@@ -4,19 +4,27 @@ About Triton docs
 Requirements and building
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Sphinx: Debian package ``python-sphinx``, : PyPI: ``python-sphinx``
+The only software needed is Sphinx: Debian package
+``python-sphinx``, : PyPI: ``python-sphinx``.  It is already installed
+on Aalto workstations.
 
-Run ``make html``.
+To build the docs, run ``make html``.
+
+HTML output is in ``_build/html/index.html``, and other output formats
+are available as well.
 
 
 Editing
 ~~~~~~~
 
-Example from UiT: `source <https://github.com/uit-no/hpc-doc>`_ and
-`compiled HTML <http://hpc.uit.no/en/latest/>`_.
+Look at examples and copy.  To add sections, add a new page in a
+subfolder.  Link it from the main Table of Contents (``toctree``) in
+``index.rst`` to have the document appear and be cross-referenced.
 
-To add sections, add a new page in a subfolder.  Link it from the main
-Table of Contents.
+You can see a complete example from UiT: `source
+<https://github.com/uit-no/hpc-doc>`_ and `compiled HTML
+<http://hpc.uit.no/en/latest/>`_.
+
 
 
 ReStructured text
@@ -24,13 +32,16 @@ ReStructured text
 
 ReStructured Text is similar to markdown in spirit, but has a more
 strictly defined syntax, with more higher level structure.  This
-allows more semantic markup.
+allows more semantic markup, more power to compile into different
+formats, and advanced things like indexing, permanent references, etc.
 
 Restructured text `home <http://docutils.sourceforge.net/rst.html>`_
 and `quick reference
 <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_.
 
+A very quick guide is below.
 
+----
 
 ``Inline code/monospace``, *emphasis*, **strong emphasis**
 
@@ -38,7 +49,7 @@ and `quick reference
 
    ``Inline code/monospace``, *emphasis*, **strong emphasis**
 
-
+----
 
 Inline `link <http://python.org>`_, or anonymous__, or separate_
 link.  Trailing underscores indicate links.
@@ -56,7 +67,7 @@ __ http://python.org
 
     .. _separate: http://python.org
 
-
+----
 
 ::
 
@@ -71,7 +82,7 @@ __ http://python.org
      Block quote
      Block quote
 
-
+----
 
 Block quotes can also start with paragraph ending in double colon,
 like this::
@@ -85,6 +96,6 @@ like this::
 
        Block quote
 
-
+----
 
 `Permanent references across files <http://www.sphinx-doc.org/en/stable/markup/inline.html#role-ref>`_
