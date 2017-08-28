@@ -1,5 +1,5 @@
-About Triton docs
-=================
+About these docs
+================
 
 Requirements and building
 ~~~~~~~~~~~~~~~~~~~~~~~~~
