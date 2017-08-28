@@ -48,7 +48,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Triton user guide'
+project = u'Aalto scientific computing guide'
 copyright = u'2017, Aalto Science-IT'
 author = u'Aalto Science-IT'
 
