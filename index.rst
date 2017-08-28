@@ -3,21 +3,33 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Triton user guide
-=================
+Triton
+======
 
 Contents:
 
 .. toctree::
    :maxdepth: 2
 
-   basics/accounts.rst
+   triton/index.rst
+
+..
+  basics/accounts.rst
+
+
+
+
+
+About, indices, and tables
+==========================
+
+.. toctree::
+   :maxdepth: 0
+
    README.rst
+   todo.rst
 
-
-Indices and tables
-==================
-
+* `About this site and how to contribute <README.rst>`_
 * :ref:`genindex`
 * :ref:`search`
 
