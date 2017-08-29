@@ -8,24 +8,47 @@ Science.  Access is free for researchers.  It is similar to the CSC
 clusters, though CSC clusters are larger and Triton is easier to use
 because it is more integrated into the Aalto environment.
 
+Key links
+=========
+* `Triton issue tracker <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`_
+* `How to make good support requests <https://research.csc.fi/support-request-howto>`_
+
 Overview
 ========
 
 .. toctree::
    overview.rst
-
+   help.rst
+   accounts.rst
+   usagepolicy.rst
+   acknowledgingtriton.rst
+   techdetails.rst
+   
 Tutorials
 =========
 .. toctree::
 
-   usage/gpu.rst
+   tut/connecting.rst
+   tut/storage.rst
+   tut/modules.rst
+   tut/interactive.rst
+   tut/serial.rst
+   tut/array.rst
 
 Detailed instructions
 =====================
 .. toctree::
+   :glob:
 
-   usage/gpu.rst
+   usage/*
 
+Applications
+============
+
+.. toctree::
+   :glob:
+
+   apps/*
 
 Reference and Examples
 ======================

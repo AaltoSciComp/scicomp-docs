@@ -1,4 +1,4 @@
 TODO
 ====
 
-overview
+* technicaldetails - remove page
