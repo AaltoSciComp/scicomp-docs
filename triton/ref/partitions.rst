@@ -1,5 +1,3 @@
-Slurm partitions
-================
 
 +------------+------------+------------+------------+------------+------------+------------------------------------+
 | Partition  | Maximum    | Mem per    | Tot mem    | Cores/node | Limits     | Use                                |
@@ -54,8 +52,8 @@ Slurm partitions
 |            |            |            |            |            |            | 20computin                         |
 |            |            |            |            |            |            | g>`__                              |
 +------------+------------+------------+------------+------------+------------+------------------------------------+
-| interactiv | 2 nodes    | 5          | 128        | 24         | 1d         | for                                |
-| e          |            |            |            |            |            | ``sinteractive``                   |
+| interactive| 2 nodes    | 5          | 128        | 24         | 1d         | for                                |
+|            |            |            |            |            |            | ``sinteractive``                   |
 |            |            |            |            |            |            | command,                           |
 |            |            |            |            |            |            | longer                             |
 |            |            |            |            |            |            | interactive                        |

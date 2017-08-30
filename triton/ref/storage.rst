@@ -1,7 +1,4 @@
-Storage
-=======
 
-**Storage summary:**
 
 +---------------------------------+---------------------------------------+-----------------------------+-----------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Name                            | Path                                  | Quota                       | Backup    | Locality                       | Purpose                                                                                                                                                            |
@@ -12,13 +9,10 @@ Storage
 +---------------------------------+---------------------------------------+-----------------------------+-----------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Scratch                         | /scratch/$dept/$project/              | on request                  | -         | all nodes                      | Department/group specific project directories.                                                                                                                     |
 +---------------------------------+---------------------------------------+-----------------------------+-----------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Local temp                      | /tmp/                                 | limited by disk size        | -         | single-node                    | Primary (and usually fastest) place for single-node calculation data.  Removed once user's jobs are finished on the node.                                          |
+| Local temp                      | /tmp/                                 | limited by disk size        | -         | single-node                    | Primary (and usually fastest) place for single-node calculation data.  Removed once user's jobs are finished on the node.                                          |
 +---------------------------------+---------------------------------------+-----------------------------+-----------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| XDG Runtime Directory (ramfs)   | $XDG\_RUNTIME\_DIR                    | limited by memory           | -         | single-node                    | Ramfs on the compute nodes with files cached in the memory.  Small random-access data (https://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html).   |
+| XDG Runtime Directory (ramfs)   | $XDG\_RUNTIME\_DIR                    | limited by memory           | -         | single-node                    | Ramfs on the compute nodes with files cached in the memory.  Small random-access data (https://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html).   |
 +---------------------------------+---------------------------------------+-----------------------------+-----------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Local persistent                | /l/                                   | varies                      | -         | dedicated group servers only   | Local disk persistent storage.  On servers purchased for a specific group.  Not backed up.                                                                         |
+| Local persistent                | /l/                                   | varies                      | -         | dedicated group servers only   | Local disk persistent storage.  On servers purchased for a specific group.  Not backed up.                                                                         |
 +---------------------------------+---------------------------------------+-----------------------------+-----------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
- 
-
- 

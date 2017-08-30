@@ -1,7 +1,3 @@
-Modules
-=======
-
-environment-modules commands:
 
 +------------------------+------------------------------------------------------------+
 | command                | description                                                |

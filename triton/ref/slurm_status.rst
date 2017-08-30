@@ -1,8 +1,4 @@
-Slurm status commands
-=====================
 
-The ``slurm`` command has been developed to provide an easier
-interface to everything you may need about your jobs.
 
 +------------------------------------+------------------------------------------------------------+
 | Command                            | Description                                                |
