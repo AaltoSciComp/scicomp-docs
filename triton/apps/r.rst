@@ -1,3 +1,8 @@
+=
+R
+=
+
+
 R is a language and environment for statistical computing and graphics
 with wide userbase. There exists several packages that are easily
 imported to R.
@@ -15,17 +20,17 @@ Simply load the latest R.
 Simple R serial job
 ~~~~~~~~~~~~~~~~~~~
 
-true\ `Serial R example <LINK/Serial%20R%20example>`__
+.. include:: ../examples/r_serial.rst
 
 Simple R job using OpenMP for parallelization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-true\ `R OpenMP Example <LINK/R%20OpenMP%20Example>`__
+.. include:: ../examples/r_openmp.rst
 
 Simple R parallel job using 'parallel'-package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-true\ `Parallel R example <LINK/Parallel%20R%20example>`__
+.. include:: ../examples/r_parallel.rst
 
 Adding packages
 ~~~~~~~~~~~~~~~

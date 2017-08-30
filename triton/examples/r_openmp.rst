@@ -1,8 +1,6 @@
 R OpenMP Example
 ----------------
 
-INLINE
-
 ROpenMP\_4.slrm
 
 ::

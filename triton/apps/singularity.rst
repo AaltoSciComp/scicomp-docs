@@ -1,5 +1,6 @@
+======================
 Singularity Containers
-----------------------
+======================
 
 For more information see: http://singularity.lbl.gov/
 
@@ -8,11 +9,7 @@ Before usage
 
 Due to the 'work in progress'-designation, singularity containers are
 not available by default to all users. To start using them you need to
-run
-
-bash
-
-::
+run::
 
     module use /share/apps/singularity/modules/
 
@@ -37,23 +34,23 @@ the image, that will happen outside the image as well.
 
 Singularity enables three base commands to user:
 
-#. singularity shell <image> - Gives user a shell within the image (see
-   "singularity shell --help" for more information on flags etc.)
-#. singularity exec <image> <cmd> - Executes a program within the image
-   (see "singularity exec --help" for more information on flags etc.)
-#. singularity run <image> <parameters> - Runs the singularity image.
-   What this means depends on the image in question. (see "singularity
-   run --help" for more information on flags etc.)
+#. ``singularity shell <image>`` - Gives user a shell within the image (see
+   ``singularity shell --help`` for more information on flags etc.)
+#. ``singularity exec <image> <cmd>`` - Executes a program within the image
+   (see ``singularity exec --help`` for more information on flags etc.)
+#. ``singularity run <image> <parameters>`` - Runs the singularity image.
+   What this means depends on the image in question. (see ``singularity
+   run --help`` for more information on flags etc.)
 
-These commands can be used, but we recommend using singularity\_wrapper
+These commands can be used, but we recommend using ``singularity_wrapper``
 instead.
 
-All different images can be found from /share/apps/singularity/images
+All different images can be found from ``/share/apps/singularity/images``
 
-singularity\_wrapper
-~~~~~~~~~~~~~~~~~~~~
+singularity_wrapper
+~~~~~~~~~~~~~~~~~~~
 
-singularity\_wrapper is written so that when you load a module written
+``singularity_wrapper`` is written so that when you load a module written
 for a singularity image, singularity\_wrapper knows what parameters to
 use. Differences include:
 
@@ -61,16 +58,16 @@ use. Differences include:
 #. Binding of basic paths (-B /l:/l, -B /m:/m, /scratch:/scratch)
 #. Setting working directory within image (if needed)
 #. Loading of CUDA libraries within images (if needed) (-B
-   /lib64/`nvidia:/libhost <http://nvidia/libhost>`__)
+   /lib64/nvidia:/libhost)
 
-singularity\_wrapper enables the three base commands, but with small
+singularity_wrapper enables the three base commands, but with small
 differences:
 
-#. singularity\_wrapper shell <shell> - Gives user the requested shell
+#. ``singularity\wrapper shell <shell>`` - Gives user the requested shell
    within the image
-#. singularity\_wrapper exec <cmd> - Executes a program within the
+#. ``singularity\_wrapper exec <cmd>`` - Executes a program within the
    image.
-#. singularity run <parameters> - Runs the singularity image. What this
+#. ``singularity run <parameters>`` - Runs the singularity image. What this
    means depends on the image in question.
 
 Applications
@@ -83,8 +80,8 @@ OpenFOAM and ParaView have been installed from the Ubuntu 16.04 Docker
 image provided by OpenFOAM people. It has minimal amount of other
 software installed.
 
-Within the container OpenFOAM is installed under /opt/openfoam4/ and
-ParaView under /opt/paraviewopenfoam50/. PATH is automatically appended
+Within the container OpenFOAM is installed under ``/opt/openfoam4/`` and
+ParaView under ``/opt/paraviewopenfoam50/``. PATH is automatically appended
 with their respective paths so all program calls are available
 automatically.
 
@@ -92,11 +89,7 @@ Usage
 ^^^^^
 
 This example shows how you can run damBreak example. Firstly, let's load
-the OpenFOAM module and create a folder for the example
-
-bash
-
-::
+the OpenFOAM module and create a folder for the example::
 
     module use /share/apps/singularity/modules
     module load OpenFOAM
@@ -104,11 +97,7 @@ bash
     cd damBreak
 
 Secondly, let's use singularity shell to copy example data files to the
-folder and to initialize the simulation.
-
-bash
-
-::
+folder and to initialize the simulation.::
 
     cp -r /opt/openfoam4/tutorials/multiphase/interFoam/laminar/damBreak/damBreak/0 .
     cp -r /opt/openfoam4/tutorials/multiphase/interFoam/laminar/damBreak/damBreak/system .
@@ -118,13 +107,7 @@ bash
     exit
 
 After this one can submit the following slurm script with sbatch to
-solve the problem:
-
- 
-
-bash
-
-::
+solve the problem:::
 
     #!/bin/bash
     #SBATCH -p short
@@ -137,9 +120,7 @@ bash
 
     srun singularity_wrapper exec interFoam -parallel
 
-Paraview can be started similarly.
-
-::
+Paraview can be started similarly::
 
     #!/bin/bash
     #SBATCH -p short
@@ -152,7 +133,6 @@ Paraview can be started similarly.
 
     singularity_wrapper exec paraview
 
- 
 
 OpenPose
 ~~~~~~~~
@@ -166,8 +146,6 @@ working directory to /opt/openpose.
 
 Usage
 ^^^^^
-
-bash
 
 ::
 

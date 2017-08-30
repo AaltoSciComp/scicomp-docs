@@ -3,19 +3,42 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+News
+====
+.. toctree::
+   :maxdepth: 1
+
+   news/garage.rst
+   news/git_migration.rst
+   
 Triton
 ======
 
-Contents:
+Triton is the Aalto high performance computing cluster.  It is your
+go-to resources for anything that exceeds your desktop computer's
+capacity.
 
 .. toctree::
    :maxdepth: 2
 
    triton/index.rst
 
-..
-  basics/accounts.rst
+Data management
+===============
+.. toctree::
+   :maxdepth: 1
 
+   data/intro.rst
+   data/ida.rst
+   data/encryption.rst
+
+
+Scientific computing
+====================
+.. toctree::
+   :maxdepth: 1
+
+   scicomp/git.rst
 
 
 

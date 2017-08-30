@@ -45,10 +45,19 @@ Detailed instructions
 Applications
 ============
 
+Supplied software:
+
 .. toctree::
    :glob:
 
    apps/*
+
+Custom software installation:
+
+.. toctree::
+   :glob:
+
+   apps/custom/*
 
 Reference and Examples
 ======================

@@ -1,3 +1,7 @@
+========
+Python 2
+========
+
 Scientific Python
 =================
 
@@ -6,8 +10,6 @@ containing the base scientific python packages are available via the
 'anaconda' modules. If you want to use Python 2.7, please load the
 anaconda2 module
 
-load anaconda2
-
 ::
 
     module load anaconda2
@@ -15,38 +17,26 @@ load anaconda2
 And if you wish to use Python 3.x (currently 3.5) use the anaconda3
 module
 
-Load anaconda3
-
 ::
 
     module load anaconda3
 
 The numpy provided by anaconda uses OpenBLAS so it's fast.
 
- 
-
 Note that the Anaconda distribution comes with its own python
 interpreter, so instead of starting your scripts with
-
-Default python
 
 ::
 
     #!/usr/bin/python
 
-::
-
-    (or python3 for Python 3.x) you should instead use
-
-Use env to load correct python interpreter
+(or python3 for Python 3.x) you should instead use
 
 ::
 
     #!/usr/bin/env python
 
 for Python 2.7 and
-
-Use env for python3
 
 ::
 
@@ -73,12 +63,10 @@ the list of package in conda-forge at the link above. If you find what
 you want, just file an issue at the issue tracker asking for it to be
 installed.
 
- 
-
 **Admins ohoi:** The script at
 /share/apps/anaconda/install-extra-packages.sh installs the extra
 packages. Whenever somebody asks for a new package to be added to
 anaconda, please add it there. And also, after installing a new anaconda
 version, run the script so that all the extra packages are installed.
 
- 
+

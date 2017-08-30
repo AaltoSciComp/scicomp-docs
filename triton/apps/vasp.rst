@@ -1,5 +1,6 @@
+====
 VASP
-----
+====
 
 `VASP <http://www.vasp.at/>`__  (Vienna Ab initio Simulation Package) is
 a computer program for atomic scale materials modelling, e.g. electronic
@@ -23,7 +24,7 @@ MPI versions.
 -  vasp\_ncl: For non-collinear spin calculations
 
 VASP 5.4.1
-~~~~~~~~~~
+==========
 
 Currently the binaries are compiled with GFortran instead of Intel
 Fortran (the Intel Fortran binaries crashed, don't know why yet).
@@ -40,12 +41,12 @@ Example batch script
     srun vasp_std
 
 Potentials
-~~~~~~~~~~
+==========
 
-Potentials are stored at /share/apps/vasp/pot.
+Potentials are stored at ``/share/apps/vasp/pot``.
 
 VASP on old triton (obsolete, for reference only!)
---------------------------------------------------
+==================================================
 
 For each VASP version, there are two binaries compiled with slightly
 different options:
