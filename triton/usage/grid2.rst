@@ -1,3 +1,7 @@
+================
+Grid computing 2
+================
+
 FGI pages at
 `CSC <http://www.csc.fi/tutkimus/Laskentapalvelut/gridymparisto/fgi>`__
 

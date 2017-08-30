@@ -1,5 +1,6 @@
-Lustre filesystem
------------------
+=========================
+Storage: Lustre (scratch)
+=========================
 
 Lustre is scalable high performance file system created for HPC. It
 allows MPI-IO but mainly it provides large storage capacity and high
@@ -40,7 +41,7 @@ Working with lots of small files
 Large datasets which consist mostly of small (<1MB) files can be slow to
 process because of network overhead associated with individual files. If
 it is your case, please consult `Compute node local
-drives <LINK/Compute%20node%20local%20drives>`__ page, see tar-example
+drives <localstorage>` page, see tar-example
 over there.
 
 Working with large files
@@ -52,7 +53,7 @@ programs, parallel programs where only one process is doing I/O, and
 parallel programs using a file-per-process file I/O pattern. However,
 when working with large files (>> 10 GB), particularly if they are
 accessed in parallel from multiple processes in a parallel application,
-it can be advantageous to stripe over several OST's.  In this case the
+it can be advantageous to stripe over several OST's.  In this case the
 easiest way is to create a directory for the large file(s), and set the
 striping parameters for any files subsequently created in that
 directory:

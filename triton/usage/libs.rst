@@ -1,3 +1,7 @@
+=========
+Libraries
+=========
+
 BLAS
 ====
 
@@ -15,7 +19,6 @@ benchmark results see
 
     DGEMM benchmark on triton
 
-.
 
 Using MKL
 ---------
@@ -49,7 +52,7 @@ have various issues such as crashing when running on the incorrect node
 versa), or poor performance. In particular, the Netlib reference BLAS
 has **VERY** poor performance and should be avoided at all cost. Use it
 only for testing or if you need to debug numeric output. As can be seen
-on the \ `DGEMM benchmark results <LINK/Benchmarks>`__ performance for
+on the `DGEMM benchmark results <LINK/Benchmarks>`__ performance for
 large matrices is an order of magnitude worse than the optimized
 versions. For a real example see for instance
 `tracker.triton.aalto.fi/issue194 <http://tracker.triton.aalto.fi/issue194>`__
@@ -64,7 +67,7 @@ recommended LAPACK implementation on triton is **MKL**. See instructions
 above for how to use it.
 
 Another option is architecture specific optimization and run on either
-Opterons or Xeons only (see ``--constraint=opteron`` and
+Opterons or Xeons only (see ``--constraint=opteron`` and
 ``--constraint=xeon`` options for sbatch/salloc). ``module avail`` shows
 a number of alternatives:
 
@@ -137,8 +140,6 @@ above for how to link to it.
 +--------------+--------------------------------+--------------------------------------------------------------------------------------------+
 | MKL          | intel/VERSION or mkl/VERSION   | See http://software.intel.com/en-us/articles/intel-mkl-link-line-advisor                   |
 +--------------+--------------------------------+--------------------------------------------------------------------------------------------+
-
- 
 
 Links
 ~~~~~

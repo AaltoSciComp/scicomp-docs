@@ -2,7 +2,7 @@ Available compilers
 -------------------
 
 Please see full up to date listing of different toolchains and
-compilers from \ `Applications <LINK/Applications>`__-page. This page
+compilers from  `Applications <../apps/index>`_\ -page. This page
 contains information on their usage.
 
 GCC
@@ -12,8 +12,8 @@ Triton has the GCC set of compilers installed by default, but we
 recommend that you use the provided module versions. The GNU Compiler
 Collection (aka GCC) includes front ends for C, C+, Objective-C,
 Fortran, Java, Ada, and Go, as well as libraries for these languages
-(libstdc+, libgcj,...). In case of missing features,  `contact
-admins <LINK/Getting%20help>`__.
+(libstdc+, libgcj,...). In case of missing features,  `contact
+admins <../help>`_.
 
 ::
 
@@ -64,14 +64,14 @@ Compiling your own code
    load goolf/triton-2016b' for BLAS/LAPACK, FFTW3, ScaLAPACK+BLACS,
    etc.. Modules will set CPATH and LD\_LIBRARY\_PATH variables for
    ``-I`` and
-   ``-L, but you can use 'module show <module>' to see the exact library paths. ``
+   ``-L, but you can use 'module show <module>' to see the exact library paths. ``
 
 MPI-code "mpihello.c":
 
 ::
 
-    #include 
-    #include 
+    #include
+    #include
     int main (int argc, char **argv) {
       int rank, size;
       MPI_Init (&argc, &argv);
@@ -110,7 +110,7 @@ otherwise expect segmentation fault errors on other architectures.
 Intel Compilers
 ~~~~~~~~~~~~~~~
 
-Intel Composer available through \ ``module`` provides full set of
+Intel Composer available through  ``module`` provides full set of
 compilers C/C++/Fortran. In addition, it comes with MKL libraries, that
 works well in case you need LAPACK/BLAS functionality, as well as
 paralle version of them with ScaLAPACK and BLACS.

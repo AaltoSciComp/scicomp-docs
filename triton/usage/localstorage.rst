@@ -1,3 +1,7 @@
+=====================
+Storage: local drives
+=====================
+
 Local disks on computing nodes are the preferred place for doing your
 IO. The general idea is use network storage as a backend and local disk
 for actual data processing.
@@ -44,7 +48,7 @@ How to use /tmp when you login interactively
 ::
 
     $ sinteractive -t 1:00:00              # request a node for one hour
-    (node)$ mkdir /tmp/$SLURM_JOB_ID       # create a unique directory, here we use 
+    (node)$ mkdir /tmp/$SLURM_JOB_ID       # create a unique directory, here we use
     (node)$ cd /tmp/$SLURM_JOB_ID
     ... do what you wanted ...
     (node)$ cp your_files $WRKDIR/my/valuable/data  # copy what you need
@@ -115,6 +119,3 @@ A sample code is below:
     tar cf output.tar output/*                        # tar output
     mv output.tar $WRKDIR/SOMEDIR                     # copy results back
 
- 
-
- 

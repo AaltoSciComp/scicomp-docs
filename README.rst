@@ -99,3 +99,33 @@ like this::
 ----
 
 `Permanent references across files <http://www.sphinx-doc.org/en/stable/markup/inline.html#role-ref>`_
+
+Label things this way (note only one colon)::
+
+  .. _label-name:
+
+Referenec them this way::
+
+  `label-name`
+
+----
+
+Notes, warnings, etc.
+
+.. note::
+
+   This is a note
+
+.. warning::
+
+   This is a warning
+
+::
+
+  .. note::
+
+    This is a note
+
+  .. warning::
+
+    This is a warning

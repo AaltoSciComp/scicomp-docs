@@ -9,11 +9,11 @@ For more details, see the web page http://julialang.org/ .
 Interactive usage
 -----------------
 
-Julia is available in the module system.  By default the latest stable
-release is loaded.
+Julia is available in the module system. By default the latest stable
+release is loaded::
 
-#. module load julia
-#. julia
+  module load julia
+  julia
 
 Batch usage
 -----------
@@ -21,9 +21,7 @@ Batch usage
 Running Julia scripts as batch jobs is also possible. An example batch
 job is
 
-Batch script for Julia job
-
-::
+Batch script for Julia job::
 
     #!/bin/sh
     #SBATCH -p play
@@ -45,16 +43,3 @@ set the OMP\_NUM\_THREADS environment variable to some other value, or
 alternatively inside julia you can use the blas\_set\_num\_threads()
 function.
 
-Related articles
-----------------
-
-Related articles appear here based on the labels you select. Click to
-edit the macro and add or change labels.
-
-falsetruemodified5julia-langfalsepage
-
-true
-
-+------------------+-----+
-| Related issues   |     |
-+------------------+-----+

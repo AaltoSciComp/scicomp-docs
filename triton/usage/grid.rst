@@ -1,3 +1,7 @@
+==============
+Grid computing
+==============
+
 *Note: not directly related to local usage covered by other pages. The
 whole thing is about an upper level cluster resources usage through Grid
 interface.*
@@ -12,7 +16,7 @@ CPU and disk space resources to grid users. Having your local account on
 Triton means having access to Triton local resources only, in order to
 use whole grid one has to get grid certificate.
 
-To get started with grid computing on FGCI, please consult the 
+To get started with grid computing on FGCI, please consult the
 https://research.csc.fi/fgci-user-guide pages.
 
 Getting help

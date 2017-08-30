@@ -1,3 +1,7 @@
+======
+Matlab
+======
+
 This page will guide you through the serial computing with Matlab at
 Triton cluster. For parallel or multi-threaded computing (parallel
 computing toolbox) see the page `Matlab Distributed Computing
@@ -21,9 +25,7 @@ Simple serial script
 --------------------
 
 Running a single core Matlab job is easy through the slurm queue. A
-sample slurm script is provided underneath:
-
-::
+sample slurm script is provided underneath::
 
     #!/bin/bash -l
     #SBATCH -p short
@@ -36,9 +38,7 @@ sample slurm script is provided underneath:
     m=2
     srun matlab -nojvm -nosplash -r "serial_Matlab($n,$m) ; exit(0)"
 
-The actual calculation is done in serial\_Matlab.m-file:
-
-::
+The actual calculation is done in serial\_Matlab.m-file::
 
     function C = serial_Matlab(n,m)
             try
@@ -77,9 +77,7 @@ Below you will find an example how-to prepare and run such type of jobs.
 
 The file below calculates Sin-function in the interval 0-2\*PI and
 stores the results into a file. The interval is divided into blocks that
-are distributed over the nodes.
-
-::
+are distributed over the nodes. ::
 
     function run(blockIndex,pointsPerBlock,totalBlocks)
     % blockindex runs from 0..totalblocks-1
@@ -113,9 +111,7 @@ which will execute independently, potentially in parallel if there are
 enough idle resources. Note that it is using play partition with 5min
 time limit.
 
-matslurm.sh
-
-::
+matslurm.sh::
 
     #!/bin/bash -l
     #SBATCH --time=0-00:05:00 --mem-per-cpu=500
@@ -131,9 +127,7 @@ batch job script above).
 **Collecting the results**
 
 Finally a wrapper script to read in the .mat files and plots you tha
-Sin-function calculated in parallel with 10 tasks.
-
-::
+Sin-function calculated in parallel with 10 tasks.::
 
     function collectResults(numberOfBlocks) 
        X=[]; 
@@ -170,9 +164,7 @@ Parallel Matlab with Matlab's internal parallelization
     export OMP_NUM_THREADS=$omp_threads
     srun time -p matlab_multithread -nojvm -nosplash -r "parallel_Matlab() ; exit(0)"
 
-parallel\_Matlab.m:
-
-::
+parallel\_Matlab.m::
 
     function parallel_Matlab()
             try
@@ -188,12 +180,8 @@ parallel\_Matlab.m:
             end
     end
 
- 
-
 Parallel matlab with parpool
 ----------------------------
-
- 
 
 ::
 
@@ -209,11 +197,7 @@ Parallel matlab with parpool
     module load matlab
     srun matlab_multithread -nosplash -r "parallel_Matlab2(4) ; exit(0)"
 
- 
-
-parallel\_Matlab2.m:
-
-::
+parallel\_Matlab2.m::
 
     function parallel_Matlab2(n)
             % Try-catch expression that quits the Matlab session if your code crashes
@@ -252,9 +236,7 @@ The above example also works (even nicer way) for condor.
 **Condor submission script**
 
 Condor actually contains ArrayJob functionality that makes the task
-easier.
-
-::
+easier. ::
 
     ## Condor submit description (script) file for my_program.exe.
     ## 1. Specify the [path and] name for the executable file...
@@ -280,8 +262,4 @@ easier.
     ## 7. Add 10 copies of the job to the queue
     Queue 10
 
- 
 
- 
-
- 

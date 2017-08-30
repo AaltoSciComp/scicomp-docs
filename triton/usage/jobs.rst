@@ -1,3 +1,7 @@
+===============
+Monitoring jobs
+===============
+
 Monitoring jobs
 ===============
 
@@ -72,7 +76,7 @@ Job status while pending
 ------------------------
 
 There are a number of reasons that your job may be sitting in the queue.
-Listing your pending jobs with  ``squeue -u $USER -t PD``  will help
+Listing your pending jobs with ``squeue -u $USER -t PD`` will help
 determine why your job is not running. Look at the ``NODELIST(REASON)``.
 A pending job may have these reasons:
 
@@ -104,7 +108,7 @@ A pending job may have these reasons:
    .
 
 In case of the first two one can check currently estimated time the job
-will be started. Run ``slurm j <jobid>``, look at \ ``StartTime=``
+will be started. Run ``slurm j <jobid>``, look at ``StartTime=``
 
 Job states
 ----------
@@ -120,17 +124,99 @@ hass been submitted?". The answer is, yes it is possible, but only some
 parameters. For instance change memory/CPU requirements for pending job
 or set another time limit ofr running/pending job. Think carefully
 before you submit a job, but if you ended up in the situation that
-modification is needed, please contact your `Slurm status
-commands <LINK/Slurm%20status%20commands>`__
+modification is needed, please contact your `Triton support team
+member <../help>`__.
+
+Needless to say that there is no way to impact on your job priority and
+make sure that it goes to run asap?
+
+Viewing finished jobs
+---------------------
+
+Information about finished and cancelled jobs are available via the
+``slurm history `` command. Most notable pieces are memory use and also
+exit code, in case the jobs did not finish cleanly.
+
+::
+
+    $ slurm history 2hours
+    JobID          JobName    Start             MaxVMem  MaxRes     TotalCPU     Elapsed Tasks CPUs Nodes ExitCode State
+    1052748        helloe.sh  2012-04-10T19:05        -       -    00:00.015    00:00:00  none    1     1      1:0 FAILED
+     └──batch      *          2012-04-10T19:05        -       -    00:00.015    00:00:00     1    1     1      1:0 FAILED
+    1052751        testarr    2012-04-10T19:07        -       -    00:00.074    00:02:30  none    5     1      0:0 COMPLETED
+     └──batch      *          2012-04-10T19:07     393M      6M    00:00.055    00:02:30     1    1     1      0:0 COMPLETED
+        1052751.0  runtask    2012-04-10T19:07      99M      1M    00:00.002    00:00:30     1    1     1      0:0 COMPLETED
+        1052751.1  runtask    2012-04-10T19:08      99M      1M    00:00.003    00:00:30     1    1     1      0:0 COMPLETED
+        1052751.2  runtask    2012-04-10T19:08      99M      1M    00:00.003    00:00:30     1    1     1      0:0 COMPLETED
+        1052751.3  runtask    2012-04-10T19:09      99M      1M    00:00.003    00:00:30     1    1     1      0:0 COMPLETED
+        1052751.4  runtask    2012-04-10T19:09      99M      1M    00:00.003    00:00:30     1    1     1      0:0 COMPLETED
+
+Recognized time forms are *n* min, *n* hours, *n* days, *n* weeks
+(without space).
+
+*Elapsed* is the wall clock time from job start to finish.
+
+*MaxVMem* is the highest amount of virtual memory your program allocated
+during its lifetime. If the slurm job's memory limit is set below it,
+your job would be killed.
+
+*MaxRes* is the resident (physical) memory the program actually used of
+its virtual memory allocation, which may be of interest when monitoring
+program behavior.
+
+Cancelling jobs
+---------------
+
+::
+
+    $ scancel                       # cancel a job
+    $ scancel `echo {5205484..5205533}`    # cancel jobs in the range
+    $ scancel --state=PENDING --user=$USER --partition=debug  # kill all of your pending jobs on debug queue
+
+Job priority
+============
+
+The running job priority in general has many factors to consider. In
+addition to job time, requested nodes number and QoS, there are others,
+like how much CPU time the user has burn already all together on the
+cluster, partition priority, for how long a particular job has been
+sitting n the queue and others. While your job is pending in the queue
+SLURM checks those metrics regularly and recount job priority constanly.
+If you are interested in details, take a look at `Ticket-based
+multifactor priority
+plugin <https://slurm.schedmd.com/priority_multifactor.html>`__ page,
+that is the one we use on Triton for jobs scheduling.
+
+::
+
+    $ slurm s                # list of jobs per user with their current priorities
+    $ slurm full             # as above but almost all of the job parameters are listed
+    $ slurm shares           # displays usage values per user
+    $ slurm p gpu            # shows partition parameters incl. Priority=
+    $ slurm j <jobid>        # shows <jobid> detailed info incl. QoS, requested nodes etc.
+
+``slurm`` command on Triton
+===========================
+
+A nice tool originally developed by Tapio Leipälä specifically for
+Triton user needs and developed by Triton support team nowadays.
+
+The ``slurm`` command can show most often needed information about jobs,
+resources and the cluster state. It's a wrapper script to the native
+SLURM commands. New features are added from time to time. Running it
+without parameters prints a list of available commands. Most have some
+soft of shortcuts for convenience.
+
+.. include:: ../ref/slurm_status.rst
 
 Native slurm commands
 =====================
 
-While Triton has a  ``slurm``  utility that hides most of original SLURM
+While Triton has a ``slurm`` utility that hides most of original SLURM
 commands, you still may want to learn more. If need something else that
- ``slurm``  can not do, the native commands with their full
-functionality are at your service. For the details, please consult
-corresponding man pages (``man squeue`` , etc).
+``slurm`` can not do, the native commands with their full functionality
+are at your service. For the details, please consult corresponding man
+pages (``man squeue`` , etc).
 
 -  `` squeue ``– view information about jobs located in the Slurm
    scheduling queue
@@ -143,7 +229,7 @@ corresponding man pages (``man squeue`` , etc).
 -  `` sinfo `` – view node & partition information
 -  `` sshare `` – show statistics from the accounting database
 -  `` scontrol `` – various function, end user mostly interested in
-    ``scontrol show``  ...
+   ``scontrol show`` ...
 
    ::
 
@@ -153,12 +239,12 @@ corresponding man pages (``man squeue`` , etc).
    queue
 -  **sacct** - Historical info about jobs
 
-Customizable output for  ``slurm``
-----------------------------------
+Customizable output for ``slurm``
+---------------------------------
 
 The ``slurm`` command output can be customized. Look in the for variable
-names in /usr/local/bin/slurm and place them into your
-own $HOME/.config/slurmvars file.
+names in /usr/local/bin/slurm and place them into your own
+$HOME/.config/slurmvars file.
 
 For example, more detailed node info for those interested to know if
 either Xeon or Opteron machines are free. This changes the look of

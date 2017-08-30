@@ -329,6 +329,8 @@ with a command like:
 
     scp filename triton:remote_filename
 
+.. _faq-connecttoserveronnode:
+
 I need to connect to some server on a node
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
