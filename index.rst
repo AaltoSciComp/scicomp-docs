@@ -3,13 +3,18 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+This contains documentation from `Aalto Science-IT
+<http://science-it.aalto.fi>`_, covering resources at Aalto and
+beyond.  Science-IT is responsible for running the `Triton
+<triton/index>` cluster at Aalto, and providing advice on other
+scientific computing tasks.
+
 News
 ====
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
-   news/garage.rst
-   news/git_migration.rst
+   news/index.rst
    
 Triton
 ======
@@ -26,19 +31,17 @@ capacity.
 Data management
 ===============
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
-   data/intro.rst
-   data/ida.rst
-   data/encryption.rst
+   data/index.rst
 
 
 Scientific computing
 ====================
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
-   scicomp/git.rst
+   scicomp/index.rst
 
 
 

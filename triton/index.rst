@@ -10,34 +10,41 @@ because it is more integrated into the Aalto environment.
 
 Key links
 =========
-* `Triton issue tracker <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`_
-* `How to make good support requests <https://research.csc.fi/support-request-howto>`_
+* `Requesting accounts <accounts>`
+* `Getting help <help>`
+
+  * `Triton issue tracker <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`_
+  * `How to make good support requests <https://research.csc.fi/support-request-howto>`_
 
 Overview
 ========
 
 .. toctree::
+   :maxdepth: 1
+
    overview.rst
    help.rst
    accounts.rst
    usagepolicy.rst
    acknowledgingtriton.rst
    techdetails.rst
-   
+
 Tutorials
 =========
 .. toctree::
+   :maxdepth: 1
 
    tut/connecting.rst
    tut/storage.rst
    tut/modules.rst
-   tut/interactive.rst
-   tut/serial.rst
+   Interactive jobs - running your first command <tut/interactive.rst>
+   Running in the queue <tut/serial.rst>
    tut/array.rst
 
 Detailed instructions
 =====================
 .. toctree::
+   :maxdepth: 1
    :glob:
 
    usage/*
@@ -48,6 +55,7 @@ Applications
 Supplied software:
 
 .. toctree::
+   :maxdepth: 1
    :glob:
 
    apps/*
@@ -55,6 +63,7 @@ Supplied software:
 Custom software installation:
 
 .. toctree::
+   :maxdepth: 1
    :glob:
 
    apps/custom/*
@@ -62,6 +71,7 @@ Custom software installation:
 Reference and Examples
 ======================
 .. toctree::
+   :maxdepth: 1
 
    ref/index.rst
    examples/index.rst
