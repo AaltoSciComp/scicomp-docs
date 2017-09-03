@@ -3,6 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+==========================
+Aalto Scientific Computing
+==========================
+
 This contains documentation from `Aalto Science-IT
 <http://science-it.aalto.fi>`_, covering resources at Aalto and
 beyond.  Science-IT is responsible for running the `Triton
