@@ -6,11 +6,10 @@ Shared resource
 ===============
 
 Triton is a joint installation by a number of Aalto School of Science
-faculties (PHYS, CS, NBE, originally PHYS, ICS and BECS) within
-`Science-IT
+faculties within `Science-IT
 project <http://sci.aalto.fi/en/research/muu_tutkimustoiminta/science-it/>`__,
 which was founded in 2009 to facilitate the HPC Infrastructure in all of
-School of Science.  It is now available to all Aalto researchers.
+School of Science. It is now available to all Aalto researchers.
 
 As of 2016, Triton is part of `FGCI - Finnish Grid and Cloud
 Infrastructure <https://www.csc.fi/-/fgci>`__ (predecessor of `Finnish
