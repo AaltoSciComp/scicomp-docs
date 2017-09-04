@@ -2,7 +2,7 @@
 .. csv-table::
    :delim: |
    :header-rows: 1
-   :widths: "auto"
+   :widths: auto
 
    Node name        | Number of nodes   | Node type              | Arch   | CPU type                                                                                                                                             | Memory Configuration   | GPUs                                                                                  
    pe[1-48,65-81]   | 65                | Dell PowerEdge C4130   | hsw    | 2x12 core `Xeon E5 2680 v3 <http://ark.intel.com/products/81908/Intel-Xeon-Processor-E5-2680-v3-30M-Cache-2_50-GHz>`__ 2.50GHz                       | 128GB DDR4-2133        | -                                                                                     

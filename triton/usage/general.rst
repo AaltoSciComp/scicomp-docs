@@ -3,8 +3,6 @@ Running programs on Triton
 ==========================
 
 
---------------
-
 Triton differs somewhat from your regular desktop computer. The large
 numbers and complex examples may give the impression of something far
 more special than it actually is: a bunch of computers. Fundamentally
@@ -24,7 +22,7 @@ use cases, you're welcome to ask any questions in the `Issue
 Tracker <http://tracker.triton.aalto.fi>`__.
 
 Scheduling policy and queues
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+============================
 
 The cluster nodes (computers) are grouped into *partitions* (the
 scheduler's concept). While the default *batch* partition may always be
@@ -55,7 +53,7 @@ It can be worth looking at your job's partition list to make sure it is
 optimal: "slurm j $jobid"
 
 Interactive logins
-^^^^^^^^^^^^^^^^^^
+==================
 
 Triton mainly runs non-interactive batch jobs in its current
 configuration. There is a (small) partition which is meant for
@@ -92,9 +90,8 @@ Server for Graphical Interactive
 Use <LINK/VNC%20Server%20for%20Graphical%20Interactive%20Use>`__.
 
 Job examples
-~~~~~~~~~~~~
+============
 
---------------
 
 Submit a short batch job
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -213,7 +210,7 @@ They have different number on CPU cores per node: 12 for Opterons and
 Westmere, 20 on IvyBridge and 24 on Haswell.
 
 Submit a small MPI job
-''''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^
 
 A job that fit to one node: *single-node job*. Here we use the "-N 1"
 option which tells slurm to allocate all tasks on a single node. The "-n
@@ -240,7 +237,7 @@ only. Independently on the requested "-n X" one can always define the
 jobs examples below.
 
 Submit a large MPI job
-''''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^
 
 Large MPI-job, the one that does not fit to a single node. You should
 ask for a number of tasks that is a multiple of number of CPU cores on
@@ -281,7 +278,7 @@ MPI example using Open MPI
     #SBATCH -n 40                # 40 processes to run (2 x 20 = 40)
 
 Submit a hybrid MPI/OpenMP job
-''''''''''''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Batch file for running an application using a hybrid parallelization
 scheme with both MPI and OpenMP. Each MPI rank (process) runs a number
@@ -382,7 +379,7 @@ GPU cards with --gres=
 See details at \ `Slurm commands <LINK/Slurm%20commands>`__
 
 Links and other additional materials
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+====================================
 
 -  `Quick Start User Guide <http://slurm.schedmd.com/quickstart.html>`__
    at http://slurm.schedmd.com/.

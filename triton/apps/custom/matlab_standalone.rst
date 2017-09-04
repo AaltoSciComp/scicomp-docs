@@ -5,8 +5,6 @@ Standalone Matlab
 Installation and license activation on staff-owned computers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
---------------
-
 Matlab academic license permits installation on home computers for
 university personnel. Triton MDCS workers are available to anyone with a
 Triton account, which means the workers can be utilized from personal

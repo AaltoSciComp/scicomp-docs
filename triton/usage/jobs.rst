@@ -6,7 +6,7 @@ Monitoring jobs
 ===============
 
 Before you start, if you have SLURM experience but new to Triton, you
-may want to check out '``slurm`` command on Triton' paragraph below.
+may want to check out the ``slurm`` command on Triton' paragraph below.
 There we introduce Triton specific tool that is widely used for jobs
 monitoring and many other issues.
 
@@ -70,7 +70,7 @@ Show detailed information about running job(s):
 
 ::
 
-    slurm j 
+    slurm j
 
 Job status while pending
 ------------------------
@@ -99,7 +99,7 @@ A pending job may have these reasons:
    number of jobs running or aggregate node usage is at your limits. In
    this case, jobs in this state will become eligible when your existing
    jobs finish.
--  (AssociationResourceLimit): The job exceeds some limit set on the
+-  ``(AssociationResourceLimit)``: The job exceeds some limit set on the
    association. On triton, this in practice means the per-user
    GrpCPURunMins limit, which currently is 1.5M minutes per user. Wait a
    while for running jobs to proceed, so that new jobs may start. Also,
@@ -114,7 +114,18 @@ Job states
 ----------
 
 Possible states for jobs are:
-``PENDING  (PD), RUNNING (R), SUSPENDED (S), COMPLETING (CG), COMPLETED (CD),  CONFIGURING (CF), CANCELLED (CA), FAILED (F), TIMEOUT (TO), PREEMPTED  (PR), NODE_FAIL (NF)``.
+
+  * PENDING  (PD)
+  * RUNNING (R)
+  * SUSPENDED (S)
+  * COMPLETING (CG)
+  * COMPLETED (CD)
+  * CONFIGURING (CF)
+  * CANCELLED (CA)
+  * FAILED (F)
+  * TIMEOUT (TO)
+  * PREEMPTED  (PR)
+  * NODE_FAIL (NF)``.
 
 Modifying the job after submission
 ----------------------------------
@@ -125,7 +136,7 @@ parameters. For instance change memory/CPU requirements for pending job
 or set another time limit ofr running/pending job. Think carefully
 before you submit a job, but if you ended up in the situation that
 modification is needed, please contact your `Triton support team
-member <../help>`__.
+member <../help>`.
 
 Needless to say that there is no way to impact on your job priority and
 make sure that it goes to run asap?
@@ -134,7 +145,7 @@ Viewing finished jobs
 ---------------------
 
 Information about finished and cancelled jobs are available via the
-``slurm history `` command. Most notable pieces are memory use and also
+``slurm history`` command. Most notable pieces are memory use and also
 exit code, in case the jobs did not finish cleanly.
 
 ::
@@ -218,7 +229,7 @@ commands, you still may want to learn more. If need something else that
 are at your service. For the details, please consult corresponding man
 pages (``man squeue`` , etc).
 
--  `` squeue ``– view information about jobs located in the Slurm
+-  ``squeue`` – view information about jobs located in the Slurm
    scheduling queue
 
    ::
@@ -226,18 +237,18 @@ pages (``man squeue`` , etc).
        $ squeue -n gpu[1-22]         # reports only jobs allocated to specific nodes
        $ squeue -t PD -i 5 -u $USER  # reports your pending jobs, with the 5s interval
 
--  `` sinfo `` – view node & partition information
--  `` sshare `` – show statistics from the accounting database
--  `` scontrol `` – various function, end user mostly interested in
+-  ``sinfo`` – view node & partition information
+-  ``sshare`` – show statistics from the accounting database
+-  ``scontrol`` – various function, end user mostly interested in
    ``scontrol show`` ...
 
    ::
 
        scontrol show node ivb1    # show specific node config
 
--  **sprio** - Show calculated priority factors for jobs waiting in the
+-  ``sprio`` - Show calculated priority factors for jobs waiting in the
    queue
--  **sacct** - Historical info about jobs
+-  ``sacct`` - Historical info about jobs
 
 Customizable output for ``slurm``
 ---------------------------------

@@ -140,11 +140,11 @@ What's next?
 ============
 
 For more information, you can see the CSC guide on array jobs:
-`https://research.csc.fi/taito-array-jobs. <https://research.csc.fi/taito-array-jobs>`__
+`https://research.csc.fi/taito-array-jobs. <https://research.csc.fi/taito-array-jobs>`_
 
 For more detailed information about running on Triton, see the main page
-`Running programs on Triton <../usage/general>`__.
+`Running programs on Triton <../usage/general>`.
 
-Remember to check the `quick reference <../ref/index` when needed.
+Remember to check the `quick reference <../ref/index>` when needed.
 
 

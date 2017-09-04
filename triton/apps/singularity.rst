@@ -4,6 +4,9 @@ Singularity Containers
 
 For more information see: http://singularity.lbl.gov/
 
+Singularity
+===========
+
 Before usage
 ~~~~~~~~~~~~
 
@@ -71,7 +74,7 @@ differences:
    means depends on the image in question.
 
 Applications
-------------
+============
 
 OpenFOAM and ParaView
 ~~~~~~~~~~~~~~~~~~~~~

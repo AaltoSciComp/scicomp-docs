@@ -60,11 +60,11 @@ Compiling your own code
 -  Use gcc, g++, and gfortran compilers for compilation
 -  Use mpicc, mpic++, and mpif90 for MPI (= MVAPICH, MPICH2 or OpenMPI +
    GCC)
--  Setup your environment with 'module load <toolchain>' e.g. 'module
-   load goolf/triton-2016b' for BLAS/LAPACK, FFTW3, ScaLAPACK+BLACS,
-   etc.. Modules will set CPATH and LD\_LIBRARY\_PATH variables for
+-  Setup your environment with ``module load <toolchain>`` e.g. ``module
+   load goolf/triton-2016b`` for BLAS/LAPACK, FFTW3, ScaLAPACK+BLACS,
+   etc.. Modules will set ``CPATH`` and ``LD_LIBRARY_PATH`` variables for
    ``-I`` and
-   ``-L, but you can use 'module show <module>' to see the exact library paths. ``
+   ``-L, but you can use 'module show <module>' to see the exact library paths.``
 
 MPI-code "mpihello.c":
 

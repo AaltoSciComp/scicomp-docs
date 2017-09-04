@@ -142,7 +142,7 @@ above for how to link to it.
 +--------------+--------------------------------+--------------------------------------------------------------------------------------------+
 
 Links
-~~~~~
+=====
 
 -  BLAS at `www.netlib.org/blas <http://www.netlib.org/blas>`__
 -  LAPACK at `www.netlib.org/lapack <http://www.netlib.org/lapack>`__
