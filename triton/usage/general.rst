@@ -30,7 +30,7 @@ in full use, other partitions act as boundaries that keep specialized
 nodes, such as the GPU machines, ready and immediately available for
 jobs with special requirements.
 
-true\ `Slurm partitions <LINK/Slurm%20partitions>`__
+.. include:: ../ref/partitions.rst
 
 The debug partition and its 60 minute time limit exists for developing
 code and testing job scripts and simply getting used to the cluster
@@ -85,9 +85,8 @@ Launch 2 hour interactive session
 
     $ sinteractive -t 2:0
 
-See also interactive usage section below for advanced examples and  `VNC
-Server for Graphical Interactive
-Use <LINK/VNC%20Server%20for%20Graphical%20Interactive%20Use>`__.
+See also interactive usage section below for advanced examples and
+:doc:`../usage/vnc`.
 
 Job examples
 ============
@@ -362,8 +361,8 @@ process per allocated CPU, we can instead do "srun -n 48 executable"
 
 In a case where the program in question uses Master-Worker-paradigm,
 where there exists a single worker that coordinates the rest,
-see \ `Compute node local
-drives <LINK/Compute%20node%20local%20drives>`__
+see \ :doc:`Compute node local
+drives <localstorage>`
 
 Most of the compute nodes are equipped with one SATA disk drive though
 there are some with 2 and 4. See  ``slurm features``  for the full list.
@@ -376,7 +375,7 @@ there are some with 2 and 4. See  ``slurm features``  for the full list.
 GPU cards with --gres=
 ^^^^^^^^^^^^^^^^^^^^^^
 
-See details at \ `Slurm commands <LINK/Slurm%20commands>`__
+See details at :doc:`Slurm commands <../ref/slurm>`
 
 Links and other additional materials
 ====================================

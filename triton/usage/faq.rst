@@ -58,7 +58,7 @@ out run
       YOUR_LOGIN     YOUR_DEPART      None
 
 That should return your login and associated department/school. If
-empty, please contact your `local support team <LINK/Getting%20help>`__
+empty, please contact your `local support team <../help>`
 member and ask to add your account to SLURM db.
 
 How can I find out the remaining runtime of my job/allocation
@@ -76,7 +76,7 @@ environment variable SLURM\_JOB\_ID to refer to the current job ID.
 ``Disk quota exceeded`` error
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*Main article: `Triton Quotas <LINK/Triton%20Quotas>`__* *and*
+*Main article: `Triton Quotas <quotas>`\ * *and*
 
 ::
 
@@ -125,7 +125,7 @@ My $WRKDIR is not visible on my department computer
 
 Most likely your Kerberos ticket has expired. If you log in with a
 password or use 'kinit', you can get an another ticket. See page on
-`data storage <LINK/Data%20Storage>`__ for more information.
+`data storage <../tut/storage>` for more information.
 
 While copying to $WRKDIR with rsync or cp I'm getting 'Disk quota exceeded' error, though my quota is fine.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -365,7 +365,7 @@ out run
       YOUR_LOGIN     YOUR_DEPART      None
 
 That should return your login and associated department/school. If
-empty, please contact your `local support team <LINK/Getting%20help>`__
+empty, please contact your `local support team <../help>`
 member and ask to add your account to SLURM db.
 
 How can I find out the remaining runtime of my job/allocation
@@ -383,7 +383,7 @@ environment variable SLURM\_JOB\_ID to refer to the current job ID.
 ``Disk quota exceeded`` error
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*Main article: `Triton Quotas <LINK/Triton%20Quotas>`__* *and*
+*Main article: `Triton Quotas <quotas>`\ * *and*
 
 ::
 
@@ -635,8 +635,8 @@ a high performance filesystem Lustre still has its own bottlenecks, and
 one of the common Lustre troublemakers are ``ls -lr`` or ``ls --color``
 which generate lots of requests to Lustre meta servers which regular
 usage by all users may get whole system in stuck. Please follow the
-recommendations given at the last section at `Data storage on the Lustre
-file system <LINK/Data%20storage%20on%20the%20Lustre%20file%20system>`__
+recommendations given at the last section at :doc:`Data storage on the Lustre
+file system <lustre>`
 
 How do I subscribe to triton-users maillist?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -821,18 +821,19 @@ a high performance filesystem Lustre still has its own bottlenecks, and
 one of the common Lustre troublemakers are ``ls -lr`` or ``ls --color``
 which generate lots of requests to Lustre meta servers which regular
 usage by all users may get whole system in stuck. Please follow the
-recommendations given at the last section at `Data storage on the Lustre
-file system <LINK/Data%20storage%20on%20the%20Lustre%20file%20system>`__
+recommendations given at the last section at :doc:`Data storage on the Lustre
+file system <lustre>`
 
 How do I subscribe to triton-users maillist?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Having a user account on Triton also means being on the
-triton-users@lists.aalto.fi mailist. That is where support team sends
+mailing list automatically (since 2016). That is where support team sends
 all the Triton related announcements. All the Triton users MUST be
-subscibed to the list. Just in case you are not yet there, please send
+subscibed to the list. (Before 2016, if you were not on the list, you
+should have mailed us to fix this: but this isn't need now.  Just in case you are not yet there, please send
 an email to your local team member and ask to add your email. Same also
-if you want to replace your email with a new one.
+if you want to replace your email with a new one.)
 
 How to unsubscribe? You will be removed from the maillist as soon as
 your Triton account is deleted from the system. Otherwise no way.

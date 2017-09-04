@@ -69,6 +69,33 @@ __ http://python.org
 
 ----
 
+Linking within files.  If possible use a permanent reference (next
+section), but you can also refer to specific files by name::
+
+  :doc:`../tut/interactive.rst`  (recommended)
+  `../tut/interactive.rst`       (short, no warning if link breaks)
+
+  With different text:
+  :doc:`Text <../tut/interactive.rst>`  (recommended)
+  `Text <../tut/interactive.rst>`       (short, no warning if link breaks)
+
+
+----
+
+`Permanent references across files <http://www.sphinx-doc.org/en/stable/markup/inline.html#role-ref>`_
+
+Label things this way (note only one colon)::
+
+  .. _label-name:
+
+Reference them this way::
+
+  :ref:`label-name`     (recommended)
+  `label-name`          (short, no warning if link breaks)
+  `Text <label-name>`   (short, no warning if link breaks)
+
+----
+
 ::
 
    Block quote
@@ -95,18 +122,6 @@ like this::
    like this::
 
        Block quote
-
-----
-
-`Permanent references across files <http://www.sphinx-doc.org/en/stable/markup/inline.html#role-ref>`_
-
-Label things this way (note only one colon)::
-
-  .. _label-name:
-
-Referenec them this way::
-
-  `label-name`
 
 ----
 

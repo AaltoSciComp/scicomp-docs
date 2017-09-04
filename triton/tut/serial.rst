@@ -12,7 +12,7 @@ must use a batch queuing system (slurm) in order to allocate resources.
 The queue system takes computation requests from everyone, figures out
 the optimal use of resources, and allocates code to nodes. You have to
 start your code in a structured way in order for this to work. Our
-`previous tutorial <LINK/Interactive%20jobs%20tutorial>`__ showed how to
+`previous tutorial <interactive>` showed how to
 run things directly from the command line, without any scripting needed.
 Now let's see how to put these into scripts for making things more
 automated and reproducible.
@@ -74,13 +74,8 @@ efficiently scheduled. If you exceed the limits, the jobs will be
 killed. At least you need to set ``--time``, ``--mem-per-cpu`` or
 ``--mem``.
 
-See the reference page or the `details
-page <LINK/Running%20programs%20on%20Triton>`__ for more information and
-advanced usage.
-
-Click here to see all the slurm options.
-
-`Slurm commands <LINK/Slurm%20commands>`__
+See the :doc:`reference page <../ref/index>` or the :doc:`details page
+<../usage/general>` for more information and advanced usage.
 
 The same parameters can be used in
 
@@ -142,7 +137,7 @@ Next steps
 ==========
 
 There is a full description of `running jobs on
-Triton <LINK/Running%20programs%20on%20Triton>`__, and the `reference
-page <LINK/Reference>`__ lists many useful commands.
+Triton <../usage/general>`, and the `reference
+page <../ref/index>` lists many useful commands.
 
 

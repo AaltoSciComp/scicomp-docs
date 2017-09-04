@@ -92,7 +92,7 @@ Disk arrays
 ===========
 
 All compute nodes and front-end are connected to `DDN SFA12k storage
-system <LINK/Data%20storage%20on%20the%20Lustre%20file%20system>`__:
+system <usage/lustre>`:
 large disk arrays with the Lustre filesystem on top of it cross-mounted
 under ``/scratch`` directory. The system provides about 1.8PB of disk
 space available to end-user.

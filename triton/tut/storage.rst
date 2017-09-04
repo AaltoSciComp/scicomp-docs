@@ -2,26 +2,26 @@
 Data storage
 ============
 
-Triton has various different filesystems.  Each has a purpose, and when
+Triton has various different filesystems.  Each has a purpose, and when
 you are dealing with the large data sets or intensive IO, efficiency
 becomes important.
 
 Roughly, we have
 
--  Home directories: for user init files, some small config files, etc. 
+-  Home directories: for user init files, some small config files, etc.
    No calculation data. Daily backup.
 -  Lustre (/scratch): a high-performance filesystem shared among all
-   nodes. The primary place for calculations, data analyzes etc.  Not
+   nodes. The primary place for calculations, data analyzes etc.  Not
    backed up.
--  Local disks are on each node separately.  For the fastest IOs with
+-  Local disks are on each node separately.  For the fastest IOs with
    single-node jobs. It is cleaned up after job is finished.
--  RAM filesystems.  As fast as memory. Data lost when node is rebooted.
+-  RAM filesystems.  As fast as memory. Data lost when node is rebooted.
 
 Compare this to what is available at Aalto:
 
 -  Aalto Linux has a separate home directory, not shared with Triton.
 -  Departments can have their own shares, called variously project,
-   work, teamwork, archive.  These are not on triton, because they are
+   work, teamwork, archive.  These are not on triton, because they are
    not high performance enough (it just takes one person to start
    50-node job that brings it down for everyone).
 
@@ -33,13 +33,13 @@ Triton storage locations
 Think about I/O before you start! - General notes
 =================================================
 
-When people think of computer speed, they usually think of CPU speed. 
+When people think of computer speed, they usually think of CPU speed.
 But this is missing an important factor: how fast can data get to the
-CPU?  In very many cases, I/O (input/output) is the true bottleneck. 
+CPU?  In very many cases, I/O (input/output) is the true bottleneck.
 This must be considered just as much as code efficiency.
 
 The answer is that users have a variety of needs, and a variety of
-filesystems.  The following checklist aims to help you to choose the
+filesystems.  The following checklist aims to help you to choose the
 best approach for you calculations.
 
 | Do you need IO in the first place?
@@ -49,17 +49,17 @@ best approach for you calculations.
 -  Some programs use local disk as swap-space. Only turn on if you know
    it is reasonable.
 
-Avoid many small files! Use a few big ones instead.  See the `Compute
-node local drives <LINK/Compute%20node%20local%20drives>`__ page for
-further details and script examples.
+Avoid many small files! Use a few big ones instead.  See the :doc:`Compute
+node local drives <../usage/localstorage>` page for further details and script
+examples.
 
 **ramfs** - highly temporary storage - $XDG\_RUNTIME\_DIR
 =========================================================
 
 On Triton, $XDG\_RUNTIME\_DIR is a ramfs, which means that it looks like
-files but is stored only in memory.  Because of this, it is extremely
-fast, but has no persistence whatsoever.  Use it if you have to make
-small temporary files that don't need to last long.  Note that this is
+files but is stored only in memory.  Because of this, it is extremely
+fast, but has no persistence whatsoever.  Use it if you have to make
+small temporary files that don't need to last long.  Note that this is
 no different than just holding the data in memory, if you can hold in
 memory that's better.
 
@@ -70,7 +70,7 @@ Quotas
 All directories under /scratch (as well as /home) have quotas. Two
 quotas are set per-filesystem: disk space and files number.
 
-Disk quota and current usage are printed with the command "quota". 
+Disk quota and current usage are printed with the command "quota". 
 'space' is for the disk space and 'files' for the total files number
 limit. There is a separate quota for groups on which the user is a
 member.
@@ -89,7 +89,7 @@ member.
     /scratch     some-group              534G    524G    524G       -    7534   1000M   1000M       -
     /scratch     other-group              16T     20T     20T       -   1088M      5M      5M       -
 
- 
+ 
 
 Transferring files
 ==================
@@ -116,16 +116,16 @@ limited disk quota in your home directory.
 Rsync
 ^^^^^
 
-Rsync is similar to scp, but is smarter at restarting files.  Use rsync
+Rsync is similar to scp, but is smarter at restarting files.  Use rsync
 for large file transfers.
 
 Using sshfs
 ^^^^^^^^^^^
 
 sshfs is a neat program that lets you mount remote filesystems via ssh
-only.  It is at least well-supported in Linux, for other operating
-systems check.  The below command makes ``triton_work`` on your local
-computer access all files in ``/scratch/work/USERNAME``.  Can be done
+only.  It is at least well-supported in Linux, for other operating
+systems check.  The below command makes ``triton_work`` on your local
+computer access all files in ``/scratch/work/USERNAME``.  Can be done
 with other folders.
 
 ::
@@ -157,12 +157,12 @@ directories at ``/m/nbe/scratch``/$project/.
 PHYS
 ^^^^
 
-Directories available on demand through SSHFS. See \ `Data
-transferring <https://wiki.aalto.fi/display/TFYintra/Data+transferring>`__ page
+Directories available on demand through SSHFS. See the `Data
+transferring <https://wiki.aalto.fi/display/TFYintra/Data+transferring>`__ page
 at PHYS Intranet (accessible by PHYS users only).
 
 CS
 ^^
 
 Work directories are available at ``/m/cs/work/``, and group scratch
-directories at\ `` /m/cs/scratch/$project/.``
+directories at `` /m/cs/scratch/$project/.``
