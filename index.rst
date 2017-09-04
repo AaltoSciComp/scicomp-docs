@@ -19,7 +19,29 @@ News
    :maxdepth: 2
 
    news/index.rst
-   
+
+The Aalto environment
+=====================
+
+Aalto provides a wide variety of support for scientific computing.
+For a summary, see the `IT Services for Research page
+<https://inside.aalto.fi/display/ITServices/IT+Services+for+Research>`_.
+For information about data storage at Aalto, see the section on data
+management below.
+
+.. toctree::
+
+
+
+Data management
+===============
+.. toctree::
+   :maxdepth: 2
+
+   data/index.rst
+
+
+
 Triton
 ======
 
@@ -32,23 +54,19 @@ capacity.
 
    triton/index.rst
 
-Data management
-===============
-.. toctree::
-   :maxdepth: 2
-
-   data/index.rst
-
 
 Scientific computing
 ====================
+In this section, you find general (not Aalto specific) scientific
+computing resources
+
 .. toctree::
    :maxdepth: 2
 
    scicomp/index.rst
 
-
-
+External links
+~~~~~~~~~~~~~~
 
 About, indices, and tables
 ==========================

@@ -9,31 +9,32 @@ agencies are beginning to demand good data management and openness.
 Thus, knowing how to manage data is perhaps the most important
 untaught modern skill.
 
-But it's not just that: There are good and bad methods of managing data.
+But it's not just that: There are good and bad methods of managing
+data.  For example,
 
-A bad strategy is to store everything in one folder on your own
-laptop: there's a very high chance that you will someday lose it all.
-A better strategy is to use a secure centralized service - preferably
-an Aalto service, since you get guaranteed support for free.
+* A **bad strategy** is to store everything in one folder on your own
+  laptop: there's a very high chance that you will someday lose it all.
+  A **better strategy** is to use a secure centralized service - preferably
+  an Aalto service, since you get guaranteed support for free.
 
-A bad strategy is for everyone to do their own thing and put no effort
-into recording what they have done: in five years, when the group is
-almost completely changed, that data will be unusable.  A better
-strategy is to make sure things are documented and archived as soon
-you get them (and keep this up to date), so that the data can continue
-to serve you in the future.
+* A **bad strategy** is for everyone to do their own thing and put no effort
+  into recording what they have done: in five years, when the group is
+  almost completely changed, that data will be unusable.  A **better
+  strategy** is to make sure things are documented and archived as soon
+  you get them (and keep this up to date), so that the data can continue
+  to serve you in the future.
 
-A bad strategy is to assume all data is proprietary Aalto information:
-eventually funders will demand more and you won't be prepared, and
-Aalto will remain an island, instead of a hub that others want to work
-with and build on.  A better strategy is to always consider openness,
-licensing, and privacy from the start (even if you don't do it right
-away), and always separate data based on level of confidentiality so
-that you can share or open later.
+* A **bad strategy** is to assume all data is proprietary Aalto information:
+  eventually funders will demand more and you won't be prepared, and
+  Aalto will remain an island, instead of a hub that others want to work
+  with and build on.  A **better strategy** is to always consider openness,
+  licensing, and privacy from the start (even if you don't do it right
+  away), and always separate data based on level of confidentiality so
+  that you can share or open later.
 
 You can find more formal information at the `Aalto Research Data
 Management pages
-<http://www.aalto.fi/en/research/research_data_management/>`.
+<http://www.aalto.fi/en/research/research_data_management/>`_.
 
 Data management strategies and plans
 ====================================
@@ -96,3 +97,10 @@ inside and outside of Aalto:
    intro.rst
    ida.rst
    encryption.rst
+
+External links
+==============
+
+* `Finland Open Science Initiative (ATT) <http://openscience.fi/>`_
+* `Aalto Research Data Management pages
+  <http://www.aalto.fi/en/research/research_data_management/>`_.

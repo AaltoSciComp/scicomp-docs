@@ -143,7 +143,7 @@ What should a project contain? How much should go into the same project?
       access all data in different projects.
 
 Types of data
--------------
+=============
 
 There are different broad categories of data:
 
@@ -179,7 +179,7 @@ There are different broad categories of data:
 +--------------+--------------+--------------+--------------+--------------+--------------+
 
 Types of storage
-----------------
+================
 
 There are different qualities we want in filesystems: large, fast,
 confidential, highly available, backed up, mounted everywhere, lasts
