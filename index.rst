@@ -35,6 +35,13 @@ management below.
 
 Data management
 ===============
+
+On this site, you can some information and instructions on data
+management.  Higher level information can be found on the `Aalto
+Research Data Management pages
+<http://www.aalto.fi/en/research/research_data_management/>`_.
+
+
 .. toctree::
    :maxdepth: 2
 

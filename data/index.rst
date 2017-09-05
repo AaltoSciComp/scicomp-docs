@@ -81,7 +81,10 @@ backups, sharing, large amounts of space, and guaranteed support.
    While this should theoretically be possible anywhere in Aalto, we
    are still trying to make sure that this is sooth.
 
-* Storage locations (coming)
+.. toctree::
+
+   aaltostorage
+
 * Organizing data (coming)
 * Remote access of data locations (coming)
 
