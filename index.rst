@@ -88,3 +88,6 @@ About, indices, and tables
 * :ref:`genindex`
 * :ref:`search`
 
+.. |jotain| replace:: Tämä on jotain
+
+|jotain| tekstiä

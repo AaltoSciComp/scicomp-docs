@@ -302,4 +302,4 @@ installed MPI-supporting Python versions to different toolchains.
 
 Using mpi4py is quite easy. Example is provided below.
 
-.. include:: ../examples/python_mpi4py.rst
+.. include:: ../examples/python/mpi4py/mpi4py.rst

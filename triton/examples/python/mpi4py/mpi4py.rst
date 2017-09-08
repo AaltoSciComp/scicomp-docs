@@ -3,13 +3,13 @@ Python MPI4py
 
 A simple script :download:`mpi4py.py <mpi4py.py>` that utilizes mpi4py.
 
-.. literalinclude:: mpi4py.py
+.. literalinclude:: /triton/examples/python/mpi4py/mpi4py.py
 
 Running mpi4py.py using only srun:
 
-.. literalinclude:: mpi4py.sh
+.. literalinclude:: /triton/examples/python/mpi4py/mpi4py.sh
 
 Example sbatch script :download:`mpi4py.slrm <mpi4py.slrm>` when running mpi4py.py through
 sbatch:
 
-.. literalinclude:: mpi4py.slrm
+.. literalinclude:: /triton/examples/python/mpi4py/mpi4py.slrm
