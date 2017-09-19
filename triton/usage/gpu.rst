@@ -7,7 +7,7 @@ Overview
 
 Triton has GPU cards from two different Nvidia generations. SL390s G7
 nodes with Fermi generation cards (M2050,M2070,M2090) and PowerEdge
-C4130 servers with newer Kelper generation K80 cards.
+C4130 servers with newer Kelper and Pascal generations of K80/P100 cards.
 
 Hardware breakdown
 ==================
@@ -22,6 +22,8 @@ Hardware breakdown
 | Tesla M2050   | 10             | gpu[12-16]   | Fermi          | 448                       | 3G                | 2.0                       | m2050                |
 +---------------+----------------+--------------+----------------+---------------------------+-------------------+---------------------------+----------------------+
 | Tesla K80\*   | 12             | gpu[20-22]   | Kepler         | 2x2496                    | 2x12GB            | 3.7                       | teslak80             |
++---------------+----------------+--------------+----------------+---------------------------+-------------------+---------------------------+----------------------+
+| Tesla P100    | 20             | gpu[23-27]   | Pascal         | 3854                      | 16GB              | 6.0                       | teslak80             |
 +---------------+----------------+--------------+----------------+---------------------------+-------------------+---------------------------+----------------------+
 
 * Note: Tesla K80 cards are in essence two GK210 GPUs on a single chip
