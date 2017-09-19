@@ -43,3 +43,71 @@ these conditions of use:
    be found at `Acknowledgement of Triton usage
    <acknowledgingtriton>`.
 
+
+
+Personal data file
+------------------
+This covers the technically logging metadata which is generated in the
+course of using Triton.  It does not cover any data which users store
+on the cluster: for that, the user is the controller and Science-IT is
+only a processor.
+
+Controller
+~~~~~~~~~~
+Aalto Science-IT, Aalto University, Espoo, Finland.
+
+Contact
+~~~~~~~
+`Contact information <help>`_.  Please use the support email alias for
+account and personal data queries.
+
+Name of the register
+~~~~~~~~~~~~~~~~~~~~
+Triton
+
+Triton stores the information necessary for provision of its
+services.  This includes:
+
+* Connection logging information.
+* Job submission logs.
+* Filesystem metadata, including total storage amounts.
+* Storage quota allocations.
+
+..
+  Outside processors
+
+The purpose for processing the personal data
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Data is processed and stored in order to provide a HPC cluster
+service, in accordance with the acceptable use policy above.  The
+cluster may only be used to support Aalto (not personal) activities,
+and all usage metadata is owned by Aalto University.
+
+Content of the register
+~~~~~~~~~~~~~~~~~~~~~~~
+
+All directory information is provided by Aalto University, and is not
+stored here.  Only usernames are stored as primary keys within logs
+and database systems.  Contact information or names are not stored.
+
+Sources of information
+~~~~~~~~~~~~~~~~~~~~~~
+Data is produced during the use of Triton for research purposes.  This
+data is generated directly by users while using the cluster.
+
+Account and directory information is provide by Aalto University, and
+in general not stored or processed here.
+
+Regular destinations of disclosed data
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Data may be used for internal Aalto reporting and accounting, and for
+public reporting in non-identifiable forms.
+
+All users of the cluster may inspect the job statistics of the entire
+cluster (including all other users).
+
+
+Principles of security
+~~~~~~~~~~~~~~~~~~~~~~
+Data is stored in Finland in Aalto or CSC data centers.  Access is
+only via Aalto account.  Data is not transmitted outside of Finland.
