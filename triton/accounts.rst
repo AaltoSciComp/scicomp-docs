@@ -2,24 +2,30 @@
 Triton accounts
 ===============
 
-You need to request a Triton account from your local Triton support
-member, however, the account information (username, password, shell,
-etc) is shared with the Aalto account. Triton access is available on
-request for Aalto School of Science staff and students.
+You need to request Triton access separately, however, the account
+information (username, password, shell,
+etc) is shared with the Aalto account so there is not actually a
+separate account. Triton access is available to any researcher at
+Aalto for free.  Resources are funded by departments, and distributed
+by a fairshare algorithm: members of departments and schools which
+provide direct funding have a greater share.
 
-Please contact your :doc:`local Triton support team
-member <help>` and we will set up your account.  You
-can come by in person, or you can contact us by your department's normal
-IT mail address (PHYS,NBE,CS,ELEC).
+Please contact us via the :doc:`support email address <help>` via the
+support email address and we will set up your account.
 
 A few prerequisites:
 
 -  you must have valid Aalto account
--  you must have working email address
+-  you must have working email address (Aalto)
 -  you must accept :doc:`Triton usage
    policies <usagepolicy>`: requesting access to
    Triton cluster at Aalto University, you accept all the conditions
-   listed in the Triton usage policies
+   listed in the Triton usage policies.
+-  You should tell us your department/school in your account creation
+   request.
+
+You should have Triton access if you are in the ``triton-users``
+group at Aalto: ``groups`` shows this on Aalto linux machines.
 
 Password change and other issues
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -28,9 +34,9 @@ Since your Triton account is a regular Aalto account, for any password
 change, shell change etc use Aalto services.  You can always do these on
 the server kosh.aalto.fi (at least).
 
-If you are in doubts, in case of any account related issue your primary
-point of contact is your local support team member. Do not post such
-issues on the tracker.
+If you are in doubts, in case of any account related issue your
+primary point of contact is your local support team member via the
+support email address. Do not post such issues on the tracker.
 
 Account disabling/deleting
 ~~~~~~~~~~~~~~~~~~~~~~~~~~

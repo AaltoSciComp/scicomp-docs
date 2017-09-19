@@ -9,13 +9,14 @@ In case you got to this page directly, you are now on the Triton
 documentation site. See `the main page <index>`
 for the index.
 
-Tracker
-~~~~~~~
+Issue tracker
+~~~~~~~~~~~~~
 
 We keep track of cluster issues
 at https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues. Feel
-free to post your issue there. Either admins or one of the experienced
-users can reply. The system is accessible from anywhere in the world,
+free to post your issue there. Either admins or other
+users can reply --- and you should feel free to reply and help others,
+too. The system is accessible from anywhere in the world,
 but you need to login with your Aalto account. All newly created issues
 are reported to admins by email.
 
@@ -29,9 +30,12 @@ Email ticketing system
 For private issues you can also contact us via `our email alias`__
 (available from our Wiki page - login required). This is primarily
 intended for specific issues such as requesting new accounts, quotas,
-etc.  Please avoid using personal emails as people may be absent. You
-will get the fastest response via the tracker, and more people may
-be able to provide hints.
+etc.  Please avoid sending personal mails directly to admins, because
+it is best for all admins to be aware of issues, people may be absent,
+and personal emails are likely to be lost.
+
+Most general issues should be reported to the issue tracker instead,
+not by email.  Email is primarily for accounts related queries.
 
 __ https://wiki.aalto.fi/display/Triton/Getting+help
 
@@ -59,10 +63,12 @@ track the progress and not forget.
 Triton support team
 ~~~~~~~~~~~~~~~~~~~
 
-Most of us are members of your department's support teams, so can answer
-questions about balancing use of Triton and your department's
-computers.  There is also the Aalto IT Services support who handles
-Aalto-wide issues.
+Most of us are members of your department's support teams, so can
+answer questions about balancing use of Triton and your department's
+computers.  We also like it when people drop by and talk with us, so
+that we can better plan our services.  In general, don't mail us
+directly - use either the issue tracker above or the support email
+address.  You can address your request to a specific person.
 
 .. csv-table::
    :header-rows: 1
