@@ -2,185 +2,67 @@
 Scicomp garage
 ==============
 
-Triton Garage is a help session for scientific computing at Aalto
-organized by the Science-IT team (Triton admins). There are two things
-that can happen: A *short*, *introductory* presentation on some topic
-that can get you started, or free form individual help. It's the best
-time to talk to the ones behind scientific computing at Aalto.
-
-This is a place to get stuff done, so bring your laptop and coffee/food,
+The Aalto Scicomp Garage is a help session for scientific computing at
+Aalto organized by the Science-IT team (Triton admins).  It's the best
+time to talk to the people behind scientific computing at Aalto.  This
+is a place to get stuff done, so bring your laptop and coffee/food,
 and come hang out.
+
+There are two things that can happen: During the whole time, free-form
+help from Triton admins.  Second, there may be a *short*,
+*introductory* presentation on some topic that can get a discussion
+started.  Both usually happen in parallel, and we decide the best
+organization each week.
 
 Come if you want to:
 
--  Give feedback
 -  Solve problems
 -  Discuss bigger problems
 -  Network with others who are doing similar work
 -  Learn something new
-
-Also see our summer HPC kickstart for more in-depth and hands-on
-introduction to similar topics.
+-  Give feedback
 
 Schedule
 ========
 
--  Days: Triton garage is every week from 13-14 on Wednesdays. Every
+-  Days: Triton garage is every week from 14:00-15:00 on Tuesdays. Every
    other week, there is a short talk. Otherwise, we are only there for
    questions and support.
 -  Time: We promise to be there only the first 30 minutes. After this,
    we leave once we are done helping attendees. So if you are coming,
    come in the first 30 minutes.
--  Location: Presentation weeks (listed below) are as below. Any other
-   week is CS building T4.
+-  Location: See below.  U121a_ and U121b_  (in main building),
+   T4_ (CS building).
+
+.. _U121a: http://usefulaaltomap.fi//select/main-U121a
+.. _U121b: http://usefulaaltomap.fi/#!/select/main-U121b
+.. _T4:    http://usefulaaltomap.fi/#!/select/r030-T4
+
+.. csv-table::
+   :header-rows: 1
+   :delim: |
+
+   Date (default Tue)   | Time (default 14:00-15:00)  | Loc   | Topic
+   26.9     |       | T4    |
+   3.10     |       | U115b |
+   10.10    |       | T4    |
+   17.10    |       | U121b |
+   24.10    |       | T4    |
+   31.10    |       | U121b |
+   7.11     |       | T4    |
+   14.11    |       | U121b |
+   21.11    |       | T4    |
+   28.11    |       | U121a |
+    5.12    |       | T4    |
+   12.12    |       | U121a |
+   19.12    |       | T4    |
+
+
+Topics
+======
+* `Triton intro: interactive jobs <../triton/tut/interactive>`_
+* `Git <http://rkd.zgib.net/scicomp/scip2015/git.html>`_
 
-Autumn (2017)
-
-Spring (2018)
-
-#
-
-Topic
-
-wk
-
-date
-
-(topic)
-
-Loc
-
-wk
-
-date
-
-(topic)
-
-Loc
-
-1
-
-Triton Intro
-
-32
-
-9.aug
-
-2
-
-10.jan
-
-2
-
-git 1
-
-34
-
-23.aug
-
-4
-
-24.jan
-
-3
-
-performance monitoring
-
-36
-
-6.sep
-
-6
-
-7.feb
-
-4
-
-(special topic)
-
-38
-
-20.sep
-
-8
-
-21.feb
-
-5
-
-(special topic)
-
-40
-
-4.oct
-
-10
-
-7.mar
-
-6
-
-Triton intro
-
-42
-
-18.oct
-
-12
-
-21.mar
-
-7
-
-git 1
-
-44
-
-1.nov
-
-14
-
-4.apr
-
-8
-
-git 2
-
-46
-
-15.nov
-
-16
-
-18.apr
-
-9
-
-(special topic)
-
-48
-
-29.nov
-
-18
-
-2.may
-
-10
-
-(special topic)
-
-50
-
-13.dec
-
-20
-
-16.may
-
-11
-
-22
 
 Possible special topics
 =======================
