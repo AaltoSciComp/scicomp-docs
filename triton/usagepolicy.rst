@@ -1,5 +1,8 @@
-Acceptable Use Policy
-=====================
+Usage policies and legal
+========================
+
+Acceptable Use Policy and Terms of Service
+------------------------------------------
 
 By using the Triton cluster resources, you shall be deemed to accept
 these conditions of use:
@@ -45,12 +48,17 @@ these conditions of use:
 
 
 
-Personal data file
-------------------
-This covers the technically logging metadata which is generated in the
-course of using Triton.  It does not cover any data which users store
-on the cluster: for that, the user is the controller and Science-IT is
-only a processor.
+Data file (rekisteriseloste)
+----------------------------
+This covers the metadata which is generated in the course of using
+Triton.  Only username and uid are stored within Triton, and actual
+account information is provided by Aalto ITS.  We do not consider
+Triton to hold a personal data file, but for full disclosure we
+describe the data we do hold.
+
+This does not cover any data which users store on the cluster:
+for that, the user is the controller and Science-IT is only a
+processor.
 
 Controller
 ~~~~~~~~~~
@@ -63,18 +71,7 @@ account and personal data queries.
 
 Name of the register
 ~~~~~~~~~~~~~~~~~~~~
-Triton
-
-Triton stores the information necessary for provision of its
-services.  This includes:
-
-* Connection logging information.
-* Job submission logs.
-* Filesystem metadata, including total storage amounts.
-* Storage quota allocations.
-
-..
-  Outside processors
+Triton cluster metadata
 
 The purpose for processing the personal data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -85,10 +82,16 @@ and all usage metadata is owned by Aalto University.
 
 Content of the register
 ~~~~~~~~~~~~~~~~~~~~~~~
+Triton stores the information necessary for provision of its services,
+including accounting, funding, and security.  This includes logs of
+all operations and metadata of stored data.  Data is only generated
+when a users uses the cluster.  For example:
 
-All directory information is provided by Aalto University, and is not
-stored here.  Only usernames are stored as primary keys within logs
-and database systems.  Contact information or names are not stored.
+* Connection logs
+* Job submission and statistics logs
+* Filesystem and storage metadata and logs
+
+Directory and account information is provided by Aalto University ITS.
 
 Sources of information
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -100,12 +103,11 @@ in general not stored or processed here.
 
 Regular destinations of disclosed data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Data may be used for internal Aalto reporting and accounting, and for
-public reporting in non-identifiable forms.
+Data may be used for internal Aalto reporting and accounting, and used
+in non-identifiable forms in public reports and statistics.
 
 All users of the cluster may inspect the job statistics of the entire
 cluster (including all other users).
-
 
 Principles of security
 ~~~~~~~~~~~~~~~~~~~~~~
