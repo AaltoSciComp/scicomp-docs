@@ -5,8 +5,8 @@ Singularity Containers
 
 For more information see: http://singularity.lbl.gov/
 
-Singularity
-===========
+General information
+===================
 
 Before usage
 ~~~~~~~~~~~~
@@ -55,16 +55,16 @@ singularity_wrapper
 ~~~~~~~~~~~~~~~~~~~
 
 ``singularity_wrapper`` is written so that when you load a module written
-for a singularity image, singularity_wrapper knows what parameters to
-use. Differences include:
+for a singularity image, ``singularity_wrapper`` knows what parameters to
+use. These include:
 
-#. Choosing version appropriate image
+#. Choosing appropriate image based on module version
 #. Binding of basic paths (-B /l:/l, -B /m:/m, /scratch:/scratch)
-#. Setting working directory within image (if needed)
 #. Loading of system libraries within images (if needed) (e.g. -B
    /lib64/nvidia:/opt/nvidia)
+#. Setting working directory within image (if needed)
 
-singularity_wrapper enables the three base commands, but with small
+singularity_wrapper enables the same three base commands, but with small
 differences:
 
 #. ``singularity_wrapper shell <shell>`` - Gives user the requested shell
@@ -73,6 +73,15 @@ differences:
    image.
 #. ``singularity_wrapper run <parameters>`` - Runs the singularity image. What this
    means depends on the image in question.
+
+Creating your own Singularity images to run in Triton
+=====================================================
+
+All images used in Triton are done using a templating scheme described
+in `this repository <https://github.com/AaltoScienceIT/singularity-templating>`_.
+Definition templates will be shared on `Aalto GitLab <https://version.aalto.fi/gitlab/AaltoScienceIT>`_ or on `GitHub <https://github.com/AaltoScienceIT>`_. Build environment is
+reserved for admins, but we can take pull requests if you want to
+contribute to the definitions.
 
 .. include:: ../examples/openfoam/openfoam.rst
 
