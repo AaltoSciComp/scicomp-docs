@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATCH -p gpushort
+#SBATCH -t 00:10:00
+#SBATCH -n 1
+#SBATCH --gres=gpu:teslak80:1
+#SBATCH --mem=8G
+
+module use /share/apps2/singularity/modules
+module purge
+module load OpenPose
+
+singularity_wrapper exec ./build/examples/openpose/openpose.bin --video examples/media/video.avi --no_display --write_video $WRKDIR/openpose.avi
