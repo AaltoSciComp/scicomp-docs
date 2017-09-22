@@ -83,7 +83,10 @@ backups, sharing, large amounts of space, and guaranteed support.
 
 .. toctree::
 
+   outline
+   services
    aaltostorage
+   datapolicy
 
 * Organizing data (coming)
 * Remote access of data locations (coming)
@@ -97,9 +100,10 @@ inside and outside of Aalto:
 .. toctree::
    :maxdepth: 1
 
-   intro.rst
-   ida.rst
-   encryption.rst
+   organization
+   ida
+   encryption
+   opensource
 
 External links
 ==============

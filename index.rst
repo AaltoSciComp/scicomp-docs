@@ -30,7 +30,9 @@ For information about data storage at Aalto, see the section on data
 management below.
 
 .. toctree::
+   :maxdepth: 2
 
+   aalto/index
 
 
 Data management
@@ -45,7 +47,7 @@ Research Data Management pages
 .. toctree::
    :maxdepth: 2
 
-   data/index.rst
+   data/index
 
 
 
