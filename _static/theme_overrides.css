@@ -1,0 +1,12 @@
+/* override table width restrictions:
+   https://github.com/rtfd/sphinx_rtd_theme/issues/117 */
+.wy-table-responsive table td, .wy-table-responsive table th {
+  white-space: normal !important;
+}
+
+@media screen and (min-width: 767px) {
+  .wy-table-responsive {
+    max-width: 100%  !important;
+    overflow: visible  !important;
+  }
+}
