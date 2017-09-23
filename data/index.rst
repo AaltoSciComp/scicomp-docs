@@ -1,6 +1,6 @@
-===============
-Data management
-===============
+====
+Data
+====
 
 Data binds all research together today.  Even if you don't consider
 yourself to do data-based research, the results of your work becomes
@@ -45,27 +45,16 @@ for your daily work that guides your collaboration (practical DMP).
 This section will contains some information on both, but focused on
 the latter.
 
-No matter what your project, you want to start by thinking how you
-will handle your data (this can be "real data", notes, code, papers,
-etc).  This will make sure that your team works together well and
-doesn't end up with a big mess in a few months - or that you can't
-work together because you can't share information.  For this, see the
-`A4 DMP template`__.  This site is focused on practical DMPs.
-
-__ https://drive.google.com/drive/u/0/folders/0BzlGN0F6ew2hc0hGVXVTaGZwQjQ
-
-* Suggested DMP for large experimental data (coming)
-* Suggested DMP for simulations or computer-generated data (coming)
-* Suggested DMP for data from humans (surveys, interviews, etc)
-  (coming)
-
-
 For information on Funder DMPs, see the `Aalto Research Data
 Management pages`__.  We recommend that you first think about your
 practical DMP, so that the Funder DMP comes naturally.  The Funder DMP
 has more of a focus on sharing, standardization, and openness.
 
 __ http://www.aalto.fi/en/research/research_data_management/data_management_planning/
+
+.. toctree::
+
+   plans
 
 Aalto data storage
 ==================
@@ -82,6 +71,7 @@ backups, sharing, large amounts of space, and guaranteed support.
    are still trying to make sure that this is sooth.
 
 .. toctree::
+   :maxdepth: 1
 
    outline
    services
@@ -91,8 +81,8 @@ backups, sharing, large amounts of space, and guaranteed support.
 * Organizing data (coming)
 * Remote access of data locations (coming)
 
-Tools and resources
-===================
+Tools, resources, and instructions
+==================================
 
 There are a wide variety of other tools that may be useful, both
 inside and outside of Aalto:
