@@ -1,20 +1,14 @@
-:orphan:
+.. csv-table::
+   :header-rows: 1
+   :delim: |
 
-+------------------------------------+------------------------------------------------------------+
-| Command                            | Description                                                |
-+====================================+============================================================+
-| slurm q ; slurm qq                 | Status of your queued jobs (long/short)                    |
-+------------------------------------+------------------------------------------------------------+
-| slurm partitions                   | Overview of partitions (A/I/O/T=active,idle,other,total)   |
-+------------------------------------+------------------------------------------------------------+
-| slurm cpus <partition>             | list free CPUs in a partition                              |
-+------------------------------------+------------------------------------------------------------+
-| slurm history [1day\|2hour\|...]   | Show status of recent jobs                                 |
-+------------------------------------+------------------------------------------------------------+
-| slurm j <jobid>                    | Job details (only while running)                           |
-+------------------------------------+------------------------------------------------------------+
-| slurm s ; slurm ss <partition>     | Show status of all jobs                                    |
-+------------------------------------+------------------------------------------------------------+
+   Command                                  | Description
+   ``slurm q`` ; ``slurm qq``               | Status of your queued jobs (long/short)
+   ``slurm partitions``                     | Overview of partitions (A/I/O/T=active,idle,other,total)
+   ``slurm cpus`` *<partition>*             | list free CPUs in a partition
+   ``slurm history`` *[1day,2hour,...]*     | Show status of recent jobs
+   ``slurm j`` *<jobid>*                    | Job details (only while running)
+   ``slurm s`` ; ``slurm ss`` *<partition>* | Show status of all jobs
 
 **Full slurm command help:**
 
@@ -57,12 +51,11 @@
 **Other advanced** commands (many require lots of parameters to be
 useful):
 
-+---------------+-------------------------------+
-| Command       | Description                   |
-+===============+===============================+
-| squeue        | Full info on queues           |
-+---------------+-------------------------------+
-| sinfo         | Advanced info on partitions   |
-+---------------+-------------------------------+
-| slurm nodes   | List all nodes                |
-+---------------+-------------------------------+
+.. csv-table::
+   :header-rows: 1
+   :delim: |
+
+   Command           | Description
+   ``squeue``        | Full info on queues
+   ``sinfo``         | Advanced info on partitions
+   ``slurm nodes``   | List all nodes
