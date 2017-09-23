@@ -43,7 +43,7 @@ automatically selects partitions.  If you notice the script doing
 something wrong, submit an issue and we can look at it.  It roughly uses
 this logic:
 
--  Do you use --gres=gpu\* ?  If so, do GPU partitions.
+-  Do you use ``--gres=gpu`` ?  If so, do GPU partitions.
 -  Otherwise, default to batch
 -  If your time limit is less than the short time limit, also add in the
    short partitions, too
@@ -160,7 +160,7 @@ Programs using multiple threads must have their behaviour described to
 Slurm in terms of the number of threads needed. To launch a
 multithreaded job we tell slurm that we want a single task, but that
 that one task requires several CPU's. This is done with the
---cpus-per-task=N (or the short form -c N) option and should match the
+``--cpus-per-task=``\ *N* (or the short form ``-c`` *N*) option and should match the
 number of computational threads used by your application.
 
 When moving a program from a Linux workstation to the cluster, please

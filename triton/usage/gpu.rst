@@ -213,7 +213,7 @@ After that create a conda environment to install tensorflow in:
     linux_x86_64.whl
 
 For some (unclear) reason you have to run the pip command twice, first
-with '--ignore-installed' and second time without to make the conda
+with ``--ignore-installed`` and second time without to make the conda
 environment work.
 
 Now we can create a batch script (``submit_cifar.sh``) that runs this

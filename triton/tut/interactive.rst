@@ -65,8 +65,8 @@ used of your job. There is a little bit about this below and more in
 the next tutorial.
 
 
-srun --pty (shell)
-==================
+srun ``--pty`` (shell)
+======================
 
 So, let's say you need to go one step up. You want an actual shell to
 do several things. You can do that this way:
