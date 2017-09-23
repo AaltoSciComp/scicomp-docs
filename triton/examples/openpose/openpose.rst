@@ -12,6 +12,6 @@ Example :download:`script </triton/examples/openpose/openpose.slrm>` to be run w
 be seen below.
 
 Usage
-^^^^^
+~~~~~
 
 .. literalinclude:: /triton/examples/openpose/openpose.slrm

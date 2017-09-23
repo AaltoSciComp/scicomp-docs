@@ -1,3 +1,4 @@
+:orphan:
 
 +------------------------+--------------------+------------------+-------------------+---------------------+-------------------+----------------+
 | Toolchain              | Compiler version   | MPI version      | BLAS version      | ScaLAPACK version   | FFTW version      | CUDA version   |

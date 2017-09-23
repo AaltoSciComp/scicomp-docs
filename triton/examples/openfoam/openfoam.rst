@@ -14,7 +14,7 @@ with their respective paths so all program calls are available
 automatically.
 
 Usage
-^^^^^
+~~~~~
 
 This example shows how you can run damBreak example. Firstly, let's load
 the OpenFOAM module and create a folder for the example::

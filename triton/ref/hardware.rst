@@ -1,3 +1,5 @@
+:orphan:
+
 
 .. csv-table::
    :delim: |
