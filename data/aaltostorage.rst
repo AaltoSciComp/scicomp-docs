@@ -217,6 +217,9 @@ Filesystem list
       happen. (still, it's better than your laptop or a drive on your
       desk. Human error is the greatest risk here).
    -  Accessible on ``magi``/``taltta`` at the same path.
+   -  SMB mounting:
+      ``smb://lgw01.triton.aalto.fi/scratch/$dept/$dir/`` or
+      ``lgw02``.
 
 -  **work:** personal large file storage and work (Triton)
 
@@ -224,6 +227,7 @@ Filesystem list
    -  This is the equivalent of scratch, but per-person. Data is lost
       once you leave.
    -  Accessible on ``magi``/``taltta`` at the same path.
+   - SMB mounting: ``smb://lwg01.triton.aalto.fi/work/$username`` or ``lgw02``
 
 -  **local:** local disks for high performance
 

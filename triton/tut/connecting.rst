@@ -56,10 +56,7 @@ We highly recommend you follow these steps on the first login to set up
 passwordless SSH.  This will make your life much more pleasant, and can
 be used when connecting to computers other than Triton. Using keys will
 save you the trouble of entering passwords every time, since ssh stores
-the key once and uses it for logging you in in the future. SSH keys are
-also required if you plan on using Matlab on Windows, see our `MDCS
-guide <https://wiki.aalto.fi/display/Triton/Matlab+Distributed+Computing+Server#MatlabDistributedComputingServer-Windows>`__
-for instructions.
+the key once and uses it for logging you in in the future.
 
 **First, create the keypair on your own computer.** **Do not copy
 private keys from other computers - one computer=one private key, and

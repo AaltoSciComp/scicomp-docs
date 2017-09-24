@@ -21,7 +21,7 @@ of service for those who need it, but users must discuss with staff.
 This policy is jointly implemented by CS-IT and Science-IT.
 
 Summary for users
-~~~~~~~~~~~~~~~~~
+=================
 
 -  Do not store research data in home directories, this is not
    accessible should something happen to you or when you leave. They
@@ -44,7 +44,7 @@ Summary for users
    you must ask us.
 
 Summary for data directory owners (professors or long-term staff)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=================================================================
 
 -  Data in the shared directories controlled by you and you make
    decisions on it.
@@ -71,12 +71,12 @@ is above, but the full details are written below for avoidance of
 doubts.
 
 Scope
-
+~~~~~
 #. This policy concerns all data stored in CS-IT provided locations or
    managed by CS-IT staff.
 
 Responsibilities
-
+~~~~~~~~~~~~~~~~
 #. In data processing and rules CS-IT follows Finnish legislation and
    Aalto university policies in this order.
 #. If there are agreements with a third party organization for data
@@ -88,7 +88,7 @@ Responsibilities
    instruction on best practices.
 
 Storage
-
+~~~~~~~
 #. **All data must have owner and given lifespan. Data cannot be stored
    indefinitely**, but of course lifespan is routinely extended when
    needed. There are other long-term archival services.
@@ -108,7 +108,7 @@ Storage
    backed up.**
 
 Ownership, and access rights, and end-of-life
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #. Access rights in this policy refer only to file system rights. Other
    rights (e.g. IPR) to the stored information are not part of this
    policy.
@@ -131,7 +131,7 @@ Ownership, and access rights, and end-of-life
    discussed with CS-IT.
 
 Security/Confidentiality
-
+~~~~~~~~~~~~~~~~~~~~~~~~
 #. **Unless there is separate agreement, there is no particular
    guaranteed service level regarding confidential data. However, all
    services are expected to be as secure as possible.**
@@ -154,7 +154,7 @@ Security/Confidentiality
    security, since technical security is only one part of the process.**
 
 General practices
-
+~~~~~~~~~~~~~~~~~
 #. Details about centrally provided folders and best practices are
    available online in CS Intranet.
 #. Changes to policy will be coordinated by CS department management.

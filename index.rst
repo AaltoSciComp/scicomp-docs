@@ -7,11 +7,12 @@
 Aalto Scientific Computing
 ==========================
 
-This contains documentation from `Aalto Science-IT
-<http://science-it.aalto.fi>`_, covering resources at Aalto and
-beyond.  Science-IT is responsible for running the `Triton
-<triton/index>` cluster at Aalto, and providing advice on other
-scientific computing tasks.
+This contains documentation about scientific, and research computing
+at Aalto and beyond.  It is mainly maintained by `Aalto Science-IT
+<http://science-it.aalto.fi>`_, who are responsible for scientific
+computing at Aalto and running the `Triton <triton/index>` cluster.
+Science-IT is organized from the School of Science, but they are (and
+these pages are) an Aalto-level infrastructure that supports everyone.
 
 News
 ====
@@ -77,8 +78,13 @@ computing resources
 External links
 ~~~~~~~~~~~~~~
 
-About, indices, and tables
-==========================
+Metadocs
+========
+
+These docs are open source, and we encourage anyone to contribute.
+See the README and the github links at the top of every page.  Any
+other service unit at Aalto that wishes to use this location for their
+own docs should join us.
 
 .. toctree::
    :maxdepth: 0
@@ -88,7 +94,3 @@ About, indices, and tables
 
 * :ref:`genindex`
 * :ref:`search`
-
-.. |jotain| replace:: Tämä on jotain
-
-|jotain| tekstiä

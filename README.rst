@@ -70,7 +70,8 @@ __ http://python.org
 ----
 
 Linking within files.  If possible use a permanent reference (next
-section), but you can also refer to specific files by name::
+section), but you can also refer to specific files by name.  Note,
+that for internal links there are no trailing underscores::
 
   :doc:`../tut/interactive.rst`  (recommended)
   `../tut/interactive.rst`       (short, no warning if link breaks)
