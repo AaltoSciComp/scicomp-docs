@@ -8,7 +8,7 @@ Open Source at Aalto
    conjunction with experts from Research and Innovation services
    (both the legal and commercialization side).  Then, we have heard
    that supposedly the `Aalto Research Data Management Policy
-   <rdmpolicy>`_ was supposed to have this same effect, however
+   <aaltordm>`_ was supposed to have this same effect, however
    reading it it requires a lot of mental stretching to get to this
    point.  In fact, the RDM policy, if interpreted this way, would
    allow you to do essentially anything, including things which are
@@ -20,6 +20,8 @@ Open Source at Aalto
    you and Aalto's interests are protected.  If you are doing
    something that is beyond what is in here, you probably want to talk
    to someone at Aalto anyway.
+
+.. _aaltordm: http://www.aalto.fi/en/research/research_data_management/
 
 
 This document describes the procedure for Aalto employees releasing the
@@ -331,7 +333,7 @@ References
    \ `https://inside.aalto.fi/download/attachments/43223812/2016\_02\_10\_datapolicy.pdf?version=1&modificationDate=1455967763618&api=v2 <https://inside.aalto.fi/download/attachments/43223812/2016_02_10_datapolicy.pdf?version=1&modificationDate=1455967763618&api=v2>`__
 
 -  Aalto copyright advice:
-   \ `http://copyright.aalto.fi/ <http://copyright.aalto.fi/>`__
+   `http://copyright.aalto.fi/ <http://copyright.aalto.fi/>`__
 
 -  Aalto IP guide: forthcoming, 2017
 

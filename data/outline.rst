@@ -3,7 +3,7 @@ Outline of academic data management
 ===================================
 
 This page is about how to use data - not the raw storage part, which
-you can find at `data storage <aaltostorage>`_.  Aalto has high-level
+you can find at :doc:`data storage <aaltostorage>`.  Aalto has high-level
 information on `research data management <aaltordm>`_, too.
 
 .. _aaltordm: http://www.aalto.fi/en/research/research_data_management/
@@ -172,10 +172,10 @@ responsibility to follow CS-IT's rules. Otherwise you are on your own:
    can use an existing group, but consider how many people will have
    access.
 -  Store data only in this directory on the network drive. It can be
-   accessed from CS computers, see `data
-   storage <aaltostorage>`__.
--  To access data from laptops (Aalto or your own), use `network drive
-   mounting <LINK/Remote%20access>`__, not copying. Also consider if
+   accessed from CS computers, see :doc:`data
+   storage <aaltostorage>`.
+-  To access data from laptops (Aalto or your own), use :doc:`network drive
+   mounting <../aalto/remoteaccess>`, not copying. Also consider if
    temporary files: don't store intermediate work or let your programs
    save temporary files to your own computer.
 -  Don't transfer the data to external media (USB drives, external hard
@@ -268,8 +268,8 @@ available for this, such as
 -  the EU-funded `Zenodo <https://zenodo.org/>`__ for open published
    data (embargoed data, or closed data is also somewhat supported).
 -  Finland's `IDA <http://openscience.fi/ida>`__ (for large data, long
-   term storage, closed or open). There are `Aalto-specific instructions
-   for IDA here <LINK/IDA>`__.
+   term storage, closed or open). There are :doc:`Aalto-specific instructions
+   for IDA here <../data/ida>`.
 -  There is supposed to be an alternate `Finnish digital preservation
    service <http://openscience.fi/digital-preservation>`__ coming in
    2017, and it's unclear what the intention of IDA is in light of that.
@@ -380,7 +380,7 @@ data:
 | solution       |                |                |                |                |
 +----------------+----------------+----------------+----------------+----------------+
 
-See `data storage <aaltostorage>`_ for full info.
+See :doc:`data storage <aaltostorage>` for full info.
 
 Instructions
 ------------
@@ -429,7 +429,7 @@ owners should be long-term (e.g. professor level) staff.
 -  Expiration time (default=max 2 years, extendable. max 5 years
    archive). We will ping you for management/renewal then.
 -  Which filesystems and what quota. (project, archive, scratch). See
-   the `the storage page <aaltostorage>`__.
+   the :doc:`the storage page <aaltostorage>`.
 -  Basic description of purpose of group.
 -  Is there any confidential or secret data (see above for disclaimer).
 -  Any other notes that CS-IT should enforce, for example check NDA

@@ -8,8 +8,8 @@ Aalto IT Services, and some provided by Science IT. For clarity, this
 page describes them all, so that you can have an easy reference.
 
 When starting a new project, please first consider the big picture of
-good Research Data Management: See the `department
-page <index>`__ and `Aalto's
+good Research Data Management: See the :doc:`general data management
+pages here <index>` and `Aalto's
 page <http://www.aalto.fi/en/research/research_data_management/>`__. On
 Aalto's page, there are links to solutions for Opening, Collaborating
 and Archiving. Our department's resources are just one part of that.
@@ -20,15 +20,15 @@ supported.
 **Other operating systems:** Windows and OSX workstations do not
 currently have any of these paths mounted. In the future, project and
 archive may be automatically mounted. You can always remote mount via
-sshfs or SMB. See the `remote access <../aalto/remoteaccess>`__ page for
+sshfs or SMB. See the :doc:`remote access <../aalto/remoteaccess>` page for
 Linux, Mac, and Windows instructions for home,project, and archive. In
 OSX, there is a shortcut in the launcher for mounting home. In Windows
 workstations, this is Z drive.
 
 **Laptops:** Laptops have their own filesystems, including home
 directories. These are not backed up automatically. Other directories
-can be mounted as described on the `remote
-access <../aalto/remoteaccess>`__ page.
+can be mounted as described on the :doc:`remote
+access <../aalto/remoteaccess>` page.
 
 Summary table
 ~~~~~~~~~~~~~
@@ -240,9 +240,9 @@ Filesystem list
       permissions should protect most other cases.
    -  When you are done with the computer, you are also responsible for
       secure management/wiping/cleanup of this data.
-   -  See the note about disk wiping under `CS
-      Linux <LINK/CS%20Linux>`__ (under "when you are done with your
-      computer"). CSIT should do this, but if it's important you must
+   -  See the note about disk wiping under `Aalto
+      Linux <../aalto/linux>`__ (under "when you are done with your
+      computer"). IT should do this, but if it's important you must
       mention it, too.
 
 -  **tmpfs**: in-memory filesystem
@@ -281,7 +281,7 @@ check your scratch/work quotas on Triton.
 The scratch and work directories do quotas by unix group, and **there is
 a strange error about quota exceeded** that you may get sometimes when
 the unix group of the file or directory is wrong. See the full
-information at `Quotas <../triton/usage/quotas>`_ and summary below. You
+information at :doc:`Quotas <../triton/usage/quotas>` and summary below. You
 may have to fix this on Triton if the things below don't work.
 
 -  Symptoms: "Quota exceeded" when you are trying to make a new file in

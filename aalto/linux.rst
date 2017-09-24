@@ -24,8 +24,8 @@ Basics
    group can be set up, for example to apply custom configuration to one
    group's computers.
 -  Large scientific computing resources are provided by the Science-IT
-   project. `The compute cluster there is named
-   Triton <../triton/index>`__. Science-IT is a school of
+   project. :doc:`The compute cluster there is named
+   Triton <../triton/index>`. Science-IT is a school of
    science collaboration, and its administrators are embedded in NBE,
    PHYS, CS IT.
 -  Workstations are on a dedicated VLAN. The network port must be
@@ -152,7 +152,7 @@ Useful modules:
 Remote access
 ~~~~~~~~~~~~~
 
-See the `remote access page <remoteaccess>`__.
+See the :doc:`remote access page <remoteaccess>`.
 
 Laptops
 ~~~~~~~
@@ -180,7 +180,7 @@ Triton is not a main part of the department computers, but is heavily used by
 researchers. You should see the main documentation at the Triton user
 guide, but for convenience some is reproduced here.
 
--  `Triton user guide <../triton/index>`__
+-  :doc:`Triton user guide <../triton/index>`
 -  **You can request a dedicate group node as part of Triton**.
 
    -  This is paid however your group would normally pay for dedicated
@@ -215,7 +215,7 @@ guide, but for convenience some is reproduced here.
    -  TODO: make this actually happen.
 
 -  Triton was renewed in 2016.
--  All info in the `triton user guide <../triton/index>`__
+-  All info in the :doc:`triton user guide <../triton/index>`
 
 Common problems
 ~~~~~~~~~~~~~~~

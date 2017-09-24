@@ -104,8 +104,8 @@ Tutorials
    tut/connecting.rst
    tut/storage.rst
    tut/modules.rst
-   Interactive jobs - running your first command <tut/interactive.rst>
-   Running in the queue <tut/serial.rst>
+   Interactive jobs - running your first command <tut/interactive>
+   Running in the queue <tut/serial>
    tut/array.rst
 
 Detailed instructions
@@ -142,5 +142,5 @@ Reference and Examples
 .. toctree::
    :maxdepth: 1
 
-   ref/index.rst
-   examples/index.rst
+   ref/index
+   examples/index

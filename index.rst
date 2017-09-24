@@ -18,7 +18,7 @@ News
 .. toctree::
    :maxdepth: 2
 
-   news/index.rst
+   news/index
 
 The Aalto environment
 =====================
@@ -61,7 +61,7 @@ capacity.
 .. toctree::
    :maxdepth: 2
 
-   triton/index.rst
+   triton/index
 
 
 Scientific computing
@@ -72,7 +72,7 @@ computing resources
 .. toctree::
    :maxdepth: 2
 
-   scicomp/index.rst
+   scicomp/index
 
 External links
 ~~~~~~~~~~~~~~
@@ -83,10 +83,9 @@ About, indices, and tables
 .. toctree::
    :maxdepth: 0
 
-   README.rst
-   todo.rst
+   README
+   todo
 
-* `About this site and how to contribute <README.rst>`_
 * :ref:`genindex`
 * :ref:`search`
 
