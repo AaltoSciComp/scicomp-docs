@@ -22,14 +22,16 @@ one difference: the environment variable ``SLURM_ARRAY_TASK_ID``. You
 just need to have your job script or code read this variable and take
 the right action, depending on what you need to do.
 
+Below are four examples.  The first and third are probably most
+recommended for starting out.
+
+Different inputs
+~~~~~~~~~~~~~~~~
+
 In the example below, the ``$SLURM_ARRAY_TASK_ID`` is used to change to
 the right directory, make the application read the correct input file,
 and to generate output in a unique directory. This script is submitted
-with ``sbatch scirpt.sh`` .
-
-Same program, different data
-
-::
+with ``sbatch script.sh``::
 
     #!/bin/bash
     #SBATCH -n 1
@@ -42,6 +44,9 @@ Same program, different data
     srun ./my_application -input input_data_$SLURM_ARRAY_TASK_ID
     cd ..
 
+Different parameters in script
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 In the example below, we have the same program, but different command
 line parameters. In this case, everything is hard coded in the bash
 script itself. You could also do this directly inside your program, and
@@ -52,11 +57,7 @@ where you can see everything that has been run before. (Personally, I
 always try to set up a system where parameters are defined in one place,
 code in another, and I can always know what has been run for each output
 by looking in just one place. If you are going to be configuring stuff
-by hand anyway, better to have it all together.).
-
-Same program, different command line options
-
-::
+by hand anyway, better to have it all together.)::
 
     #!/bin/bash
     #SBATCH -n 1
@@ -76,13 +77,44 @@ Same program, different command line options
     srun ./my_application $ARGS
     cd ..
 
-Here is an example that lets you sample from a 2D array, with
-experiments and 10 replicas (but this might be approaching hackish, ask
-first if it makes sense to have them together):
+Read parameters from file
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-2D array: trials and replicas
+Now we do basically the same thing as above, but we have all of the
+parameters stored in another file ``arrayparams.txt``::
+
+  input_561 --opt1
+  input_418 --opt2
+  input_569 --opt1
+
+In our script, we use the ``sed`` program to read just one line from
+the file.  This is stored in the variable ``line``, and then we can
+use this however: in this case by using it as the parameters to the
+program.  Don't worry about how the ``sed`` command works - no one
+really knows, we just find it via a web search.  Note that the line
+numbers start at one, not zero!
 
 ::
+
+    #!/bin/bash
+    #SBATCH -n 1
+    #SBATCH -t 04:00:00
+    #SBATCH --mem-per-cpu=2500
+
+    n=$SLURM_ARRAY_TASK_ID                  # define n
+    line=`sed "${n}q;d" arrayparams.txt`    # get n:th line (1-indexed) of the file
+
+    # Do whatever with arrayparams.txt
+    ./my_program $line
+
+
+
+2D sampling
+~~~~~~~~~~~
+
+Here is an example that lets you sample from a 2D array, with
+experiments and 10 replicas (but this might be approaching hackish, ask
+first if it makes sense to have them together)::
 
     experiment=$(( $SLURM_ARRAY_TASK_ID / 10 ))
     replica=$(( $SLURM_ARRAY_TASK_ID % 10 ))
@@ -95,7 +127,8 @@ using the ``#SBATCH`` syntax, or on the command line. So, you can
 control what runs different ways. Let's say you have a fixed number of
 parameters: put that directly in the script. Or if you are just running
 replicas, run them from the command line as you need more. In any case,
-us the command line when things fail and you need to run more.
+us the command line when things fail and you need to repeat only
+certain runs.
 
 You don't have to have the job script use the variable. You could
 directly pass it as a command line argument to your program, use it to
