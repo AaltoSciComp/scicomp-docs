@@ -1,0 +1,22 @@
+# See confluence2html.py for info
+# Richard Darst, 2017.  MIT license
+
+
+input = $(wildcard source/*.html)
+
+rst = $(addprefix rst/, $(notdir $(addsuffix .rst, $(basename $(input)))))
+
+html = $(addprefix html/, $(notdir $(addsuffix .html, $(basename $(input)))))
+
+allrst: $(rst)
+#	echo $(input)
+#	echo $(rst)
+allhtml: $(html)
+
+
+rst/%.rst: source/%
+	pandoc -f html $< -o $@
+
+html/%.html: rst/%.rst
+	rst2html $< > $@
+
