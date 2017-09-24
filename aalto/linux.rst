@@ -3,18 +3,20 @@ Aalto Linux (Science-IT flavor specifically)
 ============================================
 
 
-CS-Linux is built on top of centrally maintained Aalto Ubuntu by Aalto
-IT Services (ITS). Both laptop and desktop setups are available.
+Aalto Linux is provided to all departments in Aalto.  Department IT
+co-maintains this, and in some departments provides more support
+(specifically, CS, NBE, PHYS at least).  It contains a lot of software
+and features to support scientific computing and data.  Both laptop and desktop
+setups are available.
 
 Basics
 ~~~~~~
 
 -  New installations are using Ubuntu 16.04 LTS, but some former
-   installations might have Ubuntu 14.04. The day-to-day management is
-   done by CSIT.
+   installations might have Ubuntu 14.04.
 -  `Some basic information from Aalto is availiable at
    Inside <https://inside.aalto.fi/display/ITServices/Linux>`__.
--  **Login is with Aalto credentials**. Anyone (not just CS staff) can
+-  **Login is with Aalto credentials**. Anyone can
    log in to any computer.
 -  All systems are effectively identical, except for local Ubuntu
    packages installed. Thus, switching machines is a low-cost operation.
@@ -24,8 +26,8 @@ Basics
 -  Large scientific computing resources are provided by the Science-IT
    project. `The compute cluster there is named
    Triton <../triton/index>`__. Science-IT is a school of
-   science collaboration, and its administrators are embedded in each
-   department's IT. In CS, these are Mikko and Simo.
+   science collaboration, and its administrators are embedded in NBE,
+   PHYS, CS IT.
 -  Workstations are on a dedicated VLAN. The network port must be
    configured before it can be turned on. You can request other network
    ports enabled for personal computers, just ask.
@@ -39,24 +41,25 @@ Basics
 
 **When requesting a new computer:**
 
--  Contact CSIT
+-  Contact your department IT
 -  Let us know who the primary user will be, so that we can set this
    properly.
 
 **When you are done with a computer:**
 
--  Ensure that data is cleaned up. Usually, if returned to CSIT disks
-   will be wiped, but if this is important then confirm this with them.
+-  Ensure that data is cleaned up. Usually, disks
+   will be wiped, but if this is important then you must explicitly
+   confirm before you leave.
    There may be data if you use the workstation local disks (not the
    default). There is also a local cache ($XDG\_CACHE\_HOME), which
    stores things such as web browser cache. Unix permissions protect all
    data, even if the primary user changes, but it is better safe than
-   sorry. Contact CSIT if you want wipes.
+   sorry. Contact IT if you want wipes.
 
 Project groups
 ~~~~~~~~~~~~~~
 
-Unix groups (managed by CSIT) provide access control to data and some
+Unix groups provide access control to data and some
 workstations. See `data management <../data/index>`__.
 
 Storage available
@@ -77,7 +80,8 @@ encryption password. Enter something secure and remember it - you have
 only one chance. Should you want to change this password, take the
 computer to an Aalto ITS service desk. They can also add more passwords
 for alternative users for shared computers. Aalto ITS also has a backup
-master key.
+master key.  (If you have local root access, you can do this with
+``cryptsetup``, but if you mess up there's nothing we can do).
 
 Primary User
 ~~~~~~~~~~~~
@@ -87,7 +91,7 @@ install software from the existing software repositories and ssh
 remotely to the desktops.**
 
 -  Primary users are implemented as a group with name
-   \`$hostname-primaryuser\`. You can check primary users by using the
+   ``$hostname-primaryuser``. You can check primary users by using the
    group querying commands above.
 -  If you have a laptop setup, make sure you have the PrimaryUser
    privileges!
@@ -111,34 +115,39 @@ If you have PrimaryUser privileges, you can install Ubuntu packages
 using one of the following commands:
 
 -  By going to the Ubuntu Software Center (Applications -> System Tools
-   -> Administration -> Ubuntu Software Centre)
--  aptdcon --install $ubuntu\_package\_name
--  pkcon install $ubuntu\_package\_namesoftware
--  By requesting CSIT to make a package available across all computers
+   -> Administration -> Ubuntu Software Centre).  Note: some software
+   doesn't appear here!  Use the next option.
+-  ``pkcon install $ubuntu_package_name``  (search for stuff using
+   ``apt search``)
+-  ``aptdcon --install $ubuntu_package_name``
+-  By requesting IT to make a package available across all computers
    as part of the standard environment. Help us to create a good
    standard operating environment!
 
 The module system
 ^^^^^^^^^^^^^^^^^
 
-The command \`module\` provides a way to manage various installed
+The command ``module`` provides a way to manage various installed
 versions of software across many computers. This is the way that we
 install custom software and newer versions of software, if it is not
 available in Ubuntu. Note that these are shell functions that alter
 environment variables, so this needs to be repeated in each new shell
 (or automated in login)
 
--  \`module avail\` to list available package.
--  \`module load $name\` to load a module. This adjusts environment
-   variables to bring various directories into PATH, LD\_LIBRARY\_PATH,
+-  See the :doc:`Triton module docs <../triton/tut/modules>` docs for
+   details.
+-  ``module avail`` to list available package.
+-  ``module load $name`` to load a module. This adjusts environment
+   variables to bring various directories into ``PATH``, ``LD_LIBRARY_PATH``,
    etc.
 -  We will try to keep important modules synced across the workstations
-   and Triton, but let us know
+   and Triton, but let us know.
 
 Useful modules:
 
--  \`anaconda2\` will always be kept up to date with the latest Python
-   Anaconda distribution, and kept synced across CS and Triton.
+-  ``anaconda3`` and ``anaconda2`` will always be kept up to date with the latest Python
+   Anaconda distribution, and we'll try to keep this in sync across
+   Aalto Linux and Triton.
 
 Remote access
 ~~~~~~~~~~~~~
@@ -148,15 +157,14 @@ See the `remote access page <remoteaccess>`__.
 Laptops
 ~~~~~~~
 
--  You can get laptops with CS Linux on it. The are also managed in
-   CSIT.
+-  You can get laptops with Linux on it.
 -  Each user should log in the first time while connected to the Aalto
    network, to cache authentication information.
 -  Home directories can be synced with the Aalto home directories. This
-   is done using unison. TODO: what about this?
+   is done using unison. TODO: not documented, what about this?
 -  If you travel, make sure that your primary user is set correctly
    before you go. The system configuration can't be updated remotely.
--  Otherwise environment is like the workstations
+-  Otherwise, environment is like the workstations.
 -  If the keychain password no longer works (it is an old Aalto password
    and you have since changed it), see `this page on changing the
    keyring
@@ -168,7 +176,7 @@ Laptops
 Triton
 ~~~~~~
 
-Triton is not a main part of the CS computers, but is heavily used by CS
+Triton is not a main part of the department computers, but is heavily used by
 researchers. You should see the main documentation at the Triton user
 guide, but for convenience some is reproduced here.
 
@@ -195,8 +203,8 @@ guide, but for convenience some is reproduced here.
 
 -  We will try to have similar software installed in workstation and
    Triton module systems.
--  The paths **/m/cs/** are designed to be standard across computers
--  The **project** and **archive** filesystems are not available on all
+-  The paths ``/m/$dept/`` are designed to be standard across computers
+-  The *project* and *archive* filesystems are not available on all
    Triton nodes. This is because they are NFS shares, and if someone
    starts a massively parallel job accessing data from here, it will
    kill performance for everyone. Since history shows this will
@@ -207,9 +215,7 @@ guide, but for convenience some is reproduced here.
    -  TODO: make this actually happen.
 
 -  Triton was renewed in 2016.
--  It is the goal to eventually have virtual machines for non-batch
-   computing.
--  Triton login: login.triton.aalto.fi (requires account activation)
+-  All info in the `triton user guide <../triton/index>`__
 
 Common problems
 ~~~~~~~~~~~~~~~
@@ -238,11 +244,11 @@ Graphical User Interface on Aalto CS Linux desktop is sluggish, unstable or does
       found with key combo CTRL+ALT+F7.
    #. If you are running low on quota (blocks count is close quota), you
       should clean up some files and then reboot the workstation to try
-      GUI login again
+      GUI login again.
 
       -  You can find out what is consuming quota from terminal with
          command:
-         bash -c 'cd && du -sch .[!.]\* \* \|sort -h'
+         ``bash -c 'cd && du -sch .[!.]\* \* \|sort -h'``
 
 Enter password to unlock your login keyring
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -267,3 +273,41 @@ If changing password didn't help, then try this:
    right mouse key select "delete" and reboot the workstation. When
    logging in, the keyring application should use your logging key
    automatically.
+
+In linux some process is stuck and freezez the whole session
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+You can kill a certain (own) process via text console.
+
+How do I use eJournals, Netmot and other Aalto library services from home?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+There is a weblogin possibility at Aalto Library. After this, all
+library provided services are available. There are links for journals
+(nelli) and netmot.
+
+Rsync complains about Quota, even though there is plenty left.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The reason usually is that default ``rsync -av`` tries to preserver
+group. Thus, there is wrong group in the target. Try using
+``rsync -rlptDxvz --chmod=Dg+s <source> <target>``. This will make group
+setting correct on ``/scratch/`` etc and quota should then be fine.
+
+Quota exceeded or unable to write files to project / work / scratch / archive
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Most likely this is due to wrong Linux filesystem permissions. Quota
+is set per group (e.g. braindata) and by default file go to the
+default group (domain users). If this happens under some project,
+scratch etc directory it will complain about "Disk quota exceeded".
+
+In general this is fixed by admins by setting the directory
+permissions such that all goes ok automatically. But sometimes this
+breaks down. Some programs often are responsible for this (rsync, tar
+for instance).
+
+There are two easy ways to fix this
+
+- In terminal, run the command ``find . -type d -exec chmod g+rwxs {} \;``
+  under your project directory. After this all should be working
+  normally again.
+- If it's on scratch or work, see the :doc:`Triton quotas page <../triton/usage/quotas>`
+- Contact NBE-IT and we will reset the directory permissions for the given directory
