@@ -7,4 +7,5 @@ The Aalto environment
 
    linux
    remoteaccess
+   htcondor
    git
