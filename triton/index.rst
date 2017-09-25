@@ -56,6 +56,7 @@ Quick contents and links
        * `Quick Reference <ref/index>`
        * Triton Cheatsheet
        * `Triton FAQ <usage/faq>`
+       * `Scicomp Garage </news/garage>`
 
        **Scientific computing resources**
 
