@@ -38,13 +38,17 @@ If you are in doubts, in case of any account related issue your
 primary point of contact is your local support team member via the
 support email address. Do not post such issues on the tracker.
 
-Account disabling/deleting
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Account deactivation / remove from mailing list
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Your account currently lasts as long as your Aalto account does.  If you
-want to end your account early, contact us. This way you also get
-unsubscribed from triton-users maillist. Before you leave, please clean
-up your home/work/scratch directories data and let your local support
-team member to know that you are done.  Consider who should have your
-data after you are done. Note that scratch/work directory data are
-unrecoverable after deleting.
+Your account currently lasts as long as your Aalto account does. If
+you want to end your account early, contact your local support via the
+esupport-triton email address. This way, you will also be unsubscribed
+from the triton-users maillist (the mailing list is required for
+everyone who has an account).
+
+Before you leave, please clean up your home/work/scratch directories
+data. Consider who should have your data after you are done: does your
+group still need access to it?. You won't have access to the files
+after your account is deactivated. Note that scratch/work directory
+data are unrecoverable after deleting, which will happen eventually.
