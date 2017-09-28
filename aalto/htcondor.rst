@@ -261,10 +261,14 @@ remotely mounted) would make it really slow. Use
     should_transfer_files  = YES
     transfer_input_files   = file1.dat,file2.txt
 
-options instead. Then condor will copy all required (specified) files to
-its localdirectory and run jobs locally. Only when finished, it will
-return files back to the original submitting directory. This can of
-course be on NFS i.e. /net/project or /net/scratch.
+options instead. Then condor will copy all required (specified) files
+to its local spool directory and run jobs locally. Only when finished,
+it will return files back to the original submitting directory.  This
+original submitting directory should *not* be a NFS mounted directory
+such as your home directory, as in the Aalto environment those are
+mounted with Kerberos security, and if the Kerberos ticket has expired
+because you aren't working on your workstations, condor will not be
+able to access this directory and your job results will be lost.
 
 My job is in 'Idle' state, while there are resources available
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
