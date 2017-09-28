@@ -138,7 +138,7 @@ Top-level recommendations:
 #. Use this nice site: https://choosealicense.com/. It contains
    everything you need to know, including what is here.
 #. **MIT** for software which should be basically public domain,
-   **Apapche 2.0** for larger almost-public domain things. Anyone can
+   **Apache 2.0** for larger almost-public domain things. Anyone can
    use this for any purpose, including putting it in their own
    proprietary, non-open products.
 #. **GNU General Public License (GPL)** ("v2 or any later version") for
