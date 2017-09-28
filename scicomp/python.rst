@@ -2,10 +2,11 @@
 Python
 ======
 
-The scientific python ecosystem is available also on Aalto Linux
+The scientific python ecosystem is also available on Aalto Linux
 workstations, including the anaconda2 and anaconda3 modules providing
 the Anaconda python distribution. For a more indepth description see
 `python page under triton docs </triton/apps/python>`.
+
 
 The "brain" environment with mayavi
 ===================================
@@ -39,7 +40,7 @@ Finally, if you get binaries from the wrong environment (check with
 Installation (for admins)
 -------------------------
 
-The environment was create with the commands::
+The environment was created with the commands::
 
     $ ml purge
     $ ml anaconda2
