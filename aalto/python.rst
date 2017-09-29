@@ -5,7 +5,8 @@ Python
 The scientific python ecosystem is also available on Aalto Linux
 workstations, including the anaconda2 and anaconda3 modules providing
 the Anaconda python distribution. For a more indepth description see
-`python page under triton docs </triton/apps/python>`.
+the generic `python page under scientific computing docs
+</scicomp/python>`.
 
 
 The "brain" environment with mayavi
