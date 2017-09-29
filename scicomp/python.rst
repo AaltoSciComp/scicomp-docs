@@ -2,9 +2,9 @@
 Python
 ======
 
-*Note* : For triton specific instructions see `triton python page
- </triton/apps/python>`. For Aalto Linux workstation specific stuff, see
- `Aalto python page </aalto/python>`.
+*Note* For triton specific instructions see
+`triton python page </triton/apps/python>`.  For Aalto Linux workstation
+specific stuff, see `Aalto python page </aalto/python>`.
 
 Python is widely used high level programming language that is widely
 used in many branches of science.
