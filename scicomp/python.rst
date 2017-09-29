@@ -2,7 +2,7 @@
 Python
 ======
 
-*Note*: For triton specific instructions see `triton python page
+*Note* : For triton specific instructions see `triton python page
  </triton/apps/python>`. For Aalto Linux workstation specific stuff, see
  `Aalto python page </aalto/python>`.
 
