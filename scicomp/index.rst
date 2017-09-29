@@ -6,3 +6,4 @@ Scientific computing
    :maxdepth: 1
 
    git.rst
+   python
