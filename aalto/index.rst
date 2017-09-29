@@ -14,3 +14,4 @@ for Research page
    remoteaccess
    htcondor
    git
+   python
