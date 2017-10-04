@@ -143,6 +143,18 @@ Sin-function calculated in parallel with 10 tasks.::
        end 
        plot(X,Y,'b+:')
 
+
+Seeding the random number generator
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Note that by default MATLAB always initializes the random number
+generator with a constant value. Thus if you launch several matlab
+instances e.g. to calculate distinct ensembles, then you need to seed
+the random number generator such that it's distinct for each
+instance. In order to do this, you can call the rng() function,
+passing the value of $SLURM_ARRAY_TASK_ID to it.
+
+
 Parallel Matlab with Matlab's internal parallelization
 ------------------------------------------------------
 
