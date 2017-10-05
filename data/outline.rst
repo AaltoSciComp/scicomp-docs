@@ -3,7 +3,7 @@ Outline of academic data management
 ===================================
 
 This page is about how to use data - not the raw storage part, which
-you can find at :doc:`data storage <aaltostorage>`.  Aalto has high-level
+you can find at :doc:`data storage <../aalto/aaltostorage>`.  Aalto has high-level
 information on `research data management <aaltordm>`_, too.
 
 .. _aaltordm: http://www.aalto.fi/en/research/research_data_management/
@@ -78,7 +78,7 @@ used, and why it's needed, it's probably managed well.
 Read the full data management policy here (TODO).
 
 Information on all physical locations how to use them is on the `storage
-page <aaltostorage>`_.
+page <../aalto/aaltostorage>`_.
 
 Groups
 ~~~~~~
@@ -173,7 +173,7 @@ responsibility to follow CS-IT's rules. Otherwise you are on your own:
    access.
 -  Store data only in this directory on the network drive. It can be
    accessed from CS computers, see :doc:`data
-   storage <aaltostorage>`.
+   storage <../aalto/aaltostorage>`.
 -  To access data from laptops (Aalto or your own), use :doc:`network drive
    mounting <../aalto/remoteaccess>`, not copying. Also consider if
    temporary files: don't store intermediate work or let your programs
@@ -380,7 +380,7 @@ data:
 | solution       |                |                |                |                |
 +----------------+----------------+----------------+----------------+----------------+
 
-See :doc:`data storage <aaltostorage>` for full info.
+See :doc:`data storage <../aalto/aaltostorage>` for full info.
 
 Instructions
 ------------
@@ -429,7 +429,7 @@ owners should be long-term (e.g. professor level) staff.
 -  Expiration time (default=max 2 years, extendable. max 5 years
    archive). We will ping you for management/renewal then.
 -  Which filesystems and what quota. (project, archive, scratch). See
-   the :doc:`the storage page <aaltostorage>`.
+   the :doc:`the storage page <../aalto/aaltostorage>`.
 -  Basic description of purpose of group.
 -  Is there any confidential or secret data (see above for disclaimer).
 -  Any other notes that CS-IT should enforce, for example check NDA

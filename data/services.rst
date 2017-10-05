@@ -1,6 +1,10 @@
-=====================
-Data storage services
-=====================
+===============================
+Data storage services available
+===============================
+
+This page provides a list of common data storage services, and can
+help you select the right service for the type of data you have (see
+:doc:`organization`).
 
 
 Types of data
@@ -20,11 +24,14 @@ There are different broad categories of data:
    large, fast location.
 -  **Final published results/data:** You want this backed up and
    available for a very long time (forever?). Put in an open-access
-   repository such as Zenodo.
+   repository such as Zenodo.  Once it's in the archival, backups
+   should be done there.
+
+O = best, o = acceptable, x = bad, X = very bad
 
 +--------------+--------------+--------------+--------------+--------------+--------------+
-|              | Large        | Fast         | Confidential | Backups      | Long-term    |
-|              |              |              |              |              | archival     |
+|              | Large        | Fast         | Confidential | Frequent     | Long-term    |
+|              |              |              |              | Backups      | archival     |
 +==============+==============+==============+==============+==============+==============+
 | Code         |              |              |              | O            | O            |
 +--------------+--------------+--------------+--------------+--------------+--------------+
@@ -39,7 +46,7 @@ There are different broad categories of data:
 | data         |              |              |              |              |              |
 +--------------+--------------+--------------+--------------+--------------+--------------+
 
-Types of storage
+Storage services
 ================
 
 There are different qualities we want in filesystems: large, fast,
@@ -49,57 +56,35 @@ different places with different benefits. It is up to you to balance
 their use so that you can accomplish what you need. Compare this table
 to the types of data above. Use the right place for the right data.
 
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
-|           |           | Large     | Fast      | Confident | Backups   | Long-term | Shareable |
-|           |           |           |           | ial       |           | archival  |           |
-+===========+===========+===========+===========+===========+===========+===========+===========+
-| Triton    | scratch   | O         | O         | o         | X         | X         | O         |
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
-|           | work      | O         | O         | o         | X         | X         |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
-|           | Triton    | X         |           | o         | O         |           |           |
-|           | home      |           |           |           |           |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
-|           | Local     | o         | OO        | o         |           |           |           |
-|           | disks     |           |           |           |           |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
-|           | ramfs     |           | OOO       | O         |           |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
-| Depts     | /m/.../pr | o         | o         | O         | O         |           | o         |
-|           | oject     |           |           |           |           |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
-|           | /m/.../ar | o         | o         | O         | O         | o         | o         |
-|           | chive     |           |           |           |           |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
-| Aalto     | Aalto     |           |           | O         | O         |           |           |
-|           | home      |           |           |           |           |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
-|           | Aalto     |           |           | x         | X         | X         |           |
-|           | laptops   |           |           |           |           |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
-|           | Aalto     |           |           |           |           |           | O         |
-|           | webspace  |           |           |           |           |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
-|           | version.a |           |           | O         | O         | o         | O         |
-|           | alto.fi   |           |           |           |           |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
-| Finland   | funet     |           |           | o         |           |           | O         |
-|           | fileshare |           |           |           |           |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
-|           | CSC       | o         | o         |           |           |           | o         |
-|           | cPouta    |           |           |           |           |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
-|           | CSC Ida   | OO        | x         |           | O         | o         | o         |
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
-| Public    | github    |           |           | X         |           |           | O         |
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
-|           | Zenodo    |           |           |           |           | O         | O         |
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
-|           | Google    |           |           | X         |           |           | o         |
-|           | drive     |           |           |           |           |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
-|           | Own       |           |           | X         | X         | X         |           |
-|           | computers |           |           |           |           |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
-|           | Emails    |           |           | X         | X         | X         |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+O = best, o = acceptable, x = bad, X = very bad
+
+.. csv-table::
+   :delim: |
+   :header-rows: 1
+   :stub-columns: 2
+
+             |           | Large     | Fast      | Confidential | Backups   | Long-term archival | Shareable |
+   Triton    | scratch   | O         | O         | o         | X         | X         | O         |
+             | work      | O         | O         | o         | X         | X         |           |
+             |Triton home| X         |           | o         | O         |           |           |
+             |Local disks| o         | OO        | o         |           |           |           |
+             | ramfs     |           | OOO       | O         |           |           |           |
+   Depts     | /m/.../project| o     | o         | O         | O         |           | o         |
+             | /m/.../archive| o     | o         | O         | O         | o         | o         |
+   Aalto     | Aalto home|           |           | O         | O         |           |           |
+             | Aalto laptops |       |           | x         | X         | X         |           |
+             | Aalto webspace|       |           |           |           |           | O         |
+             | version.aalto.fi|     |           | O         | O         | o         | O         |
+   Finland   | funet fileshare|      |           | o         |           |           | O         |
+             | CSC cPouta| o         | o         |           |           |           | o         |
+             | CSC Ida   | OO        | x         |           | O         | o         | o         |
+   Public    | github    |           |           | X         |           |           | O         |
+             | Zenodo    |           |           |           |           | O         | O         |
+             | Google drive|         |           | X         |           |           | o         |
+             | Own computers|        |           | X         | X         | X         |           |
+             | Emails    |           |           | X         | X         | X         |           |
+
+Information
+===========
+
+TODO

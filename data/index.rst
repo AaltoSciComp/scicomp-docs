@@ -36,16 +36,26 @@ You can find more formal information at the `Aalto Research Data
 Management pages
 <http://www.aalto.fi/en/research/research_data_management/>`_.
 
-Data management strategies and plans
-====================================
+Big considerations
+==================
+
+.. toctree::
+   :maxdepth: 1
+
+   outline
+   organization
+   services
+   datapolicy
+   opensource
+
+Data management plans
+=====================
 
 A "data management plan" (DMP) can mean a formal thing that funders
-require (funder DMP).  However, it can also be a very practical thing
-for your daily work that guides your collaboration (practical DMP).
+require (funder DMP).  However, it also worth thinking about how
+you'll manage data on a day to day basis (practical DMP).
 This section will contains some information on both, but focused on
-the latter.
-
-For information on Funder DMPs, see the `Aalto Research Data
+the latter.  For information on Funder DMPs, see the `Aalto Research Data
 Management pages`__.  We recommend that you first think about your
 practical DMP, so that the Funder DMP comes naturally.  The Funder DMP
 has more of a focus on sharing, standardization, and openness.
@@ -65,21 +75,9 @@ centralized storage system - which Aalto provides for free and can be
 accessed from any computer.  By storing on a central system, you get
 backups, sharing, large amounts of space, and guaranteed support.
 
-.. note::
+See the :doc:`Aalto environment <../aalto/index>` section, and specifically
+:doc:`Aalto data storage <../aalto/aaltostorage>`
 
-   While this should theoretically be possible anywhere in Aalto, we
-   are still trying to make sure that this is sooth.
-
-.. toctree::
-   :maxdepth: 1
-
-   outline
-   services
-   aaltostorage
-   datapolicy
-
-* Organizing data (coming)
-* Remote access of data locations (coming)
 
 Tools, resources, and instructions
 ==================================
@@ -90,10 +88,8 @@ inside and outside of Aalto:
 .. toctree::
    :maxdepth: 1
 
-   organization
    ida
    encryption
-   opensource
 
 External links
 ==============

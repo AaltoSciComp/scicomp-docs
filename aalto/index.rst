@@ -11,6 +11,7 @@ for Research page
    :maxdepth: 1
 
    linux
+   aaltostorage
    remoteaccess
    htcondor
    git
