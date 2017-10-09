@@ -2,32 +2,28 @@
 Data organization
 =================
 
+How should data be stored?  On the simplest level, this asks "on what
+physical disks", but this page is concerned about something more
+high-level: how you organize data on those disks.
 
-.. note::
+Data organization is very important, because if you don't do it soon,
+you end up with a *epic* mess which you will never have time to clean
+up.  If you organize data well, then everything after becomes much
+easier: you can archive what you need.  Others can find what they
+need.  You can open what you need easily.
 
-   This is a work in progress.
+First steps: filesystems
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-Where should data be stored? How should it be handled so that it exists
-and someone can make sense of it 5 years from now? These are important
-questions but it's not always clear how to do things properly. It is not
-obvious how to do this, and it is rarely taught. There is a long way
-between processing your own data on your own computer for your own
-courses to taking part in high-level research.
+The first step is to pick the right filesystems to store on, which you
+can find on other pages here.
 
-This page provides a summary of different types of data and the types of
-storage locations available, so that they can be matched properly. It
-also provides some practical advice for organizing data both for single
-people and large, long-term projects.
+If you've picked a good storage locations, then you can share the data
+with multiple people automatically.  In this case, you really should
+pay attention to the advice on this page.  Even if you are the only
+person who can access the data, these tips will be quite useful to
+you.
 
-How to arrange data?
-====================
-
-Data management isn't just picking a place to put data and keeping
-everything there. You have to keep it organized so that you can archive
-the long-term parts, back up the important parts parts, and eventually
-get rid of the irrelevant parts at the end. If you don't think about
-this in advance, you will end up losing *all* of your data once drives
-fail, accounts expire, or someone stops copying it.
 
 Traditional organization
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -36,18 +32,18 @@ This is the traditional organization within a single person's project.
 The key concept is separation of code, original data, scratch data, and
 final outputs. Each is handled properly.
 
--  PROJECT/code/ - backed up and tracked in a version control system.
--  PROJECT/original/ - original and irreplaceable data. Backed up at the
+-  ``PROJECT/code/`` - backed up and tracked in a version control system.
+-  ``PROJECT/original/`` - original and irreplaceable data. Backed up at the
    same time it is placed here.
--  PROJECT/scratch/ - bulk data, can be regenerated from code+original
--  PROJECT/doc/ - final outputs, which should be kept for a very long
+-  ``PROJECT/scratch/`` - bulk data, can be regenerated from code+original
+-  ``PROJECT/doc/`` - final outputs, which should be kept for a very long
    term.
--  PROJECT/doc/paper1/
--  PROJECT/doc/paper2/
--  PROJECT/doc/opendata/
+-  ``PROJECT/doc/paper1/``
+-  ``PROJECT/doc/paper2/``
+-  ``PROJECT/doc/opendata/``
 
-When the project is over, code/ and doc/ can be backed up permanently
-(original/ is already backed up) and the scratch directory can be kept
+When the project is over, ``code/`` and ``doc/`` can be backed up permanently
+(``original/`` is already backed up) and the scratch directory can be kept
 for a reasonable time before it is removed (or put into cold storage).
 
 The most important thing is that code is kept separate from the data.
@@ -62,13 +58,13 @@ Multi-user
 The system above can be trivially adapted to suit a project with
 multiple users:
 
--  PROJECT/USER1/.... - each user directory has their own code/,
-   scratch/, and doc/ directories. Code is synced via the version
+-  ``PROJECT/USER1/....`` - each user directory has their own ``code/``,
+   ``scratch/``, and ``doc/`` directories. Code is synced via the version
    control system. People use the original data straight from the shared
    folder in the project.
--  PROJECT/USER2/....
--  PROJECT/original/ - this is the original data.
--  PROJECT/scratch/ - shared intermediate files, if they are stable
+-  ``PROJECT/USER2/....``
+-  ``PROJECT/original/`` - this is the original data.
+-  ``PROJECT/scratch/`` - shared intermediate files, if they are stable
    enough to be shared.
 
 For convenience, each user can create a symbolic link to the original/
@@ -82,13 +78,13 @@ users and research themes with in. As time goes on, once users leave,
 their directories can be cleaned up and removed. The same can happen for
 the themes.
 
--  PROJECT/USER1/SUBPROJECT1/...
--  PROJECT/USER1/SUBPROJECT2/...
--  PROJECT/USER2/SUBPROJECT1/...
--  PROJECT/original/
--  PROJECT/THEME/USER1/...
--  PROJECT/THEME/USER2/...
--  PROJECT/archive/
+-  ``PROJECT/USER1/SUBPROJECT1/...``
+-  ``PROJECT/USER1/SUBPROJECT2/...``
+-  ``PROJECT/USER2/SUBPROJECT1/...``
+-  ``PROJECT/original/``
+-  ``PROJECT/THEME/USER1/...``
+-  ``PROJECT/THEME/USER2/...``
+-  ``PROJECT/archive/``
 
 Common variants
 ~~~~~~~~~~~~~~~

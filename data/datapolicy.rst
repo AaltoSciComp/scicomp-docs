@@ -8,7 +8,7 @@ Science-IT data policy
    managed by the Science-IT team.
 
 In Aalto, large amounts of data with variety of requirements are
-being processed daily. This describes the responsibilities of CS-IT and
+being processed daily. This describes the responsibilities of IT support and
 users with respect to data management.
 
 Everyone should know the summary items below. The full policy is for
@@ -16,9 +16,9 @@ reference in case of doubts (items in **bold** are things which are not
 completely obvious).
 
 This policy is designed to avoid the most common problems by advance
-planning for the majority case. CS-IT is eager to provide a higher level
+planning for the majority case. Science-IT is eager to provide a higher level
 of service for those who need it, but users must discuss with staff.
-This policy is jointly implemented by CS-IT and Science-IT.
+This policy is jointly implemented by department IT and Science-IT.
 
 Summary for users
 =================
@@ -72,19 +72,19 @@ doubts.
 
 Scope
 ~~~~~
-#. This policy concerns all data stored in CS-IT provided locations or
-   managed by CS-IT staff.
+#. This policy concerns all data stored in the main provided locations or
+   managed by Science-IT staff (including its core departments).
 
 Responsibilities
 ~~~~~~~~~~~~~~~~
-#. In data processing and rules CS-IT follows Finnish legislation and
+#. In data processing and rules we follow Finnish legislation and
    Aalto university policies in this order.
 #. If there are agreements with a third party organization for data
    access those rules are honored next. Regarding this type of data
-   CS-IT must be consulted first prior to the storing the data.
+   we must be consulted first prior to the storing the data.
 #. Users are expected to follow all Aalto and CS policies, as well as
    good security practices.
-#. CS-IT is expected to provided a good service, data security, and
+#. IT is expected to provided a good service, data security, and
    instruction on best practices.
 
 Storage
@@ -99,9 +99,9 @@ Storage
 #. **Other centrally available folders (i.e. Project, Archive, Scratch)
    than HOME are meant for work related information only.**
 #. **Desktop computers are considered as stateless. They can be
-   re-installed at any point by CS-IT if necessary. Data stored on local
+   re-installed at any point by IT if necessary. Data stored on local
    workstations is always considered as temporary data and is not backed
-   up. CS-IT will still try to inform users of changes.**
+   up. IT support will still try to inform users of changes.**
 #. Backed-up data locations are listed. **It is the user's
    responsibility to ensure that data is stored in backed-up locations
    as needed. Mobile devices (laptops) and personal workstations are not
@@ -119,7 +119,7 @@ Ownership, and access rights, and end-of-life
    permissions (possibility to read, write, copy, modify and delete) of
    these files belongs to group. There is not more granular access, for
    example single files with more restrictive permissions. Permissions
-   will be fixed by CS-IT on request from group members.**
+   will be fixed by IT on request from group members.**
 #. **The group owner-on-file can make any decisions related to data
    access, management, or end-of-life.**
 #. Should a data owner of a group directory become unavailable or unable
@@ -128,36 +128,37 @@ Ownership, and access rights, and end-of-life
    including end-of-life. This defaults to their supervisor (e.g. head
    of department), but should be discussed on data opening.
 #. Should researchers need a more complex access scheme, this must be
-   discussed with CS-IT.
+   discussed with IT support.
 
 Security/Confidentiality
 ~~~~~~~~~~~~~~~~~~~~~~~~
-#. **Unless there is separate agreement, there is no particular
+#. **Unless there is a notification, there is no particular
    guaranteed service level regarding confidential data. However, all
-   services are expected to be as secure as possible.**
+   services are expected to be as secure as possible and are designed
+   to support confidential data.**
 #. **Should a specific security level be needed, that must be agreed
    separately.**
-#. Data stored to the CS-IT provided storage location is not encrypted
+#. Data stored to the  provided storage location is not encrypted
    at rest.
 #. Confidentiality is enforced by file system permissions will be set
    and access changes will be always confirmed from data owner.
 #. All storage medium (hard drives, etc), should be securely wiped to
    the extend technically feasible at end of life. This is handled by
-   CS-IT.
+   IT, but if it is required it must be handled by the end users.
 #. All remote data access should use strong encryption.
-#. Users must notify CS-IT or their supervisor about any security issues
+#. Users must notify IT support or their supervisor about any security issues
    or misuse of data.
 #. **Security of laptops, mobile devices and personal devices is not
-   currently guaranteed by CS-IT. Confidential data should use CS-IT
-   services only.**
+   currently guaranteed by IT support. Confidential data should use
+   centralized IT-provided services only.**
 #. **Users and data owners must take primary responsibility for data
    security, since technical security is only one part of the process.**
 
-General practices
-~~~~~~~~~~~~~~~~~
+Communication
+~~~~~~~~~~~~~
 #. Details about centrally provided folders and best practices are
-   available online in CS Intranet.
-#. Changes to policy will be coordinated by CS department management.
+   available in online documentation.
+#. Changes to policy will be coordinated by department management.
    All changes will at least be announced to data owners, but individual
    approvals are not needed unless a service level drops.
 

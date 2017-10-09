@@ -2,14 +2,14 @@
 Data
 ====
 
-Data binds all research together today.  Even if you don't consider
+Data binds all of today's research together.  Even if you don't consider
 yourself to do data-based research, the results of your work becomes
-data before it is published.  Also, the highest levels of funding
+data before it is published.  The highest levels of funding
 agencies are beginning to demand good data management and openness.
-Thus, knowing how to manage data is perhaps the most important
-untaught modern skill.
+Knowing how to manage data is probably one of the most important
+untaught modern skills.
 
-But it's not just that: There are good and bad methods of managing
+It's not just "get it done": there are good and bad methods of managing
 data.  For example,
 
 * A **bad strategy** is to store everything in one folder on your own
@@ -39,14 +39,20 @@ Management pages
 Big considerations
 ==================
 
+We recommend you read the :doc:`outline <outline>` to see what the
+main considerations are before starting your research.  :doc:`Services
+<services>` helps you be sure you know everything available.
+
 .. toctree::
    :maxdepth: 1
 
    outline
-   organization
    services
+   organization
    datapolicy
    opensource
+
+.. _scicomp_dmp:
 
 Data management plans
 =====================
