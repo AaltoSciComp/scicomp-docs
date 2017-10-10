@@ -45,7 +45,7 @@ Schedule
    Date (default Tue)   | Time (default 14:00-15:00)  | Loc   | Topic
    26.9     |       | T4    |
    3.10     |       | U115b |
-   10.10    |       | T4    |
+   10.10    |       | T4    | First-time users
    17.10    |       | U121b |
    24.10    |       | T4    |
    31.10    |       | U121b |
