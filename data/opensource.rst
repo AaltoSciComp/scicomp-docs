@@ -6,7 +6,7 @@ Open Source at Aalto
 
    This policy was developed at the Department of Computer Science, in
    conjunction with experts from Research and Innovation services
-   (both the legal and commercialization side).  Then, we have heard
+   (both the legal and commercialization sides).  Then, we have heard
    that supposedly the `Aalto Research Data Management Policy
    <aaltordm>`_ was supposed to have this same effect, however
    reading it it requires a lot of mental stretching to get to this
@@ -18,8 +18,8 @@ Open Source at Aalto
    this can be directly applied in all Aalto.  Unlike the Aalto
    policies, this provides the necessary guidance to make sure that
    you and Aalto's interests are protected.  If you are doing
-   something that is beyond what is in here, you probably want to talk
-   to someone at Aalto anyway.
+   something that is beyond what is in this document, you probably
+   want to talk to someone at Aalto anyway.
 
 .. _aaltordm: http://www.aalto.fi/en/research/research_data_management/
 

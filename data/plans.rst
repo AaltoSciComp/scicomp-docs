@@ -52,3 +52,20 @@ There are plenty of other good resources about making funder DMPs.
 * The `DMPTuuli <https://www.dmptuuli.fi/>`_ is a combination
   template, instructions, and web form which makes it easy to do the
   mechanical assembly of DMPs.  This is highly recommended.
+
+As some concrete suggestions:
+
+* Funders are especially concerned about sharing, preservation,
+  reproducibility, and
+  dissemination but probably can't evaluate too much about the
+  practical side of things.
+
+* You can mention that you will follow the `Aalto RDM policy
+  <aaltordm>`_, which covers mainly opening and licensing.  The policy
+  still allows you to make your own choices, but it sounds quite good
+  if you refer to it and say you will follow it.
+
+* For data storage considerations, you can say that your
+  department/Science-IT provides data storage services (for Science-IT
+  departments) and has a data storage policy which you will follow:
+  :doc:`citation <outline>` and/or :doc:`full text <datapolicy>`.
