@@ -35,12 +35,12 @@ O = best, o = acceptable, x = bad, X = very bad
    :stub-columns: 1
 
                   | Large        | Fast         | Confidential | Frequent backups| Long-term archival
-     Code         |              |              |              | ++           | ++
-     Original     | +            | +            | ++?          | ++           | ++
+     Code         |              |              |              | ➕➕           | ➕➕
+     Original     | ➕            | ➕            | ➕➕?          | ➕➕           | ➕➕
      data         |              |              |              |              |
-     Intermediate | ++           | ++           | ++?          |              |
+     Intermediate | ➕➕           | ➕➕           | ➕➕?          |              |
      files        |              |              |              |              |
-     Final        |              |              |              |              | ++
+     Final        |              |              |              |              | ➕➕
      results/open |              |              |              |              |
      data         |              |              |              |              |
 
@@ -62,25 +62,25 @@ O = best, o = acceptable, x = bad, X = very bad
    :stub-columns: 2
 
              |           | Large     | Fast      | Confidential | Backups|Long-term archival | Shareable
-   Triton    | scratch   | ++        | ++        | +         | -         | -         | +
-             | work      | ++        | ++        | +         | -         | -         |
-             |Triton home| -         |           | +         | ++        |           |
-             |Local disks| +         | ++        | +         |           |           |
-             | ramfs     |           | +++       | ++        |           |           |
-   Depts     | /m/.../project| +     | +         | ++        | ++        |           | +
-             | /m/.../archive| +     | +         | ++        | ++        | +         | +
-   Aalto     | Aalto home|           |           | ++        | ++        |           |
-             | Aalto laptops |       |           | -         | -         | X         |
-             | Aalto webspace|       |           |           |           |           | ++
-             | version.aalto.fi|     |           | ++        | ++        | +         | ++
-   Finland   | funet fileshare|      |           | +         |           |           | ++
-             | CSC cPouta| +         | +         |           |           |           | +
-             | CSC Ida   | +++       | -         |           | ++        | +         | +
-   Public    | github    |           |           | -         |           |           | ++
-             | Zenodo    |           |           |           |           | ++        | ++
-             | Google drive|         |           | -         |           |           | +
-             | Own computers|        |           | -         | -         | -         |
-             | Emails    |           |           | -         | -         | -         |
+   Triton    | scratch   | ➕➕        | ➕➕        | ➕         | ➖         | ➖         | ➕
+             | work      | ➕➕        | ➕➕        | ➕         | ➖         | ➖         |
+             |Triton home| ➖         |           | ➕         | ➕➕        |           |
+             |Local disks| ➕         | ➕➕        | ➕         |           |           |
+             | ramfs     |           | ➕➕➕       | ➕➕        |           |           |
+   Depts     | /m/.../project| ➕     | ➕         | ➕➕        | ➕➕        |           | ➕
+             | /m/.../archive| ➕     | ➕         | ➕➕        | ➕➕        | ➕         | ➕
+   Aalto     | Aalto home|           |           | ➕➕        | ➕➕        |           |
+             | Aalto laptops |       |           | ➖         | ➖         | X         |
+             | Aalto webspace|       |           |           |           |           | ➕➕
+             | version.aalto.fi|     |           | ➕➕        | ➕➕        | ➕         | ➕➕
+   Finland   | funet fileshare|      |           | ➕         |           |           | ➕➕
+             | CSC cPouta| ➕         | ➕         |           |           |           | ➕
+             | CSC Ida   | ➕➕➕       | ➖         |           | ➕➕        | ➕         | ➕
+   Public    | github    |           |           | ➖         |           |           | ➕➕
+             | Zenodo    |           |           |           |           | ➕➕        | ➕➕
+             | Google drive|         |           | ➖         |           |           | ➕
+             | Own computers|        |           | ➖         | ➖         | ➖         |
+             | Emails    |           |           | ➖         | ➖         | ➖         |
 
 Information
 ===========
