@@ -26,7 +26,7 @@ Quick contents and links
        * `Getting Help <help>`
 
 	 * `Triton issue tracker <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`_
-	   (most requests here)
+	   (most requests here, login with HAKA)
 	 * `Suggestions for good support requests
 	   <https://research.csc.fi/support-request-howto>`_
 

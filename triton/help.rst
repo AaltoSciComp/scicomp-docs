@@ -17,12 +17,19 @@ at https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues. Feel
 free to post your issue there. Either admins or other
 users can reply --- and you should feel free to reply and help others,
 too. The system is accessible from anywhere in the world,
-but you need to login with your Aalto account. All newly created issues
-are reported to admins by email.
+but you need to login with HAKA (using your Aalto account). All newly
+created issues are reported to admins by email.
 
 This is primary support channel and meant for general issues like
 general help, troubleshooting, problems with code, new software
 requests, problems that may affect several users.
+
+.. note::
+
+   If you get a message that you are blocked from version.aalto.fi,
+   send the email to servicedesk.  It's not your fault: it
+   automatically blocks people when their organizational unit
+   changes.  Yes, this is bad but it's not in our control...
 
 Email ticketing system
 ~~~~~~~~~~~~~~~~~~~~~~
