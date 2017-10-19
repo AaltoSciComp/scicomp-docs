@@ -998,3 +998,17 @@ Use ``file`` utility:
     for GNU/Linux 2.4.0, dynamically linked (uses shared libs), not stripped
 
 it displays the type of an executable or object file.
+
+
+
+Graphical programs don't work (X11, -X)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In order for graphical programs on Linux to work, a file
+``~/.Xauthority`` has to be written.  If your home directory quota
+(check with ``quota``) is exceeded, then this can't be written and
+graphical programs can't open.  If your quota is exceeded, clean up
+some files, close connections, and log in again.  You can find where
+most of your space goes with ``du -h $HOME | sort -hr | less``.
+
+This is often the case if you get ``X11 connection rejected because of
+wrong authentication``.
