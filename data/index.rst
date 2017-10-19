@@ -95,7 +95,6 @@ inside and outside of Aalto:
    :maxdepth: 1
 
    ida
-   encryption
 
 External links
 ==============

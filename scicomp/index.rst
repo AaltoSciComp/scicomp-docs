@@ -5,5 +5,6 @@ Scientific computing
 .. toctree::
    :maxdepth: 1
 
-   git.rst
+   encryption
+   git
    python
