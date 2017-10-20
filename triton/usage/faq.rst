@@ -215,16 +215,15 @@ name:
 How can I access my Triton files from outside?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If your workstatios has no NFS mounts from Triton (ICS and BECS have,
-consult with your local admins for exact paths), you may always use SSH.
-Either copy your files from triton to a local directory on your
-workstation, like
+Remote mounting
+...............
 
-::
+The scratch filesystem can be mounted from inside the Aalto networks
+by using ``smb://lgw01.triton.aalto.fi/scratch/``.  For example, from
+Nautilus (the file manager) on Ubuntu, use "File" -> "Connect to
+server".
 
-    $ scp -pr user1@triton.aalto.fi:/triton/path/to/dir .
-
-or use SSHFS – filesystem client based on SSH. Most Linux workstations
+Or you can use ``sshfs`` – filesystem client based on SSH. Most Linux workstations
 have it installed by default, if not, install it or ask your local IT
 support to do it for you. For setting up your SSHFS mount from your
 local workstation: create a local directory and mount remote directory
@@ -235,10 +234,10 @@ with sshfs
     $ mkdir /LOCALDIR/triton
     $ sshfs user1@triton.aalto.fi:/triton/PATH/TO/DIR /LOCALDIR/triton
 
-Replace \ ``user1``\  with your real username and \ ``/LOCALDIR``\  with
+Replace ``user1`` with your real username and ``/LOCALDIR`` with
 a real directory on your local drive. After successful mount, use you
-/LOCALDIR\ ``/triton``\  directory as it would be local. To unmount it,
-run \ ``fusermount -u /LOCALDIR/triton``\  .
+/LOCALDIR ``/triton``  directory as it would be local. To unmount it,
+run ``fusermount -u /LOCALDIR/triton``.
 
 PHYS users example, assuming that Triton and PHYS accounts are the same:
 
@@ -263,6 +262,17 @@ establish connection it will appear on the left-hand side below Network
 header. Now you may access it as it would be your local directory. To
 keep it as a bookmark click on the mount point and press ``Ctrl+D``, it
 will appear below Bookmark header on the same menu.
+
+Copying files
+.............
+
+If your workstatios has no NFS mounts from Triton (ICS and BECS have,
+consult with your local admins for exact paths), you may always use SSH.
+Either copy your files from triton to a local directory on your
+workstation, like::
+
+    $ scp -pr user1@triton.aalto.fi:/triton/path/to/dir .
+
 
 How can I copy Triton files from outside of Aalto?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

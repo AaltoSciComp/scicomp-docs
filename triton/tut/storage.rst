@@ -97,6 +97,16 @@ Transferring files
 Transferring files to/from triton is exactly the same as any other
 remote Linux server.
 
+Remote mounting
+^^^^^^^^^^^^^^^
+
+The scratch filesystem can be remote mounted using SMB inside secure
+Aalto networks at the URL ``smb://lgw01.triton.aalto.fi/scratch/``.
+Work can be mounted using
+``smb://lgw01.triton.aalto.fi/work/$username``.  This can be used (for
+example) from Ubuntu in the file manager (Nautilus) by going to File
+-> Connect to server.
+
 Using scp
 ^^^^^^^^^
 
