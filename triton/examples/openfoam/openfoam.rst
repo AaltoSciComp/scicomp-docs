@@ -5,7 +5,7 @@ OpenFOAM and ParaView have been installed from the Ubuntu 16.04 Docker
 image provided by OpenFOAM people. It has minimal amount of other
 software installed.
 
-Parallelization has been against Triton's OpenMPI, so using this container
+Parallelization is done against Triton's OpenMPI, so using this container
 with other OpenMPI modules is discouraged.
 
 Within the container OpenFOAM is installed under ``/opt/openfoam4/`` and
@@ -19,7 +19,7 @@ Usage
 This example shows how you can run damBreak example. Firstly, let's load
 the OpenFOAM module and create a folder for the example::
 
-    module use /share/apps/singularity/modules
+    module use /share/apps2/singularity/modules
     module load OpenFOAM
     mkdir damBreak
     cd damBreak

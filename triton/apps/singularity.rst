@@ -86,3 +86,5 @@ contribute to the definitions.
 .. include:: ../examples/openfoam/openfoam.rst
 
 .. include:: ../examples/openpose/openpose.rst
+
+.. include:: ../examples/visit/visit.rst
