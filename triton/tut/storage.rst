@@ -2,7 +2,7 @@
 Data storage
 ============
 
-Triton has various different filesystems.  Each has a purpose, and when
+Triton has various ways to store data.  Each has a purpose, and when
 you are dealing with the large data sets or intensive IO, efficiency
 becomes important.
 
@@ -21,7 +21,8 @@ Compare this to what is available at Aalto:
 
 -  Aalto Linux has a separate home directory, not shared with Triton.
 -  Departments can have their own shares, called variously project,
-   work, teamwork, archive.  These are not on triton, because they are
+   work, teamwork, archive.  These are not on triton except the login
+   node, because they are
    not high performance enough (it just takes one person to start
    50-node job that brings it down for everyone).
 
@@ -42,8 +43,7 @@ The answer is that users have a variety of needs, and a variety of
 filesystems.  The following checklist aims to help you to choose the
 best approach for you calculations.
 
-| Do you need IO in the first place?
-
+-  Do you need IO in the first place?
 -  E.g. checkpointing code state to disk may be unwise if the code runs
    less that couple of days.
 -  Some programs use local disk as swap-space. Only turn on if you know
@@ -53,10 +53,10 @@ Avoid many small files! Use a few big ones instead.  See the :doc:`Compute
 node local drives <../usage/localstorage>` page for further details and script
 examples.
 
-**ramfs** - highly temporary storage - $XDG\_RUNTIME\_DIR
-=========================================================
+**ramfs** - fast and highly temporary storage
+=============================================
 
-On Triton, $XDG\_RUNTIME\_DIR is a ramfs, which means that it looks like
+On Triton, ``$XDG_RUNTIME_DIR`` is a ramfs, which means that it looks like
 files but is stored only in memory.  Because of this, it is extremely
 fast, but has no persistence whatsoever.  Use it if you have to make
 small temporary files that don't need to last long.  Note that this is
@@ -67,10 +67,10 @@ memory that's better.
 Quotas
 ======
 
-All directories under /scratch (as well as /home) have quotas. Two
+All directories under ``/scratch`` (as well as ``/home``) have quotas. Two
 quotas are set per-filesystem: disk space and files number.
 
-Disk quota and current usage are printed with the command "quota". 
+Disk quota and current usage are printed with the command ``quota``.
 'space' is for the disk space and 'files' for the total files number
 limit. There is a separate quota for groups on which the user is a
 member.
@@ -89,7 +89,9 @@ member.
     /scratch     some-group              534G    524G    524G       -    7534   1000M   1000M       -
     /scratch     other-group              16T     20T     20T       -   1088M      5M      5M       -
 
- 
+If you get a quota error, see :doc:`the quotas page <../usage/quotas>`
+for the solution.
+
 
 Transferring files
 ==================
@@ -100,12 +102,27 @@ remote Linux server.
 Remote mounting
 ^^^^^^^^^^^^^^^
 
+By far, remote mounting of files is the easiest method.  If you are
+not on the Aalto networks, connect to the Aalto VPN first.  Note that
+this is automatically done on some department workstations (see
+below) - if not, request it!
+
 The scratch filesystem can be remote mounted using SMB inside secure
-Aalto networks at the URL ``smb://lgw01.triton.aalto.fi/scratch/``.
-Work can be mounted using
-``smb://lgw01.triton.aalto.fi/work/$username``.  This can be used (for
-example) from Ubuntu in the file manager (Nautilus) by going to File
--> Connect to server.
+Aalto networks at the URLs
+
+* scratch: ``smb://lgw01.triton.aalto.fi/scratch/``.
+* work: ``smb://lgw01.triton.aalto.fi/work/$username/``.
+
+On different operating systems:
+
+* Linux (Ubuntu for example): File manager (Nautilus) → File →
+  Connect to server.
+* Windows: In the file manager, go to Computer and "Map Network
+  Drive".  In Windows 10 → "This PC" → right click → "Add Network
+  Location".  Use the URLs above but replace ``smb://`` with ``\\`` and
+  use backslashes instead of forward slashes.
+* Mac: Finder → Go → Connect to Server.  Use the URLs above.
+
 
 Using scp
 ^^^^^^^^^
@@ -129,6 +146,7 @@ Rsync
 Rsync is similar to scp, but is smarter at restarting files.  Use rsync
 for large file transfers.
 
+
 Using sshfs
 ^^^^^^^^^^^
 
@@ -141,6 +159,8 @@ with other folders.
 ::
 
     sshfs triton.aalto.fi:/scratch/work/USERNAME triton_work
+
+
 
 Accessing files from Department workstations
 ============================================
@@ -162,7 +182,7 @@ NBE
 ^^^
 
 Work directories are available at ``/m/nbe/work`` and group scratch
-directories at ``/m/nbe/scratch``/$project/.
+directories at ``/m/nbe/scratch/$project/``.
 
 PHYS
 ^^^^
@@ -175,4 +195,4 @@ CS
 ^^
 
 Work directories are available at ``/m/cs/work/``, and group scratch
-directories at `` /m/cs/scratch/$project/.``
+directories at ``/m/cs/scratch/$project/``.
