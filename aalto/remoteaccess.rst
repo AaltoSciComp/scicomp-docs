@@ -48,15 +48,15 @@ TODO: this section is currently being updated. For Aalto instructions,
 `search Inside for "VPN"
 <https://inside.aalto.fi/display/ITServices/VPN>`__.
 
--  Generic: OpenConnect/Cisco AnyConnect protocols. vpn.aalto.fi,
--  Aalto Linux: Status bar -> Network -> VPN Connections -> Aalto TLS
+-  Generic: OpenConnect/Cisco AnyConnect protocols. ``vpn.aalto.fi``
+-  Aalto Linux: Status bar → Network → VPN Connections → Aalto TLS
    VPN.
--  Aalto mac: Dock -> Launchpad -> Cisco AnyConnect Secure Mobility
+-  Aalto mac: Dock → Launchpad → Cisco AnyConnect Secure Mobility
    Client
--  Aalto windows: Start -> Search -> AnyConnect
+-  Aalto windows: Start → Search → AnyConnect
 -  Personal Linux laptops: Use OpenConnect. Configuration on Ubuntu:
-   Networks -> Add Connection -> Cisco AnyConnect compatible VPN. ->
-   vpn.aalto.fi. Then connect and use Aalto username/password. Or from
+   Networks → Add Connection → Cisco AnyConnect compatible VPN. →
+   ``vpn.aalto.fi``. Then connect and use Aalto username/password. Or from
    command line: ``openconnect https://vpn.aalto.fi``
 -  Personal mac: `use Cisco AnyConnect VPN
    Client <https://download.aalto.fi/staff/>`__
@@ -65,8 +65,8 @@ TODO: this section is currently being updated. For Aalto instructions,
 
 For more lightweight things (though not actually easier!), you can use
 ssh proxy. You are on your own
-here.\ `` ssh -D 8080 $username@kosh.aalto.fi``. Configure your web
-browser or other applications to use a SOCKS5 proxy on localhost:8080
+here. ``ssh -D 8080 $username@kosh.aalto.fi``. Configure your web
+browser or other applications to use a SOCKS5 proxy on ``localhost:8080``
 for connections. Remember to revert when done or else you can't connect
 to anything. The extension FoxyProxy Standard may be useful here.
 
@@ -79,20 +79,20 @@ mentioned above. (You can also access these filesystems via ssh through
 the shell servers):
 
 -  username=aalto username, domain=AALTO, password=Aalto password.
--  smb://\ **home**.org.aalto.fi/ for your home directory
--  smb://tw-cs.org.aalto.fi/\ **project**/$group/ for project
+-  ``smb://home.org.aalto.fi/`` for your home directory
+-  ``smb://tw-cs.org.aalto.fi/project**/$group/`` for project
    directories
--  smb://tw-cs.org.aalto.fi/\ **archive**/$group/ for archive
+-  ``smb://tw-cs.org.aalto.fi/archive/$group/`` for archive
    directories
 
-On Ubuntu: Files -> Left sidebar -> Connect to server -> use URLs above.
+On Ubuntu: Files → Left sidebar → Connect to server → use URLs above.
 For other linuxes, you can probably figure it out.
 
-On mac laptops: Finder -> Go menu item -> Connect to server -> use URLs
+On mac laptops: Finder → Go menu item → Connect to server → use URLs
 above .
 
-On windows laptops: Windows Explorer -> Computer -> Map network drive ->
-select a free letter and use: \\\\tw-cs.org.aalto.fi\\project (and so
+On windows laptops: Windows Explorer → Computer → Map network drive →
+select a free letter and use: ``\\tw-cs.org.aalto.fi\project`` (and so
 on, like above).
 
 Remember that you must connect to the Aalto VPN first!
