@@ -48,7 +48,7 @@ Schedule
    10.10    |       | T4    | First-time users
    17.10    |       | U121b | GPU computing
    24.10    |       | T4    |
-   31.10    |       | U121b |
+   31.10    |       | U121b | Aalto and department environments
    7.11     |       | T4    |
    14.11    |       | U121b |
    21.11    |       | T4    |
