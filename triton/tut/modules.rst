@@ -1,6 +1,6 @@
-=======
-Modules
-=======
+================
+Software Modules
+================
 
 There are hundreds of people using Triton.  They all have different
 software needs, including conflicting versions required!  How do we
