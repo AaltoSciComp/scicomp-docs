@@ -1,3 +1,4 @@
+================
 About these docs
 ================
 
@@ -69,7 +70,7 @@ __ http://python.org
 
 ----
 
-Linking within files.  If possible use a permanent reference (next
+Linking to the web.  If possible use a permanent reference (next
 section), but you can also refer to specific files by name.  Note,
 that for internal links there are no trailing underscores::
 
@@ -83,7 +84,7 @@ that for internal links there are no trailing underscores::
 
 ----
 
-`Permanent references across files <http://www.sphinx-doc.org/en/stable/markup/inline.html#role-ref>`_
+Internal links.  `Permanent references across files <http://www.sphinx-doc.org/en/stable/markup/inline.html#role-ref>`_
 
 Label things this way (note only one colon)::
 
