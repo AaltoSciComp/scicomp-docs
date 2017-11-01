@@ -41,7 +41,7 @@ projects** when needed to keep things organized.INLINE
 +--------------+--------------+--------------+--------------+--------------+--------------+
 | Filesystem   | Path (Linux) | Triton?      | Quota        | Backups?     | Notes        |
 +==============+==============+==============+==============+==============+==============+
-| home         | /u/.../$user | no           | 10 GiB       | yes,         | Used for     |
+| home         | /u/.../$user | no           | 20 GiB       | yes,         | Used for     |
 |              | name/unix    |              |              | $HOME/../.sn | personal and |
 |              |              |              |              | apshot/      | non-research |
 |              |              |              |              |              | files        |
@@ -146,7 +146,7 @@ Filesystem list
       -  Instead, use project for research files, so they are accessible
          to others after you leave.
 
-   -  Quota 10 GiB.
+   -  Quota 20 GiB.
    -  Backups recoverable by ``$HOME/../.snapshot/`` (on linux
       workstations at least).
    -  SMB mounting: ``smb://home.org.aalto.fi/``
