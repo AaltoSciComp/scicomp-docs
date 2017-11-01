@@ -44,7 +44,7 @@ There are plenty of other good resources about making funder DMPs.
   to make good funder DMPs.
 
 * The Aalto RDM pages have a subsection dedicated to `data management
-  plans <aaltordm>`_.
+  plans <aaltordm_>`_.
 
 .. _aaltordm: http://www.aalto.fi/en/research/research_data_management/data_management_planning/
 
@@ -61,7 +61,7 @@ As some concrete suggestions:
   practical side of things.
 
 * You can mention that you will follow the `Aalto RDM policy
-  <aaltordm>`_, which covers mainly opening and licensing.  The policy
+  <aaltordm_>`_, which covers mainly opening and licensing.  The policy
   still allows you to make your own choices, but it sounds quite good
   if you refer to it and say you will follow it.
 

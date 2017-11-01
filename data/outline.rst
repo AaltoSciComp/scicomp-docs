@@ -4,7 +4,7 @@ Outline of academic data management
 
 This page is about how handle data - not the raw storage part, which
 you can find at :doc:`data storage <../aalto/aaltostorage>`.  Aalto has high-level
-information on `research data management <aaltordm>`_, too.
+information on `research data management <aaltordm_>`_, too.
 
 .. _aaltordm: http://www.aalto.fi/en/research/research_data_management/
 
@@ -24,7 +24,7 @@ you lose knowledge of what you have. Don't let this happen to you or
 your group!
 
 Another good starting point is the `Aalto research data management pages
-<aaltordm>`_. These pages can also help with preparing a data
+<aaltordm_>`_. These pages can also help with preparing a data
 management plan.
 
 **Data management is an important part of modern science! We are here

@@ -53,7 +53,8 @@ A very quick guide is below.
 ----
 
 Inline `link <http://python.org>`_, or anonymous__, or separate_
-link.  Trailing underscores indicate links.
+`+different text <separate_>`_ links.  Trailing underscores indicate
+links.
 
 __ http://python.org
 
@@ -61,8 +62,9 @@ __ http://python.org
 
 ::
 
-   Inline `link <http://python.org>`_, or anonymous__, or separate_
-   link.  Trailing underscores indicate links.
+    Inline `link <http://python.org>`_, or anonymous__, or separate_
+    (`or different text <separate_>`_ links).  Trailing underscores indicate
+    links.
 
     __ http://python.org
 

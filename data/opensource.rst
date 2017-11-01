@@ -8,7 +8,7 @@ Open Source at Aalto
    conjunction with experts from Research and Innovation services
    (both the legal and commercialization sides).  Then, we have heard
    that supposedly the `Aalto Research Data Management Policy
-   <aaltordm>`_ was supposed to have this same effect, however
+   <aaltordm_>`_ was supposed to have this same effect, however
    reading it it requires a lot of mental stretching to get to this
    point.  In fact, the RDM policy, if interpreted this way, would
    allow you to do essentially anything, including things which are
