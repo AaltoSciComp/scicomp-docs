@@ -96,7 +96,6 @@ own docs should join us.
    :maxdepth: 0
 
    README
-   todo
 
 * :ref:`genindex`
 * :ref:`search`
