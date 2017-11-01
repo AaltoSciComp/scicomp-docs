@@ -96,7 +96,7 @@ process again.
 
      sinteractive --time=HH:MM:SS --mem=nnG
 
-**Just like with srun --pty, remember to close the process when done.
+**Just like with ``srun --pty``, remember to close the process when done.
 However, it's even harder than before. Since there is a separate screen
 session running, just closing the terminal isn't enough. Exit all
 shells in the screen session on the node (C-d or ``exit``), or cancel
