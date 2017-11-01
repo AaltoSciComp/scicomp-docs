@@ -9,7 +9,7 @@ interface.*
 Grid computing on FGCI
 ~~~~~~~~~~~~~~~~~~~~~~
 
-FGCI (Finnish Grid and Cloud Infrastructure) is a joint pool of
+The `FGCI (Finnish Grid and Cloud Infrastructure) <https://www.csc.fi/-/fgci>`__ is a joint pool of
 resources that consists of a number of Linux clusters placed all around
 Finland. Triton is one of them. Being a part of FGCI Triton provides its
 CPU and disk space resources to grid users. Having your local account on
