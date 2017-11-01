@@ -14,6 +14,12 @@ computing at Aalto and running the `Triton <triton/index>` cluster.
 Science-IT is organized from the School of Science, but they are (and
 these pages are) an Aalto-level infrastructure that supports everyone.
 
+.. toctree::
+   :maxdepth: 1
+
+   aalto/welcomeresearchers
+   aalto/welcomestudents
+
 News
 ====
 .. toctree::
