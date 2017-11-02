@@ -41,7 +41,8 @@ Big considerations
 
 We recommend you read the :doc:`outline <outline>` to see what the
 main considerations are before starting your research.  :doc:`Services
-<services>` helps you be sure you know everything available.
+<services>` helps you be sure you know everything available.  For
+:doc:`Aalto open source information <../aalto/opensource>`, see its page.
 
 .. toctree::
    :maxdepth: 1
@@ -50,7 +51,6 @@ main considerations are before starting your research.  :doc:`Services
    services
    organization
    datapolicy
-   opensource
 
 .. _scicomp_dmp:
 
