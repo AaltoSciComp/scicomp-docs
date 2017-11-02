@@ -30,7 +30,6 @@ News
 
 The Aalto environment
 =====================
-
 Aalto provides a wide variety of support for scientific computing.
 For a summary, see the `IT Services for Research page
 <https://inside.aalto.fi/display/ITServices/IT+Services+for+Research>`_.
@@ -45,8 +44,7 @@ management below.
 
 Data management
 ===============
-
-On this site, you can some information and instructions on data
+In this section, you can some information and instructions on data
 management.  Higher level information can be found on the `Aalto
 Research Data Management pages
 <http://www.aalto.fi/en/research/research_data_management/>`_.
@@ -58,10 +56,8 @@ Research Data Management pages
    data/index
 
 
-
 Triton
 ======
-
 Triton is the Aalto high performance computing cluster.  It is your
 go-to resources for anything that exceeds your desktop computer's
 capacity.
@@ -75,7 +71,7 @@ capacity.
 Scientific computing
 ====================
 In this section, you find general (not Aalto specific) scientific
-computing resources
+computing resources.
 
 .. toctree::
    :maxdepth: 2
