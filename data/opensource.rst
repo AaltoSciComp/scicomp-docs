@@ -9,24 +9,29 @@ Open Source at Aalto
    (both the legal and commercialization sides).  Then, we have heard
    that supposedly the `Aalto Research Data Management Policy
    <aaltordm_>`_ was supposed to have this same effect, however
-   reading it it requires a lot of mental stretching to get to this
-   point.  In fact, the RDM policy, if interpreted this way, would
+   it does not make these things so clear.  In fact, the RDM policy, if interpreted this way, would
    allow you to do essentially anything, including things which are
    not to the benefit of Aalto.
 
    Thus, while I (Richard Darst) can't promise anything, rumor has it
    this can be directly applied in all Aalto.  Unlike the Aalto
    policies, this provides the necessary guidance to make sure that
-   you and Aalto's interests are protected.  If you are doing
+   your and Aalto's interests are protected.  If you are doing
    something that is beyond what is in this document, you probably
-   want to talk to someone at Aalto anyway.
+   want to talk to someone at Aalto anyway.  Also, you may also have
+   rights beyond what is in this document even without further
+   discussion.
 
 .. _aaltordm: http://www.aalto.fi/en/research/research_data_management/
 
 
+Researchers make at least three primary outputs: publications, software,
+and data. This policy aims to make openly releasing all types of work as
+straightforward the traditional academic publishing process.
+
 This document describes the procedure for Aalto employees releasing the
 output of their work openly (open source software, data, and
-publications). Aalto University and CS encourage openness. This policy
+publications). Aalto University encourages openness. This policy
 covers only cases where work can clearly be released openly with no
 bureaucracy needed. It does not cover complex cases, such as commercial
 software, work related to inventions, complex partnership agreements,
@@ -35,11 +40,8 @@ but does not require it or preclude any other university process. It
 only is relevant when the creator has an employment relationship with
 Aalto. If they don't (e.g. students), they own their own work unless
 there is some other agreement in place (e.g. their own funding contract,
-grant, etc).
-
-Researchers make at least three primary outputs: publications, software,
-and data. This policy aims to make openly releasing all types of work as
-straightforward the traditional academic publishing process.
+grant, etc).  Still, they can use this same process with no extra
+bureaucracy needed.
 
 We realize that this policy does not cover all cases. We aim to cover
 the 99% case, and existing processes are used for complicated cases.
@@ -55,24 +57,31 @@ we can't require anything, we strongly encourage that all work is either
 made open source or taken through the commercialization process. If you
 don't know what to do, don't worry: they are not mutually exclusive.
 Proper open-source licensing can protect your ability to commercialize
-later. Talk to Innovation services. They like open source, too, they
+later. Talk to Innovation Services. They like open source, too, and
 will help you find the right balance. Anyway, if work matches the
 criteria in this policy, it probably has limited commercial potential
-anyway: what is more important is your own knowledge and skills.
+anyway: what is more important is your own knowledge and skills that
+went into it.
 
 You want to add a proper open source license to your work, rather than
 just putting code on some webpage. Without a license, others can not
 build on your code, making your impact limited. No one will build on
-you, and eventually your work rots.
+you, and eventually your work rots and gets lost.
+
+You *always* want to go through this process as soon as possible: if
+you don't, it becomes much harder to track everyone down.
 
 You shouldn't release as open source (yet) if your work is intentionally
 commercial or contains patentable inventions. In these cases, contact
-innovation services. In the second case (patentable inventions),
+`Innovation Services <innosrv_>`_. In the second case (patentable inventions),
 according to Finnish legislation you are actually required to report the
-invention to Innovation services.
+invention to Innovation Services.
 
-Checklist for release under this policy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. _innosrv: http://innovation.aalto.fi/contact-us/
+
+
+Step-by-step guide for release under this policy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Check if the work is covered under the "conditions for limited
    commercial potential" in the policy.
@@ -99,14 +108,17 @@ Checklist for release under this policy
    each individual source file should list copyright and authors, but in
    practice if you don't do this it's not *too* much of a problem.
    Almost all licenses will do this, but make sure that the license
-   disclaims any warranty!
+   disclaims any warranty!  After this, contributors implicitly
+   consent to the license.  If you have an important case, ask
+   explicitly too.
 
 #. This policy is seen as Aalto transferring the rights to you to
    release, not Aalto releasing itself (just the same as with
    publications). Release in your own name, but you can(+should) list
    your affiliations.
-#. Make your code public. No particular requirements here, but see below
-   for best practices. (TODO)
+
+#. Make your code public if/when you want. No particular requirements
+   here, but see below for best practices. (TODO)
 
 Any borderline or questionable cases should be handled by the existing
 innovation disclosure process.
@@ -114,24 +126,24 @@ innovation disclosure process.
 In addition to the above requirements, the following are best practices:
 
 #. You can't require that people cite you, but you can ask nicely. Make
-   it easy to do this! Include the best citations directly in the
+   it easy to do this! Include the proper citations directly in the
    README. Make your code itself also citeable by publishing it
-   somewhere (github, zenodo, ...)
+   somewhere (github, zenodo, ...).
 
 #. Put on a good hosting location and encourage contributions. For
-   example, github is the most popular these days, but there are plenty
+   example, Github is the most popular these days, but there are plenty
    of others. Welcome contributions and bug reports, and build on them.
    Make yourself the hub of expertise of your knowledge and methods.
 
 Choosing a license
 ~~~~~~~~~~~~~~~~~~
 
-(Under this policy, any `Creative
+Under this policy, any `Creative
 Commons <https://creativecommons.org/licenses/>`__, `Open Source
 Initiative <https://opensource.org/licenses>`__, and `Free Software
 Foundation <https://www.gnu.org/licenses/license-list.html>`__ approved
 open source licenses are usable. However, you should *not* try to be
-creative, and use the most common thing that serves your needs.)
+creative, and use the most common license that serves your needs.
 
 Top-level recommendations:
 
@@ -161,167 +173,39 @@ For special cases:
 
 Discussion:
 
--  Most public domain --> MIT / Apache 2 > CC-BY > LGPL > GPL > AGPL -->
+-  Most public domain → MIT / Apache 2 > CC-BY > LGPL > GPL > AGPL →
    Most protection against proprietary use
 -  If you think you might want to commercialize in the future: **ask
    innovation services** and they'll help you release as open source now
    and preserve commercialization possibilities for the future.
 
+
+
 The policy
 ~~~~~~~~~~
+.. toctree::
+   :hidden:
 
-TODO: proper link
+   opensource-policy
 
-This is a copy from the policy attached above, for convenience. See the
-attachment for the official copy.
 
-Covered work
-^^^^^^^^^^^^
+:doc:`Raw text <opensource-policy>`. Current approvals: Department of
+Computer Science (2017-03-17).
 
-#. Software
+.. include:: opensource-policy.rst
 
-#. Publications and other writing (Note that this policy simply
-   formalizes the existing process where researchers have the right to
-   publish their work, as an exception researchers are allowed to grant
-   exclusive licenses to publishers. Open-access publishing is still
-   preferred.)
 
-#. Data
 
-Conditions for limited commercial potential
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This policy supports the release of work with limited commercial
-potential. Work with commercial potential should be assessed via Aalto’s
-innovation process.
-
-#. If work’s entire novelty is equally contained in academic
-   publications, there is usually little commercial value. Examples:
-   code implementing algorithms, data handling scripts.
-
-#. Similarly, work which only is a byproduct of academic publications
-   probably has limited commercial value, unless some other factor
-   overrides. For example: analysis codes, blog posts, datasets, other
-   communications.
-
-#. Small products with limited independent value. If the time required
-   to reproduce the work is small (one week or less), there is likely
-   not commercial value. For example: sysadmin scripts, analysis codes,
-   etc. Think about the time for someone else to reproduce the work
-   given what you are publishing, not the time it took for you to create
-   it.
-
-#. Should a work be contributing to an existing open project, there is
-   probably little commercial value. For example: contribution to
-   existing open-source software, Wikipedia edits, etc.
-
-#. NOT INCLUDED: Should work contain patentable elements or have
-   commercial potential, this policy does not apply and it should be
-   evaluated according to the Aalto innovation process. Patentable
-   discoveries are anything which is a truly new, non-obvious, useful
-   inventions. In case of doubt, always contact Innovation Services!
-   Indicators for this category: actually novel, non-obvious, useful,
-   and actually an invention. Algorithms and math usually do not count,
-   but expressions of these can.
-
-#. NOT INCLUDED: Software designed for mass-market consumption or
-   business-to-business use should be evaluated according to the Aalto
-   innovation process. Indicators for this category: large amount of
-   effort, software being a primary output.
-
-Ownership of intellectual property rights at Aalto
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-#. This policy covers work of employees whose contracts assign copyright
-   and other intellectual property rights of their work to Aalto.
-   However, determining this can be difficult. This policy is designed
-   to be applicable to all work, regardless of the ownership.
-
-#. Your rights are assigned to Aalto if you are funded by external
-   funding, or if there are other Aalto agreements regarding your work.
-
-#. If neither of the points in (2) apply to you AND your work is
-   independent (self-decided and directed), then according to Finnish
-   law you own all rights to your own work. You may release it how you
-   please, and the rest of this policy does NOT apply (but we recommend
-   reading it anyway for valuable advice). Aalto Innovation Services can
-   serve you anyway.
-
-#. Rather than figure out the the ownership of work, this policy can
-   also be applied to all work.
-
-Release criteria and process
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-#. This policy applies to copyright only, not other forms of
-   intellectual property. Should a work contain other intellectual
-   property (which would not be published academically), this policy
-   does not apply. In particular, this policy does not cover any work
-   which contains patentable inventions.
-
-#. The employee and supervisor must consider commercial potential. The
-   guidelines in the “conditions for limited commercial potential” may
-   guide you. Should there be commercial potential, go through the
-   existing innovation disclosure processes. In particular, any work
-   which may cover patentable inventions must be reported first.
-
-#. If all conditions are satisfied, you, in consultation with your
-   supervisor or project leader, may choose to release the work. Should
-   the supervisor or PI have a conflict of interest or possible conflict
-   of interest, their supervisor should also be consulted.
-
-#. Depending on funding sources, you may have more restrictions on
-   licensing and releasing as open source. Project proposals and grant
-   agreements may contain provisions relevant to releasing work openly.
-   When making project proposals, consider these topics already. When in
-   doubt, contact the relevant staff.
-
-#. To be covered under this policy, work must be licensed under a
-   open/open source/free software license. In case of doubt, Creative
-   Commons, Open Source Initiative, and Free Software Foundation
-   approved open source licenses are considered acceptable. See below
-   for some license recommendations.
-
-#. All warranty must be disclaimed. The easiest way of doing this is by
-   choosing an appropriate license. Practically all of them disclaim
-   warranty.
-
-#. All authors must consent to the release terms.
-
-#. The employee should not transfer an exclusive license or ownership to
-   a third party. Aalto maintains the right to relicense and use
-   internally, commercially, or re-license should circumstances change.
-
-#. Employees should acknowledge their Aalto affiliation, if this
-   possible and within the community norms.
-
-#. This right should not be considered Aalto officially releasing any
-   work, but allowing the creators to release it in their own name.
-   Thus, Aalto does not assume liability or responsibility for work
-   released in this way. Copyright owner/releaser should be listed as
-   the actual authors.
-
-#. Employees are responsible for ensuring that they have the right to
-   license their work as open source, for example ensuring that all
-   included software and data is compatible with this license and that
-   they have permission of all authors. Also the release must be allowed
-   by any relevant project agreements. Should you have any doubts or
-   concern, contact Innovation Services.
-
-| To apply this to your work, first receive any necessary permissions.
-  In writing, by email, is sufficient. Apply the license in your name,
-  but list Aalto University as an affiliation somewhere that makes
-  sense. Do not claim any special Aalto approval for your work.
-
-How to run a good software project
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+How to run a good open-source software project
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 TODO
 
 References
 ~~~~~~~~~~
 
--  Practical guidelines for Open Source: forthcoming, 2017
+-  Practical guidelines for Open Source Projects: forthcoming, 2017
 
 -  Choosing an open source license:
    \ `http://choosealicense.com/ <http://choosealicense.com/>`__
@@ -335,10 +219,12 @@ References
 -  Aalto copyright advice:
    `http://copyright.aalto.fi/ <http://copyright.aalto.fi/>`__
 
--  Aalto IP guide: forthcoming, 2017
+-  Aalto IP guide: `FI <ipguidefi_>`_ `EN <ipguideen_>`_
+
+.. _ipguidefi: https://inside.aalto.fi/display/firis/IPR-opas
+.. _ipguideen: https://inside.aalto.fi/display/enris/IP+Guide
 
 ..
-
   Planning stuff below
   - -------------------
 
