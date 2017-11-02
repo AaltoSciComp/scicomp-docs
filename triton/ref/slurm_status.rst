@@ -9,6 +9,7 @@
    ``slurm history`` *[1day,2hour,...]*     | Show status of recent jobs
    ``slurm j`` *<jobid>*                    | Job details (only while running)
    ``slurm s`` ; ``slurm ss`` *<partition>* | Show status of all jobs
+   ``sacct``                                | Full history information (advanced, needs args)
 
 **Full slurm command help:**
 
