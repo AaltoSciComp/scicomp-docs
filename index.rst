@@ -7,12 +7,13 @@
 Aalto Scientific Computing
 ==========================
 
-This contains documentation about scientific, and research computing
-at Aalto and beyond.  It is mainly maintained by `Aalto Science-IT
-<http://science-it.aalto.fi>`_, who are responsible for scientific
-computing at Aalto and running the `Triton <triton/index>` cluster.
-Science-IT is organized from the School of Science, but they are (and
-these pages are) an Aalto-level infrastructure that supports everyone.
+This contains documentation about scientific and data-intensive computing
+at Aalto and beyond.  It is targeted towards Aalto researchers, but
+has some useful information for everyone.  The data management section
+is useful even to non-computational researchers.
+
+These docs are maintained by `Aalto Science-IT
+<http://science-it.aalto.fi>`_ with the help of the Aalto community.
 
 .. toctree::
    :maxdepth: 1
@@ -81,19 +82,18 @@ computing resources
 
    scicomp/index
 
-External links
-~~~~~~~~~~~~~~
 
 Metadocs
 ========
 
-These docs are open source, and we encourage anyone to contribute.
-See the README and the github links at the top of every page.  Any
-other service unit at Aalto that wishes to use this location for their
-own docs should join us.
+These docs are open source, and we *strongly* encourage anyone to
+contribute.  See the README below and the Github links at the top of
+every page.  Either make Github issues, pull requests, or ask for
+direct commit access.  Be bold: don't be afraid of mistakes, they
+can always be fixed.
 
 .. toctree::
-   :maxdepth: 0
+   :maxdepth: 1
 
    README
 
