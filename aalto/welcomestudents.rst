@@ -48,11 +48,10 @@ workstations <../aalto/linux>` apply there as well (mostly).  The
 software on these machines is managed by the Science-IT team.  This is
 the place if you need to play with GPUs, deep learning, etc.
 
-In principle, the use of :doc:`Triton <../triton/index>` is available
-for students, but in practice we try to direct students to the most
-appropriate resources.  First, try the resources above.  If you do
-need Triton, ask if this is for research and apply through that.
-Otherwise, send us a full description of your need.
+The use of :doc:`Triton <../triton/index>` is primarily for research
+purposes.  If you are in a course with advanced computing needs, ask
+the course instructor to contact us to discuss access for the class.
+Your instructor will tell you when to contact us.
 
 
 

@@ -23,6 +23,14 @@ A few prerequisites:
    listed in the Triton usage policies.
 -  You should tell us your department/school in your account creation
    request.
+-  Accounts are for
+   - Researchers (as in, affiliated with a research PI in any way)
+   - Students coming to one of our `Scientific Computing in Practice
+     courses <scip_>`_ which uses Triton.
+   - Students in other courses should ask their instructor to contact
+     us first to discuss access.
+
+.. _scip: http://science-it.aalto.fi/scip/
 
 You should have Triton access if you are in the ``triton-users``
 group at Aalto: ``groups`` shows this on Aalto linux machines.
