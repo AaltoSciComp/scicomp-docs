@@ -8,19 +8,20 @@ Open Source at Aalto
    conjunction with experts from Research and Innovation services
    (both the legal and commercialization sides).  Then, we have heard
    that supposedly the `Aalto Research Data Management Policy
-   <aaltordm_>`_ was supposed to have this same effect, however
-   it does not make these things so clear.  In fact, the RDM policy, if interpreted this way, would
-   allow you to do essentially anything, including things which are
-   not to the benefit of Aalto.
+   <aaltordm_>`_ was supposed to have this same effect, however it
+   does not make these things so clear.  In fact, the RDM policy, if
+   interpreted this way, would allow you to do essentially anything,
+   including things which are not to the benefit of Aalto.  More
+   evidence of these Aalto policies can be found in the `Aalto IP
+   Guide <ipguideen_>`_.
 
-   Thus, while I (Richard Darst) can't promise anything, rumor has it
-   this can be directly applied in all Aalto.  Unlike the Aalto
-   policies, this provides the necessary guidance to make sure that
-   your and Aalto's interests are protected.  If you are doing
-   something that is beyond what is in this document, you probably
-   want to talk to someone at Aalto anyway.  Also, you may also have
-   rights beyond what is in this document even without further
-   discussion.
+   Thus, while I (Richard Darst) can't promise anything, you probably
+   have *more* than these rights in all of Aalto (including units that
+   have approved this policy).  Unlike the Aalto policies, this policy
+   provides the necessary guidance to make sure that your and Aalto's
+   interests are protected.  If you are doing something that is beyond
+   what is in this document, you probably want to talk to someone at
+   Aalto anyway.
 
 .. _aaltordm: http://www.aalto.fi/en/research/research_data_management/
 
@@ -205,24 +206,31 @@ TODO
 References
 ~~~~~~~~~~
 
--  Practical guidelines for Open Source Projects: forthcoming, 2017
-
--  Choosing an open source license:
-   \ `http://choosealicense.com/ <http://choosealicense.com/>`__
-
--  Aalto Innovation Services:
-   \ `http://innovation.aalto.fi/ <http://innovation.aalto.fi/>`__
 
 -  Aalto Research Data Management Policy:
    \ `https://inside.aalto.fi/download/attachments/43223812/2016\_02\_10\_datapolicy.pdf?version=1&modificationDate=1455967763618&api=v2 <https://inside.aalto.fi/download/attachments/43223812/2016_02_10_datapolicy.pdf?version=1&modificationDate=1455967763618&api=v2>`__
 
+-  Aalto IP guide: `FI <ipguidefi_>`_ `EN <ipguideen_>`_: contains
+   evidence that this policy is applicable to all Aalto.
+
+-  Aalto Innovation Services:
+   \ `http://innovation.aalto.fi/ <http://innovation.aalto.fi/>`__
+
+-  Choosing an open source license:
+   \ `http://choosealicense.com/ <http://choosealicense.com/>`__
+
 -  Aalto copyright advice:
    `http://copyright.aalto.fi/ <http://copyright.aalto.fi/>`__
 
--  Aalto IP guide: `FI <ipguidefi_>`_ `EN <ipguideen_>`_
+-  Practical guidelines for Open Source Projects: forthcoming, 2017
 
 .. _ipguidefi: https://inside.aalto.fi/display/firis/IPR-opas
 .. _ipguideen: https://inside.aalto.fi/display/enris/IP+Guide
+
+
+
+
+
 
 ..
   Planning stuff below
