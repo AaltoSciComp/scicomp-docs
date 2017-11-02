@@ -189,8 +189,8 @@ The policy
    opensource-policy
 
 
-:doc:`Raw text <opensource-policy>`. Current approvals: Department of
-Computer Science (2017-03-17).
+:doc:`Raw official text <opensource-policy>`. Current approvals:
+Department of Computer Science (2017-03-17).
 
 .. include:: opensource-policy.rst
 
