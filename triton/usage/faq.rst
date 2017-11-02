@@ -1012,7 +1012,7 @@ it displays the type of an executable or object file.
 
 
 Graphical programs don't work (X11, -X)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 In order for graphical programs on Linux to work, a file
 ``~/.Xauthority`` has to be written.  If your home directory quota
 (check with ``quota``) is exceeded, then this can't be written and

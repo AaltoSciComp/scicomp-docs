@@ -24,6 +24,7 @@ A few prerequisites:
 -  You should tell us your department/school in your account creation
    request.
 -  Accounts are for
+
    - Researchers (as in, affiliated with a research PI in any way)
    - Students coming to one of our `Scientific Computing in Practice
      courses <scip_>`_ which uses Triton.
