@@ -19,7 +19,7 @@ a directory in your working directory.
 ::
 
     mv ~/.matlab $WRKDIR/matlab
-    ln -s $WRKDIR/matlab .matlab
+    ln -s $WRKDIR/matlab ~/.matlab
     quotafix -sg --fix --group $USER $WRKDIR/matlab
 
 Interactive usage
