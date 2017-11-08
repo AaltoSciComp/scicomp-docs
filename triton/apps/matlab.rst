@@ -8,6 +8,20 @@ Computing Server (MDCS), but because of low use we no longer have a
 license.  You can still run in parallel on one node, up to 20-28 cores
 depending on how new.)
 
+Matlab configuration
+--------------------
+
+Matlab writes session data, compiled code and additional toolboxes to
+`~/.matlab`. This can quicky fill up your `$HOME` quota. To fix this
+we recommend that you replace the folder with a symlink that points to
+a directory in your working directory.
+
+::
+
+    mv ~/.matlab $WRKDIR/matlab
+    ln -s $WRKDIR/matlab .matlab
+    quotafix -sg --fix --group $USER $WRKDIR/matlab
+
 Interactive usage
 -----------------
 
