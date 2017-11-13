@@ -2,7 +2,7 @@ Available compilers
 -------------------
 
 Please see full up to date listing of different toolchains and
-compilers from  `Applications <../apps/index>`_\ -page. This page
+compilers from  :doc:`Applications <../apps/index>`\ -page. This page
 contains information on their usage.
 
 GCC

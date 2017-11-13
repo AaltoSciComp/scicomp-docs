@@ -262,7 +262,7 @@ Python optimized for Triton
 ---------------------------
 
 There are Python modules installed with the typical software setup
-against `EasyBuild toolchains <../apps/index>`. While some of the
+against :doc:`EasyBuild toolchains <../apps/index>`. While some of the
 more general packages available with anaconda installation might be
 missing, the Numpy and Scipy installations on these modules are highly
 optimized against the installed linear algebra libraries. A typical
