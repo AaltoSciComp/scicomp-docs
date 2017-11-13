@@ -23,6 +23,23 @@ MPI versions.
 -  vasp\_gam: Gamma point only. Faster if you use only a single k-point.
 -  vasp\_ncl: For non-collinear spin calculations
 
+VASP 5.4.4
+==========
+
+The binaries are compiled with the Intel compiler suite and the MKL
+library, the used toolchain module is `iomklc/triton-2017a`. Example
+batch script
+
+::
+
+   #!/bin/bash -l
+   #SBATCH -n 8
+   #SBATCH -t 0-6
+   #SBATCH --mem-per-cpu=1500
+   ml vasp/5.4.4
+   srun vasp_std
+
+
 VASP 5.4.1
 ==========
 
