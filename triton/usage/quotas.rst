@@ -20,7 +20,7 @@ scratch, so if you ever get a "disk quota exceeded" error, then read on.
    To try a quick fix, you can:
      ``quotafix -gs --fix /path/to/the/directory``
 
-   If that fixes something, and problem recurs, then:``
+   If that fixes something, and problem recurs, then:
      ``module load teflon``
      
 How quotas work
