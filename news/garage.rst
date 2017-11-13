@@ -34,9 +34,9 @@ Schedule
 -  Location: See below.  U121a_ and U121b_  (in main building),
    T4_ (CS building).
 
-.. _U121a: http://usefulaaltomap.fi//select/main-U121a
+.. _U121a: http://usefulaaltomap.fi/#!/select/main-U121a
 .. _U121b: http://usefulaaltomap.fi/#!/select/main-U121b
-.. _T4:    http://usefulaaltomap.fi/#!/select/r030-T4
+.. _T4:    http://usefulaaltomap.fi/#!/select/r030-A238
 
 .. csv-table::
    :header-rows: 1
