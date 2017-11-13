@@ -6,24 +6,27 @@ Open Source at Aalto
 
    This policy was developed at the Department of Computer Science, in
    conjunction with experts from Research and Innovation services
-   (both the legal and commercialization sides).  Then, we have heard
-   that supposedly the `Aalto Research Data Management Policy
-   <aaltordm_>`_ was supposed to have this same effect, however it
-   does not make these things so clear.  In fact, the RDM policy, if
-   interpreted this way, would allow you to do essentially anything,
-   including things which are not to the benefit of Aalto.  More
-   evidence of these Aalto policies can be found in the `Aalto IP
-   Guide <ipguideen_>`_.
+   (both the legal and commercialization sides) with the intention of
+   serving the wider community.
 
-   Thus, while I (Richard Darst) can't promise anything, you probably
-   have *more* than these rights in all of Aalto (including units that
-   have approved this policy).  Unlike the Aalto policies, this policy
-   provides the necessary guidance to make sure that your and Aalto's
-   interests are protected.  If you are doing something that is beyond
-   what is in this document, you probably want to talk to someone at
-   Aalto anyway.
+   After more research, we have learned that this policy is, in fact,
+   de-facto applicable to all of Aalto, it is just extremely
+   unclear that open source is actually allowed.  Thus, this policy
+   can be seen as best practices for all of Aalto.  However, everyone
+   (including CS) has more rights: one does not have to use this
+   policy.  You don't have to use an open source license.  IP
+   ownership may be in more limited hands, so that you need fewer
+   agreements to release.
 
-.. _aaltordm: http://www.aalto.fi/en/research/research_data_management/
+   However, we strongly encourage you to use this policy anyway.  If
+   you use this, you *know* that you are safe and have all permissions
+   to make open source, regardless of your particular funding
+   situation.  It also ensures that you make proper open source
+   software, for maximum benefit and open science impact.
+
+   References at bottom.
+
+
 
 
 Researchers make at least three primary outputs: publications, software,
@@ -37,7 +40,8 @@ covers only cases where work can clearly be released openly with no
 bureaucracy needed. It does not cover complex cases, such as commercial
 software, work related to inventions, complex partnership agreements,
 etc. The policy is voluntary, and provides a right to release openly,
-but does not require it or preclude any other university process. It
+but does not require it or preclude any other university process.
+(Thus it's more of a guideline than a policy.)  It
 only is relevant when the creator has an employment relationship with
 Aalto. If they don't (e.g. students), they own their own work unless
 there is some other agreement in place (e.g. their own funding contract,
@@ -69,7 +73,8 @@ just putting code on some webpage. Without a license, others can not
 build on your code, making your impact limited. No one will build on
 you, and eventually your work rots and gets lost.
 
-You *always* want to go through this process as soon as possible: if
+You *always* want to go through this process as soon as possible at
+the beginning of a project: if
 you don't, it becomes much harder to track everyone down.
 
 You shouldn't release as open source (yet) if your work is intentionally
@@ -84,6 +89,8 @@ invention to Innovation Services.
 Step-by-step guide for release under this policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+#. Do these steps at the beginning of your project, not at the end!
+
 #. Check if the work is covered under the "conditions for limited
    commercial potential" in the policy.
 
@@ -92,7 +99,7 @@ Step-by-step guide for release under this policy
    type of exclusive license away - Aalto keeps full right to future
    use.
 
-#. Get the consent of all authors and their supervisors. There are no
+#. Get the consent of all authors and their supervisors and/or funders. There are no
    particular requirements for this, the only need is proving it later
    in case a question ever arises. You should also make sure that your
    particular funding source/collaboration agreements don't have any
@@ -100,6 +107,10 @@ Step-by-step guide for release under this policy
    say no GPL-type licenses without consent of all partners.) Your
    advisor (and Research and Innovation Services) can help you with
    this.
+
+   If you are funded by Aalto basic funding, you by default have
+   permission.  Same goes for other big public funding agencies
+   (Academy, EU).
 
 #. You are responsible for making sure that you have the right to
    release your code. For example, that any other included software has
@@ -129,7 +140,7 @@ In addition to the above requirements, the following are best practices:
 #. You can't require that people cite you, but you can ask nicely. Make
    it easy to do this! Include the proper citations directly in the
    README. Make your code itself also citeable by publishing it
-   somewhere (github, zenodo, ...).
+   somewhere (Github, Zenodo, ...).
 
 #. Put on a good hosting location and encourage contributions. For
    example, Github is the most popular these days, but there are plenty

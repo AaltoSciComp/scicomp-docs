@@ -6,11 +6,9 @@ Covered work
 
 #. Software
 
-#. Publications and other writing (Note that this policy simply
-   formalizes the existing process where researchers have the right to
-   publish their work, as an exception researchers are allowed to grant
-   exclusive licenses to publishers. Open-access publishing is still
-   preferred.)
+#. Publications and other writing (Note that especially in this case,
+   it is common to sign away full rights.  This is a case where you do
+   more than this policy says.)
 
 #. Data
 
@@ -26,6 +24,7 @@ innovation process.
    code implementing algorithms, data handling scripts.
 
 #. Similarly, work which only is a byproduct of academic publications
+   or other work
    probably has limited commercial value, unless some other factor
    overrides. For example: analysis codes, blog posts, datasets, other
    communications.
@@ -60,21 +59,22 @@ Ownership of intellectual property rights at Aalto
 
 #. This policy covers work of employees whose contracts assign copyright
    and other intellectual property rights of their work to Aalto.
-   However, determining this can be difficult. This policy is designed
-   to be applicable to all work, regardless of the ownership.
+   However, the Aalto rules for ownership of IP are *extremely*
+   difficult, so see the last point.
 
 #. Your rights are assigned to Aalto if you are funded by external
    funding, or if there are other Aalto agreements regarding your work.
 
 #. If neither of the points in (2) apply to you AND your work is
-   independent (self-decided and directed), then according to Finnish
+   independent (self-decided and self-directed), then according to Finnish
    law you own all rights to your own work. You may release it how you
    please, and the rest of this policy does NOT apply (but we recommend
    reading it anyway for valuable advice). Aalto Innovation Services can
    serve you anyway.
 
-#. Rather than figure out the the ownership of work, this policy can
-   also be applied to all work.
+#. Rather than figure out the the ownership of work, this policy is
+   written to apply to *all* work, so that you do not need to worry
+   about this.
 
 Release criteria and process
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -92,7 +92,8 @@ Release criteria and process
    which may cover patentable inventions must be reported first.
 
 #. If all conditions are satisfied, you, in consultation with your
-   supervisor or project leader, may choose to release the work. Should
+   PI, supervisor, or project leader (whichever is applicable) and any
+   funder/client requirements, may choose to release the work. Should
    the supervisor or PI have a conflict of interest or possible conflict
    of interest, their supervisor should also be consulted.
 
