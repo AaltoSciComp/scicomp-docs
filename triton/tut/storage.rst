@@ -120,9 +120,11 @@ On different operating systems:
 * Windows: In the file manager, go to Computer and "Map Network
   Drive".  In Windows 10 → "This PC" → right click → "Add Network
   Location".  Use the URLs above but replace ``smb://`` with ``\\`` and
-  use backslashes instead of forward slashes.
+  ``/`` with ``\``.  For example, ``\\lgw01.triton.aalto.fi\scratch\``.
 * Mac: Finder → Go → Connect to Server.  Use the URLs above.
 
+Depending on your OS, you may need to use either your username
+directly or ``AALTO\username``
 
 Using scp
 ^^^^^^^^^

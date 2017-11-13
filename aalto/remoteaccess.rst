@@ -80,20 +80,26 @@ the shell servers):
 
 -  username=aalto username, domain=AALTO, password=Aalto password.
 -  ``smb://home.org.aalto.fi/`` for your home directory
--  ``smb://tw-cs.org.aalto.fi/project**/$group/`` for project
-   directories
--  ``smb://tw-cs.org.aalto.fi/archive/$group/`` for archive
-   directories
+-  ``smb://tw-cs.org.aalto.fi/project/$name/`` for project
+   directories (``$name``\ =project name)
+-  ``smb://tw-cs.org.aalto.fi/archive/$name/`` for archive
+   directories (``$name``\ =project name)
+- For scratch directories, see :doc:`Triton storage
+  <../triton/tut/storage>`.
 
-On Ubuntu: Files → Left sidebar → Connect to server → use URLs above.
-For other linuxes, you can probably figure it out.
+Depending on your OS, you may need to use either your username
+directly or ``AALTO\username``
 
-On mac laptops: Finder → Go menu item → Connect to server → use URLs
-above .
+On Ubuntu: Files → Left sidebar → Connect to server → use the URLs above.
+For other Linuxes, you can probably figure it out.
 
-On windows laptops: Windows Explorer → Computer → Map network drive →
-select a free letter and use: ``\\tw-cs.org.aalto.fi\project`` (and so
-on, like above).
+On mac laptops: Finder → Go menu item → Connect to server → use the URLs
+above.
+
+On windows laptops: ``smb://`` becomes ``\\``, and ``/`` becomes
+``\``.  To do the mounting, Windows Explorer → Computer → Map network drive →
+select a free letter.  For example, a URL could be
+``\\tw-cs.org.aalto.fi\project\mygroup``.
 
 Remember that you must connect to the Aalto VPN first!
 
