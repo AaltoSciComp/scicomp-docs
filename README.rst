@@ -2,6 +2,34 @@
 About these docs
 ================
 
+These docs originally came from the Triton User Guide, but now serves
+as a general Aalto scientific computing guide.  The intention is a
+good central resources for researchers, kept up to date by the whole
+community.
+
+Contributing
+~~~~~~~~~~~~
+
+This documentation is Open Source (CC-BY 4.0), and we welcome
+contributions from the Aalto community.  The project is run on Github
+(https://github.com/AaltoScienceIT/triton-docs).
+
+To contribute, you can always use the normal Github contribution
+mechanims: make a pull request or comments.  If you are at Aalto, you
+can also get direct write access.  Make a github issue, then contact
+us in person/by email for us to confirm.
+
+**The worst contribution is one that isn't made.** Don't worry about
+making things perfect: since this is in version control, we track all
+changes and will just fix anything that's not perfect.  This is also
+true for formatting errors - if you can't do ReStructudedText
+perfectly, just do your best (and pretend it's markdown because all
+the basics are similar).
+
+Contributing gives consent to use content under the licenses (CC-BY
+4.0 or CC0 for examples).
+
+
 Requirements and building
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -31,10 +59,11 @@ You can see a complete example from UiT: `source
 ReStructured text
 ~~~~~~~~~~~~~~~~~
 
-ReStructured Text is similar to markdown in spirit, but has a more
-strictly defined syntax, with more higher level structure.  This
+ReStructured Text is similar to markdown for basics, but has a more
+strictly defined syntax and more higher level structure.  This
 allows more semantic markup, more power to compile into different
-formats, and advanced things like indexing, permanent references, etc.
+formats (since there isn't embedded HTML), and advanced things like
+indexing, permanent references, etc.
 
 Restructured text `home <http://docutils.sourceforge.net/rst.html>`_
 and `quick reference

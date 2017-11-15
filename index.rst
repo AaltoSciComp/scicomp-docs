@@ -82,11 +82,13 @@ computing resources.
 Metadocs
 ========
 
-These docs are open source, and we *strongly* encourage anyone to
-contribute.  See the README below and the Github links at the top of
-every page.  Either make Github issues, pull requests, or ask for
-direct commit access.  Be bold: don't be afraid of mistakes, they
-can always be fixed.
+These docs are open source: all content is licensed under CC-BY 4.0
+and all examples under CC0 (public domain).  Additionally, this is an
+*open project* and we *strongly* encourage anyone to :doc:`contribute
+<README>`.  For information, see the :doc:`README` and the Github
+links at the top of every page.  Either make Github issues, pull
+requests, or ask for direct commit access.  Be bold: the biggest
+problem is missing information, and mistakes can always be fixed.
 
 .. toctree::
    :maxdepth: 1
