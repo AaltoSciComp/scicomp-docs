@@ -88,16 +88,19 @@ distributed computing framework.
 Most HPC at Aalto is performed on :doc:`Triton <../triton/index>`, the
 Aalto HPC cluster.  It is a fairly standard medium-sized cluster, and
 it's main advantage is the close integration into the Aalto
-environment: it shares Aalto accounts and its data storage (2PB) is
-also available on workstations.  Triton is part of the Finnish Grid
+environment: it shares Aalto accounts, its data storage (2PB) is
+also available on workstations, and has responsive local support.  If
+you need dedicated resources, you can purchase them and they can be
+managed by us as part of Triton.  Triton is part of the Finnish Grid
 and Cloud Infrastructure.
 
 `CSC <https://csc.fi>`_ (the Finnish IT Center for Science) is a
 government-owned organization.  They provide a lot of services, most
-notably HPC and data management services to the.  All of their
-services are free to the academic community (paid directly by the
-state of Finland).  They also coordinate the Finnish Grid and Cloud
-Infrastructure.  They have the largest known cluster in Finland.
+notably HPC, data, and IT infrastructure services to the academic
+sector.  All of their services are free to the academic community
+(paid directly by the state of Finland).  They also coordinate the
+Finnish Grid and Cloud Infrastructure.  They have the largest known
+cluster in Finland.
 
 
 
@@ -108,17 +111,25 @@ Data management isn't just storage: if data is just put somewhere, you
 get a massive mess and data isn't usable in even 5 years.  Funders now
 require "data management plans".  Thus data management is not just a
 *hot* topic, it's an *important* one.  We have a :doc:`whole section
-on data <../data/index>`, and also there are higher level :doc:`guides from
-Aalto <aaltordm_>`_.  If you have specific questions, there is an
-official service email address you can use, or you can ask the
-Science-IT team.
+on data <../data/index>`, and also there are higher level `guides from
+Aalto <aaltordm_>`_, or you can check :doc:`our guide for researchers
+<../data/outline/>`.  If you have specific questions, there is an
+official service email address you can use (see the Aalto pages), or
+you can ask the Science-IT team.
 
 .. _aaltordm: http://www.aalto.fi/en/research/research_data_management/
 
 Aalto has many data storage options, most free.  In general, you
 should put your data in some centralized location shared with your
 group: if you keep it only on your own systems, the data dies when you
-leave.
+leave.  We manage data by *projects*: a group of people
+with shared access and a manager.  Groups provide flexibility,
+sharing, and long-term management (so that you don't lose or forget
+about data every time someone leaves).  You can request as many
+projects as you need, and each can have its own access control and
+quota.  You can read about the :doc:`storage locations available
+<../aalto/aaltostorage>` and :doc:`storage service policy
+<../data/datapolicy>`.
 
 Triton has 2PB of non-backed up data storage on the high-performance
 Lustre filesystem.  This is used for large active computation
@@ -127,13 +138,13 @@ it is very fast and parallel.  This is mounted by default at
 Science-IT departments, and can be by default in other departments
 too.
 
-Aalto provides "work" and "teamwork" centralized filesystems.
-Teamwork is managed by the Science-IT departments and provided to its
-researchers.  For other schools/departments, both are provided by
-Aalto ITS but you will have to figure out your school's system
-yourself.  These systems are snapshotted, backed up, shareable, and
-easily available on Aalto workstations.  It's even possible to
-directly collect data to these systems from lab equipment.
+Aalto provides "work" and "teamwork" centralized filesystems which are
+large, backed up, snapshotted, shared: everything you may want.
+Within the Science-IT departments, Science-IT and department IT
+manages it and provides access.  For other schools/departments, both
+are provided by Aalto ITS but you will have to figure out your
+school's policies yourself.  It's even possible to directly collect
+data to these systems from lab equipment.
 
 CSC provides both high-performance Lustre filesystems (like Triton)
 and archive systems.
@@ -156,9 +167,17 @@ a lot of scientific software installed, with in the :doc:`Lmod system
 workstation, you can install Ubuntu packages yourself (and if you
 aren't, you should ask to be).  If you use Triton or are in a Science-IT department, it
 can be worth asking Science-IT about software you need - we are
-experts in this.  Windows workstations can have things automatically
+experts in this and working to simplify the mess that scientific
+software is.  Windows workstations can have things automatically
 installed, but you'll have to find the method from the ITS
 instructions above.
+
+Triton and Aalto workstations have the central software available,
+currently for laptops you are on your own.
+
+On Triton, type ``module spider $name`` to search for available
+software.  We are working to unify the software stack available on
+Triton and Aalto workstations.
 
 `ITS software and licenses
 <https://inside.aalto.fi/display/ITServices/Software+and+licenses>`__.
