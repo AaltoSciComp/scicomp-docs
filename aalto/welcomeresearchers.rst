@@ -33,7 +33,7 @@ some of the key players:
   in the university.  The core Science-IT departments are CS, NBE, and
   PHYS.  Science-IT runs a weekly :doc:`SciComp garage
   <../news/garage>`, where we provide hands on support for anything
-  related to scientific computing.   `Official site <sci-it>`_, but
+  related to scientific computing.   `Official site <sci-it_>`_, but
   :doc:`this site <../index>` is its day-to-day guidance.
 * **Aalto ITS** (IT Services): Provides central IT infrastructure.
   Their support for complicated research situations and special
