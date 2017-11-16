@@ -85,8 +85,7 @@ Launch 2 hour interactive session
 
     $ sinteractive -t 2:0
 
-See also interactive usage section below for advanced examples and
-:doc:`../usage/vnc`.
+See also the interactive usage section below for advanced examples.
 
 Job examples
 ============
