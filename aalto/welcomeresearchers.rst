@@ -194,6 +194,42 @@ is exported to Triton.
 
 
 
+Starting a project
+==================
+Each time you start a project, it's worth putting a few minutes into
+planning so that you create a good base (and don't end up with chaos
+in a few years).
+
+- Do the normal Aalto bureaucratic work.  We don't know about that, and
+  this guide does *not* relate to that.  You also don't have to do
+  that stuff in order to do the steps below.
+
+- Request a data group (see above) if you don't already have a good
+  location.  This will keep all of your data together, in the same
+  place.
+
+  - If you already have a data group that is suitable (similar
+    members), you can use that.  But there's no limit to the number of
+    projects, so think about if it's better to keep things apart earlier.
+
+  - Mail your department IT support and request a group.  Give the
+    info requested at the bottom of :doc:`data outline page
+    <../data/outline>`.
+
+  - In the same message, request the different data storage
+    locations, e.g. scratch, project, archive.  Quotas can always be
+    increased later.
+
+- Think about how you'll manage data.  It's always easy to just start
+  working, but it can be worth getting all project members on the same
+  page about where data will be stored and what you want to happen to
+  it in the end.  Having a very short thing written will also help a
+  lot to get newcomers started.  The :doc:`"practical DMP" section
+  here <../data/plans>` can help a lot - try filling out that A4 page
+  to consider the big sections.
+
+
+
 Other notes
 ===========
 
