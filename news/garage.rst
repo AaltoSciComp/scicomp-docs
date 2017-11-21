@@ -36,7 +36,7 @@ Schedule
 
 .. _U121a: http://usefulaaltomap.fi/#!/select/main-U121a
 .. _U121b: http://usefulaaltomap.fi/#!/select/main-U121b
-.. _T4:    http://usefulaaltomap.fi/#!/select/r030-A238
+.. _T4:    http://usefulaaltomap.fi/#!/select/cs-A238
 
 .. csv-table::
    :header-rows: 1
