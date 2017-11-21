@@ -8,7 +8,7 @@ good overview of IT services for researchers for you (focused on
 computation and data-using researchers).
 
 These aren't generic IT instructions - ITS has an introduction for
-staff somewhere (TODO: find it online).  There is also a handy list of
+staff somewhere (but apparently not online).  There is also a handy list of
 `research-focused services <itsr_>`_ provided by ITS.
 
 .. _itsr: https://inside.aalto.fi/display/ITServices/IT+Services+for+Research
@@ -38,7 +38,7 @@ some of the key players:
 * **Aalto ITS** (IT Services): Provides central IT infrastructure.
   Their support for complicated research situations and special
   scientific software is limited, but they are the first place to
-  contact if not in SCI.  Their infrastructure is also used in SCI,
+  contact if not in the School of Science.  Their infrastructure is also used in SCI,
   but supported by department teams.  Their instructions are on `Aalto
   Inside <its_instr_>`_, but most importantly the already-mentioned
   `IT Services for Research <itsr_>`_ page.
@@ -55,6 +55,31 @@ some of the key players:
 .. _cs-it: https://wiki.aalto.fi/display/CSdept/IT
 .. _nbe-it: https://wiki.aalto.fi/display/NBE/IT+Information
 .. _phys-it: https://wiki.aalto.fi/display/TFYintra/PHYS+IT
+
+Also, currently Aalto has information is scattered everywhere:
+
+* `aalto.fi <http://aalto.fi>`__ is the normal homepage, but doesn't
+  have much practical information for researchers.
+* `inside.aalto.fi <https://inside.aalto.fi>`__ is the typical
+  "official" staff documentation area, where most service units have
+  their homepages. This is perhaps the most important place to look,
+  but is *not* visible in any public search engines or on the search
+  engine on the Aalto homepage - you have to go directly here to
+  search (so most people never find the Aalto official information).
+* `into.aalto.fi <https://into.aalto.fi>`__ is the student official
+  information.  It contains a lot of duplicate information compared to
+  Inside and is public, so if you search things at Aalto you tend to
+  find answers here.
+* `wiki.aalto.fi <https://wiki.aalto.fi>`__ is obviously the Aalto
+  wiki space.  Anyone can make a space here, and many department's
+  internal sites are here.  Searching can randomly find useful
+  information.  Most sites aren't publically searchable.
+* :doc:`scicomp.aalto.fi <../index>` is where you are now.  Scicomp
+  was started by the Science-IT group from the Triton (HPC cluster)
+  documentation, which is slowly taking over from our department's
+  research IT instructions.  Now is is our general guidance to
+  researchers.  We would rather combine with other official sites, but
+  currently there's nothing standard-based and open.
 
 
 
