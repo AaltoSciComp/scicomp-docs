@@ -41,6 +41,12 @@ management below.
 
    aalto/index
 
+Cheatsheets: `CS <ch-cs_>`_, `Data <ch-data_>`_.
+
+.. _ch-cs: https://users.aalto.fi/~darstr1/cheatsheets/cs-cheatsheet.pdf
+.. _ch-data: https://users.aalto.fi/~darstr1/cheatsheets/sci-data-cheatsheet.pdf
+
+
 
 Data management
 ===============
@@ -55,6 +61,11 @@ Research Data Management pages
 
    data/index
 
+Cheatsheets: `Data <ch-data_>`_, `A4 Data management plan <ch-dmpA4_>`_.
+
+.. _ch-dmpA4: https://users.aalto.fi/~darstr1/cheatsheets/DMP-A4-both.pdf
+
+
 
 Triton
 ======
@@ -67,6 +78,10 @@ capacity.
 
    triton/index
 
+Cheatsheets: `Triton <ch-triton_>`_
+
+.. _ch-triton: https://users.aalto.fi/~darstr1/cheatsheets/triton-cheatsheet.pdf
+
 
 Scientific computing
 ====================
@@ -77,6 +92,10 @@ computing resources.
    :maxdepth: 2
 
    scicomp/index
+
+Cheatsheets: `Gitlab (produced by Gitlab, with Aalto link) <ch-gitlab_>`_
+
+.. _ch-gitlab: https://users.aalto.fi/~darstr1/cheatsheets/git-cheatsheet.pdf
 
 
 Metadocs

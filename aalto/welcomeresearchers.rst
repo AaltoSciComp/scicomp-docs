@@ -260,3 +260,8 @@ Other notes
 
 Remember to keep the `IT Services for Research page close <itsr_>`_
 close at hand!
+
+There are some good `cheatsheets
+<https://users.aalto.fi/~darstr1/cheatsheets/>`__ which our team
+maintains.  They are somewhat sepcialized, but useful in the right
+places.
