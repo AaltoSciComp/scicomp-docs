@@ -179,8 +179,14 @@ On Triton, type ``module spider $name`` to search for available
 software.  We are working to unify the software stack available on
 Triton and Aalto workstations.
 
-`ITS software and licenses
-<https://inside.aalto.fi/display/ITServices/Software+and+licenses>`__.
+ITS has a `software and licenses <its_sw_>`_ (`FI <its_sw_fi_>`_)
+page, and also a `full list of licenses <its_sw_list_>`_.  There is
+also https://download.aalto.fi/.
+
+.. _its_sw: https://inside.aalto.fi/display/ITServices/Software+and+licenses
+.. _its_sw_fi: https://inside.aalto.fi/display/ITPK/Ohjelmistot+ja+lisenssit
+.. _its_sw_list: https://inside.aalto.fi/display/ITServices/University+software+licenses
+.. _sw_download: http://download.aalto.fi/
 
 CSC also has `a lot of software
 <https://research.csc.fi/software>`__.  Some is on CSC computers, some

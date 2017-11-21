@@ -14,11 +14,15 @@ yourself with all information on this site and use whatever you
 need.
 
 There are general IT instructions for students: `FI <itsFI_>`_ `SV
-<itsSV_>`_ `EN <itsEN_>`_.  There are also `research-focused instructions
-<itsr_>`_.
+<itsSV_>`_ `EN <itsEN_>`_.  There is an `introduction to IT services
+for students <itsrv_std_>`_ (`FI <itsrv_std_fi_>`_) There are also
+`research-focused instructions <itsr_>`_.
 
 .. _itsFI: https://into.aalto.fi/display/fiit/Etusivu
 .. _itsSV: https://into.aalto.fi/display/svit/Startsida
+.. _itsrv_std: https://into.aalto.fi/display/fiit/IT-pikaopas+opiskelijoille
+.. _itsrv_std_fi: https://into.aalto.fi/display/fiit/IT-pikaopas+opiskelijoille
+.. _itsrv_std_sv: https://into.aalto.fi/pages/viewpage.action?pageId=17334253
 .. _itsEN: https://into.aalto.fi/display/enit/Homepage
 
 
@@ -66,6 +70,20 @@ The `IT Services for Research <itsr_>`_ page contains some other cloud
 services which may be useful for data storage.
 
 .. _itsr: https://inside.aalto.fi/display/ITServices/IT+Services+for+Research
+
+
+
+Software
+========
+
+ITS has a `software and licenses <its_sw_>`_ (`FI <its_sw_fi_>`_)
+page, and also a `full list of licenses <its_sw_list_>`_.  There is
+also http://download.aalto.fi/.
+
+.. _its_sw: https://inside.aalto.fi/display/ITServices/Software+and+licenses
+.. _its_sw_fi: https://inside.aalto.fi/display/ITPK/Ohjelmistot+ja+lisenssit
+.. _its_sw_list: https://inside.aalto.fi/display/ITServices/University+software+licenses
+
 
 
 Software
