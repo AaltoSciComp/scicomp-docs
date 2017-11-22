@@ -60,14 +60,6 @@ Some highlights include:
   - rpy2 (bridge between Python and R)
   - tidyverse
 
-If you frequently use the "neuroimaging" environment, you may consider making
-it your default Python environment by adding these lines to your ``~/.zshrc``::
-
-	# Set default python environment to "neuroimaging"
-	module load anaconda3
-	export CONDA_DEFAULT_ENV="/work/modules/Ubuntu/14.04/amd64/common/anaconda3/latest/envs/neuroimaging"
-	export PATH="$CONDA_DEFAULT_ENV/bin:$PATH"
-
 Finally, if you get binaries from the wrong environment (check with
 ``which BINARYNAME``) you may need to update the mappings with::
 
