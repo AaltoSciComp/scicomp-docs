@@ -41,7 +41,7 @@ Some highlights include:
 
   - nibabel
   - nilearn
-  - nibabel
+  - nitime
   - pysurfer
 
 - EEG/MEG:
