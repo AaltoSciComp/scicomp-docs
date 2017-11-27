@@ -214,3 +214,13 @@ pseudoxml:
 	$(SPHINXBUILD) -b pseudoxml $(ALLSPHINXOPTS) $(BUILDDIR)/pseudoxml
 	@echo
 	@echo "Build finished. The pseudo-XML files are in $(BUILDDIR)/pseudoxml."
+
+
+
+# Science-IT make:
+DEPLOYHOST=fixme
+science-it-deploy: html latexpdfja epub
+
+	#rsync _build/html/ $(DEPLOYHOST)
+	#rsync _build/latex/AaltoScicomp.pdf $(DEPLOYHOST)
+	#rsync _build/epub/AaltoScicomp.epub $(DEPLOYHOST)

@@ -70,7 +70,7 @@ version = release = ''
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -120,11 +120,20 @@ import sphinx_rtd_theme
 html_theme = "sphinx_rtd_theme"
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
-
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #html_theme_options = {}
+html_theme_options = {
+    'display_version': False,
+    #'navigation_depth': 3,
+    #'canonical_url': 'http://scicomp.aalto.fi/'
+    }
+html_context = {'display_github': True,
+                'github_user': 'AaltoScienceIT',
+                'github_repo': 'triton-docs',
+                'github_version': 'master/',
+               }
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
@@ -233,7 +242,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'Tritonuserguide.tex', u'Triton user guide Documentation',
+    (master_doc, 'AaltoScicomp.tex', u'Aalto scientific computing guide',
      u'Aalto Science-IT', 'manual'),
 ]
 
@@ -294,6 +303,13 @@ texinfo_documents = [
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
 
+# -- Options for Epub output -------------------------------------------
+epub_basename = 'AaltoScicomp'
+epub_title = 'Aalto scientefic computing guide'
+epub_author = 'Aalto Science-IT'
+
+
+# -- Own options -------------------------------------------------------
 
 # Following allows custom CSS to be included
 # https://github.com/rtfd/sphinx_rtd_theme/issues/117
