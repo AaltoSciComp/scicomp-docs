@@ -62,7 +62,7 @@ O = good, x  = bad
    :stub-columns: 2
 
              |           | Large     | Fast      | Confidential | Backups|Long-term archival | Shareable
-   Triton    | scratch   | OO        | OO        | O         | ➖         | x         | O
+   Triton    | scratch   | OO        | OO        | O         | x         | x         | O
              | work      | OO        | OO        | O         | x         | x         |
              |Triton home| x         |           | O         | OO        |           |
              |Local disks| O         | OO        | O         |           |           |
