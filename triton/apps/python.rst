@@ -13,15 +13,15 @@ Python distributions
 |                          | Python to use            | How to install own       |
 |                          |                          | packages                 |
 +==========================+==========================+==========================+
-| Simple programs with     | Anaconda 2/3             | pip install --user       |
-| common packages, not     |                          |                          |
-| switching between        |                          |                          |
-| Pythons often            |                          |                          |
-+--------------------------+--------------------------+--------------------------+
 | Most of the use cases,   | Anaconda 2/3             | conda environment +      |
 | but sometimes different  |                          | conda                    |
 | versions of modules      |                          |                          |
 | needed                   |                          |                          |
++--------------------------+--------------------------+--------------------------+
+| Simple programs with     | Anaconda 2/3             | ``pip install --user``   |
+| common packages, not     |                          |                          |
+| switching between        |                          |                          |
+| Pythons often            |                          |                          |
 +--------------------------+--------------------------+--------------------------+
 | Special advanced cases.  | Python from module       | virtualenv + pip install |
 |                          | system                   |                          |
@@ -70,7 +70,7 @@ manager system that can do this for you. There are three important
 related concepts:
 
 -  pip: the Python package installer. Installs Python packages globally,
-   in a user's directory (--user), or anywhere. Installs from the
+   in a user's directory (``--user``), or anywhere. Installs from the
    `Python Package Index <https://pypi.python.org/pypi>`__.
 -  virtualenv: Creates a directory that has all self-contained packages
    that is manageable by the user themself. When the virtualenv is
@@ -214,10 +214,10 @@ A few notes about conda environments:
    you are doing this might work.
 -  The commands below will fail:
 
-   -  conda create -n foo pip # tries to use the global dir, use the
-      --prefix instead
+   -  ``conda create -n foo pip`` # tries to use the global dir, use the
+      ``--prefix`` instead
 
-   -  conda create --prefix $WRKDIR/foo --clone root # will fail as our
+   -  ``conda create --prefix $WRKDIR/foo --clone root`` # will fail as our
       anaconda module has additional packages (e.g. via pip) installed.
 
 Basic pip usage
