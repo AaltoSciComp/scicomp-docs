@@ -8,7 +8,8 @@ new version.aalto.fi service.
 Migrating from svn
 ==================
 
-There are many guides online, but a minimum guide is included below. You
+There are many guides online, but a minimum guide is included below
+(this preserves all history). You
 should create the repository on version.aalto.fi yourself, get your
 computer set up to use version.aalto.fi, and then do the following:
 
@@ -26,6 +27,16 @@ computer set up to use version.aalto.fi, and then do the following:
     # Add Aalto gitlab info
     git remote add origin $VERSION.AALTO.FI_URL
     git push -f origin master
+
+If you have a giant subversion repository with many different
+unrelated (or loosely related) projects, it is recommended to split
+this into separate git repositories per project.  You can also do this
+preserving all history.  If you are in a Science-IT department, we can
+help with this, :doc:`contact Science-IT <../triton/help>`.  If you
+aren't, contact us anyway and we can try to help anyway.
+
+
+
 
 Migrating from other Gitlab (like departments had)
 ==================================================
@@ -138,14 +149,5 @@ FAQ
 FAQ about version.aalto.fi
 ==========================
 
--  What password should I use? It is best to use HAKA to log in to
-   gitlab, in which case you don't need a separate gitlab password. To
-   push, it is best to use ssh keys. You could also set up a separate
-   gitlab password.
--  My account is blocked! That's not a question, but Gitlab blocks users
-   when your Aalto unit changes. This is unfortunately part of gitlab
-   and hasn't been worked around yet. Mail servicedesk@aalto.fi with
-   your username and request "my version.aalto.fi username XXX be
-   unblocked (because my aalto unit changed)" and they should do it.
-
+Moved to :doc:`the gitlab page <../aalto/gitlab>`.
 
