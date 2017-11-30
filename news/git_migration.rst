@@ -35,6 +35,25 @@ preserving all history.  If you are in a Science-IT department, we can
 help with this, :doc:`contact Science-IT <../triton/help>`.  If you
 aren't, contact us anyway and we can try to help anyway.
 
+Preserving the working directory
+--------------------------------
+
+Let's say you are switching to git, but have some stuff that isn't
+checked in yet, so you don't want to re-get the whole repository.  You
+can keep your working directory if you want::
+
+  # project/ is the old subversion directory
+
+  mv project/.svn project/.svn-old
+  # Now it won't appear to be a subversion repo anymore.  You may have
+  # to move other .svn directories in subdirectories.  This step isn't
+  # really needed, but prevents mistakes!
+
+  git clone git@version.aalto.fi:gitlab/new/repo.git new-git-repo/
+  cp -r new-git-repo/.git project/.git
+  # Now project/ looks like a git repo!  You keep all your old files
+  # and resume where you left off.
+
 
 
 

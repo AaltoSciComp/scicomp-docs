@@ -37,9 +37,11 @@ Gitlabs.  With Aalto Gitlab, you can:
 * Have whatever groups you need
 * Get local support
 
-The `Aalto instructions can be found here <version-inst_>`_.
+The `Aalto instructions can be found here <version-inst_>`_, and
+general `gitlab help here <gitlabhelp_>`_.
 
 .. _version-inst: https://version.aalto.fi/docs/aalto_version_quickstart_guide.pdf
+.. _gitlabhelp: https://version.aalto.fi/gitlab/help
 
 All support is provided by Aalto ITS. Since all data is stored within
 Aalto and is managed by Aalto, this is suitable for materials up to
@@ -48,20 +50,26 @@ the "confidential" level.
 Extra instructions for Aalto Gitlab
 -----------------------------------
 
-If you need to share with an outside collaborator, this is supported.
+Always login with HAKA wherever you see the button.  To use your Aalto
+account otherwise, use ``username@aalto.fi`` and your Aalto password
+(for example, use this with ``https`` pushing and pulling).  But, you
+really should try to configure ssh keys for pushing and pulling.
+
+If you need to share with an **outside collaborator**, this is supported.
 These outside partners can access repositories shared with them, but
 not make new ones.  They will get a special gitlab username/password,
 and should use that with the normal gitlab login boxes.
 
-For public projects where you want to build a community, you can also consider
-Github.  There's nothing wrong with having both for your group, just
-make sure people know about it.
+For **public projects** where you want to build a community, you can also consider
+Github.  There's nothing wrong with having both sites for your group, just
+make sure people know about both.  Gitlab can have public projects,
+and Github can also have group organizations.
 
-**NOTE!** If your work contract type changes (e.g. staff -> visitor),
-the Aalto Version blocks the access as a security measure. Please
-contact Aalto ITS Servicedesk <servicedesk@aalto.fi> to fix the problem
-with your account or warn them in advance so that you can continue using
-Aalto Version control.
+**NOTE!** If your work contract type changes (e.g. staff -> visitor,
+student->employee, different department),
+the Aalto Version blocks the access as a "security" measure. Please
+contact Aalto ITS Servicedesk <servicedesk@aalto.fi> to unblock you.
+This is annoying, but can't be fixed yet.
 
 
 Recommendations
@@ -70,6 +78,8 @@ Recommendations
 ``version.aalto.fi`` is a great resource for research groups.  Research
 groups should create a "Gitlab group" and give all their members access to
 it.  This way, code and important data will last longer than single
+person's time at Aalto.  Add everyone as a member to this group so
+that everyone can easily find code.
 
 
 
@@ -78,8 +88,7 @@ FAQ
 
 -  **What password should I use?** It is best to use HAKA to log in to
    gitlab, in which case you don't need a separate gitlab password. To
-   push, it is best to use ssh keys. You could also set up a separate
-   gitlab password.
+   push, it is best to use ssh keys.
 -  **My account is blocked!** That's not a question, but Gitlab blocks users
    when your Aalto unit changes. This is unfortunately part of gitlab
    and hasn't been worked around yet. Mail servicedesk@aalto.fi with

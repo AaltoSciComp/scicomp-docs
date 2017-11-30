@@ -23,14 +23,9 @@ areas, and multiple workflows.*" `Git <http://git-scm.com/>`__
 
    * This page is git in general, not Aalto specific.
 
-   * :doc:`aalto/git <../aalto/git>` contains advice on the Aalto gitlab
+   * :doc:`aalto/git <../aalto/git>` contains advice on the Aalto
+     Gitlab, a repository for the Aalto community integrated to Aalto systems.
 
-At Aalto
-========
-
--  https://version.aalto.fi (:doc:`our documentation <../aalto/git>`) is
-   Gitlab for the Aalto community, managed by Aalto and integrated
-   into the Aalto systems.
 
 Basic git tutorials
 ===================
