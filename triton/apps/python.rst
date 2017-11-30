@@ -195,7 +195,7 @@ thus messing up quota accounting. This prevents that.
        rm -r ~/.local/lib/python*.*/
 
 -  Worst case, you have incompatibility problems. Remove everything,
-   including the stuff installed with "pip install --user". If you've
+   including the stuff installed with ``pip install --user``. If you've
    mixed your personal stuff in with this, then you will have to
    separate it out.
 
