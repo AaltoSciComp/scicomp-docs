@@ -58,7 +58,11 @@ really should try to configure ssh keys for pushing and pulling.
 If you need to share with an **outside collaborator**, this is supported.
 These outside partners can access repositories shared with them, but
 not make new ones.  They will get a special gitlab username/password,
-and should use that with the normal gitlab login boxes.
+and should use that with the normal gitlab login boxes.  To request an
+collaborator account, their Aalto sponsor should `go here to the
+request form <workflow_ext_>`_ (employees only).
+
+.. _ workflow_ext: https://workflow.aalto.fi/version_ext/
 
 For **public projects** where you want to build a community, you can also consider
 Github.  There's nothing wrong with having both sites for your group, just
@@ -71,6 +75,11 @@ the Aalto Version blocks the access as a "security" measure. Please
 contact Aalto ITS Servicedesk <servicedesk@aalto.fi> to unblock you.
 This is annoying, but can't be fixed yet.
 
+The service doesn't have quotas right now, but has limited resources
+and we expect everyone to use disk space responsibly.  If you use too
+much space, you will be contacted.  Just do your best to use the
+service well, and the admins will work with you to get your work done.
+
 
 Recommendations
 ---------------
@@ -81,6 +90,25 @@ it.  This way, code and important data will last longer than single
 person's time at Aalto.  Add everyone as a member to this group so
 that everyone can easily find code.
 
+Think about the long term.  Will you need access to this code in 5
+years, and if so what will you do?
+
+- If you are a research group, put your code in a Gitlab group.  The
+  users can constantly switch, but the code will stay with the group.
+
+- If you are an individual, plan on needing a different location once
+  you leave Aalto.  If your code can become group code, include it in
+  the group repository so at least someone will keep it at Aalto.
+
+- `Zenodo <https://zenodo.org>`_ is a long-term data archive.  When
+  you publish projects, consider archiving your code there.  (It has
+  integration with Github, which you might prefer to use if you are
+  actually making your code open.)  Your code is then citeable
+  with a DOI.
+
+- In all cases, if multiple people are working on something, think
+  about licenses at the beginning.  If you don't, you may be blocked
+  from using your own work.
 
 
 FAQ
@@ -100,5 +128,10 @@ FAQ
   that this is a major reason for group-based access control!).  Email
   servicedesk for information on what to do to become an external
   collaborator.
+- **When are accounts/data deleted?** The deletion policy is findable
+  in the `privacy policy <verisionprivacy_>`_.  In 2017, it's 6 months
+  after Aalto account closed, 24 months after last login, or 12 months
+  after last login of an external collaborator.
 
+.. _versionprivacy: https://version.aalto.fi/policies/version_aalto_policy_eng.pdf
 
