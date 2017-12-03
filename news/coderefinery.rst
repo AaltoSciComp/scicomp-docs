@@ -8,10 +8,20 @@ from 12-14 December <cre_>`_.  We highly recommend this workshop.
 .. _cre: http://coderefinery.org/workshops/2017-12-12-espoo/
 
 If you have an Aalto centrally-managed laptop, this page gives hints
-on software installation.  (These are not needed if you have your own
-computer you administer yourself, or if you have an Aalto standalone
-computer you administer yourself).  You have to use these instructions
+on software installation.  You have to use these instructions
 along with the CodeRefinery instructions.
+
+.. note::
+
+  These are only for the Aalto centrally managed laptops.  They are
+  not needed if you have your own computer you administer yourself, or
+  if you have an Aalto standalone computer you administer yourself).
+
+.. warning::
+
+   You should request primary user rights early, or else it won't be
+   ready on time and you will have trouble installing things.  For
+   Windows computers, request a wa (workstation admin) account.
 
 
 
@@ -28,9 +38,7 @@ will be asked to enter your own password::
 
   pkcon install bash git git-gui gitk git-cola meld gfortran gcc g++ build-essential cmake sphinx-doc python-pytest python-pep8 python-cffi
 
-  pkcon install python-numpy python-scipy python-matplotlib python-pandas python-seaborn cython
-
-TODO: jupyter, possibly use anaconda instead.
+You can install Anaconda to your home directory like normal.
 
 
 
@@ -39,20 +47,31 @@ Mac
 
 You also need to be primary user to install software.
 
-If you are, in the software center you can install "Get temporary
-admin rights".  This will allow you to become an administrator for 30
-minutes at a time.  Then, you can install ``.dmg`` files yourself
-(Use this for git, meld, cmake).
+If you are the primary user, in the Software Center you can install
+"Get temporary admin rights".  This will allow you to become an
+administrator for 30 minutes at a time.  Then, you can install
+``.dmg`` files yourself (Use this for git, meld, cmake).
 
 Anaconda: you should be able to do "Install for me only".
 
-Xcode can be installed via the software center.
+Xcode can be installed via the Software Center.
 
-Jupyter: use it via Anaconda
+Jupyter: use it via Anaconda, no need to install.
 
 
 
 Windows
 =======
 
-No instructions yet.
+You should request a workstation-admin account ("``wa account``"),
+then you can install everything.  Note: these instructions are not
+extensively tested.
+
+Git and bash can be installed according to the instructions.
+
+Visual diff tools: Needs wa-account.
+
+Mingw: Not working, but seems to be because of download failing.
+
+Cmake: Needs wa-account.
+
