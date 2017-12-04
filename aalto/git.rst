@@ -62,7 +62,7 @@ and should use that with the normal gitlab login boxes.  To request an
 collaborator account, their Aalto sponsor should `go here to the
 request form <workflow_ext_>`_ (employees only).
 
-.. _ workflow_ext: https://workflow.aalto.fi/version_ext/
+.. _workflow_ext: https://workflow.aalto.fi/version_ext/
 
 For **public projects** where you want to build a community, you can also consider
 Github.  There's nothing wrong with having both sites for your group, just
@@ -129,7 +129,7 @@ FAQ
   servicedesk for information on what to do to become an external
   collaborator.
 - **When are accounts/data deleted?** The deletion policy is findable
-  in the `privacy policy <verisionprivacy_>`_.  In 2017, it's 6 months
+  in the `privacy policy <versionprivacy_>`_.  In 2017, it's 6 months
   after Aalto account closed, 24 months after last login, or 12 months
   after last login of an external collaborator.
 
