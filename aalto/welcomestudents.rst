@@ -90,3 +90,9 @@ Software
 ========
 Various scientific software can be found for your own use via the
 Aalto software portals (see the IT instructions at the top of the page)
+
+Other notes
+===========
+It can be hard to find your way around Aalto, the official campus maps
+and directions are known for being confusing confusing.  Try
+`UsefulAaltoMap <http://usefulaaltomap.fi>`_ instead.

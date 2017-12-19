@@ -265,3 +265,7 @@ There are some good `cheatsheets
 <https://users.aalto.fi/~darstr1/cheatsheets/>`__ which our team
 maintains.  They are somewhat sepcialized, but useful in the right
 places.
+
+It can be hard to find your way around Aalto, the official campus maps
+and directions are known for being confusing confusing.  Try
+`UsefulAaltoMap <http://usefulaaltomap.fi>`_ instead.
