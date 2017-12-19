@@ -69,6 +69,9 @@ Restructured text `home <http://docutils.sourceforge.net/rst.html>`_
 and `quick reference
 <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_.
 
+Note: Literal inline text uses `````` instead of a single ````` (second
+works but gives warning).
+
 A very quick guide is below.
 
 ----
@@ -81,9 +84,40 @@ A very quick guide is below.
 
 ----
 
-Inline `link <http://python.org>`_, or anonymous__, or separate_
-`+different text <separate_>`_ links.  Trailing underscores indicate
-links.
+::
+
+   Block quote
+   Block quote
+
+
+::
+
+   ::
+
+     Block quote
+     Block quote
+
+----
+
+Block quotes can also start with paragraph ending in double colon,
+like this::
+
+  Block quote
+
+::
+
+   Block quotes can also start with paragraph ending in double colon,
+   like this::
+
+       Block quote
+
+----
+
+Inline `link <http://python.org>`_, or
+anonymous__, or
+separate_, or
+`different text <separate_>`_ links.
+Trailing underscores indicate links.
 
 __ http://python.org
 
@@ -91,9 +125,11 @@ __ http://python.org
 
 ::
 
-    Inline `link <http://python.org>`_, or anonymous__, or separate_
-    (`or different text <separate_>`_ links).  Trailing underscores indicate
-    links.
+    Inline `link <http://python.org>`_, or
+    anonymous__, or
+    separate_, or
+    `different text <separate_>`_ links.
+    Trailing underscores indicate links.
 
     __ http://python.org
 
@@ -126,35 +162,6 @@ Reference them this way::
   :ref:`label-name`     (recommended)
   `label-name`          (short, no warning if link breaks)
   `Text <label-name>`   (short, no warning if link breaks)
-
-----
-
-::
-
-   Block quote
-   Block quote
-
-
-::
-
-   ::
-
-     Block quote
-     Block quote
-
-----
-
-Block quotes can also start with paragraph ending in double colon,
-like this::
-
-  Block quote
-
-::
-
-   Block quotes can also start with paragraph ending in double colon,
-   like this::
-
-       Block quote
 
 ----
 
