@@ -39,18 +39,18 @@ will be asked to enter your own password::
   pkcon install bash git git-gui gitk git-cola meld gfortran gcc g++ build-essential cmake sphinx-doc python-pytest python-pep8 python-cffi
 
 You can install Anaconda to your home directory like normal.  If your
-default shell is `zsh` (this is the Aalto default, unless you changed
+default shell is ``zsh`` (this is the Aalto default, unless you changed
 it yourself), then Anaconda won't be automatically put into the path.
-Either: copy the relevant lines from `.bashrc` to `.zshrc` (you may
-have to make this file), or just start `bash` before starting the
+Either: copy the relevant lines from ``.bashrc`` to ``.zshrc`` (you may
+have to make this file), or just start ``bash`` before starting the
 Anaconda programs.
 
 PyCharm: the "snap package" installer requires root, which most people
 don't have.  Instead, download the standalone community file
-(`.tar.gz`), unpack it, and then just run it using
-`./pycharm.../bin/pycharm.sh`.  The custom script in `/usr/loca/bin`
+(``.tar.gz``), unpack it, and then just run it using
+``./pycharm.../bin/pycharm.sh``.  The custom script in ``/usr/loca/bin``
 won't work since you aren't root, but you can make an alias in
-`.bashrc` or `.zshrc`: `alias pycharm=...` (path here).
+``.bashrc`` or ``.zshrc``: ``alias pycharm=...`` (path here).
 
 
 Mac
