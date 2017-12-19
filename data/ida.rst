@@ -43,7 +43,8 @@ Registering and applying for space
 
 Main article: http://openscience.fi/becoming-an-ida-user
 
-Everyone can apply for IDA space via your CSC account. Anyone at a
+Everyone can apply for IDA space via your CSC account (but all IDA
+space is allocated to projects, not individual users). Anyone at a
 Finnish university can get a CSC account automatically. IDA space is
 
 First, you need a CSC account. You can get this online via the Aalto
@@ -54,21 +55,23 @@ staff (postdoc or above) can do this - you probably want it to be
 someone who will be here long term, since that is the point!. Apply for
 the project through the scientists user interface (SUI)
 (https://sui.csc.fi). The SUI can be rather confusing. First, go to
-eService -> My projects, click "Apply for resources", and fill out the
-info. Say you need a project for IDA (or whatever). You need to wait for
-an email for the CSC project to be approved.
+eService → Resources and Applications → select "Academic CSC
+project".  The bottom of the page then changes to an application form.
+Fill this out: say you need a project for IDA (or whatever). You need
+to wait for an email for the CSC project to be approved.
 
 After this project is approved, you can apply for IDA storage space to
-be connected to this project. Go to the SUI -> eService -> Resources and
-Applications, then go to Resources -> Storage -> IDA Storage Service. An
-application form appears below. Select the project which will receive
-the resources, then fill out the application.
+be connected to this project. Go to the SUI → eService → Resources and
+Applications, then go to Resources → Storage → IDA Storage Service.
+The application form below changes to the IDA application. Select the
+project which will receive the resources, then fill out the application.
 
 You will get another email with your IDA password and path once it has
 been approved by Aalto's IDA contact person. This is different from the
-project approval email from CSC. If you do not get the IDA info email
-within a day or two, ping Juha Juvonen and ask if the project has been
-approved.
+project approval email from CSC (the right email has explicit IDA
+usernames and passwords in it). If you do not get the IDA info email
+within a day or two, ping Juha Juvonen at Aalto and ask if the project
+has been approved.
 
 Confidential data
 -----------------
@@ -80,7 +83,7 @@ be made to). Still, since they do not indent to support confidential
 data, we should not count on this for the future. **However,
 confidential data is OK if it is strongly encrypted.**
 
-See our page on encryption for scientists (TODO).
+See our page on :doc:`encryption for scientists <../scicomp/encryption>`.
 
 Access
 ------
