@@ -7,3 +7,4 @@ News
 
    garage.rst
    git_migration.rst
+   aalto_loves_ai.rst
