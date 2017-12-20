@@ -2,6 +2,12 @@
 Aalto loves AI
 ==============
 
+TL;DR
+=====
+We will make it super easy for you to use Paniikki machines remotely from your home computers. Paniikki machines are powerful workhorses loaded with powerful 8-core CPUs and $1845 GPUs. Take advantange of these for your next amazing AI projects.
+
+Intro
+=====
 Do you want to do some Machine Learning? Do you want to run a convolutional neural network with 100 layers of 100 units? Go ahead and rock 'n roll but if you are dancing on your Macbook or Thinkpad your algorithm will just never end. That is because AI(machine learning, deep learning, data mining and etc.) is computationally heavy. You need lots of strong CPU cores and especially powerful GPUs. However, GPUs are expensive! A decent GPU can cost as much as your laptop.
 
 Fortunately Aalto has you covered! In Paniikki(panic in Finnish), a computer room in the CS building, there are 31 monster machines waiting to rock 'n roll with you. Here is the spec:
@@ -51,6 +57,18 @@ Fortunately Aalto has you covered! In Paniikki(panic in Finnish), a computer roo
    Memory properties| Spec
    RAM                        | 32GiB
  
+
+Our goal
+========
+We will build a simple front-end application which you can install on your home computers. Here's how the app will work:
+
+1. App starts. Enter your Aalto credentials
+2. You will be given a list of available Python environments, e.g. Tensorflow-py35 or PyTorch-py34.
+3. You select the environment you need.
+4. A jupyter notebook server is launched on a Paniikki machine which is the most idle. You will be an URL where you can access the Jupyter notebook.
+5. You enter the given URL in your browser. You start coding. The code is saved on the Aalto network drive so you can access them from any Aalto nodes.
+
+
 
 
 The Aalto Scicomp Garage is a help session for scientific computing at
