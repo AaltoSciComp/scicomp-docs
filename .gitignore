@@ -2,3 +2,6 @@
 
 # Emacs backup files
 *~
+
+# Vim swap files
+*.swp

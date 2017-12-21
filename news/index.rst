@@ -7,4 +7,4 @@ News
 
    garage.rst
    git_migration.rst
-   aalto_loves_ai.rst
+   new_project_paniikki_utilisation_pr.rst
