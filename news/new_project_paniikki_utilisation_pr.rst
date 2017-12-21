@@ -22,7 +22,7 @@ While the topic itself is very interesting and there are many resources for stud
 
 Can Aalto help you?
 -------------------
-YES!!! We are always glad to help you and we want you to get advantage of the luxurious workstations in Paniikki(The NVIDIA Quadro P5000 GPUs in Paniikki costed us €2K/module). We will build a desktop app that allows you to use complete scientific containers on Paniikki machines, remotely without any use of Terminal.
+YES!!! We are always glad to help you and we want you to get advantage of the luxurious workstations in Paniikki(The NVIDIA Quadro P5000 GPUs in Paniikki costed us €2K/module). We will build a desktop app that allows you to use complete scientific containers on Paniikki machines, remotely without any use of Terminal. We will also prepare containers for famous ML courses so you don't have to struggle setting the infrastructures.   
 
 How are we going to deliver this?
 =================================
