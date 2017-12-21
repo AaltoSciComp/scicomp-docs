@@ -27,7 +27,7 @@ VASP 5.4.4
 ==========
 
 The binaries are compiled with the Intel compiler suite and the MKL
-library, the used toolchain module is `iomklc/triton-2017a`. Example
+library, the used toolchain module is ``iomklc/triton-2017a``. Example
 batch script
 
 ::

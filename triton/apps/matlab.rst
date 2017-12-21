@@ -12,7 +12,7 @@ Matlab configuration
 --------------------
 
 Matlab writes session data, compiled code and additional toolboxes to
-`~/.matlab`. This can quicky fill up your `$HOME` quota. To fix this
+``~/.matlab``. This can quicky fill up your ``$HOME`` quota. To fix this
 we recommend that you replace the folder with a symlink that points to
 a directory in your working directory.
 
@@ -294,16 +294,16 @@ FAQ / troubleshooting
 ---------------------
 
 If things randomly don't work, you can try removing or moving either the
-`~/.matlab` directory or `~/.matlab/Rxxxxy` directory to see if it's
+``~/.matlab`` directory or ``~/.matlab/Rxxxxy`` directory to see if it's
 caused by configuration.
 
 Random error messages about things not loading and/or something
 (Matlab Live Editor maybe) doesn't work: ``ls *.m``, do you have any
 unexpected files like ``pathdef.m`` in there?  Remove them.
 
-Also, check your home quota.  Often `.matlab` gets large and fills up
+Also, check your home quota.  Often ``.matlab`` gets large and fills up
 your home directory.  You can move this to your work directory
-following a similar process to that in the `.conda` directory (see
+following a similar process to that in the ``.conda`` directory (see
 :doc:`python`)::
 
    # Move your package cache to your work directory.  The following does it automatically.
