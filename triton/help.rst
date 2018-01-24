@@ -61,6 +61,10 @@ announcements including critical ones about maintenance breaks.
 In person
 ~~~~~~~~~
 
+Come by one of the :doc:`Scientific computing garages
+<../news/garage>` any week.  It's the best place to get problems
+solved fast.
+
 You can also come and talk to us face-to-face, but of course we have to
 be in-office.  This is especially useful when there is an open-ended
 question where we have to discuss what is the best solution.  We may
