@@ -88,3 +88,26 @@ address.  You can address your request to a specific person.
    ELEC       | Tarmo Simonen
    PHYS       | Ivan Degtyarenko | Otakaari 1, Y415b
    CS/SCI     | Richard Darst    | T-building A243
+
+
+Getting a detailed bug report with triton-record-environment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+We have a script named ``triton-record-environment`` which will record
+key environment variables, input, and output.  This greatly helps in
+debugging.
+
+To use it to run a single command that gives an error::
+
+  triton-record-environment YOUR_COMMAND
+  Saving output to record-environment.out.txt
+  ...
+
+Then, just check the output of ``record-environment.out.txt`` (it
+shouldn't have any confidential information, but make sure) and send
+it to us/attach it to the bug report.
+
+If you use Python, add the ``-p`` option, matlab should use ``-m``,
+and graphical programs should use ``-x`` (these options have to go
+*before* the command you execute).
+
