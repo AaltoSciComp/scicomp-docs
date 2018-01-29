@@ -99,8 +99,8 @@ Transferring files
 Transferring files to/from triton is exactly the same as any other
 remote Linux server.
 
-Remote mounting
-^^^^^^^^^^^^^^^
+Remote mounting using SMB
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 By far, remote mounting of files is the easiest method.  If you are
 not on the Aalto networks (wired, ``eduroam``, or ``aalto`` with
@@ -128,6 +128,28 @@ On different operating systems:
 Depending on your OS, you may need to use either your username
 directly or ``AALTO\username``
 
+
+Remote mounting using sshfs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+``sshfs`` is a neat program that lets you mount remote filesystems via
+ssh only.  It is well-supported in Linux, for other operating systems
+check.  On Ubuntu, you can mount by "File → Connect to
+server" and using ``sftp://triton.aalto.fi/scratch/work/USERNAME``.
+
+The below is slightly more generic, and makes the ``triton_work`` on
+your local computer access all files in ``/scratch/work/USERNAME``.
+Can be done with other folders.
+
+::
+
+    mkdir triton_work
+    sshfs triton.aalto.fi:/scratch/work/USERNAME triton_work
+
+This, and the options below, only use ``ssh`` to connect so in
+principle are the most generic ways to connect from anywhere, if you
+set up ssh properly.
+
 Using scp or sftp
 ^^^^^^^^^^^^^^^^^
 
@@ -146,30 +168,15 @@ equivalent to ``scp``, but you can find nice graphical clients for it
     user@pc123 $ scp testCluster.m user12@triton:/scratch/work/USERNAME/
     ...
 
+These both use ``ssh``, so are the most general ways to connect.
+
 Rsync
 ^^^^^
 
 Rsync is similar to scp, but is smarter at restarting files.  Use rsync
-for large file transfers.
+for large file transfers.  ``rsync`` actually uses ``ssh``, so
+you can ``rsync`` from anywhere you can ``ssh`` from.
 
-
-Using sshfs mounting
-^^^^^^^^^^^^^^^^^^^^
-
-``sshfs`` is a neat program that lets you mount remote filesystems via
-ssh only.  It is well-supported in Linux, for other operating systems
-check.  On Ubuntu, you can mount by "File → Connect to
-server" and using ``sftp://triton.aalto.fi/scratch/work/USERNAME``.
-
-
-The below is slightly more generic, and makes the ``triton_work`` on
-your local computer access all files in ``/scratch/work/USERNAME``.
-Can be done with other folders.
-
-::
-
-    mkdir triton_work
-    sshfs triton.aalto.fi:/scratch/work/USERNAME triton_work
 
 
 
