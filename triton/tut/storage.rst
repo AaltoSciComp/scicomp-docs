@@ -103,7 +103,9 @@ Remote mounting
 ^^^^^^^^^^^^^^^
 
 By far, remote mounting of files is the easiest method.  If you are
-not on the Aalto networks, connect to the Aalto VPN first.  Note that
+not on the Aalto networks (wired, ``eduroam``, or ``aalto`` with
+Aalto-managed laptop), connect to the :doc:`Aalto VPN
+</aalto/remoteaccess>` first.  Note that
 this is automatically done on some department workstations (see
 below) - if not, request it!
 
@@ -116,22 +118,24 @@ Aalto networks at the URLs
 On different operating systems:
 
 * Linux (Ubuntu for example): File manager (Nautilus) → File →
-  Connect to server.
+  Connect to server.  Use the ``smb://`` URLs above.
 * Windows: In the file manager, go to Computer and "Map Network
   Drive".  In Windows 10 → "This PC" → right click → "Add Network
   Location".  Use the URLs above but replace ``smb://`` with ``\\`` and
   ``/`` with ``\``.  For example, ``\\lgw01.triton.aalto.fi\scratch\``.
-* Mac: Finder → Go → Connect to Server.  Use the URLs above.
+* Mac: Finder → Go → Connect to Server.  Use the ``smb://`` URLs above.
 
 Depending on your OS, you may need to use either your username
 directly or ``AALTO\username``
 
-Using scp
-^^^^^^^^^
+Using scp or sftp
+^^^^^^^^^^^^^^^^^
 
-You can use ``scp`` to copy your files to/from triton, and for accessing
+You can use ``scp`` and ``sftp`` to copy your files to/from triton, and for accessing
 the Triton home directory this is the only way. Note however the quite
-limited disk quota in your home directory.
+limited disk quota in your home directory.  ``sftp`` is basically
+equivalent to ``scp``, but you can find nice graphical clients for it
+(they are basically the same protocol).
 
 ::
 
@@ -140,7 +144,7 @@ limited disk quota in your home directory.
     testCluster.m                                 100%  391     0.4KB/s   00:00    
     # copying to WRKDIR
     user@pc123 $ scp testCluster.m user12@triton:/scratch/work/USERNAME/
-    ... 
+    ...
 
 Rsync
 ^^^^^
@@ -149,17 +153,22 @@ Rsync is similar to scp, but is smarter at restarting files.  Use rsync
 for large file transfers.
 
 
-Using sshfs
-^^^^^^^^^^^
+Using sshfs mounting
+^^^^^^^^^^^^^^^^^^^^
 
-sshfs is a neat program that lets you mount remote filesystems via ssh
-only.  It is at least well-supported in Linux, for other operating
-systems check.  The below command makes ``triton_work`` on your local
-computer access all files in ``/scratch/work/USERNAME``.  Can be done
-with other folders.
+``sshfs`` is a neat program that lets you mount remote filesystems via
+ssh only.  It is well-supported in Linux, for other operating systems
+check.  On Ubuntu, you can mount by "File → Connect to
+server" and using ``sftp://triton.aalto.fi/scratch/work/USERNAME``.
+
+
+The below is slightly more generic, and makes the ``triton_work`` on
+your local computer access all files in ``/scratch/work/USERNAME``.
+Can be done with other folders.
 
 ::
 
+    mkdir triton_work
     sshfs triton.aalto.fi:/scratch/work/USERNAME triton_work
 
 
