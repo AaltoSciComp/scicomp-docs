@@ -162,8 +162,11 @@ job? There are different strategies
 
 You probably want to look at the slurm -o option to direct the script
 output to somewhere useful. See the ``sbatch`` manual page, ``-o``,
-``-e``, and ``--open-mode`` options. In the filenames, use %a for array
-index, and %j (normal jobs) %A (array jobs) for jobid.
+``-e``, and ``--open-mode`` options. In the filenames, use ``%a`` for array
+index and ``%A`` (array jobs) for array jobid.  For normal jobs, use
+``%j`` for the jobid.  (If you use ``%j`` for array jobs, you get a
+different number even when things were started as part of the same
+array.  Maybe it's what you want).
 
 Array jobs have less overhead for accounting and scheduling, but you
 still want them to not be too short. 30 minutes is a good target time,
