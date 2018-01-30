@@ -29,7 +29,8 @@ Schedule
 -  Time: We promise to be there only the first 30 minutes or so, if
    everyone leaves before then.  Usually we are there the whole time.
 -  Location: See below.  U121a_ and U121b_  (in main building),
-   T4_ (CS building).
+   T4_ (CS building).  Carefully note the difference between U121a and
+   U121b, but they are right by each other.
 
 .. _U121a: http://usefulaaltomap.fi/#!/select/main-U121a
 .. _U121b: http://usefulaaltomap.fi/#!/select/main-U121b
@@ -45,21 +46,21 @@ Schedule
     8.2     |       | T4    |
    15.2     |       | U121a |
    22.2     |       | T4    |
-    1.3     |       |       |
+    1.3     |       | U121b |
     8.3     |       | T4    |
-   15.3     |       |       |
+   15.3     |       | U121b |
    22.3     |       | T4    |
-   29.3     |       |       |
+   29.3     |       | U121b |
     5.4     |       | T4    |
-   12.4     |       |       |
+   12.4     |       | U121a |
    19.4     |       | T4    |
-   26.4     |       |       |
+   26.4     |       | U121a |
     3.5     |       | T4    |
-   10.5     |       |       |
+   10.5     |       |       | (no garage, holiday)
    17.5     |       | T4    |
-   24.5     |       |       |
+   24.5     |       | U121b |
    31.5     |       | T4    |
-    7.6     |       |       |
+    7.6     |       | U121a |
    14.6     |       | T4    |
 
 (future odd weeks to be booked later)
