@@ -2,6 +2,9 @@
 GPU Computing
 =============
 
+This is the reference page.  There is also the :doc:`basic GPU
+tutorial <../tut/gpu>`.
+
 Overview
 ========
 
@@ -35,20 +38,18 @@ Using GPU nodes
 GPU partitions
 --------------
 
-There are two queues governing these nodes; gpu and gpushort, where the
+There are two queues governing these nodes: ``gpu`` and ``gpushort``, where the
 latter is for jobs up to 4 hours.
 
-The latest details can always be found with the following command:
-
-::
+The latest details can always be found with the following command::
 
     $ slurm p | grep gpu
 
 GPU node allocation
 -------------------
 
-For gpu resource allocation one has to request a gpu partition, with
-``-p gpu`` ,  and a GPU resource, with  ``--gres=gpu:N`` , where ``N``
+For gpu resource allocation one has to request a GPU resource, with
+``--gres=gpu:N`` , where ``N``
 stands for number of requested GPU cards. To request a specific card,
 one must use syntax  ``--gres=gpu:CARD_TYPE:N`` ,  see 'Slurm feature
 name' in the table above.
@@ -61,9 +62,10 @@ name' in the table above.
 For the full current list of configured SLURM gpu cards names run
 ``slurm features``.
 
-.. raw:: html
+Note: Before summer 2016, you also had to specify a GPU partition with
+``-p gpu`` or ``-p gpushort``.  Now, this is automatically detected
+and the recommendation is to leave it off.
 
-   </div>
 
 GPU nodes environment and CUDA
 ------------------------------
@@ -142,8 +144,8 @@ Debugging
 
 CUDA SDK provides an extension to the well-known gnu debugger gdb. Using
 cuda-gdb it is possible to debug the device code natively on the GPU. In
-order to use the cuda-gdb, one has to compile the program with option
-pair -g -G, like follows:
+order to use the ``cuda-gdb``, one has to compile the program with option
+pair ``-g -G``, like follows:
 
 ::
 
@@ -247,7 +249,7 @@ before you launch theano. E.g.
 
     mkdir -p /tmp/${USER}/theano
 
-The problem is that by default the base\_compiledir is in your home
+The problem is that by default the ``base_compiledir`` is in your home
 directory (``~/.theano/``), and then if you first happen to run a job on a
 newer processor, a later job that happens to run on an older processor
 will crash with an "Illegal instruction" error.
