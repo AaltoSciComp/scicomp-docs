@@ -146,9 +146,19 @@ Openssh on linux can be made nicer if you set up a config file
 File access
 ===========
 
-While this is actually part of `data storage <storage>`,
-the scratch and work filesystems are mounted on ``taltta.aalto.fi``, at
-``/m/triton/{scratch,work}/``.
+You'll actually learn this in the next section, the `data storage tutorial <storage>`.
+The scratch and work filesystems are mounted on ``taltta.aalto.fi``, at
+``/m/triton/{scratch,work}/``, which you can access over ssh.
 
-You can also use sftp to access files, or sshfs. See the
-:doc:`FAQ <../usage/faq>`.
+You can also use sftp to access files, or ``sshfs``. See the next
+tutorial (or :doc:`FAQ <../usage/faq>`).
+
+
+
+What's next?
+============
+
+``ssh`` is one of the most fundamental Linux programs: by using it
+well, you can really do almost anything from anywhere.  The
+``.ssh/config`` file is valuable to set up.  If ssh is annoying to
+use, ask for some help in getting it working well.

@@ -2,34 +2,30 @@
 Data storage
 ============
 
+In this tutorial, we go over places to store data on Triton and how to
+access it remotely.
+
+Basics
+======
+
+
 Triton has various ways to store data.  Each has a purpose, and when
 you are dealing with the large data sets or intensive IO, efficiency
 becomes important.
 
-Roughly, we have
-
--  Home directories: for user init files, some small config files, etc.
-   No calculation data. Daily backup.
--  Lustre (/scratch): a high-performance filesystem shared among all
-   nodes. The primary place for calculations, data analyzes etc.  Not
-   backed up.
--  Local disks are on each node separately.  For the fastest IOs with
-   single-node jobs. It is cleaned up after job is finished.
--  RAM filesystems.  As fast as memory. Data lost when node is rebooted.
+Roughly, we have small home directories (only for configuration
+files), large Lustre (scratch and work, large, primary calculation
+data), and special places for scratch during computations (local
+disks, ramfs, fast but temporary)
 
 Compare this to what is available at Aalto:
 
 -  Aalto Linux has a separate home directory, not shared with Triton.
 -  Departments can have their own shares, called variously project,
-   work, teamwork, archive.  These are not on triton except the login
+   work, teamwork, archive.  These are not on Triton except the login
    node, because they are
    not high performance enough (it just takes one person to start
    50-node job that brings it down for everyone).
-
-Triton storage locations
-========================
-
-.. include:: ../ref/storage.rst
 
 Think about I/O before you start! - General notes
 =================================================
@@ -49,12 +45,41 @@ best approach for you calculations.
 -  Some programs use local disk as swap-space. Only turn on if you know
    it is reasonable.
 
-Avoid many small files! Use a few big ones instead.  See the :doc:`Compute
+Avoid many small files! Use a few big ones instead. (we have a
+:doc:`dedicated page <../usage/smallfiles>` on the matter)
+
+Summary table
+=============
+
+.. include:: ../ref/storage.rst
+
+Home directories
+^^^^^^^^^^^^^^^^
+The place you start when you log in.  For user init files, some small
+config files, etc.  No calculation data. Daily backup.  Usually you
+want to move to scratch first.
+
+Lustre (/scratch)
+^^^^^^^^^^^^^^^^^
+This is the big, high-performance, 2PB Triton storage.  The primary
+place for calculations, data analyzes etc.  Not backed up.  It is
+shared on all nodes, and has very fast access.  It is divided into two
+parts, scratch (by groups) or work (per-user).  In general, always
+change to ``$WRKDIR`` when you first log in and start doing work.
+
+See :doc:`../usage/lustre`
+
+Local disks
+^^^^^^^^^^^
+Local disks are on each node separately.  For the fastest IOs with
+single-node jobs. It is cleaned up after job is finished.
+
+See the :doc:`Compute
 node local drives <../usage/localstorage>` page for further details and script
 examples.
 
 **ramfs** - fast and highly temporary storage
-=============================================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 On Triton, ``$XDG_RUNTIME_DIR`` is a ramfs, which means that it looks like
 files but is stored only in memory.  Because of this, it is extremely
@@ -93,8 +118,8 @@ If you get a quota error, see :doc:`the quotas page <../usage/quotas>`
 for the solution.
 
 
-Transferring files
-==================
+Accessing and transferring files remotely
+=========================================
 
 Transferring files to/from triton is exactly the same as any other
 remote Linux server.
@@ -102,7 +127,7 @@ remote Linux server.
 Remote mounting using SMB
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-By far, remote mounting of files is the easiest method.  If you are
+By far, remote mounting of files is the easiest method to transfer files.  If you are
 not on the Aalto networks (wired, ``eduroam``, or ``aalto`` with
 Aalto-managed laptop), connect to the :doc:`Aalto VPN
 </aalto/remoteaccess>` first.  Note that
@@ -190,7 +215,8 @@ These mounts that are already on workstations require a valid Kerberos
 ticket (usually generated when you log in). On long sessions these might
 expire, and you have to renew them with ``kinit`` to keep going.
 
-**Generic**
+Generic
+^^^^^^^
 
 The staff shell server ``taltta.aalto.fi`` has scratch and work mounted
 at ``/m/triton``, and department directories are also in the standard
@@ -214,3 +240,19 @@ CS
 
 Work directories are available at ``/m/cs/work/``, and group scratch
 directories at ``/m/cs/scratch/$project/``.
+
+
+
+Next steps
+==========
+
+Optimizing data storage isn't very glamorous, but it's an important
+part of high-performance computing.  You can find some hints on the
+:doc:`profiling <../usage/profiling>` page.
+
+We have these related pages:
+
+* :doc:`../usage/lustre`
+* :doc:`../usage/localstorage`
+* :doc:`../usage/quotas`
+* :doc:`../usage/smallfiles`

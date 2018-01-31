@@ -40,7 +40,7 @@ this:
 
 ::
 
-    ./my_code 5000 1.1 1-5 
+    ./my_code 5000 1.1 1-5
 
 You switch to use srun. All input/output still goes to your terminal
 (but note X forwarding for graphical applications doesn't work - see
@@ -48,7 +48,7 @@ below for that).
 
 ::
 
-    srun --mem=50G --time=5:00:00 ./my_code 5000 1.1 1-5 
+    srun --mem=50G --time=5:00:00 ./my_code 5000 1.1 1-5
 
 This has some possible problems: it is connected to your shell. If your
 shell quits, the process gets lost. Also, this runs only one single
