@@ -22,7 +22,7 @@ should start here, but once you need more go to more advanced usage.
 
 .. note::
 
-  Advantages of interactive running:  It's good for getting started
+  Advantages of interactive running:  It's good for getting started
   quickly and scaling up: "just add srun!". It's good when task is so
   small that scripting isn't worth it.
 
@@ -58,7 +58,7 @@ to run, not batch scripts like sbatch is (though of course you could run
 a shell script). srun does not look at the #SBATCH options inside of
 scripts.
 
-How do you find the right time/CPU/memory requirements?  Slurm (the
+How do you find the right time/CPU/memory requirements?  Slurm (the
 queuing system) has extensive reporting. For example,
 "``slurm history`` will show you the actual run time and actual memory
 used of your job. There is a little bit about this below and more in
@@ -76,10 +76,10 @@ do several things. You can do that this way:
     srun -p interactive --time=HH:MM:SS --mem=nnG --pty bash
 
 Now you have a shell... do whatever you need to do. **Close the shell
-when you are done!  If you don't, the process will keep running until
+when you are done!  If you don't, the process will keep running until
 your time limit. All of this time will be counted against your usage.
 It doesn't cost money, but does mean that your priority will go down in
-the future.**  (Note that we specify the interactive partition with "-p
+the future.**  (Note that we specify the interactive partition with "-p
 interactive". More on this below.)
 
 
@@ -94,7 +94,7 @@ process again.
 
 ::
 
-     sinteractive --time=HH:MM:SS --mem=nnG
+     sinteractive --time=HH:MM:SS --mem=nnG
 
 **Just like with ``srun --pty``, remember to close the process when done.
 However, it's even harder than before. Since there is a separate screen
@@ -122,7 +122,7 @@ specifies a different type of nodes, and different limits.
 In regular usage, this is usually decided automatically (based on time
 and memory requirements), but if you are doing stuff with an interactive
 shell, it's important to specify *interactive*. You don't need to do
-this if you are   You specify a partition with *-p partition* like
+this if you are   You specify a partition with *-p partition* like
 above. We recommend interactive for things that start a shell for
 interactive running, otherwise leave it off and it will pick all
 available options based on your time/CPU/memory. If you need to go
@@ -139,7 +139,7 @@ and *--time* *(-t)*.
 
 .. include:: ../ref/slurm.rst
 
-****How much time/memory/CPU resources should you request?****  The less
+****How much time/memory/CPU resources should you request?****  The less
 you request, the faster you are likely to run. As for all you need, but
 not ridiculously large amounts. If you request something slightly less
 than a node size (note that we have different size nodes) or partition
@@ -165,7 +165,7 @@ etc), including computation directly on the node. When you need more
 power, you can "just add srun!" or create batch scripts from that node.
 Contact us to discuss.
 
- 
+
 
 Monitoring your usage
 =====================
