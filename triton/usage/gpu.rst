@@ -12,19 +12,15 @@ C4130 servers with newer Kelper and Pascal generations of K80/P100 cards.
 Hardware breakdown
 ==================
 
-+---------------+----------------+--------------+----------------+---------------------------+-------------------+---------------------------+----------------------+
-| Card          | total amount   | nodes        | architecture   | compute threads per GPU   | memory per card   | CUDA compute capability   | Slurm feature name   |
-+===============+================+==============+================+===========================+===================+===========================+======================+
-| Tesla M2090   | 22             | gpu[1-11]    | Fermi          | 512                       | 6G                | 2.0                       | m2090                |
-+---------------+----------------+--------------+----------------+---------------------------+-------------------+---------------------------+----------------------+
-| Tesla M2070   | 6              | gpu[17-19]   | Fermi          | 448                       | 6G                | 2.0                       | m2070                |
-+---------------+----------------+--------------+----------------+---------------------------+-------------------+---------------------------+----------------------+
-| Tesla M2050   | 10             | gpu[12-16]   | Fermi          | 448                       | 3G                | 2.0                       | m2050                |
-+---------------+----------------+--------------+----------------+---------------------------+-------------------+---------------------------+----------------------+
-| Tesla K80\*   | 12             | gpu[20-22]   | Kepler         | 2x2496                    | 2x12GB            | 3.7                       | teslak80             |
-+---------------+----------------+--------------+----------------+---------------------------+-------------------+---------------------------+----------------------+
-| Tesla P100    | 20             | gpu[23-27]   | Pascal         | 3854                      | 16GB              | 6.0                       | teslap100            |
-+---------------+----------------+--------------+----------------+---------------------------+-------------------+---------------------------+----------------------+
+.. csv-table::
+   :delim: |
+
+   Card          | total amount   | nodes        | architecture   | compute threads per GPU   | memory per card   | CUDA compute capability   | Slurm feature name
+   Tesla M2090   | 22             | gpu[1-11]    | Fermi          | 512                       | 6G                | 2.0                       | ``m2090``
+   Tesla M2070   | 6              | gpu[17-19]   | Fermi          | 448                       | 6G                | 2.0                       | ``m2070``
+   Tesla M2050   | 10             | gpu[12-16]   | Fermi          | 448                       | 3G                | 2.0                       | ``m2050``
+   Tesla K80\*   | 12             | gpu[20-22]   | Kepler         | 2x2496                    | 2x12GB            | 3.7                       | ``teslak80``
+   Tesla P100    | 20             | gpu[23-27]   | Pascal         | 3854                      | 16GB              | 6.0                       | ``teslap100``
 
 * Note: Tesla K80 cards are in essence two GK210 GPUs on a single chip
 
@@ -51,24 +47,18 @@ The latest details can always be found with the following command:
 GPU node allocation
 -------------------
 
-For gpu resource allocation one has to request a gpu partition, with 
-``-p gpu`` ,  and a GPU resource, with  ``--gres=gpu:N`` , where \ ``N``
+For gpu resource allocation one has to request a gpu partition, with
+``-p gpu`` ,  and a GPU resource, with  ``--gres=gpu:N`` , where ``N``
 stands for number of requested GPU cards. To request a specific card,
-one must use syntax  ``--gres=gpu:CARD_TYPE:N`` ,  see 'Slurm feature
+one must use syntax  ``--gres=gpu:CARD_TYPE:N`` ,  see 'Slurm feature
 name' in the table above.
-
-.. raw:: html
-
-   <div class="line number1 index0 alt2">
-
- 
 
 ::
 
     -p gpu --gres=gpu:2  # any two gpu cards on gpu partition
     -p gpushort --gres=gpu:teslak80:1   # one tesla card on gpushort
 
-For the full current list of configured SLURM gpu cards names run 
+For the full current list of configured SLURM gpu cards names run
 ``slurm features``.
 
 .. raw:: html
@@ -107,7 +97,7 @@ a shell sessions
     $ module load CUDA
     $ sinteractive -t 4:00:00 -p gpushort --gres=gpu:1
     gpuXX$ .... run something
-    gpuXX$ exit 
+    gpuXX$ exit
 
 Run a batch job
 
@@ -157,7 +147,7 @@ pair -g -G, like follows:
 
 ::
 
-    $ nvcc -g -G cuda_code.cu -o cuda_code
+    $ nvcc -g -G cuda_code.cu -o cuda_code
 
 See `CUDA-GDB User
 Guide <http://developer.download.nvidia.com/compute/DevZone/docs/html/C/doc/cuda-gdb.pdf>`__
@@ -205,12 +195,8 @@ After that create a conda environment to install tensorflow in:
     $ conda create -n tensorflow python=2.7
 
     $ source activate tensorflow
-    $ pip install --ignore-installed --upgrade 
-    https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.8.0-cp27-none-
-    linux_x86_64.whl
-    $ pip install --upgrade 
-    https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.8.0-cp27-none-
-    linux_x86_64.whl
+    $ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.8.0-cp27-none-linux_x86_64.whl
+    $ pip install --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.8.0-cp27-none-linux_x86_64.whl
 
 For some (unclear) reason you have to run the pip command twice, first
 with ``--ignore-installed`` and second time without to make the conda
@@ -222,7 +208,7 @@ code on 4 gpus
 ::
 
     #!/bin/bash
-     
+
     #Request 4 gpus
     #SBATCH --gres=gpu:teslak80:4
     #SBATCH -p gpushort
@@ -247,7 +233,7 @@ Theano configuration
 
 If you're using the theano library, you need to tell theano to store
 compiled code on the local disk on the compute node. Create a file
-~/.theanorc with the contents
+``~/.theanorc`` with the contents
 
 ::
 
@@ -262,7 +248,7 @@ before you launch theano. E.g.
     mkdir -p /tmp/${USER}/theano
 
 The problem is that by default the base\_compiledir is in your home
-directory (~/.theano/), and then if you first happen to run a job on a
+directory (``~/.theano/``), and then if you first happen to run a job on a
 newer processor, a later job that happens to run on an older processor
 will crash with an "Illegal instruction" error.
 
@@ -271,7 +257,7 @@ CUDA samples
 
 There are CUDA code samples provided by Nvidia that can be useful for a
 sake of testing or getting familiar with CUDA. Placed
-at \ ``$CUDA_HOME/samples``. To play with:
+at ``$CUDA_HOME/samples``. To play with:
 
 ::
 
@@ -288,8 +274,8 @@ at \ ``$CUDA_HOME/samples``. To play with:
 Attachments and useful links
 ============================
 
-| `CUDA C Programming
+* `CUDA C Programming
   Guide <http://developer.download.nvidia.com/compute/DevZone/docs/html/C/doc/CUDA_C_Programming_Guide.pdf>`__
-| `CUDA Zone on
+* `CUDA Zone on
   NVIDIA <http://developer.nvidia.com/category/zone/cuda-zone>`__
-| `CUDA FAQ <http://developer.nvidia.com/cuda/cuda-faq>`__
+* `CUDA FAQ <http://developer.nvidia.com/cuda/cuda-faq>`__
