@@ -2,14 +2,14 @@
 Software Modules
 ================
 
-There are hundreds of people using Triton.  They all have different
-software needs, including conflicting versions required!  How do we
+There are hundreds of people using Triton.  They all have different
+software needs, including conflicting versions required!  How do we
 handle this without making a mess?
 
-The answer is the standard "environment module" system.  It allows us to
+The answer is the standard "environment module" system.  It allows us to
 have unlimited number of different software packages installed, and the
-user can select what they want.  Modules include everything from
-compilers (+their required development files), libraries, and programs. 
+user can select what they want.  Modules include everything from
+compilers (+their required development files), libraries, and programs.
 If you need a program installed, we will put it in the module system.
 
 What is a module?
@@ -44,10 +44,10 @@ Loading modules
 ---------------
 
 Normally, you run ``module load MODULE_NAME``. Do it in your open shell,
-your program scripts, or whatever.  You could put it in your
+your program scripts, or whatever.  You could put it in your
 ~.bash\_profile, but then realize that it will always be there, even if
-you don't expect it.  Watch out for this if unexpected things start
-happening.  You can load any number of modules, and there is a basic
+you don't expect it.  Watch out for this if unexpected things start
+happening.  You can load any number of modules, and there is a basic
 dependency/conflict system, but you can still probably make problems if
 you do something really convoluted.
 
@@ -62,13 +62,13 @@ Final notes
 The modules used to compile and run a program become part of its
 environment and must always be specified.
 
-environment-modules use environment variables.  Thus, they must be
-**sourced** by a shell and are are only transferred to child processes. 
-Anything that clears the environment clears loaded modules.  Module
+environment-modules use environment variables.  Thus, they must be
+**sourced** by a shell and are are only transferred to child processes.
+Anything that clears the environment clears loaded modules.  Module
 loading is done by special functions (not scripts) that are
 shell-specific and set environment variables.
 
-Some modules are provided by Aalto Science-IT, some by CSC.  You could
+Some modules are provided by Aalto Science-IT, some by CSC.  You could
 even make your own user modules if needed...
 
- 
+
