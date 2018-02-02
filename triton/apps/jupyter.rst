@@ -44,7 +44,7 @@ Initial setup
 ~~~~~~~~~~~~~
 
 When running Jupyter on another system, the biggest problem is always
-making the conenction securely.  To do this here, we a browser
+making the conenction securely.  To do this here, we use a browser
 extension and SSH Proxy.
 
 * Install the proxy extension
