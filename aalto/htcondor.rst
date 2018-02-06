@@ -33,7 +33,7 @@ workstations.
 +-----------------------+------------------------------------+----------------------------------------------------------------+
 | CS / SCI              | Aalto IT servicedesk *             | installed on all the Ubuntu workstations                       |
 +-----------------------+------------------------------------+----------------------------------------------------------------+
-| MAT / SCI             | Matti Harjula ja Kenrick Bingham   | installed on several workstations                              |
+| MATH / SCI            | Matti Harjula and Kenrick Bingham  | installed on about 50 newer Ubuntu workstations                |
 +-----------------------+------------------------------------+----------------------------------------------------------------+
 
 The instructions below are common to all the departments if not
