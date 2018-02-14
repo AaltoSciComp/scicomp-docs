@@ -70,22 +70,25 @@ browser or other applications to use a SOCKS5 proxy on ``localhost:8080``
 for connections. Remember to revert when done or else you can't connect
 to anything. The extension FoxyProxy Standard may be useful here.
 
-Remote mounting of network filesystems (home/project/archive)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Remote mounting of network filesystems 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 From Aalto networks (or VPN), you can mount many of the filesystems via
 SMB. To use this well, you want to get the VPN set up first like
 mentioned above. (You can also access these filesystems via ssh through
 the shell servers):
 
--  username=aalto username, domain=AALTO, password=Aalto password.
--  ``smb://home.org.aalto.fi/`` for your home directory
--  ``smb://tw-cs.org.aalto.fi/project/$name/`` for project
-   directories (``$name``\ =project name)
--  ``smb://tw-cs.org.aalto.fi/archive/$name/`` for archive
+- In all cases, username=aalto username, domain=AALTO,
+  password=Aalto password.
+- ``smb://home.org.aalto.fi/`` for your home directory
+- ``smb://tw-cs.org.aalto.fi/project/$name/`` for project
+  directories (``$name``\ =project name)
+- ``smb://tw-cs.org.aalto.fi/archive/$name/`` for archive
    directories (``$name``\ =project name)
 - For scratch directories, see :doc:`Triton storage
   <../triton/tut/storage>`.
+- ``\\work.org.aalto.fi`` for "Aalto work" directories (different
+  than Triton ``work``).
 
 Depending on your OS, you may need to use either your username
 directly or ``AALTO\username``
@@ -99,7 +102,8 @@ above.
 On windows laptops: ``smb://`` becomes ``\\``, and ``/`` becomes
 ``\``.  To do the mounting, Windows Explorer → Computer → Map network drive →
 select a free letter.  For example, a URL could be
-``\\tw-cs.org.aalto.fi\project\mygroup``.
+``\\tw-cs.org.aalto.fi\project\mygroup``.  You can also just enter
+it into the file manager bar.
 
 Remember that you must connect to the Aalto VPN first!
 
