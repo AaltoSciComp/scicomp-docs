@@ -70,7 +70,7 @@ browser or other applications to use a SOCKS5 proxy on ``localhost:8080``
 for connections. Remember to revert when done or else you can't connect
 to anything. The extension FoxyProxy Standard may be useful here.
 
-Remote mounting of network filesystems 
+Remote mounting of network filesystems
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 From Aalto networks (or VPN), you can mount many of the filesystems via
@@ -87,7 +87,7 @@ the shell servers):
    directories (``$name``\ =project name)
 - For scratch directories, see :doc:`Triton storage
   <../triton/tut/storage>`.
-- ``\\work.org.aalto.fi`` for "Aalto work" directories (different
+- ``smb://work.org.aalto.fi`` for "Aalto work" directories (different
   than Triton ``work``).
 
 Depending on your OS, you may need to use either your username
