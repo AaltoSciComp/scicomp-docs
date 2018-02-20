@@ -36,6 +36,15 @@ A few prerequisites:
 You should have Triton access if you are in the ``triton-users``
 group at Aalto: ``groups`` shows this on Aalto linux machines.
 
+Your department/unit
+~~~~~~~~~~~~~~~~~~~~
+
+When you get an account, you get added to a unit's group, which is
+"billed" for your usage.  If you change Aalto units, this may need
+updated.  Check ``sshare -U`` or ``sshare`` and if it's wrong, let us
+know (the units are first on the line).  (These are currently by
+department, so changes are not that frequent)
+
 Password change and other issues
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
