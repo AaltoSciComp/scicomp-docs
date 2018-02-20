@@ -1,6 +1,6 @@
-===========================
-Aalto version control (git)
-===========================
+============
+Aalto Gitlab
+============
 
 https://version.aalto.fi is a Gitlab installation for the Aalto
 community.  Gitlab is a ``git`` server and hosting facility (an open
@@ -55,12 +55,17 @@ account otherwise, use ``username@aalto.fi`` and your Aalto password
 (for example, use this with ``https`` pushing and pulling).  But, you
 really should try to configure ssh keys for pushing and pulling.
 
+For outside/public sharing read-only, you can make repositories public.
+
 If you need to share with an **outside collaborator**, this is supported.
 These outside partners can access repositories shared with them, but
 not make new ones.  They will get a special gitlab username/password,
 and should use that with the normal gitlab login boxes.  To request an
 collaborator account, their Aalto sponsor should `go here to the
-request form <workflow_ext_>`_ (employees only).
+request form <workflow_ext_>`_ (employees only).  (You can always set
+a repository as public, so anyone can clone.  Another hackish
+method is to add ssh deploy keys (read-only or read-write) for outside
+collaborators, but this wouldn't be recommended for serious cases.)
 
 .. _workflow_ext: https://workflow.aalto.fi/version_ext/
 
