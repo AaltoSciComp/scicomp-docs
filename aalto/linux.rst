@@ -173,11 +173,12 @@ managed with non-standard improvements and features, and 90% of cases
 can be handled using existing tools:
 
 Do you want to:
-* Install Ubuntu packages: *Use ``pkcon install $package_name`` as
+
+- Install Ubuntu packages: *Use* ``pkcon install $package_name`` *as
   primary user.*
-* This website tells me to run ``sudo apt-get`` to install
+- This website tells me to run ``sudo apt-get`` to install
   something.  *Don't, use the instructions above.*
-* This website gives me some random instructions involving ``sudo`` to
+- This website gives me some random instructions involving ``sudo`` to
   install their program.  These are not always a good idea to run,
   especially since our computers are networked, centrally managed, and
   these instructions don't always work.  Sometimes, these things can
