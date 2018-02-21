@@ -125,8 +125,8 @@ remotely to the desktops.**
 Installing software
 ~~~~~~~~~~~~~~~~~~~
 
-**Ubuntu packages:**
-^^^^^^^^^^^^^^^^^^^^
+Ubuntu packages
+^^^^^^^^^^^^^^^
 
 If you have PrimaryUser privileges, you can install Ubuntu packages
 using one of the following commands:
@@ -165,6 +165,41 @@ Useful modules:
 -  ``anaconda3`` and ``anaconda2`` will always be kept up to date with the latest Python
    Anaconda distribution, and we'll try to keep this in sync across
    Aalto Linux and Triton.
+
+I need to be admin!
+~~~~~~~~~~~~~~~~~~~
+Most times you don't need to be.  Our Linux systems are centrally
+managed with non-standard improvements and features, and 90% of cases
+can be handled using existing tools:
+
+Do you want to:
+* Install Ubuntu packages: *Use ``pkcon install $package_name`` as
+  primary user.*
+* This website tells me to run ``sudo apt-get`` to install
+  something.  *Don't, use the instructions above.*
+* This website gives me some random instructions involving ``sudo`` to
+  install their program.  These are not always a good idea to run,
+  especially since our computers are networked, centrally managed, and
+  these instructions don't always work.  Sometimes, these things can
+  be installed as a normal user with simple modifications.  Sometimes
+  their instructions will break our systems.  In this case, try to
+  install as normal user and then send a support request first.  *If
+  none of these work and you have studied enough to understand the
+  risk, you can ask us.  Make sure you give details of what you want
+  to do.*
+- I need to change network or some other settings.  This computer is
+  bound to this certain network and settings can't be changed, users
+  can't be managed, etc.
+- It's a laptop: *then yes, there are slightly more cases you need
+  this, but see above first.*
+- I do low-level driver, network protocol, or related systems
+  development.  *Then this is a good reason for root, ask us.*
+
+If you do have root and something goes wrong, our help is limited to
+reinstalling (wiping all data - note that most data is stored on
+network drives anyway).  You will have to fill out a form and get a
+new ``wa`` account, we can't really do anything to make this faster
+unfortunately.
 
 Remote access
 ~~~~~~~~~~~~~
