@@ -24,7 +24,8 @@ Linux shell servers
       trying to use these for research, you really want to be using
       Triton instead.
    -  ``taltta.aalto.fi``: Staff server (access to workstations and has
-      filesystems mounted, but you need to kinit to access them.)
+      filesystems mounted, but you need to kinit to access them.) that
+      is kind of outdated and different.
 
 -  Your **home** directory is shared on all Aalto shell servers, and
    that means .ssh/authorized\_keys as well.
@@ -111,7 +112,8 @@ Accessing you Linux workstation / Triton remotely
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Remote access to desktop workstations is available via the university
-   staff shell servers ``magi`` and ``taltta.aalto.fi``.
+   staff shell servers ``taltta.aalto.fi`` or department-specific
+   servers ``magi.cs.aalto.fi`` (CS), ``amor.org.aalto.fi`` (NBE).
 -  You need to be the **PrimaryUser** of the desktop in order to ssh to
    it.
 -  Remote access to Triton is available from any Aalto shell server:
@@ -132,13 +134,19 @@ Remote Windows desktop
 Aalto has a windows remote desktop available. As usual, you must be on
 the Aalto VPN or Aalto networks.
 
--  Server name ``rds01.org.aalto.fi``,
+-  Server name ``rds01.org.aalto.fi`` (or ``rds02``).
 -  login with Aalto credentials, username: ``AALTO\$username``
--  From Linux: install rdesktop and
+-  From Linux: the GUI program ``remmina`` lets you connect.  Follow
+   the instructions to add a server connection.
+   Username is Aalto username and password is Aalto password.  If you are on the
+   Aalto network, you can turn the quality settings quite high (True
+   color, Quality=best).  Security=negotiate.
+-  From Linux: the command line program ``rdesktop`` can connect:
    ``rdesktop -u 'AALTO\$username' -g 1360x760 rds01.org.aalto.fi``
 
 As usual (on Linux), you can also access this directly through SSH
-forwarding instead of the VPN:
+forwarding instead of the VPN (``remmina`` seems to be able to do this
+automatically):
 
 -  ``ssh -L 3389:rds01.org.aalto.fi:3389 kosh.aalto.fi``
 -  ``rdesktop -u 'AALTO\$username' -g 1360x760 localhost``

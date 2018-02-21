@@ -127,7 +127,7 @@ everyone in the group has access.
 -  **To get added to a group**, see instructions below.
 -  To see your groups: use the ``groups`` command or
    ``groups $username``
--  To see all members of a group: ``gentent group $groupname``
+-  To see all members of a group: ``getent group $groupname``
 
 Common data management considerations
 -------------------------------------
@@ -269,16 +269,18 @@ initial help in navigating the issues and RIS for full advice.
 Openness
 ~~~~~~~~
 
-You should consider releasing data openly when possible. Aalto
-encourages this. See the research data management web pages (at top) for
-some basic information.  In short, Aalto says that you "must" make
+Aalto strongly encourages to share the data openly or under controlled
+access with a goal of 50% data shared by 2020 (see
+`The Aalto RDM pages <http://www.aalto.fi/en/research/research_data_management/>`__).
+In short, Aalto says that you "must" make
 strategic decisions about openness for the best benefits (which
 practically probably means you can do what you would like).
 Regardless, being open is usually a good idea when you can: it builds
 impact for your work and benefits society more.
 
-For small data, `Zenodo <https://zenodo.org>`__ is a
-good way to open it (and provides DOIs so that it can be cited). For
+Zenodo (https://zenodo.org/) is an excellent platform for sharing data, getting
+your data cited (it provides a DOI), and control what you share with
+different policies (http://about.zenodo.org/policies/).  For
 larger data, there are other resources, such as IDA/AVAA provided by CSC
 (see below).
 

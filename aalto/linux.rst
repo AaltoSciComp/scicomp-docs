@@ -12,12 +12,19 @@ setups are available.
 Basics
 ~~~~~~
 
+-  Aalto home directory. In the Aalto Ubuntu workstations, your home
+   directory will be your Aalto home directory. That is, the same home
+   directory that you have in Aalto Windows machines and the Aalto
+   Linux machines, including shell servers (kosh, taltta, lyta, brute, force).
 -  New installations are using Ubuntu 16.04 LTS, but some former
    installations might have Ubuntu 14.04.
 -  `Some basic information from Aalto is availiable at
    Inside <https://inside.aalto.fi/display/ITServices/Linux>`__.
 -  **Login is with Aalto credentials**. Anyone can
-   log in to any computer.
+   log in to any computer.  Since login is tied to your Aalto account,
+   login is tied to your contract status.  Please contact HR if you
+   need to access systems after you leave the university or your
+   account stops working due to contract expiration.
 -  All systems are effectively identical, except for local Ubuntu
    packages installed. Thus, switching machines is a low-cost operation.
 -  Systems are centrally managed using puppet. Any sort of configuration
@@ -38,6 +45,16 @@ Basics
    reinstalling is a low-cost operation. The same should be true for
    upgrading, once the new OS is ready you reboot and netinstall.
    Installation takes less than two hours.
+-  Default user interface. The new default user interface for Aalto
+   Linux is `Unity
+   <https://en.wikipedia.org/wiki/Unity_(user_interface)>`__. If you
+   want to switch to the previous default interface (`Gnome
+   <https://en.wikipedia.org/wiki/GNOME>`__), before logging in please
+   select "Gnome Flashback (Metacity)" by clicking the round ubuntu
+   logo close to the "Login" input field.
+-  Personal web pages. What you put under ``~/public_html`` will be
+   visible at ``https://users.aalto.fi/~username``.  See
+   :doc:`../data/aaltostorage`.
 
 **When requesting a new computer:**
 
@@ -51,7 +68,7 @@ Basics
    will be wiped, but if this is important then you must explicitly
    confirm before you leave.
    There may be data if you use the workstation local disks (not the
-   default). There is also a local cache ($XDG\_CACHE\_HOME), which
+   default). There is also a local cache (``$XDG_CACHE_HOME``), which
    stores things such as web browser cache. Unix permissions protect all
    data, even if the primary user changes, but it is better safe than
    sorry. Contact IT if you want wipes.
@@ -60,13 +77,13 @@ Project groups
 ~~~~~~~~~~~~~~
 
 Unix groups provide access control to data and some
-workstations. See `data management <../data/index>`__.
+workstations. See :doc:`data management <../data/index>`.
 
 Storage available
 ~~~~~~~~~~~~~~~~~
 
-See the general `storage page <../data/aaltostorage>`__ for the full
-story.
+See the general :doc:`storage page <../data/aaltostorage>` for the full
+story.  All of the common shared directories are available by default.
 
 Full disk encryption
 ~~~~~~~~~~~~~~~~~~~~
