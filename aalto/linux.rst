@@ -134,9 +134,8 @@ using one of the following commands:
 -  By going to the Ubuntu Software Center (Applications -> System Tools
    -> Administration -> Ubuntu Software Centre).  Note: some software
    doesn't appear here!  Use the next option.
--  ``pkcon install $ubuntu_package_name``  (search for stuff using
+-  ``aptdcon --install $ubuntu_package_name`` (search for stuff using
    ``apt search``)
--  ``aptdcon --install $ubuntu_package_name``
 -  By requesting IT to make a package available across all computers
    as part of the standard environment. Help us to create a good
    standard operating environment!
@@ -174,7 +173,7 @@ can be handled using existing tools:
 
 Do you want to:
 
-- Install Ubuntu packages: *Use* ``pkcon install $package_name`` *as
+- Install Ubuntu packages: *Use* ``aptdcon --install $package_name`` *as
   primary user.*
 - This website tells me to run ``sudo apt-get`` to install
   something.  *Don't, use the instructions above.*
