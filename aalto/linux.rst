@@ -1,6 +1,6 @@
-============================================
-Aalto Linux (Science-IT flavor specifically)
-============================================
+===========
+Aalto Linux
+===========
 
 
 Aalto Linux is provided to all departments in Aalto.  Department IT
@@ -8,6 +8,10 @@ co-maintains this, and in some departments provides more support
 (specifically, CS, NBE, PHYS at least).  It contains a lot of software
 and features to support scientific computing and data.  Both laptop and desktop
 setups are available.
+
+This page is mainly about the Linux flavor in CS/PHYS/NBE, co-managed
+by these departments and Science-IT.  Most of it is relevant to all
+Aalto, though.
 
 Basics
 ~~~~~~
@@ -54,7 +58,7 @@ Basics
    logo close to the "Login" input field.
 -  Personal web pages. What you put under ``~/public_html`` will be
    visible at ``https://users.aalto.fi/~username``.  See
-   :doc:`../data/aaltostorage`.
+   :doc:`aaltostorage`.
 
 **When requesting a new computer:**
 
@@ -82,7 +86,7 @@ workstations. See :doc:`data management <../data/index>`.
 Storage available
 ~~~~~~~~~~~~~~~~~
 
-See the general :doc:`storage page <../data/aaltostorage>` for the full
+See the general :doc:`storage page <aaltostorage>` for the full
 story.  All of the common shared directories are available by default.
 
 Full disk encryption

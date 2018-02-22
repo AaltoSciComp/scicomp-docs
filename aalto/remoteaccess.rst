@@ -36,7 +36,7 @@ Linux shell servers
    -  The CS filesystems **project** and **archive** and Triton
       filesystems **scratch** and **work** are mounted on
       ``magi`` (and ``taltta.aalto.fi``) (see
-      `storage <../data/aaltostorage>`__).
+      `storage <aaltostorage>`__).
 
 VPN / web proxy
 ~~~~~~~~~~~~~~~
