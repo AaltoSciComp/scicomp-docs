@@ -53,6 +53,10 @@ the 99% case, and existing processes are used for complicated cases.
 Aalto Innovation Services provides advice on both commercialization and
 open source release.
 
+This policy is for public licensing only (one to many).  You must go
+through Research and Innovation Services for anything involving a
+multi-party agreement.
+
 Why release?
 ~~~~~~~~~~~~
 
@@ -86,6 +90,25 @@ invention to Innovation Services.
 .. _innosrv: http://innovation.aalto.fi/contact-us/
 
 
+Traps and acting early
+~~~~~~~~~~~~~~~~~~~~~~
+Intellectual property rights don't give you the right to do anything -
+they give you the right to block others from doing something.  Thus,
+it is very important that you don't end up in a situation where others
+can block you, and that means *thinking early*.
+
+Decide on a license as soon as possible.  Once it goes into the
+repository, future contributors implicitly agree to it.  Otherwise,
+you are stuck trying to find all past contributors and get their
+agreement.
+
+Another common trap is non-open source friendly grants.  Not many
+outright ban it, but some require permission from *all* partners, and
+if there are a lot then this becomes close to impossible.  Ask in
+advance, but in the worst case it might be you just *can't* write
+software at the times you are paid by these projects!
+
+
 Step-by-step guide for release under this policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -110,7 +133,11 @@ Step-by-step guide for release under this policy
 
    If you are funded by Aalto basic funding, you by default have
    permission.  Same goes for other big public funding agencies
-   (Academy, EU).
+   (Academy, EU... but the grant can always override this).
+
+   If you are in services, follow your source of funding.  At the very
+   worst, whoever is responsible for your funding can decide, but it
+   may be someone lower too.
 
 #. You are responsible for making sure that you have the right to
    release your code. For example, that any other included software has
@@ -119,10 +146,12 @@ Step-by-step guide for release under this policy
 #. Put a copyright license in the source repository. In the best case,
    each individual source file should list copyright and authors, but in
    practice if you don't do this it's not *too* much of a problem.
-   Almost all licenses will do this, but make sure that the license
-   disclaims any warranty!  After this, contributors implicitly
+   Make sure that the license disclaims any warranty (almost all
+   licenses will do this). After this, contributors implicitly
    consent to the license.  If you have an important case, ask
-   explicitly too.
+   explicitly too.  The important thing is that you have more evidence
+   than the amount of scrutiny you might get (low in typical projects,
+   will be higher if your project becomes more important).
 
 #. This policy is seen as Aalto transferring the rights to you to
    release, not Aalto releasing itself (just the same as with
@@ -130,7 +159,7 @@ Step-by-step guide for release under this policy
    your affiliations.
 
 #. Make your code public if/when you want. No particular requirements
-   here, but see below for best practices. (TODO)
+   here, but see below for best practices.
 
 Any borderline or questionable cases should be handled by the existing
 innovation disclosure process.
@@ -162,7 +191,8 @@ Top-level recommendations:
 #. Use this nice site: https://choosealicense.com/. It contains
    everything you need to know, including what is here.
 #. **MIT** for software which should be basically public domain,
-   **Apache 2.0** for larger almost-public domain things. Anyone can
+   **Apache 2.0** for larger almost-public domain things (the Apache
+   license protects more against patent trolling). Anyone can
    use this for any purpose, including putting it in their own
    proprietary, non-open products.
 #. **GNU General Public License (GPL)** ("v2 or any later version") for
@@ -201,10 +231,10 @@ The policy
    opensource-policy
 
 
-:doc:`Raw official text <opensource-policy>`. Current approvals:
-Department of Computer Science (2017-03-17).
+For clarity, :doc:`raw official text <opensource-policy>` is separate
+from the guidance on this page. Current approvals: Department of
+Computer Science (2017-03-17).
 
-.. include:: opensource-policy.rst
 
 
 
@@ -212,7 +242,12 @@ Department of Computer Science (2017-03-17).
 How to run a good open-source software project
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-TODO
+One of the largest benefits to open source is having a community of
+people contributing back to you.  To do this, you need to have a good
+environment.  Open development, good style and a basic contribution
+guide, and encouragement is the base of this.  Eventually, this
+section may contain some more pointers to how to create this type of
+community.  (TODO)
 
 References
 ~~~~~~~~~~
