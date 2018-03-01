@@ -21,6 +21,8 @@ computer set up to use version.aalto.fi, and then do the following:
     mv authors-orig.txt authors.txt
 
     git svn clone --authors-file=authors.txt   svn-url/ tmp_directory/
+
+    cd tmp_directory
     git svn create-ignore
     git commit -a -m 'Add .gitignore from svn ignore'
 
