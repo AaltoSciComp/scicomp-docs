@@ -46,6 +46,25 @@ Aalto software
 Installing other software
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Homebrew
+########
+`Homebrew <https://brew.sh>`_ is a handy package manager on Macs. On Aalto Macs, you have to install Brew in your home dir.
+
+.. code-block:: bash
+
+	# Go to wherever you want to have your Brew and run this
+	curl -L https://github.com/Homebrew/brew/tarball/master  | tar xz
+
+	mv Homebrew-brew-43c658a Homebrew
+
+	# This is a MUST!!!
+	echo 'export PATH="path-where-you-installed/Homebrew/bin:$PATH"' >> ~/.bash_profile
+
+	# Reload the profile
+	source ~/.bash_profile
+
+	# Check if brew is correctly installed.
+	which brew    # /Users/username/Homebrew/bin/brew
 
 
 
