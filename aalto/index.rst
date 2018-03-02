@@ -11,9 +11,12 @@ for Research page
    :maxdepth: 1
 
    linux
+   mac
+   windows
    aaltostorage
    remoteaccess
    htcondor
    git
    python
    opensource
+

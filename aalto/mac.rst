@@ -1,6 +1,6 @@
-=============
-Aalto Windows
-=============
+=========
+Aalto Mac
+=========
 
 This page describes the Aalto centrally-managed Mac computers, where
 login is via Aalto accounts.  If you have a standalone laptop, some of
