@@ -100,9 +100,9 @@ For other Linuxes, you can probably figure it out.
 On mac laptops: Finder → Go menu item → Connect to server → use the URLs
 above.
 
-On windows laptops: ``smb://`` becomes ``\\`` (without the ``smb:``, and ``/`` becomes
-``\``.  To do the mounting, Windows Explorer → Computer → Map network drive →
-select a free letter.  For example, a full URL could be
+On windows laptops:  To do the mounting, Windows Explorer → Computer → Map network drive →
+select a free letter.  ``smb://`` becomes ``\\`` (without the ``smb:``), and ``/`` becomes
+``\``.  For example, a full URL could be
 ``\\tw-cs.org.aalto.fi\project\mygroup``.  You can also just enter
 it into the file manager bar.
 
