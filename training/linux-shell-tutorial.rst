@@ -1,6 +1,7 @@
 Course preview
 ====
 Linux Shell tutorial by Science IT at Aalto University.
+
 BASH practicalities, shell scripting. Learning by doing.
 
 Corresponds to 4 sessions 3h each, session rough schedule 1h25m + 10m break + 1h25m.
@@ -8,9 +9,10 @@ Corresponds to 4 sessions 3h each, session rough schedule 1h25m + 10m break + 1h
 Starred exersices (*) for the advanced user, to keep them busy.
 
 Based on 
- - ``man bash``
+ - ``man bash`` v4.2 (Triton default version in Feb 2018)
  - Advanced BASH scripting guide [#]_
- - common sence and 20+ years experience, see also other references
+ - common sence and 20+ years Linux experience
+ - see also other references in the text
 
 1. session
 ====
@@ -24,7 +26,7 @@ Shell -- is what you get when your teminal window is open. It is a command-line 
 
 Built-in and external commands
 ----
-cd, pwd, echo, ls vs. date, man, less, lpr etc. 
+cd, pwd, echo, ls vs. date, less, lpr etc. 
 
 **Hint** ``type -a`` to find what is behind the name
 
@@ -40,7 +42,7 @@ Your best friend ever -- ``man`` -- collection of manuals.
 
 Files and dirs
 ----
-ls, ls -l, ls -la, ./, ../, *, ?, []
+ls, ls -l, ls -la, ./, ../, *, ?
 
 cd, mkdir, cp, rm, rm -r, mv, touch
 
@@ -57,8 +59,6 @@ Could be a link -- ln -s. s- and t-bits.
 chmod: u+rwx,g-rwx,o-rwx -or- 700
 
 chmod -R ...
-
-[note: ``setfacl`` to be covered later on]
 
 **Hint** File Manager like Midnight Commander -- ``mc``
 
@@ -125,7 +125,7 @@ Aliases
 ----
 Define a new or re-define an old command ``alias space='du -hs .[!.]* * | sort -h'``, ``alias rm='rm -i'``
 
-Examples: ``alias chknet='ping -c 1 8.8.8.8 > /dev/null && echo online || echo offline'``
+Example: ``alias chknet='ping -c 1 8.8.8.8 > /dev/null && echo online || echo offline'``
 
 find
 ----
@@ -148,20 +148,103 @@ More options: by modification/accessing time, by ownership, by access type, join
 
 2. session
 ====
-BASH Scripting
+Command line advances and introduction to BASH scripting
+
+Files and dirs advances
+----
+Wildcards, on top of * and ?, that can be used with ls, touch, rm, mkdir, cp or anywhere else
+
+[abc], [a-bxy] {abc,xyz}, {3..15}, {c-h}, [!.], \(
+
+Advanced access permissions
+
+Access list aka ACL: ``getfacl`` and ``setfacl``
+
+ - Allow read access for a user ``setfacl -m u:<user>:r <file_or_dir>``
+ - Allow read/write access for a group ``setfacl -m g:<group>:rw <file_or_dir>``
+ - Revoke granted access ``setfacl -x u:<user> <file_or_dir>``
+ - See current stage ``getfacl <file_or_dir>``
+
+**Hint** to get file meta info ``stat <file_or_dir>``
+
+**Hint** even though file has a read access the top directory must be searchable before external user or group will be able to access it. Best practice on Triton ``chmod -R o-rwx $WRKDIR; chmod o+x $WRKDIR``
+
+Setting default access permissions: add to *.bashrc* ``umask 027`` [#]_
+
+:Exercise: practice with chmod/setfacl: set a directory permissions so that only you and some user/group of your choice would have access to a file
 
 PATH
 ----
 ``chmod +x``, what is next? binaries at /bin, /usr/bin, /usr/local/bin etc. Setting up ~/bin or running as ./binary.
 
-Hello World
+Add to *.bashrc* ``export PATH="$PATH:$HOME/bin"``
+
+**Hint** name your scripts  *\*.sh* and collect them in ~/bin directory
+
+Ping World
 ----
+Use an editor of your choice
+
+::
+
+$ cd ~/bin
+$ nano chknet.sh
+
+::
+
+ #!/bin/bash
+ ping -c 1 8.8.8.8 > /dev/null && echo online || echo offline
+
+To run ``chmod +x chknet.sh; ./chknet.sh``. Setting an x-bit needs to be done only once. If ~/bin is in the $PATH, one can scip ./ prefix.
+
+**Hint** comments in the scripts #
+
+Input arguments
+----
+$1, $2, $3, ...
+
+::
+ 
+ host=$1
+ ${host:-8.8.8.8}
+ ping -c 1 $host > /dev/null && echo online || echo offline
+ 
+Variables
+----
+Assign a variable ``var1=100``, ``var2='some string'``
+
+Invoke a variable ``$var1``
+
+BASH is smart enough to distiguish a var inline ``dir=$HOME/dir1; fname=file; fext=xyz; echo "$dir/$fname.$fext"``, though if var followed by a number or a letter ``echo ${dir}2/${file}abc.$fext``
+
+**Hint** Quoting matters: '' vs ""
+
+In shell, variables define your environment. Common practice is that environmental vars are written IN CAPITAL. You met already $HOME, $SHELL, $PATH, $PS1. To list all defined variables ``printenv``. All variables can be used or even redefined. No error if you invoke an undefined var, it is just considered to be empty.
 
 
+
+Functions in general on example of one real one
+----
+Alias can not accept an argument, function can. Once declared functions can be used within a script and from command line (cli). Any script may use a function but for mudularity let us collect some generic onse into one file.
+
+::
+
+$ nano ~/bin/functions.sh
+
+It doesn't need #!/bin/bash in the header, it can be even just readable, not executable
+
+::
+
+ onlinechk() {
+   ping $1 > /dev/null && 
+ }
 
 
 3. session
 ====
+SSH tricks
+----
+
 
 4. session
 ====
@@ -171,3 +254,4 @@ References
 .. [#] http://tldp.org/LDP/abs/html/index.html
 .. [#] https://www.putty.org/
 .. [#] https://alvinalexander.com/unix/edu/examples/find.shtml
+.. [#] https://www.computerhope.com/unix/uumask.htm
