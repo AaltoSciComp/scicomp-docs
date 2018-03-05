@@ -48,7 +48,7 @@ Schedule
    22.2     |       | T4    |
     1.3     |       | U121b |
     8.3     |       | T4    |
-   15.3     |       | U121b |
+   15.3     |       | U121b | Matlab course questions and homework help
    22.3     |       | T4    |
    29.3     |       | U121b |
     5.4     |       | T4    |
