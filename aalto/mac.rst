@@ -10,6 +10,8 @@ and Aalto resources via :doc:`remoteaccess`.
 Basics
 ------
 
+In the Aalto installations, login is via Aalto account only.
+
 - accounts
 - login/upgrades
 
@@ -18,6 +20,10 @@ Initial setup
 
 Full disk encryption
 ~~~~~~~~~~~~~~~~~~~~
+
+This must be enabled per-user, using FileVault.  On Aalto-managed
+laptops, install "Enable FileVault disk encryption" (it's a custom
+Aalto thing that does it for you)
 
 Remote usage
 ~~~~~~~~~~~~
@@ -36,12 +42,20 @@ For Aalto data storage locations, see :doc:`aaltostorage` and :doc:`../data/outl
 
 
 
-
 Software
 --------
 
+If you are the primary user, in the Software Center you can install
+"Get temporary admin rights". This will allow you to become an
+administrator for 30 minutes at a time. Then, you can install .dmg
+files yourself.
+
 Aalto software
 ~~~~~~~~~~~~~~
+
+There is a tool called "Managed software center" (or "Managed software
+update" in older versions) (`ITS instructions
+<https://inside.aalto.fi/display/ITServices/Mac>`__).
 
 Installing other software
 ~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -10,6 +10,8 @@ your data and Aalto resources via :doc:`remoteaccess`.
 Basics
 ------
 
+In the Aalto installations, login is via Aalto account only.
+
 - accounts
 - login/upgrades
 
@@ -18,6 +20,11 @@ Initial setup
 
 Full disk encryption
 ~~~~~~~~~~~~~~~~~~~~
+
+TODO: Aalto instructions
+
+Note, that on standalone installations, you can do encryption by
+searching "TrueCrypt" in programs - it is already included.
 
 Remote usage
 ~~~~~~~~~~~~
@@ -34,6 +41,11 @@ For Aalto data storage locations, see :doc:`aaltostorage` and :doc:`../data/outl
 
 (project, archive, scratch, home mainly)
 
+You can store local data at
+``C:\LocalUserData\User-data\<yourusername>``.  Note that this is not
+backed up or supported.  For data you want to exist in a few years,
+use a network drive.  It can be worth making a working copy here,
+since it can be faster.
 
 
 
@@ -43,9 +55,15 @@ Software
 Aalto software
 ~~~~~~~~~~~~~~
 
+There is a `Windows software self-service portal
+<https://inside.aalto.fi/display/ITServices/Self-service+portal+for+Windows+workstations>`__
+which can be used to install some software automatically.
+
 Installing other software
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
+To install most other software, you need to apply for a workstation
+admin (``wa``) account.
 
 
 
