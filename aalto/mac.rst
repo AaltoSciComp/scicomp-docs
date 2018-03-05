@@ -7,6 +7,11 @@ login is via Aalto accounts.  If you have a standalone laptop, some of
 this may be relevant, but for the most part you will access your data
 and Aalto resources via :doc:`remoteaccess`.
 
+.. note::
+
+   This page is still under development.
+
+
 Basics
 ------
 
