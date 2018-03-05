@@ -4,8 +4,15 @@ Linux Shell tutorial by Science IT at Aalto University.
 
 BASH practicalities, shell scripting. Learning by doing.
 
-Corresponds to 4 sessions 3h each, session rough schedule 1h25m + 10m break + 1h25m.
+Corresponds to 4 sessions 3h each, session rough schedule 1h / 5m break / 55m / 5m break / 55m.
 
+Setting up instructions for the lecturer: one slim terminal at the top that keeps a track of the commands
+
+ - export PROMPT_COMMAND='history -a'   # .bashrc or all the terminals one launches commands
+ - tail -n 0 -F .bash_history
+
+Main terminal white&black with the enlarged font size.
+ 
 Starred exersices (*) for the advanced user, to keep them busy.
 
 Based on 
@@ -13,6 +20,8 @@ Based on
  - Advanced BASH scripting guide [#]_
  - common sence and 20+ years Linux experience
  - see also other references in the text
+
+-----------------------------------------------------------------------------
 
 1. session
 ====
@@ -91,7 +100,8 @@ Linux terminal editors: VIM, Emacs, Nano. Can be set with the ``export EDITOR=``
 
 ``PS1="[\d \t \u@\h:\w ] $ "``  for permanent changes, add to .bashrc wtih ``export PS1``. For special characters see PROMPTING at ``man bash``
 
-:Exersise: customize a prompt ``$PS1``
+:Exercise: customize a prompt ``$PS1``
+:Exercise*: make it colorful
 
 After editing: ``source .bashrc``. source vs execution.
 
@@ -109,7 +119,11 @@ sort, grep, tr, cut, /dev/null
 
 ``w -h | wc -l``
 
-:Exersice: 
+``ls -1 | tr '\n' ' '``
+
+``getent passwd | cut -d: -f1,5 > users``
+
+:Exersice: make a pipe that counts number of files (inluding dot files) in your directory
 :Exercise*: expand ``du`` to list dot files/directories also
 :Exercise*: Count unique logged in users on kosh/taltta/triton or anywhere else
 
@@ -144,7 +158,31 @@ More options: by modification/accessing time, by ownership, by access type, join
 :Exercise: Find all files with 'lock' in the name in your home directory
 :Exercise*: Find all the files in your $HOME or $WRKDIR that are readable or writable by everyone and make them
 
+Jobs
+====
+Sending job to background '&'
 
+Ctrl-z and then ``bg``: firefox or any other gui app run from cli. Drawback: there is no easy way to redirect the running task output.
+
+Get a job back online: ``fg``
+
+List the jobs ruuning in the background ``jobs``
+
+Kill the foreground job: Ctrl-c
+
+Exit the shell
+----
+
+``logout`` or Ctrl-d (export IGNOREEOF=1 to *.bashrc*)
+
+In order to keep your sessions running while you logged out discover ``screen``
+
+ - ``screen`` to start a session
+ - Ctrl-a-d to detach the session while you are in
+ - ``screen -ls`` to list current sessions
+ - ``screen -rx <session_id>`` to attach the session, one can use TAB for the autocompletion or skip the <session_id> if there is only one session running 
+
+Example: irssi on kosh / lyta
 
 2. session
 ====
@@ -172,6 +210,45 @@ Access list aka ACL: ``getfacl`` and ``setfacl``
 Setting default access permissions: add to *.bashrc* ``umask 027`` [#]_
 
 :Exercise: practice with chmod/setfacl: set a directory permissions so that only you and some user/group of your choice would have access to a file
+
+Functions as part of your environment
+----
+Can be defined from the cli, or better in file (for instance *.bashrc*)
+
+::
+
+ name() {
+   command $1
+   command $2
+   ...
+ }
+
+Invoking a function from command line (source the file first)
+
+::
+
+ $ name arg1 arg2 
+
+As an example ``lcd``, could be defined in *.bashrc*
+
+::
+
+ lcd() {
+   cd $1
+   ls -1 | wc -l
+ }
+
+::
+
+ $ source .bashrc
+ $ lcd
+
+:Exercise: expand ``lcd`` so that it would print number of files and directories separately
+:Exercise*: ... and hidden files, all in one line like: *directories X, files Y, hidden files Z*
+
+Substitute a command output
+----
+$(...)
 
 PATH
 ----
