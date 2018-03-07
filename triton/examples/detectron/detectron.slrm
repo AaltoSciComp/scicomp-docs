@@ -1,0 +1,19 @@
+#!/bin/bash
+#SBATCH -p gpushort
+#SBATCH -n 1
+#SBATCH --gres=gpu:teslap100:1
+#SBATCH -t 00:30:00
+#SBATCH --mem=8G
+#SBATCH -o detectron.out
+
+module use /share/apps/singularity-ci/centos/modules/
+module load singularity-detectron
+
+mkdir -p $WRKDIR/detectron/outputs
+
+singularity_wrapper exec python2 /detectron/tools/infer_simple.py \
+    --cfg /detectron/configs/12_2017_baselines/e2e_mask_rcnn_R-101-FPN_2x.yaml \
+    --output-dir $WRKDIR/detectron/outputs \
+    --image-ext jpg \
+    --wts https://s3-us-west-2.amazonaws.com/detectron/35861858/12_2017_baselines/e2e_mask_rcnn_R-101-FPN_2x.yaml.02_32_51.SgT4y1cO/output/train/coco_2014_train:coco_2014_valminusminival/generalized_rcnn/model_final.pkl \
+    /detectron/demo

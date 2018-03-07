@@ -2,27 +2,17 @@
 Singularity Containers
 ======================
 
-
 For more information see: http://singularity.lbl.gov/
 
 General information
 ===================
 
-Before usage
-~~~~~~~~~~~~
-
-Due to the 'work in progress'-designation, singularity containers are
-not available by default to all users. To start using them you need to
-run::
-
-    module use /share/apps2/singularity/modules/
-
 Basic Idea
 ~~~~~~~~~~
 
-Basic Idea behind Singularity containers is that software is packaged
-into a container that is based on a Linux image or Docker image that can
-then be run by the user.
+Basic idea behind Singularity containers is that software is packaged
+into a container that is based on a Docker image that can then be run by the
+user.
 
 During runtime the root file system "/" is changed to the one inside the
 image and file systems are brought into the container through bind
@@ -88,3 +78,5 @@ contribute to the definitions.
 .. include:: ../examples/openpose/openpose.rst
 
 .. include:: ../examples/visit/visit.rst
+
+.. include:: ../examples/detectron/detectron.rst
