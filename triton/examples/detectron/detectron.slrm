@@ -6,7 +6,6 @@
 #SBATCH --mem=8G
 #SBATCH -o detectron.out
 
-module use /share/apps/singularity-ci/centos/modules/
 module load singularity-detectron
 
 mkdir -p $WRKDIR/detectron/outputs
