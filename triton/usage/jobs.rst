@@ -2,8 +2,8 @@
 Monitoring jobs
 ===============
 
-Monitoring jobs
-===============
+Basics
+======
 
 Before you start, if you have SLURM experience but new to Triton, you
 may want to check out the ``slurm`` command on Triton' paragraph below.
@@ -187,24 +187,88 @@ Cancelling jobs
 Job priority
 ============
 
-The running job priority in general has many factors to consider. In
-addition to job time, requested nodes number and QoS, there are others,
-like how much CPU time the user has burn already all together on the
-cluster, partition priority, for how long a particular job has been
-sitting n the queue and others. While your job is pending in the queue
-SLURM checks those metrics regularly and recount job priority constanly.
-If you are interested in details, take a look at `Ticket-based
-multifactor priority
-plugin <https://slurm.schedmd.com/priority_multifactor.html>`__ page,
-that is the one we use on Triton for jobs scheduling.
+Triton queues are not first-in first-out, but "fairshare".  This means
+that every person has a priority.  The more you run the lower your
+user priority.  As time passes, your user priority increases again.
+The longer a job waits in the queue, the higher its job priority goes.
+So, in the long run (if everyone is submitting an never-ending stream
+of jobs), everyone will get exactly their share.
 
-::
+Once there are priorities, then: jobs are scheduled in order of
+priority, then any gaps are backfilled with any smaller jobs that can
+fit in.  So small jobs usually get scheduled fast regardless.
 
-    $ slurm s                # list of jobs per user with their current priorities
-    $ slurm full             # as above but almost all of the job parameters are listed
-    $ slurm shares           # displays usage values per user
-    $ slurm p gpu            # shows partition parameters incl. Priority=
-    $ slurm j <jobid>        # shows <jobid> detailed info incl. QoS, requested nodes etc.
+*Warning: from this point on, we get more and more technical, if you
+really want to know the details.  Summary at the end.*
+
+What's a share?  Currently shares are based on department and their
+respective funding of Triton (``sshare``).  Shares are shared among
+everyone in the department, but each person has their own priority.
+Thus, for medium users, the 2-week usage of the rest of your
+department can affect how fast your jobs run.  However, again, things
+are balanced per-user within departments.  (However, one heavy user in
+a department can affect all others in that department a bit too much,
+we are working on this)
+
+Your priority goes down via the "job billing": roughly time×power.
+CPUs are billed at 1/s (but older, less powerful CPUs cost less!).
+Memory costs .2/GB/s.  But: you only get billed for the max of memory
+or CPU. So if you use one CPU and all the memory (so that no one else
+can run on it), you get billed for all memory but no CPU.  Same for
+all CPUs and little memory.  This encourages balanced use.  (this also
+applies to GPUs).
+
+GPUs also have a billing weight, currently 2/GPU/s for newer models and
+1/GPU/s for the older ones.
+
+If you submit a long job but it ends early, you are only billed for
+the actual time you use (but the longer job might take longer to start
+at the beginning).  Memory is always billed for the full reservation
+even if you use less, since it isn't shared.
+
+The "user priority" is actually just a record how much you have
+consumed lately (the billing numbers above).  This number goes down
+with a half-life decay of 2 weeks.  Your personal priority your share
+compared to that, so we get the effect described above: the more you
+(or your department) runs lately, the lower your priority.
+
+If you want your stuff to run faster, the best way is to more
+accurately specify your time (may make that job can find a place
+sooner) and memory (avoids needlessly wasting your priority).
+
+While your job is pending in the queue SLURM checks those metrics
+regularly and recalculates job priority constantly.  If you are
+interested in details, take a look at `Ticket-based multifactor
+priority plugin
+<https://slurm.schedmd.com/priority_multifactor.html>`__ page.  This
+is what we use for Triton (warning: very in depth page).  On Triton,
+you can always see the latest billing weights in
+``/etc/slurm/slurm.conf``
+
+Numerically, job priorities range from 0 to 2^32-1.  Higher is
+sooner to run, but really the number doesn't mean much itself.
+
+These commands can show you information about your user and job
+priorities:
+
+.. csv-table::
+   :delim: |
+
+   ``slurm s``         | list of jobs per user with their current priorities
+   ``slurm full``      | as above but almost all of the job parameters are listed
+   ``slurm shares``    | displays usage (RawUsage) and current
+   FairShare weights (FairShare, higher is better) values for all users
+   ``slurm j <jobid>`` | shows ``<jobid>`` detailed info including priority, requested nodes etc.
+
+..
+   ``slurm p gpu``       |     # shows partition parameters incl. Priority=
+
+
+tl;dr: Just select the resources you think you need, and slurm
+tries to balance things out so everyone gets their share.  The best
+way to maintain high priority is to use resources efficiently so you
+don't need to over-request.
+
 
 ``slurm`` command on Triton
 ===========================
