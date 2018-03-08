@@ -43,7 +43,7 @@ TODO: Aalto workstations and default scientific software.
 The `shell servers
 <https://inside.aalto.fi/display/ITServices/Servers+for+light+computing>`_
 ``brute`` and ``force`` are for light computing, and generally for
-students.  You may find them useful, but can often be overloaded.
+students.  You may find them useful, but can often be overloaded. :doc:`Learn how to launch Jupyter notebook on there <../aalto/remotejupyter>`.
 
 For GPU computing, the `Paniikki Linux computer lab
 <http://usefulaaltomap.fi/#!/select/paniikki>`_ has GPUs in all
