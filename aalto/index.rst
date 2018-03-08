@@ -15,6 +15,7 @@ for Research page
    windows
    aaltostorage
    remoteaccess
+   remotejupyter
    htcondor
    git
    python
