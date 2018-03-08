@@ -16,6 +16,7 @@ for Research page
    aaltostorage
    remoteaccess
    remotejupyter
+   paniikki
    htcondor
    git
    python
