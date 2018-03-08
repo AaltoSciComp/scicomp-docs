@@ -48,8 +48,9 @@ students.  You may find them useful, but can often be overloaded. :doc:`Learn ho
 For GPU computing, the `Paniikki Linux computer lab
 <http://usefulaaltomap.fi/#!/select/paniikki>`_ has GPUs in all
 workstations and various software.  The instructions for :doc:`Aalto
-workstations <../aalto/linux>` apply there as well (mostly).  The
-software on these machines is managed by the Science-IT team.  This is
+workstations <../aalto/linux>` apply there as well (mostly). Read the 
+:doc:`Paniikki cheatsheet here <../aalto/paniikki>`. The
+software on these machines is managed by the Aalto-IT team.  This is
 the place if you need to play with GPUs, deep learning, etc.
 
 The use of :doc:`Triton <../triton/index>` is primarily for research
