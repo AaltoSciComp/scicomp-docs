@@ -238,12 +238,12 @@ sooner) and memory (avoids needlessly wasting your priority).
 
 While your job is pending in the queue SLURM checks those metrics
 regularly and recalculates job priority constantly.  If you are
-interested in details, take a look at `Ticket-based multifactor
-priority plugin
-<https://slurm.schedmd.com/priority_multifactor.html>`__ page.  This
-is what we use for Triton (warning: very in depth page).  On Triton,
-you can always see the latest billing weights in
-``/etc/slurm/slurm.conf``
+interested in details, take a look at `multifactor priority plugin
+<https://slurm.schedmd.com/priority_multifactor.html>`__ page (general
+info) and `depth-oblivious fair-share factor
+<https://slurm.schedmd.com/priority_multifactor3.html>`__ for what we
+use specifically (warning: very in depth page).  On Triton, you can
+always see the latest billing weights in ``/etc/slurm/slurm.conf``
 
 Numerically, job priorities range from 0 to 2^32-1.  Higher is
 sooner to run, but really the number doesn't mean much itself.
