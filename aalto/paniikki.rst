@@ -4,6 +4,14 @@ Paniikki
 
 Paniikki is a cutting edge computer lab in the computer science department. It is located in `T106 <http://usefulaaltomap.fi/#!/select/paniikki>`_. This documentation is a Paniikki cheatsheet cheatsheet.
 
+.. figure:: /images/paniikki_map.png
+  :align: center
+  :alt: alternate text
+  :figclass: align-center
+
+  < The blue box at the entrance is Paniikki > 
+
+
 The name
 ========
 Paniikki means "panic" in English which is a fascinating name as people in panic are in panic. I don't know which comes first, the space or the emotion. Anyway, people experience the both simultaneously.
