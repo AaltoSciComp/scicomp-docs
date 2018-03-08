@@ -18,6 +18,7 @@ Starred exersices (*) for the advanced user, to keep them busy.
 Based on 
  - ``man bash`` v4.2 (Triton default version in Feb 2018)
  - Advanced BASH scripting guide [#]_
+ - UNIX Power Tools, Shelley Powers etc, 3rd ed, O'Reilly
  - common sence and 20+ years Linux experience
  - see also other references in the text
 
@@ -25,7 +26,7 @@ Based on
 
 1. session
 ====
-Practical aspects of BASH, command line usage.
+Interactive usage of BASH
 
 Linux and Mac users: just open a terminal window.
 
@@ -170,6 +171,9 @@ List the jobs ruuning in the background ``jobs``
 
 Kill the foreground job: Ctrl-c
 
+Example: tar 
+
+
 Exit the shell
 ----
 
@@ -179,7 +183,7 @@ In order to keep your sessions running while you logged out discover ``screen``
 
  - ``screen`` to start a session
  - Ctrl-a-d to detach the session while you are in
- - ``screen -ls`` to list current sessions
+ - ``screen -ls`` to list currently running sessions
  - ``screen -rx <session_id>`` to attach the session, one can use TAB for the autocompletion or skip the <session_id> if there is only one session running 
 
 Example: irssi on kosh / lyta
@@ -243,8 +247,46 @@ As an example ``lcd``, could be defined in *.bashrc*
  $ source .bashrc
  $ lcd
 
+Functions in BASH is just a piece of code that once declared can be invoked at any place later with args or withour. ``return`` returns the exit code only. By default vars are in global space, once chaged in the function is seen everywhere else. ``local`` can be used to localize the vars.
+
 :Exercise: expand ``lcd`` so that it would print number of files and directories separately
-:Exercise*: ... and hidden files, all in one line like: *directories X, files Y, hidden files Z*
+:Exercise*: write a function that makes files/subdirectories readable by all on a given directory (note r for files, xr for dirs)
+
+Variables
+----
+In shell, variables define your environment. Common practice is that environmental vars are written IN CAPITAL: $HOME, $SHELL, $PATH, $PS1. To list all defined variables ``printenv``. All variables can be used or even redefined. No error if you call an undefined var, it is just considered to be empty.
+
+Assign a variable ``var1=100``, ``var2='some string'``
+
+Invoke a variable ``$var1``
+
+BASH is smart enough to distiguish a var inline ``dir=$HOME/dir1; fname=file; fext=xyz; echo "$dir/$fname.$fext"``, though if var followed by a number or a letter ``echo ${dir}2/${file}abc.$fext``
+
+Built-in vars: $?, $$, $#, $1 ..., "$*", "$@",  
+
+**Hint** Quoting matters: '' vs ""
+
+:Exercise: write a function that outputs number of arguments it has got and then all the arguments as a single word
+:Exercise*: make a function that takes IP as an argument, ping that IP and returns ok/failed only
+
+More on variables
+----
+BASH provides wide abilities to work with the vars "on-the-fly".
+
+
+
+More about redirection and pipe
+----------
+STDOUT and STDERR: reserved file descriptors *1* and *2*, always there when you run a command
+
+`` ... >/dev/null`` redirects STDOUT only, to redirect all the output including errors `` ... &>/dev/null``, or redirect outputs in different ways ``1>file.out`` and ``2>file.err``
+
+In order to pipe both STDERR and STDOUT ``|&``.
+
+If ``!``  preceds the command, the exit status is the logical negation.
+
+The third file descriptor is 0, STDIN, valid syntax ``command < input_file &> output_file``. ping exercise explained.
+
 
 Substitute a command output
 ----
@@ -286,18 +328,6 @@ $1, $2, $3, ...
  ${host:-8.8.8.8}
  ping -c 1 $host > /dev/null && echo online || echo offline
  
-Variables
-----
-Assign a variable ``var1=100``, ``var2='some string'``
-
-Invoke a variable ``$var1``
-
-BASH is smart enough to distiguish a var inline ``dir=$HOME/dir1; fname=file; fext=xyz; echo "$dir/$fname.$fext"``, though if var followed by a number or a letter ``echo ${dir}2/${file}abc.$fext``
-
-**Hint** Quoting matters: '' vs ""
-
-In shell, variables define your environment. Common practice is that environmental vars are written IN CAPITAL. You met already $HOME, $SHELL, $PATH, $PS1. To list all defined variables ``printenv``. All variables can be used or even redefined. No error if you invoke an undefined var, it is just considered to be empty.
-
 
 
 Functions in general on example of one real one
