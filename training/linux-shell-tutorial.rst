@@ -4,7 +4,7 @@ Linux Shell tutorial by Science IT at Aalto University.
 
 BASH practicalities, shell scripting. Learning by doing.
 
-Corresponds to 4 sessions 3h each, session rough schedule 1h / 5m break / 55m / 5m break / 55m.
+Corresponds to 4 sessions 3h each, session rough schedule 2x1h25m with 10m break in between.
 
 Setting up instructions for the lecturer: one slim terminal at the top that keeps a track of the commands
 
@@ -66,7 +66,7 @@ Permissions
 rwxrwxrwx -- read, write, execute/search
 Could be a link -- ln -s. s- and t-bits.
 
-chmod: u+rwx,g-rwx,o-rwx -or- 700
+chmod u+rwx,g-rwx,o-rwx <files> -or- chmod 700 <files>
 
 chmod -R ...
 
@@ -82,7 +82,7 @@ Hotkeys
 - End `or` Ctrl-e -- end
 - Ctrl-left/right arrows `or` Alt-b/Alt-f  - moving by one word there and back
 - up/down arrows -- command history
-- Ctrl-i -- clear the screen
+- Ctrl-l -- clear the screen
 - Ctrl-Shift-c -- copy
 - Ctrl-Shift-v -- paste
 - Ctrl-Shift--  -- undo the last changes on cli
@@ -159,6 +159,16 @@ More options: by modification/accessing time, by ownership, by access type, join
 :Exercise: Find all files with 'lock' in the name in your home directory
 :Exercise*: Find all the files in your $HOME or $WRKDIR that are readable or writable by everyone and make them
 
+Archiving files
+====
+To archive ``tar czvf path/to/archive.tar.gz directory/to/archive``
+
+To open ``cd directory/to/open/archive; tar xzf path/to/archive.tar.gz``
+
+To watch what is there ``tar tzf ...``
+
+By now you should know that much to get started with the interactive BASH usage.
+
 Jobs
 ====
 Sending job to background '&'
@@ -187,6 +197,7 @@ In order to keep your sessions running while you logged out discover ``screen``
  - ``screen -rx <session_id>`` to attach the session, one can use TAB for the autocompletion or skip the <session_id> if there is only one session running 
 
 Example: irssi on kosh / lyta
+
 
 2. session
 ====
@@ -217,7 +228,7 @@ Setting default access permissions: add to *.bashrc* ``umask 027`` [#]_
 
 Functions as part of your environment
 ----
-Can be defined from the cli, or better in file (for instance *.bashrc*)
+Can be defined from the cli, or better in file (for instance *function.sh*)
 
 ::
 
@@ -271,7 +282,29 @@ Built-in vars: $?, $$, $#, $1 ..., "$*", "$@",
 
 More on variables
 ----
-BASH provides wide abilities to work with the vars "on-the-fly".
+BASH provides wide abilities to work with the vars "on-the-fly" with ${var...} like constructions.
+
+Subtitute a var with default *value* if empty: ``${var:=value}``
+
+Print an *error_message* if var empty: ``${var:?error_message}``
+
+Extract a substring: ``${var:offset:length}``, example ``var=abcde; echo ${var:1:3}`` returns 'bcd'
+
+Variable length: ``${#var}
+
+Replace beginning part: ``${var#prefix}``
+
+Replace trailing part: ``${var%suffix}``
+
+Replace *pattern* with the *string*: ``${var/pattern/string}``
+
+
+:Exercise: 
+ - shorten *filename.ext* down to *filename* and then down to *ext*. Filename can be any length, while ext is the same.
+ - 
+
+if/else
+====
 
 
 
