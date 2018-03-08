@@ -105,7 +105,7 @@ Quick reference
 
 As a reminder, here is the quick reference of all slurm options
 
-.. include:: ../ref/slurm
+.. include:: ../ref/slurm.rst
 
 
 Next steps
