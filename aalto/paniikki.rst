@@ -87,7 +87,7 @@ Assume we are in Paniikki and wants to do our homework for CS-E4820 Machine Lear
 	$ module load courses/    # Tab to auto-complete
 
 	# Finally you will complete this
-	$ module load courses/courses/CS-E4820-advanced-probabilistic-methods.lua
+	$ module load courses/CS-E4820-advanced-probabilistic-methods.lua
 
 	# Check the module you loaded
 	$ module list
