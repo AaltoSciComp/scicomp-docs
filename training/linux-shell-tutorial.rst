@@ -174,7 +174,7 @@ More options: by modification/accessing time, by ownership, by access type, join
 :Exercise*: Find all the files in your $HOME or $WRKDIR that are readable or writable by everyone and make them
 
 Archiving files
-====
+----
 To archive ``tar czvf path/to/archive.tar.gz directory/to/archive``
 
 To open ``cd directory/to/open/archive; tar xzf path/to/archive.tar.gz``
@@ -184,7 +184,7 @@ To watch what is there ``tar tzf ...``
 By now you should know that much to get started with the interactive BASH usage.
 
 Managing foreground/background processes
-====
+----
 Adding *&* right after the command send the process to background. Example: ``firefox --no-remote &`` same can be done with any terminal command/function, like ``tar ... &``.
 
 If you have already running process, then Ctrl-z and then ``bg``. Drawback: there is no easy way to redirect the running task output.
@@ -195,7 +195,6 @@ Kill the foreground job: Ctrl-c
 
 Exit the shell
 ----
-
 ``logout`` or Ctrl-d (export IGNOREEOF=1 to *.bashrc*)
 
 In order to keep your sessions running while you logged out discover ``screen``
@@ -309,12 +308,51 @@ Replace *pattern* with the *string*: ``${var/pattern/string}``
 
 
 :Exercise: 
- - shorten *filename.ext* down to *filename* and then down to *ext*. Filename can be any length, while ext is the same.
- - 
+ - shorten *filename.ext* down to *filename* and then down to *ext*. Filename can be of any length, while *.ext* is the same.
+ - expand lcd() so that it would go to some specific directory if $1 is empty (if on Triton then $WRKDIR)
+:Exercise*: extract filename with no extension from */work/archive/OLD/Michel's_stuff.tar.gz*
 
-if/else
-====
+[[ ]] and if/elif/else
+----
+``[[ expression ]]`` returns 0 or 1 depending on the evaluation of the conditional *expression*
 
+==, <, >, !=, =~, &&, ||, !, ()
+
+When working with the strings the right-hand side is a pattern (a regular expression). Matched strings assigned to *${BASH_REMATCH[]}* array elements.
+
+Integer example: ``x=5; y=6; z=7; [[ $x < $y && ! $y == $z ]] && echo ok || echo nope``
+String example: ``x='abcefgh kjhkjh #1278?'; regexpr='#([0-9][0-9][0-9][0-9])'; [[ "$x" =~ $regexpr ]] && echo ${BASH_REMATCH[1]} || echo nope``
+
+**Hint** For case insesitive, set ``shopt -s nocasematch``  (to disable it back ``shopt -u nocasematch``)
+
+Though scripting style is more logical if/else
+
+::
+
+ if [[ expression ]]; then
+   command1
+ elif [[ expression ]]; then
+   command2
+ else
+   command3
+ fi
+
+An example: script (or function) that accepts two strings and return result
+
+::
+
+ if [[ "$1" == "$2" ]]
+ then
+   echo The strings are the same
+ else
+   echo The strings are different
+ fi
+
+:Exercise: Play with the strings/patterns. Make a script/function that picks up a pattern and a string as an input and reports whether pattern matches any part of string or not. Kind of *my_grep pattern string*.
+:Exercise*: Expand the script to make search case insesitive and report also a count how many times pattern appears in the string
+
+Loops
+----
 
 
 More about redirection and pipe
