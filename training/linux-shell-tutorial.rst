@@ -52,23 +52,31 @@ Your best friend ever -- ``man`` -- collection of manuals.
 
 Files and dirs
 ----
-ls, ls -l, ls -la, ./, ../, *, ?
 
-cd, mkdir, cp, rm, rm -r, mv, touch
+::
+
+ ls, ls -l, ls -la, ./, ../, *, ?
+
+::
+
+ cd, mkdir, cp, rm, rm -r, mv, touch
 
 **Hint** ``ls -lX``, ``ls -ltr``, ``file <filename>``
 
-:Exercise: mkdir in your $HOME, cd there and 'touch' a file. Rename it. Make a copy and then remove the original.
+:Exercise: mkdir in your $HOME (or $WRKDIR if on Triton), cd there and 'touch' a file. Rename it. Make a copy and then remove the original
 :Exercise*: ``ls`` dot files only. Create a dozen of files with one command with names like file1.txt, file2.txt, ... file12.txt
 
 Permissions
 ----
 rwxrwxrwx -- read, write, execute/search
-Could be a link -- ln -s. s- and t-bits.
 
-chmod u+rwx,g-rwx,o-rwx <files> -or- chmod 700 <files>
+Could be a link -- ``ln -s``. s- and t-bits.
 
-chmod -R ...
+::
+
+ chmod u+rwx,g-rwx,o-rwx <files> -or- chmod 700 <files>
+
+For recursive ``chmod -R ... ``
 
 **Hint** File Manager like Midnight Commander -- ``mc``
 
@@ -95,36 +103,72 @@ Hotkeys
 
 Initialization files
 ----
-.bashrc and .bash_profile
+.bashrc (when SSH) and .bash_profile (interactive login to a workstation), often a symlink from one to another.
 
-Linux terminal editors: VIM, Emacs, Nano. Can be set with the ``export EDITOR=``.
+Here you define everything you want to be enabled when you login.
 
-``PS1="[\d \t \u@\h:\w ] $ "``  for permanent changes, add to .bashrc wtih ``export PS1``. For special characters see PROMPTING at ``man bash``
+**Hint** best text viewer ever -- *less*
 
-:Exercise: customize a prompt ``$PS1``
+One of the things to play with: command line prompt defined in PS1
+
+::
+
+ PS1="[\d \t \u@\h:\w ] $ "
+
+For special characters see PROMPTING at ``man bash``. To make it permanent, should be added to *.bashrc* like ``export PS1``.
+
+:Exercise: customize a prompt ``$PS1``. Hint: save the original PS1 like ``oldPS1=$PS1`` to be able to recover it any time.
 :Exercise*: make it colorful
 
-After editing: ``source .bashrc``. source vs execution.
+
+Create/edit a file
+-----
+Editors like: *vim*, *emacs* or the simplest one *nano*.
+
+Quick look at the text file ``cat filename.txt``
+
+Other quick ways to add something to a file (no need for an editor)
+
+``echo 'Some sentense, or whatever else 1234567!-+>$#' > filename.txt``
+
+``cat > filename2.txt`` to finish typing and write written to the file, press enter, then Ctrl-d.
+
+:Exercise: add above mentioned ``export PS1`` to *.bashrc* and then ``source .bashrc`` to enable changes
 
 Redirect, pipe
 ----
-Append to a file or replace a file ``command > file.txt`` *or* ``command >> file.txt``
+Redirect: append to a file or replace a file ``command > file.txt`` *or* ``command >> file.txt``
 
-``echo Hello World > hello.txt`` *or* ``ls -lH >> current_dir_ls.txt``
+::
 
-Output of the first command as an input for the second one ``command_a | command_b``
+ echo Hello World > hello.txt
+ ls -lH >> current_dir_ls.txt
 
-sort, grep, tr, cut, /dev/null
+Pipe: output of the first command as an input for the second one ``command_a | command_b``
 
-``du -hs * | sort -h``
+::
+ # sort, tr, cut, /dev/null, see also grep below
+ $ du -hs * | sort -h
+ $ w -h | wc -l
+ $ ls -1 | tr '\n' ' '
+ $ getent passwd | cut -d: -f1,5 > users
 
-``w -h | wc -l``
+grep
+----
+Later on you'll find out that *grep* is one of the most useful commands you ever discover on Linux
 
-``ls -1 | tr '\n' ' '``
+::
 
-``getent passwd | cut -d: -f1,5 > users``
+ $ grep <pattern> <filename>  # grep lines that match <pattern>
+ $ grep -R <pattern> <directory>  # grep all the files in the <directory>
+ $ grep -v ...  # grep everything except
+
+For details on what <pattern> could be, look for REGULAR EXPRESSIONS at ``man grep`
 
 :Exersice: make a pipe that counts number of files (inluding dot files) in your directory
+:Exercise: 
+ - grep directories out of ``ls -l``
+ - grep all but blank lines in the file
 :Exercise*: expand ``du`` to list dot files/directories also
 :Exercise*: Count unique logged in users on kosh/taltta/triton or anywhere else
 
@@ -142,23 +186,9 @@ Define a new or re-define an old command ``alias space='du -hs .[!.]* * | sort -
 
 Example: ``alias chknet='ping -c 1 8.8.8.8 > /dev/null && echo online || echo offline'``
 
-Create/edit a file
------
-Editors like: *vim*, *emacs* or the simplest one *nano*.
-
-Quick look at the text file ``cat filename.txt``
-
-Other quick ways to add something to file (no need for an editor)
-
-``echo 'Some sentense, or whatever else 1234567!-+>$#' > filename.txt``
-
-``cat > filename2.txt`` to finish typing and write written to the file, press enter, then Ctrl-d.
-
-:Exercise: collect above mentioned (or your own) aliases to a file
-
 find
 ----
-It is a number one in searching files from shell.
+It is a number one in searching files in shell.
 
 ``find ~ -name file.txt`` *or* ``find $HOME $WRKDIR -name file.txt``
 
@@ -169,6 +199,7 @@ It is a number one in searching files from shell.
 More options: by modification/accessing time, by ownership, by access type, joint conditions, case-insensitive, that do not match, etc [#]_
 
 **Hint**  On Triton ``lfs find``
+**Hint**  Another utility that you may find useful ``locate``, but on workstations only
 
 :Exercise: Find all files with 'lock' in the name in your home directory
 :Exercise*: Find all the files in your $HOME or $WRKDIR that are readable or writable by everyone and make them
@@ -252,8 +283,7 @@ Invoking a function from command line (source the file first)
 
  $ name arg1 arg2 
 
-As an example ``lcd``, could be defined in *.bashrc*
-
+As an example ``lcd``
 ::
 
  lcd() {
@@ -263,7 +293,7 @@ As an example ``lcd``, could be defined in *.bashrc*
 
 ::
 
- $ source .bashrc
+ $ source function.sh
  $ lcd
 
 Functions in BASH is just a piece of code that once declared can be invoked at any place later with args or withour. ``return`` returns the exit code only. By default vars are in global space, once chaged in the function is seen everywhere else. ``local`` can be used to localize the vars.
@@ -281,7 +311,13 @@ Invoke a variable ``$var1``
 
 BASH is smart enough to distiguish a var inline ``dir=$HOME/dir1; fname=file; fext=xyz; echo "$dir/$fname.$fext"``, though if var followed by a number or a letter ``echo ${dir}2/${file}abc.$fext``
 
-Built-in vars: $?, $$, $#, $1 ..., "$*", "$@",  
+Built-in vars:
+
+ - $?  exit status of the last command
+ - $$  name of the shell
+ - $#  number of input parameters
+ - $1, $2 ... input parameter one by one (function/script)
+ - "$@" all input parameters as is in one line
 
 **Hint** Quoting matters: '' vs ""
 
@@ -292,40 +328,37 @@ More on variables
 ----
 BASH provides wide abilities to work with the vars "on-the-fly" with ${var...} like constructions.
 
-Subtitute a var with default *value* if empty: ``${var:=value}``
-
-Print an *error_message* if var empty: ``${var:?error_message}``
-
-Extract a substring: ``${var:offset:length}``, example ``var=abcde; echo ${var:1:3}`` returns 'bcd'
-
-Variable length: ``${#var}
-
-Replace beginning part: ``${var#prefix}``
-
-Replace trailing part: ``${var%suffix}``
-
-Replace *pattern* with the *string*: ``${var/pattern/string}``
-
+ - Subtitute a var with default *value* if empty: ``${var:=value}``
+ - Print an *error_message* if var empty: ``${var:?error_message}``
+ - Extract a substring: ``${var:offset:length}``, example ``var=abcde; echo ${var:1:3}`` returns 'bcd'
+ - Variable's length: ``${#var}
+ - Replace beginning part: ``${var#prefix}``
+ - Replace trailing part: ``${var%suffix}``
+ - Replace *pattern* with the *string*: ``${var/pattern/string}``
 
 :Exercise: 
  - shorten *filename.ext* down to *filename* and then down to *ext*. Filename can be of any length, while *.ext* is the same.
- - expand lcd() so that it would go to some specific directory if $1 is empty (if on Triton then $WRKDIR)
+ - expand lcd() so that it would go to some specific directory taken as an input parameter, if *$1* is empty (on Triton it could be $WRKDIR)
 :Exercise*: extract filename with no extension from */work/archive/OLD/Michel's_stuff.tar.gz*
 
 [[ ]] and if/elif/else
 ----
 ``[[ expression ]]`` returns 0 or 1 depending on the evaluation of the conditional *expression*
 
-==, <, >, !=, =~, &&, ||, !, ()
+::
+
+ ==, <, >, !=, =~, &&, ||, !, ()
 
 When working with the strings the right-hand side is a pattern (a regular expression). Matched strings assigned to *${BASH_REMATCH[]}* array elements.
 
-Integer example: ``x=5; y=6; z=7; [[ $x < $y && ! $y == $z ]] && echo ok || echo nope``
-String example: ``x='abcefgh kjhkjh #1278?'; regexpr='#([0-9][0-9][0-9][0-9])'; [[ "$x" =~ $regexpr ]] && echo ${BASH_REMATCH[1]} || echo nope``
+::
+
+ x=5; y=6; z=7; [[ $x < $y && ! $y == $z ]] && echo ok || echo nope
+ x='abcefgh kjhkjh #1278?'; regexpr='#([0-9][0-9][0-9][0-9])'; [[ "$x" =~ $regexpr ]] && echo ${BASH_REMATCH[1]} || echo nope
 
 **Hint** For case insesitive, set ``shopt -s nocasematch``  (to disable it back ``shopt -u nocasematch``)
 
-Though scripting style is more logical if/else
+Though scripting style is more logical with if/else construction
 
 ::
 
@@ -337,7 +370,7 @@ Though scripting style is more logical if/else
    command3
  fi
 
-An example: script (or function) that accepts two strings and return result
+An example: script (or function) that accepts two strings and returns result of comparison
 
 ::
 
@@ -349,10 +382,12 @@ An example: script (or function) that accepts two strings and return result
  fi
 
 :Exercise: Play with the strings/patterns. Make a script/function that picks up a pattern and a string as an input and reports whether pattern matches any part of string or not. Kind of *my_grep pattern string*.
-:Exercise*: Expand the script to make search case insesitive and report also a count how many times pattern appears in the string
+:Exercise*: Expand the *my_grep* script to make search case insesitive and report also a count how many times pattern appears in the string
 
-Loops
+More on search and regular expressions
 ----
+Regular expression is a pattern, it describes what we are looking for within a string
+
 
 
 More about redirection and pipe
@@ -368,9 +403,7 @@ If ``!``  preceds the command, the exit status is the logical negation.
 The third file descriptor is 0, STDIN, valid syntax ``command < input_file &> output_file``. ping exercise explained.
 
 
-Substitute a command output
-----
-$(...)
+
 
 PATH
 ----
@@ -380,61 +413,35 @@ Add to *.bashrc* ``export PATH="$PATH:$HOME/bin"``
 
 **Hint** name your scripts  *\*.sh* and collect them in ~/bin directory
 
-Ping World
-----
-Use an editor of your choice
-
-::
-
-$ cd ~/bin
-$ nano chknet.sh
-
-::
-
- #!/bin/bash
- ping -c 1 8.8.8.8 > /dev/null && echo online || echo offline
-
-To run ``chmod +x chknet.sh; ./chknet.sh``. Setting an x-bit needs to be done only once. If ~/bin is in the $PATH, one can scip ./ prefix.
-
-**Hint** comments in the scripts #
-
-Input arguments
-----
-$1, $2, $3, ...
-
-::
- 
- host=$1
- ${host:-8.8.8.8}
- ping -c 1 $host > /dev/null && echo online || echo offline
- 
-
-
-Functions in general on example of one real one
-----
-Alias can not accept an argument, function can. Once declared functions can be used within a script and from command line (cli). Any script may use a function but for mudularity let us collect some generic onse into one file.
-
-::
-
-$ nano ~/bin/functions.sh
-
-It doesn't need #!/bin/bash in the header, it can be even just readable, not executable
-
-::
-
- onlinechk() {
-   ping $1 > /dev/null && 
- }
-
 
 3. session
 ====
+Substitute a command output
+----
+$(...)
+
+Arithmetics
+----
+
+Gauss example
+
+Loops
+----
+for, while/until
+
+
 SSH tricks
 ----
 
 
 4. session
 ====
+Catching kill signals
+----
+
+Debugging
+----
+
 
 References
 ====
