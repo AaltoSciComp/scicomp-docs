@@ -142,6 +142,20 @@ Define a new or re-define an old command ``alias space='du -hs .[!.]* * | sort -
 
 Example: ``alias chknet='ping -c 1 8.8.8.8 > /dev/null && echo online || echo offline'``
 
+Create/edit a file
+-----
+Editors like: *vim*, *emacs* or the simplest one *nano*.
+
+Quick look at the text file ``cat filename.txt``
+
+Other quick ways to add something to file (no need for an editor)
+
+``echo 'Some sentense, or whatever else 1234567!-+>$#' > filename.txt``
+
+``cat > filename2.txt`` to finish typing and write written to the file, press enter, then Ctrl-d.
+
+:Exercise: collect above mentioned (or your own) aliases to a file
+
 find
 ----
 It is a number one in searching files from shell.
@@ -169,20 +183,15 @@ To watch what is there ``tar tzf ...``
 
 By now you should know that much to get started with the interactive BASH usage.
 
-Jobs
+Managing foreground/background processes
 ====
-Sending job to background '&'
+Adding *&* right after the command send the process to background. Example: ``firefox --no-remote &`` same can be done with any terminal command/function, like ``tar ... &``.
 
-Ctrl-z and then ``bg``: firefox or any other gui app run from cli. Drawback: there is no easy way to redirect the running task output.
+If you have already running process, then Ctrl-z and then ``bg``. Drawback: there is no easy way to redirect the running task output.
 
-Get a job back online: ``fg``
-
-List the jobs ruuning in the background ``jobs``
+List the jobs ruuning in the background ``jobs``, get a job back online: ``fg`` or ``fg <job_number>``. There can be multiple background jobs (remeber forkbombs).
 
 Kill the foreground job: Ctrl-c
-
-Example: tar 
-
 
 Exit the shell
 ----
