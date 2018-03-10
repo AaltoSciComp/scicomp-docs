@@ -387,9 +387,29 @@ An example: script (or function) that accepts two strings and returns result of 
 :Exercise: Play with the strings/patterns. Make a script/function that picks up a pattern and a string as an input and reports whether pattern matches any part of string or not. Kind of *my_grep pattern string*.
 :Exercise*: Expand the *my_grep* script to make search case insesitive and report also a count how many times pattern appears in the string
 
+More conditional expressions
+----
+
+ - ``-f`` true if is a file
+ - ``-r`` true if file exists and readable
+ - ``-d`` true if is a directory
+ - ``-z`` true if the length of string is zero (always used to check that var is not empty)
+ - ``-n`` true if the length of string is non-zero
+ - ``file1 -nt file2`` true if *file1* is newer (modification time)
+ - many more others
+
+::
+
+ [[ -f $file ]] && echo $ file exists
+
+
 More on search and regular expressions
 ----
 Regular expression is a pattern, it describes what we are looking for within a string
+
+ - ``*`` matches any string
+ - ``?`` matches a single character
+ - ````
 
 
 
@@ -425,8 +445,20 @@ $(...)
 
 Arithmetics
 ----
+BASH supports wide range of arithmetic operators for integers that can be evaluated within ``(( .. ))``
 
-Gauss example
+ - ``n++``, ``n--``, ``++n``, ``--n`` increments/decrements
+ - ``+``, ``-`` plus minus
+ - ``**`` exponent
+ - ``*``, ``/``, ``%`` multiplication, division, remainder
+ - ``&&``, ``||`` logical AND, OR
+ - ``expr?expr:expr`` conditional operator (trinity)
+ - ``==``, ``!=``, ``<``, ``>``, ``>=``, ``<=`` comparison
+ - ``=``, ``+=``, ``-=``, ``*=``, ``/=``, ``%=`` assignment
+ 
+For full list incl. bitwise operators, see man page.
+ 
+:Exercise: Gauss 1..100 sum example. Write a function that count a sum of any *1+2+3+4+..+n* sequence of numbers. Where *n* is any positive integer.
 
 Loops
 ----
