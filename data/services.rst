@@ -237,15 +237,15 @@ Finnish services
     2018, and will need reevaluation then.
 
   * **AVAA** is basically a merging of IDA and Etsin.  You can set
-    some metadat in IDA so that your data is available via the web.
+    some metadata in IDA so that your data is available via the web.
     There are some instruction in the IDA user guide (`browser
-    <https://openscience.fi/ida-browser-sharing>`__, `cli
+    <https://openscience.fi/ida-browser-sharing>`__, `command line
     <https://openscience.fi/ida-commands-sharing>`__).  Overall,
     having to use three different services for publishing a file takes
     a fair amount of work, so if you want to open data, Zenodo is
     faster.
 
-* **The FSD Finnish Social Data Arhive / Tietoarkisto** is run from
+* **The FSD Finnish Social Data Archive / Tietoarkisto** is run from
   the University of Tampere.  It is a full-service archive for social
   data, so they can help in data preparation and curation..  It is one
   of the few places in Finland allowed to archive personally
