@@ -309,13 +309,16 @@ Assign a variable ``var1=100``, ``var2='some string'``
 
 Invoke a variable ``$var1``
 
+Append a var: ``var+=<string>/<integer>``
+
 BASH is smart enough to distiguish a var inline ``dir=$HOME/dir1; fname=file; fext=xyz; echo "$dir/$fname.$fext"``, though if var followed by a number or a letter ``echo ${dir}2/${file}abc.$fext``
 
 Built-in vars:
 
  - $?  exit status of the last command
- - $$  name of the shell
+ - $$  current shell pid
  - $#  number of input parameters
+ - $0  running script name
  - $1, $2 ... input parameter one by one (function/script)
  - "$@" all input parameters as is in one line
 
@@ -428,6 +431,57 @@ Gauss example
 Loops
 ----
 for, while/until
+
+Arrays
+----
+BASH supports both indexed and associative one-dimensional arrays. Indexed array can be declared explicilty or with ``declare -a array_name``, other ways:
+
+::
+ 
+ array=(my very first array)
+ array=('my second' array [6]=sure)
+ array[5]=234
+ 
+To access array elements
+
+::
+
+  echo ${array[0]} ${array[1]}  # elements one by one
+  ${array[@]}  # array values at once
+  ${!array[@]}  # indexes at once
+  ${#array[@]}  # number of elements in the array
+  ${#array[2]}  # length of the element number 2
+
+To append elements to the end of array
+
+::
+
+  $array+=(value)
+
+Loops through the indexed array
+
+:: 
+
+ for i in ${!array[@]}; do
+   echo \$array[$i] is ${array[$i]}
+ done
+
+Negative index counts back from the end of the array, *[-1]* referencing to the last element.
+
+BASH associative arrays needs to be declared first ``declare -A asarr``
+
+::
+
+ asarr=([university]='Aalto University' [city]=Espoo ['street address']='Otakaari 1')
+ asarr[post_index]=02150
+
+Addressing is similar to indexed arrays
+
+::
+
+ for i in "${!asarr[*]}"; do
+   echo \$asarr["$i"] is ${asarr["$i"]}
+ done
 
 
 SSH tricks
