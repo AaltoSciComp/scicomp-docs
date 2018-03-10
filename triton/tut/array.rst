@@ -2,6 +2,8 @@
 Array jobs
 ==========
 
+.. highlight:: bash
+
 Introduction
 ============
 
@@ -106,6 +108,36 @@ numbers start at one, not zero!
 
     # Do whatever with arrayparams.txt
     ./my_program $line
+
+
+Grouping runs together in bigger chunks
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Let's say your tasks are very short - only a few minutes.  This is
+still a bit short to use array jobs, because you will still have too
+much overhead in scheduling.  We want to try for 30 minutes and if
+possible more.  So, below is an example script that uses shell
+
+In the below script, we take a chunk size of 100.  Array #0 will run
+0-99, array #1 will run 100-199, etc.  The for loop handles the
+running.  Before each one runs, it uses ``test -s output_$i`` to see if
+the output filename ``output_$i`` exists: only run the task if it does
+not exist already (see ``man test`` to see other types of tests you
+can do).  This example starts using more advanced shell scripting,
+which might be worth learning.
+
+::
+
+   [... all the initial stuff from above]
+
+   CHUNKSIZE=100
+   arrayID=$SLURM_ARRAY_TASK_ID
+   indexes=`seq $((arrayID * CHUNKSIZE)) $(((arrayID+1)*CHUNKSIZE - 1))`
+
+   for i in $indexes ; do
+       if ! test -s output_$i ; then
+           run $i
+       fi
+   done
 
 
 
