@@ -3,7 +3,7 @@ GPU Computing
 =============
 
 This is the reference page.  There is also the :doc:`basic GPU
-tutorial <../tut/gpu>`.
+tutorial <../tut/gpu>` which you should read first.
 
 Overview
 ========
