@@ -48,10 +48,19 @@ A: Basics
        There is not currently a dedicated course, but, but all of our
        information is found at :doc:`../aalto/welcomeresearchers`.
 
+..
+  Lapiokurssi - computer as a tool.  What the different computational
+  options are, and how to get your systems set up to do this.  how to
+  not get into a rut of doing the same things all the time.
+
+
 
 
 B: Scientific computing
 =======================
+
+..
+  https://training.linuxfoundation.org/linux-courses/system-administration-training/introduction-to-linux%20
 
 Core courses:
 
@@ -226,3 +235,11 @@ Recommended programming courses
 
 Need to learn programming?  We will include some recommended
 online programming courses here.
+
+..
+  Recommended programming courses.  what's current bleeding edge?
+
+  Python
+  R
+  Matlab
+  shell
