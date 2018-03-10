@@ -100,6 +100,7 @@ Hotkeys
 - Ctrl-w -- remove previous word
 
 **Hint** ``history | grep KEYWORD``
+**Hint** Check */etc/inpurc* for some default key bindings, more can be defined *~/.inputrc*
 
 Initialization files
 ----
