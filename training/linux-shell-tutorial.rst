@@ -495,6 +495,19 @@ Catching kill signals
 
 Debugging
 ----
+::
+
+ #!/bin/bash -xv
+
+One can always run ``bash -x script.sh``
+
+To debug some parts of the code only
+
+::
+
+  set +x
+  ... some code
+  set -x
 
 
 References
