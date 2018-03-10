@@ -56,8 +56,8 @@ name' in the table above.
 
 ::
 
-    -p gpu --gres=gpu:2  # any two gpu cards on gpu partition
-    -p gpushort --gres=gpu:teslak80:1   # one tesla card on gpushort
+    --gres=gpu:2
+    --gres=gpu:teslak80:1
 
 For the full current list of configured SLURM gpu cards names run
 ``slurm features``.
@@ -89,7 +89,7 @@ Quick interactive run
 ::
 
     $ module load CUDA
-    $ srun -t 00:30:00 -p gpushort --gres=gpu:1 $WRKDIR/my_gpu_binary
+    $ srun -t 00:30:00 --gres=gpu:1 $WRKDIR/my_gpu_binary
 
 Allocating a gpu node for longer interactive session, this will give you
 a shell sessions
@@ -97,7 +97,7 @@ a shell sessions
 ::
 
     $ module load CUDA
-    $ sinteractive -t 4:00:00 -p gpushort --gres=gpu:1
+    $ sinteractive -t 4:00:00 --gres=gpu:1
     gpuXX$ .... run something
     gpuXX$ exit
 
@@ -114,7 +114,6 @@ Where ``gpu_job.sh`` is
     #!/bin/bash
 
     #SBATCH --time=01:15:00          ## wallclock time hh:mm:ss
-    #SBATCH -p gpu                   ## partition: gpu
     #SBATCH --gres=gpu:teslak80:1    ## one K80 requested
 
     module load CUDA
@@ -134,9 +133,9 @@ installed on those nodes only).
 
 ::
 
-    $ sinteractive -t 1:00:00 -p gpushort --gres=gpu:1    # open a session on a gpu node
-    $ module load CUDA                                    # set CUDA environment
-    $ nvcc cuda_code.cu -o cuda_code                      # compile your CUDA code
+    $ sinteractive -t 1:00:00 --gres=gpu:1    # open a session on a gpu node
+    $ module load CUDA                        # set CUDA environment
+    $ nvcc cuda_code.cu -o cuda_code          # compile your CUDA code
     .. or compile normally any other code with 'make'
 
 Debugging
@@ -213,7 +212,6 @@ code on 4 gpus
 
     #Request 4 gpus
     #SBATCH --gres=gpu:teslak80:4
-    #SBATCH -p gpushort
     #SBATCH --mem-per-cpu 10G
     #SBATCH -t 4:00:00
 
@@ -263,7 +261,7 @@ at ``$CUDA_HOME/samples``. To play with:
 
 ::
 
-    $ sinteractive -t 1:00:00 -p gpushort --gres=gpu:1
+    $ sinteractive -t 1:00:00 --gres=gpu:1
     $ module load CUDA
     $ cp -r $CUDA_HOME/samples $WRKDIR
     $ cd $WRKDIR/samples
