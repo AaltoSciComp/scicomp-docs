@@ -103,7 +103,7 @@ Hotkeys
 
 Initialization files
 ----
-.bashrc (when SSH) and .bash_profile (interactive login to a workstation), often a symlink from one to another.
+*.bashrc* (when SSH) and *.bash_profile* (interactive login to a workstation), often a symlink from one to another.
 
 Here you define everything you want to be enabled when you login.
 
@@ -147,6 +147,7 @@ Redirect: append to a file or replace a file ``command > file.txt`` *or* ``comma
 Pipe: output of the first command as an input for the second one ``command_a | command_b``
 
 ::
+
  # sort, tr, cut, /dev/null, see also grep below
  $ du -hs * | sort -h
  $ w -h | wc -l
@@ -246,7 +247,7 @@ Files and dirs advances
 ----
 Wildcards, on top of * and ?, that can be used with ls, touch, rm, mkdir, cp or anywhere else
 
-[abc], [a-bxy] {abc,xyz}, {3..15}, {c-h}, [!.], \(
+``[abc], [a-bxy] {abc,xyz}, {3..15}, {c-h}, [!.], \(``
 
 Advanced access permissions
 
@@ -284,6 +285,7 @@ Invoking a function from command line (source the file first)
  $ name arg1 arg2 
 
 As an example ``lcd``
+
 ::
 
  lcd() {
@@ -348,9 +350,7 @@ BASH provides wide abilities to work with the vars "on-the-fly" with ${var...} l
 ----
 ``[[ expression ]]`` returns 0 or 1 depending on the evaluation of the conditional *expression*
 
-::
-
- ==, <, >, !=, =~, &&, ||, !, ()
+``==, <, >, !=, =~, &&, ||, !, ()``
 
 When working with the strings the right-hand side is a pattern (a regular expression). Matched strings assigned to *${BASH_REMATCH[]}* array elements.
 
@@ -409,12 +409,12 @@ Regular expression is a pattern, it describes what we are looking for within a s
 
  - ``*`` matches any string
  - ``?`` matches a single character
- - ````
+ - ``.``
 
 
 
 More about redirection and pipe
-----------
+----
 STDOUT and STDERR: reserved file descriptors *1* and *2*, always there when you run a command
 
 `` ... >/dev/null`` redirects STDOUT only, to redirect all the output including errors `` ... &>/dev/null``, or redirect outputs in different ways ``1>file.out`` and ``2>file.err``
