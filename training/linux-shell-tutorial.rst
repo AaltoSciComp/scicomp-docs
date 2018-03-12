@@ -360,6 +360,14 @@ BASH provides wide abilities to work with the vars "on-the-fly" with ${var...} l
  - expand lcd() so that it would go to some specific directory taken as an input parameter, if *$1* is empty (on Triton it could be $WRKDIR)
 :Exercise*: extract filename with no extension from */work/archive/OLD/Michel's_stuff.tar.gz*
 
+PATH
+----
+``chmod +x``, what is next? binaries at /bin, /usr/bin, /usr/local/bin etc. Setting up ~/bin or running as ./binary.
+
+Add to *.bashrc* ``export PATH="$PATH:$HOME/bin"``
+
+**Hint** name your scripts  *\*.sh* and collect them in ~/bin directory
+
 [[ ]] and if/elif/else
 ----
 ``[[ expression ]]`` returns 0 or 1 depending on the evaluation of the conditional *expression*
@@ -414,7 +422,8 @@ More conditional expressions
 
 ::
 
- [[ -f $file ]] && echo $ file exists
+ [[ -f $file ]] && echo $file exists || { echo error; exit 1; }
+ [[ -d $dir ]] || mkdir $dir
 
 
 More on search and regular expressions
@@ -427,7 +436,7 @@ Regular expression is a pattern, it describes what we are looking for within a s
 
 
 
-More about redirection and pipe
+More about redirection, pipe and multiple commands execution 
 ----
 STDOUT and STDERR: reserved file descriptors *1* and *2*, always there when you run a command
 
@@ -439,16 +448,12 @@ If ``!``  preceds the command, the exit status is the logical negation.
 
 The third file descriptor is 0, STDIN, valid syntax ``command < input_file &> output_file``. ping exercise explained.
 
+List of the commands can be part of pipe constructions ``{ command1; command2 }`` and ``( command1; command2 )``
 
+::
 
-
-PATH
-----
-``chmod +x``, what is next? binaries at /bin, /usr/bin, /usr/local/bin etc. Setting up ~/bin or running as ./binary.
-
-Add to *.bashrc* ``export PATH="$PATH:$HOME/bin"``
-
-**Hint** name your scripts  *\*.sh* and collect them in ~/bin directory
+ [[ -f $file ]] && echo $file exists || { echo error; exit 1; }
+ 
 
 
 3. session
