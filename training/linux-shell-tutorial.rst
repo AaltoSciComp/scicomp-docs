@@ -442,7 +442,13 @@ Add to *.bashrc* ``export PATH="$PATH:$HOME/bin"``
 ====
 Substitute a command output
 ----
-$(...)
+``$(command)`` or alternatively ```command```. Could be a commnad or a list of commands with pipes, redirections, variables inside. Can be nested as well.
+
+::
+
+ touch file.$(date +%Y-%m-%d)
+ tar czf $(basename $(pwd)).$(date +%Y-%m-%d).tar.gz ...
+ now=$(date +%Y-%m-%d)
 
 Arithmetics
 ----
