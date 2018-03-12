@@ -491,6 +491,16 @@ Or just outputting to a file (same can be done with echo commands)
  cat <<EOF >filename
  ... text
  EOF
+ 
+One trick that is particularly useful, making a long comment out of it
+
+::
+ 
+ : <<\COMMENTS
+ here come text that is seen nowhere
+ and no need for #
+ COMMENTS
+ 
 
 **Hint** ``<<\LimtiString`` to turn off substitutions and place text as is with $ marks etc
 
@@ -525,7 +535,63 @@ For full list incl. bitwise operators, see man page.
 
 Loops
 ----
-for, while/until
+::
+
+ for name in list; do
+   commands
+ done
+
+ for school in "SCI ELEC CHEM"; do
+  echo "$school is the best!"
+ done
+
+ # example below will convert all the jpg files in the current directory to png. ``*.jpg`` similar to ``ls *.jpg``
+ for f in *.jpg; do
+  convert $f ${f/.jpg/.png}
+ done
+
+Same can be done (and often being done) in one line. Can be used Brace expressions like *{1..10}*, command substitution and all kind of extenssions supported by BASH.
+
+If *in list* is omitted, loops uses script/function input arguments $@.
+
+::
+
+ func() { for i; do echo $i; done }; func a b c
+ 
+
+C-style, expressions evaluated according to the arithmetic evaluation rules
+
+::
+
+ for (( expr1; expr2; expr3 )); do
+   commands
+ done
+ 
+ LIMIT=10
+ for ((a=1; a <= LIMIT ; a++))  # LIMIT with no $
+ do
+   echo -n "$a "
+ done
+
+Loops can be nested.
+
+Other useful loop statement are ``while`` and ``until``. Both execute continously as long as the condition returns exit status zero/non-zero correspondignly.
+::
+ while condition; do
+   ...
+ done
+ 
+ LIMIT=10
+ var=0
+ until ((var == LIMIT)); do
+  echo $var
+  ((var++))
+ done
+
+Condition can be any command, expression, function or a combination of them.
+
+:Exercise: Write a function that count a sum of any *1+2+3+4+..+n* sequence of numbers directly, thus just by summing all the numbers. Let us benchmark to solutions with *time*.
+:Exercise: Using for loop rename all the files in the directories *dir1/* and *dir2/* which file names are like *filename.txt* to *filename.edited.txt*. Where *filename* can be any, while extensions is always the same.
 
 Arrays
 ----
