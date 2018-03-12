@@ -651,9 +651,26 @@ SSH tricks
 
 4. session
 ====
+read
+----
+
 Catching kill signals
 ----
-trap() {}
+Making scripts booletproofed with ``trap``. It is when you want to control the script even when it is being aborted.
+
+::
+
+ trap command list_of_signals   # thus trap catches listed signals only, others it ignores
+
+ trap "echo We are killed" INT TERM
+ while :; do
+  sleep 30
+ done
+
+While instead of *echo*, one can come up with something more clever: function that removes temp files, put something to the log file or a valuable error message to a screen.
+
+**Hint** About signals see *Standard signals* section at ``man 7 signal``. Like Ctrl-c is INT (aka SIGINT).
+
 
 printf
 ----
@@ -663,6 +680,10 @@ parallel
 
 Debugging
 ----
+Check for syntax errors without actual running it ``bash -n script.sh``
+
+Or echos each command and its results with ``bash -xv script.sh``. or even adding options directly to the script
+
 ::
 
  #!/bin/bash -xv
@@ -677,6 +698,40 @@ To debug some parts of the code only
   ... some code
   set -x
 
+One can always use ``echo``, though more elegant would be a function that only prints output if DEBUG is set to 'yes'.
+
+::
+ 
+ #!/bin/bash
+
+ debug() {
+   [[ "$DEBUG" == 'yes' ]] && echo " Line $LINENO: $1"
+ }
+ 
+ command1
+ debug "after command 1, variables list... $var1, $var2"
+ command2
+ while :;
+   debug "comment right at very beginning of the while loop"
+   ...
+ done
+ # call this script like 'DEBUG=yes ./script.sh' otherwise *debug* function produces no result
+
+
+Another debugging technique is with trap: tracing the variables.
+
+::
+
+ declare -t VARIABLE=value
+ trap "echo VARIABLE is being used here." DEBUG
+
+Or simply output variable values on exit
+
+::
+
+ trap 'echo Variable Listing --- a = $a  b = $b' EXIT  # will output variables value on exit
+ 
+ 
 
 References
 ====
