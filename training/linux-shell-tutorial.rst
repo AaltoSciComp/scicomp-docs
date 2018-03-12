@@ -492,6 +492,7 @@ Or just outputting to a file (same can be done with echo commands)
  ... text
  EOF
 
+**Hint** ``<<\LimtiString`` to turn off substitutions and place text as is with $ marks etc
 
 3. session
 ====
