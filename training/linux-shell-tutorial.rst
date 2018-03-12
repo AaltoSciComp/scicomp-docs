@@ -94,21 +94,24 @@ Hotkeys
 - Ctrl-Shift-c -- copy
 - Ctrl-Shift-v -- paste
 - Ctrl-Shift--  -- undo the last changes on cli
-- Ctrl-R -- command history search
+- Alt-r -- undo all changes made to this line
+- Ctrl-r -- command history search: backward (hit Ctrl-r, then start typing the search word, hit Ctrl-r again to go through commands that have the search word in it)
+- Ctrl-s  -- search command history furtherword (for this to work one needs to disable default suspend keys ``stty -ixon``)
 - Ctrl-u  -- remove beginning of the line, from cursor
 - Ctrl-k -- remove end of the line, from cursor
 - Ctrl-w -- remove previous word
 
 **Hint** ``history | grep KEYWORD``
+
 **Hint** Check */etc/inpurc* for some default key bindings, more can be defined *~/.inputrc*
 
 Initialization files
 ----
 *.bashrc* (when SSH) and *.bash_profile* (interactive login to a workstation), often a symlink from one to another.
 
-Here you define everything you want to be enabled when you login.
+Here you do modifications of your default environment
 
-**Hint** best text viewer ever -- *less*
+**Hint** best text viewer ever -- *less*  (to open a file in your EDITOR, hit *v*)
 
 One of the things to play with: command line prompt defined in PS1
 
@@ -162,10 +165,20 @@ Later on you'll find out that *grep* is one of the most useful commands you ever
 ::
 
  $ grep <pattern> <filename>  # grep lines that match <pattern>
- $ grep -R <pattern> <directory>  # grep all the files in the <directory>
+ $ grep -R -i <pattern> <directory>  # grep all the files in the <directory>, case insensitive
  $ grep -v ...  # grep everything except
+ $ grep -C 2 ... # displaying 2 extra lines before and after the match (-A just after, -B just before)
+ $ grep -c ... # counts the number of matches
+ $ grep -o <pattern> ... # shows only the matched part of the string (by default grep shows whole line)
+ $ grep -E <extended_regexpr> ... # accepts way more advanced regular expressions as a search pattern
 
-For details on what <pattern> could be, look for REGULAR EXPRESSIONS at ``man grep`
+For details on what <pattern> could be, look for REGULAR EXPRESSIONS at ``man grep`, here are some
+
+::
+
+ grep -Eio "\b[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}\b" file.txt  # grep emails to a list
+ ps auxw | grep firefox  # accepts standard input
+
 
 :Exersice: make a pipe that counts number of files (inluding dot files) in your directory
 :Exercise: 
