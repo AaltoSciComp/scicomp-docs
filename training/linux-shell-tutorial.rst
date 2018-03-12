@@ -674,9 +674,31 @@ While instead of *echo*, one can come up with something more clever: function th
 
 printf
 ----
+If you have been ever wondering that whether ``echo`` is the only way to output something to a screen, then nope, BASH has ``printf``. Familiar to programmers, it allows make output formatted.
+
+::
+
+ printf format [arguments]
+ # printing a text at the end of the line
+ printf "%*s\n" $(tput cols) "Hello world!"
+ 
+See more examples at [#]_
+
 
 parallel
 ----
+It is not a parallelzation in the HPC way (threads, MPI), but the utility to make a number of similar processes to run in parallel, while they differ in input parameters only.
+
+It is not a built-in feature of BASH but an extra utility. 
+
+::
+
+ parallel -i command {} -- arguments_list   # normally the command is passed the argument at the end of its command line. With -i               option, any instances of "{}" in the command are replaced with the argument.
+ 
+ parallel sh -c "echo hi; sleep 2; echo bye" -- 1 2 3   # will run three subshells that each print a message
+ parallel -j 3 -- ls df "echo hi"   # will run three independent processes in parallel
+
+On Triton we have installed Tollef Fog Heen's version of parallel from moreutils-parallel CentOS' RPM. GNU project has its own though, of exactly the same name.
 
 Debugging
 ----
@@ -688,9 +710,7 @@ Or echos each command and its results with ``bash -xv script.sh``. or even addin
 
  #!/bin/bash -xv
 
-One can always run ``bash -x script.sh``
-
-To debug some parts of the code only
+To enable debugging for some parts of the code only
 
 ::
 
@@ -711,11 +731,8 @@ One can always use ``echo``, though more elegant would be a function that only p
  command1
  debug "after command 1, variables list... $var1, $var2"
  command2
- while :;
-   debug "comment right at very beginning of the while loop"
-   ...
- done
- # call this script like 'DEBUG=yes ./script.sh' otherwise *debug* function produces no result
+ 
+ # call this script like 'DEBUG=yes ./script.sh' otherwise *debug* function produces no result and script can be used as is.
 
 
 Another debugging technique is with trap: tracing the variables.
@@ -739,3 +756,4 @@ References
 .. [#] https://www.putty.org/
 .. [#] https://alvinalexander.com/unix/edu/examples/find.shtml
 .. [#] https://www.computerhope.com/unix/uumask.htm
+.. [#] http://wiki.bash-hackers.org/commands/builtin/printf
