@@ -454,6 +454,43 @@ List of the commands can be part of pipe constructions ``{ command1; command2 }`
 
  [[ -f $file ]] && echo $file exists || { echo error; exit 1; }
  
+Here Documents code block
+----
+
+::
+ 
+ command <<SomeLimitString
+ Here comes text with $var and even $() substitutions
+ and more just text
+ which finally ends on a new line with the:
+ SomeLimitString
+
+Often used for messaging, be it an email or dumping bunch of text to file.
+
+::
+
+ NAME=Jussi
+ SURNAME=Meikalainen
+ $DAYS=14
+
+ mail -s 'Account expiration' $NAME.$SURNAME@aalto.fi<<END-OF-EMAIL
+ Dear $NAME $SURNAME,
+ 
+ your account is about to expire in $DAYS days.
+ 
+ $(date)
+ 
+ Best Regards,
+ Aalto ITS
+ END-OF-EMAIL
+
+Or just outputting to a file (same can be done with echo commands)
+
+::
+
+ cat <<EOF >filename
+ ... text
+ EOF
 
 
 3. session
@@ -548,6 +585,13 @@ SSH tricks
 4. session
 ====
 Catching kill signals
+----
+trap() {}
+
+printf
+----
+
+parallel
 ----
 
 Debugging
