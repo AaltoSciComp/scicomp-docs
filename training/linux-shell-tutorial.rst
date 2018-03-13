@@ -197,6 +197,7 @@ If failed  ``command_a || command_b``
 **Hint** command_a && command_b || command_c
 
 Try: ``cd /bad_dir && ls /bad_dir`` compare with ``cd /bad_dir; ls /bad_dir``
+
 Try: ``ping -c 1 8.8.8.8 > /dev/null && echo online || echo offline``
 
 
@@ -211,7 +212,11 @@ Try: add to *.bashrc*
 ::
 
  alias chknet='ping -c 1 8.8.8.8 > /dev/null && echo online || echo offline'
-  # and then
+
+and then
+
+::
+
  source .bashrc
  chknet
 
@@ -229,6 +234,7 @@ It is a number one in searching files in shell.
 More options: by modification/accessing time, by ownership, by access type, joint conditions, case-insensitive, that do not match, etc [#]_ [#]_
 
 **Hint**  On Triton ``lfs find``
+
 **Hint**  Another utility that you may find useful ``locate``, but on workstations only
 
 :Exercise: Find all files with 'lock' in the name in your home directory
@@ -268,6 +274,8 @@ Another use case, you want to archive your Triton data to some other place
 
 :Try: whatever use case you have, try trasfering files.
 
+:Exercise: make an alias so *rsyncing* a copy of your local directory (or kosh:somedir) to Triton
+
 
 Exit the shell
 ----
@@ -281,6 +289,39 @@ In order to keep your sessions running while you logged out discover ``screen``
  - ``screen -rx <session_id>`` to attach the session, one can use TAB for the autocompletion or skip the <session_id> if there is only one session running 
 
 Example: irssi on kosh / lyta
+
+
+SSH keys and proxy (*bonus section)
+----
+SSH keys and proxy jumping makes life way easier. Logining to Triton from your Linux workstation or from kosh/lyta.
+
+For PuTTY (Windows) SSH keys generation, please consult section "Using public keys for SSH authentication" at [#]_
+
+On Linux/Mac: generate a key on the client machine
+
+::
+
+ ssh-keygen -t rsa -b 4096  # you will be prompted for a location to save the keys, and a passphrase for the keys. Make sure passphrase is strong (!)
+ ssh-copy-id aalto_login@triton.aalto.fi   # transfer file to a Triton, or/and any other host you want to login to
+
+From now on you should be able to login with the SSH key instead of password. When SSH key added to the ssh-agent (once during the login to workstation), one can login automatically, passwordless.
+
+Note that same key can be used 
+
+SSH proxy is yet another trick to make life easier: allows to jump through a node (in OpenSSH version 7.2 and earlier -J option is not supported yet, here is an old receipe that works on Ubuntu 16.04). So, SSH/SCP from your laptop/home PC through kosh.
+
+On the client side, add to *~/.ssh/config* file (create it if does not exists and make it readable by you only)
+
+::
+ Host triton triton.aalto.fi
+     Hostname triton.aalto.fi
+     ProxyCommand ssh YOUR_AALTO_LOGIN@kosh.aalto.fi -W %h:%p
+
+Now try
+
+::
+
+ ssh triton
 
 
 2. session
@@ -305,6 +346,7 @@ Access list aka ACL: ``getfacl`` and ``setfacl``
 Setting default access permissions: add to *.bashrc* ``umask 027`` [#]_
 
 :Exercise: practice with chmod/setfacl: set a directory permissions so that only you and some user/group of your choice would have access to a file
+
 
 Functions as part of your environment
 ----
@@ -805,5 +847,6 @@ References
 .. [#] https://www.ibm.com/developerworks/linux/library/l-tip-prompt/
 .. [#] https://alvinalexander.com/unix/edu/examples/find.shtml
 .. [#] http://www.softpanorama.org/Tools/Find/index.shtml
+.. [#] https://the.earth.li/~sgtatham/putty/0.70/htmldoc/
 .. [#] https://www.computerhope.com/unix/uumask.htm
 .. [#] http://wiki.bash-hackers.org/commands/builtin/printf
