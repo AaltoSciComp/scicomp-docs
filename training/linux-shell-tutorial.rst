@@ -313,6 +313,7 @@ SSH proxy is yet another trick to make life easier: allows to jump through a nod
 On the client side, add to *~/.ssh/config* file (create it if does not exists and make it readable by you only)
 
 ::
+
  Host triton triton.aalto.fi
      Hostname triton.aalto.fi
      ProxyCommand ssh YOUR_AALTO_LOGIN@kosh.aalto.fi -W %h:%p
