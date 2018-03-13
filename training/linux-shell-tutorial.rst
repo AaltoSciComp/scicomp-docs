@@ -55,7 +55,7 @@ Files and dirs
 
 ::
 
- ls, ls -l, ls -la, ./, ../, *, ?
+ ls, ls -l, ls -la, ./, ../, *, ?, [], [!], {}
 
 ::
 
@@ -81,7 +81,7 @@ For recursive ``chmod -R ... ``
 **Hint** File Manager like Midnight Commander -- ``mc``
 
 :Exercise: allow group members to open the file, while others should have no acceess to the directory at all.
-:Exercise*: make a few more subdirectories and set +x bit for group for the current dir and all subdirectories only (not files) with one command
+:Exercise*: make a few more subdirectories and make a current directory and all newly created subdirectories then readable by them group with one command (directories only).
 
 Hotkeys
 ----
@@ -113,7 +113,7 @@ Here you do modifications of your default environment
 
 **Hint** best text viewer ever -- *less*  (to open a file in your EDITOR, hit *v*)
 
-One of the things to play with: command line prompt defined in PS1
+One of the things to play with: command line prompt defined in PS1 [#]_
 
 ::
 
@@ -121,7 +121,7 @@ One of the things to play with: command line prompt defined in PS1
 
 For special characters see PROMPTING at ``man bash``. To make it permanent, should be added to *.bashrc* like ``export PS1``.
 
-:Exercise: customize a prompt ``$PS1``. Hint: save the original PS1 like ``oldPS1=$PS1`` to be able to recover it any time.
+:Exercise: customize a prompt ``$PS1``, make sure is has a current directory name and the hostname in it in the format *hostname:/path/to/current/dir*. Hint: save the original PS1 like ``oldPS1=$PS1`` to be able to recover it any time.
 :Exercise*: make it colorful
 
 
@@ -139,6 +139,7 @@ Other quick ways to add something to a file (no need for an editor)
 
 :Exercise: add above mentioned ``export PS1`` to *.bashrc* and then ``source .bashrc`` to enable changes
 
+
 Redirect, pipe
 ----
 Redirect: append to a file or replace a file ``command > file.txt`` *or* ``command >> file.txt``
@@ -153,10 +154,10 @@ Pipe: output of the first command as an input for the second one ``command_a | c
 ::
 
  # sort, tr, cut, /dev/null, see also grep below
- $ du -hs * | sort -h
- $ w -h | wc -l
- $ ls -1 | tr '\n' ' '
- $ getent passwd | cut -d: -f1,5 > users
+ du -hs * | sort -h
+ w -h | wc -l
+ ls -1 | tr '\n' ' '
+ getent passwd | cut -d: -f1,5 > users
 
 grep
 ----
@@ -164,13 +165,13 @@ Later on you'll find out that *grep* is one of the most useful commands you ever
 
 ::
 
- $ grep <pattern> <filename>  # grep lines that match <pattern>
- $ grep -R -i <pattern> <directory>  # grep all the files in the <directory>, case insensitive
- $ grep -v ...  # grep everything except
- $ grep -C 2 ... # displaying 2 extra lines before and after the match (-A just after, -B just before)
- $ grep -c ... # counts the number of matches
- $ grep -o <pattern> ... # shows only the matched part of the string (by default grep shows whole line)
- $ grep -E <extended_regexpr> ... # accepts way more advanced regular expressions as a search pattern
+ grep <pattern> <filename>  # grep lines that match <pattern>
+ grep -R -i <pattern> <directory>  # grep all the files in the <directory>, case insensitive
+ grep -v ...  # grep everything except
+ grep -C 2 ... # displaying 2 extra lines before and after the match (-A just after, -B just before)
+ grep -c ... # counts the number of matches
+ grep -o <pattern> ... # shows only the matched part of the string (by default grep shows whole line)
+ grep -E <extended_regexpr> ... # accepts way more advanced regular expressions as a search pattern
 
 For details on what <pattern> could be, look for REGULAR EXPRESSIONS at ``man grep`, here are some
 
@@ -180,7 +181,7 @@ For details on what <pattern> could be, look for REGULAR EXPRESSIONS at ``man gr
  ps auxw | grep firefox  # accepts standard input
 
 
-:Exersice: make a pipe that counts number of files (inluding dot files) in your directory
+:Exersice: make a pipe that counts number of files/directories (inluding dot files) in your directory
 :Exercise: 
  - grep directories out of ``ls -l``
  - grep all but blank lines in the file
@@ -195,49 +196,78 @@ If failed  ``command_a || command_b``
 
 **Hint** command_a && command_b || command_c
 
+Try: ``cd /bad_dir && ls /bad_dir`` compare with ``cd /bad_dir; ls /bad_dir``
+Try: ``ping -c 1 8.8.8.8 > /dev/null && echo online || echo offline``
+
+
 Aliases
 ----
 Define a new or re-define an old command ``alias space='du -hs .[!.]* * | sort -h'``, ``alias rm='rm -i'``
 
-Example: ``alias chknet='ping -c 1 8.8.8.8 > /dev/null && echo online || echo offline'``
+Aliases go to *.bashrc* and available later by default.
+
+Try: add to *.bashrc*
+
+::
+
+ alias chknet='ping -c 1 8.8.8.8 > /dev/null && echo online || echo offline'
+  # and then
+ source .bashrc
+ chknet
+
 
 find
 ----
 It is a number one in searching files in shell.
 
-``find ~ -name file.txt`` *or* ``find $HOME $WRKDIR -name file.txt``
+::
 
-``find . -name 'file*' -type f``
+ find ~ -name file.txt   # -OR-  find $HOME $WRKDIR -name file.txt
+ find . -name 'file*' -type f
+ find . -type d -exec chmod g+x {} \;
 
-``find . -type d -exec chmod g+x {} \;``
-
-More options: by modification/accessing time, by ownership, by access type, joint conditions, case-insensitive, that do not match, etc [#]_
+More options: by modification/accessing time, by ownership, by access type, joint conditions, case-insensitive, that do not match, etc [#]_ [#]_
 
 **Hint**  On Triton ``lfs find``
 **Hint**  Another utility that you may find useful ``locate``, but on workstations only
 
 :Exercise: Find all files with 'lock' in the name in your home directory
-:Exercise*: Find all the files in your $HOME or $WRKDIR that are readable or writable by everyone and make them
+:Exercise*: Find all the files in your $HOME or $WRKDIR that are readable or writable by everyone. What would the ways to "fix them"?
 
-Archiving files
+
+Transferring files (archiving on the fly)
 ----
-To archive ``tar czvf path/to/archive.tar.gz directory/to/archive``
+For Triton users abilty to transfer files to/from Triton is essential.
 
-To open ``cd directory/to/open/archive; tar xzf path/to/archive.tar.gz``
+Assume a use case: you have logged in to kosh/taltta/lyta/etc. To get some files from Triton's WRKDIR to one of the directories available around:
 
-To watch what is there ``tar tzf ...``
+::
 
-By now you should know that much to get started with the interactive BASH usage.
+ scp -r triton.aalto.fi:/scratch/work/LOGIN_NAME/some/files path/to/copy/to
 
-Managing foreground/background processes
-----
-Adding *&* right after the command send the process to background. Example: ``firefox --no-remote &`` same can be done with any terminal command/function, like ``tar ... &``.
+Another use case, copying to Triton, or making a directory backup
 
-If you have already running process, then Ctrl-z and then ``bg``. Drawback: there is no easy way to redirect the running task output.
+::
 
-List the jobs ruuning in the background ``jobs``, get a job back online: ``fg`` or ``fg <job_number>``. There can be multiple background jobs (remeber forkbombs).
+ rsync -urlptDxv --chmod=Dg+s somefile triton.aalto.fi:/scratch/work/LOGIN_NAME  # copy a file to $WRKDIR
+ rsync -urlptDxv --chmod=Dg+s dir1/ triton.aalto.fi:/scratch/work/LOGINNAME/dir1/  # sync two directories
 
-Kill the foreground job: Ctrl-c
+Another use case, you want to archive your Triton data to some other place
+
+::
+ 
+ # login to Triton
+ cd $WRKDIR
+ tar czf - path/to/dir | ssh kosh.aalto.fi 'cat > path/to/archive/dir/archive_file.tar.gz'
+ 
+*tar* is standard de-facto for archiving on UNIX systems. *z* stands for compressing with GZIP, otherwise directory is packed, but not compressed
+
+ - ``tar czvf path/to/archive.tar.gz directory/to/archive``  # to archive
+ - ``tar xzf path/to/archive.tar.gz -C path/to/directory``  # to extract
+ - ``tar tzf archive.tar.gz``
+
+:Try: whatever use case you have, try trasfering files.
+
 
 Exit the shell
 ----
@@ -259,10 +289,6 @@ Command line advances and introduction to BASH scripting
 
 Files and dirs advances
 ----
-Wildcards, on top of * and ?, that can be used with ls, touch, rm, mkdir, cp or anywhere else
-
-``[abc], [a-bxy] {abc,xyz}, {3..15}, {c-h}, [!.], \(``
-
 Advanced access permissions
 
 Access list aka ACL: ``getfacl`` and ``setfacl``
@@ -506,6 +532,17 @@ One trick that is particularly useful, making a long comment out of it
 
 3. session
 ====
+Managing foreground/background processes
+----
+Adding *&* right after the command send the process to background. Example: ``firefox --no-remote &`` same can be done with any terminal command/function, like ``tar ... &``.
+
+If you have already running process, then Ctrl-z and then ``bg``. Drawback: there is no easy way to redirect the running task output.
+
+List the jobs ruuning in the background ``jobs``, get a job back online: ``fg`` or ``fg <job_number>``. There can be multiple background jobs (remeber forkbombs).
+
+Kill the foreground job: Ctrl-c
+
+
 Substitute a command output
 ----
 ``$(command)`` or alternatively ```command```. Could be a commnad or a list of commands with pipes, redirections, variables inside. Can be nested as well.
@@ -765,6 +802,8 @@ References
 ====
 .. [#] http://tldp.org/LDP/abs/html/index.html
 .. [#] https://www.putty.org/
+.. [#] https://www.ibm.com/developerworks/linux/library/l-tip-prompt/
 .. [#] https://alvinalexander.com/unix/edu/examples/find.shtml
+.. [#] http://www.softpanorama.org/Tools/Find/index.shtml
 .. [#] https://www.computerhope.com/unix/uumask.htm
 .. [#] http://wiki.bash-hackers.org/commands/builtin/printf
