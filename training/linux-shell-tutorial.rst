@@ -590,6 +590,17 @@ Other useful loop statement are ``while`` and ``until``. Both execute continousl
 
 Condition can be any command, expression, function or a combination of them.
 
+Loop controling: ``break`` -- terminates the loop, ``continue`` -- jump to a new iteration. ``break n`` will terminate *n* levels of loops if they are nested, otherwise terminated only loop in which it is embedded. Same kind of behaviour for ``continue n``.
+
+::
+
+ for i in {1..10}; do
+   if (( i%2 == 0 )); then
+    continue
+   fi
+   echo $i  # output odd numbers only
+ done
+
 :Exercise: Write a function that count a sum of any *1+2+3+4+..+n* sequence of numbers directly, thus just by summing all the numbers. Let us benchmark to solutions with *time*.
 :Exercise: Using for loop rename all the files in the directories *dir1/* and *dir2/* which file names are like *filename.txt* to *filename.edited.txt*. Where *filename* can be any, while extensions is always the same.
 
