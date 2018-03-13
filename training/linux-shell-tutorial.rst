@@ -419,7 +419,7 @@ BASH provides wide abilities to work with the vars "on-the-fly" with ${var...} l
  - Subtitute a var with default *value* if empty: ``${var:=value}``
  - Print an *error_message* if var empty: ``${var:?error_message}``
  - Extract a substring: ``${var:offset:length}``, example ``var=abcde; echo ${var:1:3}`` returns 'bcd'
- - Variable's length: ``${#var}
+ - Variable's length: ``${#var}``
  - Replace beginning part: ``${var#prefix}``
  - Replace trailing part: ``${var%suffix}``
  - Replace *pattern* with the *string*: ``${var/pattern/string}``
@@ -437,7 +437,7 @@ Add to *.bashrc* ``export PATH="$PATH:$HOME/bin"``
 
 **Hint** name your scripts  *\*.sh* and collect them in ~/bin directory
 
-[[ ]] and if/elif/else
+[[ ]]
 ----
 ``[[ expression ]]`` returns 0 or 1 depending on the evaluation of the conditional *expression*
 
@@ -448,9 +448,33 @@ When working with the strings the right-hand side is a pattern (a regular expres
 ::
 
  x=5; y=6; z=7; [[ $x < $y && ! $y == $z ]] && echo ok || echo nope
- x='abcefgh kjhkjh #1278?'; regexpr='#([0-9][0-9][0-9][0-9])'; [[ "$x" =~ $regexpr ]] && echo ${BASH_REMATCH[1]} || echo nope
+ 
+ 
+About regular expressions
+----
+Regular expression is a pattern, it describes what we are looking for within a string. Selected operators:
+ 
+ - ``.`` 	matches any single character
+ - ``?`` the preceding item is optional and will be matched, at most, once
+ - ``*`` 	the preceding item will be matched zero or more times
+ - ``+``  the preceding item will be matched one or more times
+ - ``{N}`` the preceding item is matched exactly N times
+ - ``{N,}`` the preceding item is matched N or more times
+ - ``{N,M}`` the preceding item is matched at least N times, but not more than M times
+ - ``-``  represents the range if it's not first or last in a list or the ending point of a range in a list
+ - ``^``  beginning of a line
+ - ``$`` 	 the end of a line
+ 
+::
+
+ email='jussi.meikalainen@aalto.fi'; regex='(.*)@(.*)'; [[ "$email" =~ $regex ]]; echo ${BASH_REMATCH[*]}
+ txt='Some text with #1278 in it'; regex='#([0-9]+ )'; [[ "$txt" =~ $regex ]] && echo ${BASH_REMATCH[1]} || echo do not match
 
 **Hint** For case insesitive, set ``shopt -s nocasematch``  (to disable it back ``shopt -u nocasematch``)
+
+
+if/elif/else
+----
 
 Though scripting style is more logical with if/else construction
 
@@ -464,6 +488,8 @@ Though scripting style is more logical with if/else construction
    command3
  fi
 
+[[ ]] can be a command/function or an arithmetic expression (( )), or a command substitution, that is what ever returns an exit code is fine.
+
 An example: script (or function) that accepts two strings and returns result of comparison
 
 ::
@@ -474,6 +500,11 @@ An example: script (or function) that accepts two strings and returns result of 
  else
    echo The strings are different
  fi
+ 
+ ::
+ 
+  if ping -c 1 8.8.8.8 &> /dev/null; then echo online; else echo offline; fi
+ 
 
 :Exercise: Play with the strings/patterns. Make a script/function that picks up a pattern and a string as an input and reports whether pattern matches any part of string or not. Kind of *my_grep pattern string*.
 :Exercise*: Expand the *my_grep* script to make search case insesitive and report also a count how many times pattern appears in the string
@@ -493,16 +524,6 @@ More conditional expressions
 
  [[ -f $file ]] && echo $file exists || { echo error; exit 1; }
  [[ -d $dir ]] || mkdir $dir
-
-
-More on search and regular expressions
-----
-Regular expression is a pattern, it describes what we are looking for within a string
-
- - ``*`` matches any string
- - ``?`` matches a single character
- - ``.``
-
 
 
 More about redirection, pipe and multiple commands execution 
