@@ -34,21 +34,22 @@ Windows users: install PuTTY [#]_ then SSH to any interactive server at Aalto or
 
 Shell -- is what you get when your teminal window is open. It is a command-line (CLI), an interface that intepreters and executes the commands.
 
+
 Built-in and external commands
 ----
 cd, pwd, echo, ls vs. date, less, lpr etc. 
 
 **Hint** ``type -a`` to find what is behind the name
 
+``echo something to type`` # types whatever you put after
+
 Who am I: ``id``, ``echo $HOME``, ``echo $SHELL`` 
 (Your default shell is not a /bin/bash? Login to kosh/taltta and run ``chsh -s /bin/bash``)
 
 Where am I: ``pwd``
 
-Your best friend ever -- ``man`` -- collection of manuals.
+Your best friend ever -- ``man`` -- collection of manuals. Type */search_word* for searching through the man page.
 
-
-**Hint** ``man -t ls | lpr`` to print it to a default printer
 
 Files and dirs
 ----
@@ -59,18 +60,19 @@ Files and dirs
 
 ::
 
- cd, mkdir, cp, rm, rm -r, mv, touch
+ cd, mkdir, cp, rm, rm -r, mv, ln, touch
 
 **Hint** ``ls -lX``, ``ls -ltr``, ``file <filename>``
 
 :Exercise: mkdir in your $HOME (or $WRKDIR if on Triton), cd there and 'touch' a file. Rename it. Make a copy and then remove the original
 :Exercise*: ``ls`` dot files only. Create a dozen of files with one command with names like file1.txt, file2.txt, ... file12.txt
 
+
 Permissions
 ----
 rwxrwxrwx -- read, write, execute/search
 
-Could be a link -- ``ln -s``. s- and t-bits.
+s- and t-bits.
 
 ::
 
@@ -109,9 +111,7 @@ Initialization files
 ----
 *.bashrc* (when SSH) and *.bash_profile* (interactive login to a workstation), often a symlink from one to another.
 
-Here you do modifications of your default environment
-
-**Hint** best text viewer ever -- *less*  (to open a file in your EDITOR, hit *v*)
+Customizing your environment means setting or expanding aliases, variables, functions. If you do it online, you do it once for the particular session, to make changes permanent add them to *.bashrc* (assuming *.bash_profile* is linked).
 
 One of the things to play with: command line prompt defined in PS1 [#]_
 
@@ -137,6 +137,8 @@ Other quick ways to add something to a file (no need for an editor)
 
 ``cat > filename2.txt`` to finish typing and write written to the file, press enter, then Ctrl-d.
 
+**Hint** best text viewer ever -- *less -S*  (to open a file in your EDITOR, hit *v*, to search through type */search_word*)
+
 :Exercise: add above mentioned ``export PS1`` to *.bashrc* and then ``source .bashrc`` to enable changes
 
 
@@ -154,10 +156,12 @@ Pipe: output of the first command as an input for the second one ``command_a | c
 ::
 
  # sort, tr, cut, /dev/null, see also grep below
- du -hs * | sort -h
- w -h | wc -l
- ls -1 | tr '\n' ' '
- getent passwd | cut -d: -f1,5 > users
+ man -t ls | lpr  # send man page to a default printer
+ du -hs * | sort -h  # see what directories use the most space
+ w -h | wc -l  # count a number of logged in users
+ ls -1 | tr '\n' ' '   # replace new line with a comma
+ getent passwd | cut -d: -f1,5 > users  # extract user names and store them to a file
+
 
 grep
 ----
@@ -178,15 +182,16 @@ For details on what <pattern> could be, look for REGULAR EXPRESSIONS at ``man gr
 ::
 
  grep -Eio "\b[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}\b" file.txt  # grep emails to a list
- ps auxw | grep firefox  # accepts standard input
-
+ ps auxw | grep firefox  # grep currently running firefox processes
 
 :Exersice: make a pipe that counts number of files/directories (inluding dot files) in your directory
 :Exercise: 
  - grep directories out of ``ls -l``
- - grep all but blank lines in the file
+ - grep all but blank lines in the file (Hint: 'man grep' for regular expression)
+ - expand the previous one to filter out commented lines (start with #)
 :Exercise*: expand ``du`` to list dot files/directories also
 :Exercise*: Count unique logged in users on kosh/taltta/triton or anywhere else
+
 
 && and ||
 ----
@@ -227,10 +232,12 @@ It is a number one in searching files in shell.
 
 ::
 
- find ~ -name file.txt   # -OR-  find $HOME $WRKDIR -name file.txt
- find . -name 'file*' -type f
- find . -type d -exec chmod g+x {} \;
-
+ find ~ -name file.txt   # -or-  'find ~ $WRKDIR -name file.txt' one can search more than one dir at once
+ find . -maxdepth 1 -name '*.jpg' -type f  # look for jpeg files in the current dir only
+ find . -type -f -size +10M -size -100M  # find all files of size more than 10M and less than 100M
+ find ~ ! -user $USER | xargs ls -ld # find everything that does no belong to you
+ find . -type d -exec chmod g+rwx {} \;   # opn all directories to group members
+ 
 More options: by modification/accessing time, by ownership, by access type, joint conditions, case-insensitive, that do not match, etc [#]_ [#]_
 
 **Hint**  On Triton ``lfs find``
@@ -239,6 +246,7 @@ More options: by modification/accessing time, by ownership, by access type, join
 
 :Exercise: Find all files with 'lock' in the name in your home directory
 :Exercise*: Find all the files in your $HOME or $WRKDIR that are readable or writable by everyone. What would the ways to "fix them"?
+:Exercise*: Find all the dirs/files that do no belong to your UID/GID (user id and effective group id).
 
 
 Transferring files (archiving on the fly)
@@ -385,6 +393,7 @@ Functions in BASH is just a piece of code that once declared can be invoked at a
 
 :Exercise: expand ``lcd`` so that it would print number of files and directories separately
 :Exercise*: write a function that makes files/subdirectories readable by all on a given directory (note r for files, xr for dirs)
+
 
 Variables
 ----
