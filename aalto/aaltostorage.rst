@@ -46,28 +46,28 @@ projects** when needed to keep things organized.INLINE
 |              |              |              |              | apshot/      | non-research |
 |              |              |              |              |              | files        |
 +--------------+--------------+--------------+--------------+--------------+--------------+
-| project      | /m/$dept/projec | some         | per-project, | Yes,         |              |
-|              | t/$project/  |              | up to 100s   | hourly/daily |              |
+| project      | /m/$dept/proj| some         | per-project, | Yes,         |              |
+|              | ect/$project/|              | up to 100s   | hourly/daily |              |
 |              |              |              | of GiB       | /weekly.     |              |
 |              |              |              |              | (.snapshot)  |              |
 +--------------+--------------+--------------+--------------+--------------+--------------+
-| archive      | /m/$dept/archiv | some         | per-project, | Yes, weekly. |              |
-|              | e/$project/  |              | up to 100s   | + off-site   |              |
-|              |              |              | of GiB       | tape         |              |
+| archive      | /m/$dept/arc | some         | per-project, | Yes, weekly. |              |
+|              | hiv          |              | up to 100s   | + off-site   |              |
+|              | e/$project/  |              | of GiB       | tape         |              |
 |              |              |              |              | backups.     |              |
 |              |              |              |              | (.snapshot)  |              |
 +--------------+--------------+--------------+--------------+--------------+--------------+
-| scratch      | /m/$dept/scratc | yes          | per-project, | RAID6, but   | Don't even   |
-|              | h/$project/  |              | 2 PiB        | no backups.  | think about  |
-|              |              |              | available    |              | leaving      |
+| scratch      | /m/$dept/scr | yes          | per-project, | RAID6, but   | Don't even   |
+|              | atch/$pro    |              | 2 PiB        | no backups.  | think about  |
+|              | hect/        |              | available    |              | leaving      |
 |              |              |              |              |              | irreplaceabl |
 |              |              |              |              |              | e            |
 |              |              |              |              |              | files here!  |
 |              |              |              |              |              | Need Triton  |
 |              |              |              |              |              | account.     |
 +--------------+--------------+--------------+--------------+--------------+--------------+
-| work         | /m/$dept/work/$ | yes          | 200GB        | RAID6, but   | same as      |
-|              | username/    |              | default      | no backups.  | scratch.     |
+| work         | /m/$dept/wor | yes          | 200GB        | RAID6, but   | same as      |
+|              | k/$username/ |              | default      | no backups.  | scratch.     |
 |              |              |              |              |              | Need Triton  |
 |              |              |              |              |              | account.     |
 +--------------+--------------+--------------+--------------+--------------+--------------+
