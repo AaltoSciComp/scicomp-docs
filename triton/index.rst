@@ -108,6 +108,7 @@ Tutorials
    Interactive jobs - running your first command <tut/interactive>
    Running in the queue <tut/serial>
    tut/array.rst
+   tut/gpu.rst
 
 Detailed instructions
 =====================

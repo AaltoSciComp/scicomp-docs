@@ -2,6 +2,10 @@
 Parallel computing
 ==================
 
+.. note::
+
+   This page is still under development.
+
 Parallel computing is what HPC is really all about: being able to use
 many CPUs at once.  By now, you should have read all of the previous
 tutorials.

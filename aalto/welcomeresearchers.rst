@@ -255,6 +255,19 @@ in a few years).
 
 
 
+Training
+========
+
+Of course you want to get straight to research.  However, we come from
+a wide range of backgrounds and we've noticed that missing basic
+skills (computer as a tool) can be a research bottleneck.  We have
+constructed a :doc:`multi-level training plan <../training/index>` so
+that you can find the right courses for your needs.  These courses are
+selected by researchers for researchers, so we make sure that
+everything is relevant to you.
+
+
+
 Other notes
 ===========
 

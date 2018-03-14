@@ -28,6 +28,8 @@ News
 
    news/index
 
+
+
 The Aalto environment
 =====================
 Aalto provides a wide variety of support for scientific computing.
@@ -83,6 +85,7 @@ Cheatsheets: `Triton <ch-triton_>`_
 .. _ch-triton: https://users.aalto.fi/~darstr1/cheatsheets/triton-cheatsheet.pdf
 
 
+
 Scientific computing
 ====================
 In this section, you find general (not Aalto specific) scientific
@@ -96,6 +99,21 @@ computing resources.
 Cheatsheets: `Gitlab (produced by Gitlab, with Aalto link) <ch-gitlab_>`_
 
 .. _ch-gitlab: https://users.aalto.fi/~darstr1/cheatsheets/git-cheatsheet.pdf
+
+
+
+Training
+========
+
+We have various recommended training courses for researchers who deal
+with computation and data.  These courses are selected by researchers,
+for researchers and grouped by level of skill needed.
+
+.. toctree::
+   :maxdepth: :0:
+
+   training/index
+
 
 
 Metadocs

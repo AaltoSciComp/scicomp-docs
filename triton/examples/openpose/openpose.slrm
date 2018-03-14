@@ -1,5 +1,4 @@
 #!/bin/bash
-#SBATCH -p gpushort
 #SBATCH -t 00:10:00
 #SBATCH -n 1
 #SBATCH --gres=gpu:teslak80:1

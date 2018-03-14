@@ -18,9 +18,9 @@ a directory in your working directory.
 
 ::
 
-    mv ~/.matlab $WRKDIR/matlab
-    ln -s $WRKDIR/matlab ~/.matlab
-    quotafix -sg --fix --group $USER $WRKDIR/matlab
+   rsync -lrt ~/.matlab/ $WRKDIR/matlab-config/ && rm -r ~/.matlab
+   ln -sT $WRKDIR/matlab-config ~/.matlab
+   quotafix -gs --fix $WRKDIR/matlab-config
 
 Interactive usage
 -----------------
@@ -53,28 +53,29 @@ sample slurm script is provided underneath::
     m=2
     srun matlab -nojvm -nosplash -r "serial_Matlab($n,$m) ; exit(0)"
 
-The actual calculation is done in serial\_Matlab.m-file::
+The actual calculation is done in ``serial_Matlab.m``\ -file::
 
     function C = serial_Matlab(n,m)
             try
                     A=0:(n*m-1);
                     A=reshape(A,[2,3]).'
-                    
+
                     B=2:(n*m+1);
                     B=reshape(B,[2,3]).'
-                    
+
                     C=0.5*ones(n,n)
                     C=A*(B.') + 2.0*C
             catch error
-                    disp('Error occured');
-                    exit(0)
+                    disp(getReport(error))
+                    exit(1)
             end
     end
 
-Remember to set exit into your slurm script so that the program quits
-once the function serial\_Matlab has finished. Using a
+Remember to *always* set exit into your slurm script so that the program quits
+once the function ``serial_Matlab`` has finished. Using a
 try-catch-statement will allow your job to finish in case of any error
-within the program.
+within the program.  If you don't do this, Matlab will drop into
+interactive mode and do nothing while your cluster time wastes.
 
 Multiple serial batchjobs
 -------------------------
@@ -165,8 +166,8 @@ Note that by default MATLAB always initializes the random number
 generator with a constant value. Thus if you launch several matlab
 instances e.g. to calculate distinct ensembles, then you need to seed
 the random number generator such that it's distinct for each
-instance. In order to do this, you can call the rng() function,
-passing the value of $SLURM_ARRAY_TASK_ID to it.
+instance. In order to do this, you can call the ``rng()`` function,
+passing the value of ``$SLURM_ARRAY_TASK_ID`` to it.
 
 
 Parallel Matlab with Matlab's internal parallelization
@@ -345,12 +346,5 @@ Random error messages about things not loading and/or something
 unexpected files like ``pathdef.m`` in there?  Remove them.
 
 Also, check your home quota.  Often ``.matlab`` gets large and fills up
-your home directory.  You can move this to your work directory
-following a similar process to that in the ``.conda`` directory (see
-:doc:`python`)::
-
-   # Move your package cache to your work directory.  The following does it automatically.
-   rsync -lrt ~/.matlab/ $WRKDIR/matlab-config/ && rm -r ~/.matlab
-   ln -sT $WRKDIR/matlab-config ~/.matlab
-   quotafix -gs --fix $WRKDIR/matlab-config
-
+your home directory.  Check the answer at the very top of the page,
+under "Matlab Configuration".
