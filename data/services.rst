@@ -44,8 +44,8 @@ O = good, x  = bad
      results/open |              |              |              |              |
      data         |              |              |              |              |
 
-Storage services
-================
+Service index
+=============
 
 There are different qualities we want in filesystems: large, fast,
 confidential, highly available, backed up, mounted everywhere, lasts
@@ -92,18 +92,23 @@ O = good, x  = bad
              | Emails    |           |           | x         | x         | x         |
              | EUDAT B2SHARE |       |           |           | O         | O         | O
 
-Information
-===========
+Service details
+===============
 
 .. note::
 
    This list is still under development (2018-03-07)
 
-In general, if you need to **archive and open**, consider Zenodo with
-data in ACRIS, unless you have a discipline-specific repository.  For
-**day to day work** within Aalto, Aalto network drives are a good
-service (different options below).  For **making a data management
-plan**, DMPTuuli along with :doc:`our info <plans>` is good.
+In general, if you need to
+
+* **archive and open**, consider hosting data on Zenodo (and put a
+  record of it in ACRIS, so you can get internal Aalto credit.  If you
+  have a discipline-specific repository, use that instead (with
+  metadata still in ACRIS)
+* For **day to day work** within Aalto, Aalto network drives are a
+  good service and (different options below).
+* For **making a data management plan**, DMPTuuli along with :doc:`our
+  info <plans>` is good.
 
 
 
