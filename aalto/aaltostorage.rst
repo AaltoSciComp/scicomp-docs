@@ -51,9 +51,9 @@ projects** when needed to keep things organized.INLINE
 |              |              |              | of GiB       | /weekly.     |              |
 |              |              |              |              | (.snapshot)  |              |
 +--------------+--------------+--------------+--------------+--------------+--------------+
-| archive      | /m/$dept/arc | some         | per-project, | Yes, weekly. |              |
-|              | hiv          |              | up to 100s   | + off-site   |              |
-|              | e/$project/  |              | of GiB       | tape         |              |
+| archive      | /m/$dept/arch| some         | per-project, | Yes, weekly. |              |
+|              | ive/         |              | up to 100s   | + off-site   |              |
+|              | $project/    |              | of GiB       | tape         |              |
 |              |              |              |              | backups.     |              |
 |              |              |              |              | (.snapshot)  |              |
 +--------------+--------------+--------------+--------------+--------------+--------------+
