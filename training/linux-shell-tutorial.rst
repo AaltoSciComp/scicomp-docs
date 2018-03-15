@@ -256,6 +256,17 @@ More options: by modification/accessing time, by ownership, by access type, join
 :Exercise*: Find all the dirs/files that do no belong to your UID/GID (user id and effective group id).
 
 
+Substitute a command output
+----
+``$(command)`` or alternatively ```command```. Could be a commnad or a list of commands with pipes, redirections, variables inside. Can be nested as well.
+
+::
+
+ touch file.$(date +%Y-%m-%d)
+ tar czf $(basename $(pwd)).$(date +%Y-%m-%d).tar.gz ...
+ now=$(date +%Y-%m-%d)
+
+
 Transferring files (archiving on the fly)
 ----
 For Triton users abilty to transfer files to/from Triton is essential.
@@ -624,16 +635,6 @@ List the jobs ruuning in the background ``jobs``, get a job back online: ``fg`` 
 Kill the foreground job: Ctrl-c
 
 
-Substitute a command output
-----
-``$(command)`` or alternatively ```command```. Could be a commnad or a list of commands with pipes, redirections, variables inside. Can be nested as well.
-
-::
-
- touch file.$(date +%Y-%m-%d)
- tar czf $(basename $(pwd)).$(date +%Y-%m-%d).tar.gz ...
- now=$(date +%Y-%m-%d)
-
 Arithmetics
 ----
 BASH supports wide range of arithmetic operators for integers that can be evaluated within ``(( .. ))``
@@ -775,10 +776,7 @@ Addressing is similar to indexed arrays
    echo \$asarr["$i"] is ${asarr["$i"]}
  done
 
-
-SSH tricks
-----
-
+:Exercise: make a script/function that produces an array of random numbers (Tip: $RANDOM)
 
 4. session
 ====
