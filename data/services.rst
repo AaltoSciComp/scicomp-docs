@@ -44,8 +44,8 @@ O = good, x  = bad
      results/open |              |              |              |              |
      data         |              |              |              |              |
 
-Storage services
-================
+Service index
+=============
 
 There are different qualities we want in filesystems: large, fast,
 confidential, highly available, backed up, mounted everywhere, lasts
@@ -80,7 +80,7 @@ O = good, x  = bad
              | ACRIS           |     |           | O         | O         |           |
              | Eduuni          |     |           |           |           |           |
              | Aalto Wiki      |     |           |           |           |           |
-   Finland   | funet filesender|     |           | O         |           |           | OO
+   Finland   | Funet filesender|     |           | O         |           |           | OO
              | CSC cPouta| O         | O         |           |           |           | O
              | CSC Ida   | OOO       | x         |           | OO        | O         | O
              | FSD       |           |           | OO        | O         | OO        | O
@@ -90,14 +90,27 @@ O = good, x  = bad
              | OneDrive    |         |           |           |           |           |
              | Own computers|        |           | x         | x         | x         |
              | Emails    |           |           | x         | x         | x         |
-             | EUDAT B2SHARe |       |           |           | O         | O         | O
+             | EUDAT B2SHARE |       |           |           | O         | O         | O
 
-Information
-===========
+Service details
+===============
 
 .. note::
 
    This list is still under development (2018-03-07)
+
+In general, if you need to
+
+* **archive and open**, consider hosting data on Zenodo (and put a
+  record of it in ACRIS, so you can get internal Aalto credit.  If you
+  have a discipline-specific repository, use that instead (with
+  metadata still in ACRIS)
+* For **day to day work** within Aalto, Aalto network drives are a
+  good service and (different options below).
+* For **making a data management plan**, DMPTuuli along with :doc:`our
+  info <plans>` is good.
+
+
 
 Science-IT services
 ~~~~~~~~~~~~~~~~~~~
@@ -111,6 +124,10 @@ Departments
   archive.  These are the counterparts of Triton and are backed up.
   They are actually Aalto "teamwork", but the departments do the
   day-to-day interfacing.  See :doc:`../aalto/aaltostorage`.
+
+* Other Aalto departments have **work** and **teamwork**.  These are
+  actually provided at the Aalto level, but how you get them in other
+  departments varies.
 
 Aalto
 ~~~~~
@@ -133,7 +150,7 @@ Aalto
   :doc:`../aalto/aaltostorage`.  This isn't suitable for archival or
   long-term anything, since it is tied to user accounts.  If you
   want to share here, maybe you could do a bit more work and
-  handle it forever at Zenode?
+  handle it forever at Zenodo?
 
 * https://version.aalto.fi is the Aalto Gitlab.  It is used for small
   version controlled files.  It is a great place for day to day work
@@ -142,51 +159,163 @@ Aalto
 
 * **ACRIS** is the Aalto "research information system", meaning it's a
   record of things that everyone is doing research-wise.  You should
-  make records for datasets there as a research output.  It has
-  support for storing data itself, but that probably isn't recommended
-  most of the time since ACRIS in it's current form isn't guaranteed
-  to stay around forever.  However, if data needs to be kept internal,
-  it might be OK since you can set confidentiality and share with
-  certain people.  Still, consider other services which can do similar
-  things.  However, you *should* always make a report of your datasets
-  in ACRIS anyway, so that you can get academic credit for it.  You
-  can some info about it `on ACRIShelp
-  <https://wiki.aalto.fi/display/ACRIShelp/ACRIS+and+research+data>`__,
-  but we should probably make some better instructions.
+  make records for datasets there as a research output.
+  (`ACRIS + research data instructions
+  <https://wiki.aalto.fi/display/ACRIShelp/ACRIS+and+research+data>`__)
+
+  Summary: try to host the actual data elsewhere, but always make a
+  report of the data in ACRIS so you get credit.
+
+  ACRIS has support for storing data itself, but that isn't
+  recommended most of the time since ACRIS in it's current form isn't
+  guaranteed to stay around forever.  However, if data needs to be
+  kept internal, it might be OK since you can set confidentiality and
+  share with certain people.  However, you *should* always make a
+  report of your datasets in ACRIS even if they are hosted elsewhere,
+  so that you can get academic credit for it.
+
+  What data sets should be included in ACRIS?  We think: a) anything that
+  is independently published with DOI. b) any paper which serves as a
+  formal dataset description in a data journal, even if there is also
+  an entry as an ACRIS article.  c) any paper which serves as an
+  informal dataset description.
+
+  As for different roles: creator=who is involved in creating it,
+  distributor=who can be contacted about access (if not public),
+  owner=who has ultimate responsibility (often the PI but project
+  dependent).
 
 * **Eduuni** is a Finnish service for educational collaboration.  It's
   reported to be more secure than either Google Drive or OneDrive, but
   we know of few people who use it.
 
-* The **aalto Wiki** is sometimes mentioned as a place to store data.
+* The **Aalto Wiki** is sometimes mentioned as a place to store data.
   It's really better for collaboration, but you can put little bits of
   data there if you want.
 
 Finnish services
 ~~~~~~~~~~~~~~~~
-* The **FUNET filesender* (https://filesender.funet.fi) can share
+* The **FUNET filesender** (https://filesender.funet.fi) can share
   files with others.  You log in with your Aalto account, and then you
   can upload files and send a link by email.  Or, you can send an
   email that allows others to upload.  Run by CSC and recommended for
   sharing (instead of email).
 
 * **IDA**, **Etsin**, and **AVAA** are CSC-provided services (funded
-  by the ministry), which provide some data services to researchers.
-  We have some practical notes on using it :doc:`here <ida>`.
+  by the ministry as part of the Open Science project, ATT), which
+  provide some data services to researchers.
 
-* **The FSD Finnish Social Data Arhive / Tietoarkisto** is run from
+  * **Etsin** is the Finnish metadata catalog.  The intention is that
+    all research data eventually gets cataloged here (open or not),
+    but we are quite far from that goal.  Ideally, there would be
+    bidirectional imports to and from ACRIS (the Aalto system) and
+    other repositories, but it's not there yet.  We should recommend
+    that you make a note of your data here, but realistically do ACRIS
+    and wait for a link.
+
+  * **IDA** is a storage service. (`instructions
+    <https://openscience.fi/ida>`__) It is based on iRODS, a data
+    management layer on top of filesystems.  Thus, you have to access
+    it using a special API, command line interfaces, or other tools.
+    Because of this, the learning curve is very steep.  Currently, we
+    think IDA would be good if your university doesn't provide large
+    enough free, properly backed up storage that is shareable within
+    Finland.  For long-term public storage, Zenodo is probably overall
+    easier to use.  We have some practical notes on using it
+    :doc:`here <ida>`, because it takes quite a few steps to get started.
+
+    It is said to be a safe place to store your data, but if you read
+    closely a different "long-term preservation" service `is coming
+    <https://openscience.fi/digital-preservation>`__, so IDA isn't that.  IDA
+    might have a use case for confidential data which can't leave
+    Finland, but it says `it claims it is not suitable for such
+    <https://openscience.fi/ida-faq>`__.  They also say that metadata
+    "`shall
+    <https://sui.csc.fi/web/guest/terms-of-use/-/asset_publisher/FMMBc3VntxT0/content/id/465885>`__"
+    be added, which makes you think it is only for data which is
+    prepared enough for putting in Etsin.
+
+    If you are dealing with a large amount of data and want to use an
+    API to handle it, this could be good.
+
+    IDA is being `renewed <https://openscience.fi/ida-renewal>`__ in
+    2018, and will need reevaluation then.
+
+  * **AVAA** is basically a merging of IDA and Etsin.  You can set
+    some metadata in IDA so that your data is available via the web.
+    There are some instruction in the IDA user guide (`browser
+    <https://openscience.fi/ida-browser-sharing>`__, `command line
+    <https://openscience.fi/ida-commands-sharing>`__).  Overall,
+    having to use three different services for publishing a file takes
+    a fair amount of work, so if you want to open data, Zenodo is
+    faster.
+
+* **The FSD Finnish Social Data Archive / Tietoarkisto** is run from
   the University of Tampere.  It is a full-service archive for social
-  data, so they can help in data preparation and curation..  It is one of the few places allowed to archive personal data.
+  data, so they can help in data preparation and curation..  It is one
+  of the few places in Finland allowed to archive personally
+  identifiable data.
+
+* **DMPTuuli** (`dmptuuli.fi <https://dmptuuli.fi>`__) is a service
+  for making data management plans.  It is primarily targeted at
+  funder DMPs, so it won't help you plan your actual research (and
+  even for funder DMPs, you need to know what to say).  You can check
+  our :doc:`data management plans <plans>` page, including the
+  "emergency DMP" section.  Aalto also has a `little bit of guidance
+  <http://www.aalto.fi/en/research/research_data_management/data_management_planning/>`__.
 
 EU services
 ~~~~~~~~~~~
 
 * **Zenodo** (https://zenodo.org) is a long-term data repository.  It
   is the largest (thus the most stable long-term) and also has a great
-  user interface.  There is little curation, so make sure that your
-  metadata is good.  We recommend this service unless you have another
+  user interface.  You get a DOI if you archive here.  We recommend
+  this service unless you have another
   domain-specific repository that fits your data better.  If you
   publish data here, also make a metadata entry in ACRIS (see above).
 
-* **EUDAT** (http://eudat.eu)
+  Zenodo is a good service, but there is little curation, so you need
+  to make sure that your data is described well (both in the
+  structured catalog information and within the data, so that it is
+  usable).
+
+  When you put data in Zenodo, also make an ACRIS dataset entry linked
+  with the DOI.
+
+* **EUDAT** (http://eudat.eu) provides a lot of different services:
+  B2share is a lot like Zenodo, but smaller and last we checked the
+  user interface wasn't as good (and it didn't provide DOIs).  B2Drop
+  is a Dropbox-like file sharing service (powered by nextcloud), which
+  can be quite nice.  B2Find is a metadata catalog that lets you
+  search for data.  The other services are mostly target to other
+  large infrastructures.  (EUDAT will be re-evaluated in 2018)
+
+Global services
+~~~~~~~~~~~~~~~
+
+* **Google Drive** is a cloud storage solution (but you probably
+  already knew that...).  You can register your Aalto account as a
+  Google account, which gives you unlimited storage (note that this
+  does not mean your personal account gets unlimited... a Gsuite
+  account does.  This account ends when you leave Aalto, so this
+  should not be used for permanent storage).  You have to enable your
+  account using `ITS instructions here
+  <https://it.aalto.fi/instructions/google-drive-registration-and-closing-account>`__.
+  Access the Aalto Google Drive from https://gdrive.aalto.fi.  This
+  service can be great for sharing, but because it is tied to your
+  Aalto account, you should not store valuable research data here.
+
+* **Microsoft OneDrive** is like GoogleDrive.  You can find
+  `instructions from ITS here
+  <https://it.aalto.fi/instructions/deploying-onedrive-business>`__.
+  Theoretically, OneDrive has a higher security rating than Google
+  Drive, but it is still not suitable for legally confidential data.
+
+* **Github** is a code-sharing and collaboration service (using git,
+  obviously).  If you have an open source project, this is a
+  well-known place to put it.  The only downside is if you have
+  objections to proprietary services.  Github should not be used as a
+  permanent archive, but there is Zenodo integration so that your code
+  can be archived permanently (and even has integration with the
+  Github "release" feature).
 

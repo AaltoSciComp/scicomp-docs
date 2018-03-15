@@ -1,6 +1,6 @@
-=============================
-Scientific computing training
-=============================
+========
+Training
+========
 
 Scientific computing and data science require special, practical
 skills in programming and computer use.  However, these aren't often
@@ -16,7 +16,7 @@ into four big levels A-D:
    * * **A (basics)**
      * Having a basic knowledge of university resources, so that you use the right tool for the right job and don't lose your data.
    * * **B (scientific computing)**
-     * When you are doing science but existing software isn't enough: you have to make your own or connect things together.
+     * When you are doing science but existing software isn't enough: you have to connect things together (or make your own).
    * * **C (high performance computing)**
      * Using large computer clusters for large-scale analysis.  Basically, at Aalto, :doc:`Triton <../triton/index>`.
    * * **D (advanced high performance computing)**
@@ -24,28 +24,45 @@ into four big levels A-D:
    * * **Special tracks**
      * Programming, scientific papers/posters/presentations, etc.  Can be at any level.
 
-If you're starting research, check this list list above.  What level
-of skills do you need?  Ask your advisor, then check the list below to
-get to the right level.
+If you're starting research, ask your advisor what level of skill they
+expect you to have.  There are both courses and self-study materials
+below.  A few hours now can save you days of time during your career.
 
 Subpages:
 
 .. toctree::
+   :maxdepth: 1
 
    by-science-it
+   linux-shell-tutorial
 
 
 A: Basics
 =========
 
-There are no dedicated courses for this level, but the page
-:doc:`../aalto/welcomeresearchers` is our introduction and has all of
-the relevant links to what you need to know. (Course A01)
+.. list-table::
+
+   * * A01
+       University IT systems
+
+     * This covers the basics of research facilities at Aalto and how to use them.
+
+       There is not currently a dedicated course, but, but all of our
+       information is found at :doc:`../aalto/welcomeresearchers`.
+
+..
+  Lapiokurssi - computer as a tool.  What the different computational
+  options are, and how to get your systems set up to do this.  how to
+  not get into a rut of doing the same things all the time.
+
 
 
 
 B: Scientific computing
 =======================
+
+..
+  https://training.linuxfoundation.org/linux-courses/system-administration-training/introduction-to-linux%20
 
 Core courses:
 
@@ -93,7 +110,7 @@ Core courses:
        Different expert tips for making ssh better, too.
 
 
-Core courses:
+Other courses:
 
 .. list-table::
 
@@ -136,7 +153,7 @@ scientific programming well.
    * * B62
 
        Profiling
-     * Aalto course
+     * Aalto course, see :doc:`../triton/usage/profiling` for now.
 
    * * B63
 
@@ -163,15 +180,18 @@ C: High performance computing
    * * C20
 
        Modules and software
-     * See :doc:`training by Science-IT <by-science-it>`
+     * See :doc:`training by Science-IT <by-science-it>` or
+       :doc:`../triton/tut/modules`
    * * C21
 
        Slurm
-     * See :doc:`training by Science-IT <by-science-it>`
+     * See :doc:`training by Science-IT <by-science-it>` or
+       :doc:`../triton/tut/modules`
    * * C22
 
        HPC Storage
-     * See :doc:`training by Science-IT <by-science-it>`
+     * See :doc:`training by Science-IT <by-science-it>`  or
+       :doc:`../triton/tut/modules`
    * * C23
 
        Parallel computing
@@ -195,6 +215,20 @@ D: Advanced high performance computing
        (Apr-May), `search MyCourses/Oodi for CS-E4580
        <https://oodi.aalto.fi/a/opintjakstied.jsp?html=1&Kieli=6&Tunniste=CS-E4580>`__.
 
+   * * Dxx
+
+       GPU Programming
+     * This was an advanced guest course, useful if you want to know
+       how to program GPU applications `Materials here
+       <http://science-it.aalto.fi/scip/gpu-computing-fall-2017/>`__.
+
+   * * Dxx
+
+       MPI Programming
+     * This was an advanced guest course, useful if you want to know
+       internals of MPI or program MPI applications.  `Materials here
+       <http://science-it.aalto.fi/scip/mpi-intro-spring-2018/>`__.
+
 Also see the `Science-IT training archive
 <http://science-it.aalto.fi/scip/>`__ for more level 3 courses.
 
@@ -203,3 +237,11 @@ Recommended programming courses
 
 Need to learn programming?  We will include some recommended
 online programming courses here.
+
+..
+  Recommended programming courses.  what's current bleeding edge?
+
+  Python
+  R
+  Matlab
+  shell

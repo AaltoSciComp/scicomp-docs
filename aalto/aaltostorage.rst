@@ -46,28 +46,28 @@ projects** when needed to keep things organized.INLINE
 |              |              |              |              | apshot/      | non-research |
 |              |              |              |              |              | files        |
 +--------------+--------------+--------------+--------------+--------------+--------------+
-| project      | /m/cs/projec | some         | per-project, | Yes,         |              |
-|              | t/$project/  |              | up to 100s   | hourly/daily |              |
+| project      | /m/$dept/proj| some         | per-project, | Yes,         |              |
+|              | ect/$project/|              | up to 100s   | hourly/daily |              |
 |              |              |              | of GiB       | /weekly.     |              |
 |              |              |              |              | (.snapshot)  |              |
 +--------------+--------------+--------------+--------------+--------------+--------------+
-| archive      | /m/cs/archiv | some         | per-project, | Yes, weekly. |              |
-|              | e/$project/  |              | up to 100s   | + off-site   |              |
-|              |              |              | of GiB       | tape         |              |
+| archive      | /m/$dept/arch| some         | per-project, | Yes, weekly. |              |
+|              | ive/         |              | up to 100s   | + off-site   |              |
+|              | $project/    |              | of GiB       | tape         |              |
 |              |              |              |              | backups.     |              |
 |              |              |              |              | (.snapshot)  |              |
 +--------------+--------------+--------------+--------------+--------------+--------------+
-| scratch      | /m/cs/scratc | yes          | per-project, | RAID6, but   | Don't even   |
-|              | h/$project/  |              | 2 PiB        | no backups.  | think about  |
-|              |              |              | available    |              | leaving      |
+| scratch      | /m/$dept/scr | yes          | per-project, | RAID6, but   | Don't even   |
+|              | atch/$pro    |              | 2 PiB        | no backups.  | think about  |
+|              | hect/        |              | available    |              | leaving      |
 |              |              |              |              |              | irreplaceabl |
 |              |              |              |              |              | e            |
 |              |              |              |              |              | files here!  |
 |              |              |              |              |              | Need Triton  |
 |              |              |              |              |              | account.     |
 +--------------+--------------+--------------+--------------+--------------+--------------+
-| work         | /m/cs/work/$ | yes          | 200GB        | RAID6, but   | same as      |
-|              | username/    |              | default      | no backups.  | scratch.     |
+| work         | /m/$dept/wor | yes          | 200GB        | RAID6, but   | same as      |
+|              | k/$username/ |              | default      | no backups.  | scratch.     |
 |              |              |              |              |              | Need Triton  |
 |              |              |              |              |              | account.     |
 +--------------+--------------+--------------+--------------+--------------+--------------+
@@ -114,7 +114,7 @@ General notes
 ~~~~~~~~~~~~~
 
 -  The table below details the types of filesystems available.
--  The path /**m/cs/** is designed to be a standard location for mounts.
+-  The path /**m/$dept/** is designed to be a standard location for mounts.
    In particular, this is shared with Triton.
 -  The server ``magi`` is ``magi.TODO`` and is for the CS
    department. Home directory is mounted here without kerberos
@@ -153,7 +153,7 @@ Filesystem list
 
 -  **project:** main place for shared, backed-up project files
 
-   -  ``/m/cs/project/$project/``
+   -  ``/m/$dept/project/$project/``
    -  Research time storage for data that requires backup. Good for e.g.
       code, articles, other important data. Generally for small amount
       (10s-100s GiB) of data per project.
@@ -178,7 +178,7 @@ Filesystem list
 
 -  **archive:**
 
-   -  ``/m/cs/archive/$project/``
+   -  ``/m/$dept/archive/$project/``
    -  For data that should be kept accessible for 1-5 years after the
       project has ended. Alternatively a good place to store a copy of a
       large original data (backup).
@@ -192,7 +192,7 @@ Filesystem list
 
 -  **scratch:** large file storage and work, not backed up (Triton).
 
-   -  ``/m/cs/scratch/$group/``
+   -  ``/m/$dept/scratch/$group/``
    -  Research time storage for data that does not require backup. Good
       for temporary files and large data sets where the backup of
       original copy is somewhere else (e.g. archive).
@@ -223,7 +223,7 @@ Filesystem list
 
 -  **work:** personal large file storage and work (Triton)
 
-   -  ``/m/cs/work/$username/``
+   -  ``/m/$dept/work/$username/``
    -  This is the equivalent of scratch, but per-person. Data is lost
       once you leave.
    -  Accessible on ``magi``/``taltta`` at the same path.

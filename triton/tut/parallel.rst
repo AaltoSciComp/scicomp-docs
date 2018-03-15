@@ -2,6 +2,10 @@
 Parallel computing
 ==================
 
+.. note::
+
+   This page is still under development.
+
 Parallel computing is what HPC is really all about: being able to use
 many CPUs at once.  By now, you should have read all of the previous
 tutorials.
@@ -105,7 +109,7 @@ Quick reference
 
 As a reminder, here is the quick reference of all slurm options
 
-.. include:: ../ref/slurm
+.. include:: ../ref/slurm.rst
 
 
 Next steps

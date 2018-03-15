@@ -2,6 +2,12 @@
 GPU computing
 =============
 
+.. note::
+
+   This page is still under development.
+
+.. highlight:: bash
+
 GPUs and accelerators are basically very special parallel processors:
 they can apply the same instructions to lots of different data at the
 same time.  You can get a speedup of 100x or more... but only in the
@@ -12,8 +18,8 @@ parallelism, so now these are the standard for this type of research.
 On Triton, we have a large number of Nvidia GPU cards of different
 generations, and are constantly getting more.  Our GPUs are not for
 desktops, but specialized research-grade server GPUs with large
-memory, high bandwidth, and generally far exceed the best desktop GPUs
-for scientific purposes.
+memory, high bandwidth, and for scientific purposes generally
+exceed the best desktop GPUs.
 
 Some nomenclature: a GPU is a graphical processing unit, CUDA is the
 software interface for Nvidia GPUs.  (we only support CUDA)
@@ -37,6 +43,10 @@ This means you request the ``gpu`` resources, and one of them
 
 ... and you've got yourself the basics.  Of course, once you are ready
 for serious runs, you should put your code into slurm scripts.
+
+If you want to restrict yourself to a certain type of card, you can be
+more specific in the ``--gres``, for example ``--gres=gpu:teslak80:1``
+or ``--gres=gpu:telsap100:1`.
 
 
 Note: before summer 2016, you also had to specify a GPU partition
@@ -93,10 +103,10 @@ Input/output
 ~~~~~~~~~~~~
 
 Deep learning work is intrinsically very data-hungry.  Remember what
-we said about storage and input/output being important before?  Now
+we said about storage and input/output being important before
+(:doc:`in the storage tutorial <storage>`)?  Now
 it's really important.  In fact, faster memory bandwidth is the main
 improvement of our server-grade GPUs compared to desktop models.
-TODO: more notes here.
 
 If you are loading lots of data, package the data into a container
 format first: lots of small files are your worst enemy, and we have a
@@ -109,12 +119,15 @@ When using a GPU, you need to also request enough CPUs to supply the
 data to the process.  So, increase the number of CPUs you request so
 that you can provide the GPU with enough data.  However, don't request
 too many: then, there aren't enough CPUs for everyone to use the GPUs,
-and they go to waste!  (TODO: recommendations?)
+and they go to waste!  (For the K80 nodes, we have only 1.5 CPUs per
+GPU, but on all others we have 6 CPUs/GPU)
 
 Other
 ~~~~~
 
-Most of the time, using more than one GPU isn't efficient.
+Most of the time, using more than one GPU isn't worth it, unless you
+specially optimize, because communication takes too much time.  It's
+better to parallelize by splitting tasks into different jobs.
 
 
 
@@ -127,7 +140,7 @@ computing, including examples of different machine learning languages.
 
 If you came straight to this page, you should also read
 :doc:`interactive` and :doc:`serial` (actually you should have read
-them first, but it's OK).
+them first, but don't worry).
 
 This guide assumes you are using pre-existing GPU programs.  If you
 need to write your own, that's a whole other story, and you can find
