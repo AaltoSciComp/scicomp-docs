@@ -89,7 +89,7 @@ Homebrew
 
 Backup Service(Beta)
 --------------------
-We are providing a full clone-backup service for Mac users. We use Time Machine. It is encrypted and automatic; hourly backup on charge mode in the background. It is "clone" because we can restore your environment in its entirity. You can think of it as a snapshot backup(though it isn't). It works under Aalto network i.e., it will work anywhere as long as you use Aalto vpn. We provide twice your SSD; your Mac has 250GB of space you get 500GB of backup space. If you would like to enroll in the program please pay a visit to our office, A243.
+We are providing a full clone-backup service for "Aalto Mac" users who work at the CS department. We use Time Machine. It is encrypted and automatic; hourly backup on charge mode in the background. It is "clone" because we can restore your environment in its entirity. You can think of it as a snapshot backup(though it isn't). It works under Aalto network i.e., it will work anywhere as long as you use Aalto vpn. We provide twice the space of your SSD; your Mac has 250GB of space, you get 500GB of backup space. If you would like to enroll in the program please pay a visit to our office, A243.
 
 Restore
 ~~~~~~~
@@ -97,7 +97,15 @@ With Time Machine you have two options for restore.
 
 1. Partial
 
-	* You can restore file-by-file. Watch this `Youtube video <https://youtu.be/6bcf54aRBPk>`_,
+	* You can restore file-by-file. Watch the video,
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube.com/embed/6bcf54aRBPk" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+
 
 2. Complete restore
 
@@ -120,27 +128,26 @@ This happens because either 1). you changed your password or the 2). server is d
 	# Watch the video below.
 
 	# If dead, something's wrong with the server.
-	# Pease contact guru@cs.hut.fi
+	# Pease contact guru@cs.aalto.fi
 
 
+.. raw:: html
 
-.. figure:: /images/time_machine_tutorial_1.png
-   :align: center
-   :alt: alternate text
-   :figclass: align-center
-
-   < Watch the video at https://youtu.be/jexhHxZ75w4 >
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube.com/embed/jexhHxZ75w4" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
 
 
 Corrupted backup
 ################
 
 .. figure:: /images/time-machine-error.png
+   :scale: 50%
    :align: center
    :alt: alternate text
    :figclass: align-center
 
-This is an unfortunate situation with an unknown reason. If your backup data is unnecessary then start a new backup. If you want to fix the backup, please visit us. We can try to fix it but we cannot guarantee it.
+This is an unfortunate situation with an unknown reason. If your backup data is unnecessary, start a new backup. If you want to fix the backup, please visit us. We can try to fix it but we cannot guarantee it.
 
 
 -----------------------------------------------------
