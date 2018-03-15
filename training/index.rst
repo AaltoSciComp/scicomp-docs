@@ -33,6 +33,7 @@ Subpages:
 .. toctree::
 
    by-science-it
+   linux-shell-tutorial
 
 
 A: Basics
