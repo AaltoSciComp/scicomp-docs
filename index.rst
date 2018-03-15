@@ -110,7 +110,7 @@ with computation and data.  These courses are selected by researchers,
 for researchers and grouped by level of skill needed.
 
 .. toctree::
-   :maxdepth: :0:
+   :maxdepth: 2
 
    training/index
 
