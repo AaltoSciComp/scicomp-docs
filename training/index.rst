@@ -1,6 +1,6 @@
-=============================
-Scientific computing training
-=============================
+========
+Training
+========
 
 Scientific computing and data science require special, practical
 skills in programming and computer use.  However, these aren't often
@@ -31,6 +31,7 @@ below.  A few hours now can save you days of time during your career.
 Subpages:
 
 .. toctree::
+   :maxdepth: 1
 
    by-science-it
    linux-shell-tutorial
