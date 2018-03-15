@@ -61,13 +61,15 @@ Files and dirs
 
 ::
 
- ls, ls -l, ls -la, ./, ../, *, ?, [], [!], {}
+ ls, ls -l, ls -la, ./, ../, *, ?, [], [!], {}, \
 
 ::
 
  cd, mkdir, cp, rm, rm -r, mv, ln, touch
 
 **Hint** ``ls -lX``, ``ls -ltr``, ``file <filename>``
+
+**Hint** Quotation matters
 
 :Exercise: mkdir in your $HOME (or $WRKDIR if on Triton), cd there and 'touch' a file. Rename it. Make a copy and then remove the original
 :Exercise*: ``ls`` dot files only. Create a dozen of files with one command with names like file1.txt, file2.txt, ... file12.txt
@@ -281,7 +283,7 @@ Another use case, you want to archive your Triton data to some other place
  
 *tar* is standard de-facto for archiving on UNIX systems. *z* stands for compressing with GZIP, otherwise directory is packed, but not compressed
 
- - ``tar czvf path/to/archive.tar.gz directory/to/archive``  # to archive
+ - ``tar czvf path/to/archive.tar.gz directory/to/archive/  another/file/to/archive.txt``  # to archive
  - ``tar xzf path/to/archive.tar.gz -C path/to/directory``  # to extract
  - ``tar tzf archive.tar.gz``
 
@@ -402,13 +404,15 @@ Functions in BASH is just a piece of code that once declared can be invoked at a
 
 Variables
 ----
-In shell, variables define your environment. Common practice is that environmental vars are written IN CAPITAL: $HOME, $SHELL, $PATH, $PS1. To list all defined variables ``printenv``. All variables can be used or even redefined. No error if you call an undefined var, it is just considered to be empty.
+In shell, variables define your environment. Common practice is that environmental vars are written IN CAPITAL: $HOME, $SHELL, $PATH, $PS1, $RANDOM. To list all defined variables ``printenv``. All variables can be used or even redefined. No error if you call an undefined var, it is just considered to be empty.
 
 Assign a variable ``var1=100``, ``var2='some string'``
 
 Invoke a variable ``$var1``
 
 Append a var: ``var+=<string>/<integer>``
+
+Vars can be declared, like if you want it readonly ``declare -r var=xyz``, or to be treated as integer always ``declare -i var``.
 
 BASH is smart enough to distiguish a var inline ``dir=$HOME/dir1; fname=file; fext=xyz; echo "$dir/$fname.$fext"``, though if var followed by a number or a letter ``echo ${dir}2/${file}abc.$fext``
 
@@ -421,7 +425,6 @@ Built-in vars:
  - $1, $2 ... input parameter one by one (function/script)
  - "$@" all input parameters as is in one line
 
-**Hint** Quoting matters: '' vs ""
 
 :Exercise: write a function that outputs number of arguments it has got and then all the arguments as a single word
 :Exercise*: make a function that takes IP as an argument, ping that IP and returns ok/failed only
@@ -718,6 +721,8 @@ Loop controling: ``break`` -- terminates the loop, ``continue`` -- jump to a new
 
 :Exercise: Write a function that count a sum of any *1+2+3+4+..+n* sequence of numbers directly, thus just by summing all the numbers. Let us benchmark to solutions with *time*.
 :Exercise: Using for loop rename all the files in the directories *dir1/* and *dir2/* which file names are like *filename.txt* to *filename.edited.txt*. Where *filename* can be any, while extensions is always the same.
+:Exercise*: Implement a Bubble sort using bash loops (not *sort* utility).
+
 
 Arrays
 ----
