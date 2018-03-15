@@ -85,7 +85,83 @@ Homebrew
 	# Check if brew is correctly installed.
 	which brew    # /Users/username/Homebrew/bin/brew
 
+------------------------------------------------------------------------
 
+Backup Service(Beta)
+--------------------
+We are providing a full clone-backup service for Mac users. We use Time Machine. It is encrypted and automatic; hourly backup on charge mode in the background. It is "clone" because we can restore your environment in its entirity. You can think of it as a snapshot backup(though it isn't). It works under Aalto network i.e., it will work anywhere as long as you use Aalto vpn. We provide twice your SSD; your Mac has 250GB of space you get 500GB of backup space. If you would like to enroll in the program please pay a visit to our office, A243.
+
+Restore
+~~~~~~~
+With Time Machine you have two options for restore.
+
+1. Partial
+
+	* You can restore file-by-file. Watch this `Youtube video <https://youtu.be/6bcf54aRBPk>`_,
+
+2. Complete restore
+
+	* In case your Mac is broken, you can restore completely on a new Mac. For this, you must visit us.
+
+
+Trouble-shooting
+~~~~~~~~~~~~~~~~
+
+Can't find the backup destination
+#################################
+This happens because either 1). you changed your password or the 2). server is down. Debug in the following manner,
+
+.. code-block:: bash
+	
+	# Is the server alive?
+	ping cs-239.org.aalto.fi
+
+	# If alive, probably it's your keychain. 
+	# Watch the video below.
+
+	# If dead, something's wrong with the server.
+	# Pease contact guru@cs.hut.fi
+
+
+
+.. figure:: /images/time_machine_tutorial_1.png
+   :align: center
+   :alt: alternate text
+   :figclass: align-center
+
+   < Watch the video at https://youtu.be/jexhHxZ75w4 >
+
+
+Corrupted backup
+################
+
+.. figure:: /images/time-machine-error.png
+   :align: center
+   :alt: alternate text
+   :figclass: align-center
+
+This is an unfortunate situation with an unknown reason. If your backup data is unnecessary then start a new backup. If you want to fix the backup, please visit us. We can try to fix it but we cannot guarantee it.
+
+
+-----------------------------------------------------
 
 Common problems
 ---------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
