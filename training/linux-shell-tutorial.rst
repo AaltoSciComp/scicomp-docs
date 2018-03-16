@@ -255,8 +255,8 @@ It is a number one in searching files in shell.
  find ~ -name file.txt   # -or-  'find ~ $WRKDIR -name file.txt' one can search more than one dir at once
  find . -maxdepth 1 -name '*.jpg' -type f  # look for jpeg files in the current dir only
  find . -type -f -size +10M -size -100M  # find all files of size more than 10M and less than 100M
- find ~ ! -user $USER | xargs ls -ld # find everything that does no belong to you
- find . -type d -exec chmod g+rwx {} \;   # opn all directories to group members
+ find ~ ! -user $USER | xargs ls -ld # find everything that does not belong to you
+ find . -type d -exec chmod g+rwx {} \;   # open all directories to group members
  
 More options: by modification/accessing time, by ownership, by access type, joint conditions, case-insensitive, that do not match, etc [#]_ [#]_
 
@@ -599,6 +599,23 @@ It tries to match the variable against each pattern in turn. Understands pattern
  esac
  
 ``;;`` is important, if replaced with ``;&``, execution will continue with the command associated with the next pattern, without testing it. ``;;&`` causes the shell to test next pattern. The default behaviour with ``;;`` is to stop matches after first pattern has been found.
+
+Try:
+
+::
+
+ # create a file 'cx'
+ case "$0" in
+  *cx) chmod +x "$@" ;;
+  *cw) chmod +w "$@" ;;
+  *c-w) chmod -w "$@" ;;
+  *) echo "$0: seems that file name is somewhat different"; exit 1 ;;
+ esac
+ 
+ # chmod +x cx
+ # ln cx cw
+ # ln cx c-w
+ # to make a file executable 'cx filename'
 
 
 More about redirection, pipe and multiple commands execution 
