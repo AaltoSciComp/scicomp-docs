@@ -72,25 +72,36 @@ Files and dirs
 **Hint** Quotation matters
 
 :Exercise: mkdir in your $HOME (or $WRKDIR if on Triton), cd there and 'touch' a file. Rename it. Make a copy and then remove the original
-:Exercise*: ``ls`` dot files only. Create a dozen of files with one command with names like file1.txt, file2.txt, ... file12.txt
+:Exercise*: 
+ - ``ls`` dot files only
+ - create a dozen empty files with one command with names like file1.txt, ... file12.txt
 
 
 Permissions
 ----
 rwxrwxrwx -- read, write, execute/search
 
-s- and t-bits.
-
 ::
 
- chmod u+rwx,g-rwx,o-rwx <files> -or- chmod 700 <files>
+ chmod u+rwx,g-rwx,o-rwx <files>  # u=user, g=group, o=others, a=all
+  -or-
+ chmod 700 <files>   # r=4, w=2, x=1
+ chmod -R <perm> <directory>  # recursive, changing all the subdirectories and files at once
+ 
+ chgrp group_name <file or directory>  # changing group ownership (you must be a member)
 
-For recursive ``chmod -R ... ``
+s-bit:  setuid/setgid bit, preseves user and/or group IDs
+
+t-bit: sticky bit, for directories it prevents from removing file by another user (example */tmp*)
 
 **Hint** File Manager like Midnight Commander -- ``mc``
 
-:Exercise: allow group members to open the file, while others should have no acceess to the directory at all.
-:Exercise*: make a few more subdirectories and make a current directory and all newly created subdirectories then readable by them group with one command (directories only).
+:Exercise:
+ - on Triton make a directory at $WRKDIR, allow user and group members full access and no access for others
+ - change group ownership to 'scip', set s-bit for the group (one can open another 'scip' session to check that *scip user* has access)
+ - Note: make sure your upper directory has  *o+x* bit set
+:Exercise*: create a directory and a subdirectory in it and set their permissions to 700 with one command
+:Exercise*: ``ls -ld`` tells you that directory has permissions ``rwxr-Sr--``, does group members get access there?
 
 Hotkeys
 ----
@@ -110,9 +121,10 @@ Hotkeys
 - Ctrl-k -- remove end of the line, from cursor
 - Ctrl-w -- remove previous word
 
-**Hint** ``history | grep KEYWORD``
+**Hint** ``history | grep KEYWORD``  to list all matching commands
 
-**Hint** Check */etc/inpurc* for some default key bindings, more can be defined *~/.inputrc*
+**Hint** Check */etc/inpurc* for some default key bindings, more can be defined *~/.inputrc* (left as an exercise)
+
 
 Initialization files
 ----
@@ -146,7 +158,7 @@ Other quick ways to add something to a file (no need for an editor)
 
 **Hint** best text viewer ever -- *less -S*  (to open a file in your EDITOR, hit *v*, to search through type */search_word*)
 
-:Exercise: add above mentioned ``export PS1`` to *.bashrc* and then ``source .bashrc`` to enable changes
+Try: add above mentioned ``export PS1`` to *.bashrc*. Remember ``source .bashrc`` to enable changes
 
 
 Redirect, pipe
@@ -197,6 +209,7 @@ For details on what <pattern> could be, look for REGULAR EXPRESSIONS at ``man gr
  - grep all but blank lines in the file (Hint: 'man grep' for regular expression)
  - expand the previous one to filter out commented lines (start with #)
 :Exercise*: expand ``du`` to list dot files/directories also
+:Exercise*: ``uptime; w > wuptime`` how to add output of both commands to the same file with one redirect?
 :Exercise*: Count unique logged in users on kosh/taltta/triton or anywhere else
 
 
