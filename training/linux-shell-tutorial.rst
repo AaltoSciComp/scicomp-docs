@@ -264,6 +264,8 @@ More options: by modification/accessing time, by ownership, by access type, join
 
 **Hint**  Another utility that you may find useful ``locate``, but on workstations only
 
+**Hint** 'Too many arguments' error solved with ``find ... | xargs``
+
 :Exercise: Find all files with 'lock' in the name in your home directory
 :Exercise*: Find all the files in your $HOME or $WRKDIR that are readable or writable by everyone. What would the ways to "fix them"?
 :Exercise*: Find all the dirs/files that do no belong to your UID/GID (user id and effective group id).
@@ -310,7 +312,7 @@ Another use case, you want to archive your Triton data to some other place
  - ``tar czvf path/to/archive.tar.gz directory/to/archive/  another/file/to/archive.txt``  # to archive
  - ``tar xzf path/to/archive.tar.gz -C path/to/directory``  # to extract
  - ``tar tzf archive.tar.gz``
-
+  
 :Try: whatever use case you have, try trasfering files.
 
 :Exercise: make an alias so *rsyncing* a copy of your local directory (or kosh:somedir) to Triton
@@ -449,9 +451,9 @@ Built-in vars:
  - $1, $2 ... input parameter one by one (function/script)
  - "$@" all input parameters as is in one line
 
-
 :Exercise: write a function that outputs number of arguments it has got and then all the arguments as a single word
 :Exercise*: make a function that takes IP as an argument, ping that IP and returns ok/failed only
+
 
 More on variables
 ----
@@ -470,6 +472,7 @@ BASH provides wide abilities to work with the vars "on-the-fly" with ${var...} l
  - expand lcd() so that it would go to some specific directory taken as an input parameter, if *$1* is empty (on Triton it could be $WRKDIR)
 :Exercise*: extract filename with no extension from */work/archive/OLD/Michel's_stuff.tar.gz*
 
+
 PATH
 ----
 ``chmod +x``, what is next? binaries at /bin, /usr/bin, /usr/local/bin etc. Setting up ~/bin or running as ./binary.
@@ -478,13 +481,14 @@ Add to *.bashrc* ``export PATH="$PATH:$HOME/bin"``
 
 **Hint** name your scripts  *\*.sh* and collect them in ~/bin directory
 
+
 [[ ]]
 ----
 ``[[ expression ]]`` returns 0 or 1 depending on the evaluation of the conditional *expression*
 
 ``==, <, >, !=, =~, &&, ||, !, ()``
 
-When working with the strings the right-hand side is a pattern (a regular expression). Matched strings assigned to *${BASH_REMATCH[]}* array elements.
+When working with the strings the right-hand side is a pattern (a regular expression). Matched strings in brackets assigned to *${BASH_REMATCH[]}* array elements.
 
 ::
 
@@ -565,6 +569,36 @@ More conditional expressions
 
  [[ -f $file ]] && echo $file exists || { echo error; exit 1; }
  [[ -d $dir ]] || mkdir $dir
+
+
+case
+----
+For the more complex conditionals, instead of nested *ifs*, BASH has ``case``.
+
+::
+ 
+ read -p "Are you ready (y/n)? " yesno   # expects user input
+ case $yesno in
+   y|yes) do_something_if_yes ;;
+   n|no) do_something_if_no ;;
+   *) do_something_else ;;
+ esac
+ # $yesno can be replaced with ${yesno,,} to convert to a lower case on the fly
+
+
+It tries to match the variable against each pattern in turn. Understands patterns rules like ``*, ?, [], |``.
+
+::
+
+ read -p "Enter your age? " age
+ case $age in
+   [1-9]|1[0-2]) echo Child ;;
+   1[3-9]|[2-5][0-9]) echo Adult ;;
+   [6-9][0-9]) echo Senior ;;
+   *) echo Should be dead by now or wrong input ;;
+ esac
+ 
+``;;`` is important, if replaced with ``;&``, execution will continue with the command associated with the next pattern, without testing it. ``;;&`` causes the shell to test next pattern. The default behaviour with ``;;`` is to stop matches after first pattern has been found.
 
 
 More about redirection, pipe and multiple commands execution 
