@@ -30,6 +30,9 @@ How jupyter notebooks work
   you can plots and other things embedded, too so that it becomes a
   complete story.
 
+JupyterLab is the next iteration of this and has many more features,
+making it closer to an IDE or RStudio.
+
 
 Jupyterhub
 ==========
@@ -37,18 +40,32 @@ Jupyterhub
 .. note::
 
    Jupyterhub on Triton is still under development, and features will
-   be added as they are needed or requested.
+   be added as they are needed or requested.  Please use the `Triton
+   issue tracker
+   <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`__.
 
 The easiest way of using Jupyter is through JupyterHub - it is a
 multi-user jupyter server which takes a web-based login and spawns
 your own single-user server.  This is available on Triton.
 
-Connecting
-----------
+Connecting and starting
+-----------------------
 Currently jupyterhub is available only available within Triton, so you
 have to set up the :ref:`proxy described in the section below
 <jupyter-proxy-setup>`.  Once this is done, connect to
 ``https://jupyter01.int.triton.aalto.fi``.
+
+Once you log in, you must start your single-user server.  There are
+several options available that balance long run time and short run
+time but more memory available.  These run in the Slurm queue, so
+starting takes a few seconds.  The resources you request are managed
+by slurm: if you go over the memory limit, your server will be killed
+without warning or notification (but you can see it in the output log,
+``~/'jupyterhub_slurmspawner_*.log``).  The jupyter server nodes are
+oversubscribed, which means that we can allocate more memory and CPU
+than is actually available.  We will monitor the nodes to try to
+ensure that there are enough resources available, but do report
+problems to us.
 
 Usage
 -----
@@ -71,7 +88,7 @@ The log files for your single-user servers can be found in, see
 ``~/jupyterhub_slurmspawner_*.log``.  These will eventually be cleaned
 up when they are more than 1 week old.
 
-For `web security reasons
+For `reasons of web security
 <https://jupyterhub.readthedocs.io/en/latest/reference/websecurity.html>`__,
 you can't install your own extensions (but you can install your own
 kernels).  Send your requests to us instead.
@@ -117,7 +134,7 @@ Your own notebooks via ``sjupyter``
    This is currently not integrated into the Jupyterhub setup above.
 
 
-.. jupyter-proxy-setup:
+.. _jupyter-proxy-setup:
 
 Set up the proxy
 ----------------
@@ -175,7 +192,7 @@ notebook idle, no one else can use them.  Thus, try to use the
 
 
 Other kernels and software
-==========================
+--------------------------
 
 Jupyter isn't just Python - you can run other programming languages
 with the same notebook interface.  See the `full list of kernels here
@@ -237,8 +254,8 @@ See also
   * Online demo: https://try.jupyter.org/
 * Jupyter basic tutorial: https://www.youtube.com/watch?v=HW29067qVWk
   (this is just the first link on youtube - there are many more too)
-* CSC has this service, too, however there is no long term saving yet
-  so there is limited research usefulness: https://notebooks.csc.fi/
+* CSC has this service, too, however there is no long term storage yet
+  so there is limited usefulness for research: https://notebooks.csc.fi/
 
 
 ..
