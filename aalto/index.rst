@@ -10,6 +10,7 @@ for Research page
 .. toctree::
    :maxdepth: 1
 
+   account
    linux
    mac
    windows
