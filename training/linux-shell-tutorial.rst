@@ -173,7 +173,7 @@ There are some advanced permission bits:
 :Exercise:
  - on Triton make a directory at ``$WRKDIR``, allow user and group members
    full access and no access for others
- - change group ownership to 'scip', set s-bit for the group (one can
+ - change group ownership to '[FIXME: must be a group member]', set s-bit for the group (one can
    open another 'scip' session to check that *scip user* has access)
  - Note: make sure your upper directory has *o+x* bit set
 :Exercise*: create a directory and a subdirectory in it and set their
@@ -236,13 +236,14 @@ One of the things to play with: command line prompt defined in PS1 [#]_
 For special characters see PROMPTING at ``man bash``. To make it
 permanent, should be added to *.bashrc* like ``export PS1``.
 
-:Exercise: customize a prompt ``$PS1``, make sure is has a current
-           directory name and the hostname in it in the format
-           *hostname:/path/to/current/dir*. Hint: save the original
-           PS1 like ``oldPS1=$PS1`` to be able to recover it any time.
-:Exercise*: make it colorful
-:Exercise*: Find some example ``bashrc`` files online and see how long
-	    they are.  Do you get any good ideas?
+:Home exercise:
+  - customize a prompt ``$PS1``, make sure is has a current
+    directory name and the hostname in it in the format
+    *hostname:/path/to/current/dir*. Hint: save the original
+    PS1 like ``oldPS1=$PS1`` to be able to recover it any time.
+  - make it colorful
+  - take a look at https://www.tldp.org/LDP/abs/html/sample-bashrc.html 
+    Do you get any good ideas?
 
 Createing/editing/viewing file
 ------------------------------
@@ -276,6 +277,7 @@ Try: add above mentioned ``export PS1`` to *.bashrc*. Remember ``source .bashrc`
 :Exercise*: Set some default options for the ``less`` program in your
 	    bashrc.  Examples: case-insensitive searching, long
 	    prompt, wrapping lines.
+
 
 Input and output: redirect and pipes
 ------------------------------------
@@ -313,40 +315,12 @@ Redirects:
 **unix philosophy** is a lot of small, specialized, good programs
 which can be easily connected together.
 
-
-grep
-----
-Later on you'll find out that ``grep`` is one of the most useful
-commands you ever discover on Linux (except for all the *other* most
-useful commands ever)
+To dump output of all commands at once: group them
 
 ::
 
- grep <pattern> <filename>  # grep lines that match <pattern>
- grep -R -i <pattern> <directory>  # grep all the files in the <directory>, case insensitive
- grep -v ...  # grep everything except
- grep -C 2 ... # displaying 2 extra lines before and after the match (-A just after, -B just before)
- grep -c ... # counts the number of matches
- grep -o <pattern> ... # shows only the matched part of the string (by default grep shows whole line)
- grep -E <extended_regexpr> ... # accepts way more advanced regular expressions as a search pattern
-
-For details on what <pattern> could be, look for REGULAR EXPRESSIONS
-at ``man grep``.  Some examples:
-
-::
-
- grep -Eio "\b[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}\b" file.txt  # grep emails to a list
- ps auxw | grep firefox  # grep currently running firefox processes
-
-:Exercise: make a pipe that counts number of files/directories (including dot files) in your directory
-:Exercise: 
- - grep directories out of ``ls -l``
- - grep all but blank lines in the file (Hint: 'man grep' for regular expression)
- - expand the previous one to filter out commented lines (start with #)
-:Exercise*: expand ``du`` to list dot files/directories also
-:Exercise*: ``uptime; w > wuptime`` how to add output of both commands
-	    to the same file with only one redirect?
-:Exercise*: Count unique logged in users on kosh/taltta/triton or anywhere else
+ { command1; command2; } > filename  # commands run in the current shell  as a group
+ ( command1; command2; ) > filename  # commands run in external shell as a group
 
 
 Pipelines: ;, &&, and ||
@@ -380,6 +354,42 @@ boolean operators.  They can be used for quick conditionsals.
 Try: ``cd /nonexistent_dir && ls /nonexistent_dir`` compare with ``cd /nonexistent_dir; ls /nonexistent_dir``
 
 Try: ``ping -c 1 8.8.8.8 > /dev/null && echo online || echo offline``
+
+
+grep
+----
+Later on you'll find out that ``grep`` is one of the most useful
+commands you ever discover on Linux (except for all the *other* most
+useful commands ever)
+
+::
+
+ grep <pattern> <filename>  # grep lines that match <pattern>
+ command | grep <pattern>  # grep lines from stdin
+ grep -R -i <pattern> <directory>  # grep all the files in the <directory>, case insensitive
+ grep -v ...  # grep everything except
+ grep -C 2 ... # displaying 2 extra lines before and after the match (-A just after, -B just before)
+ grep -c ... # counts the number of matches
+ grep -o <pattern> ... # shows only the matched part of the string (by default grep shows whole line)
+ grep -E <extended_regexpr> ... # accepts way more advanced regular expressions as a search pattern
+
+For details on what <pattern> could be, look for REGULAR EXPRESSIONS
+at ``man grep``.  Some examples:
+
+::
+
+ grep -Eio "\b[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}\b" file.txt  # grep emails to a list
+ ps auxw | grep firefox  # grep currently running firefox processes
+
+:Exercise: make a pipe that counts number of files/directories (including dot files) in your directory
+:Exercise: 
+ - grep directories out of ``ls -l``
+ - grep all but blank lines in the file (Hint: 'man grep' for regular expression)
+ - expand the previous one to filter out commented lines (start with #)
+:Exercise*: expand ``du`` to list dot files/directories also
+:Exercise*: ``uptime; w > wuptime`` how to add output of both commands
+	    to the same file with only one redirect?
+:Exercise*: Count unique logged in users on kosh/taltta/triton or anywhere else
 
 
 Aliases
