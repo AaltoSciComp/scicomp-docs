@@ -3,108 +3,194 @@ Linux shell tutorial
 ====================
 
 
-Course preview
-====
+Course basics
+=============
 Linux Shell tutorial by Science IT at Aalto University.
 
-BASH practicalities, shell scripting. Learning by doing.
+Abstract: BASH practicalities, shell scripting. Learning by doing.  Corresponds to 4 sessions 3h each, session rough schedule 2x1h25m with 10m break in between.
 
-Corresponds to 4 sessions 3h each, session rough schedule 2x1h25m with 10m break in between.
+Setting up instructions for the lecturer: Main terminal white&black
+with the enlarged font size.  One small terminal at the top that shows
+commands to learners.
 
-Setting up instructions for the lecturer: one slim terminal at the top that keeps a track of the commands
+ - ``export PROMPT_COMMAND='history -a'``   # .bashrc or all the terminals one launches commands
+ - ``tail -n 0 -F .bash_history``
 
- - export PROMPT_COMMAND='history -a'   # .bashrc or all the terminals one launches commands
- - tail -n 0 -F .bash_history
+Starred exersices (*) are for advanced users who would like further stimulation.
 
-Main terminal white&black with the enlarged font size.
- 
-Starred exersices (*) for the advanced user, to keep them busy.
-
-Based on 
+Based on
  - ``man bash`` v4.2 (Triton default version in Feb 2018)
  - Advanced BASH scripting guide [#]_
  - UNIX Power Tools, Shelley Powers etc, 3rd ed, O'Reilly
- - common sence and 20+ years Linux experience
+ - common sense and 20+ years Linux experience
  - see also other references in the text
+
+Getting a shell
+---------------
+
+Before the course: set yourself up with a bash shell.  Connect to a
+server or open on your own computer.  Ask for help if needed:
+
+- Linux and Mac users: just open a terminal window.
+- Windows users: install PuTTY [#]_ then SSH to any interactive server
+  at Aalto or your department.
 
 -----------------------------------------------------------------------------
 
-1. session
-====
+1. session: interactive shell
+=============================
 Interactive usage of BASH
 
-Linux and Mac users: just open a terminal window.
+- Shell -- is what you get when your terminal window is open. It is a
+  command-line (CLI), an interface that interpreters and executes the
+  commands.
+- The name comes from being a "shell" (layer) around the operating
+  system.  It connects and binds all programs together.
+- This is the basic, raw method of using UNIX-like systems.  It may
+  not be used everyday, but it's really good (necessary) for any type
+  of automation and scripting - as is often need in Science or when
+  using Triton.
+- There are multiple shells.  This talk is about `bash
+  <https://en.wikipedia.org/wiki/Bash_(Unix_shell)>`__, which is the
+  most common one.  `zsh <https://en.wikipedia.org/wiki/Z_shell>`__ is
+  another common shell which is somewhat similar but has some more
+  powerful features.  `tcsh <https://en.wikipedia.org/wiki/Tcsh>`__ is
+  another shell from a completely different family (the csh family),
+  which has quite different syntax.
+- ``bash`` is a "Bourne shell": the "bourne-again shell".  Open source
+  version of original Bourne shell.
 
-Windows users: install PuTTY [#]_ then SSH to any interactive server at Aalto or your department.
 
-Shell -- is what you get when your teminal window is open. It is a command-line (CLI), an interface that intepreters and executes the commands.
+What's a UNIX process?
+----------------------
+- To understand a shell, let's first understand what processes are.
+- All programs are a process
+- Processes have:
 
+  - Process ID (integer)
+  - Name
+  - Command line arguments
+  - input and output: ``stdin`` (input, like from keyboard),
+    ``stdout`` (output, like to screen), ``stderr`` (like stdout)
+  - Return code (integer) when complete
+  - Working directory
+  - environment variables: key-values which get inherited.
+
+- These concepts bind together *all* UNIX programs.
 
 Built-in and external commands
-----
-cd, pwd, echo, ls vs. date, less, lpr etc. 
+------------------------------
+
+There are two types of commands:
+
+- shell built-in: ``cd``, ``pwd``, ``echo``, ``test``, etc.
+- external: ``ls``, ``date``, ``less``, ``lpr``, ``test``, etc.
+- some can be both: e.g. ``test``.  Options not always the same!
+- For the most part, these behave similarly, which is a good thing!
+  You don't have to tell which is which.
 
 **Hint** ``type -a`` to find what is behind the name
 
-``echo something to type`` # types whatever you put after
+- **echo**: prints out ``echo something to type`` # types whatever you put after
 
-Who am I: ``id``, ``echo $HOME``, ``echo $SHELL`` 
+Who am I: ``id``, ``echo $HOME``, ``echo $SHELL``
 (Your default shell is not a /bin/bash? Login to kosh/taltta and run ``chsh -s /bin/bash``)
 
-Where am I: ``pwd``
+Where am I: ``pwd`` (this shows the first piece of process
+information: current directory)
 
-Your best friend ever -- ``man`` -- collection of manuals. Type */search_word* for searching through the man page.
+Your best friend ever -- ``man`` -- collection of manuals. Type
+*/search_word* for searching through the man page.  But... if it's a
+builtin, you need to use ``help``
 
 
-Files and dirs
-----
+Files and directories
+---------------------
+Files contain data.  They have a name, permissions, owner
+(user+group), contents, and some other metadata.
+
+
+``ls`` is the standard way of getting information about files.
 
 ::
 
  ls, ls -l, ls -la, ./, ../, *, ?, [], [!], {}, \
 
+There are a variety of commands to manipulate directories:
+
 ::
 
  cd, mkdir, cp, rm, rm -r, mv, ln, touch
+
+Note that ``cd`` is a shell builtin which change's the shell's own
+working directory.  This is the base from which all other commands
+work: ``ls`` by default tells you the current directory.  ``.`` is the
+current directory, ``..`` is the parent directory, etc.  This is
+inherited to other commands you run.
 
 **Hint** ``ls -lX``, ``ls -ltr``, ``file <filename>``
 
 **Hint** Quotation matters
 
-:Exercise: mkdir in your $HOME (or $WRKDIR if on Triton), cd there and 'touch' a file. Rename it. Make a copy and then remove the original
-:Exercise*: 
+:Exercise: mkdir in your ``$HOME`` (or ``$WRKDIR`` if on Triton), cd
+           there and 'touch' a file. Rename it. Make a copy and then
+           remove the original
+:Exercise*:
  - ``ls`` dot files only
- - create a dozen empty files with one command with names like file1.txt, ... file12.txt
-
+ - create a dozen empty files with one command with names like
+   ``file1.txt``, ..., ``file12.txt``
+:Exercise*: Compare the data you get from ``ls -l`` and ``stat``.
+	    What metadata do you find?
 
 Permissions
-----
-rwxrwxrwx -- read, write, execute/search
+-----------
+- Permissions are one of the types of file metadata.
+- They tell you if you can *read* a file, *write* a file, and
+  *execute a file/list directory*
+- Each of these for both *user*, *group*, and *others*
+- Here is a typical permission bits for a file: ``-rw-r--r--``
+- In general, it is ``rwxrwxrwx`` -- read, write, execute/search for
+  user, group, others respectively
+- ``ls -l`` gives you details on files.
 
-::
+Modifying permissions::
 
  chmod u+rwx,g-rwx,o-rwx <files>  # u=user, g=group, o=others, a=all
   -or-
  chmod 700 <files>   # r=4, w=2, x=1
  chmod -R <perm> <directory>  # recursive, changing all the subdirectories and files at once
- 
+
  chgrp group_name <file or directory>  # changing group ownership (you must be a member)
 
-s-bit:  setuid/setgid bit, preseves user and/or group IDs
+There are some advanced permission bits:
 
-t-bit: sticky bit, for directories it prevents from removing file by another user (example */tmp*)
+- s-bit:  setuid/setgid bit, preserves user and/or group IDs.
+- t-bit: sticky bit, for directories it prevents from removing file by
+  another user (example */tmp*)
 
 **Hint** File Manager like Midnight Commander -- ``mc``
 
 :Exercise:
- - on Triton make a directory at $WRKDIR, allow user and group members full access and no access for others
- - change group ownership to 'scip', set s-bit for the group (one can open another 'scip' session to check that *scip user* has access)
- - Note: make sure your upper directory has  *o+x* bit set
-:Exercise*: create a directory and a subdirectory in it and set their permissions to 700 with one command
-:Exercise*: ``ls -ld`` tells you that directory has permissions ``rwxr-Sr--``, does group members get access there?
+ - on Triton make a directory at ``$WRKDIR``, allow user and group members
+   full access and no access for others
+ - change group ownership to 'scip', set s-bit for the group (one can
+   open another 'scip' session to check that *scip user* has access)
+ - Note: make sure your upper directory has *o+x* bit set
+:Exercise*: create a directory and a subdirectory in it and set their
+            permissions to 700 with one command
+:Exercise*: ``ls -ld`` tells you that directory has permissions
+            ``rwxr-Sr--``, does group members get access there?
 
 Hotkeys
-----
+-------
+- Is it annoying to have to type everything in the shell?  No, because
+  we have hotkeys.  In fact, it can become much more efficient and
+  powerful to use the shell.
+- Most important key: **TAB**: autocomplete.  You should never be
+  typing full filenames or command names.  TAB can complete almost anything
+
+Common hotkeys:
+
 - TAB -- autocomlpetion
 - Home `or` Ctrl-a -- start of the command line
 - End `or` Ctrl-e -- end
@@ -126,11 +212,20 @@ Hotkeys
 **Hint** Check */etc/inpurc* for some default key bindings, more can be defined *~/.inputrc* (left as an exercise)
 
 
-Initialization files
-----
-*.bashrc* (when SSH) and *.bash_profile* (interactive login to a workstation), often a symlink from one to another.
+Initialization files and configuration
+--------------------------------------
+- When the shell first starts (when you login), it reads some files.
+  These are normal shell files, and it evaluates normal shell commands
+  to set configuration.
+- You can always test things in your own shell and see if it works
+  before putting it in the config files.  Highly recommended!
+- You customize your environment means setting or expanding aliases,
+  variables, functions.
+- The config files are:
 
-Customizing your environment means setting or expanding aliases, variables, functions. If you do it online, you do it once for the particular session, to make changes permanent add them to *.bashrc* (assuming *.bash_profile* is linked).
+  - ``.bashrc`` (when SSH) and
+  - ``.bash_profile`` (interactive login to a workstation).
+  - they are often a symlink from one to another.
 
 One of the things to play with: command line prompt defined in PS1 [#]_
 
@@ -138,37 +233,59 @@ One of the things to play with: command line prompt defined in PS1 [#]_
 
  PS1="[\d \t \u@\h:\w ] $ "
 
-For special characters see PROMPTING at ``man bash``. To make it permanent, should be added to *.bashrc* like ``export PS1``.
+For special characters see PROMPTING at ``man bash``. To make it
+permanent, should be added to *.bashrc* like ``export PS1``.
 
-:Exercise: customize a prompt ``$PS1``, make sure is has a current directory name and the hostname in it in the format *hostname:/path/to/current/dir*. Hint: save the original PS1 like ``oldPS1=$PS1`` to be able to recover it any time.
+:Exercise: customize a prompt ``$PS1``, make sure is has a current
+           directory name and the hostname in it in the format
+           *hostname:/path/to/current/dir*. Hint: save the original
+           PS1 like ``oldPS1=$PS1`` to be able to recover it any time.
 :Exercise*: make it colorful
+:Exercise*: Find some example ``bashrc`` files online and see how long
+	    they are.  Do you get any good ideas?
 
+Createing/editing/viewing file
+------------------------------
+* A **text editor* edits files as ASCII.  These are your best friend.
+  In fact, text files are your best friend: rawest, most efficient,
+  longest-lasting way of storing data.
+* "pager" is a generic term for things that view files or data.
 
-Create/edit a file
------
-Editors like: *vim*, *emacs* or the simplest one *nano*.
+Editors like:
 
-Quick look at the text file ``cat filename.txt``
+- *nano* - simplest
+- *vim* - minimal.  To save&quit, ``ESC :wq``
+- *emacs* - or the simplest one *nano*.  To save&quit: ``Ctrl-x
+  Ctrl-c``
+
+To view contents of a file in a scrollable fashion: ``less``
+
+Quick look at the text file ``cat filename.txt`` (dumps everything to
+screen- beware of non-text binary files or large files!)
 
 Other quick ways to add something to a file (no need for an editor)
 
-``echo 'Some sentense, or whatever else 1234567!-+>$#' > filename.txt``
+``echo 'Some sentence, or whatever else 1234567!-+>$#' > filename.txt``
 
 ``cat > filename2.txt`` to finish typing and write written to the file, press enter, then Ctrl-d.
 
-**Hint** best text viewer ever -- *less -S*  (to open a file in your EDITOR, hit *v*, to search through type */search_word*)
+**Hint** best text viewer ever -- ``less -S``  (to open a file in your EDITOR, hit *v*, to search through type */search_word*)
 
 Try: add above mentioned ``export PS1`` to *.bashrc*. Remember ``source .bashrc`` to enable changes
 
+:Exercise*: Set some default options for the ``less`` program in your
+	    bashrc.  Examples: case-insensitive searching, long
+	    prompt, wrapping lines.
 
-Redirect, pipe
-----
-Redirect: append to a file or replace a file ``command > file.txt`` *or* ``command >> file.txt``
+Input and output: redirect and pipes
+------------------------------------
+* Programs can display something: ``echo this is some output`` or ``cat``
+* Programs can take some input: e.g. ``less`` by default displays
+  input if no filename given.
 
-::
-
- echo Hello World > hello.txt
- ls -lH >> current_dir_ls.txt
+- ``cat /etc/bashrc`` dumps that file to *stardard output* (stdout)
+- ``cat /etc/bashrc | less`` gives it to ``less`` on *standard input*
+  (stdin)
 
 Pipe: output of the first command as an input for the second one ``command_a | command_b``
 
@@ -179,12 +296,29 @@ Pipe: output of the first command as an input for the second one ``command_a | c
  du -hs * | sort -h  # see what directories use the most space
  w -h | wc -l  # count a number of logged in users
  ls -1 | tr '\n' ' '   # replace new line with a comma
+
+Redirects:
+- Like pipes, but send data to files instead of other processes.
+- Replace a file: ``command > file.txt``
+- Append to a file: ``command >> file.txt`` (be careful you don't mix
+  them up!)
+
+::
+
+ echo Hello World > hello.txt
+ ls -lH >> current_dir_ls.txt
  getent passwd | cut -d: -f1,5 > users  # extract user names and store them to a file
+
+**This is the unix philosophy** and the true power of the shell.  The
+**unix philosophy** is a lot of small, specialized, good programs
+which can be easily connected together.
 
 
 grep
 ----
-Later on you'll find out that *grep* is one of the most useful commands you ever discover on Linux
+Later on you'll find out that ``grep`` is one of the most useful
+commands you ever discover on Linux (except for all the *other* most
+useful commands ever)
 
 ::
 
@@ -196,38 +330,60 @@ Later on you'll find out that *grep* is one of the most useful commands you ever
  grep -o <pattern> ... # shows only the matched part of the string (by default grep shows whole line)
  grep -E <extended_regexpr> ... # accepts way more advanced regular expressions as a search pattern
 
-For details on what <pattern> could be, look for REGULAR EXPRESSIONS at ``man grep`, here are some
+For details on what <pattern> could be, look for REGULAR EXPRESSIONS
+at ``man grep``.  Some examples:
 
 ::
 
  grep -Eio "\b[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}\b" file.txt  # grep emails to a list
  ps auxw | grep firefox  # grep currently running firefox processes
 
-:Exersice: make a pipe that counts number of files/directories (inluding dot files) in your directory
+:Exercise: make a pipe that counts number of files/directories (including dot files) in your directory
 :Exercise: 
  - grep directories out of ``ls -l``
  - grep all but blank lines in the file (Hint: 'man grep' for regular expression)
  - expand the previous one to filter out commented lines (start with #)
 :Exercise*: expand ``du`` to list dot files/directories also
-:Exercise*: ``uptime; w > wuptime`` how to add output of both commands to the same file with one redirect?
+:Exercise*: ``uptime; w > wuptime`` how to add output of both commands
+	    to the same file with only one redirect?
 :Exercise*: Count unique logged in users on kosh/taltta/triton or anywhere else
 
 
-&& and ||
-----
-If succesful ``command_a && command_b``
+Pipelines: ;, &&, and ||
+------------------------
+- You can put several commands on the same line using different
+  separators.
+- The shell term for this is *pipelines*.
 
-If failed  ``command_a || command_b``
+Chaining: ``command_a ; command_b``: always runs both commands.
+
+Remember exit codes?  In shell, 0=success and anything 1-255=failure.
+Note that this is opposite of normal Boolean logic!
+
+The ``&&`` and ``||`` are `short-circuit
+<https://en.wikipedia.org/wiki/Short-circuit_evaluation>`__ (lazy)
+boolean operators.  They can be used for quick conditionsals.
+
+* ``command_a && command_b``
+
+  * If ``command_a`` is successful, also run ``command_b``
+  * final exit code is last evaluated one, which has the role of Boolean *and*.
+
+* ``command_a || command_b``
+
+  * If ``command_a`` is *not* successful, also run ``command_b``
+  * final exit code is that of the last evaluated command, which has
+    the role of Boolean *or*.
 
 **Hint** command_a && command_b || command_c
 
-Try: ``cd /bad_dir && ls /bad_dir`` compare with ``cd /bad_dir; ls /bad_dir``
+Try: ``cd /nonexistent_dir && ls /nonexistent_dir`` compare with ``cd /nonexistent_dir; ls /nonexistent_dir``
 
 Try: ``ping -c 1 8.8.8.8 > /dev/null && echo online || echo offline``
 
 
 Aliases
-----
+-------
 Define a new or re-define an old command ``alias space='du -hs .[!.]* * | sort -h'``, ``alias rm='rm -i'``
 
 Aliases go to *.bashrc* and available later by default.
