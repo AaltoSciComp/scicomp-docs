@@ -388,7 +388,8 @@ Define a new or re-define an old command ``alias space='du -hs .[!.]* * | sort -
 
 Aliases go to *.bashrc* and available later by default.
 
-Try: add to *.bashrc*
+Try: Define this on command line, then add to *.bashrc* once you
+verify it works:
 
 ::
 
@@ -404,7 +405,15 @@ and then
 
 find
 ----
-It is a number one in searching files in shell.
+* ``find`` is a very unixy program: it finds files, but in the most
+  flexible way possible.
+* It is a amazingly complicated program
+* It is a number one in searching files in shell
+
+With no options, just recursively lists all files::
+
+  find
+  find | grep some_filename
 
 ::
 
@@ -413,12 +422,15 @@ It is a number one in searching files in shell.
  find . -type -f -size +10M -size -100M  # find all files of size more than 10M and less than 100M
  find ~ ! -user $USER | xargs ls -ld # find everything that does not belong to you
  find . -type d -exec chmod g+rwx {} \;   # open all directories to group members
- 
+
 More options: by modification/accessing time, by ownership, by access type, joint conditions, case-insensitive, that do not match, etc [#]_ [#]_
 
-**Hint**  On Triton ``lfs find``
+**Hint**  On Triton ``lfs find``.  This uses a raw lustre connection
+to make it more efficient than accessing every file.
 
-**Hint**  Another utility that you may find useful ``locate``, but on workstations only
+**Hint**  Another utility that you may find useful ``locate``, but on
+workstations only.  This creates a cached database of all files, and
+just searches that so it is much faster.
 
 **Hint** 'Too many arguments' error solved with ``find ... | xargs``
 
@@ -428,8 +440,11 @@ More options: by modification/accessing time, by ownership, by access type, join
 
 
 Substitute a command output
-----
-``$(command)`` or alternatively ```command```. Could be a commnad or a list of commands with pipes, redirections, variables inside. Can be nested as well.
+---------------------------
+* Command substitutions execute a command, take its stdout, and  place
+  it on the command line in that place.
+
+``$(command)`` or alternatively ```command```. Could be a command or a list of commands with pipes, redirections, variables inside. Can be nested as well.
 
 ::
 
@@ -439,8 +454,8 @@ Substitute a command output
 
 
 Transferring files (archiving on the fly)
-----
-For Triton users abilty to transfer files to/from Triton is essential.
+-----------------------------------------
+For Triton users the ability to transfer files to/from Triton is essential.
 
 Assume a use case: you have logged in to kosh/taltta/lyta/etc. To get some files from Triton's WRKDIR to one of the directories available around:
 
@@ -458,39 +473,48 @@ Another use case, copying to Triton, or making a directory backup
 Another use case, you want to archive your Triton data to some other place
 
 ::
- 
+
  # login to Triton
  cd $WRKDIR
  tar czf - path/to/dir | ssh kosh.aalto.fi 'cat > path/to/archive/dir/archive_file.tar.gz'
- 
-*tar* is standard de-facto for archiving on UNIX systems. *z* stands for compressing with GZIP, otherwise directory is packed, but not compressed
+
+*tar* is the de-facto standard for archiving on UNIX systems. *z*
+ stands for compressing with GZIP, otherwise directory is packed, but
+ not compressed
 
  - ``tar czvf path/to/archive.tar.gz directory/to/archive/  another/file/to/archive.txt``  # to archive
  - ``tar xzf path/to/archive.tar.gz -C path/to/directory``  # to extract
  - ``tar tzf archive.tar.gz``
-  
-:Try: whatever use case you have, try trasfering files.
+
+:Try: whatever use case you have, try transferring files.
 
 :Exercise: make an alias so *rsyncing* a copy of your local directory (or kosh:somedir) to Triton
 
 
 Exit the shell
-----
+--------------
 ``logout`` or Ctrl-d (export IGNOREEOF=1 to *.bashrc*)
 
-In order to keep your sessions running while you logged out discover ``screen``
+In order to keep your sessions running while you logged out, you
+should discover the ``screen`` program.
 
  - ``screen`` to start a session
- - Ctrl-a-d to detach the session while you are in
+ - Ctrl-a-d to detach the session while you are connected
  - ``screen -ls`` to list currently running sessions
- - ``screen -rx <session_id>`` to attach the session, one can use TAB for the autocompletion or skip the <session_id> if there is only one session running 
+ - ``screen -rx <session_id>`` to attach the session, one can use TAB for the autocompletion or skip the <session_id> if there is only one session running
 
 Example: irssi on kosh / lyta
 
 
 SSH keys and proxy (*bonus section)
-----
-SSH keys and proxy jumping makes life way easier. Logining to Triton from your Linux workstation or from kosh/lyta.
+-----------------------------------
+* SSH is the standard for connecting to remote computers: it is
+  both powerful and secure.
+* It is highly configurable, and doing some configuration will make
+  your life much easier.
+
+SSH keys and proxy jumping makes life way easier. For example, logging
+on to Triton from your Linux workstation or from kosh/lyta.
 
 For PuTTY (Windows) SSH keys generation, please consult section "Using public keys for SSH authentication" at [#]_
 
@@ -503,27 +527,28 @@ On Linux/Mac: generate a key on the client machine
 
 From now on you should be able to login with the SSH key instead of password. When SSH key added to the ssh-agent (once during the login to workstation), one can login automatically, passwordless.
 
-Note that same key can be used 
+Note that same key can be used on multiple different computers.
 
-SSH proxy is yet another trick to make life easier: allows to jump through a node (in OpenSSH version 7.2 and earlier -J option is not supported yet, here is an old receipe that works on Ubuntu 16.04). So, SSH/SCP from your laptop/home PC through kosh.
+SSH proxy is yet another trick to make life easier: allows to jump
+through a node (in OpenSSH version 7.2 and earlier ``-J`` option is
+not supported yet, here is an old recipe that works on Ubuntu
+16.04). By using this, you can directly connect to a system (Triton)
+through a jump host (kosh):
 
-On the client side, add to *~/.ssh/config* file (create it if does not exists and make it readable by you only)
-
-::
+On the client side, add to ``~/.ssh/config`` file (create it if does
+not exists and make it readable by you only)::
 
  Host triton triton.aalto.fi
      Hostname triton.aalto.fi
      ProxyCommand ssh YOUR_AALTO_LOGIN@kosh.aalto.fi -W %h:%p
 
-Now try
-
-::
+Now try::
 
  ssh triton
 
 
 2. session
-====
+==========
 Command line advances and introduction to BASH scripting
 
 Files and dirs advances
