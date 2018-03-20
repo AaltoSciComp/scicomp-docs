@@ -507,56 +507,19 @@ Define a new or re-define an old command
 
 Aliases go to *.bashrc* and available later by default.
 
-:Exercice 2.1:
- - 
- - Define above mentioned ``ping ...`` command as an alias (you name it, literally) in *.bashrc* once you
-verify it works
- - ``source .bashrc`` and try it
- - (*) Using tar, mail and known to you pipes/redirections compose a one-liner that archive file (gzipping as well) and send it as an attachment to a given email
+:Exercise 2.1:
+ - Define above mentioned ``ping ...`` command as an alias (you name it, literally) in *.bashrc*
+   once you verify it works. Then ``source .bashrc`` and try the new alias.
+ - (*) Using tar / mail and known to you pipes/redirections compose a one-liner that archive file
+   (gzipping as well) and send it as an attachment to a given email
 
 :Exercise 2.2:
  - Find all the files in your $HOME that are readable or writable by everyone
- - On Triton find (lfs find ... ) all the dirs/files at $WRKDIR that do not belong to your group. Tip: on Triton at WRKDIR your username $USER and group name are the same. On any other filesystem, ``$(id -gn)`` returns your group name.
+ - On Triton find (lfs find ... ) all the dirs/files at $WRKDIR that do not belong to your group.
+   Tip: on Triton at WRKDIR your username $USER and group name are the same. On any other filesystem,
+   ``$(id -gn)`` returns your group name.
  - On Triton find (lfs find) all the directories at $WRKDIR that do not have s-bit set
  - (*) extend both above commands (lfs find ...) to fix the "wrong" files and directories
-
-
-Transferring files (archiving on the fly)
------------------------------------------
-For Triton users the ability to transfer files to/from Triton is essential.
-
-Assume a use case: you have logged in to kosh/taltta/lyta/etc. To get some files from Triton's WRKDIR to one of the directories available around:
-
-::
-
- scp -r triton.aalto.fi:/scratch/work/LOGIN_NAME/some/files path/to/copy/to
-
-Another use case, copying to Triton, or making a directory backup
-
-::
-
- rsync -urlptDxv --chmod=Dg+s somefile triton.aalto.fi:/scratch/work/LOGIN_NAME  # copy a file to $WRKDIR
- rsync -urlptDxv --chmod=Dg+s dir1/ triton.aalto.fi:/scratch/work/LOGINNAME/dir1/  # sync two directories
-
-Another use case, you want to archive your Triton data to some other place
-
-::
-
- # login to Triton
- cd $WRKDIR
- tar czf - path/to/dir | ssh kosh.aalto.fi 'cat > path/to/archive/dir/archive_file.tar.gz'
-
-*tar* is the de-facto standard for archiving on UNIX systems. *z*
- stands for compressing with GZIP, otherwise directory is packed, but
- not compressed
-
- - ``tar czvf path/to/archive.tar.gz directory/to/archive/  another/file/to/archive.txt``  # to archive
- - ``tar xzf path/to/archive.tar.gz -C path/to/directory``  # to extract
- - ``tar tzf archive.tar.gz``
-
-:Try: whatever use case you have, try transferring files.
-
-:Exercise: make an alias so *rsyncing* a copy of your local directory (or kosh:somedir) to Triton
 
 
 Exit the shell
@@ -1203,4 +1166,41 @@ not exists and make it readable by you only)::
 Now try::
 
  ssh triton
+ 
+Transferring files (archiving on the fly)
+-----------------------------------------
+For Triton users the ability to transfer files to/from Triton is essential.
+
+Assume a use case: you have logged in to kosh/taltta/lyta/etc. To get some files from Triton's WRKDIR to one of the directories available around:
+
+::
+
+ scp -r triton.aalto.fi:/scratch/work/LOGIN_NAME/some/files path/to/copy/to
+
+Another use case, copying to Triton, or making a directory backup
+
+::
+
+ rsync -urlptDxv --chmod=Dg+s somefile triton.aalto.fi:/scratch/work/LOGIN_NAME  # copy a file to $WRKDIR
+ rsync -urlptDxv --chmod=Dg+s dir1/ triton.aalto.fi:/scratch/work/LOGINNAME/dir1/  # sync two directories
+
+Another use case, you want to archive your Triton data to some other place
+
+::
+
+ # login to Triton
+ cd $WRKDIR
+ tar czf - path/to/dir | ssh kosh.aalto.fi 'cat > path/to/archive/dir/archive_file.tar.gz'
+
+*tar* is the de-facto standard for archiving on UNIX systems. *z*
+ stands for compressing with GZIP, otherwise directory is packed, but
+ not compressed
+
+ - ``tar czvf path/to/archive.tar.gz directory/to/archive/  another/file/to/archive.txt``  # to archive
+ - ``tar xzf path/to/archive.tar.gz -C path/to/directory``  # to extract
+ - ``tar tzf archive.tar.gz``
+
+:Try: whatever use case you have, try transferring files.
+
+:Exercise: make an alias so *rsyncing* a copy of your local directory (or kosh:somedir) to Triton
 
