@@ -103,6 +103,9 @@ Your best friend ever -- ``man`` -- collection of manuals. Type
 */search_word* for searching through the man page.  But... if it's a
 builtin, you need to use ``help``
 
+**Disable built-in command** ``enable -n echo``, after this */usr/bin/echo*
+becomes a default instead of built-in *echo*
+
 
 Files and directories
 ---------------------
@@ -114,9 +117,9 @@ Files contain data.  They have a name, permissions, owner
 
 ::
 
- ls, ls -l, ls -la, ./, ../, *, ?, [], [!], {}, \
+ ls, ls -l, ls -la, ./, ../, *, ?, [], [!], {abc,xyz}, {1..10}, \
 
-There are a variety of commands to manipulate directories:
+There are a variety of commands to manipulate files/directories:
 
 ::
 
@@ -130,7 +133,7 @@ inherited to other commands you run.
 
 **Hint** ``ls -lX``, ``ls -ltr``, ``file <filename>``
 
-**Hint** quotation matters: ``echo "$USER"`` vs ``echo '$USER'``
+**Quotation matters** ``echo "$USER"`` vs ``echo '$USER'``
 
 
 Permissions
@@ -154,9 +157,10 @@ Modifying permissions
  chmod -R <perm> <directory>  # recursive, changing all the subdirectories and
  files at once
 
- chgrp group_name <file or directory>  # changing group ownership (you must be a member)
+ chgrp group_name <file or directory>  # changing group ownership (you must be
+ a group member)
 
-There are some advanced permission bits:
+Some advanced permission bits:
 
 - s-bit:  setuid/setgid bit, preserves user and/or group IDs.
 - t-bit: sticky bit, for directories it prevents from removing file by
@@ -169,6 +173,8 @@ There are some advanced permission bits:
 :Exercise 1.1:
  - mkdir in your ``$HOME`` (or ``$WRKDIR`` if on Triton), cd there and 'touch' a file.
    Rename it. Make a copy and then remove the original
+ - list all files in /usr/bin and /usr/sbin that start with non-letter characters with
+   one ``ls`` command
  - ``ls`` dot files only
  - Discover ``stat file`` output. What metadata do you find?
 
@@ -177,9 +183,9 @@ There are some advanced permission bits:
    full access and no access for others
  - change group ownership to (any group that you belong to is fine), set s-bit for the group and
    apply t-bit to a directory, check that the upper directory has *o+x* bit set: now you should
-   have a working space for your group
+   have a private working space for your group
  - create a directory and a subdirectory in it and set their permissions to 700 with one command
- - ``ls -ld`` tells you that directory has permissions ``rwxr-Sr--``, does group members get
+ - ``ls -ld`` tells you that directory has permissions ``rwxr-Sr--``, do group members have
    access there?
 
 Hotkeys
@@ -223,8 +229,8 @@ Initialization files and configuration
 - The config files are:
 
   - ``.bashrc`` (when SSH) and
-  - ``.bash_profile`` (interactive login to a workstation).
-  - they are often a symlink from one to another.
+  - ``.bash_profile`` (interactive login to a workstation)
+  - they are often a symlink from one to another
 
 One of the things to play with: command line prompt defined in PS1 [#]_
 
@@ -397,16 +403,16 @@ Leftovers can be said as a homework, one can go through them next session or giv
  - grep all but blank lines in triton:/etc/bashrc
  - expand the previous one to filter out commented lines (start with #)
  - expand ``du -hs * | sort -h`` to list dot files/directories also
- -* count unique logged in users on triton
+ - (*) count unique logged in users on triton
 
 :Homework:
  - Finish up the exercises mentioned during the session if you have anything left
- - get familiar with any of the text editor of your choice, nano, vim or
+ - Get familiar with any of the text editor of your choice, nano, vim or
    emacs. We will use it heavily during remaining sessions.
- - play with the commands grep, cut: find at least two ways to
+ - Play with the commands grep, cut: find at least two ways to
    extract pure IP addresses out of /etc/hosts. Are there other ways?
- -* using pipes and commands echo/tr/uniq, find doubled words out of 'My
-  Do Do list: Find a a Doubled Word'
+ - (*) Using pipes and commands echo/tr/uniq, find doubled words out of 'My
+  Do Do list: Find a a Doubled Word'. Any easier way to do it?
 
 
 Session 2
