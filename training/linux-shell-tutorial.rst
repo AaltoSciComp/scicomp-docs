@@ -250,14 +250,14 @@ permanent, should be added to *.bashrc* like ``export PS1``.
   - take a look at https://www.tldp.org/LDP/abs/html/sample-bashrc.html 
     Do you get any good ideas?
 
-Createing/editing/viewing file
+Creating/editing/viewing file
 ------------------------------
-* A **text editor* edits files as ASCII.  These are your best friend.
+* A *text editor* edits files as ASCII.  These are your best friend.
   In fact, text files are your best friend: rawest, most efficient,
   longest-lasting way of storing data.
 * "pager" is a generic term for things that view files or data.
 
-Editors like:
+Linux command line *text editors* like:
 
 - *nano* - simplest
 - *vim* - minimal.  To save&quit, ``ESC :wq``
@@ -303,10 +303,10 @@ Pipe: output of the first command as an input for the second one ``command_a | c
  du -hs * | sort -h  # see what directories use the most space
  w -h | wc -l  # count a number of logged in users
  ls -1 | tr '\n' ' '   # replace new line with a comma
- history | grep search_word  # to list all matching commands
+ history | grep -w 'command name'  # to list all matching commands
 
 Redirects:
-- Like pipes, but send data to files instead of other processes.
+- Like pipes, but send data to/from files instead of other processes.
 - Replace a file: ``command > file.txt``
 - Append to a file: ``command >> file.txt`` (be careful you don't mix
   them up!)
@@ -330,6 +330,9 @@ To dump output of all commands at once: group them
 
  { command1; command2; } > filename  # commands run in the current shell  as a group
  ( command1; command2; ) > filename  # commands run in external shell as a group
+ 
+ **Coreutils by GNU** You may find many other useful commands at
+ https://www.gnu.org/software/coreutils/manual/coreutils.html
 
 
 Pipelines: ;, &&, and ||
@@ -423,13 +426,41 @@ Substitute a command output
 * Command substitutions execute a command, take its stdout, and  place
   it on the command line in that place.
 
-``$(command)`` or alternatively ```command```. Could be a command or a list of commands with pipes, redirections, variables inside. Can be nested as well.
+``$(command)`` or alternatively ```command```. Could be a command or a list of commands with pipes, redirections, grouping, variables inside. Can be nested as well.
 
 ::
 
- touch file.$(date +%Y-%m-%d)
- tar czf $(basename $(pwd)).$(date +%Y-%m-%d).tar.gz ...
- now=$(date +%Y-%m-%d)
+ ls_var=$(ls -1a)  # save current directory list to a variable
+ now=$(date +%Y-%m-%d)   # save current date to a variable
+ touch file.$(date +%Y-%m-%d)  # crate a new file with current date in the name
+ tar czf $(basename $(pwd)).$(date +%Y-%m-%d).tar.gz .  # archive current directory content, where new archive name is based on current path and date
+ echo Number of directories $(ls -la | grep ^d | wc -l) files $(ls -la | grep ^- | wc -l)  # counting directories and files on the fly
+  
+This is what makes BASH powerful!
+
+
+More about redirection and pipe
+-------------------------------
+*STDIN*, *STDOUT* and *STDERR*: reserved file descriptors *0*, *1* and *2*. They always there
+whatever process you run.
+
+*/dev/null*  device that discards all data written to it
+
+::
+
+ command > /dev/null  # discards STDOUT only
+ command &>/dev/null  # discards both STDOUT and STDERR
+ command 1>file.out 2>file.err  # redirects outputs to different files
+ command < input_file &> output_file  # takes STDIN as an input and outputs STDIN/STDERR to a file
+ 
+::
+
+ ping -c 1 8.8.8.8 > /dev/null && echo online || echo down  # what happens if 8.8.8.8 is down?
+ ls -l > listing && { mail -s "ls -l $(pwd) @ $(date +'%Y-%m-%d %H:%M')" jussi.meikalainen@aalto.fi < listing; mv listing listing.$(date +"%Y-%m-%d-%H-%M") }  # takes a snapshot of the directory list and send it to email, then renames the file
+
+Pipes are following the same rules with respect to standard output/error. In order to pipe both STDERR and STDOUT ``|&``.
+
+If ``!``  preceeds the command, the exit status is the logical negation.
 
 
 find
@@ -451,6 +482,7 @@ With no options, just recursively lists all files::
  find . -type -f -size +10M -size -100M  # find all files of size more than 10M and less than 100M
  find ~ ! -user $USER | xargs ls -ld # find everything that does not belong to you
  find . -type d -exec chmod g+rwx {} \;   # open all directories to group members
+ find path/dir -type f -mtime +7 -exec rm {} \;  # find and remove all files older than 7 days
 
 More options: by modification/accessing time, by ownership, by access type, joint conditions, case-insensitive, that do not match, etc [#]_ [#]_
 
@@ -463,32 +495,30 @@ just searches that so it is much faster.
 
 **Hint** 'Too many arguments' error solved with ``find ... | xargs``
 
-:Exercise: Find all files with 'lock' in the name in your home directory
-:Exercise*: Find all the files in your $HOME or $WRKDIR that are readable or writable by everyone. What would the ways to "fix them"?
-:Exercise*: Find all the dirs/files that do no belong to your UID/GID (user id and effective group id).
-
 
 Aliases
 -------
-Define a new or re-define an old command ``alias space='du -hs .[!.]* * | sort -h'``, ``alias rm='rm -i'``
+Define a new or re-define an old command
+
+::
+
+ alias space='du -hs .[!.]* * | sort -h'
+ alias rm='rm -i'
 
 Aliases go to *.bashrc* and available later by default.
 
-Try: Define this on command line, then add to *.bashrc* once you
-verify it works:
+:Exercice 2.1:
+ - 
+ - Define above mentioned ``ping ...`` command as an alias (you name it, literally) in *.bashrc* once you
+verify it works
+ - ``source .bashrc`` and try it
+ - (*) Using tar, mail and known to you pipes/redirections compose a one-liner that archive file (gzipping as well) and send it as an attachment to a given email
 
-::
-
- alias chknet='ping -c 1 8.8.8.8 > /dev/null && echo online || echo offline'
-
-and then
-
-::
-
- source .bashrc
- chknet
-
-
+:Exercise 2.2:
+ - Find all the files in your $HOME that are readable or writable by everyone
+ - On Triton find (lfs find ... ) all the dirs/files at $WRKDIR that do not belong to your group. Tip: on Triton at WRKDIR your username $USER and group name are the same. On any other filesystem, ``$(id -gn)`` returns your group name.
+ - On Triton find (lfs find) all the directories at $WRKDIR that do not have s-bit set
+ - (*) extend both above commands (lfs find ...) to fix the "wrong" files and directories
 
 
 Transferring files (archiving on the fly)
@@ -543,11 +573,6 @@ should discover the ``screen`` program.
 
 Example: irssi on kosh / lyta
 
-
-
-2. session
-==========
-Command line advances and introduction to BASH scripting
 
 Files and dirs advances
 ----
