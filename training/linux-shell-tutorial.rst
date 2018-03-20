@@ -392,25 +392,21 @@ at ``man grep``.  Some examples:
 :Exercise*: Count unique logged in users on kosh/taltta/triton or anywhere else
 
 
-Aliases
--------
-Define a new or re-define an old command ``alias space='du -hs .[!.]* * | sort -h'``, ``alias rm='rm -i'``
+Session 2
+=========
 
-Aliases go to *.bashrc* and available later by default.
+Substitute a command output
+---------------------------
+* Command substitutions execute a command, take its stdout, and  place
+  it on the command line in that place.
 
-Try: Define this on command line, then add to *.bashrc* once you
-verify it works:
-
-::
-
- alias chknet='ping -c 1 8.8.8.8 > /dev/null && echo online || echo offline'
-
-and then
+``$(command)`` or alternatively ```command```. Could be a command or a list of commands with pipes, redirections, variables inside. Can be nested as well.
 
 ::
 
- source .bashrc
- chknet
+ touch file.$(date +%Y-%m-%d)
+ tar czf $(basename $(pwd)).$(date +%Y-%m-%d).tar.gz ...
+ now=$(date +%Y-%m-%d)
 
 
 find
@@ -449,18 +445,27 @@ just searches that so it is much faster.
 :Exercise*: Find all the dirs/files that do no belong to your UID/GID (user id and effective group id).
 
 
-Substitute a command output
----------------------------
-* Command substitutions execute a command, take its stdout, and  place
-  it on the command line in that place.
+Aliases
+-------
+Define a new or re-define an old command ``alias space='du -hs .[!.]* * | sort -h'``, ``alias rm='rm -i'``
 
-``$(command)`` or alternatively ```command```. Could be a command or a list of commands with pipes, redirections, variables inside. Can be nested as well.
+Aliases go to *.bashrc* and available later by default.
+
+Try: Define this on command line, then add to *.bashrc* once you
+verify it works:
 
 ::
 
- touch file.$(date +%Y-%m-%d)
- tar czf $(basename $(pwd)).$(date +%Y-%m-%d).tar.gz ...
- now=$(date +%Y-%m-%d)
+ alias chknet='ping -c 1 8.8.8.8 > /dev/null && echo online || echo offline'
+
+and then
+
+::
+
+ source .bashrc
+ chknet
+
+
 
 
 Transferring files (archiving on the fly)
@@ -515,46 +520,6 @@ should discover the ``screen`` program.
 
 Example: irssi on kosh / lyta
 
-
-SSH keys and proxy (*bonus section)
------------------------------------
-* SSH is the standard for connecting to remote computers: it is
-  both powerful and secure.
-* It is highly configurable, and doing some configuration will make
-  your life much easier.
-
-SSH keys and proxy jumping makes life way easier. For example, logging
-on to Triton from your Linux workstation or from kosh/lyta.
-
-For PuTTY (Windows) SSH keys generation, please consult section "Using public keys for SSH authentication" at [#]_
-
-On Linux/Mac: generate a key on the client machine
-
-::
-
- ssh-keygen -t rsa -b 4096  # you will be prompted for a location to save the keys, and a passphrase for the keys. Make sure passphrase is strong (!)
- ssh-copy-id aalto_login@triton.aalto.fi   # transfer file to a Triton, or/and any other host you want to login to
-
-From now on you should be able to login with the SSH key instead of password. When SSH key added to the ssh-agent (once during the login to workstation), one can login automatically, passwordless.
-
-Note that same key can be used on multiple different computers.
-
-SSH proxy is yet another trick to make life easier: allows to jump
-through a node (in OpenSSH version 7.2 and earlier ``-J`` option is
-not supported yet, here is an old recipe that works on Ubuntu
-16.04). By using this, you can directly connect to a system (Triton)
-through a jump host (kosh):
-
-On the client side, add to ``~/.ssh/config`` file (create it if does
-not exists and make it readable by you only)::
-
- Host triton triton.aalto.fi
-     Hostname triton.aalto.fi
-     ProxyCommand ssh YOUR_AALTO_LOGIN@kosh.aalto.fi -W %h:%p
-
-Now try::
-
- ssh triton
 
 
 2. session
@@ -1135,7 +1100,7 @@ Or simply output variable values on exit
  
 
 References
-====
+==========
 .. [#] http://tldp.org/LDP/abs/html/index.html
 .. [#] https://www.putty.org/
 .. [#] https://www.ibm.com/developerworks/linux/library/l-tip-prompt/
@@ -1144,3 +1109,50 @@ References
 .. [#] https://the.earth.li/~sgtatham/putty/0.70/htmldoc/
 .. [#] https://www.computerhope.com/unix/uumask.htm
 .. [#] http://wiki.bash-hackers.org/commands/builtin/printf
+
+
+Bonuses
+=======
+
+[FIXME: should be moved to another tutorial *SSH: beyond login*]
+
+SSH keys and proxy (*bonus section)
+-----------------------------------
+* SSH is the standard for connecting to remote computers: it is
+  both powerful and secure.
+* It is highly configurable, and doing some configuration will make
+  your life much easier.
+
+SSH keys and proxy jumping makes life way easier. For example, logging
+on to Triton from your Linux workstation or from kosh/lyta.
+
+For PuTTY (Windows) SSH keys generation, please consult section "Using public keys for SSH authentication" at [#]_
+
+On Linux/Mac: generate a key on the client machine
+
+::
+
+ ssh-keygen -t rsa -b 4096  # you will be prompted for a location to save the keys, and a passphrase for the keys. Make sure passphrase is strong (!)
+ ssh-copy-id aalto_login@triton.aalto.fi   # transfer file to a Triton, or/and any other host you want to login to
+
+From now on you should be able to login with the SSH key instead of password. When SSH key added to the ssh-agent (once during the login to workstation), one can login automatically, passwordless.
+
+Note that same key can be used on multiple different computers.
+
+SSH proxy is yet another trick to make life easier: allows to jump
+through a node (in OpenSSH version 7.2 and earlier ``-J`` option is
+not supported yet, here is an old recipe that works on Ubuntu
+16.04). By using this, you can directly connect to a system (Triton)
+through a jump host (kosh):
+
+On the client side, add to ``~/.ssh/config`` file (create it if does
+not exists and make it readable by you only)::
+
+ Host triton triton.aalto.fi
+     Hostname triton.aalto.fi
+     ProxyCommand ssh YOUR_AALTO_LOGIN@kosh.aalto.fi -W %h:%p
+
+Now try::
+
+ ssh triton
+
