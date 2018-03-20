@@ -66,6 +66,8 @@ Note: Before summer 2016, you also had to specify a GPU partition with
 ``-p gpu`` or ``-p gpushort``.  Now, this is automatically detected
 and the recommendation is to leave it off.
 
+When using multiple GPU's please verify that the code actually uses them with
+instructions given in `Monitoring GPU usage`_.
 
 GPU nodes environment and CUDA
 ------------------------------
@@ -120,6 +122,33 @@ Where ``gpu_job.sh`` is
 
     ## run my GPU accelerated executable, note the --gres
     srun --gres=gpu:1  $WRKDIR/my_gpu_binary
+
+Monitoring GPU usage
+====================
+
+Currently there isn't a good way of monitoring the gpu usage
+non-interactively. Interactively one can (when the job is running) ssh to the
+gpu node in question and run
+
+::
+
+    login2$ ssh gpuxx
+    gpuxx$ watch -n 1 nvidia-smi
+
+``CTRL + C`` quits the command.
+
+This shows the gpu usage with 1 second interval. The GPU utilized by process
+with PID X is shown in the first column of the second table. The first table
+lists the GPUs by their ID Checking the `Volatile GPU-Util` column gives the
+utilization of GPU. If your code uses less than 50% of the GPU you should
+try to improve the data loading / CPU part of your code as the GPU is 
+underutilized.
+
+If you run multi-GPU job you should verify that the all GPUs are properly
+utilized. For many applications one needs to use multiple CPUs to fill the
+GPUs with data. With badly implemented data handling multi-GPU setups can
+be slower than single-GPU setups.
+
 
 Development
 ===========
