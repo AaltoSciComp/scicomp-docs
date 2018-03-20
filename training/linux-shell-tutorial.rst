@@ -130,17 +130,8 @@ inherited to other commands you run.
 
 **Hint** ``ls -lX``, ``ls -ltr``, ``file <filename>``
 
-**Hint** Quotation matters
+**Hint** quotation matters: ``echo "$USER"`` vs ``echo '$USER'``
 
-:Exercise: mkdir in your ``$HOME`` (or ``$WRKDIR`` if on Triton), cd
-           there and 'touch' a file. Rename it. Make a copy and then
-           remove the original
-:Exercise*:
- - ``ls`` dot files only
- - create a dozen empty files with one command with names like
-   ``file1.txt``, ..., ``file12.txt``
-:Exercise*: Compare the data you get from ``ls -l`` and ``stat``.
-	    What metadata do you find?
 
 Permissions
 -----------
@@ -153,12 +144,15 @@ Permissions
   user, group, others respectively
 - ``ls -l`` gives you details on files.
 
-Modifying permissions::
+Modifying permissions
+
+::
 
  chmod u+rwx,g-rwx,o-rwx <files>  # u=user, g=group, o=others, a=all
   -or-
  chmod 700 <files>   # r=4, w=2, x=1
- chmod -R <perm> <directory>  # recursive, changing all the subdirectories and files at once
+ chmod -R <perm> <directory>  # recursive, changing all the subdirectories and
+ files at once
 
  chgrp group_name <file or directory>  # changing group ownership (you must be a member)
 
@@ -170,16 +164,23 @@ There are some advanced permission bits:
 
 **Hint** File Manager like Midnight Commander -- ``mc``
 
-:Exercise:
+[Lecture notes: that should be a first half, then joint hands-on/break ~30 mins]
+
+:Exercise 1.1:
+ - mkdir in your ``$HOME`` (or ``$WRKDIR`` if on Triton), cd there and 'touch' a file.
+   Rename it. Make a copy and then remove the original
+ - ``ls`` dot files only
+ - Discover ``stat file`` output. What metadata do you find?
+
+:Exercise 1.2:
  - on Triton make a directory at ``$WRKDIR``, allow user and group members
    full access and no access for others
- - change group ownership to '[FIXME: must be a group member]', set s-bit for the group (one can
-   open another 'scip' session to check that *scip user* has access)
- - Note: make sure your upper directory has *o+x* bit set
-:Exercise*: create a directory and a subdirectory in it and set their
-            permissions to 700 with one command
-:Exercise*: ``ls -ld`` tells you that directory has permissions
-            ``rwxr-Sr--``, does group members get access there?
+ - change group ownership to (any group that you belong to is fine), set s-bit for the group and
+   apply t-bit to a directory, check that the upper directory has *o+x* bit set: now you should
+   have a working space for your group
+ - create a directory and a subdirectory in it and set their permissions to 700 with one command
+ - ``ls -ld`` tells you that directory has permissions ``rwxr-Sr--``, does group members get
+   access there?
 
 Hotkeys
 -------
@@ -206,8 +207,6 @@ Common hotkeys:
 - Ctrl-u  -- remove beginning of the line, from cursor
 - Ctrl-k -- remove end of the line, from cursor
 - Ctrl-w -- remove previous word
-
-**Hint** ``history | grep KEYWORD``  to list all matching commands
 
 **Hint** Check */etc/inpurc* for some default key bindings, more can be defined *~/.inputrc* (left as an exercise)
 
@@ -274,7 +273,7 @@ Other quick ways to add something to a file (no need for an editor)
 
 Try: add above mentioned ``export PS1`` to *.bashrc*. Remember ``source .bashrc`` to enable changes
 
-:Exercise*: Set some default options for the ``less`` program in your
+:Home exercise: Set some default options for the ``less`` program in your
 	    bashrc.  Examples: case-insensitive searching, long
 	    prompt, wrapping lines.
 
@@ -293,23 +292,27 @@ Pipe: output of the first command as an input for the second one ``command_a | c
 
 ::
 
- # sort, tr, cut, /dev/null, see also grep below
+ # sort, tr, cut, see more grep examples below
  man -t ls | lpr  # send man page to a default printer
  du -hs * | sort -h  # see what directories use the most space
  w -h | wc -l  # count a number of logged in users
  ls -1 | tr '\n' ' '   # replace new line with a comma
+ history | grep search_word  # to list all matching commands
 
 Redirects:
 - Like pipes, but send data to files instead of other processes.
 - Replace a file: ``command > file.txt``
 - Append to a file: ``command >> file.txt`` (be careful you don't mix
   them up!)
+- Redirect file as STDIN: ``command < file``  (in case program accepts STDIN only)
 
 ::
 
  echo Hello World > hello.txt
  ls -lH >> current_dir_ls.txt
+ cat file1 file2 > file3  # join two files into one
  getent passwd | cut -d: -f1,5 > users  # extract user names and store them to a file
+ paste -s -d : file1 file2 > file3  # join file1 and 2 lines one by one using : as a delimiter
 
 **This is the unix philosophy** and the true power of the shell.  The
 **unix philosophy** is a lot of small, specialized, good programs
@@ -365,13 +368,17 @@ useful commands ever)
 ::
 
  grep <pattern> <filename>  # grep lines that match <pattern>
+  -or- 
  command | grep <pattern>  # grep lines from stdin
- grep -R -i <pattern> <directory>  # grep all the files in the <directory>, case insensitive
- grep -v ...  # grep everything except
- grep -C 2 ... # displaying 2 extra lines before and after the match (-A just after, -B just before)
- grep -c ... # counts the number of matches
- grep -o <pattern> ... # shows only the matched part of the string (by default grep shows whole line)
- grep -E <extended_regexpr> ... # accepts way more advanced regular expressions as a search pattern
+
+::
+
+ grep -R -iw 'is' dir/  # search all the files in the dir/ and its subdirs, to match word 'is', case insensitive
+ *command* | grep -v comment  # grep all lines from *command* output, except those that have 'comment' in it
+ grep -C 2 'search word' file # displaying 2 extra lines before and after the match (-A just after, -B just before)
+ grep -c <pattern> file(s) # counts the number of matches
+ grep -o <pattern> file(s) # shows only the matched part of the string (by default grep shows whole line)
+ grep -E <extended_regexpr> file(s) # accepts way more advanced regular expressions as a search pattern
 
 For details on what <pattern> could be, look for REGULAR EXPRESSIONS
 at ``man grep``.  Some examples:
@@ -381,15 +388,25 @@ at ``man grep``.  Some examples:
  grep -Eio "\b[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}\b" file.txt  # grep emails to a list
  ps auxw | grep firefox  # grep currently running firefox processes
 
-:Exercise: make a pipe that counts number of files/directories (including dot files) in your directory
-:Exercise: 
+[Lecturer's notes: ~20 minutes at the end of the session to proceed with the hands-on excersises.
+Leftovers can be said as a homework, one can go through them next session or give hints by email.]
+
+:Exercise:
+ - make a pipe that counts number of files/directories (including dot files) in your directory
  - grep directories out of ``ls -l``
- - grep all but blank lines in the file (Hint: 'man grep' for regular expression)
+ - grep all but blank lines in triton:/etc/bashrc
  - expand the previous one to filter out commented lines (start with #)
-:Exercise*: expand ``du`` to list dot files/directories also
-:Exercise*: ``uptime; w > wuptime`` how to add output of both commands
-	    to the same file with only one redirect?
-:Exercise*: Count unique logged in users on kosh/taltta/triton or anywhere else
+ - expand ``du -hs * | sort -h`` to list dot files/directories also
+ -* count unique logged in users on triton
+
+:Homework:
+ - Finish up the exercises mentioned during the session if you have anything left
+ - get familiar with any of the text editor of your choice, nano, vim or
+   emacs. We will use it heavily during remaining sessions.
+ - play with the commands grep, cut: find at least two ways to
+   extract pure IP addresses out of /etc/hosts. Are there other ways?
+ -* using pipes and commands echo/tr/uniq, find doubled words out of 'My
+  Do Do list: Find a a Doubled Word'
 
 
 Session 2
