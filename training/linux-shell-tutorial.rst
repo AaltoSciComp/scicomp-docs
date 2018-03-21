@@ -78,6 +78,30 @@ What's a UNIX process?
 
 - These concepts bind together *all* UNIX programs.
 
+Process stat commands::
+
+   pstree
+   pstree -u $USER
+   pstree -pu $USER
+   ps auxw
+
+You can find info about your user::
+
+  id
+  echo $SHELL
+  echo $HOME
+
+Where you are::
+
+  pwd
+
+Who am I: ``id``, ``echo $HOME``, ``echo $SHELL``
+(Your default shell is not a /bin/bash? Login to kosh/taltta and run ``chsh -s /bin/bash``)
+
+Where am I: ``pwd`` (this shows the first piece of process
+information: current directory)
+
+
 Built-in and external commands
 ------------------------------
 
@@ -92,12 +116,6 @@ There are two types of commands:
 **Hint** ``type -a`` to find what is behind the name
 
 - **echo**: prints out ``echo something to type`` # types whatever you put after
-
-Who am I: ``id``, ``echo $HOME``, ``echo $SHELL``
-(Your default shell is not a /bin/bash? Login to kosh/taltta and run ``chsh -s /bin/bash``)
-
-Where am I: ``pwd`` (this shows the first piece of process
-information: current directory)
 
 Your best friend ever -- ``man`` -- collection of manuals. Type
 */search_word* for searching through the man page.  But... if it's a
@@ -428,13 +446,57 @@ Leftovers can be said as a homework, one can go through them next session or giv
 
 Session 2
 =========
+Last time, we focused on interactive things from the command line.
+Now, we build on that some and end up with making our own scripts.
+
+
+Command line processing and quoting
+-----------------------------------
+* When you enter a command line, it is one string.
+* When a program runs, it always takes an array of strings (the
+  ``argv`` in C, ``sys.argv`` in Python, for example).  How do you get
+  from one string to an array of strings?  Bash does a lot of
+  processing.
+* The simplest way of looking at it is everything separated by spaces,
+  but actually there is more: variable substitution, command
+  substitution, arithmetic evaluation, history evaluation, etc.
+
+The partial order of operations is (don't worry about exact order:
+just realize that the shell does a lot of different things in same
+particular order):
+
+* history expansion
+* brace expansion (``{1..9}``)
+* parameter and variable expansion (``$VAR``, ``${VAR}``)
+* command substitution (``$()``)
+* arithmetic expansion (``$((1+1))``)
+* word splitting
+* pathname expansion (``*``, ``?``, ``[a,b]``)
+
+One thing we will start to see is shell quoting.  There are two types
+of quoting (we will learn details of variables later)::
+
+  echo $SHELL         # $SHELL is a variable and is printed here
+  echo "$SHELL"       # Double quotes: variables still substituted
+  echo '$SHELL        # Single quotes: variables NOT substitute
+
+There are different rules for embedding quoting in other quoting.
+Sometimes a command passes through multiple layers and you need to
+really be careful with multiple layers of quoting!  This is advanced,
+but just remember it.
+
+
 
 Substitute a command output
 ---------------------------
 * Command substitutions execute a command, take its stdout, and  place
   it on the command line in that place.
 
-``$(command)`` or alternatively ```command```. Could be a command or a list of commands with pipes, redirections, grouping, variables inside. Can be nested as well.
+``$(command)`` or alternatively ```command```. Could be a command or a
+list of commands with pipes, redirections, grouping, variables
+inside. The first one can be nested as well.  Works inside double
+quotes.  To understand what is going on in these, run the inner
+command first.
 
 ::
 
@@ -452,7 +514,8 @@ More about redirection and pipe
 *STDIN*, *STDOUT* and *STDERR*: reserved file descriptors *0*, *1* and *2*. They always there
 whatever process you run.
 
-*/dev/null*  device that discards all data written to it
+*/dev/null*  file (actually special operating system device) that
+discards all data written to it.
 
 ::
 
@@ -480,12 +543,18 @@ find
 * It is a amazingly complicated program
 * It is a number one in searching files in shell
 
-With no options, just recursively lists all files::
+With no options, just recursively lists all files starting in current directory::
 
   find
   find | grep some_filename
 
-::
+The first option gives a starting directory::
+
+  find /etc/
+
+More options: by modification/accessing time, by ownership, by access
+type, joint conditions, case-insensitive, that do not match, etc [#]_
+[#]_::
 
  find ~ -name file.txt   # -or-  'find ~ $WRKDIR -name file.txt' one can search more than one dir at once
  find . -maxdepth 1 -name '*.jpg' -type f  # look for jpeg files in the current dir only
@@ -495,29 +564,35 @@ With no options, just recursively lists all files::
  find /usr/{bin,sbin} -perm /u=s  # find all s-bitted binaries
  find path/dir -type f -mtime +7 -exec rm {} \;  # find and remove all files older than 7 days
 
-More options: by modification/accessing time, by ownership, by access type, joint conditions, case-insensitive, that do not match, etc [#]_ [#]_
+Find syntax is actually an entire boolean logic language given on the
+command line: it is a single expression evaluated left to right with
+certain precedence.  Thus, you can get amazingly complex if you want to.
 
 **find on Triton**  On Triton's WRKDIR it is ``lfs find``.  This uses a raw lustre connection
 to make it more efficient than accessing every file. Has somewhat limited abilities as comparing
 to GNU find. For details ``man lfs`` on Triton.
 
 **Fast find -- locate**  Another utility that you may find useful ``locate <pattern>``, but on
-workstations only.  This creates a cached database of all files, and
-just searches that so it is much faster.
+workstations only.  This uses a cached database of all files, and
+just searches that database so it is much faster.
 
 **Too many arguments**  error solved with ``find ... | xargs``
 
 
 Aliases
 -------
-Define a new or re-define an old command
+* Aliases allow you to define shortcuts.
+* They replace only the first word on the command line.
+* They are less flexible than functions which we will discuss next.
 
 ::
 
+ alias l=ls
  alias space='du -hs .[!.]* * | sort -h'
  alias rm='rm -i'
 
-Aliases go to *.bashrc* and available later by default.
+Aliases go to *.bashrc* and available later by default (really,
+anywhere they can be read by the shell).
 
 [Lecturer's notes: about 30 mins joint hands-on session + break]
 
@@ -550,15 +625,20 @@ shell searches through when you enter a command. Binaries are at */bin*, */usr/b
  chmod +x ~/bin/script_name.sh
  script_name.sh
 
+You can find where a program is using ``which``::
+
+  which ls
+  which cd      # nothing - not a program, it's a builtin!
+
 Other options::
- 
+
  # +x bit and ./
  chmod +x script.sh
  ./script.sh   # that works if script.sh has #!/bin/bash as a first line
  # with no x bit
  bash script.sh  # this will work even without #!/bin/bash
 
-**Extenssion is optional** note tha *.sh* extenssion is optional, script may have any name
+**Extension is optional** note that *.sh* extension is optional, script may have any name
 
 
 Functions as part of your environment
@@ -600,7 +680,7 @@ seen everywhere else. ``local`` can be used to localize the vars. Compare::
 
 Variables
 ---------
-In shell, variables define your environment. Common practice is that environmental vars are written IN CAPITAL: $HOME, $SHELL, $PATH, $PS1, $RANDOM. To list all defined variables ``printenv``. All variables can be used or even redefined. No error if you call an undefined var, it is just considered to be empty.::
+In shell, variables define your environment. Common practice is that environmental vars are written IN CAPITAL: $HOME, $SHELL, $PATH, $PS1, $RANDOM. To list all defined variables ``printenv``. All variables can be used or even redefined. No error if you call an undefined var, it is just considered to be empty::
 
  var1=100 var2='some string'  # assign a variable, note, no need for ;
  $var1  # call a variable
@@ -610,16 +690,20 @@ In shell, variables define your environment. Common practice is that environment
    var2+=' more' # var2 is 'some string more'
  echo "var1 is $var1"  # use is the commands
 
-None bothers about declaration, but there can be cases when you need something specific::
+There is no need to declare things in advance: there is flexible
+typing.  In fact, you can access any variable, defined or not.
+However, you can still declare things to be of a certain type if you
+need to::
 
  declare -r var=xyz   # read-only
  declare -i var  # must be treated as an integer, 'man bash' for other declare options
 
-BASH is smart enough to distiguish a variable inline::
+BASH is smart enough to distinguish a variable inline without special quoting::
 
  dir=$HOME/dir1 fname=file fext=xyz echo "$dir/$fname.$fext"
 
-though if variable followed by a number or a letter:: 
+though if variable followed by a number or a letter, you have to
+explicitly separate it with the braces syntax::
 
  echo ${dir}2/${file}abc.$fext
 
@@ -640,9 +724,12 @@ Built-in vars:
 
 Magic of BASH variables
 -----------------------
-BASH provides wide abilities to work with the vars "on-the-fly" with ${var...} like constructions.
+BASH provides wide abilities to work with the vars "on-the-fly" with
+``${var...}`` like constructions.  This lets you do simple text
+processing easily.  These are nice, but are easy to forget so you will
+need to look them up when you need them.
 
- - Subtitute a var with default *value* if empty: ``${var:=value}``
+ - Substitute a var with default *value* if empty: ``${var:=value}``
  - Print an *error_message* if var empty: ``${var:?error_message}``
  - Extract a substring: ``${var:offset:length}``, example ``var=abcde; echo ${var:1:3}`` returns 'bcd'
  - Variable's length: ``${#var}``
@@ -657,13 +744,14 @@ BASH provides wide abilities to work with the vars "on-the-fly" with ${var...} l
  var='';  echo ${var:?not defined}  # will print 'not defined' in both cases
  var=''; err='not defined'; echo ${var:?$err}
  var='I love you'; echo ${var:2:8}  # will return 'love you'
- var='I love you too!'; echo ${#var}  # will return 15, that is a number of chracters
+ var='I love you too!'; echo ${#var}  # will return 15, that is a number of characters
  var=26_file.ext; echo ${var#[0-9][0-9]_}  # returns file.ext
  var=26_file.ext; echo ${var%.ext}  # returns 26_file
  var=26_file.ext; echo ${var%.[a-z][a-z][a-z]}  # the same
  var='I love you'; echo ${var/love/hate}  # returns 'I hate you'
 
-Except for the *:=* the variable remains unchanged. If you want to redefine it::
+Except for the *:=* the variable remains unchanged. If you want to
+redefine a variable::
 
   var='I love you'; var=${var/love/hate}; echo $var  # returns 'I hate you'
 
@@ -681,9 +769,15 @@ Except for the *:=* the variable remains unchanged. If you want to redefine it::
 Session 3
 =========
 
-[[ ]]
-----
-``[[ expression ]]`` returns 0 or 1 depending on the evaluation of the conditional *expression*
+Tests: ``test`` and ``[[ ]]``
+------------------------------
+* ``[[ expression ]]`` returns 0 or 1 depending on the evaluation of the
+  conditional *expression*.
+* This is a shell-builtin equivalent of the ``test`` command (actually
+  ``test`` is both a command and builtin)
+* Remember, each command has a return code.  0=true/success, 1 or
+  more=false/failure (opposite of normal boolean conventions!).  These
+  two commands are just normal commands following this convention!
 
 ``==, <, >, !=, =~, &&, ||, !, ()``
 
@@ -692,12 +786,26 @@ When working with the strings the right-hand side is a pattern (a regular expres
 ::
 
  x=5; y=6; z=7; [[ $x < $y && ! $y == $z ]] && echo ok || echo nope
- 
- 
+
+To learn more, you can check ``man test``: ``test` and ``[[ ]]`` have
+roughly the same syntax
+
+
 About regular expressions
-----
-Regular expression is a pattern, it describes what we are looking for within a string. Selected operators:
- 
+-------------------------
+* Regular expressions (regexs) are basically a mini-language for
+  searching within, matching, and replacing text in strings.
+* They are extremely powerful and basically required knowledge in any
+  type of text processing
+* Yet there is a famous quote by Jamie Zawinski: "Some people, when
+  confronted with a problem, think 'I know, I'll use regular
+  expressions.' Now they have two problems."  This doesn't mean
+  regular expressions shouldn't be used, but used carefully.
+
+
+
+Selected operators:
+
  - ``.`` 	matches any single character
  - ``?`` the preceding item is optional and will be matched, at most, once
  - ``*`` 	the preceding item will be matched zero or more times
@@ -708,7 +816,10 @@ Regular expression is a pattern, it describes what we are looking for within a s
  - ``-``  represents the range if it's not first or last in a list or the ending point of a range in a list
  - ``^``  beginning of a line
  - ``$`` 	 the end of a line
- 
+
+Regular expression builders: online building and testing.
+
+
 ::
 
  email='jussi.meikalainen@aalto.fi'; regex='(.*)@(.*)'; [[ "$email" =~ $regex ]]; echo ${BASH_REMATCH[*]}
@@ -717,8 +828,8 @@ Regular expression is a pattern, it describes what we are looking for within a s
 **Hint** For case insesitive, set ``shopt -s nocasematch``  (to disable it back ``shopt -u nocasematch``)
 
 
-if/elif/else
-----
+Conditionals: if/elif/else
+--------------------------
 
 Though scripting style is more logical with if/else construction
 
@@ -732,7 +843,7 @@ Though scripting style is more logical with if/else construction
    command3
  fi
 
-[[ ]] can be a command/function or an arithmetic expression (( )), or a command substitution, that is what ever returns an exit code is fine.
+``[[ ]]`` can be a command/function or an arithmetic expression ``$(( ))``, or a command substitution, that is what ever returns an exit code is fine.
 
 An example: script (or function) that accepts two strings and returns result of comparison
 
@@ -744,17 +855,17 @@ An example: script (or function) that accepts two strings and returns result of 
  else
    echo The strings are different
  fi
- 
+
  ::
- 
+
   if ping -c 1 8.8.8.8 &> /dev/null; then echo online; else echo offline; fi
- 
+
 
 :Exercise: Play with the strings/patterns. Make a script/function that picks up a pattern and a string as an input and reports whether pattern matches any part of string or not. Kind of *my_grep pattern string*.
 :Exercise*: Expand the *my_grep* script to make search case insesitive and report also a count how many times pattern appears in the string
 
 More conditional expressions
-----
+----------------------------
 
  - ``-f`` true if is a file
  - ``-r`` true if file exists and readable
