@@ -524,17 +524,18 @@ Aliases go to *.bashrc* and available later by default.
 :Exercise 2.1:
  - Define above mentioned ``ping ...`` command as an alias (you name it, literally) in *.bashrc*
    once you verify it works. Then ``source .bashrc`` and try the new alias.
+ - Pick up */scratch/scip/BASH/windows.txt* file and convert it to UNIX format using ``tr`` and
+   redirects only. Tip: remind first session examples.
+ - Find all the files in your $HOME that are readable or writable by everyone
+ - (*) Using find, duplicate current directory tree (to some other dir, only tree, no content)
  - (*) Join find and grep power and find all the files in /usr/{bin,sbin} that have '#!/bin/bash' in it
 
-:Exercise 2.2:
- - Find all the files in your $HOME that are readable or writable by everyone
+:Exercise 2.2: Triton specific
  - On Triton find (lfs find ... ) all the dirs/files at $WRKDIR that do not belong to your group.
    Tip: on Triton at WRKDIR your username $USER and group name are the same. On any other filesystem,
    ``$(id -gn)`` returns your group name.
  - extend above command to fix the group ownership  (... | xargs)
  - On Triton go through all $WRKDIR subdirectories with 'lfs find ...' and set s-bit for the group 
- - (*) using find, duplicate current directory tree (to some other dir, only tree, no content)
-
 
 
 Your ~/bin and PATH
@@ -669,14 +670,12 @@ Except for the *:=* the variable remains unchanged. If you want to redefine it::
 [Lecturer's note: ~20 minutes for the hands-on exercises. Solution examples can be given at very end.]
 
 :Exercise 2.3:
- - Expand our lcd() to have a default directory in case function is invoked without an input parameter
+ - Expand *lcd()* function to have WRKDIR as a default directory in case function is invoked without any input parameter.
  - Fast find function -- ``ff word``. Implement a function that returns a long listing (ls -ldA) of any file or directory names that contain the <word>. Make search case insensitive.
- - By now one should be able to explain: ``:() { :|:&; };:`` [WARNING: it is a forkbomb]
- 
-:Exercise 2.4: 
- - shorten *filename.ext* down to *filename* and then down to *ext*. Filename can be of any length, while *.ext* is the same.
- - expand lcd() so that it would go to some specific directory taken as an input parameter, if *$1* is empty (on Triton it could be $WRKDIR)
-:Exercise*: extract filename with no extension from */work/archive/OLD/Michel's_stuff.tar.gz*
+ - (*) By now one should be able to explain: ``:() { :|:&; };:``. *&* in this case sends process to background
+   [WARNING: it is a forkbomb]
+ - Shorten *filename.ext* down to *filename* and then down to *ext*. Filename/extenssion can be of any length.
+ - (*) Extract filename with no extension from */work/archive/OLD/Michel's_stuff.tar.gz*. Use variable expanssion.
 
 
 Session 3
