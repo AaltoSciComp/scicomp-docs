@@ -528,13 +528,13 @@ Aliases go to *.bashrc* and available later by default.
    redirects only. Tip: remind first session examples.
  - Find all the files in your $HOME that are readable or writable by everyone
  - (*) Using find, duplicate current directory tree (to some other dir, only tree, no content)
- - (*) Join find and grep power and find all the files in /usr/{bin,sbin} that have '#!/bin/bash' in it
+ - (*) Join *find* and *grep* power and find all the files in /{usr/,}{bin,sbin} that have '#!/bin/bash' in it
 
-:Exercise 2.2: Triton specific
+:Exercise 2.2:
  - On Triton find (lfs find ... ) all the dirs/files at $WRKDIR that do not belong to your group.
    Tip: on Triton at WRKDIR your username $USER and group name are the same. On any other filesystem,
    ``$(id -gn)`` returns your group name.
- - extend above command to fix the group ownership  (... | xargs)
+ - Extend above command to fix the group ownership  (... | xargs)
  - On Triton go through all $WRKDIR subdirectories with 'lfs find ...' and set s-bit for the group 
 
 
