@@ -599,7 +599,7 @@ seen everywhere else. ``local`` can be used to localize the vars. Compare::
 
 
 Variables
-----
+---------
 In shell, variables define your environment. Common practice is that environmental vars are written IN CAPITAL: $HOME, $SHELL, $PATH, $PS1, $RANDOM. To list all defined variables ``printenv``. All variables can be used or even redefined. No error if you call an undefined var, it is just considered to be empty.::
 
  var1=100 var2='some string'  # assign a variable, note, no need for ;
@@ -675,7 +675,7 @@ Except for the *:=* the variable remains unchanged. If you want to redefine it::
  - (*) By now one should be able to explain: ``:() { :|:&; };:``. *&* in this case sends process to background
    [WARNING: it is a forkbomb]
  - Shorten *filename.ext* down to *filename* and then down to *ext*. Filename/extenssion can be of any length.
- - (*) Extract filename with no extension from */work/archive/OLD/Michel's_stuff.tar.gz*. Use variable expanssion.
+ - Extract filename with no extension from */work/archive/OLD/Michel's_stuff.tar.gz*.
 
 
 Session 3
