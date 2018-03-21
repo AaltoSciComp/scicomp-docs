@@ -302,9 +302,7 @@ Input and output: redirect and pipes
 - ``cat /etc/bashrc | less`` gives it to ``less`` on *standard input*
   (stdin)
 
-Pipe: output of the first command as an input for the second one ``command_a | command_b``
-
-::
+Pipe: output of the first command as an input for the second one ``command_a | command_b``::
 
  # cat, sort, tr, cut, head, wc, grep examples
  man -t ls | lpr  # send man page to a default printer
@@ -316,10 +314,10 @@ Pipe: output of the first command as an input for the second one ``command_a | c
  ls -1t | head -1  # print the name of the newest file in the directory
 
 Redirects:
-- Like pipes, but send data to/from files instead of other processes.
-- Replace a file: ``command > file.txt``
-- Append to a file: ``command >> file.txt`` (be careful you do not mix them up!)
-- Redirect file as STDIN: ``command < file``  (in case program accepts STDIN only)
+ - Like pipes, but send data to/from files instead of other processes.
+ - Replace a file: ``command > file.txt``
+ - Append to a file: ``command >> file.txt`` (be careful you do not mix them up!)
+ - Redirect file as STDIN: ``command < file``  (in case program accepts STDIN only)
 
 ::
 
@@ -370,7 +368,7 @@ boolean operators.  They can be used for quick conditionsals.
   * final exit code is that of the last evaluated command, which has
     the role of Boolean *or*.
 
-**Hint** command_a && command_b || command_c
+**Hint** ``command_a && command_b || command_c``
 
 Try: ``cd /nonexistent_dir && ls /nonexistent_dir`` compare with ``cd /nonexistent_dir; ls /nonexistent_dir``
 
@@ -410,11 +408,11 @@ at ``man grep``.  Some examples:
 [Lecturer's notes: ~20 minutes at the end of the session to proceed with the hands-on excersises.
 Leftovers can be said as a homework, one can go through them next session or give hints by email.]
 
-:Exercise:
+:Exercise 1.3:
  - make a pipe that counts number of files/directories (including dot files) in your directory
  - grep directories out of ``ls -l``
  - grep all but blank lines in triton:/etc/bashrc
- - expand the previous one to filter out commented lines (start with #)
+ - (*) expand the previous one to filter out commented lines also (line starts with #)
  - expand ``du -hs * | sort -h`` to list dot files/directories also
  - (*) count unique logged in users on triton
 
@@ -423,7 +421,7 @@ Leftovers can be said as a homework, one can go through them next session or giv
  - Get familiar with any of the text editor of your choice, nano, vim or
    emacs. We will use it heavily during remaining sessions.
  - Play with the commands grep, cut: find at least two ways to
-   extract pure IP addresses out of /etc/hosts. Are there other ways?
+   extract IP addresses only out of /etc/hosts. Are there other ways?
  - (*) Using pipes and commands echo/tr/uniq, find doubled words out of 'My
   Do Do list: Find a a Doubled Word'. Any easier way to do it?
 
