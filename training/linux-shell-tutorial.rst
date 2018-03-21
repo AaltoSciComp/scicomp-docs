@@ -340,8 +340,8 @@ To dump output of all commands at once: group them
  { command1; command2; } > filename  # commands run in the current shell  as a group
  ( command1; command2; ) > filename  # commands run in external shell as a group
  
- **Coreutils by GNU** You may find many other useful commands at
- https://www.gnu.org/software/coreutils/manual/coreutils.html
+**Coreutils by GNU** You may find many other useful commands at
+https://www.gnu.org/software/coreutils/manual/coreutils.html
 
 
 Pipelines: ;, &&, and ||
@@ -596,22 +596,31 @@ seen everywhere else. ``local`` can be used to localize the vars. Compare::
  var=2; f() { var=3; }; f; echo $var
  var=2; f() { local var=3; }; f; echo $var
 
-:Exercise: Fast find function -- ``ff word``. Implement a function that returns a long listing (ls -ldA) of any file or directory names that contain the <word>. Make search case insensitive.
-
 
 Variables
 ----
-In shell, variables define your environment. Common practice is that environmental vars are written IN CAPITAL: $HOME, $SHELL, $PATH, $PS1, $RANDOM. To list all defined variables ``printenv``. All variables can be used or even redefined. No error if you call an undefined var, it is just considered to be empty.
+In shell, variables define your environment. Common practice is that environmental vars are written IN CAPITAL: $HOME, $SHELL, $PATH, $PS1, $RANDOM. To list all defined variables ``printenv``. All variables can be used or even redefined. No error if you call an undefined var, it is just considered to be empty.::
 
-Assign a variable ``var1=100``, ``var2='some string'``
+ var1=100 var2='some string'  # assign a variable, note, no need for ;
+ $var1  # call a variable
+ var3=$var1  # assign to another var
+ var+=<string>/<integer>  # append a var
+   var1+=50  # var1=150
+   var2+=' more' # var2 is 'some string more'
+ echo "var1 is $var1"  # use is the commands
 
-Invoke a variable ``$var1``
+None bothers about declaration, but there can be cases when you need something specific::
 
-Append a var: ``var+=<string>/<integer>``
+ declare -r var=xyz   # read-only
+ declare -i var  # must be treated as an integer, 'man bash' for other declare options
 
-Vars can be declared, like if you want it readonly ``declare -r var=xyz``, or to be treated as integer always ``declare -i var``.
+BASH is smart enough to distiguish a variable inline::
 
-BASH is smart enough to distiguish a var inline ``dir=$HOME/dir1; fname=file; fext=xyz; echo "$dir/$fname.$fext"``, though if var followed by a number or a letter ``echo ${dir}2/${file}abc.$fext``
+ dir=$HOME/dir1 fname=file fext=xyz echo "$dir/$fname.$fext"
+
+though if variable followed by a number or a letter:: 
+
+ echo ${dir}2/${file}abc.$fext
 
 Built-in vars:
 
@@ -619,15 +628,17 @@ Built-in vars:
  - $$  current shell pid
  - $#  number of input parameters
  - $0  running script name
+ - $FUNCTION  function name being executed, [ note: actually an array ${FUNCTION[*]} ]
  - $1, $2 ... input parameter one by one (function/script)
  - "$@" all input parameters as is in one line
 
-:Exercise: write a function that outputs number of arguments it has got and then all the arguments as a single word
-:Exercise*: make a function that takes IP as an argument, ping that IP and returns ok/failed only
+::
 
+ example() { echo -e " number of input params: $#\n input params: $@\n shell process id: $$\n script name: $0\n function name: $FUNCNAME"; return 1; }; f arg1 arg2; echo "exit code: $?"
+ 
 
-More on variables
-----
+Magic of BASH variables
+-----------------------
 BASH provides wide abilities to work with the vars "on-the-fly" with ${var...} like constructions.
 
  - Subtitute a var with default *value* if empty: ``${var:=value}``
@@ -638,11 +649,38 @@ BASH provides wide abilities to work with the vars "on-the-fly" with ${var...} l
  - Replace trailing part: ``${var%suffix}``
  - Replace *pattern* with the *string*: ``${var/pattern/string}``
 
-:Exercise: 
+::
+
+ var=''; echo ${var:=default_value}   # will print default_value
+ var1=another_value; var='';  echo ${var:=$var1}   # default value can be another variable
+ var='';  echo ${var:?not defined}  # will print 'not defined' in both cases
+ var=''; err='not defined'; echo ${var:?$err}
+ var='I love you'; echo ${var:2:8}  # will return 'love you'
+ var='I love you too!'; echo ${#var}  # will return 15, that is a number of chracters
+ var=26_file.ext; echo ${var#[0-9][0-9]_}  # returns file.ext
+ var=26_file.ext; echo ${var%.ext}  # returns 26_file
+ var=26_file.ext; echo ${var%.[a-z][a-z][a-z]}  # the same
+ var='I love you'; echo ${var/love/hate}  # returns 'I hate you'
+
+Except for the *:=* the variable remains unchanged. If you want to redefine it::
+
+  var='I love you'; var=${var/love/hate}; echo $var  # returns 'I hate you'
+
+[Lecturer's note: ~20 minutes for the hands-on exercises. Solution examples can be given at very end.]
+
+:Exercise 2.3:
+ - Expand our lcd() to have a default directory in case function is invoked without an input parameter
+ - Fast find function -- ``ff word``. Implement a function that returns a long listing (ls -ldA) of any file or directory names that contain the <word>. Make search case insensitive.
+ - By now one should be able to explain: ``:() { :|:&; };:`` [WARNING: it is a forkbomb]
+ 
+:Exercise 2.4: 
  - shorten *filename.ext* down to *filename* and then down to *ext*. Filename can be of any length, while *.ext* is the same.
  - expand lcd() so that it would go to some specific directory taken as an input parameter, if *$1* is empty (on Triton it could be $WRKDIR)
 :Exercise*: extract filename with no extension from */work/archive/OLD/Michel's_stuff.tar.gz*
 
+
+Session 3
+=========
 
 [[ ]]
 ----
@@ -779,9 +817,6 @@ Try:
  # ln cx c-w
  # to make a file executable 'cx filename'
 
-
-Session 3
-=========
 
 Exit the shell
 --------------
