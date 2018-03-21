@@ -492,12 +492,14 @@ With no options, just recursively lists all files::
  find . -type -f -size +10M -size -100M  # find all files of size more than 10M and less than 100M
  find ~ ! -user $USER | xargs ls -ld # find everything that does not belong to you
  find . -type d -exec chmod g+rwx {} \;   # open all directories to group members
+ find /usr/{bin,sbin} -perm /u=s  # find all s-bitted binaries
  find path/dir -type f -mtime +7 -exec rm {} \;  # find and remove all files older than 7 days
 
 More options: by modification/accessing time, by ownership, by access type, joint conditions, case-insensitive, that do not match, etc [#]_ [#]_
 
 **find on Triton**  On Triton's WRKDIR it is ``lfs find``.  This uses a raw lustre connection
-to make it more efficient than accessing every file.
+to make it more efficient than accessing every file. Has somewhat limited abilities as comparing
+to GNU find. For details ``man lfs`` on Triton.
 
 **Fast find -- locate**  Another utility that you may find useful ``locate <pattern>``, but on
 workstations only.  This creates a cached database of all files, and
@@ -529,8 +531,8 @@ Aliases go to *.bashrc* and available later by default.
  - On Triton find (lfs find ... ) all the dirs/files at $WRKDIR that do not belong to your group.
    Tip: on Triton at WRKDIR your username $USER and group name are the same. On any other filesystem,
    ``$(id -gn)`` returns your group name.
- - On Triton find (lfs find) all the directories at $WRKDIR that do not have s-bit set
- - (*) extend both above commands (lfs find ...) to fix the "wrong" files and directories
+ - extend above command to fix the group ownership  (... | xargs)
+ - On Triton go through all $WRKDIR subdirectories with 'lfs find ...' and set s-bit for the group 
  - (*) using find, duplicate current directory tree (to some other dir, only tree, no content)
 
 
