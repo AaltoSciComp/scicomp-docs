@@ -318,8 +318,7 @@ Pipe: output of the first command as an input for the second one ``command_a | c
 Redirects:
 - Like pipes, but send data to/from files instead of other processes.
 - Replace a file: ``command > file.txt``
-- Append to a file: ``command >> file.txt`` (be careful you don't mix
-  them up!)
+- Append to a file: ``command >> file.txt`` (be careful you do not mix them up!)
 - Redirect file as STDIN: ``command < file``  (in case program accepts STDIN only)
 
 ::
