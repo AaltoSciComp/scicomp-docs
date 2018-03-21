@@ -117,7 +117,7 @@ Files contain data.  They have a name, permissions, owner
 
 ::
 
- ls, ls -l, ls -la, ./, ../, *, ?, [], [!], {abc,xyz}, {1..10}, \
+ ls, ls -l, ls -lA, ./, ../, *, ?, [], [!], {abc,xyz}, {1..10}, \
 
 There are a variety of commands to manipulate files/directories:
 
@@ -131,7 +131,9 @@ work: ``ls`` by default tells you the current directory.  ``.`` is the
 current directory, ``..`` is the parent directory, etc.  This is
 inherited to other commands you run.
 
-**Hint** ``ls -lX``, ``ls -ltr``, ``file <filename>``
+**Discover other ls features** ``ls -lX``, ``ls -ltr``, ``ls -Q``
+
+**Type of file in one line** ``file <filename>``
 
 **Quotation matters** ``echo "$USER"`` vs ``echo '$USER'``
 
@@ -166,9 +168,12 @@ Some advanced permission bits:
 - t-bit: sticky bit, for directories it prevents from removing file by
   another user (example */tmp*)
 
-**Hint** File Manager like Midnight Commander -- ``mc``
+**File managers** on Triton we have installed Midnight Commander -- ``mc``
+
+**Advanced file status** to get file meta info ``stat <file_or_dir>``
 
 [Lecture notes: that should be a first half, then joint hands-on/break ~30 mins]
+
 
 :Exercise 1.1:
  - mkdir in your ``$HOME`` (or ``$WRKDIR`` if on Triton), cd there and 'touch' a file.
@@ -275,7 +280,9 @@ Other quick ways to add something to a file (no need for an editor)
 
 ``cat > filename2.txt`` to finish typing and write written to the file, press enter, then Ctrl-d.
 
-**Hint** best text viewer ever -- ``less -S``  (to open a file in your EDITOR, hit *v*, to search through type */search_word*)
+**The best text viewer ever** ``less -S``  (to open a file in your EDITOR, hit *v*, to search through type */search_word*)
+
+**Watching files while they grow** ``tail -n 0 -f <file>``
 
 Try: add above mentioned ``export PS1`` to *.bashrc*. Remember ``source .bashrc`` to enable changes
 
@@ -298,12 +305,14 @@ Pipe: output of the first command as an input for the second one ``command_a | c
 
 ::
 
- # sort, tr, cut, see more grep examples below
+ # cat, sort, tr, cut, head, wc, grep examples
  man -t ls | lpr  # send man page to a default printer
  du -hs * | sort -h  # see what directories use the most space
  w -h | wc -l  # count a number of logged in users
- ls -1 | tr '\n' ' '   # replace new line with a comma
+ cat win.txt | tr -d '\15\32' > unix.txt  # to remove all carriage returns and Ctrl-z characters from a Windows file
  history | grep -w 'command name'  # to list all matching commands
+ ls -lA | cat -A   # print all non-printable characters as well
+ ls -1t | head -1  # print the name of the newest file in the directory
 
 Redirects:
 - Like pipes, but send data to/from files instead of other processes.
@@ -396,6 +405,7 @@ at ``man grep``.  Some examples:
 
  grep -Eio "\b[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}\b" file.txt  # grep emails to a list
  ps auxw | grep firefox  # grep currently running firefox processes
+ grep "<[Hh][12]>" file.html  # grep H1 and H2 header lines out of HTML file
 
 [Lecturer's notes: ~20 minutes at the end of the session to proceed with the hands-on excersises.
 Leftovers can be said as a homework, one can go through them next session or give hints by email.]
@@ -430,11 +440,11 @@ Substitute a command output
 
 ::
 
- ls_var=$(ls -1a)  # save current directory list to a variable
+ newest=$(ls -F1t | grep -v */ | head -1)  # get the latest modified file to a variable
  now=$(date +%Y-%m-%d)   # save current date to a variable
- touch file.$(date +%Y-%m-%d)  # crate a new file with current date in the name
+ touch file.$(date +%Y-%m-%d-%H-%M-%S)  # crate a new file with current timestamp in the name (almost unique filename)
  tar czf $(basename $(pwd)).$(date +%Y-%m-%d).tar.gz .  # archive current directory content, where new archive name is based on current path and date
- echo Number of directories $(ls -la | grep ^d | wc -l) files $(ls -la | grep ^- | wc -l)  # counting directories and files on the fly
+ echo Number of directories $(ls -lA | grep ^d | wc -l) files $(ls -lA | grep ^- | wc -l)  # counting directories and files on the fly
   
 This is what makes BASH powerful!
 
@@ -455,12 +465,14 @@ whatever process you run.
  
 ::
 
- ping -c 1 8.8.8.8 > /dev/null && echo online || echo down  # what happens if 8.8.8.8 is down?
+ ping -c 1 8.8.8.8 > /dev/null && echo online || echo down  # what happens if 8.8.8.8 is down? How to make it more robust?
  ls -l > listing && { mail -s "ls -l $(pwd) @ $(date +'%Y-%m-%d %H:%M')" jussi.meikalainen@aalto.fi < listing; mv listing listing.$(date +"%Y-%m-%d-%H-%M") }  # takes a snapshot of the directory list and send it to email, then renames the file
 
 Pipes are following the same rules with respect to standard output/error. In order to pipe both STDERR and STDOUT ``|&``.
 
 If ``!``  preceeds the command, the exit status is the logical negation.
+
+**tee** in case you still want output to a terminal and to a file ``command | tee > file``
 
 
 find
@@ -486,14 +498,14 @@ With no options, just recursively lists all files::
 
 More options: by modification/accessing time, by ownership, by access type, joint conditions, case-insensitive, that do not match, etc [#]_ [#]_
 
-**Hint**  On Triton ``lfs find``.  This uses a raw lustre connection
+**find on Triton**  On Triton's WRKDIR it is ``lfs find``.  This uses a raw lustre connection
 to make it more efficient than accessing every file.
 
-**Hint**  Another utility that you may find useful ``locate``, but on
+**Fast find -- locate**  Another utility that you may find useful ``locate <pattern>``, but on
 workstations only.  This creates a cached database of all files, and
 just searches that so it is much faster.
 
-**Hint** 'Too many arguments' error solved with ``find ... | xargs``
+**Too many arguments**  error solved with ``find ... | xargs``
 
 
 Aliases
@@ -507,11 +519,12 @@ Define a new or re-define an old command
 
 Aliases go to *.bashrc* and available later by default.
 
+[Lecturer's notes: about 30 mins joint hands-on session + break]
+
 :Exercise 2.1:
  - Define above mentioned ``ping ...`` command as an alias (you name it, literally) in *.bashrc*
    once you verify it works. Then ``source .bashrc`` and try the new alias.
- - (*) Using tar / mail and known to you pipes/redirections compose a one-liner that archive file
-   (gzipping as well) and send it as an attachment to a given email
+ - (*) Join find and grep power and find all the files in /usr/{bin,sbin} that have '#!/bin/bash' in it
 
 :Exercise 2.2:
  - Find all the files in your $HOME that are readable or writable by everyone
@@ -520,79 +533,70 @@ Aliases go to *.bashrc* and available later by default.
    ``$(id -gn)`` returns your group name.
  - On Triton find (lfs find) all the directories at $WRKDIR that do not have s-bit set
  - (*) extend both above commands (lfs find ...) to fix the "wrong" files and directories
+ - (*) using find, duplicate current directory tree (to some other dir, only tree, no content)
 
 
-Exit the shell
---------------
-``logout`` or Ctrl-d (export IGNOREEOF=1 to *.bashrc*)
 
-In order to keep your sessions running while you logged out, you
-should discover the ``screen`` program.
+Your ~/bin and PATH
+-------------------
+The PATH is an environment variable. It is a colon delimited list of directories that your
+shell searches through when you enter a command. Binaries are at */bin*, */usr/bin*,
+*/usr/local/bin* etc. The best place for your own is *~/bin*.::
 
- - ``screen`` to start a session
- - Ctrl-a-d to detach the session while you are connected
- - ``screen -ls`` to list currently running sessions
- - ``screen -rx <session_id>`` to attach the session, one can use TAB for the autocompletion or skip the <session_id> if there is only one session running
+ # add to .bashrc
+ export PATH="$PATH:$HOME/bin"
+ # after you have your script written, set +x bit and run it
+ chmod +x ~/bin/script_name.sh
+ script_name.sh
 
-Example: irssi on kosh / lyta
+Other options::
+ 
+ # +x bit and ./
+ chmod +x script.sh
+ ./script.sh   # that works if script.sh has #!/bin/bash as a first line
+ # with no x bit
+ bash script.sh  # this will work even without #!/bin/bash
 
-
-Files and dirs advances
-----
-Advanced access permissions
-
-Access list aka ACL: ``getfacl`` and ``setfacl``
-
- - Allow read access for a user ``setfacl -m u:<user>:r <file_or_dir>``
- - Allow read/write access for a group ``setfacl -m g:<group>:rw <file_or_dir>``
- - Revoke granted access ``setfacl -x u:<user> <file_or_dir>``
- - See current stage ``getfacl <file_or_dir>``
-
-**Hint** to get file meta info ``stat <file_or_dir>``
-
-**Hint** even though file has a read access the top directory must be searchable before external user or group will be able to access it. Best practice on Triton ``chmod -R o-rwx $WRKDIR; chmod o+x $WRKDIR``
-
-Setting default access permissions: add to *.bashrc* ``umask 027`` [#]_
-
-:Exercise: practice with chmod/setfacl: set a directory permissions so that only you and some user/group of your choice would have access to a file
+**Extenssion is optional** note tha *.sh* extenssion is optional, script may have any name
 
 
 Functions as part of your environment
-----
-Can be defined from the cli, or better in file (for instance *function.sh*)
+-------------------------------------
+Alias is a shortcut to a long command, while function is a piece of programming
+that has logic and can accept input parameters. Functions can be defined on-the-fly
+from the cli, or can go to a file. Let us set *~/bin/functions.sh* and collect
+everything useful there.::
 
-::
-
- name() {
-   command $1
-   command $2
-   ...
- }
-
-Invoking a function from command line (source the file first)
-
-::
-
- $ name arg1 arg2 
-
-As an example ``lcd``
-
-::
-
+ # cd to the directory and lists it at once
+ # can be run as: lcd <path/to/directory>
  lcd() {
    cd $1
-   ls -1 | wc -l
+   ls -FlA
  }
+ 
+ # in one line, note spaces and ; delimiters
+ lcd() { cd $1; ls -FlA; }
+ # -or- in a full format
+ function lcd { cd $1; ls -FlA; }
+ 
+By now function has been defined, to run it, one has to invoke it.::
 
-::
+ source ~/bin/functions.sh
+ lcd dir1
 
- $ source function.sh
- $ lcd
+The function refers to passed arguments by their position (not by name),
+that is $1, $2, and so forth::
 
-Functions in BASH is just a piece of code that once declared can be invoked at any place later with args or withour. ``return`` returns the exit code only. By default vars are in global space, once chaged in the function is seen everywhere else. ``local`` can be used to localize the vars.
+ func_name arg1 arg2 arg3  # will become $1 $2 $3
 
-:Exercise: expand ``lcd`` so that it would print number of files and directories separately
-:Exercise*: write a function that makes files/subdirectories readable by all on a given directory (note r for files, xr for dirs)
+Functions in BASH have ``return`` but it only returns the exit code. By
+default variables are in the global space, once chaged in the function is
+seen everywhere else. ``local`` can be used to localize the vars. Compare::
+
+ var=2; f() { var=3; }; f; echo $var
+ var=2; f() { local var=3; }; f; echo $var
+
+:Exercise: Fast find function -- ``ff word``. Implement a function that returns a long listing (ls -ldA) of any file or directory names that contain the <word>. Make search case insensitive.
 
 
 Variables
@@ -638,15 +642,6 @@ BASH provides wide abilities to work with the vars "on-the-fly" with ${var...} l
  - shorten *filename.ext* down to *filename* and then down to *ext*. Filename can be of any length, while *.ext* is the same.
  - expand lcd() so that it would go to some specific directory taken as an input parameter, if *$1* is empty (on Triton it could be $WRKDIR)
 :Exercise*: extract filename with no extension from */work/archive/OLD/Michel's_stuff.tar.gz*
-
-
-PATH
-----
-``chmod +x``, what is next? binaries at /bin, /usr/bin, /usr/local/bin etc. Setting up ~/bin or running as ./binary.
-
-Add to *.bashrc* ``export PATH="$PATH:$HOME/bin"``
-
-**Hint** name your scripts  *\*.sh* and collect them in ~/bin directory
 
 
 [[ ]]
@@ -785,24 +780,41 @@ Try:
  # to make a file executable 'cx filename'
 
 
-More about redirection, pipe and multiple commands execution 
+Session 3
+=========
+
+Exit the shell
+--------------
+``logout`` or Ctrl-d (export IGNOREEOF=1 to *.bashrc*)
+
+In order to keep your sessions running while you logged out, you
+should discover the ``screen`` program.
+
+ - ``screen`` to start a session
+ - Ctrl-a-d to detach the session while you are connected
+ - ``screen -ls`` to list currently running sessions
+ - ``screen -rx <session_id>`` to attach the session, one can use TAB for the autocompletion or skip the <session_id> if there is only one session running
+
+Example: irssi on kosh / lyta
+
+
+Files and dirs advances
 ----
-STDOUT and STDERR: reserved file descriptors *1* and *2*, always there when you run a command
+Advanced access permissions
 
-`` ... >/dev/null`` redirects STDOUT only, to redirect all the output including errors `` ... &>/dev/null``, or redirect outputs in different ways ``1>file.out`` and ``2>file.err``
+Access list aka ACL: ``getfacl`` and ``setfacl``
 
-In order to pipe both STDERR and STDOUT ``|&``.
+ - Allow read access for a user ``setfacl -m u:<user>:r <file_or_dir>``
+ - Allow read/write access for a group ``setfacl -m g:<group>:rw <file_or_dir>``
+ - Revoke granted access ``setfacl -x u:<user> <file_or_dir>``
+ - See current stage ``getfacl <file_or_dir>``
 
-If ``!``  preceds the command, the exit status is the logical negation.
+**Hint** even though file has a read access the top directory must be searchable before external user or group will be able to access it. Best practice on Triton ``chmod -R o-rwx $WRKDIR; chmod o+x $WRKDIR``
 
-The third file descriptor is 0, STDIN, valid syntax ``command < input_file &> output_file``. ping exercise explained.
+Setting default access permissions: add to *.bashrc* ``umask 027`` [#]_
 
-List of the commands can be part of pipe constructions ``{ command1; command2 }`` and ``( command1; command2 )``
-
-::
-
- [[ -f $file ]] && echo $file exists || { echo error; exit 1; }
- 
+:Home exercise: practice with setfacl: set a directory permissions so that only you and some
+user/group of your choice would have access to a file 
 Here Documents code block
 ----
 
