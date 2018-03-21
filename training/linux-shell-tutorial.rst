@@ -180,11 +180,12 @@ Some advanced permission bits:
    Rename it. Make a copy and then remove the original
  - list all files in /usr/bin and /usr/sbin that start with non-letter characters with
    one ``ls`` command
- - ``ls`` dot files only
- - Discover ``stat file`` output. What metadata do you find?
+ - (*) ``ls`` lists all files/directories but dotted, but how to ``ls`` dot files/directories only?
+ - Run ``file *`` to see what kind of files you have, how to list dot files also while avoiding . and .. directories on the list?
+ - (*) Discover ``stat file`` output. What metadata do you find?
 
 :Exercise 1.2:
- - on Triton make a directory at ``$WRKDIR``, allow user and group members
+ - on Triton use the recently created directory at ``$WRKDIR``, allow user and group members
    full access and no access for others
  - change group ownership to (any group that you belong to is fine), set s-bit for the group and
    apply t-bit to a directory, check that the upper directory has *o+x* bit set: now you should
@@ -219,7 +220,7 @@ Common hotkeys:
 - Ctrl-k -- remove end of the line, from cursor
 - Ctrl-w -- remove previous word
 
-**Hint** Check */etc/inpurc* for some default key bindings, more can be defined *~/.inputrc* (left as an exercise)
+**inputrc** Check */etc/inpurc* for some default key bindings, more can be defined *~/.inputrc* (left as an exercise)
 
 
 Initialization files and configuration
