@@ -645,7 +645,7 @@ Functions as part of your environment
 -------------------------------------
 Alias is a shortcut to a long command, while function is a piece of programming
 that has logic and can accept input parameters. Functions can be defined on-the-fly
-from the cli, or can go to a file. Let us set *~/bin/functions.sh* and collect
+from the cli, or can go to a file. Let us set *~/bin/functions* and collect
 everything useful there.::
 
  # cd to the directory and lists it at once
@@ -662,7 +662,7 @@ everything useful there.::
  
 By now function has been defined, to run it, one has to invoke it.::
 
- source ~/bin/functions.sh
+ source ~/bin/functions
  lcd dir1
 
 The function refers to passed arguments by their position (not by name),
@@ -758,12 +758,19 @@ redefine a variable::
 [Lecturer's note: ~20 minutes for the hands-on exercises. Solution examples can be given at very end.]
 
 :Exercise 2.3:
- - Expand *lcd()* function to have WRKDIR as a default directory in case function is invoked without any input parameter.
- - Fast find function -- ``ff word``. Implement a function that returns a long listing (ls -ldA) of any file or directory names that contain the <word>. Make search case insensitive.
- - (*) By now one should be able to explain: ``:() { :|:&; };:``. *&* in this case sends process to background
-   [WARNING: it is a forkbomb]
- - Shorten *filename.ext* down to *filename* and then down to *ext*. Filename/extenssion can be of any length.
- - Extract filename with no extension from */work/archive/OLD/Michel's_stuff.tar.gz*.
+ - Expand *lcd()* function to have WRKDIR as a default directory in case function is invoked
+   without any input parameter.
+ - Implement a 'fast find' function ``ff word``. The function should return a long listing
+   (ls -ldA) of any file or directory names that contain the <word>. Make search case insensitive.
+   Note: your newly ceated functions should go to *~/bin/functions*
+ - Write two functions ``get_filename()`` and ``get_extension()``. Both should accept a full filename
+   like *path/to/filename.ext* of any length and return *filename* or *ext* correspondingly.
+   Extenssion can be of any length. Function should handle missing argument case correctly.
+ - Expand *get_filename()* so that it would accept extenssion pattern as a second argument (if given) and
+   return *filename* out of *path/to/filename.tar.gz* or alike. I.e. ``get_filename path/to/filename.tar.gz tar.gz``
+ - (*) By now one should be able to explain: ``:() { :|:&; };:``. *&* in this case sends process
+   to background. [WARNING: it is a forkbomb]
+ 
 
 
 Session 3
