@@ -793,6 +793,14 @@ seen everywhere else. ``local`` can be used to localize the vars. Compare::
  var=2; f() { var=3; }; f; echo $var
  var=2; f() { local var=3; }; f; echo $var
 
+If you happened to build a function in an alias way, redefining a command name while
+using that original command inside the function, you need to type *command* before
+the name of the command, like::
+
+ rm() { command rm -i "$@"; } 
+
+here you avoid internal loops (forkbombs).
+
 
 Variables
 ---------
@@ -836,7 +844,21 @@ Built-in vars:
 ::
 
  example() { echo -e " number of input params: $#\n input params: $@\n shell process id: $$\n script name: $0\n function name: $FUNCNAME"; return 1; }; f arg1 arg2; echo "exit code: $?"
+
+What if you assing a variable to a variable like::
+
+ var2='something'
+ var1=\$var2
+ echo $var1     # will return '$var2' literally
  
+ # BASH provides built-in 'eval' command that reads the string then re-evaluate it
+ # if variables etc found, they are given another chance to show themselves
+ 
+ eval echo $var1  # returns 'something'
+
+In more realistic examples it is often used to compose a command string based on input
+parameters or some conditionals and then evaluate it at very end.
+
 
 Magic of BASH variables
 -----------------------
@@ -884,6 +906,7 @@ redefine a variable::
 
   var='I love you'; var=${var/love/hate}; echo $var  # returns 'I hate you'
 
+
 [Lecturer's note: ~20 minutes for the hands-on exercises. Solution examples can be given at very end.]
 
 :Exercise 2.3:
@@ -902,33 +925,75 @@ redefine a variable::
  
 
 
-Session 3
+Session 3: programming logic
 =========
 
-Tests: ``test`` and ``[[ ]]``
+``[[ ]]``
 ------------------------------
-* ``[[ expression ]]`` returns 0 or 1 depending on the evaluation of the
-  conditional *expression*.
-* This is a shell-builtin equivalent of the ``test`` command (actually
-  ``test`` is both a command and builtin)
-* Remember, each command has a return code.  0=true/success, 1 or
-  more=false/failure (opposite of normal boolean conventions!).  These
-  two commands are just normal commands following this convention!
+* ``[[ expression ]]`` returns 0=true/success or 1=false/failure depending on the
+  evaluation of the conditional *expression*.
+* ``[[ expression ]] is a new upgraded variation on ``test`` (also known as ``[ ... ]``)
+* Inside the double brackets it performs tilde expansion, parameter and variable expansion,
+  arithmetic expansion, command substitution, process substitution, and quote removal
+* Conditional expressions can be used to test file attributes and perform string and arithmetic
+  comparisons
 
-``==, <, >, !=, =~, &&, ||, !, ()``
-
-When working with the strings the right-hand side is a pattern (a regular expression). Matched strings in brackets assigned to *${BASH_REMATCH[]}* array elements.
+Selected examples file attributes and variables testing:
+ - ``-f`` true if is a file
+ - ``-r`` true if file exists and readable
+ - ``-d`` true if is a directory
+ - ``-z`` true if the length of string is zero (always used to check that var is not empty)
+ - ``-n`` true if the length of string is non-zero
+ - ``file1 -nt file2`` true if *file1* is newer (modification time)
+ - many more others
 
 ::
 
- x=5; y=6; z=7; [[ $x < $y && ! $y == $z ]] && echo ok || echo nope
+ # checks that file exists
+ [[ -f $file ]] && echo $file exists || { echo error; exit 1; }
+ 
+ # check that directory does not exist before creating one
+ [[ -d $dir ]] || mkdir $dir
 
-To learn more, you can check ``man test``: ``test` and ``[[ ]]`` have
-roughly the same syntax
+Note that integers have their own construction ``(( expression ))`` (we come back to this),
+though ``[[ ]]`` will work for them too
 
+ - ``==`` strings or integers are equal  (``=`` also works)
+ - ``!=`` strings or integers are not equal
+ - ``string1 < string2`` true if *string1* sorts before *string2* lexicographically
+ - ``>`` vice versa, for integers greater/less than
+ - ``string =~ pattern`` matches the pattern against the string
+ - ``&&``  logical AND, conditions can be combined
+ - ``||`` logical OR
+ - ``!`` negate the result of the evaluation
+ - ``()`` group conditional expressions
 
-About regular expressions
--------------------------
+::
+
+ # the way to check input arguments, if no input, exit (in functions 'return 1')
+ [[ $# == 0 ]] && { echo Usage: $0 arguments; exit 1; }
+
+ # the result will be true, since Aalto sorts before HY :(
+ [[ Aalto < HY ]]; echo $?
+ 
+ # though with a small modification, the way around is going to be true also
+ [[ ! Aalto > HY ]]; echo $?
+
+ # this will return also true, here we compare lengths, Aaaaalto has longer... name
+ s1=Aalto; s2=HY; [[ ${#s1} > ${#s2} ]]; echo $?
+
+ # true, since Aalto in both cases sorted before HY and UTU
+ [[ Aalto < HY && Aalto < UTU ]]; echo $?
+ 
+ # false, since both fail
+ [[ ( Aalto < HY && Aalto > UTU ) || HY > UTU ]]; echo $?
+ 
+ # syntax allows write in a compact way, though [[ ]] always require spaces
+ [[ (Aalto<HY&&Aalto>UTU)||HY<UTU ]]
+
+Matching operator brings more oportunities, here where regular expressions come in place.
+Even more: matched strings in parentheses assigned to *${BASH_REMATCH[]}* array elements!
+
 * Regular expressions (regexs) are basically a mini-language for
   searching within, matching, and replacing text in strings.
 * They are extremely powerful and basically required knowledge in any
@@ -937,8 +1002,6 @@ About regular expressions
   confronted with a problem, think 'I know, I'll use regular
   expressions.' Now they have two problems."  This doesn't mean
   regular expressions shouldn't be used, but used carefully.
-
-
 
 Selected operators:
 
@@ -953,38 +1016,35 @@ Selected operators:
  - ``^``  beginning of a line
  - ``$`` 	 the end of a line
 
-Regular expression builders: online building and testing.
-
-
 ::
 
+ # match an email
  email='jussi.meikalainen@aalto.fi'; regex='(.*)@(.*)'; [[ "$email" =~ $regex ]]; echo ${BASH_REMATCH[*]}
+
+ # a number out of the text
  txt='Some text with #1278 in it'; regex='#([0-9]+ )'; [[ "$txt" =~ $regex ]] && echo ${BASH_REMATCH[1]} || echo do not match
 
-**Hint** For case insesitive, set ``shopt -s nocasematch``  (to disable it back ``shopt -u nocasematch``)
+**For case insesitive matching**, set ``shopt -s nocasematch``  (to disable it back ``shopt -u nocasematch``)
 
 
-Conditionals: if/elif/else
---------------------------
+if/elif/else
+------------
+Yes, we have ``[[ ]] && ... || ...`` but scripting style is more logical with if/else construction::
 
-Though scripting style is more logical with if/else construction
-
-::
-
- if [[ expression ]]; then
+ if condition; then
    command1
- elif [[ expression ]]; then
+ elif condition; then
    command2
  else
    command3
  fi
 
-``[[ ]]`` can be a command/function or an arithmetic expression ``$(( ))``, or a command substitution, that is what ever returns an exit code is fine.
-
-An example: script (or function) that accepts two strings and returns result of comparison
+At the *condition* place can be anything what returns an exit code, i.e. ``[[ ]]``, command/function,
+an arithmetic expression ``$(( ))``, or a command substitution.
 
 ::
 
+ # to compare two input strings/integers
  if [[ "$1" == "$2" ]]
  then
    echo The strings are the same
@@ -992,34 +1052,26 @@ An example: script (or function) that accepts two strings and returns result of 
    echo The strings are different
  fi
 
- ::
+ # checking command output
+ if ping -c 1 8.8.8.8 &> /dev/null; then
+   echo Online
+ elif ping -c 1 127.0.0.1 &> /dev/null; then
+   echo Local interface is down
+ else
+   echo No external connection
+ fi
 
-  if ping -c 1 8.8.8.8 &> /dev/null; then echo online; else echo offline; fi
-
-
-:Exercise: Play with the strings/patterns. Make a script/function that picks up a pattern and a string as an input and reports whether pattern matches any part of string or not. Kind of *my_grep pattern string*.
-:Exercise*: Expand the *my_grep* script to make search case insesitive and report also a count how many times pattern appears in the string
-
-More conditional expressions
-----------------------------
-
- - ``-f`` true if is a file
- - ``-r`` true if file exists and readable
- - ``-d`` true if is a directory
- - ``-z`` true if the length of string is zero (always used to check that var is not empty)
- - ``-n`` true if the length of string is non-zero
- - ``file1 -nt file2`` true if *file1* is newer (modification time)
- - many more others
-
-::
-
- [[ -f $file ]] && echo $file exists || { echo error; exit 1; }
- [[ -d $dir ]] || mkdir $dir
+ # check input parameters
+ if [[ $# == 0 ]]; then
+   echo Usage: $0 input_arg
+   exit 1
+ fi
+ ... the rest of the code 
 
 
 case
 ----
-For the more complex conditionals, instead of nested *ifs*, BASH has ``case``.
+Another option to handle flow, instead of nested *ifs*, ``case``.
 
 ::
  
@@ -1031,8 +1083,10 @@ For the more complex conditionals, instead of nested *ifs*, BASH has ``case``.
  esac
  # $yesno can be replaced with ${yesno,,} to convert to a lower case on the fly
 
+**Here is introduced** ``read`` built-in command that reads one line from the standard
+input or file descriptor.
 
-It tries to match the variable against each pattern in turn. Understands patterns rules like ``*, ?, [], |``.
+``case`` tries to match the variable against each pattern in turn. Understands patterns rules like ``*, ?, [], |``.
 
 ::
 
@@ -1044,11 +1098,10 @@ It tries to match the variable against each pattern in turn. Understands pattern
    *) echo Should be dead by now or wrong input ;;
  esac
  
-``;;`` is important, if replaced with ``;&``, execution will continue with the command associated with the next pattern, without testing it. ``;;&`` causes the shell to test next pattern. The default behaviour with ``;;`` is to stop matches after first pattern has been found.
-
-Try:
-
-::
+``;;`` is important, if replaced with ``;&``, execution will continue with the command
+associated with the next pattern, without testing it. ``;;&`` causes the shell to test
+next pattern. The default behaviour with ``;;`` is to stop matches after first pattern
+has been found.:
 
  # create a file 'cx'
  case "$0" in
@@ -1063,105 +1116,23 @@ Try:
  # ln cx c-w
  # to make a file executable 'cx filename'
 
-
-Exit the shell
---------------
-``logout`` or Ctrl-d (export IGNOREEOF=1 to *.bashrc*)
-
-In order to keep your sessions running while you logged out, you
-should discover the ``screen`` program.
-
- - ``screen`` to start a session
- - Ctrl-a-d to detach the session while you are connected
- - ``screen -ls`` to list currently running sessions
- - ``screen -rx <session_id>`` to attach the session, one can use TAB for the autocompletion or skip the <session_id> if there is only one session running
-
-Example: irssi on kosh / lyta
-
-
-Files and dirs advances
-----
-Advanced access permissions
-
-Access list aka ACL: ``getfacl`` and ``setfacl``
-
- - Allow read access for a user ``setfacl -m u:<user>:r <file_or_dir>``
- - Allow read/write access for a group ``setfacl -m g:<group>:rw <file_or_dir>``
- - Revoke granted access ``setfacl -x u:<user> <file_or_dir>``
- - See current stage ``getfacl <file_or_dir>``
-
-**Hint** even though file has a read access the top directory must be searchable before external user or group will be able to access it. Best practice on Triton ``chmod -R o-rwx $WRKDIR; chmod o+x $WRKDIR``
-
-Setting default access permissions: add to *.bashrc* ``umask 027`` [#]_
-
-:Home exercise: practice with setfacl: set a directory permissions so that only you and some
-user/group of your choice would have access to a file 
-Here Documents code block
-----
-
-::
+:Exercise 3.1:
+ - Using BASH builtin functionality implement ``my_grep pattern string`` script that picks
+   up a pattern ($1) and a string ($2) as an input and reports whether pattern matches any
+   part of the string or not.
+   
+   - The script must check that number of input parameters is correct.
+   - Expand the *my_grep* script to make search case insesitive
  
- command <<SomeLimitString
- Here comes text with $var and even $() substitutions
- and more just text
- which finally ends on a new line with the:
- SomeLimitString
-
-Often used for messaging, be it an email or dumping bunch of text to file.
-
-::
-
- NAME=Jussi
- SURNAME=Meikalainen
- $DAYS=14
-
- mail -s 'Account expiration' $NAME.$SURNAME@aalto.fi<<END-OF-EMAIL
- Dear $NAME $SURNAME,
- 
- your account is about to expire in $DAYS days.
- 
- $(date)
- 
- Best Regards,
- Aalto ITS
- END-OF-EMAIL
-
-Or just outputting to a file (same can be done with echo commands)
-
-::
-
- cat <<EOF >filename
- ... text
- EOF
- 
-One trick that is particularly useful, making a long comment out of it
-
-::
- 
- : <<\COMMENTS
- here come text that is seen nowhere
- and no need for #
- COMMENTS
- 
-
-**Hint** ``<<\LimtiString`` to turn off substitutions and place text as is with $ marks etc
-
-3. session
-====
-Managing foreground/background processes
-----
-Adding *&* right after the command send the process to background. Example: ``firefox --no-remote &`` same can be done with any terminal command/function, like ``tar ... &``.
-
-If you have already running process, then Ctrl-z and then ``bg``. Drawback: there is no easy way to redirect the running task output.
-
-List the jobs ruuning in the background ``jobs``, get a job back online: ``fg`` or ``fg <job_number>``. There can be multiple background jobs (remeber forkbombs).
-
-Kill the foreground job: Ctrl-c
-
+ - Implement a script that either accept a directory name as a input parameter or request it
+   with ``read`` if no input parameters and creates that directory if does not exist with
+   the access permissions 700
+  
 
 Arithmetics
-----
-BASH supports wide range of arithmetic operators for integers that can be evaluated within ``(( .. ))``
+-----------
+BASH works with the integers only but supports wide range of arithmetic operators using
+arithmetic expanssion ``(( exprssion ))``
 
  - ``n++``, ``n--``, ``++n``, ``--n`` increments/decrements
  - ``+``, ``-`` plus minus
@@ -1172,10 +1143,9 @@ BASH supports wide range of arithmetic operators for integers that can be evalua
  - ``==``, ``!=``, ``<``, ``>``, ``>=``, ``<=`` comparison
  - ``=``, ``+=``, ``-=``, ``*=``, ``/=``, ``%=`` assignment
  
-For full list incl. bitwise operators, see man page.
+Full list includes bitwise operators.
  
-:Exercise: Gauss 1..100 sum example. Write a function that count a sum of any *1+2+3+4+..+n* sequence of numbers. Where *n* is any positive integer.
-
+ 
 Loops
 ----
 ::
@@ -1300,10 +1270,68 @@ Addressing is similar to indexed arrays
    echo \$asarr["$i"] is ${asarr["$i"]}
  done
 
+
+:Exercise: Gauss 1..100 sum example. Write a function that count a sum of any *1+2+3+4+..+n* sequence of numbers. Where *n* is any positive integer.
+
 :Exercise: make a script/function that produces an array of random numbers (Tip: $RANDOM)
 
+
+
 4. session
-====
+==========
+Here Documents code block
+----
+
+::
+ 
+ command <<SomeLimitString
+ Here comes text with $var and even $() substitutions
+ and more just text
+ which finally ends on a new line with the:
+ SomeLimitString
+
+Often used for messaging, be it an email or dumping bunch of text to file.
+
+::
+
+ NAME=Jussi
+ SURNAME=Meikalainen
+ $DAYS=14
+
+ mail -s 'Account expiration' $NAME.$SURNAME@aalto.fi<<END-OF-EMAIL
+ Dear $NAME $SURNAME,
+ 
+ your account is about to expire in $DAYS days.
+ 
+ $(date)
+ 
+ Best Regards,
+ Aalto ITS
+ END-OF-EMAIL
+
+Or just outputting to a file (same can be done with echo commands)
+
+::
+
+ cat <<EOF >filename
+ ... text
+ EOF
+ 
+One trick that is particularly useful, making a long comment out of it
+
+::
+ 
+ : <<\COMMENTS
+ here come text that is seen nowhere
+ and no need for #
+ COMMENTS
+ 
+
+**Hint** ``<<\LimtiString`` to turn off substitutions and place text as is with $ marks etc
+
+
+
+
 read
 ----
 
@@ -1415,8 +1443,56 @@ References
 .. [#] http://wiki.bash-hackers.org/commands/builtin/printf
 
 
-Bonuses
-=======
+Bonus material
+==============
+Parts that did not fit.
+
+Managing foreground/background processes
+----
+Adding *&* right after the command send the process to background. Example: ``firefox --no-remote &`` same can be done with any terminal command/function, like ``tar ... &``.
+
+If you have already running process, then Ctrl-z and then ``bg``. Drawback: there is no easy way to redirect the running task output.
+
+List the jobs ruuning in the background ``jobs``, get a job back online: ``fg`` or ``fg <job_number>``. There can be multiple background jobs (remeber forkbombs).
+
+Kill the foreground job: Ctrl-c
+
+
+
+Exit the shell
+--------------
+``logout`` or Ctrl-d (export IGNOREEOF=1 to *.bashrc*)
+
+In order to keep your sessions running while you logged out, you
+should discover the ``screen`` program.
+
+ - ``screen`` to start a session
+ - Ctrl-a-d to detach the session while you are connected
+ - ``screen -ls`` to list currently running sessions
+ - ``screen -rx <session_id>`` to attach the session, one can use TAB for the autocompletion or skip the <session_id> if there is only one session running
+
+Example: irssi on kosh / lyta
+
+
+Files and dirs advances
+----
+Advanced access permissions
+
+Access list aka ACL: ``getfacl`` and ``setfacl``
+
+ - Allow read access for a user ``setfacl -m u:<user>:r <file_or_dir>``
+ - Allow read/write access for a group ``setfacl -m g:<group>:rw <file_or_dir>``
+ - Revoke granted access ``setfacl -x u:<user> <file_or_dir>``
+ - See current stage ``getfacl <file_or_dir>``
+
+**Hint** even though file has a read access the top directory must be searchable before external user or group will be able to access it. Best practice on Triton ``chmod -R o-rwx $WRKDIR; chmod o+x $WRKDIR``
+
+Setting default access permissions: add to *.bashrc* ``umask 027`` [#]_
+
+:Home exercise: practice with setfacl: set a directory permissions so that only you and some
+user/group of your choice would have access to a file 
+
+
 
 [FIXME: should be moved to another tutorial *SSH: beyond login*]
 
