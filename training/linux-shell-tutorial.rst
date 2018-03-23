@@ -173,14 +173,15 @@ Modifying permissions
 
 ::
 
- chmod u+rwx,g-rwx,o-rwx <files>  # u=user, g=group, o=others, a=all
-  -or-
+ chmod u+rwx,g-rwx,o-rwx <files>   # u=user, g=group, o=others, a=all
+ # -or-
  chmod 700 <files>   # r=4, w=2, x=1
- chmod -R <perm> <directory>  # recursive, changing all the subdirectories and
- files at once
+ 
+ # recursive, changing all the subdirectories and files at once
+ chmod -R <perm> <directory>
 
- chgrp group_name <file or directory>  # changing group ownership (you must be
- a group member)
+ # changing group ownership (you must be a group member)
+ chgrp group_name <file or directory>
 
 Some advanced permission bits:
 
@@ -325,13 +326,27 @@ Input and output: redirect and pipes
 Pipe: output of the first command as an input for the second one ``command_a | command_b``::
 
  # cat, sort, tr, cut, head, wc, grep examples
- man -t ls | lpr  # send man page to a default printer
- du -hs * | sort -h  # see what directories use the most space
- w -h | wc -l  # count a number of logged in users
- cat win.txt | tr -d '\15\32' > unix.txt  # to remove all carriage returns and Ctrl-z characters from a Windows file
- history | grep -w 'command name'  # to list all matching commands
- ls -lA | cat -A   # print all non-printable characters as well
- ls -1t | head -1  # print the name of the newest file in the directory
+ 
+ # send man page to a default printer
+ man -t ls | lpr
+ 
+ # see what directories use the most space
+ du -hs * | sort -h
+ 
+ # count a number of logged in users
+ w -h | wc -l
+ 
+ # to remove all carriage returns and Ctrl-z characters from a Windows file
+ cat win.txt | tr -d '\15\32' > unix.txt
+ 
+ # to list all matching commands
+ history | grep -w 'command name'
+ 
+ # print all non-printable characters as well
+ ls -lA | cat -A
+ 
+ # print the name of the newest file in the directory (non-dot)
+ ls -1tF | grep -v -E '*/|@' | head -1
 
 Redirects:
  - Like pipes, but send data to/from files instead of other processes.
@@ -342,10 +357,17 @@ Redirects:
 ::
 
  echo Hello World > hello.txt
+ 
  ls -lH >> current_dir_ls.txt
- cat file1 file2 > file3  # join two files into one
- getent passwd | cut -d: -f1,5 > users  # extract user names and store them to a file
- paste -s -d : file1 file2 > file3  # join file1 and 2 lines one by one using : as a delimiter
+ 
+ # join two files into one
+ cat file1 file2 > file3
+ 
+ # extract user names and store them to a file
+ getent passwd | cut -d: -f1,5 > users
+ 
+ # join file1 and 2 lines one by one using : as a delimiter
+ paste -s -d : file1 file2 > file3
 
 **This is the unix philosophy** and the true power of the shell.  The
 **unix philosophy** is a lot of small, specialized, good programs
@@ -409,21 +431,37 @@ useful commands ever)
 
 ::
 
- grep -R -iw 'is' dir/  # search all the files in the dir/ and its subdirs, to match word 'is', case insensitive
- *command* | grep -v comment  # grep all lines from *command* output, except those that have 'comment' in it
- grep -C 2 'search word' file # displaying 2 extra lines before and after the match (-A just after, -B just before)
- grep -c <pattern> file(s) # counts the number of matches
- grep -o <pattern> file(s) # shows only the matched part of the string (by default grep shows whole line)
- grep -E <extended_regexpr> file(s) # accepts way more advanced regular expressions as a search pattern
+ # search all the files in the dir/ and its subdirs, to match the word 'is', case insensitive
+ grep -R -iw 'is' dir/
+ 
+ # grep all lines from *command* output, except those that have 'comment' in it
+ *command* | grep -v comment
+ 
+ # displaying 2 extra lines before and after the match (-A just after, -B just before)
+ grep -C 2 'search word' file
+ 
+ # counts the number of matches
+ grep -c <pattern> file(s)
+ 
+ # shows only the matched part of the string (by default grep shows whole line)
+ grep -o <pattern> file(s)
+ 
+ # accepts way more advanced regular expressions as a search pattern
+ grep -E <extended_regexpr> file(s)
 
 For details on what <pattern> could be, look for REGULAR EXPRESSIONS
 at ``man grep``.  Some examples:
 
 ::
 
- grep -Eio "\b[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}\b" file.txt  # grep emails to a list
- ps auxw | grep firefox  # grep currently running firefox processes
- grep "<[Hh][12]>" file.html  # grep H1 and H2 header lines out of HTML file
+ # grep emails to a list
+ grep -Eio "\b[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}\b" file.txt
+ 
+ # grep currently running firefox processes
+ ps auxw | grep firefox
+ 
+ # grep H1 and H2 header lines out of HTML file
+ grep "<[Hh][12]>" file.html
 
 [Lecturer's notes: ~20 minutes at the end of the session to proceed with the hands-on excersises.
 Leftovers can be said as a homework, one can go through them next session or give hints by email.]
@@ -482,9 +520,14 @@ particular order):
 One thing we will start to see is shell quoting.  There are several types
 of quoting (we will learn details of variables later)::
 
-  echo "$SHELL"         # Double quotes: disables all other characters except $, ', \
-  echo '$SHELL'         # Single quotes: disables all special characters
-  ls name\ with\ space  # backslash disables the special meaning of the next character
+  # Double quotes: disable all other characters except $, ', \  
+  echo "$SHELL"
+  
+  # Single quotes: disable all special characters
+  echo '$SHELL'
+  
+  # backslash disables the special meaning of the next character
+  ls name\ with\ space
 
 By special characters we mean::
 
@@ -550,11 +593,18 @@ discards all data written to it.
 
 ::
 
- command > /dev/null  # discards STDOUT only
- command &>/dev/null  # discards both STDOUT and STDERR
- command >/dev/null 2>&1  # same as above, old style notation
- command 1>file.out 2>file.err  # redirects outputs to different files
- command < input_file &> output_file  # takes STDIN as an input and outputs STDIN/STDERR to a file
+ # discards STDOUT only
+ command > /dev/null
+ 
+ # discards both STDOUT and STDERR
+ command &> /dev/null
+ command > /dev/null 2>&1    # same as above, old style notation
+ 
+ # redirects outputs to different files
+ command 1>file.out 2>file.err
+ 
+ # takes STDIN as an input and outputs STDOUT/STDERR to a file
+ command < input_file &> output_file
  
 ::
 
@@ -805,16 +855,29 @@ need to look them up when you need them.
 
 ::
 
- var=''; echo ${var:=default_value}   # will print default_value
- var1=another_value; var='';  echo ${var:=$var1}   # default value can be another variable
- var='';  echo ${var:?not defined}  # will print 'not defined' in both cases
+ # will print default_value, which can be a variable
+ var=''; echo ${var:=default_value}
+ var1=another_value; var='';  echo ${var:=$var1}
+ 
+ # will print 'not defined' in both cases
+ var='';  echo ${var:?not defined}
  var=''; err='not defined'; echo ${var:?$err}
- var='I love you'; echo ${var:2:8}  # will return 'love you'
- var='I love you too!'; echo ${#var}  # will return 15, that is a number of characters
- var=26_file.ext; echo ${var#[0-9][0-9]_}  # returns file.ext
- var=26_file.ext; echo ${var%.ext}  # returns 26_file
- var=26_file.ext; echo ${var%.[a-z][a-z][a-z]}  # the same
- var='I love you'; echo ${var/love/hate}  # returns 'I hate you'
+ 
+ # will return 'love you'
+ var='I love you'; echo ${var:2:8}
+ 
+ # will return 15, that is a number of characters
+ var='I love you too!'; echo ${#var}
+ 
+ # returns file.ext
+ var=26_file.ext; echo ${var#[0-9][0-9]_}
+ 
+ # in both cases returns 26_file
+ var=26_file.ext; echo ${var%.ext}
+ var=26_file.ext; echo ${var%.[a-z][a-z][a-z]}
+ 
+ # returns 'I hate you'
+ var='I love you'; echo ${var/love/hate}
 
 Except for the *:=* the variable remains unchanged. If you want to
 redefine a variable::
