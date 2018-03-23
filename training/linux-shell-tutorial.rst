@@ -502,7 +502,7 @@ but just remember it.
  echo "What's up? how much did you get \$\$?"    # correct
  echo "What's up? how much did you get "'$$'"?"  # correct
 
-At the end of the line *\* removes the new line character, thus command can continue::
+At the end of the line ``\`` removes the new line character, thus the command can continue to a next line::
 
  ping -c 1 8.8.8.8 > /dev/null && \
  echo online || \
@@ -522,11 +522,20 @@ command first.
 
 ::
 
- newest=$(ls -F1t | grep -v */ | head -1)  # get the latest modified file to a variable
- now=$(date +%Y-%m-%d)   # save current date to a variable
- touch file.$(date +%Y-%m-%d-%H-%M-%S)  # crate a new file with current timestamp in the name (almost unique filename)
- tar czf $(basename $(pwd)).$(date +%Y-%m-%d).tar.gz .  # archive current directory content, where new archive name is based on current path and date
- echo Number of directories $(ls -lA | grep ^d | wc -l) files $(ls -lA | grep ^- | wc -l)  # counting directories and files on the fly
+ # get the latest modified file to a variable
+ newest=$(ls -F1t | grep -v */ | head -1)
+ 
+ # save current date to a variable
+ today=$(date +%Y-%m-%d)
+ 
+ # create a new file with current timestamp in the name (almost unique filename)
+ touch file.$(date +%Y-%m-%d-%H-%M-%S)
+ 
+ # archive current directory content, where new archive name is based on current path and date
+ tar czf $(basename $(pwd)).$(date +%Y-%m-%d).tar.gz .
+ 
+ # counting directories and files on the fly
+ echo Number of directories $(ls -lA | grep ^d | wc -l) files $(ls -lA | grep ^- | wc -l)
   
 This is what makes BASH powerful!
 
@@ -549,11 +558,18 @@ discards all data written to it.
  
 ::
 
- ping -c 1 8.8.8.8 > /dev/null && echo online || echo down  # what happens if 8.8.8.8 is down? How to make it more robust?
- ls -l > listing && { mail -s "ls -l $(pwd)" jussi.meikalainen@aalto.fi < listing; mv listing listing.$(date +"%Y-%m-%d-%H-%M") }  # takes a snapshot of the directory list and send it to email, then renames the file
- > filename   # the easiest ever methond to empty a file
- cat /dev/null > filename  # yet another method of emptimg files
- ln -s /dev/null filename  # if you can't get the program to stop writing to the file...
+ # what happens if 8.8.8.8 is down? How to make the command more robust?
+ ping -c 1 8.8.8.8 > /dev/null && echo online || echo down
+ 
+ # takes a snapshot of the directory list and send it to email, then renames the file
+ ls -l > listing && { mail -s "ls -l $(pwd)" jussi.meikalainen@aalto.fi < listing; mv listing listing.$(date +"%Y-%m-%d-%H-%M") }
+ 
+ # a few ways to empty a file
+ > filename
+ cat /dev/null > filename
+ 
+ # extreme case, if you can't get the program to stop writing to the file...
+ ln -s /dev/null filename
  
 Pipes are following the same rules with respect to standard output/error. In order to pipe both STDERR and STDOUT ``|&``.
 
@@ -582,13 +598,26 @@ More options: by modification/accessing time, by ownership, by access
 type, joint conditions, case-insensitive, that do not match, etc [#]_
 [#]_::
 
- find ~ -name file.txt   # -or-  'find ~ $WRKDIR -name file.txt' one can search more than one dir at once
- find . -maxdepth 1 -name '*.jpg' -type f  # look for jpeg files in the current dir only
- find . -type -f -size +10M -size -100M  # find all files of size more than 10M and less than 100M
- find ~ ! -user $USER | xargs ls -ld # find everything that does not belong to you
- find . -type d -exec chmod g+rwx {} \;   # open all directories to group members
- find /usr/{bin,sbin} -perm /u=s  # find all s-bitted binaries
- find path/dir -type f -mtime +7 -exec rm {} \;  # find and remove all files older than 7 days
+ # -or-  'find ~ $WRKDIR -name file.txt' one can search more than one dir at once
+ find ~ -name file.txt
+ 
+ # look for jpeg files in the current dir only
+ find . -maxdepth 1 -name '*.jpg' -type f
+ 
+ # find all files of size more than 10M and less than 100M
+ find . -type -f -size +10M -size -100M
+ 
+ # find everything that does not belong to you
+ find ~ ! -user $USER | xargs ls -ld
+ 
+ # open all directories to group members
+ find . -type d -exec chmod g+rwx {} \;
+ 
+ # find all s-bitted binaries
+ find /usr/{bin,sbin} -perm /u=s
+ 
+ # find and remove all files older than 7 days
+ find path/dir -type f -mtime +7 -exec rm -f {} \;
 
 Find syntax is actually an entire boolean logic language given on the
 command line: it is a single expression evaluated left to right with
@@ -602,7 +631,7 @@ to GNU find. For details ``man lfs`` on Triton.
 workstations only.  This uses a cached database of all files, and
 just searches that database so it is much faster.
 
-**Too many arguments**  error solved with ``find ... | xargs``
+**Too many arguments**  error solved with the ``find ... | xargs``
 
 
 Aliases
@@ -615,11 +644,18 @@ Aliases
 
 ::
 
- alias l='ls -lAF'   # your own listing command
- alias space='du -hs .[!.]* * | sort -h'  # shortcut for checking space usage
- alias me="echo \"'$(id -un)' '$(id -gn)'\""  # prints in the compact way login/group
- alias rm='rm -i'  # redefine rm to be asked every time when you remove something
- alias rm='rm -rf'  # redefine rm to remove directories as well with no extra questions
+ # your own listing command
+ alias l='ls -lAF'
+ 
+ # shortcut for checking space usage
+ alias space='du -hs .[!.]* * | sort -h'
+ 
+ # prints in the compact way login/group
+ alias me="echo \"'$(id -un)' '$(id -gn)'\""
+ 
+ # redefine rm
+ alias rm='rm -i'
+ alias rm='rm -rf'
 
 Aliases go to *.bashrc* and available later by default (really,
 anywhere they can be read by the shell).
