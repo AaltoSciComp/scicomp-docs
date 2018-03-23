@@ -28,8 +28,10 @@ Based on
 Getting a shell
 ---------------
 
-Before the course: set yourself up with a bash shell.  Connect to a
-server or open on your own computer.  Ask for help if needed:
+Before the course: set yourself up with a BASH shell.  Connect to a
+server or open on your own computer. Examples and demos given during the lecture
+are done on Triton, though should work on all other Linux installations.
+Ask for help if needed:
 
 - Linux and Mac users: just open a terminal window.
 - Windows users: install PuTTY [#]_ then SSH to any interactive server
@@ -449,9 +451,12 @@ Session 2
 Last time, we focused on interactive things from the command line.
 Now, we build on that some and end up with making our own scripts.
 
-
 Command line processing and quoting
 -----------------------------------
+So, shell is responsible for interpreting the commands you type. Executing commands
+might seem simple enough, but a lot happens between the time you press RETURN and
+time your computer actually does something.
+
 * When you enter a command line, it is one string.
 * When a program runs, it always takes an array of strings (the
   ``argv`` in C, ``sys.argv`` in Python, for example).  How do you get
@@ -472,19 +477,36 @@ particular order):
 * arithmetic expansion (``$((1+1))``)
 * word splitting
 * pathname expansion (``*``, ``?``, ``[a,b]``)
+* redirects and pipes
 
-One thing we will start to see is shell quoting.  There are two types
+One thing we will start to see is shell quoting.  There are several types
 of quoting (we will learn details of variables later)::
 
-  echo $SHELL         # $SHELL is a variable and is printed here
-  echo "$SHELL"       # Double quotes: variables still substituted
-  echo '$SHELL        # Single quotes: variables NOT substitute
+  echo "$SHELL"         # Double quotes: disables all other characters except $, ', \
+  echo '$SHELL'         # Single quotes: disables all special characters
+  ls name\ with\ space  # backslash disables the special meaning of the next character
+
+By special characters we mean::
+
+ # & * ? [ ] ( ) { } = | ^ ; < > ` $ " ' \
 
 There are different rules for embedding quoting in other quoting.
 Sometimes a command passes through multiple layers and you need to
 really be careful with multiple layers of quoting!  This is advanced,
 but just remember it.
 
+::
+
+ echo 'What's up? how much did you get $$?'      # wrong, ' can not be in between ''
+ echo "What's up? how much did you get $$?"      # wrong, $$ is a variable in this case
+ echo "What's up? how much did you get \$\$?"    # correct
+ echo "What's up? how much did you get "'$$'"?"  # correct
+
+At the end of the line *\* removes the new line character, thus command can continue::
+
+ ping -c 1 8.8.8.8 > /dev/null && \
+ echo online || \
+ echo offline
 
 
 Substitute a command output
@@ -494,7 +516,7 @@ Substitute a command output
 
 ``$(command)`` or alternatively ```command```. Could be a command or a
 list of commands with pipes, redirections, grouping, variables
-inside. The first one can be nested as well.  Works inside double
+inside. The ``$()`` is a modern way, supports nesting, works inside double
 quotes.  To understand what is going on in these, run the inner
 command first.
 
@@ -521,19 +543,23 @@ discards all data written to it.
 
  command > /dev/null  # discards STDOUT only
  command &>/dev/null  # discards both STDOUT and STDERR
+ command >/dev/null 2>&1  # same as above, old style notation
  command 1>file.out 2>file.err  # redirects outputs to different files
  command < input_file &> output_file  # takes STDIN as an input and outputs STDIN/STDERR to a file
  
 ::
 
  ping -c 1 8.8.8.8 > /dev/null && echo online || echo down  # what happens if 8.8.8.8 is down? How to make it more robust?
- ls -l > listing && { mail -s "ls -l $(pwd) @ $(date +'%Y-%m-%d %H:%M')" jussi.meikalainen@aalto.fi < listing; mv listing listing.$(date +"%Y-%m-%d-%H-%M") }  # takes a snapshot of the directory list and send it to email, then renames the file
-
+ ls -l > listing && { mail -s "ls -l $(pwd)" jussi.meikalainen@aalto.fi < listing; mv listing listing.$(date +"%Y-%m-%d-%H-%M") }  # takes a snapshot of the directory list and send it to email, then renames the file
+ > filename   # the easiest ever methond to empty a file
+ cat /dev/null > filename  # yet another method of emptimg files
+ ln -s /dev/null filename  # if you can't get the program to stop writing to the file...
+ 
 Pipes are following the same rules with respect to standard output/error. In order to pipe both STDERR and STDOUT ``|&``.
 
 If ``!``  preceeds the command, the exit status is the logical negation.
 
-**tee** in case you still want output to a terminal and to a file ``command | tee > file``
+**tee** in case you still want output to a terminal and to a file ``command | tee filename``
 
 
 find
@@ -581,15 +607,19 @@ just searches that database so it is much faster.
 
 Aliases
 -------
-* Aliases allow you to define shortcuts.
-* They replace only the first word on the command line.
-* They are less flexible than functions which we will discuss next.
+* Alias is nothing more than a shortcut to a long command sequence
+* With alias one can redefine an existing command or name a new one
+* Alias will be evaluated only when executed, thus it may have all the expansions and
+  substitutions one normally has on the cli
+* They are less flexible than functions which we will discuss next
 
 ::
 
- alias l=ls
- alias space='du -hs .[!.]* * | sort -h'
- alias rm='rm -i'
+ alias l='ls -lAF'   # your own listing command
+ alias space='du -hs .[!.]* * | sort -h'  # shortcut for checking space usage
+ alias me="echo \"'$(id -un)' '$(id -gn)'\""  # prints in the compact way login/group
+ alias rm='rm -i'  # redefine rm to be asked every time when you remove something
+ alias rm='rm -rf'  # redefine rm to remove directories as well with no extra questions
 
 Aliases go to *.bashrc* and available later by default (really,
 anywhere they can be read by the shell).
