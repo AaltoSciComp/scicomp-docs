@@ -1014,7 +1014,7 @@ Selected operators:
  - ``{N,M}`` the preceding item is matched at least N times, but not more than M times
  - ``-``  represents the range if it's not first or last in a list or the ending point of a range in a list
  - ``^``  beginning of a line
- - ``$`` 	 the end of a line
+ - ``$``  the end of a line
 
 ::
 
@@ -1122,11 +1122,12 @@ has been found.:
    part of the string or not.
    
    - The script must check that number of input parameters is correct.
-   - Expand the *my_grep* script to make search case insesitive
+   - Expand *my_grep* script to make search case insesitive
  
- - Implement a script that either accept a directory name as a input parameter or request it
+ - Implement a script that either accept a directory name as aninput parameter or request it
    with ``read`` if no input parameters and creates that directory if does not exist with
-   the access permissions 700
+   the access permissions 700. Directory name should allow alphanumeric characters or special
+   characters ``.``, ``-``, ``_``.
   
 
 Arithmetics
