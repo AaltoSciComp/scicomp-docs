@@ -1101,7 +1101,9 @@ input or file descriptor.
 ``;;`` is important, if replaced with ``;&``, execution will continue with the command
 associated with the next pattern, without testing it. ``;;&`` causes the shell to test
 next pattern. The default behaviour with ``;;`` is to stop matches after first pattern
-has been found.:
+has been found.
+
+::
 
  # create a file 'cx'
  case "$0" in
