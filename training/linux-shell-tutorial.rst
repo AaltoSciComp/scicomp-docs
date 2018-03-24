@@ -243,6 +243,14 @@ Common hotkeys:
 
 **inputrc** Check */etc/inpurc* for some default key bindings, more can be defined *~/.inputrc* (left as an exercise)
 
+**CDPATH** helps changing directories faster. When you type ``cd dirname``, the shell tries to go
+to one of the local subdirectories and if it is not found shell will try the same command from every
+directory listed in the *$CDPATH*.
+
+::
+
+ export CDPATH=$HOME:$WRKDIR:$WRKDIR/project
+
 
 Initialization files and configuration
 --------------------------------------
@@ -1200,9 +1208,9 @@ Full list includes bitwise operators, see ``man bash``.
    s=$((n/2*(n+1)))
  fi
 
- echo Summ from 1..$n is $s
+ echo Sum from 1..$n is $s
 
-Something to try: make a summation directly 1+2+3+...+n and compare performance with the above one.
+Left for the exercise: make a summation directly 1+2+3+...+n and compare performance with the above one.
 
  
 Loops
@@ -1335,6 +1343,17 @@ Loop controling:
    echo $i  # output odd numbers only
  done
 
+ # this goes through all given directories to process found files
+ # if directory is not accessible, it fails, if file is empty it tries next one
+ dir_list='dir1 dir2 dir3'
+ for dir in $dir_list; do
+   cd "$dir" || { echo $dir fails; break; }
+   for file in *; do
+     [[ -s $file ]] || { echo $dir/$file is empty; continue; }
+     echo processing $dir/$file
+   done
+ done
+     
 
 :Exercise:
  - Write to files both scripts that count a sum of any *1+2+3+4+..+n* sequence. The Gauss version
@@ -1342,7 +1361,6 @@ Loop controling:
    - For the direct summation one can avoid loops, how? Tip: discover ``eval $(echo {1..$n})``
  - Using for loop rename all the files in the directories *dir1/* and *dir2/* which file names
    are like *filename.txt* to *filename.edited.txt*. Where *filename* can be any.
- - (*) Implement a script that sorts text file lines by lines length
  
 
 
@@ -1404,6 +1422,7 @@ Addressing is similar to indexed arrays
 :Exercise:
  - make a script/function that produces an array of random numbers (Tip: $RANDOM)
  - Implement a Bubble sort using arrays and loops and other built-in BASH functionality (no *sort* etc).
+ - (*) Implement a script that sorts text file lines by lines length
 
 
 
