@@ -932,7 +932,9 @@ Session 3: programming logic
 ------------------------------
 * ``[[ expression ]]`` returns 0=true/success or 1=false/failure depending on the
   evaluation of the conditional *expression*.
-* ``[[ expression ]] is a new upgraded variation on ``test`` (also known as ``[ ... ]``)
+* ``[[ expression ]]`` is a new upgraded variation on ``test`` (also known as ``[ ... ]``),
+  all the earlier examples with single brackets that one can find on the net, will also work
+  with double
 * Inside the double brackets it performs tilde expansion, parameter and variable expansion,
   arithmetic expansion, command substitution, process substitution, and quote removal
 * Conditional expressions can be used to test file attributes and perform string and arithmetic
@@ -968,19 +970,25 @@ though ``[[ ]]`` will work for them too
  - ``!`` negate the result of the evaluation
  - ``()`` group conditional expressions
 
+In addition, double brackets inherit several operands to work with integers mainly:
+
+ - ``-eq``, ``-ne``, ``-lt``, ``-le``, ``-gt``, ``-ge``  equal to, not equal  to,
+   less  than, less than or equal to, greater than, or greater than or equal
+
+
 ::
 
  # the way to check input arguments, if no input, exit (in functions 'return 1')
- [[ $# == 0 ]] && { echo Usage: $0 arguments; exit 1; }
+ [[ $# -eq 0 ]] && { echo Usage: $0 arguments; exit 1; }
 
- # the result will be true, since Aalto sorts before HY :(
+ # the result will be true, since Aalto sorts before HY
  [[ Aalto < HY ]]; echo $?
  
  # though with a small modification, the way around is going to be true also
  [[ ! Aalto > HY ]]; echo $?
 
  # this will return also true, here we compare lengths, Aaaaalto has longer... name
- s1=Aalto; s2=HY; [[ ${#s1} > ${#s2} ]]; echo $?
+ s1=Aalto; s2=HY; [[ ${#s1} -gt ${#s2} ]]; echo $?
 
  # true, since Aalto in both cases sorted before HY and UTU
  [[ Aalto < HY && Aalto < UTU ]]; echo $?
@@ -1012,9 +1020,10 @@ Selected operators:
  - ``{N}`` the preceding item is matched exactly N times
  - ``{N,}`` the preceding item is matched N or more times
  - ``{N,M}`` the preceding item is matched at least N times, but not more than M times
- - ``-``  represents the range if it's not first or last in a list or the ending point of a range in a list
+ - ``[abd]``, ``[a-z]``  a character or a range of characters/integers
  - ``^``  beginning of a line
  - ``$``  the end of a line
+ - ``()`` grouping items, this what comes to ${BASH_REMATCH[@]}
 
 ::
 
@@ -1126,87 +1135,196 @@ has been found.
    - The script must check that number of input parameters is correct.
    - Expand *my_grep* script to make search case insesitive
  
- - Implement a script that either accept a directory name as aninput parameter or request it
-   with ``read`` if no input parameters and creates that directory if does not exist with
-   the access permissions 700. Directory name should allow alphanumeric characters or special
-   characters ``.``, ``-``, ``_``.
+ - Implement a ``my_mkdir`` script that either accepts a directory name as an input parameter or requests it
+   with ``read`` if no input parameter is given. Script should create a directory if does not exist with
+   the access permissions 700.
+   
+   - Add a sanity check so that directory name should allow alphanumeric characters only.
   
 
 Arithmetics
 -----------
 BASH works with the integers only but supports wide range of arithmetic operators using
-arithmetic expanssion ``(( exprssion ))``
+arithmetic expanssion ``$(( expression ))``.
+
+ * All tokens in the expression undergo parameter and variable expansion, command  substitution,
+   and  quote  removal. The result is treated as the arithmetic expression to be evaluated.
+ * Arithmetic  expansions  may  be nested.
+ * Variables inside double parentheses can be without $ sign.
+ * BASH has other options to work with the integers, like ``let``, ``expr``, ``$[]``, and in
+   the older scripts/examples you may meet them
 
  - ``n++``, ``n--``, ``++n``, ``--n`` increments/decrements
  - ``+``, ``-`` plus minus
  - ``**`` exponent
  - ``*``, ``/``, ``%`` multiplication, division, remainder
  - ``&&``, ``||`` logical AND, OR
- - ``expr?expr:expr`` conditional operator (trinity)
+ - ``expr?expr:expr`` conditional operator (ternary)
  - ``==``, ``!=``, ``<``, ``>``, ``>=``, ``<=`` comparison
  - ``=``, ``+=``, ``-=``, ``*=``, ``/=``, ``%=`` assignment
+ - ``()``  sub-expressions in parentheses  are  evaluated first
  
-Full list includes bitwise operators.
+Full list includes bitwise operators, see ``man bash``.
+
+::
+
+ # without dollar sing value is not returned, though 'n' has been incremented
+ n=10; ((n++))
  
+ # but if we need a value
+ n=10; m=3; q=$((n**m))
+ 
+ # here we need exit code only
+ if ((q%2)); then echo odd; fi
+ if ((n>=m)); then ...; fi
+ 
+ # condition ? integer_value_if_true : integer_value_if_false
+ n=2; m=3; echo $((n<m?10:100))
+ 
+::
+
+ #!/bin/bash
+ 
+ # sum all numbers from 1..n, where n is a positive integer
+ # Gauss way, summing pairs 
+ 
+ if (($#==1)); then
+   n=$1
+ else
+   read -p 'Give me a positive integer ' n
+ fi
+
+ if ((n%2)); then
+   s=$(((n-1)/2*n+n))
+ else
+   s=$((n/2*(n+1)))
+ fi
+
+ echo Summ from 1..$n is $s
+
+Something to try: make a summation directly 1+2+3+...+n and compare performance with the above one.
+
  
 Loops
 ----
+BASH offers several options for iterating over the lists of elements. The options include
+
+ * Basic construction ``for arg in [list]``
+ * C-style *for loop* ``for ((i=1; i <= LIMIT ; i++))``
+ * while and until constructs
+
 ::
 
- for name in list; do
-   commands
+ # simple loop over a list of items, note that if you put 'list' in quotes it will be
+ # considered as one item
+ for school in SCI ELEC CHEM; do
+   echo "$school is the best!"
  done
 
- for school in "SCI ELEC CHEM"; do
-  echo "$school is the best!"
- done
-
- # example below will convert all the jpg files in the current directory to png. ``*.jpg`` similar to ``ls *.jpg``
+ # if path expanssions used (*, ? etc), loop automatically lists current dir
+ # example below will convert all jpg files in the current directory to png.
+ # ``*.jpg`` similar to ``ls *.jpg``
  for f in *.jpg; do
   convert $f ${f/.jpg/.png}
  done
+ 
+ # do ... done in certain contexts, can be omitted by framing the command block within curly brackets
+ # and certainly for loop can be written in one line as well
+ for i in {1..10}; { echo i is $i; }
 
-Same can be done (and often being done) in one line. Can be used Brace expressions like *{1..10}*, command substitution and all kind of extenssions supported by BASH.
+ # if 'in list' omitted, for loop goes through script/function input parameters $@
+ # here is a loop to rename files which names are given as input parameters
+ # touch file{1..3}; ./newname file1 file2 file3
+ for old; do
+   read -p "old name $old, new name: " new
+   mv -i "$old" "$new"
+ done
 
-If *in list* is omitted, loops uses script/function input arguments $@.
+ # loop output can be piped or redirected as output of any other command
+ for u in Aalto HY UTU; do
+   case "$u" in
+     Aalto|aalto|AALTO) echo My univesity is Aalto Univesity ;;
+     HY|hy) echo My univesity is University of Helsinki ;;
+     UTU|utu) echo My univesity is University of Turku ;;
+     *) echo "Sorry, no university"; exit 1 ;;
+   esac
+ done | sort > filename
+
+The *list* can be anything what produces a list, like Brace expanssion *{1..10}*, command substitution etc.
 
 ::
-
- func() { for i; do echo $i; done }; func a b c
+ 
+ # on Triton, do something to all pending jobs based on squeue output
+ for jobid in $(squeue -h -u $USER -t PD -o %A); do
+   scontrol update JobId=$jobid StartTime=now+5days
+ done
+   
  
 
 C-style, expressions evaluated according to the arithmetic evaluation rules
 
 ::
 
- for (( expr1; expr2; expr3 )); do
-   commands
- done
- 
- LIMIT=10
- for ((a=1; a <= LIMIT ; a++))  # LIMIT with no $
+ N=10
+ for ((i=1; i <= N ; i++))  # LIMIT with no $
  do
-   echo -n "$a "
+   echo -n "$i "
  done
 
 Loops can be nested.
 
-Other useful loop statement are ``while`` and ``until``. Both execute continously as long as the condition returns exit status zero/non-zero correspondignly.
+Other useful loop statement are ``while`` and ``until``. Both execute continously as long as the
+condition returns exit status zero/non-zero correspondignly.
+
 ::
+
  while condition; do
    ...
  done
  
- LIMIT=10
- var=0
- until ((var == LIMIT)); do
-  echo $var
-  ((var++))
+ # sum of all numbers 1..n
+ read -p 'Give a positive integer: ' n
+ i=1
+ until ((i > n)); do
+   ((s+=i))
+   ((i++))
+ done
+ echo Sum of 1..$n is $s
+
+ # endless loop, note : is noop command in BASH, does nothing
+ # can be run as sort of "deamon", process should be stopped with Ctrl-c or killed
+ while true; do : ; done
+ 
+ # drop an email every 10 minutes about running jobs on Triton
+ # can be used in combination with 'screen', and run in background
+ while true; do
+   squeue -t R -u $USER | mail -s 'running jobs' mister.x@aalto.fi
+   sleep 600
  done
 
-Condition can be any command, expression, function or a combination of them.
+ #  reads a file passed line by line, 
+ # IFS= variable before read command to prevent leading/trailing whitespace from being trimmed
+ input=/path/to/txt/file
+ while IFS= read -r line; do
+  echo $line
+ done < "$input"
+ 
+ # reading file fieldwise
+ file="/etc/passwd"
+ while IFS=: read -r f1 f2 f3 f4 f5 f6 f7; do
+   printf 'Username: %s, Shell: %s, Home Dir: %s\n' "$f1" "$f7" "$f6"
+ done <"$file"
+ 
+All the things mentioned above for *for* loop applicable to ``while`` / ``until`` loops.
 
-Loop controling: ``break`` -- terminates the loop, ``continue`` -- jump to a new iteration. ``break n`` will terminate *n* levels of loops if they are nested, otherwise terminated only loop in which it is embedded. Same kind of behaviour for ``continue n``.
+*printf* should be familiar to prorgammers, allows formatted output
+
+Loop controling:
+
+ - ``break`` terminates the loop
+ - ``continue`` jump to a new iteration
+ - ``break n`` will terminate *n* levels of loops if they are nested, otherwise terminated only
+     loop in which it is embedded. Same kind of behaviour for ``continue n``.
 
 ::
 
@@ -1217,10 +1335,19 @@ Loop controling: ``break`` -- terminates the loop, ``continue`` -- jump to a new
    echo $i  # output odd numbers only
  done
 
-:Exercise: Write a function that count a sum of any *1+2+3+4+..+n* sequence of numbers directly, thus just by summing all the numbers. Let us benchmark to solutions with *time*.
-:Exercise: Using for loop rename all the files in the directories *dir1/* and *dir2/* which file names are like *filename.txt* to *filename.edited.txt*. Where *filename* can be any, while extensions is always the same.
-:Exercise*: Implement a Bubble sort using bash loops (not *sort* utility).
 
+:Exercise:
+ - Write to files both scripts that count a sum of any *1+2+3+4+..+n* sequence. The Gauss version
+   and direct summation. Benchmark them with *time*. 
+   - For the direct summation one can avoid loops, how? Tip: discover ``eval $(echo {1..$n})``
+ - Using for loop rename all the files in the directories *dir1/* and *dir2/* which file names
+   are like *filename.txt* to *filename.edited.txt*. Where *filename* can be any.
+ - (*) Implement a script that sorts text file lines by lines length
+ 
+
+
+Session 4
+=========
 
 Arrays
 ----
@@ -1274,14 +1401,12 @@ Addressing is similar to indexed arrays
  done
 
 
-:Exercise: Gauss 1..100 sum example. Write a function that count a sum of any *1+2+3+4+..+n* sequence of numbers. Where *n* is any positive integer.
+:Exercise:
+ - make a script/function that produces an array of random numbers (Tip: $RANDOM)
+ - Implement a Bubble sort using arrays and loops and other built-in BASH functionality (no *sort* etc).
 
-:Exercise: make a script/function that produces an array of random numbers (Tip: $RANDOM)
 
 
-
-4. session
-==========
 Here Documents code block
 ----
 
