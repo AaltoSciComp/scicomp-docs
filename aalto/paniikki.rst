@@ -18,8 +18,8 @@ Paniikki means "panic" in English which is a fascinating name as people in panic
 
 -------------------------------------------
 
-Hardwares
-=========
+Hardware
+========
 
 .. csv-table::
    :header-rows: 1
@@ -36,7 +36,7 @@ Hardwares
    L1i cache              | 32K
    L2 cache               | 256K
    L3 cache               | 15360K
-   
+
 
 .. csv-table::
    :header-rows: 1
@@ -65,8 +65,8 @@ Hardwares
 
 -------------------------------------------
 
-Softwares
-=========
+Software
+========
 First thing first, you DO NOT have a sudo right in Aalto classroom machines and you never will. We provide mostly used SW and if you need more you could inquire via esupport@aalto.fi.
 
 Modules
@@ -77,8 +77,8 @@ In short, it is a software environment management tool. With ``module`` you can 
 
 Read the detail in `Module environment page <http://scicomp.aalto.fi/triton/apps/index.html#module-environment>`_.
 
-Examples 1
-^^^^^^^^^^
+Example 1
+^^^^^^^^^
 Assume we are in Paniikki and wants to do our homework for CS-E4820 Machine Learning: Advanced probabilistic methods. In the course students use Tensorflow and Edward.
 
 .. code-block:: bash
@@ -107,8 +107,22 @@ Assume we are in Paniikki and wants to do our homework for CS-E4820 Machine Lear
 	$ module purge
 
 
-Examples 2
-^^^^^^^^^^
+Example 2: general Python software
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Need Python and general software?  The anaconda modules have Python, a
+bunch of useful scientific and data packages, and machine learning
+libraries.
+
+.. code-block:: bash
+
+   # Latest Python 2
+   $ module load anaconda2
+
+   # Latest Python 3
+   $ module load anaconda3
+
+Example 3: more software
+^^^^^^^^^^^^^^^^^^^^^^^^
 You can check all other modules as well
 
 .. code-block:: bash
@@ -121,13 +135,13 @@ You can check all other modules as well
   :alt: alternate text
   :figclass: align-center
 
-  < Available modules in Paniikki as of 2018 March 8th > 
+  < Available modules in Paniikki as of 2018 March 8th >
 
 You want to use Matlab?
 
 .. code-block:: bash
 
-	$ module avail matlab/2017b
+	$ module load matlab/2017b
 	$ matlab
 
 -------------------------------------------

@@ -48,15 +48,15 @@ students.  You may find them useful, but can often be overloaded. :doc:`Learn ho
 For GPU computing, the `Paniikki Linux computer lab
 <http://usefulaaltomap.fi/#!/select/paniikki>`_ has GPUs in all
 workstations and various software.  The instructions for :doc:`Aalto
-workstations <../aalto/linux>` apply there as well (mostly). Read the 
+workstations <../aalto/linux>` apply there as well (mostly). Read the
 :doc:`Paniikki cheatsheet here <../aalto/paniikki>`. The
 software on these machines is managed by the Aalto-IT team.  This is
 the place if you need to play with GPUs, deep learning, etc.
 
 The use of :doc:`Triton <../triton/index>` is primarily for research
-purposes.  If you are in a course with advanced computing needs, ask
-the course instructor to contact us to discuss access for the class.
-Your instructor will tell you when to contact us.
+purposes.  Some very advanced courses may use this, but it generally
+only available for research purposes.  Please ask your instructor
+first, before asking us.
 
 
 
@@ -79,21 +79,33 @@ Software
 
 ITS has a `software and licenses <its_sw_>`_ (`FI <its_sw_fi_>`_)
 page, and also a `full list of licenses <its_sw_list_>`_.  There is
-also http://download.aalto.fi/.
+also http://download.aalto.fi/.  Various scientific software can be
+found for your own use via the Aalto software portals.
+
 
 .. _its_sw: https://inside.aalto.fi/display/ITServices/Software+and+licenses
 .. _its_sw_fi: https://inside.aalto.fi/display/ITPK/Ohjelmistot+ja+lisenssit
 .. _its_sw_list: https://inside.aalto.fi/display/ITServices/University+software+licenses
 
 
+The Lmod (``module``) system provides more software on
+``brute``/``force`` and in Paniikki.  For example, to access a bunch
+of scientific Python software, you can do ``module load anaconda3``.
+The :doc:`researcher-focused instructions are here
+</triton/tut/modules>`, but like many things on this site you may have
+to adapt to the student systems.
 
-Software
-========
-Various scientific software can be found for your own use via the
-Aalto software portals (see the IT instructions at the top of the page)
+
 
 Other notes
 ===========
 It can be hard to find your way around Aalto, the official campus maps
 and directions are known for being confusing confusing.  Try
 `UsefulAaltoMap <http://usefulaaltomap.fi>`_ instead.
+
+Do you have suggestions for this page?  Please leave on `issue on
+Github <scicomp_github_issues_>`_ (make sure you have a good title
+that mentions the audience is students, so we can put the information
+in the right place).  Better yet, send a pull request to us yourself.
+
+.. _scicomp_github_issues: https://github.com/AaltoScienceIT/scicomp-docs/issues
