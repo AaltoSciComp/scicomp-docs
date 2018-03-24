@@ -181,6 +181,13 @@ us know.  If this is useful to you, please let us know your user
 store, too.  In the current development stage, the threshold for
 feedback should be very low.
 
+Currently, the service level is best effort.  The service may go down
+at any time and/or notebooks may be killed whenever there is a
+shortage of resources or need of maintenance.  However, notebooks
+auto-save and do survive service restarts, and we will try to avoid
+killing things unnecessarily.
+
+
 
 Your own notebooks via ``sjupyter``
 ===================================
@@ -280,6 +287,14 @@ can within the python/R/matlab/etc environment: just do it outside of
 Jupyter and it should be there inside, as long as you use the same
 environment.
 
+
+
+
+FAQ/common problems
+===================
+* **Jupyterhub won't spawn my server: "Error: HTTP 500: Internal
+  Server Error (Spawner failed to start [status=1]."**.  Is your home
+  directory quota exceeded?
 
 
 
