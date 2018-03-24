@@ -1357,8 +1357,10 @@ Loop controling:
 
 :Exercise:
  - Write to files both scripts that count a sum of any *1+2+3+4+..+n* sequence. The Gauss version
-   and direct summation. Benchmark them with *time*. 
+   and direct summation. Benchmark them with *time*.
+   
    - For the direct summation one can avoid loops, how? Tip: discover ``eval $(echo {1..$n})``
+ 
  - Using for loop rename all the files in the directories *dir1/* and *dir2/* which file names
    are like *filename.txt* to *filename.edited.txt*. Where *filename* can be any.
  
@@ -1419,15 +1421,8 @@ Addressing is similar to indexed arrays
  done
 
 
-:Exercise:
- - make a script/function that produces an array of random numbers (Tip: $RANDOM)
- - Implement a Bubble sort using arrays and loops and other built-in BASH functionality (no *sort* etc).
- - (*) Implement a script that sorts text file lines by lines length
-
-
-
 Here Documents code block
-----
+-------------------------
 
 ::
  
@@ -1477,13 +1472,8 @@ One trick that is particularly useful, making a long comment out of it
 **Hint** ``<<\LimtiString`` to turn off substitutions and place text as is with $ marks etc
 
 
-
-
-read
-----
-
-Catching kill signals
-----
+Catching kill signals: trap
+---------------------------
 Making scripts booletproofed with ``trap``. It is when you want to control the script even when it is being aborted.
 
 ::
@@ -1500,33 +1490,11 @@ While instead of *echo*, one can come up with something more clever: function th
 **Hint** About signals see *Standard signals* section at ``man 7 signal``. Like Ctrl-c is INT (aka SIGINT).
 
 
-printf
-----
-If you have been ever wondering that whether ``echo`` is the only way to output something to a screen, then nope, BASH has ``printf``. Familiar to programmers, it allows make output formatted.
+:Exercise:
+ - make a script/function that produces an array of random numbers (Tip: $RANDOM)
+ - Implement a Bubble sort using arrays and loops and other built-in BASH functionality (no *sort* etc).
+ - (*) Implement a script that sorts text file lines by lines length
 
-::
-
- printf format [arguments]
- # printing a text at the end of the line
- printf "%*s\n" $(tput cols) "Hello world!"
- 
-See more examples at [#]_
-
-
-parallel
-----
-It is not a parallelzation in the HPC way (threads, MPI), but the utility to make a number of similar processes to run in parallel, while they differ in input parameters only.
-
-It is not a built-in feature of BASH but an extra utility. 
-
-::
-
- parallel -i command {} -- arguments_list   # normally the command is passed the argument at the end of its command line. With -i               option, any instances of "{}" in the command are replaced with the argument.
- 
- parallel sh -c "echo hi; sleep 2; echo bye" -- 1 2 3   # will run three subshells that each print a message
- parallel -j 3 -- ls df "echo hi"   # will run three independent processes in parallel
-
-On Triton we have installed Tollef Fog Heen's version of parallel from moreutils-parallel CentOS' RPM. GNU project has its own though, of exactly the same name.
 
 Debugging
 ----
@@ -1575,8 +1543,54 @@ Or simply output variable values on exit
 ::
 
  trap 'echo Variable Listing --- a = $a  b = $b' EXIT  # will output variables value on exit
+
+
+parallel
+----
+It is not a parallelzation in the HPC way (threads, MPI), but the utility to make a number of similar processes to run in parallel, while they differ in input parameters only.
+
+It is not a built-in feature of BASH but an extra utility. 
+
+::
+
+ parallel -i command {} -- arguments_list   # normally the command is passed the argument at the end of its command line. With -i               option, any instances of "{}" in the command are replaced with the argument.
  
- 
+ parallel sh -c "echo hi; sleep 2; echo bye" -- 1 2 3   # will run three subshells that each print a message
+ parallel -j 3 -- ls df "echo hi"   # will run three independent processes in parallel
+
+On Triton we have installed Tollef Fog Heen's version of parallel from moreutils-parallel CentOS' RPM. GNU project has its own though, of exactly the same name.
+
+
+Managing foreground/background processes
+----
+Adding *&* right after the command send the process to background. Example: ``firefox --no-remote &`` same can be done with any terminal command/function, like ``tar ... &``.
+
+If you have already running process, then Ctrl-z and then ``bg``. Drawback: there is no easy way to redirect the running task output.
+
+List the jobs ruuning in the background ``jobs``, get a job back online: ``fg`` or ``fg <job_number>``. There can be multiple background jobs (remeber forkbombs).
+
+Kill the foreground job: Ctrl-c
+
+
+Exit the shell
+--------------
+``logout`` or Ctrl-d (export IGNOREEOF=1 to *.bashrc*)
+
+In order to keep your sessions running while you logged out, you
+should discover the ``screen`` program.
+
+ - ``screen`` to start a session
+ - Ctrl-a-d to detach the session while you are connected
+ - ``screen -ls`` to list currently running sessions
+ - ``screen -rx <session_id>`` to attach the session, one can use TAB for the autocompletion or skip the <session_id> if there is only one session running
+
+Example: irssi on kosh / lyta
+
+
+About homeworks
+---------------
+Comming soonish...
+
 
 References
 ==========
@@ -1594,31 +1608,6 @@ Bonus material
 ==============
 Parts that did not fit.
 
-Managing foreground/background processes
-----
-Adding *&* right after the command send the process to background. Example: ``firefox --no-remote &`` same can be done with any terminal command/function, like ``tar ... &``.
-
-If you have already running process, then Ctrl-z and then ``bg``. Drawback: there is no easy way to redirect the running task output.
-
-List the jobs ruuning in the background ``jobs``, get a job back online: ``fg`` or ``fg <job_number>``. There can be multiple background jobs (remeber forkbombs).
-
-Kill the foreground job: Ctrl-c
-
-
-
-Exit the shell
---------------
-``logout`` or Ctrl-d (export IGNOREEOF=1 to *.bashrc*)
-
-In order to keep your sessions running while you logged out, you
-should discover the ``screen`` program.
-
- - ``screen`` to start a session
- - Ctrl-a-d to detach the session while you are connected
- - ``screen -ls`` to list currently running sessions
- - ``screen -rx <session_id>`` to attach the session, one can use TAB for the autocompletion or skip the <session_id> if there is only one session running
-
-Example: irssi on kosh / lyta
 
 
 Files and dirs advances
