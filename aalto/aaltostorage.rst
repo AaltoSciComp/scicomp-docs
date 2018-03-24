@@ -9,7 +9,7 @@ page describes them all, so that you can have an easy reference.
 
 When starting a new project, please first consider the big picture of
 good Research Data Management: See the :doc:`general data management
-pages here <index>` and `Aalto's
+pages here <../data/index>` and `Aalto's
 page <http://www.aalto.fi/en/research/research_data_management/>`__. On
 Aalto's page, there are links to solutions for Opening, Collaborating
 and Archiving. Our department's resources are just one part of that.
@@ -34,7 +34,7 @@ Summary table
 ~~~~~~~~~~~~~
 
 This table lists all available options, including those not managed by
-CSIT. In general, **project** is for most research data that requires
+departments. In general, **project** is for most research data that requires
 good backups. For big data, use **scratch**. Request **separate
 projects** when needed to keep things organized.INLINE
 
@@ -204,9 +204,9 @@ Filesystem list
       total.
    -  In order to use this, **you must have a triton account**. If you
       don't, you get "input/output error" which is extremely confusing.
-   -  On CS workstations, this is **mounted via NFS** (and accessing it
+   -  On workstations, this is **mounted via NFS** (and accessing it
       transfers data from Keilaniemi on each access), so it is **not**
-      fast on CS workstations, just large file storage. For high
+      fast on workstations, just large file storage. For high
       performance operations, work on triton and use the workstation
       mount for convenience when visualizing.
    -  This is RAID6, so is pretty well protected against single disk
@@ -269,7 +269,7 @@ Filesystem list
 
 -  **triton home**: triton's home directories
 
-   -  Not part of CS, but documented here for convenience
+   -  Not part of departments, but documented here for convenience
    -  The home directory on Triton.
    -  Backed up daily.
    -  Not available on workstations.
