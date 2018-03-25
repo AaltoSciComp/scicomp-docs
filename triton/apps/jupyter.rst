@@ -310,11 +310,15 @@ See also
 * CSC has this service, too, however there is no long term storage yet
   so there is limited usefulness for research: https://notebooks.csc.fi/
 
-Our configuration is available on Github:
+Our configuration is available on Github.  Theoretically, all the
+pieces are here but it is not yet documented well and not yet
+generalizable.  The Ansible role is a good start but the jupyterhub
+config and setup is hackish.
 
 * Ansible config role:
   https://github.com/AaltoScienceIT/ansible-role-fgci-jupyterhub
-* Configuration: coming soon
+* Configuration and automated conda environment setup:
+  https://github.com/AaltoScienceIT/triton-jupyterhub
 
 ..
   Matlab support:
