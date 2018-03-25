@@ -492,8 +492,8 @@ Leftovers can be said as a homework, one can go through them next session or giv
   Do Do list: Find a a Doubled Word'. Any easier way to do it?
 
 
-Session 2
-=========
+2. session: BASH magic
+======================
 Last time, we focused on interactive things from the command line.
 Now, we build on that some and end up with making our own scripts.
 
@@ -933,9 +933,8 @@ redefine a variable::
  
 
 
-Session 3: programming logic
-=========
-
+3. session: programming logic
+=============================
 ``[[ ]]``
 ------------------------------
 * ``[[ expression ]]`` returns 0=true/success or 1=false/failure depending on the
@@ -1323,11 +1322,24 @@ condition returns exit status zero/non-zero correspondignly.
    printf 'Username: %s, Shell: %s, Home Dir: %s\n' "$f1" "$f7" "$f6"
  done <"$file"
  
+ # reading command output, this will be run in a subshell, and thus all variables used
+ # inside the loop will die when loop is over
+ file -b * | while read line; do
+   do something with the lines
+ done
+ 
+ # to avoid above situation, one can use process substitution
+ while read line; do
+   do something with the lines
+ done < <(file -b *)
+ 
 All the things mentioned above for *for* loop applicable to ``while`` / ``until`` loops.
 
 *printf* should be familiar to prorgammers, allows formatted output
 
-Loop controling:
+Loop controling: normally *for* loop iterates until it has processed all its input arguments.
+*while* and *until* loops iterate until the loop control returns a certain status. But if
+needed, one can terminate loop or jump to a next iteration.
 
  - ``break`` terminates the loop
  - ``continue`` jump to a new iteration
@@ -1401,7 +1413,7 @@ To append elements to the end of array
 
 ::
 
-  $array+=(value)
+  array+=(value)
 
 Loops through the indexed array
 
@@ -1413,7 +1425,11 @@ Loops through the indexed array
 
 Negative index counts back from the end of the array, *[-1]* referencing to the last element.
 
-BASH associative arrays needs to be declared first ``declare -A asarr``
+Quick (and dirty) way to print array with no loop::
+
+ declare -p array
+
+BASH associative arrays (this type of array supported in BASH since version 4.2) needs to be declared first ``declare -A asarr``, array elements they can be declared as integers ``declare -iA array``.
 
 ::
 
@@ -1424,9 +1440,11 @@ Addressing is similar to indexed arrays
 
 ::
 
- for i in "${!asarr[*]}"; do
-   echo \$asarr["$i"] is ${asarr["$i"]}
+ for i in "${!asarr[@]}"; do
+   echo \$asarr[$i] is ${asarr[$i]}
  done
+
+Even though key can have spaces in it, quoting can be omitted.
 
 
 Here Documents code block
