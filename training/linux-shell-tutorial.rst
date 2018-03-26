@@ -1012,25 +1012,26 @@ In addition, double brackets inherit several operands to work with integers main
  # 'return 1').  Remember, $# is special variable for number of arguments.
  [[ $# -eq 0 ]] && { echo Usage: $0 arguments; exit 1; }
 
+ aalto=Aalto hy=HY utu=UTU
+ 
  # the result will be true (0), since Aalto sorts before HY
- [[ Aalto < HY ]]; echo $?
+ [[ $aalto < $hy ]]; echo $?
 
  # though with a small modification, the way around is going to be true also
- [[ ! Aalto > HY ]]; echo $?
+ [[ ! $aalto > $hy ]]; echo $?
 
  # this will return also true, here we compare lengths, Aaaaalto has a longer... name
- s1=Aalto; s2=HY; [[ ${#s1} -gt ${#s2} ]]; echo $?
+ [[ ${#aalto} -gt ${#hy} ]]; echo $?
 
  # true, since Aalto in both cases sorted before HY and UTU
- [[ Aalto < HY && Aalto < UTU ]]; echo $?
+ [[ $aalto < $hy && $aalto < $utu ]]; echo $?
 
  # false, since both fail
- [[ ( Aalto < HY && Aalto > UTU ) || HY > UTU ]]; echo $?
+ [[ ( $aalto < $hy && $aalto > $utu ) || $hy > $utu ]]; echo $?
 
- # syntax allows write in a compact way, though [[ ]] always require spaces
- [[ (Aalto<HY&&Aalto>UTU)||HY<UTU ]]
-
-The matching operator brings more opportunities, because regular expressions come in play.
+ # note that [[ ]] always require spaces before and after brackets
+ 
+The matching operator ``=~`` brings more opportunities, because regular expressions come in play.
 Even more: matched strings in parentheses assigned to *${BASH_REMATCH[]}* array elements!
 
 * Regular expressions (regexs) are basically a mini-language for
@@ -1244,6 +1245,15 @@ Available operators:
  echo Sum from 1..$n is $s
 
 Left for the exercise: make a summation directly 1+2+3+...+n and compare performance with the above one.
+
+For anything more mathematical than summing integers, one should use something else,
+one of the option is ``bc``, often installed by default.
+
+::
+  
+  # bc -- an arbitrary precision calculator language
+  # compute Pi number
+  echo "scale=10; 4*a(1)" | bc -l
 
 
 Loops
