@@ -1235,14 +1235,8 @@ Available operators:
  else
    read -p 'Give me a positive integer ' n
  fi
-
- if ((n%2)); then
-   s=$(((n-1)/2*n+n))
- else
-   s=$((n/2*(n+1)))
- fi
-
- echo Sum from 1..$n is $s
+ 
+ echo Sum from 1..$n is $((n*(n+1)/2))
 
 Left for the exercise: make a summation directly 1+2+3+...+n and compare performance with the above one.
 
