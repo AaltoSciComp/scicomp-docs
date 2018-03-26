@@ -635,6 +635,28 @@ If ``!``  preceeds the command, the exit status is the logical negation.
 
 **tee** in case you still want output to a terminal and to a file ``command | tee filename``
 
+But what if you need to pass to another program results of two commands at once?
+BASH reserves file descriptors 3, 4, .. 9. A way to use them is a built-in feature called
+*Process Substitution*, ``<(command)`` or ``>(command)``. The command (pipes, pipelines are fine here)
+is run asynchronously, and its input or output appears as a filename (*/dev/fd/<n>*). This filename is passed as an
+argument to the current command as the result of the expansion.
+
+::
+
+ # BASH creates a file that has an output of *command2* and pass it to *command1*
+ command1 <(command2)
+ 
+ # but in the same way one can substitute results of several commands
+ command1 <(command2) <(command3)
+ 
+ # some of the examples can be done with { command 2; command3; } | command1
+ # but when input order matters, process substitution has no alternative
+ # example: comparing listings of two directories
+ diff <(ls dir1) <(ls dir2)
+ 
+ # writing to the file will provide input for *command2*
+ command1 >(command2)
+
 
 find
 ----
