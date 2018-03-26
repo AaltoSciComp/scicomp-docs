@@ -11,7 +11,8 @@ proper programs.  You must do this if you are going to large parallel
 computing.
 
 You can try them online at `try.jupyter.org
-<http://try.jupyter.org/>`_ (there is no long-term saving here).
+<http://try.jupyter.org/>`_ (there is a temporary notebook with no
+long-term saving).
 
 You can always run notebooks yourself on your own (or remote)
 computers, but on Triton we have some facilities already set up to
@@ -54,10 +55,12 @@ In a cluster environment, notebooks are inefficient for big
 calculations because you must reserve your resources in advance, but
 most of the time the notebooks are not using all their resources.
 Instead, use notebooks for exploration and light calculation.  When
-you need to scale up and run on the cluster, create actual programs
+you need to scale up and run on the cluster, separate the calculation
+from the exploration.  Best is to create actual programs
 (start, run, end, non-interactive) and :doc:`submit those to the queue
 </triton/tut/serial>`.  Use notebooks to explore and process the
-output.
+output.  A general rule of thumb is "if you would be upset that your
+notebook restarted, it's time to split out the calculation".
 
 Notebooks are hard to :doc:`version control </scicomp/git>`, so you
 should look at the `Jupyter diff and merge tools
@@ -66,7 +69,8 @@ interactive doesn't mean version control is any less important!  The
 "split core functions into a library" is also related: that library
 should be in version control at least.
 
-Don't open the same notebook twice - you will get conflicts.
+Don't open the same notebook more than once at the same time - you
+will get conflicts.
 
 
 
@@ -102,7 +106,8 @@ the output log, ``~/'jupyterhub_slurmspawner_*.log``).  The jupyter
 server nodes are oversubscribed, which means that we can allocate more
 memory and CPU than is actually available.  We will monitor the nodes
 to try to ensure that there are enough resources available, so do
-report problems to us.
+report problems to us.  Please request the minimum amount of memory
+you think you need - you can always restart with more memory.
 
 When you use Jupyter via this interface, the slurm billing weights are
 lower, so that the rest of your Triton priority does not decrease by
@@ -194,12 +199,16 @@ Your own notebooks via ``sjupyter``
 
 .. note::
 
-   Start ``sjupyter`` by using ``/share/apps/bin/sjupyter`` for now.
-
-.. note::
+   Now that Jupyterhub exists, this method of running Jupyter is not
+   so important.  It is only needed if you need more resources than
+   JupyterHub can provide.
 
    This is currently not integrated into the Jupyterhub setup above,
    and these instructions will be slightly wrong.
+
+.. note::
+
+   Start ``sjupyter`` by using ``/share/apps/bin/sjupyter`` for now.
 
 We provide a command ``sjupyter`` which automates launching your own
 notebooks in the Slurm queue.  This gives you more flexibility in
@@ -307,6 +316,7 @@ See also
 
 * Jupyter basic tutorial: https://www.youtube.com/watch?v=HW29067qVWk
   (this is just the first link on youtube - there are many more too)
+
 * CSC has this service, too, however there is no long term storage yet
   so there is limited usefulness for research: https://notebooks.csc.fi/
 
