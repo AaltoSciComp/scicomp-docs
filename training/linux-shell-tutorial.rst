@@ -16,11 +16,11 @@ commands to learners.
  - ``export PROMPT_COMMAND='history -a'``   # .bashrc or all the terminals one launches commands
  - ``tail -n 0 -F .bash_history``
 
-Starred exersices (*) are for advanced users who would like further stimulation.
+Starred exercises (*) are for advanced users who would like further stimulation.
 
 Based on
  - ``man bash`` v4.2 (Triton default version in Feb 2018)
- - Advanced BASH scripting guide [#]_
+ - Advanced BASH scripting guide [#absguide]_
  - UNIX Power Tools, Shelley Powers etc, 3rd ed, O'Reilly
  - common sense and 20+ years Linux experience
  - see also other references in the text
@@ -34,7 +34,7 @@ are done on Triton, though should work on all other Linux installations.
 Ask for help if needed:
 
 - Linux and Mac users: just open a terminal window.
-- Windows users: install PuTTY [#]_ then SSH to any interactive server
+- Windows users: install PuTTY [#putty]_ then SSH to any interactive server
   at Aalto or your department.
 
 -----------------------------------------------------------------------------
@@ -226,9 +226,9 @@ Hotkeys
 Common hotkeys:
 
 - TAB -- autocomlpetion
-- Home `or` Ctrl-a -- start of the command line
-- End `or` Ctrl-e -- end
-- Ctrl-left/right arrows `or` Alt-b/Alt-f  - moving by one word there and back
+- Home ``or`` Ctrl-a -- start of the command line
+- End ``or`` Ctrl-e -- end
+- Ctrl-left/right arrows ``or`` Alt-b/Alt-f  - moving by one word there and back
 - up/down arrows -- command history
 - Ctrl-l -- clear the screen
 - Ctrl-Shift-c -- copy
@@ -267,7 +267,7 @@ Initialization files and configuration
   - ``.bash_profile`` (interactive login to a workstation)
   - they are often a symlink from one to another
 
-One of the things to play with: command line prompt defined in PS1 [#]_
+One of the things to play with: command line prompt defined in PS1 [#ps1]_
 
 ::
 
@@ -489,7 +489,7 @@ Leftovers can be said as a homework, one can go through them next session or giv
  - Play with the commands grep, cut: find at least two ways to
    extract IP addresses only out of /etc/hosts. Are there other ways?
  - (*) Using pipes and commands echo/tr/uniq, find doubled words out of 'My
-  Do Do list: Find a a Doubled Word'. Any easier way to do it?
+   Do Do list: Find a a Doubled Word'. Any easier way to do it?
 
 
 2. session: BASH magic
@@ -653,8 +653,8 @@ The first option gives a starting directory::
   find /etc/
 
 More options: by modification/accessing time, by ownership, by access
-type, joint conditions, case-insensitive, that do not match, etc [#]_
-[#]_::
+type, joint conditions, case-insensitive, that do not match, etc [#find1]_
+[#find2]_::
 
  # -or-  'find ~ $WRKDIR -name file.txt' one can search more than one dir at once
  find ~ -name file.txt
@@ -935,12 +935,12 @@ redefine a variable::
 
 3. session: programming logic
 =============================
-``[[ ]]``
-------------------------------
+Tests: ``[[ ]]``
+----------------
 * ``[[ expression ]]`` returns 0=true/success or 1=false/failure depending on the
   evaluation of the conditional *expression*.
 * ``[[ expression ]]`` is a new upgraded variation on ``test`` (also known as ``[ ... ]``),
-  all the earlier examples with single brackets that one can find on the net, will also work
+  all the earlier examples with single brackets that one can find online will also work
   with double
 * Inside the double brackets it performs tilde expansion, parameter and variable expansion,
   arithmetic expansion, command substitution, process substitution, and quote removal
@@ -948,11 +948,12 @@ redefine a variable::
   comparisons
 
 Selected examples file attributes and variables testing:
- - ``-f`` true if is a file
- - ``-r`` true if file exists and readable
- - ``-d`` true if is a directory
- - ``-z`` true if the length of string is zero (always used to check that var is not empty)
- - ``-n`` true if the length of string is non-zero
+ - ``-f file`` true if is a file
+ - ``-r file`` true if file exists and readable
+ - ``-d dir`` true if is a directory
+ - ``-e file`` true if file/dir/etc exists in any form
+ - ``-z string`` true if the length of string is zero (always used to check that var is not empty)
+ - ``-n string`` true if the length of string is non-zero
  - ``file1 -nt file2`` true if *file1* is newer (modification time)
  - many more others
 
@@ -960,12 +961,12 @@ Selected examples file attributes and variables testing:
 
  # checks that file exists
  [[ -f $file ]] && echo $file exists || { echo error; exit 1; }
- 
+
  # check that directory does not exist before creating one
  [[ -d $dir ]] || mkdir $dir
 
 Note that integers have their own construction ``(( expression ))`` (we come back to this),
-though ``[[ ]]`` will work for them too
+though ``[[ ]]`` will work for them too.  The following are more tests:
 
  - ``==`` strings or integers are equal  (``=`` also works)
  - ``!=`` strings or integers are not equal
@@ -985,45 +986,55 @@ In addition, double brackets inherit several operands to work with integers main
 
 ::
 
- # the way to check input arguments, if no input, exit (in functions 'return 1')
+ # the way to check input arguments, if no input, exit (in functions
+ # 'return 1').  Remember, $# is special variable for number of arguments.
  [[ $# -eq 0 ]] && { echo Usage: $0 arguments; exit 1; }
 
- # the result will be true, since Aalto sorts before HY
+ # the result will be true (0), since Aalto sorts before HY
  [[ Aalto < HY ]]; echo $?
- 
+
  # though with a small modification, the way around is going to be true also
  [[ ! Aalto > HY ]]; echo $?
 
- # this will return also true, here we compare lengths, Aaaaalto has longer... name
+ # this will return also true, here we compare lengths, Aaaaalto has a longer... name
  s1=Aalto; s2=HY; [[ ${#s1} -gt ${#s2} ]]; echo $?
 
  # true, since Aalto in both cases sorted before HY and UTU
  [[ Aalto < HY && Aalto < UTU ]]; echo $?
- 
+
  # false, since both fail
  [[ ( Aalto < HY && Aalto > UTU ) || HY > UTU ]]; echo $?
- 
+
  # syntax allows write in a compact way, though [[ ]] always require spaces
  [[ (Aalto<HY&&Aalto>UTU)||HY<UTU ]]
 
-Matching operator brings more oportunities, here where regular expressions come in place.
+The matching operator brings more opportunities, because regular expressions come in play.
 Even more: matched strings in parentheses assigned to *${BASH_REMATCH[]}* array elements!
 
 * Regular expressions (regexs) are basically a mini-language for
   searching within, matching, and replacing text in strings.
 * They are extremely powerful and basically required knowledge in any
-  type of text processing
+  type of text processing.
 * Yet there is a famous quote by Jamie Zawinski: "Some people, when
   confronted with a problem, think 'I know, I'll use regular
   expressions.' Now they have two problems."  This doesn't mean
-  regular expressions shouldn't be used, but used carefully.
+  regular expressions shouldn't be used, but used carefully.  When
+  writing regexs, start with a small pattern and slowly build it up,
+  testing the matching at each phase, or else you will end up with a
+  giant thing that doesn't work and you don't know why and can't debug
+  it.  There are also online regex testers which help build them.
+* While the basics (below) are the same, there are different forms of
+  regexs!  For example, the ``grep`` program has regular regexs, but
+  ``grep -E`` has extended.  The difference is mainly in the special
+  characters and quoting.  Basically, check the docs for each language
+  (Perl, Python, etc) you want to use regexs in.
 
 Selected operators:
 
- - ``.`` 	matches any single character
+ - ``.`` matches any single character
  - ``?`` the preceding item is optional and will be matched, at most, once
- - ``*`` 	the preceding item will be matched zero or more times
- - ``+``  the preceding item will be matched one or more times
+ - ``*`` the preceding item will be matched zero or more times
+ - ``+`` the preceding item will be matched one or more times
  - ``{N}`` the preceding item is matched exactly N times
  - ``{N,}`` the preceding item is matched N or more times
  - ``{N,M}`` the preceding item is matched at least N times, but not more than M times
@@ -1043,8 +1054,8 @@ Selected operators:
 **For case insesitive matching**, set ``shopt -s nocasematch``  (to disable it back ``shopt -u nocasematch``)
 
 
-if/elif/else
-------------
+Conditionals: if/elif/else
+--------------------------
 Yes, we have ``[[ ]] && ... || ...`` but scripting style is more logical with if/else construction::
 
  if condition; then
@@ -1082,15 +1093,15 @@ an arithmetic expression ``$(( ))``, or a command substitution.
    echo Usage: $0 input_arg
    exit 1
  fi
- ... the rest of the code 
+ ... the rest of the code
 
 
 case
 ----
-Another option to handle flow, instead of nested *ifs*, ``case``.
+Another option to handle flow, instead of nested *ifs*, is ``case``.
 
 ::
- 
+
  read -p "Are you ready (y/n)? " yesno   # expects user input
  case $yesno in
    y|yes) do_something_if_yes ;;
@@ -1099,7 +1110,7 @@ Another option to handle flow, instead of nested *ifs*, ``case``.
  esac
  # $yesno can be replaced with ${yesno,,} to convert to a lower case on the fly
 
-**Here is introduced** ``read`` built-in command that reads one line from the standard
+**In the example above, we introduce** ``read``, a built-in command that reads one line from the standard
 input or file descriptor.
 
 ``case`` tries to match the variable against each pattern in turn. Understands patterns rules like ``*, ?, [], |``.
@@ -1113,7 +1124,7 @@ input or file descriptor.
    [6-9][0-9]) echo Senior ;;
    *) echo Should be dead by now or wrong input ;;
  esac
- 
+
 ``;;`` is important, if replaced with ``;&``, execution will continue with the command
 associated with the next pattern, without testing it. ``;;&`` causes the shell to test
 next pattern. The default behaviour with ``;;`` is to stop matches after first pattern
@@ -1128,7 +1139,7 @@ has been found.
   *c-w) chmod -w "$@" ;;
   *) echo "$0: seems that file name is somewhat different"; exit 1 ;;
  esac
- 
+
  # chmod +x cx
  # ln cx cw
  # ln cx c-w
@@ -1138,63 +1149,64 @@ has been found.
  - Using BASH builtin functionality implement ``my_grep pattern string`` script that picks
    up a pattern ($1) and a string ($2) as an input and reports whether pattern matches any
    part of the string or not.
-   
+
    - The script must check that number of input parameters is correct.
-   - Expand *my_grep* script to make search case insesitive
- 
+   - Expand *my_grep* script to make search case insensitive
+
  - Implement a ``my_mkdir`` script that either accepts a directory name as an input parameter or requests it
    with ``read`` if no input parameter is given. Script should create a directory if does not exist with
    the access permissions 700.
-   
+
    - Add a sanity check so that directory name should allow alphanumeric characters only.
-  
 
-Arithmetics
------------
-BASH works with the integers only but supports wide range of arithmetic operators using
-arithmetic expanssion ``$(( expression ))``.
 
- * All tokens in the expression undergo parameter and variable expansion, command  substitution,
-   and  quote  removal. The result is treated as the arithmetic expression to be evaluated.
- * Arithmetic  expansions  may  be nested.
- * Variables inside double parentheses can be without $ sign.
+Arithmetic
+----------
+BASH works with integers only (no floating point) but supports wide range of arithmetic operators using
+arithmetic expansion ``$(( expression ))``.
+
+ * All tokens in the expression undergo parameter and variable expansion, command substitution,
+   and quote removal. The result is treated as the arithmetic expression to be evaluated.
+ * Arithmetic expansion may be nested.
+ * Variables inside double parentheses can be without a $ sign.
  * BASH has other options to work with the integers, like ``let``, ``expr``, ``$[]``, and in
-   the older scripts/examples you may meet them
+   older scripts/examples you may see them.
+
+Available operators:
 
  - ``n++``, ``n--``, ``++n``, ``--n`` increments/decrements
  - ``+``, ``-`` plus minus
  - ``**`` exponent
- - ``*``, ``/``, ``%`` multiplication, division, remainder
+ - ``*``, ``/``, ``%`` multiplication, (truncating) division, remainder
  - ``&&``, ``||`` logical AND, OR
  - ``expr?expr:expr`` conditional operator (ternary)
  - ``==``, ``!=``, ``<``, ``>``, ``>=``, ``<=`` comparison
  - ``=``, ``+=``, ``-=``, ``*=``, ``/=``, ``%=`` assignment
  - ``()``  sub-expressions in parentheses  are  evaluated first
- 
-Full list includes bitwise operators, see ``man bash``.
+ - The full list includes bitwise operators, see ``man bash`` section *ARITHMETIC EVALUATION*.
 
 ::
 
  # without dollar sing value is not returned, though 'n' has been incremented
  n=10; ((n++))
- 
+
  # but if we need a value
  n=10; m=3; q=$((n**m))
- 
+
  # here we need exit code only
  if ((q%2)); then echo odd; fi
  if ((n>=m)); then ...; fi
- 
+
  # condition ? integer_value_if_true : integer_value_if_false
  n=2; m=3; echo $((n<m?10:100))
- 
+
 ::
 
  #!/bin/bash
- 
+
  # sum all numbers from 1..n, where n is a positive integer
- # Gauss way, summing pairs 
- 
+ # Gauss method, summing pairs
+
  if (($#==1)); then
    n=$1
  else
@@ -1211,12 +1223,12 @@ Full list includes bitwise operators, see ``man bash``.
 
 Left for the exercise: make a summation directly 1+2+3+...+n and compare performance with the above one.
 
- 
+
 Loops
-----
+-----
 BASH offers several options for iterating over the lists of elements. The options include
 
- * Basic construction ``for arg in [list]``
+ * Basic construction ``for arg in item1 item2 item3 ...``
  * C-style *for loop* ``for ((i=1; i <= LIMIT ; i++))``
  * while and until constructs
 
@@ -1228,15 +1240,17 @@ BASH offers several options for iterating over the lists of elements. The option
    echo "$school is the best!"
  done
 
- # if path expanssions used (*, ? etc), loop automatically lists current dir
+ # if path expansions used (*, ? etc), loop automatically lists current dir
+ # using path expansion.
  # example below will convert all jpg files in the current directory to png.
  # ``*.jpg`` similar to ``ls *.jpg``
+
  for f in *.jpg; do
   convert $f ${f/.jpg/.png}
  done
- 
+
  # do ... done in certain contexts, can be omitted by framing the command block within curly brackets
- # and certainly for loop can be written in one line as well
+ # and certain for loop can be written in one line as well
  for i in {1..10}; { echo i is $i; }
 
  # if 'in list' omitted, for loop goes through script/function input parameters $@
@@ -1250,27 +1264,23 @@ BASH offers several options for iterating over the lists of elements. The option
  # loop output can be piped or redirected as output of any other command
  for u in Aalto HY UTU; do
    case "$u" in
-     Aalto|aalto|AALTO) echo My univesity is Aalto Univesity ;;
-     HY|hy) echo My univesity is University of Helsinki ;;
-     UTU|utu) echo My univesity is University of Turku ;;
+     Aalto|aalto|AALTO) echo My university is Aalto University ;;
+     HY|hy) echo My university is University of Helsinki ;;
+     UTU|utu) echo My university is University of Turku ;;
      *) echo "Sorry, no university"; exit 1 ;;
    esac
  done | sort > filename
 
-The *list* can be anything what produces a list, like Brace expanssion *{1..10}*, command substitution etc.
+The *list* can be anything what produces a list, like Brace expansion *{1..10}*, command substitution etc.::
 
-::
- 
  # on Triton, do something to all pending jobs based on squeue output
  for jobid in $(squeue -h -u $USER -t PD -o %A); do
    scontrol update JobId=$jobid StartTime=now+5days
  done
-   
- 
 
-C-style, expressions evaluated according to the arithmetic evaluation rules
 
-::
+
+C-style, expressions evaluated according to the arithmetic evaluation rules::
 
  N=10
  for ((i=1; i <= N ; i++))  # LIMIT with no $
@@ -1280,15 +1290,15 @@ C-style, expressions evaluated according to the arithmetic evaluation rules
 
 Loops can be nested.
 
-Other useful loop statement are ``while`` and ``until``. Both execute continously as long as the
-condition returns exit status zero/non-zero correspondignly.
+Other useful loop statement are ``while`` and ``until``. Both execute continuously as long as the
+condition returns exit status zero/non-zero correspondingly.
 
 ::
 
  while condition; do
    ...
  done
- 
+
  # sum of all numbers 1..n
  read -p 'Give a positive integer: ' n
  i=1
@@ -1301,7 +1311,7 @@ condition returns exit status zero/non-zero correspondignly.
  # endless loop, note : is noop command in BASH, does nothing
  # can be run as sort of "deamon", process should be stopped with Ctrl-c or killed
  while true; do : ; done
- 
+
  # drop an email every 10 minutes about running jobs on Triton
  # can be used in combination with 'screen', and run in background
  while true; do
@@ -1309,35 +1319,36 @@ condition returns exit status zero/non-zero correspondignly.
    sleep 600
  done
 
- #  reads a file passed line by line, 
+ #  reads a file passed line by line,
  # IFS= variable before read command to prevent leading/trailing whitespace from being trimmed
  input=/path/to/txt/file
  while IFS= read -r line; do
   echo $line
  done < "$input"
- 
+
  # reading file fieldwise
  file="/etc/passwd"
  while IFS=: read -r f1 f2 f3 f4 f5 f6 f7; do
    printf 'Username: %s, Shell: %s, Home Dir: %s\n' "$f1" "$f7" "$f6"
  done <"$file"
- 
+
  # reading command output, this will be run in a subshell, and thus all variables used
  # inside the loop will die when loop is over
  file -b * | while read line; do
    do something with the lines
  done
- 
+
  # to avoid above situation, one can use process substitution
  while read line; do
    do something with the lines
  done < <(file -b *)
- 
+
 All the things mentioned above for *for* loop applicable to ``while`` / ``until`` loops.
 
-*printf* should be familiar to prorgammers, allows formatted output
+*printf* should be familiar to programmers, allows formatted output
+ similar to C printf. [#printf]_
 
-Loop controling: normally *for* loop iterates until it has processed all its input arguments.
+Loop control: normally *for* loop iterates until it has processed all its input arguments.
 *while* and *until* loops iterate until the loop control returns a certain status. But if
 needed, one can terminate loop or jump to a next iteration.
 
@@ -1365,43 +1376,44 @@ needed, one can terminate loop or jump to a next iteration.
      echo processing $dir/$file
    done
  done
-     
+
 
 :Exercise 3.2:
- - Write to files both scripts that count a sum of any *1+2+3+4+..+n* sequence. The Gauss version
-   and direct summation. Benchmark them with *time* for n=10000 or more.
-   
+ - Write separate scripts that count a sum of any *1+2+3+4+..+n*
+   sequence, both the Gauss version and direct summation.  Accept the
+   *n* on the command line.  Benchmark them with *time* for n=10000 or
+   more.
+
    - For the direct summation one can avoid loops, how? Tip: discover ``eval $(echo {1..$n})``
- 
+
  - On kosh/lyta run ``net ads search samaccountname=$USER accountExpires 2>/dev/null``
    to get your account expiration date. It is a 18-digit timestamp, the number of 100-nanoseconds
    intervals since Jan 1, 1601 UTC. Implement a function that accept a user name, and if not given
    uses current user by default, and then converts it to the human readable time format.
    Tip: http://meinit.nl/convert-active-directory-lastlogon-time-to-unix-readable-time
-   
-   - Expand it to handle "Got 0 replies" reponse, i.e. account name not found.
-   
+
+   - Expand it to handle "Got 0 replies" response, i.e. account name not found.
+
  - Using for loop rename all the files in the directories *dir1/* and *dir2/* which file names
-   are like *filename.txt* to *filename.edited.txt*. Where *filename* can be any.
- 
+   are like *filename.txt* to *filename.edited.txt*. Where *filename* can be anything.
+
 
 
 Session 4
 =========
 
 Arrays
-----
-BASH supports both indexed and associative one-dimensional arrays. Indexed array can be declared explicilty or with ``declare -a array_name``, other ways:
+------
+BASH supports both indexed and associative one-dimensional
+arrays. Indexed array can be declared explicitly or with ``declare -a
+array_name``, other ways::
 
-::
- 
  array=(my very first array)
  array=('my second' array [6]=sure)
  array[5]=234
- 
-To access array elements
 
-::
+To access array elements (the curly braces are required, unlike normal
+variable expansion)::
 
   echo ${array[0]} ${array[1]}  # elements one by one
   ${array[@]}  # array values at once
@@ -1409,15 +1421,11 @@ To access array elements
   ${#array[@]}  # number of elements in the array
   ${#array[2]}  # length of the element number 2
 
-To append elements to the end of array
-
-::
+To append elements to the end of array::
 
   array+=(value)
 
-Loops through the indexed array
-
-:: 
+Loops through the indexed array::
 
  for i in ${!array[@]}; do
    echo \$array[$i] is ${array[$i]}
@@ -1436,9 +1444,7 @@ BASH associative arrays (this type of array supported in BASH since version 4.2)
  asarr=([university]='Aalto University' [city]=Espoo ['street address']='Otakaari 1')
  asarr[post_index]=02150
 
-Addressing is similar to indexed arrays
-
-::
+Addressing is similar to indexed arrays::
 
  for i in "${!asarr[@]}"; do
    echo \$asarr[$i] is ${asarr[$i]}
@@ -1447,20 +1453,18 @@ Addressing is similar to indexed arrays
 Even though key can have spaces in it, quoting can be omitted.
 
 
-Here Documents code block
--------------------------
+Here Documents blocks
+---------------------
 
 ::
- 
+
  command <<SomeLimitString
  Here comes text with $var and even $() substitutions
  and more just text
  which finally ends on a new line with the:
  SomeLimitString
 
-Often used for messaging, be it an email or dumping bunch of text to file.
-
-::
+Often used for messaging, be it an email or dumping bunch of text to file.::
 
  NAME=Jussi
  SURNAME=Meikalainen
@@ -1468,39 +1472,38 @@ Often used for messaging, be it an email or dumping bunch of text to file.
 
  mail -s 'Account expiration' $NAME.$SURNAME@aalto.fi<<END-OF-EMAIL
  Dear $NAME $SURNAME,
- 
+
  your account is about to expire in $DAYS days.
- 
+
  $(date)
- 
+
  Best Regards,
  Aalto ITS
  END-OF-EMAIL
 
-Or just outputting to a file (same can be done with echo commands)
-
-::
+Or just outputting to a file (same can be done with echo commands)::
 
  cat <<EOF >filename
  ... text
  EOF
- 
-One trick that is particularly useful, making a long comment out of it
 
-::
- 
+One trick that is particularly useful is using this to make a long
+comment::
+
  : <<\COMMENTS
  here come text that is seen nowhere
  and no need for #
  COMMENTS
- 
+
 
 **Hint** ``<<\LimtiString`` to turn off substitutions and place text as is with $ marks etc
 
 
 Catching kill signals: trap
 ---------------------------
-Making scripts booletproofed with ``trap``. It is when you want to control the script even when it is being aborted.
+You can make scripts bulletproof against errors with ``trap``. It lets
+you catch errors and execute a function, even when the script is being
+aborted.
 
 ::
 
@@ -1511,22 +1514,24 @@ Making scripts booletproofed with ``trap``. It is when you want to control the s
   sleep 30
  done
 
-While instead of *echo*, one can come up with something more clever: function that removes temp files, put something to the log file or a valuable error message to a screen.
+While instead of *echo*, one can come up with something more clever:
+function that removes temp files, put something to the log file or a
+valuable error message to a screen.
 
 **Hint** About signals see *Standard signals* section at ``man 7 signal``. Like Ctrl-c is INT (aka SIGINT).
 
 
 :Exercise:
- - make a script/function that produces an array of random numbers (Tip: $RANDOM)
+ - make a script/function that produces an array of random numbers (Tip: ``$RANDOM``)
  - Implement a Bubble sort using arrays and loops and other built-in BASH functionality (no *sort* etc).
  - (*) Implement a script that sorts text file lines by lines length
 
 
 Debugging
-----
+---------
 Check for syntax errors without actual running it ``bash -n script.sh``
 
-Or echos each command and its results with ``bash -xv script.sh``. or even adding options directly to the script
+Or echos each command and its results with ``bash -xv script.sh``. or even adding options directly to the script.
 
 ::
 
@@ -1543,57 +1548,53 @@ To enable debugging for some parts of the code only
 One can always use ``echo``, though more elegant would be a function that only prints output if DEBUG is set to 'yes'.
 
 ::
- 
+
  #!/bin/bash
 
  debug() {
    [[ "$DEBUG" == 'yes' ]] && echo " Line $LINENO: $1"
  }
- 
+
  command1
  debug "after command 1, variables list... $var1, $var2"
  command2
- 
+
  # call this script like 'DEBUG=yes ./script.sh' otherwise *debug* function produces no result and script can be used as is.
 
 
-Another debugging technique is with trap: tracing the variables.
-
-::
+Another debugging technique is with trap: tracing the variables::
 
  declare -t VARIABLE=value
  trap "echo VARIABLE is being used here." DEBUG
 
-Or simply output variable values on exit
-
-::
+Or simply output variable values on exit::
 
  trap 'echo Variable Listing --- a = $a  b = $b' EXIT  # will output variables value on exit
 
 
 parallel
-----
+--------
 It is not a parallelzation in the HPC way (threads, MPI), but the utility to make a number of similar processes to run in parallel, while they differ in input parameters only.
 
-It is not a built-in feature of BASH but an extra utility. 
+It is not a built-in feature of BASH but an extra utility.
 
 ::
 
  parallel -i command {} -- arguments_list   # normally the command is passed the argument at the end of its command line. With -i               option, any instances of "{}" in the command are replaced with the argument.
- 
+
  parallel sh -c "echo hi; sleep 2; echo bye" -- 1 2 3   # will run three subshells that each print a message
  parallel -j 3 -- ls df "echo hi"   # will run three independent processes in parallel
 
 On Triton we have installed Tollef Fog Heen's version of parallel from moreutils-parallel CentOS' RPM. GNU project has its own though, of exactly the same name.
 
 
-Managing foreground/background processes
-----
+Foreground and background processes
+-----------------------------------
 Adding *&* right after the command send the process to background. Example: ``firefox --no-remote &`` same can be done with any terminal command/function, like ``tar ... &``.
 
 If you have already running process, then Ctrl-z and then ``bg``. Drawback: there is no easy way to redirect the running task output.
 
-List the jobs ruuning in the background ``jobs``, get a job back online: ``fg`` or ``fg <job_number>``. There can be multiple background jobs (remeber forkbombs).
+List the jobs running in the background ``jobs``, get a job back online: ``fg`` or ``fg <job_number>``. There can be multiple background jobs (remember forkbombs).
 
 Kill the foreground job: Ctrl-c
 
@@ -1613,21 +1614,21 @@ should discover the ``screen`` program.
 Example: irssi on kosh / lyta
 
 
-About homeworks
----------------
-Comming soonish...
+About homework
+--------------
+Coming soonish...
 
 
 References
 ==========
-.. [#] http://tldp.org/LDP/abs/html/index.html
-.. [#] https://www.putty.org/
-.. [#] https://www.ibm.com/developerworks/linux/library/l-tip-prompt/
-.. [#] https://alvinalexander.com/unix/edu/examples/find.shtml
-.. [#] http://www.softpanorama.org/Tools/Find/index.shtml
-.. [#] https://the.earth.li/~sgtatham/putty/0.70/htmldoc/
-.. [#] https://www.computerhope.com/unix/uumask.htm
-.. [#] http://wiki.bash-hackers.org/commands/builtin/printf
+.. [#absguide] http://tldp.org/LDP/abs/html/index.html
+.. [#putty] https://www.putty.org/
+.. [#ps1] https://www.ibm.com/developerworks/linux/library/l-tip-prompt/
+.. [#find1] https://alvinalexander.com/unix/edu/examples/find.shtml
+.. [#find2] http://www.softpanorama.org/Tools/Find/index.shtml
+.. [#putty-sshkeys] https://the.earth.li/~sgtatham/putty/0.70/htmldoc/
+.. [#umask] https://www.computerhope.com/unix/uumask.htm
+.. [#printf] http://wiki.bash-hackers.org/commands/builtin/printf
 
 
 Bonus material
@@ -1636,30 +1637,47 @@ Parts that did not fit.
 
 
 
-Files and dirs advances
-----
+Files and dirs: advanced
+------------------------
 Advanced access permissions
 
-Access list aka ACL: ``getfacl`` and ``setfacl``
+* In normal unix, files have only "owner" and "group", and permissions
+  for owner/group/others.  This can be rather limiting.
+* Access control lists (ACLS) are an extension that allows an
+  arbitrary number of users and groups to have access rights to files.
+* ACLs don't show up in normal ``ls -l`` output, but there is an extra
+  plus sign: ``-rw-rwxr--+``.  ACLs generally work well, but there are
+  some programs that won't preserve them when you copy/move files, etc.
+* POSIX (unx) ACLs are controlled with ``getfacl`` and ``setfacl``
 
  - Allow read access for a user ``setfacl -m u:<user>:r <file_or_dir>``
  - Allow read/write access for a group ``setfacl -m g:<group>:rw <file_or_dir>``
  - Revoke granted access ``setfacl -x u:<user> <file_or_dir>``
  - See current stage ``getfacl <file_or_dir>``
 
-**Hint** even though file has a read access the top directory must be searchable before external user or group will be able to access it. Best practice on Triton ``chmod -R o-rwx $WRKDIR; chmod o+x $WRKDIR``
+**Hint** even though file has a read access the top directory must be
+ searchable before external user or group will be able to access
+ it. Best practice on Triton ``chmod -R o-rwx $WRKDIR; chmod o+x
+ $WRKDIR``.  Execute (``x``) without read (``r``) means that you can
+ access files inside if you know the exact name, but not list the
+ directory.  The permissions of the files themselves still matter.
 
-Setting default access permissions: add to *.bashrc* ``umask 027`` [#]_
+Setting default access permissions: add to *.bashrc* ``umask 027``
+[#umask]_.  The ``umask`` is what permissions are *removed* from any newly
+created file by default.  So ``umask 027`` means "by default,
+g-w,o-rwx any newly created files".  It's not really changing the
+permissions, just the default the operating system will create with.
 
-:Home exercise: practice with setfacl: set a directory permissions so that only you and some
-user/group of your choice would have access to a file 
+:Home exercise: practice with setfacl: set a directory permissions so
+		that only you and some user/group of your choice would
+		have access to a file.
 
 
 
 [FIXME: should be moved to another tutorial *SSH: beyond login*]
 
-SSH keys and proxy (*bonus section)
------------------------------------
+SSH keys and proxy (*bonus section*)
+------------------------------------
 * SSH is the standard for connecting to remote computers: it is
   both powerful and secure.
 * It is highly configurable, and doing some configuration will make
@@ -1668,7 +1686,7 @@ SSH keys and proxy (*bonus section)
 SSH keys and proxy jumping makes life way easier. For example, logging
 on to Triton from your Linux workstation or from kosh/lyta.
 
-For PuTTY (Windows) SSH keys generation, please consult section "Using public keys for SSH authentication" at [#]_
+For PuTTY (Windows) SSH keys generation, please consult section "Using public keys for SSH authentication" at [#putty-sshkeys]_
 
 On Linux/Mac: generate a key on the client machine
 
@@ -1677,7 +1695,9 @@ On Linux/Mac: generate a key on the client machine
  ssh-keygen -t rsa -b 4096  # you will be prompted for a location to save the keys, and a passphrase for the keys. Make sure passphrase is strong (!)
  ssh-copy-id aalto_login@triton.aalto.fi   # transfer file to a Triton, or/and any other host you want to login to
 
-From now on you should be able to login with the SSH key instead of password. When SSH key added to the ssh-agent (once during the login to workstation), one can login automatically, passwordless.
+From now on you should be able to login with the SSH key instead of
+password. When SSH key added to the ssh-agent (once during the login
+to workstation), one can login automatically, passwordless.
 
 Note that same key can be used on multiple different computers.
 
@@ -1685,10 +1705,9 @@ SSH proxy is yet another trick to make life easier: allows to jump
 through a node (in OpenSSH version 7.2 and earlier ``-J`` option is
 not supported yet, here is an old recipe that works on Ubuntu
 16.04). By using this, you can directly connect to a system (Triton)
-through a jump host (kosh):
-
-On the client side, add to ``~/.ssh/config`` file (create it if does
-not exists and make it readable by you only)::
+through a jump host (kosh):  On the client side, add to
+``~/.ssh/config`` file (create it if does not exists and make it
+readable by you only)::
 
  Host triton triton.aalto.fi
      Hostname triton.aalto.fi
@@ -1697,12 +1716,14 @@ not exists and make it readable by you only)::
 Now try::
 
  ssh triton
- 
+
 Transferring files (archiving on the fly)
 -----------------------------------------
 For Triton users the ability to transfer files to/from Triton is essential.
 
-Assume a use case: you have logged in to kosh/taltta/lyta/etc. To get some files from Triton's WRKDIR to one of the directories available around:
+Assume a use case: you have logged in to kosh/taltta/lyta/etc. To get
+some files from Triton's WRKDIR to one of the directories available
+around:
 
 ::
 
