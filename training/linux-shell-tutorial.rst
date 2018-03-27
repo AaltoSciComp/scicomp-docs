@@ -1465,9 +1465,13 @@ variable expansion)::
   ${#array[@]}  # number of elements in the array
   ${#array[2]}  # length of the element number 2
 
-To append elements to the end of ithe array::
+To append elements to the end of the array::
 
   array+=(value)
+
+Assign a command output to array::
+
+ array=($(command))
 
 Loops through the indexed array::
 
@@ -1627,10 +1631,14 @@ comment::
 
 **Hint** ``<<\LimtiString`` to turn off substitutions and place text as is with $ marks etc
 
-:Exercise:
- - make a script/function that produces an array of random numbers (Tip: ``$RANDOM``)
+:Exercise 4.1:
+ - make a script/function that produces an array of random numbers, make sure that numbers are unique
+ 
+   - one version should use BASH functionality only (Tip: ``$RANDOM``)
+   - the other can be done with one line (Tip: ``shuf``)
+
  - Implement a Bubble sort using arrays and loops and other built-in BASH functionality (no *sort* etc).
- - (*) Implement a script that sorts text file lines by lines length
+ - (*) Implement a one-liner that sorts text file lines by lines length (Tip: awk or sed)
 
 
 Catching kill signals: trap
@@ -1763,16 +1771,9 @@ should discover the ``screen`` program.
 Example: irssi on kosh / lyta
 
 
-To continue: course development ideas
--------------------------------------
- * sed, awk, perl as helpers
- * select command
-
-
 About homework assignments
 --------------------------
-Available on Triton.
-
+Available on Triton. See details in the *$course_directory/assignment/homework.txt*.
 
 
 
@@ -1786,6 +1787,18 @@ References
 .. [#putty-sshkeys] https://the.earth.li/~sgtatham/putty/0.70/htmldoc/
 .. [#umask] https://www.computerhope.com/unix/uumask.htm
 .. [#printf] http://wiki.bash-hackers.org/commands/builtin/printf
+
+
+To continue: course development ideas/topics
+--------------------------------------------
+ * sed, awk, perl as helpers
+ * select command
+ * managing processes: kill, nice
+
+Ideas for exercises
+-------------------
+ * function that validates a file path (pattern)
+ * function that counts days left till a given date (salary, vacation, deadline etc)
 
 
 Bonus material
