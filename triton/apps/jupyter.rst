@@ -91,7 +91,7 @@ your own single-user server.  This is available on Triton.
 Connecting and starting
 -----------------------
 Currently jupyterhub is available only within Aalto networks, at
-https://jupyter.int.triton.aalto.fi.  If you are not within the Aalto
+https://jupyter.triton.aalto.fi.  If you are not within the Aalto
 networks (aalto open is not), either connect to the VPN set up the
 :ref:`proxy as described in the section below <jupyter-proxy-setup>`.
 
