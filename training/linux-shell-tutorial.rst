@@ -587,6 +587,7 @@ command first.
  
  # counting directories and files on the fly
  echo Number of directories $(ls -lA | grep ^d | wc -l) files $(ls -lA | grep ^- | wc -l)
+ 
   
 This is what makes BASH powerful!
 
@@ -625,6 +626,9 @@ discards all data written to it.
  # a few ways to empty a file
  > filename
  cat /dev/null > filename
+ 
+ # read file to a variable
+ var=$(< path/to/file)
  
  # extreme case, if you can't get the program to stop writing to the file...
  ln -s /dev/null filename
@@ -880,7 +884,7 @@ Built-in vars:
  - $$  current shell pid
  - $#  number of input parameters
  - $0  running script name
- - $FUNCNAME  function name being executed, [ note: actually an array ${FUNCNAME[*]} ]
+ - $FUNCTION  function name being executed, [ note: actually an array ${FUNCTION[*]} ]
  - $1, $2 ... input parameter one by one (function/script)
  - "$@" all input parameters as is in one line
 
@@ -1438,14 +1442,14 @@ needed, one can terminate loop or jump to a next iteration.
 
 
 
-Session 4
-=========
+4. session: arrays, traps, input and more
+=========================================
 
 Arrays
 ------
 BASH supports both indexed and associative one-dimensional
-arrays. Indexed array can be declared explicitly or with ``declare -a
-array_name``, other ways::
+arrays. Indexed array can be declared with ``declare -a array_name``, or first assignment
+does it automatically (note: indexed arrays only)::
 
  array=(my very first array)
  array=('my second' array [6]=sure)
@@ -1460,21 +1464,25 @@ variable expansion)::
   ${#array[@]}  # number of elements in the array
   ${#array[2]}  # length of the element number 2
 
-To append elements to the end of array::
+To append elements to the end of ithe array::
 
   array+=(value)
 
 Loops through the indexed array::
 
  for i in ${!array[@]}; do
-   echo \$array[$i] is ${array[$i]}
+   echo array[$i] is ${array[$i]}
  done
 
 Negative index counts back from the end of the array, *[-1]* referencing to the last element.
 
 Quick (and dirty) way to print array with no loop::
 
+ # with keys, as is
  declare -p array
+ 
+ # indexes -- values
+ echo ${!array[@]} -- ${array[@]}
 
 BASH associative arrays (this type of array supported in BASH since version 4.2) needs to be declared first ``declare -A asarr``, array elements they can be declared as integers ``declare -iA array``.
 
@@ -1490,6 +1498,52 @@ Addressing is similar to indexed arrays::
  done
 
 Even though key can have spaces in it, quoting can be omitted.
+
+
+Working with the input
+----------------------
+We touched already passing data to script as command arguments in addition we know *read*
+command that allows to get input from the keyborad. The third option is standard input.
+
+::
+
+ # the command prints the prompt, waits for the response, and then assigns it
+ # to variable(s)
+ read -p 'Your names: ' firstn lastn
+ 
+Given input must be checked (!) with a pattern, especially if script creates directories,
+removes files, sends emails based on the input. *read* selected options
+
+ * ``-a <ARRAY>``  read the data word-wise into the specified array <ARRAY> instead of normal variables
+ * ``-N <NCHARS>`` reads <NCHARS> characters of input, ignoring any delimiter, then quits
+ * ``-p <PROMPT>`` the prompt string <PROMPT> is output (without a trailing automatic newline) before the read is performed
+ * ``-r``  raw input - disables interpretion of backslash escapes and line-continuation in the read data
+ * ``-s`` secure input - don't echo input if on a terminal (passwords!)
+ * ``-t <TIMEOUT>`` wait for data <TIMEOUT> seconds, then quit (exit code 1)
+
+``read`` can also be used to read from the STDIN, case like ``command | ./script``::
+
+ # IFS= is empty to make sure  
+ while IFS= read line; do
+   echo "line $line" 
+ done
+ 
+ # to check that STDIN is not empty
+ if [[ -p /dev/stdin ]]; then ... fi
+ 
+ # to read STDIN to a variable, all of the below mentioned do the same
+ var=$(</dev/stdin)
+ var=$(cat)
+ 
+ # or pass STDIN to a pipeline  (/dev/stdin can be omitted)
+ cat /dev/stdin | cut -d' ' -f 2,3 | sort
+
+Good script can do both: accept filename as an argument or get its content through stdin.
+To work with command line arguments BASH has ``getopts``. In the simple cases, you deal with
+*$1, $2, ...*, but what if arguments are like ``./script [-f filename] [-z] [-b]`` or alike?
+(common notaion, arguments in the square brackets are optional).
+
+
 
 
 Here Documents blocks
@@ -1653,9 +1707,18 @@ should discover the ``screen`` program.
 Example: irssi on kosh / lyta
 
 
+To continue
+-----------
+ * sed, awk, perl as helpers
+ * select command
+ * 
+
+
 About homework
 --------------
 Coming soonish...
+
+
 
 
 References
