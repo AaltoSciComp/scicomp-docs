@@ -80,3 +80,5 @@ contribute to the definitions.
 .. include:: ../examples/visit/visit.rst
 
 .. include:: ../examples/detectron/detectron.rst
+
+.. include:: ../examples/fenics/fenics.rst

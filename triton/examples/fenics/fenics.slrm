@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH -p short
+#SBATCH -t 00:15:00
+#SBATCH -n 1
+#SBATCH --mem=1G
+#SBATCH -o fenics_out.out
+
+module purge
+module load singularity-fenics
+
+cd demo/documented/poisson/python/
+
+srun singularity_wrapper run demo_poisson.py
+

@@ -1,0 +1,13 @@
+diff -Naur demo/documented/poisson/python/demo_poisson.py demo_patched/documented/poisson/python/demo_poisson.py
+--- demo/documented/poisson/python/demo_poisson.py	2018-03-27 14:29:38.000000000 +0300
++++ demo_patched/documented/poisson/python/demo_poisson.py	2018-02-28 14:22:45.000000000 +0200
+@@ -185,6 +185,8 @@
+ file << u
+ 
+ # Plot solution
++import matplotlib
++matplotlib.use('Agg')
+ import matplotlib.pyplot as plt
+ plot(u)
+-plt.show()
++plt.savefig('poisson.png')
