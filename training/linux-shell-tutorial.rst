@@ -880,7 +880,7 @@ Built-in vars:
  - $$  current shell pid
  - $#  number of input parameters
  - $0  running script name
- - $FUNCTION  function name being executed, [ note: actually an array ${FUNCTION[*]} ]
+ - $FUNCNAME  function name being executed, [ note: actually an array ${FUNCNAME[*]} ]
  - $1, $2 ... input parameter one by one (function/script)
  - "$@" all input parameters as is in one line
 
