@@ -591,8 +591,8 @@ command first.
 This is what makes BASH powerful!
 
 
-More about redirection and pipe
--------------------------------
+More about redirection, piping and process substitution
+-------------------------------------------------------
 *STDIN*, *STDOUT* and *STDERR*: reserved file descriptors *0*, *1* and *2*. They always there
 whatever process you run.
 
@@ -635,27 +635,40 @@ If ``!``  preceeds the command, the exit status is the logical negation.
 
 **tee** in case you still want output to a terminal and to a file ``command | tee filename``
 
-But what if you need to pass to another program results of two commands at once?
-BASH reserves file descriptors 3, 4, .. 9. A way to use them is a built-in feature called
-*Process Substitution*, ``<(command)`` or ``>(command)``. The command (pipes, pipelines are fine here)
-is run asynchronously, and its input or output appears as a filename (*/dev/fd/<n>*). This filename is passed as an
-argument to the current command as the result of the expansion.
+But what if you need to pass to another program results of two commands at once? Or if command
+accepts file as an argument but not STDIN?
+
+One can always do this in two steps, run commands and save results to file(s) and then use
+them with the another command. Though BASH helps to make even this part easier (or harder),
+the feature called
+*Process Substitution*, looks like ``<(command)`` or ``>(command)``, no spaces in between
+parentheses and < signs. It emulates a file creation out of *command* output
+and place it on a command line. The *command* can be a pipe, pipeline etc.
+
+The actual file paths substituted are */dev/fd/<n>*. The file paths can be passed as an
+argument to the another command or just redirected as usual.
 
 ::
 
  # BASH creates a file that has an output of *command2* and pass it to *command1*
+ # file descriptor is passed as an argument, assuming command1 can handle it
  command1 <(command2)
  
- # but in the same way one can substitute results of several commands
- command1 <(command2) <(command3)
+ # same but redirected (like: cat < filename)
+ command1 < <(command2)
  
- # some of the examples can be done with { command 2; command3; } | command1
- # but when input order matters, process substitution has no alternative
+ # in the same way one can substitute results of several commands or command groups
+ command1 <(command2) <(command3 | command4; command5)
+ 
  # example: comparing listings of two directories
  diff <(ls dir1) <(ls dir2)
  
- # writing to the file will provide input for *command2*
- command1 >(command2)
+ # and vice versa, *command1* output is redirected as a file to *command2*
+ command1 > >(command2)
+ 
+ # essentially, in some cases pipe and process substituion do the same
+ ls -s | cat
+ cat <(ls -s)
 
 
 find
