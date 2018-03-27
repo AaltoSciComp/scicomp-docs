@@ -379,9 +379,10 @@ Redirects:
 
 **This is the unix philosophy** and the true power of the shell.  The
 **unix philosophy** is a lot of small, specialized, good programs
-which can be easily connected together.
+which can be easily connected together. The beauty of the cli are elegant one-liners
+i.e. list of commands executed in one line.
 
-To dump output of all commands at once: group them
+To dump output of all commands at once: group them.
 
 ::
 
@@ -1523,7 +1524,8 @@ removes files, sends emails based on the input. *read* selected options
 
 ``read`` can also be used to read from the STDIN, case like ``command | ./script``::
 
- # IFS= is empty to make sure  
+ # IFS= is empty and echo argument in quotes to make sure we keep format
+ # otherwise all spaces and new lines shrinked to one
  while IFS= read line; do
    echo "line $line" 
  done
@@ -1539,11 +1541,45 @@ removes files, sends emails based on the input. *read* selected options
  cat /dev/stdin | cut -d' ' -f 2,3 | sort
 
 Good script can do both: accept filename as an argument or get its content through stdin.
-To work with command line arguments BASH has ``getopts``. In the simple cases, you deal with
-*$1, $2, ...*, but what if arguments are like ``./script [-f filename] [-z] [-b]`` or alike?
-(common notaion, arguments in the square brackets are optional).
+To work with command line arguments, a modern approach is to use ``getopt`` command. In the simple
+cases, you check *$#* and then assign *$1, $2, ...*, the way your script requires, but what if
+arguments are like ``./script [-f filename] [-z] [-b]`` or more complex?
+(common notaion: arguments in the square brackets are optional).
 
+Perfectly fine is to handle $@ with *for* or *while/shift* and many do this. But let us
+consider more standrard way.
 
+The ``getopt`` command (do not get confused with ``getopts`` built-in BASH function of
+similar kind, they do the same thing, but *getopt* does it way better) requires two parameters to work:
+a list of letters -- valid input options -- and colons. No commas or spaces in between, if letter
+followed by a colon, the option requires an argument. For example, the string ``getopt "f:sd"`` says that the
+options -f, -s and -d are valid and -f requires an argument, like *-f filename*. The second *getopt*
+argument is a list of input parameters, often just $@.
+
+::
+
+ # here is the whole trick: getopt validates the input parameters, returns the correct ones
+ # then they are reassigned back to $@ with 'set --'
+ set -- $(getopt "sdf:" "$@") || exit 1
+
+ # we start an endless while and go through $@ with 'case' one by one
+ # 'shift' makes another trick, every time it is invoked, it shifts $@ params, $2 becomes $1,
+ # $2 becomes $3, etc; -- separates valid options and the rest as sorted by 'getopt'
+ while :; do
+   case ${1} in
+     -s) SORTED=0 ;;
+     -d) DEBUG=0 ;;
+     -f) shift; file=$1 ;;
+     --) break ;;
+   esac
+   shift
+ done
+ shift  # remove --
+ # by now $@ has only rubish filtered out by 'getopt', could be a file name
+ 
+ .. the rest of the code
+
+If you implement a script that can accept both STDIN and positional parameters. You have to check both.
 
 
 Here Documents blocks
@@ -1591,18 +1627,34 @@ comment::
 
 **Hint** ``<<\LimtiString`` to turn off substitutions and place text as is with $ marks etc
 
+:Exercise:
+ - make a script/function that produces an array of random numbers (Tip: ``$RANDOM``)
+ - Implement a Bubble sort using arrays and loops and other built-in BASH functionality (no *sort* etc).
+ - (*) Implement a script that sorts text file lines by lines length
+
 
 Catching kill signals: trap
 ---------------------------
-You can make scripts bulletproof against errors with ``trap``. It lets
-you catch errors and execute a function, even when the script is being
-aborted.
+What if your script generates temp file and you'd like to keep it clean
+even if script gets interupted at the execution time?
 
+The built-in ``trap`` command lets you tell the shell what to do if your script recieved
+signal to exit. It can catch all, but here listed most common by their numbers
+
+ * 0  EXIT  exit command
+ * 1  HUP   when session disconnected
+ * 2  INT   interrupt - often Ctrl-c
+ * 3  QUIT  quit - often Ctrl-\
+ * 9  KILL  real kill command, it can't be caught
+ * 15 TERM  termination, by ``kill`` command
+ 
 ::
 
- trap command list_of_signals   # thus trap catches listed signals only, others it ignores
+ # 'trap' catches listed signals only, others it silently ignores
+ trap command list_of_signals
 
- trap "echo We are killed" INT TERM
+ trap 'echo Do something on exit' EXIT
+ trap 'echo We are killed!' 1 2 15
  while :; do
   sleep 30
  done
@@ -1612,12 +1664,6 @@ function that removes temp files, put something to the log file or a
 valuable error message to a screen.
 
 **Hint** About signals see *Standard signals* section at ``man 7 signal``. Like Ctrl-c is INT (aka SIGINT).
-
-
-:Exercise:
- - make a script/function that produces an array of random numbers (Tip: ``$RANDOM``)
- - Implement a Bubble sort using arrays and loops and other built-in BASH functionality (no *sort* etc).
- - (*) Implement a script that sorts text file lines by lines length
 
 
 Debugging
@@ -1667,18 +1713,28 @@ Or simply output variable values on exit::
 
 parallel
 --------
-It is not a parallelzation in the HPC way (threads, MPI), but the utility to make a number of similar processes to run in parallel, while they differ in input parameters only.
+It is not a parallelzation in the HPC way (threads, MPI). This is a set of tasks (commands or scripts)
+that run concurrently but without interactions.
 
-It is not a built-in feature of BASH but an extra utility.
+``parallel``  runs  the  specified  command, passing it a single one of the specified arguments.
+This is repeated for each argument. Jobs may be run in parallel. The default is to run one job per CPU.
+If no command is specified before the --, the commands after it are instead run in parallel.
 
 ::
 
- parallel -i command {} -- arguments_list   # normally the command is passed the argument at the end of its command line. With -i               option, any instances of "{}" in the command are replaced with the argument.
+ # normally the command is passed the argument at the end of its command line. With -i
+ # option, any instances of "{}" in the command are replaced with the argument.
+ parallel -i command {} -- arguments_list   
 
- parallel sh -c "echo hi; sleep 2; echo bye" -- 1 2 3   # will run three subshells that each print a message
- parallel -j 3 -- ls df "echo hi"   # will run three independent processes in parallel
+ # will run three subshells that each print a message
+ parallel bash -c "echo hi; sleep 2; echo bye" -- 1 2 3
+ 
+ # one more way of usage: run several independent processes in parallel
+ parallel -j 3 -- ls df "echo hi"
 
-On Triton we have installed Tollef Fog Heen's version of parallel from moreutils-parallel CentOS' RPM. GNU project has its own though, of exactly the same name.
+On Triton we have installed Tollef Fog Heen's version of parallel from *moreutils-parallel* CentOS' RPM.
+GNU project has its own though, with different syntax, but of exactly the same name, so do not get
+confused.
 
 
 Foreground and background processes
@@ -1707,16 +1763,15 @@ should discover the ``screen`` program.
 Example: irssi on kosh / lyta
 
 
-To continue
------------
+To continue: course development ideas
+-------------------------------------
  * sed, awk, perl as helpers
  * select command
- * 
 
 
-About homework
---------------
-Coming soonish...
+About homework assignments
+--------------------------
+Available on Triton.
 
 
 
