@@ -281,6 +281,37 @@ directory (``~/.theano/``), and then if you first happen to run a job on a
 newer processor, a later job that happens to run on an older processor
 will crash with an "Illegal instruction" error.
 
+
+Nvidia MPS
+----------
+
+`Nvidia Multi-Process Service (MPS)
+<http://docs.nvidia.com/deploy/mps/index.html>`__ provides a way to
+share a single GPU among multiple processes. It can be used to
+increase the GPU utilization by timesharing the GPU access, e.g. one
+process can upload data to the GPU while another is running a
+kernel. To use it one must first start the MPS server, and then CUDA
+calls are automatically routed via the MPS server. At the end of the
+job one must remember to shut it down. Example job script:
+
+::
+   #!/bin/bash -l
+
+   #SBATCH --time=01:15:00          ## wallclock time hh:mm:ss
+   #SBATCH --gres=gpu:teslak80:1    ## one K80 requested
+
+   module load CUDA
+
+   ## Start the MPS server
+   CUDA_MPS_LOG_DIRECTORY=nvidia-mps srun --gres=gpu:1 nvidia-cuda-mps-control -d&
+
+   ## run my GPU accelerated executable
+   srun --gres=gpu:1  $WRKDIR/my_gpu_binary
+
+   ## Shut down the MPS server
+   echo "quit" | nvidia-cuda-mps-control
+
+
 CUDA samples
 ------------
 
