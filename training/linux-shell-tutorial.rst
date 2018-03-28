@@ -1551,17 +1551,17 @@ removes files, sends emails based on the input. *read* selected options
  # or pass STDIN to a pipeline  (/dev/stdin can be omitted)
  cat /dev/stdin | cut -d' ' -f 2,3 | sort
 
-Good script can do both: accept filename as an argument or get its content through stdin.
+A good script can do both: accept filename as an argument or get its content through stdin.
 To work with command line arguments, a modern approach is to use ``getopt`` command. In the simple
-cases, you check *$#* and then assign *$1, $2, ...*, the way your script requires, but what if
+cases, you check *$#* and then assign *$1, $2, ...* the way your script requires, but what if
 arguments are like ``./script [-f filename] [-z] [-b]`` or more complex?
 (common notaion: arguments in the square brackets are optional).
 
-Perfectly fine is to handle $@ with *for* or *while/shift* and many do this. But let us
-consider more standrard way.
+It is perfectly fine is to handle $@ with *for* or *while/shift* and many do this. But let us
+consider a more standard way.
 
 The ``getopt`` command (do not get confused with ``getopts`` built-in BASH function of
-similar kind, they do the same thing, but *getopt* does it way better) requires two parameters to work:
+similar kind, they do the same thing, but *getopt* does it much better) requires two parameters to work:
 a list of letters -- valid input options -- and colons. No commas or spaces in between, if letter
 followed by a colon, the option requires an argument. For example, the string ``getopt "f:sd"`` says that the
 options -f, -s and -d are valid and -f requires an argument, like *-f filename*. The second *getopt*
@@ -1590,11 +1590,15 @@ argument is a list of input parameters, often just $@.
  
  .. the rest of the code
 
-If you implement a script that can accept both STDIN and positional parameters. You have to check both.
+If you implement a script that can accept both STDIN and positional
+parameters, you have to check both.
 
 
 Here Documents blocks
 ---------------------
+
+A here document takes the lines following and sends them to standard
+input.  It's a way to send larger blocks to stdin.
 
 ::
 
@@ -1651,10 +1655,13 @@ comment::
 Catching kill signals: trap
 ---------------------------
 What if your script generates temp file and you'd like to keep it clean
-even if script gets interupted at the execution time?
+even if script gets interrupted at the execution time?
 
-The built-in ``trap`` command lets you tell the shell what to do if your script recieved
-signal to exit. It can catch all, but here listed most common by their numbers
+The built-in ``trap`` command lets you tell the shell what to do if your script received
+signal to exit. It can catch all, but here listed most common by their
+numbers.  Note that signals are one of the common ways of communicating
+with running processes in UNIX: you see these same numbers and names
+in programs like ``kill``.
 
  * 0  EXIT  exit command
  * 1  HUP   when session disconnected
@@ -1662,7 +1669,7 @@ signal to exit. It can catch all, but here listed most common by their numbers
  * 3  QUIT  quit - often Ctrl-\
  * 9  KILL  real kill command, it can't be caught
  * 15 TERM  termination, by ``kill`` command
- 
+
 ::
 
  # 'trap' catches listed signals only, others it silently ignores
@@ -1691,9 +1698,7 @@ Or echos each command and its results with ``bash -xv script.sh``. or even addin
 
  #!/bin/bash -xv
 
-To enable debugging for some parts of the code only
-
-::
+To enable debugging for some parts of the code only::
 
   set +x
   ... some code
@@ -1713,7 +1718,7 @@ One can always use ``echo``, though more elegant would be a function that only p
  debug "after command 1, variables list... $var1, $var2"
  command2
 
- # call this script like 'DEBUG=yes ./script.sh' otherwise *debug* function produces no result and script can be used as is.
+ # call this script like 'DEBUG=yes ./script.sh' otherwise the *debug* function produces no result and script can be used as is.
 
 
 Another debugging technique is with trap: tracing the variables::
@@ -1728,8 +1733,8 @@ Or simply output variable values on exit::
 
 parallel
 --------
-It is not a parallelzation in the HPC way (threads, MPI). This is a set of tasks (commands or scripts)
-that run concurrently but without interactions.
+The shell doesn't do parallelzation in the HPC way (threads, MPI), but
+can run some simple commands at the same time without interaction.
 
 ``parallel``  runs  the  specified  command, passing it a single one of the specified arguments.
 This is repeated for each argument. Jobs may be run in parallel. The default is to run one job per CPU.
@@ -1754,19 +1759,36 @@ confused.
 
 Foreground and background processes
 -----------------------------------
-Adding *&* right after the command send the process to background. Example: ``firefox --no-remote &`` same can be done with any terminal command/function, like ``tar ... &``.
+The shell has a concept of foreground and background processes: a
+foreground process is directly connected to your screen and
+keyboard. A background process doesn't have input connected.  There
+can only be one foreground at a time (obviously).
 
-If you have already running process, then Ctrl-z and then ``bg``. Drawback: there is no easy way to redirect the running task output.
 
-List the jobs running in the background ``jobs``, get a job back online: ``fg`` or ``fg <job_number>``. There can be multiple background jobs (remember forkbombs).
+If you add *&* right after the command will send the process to
+background. Example: ``firefox --no-remote &`` same can be done with
+any terminal command/function, like ``tar ... &``.  In the big
+picture, the ``&`` serves the same role as ``;`` to separate commands,
+but backgrounds the first and goes straight to the next.
+
+If you have already running process, then Ctrl-z and then
+``bg``. Drawback: there is no easy way to redirect the running task
+output, so if it generates output it covers your screen.
+
+List the jobs running in the background with ``jobs``, get a job back
+online with  ``fg`` or ``fg <job_number>``. There can be multiple
+background jobs (remember forkbombs).
 
 Kill the foreground job: Ctrl-c
 
 
 Exit the shell
 --------------
-``logout`` or Ctrl-d (export IGNOREEOF=1 to *.bashrc*)
+``logout`` or Ctrl-d (``export IGNOREEOF=1`` to *.bashrc* to prevent
+Ctrl-d from quitting).
 
+Of course, quitting your shell is annoying, since you have to start
+over.  Luckily there are programs so that you don't have to do this.
 In order to keep your sessions running while you logged out, you
 should discover the ``screen`` program.
 
@@ -1774,8 +1796,14 @@ should discover the ``screen`` program.
  - Ctrl-a-d to detach the session while you are connected
  - ``screen -ls`` to list currently running sessions
  - ``screen -rx <session_id>`` to attach the session, one can use TAB for the autocompletion or skip the <session_id> if there is only one session running
+ - ``tmux`` is a newer program with the same style.  It has some extra
+   features and some missing features still.
 
-Example: irssi on kosh / lyta
+Some people have their ``screen`` open forever, which just keeps
+running and never gets closed.  Wherever they are, they ssh in,
+connect, and resume right where they left off.
+
+Example: ``irssi`` on kosh / lyta
 
 
 About homework assignments
