@@ -1448,9 +1448,8 @@ needed, one can terminate loop or jump to a next iteration.
 
 Arrays
 ------
-BASH supports both indexed and associative one-dimensional
-arrays. Indexed array can be declared with ``declare -a array_name``, or first assignment
-does it automatically (note: indexed arrays only)::
+BASH supports both indexed and associative one-dimensional arrays. Indexed array can be declared
+with ``declare -a array_name``, or first assignment does it automatically (note: indexed arrays only)::
 
  array=(my very first array)
  array=('my second' array [6]=sure)
@@ -1459,23 +1458,35 @@ does it automatically (note: indexed arrays only)::
 To access array elements (the curly braces are required, unlike normal
 variable expansion)::
 
-  echo ${array[0]} ${array[1]}  # elements one by one
-  ${array[@]}  # array values at once
-  ${!array[@]}  # indexes at once
-  ${#array[@]}  # number of elements in the array
-  ${#array[2]}  # length of the element number 2
+ # elements one by one
+ echo ${array[0]} ${array[1]}
+ 
+ # array values at once
+ ${array[@]} 
+ 
+ # indexes at once
+ ${!array[@]}
+ 
+ # number of elements in the array
+ ${#array[@]}
+ 
+ # length of the element number 2
+ ${#array[2]}
 
-To append elements to the end of the array::
+ # to append elements to the end of the array
+ array+=(value)
 
-  array+=(value)
-
-Assign a command output to array::
-
+ # assign a command output to array
  array=($(command))
+ 
+ # emptying array
+ array=()
 
-Sorting array::
-
+ # sorting array
  IFS=$'\n' sorted=($(sort <<<"${array[*]}"))
+ 
+ # array element inside arithmetic expanssion requires no ${}
+ ((array[$i]++))
 
 Loops through the indexed array::
 
@@ -1485,7 +1496,7 @@ Loops through the indexed array::
 
 Negative index counts back from the end of the array, *[-1]* referencing to the last element.
 
-Quick (and dirty) way to print array with no loop::
+Quick ways to print array with no loop::
 
  # with keys, as is
  declare -p array
@@ -1496,7 +1507,12 @@ Quick (and dirty) way to print array with no loop::
  # array elements values one per line
  printf "%s\n" "${array[@]}"
 
-BASH associative arrays (this type of array supported in BASH since version 4.2) needs to be declared first ``declare -A asarr``, array elements they can be declared as integers ``declare -iA array``.
+BASH associative arrays (this type of array supported in BASH since version 4.2) needs to be
+declared first (!) ``declare -A asarr``.
+
+Both indexed arrays and associative can be declared as array of integers, if all elements
+values are integers ``declare -ia array`` or ``declare -iA``. This way element values are
+treated as integers always.
 
 ::
 
@@ -1506,10 +1522,38 @@ BASH associative arrays (this type of array supported in BASH since version 4.2)
 Addressing is similar to indexed arrays::
 
  for i in "${!asarr[@]}"; do
-   echo \$asarr[$i] is ${asarr[$i]}
+   echo asarr[$i] is ${asarr[$i]}
  done
 
 Even though key can have spaces in it, quoting can be omitted.
+
+::
+
+ # adding output of the command to assoative array
+ # w -h -i | tr -s ' ' | cut -d' ' -f1,3 returns lines like: user1 ip.add.res.sxx
+ declare -A arr
+ for i in $(w -h -i | tr -s ' ' | cut -d' ' -f1,3); do
+   arr+=(["${i/ */}"]="${i/* /}")
+ done
+ 
+ # for a sake of demo: counts unique users and their occurances (yes, one can do it with 'uniq -c' :)
+ # declare assoative array of integers
+ declare -iA arr
+
+ for i in $(w -h | cut -c1-8); do   # get list of currenly logged users into loop
+   for u in ${!arr[@]}; do   # check that they are unique
+     if [[ $i == $u ]]; then
+       ((arr[$i]++))
+       continue 2 
+     fi 
+   done
+   arr[$i]=1  # if neww, add a new array element
+ done
+
+ for j in ${!arr[@]}; do    # printing out
+   echo ${arr[$j]} $j
+ done
+
 
 
 Working with the input
@@ -1834,6 +1878,7 @@ Ideas for exercises
 -------------------
  * function that validates a file path (pattern)
  * function that counts days left till a given date (salary, vacation, deadline etc)
+ * find all broken links
 
 
 Bonus material
