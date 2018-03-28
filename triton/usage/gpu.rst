@@ -295,6 +295,7 @@ calls are automatically routed via the MPS server. At the end of the
 job one must remember to shut it down. Example job script:
 
 ::
+
    #!/bin/bash -l
 
    #SBATCH --time=01:15:00          ## wallclock time hh:mm:ss
