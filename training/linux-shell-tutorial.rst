@@ -1493,6 +1493,9 @@ Quick (and dirty) way to print array with no loop::
  # indexes -- values
  echo ${!array[@]} -- ${array[@]}
 
+ # array elements values one per line
+ printf "%s\n" "${array[@]}"
+
 BASH associative arrays (this type of array supported in BASH since version 4.2) needs to be declared first ``declare -A asarr``, array elements they can be declared as integers ``declare -iA array``.
 
 ::
