@@ -1473,6 +1473,10 @@ Assign a command output to array::
 
  array=($(command))
 
+Sorting array::
+
+ IFS=$'\n' sorted=($(sort <<<"${array[*]}"))
+
 Loops through the indexed array::
 
  for i in ${!array[@]}; do
