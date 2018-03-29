@@ -599,15 +599,18 @@ Subshell can not modify its parent shell environment, though can give back exit 
  dir=nonexistent
  echo $(ls -l $dir || exit 1)
  
- # this will, though ugly
+ # this will not work either, since || evaluates echo's exit code, not ls
+ echo $(ls -l $dir) || exit 1
+ 
+ # this will work, though ugly
  echo $(ls -l $dir || kill -HUP $$)
  
  # this will work
  trap 'exit 1' 20
  echo $(ls -l $dir || kill -20 $$)
 
- # and this since assignment to a var of a command substitution returns exit code of the executed
- # command and not '=' operation
+ # this looks like most elegant, since assignment to a var of a command substitution returns exit
+ # code of the executed command and not '=' operation
  var=$(ls -l $dir) || exit 1
  echo $var
 
