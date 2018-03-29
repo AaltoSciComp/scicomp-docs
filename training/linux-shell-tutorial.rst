@@ -589,8 +589,27 @@ command first.
  # counting directories and files on the fly
  echo Number of directories $(ls -lA | grep ^d | wc -l) files $(ls -lA | grep ^- | wc -l)
  
-  
 This is what makes BASH powerful!
+
+Note:  ``$(command || exit 1)`` will not have an effect you expect, command is executed in a
+subshell, exiting from inside a subshell, closes the subshell only not the parent script. 
+Subshell can not modify its parent shell environment, though can give back exit code or signal it::
+
+ # this will not work, echo still will be executed
+ dir=nonexistent
+ echo $(ls -l $dir || exit 1)
+ 
+ # this will, though ugly
+ echo $(ls -l $dir || kill -HUP $$)
+ 
+ # this will work
+ trap 'exit 1' 20
+ echo $(ls -l $dir || kill -20 $$)
+
+ # and this since assignment to a var of a command substitution returns exit code of the executed
+ # command and not '=' operation
+ var=$(ls -l $dir) || exit 1
+ echo $var
 
 
 More about redirection, piping and process substitution
@@ -1604,38 +1623,61 @@ arguments are like ``./script [-f filename] [-z] [-b]`` or more complex?
 It is perfectly fine is to handle $@ with *for* or *while/shift* and many do this. But let us
 consider a more standard way.
 
-The ``getopt`` command (do not get confused with ``getopts`` built-in BASH function of
-similar kind, they do the same thing, but *getopt* does it much better) requires two parameters to work:
-a list of letters -- valid input options -- and colons. No commas or spaces in between, if letter
-followed by a colon, the option requires an argument. For example, the string ``getopt "f:sd"`` says that the
-options -f, -s and -d are valid and -f requires an argument, like *-f filename*. The second *getopt*
-argument is a list of input parameters, often just $@.
+In the simplest case ``getopt`` command (do not get confused with ``getopts`` built-in BASH
+function of similar kind) requires two parameters to work:
+fisrt is a list of letters -- valid input options -- and colons. If letter followed by a colon, the
+option requires an argument, if folowed by two colons, argument is optional. For example, the string
+``getopt "sdf:"`` says that the options -s, -d and -f are valid and -f requires an argument, like
+*-f filename*. The second *getopt* argument is a list of input parameters, often just $@.
 
 ::
 
  # here is the whole trick: getopt validates the input parameters, returns the correct ones
  # then they are reassigned back to $@ with 'set --'
- set -- $(getopt "sdf:" "$@") || exit 1
-
+ opts=$(getopt "sdf:" "$@") || exit 1   # instead of exit, can be 'usage' message/function
+ set -- $opts
+ 
+ # note: in one line one can do it like, though ugly
+ #set -- $(getopt "sdf:" "$@" || kill -HUP $$)
+ # $( ... || exit) does not work, since exit from inside a subshell, closes the subshell only
+ 
+ # since script input parameters have been validated and structured, we can go through them
  # we start an endless while and go through $@ with 'case' one by one
- # 'shift' makes another trick, every time it is invoked, it shifts $@ params, $2 becomes $1,
- # $2 becomes $3, etc; -- separates valid options and the rest as sorted by 'getopt'
+ # 'shift' makes another trick, every time it is invoked, it shifts down $@ params,
+ # $2 becomes $1, $2 becomes $3, etc while old $1 is unset
+ # getopt adds -- to $@ which separates valid options and the rest that did not qualify
  while :; do
    case ${1} in
      -s) SORTED=0 ;;
      -d) DEBUG=0 ;;
-     -f) shift; file=$1 ;;
-     --) break ;;
+     -f) shift; file=$1 ;; # shift to take next item as an argument to -f
+     --) shift; break ;;   # remove --
    esac
    shift
  done
- shift  # remove --
  # by now $@ has only rubish filtered out by 'getopt', could be a file name
  
  .. the rest of the code
 
+``getopt`` can do way more, go for ``man getopt`` for details, as an example::
+
+ # here is getopt sets name with '-n' used while reporting errors: our script name
+ # accepts long options like '--filename myfile' along with '-f myfile'
+ getopt -n $(basename $0)  -o "hac::f:" --long "help,filename:,compress::"  -- "$@"
+
 If you implement a script that can accept both STDIN and positional
 parameters, you have to check both.
+
+
+:Exercise 4.1:
+ - make a script/function that produces an array of random numbers, make sure that numbers are unique
+ 
+   - one version should use BASH functionality only (Tip: ``$RANDOM``)
+   - the other can be done with one line (Tip: ``shuf``)
+
+ - Implement a Bubble sort using arrays and loops and other built-in BASH functionality (no *sort* etc).
+ - (*) Implement a one-liner that sorts text file lines by lines length (Tip: awk or sed)
+
 
 
 Here Documents blocks
@@ -1685,15 +1727,6 @@ comment::
 
 
 **Hint** ``<<\LimtiString`` to turn off substitutions and place text as is with $ marks etc
-
-:Exercise 4.1:
- - make a script/function that produces an array of random numbers, make sure that numbers are unique
- 
-   - one version should use BASH functionality only (Tip: ``$RANDOM``)
-   - the other can be done with one line (Tip: ``shuf``)
-
- - Implement a Bubble sort using arrays and loops and other built-in BASH functionality (no *sort* etc).
- - (*) Implement a one-liner that sorts text file lines by lines length (Tip: awk or sed)
 
 
 Catching kill signals: trap
