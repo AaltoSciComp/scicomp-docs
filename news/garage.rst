@@ -29,12 +29,14 @@ Schedule
 -  Time: We promise to be there only the first 30 minutes or so, if
    everyone leaves before then.  Usually we are there the whole time.
 -  Location: See below.  U121a_ and U121b_  (in main building),
-   T4_ (CS building).  Carefully note the difference between U121a and
-   U121b, but they are right by each other.
+   T4_ (CS building), F254_ (F-building, some may call it "Health
+   technology house").  Carefully note the difference between U121a
+   and U121b, but they are right by each other.
 
 .. _U121a: http://usefulaaltomap.fi/#!/select/main-U121a
 .. _U121b: http://usefulaaltomap.fi/#!/select/main-U121b
 .. _T4:    http://usefulaaltomap.fi/#!/select/cs-A238
+.. _F254:  http://usefulaaltomap.fi/#!/select/F-F254
 
 .. csv-table::
    :header-rows: 1
