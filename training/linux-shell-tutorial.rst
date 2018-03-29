@@ -602,15 +602,8 @@ Subshell can not modify its parent shell environment, though can give back exit 
  # this will not work either, since || evaluates echo's exit code, not ls
  echo $(ls -l $dir) || exit 1
  
- # this will work, though ugly
- echo $(ls -l $dir || kill -HUP $$)
- 
- # this will work
- trap 'exit 1' 20
- echo $(ls -l $dir || kill -20 $$)
-
- # this looks like most elegant, since assignment to a var of a command substitution returns exit
- # code of the executed command and not '=' operation
+ # this will work, since assignment a comman substitution to a var returns exit
+ # code of the executed command
  var=$(ls -l $dir) || exit 1
  echo $var
 
@@ -1551,14 +1544,17 @@ Even though key can have spaces in it, quoting can be omitted.
 
 ::
 
- # adding output of the command to assoative array
- # w -h -i | tr -s ' ' | cut -d' ' -f1,3 returns lines like: user1 ip.add.res.sxx
+ # use case: your command returns list of lines like: 'string1 string2'
+ # adding them to an assoative array like: [string1]=string2
  declare -A arr
- for i in $(w -h -i | tr -s ' ' | cut -d' ' -f1,3); do
+ for i in $(command); do
    arr+=(["${i/ */}"]="${i/* /}")
  done
  
- # for a sake of demo: counts unique users and their occurances (yes, one can do it with 'uniq -c' :)
+For a sake of demo: let us count unique users and their occurances (yes, one can do it with 'uniq -c' :)
+
+::
+
  # declare assoative array of integers
  declare -iA arr
 
