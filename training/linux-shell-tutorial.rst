@@ -1506,6 +1506,9 @@ variable expansion)::
  # split a string like 'one two three etc' or 'one,two,three,etc' to an array
  # note that IFS=', ' means that separator is either space or comma, not a sequence of them
  IFS=', ' read -r -a array <<< "$string"
+ 
+ # spliting a word to an array letter by letter
+ word=qwerty; array=($(echo $word | grep -o .))
 
 Loops through the indexed array::
 
