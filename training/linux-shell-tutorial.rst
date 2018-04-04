@@ -869,13 +869,21 @@ Variables
 ---------
 In shell, variables define your environment. Common practice is that environmental vars are written IN CAPITAL: $HOME, $SHELL, $PATH, $PS1, $RANDOM. To list all defined variables ``printenv``. All variables can be used or even redefined. No error if you call an undefined var, it is just considered to be empty::
 
- var1=100 var2='some string'  # assign a variable, note, no need for ;
- $var1  # call a variable
- var3=$var1  # assign to another var
- var+=<string>/<integer>  # append a var
-   var1+=50  # var1=150
+ # assign a variable, note, no need for ; delimiter
+ var1=100 var2='some string'
+ 
+ # calling a variable is just putting a $ dollar sign in a front
+ echo "var1 is $var1"
+  
+ # re-assign to another var
+ var3=$var1
+ 
+ # when appending a variable, it is considered to be a string 
+ var+=<string>/<integer>
+   var1+=50  # var1 is now 10050
    var2+=' more' # var2 is 'some string more'
- echo "var1 is $var1"  # use is the commands
+ # we come later to how to deal with the integers (Arithmetic Expanssions $(()) below)
+ # optionally one can 'declare -i var1' to be treated as integer always
 
 There is no need to declare things in advance: there is flexible
 typing.  In fact, you can access any variable, defined or not.
