@@ -1565,6 +1565,19 @@ Even though key can have spaces in it, quoting can be omitted.
  for i in $(command); do
    arr+=(["${i/ */}"]="${i/* /}")
  done
+
+Variable expanssions come out in the new light::
+
+ # this will return two elements of the array starting from number 1
+ ${arr[@]:1:2}
+
+ # all elements without last one
+ ${arr[@]:0:${#arr[@]}-1}
+ 
+ # parts replacement will be applied to all array elements
+ declare -A emails=([Vesa]=vesa@aalto.fi [Kimmo]=kimmo@helsinki.fi [Anna]=anna@math.tut.fi)
+ echo ${emails[@]/@*/@gmail.com}
+ # returns: vesa@gmail.com anna@gmail.com kimmo@gmail.com
  
 For a sake of demo: let us count unique users and their occurances (yes, one can do it with 'uniq -c' :)
 
@@ -1917,9 +1930,18 @@ References
 
 To continue: course development ideas/topics
 --------------------------------------------
+Divide into two courses:
+ * Linux Shell basics (2 sessions): files + processes (to be expanded), interactive usage,
+   building blocks like grep, find, etc (expand from coreutils), redirections/pipe, screen,
+   script, ssh tricks
+ * Linux Shell Programming (4 sessions): programming logic, starting from command substitution
+ 
+Additional topics:
  * sed, awk, perl as helpers
  * select command
+ * placeholders: working with the templates
  * managing processes: kill, nice
+ * more Triton examples/demos
 
 Ideas for exercises
 -------------------
@@ -1931,7 +1953,6 @@ Ideas for exercises
 Bonus material
 ==============
 Parts that did not fit.
-
 
 
 Files and dirs: advanced
