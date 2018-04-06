@@ -41,7 +41,7 @@ install an X server (XQuartz).
 Windows
 -------
 
-You need to install a ssh client yourself:  `PuTTY <http://PuTTY>`__ is
+You need to install a ssh client yourself:  `PuTTY <https://www.chiark.greenend.org.uk/~sgtatham/putty/>`__ is
 the standard one.  Use `WinSCP <https://winscp.net>`__ to transfer
 files.  If you want to run graphical programs, you need an X server on
 Windows: see this
@@ -146,11 +146,11 @@ Openssh on linux can be made nicer if you set up a config file
 File access
 ===========
 
-You'll actually learn this in the next section, the `data storage tutorial <storage>`.
-The scratch and work filesystems are mounted on ``taltta.aalto.fi``, at
-``/m/triton/{scratch,work}/``, which you can access over ssh.
-
-You can also use sftp to access files, or ``sshfs``. See the next
+You'll actually learn this in the next section, the `data storage
+tutorial <storage>`.  It is easiest to mount them using SMB, and they
+are also mounted on ``taltta.aalto.fi``, at
+``/m/triton/{scratch,work}/``, which you can access over ssh or
+``sftp``/``sshfs``.  See the next
 tutorial (or :doc:`FAQ <../usage/faq>`).
 
 
@@ -162,3 +162,5 @@ What's next?
 well, you can really do almost anything from anywhere.  The
 ``.ssh/config`` file is valuable to set up.  If ssh is annoying to
 use, ask for some help in getting it working well.
+
+Next, move on to :doc:`the storage tutorial <storage>`

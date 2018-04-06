@@ -207,6 +207,8 @@ so try to combine smaller tasks to fit that.
 What's next?
 ============
 
+The next tutorial is about :doc:`GPU computing <gpu>`.
+
 For more information, you can see the CSC guide on array jobs:
 `https://research.csc.fi/taito-array-jobs. <https://research.csc.fi/taito-array-jobs>`_
 

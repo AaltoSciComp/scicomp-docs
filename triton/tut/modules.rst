@@ -134,3 +134,7 @@ even make your own user modules if needed.
 We use the `Lmod <https://lmod.readthedocs.io/en/latest/>`__ system.
 
 
+Next steps
+----------
+
+The next tutorial is about :doc:`interactive jobs <interactive>`.
