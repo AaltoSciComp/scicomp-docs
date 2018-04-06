@@ -74,12 +74,12 @@ will get conflicts.
 
 
 
-Jupyterhub
+JupyterHub
 ==========
 
 .. note::
 
-   Jupyterhub on Triton is still under development, and features will
+   JupyterHub on Triton is still under development, and features will
    be added as they are needed or requested.  Please use the `Triton
    issue tracker
    <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`__.
@@ -90,7 +90,7 @@ your own single-user server.  This is available on Triton.
 
 Connecting and starting
 -----------------------
-Currently jupyterhub is available only within Aalto networks, at
+Currently jupyterHub is available only within Aalto networks, at
 https://jupyter.triton.aalto.fi.  If you are not within the Aalto
 networks (aalto open is not), either connect to the VPN set up the
 :ref:`proxy as described in the section below <jupyter-proxy-setup>`.
@@ -102,7 +102,7 @@ Slurm queue, so the first start-up takes a few seconds but after that
 it will stay running even if you log out.  The resources you request
 are managed by slurm: if you go over the memory limit, your server
 will be killed without warning or notification (but you can see it in
-the output log, ``~/'jupyterhub_slurmspawner_*.log``).  The jupyter
+the output log, ``~/'jupyterhub_slurmspawner_*.log``).  The Jupyter
 server nodes are oversubscribed, which means that we can allocate more
 memory and CPU than is actually available.  We will monitor the nodes
 to try to ensure that there are enough resources available, so do
@@ -139,45 +139,6 @@ For `reasons of web security
 you can't install your own extensions (but you can install your own
 kernels).  Send your requests to us instead.
 
-Software and kernels
---------------------
-We have various kernels automatically installed:
-
-* Python (2 and 3 via ``anaconda/latest`` modules + a few
-  more Python modules.)
-* Matlab (latest module)
-* Bash kernel
-* R: coming soon
-* We do not yet have a kernel management policy.  Kernels may be added
-  or removed over time.  We would like to keep them synced with the
-  most common Triton modules, but it will take some time to get this
-  automatic.  Send requests and problem reports.
-
-Since these are the normal Triton modules, you can submit installation
-requests for software in these so that it is automatically available.
-
-If you want to install your own kernels:
-
-* First, ``source
-  /share/apps/jupyterhub/live/miniconda/bin/activate``.  This loads
-  the anaconda environment which contains all the server code and
-  configuration.  (This step may not be needed for all kernels)
-* Follow the instructions you find for your kernel.  You may need to
-  specify ``--user`` or some such to have it install in your user
-  directory.
-* You can check your own kernels in
-  ``~/.local/share/jupyter/kernels/``.
-
-If your kernel involves loading a :doc:`module </triton/tut/modules>`,
-you can either a) load the modules within the notebook server
-("softwares" tab in the menu), or b) update your ``kernel.json`` to
-include the required environment variables (see `kernelspec
-<https://jupyter-client.readthedocs.io/en/stable/kernels.html>`__).
-(We need to do some work to figure out just how this works)
-
-..
-  This one-liner might help: ``( echo "  \"env\": {" ; for x in LD_LIBRARY_PATH LIBRARY_PATH MANPATH PATH PKG_CONFIG_PATH ; do echo "    \"$x\": \"${!x}\"", ; done ; echo "  }" ) >> ~/.local/share/jupyter/kernels/ir/kernel.json`` + then edit the JSON to make it valid.
-
 Problems?  Requests?
 --------------------
 This service is currently in beta and under active development.  If
@@ -203,17 +164,10 @@ Your own notebooks via ``sjupyter``
    so important.  It is only needed if you need more resources than
    JupyterHub can provide.
 
-   This is currently not integrated into the Jupyterhub setup above,
-   and these instructions will be slightly wrong.
-
-.. note::
-
-   Start ``sjupyter`` by using ``/share/apps/bin/sjupyter`` for now.
-
 We provide a command ``sjupyter`` which automates launching your own
 notebooks in the Slurm queue.  This gives you more flexibility in
 choosing your nodes and resources than Jupyterhub, but also will after
-your and your department's Triton priority more because you are using
+your and your department's Triton priority more because you are
 blocking others from using these resources.
 
 
@@ -260,11 +214,8 @@ with jupyter.triton.aalto.fi which you might expect to always work).
 Starting sjupyter
 -----------------
 
-We have the custom-built command ``/share/apps/bin/sjupyter`` for
+We have the custom-built command ``sjupyter`` for
 starting Jupyter on Triton.
-
-To run on the login node, run ``sjupyter --local``.  This is good for
-small testing and so on, which doesn't use too much CPU or memory.
 
 To run in the Triton queue (using more resources), just use
 ``sjupyter``.  This will start a notebook on the interactive Slurm
@@ -276,29 +227,51 @@ resource usage: if you request a lot of resources and leave the
 notebook idle, no one else can use them.  Thus, try to use the
 (default) interactive partition, which handles this automatically.
 
+To run on the login node, run ``sjupyter --local``.  This is good for
+small testing and so on, which doesn't use too much CPU or memory.
 
 
-Other kernels and software
---------------------------
 
-Jupyter isn't just Python - you can run other programming languages
-with the same notebook interface.  See the `full list of kernels here
-<https://github.com/jupyter/jupyter/wiki/Jupyter-kernels>`_.
+Software and kernels
+====================
+We have various kernels automatically installed (these instructions
+should apply to both JupyterHub and ``sjupyter``):
 
-We support the following kernels already:
+* Python (2 and 3 via ``anacondaN/latest`` modules + a few
+  more Python modules.)
+* Matlab (latest module)
+* Bash kernel
+* R
+* We do not yet have a kernel management policy.  Kernels may be added
+  or removed over time.  We would like to keep them synced with the
+  most common Triton modules, but it will take some time to get this
+  automatic.  Send requests and problem reports.
 
-* **Python 2**: ``module load anaconda2`` first.
-* **Matlab**: ask us, we need matlab 2017b and the Jupyter connector
-  needs to be installed.
-* **R**: Supported, ask us to install.
-* **Bash**: Installed, but may be unstable.  Note, that if you do
-  anything that has external effects to the filesystem, things are not
-  re-runable!  Probably best for exploring how bash scripting works.
+Since these are the normal Triton modules, you can submit installation
+requests for software in these so that it is automatically available.
 
-If you need other software installed to use in these environments, you
-can within the python/R/matlab/etc environment: just do it outside of
-Jupyter and it should be there inside, as long as you use the same
-environment.
+If you want to install your own kernels:
+
+* First, ``module load jupyterhub/live``.  This loads
+  the anaconda environment which contains all the server code and
+  configuration.  (This step may not be needed for all kernels)
+* Follow the instructions you find for your kernel.  You may need to
+  specify ``--user`` or some such to have it install in your user
+  directory.
+* You can check your own kernels in
+  ``~/.local/share/jupyter/kernels/``.
+
+If your kernel involves loading a :doc:`module </triton/tut/modules>`,
+you can either a) load the modules within the notebook server
+("softwares" tab in the menu), or b) update your ``kernel.json`` to
+include the required environment variables (see `kernelspec
+<https://jupyter-client.readthedocs.io/en/stable/kernels.html>`__).
+(We need to do some work to figure out just how this works).  Check
+``/share/apps/jupyterhub/live/miniconda/share/jupyter/kernels/ir/kernel.json``
+for an example of a kernel that loads a module first.
+
+..
+  This one-liner might help: ``( echo "  \"env\": {" ; for x in LD_LIBRARY_PATH LIBRARY_PATH MANPATH PATH PKG_CONFIG_PATH ; do echo "    \"$x\": \"${!x}\"", ; done ; echo "  }" ) >> ~/.local/share/jupyter/kernels/ir/kernel.json`` + then edit the JSON to make it valid.
 
 
 
@@ -307,8 +280,13 @@ FAQ/common problems
 ===================
 * **Jupyterhub won't spawn my server: "Error: HTTP 500: Internal
   Server Error (Spawner failed to start [status=1]."**.  Is your home
-  directory quota exceeded?
+  directory quota exceeded?  If that's not it, check the
+  ``~/jupyterhub_slurmspawner_*`` logs then contact us.
 
+* **My server has died mysteriously.**  This may happen if resource
+  usage becomes too much and exceed the limits - Slurm will kill your
+  notebook.  You can check the ``~/jupyterhub_slurmspawner_*`` log
+  files for jupyterhub to be sure.
 
 
 See also
