@@ -233,6 +233,8 @@ extension and SSH Proxy.
     not work, but older and newer does.
 
 * Create a new proxy rule with the pattern ``*int.triton.aalto.fi*``
+  (or ``jupyter.triton.aalto.fi`` if you want to connect to that using
+  the proxy).
 
   * Proxy type: SOCKS5, Proxy URL: ``localhost``, port ``8123``.
 
@@ -251,7 +253,9 @@ extension and SSH Proxy.
 
 Now, when you go to any address matching ``*.int.triton.aalto.fi*``,
 you will *automatically* connect to the right place on Triton.  You
-can use Jupyter like normal.
+can use Jupyter like normal.  But if the ssh connection goes down,
+then you can't connect and will get errors, so be aware (especially
+with jupyter.triton.aalto.fi which you might expect to always work).
 
 Starting sjupyter
 -----------------
