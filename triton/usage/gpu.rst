@@ -139,7 +139,7 @@ gpu node in question and run
 
 This shows the gpu usage with 1 second interval. The GPU utilized by process
 with PID X is shown in the first column of the second table. The first table
-lists the GPUs by their ID Checking the `Volatile GPU-Util` column gives the
+lists the GPUs by their ID Checking the ``Volatile GPU-Util`` column gives the
 utilization of GPU. If your code uses less than 50% of the GPU you should
 try to improve the data loading / CPU part of your code as the GPU is 
 underutilized.

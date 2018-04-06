@@ -18,7 +18,7 @@ The examples try to use interactive windows to plot the results. This is not
 available in the batch queue so to fix this one needs to specify an
 alternative matplotlib backend. 
 :download:`This </triton/examples/fenics/fenics_matplotlib.patch>` patch file
-fixes example *demo_poisson.py*. Download it into `$WRKDIR/fenics` and run
+fixes example *demo_poisson.py*. Download it into ``$WRKDIR/fenics`` and run
 
 .. code-block:: bash
 
