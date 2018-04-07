@@ -1929,7 +1929,7 @@ References
 
 
 To continue: course development ideas/topics
---------------------------------------------
+============================================
 Divide into two courses:
  * Linux Shell basics (2 sessions): files + processes (to be expanded), interactive usage,
    building blocks like grep, find, etc (expand from coreutils), redirections/pipe, screen,
@@ -1948,6 +1948,7 @@ Ideas for exercises
  * function that validates a file path (pattern)
  * function that counts days left till a given date (salary, vacation, deadline etc)
  * find all broken links
+ * rename files replacing spaces with the underscores. Tip: ``rename``
 
 
 Bonus material
