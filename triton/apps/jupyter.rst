@@ -276,6 +276,21 @@ for an example of a kernel that loads a module first.
 
 
 
+Git integration
+===============
+
+You can enable git integration on Triton by using the following
+lines from inside a git repository.  (This is normal nbdime, but uses
+the centrally installed one so that you don't have to load a
+particular conda environment first.  The ``sed`` command fixes
+relative paths to absolute paths, so that you use the tools no matter
+what modules you have loaded)::
+
+  /share/apps/jupyterhub/live/miniconda/bin/nbdime config-git --enable
+  sed --in-place -r 's@(= )[ a-z/-]*(git-nb)@\1/share/apps/jupyterhub/live/miniconda/bin/\2@' .git/config
+
+
+
 FAQ/common problems
 ===================
 * **Jupyterhub won't spawn my server: "Error: HTTP 500: Internal
