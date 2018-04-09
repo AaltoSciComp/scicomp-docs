@@ -2,6 +2,13 @@
 Jupyter
 =======
 
+.. figure:: /images/jupyter_demo.gif
+   :scale: 60%
+   :align: center
+   :alt: alternate text
+   :figclass: align-center
+
+   < Triton `JupyterHub <http://scicomp.aalto.fi/triton/apps/jupyter.html#jupyterhub>`_ Demo >
 Jupyter notebooks are a way of interactive, web-based computing:
 instead of either scripts or interactive shells, the notebooks allow
 you to see a whole script + output and experiment interactively and
@@ -106,8 +113,8 @@ the output log, ``~/'jupyterhub_slurmspawner_*.log``).  The Jupyter
 server nodes are oversubscribed, which means that we can allocate more
 memory and CPU than is actually available.  We will monitor the nodes
 to try to ensure that there are enough resources available, so do
-report problems to us.  Please request the minimum amount of memory
-you think you need - you can always restart with more memory.
+report problems to us.  **Please request the minimum amount of memory
+you think you need** - you can always restart with more memory.
 
 When you use Jupyter via this interface, the slurm billing weights are
 lower, so that the rest of your Triton priority does not decrease by
