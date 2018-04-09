@@ -310,6 +310,12 @@ FAQ/common problems
   notebook.  You can check the ``~/jupyterhub_slurmspawner_*`` log
   files for jupyterhub to be sure.
 
+* "Spawner pending" when you try to start - this is fixed in `issue
+  #1534/#1533
+  <https://github.com/jupyterhub/jupyterhub/issues/1534>`__ in
+  JupyterHub.  Current recommendation: wait a bit and return to
+  JupyterHub home page and see if the server has started.
+
 
 See also
 ========
