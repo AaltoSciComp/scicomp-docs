@@ -1604,14 +1604,25 @@ For a sake of demo: let us count unique users and their occurances (yes, one can
 
 Working with the input
 ----------------------
-We touched already passing data to script as command arguments in addition we know *read*
-command that allows to get input from the keyborad. The third option is standard input.
+User input can be given to a script in three ways:
+
+ * as command arguments, like ``./script.sh arg1 arg2 ...``
+ * interactively from keyboard with ``read`` command
+ * as standard input, like ``command | ./script``
+
+Nothing stops from using a combination of them or all of the approaches in one script.
+Let us go through the last two first and then get back to command line arguments.
+
+``read`` can do both: read from keyboard or from STDIN
 
 ::
 
  # the command prints the prompt, waits for the response, and then assigns it
  # to variable(s)
  read -p 'Your names: ' firstn lastn
+ 
+ # read into array, each word as a new array element
+ read -a arr -p 'Your names: '
  
 Given input must be checked (!) with a pattern, especially if script creates directories,
 removes files, sends emails based on the input. *read* selected options
@@ -1623,33 +1634,59 @@ removes files, sends emails based on the input. *read* selected options
  * ``-s`` secure input - don't echo input if on a terminal (passwords!)
  * ``-t <TIMEOUT>`` wait for data <TIMEOUT> seconds, then quit (exit code 1)
 
-``read`` can also be used to read from the STDIN, case like ``command | ./script``::
+``read`` is capable of reading STDIN, case like ``command | ./script``, with ``while read var`` it goes
+through the input line by line::
 
  # IFS= is empty and echo argument in quotes to make sure we keep format
  # otherwise all spaces and new lines shrinked to one
  while IFS= read line; do
-   echo "line $line" 
+   echo "line is $line"    # do something useful with $line
  done
- 
+
+Other STDIN tricks that one can use in the scripts
+
+::
+
  # to check that STDIN is not empty
  if [[ -p /dev/stdin ]]; then ... fi
  
- # to read STDIN to a variable, all of the below mentioned do the same
+ # to read STDIN to a variable, both commands do the same
  var=$(</dev/stdin)
  var=$(cat)
  
  # or pass STDIN to a pipeline  (/dev/stdin can be omitted)
  cat /dev/stdin | cut -d' ' -f 2,3 | sort
 
-A good script can do both: accept filename as an argument or get its content through stdin.
-To work with command line arguments, a modern approach is to use ``getopt`` command. In the simple
-cases, you check *$#* and then assign *$1, $2, ...* the way your script requires, but what if
-arguments are like ``./script [-f filename] [-z] [-b]`` or more complex?
-(common notaion: arguments in the square brackets are optional).
+In the simplest cases like ``./script arg1 arg2 ...`, you check *$#* and then assign
+*$1, $2, ...* the way your script requires.
 
-It is perfectly fine is to handle $@ with *for* or *while/shift* and many do this. But let us
-consider a more standard way.
+::
 
+ if (($#==2)); then
+   var1=$1 var2=$2
+   # ... do something useful
+ else
+   echo 'Wrong amount of arguments'
+   echo "Usage: ${0##*/} arg1 arg2"
+   exit 1
+ fi
+ 
+To work with all input arguments at once you have *$@*::
+
+ if (($#>0)); then
+   for i; do
+     echo $i
+     # ... do something useful with each element of $@
+     # note that for loop uses $@ by default if no other list given with 'in list'
+   done
+ fi
+
+Often, the above mentioned ways are more than enough for simple scripts.
+But what if arguments are like ``./script [-f filename] [-z] [-b]`` or more complex?
+(common notaion: arguments in the square brackets are optional). What if you write
+a production ready script that will be used by many other as well?
+
+It is were ``getopt`` offers a more efficient way of handling script's input options.
 In the simplest case ``getopt`` command (do not get confused with ``getopts`` built-in BASH
 function of similar kind) requires two parameters to work:
 fisrt is a list of letters -- valid input options -- and colons. If letter followed by a colon, the
@@ -1792,11 +1829,13 @@ valuable error message to a screen.
 **Hint** About signals see *Standard signals* section at ``man 7 signal``. Like Ctrl-c is INT (aka SIGINT).
 
 
-Debugging
----------
+Debugging and profiling
+-----------------------
 Check for syntax errors without actual running it ``bash -n script.sh``
 
-Or echos each command and its results with ``bash -xv script.sh``. or even adding options directly to the script.
+Or echos each command and its results with ``bash -xv script.sh``, or even adding options directly
+to the script. ``-x`` enables tracing during the execution, ``-v`` makes bash to be verbose. Both
+can be set directly from the command line as above or with ``set -xv`` inside the script.
 
 ::
 
@@ -1808,7 +1847,8 @@ To enable debugging for some parts of the code only::
   ... some code
   set -x
 
-One can always use ``echo``, though more elegant would be a function that only prints output if DEBUG is set to 'yes'.
+Another debugging option is displaying current stage or variables status with ``echo``,
+though more elegant would be a function that only prints output if DEBUG is set to 'yes'.
 
 ::
 
@@ -1819,7 +1859,7 @@ One can always use ``echo``, though more elegant would be a function that only p
  }
 
  command1
- debug "after command 1, variables list... $var1, $var2"
+ debug "command1: variables list: $var1, $var2"
  command2
 
  # call this script like 'DEBUG=yes ./script.sh' otherwise the *debug* function produces no result and script can be used as is.
@@ -1833,6 +1873,34 @@ Another debugging technique is with trap: tracing the variables::
 Or simply output variable values on exit::
 
  trap 'echo Variable Listing --- a = $a  b = $b' EXIT  # will output variables value on exit
+ 
+For a sake of profiling one can use PS4 and ``date`` (GNU version that deals with nanoseconds). PS4 is
+a built in BASH variable which is printed before each command bash displays during an execution trace.
+The first character of PS4 is replicated multiple times, as necessary, to indicate multiple levels
+of indirection. The default is ``+``. Add the lines below right after '#!/bin/bash'
+
+::
+
+ # this will give you execution time of each command and its line number
+ # \011 is a tab
+ PS4='+\011$(date "+%s.%N")\011${LINENO}\011'
+ set -x
+ 
+ # optionally, if you want tracing output to be in a separate file
+ PS4='+\011$(date "+%s.%N")\011${LINENO}\011'
+ exec 5> ${0##*/}.$$.x && BASH_XTRACEFD='5' && set -x
+
+ # or to get your script looking more professional, one can enable DEBUG, i.e. tracing only
+ # happens when you run as 'DEBUG=profile ./script.sh'
+
+ case $DEBUG in
+   profile|PROFILE|p|P)
+     PS4='+\011$(date "+%s.%N")\011${LINENO}\011'
+     exec 5> ${0##*/}.$$.x && BASH_XTRACEFD='5' && set -x ;;
+ esac
+
+For the larger scripts with loops and functions tracing output with the date stamps and line numbers
+can be summarized.
 
 
 parallel
