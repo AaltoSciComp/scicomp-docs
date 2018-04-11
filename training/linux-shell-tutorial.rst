@@ -2020,6 +2020,7 @@ Ideas for exercises
  * function that counts days left till a given date (salary, vacation, deadline etc)
  * function to find all broken links
  * rename files replacing spaces with the underscores. Tip: ``rename``
+ * (homework?) Implement a profiler, that summarizes PS4/date output mentioned above
 
 
 Bonus material
