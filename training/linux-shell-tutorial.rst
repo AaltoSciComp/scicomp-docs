@@ -2010,12 +2010,15 @@ Additional topics:
  * placeholders: working with the templates
  * managing processes: kill, nice
  * more Triton examples/demos
+ * revise coreutils section, expand the examples and explanations, make it clear 
+   that BASH is about getting those small utilities to work together
+ * benchmark: C-code vs BASH, Python vs BASH, Perl vs BASH
 
 Ideas for exercises
 -------------------
  * function that validates a file path (pattern)
  * function that counts days left till a given date (salary, vacation, deadline etc)
- * find all broken links
+ * function to find all broken links
  * rename files replacing spaces with the underscores. Tip: ``rename``
 
 
