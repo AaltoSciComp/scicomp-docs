@@ -310,11 +310,21 @@ FAQ/common problems
   notebook.  You can check the ``~/jupyterhub_slurmspawner_*`` log
   files for jupyterhub to be sure.
 
-* "Spawner pending" when you try to start - this is fixed in `issue
+* **My R kernel keeps dying**.  Some people seem to have global R
+  configuration, either in ``.bashrc`` or ``.Renviron`` or some such
+  which globally, which even affects the R kernel here.  Things we
+  have seen: pre-loading modules in ``.bashrc`` which conflict with
+  the kernel R module; changing ``RLIBS`` in ``.Renviron``.  You can
+  either (temporarily or permanently) remove these changes, or you
+  could `install your own R kernel <https://irkernel.github.io/>`__.
+  If you install your own, it is up to you to maintain it.
+
+* "Spawner pending" when you try to start - this is hopefully fixed in `issue
   #1534/#1533
   <https://github.com/jupyterhub/jupyterhub/issues/1534>`__ in
   JupyterHub.  Current recommendation: wait a bit and return to
-  JupyterHub home page and see if the server has started.
+  JupyterHub home page and see if the server has started.  Don't click
+  the button twice!
 
 
 See also
