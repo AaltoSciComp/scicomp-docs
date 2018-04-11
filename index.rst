@@ -53,10 +53,11 @@ Cheatsheets: `CS <ch-cs_>`_, `Data <ch-data_>`_.
 Data management
 ===============
 In this section, you can some information and instructions on data
-management.  Higher level information can be found on the `Aalto
+management.  More abstract information can be found on the `Aalto
 Research Data Management pages
-<http://www.aalto.fi/en/research/research_data_management/>`_.
-
+<http://www.aalto.fi/en/research/research_data_management/>`_.  Key
+links: :doc:`Aalto-specific summary <data/outline>`, :doc:`storage
+services summary <data/services>`.
 
 .. toctree::
    :maxdepth: 2

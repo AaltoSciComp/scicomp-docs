@@ -4,7 +4,8 @@ Data storage services available
 
 This page provides a list of common data storage services, and can
 help you select the right service for the type of data you have (see
-:doc:`organization`).
+:doc:`organization`).  But before we talk about services, you have to
+consider what your needs are.
 
 
 Types of data
@@ -290,8 +291,8 @@ EU services
   search for data.  The other services are mostly target to other
   large infrastructures.  (EUDAT will be re-evaluated in 2018)
 
-Global services
-~~~~~~~~~~~~~~~
+Global services (with special Aalto support)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * **Google Drive** is a cloud storage solution (but you probably
   already knew that...).  You can register your Aalto account as a
@@ -305,11 +306,19 @@ Global services
   service can be great for sharing, but because it is tied to your
   Aalto account, you should not store valuable research data here.
 
-* **Microsoft OneDrive** is like GoogleDrive.  You can find
+  Googre Drive has a "team drives" concept, which will allow you to
+  put data into groups which can easily be inherited as time goes on,
+  even if the original people move on.
+
+* **Microsoft OneDrive** is like Google Drive, and Aalto has a special
+  agreement.  You can find
   `instructions from ITS here
   <https://it.aalto.fi/instructions/deploying-onedrive-business>`__.
   Theoretically, OneDrive has a higher security rating than Google
   Drive, but it is still not suitable for legally confidential data.
+
+Global services
+~~~~~~~~~~~~~~~
 
 * **Github** is a code-sharing and collaboration service (using git,
   obviously).  If you have an open source project, this is a
@@ -319,3 +328,4 @@ Global services
   can be archived permanently (and even has integration with the
   Github "release" feature).
 
+This is by no means a complete list...
