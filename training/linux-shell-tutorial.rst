@@ -1903,12 +1903,38 @@ For the larger scripts with loops and functions tracing output with the date sta
 can be summarized.
 
 
-parallel
---------
+Running in parallel with BASH
+-----------------------------
 The shell doesn't do parallelzation in the HPC way (threads, MPI), but
 can run some simple commands at the same time without interaction.
 
-``parallel``  runs  the  specified  command, passing it a single one of the specified arguments.
+The simplest way of parallelization is sending processes to a background and waiting in
+the script till they are done. To be on safe side, one should set a trap that kills all
+the background child processes if script is interupted abnormally::
+
+ # at the beginning of the script, to get child processes down on exit
+ trap 'killall $(jobs -p) 2>/dev/null' EXIT
+ 
+ # in the script body one may run several processes, like
+ command1 &
+ command2 &
+ command3 &
+ 
+ # or it could be a loop or alike
+ for i in arg1 arg2 arg3; do
+   myfunc $i &
+ done
+ 
+ # the trick here is to make sure jobs are done before script is finished
+ wait
+
+Putting ``wait``at very end of the script makes it to wait till all the child processes are
+over and only then exit. Having ``trap`` at very beginning makes sure we kill all the process
+whatever happens to the script. Otherwise they may stay running on their own even if script has
+exited.
+
+Another way to run in parallel yet avoiding sending to the background is using ``parallel``.
+This utility runs  the  specified  command, passing it a single one of the specified arguments.
 This is repeated for each argument. Jobs may be run in parallel. The default is to run one job per CPU.
 If no command is specified before the --, the commands after it are instead run in parallel.
 
