@@ -29,7 +29,7 @@ Schedule
 -  Time: We promise to be there only the first 30 minutes or so, if
    everyone leaves before then.  Usually we are there the whole time.
 -  Location: See below.  U121a_ and U121b_  (in main building),
-   T4_ (CS building), F254_ (F-building, some may call it "Health
+   T4_ and A106 (CS building), F254_ (F-building, some may call it "Health
    technology house").  Carefully note the difference between U121a
    and U121b, but they are right by each other.
 
@@ -54,16 +54,16 @@ Schedule
    22.3     |       | T4    |
    29.3     |       | F254  |
     5.4     |       | T4    |
-   12.4     |       | U121a |
+   12.4     |       | F254  |
    19.4     |       | T4    |
-   26.4     |       | U121a |
+   26.4     |       | F254  |
     3.5     |       | T4    |
    10.5     |       |       | (no garage, holiday)
    17.5     |       | T4    |
-   24.5     |       | U121b |
-   31.5     |       | T4    |
-    7.6     |       | U121a |
-   14.6     |       | T4    |
+   24.5     |       | F254  |
+   31.5     |       | A106  |
+    7.6     |       | F254  |
+   14.6     |       | A106  |
 
 (future odd weeks to be booked later)
 
