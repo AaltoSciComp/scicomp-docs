@@ -337,6 +337,12 @@ See also
 * Jupyter basic tutorial: https://www.youtube.com/watch?v=HW29067qVWk
   (this is just the first link on youtube - there are many more too)
 
+* More advanced tutorial: `Data Science is Software
+  <https://www.youtube.com/watch?v=EKUy0TSLg04>`__ (this is not just a
+  Jupyter tutorial, but about the whole data science workflow using
+  Jupyter.  It is annoying long (2 hours), but *very* complete and
+  could be considered good "required watching")
+
 * CSC has this service, too, however there is no long term storage yet
   so there is limited usefulness for research: https://notebooks.csc.fi/
 
