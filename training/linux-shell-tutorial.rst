@@ -883,8 +883,7 @@ In shell, variables define your environment. Common practice is that environment
    var1+=50  # var1 is now 10050
    var2+=' more' # var2 is 'some string more'
  # we come later to how to deal with the integers (Arithmetic Expanssions $(()) below)
- # optionally one can 'declare -i var1' to be treated as integer always
-
+ 
 There is no need to declare things in advance: there is flexible
 typing.  In fact, you can access any variable, defined or not.
 However, you can still declare things to be of a certain type if you
@@ -907,7 +906,7 @@ Built-in vars:
  - $?  exit status of the last command
  - $$  current shell pid
  - $#  number of input parameters
- - $0  running script name
+ - $0  running script name, full path
  - $FUNCTION  function name being executed, [ note: actually an array ${FUNCTION[*]} ]
  - $1, $2 ... input parameter one by one (function/script)
  - "$@" all input parameters as is in one line
@@ -938,7 +937,8 @@ BASH provides wide abilities to work with the vars "on-the-fly" with
 processing easily.  These are nice, but are easy to forget so you will
 need to look them up when you need them.
 
- - Substitute a var with default *value* if empty: ``${var:=value}``
+ - Assign a $var with default *value* if not defined: ``${var:=value}``
+ - Returns $var value or a default *value* if not defined: ``${var:-value}``
  - Print an *error_message* if var empty: ``${var:?error_message}``
  - Extract a substring: ``${var:offset:length}``, example ``var=abcde; echo ${var:1:3}`` returns 'bcd'
  - Variable's length: ``${#var}``
@@ -949,8 +949,12 @@ need to look them up when you need them.
 ::
 
  # will print default_value, which can be a variable
- var=''; echo ${var:=default_value}
- var1=another_value; var='';  echo ${var:=$var1}
+ var=''; echo ${var:-default_value}
+ var1=another_value; var='';  echo ${var:-$var1}
+ 
+ # assign the var if it is not defined
+ # note that we use ':' no operation command, to avoid BASH's 'command not found' errors 
+ : ${var:=default_value}
  
  # will print 'not defined' in both cases
  var='';  echo ${var:?not defined}
@@ -976,6 +980,13 @@ Except for the *:=* the variable remains unchanged. If you want to
 redefine a variable::
 
   var='I love you'; var=${var/love/hate}; echo $var  # returns 'I hate you'
+
+BASH allows indirect referencing, consider::
+
+ var1='Hello' var2=var1
+ echo $var2  # returns text 'var1'
+ echo ${!var2}  # returns 'Hello' instead of 'var1'
+
 
 
 [Lecturer's note: ~20 minutes for the hands-on exercises. Solution examples can be given at very end.]
