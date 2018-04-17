@@ -367,3 +367,15 @@ There are two easy ways to fix this
   normally again.
 - If it's on scratch or work, see the :doc:`Triton quotas page <../triton/usage/quotas>`
 - Contact NBE-IT and we will reset the directory permissions for the given directory
+
+I cannot start Firefox
+^^^^^^^^^^^^^^^^^^^^^^
+If you get an error like "*The application did not identify itself*", following might solve the issue. 
+
+Open terminal,
+
+.. code-block:: bash
+
+    firefox -P -no-remote
+
+This will launch Firefox and ask you to choose a profile. Delete and create a new one.
