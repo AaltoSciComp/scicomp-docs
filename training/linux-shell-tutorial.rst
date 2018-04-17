@@ -1548,6 +1548,19 @@ Quick ways to print array with no loop::
  # array elements values one per line
  printf "%s\n" "${array[@]}"
 
+Passing an array to a function as an argument could be the use case when you want to make it local::
+
+ f() {
+   local arr=(${!1})    # pass $1 argument as a refence
+   # do something to array elements
+   echo ${arr[@]}
+ }
+ 
+ # invoke the function, huom that no chages have been done to the original arr[@]
+ arr=(....)
+ f arr[@]
+ 
+
 BASH associative arrays (this type of array supported in BASH since version 4.2) needs to be
 declared first (!) ``declare -A asarr``.
 
