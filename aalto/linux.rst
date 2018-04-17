@@ -370,6 +370,21 @@ There are two easy ways to fix this
 
 I cannot start Firefox
 ^^^^^^^^^^^^^^^^^^^^^^
+There are two reasons for this.
+
+.. rubric:: 1. Your network home disk is full
+
+.. code-block:: bash
+
+  # Go to your user dir
+  cd ~/..
+  # Check disk usage
+  du -sh * 
+  
+The sum should be less than the max quota which is 20GB. If your disk is full then delete something or move it to a local directory, `/l/`.
+
+.. rubric:: 2. Something went wrong with your browser profile
+
 If you get an error like "*The application did not identify itself*", following might solve the issue. 
 
 Open terminal,
@@ -378,4 +393,4 @@ Open terminal,
 
     firefox -P -no-remote
 
-This will launch Firefox and ask you to choose a profile. Delete and create a new one.
+This will launch Firefox and ask you to choose a profile. **Note that when you delete a profile you delete passwords, bookmarks and etc.** So it's better to create a new profile, migrate bookmarks and delete the old one.
