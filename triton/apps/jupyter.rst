@@ -9,6 +9,7 @@ Jupyter
    :figclass: align-center
 
    < Triton `JupyterHub <http://scicomp.aalto.fi/triton/apps/jupyter.html#jupyterhub>`_ Demo >
+
 Jupyter notebooks are a way of interactive, web-based computing:
 instead of either scripts or interactive shells, the notebooks allow
 you to see a whole script + output and experiment interactively and
@@ -101,6 +102,7 @@ Currently jupyterHub is available only within Aalto networks, at
 https://jupyter.triton.aalto.fi.  If you are not within the Aalto
 networks (aalto open is not), either connect to the VPN set up the
 :ref:`proxy as described in the section below <jupyter-proxy-setup>`.
+You must also have a :doc:`Triton account <../accounts>`.
 
 Once you log in, you must start your single-user server.  There are
 several options available that trade off between long run time and

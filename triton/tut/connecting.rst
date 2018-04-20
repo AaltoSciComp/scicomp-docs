@@ -8,6 +8,10 @@ Triton from outside of your department or CSC, please login first to a
 university server (like ``kosh.aalto.fi`` or  ``taltta.org.aalto.fi``)
 and then open a session to ``triton.aalto.fi``.
 
+.. note::
+
+   Triton uses Aalto accounts, but your :doc:`account must be
+   activated first <../accounts>`.
 
 
 Login shell: ssh
