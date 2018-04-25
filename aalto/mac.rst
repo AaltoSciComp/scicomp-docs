@@ -69,15 +69,15 @@ Homebrew
 ########
 `Homebrew <https://brew.sh>`_ is a handy package manager on Macs. On Aalto Macs, you have to install Brew in your home dir.
 
+First install Xcode through Managed Software Centre (either search Xcode, or navigate through Categories -> Productivity -> Xcode).
+
 .. code-block:: bash
 
 	# Go to wherever you want to have your Brew and run this
-	curl -L https://github.com/Homebrew/brew/tarball/master  | tar xz
-
-	mv Homebrew-brew-43c658a Homebrew
+	mkdir Homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz -C Homebrew --strip 1
 
 	# This is a MUST!!!
-	echo 'export PATH="path-where-you-installed/Homebrew/bin:$PATH"' >> ~/.bash_profile
+	echo "export PATH=\$PATH:$(pwd)/Homebrew/bin" >> ~/.bash_profile
 
 	# Reload the profile
 	source ~/.bash_profile
