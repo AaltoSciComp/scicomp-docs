@@ -169,7 +169,7 @@ Can be done with other folders.
 ::
 
     mkdir triton_work
-    sshfs triton.aalto.fi:/scratch/work/USERNAME triton_work
+    sshfs USERNAME@triton.aalto.fi:/scratch/work/USERNAME triton_work
 
 This, and the options below, only use ``ssh`` to connect so in
 principle are the most generic ways to connect from anywhere, if you
