@@ -46,7 +46,7 @@ for serious runs, you should put your code into slurm scripts.
 
 If you want to restrict yourself to a certain type of card, you can be
 more specific in the ``--gres``, for example ``--gres=gpu:teslak80:1``
-or ``--gres=gpu:telsap100:1`.
+or ``--gres=gpu:telsap100:1``.
 
 
 Note: before summer 2016, you also had to specify a GPU partition
