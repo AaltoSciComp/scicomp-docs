@@ -86,11 +86,11 @@ address.  You can address your request to a specific person.
    :delim: |
 
    Dept       | Name             | Location
-   PHYS/NBE   | Janne Blomqvist  | Otakaari 1, Y415b / Otakaari 3, F354
+   PHYS/NBE   | Janne Blomqvist  | Otakaari 1, Y415a / Otakaari 3, F354
    CS/NBE     | Mikko Hakala     | T-building A243 / Otakaari 3, F354
    CS         | Simo Tuomisto    | T-building A243
    ELEC       | Tarmo Simonen
-   PHYS       | Ivan Degtyarenko | Otakaari 1, Y415b
+   PHYS       | Ivan Degtyarenko | Otakaari 1, Y415a
    CS/SCI     | Richard Darst    | T-building A243
 
 
