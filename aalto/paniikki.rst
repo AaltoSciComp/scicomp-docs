@@ -1,6 +1,6 @@
-========
-Paniikki
-========
+====================================
+Paniikki – Computer Lab For Students
+====================================
 
 Paniikki is a cutting edge computer lab in the computer science department. It is located in `T106 <http://usefulaaltomap.fi/#!/select/paniikki>`_. This documentation is a Paniikki cheatsheet cheatsheet.
 
