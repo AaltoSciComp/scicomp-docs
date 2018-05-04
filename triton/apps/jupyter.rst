@@ -2,6 +2,11 @@
 Jupyter
 =======
 
+.. note::
+
+   Quick link: Triton's JupyterHub is available at
+   http://jupyter.triton.aalto.fi.
+
 .. figure:: /images/jupyter_demo.gif
    :scale: 60%
    :align: center
@@ -20,7 +25,8 @@ computing.
 
 You can try them online at `try.jupyter.org
 <http://try.jupyter.org/>`_ (there is a temporary notebook with no
-long-term saving).
+long-term saving).  Triton's JupyterHub is available at
+https://jupyter.triton.aalto.fi.
 
 You can always run notebooks yourself on your own (or remote)
 computers, but on Triton we have some facilities already set up to
