@@ -1,6 +1,6 @@
-========================
-Aalto Science-IT storage
-========================
+============
+Data storage
+============
 
 This page outlines the storage options available for your data. There
 are many options available, some provided by CSIT, some provided by
@@ -33,7 +33,7 @@ access <../aalto/remoteaccess>` page.
 Summary table
 ~~~~~~~~~~~~~
 
-This table lists all available options, including those not managed by
+This table lists all available options in Science-IT departments, including those not managed by
 departments. In general, **project** is for most research data that requires
 good backups. For big data, use **scratch**. Request **separate
 projects** when needed to keep things organized.INLINE
@@ -221,7 +221,7 @@ Filesystem list
       ``smb://lgw01.triton.aalto.fi/scratch/$dept/$dir/`` or
       ``lgw02``.
 
--  **work:** personal large file storage and work (Triton)
+-  **Triton work:** personal large file storage and work (Triton)
 
    -  ``/m/$dept/work/$username/``
    -  This is the equivalent of scratch, but per-person. Data is lost
@@ -274,6 +274,33 @@ Filesystem list
    -  Backed up daily.
    -  Not available on workstations.
    -  Quota: 1 GB
+
+* **Aalto work**: Aalto's general storage space
+
+  - Not often used within Science-IT departments: we use project and
+    archive above, which are managed by us and practically
+    equivalent.  You could request space from here, but expect less
+    personalized service.
+  - Aalto home directories are actually here now.
+  - You may request storage space from here, email the Aalto
+    servicedesk and request space on work.  The procedures are not
+    very well established.
+  - Data is snapshotted and backed up offsite for disaster recovery.
+  - Search https://it.aalto.fi for "work.org.aalto.fi" for the latest
+    instructions.
+  - SMB mounting via ``smb://work.org.aalto.fi``
+
+* **Aalto teamwork**: Aalto's general storage space
+
+  - Not used directly within Science-IT departments: we have our own
+    direct interfaces to this, and ``project`` and ``archive``
+    directories are atually here.
+  - For information on getting teamwork space (outside of Science-IT
+    departments), contact servicedesk.
+  - Teamwork is unique in that it is arbitrarily extensible, and you
+    may buy the space from the vendor directly.  Thus, you can use
+    external grant money to buy storage space here.
+  - SMB mounting via ``smb://teamwork.org.aalto.fi``
 
 Quota errors
 ~~~~~~~~~~~~

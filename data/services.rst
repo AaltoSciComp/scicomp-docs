@@ -75,6 +75,8 @@ O = good, x  = bad
    Depts     | /m/.../project| O     | O         | OO        | OO        |           | O
              | /m/.../archive| O     | O         | OO        | OO        | O         | O
    Aalto     | Aalto home|           |           | OO        | OO        |           |
+             | Aalto work| O         | O         | OO        | OO        |           | O
+             | Aalto teamwork| O     | O         | OO        | OO        |           | O
              | Aalto laptops |       |           | x         | x         | X         |
              | Aalto webspace|       |           |           |           |           | OO
              | version.aalto.fi|     |           | OO        | OO        | O         | OO
@@ -126,9 +128,8 @@ Departments
   They are actually Aalto "teamwork", but the departments do the
   day-to-day interfacing.  See :doc:`../aalto/aaltostorage`.
 
-* Other Aalto departments have **work** and **teamwork**.  These are
-  actually provided at the Aalto level, but how you get them in other
-  departments varies.
+* See the **work** and **teamwork** notes below in the next section.
+  In some cases, these are managed by departments.
 
 Aalto
 ~~~~~
@@ -140,6 +141,12 @@ Aalto
 * **Aalto home directories** are small and intended mainly for personal
   stuff.  Once you leave, this data dies, so don't put important
   stuff here.
+
+* Aalto has **work** and **teamwork** storage systems.  These are
+  actually provided at the Aalto level, but how you request space, how
+  you use them, and what the are called varies and is not always very
+  well defined.  A little bit of info at
+  :doc:`../aalto/aaltostorage`.
 
 * **Aalto laptops** are not a good place to store data because they are
   usually not backed up, and data is not shareable.  (Even if data is
