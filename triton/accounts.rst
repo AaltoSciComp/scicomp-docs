@@ -11,7 +11,8 @@ by a fairshare algorithm: members of departments and schools which
 provide direct funding have a greater share.
 
 Please contact us via the :doc:`support email address <help>` (not
-personal email) and we will set up your account.
+personal email) and we will set up your account.  Please tell us your
+department, supervisor, Aalto account, and see the conditions below.
 
 A few prerequisites:
 
@@ -25,11 +26,12 @@ A few prerequisites:
    request.
 -  Accounts are for
 
-   - Researchers (as in, affiliated with a research PI in any way)
+   - Researchers (as in, affiliated with a research PI in any way).
+     Please tell us who your supervisor is in your account request.
    - Students coming to one of our `Scientific Computing in Practice
      courses <scip_>`_ which uses Triton.
    - Students in other courses should ask their instructor to contact
-     us first to discuss access.
+     us first to discuss if Triton is an appropriate resource.
 
 .. _scip: http://science-it.aalto.fi/scip/
 
