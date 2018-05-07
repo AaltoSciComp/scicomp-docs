@@ -73,14 +73,17 @@ First install Xcode through Managed Software Centre (either search Xcode, or nav
 
 .. code-block:: bash
 
-	# Go to wherever you want to have your Brew and run this
+	# Go to wherever you want to have your Brew (generally home directory) and run this
 	mkdir Homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz -C Homebrew --strip 1
 
-	# This is a MUST!!!
-	echo "export PATH=\$PATH:$(pwd)/Homebrew/bin" >> ~/.bash_profile
+	# The next steps depends on the shell you're using, the default shell being zsh.
+	# You can check which shell you're using with `echo $SHELL`.
+	# For bash, replace .zshrc with .bashrc or .bash_profile or the like.
+	echo "export PATH=\$PATH:$(pwd)/Homebrew/bin" >> ~/.zshrc
 
-	# Reload the profile
-	source ~/.bash_profile
+
+	# Reload the profile. Again, depends on your shell.
+	source ~/.zshrc
 
 	# Check if brew is correctly installed.
 	which brew    # /Users/username/Homebrew/bin/brew
@@ -101,9 +104,9 @@ With Time Machine you have two options for restore.
 
 .. raw:: html
 
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-        <iframe src="https://www.youtube.com/embed/6bcf54aRBPk" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-    </div>
+	<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+		<iframe src="https://www.youtube.com/embed/6bcf54aRBPk" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+	</div>
 
 
 
@@ -133,9 +136,9 @@ This happens because either 1). you changed your password or the 2). server is d
 
 .. raw:: html
 
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-        <iframe src="https://www.youtube.com/embed/jexhHxZ75w4" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-    </div>
+	<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+		<iframe src="https://www.youtube.com/embed/jexhHxZ75w4" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+	</div>
 
 
 Corrupted backup
