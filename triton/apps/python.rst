@@ -134,7 +134,8 @@ directories are very small, so it requires some initial steps. You see
 "module load teflon" here a lot: conda does bad things with permissions,
 thus messing up quota accounting. This prevents that.
 
--  Initial setup: link the conda cache to your work directory.
+-  Initial setup: link the conda cache to your work directory (an
+   rsync error because ``~/.conda`` doesn't exist is OK).
 
    ::
 
