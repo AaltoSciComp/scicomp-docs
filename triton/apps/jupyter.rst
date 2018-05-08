@@ -106,8 +106,11 @@ Connecting and starting
 -----------------------
 Currently jupyterHub is available only within Aalto networks, at
 https://jupyter.triton.aalto.fi.  If you are not within the Aalto
-networks (aalto open is not), either connect to the VPN set up the
-:ref:`proxy as described in the section below <jupyter-proxy-setup>`.
+networks (aalto open is not), either connect to the Aalto VPN (see
+`it.aalto.fi <https://it.aalto.fi>`__ or
+:doc:`../../aalto/remoteaccess`, this is the easiest and best
+supported) or
+set up a SSH proxy as described right below.
 You must also have a :doc:`Triton account <../accounts>`.
 
 Once you log in, you must start your single-user server.  There are
@@ -127,6 +130,42 @@ you think you need** - you can always restart with more memory.
 When you use Jupyter via this interface, the slurm billing weights are
 lower, so that the rest of your Triton priority does not decrease by
 as much.
+
+Proxy for remote access
+~~~~~~~~~~~~~~~~~~~~~~~
+
+When connecting to JupyterHub outside of Aalto networks, you need to
+connect somehow.  This describes how you can do it using SSH.  Using
+the Aalto VPN is easier (Aalto laptops have it set up by default).  In
+a few weeks, this should no longer be needed.
+
+If you use the proxy instead of the VPN:
+
+* Install the proxy extension
+
+  * Install the extension FoxyProxy Standard (Firefox or Chrome).
+    Some versions do not work properly: the 5.x series for Firefox may
+    not work, but older and newer does.
+
+* Create a new proxy rule with the pattern ``*jupyter.triton.aalto.fi*``.
+
+  * Proxy type: SOCKS5, Proxy URL: ``localhost``, port ``8123``.
+
+* SSH to kosh or some other Aalto computer and use the ``-D 8123``.
+  This starts a proxy on your computer on port 8123.  This has to
+  always be running whenever you connect to the notebook.
+
+  * ``ssh -D 8123
+    username@kosh.aalto.fi``.
+
+Now, when you go to ``jupyter.triton.aalto.fi``, you will
+*automatically* connect to the right place on Triton via FoxyProxy and
+the SSH proxy and can use Jupyter like normal.  But if the ssh
+connection goes down, then you can't connect and will get errors, and
+you will have to remember to restart it.  You should also remember
+that it will require SSH *inside* of Aalto too: it's simplest disable
+FoxyProxy inside of Aalto networks and enable only when you need.
+
 
 Usage
 -----
