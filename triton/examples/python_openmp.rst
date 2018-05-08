@@ -12,10 +12,8 @@ Python OpenMP example
     #SBATCH --cpus-per-task=4
     #SBATCH --mem-per-cpu=2G
     #SBATCH -o parallel_Python.out
-     
-    module load Python/2.7.11-goolf-triton-2016a
-    module load numpy/1.11.1-goolf-triton-2016a-Python-2.7.11
-    module load scipy/0.18.0-goolf-triton-2016a-Python-2.7.11
+    
+    module load anaconda3 
      
     export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
     srun -c $SLURM_CPUS_PER_TASK python parallel_Python.py
@@ -26,4 +24,4 @@ Python OpenMP example
     a = np.random.random([2000,2000])
     a = a + a.T
     b = np.linalg.pinv(a)
-    print np.amax(np.dot(a,b))
+    print(np.amax(np.dot(a,b)))
