@@ -60,6 +60,11 @@ Also, currently Aalto has information is scattered everywhere:
 
 * `aalto.fi <http://aalto.fi>`__ is the normal homepage, but doesn't
   have much practical information for researchers.
+* `it.aalto.fi <https://it.aalto.fi>`__ is a new location for IT
+  instructions, and somewhat replaces the old IT instructions on
+  inside.aalto.fi and into.aalto.fi.  It is still under active
+  development.  These generally relate to how to do a specific task -
+  but not necessarily what is the best thing to do.
 * `inside.aalto.fi <https://inside.aalto.fi>`__ is the typical
   "official" staff documentation area, where most service units have
   their homepages. This is perhaps the most important place to look,
