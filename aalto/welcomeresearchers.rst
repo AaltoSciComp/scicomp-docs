@@ -41,7 +41,8 @@ some of the key players:
   contact if not in the School of Science.  Their infrastructure is also used in SCI,
   but supported by department teams.  Their instructions are on `Aalto
   Inside <its_instr_>`_, but most importantly the already-mentioned
-  `IT Services for Research <itsr_>`_ page.
+  `IT Services for Research <itsr_>`_ page.  Contact via `servicedesk
+  <https://it.aalto.fi/contact>`__.
 * **Research and Innovation Services**: Administrative-type support.
   Provides support for grantwriting, innovation and commercialization,
   sponsored projects, legal services for research, and research

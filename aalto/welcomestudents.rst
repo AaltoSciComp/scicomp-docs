@@ -10,8 +10,8 @@ data-intensive computing at Aalto if you are a student.
 
 If you are involved in a research group or doing researcher for a
 professor/group leader, you are a researcher!  You should acquaint
-yourself with all information on this site and use whatever you
-need.
+yourself with all information on this site, starting with
+:doc:`welcomeresearchers` and use whatever you need.
 
 There are general IT instructions for students: `FI <itsFI_>`_ `SV
 <itsSV_>`_ `EN <itsEN_>`_.  There is an `introduction to IT services
@@ -33,6 +33,20 @@ Accounts
 In general, your Aalto account is identical to that which researchers
 have --- the only difference is departmental affiliation.
 
+
+Getting help
+============
+
+As a student, the `ITS servicedesks <https://it.aalto.fi/contact>`__
+are the first place to go for help.  The site https://it.aalto.fi is
+the new central site for IT instructions.  Previously, some public
+instructions were on ``https://into.aalto.fi`` (studies focused) and
+``https://inside.aalto.fi`` (staff focused) and finding information
+was a great challenge.  Note that in 2018, all of these are being
+updated.
+
+This site, http://scicomp.aalto.fi, is intended for scientific
+computing support and might be useful to you.
 
 
 Computation
