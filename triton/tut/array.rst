@@ -176,7 +176,7 @@ Hints
 
 The array indices need not be sequential. E.g. if you discover that
 after the above array job is finished, the job task id's 7 and 19
-failed, you can relaunch just those jobs with "–array=7,19". While the
+failed, you can relaunch just those jobs with ``--array=7,19``. While the
 array job above is a set of serial jobs, parallel array jobs are
 possible. For more information, see the `Slurm job array
 documentation <http://slurm.schedmd.com/job_array.html>`__.
