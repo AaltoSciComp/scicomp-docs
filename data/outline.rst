@@ -395,7 +395,8 @@ Below is a summary of the core Science-IT data storage locations.
      * yes
    * * Archive
      * Data which a longer life that project.  Practically the same,
-       but better to sort early.
+       but better to sort things out early.  Also longer snapshot and
+       guaranteed to get backed up to tape.
      * Workstations, Triton login node.  /m/$dept/project/$group.
      * Same as above
      * yes

@@ -51,9 +51,11 @@ projects** when needed to keep things organized.INLINE
 |              |              |              | of GiB       | /weekly.     |              |
 |              |              |              |              | (.snapshot)  |              |
 +--------------+--------------+--------------+--------------+--------------+--------------+
-| archive      | /m/$dept/arch| some         | per-project, | Yes, weekly. |              |
-|              | ive/         |              | up to 100s   | + off-site   |              |
-|              | $project/    |              | of GiB       | tape         |              |
+| archive      | /m/$dept/arch| some         | per-project, | Yes,         |              |
+|              | ive/         |              | up to 100s   | hourly/daily |              |
+|              | $project/    |              | of GiB       | weekly.      |              |
+|              |              |              |              | + off-site   |              |
+|              |              |              |              | tape         |              |
 |              |              |              |              | backups.     |              |
 |              |              |              |              | (.snapshot)  |              |
 +--------------+--------------+--------------+--------------+--------------+--------------+
@@ -182,6 +184,9 @@ Filesystem list
    -  For data that should be kept accessible for 1-5 years after the
       project has ended. Alternatively a good place to store a copy of a
       large original data (backup).
+   -  This is practically the same as project, but retains snapshots
+      for longer so that data is ensured to be written to tape
+      backups.
    -  This is a disk system, so does have reasonable performance.
       (Actually, same system as project, but separation makes for easier
       management).
