@@ -364,7 +364,8 @@ FAQ/common problems
   the kernel R module; changing ``RLIBS`` in ``.Renviron``.  You can
   either (temporarily or permanently) remove these changes, or you
   could `install your own R kernel <https://irkernel.github.io/>`__.
-  If you install your own, it is up to you to maintain it.
+  If you install your own, it is up to you to maintain it (and
+  remember that you installed it).
 
 * "Spawner pending" when you try to start - this is hopefully fixed in `issue
   #1534/#1533
