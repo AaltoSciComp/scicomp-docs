@@ -45,9 +45,10 @@ To access certain things, you need to be able to connect to the Aalto
 networks via VPN. This is easy and automatically set up on Aalto
 computers.
 
-TODO: this section is currently being updated. For Aalto instructions,
-`search Inside for "VPN"
-<https://inside.aalto.fi/display/ITServices/VPN>`__.
+For the main Aalto instructions,
+`see it.aalto.fi and search for "VPN"
+<https://it.aalto.fi/searchpage?search_api_fulltext=vpn>`__.  This
+section has some quick reference info.
 
 -  Generic: OpenConnect/Cisco AnyConnect protocols. ``vpn.aalto.fi``
 -  Aalto Linux: Status bar → Network → VPN Connections → Aalto TLS
