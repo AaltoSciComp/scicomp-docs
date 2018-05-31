@@ -86,6 +86,25 @@ much space, you will be contacted.  Just do your best to use the
 service well, and the admins will work with you to get your work done.
 
 
+
+CodeRefinery Gitlab and Gitlab CI service
+-----------------------------------------
+
+CodeRefinery is a publically funded project (by Nordforsk / Nordic
+e-Infrastructure Collaboration) which provides teaching and a `GitLab
+platform for Nordic researchers <coderefinery_repo_`_.  This is
+functionally the same as the Aalto Gitlab and may be more useful if
+you have cross-university collaboration, but requires more activation
+to set up.
+
+They also have a Gitlab CI (continuous integration) service which can
+be used for automated building and testing.  This is also free for
+Nordic researchers, and *can be used even with Aalto Gitlab*.  Check
+their `repository site info <coderefinery_repo_>`_, if info isn't
+there yet, then mail their support asking about it.
+
+
+
 Recommendations
 ---------------
 
@@ -114,24 +133,6 @@ years, and if so what will you do?
 - In all cases, if multiple people are working on something, think
   about licenses at the beginning.  If you don't, you may be blocked
   from using your own work.
-
-
-
-CodeRefinery Gitlab and Gitlab CI service
------------------------------------------
-
-CodeRefinery is a publically funded project (by Nordforsk / Nordic
-e-Infrastructure Collaboration) which provides teaching and a `GitLab
-platform for Nordic researchers <coderefinery_repo_`_.  This is
-functionally the same as the Aalto Gitlab and may be more useful if
-you have cross-university collaboration, but requires more activation
-to set up.
-
-They also have a Gitlab CI (continuous integration) service which can
-be used for automated building and testing.  This is also free for
-Nordic researchers, and *can be used even with Aalto Gitlab*.  Check
-their `repository site info <coderefinery_repo_>`_, if info isn't
-there yet, then mail their support asking about it.
 
 
 
