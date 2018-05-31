@@ -116,6 +116,25 @@ years, and if so what will you do?
   from using your own work.
 
 
+
+CodeRefinery Gitlab and Gitlab CI service
+-----------------------------------------
+
+CodeRefinery is a publically funded project (by Nordforsk / Nordic
+e-Infrastructure Collaboration) which provides teaching and a `GitLab
+platform for Nordic researchers <coderefinery_repo_`_.  This is
+functionally the same as the Aalto Gitlab and may be more useful if
+you have cross-university collaboration, but requires more activation
+to set up.
+
+They also have a Gitlab CI (continuous integration) service which can
+be used for automated building and testing.  This is also free for
+Nordic researchers, and *can be used even with Aalto Gitlab*.  Check
+their `repository site info <coderefinery_repo_>`_, if info isn't
+there yet, then mail their support asking about it.
+
+
+
 FAQ
 ---
 
@@ -137,6 +156,11 @@ FAQ
   in the `privacy policy <versionprivacy_>`_.  In 2017, it's 6 months
   after Aalto account closed, 24 months after last login, or 12 months
   after last login of an external collaborator.
+* **Are there continuous integration (CI) services available?**  Not
+  from Aalto, but the CodeRefinery project has free CI services to
+  Nordics, see `their site <coderefinery_repo_>`__
+  and the description above.
 
 .. _versionprivacy: https://version.aalto.fi/policies/version_aalto_policy_eng.pdf
+.. _coderefinery_repo: http://coderefinery.org/repository/
 
