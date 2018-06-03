@@ -2,12 +2,31 @@
 Getting Triton help
 ===================
 
+There are many ways to get help, and you should try them all.  If you
+are just looking for the most important link, it is :ref:`our issue
+tracker <issuetracker>`.
+
+Whatever you do, these `guidelines for making good support requests
+<https://research.csc.fi/support-request-howto>`__ are very useful.
+
+
 The Triton docs
 ~~~~~~~~~~~~~~~
-
-In case you got to this page directly, you are now on the Triton
+In case you got to this page directly, you are now on the Triton and
+Science-IT (CS, NBE, PHYS at least)
 documentation site. See `the main page <index>`
 for the index.
+
+
+Your colleagues
+~~~~~~~~~~~~~~~
+Science is a collaborative process, even if it doesn't seem so.
+Academic courses don't teach you everything you need to know, so it's
+worth trying to work together and learn from each other - your group
+is the expert in it's work, after all.
+
+
+.. _issuetrcker:
 
 Issue tracker
 ~~~~~~~~~~~~~
@@ -92,6 +111,15 @@ address.  You can address your request to a specific person.
    ELEC       | Tarmo Simonen
    PHYS       | Ivan Degtyarenko | Otakaari 1, Y415a
    CS/SCI     | Richard Darst    | T-building A243
+
+
+Science-IT trainings
+~~~~~~~~~~~~~~~~~~~~
+We have regular training in topics relevant to HPC and scientific
+computing.  In particular, each January and June we have a "kickstart"
+course which teaches you everything you need to know to do HPC work.
+Each Triton user should come to one of these.  For the schedule, see
+`our training page <http://science-it.aalto.fi/scip/>`__.
 
 
 Getting a detailed bug report with triton-record-environment
