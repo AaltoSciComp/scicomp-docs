@@ -272,6 +272,16 @@ that you can find the right courses for your needs.  These courses are
 selected by researchers for researchers, so we make sure that
 everything is relevant to you.
 
+Check our `upcoming training page
+<http://science-it.aalto.fi/scip/>`__ for a list of upcoming courses.
+If you do anything computational or code-based at all, you should
+consider the twice-yearly `CodeRefinery <http://coderefinery.org/>`__
+workshops (announced on our page).  If you have a Triton account or do
+high-performance computing or intensive computing or data-related
+tasks, you want to come to the Summer (3 days) or Winter (1 day)
+kickstart, which teaches you the basics of Triton and HPC usage (we
+say it is "required" if you have a Triton account).
+
 
 
 Other notes
