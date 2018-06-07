@@ -151,7 +151,7 @@ On different operating systems:
 * Mac: Finder → Go → Connect to Server.  Use the ``smb://`` URLs above.
 
 Depending on your OS, you may need to use either your username
-directly or ``AALTO\username``
+directly or ``AALTO\username``.
 
 
 Remote mounting using sshfs

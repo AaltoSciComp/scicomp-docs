@@ -23,7 +23,8 @@ archive may be automatically mounted. You can always remote mount via
 sshfs or SMB. See the :doc:`remote access <../aalto/remoteaccess>` page for
 Linux, Mac, and Windows instructions for home,project, and archive. In
 OSX, there is a shortcut in the launcher for mounting home. In Windows
-workstations, this is Z drive.
+workstations, this is Z drive.  On your own computers, you may need to
+use ``AALTO\username`` as your username for any of the SMB mounts.
 
 **Laptops:** Laptops have their own filesystems, including home
 directories. These are not backed up automatically. Other directories
@@ -224,7 +225,7 @@ Filesystem list
    -  Accessible on ``magi``/``taltta`` at the same path.
    -  SMB mounting:
       ``smb://lgw01.triton.aalto.fi/scratch/$dept/$dir/`` or
-      ``lgw02``.
+      ``lgw02``.  (Username may need to be ``AALTO\yourusername``.)
 
 -  **Triton work:** personal large file storage and work (Triton)
 
@@ -232,7 +233,8 @@ Filesystem list
    -  This is the equivalent of scratch, but per-person. Data is lost
       once you leave.
    -  Accessible on ``magi``/``taltta`` at the same path.
-   - SMB mounting: ``smb://lwg01.triton.aalto.fi/work/$username`` or ``lgw02``
+   - SMB mounting: ``smb://lwg01.triton.aalto.fi/work/$username`` or
+     ``lgw02``.  (Username may need to be ``AALTO\yourusername``.)
 
 -  **local:** local disks for high performance
 

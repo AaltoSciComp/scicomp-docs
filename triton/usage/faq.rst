@@ -221,7 +221,9 @@ Remote mounting
 The scratch filesystem can be mounted from inside the Aalto networks
 by using ``smb://lgw01.triton.aalto.fi/scratch/``.  For example, from
 Nautilus (the file manager) on Ubuntu, use "File" -> "Connect to
-server".
+server".  Outside Aalto networks, use the Aalto VPN.  If it is not an
+Aalto computer, you may need to us ``AALTO\username`` as the username,
+and your Aalto password.
 
 Or you can use ``sshfs`` – filesystem client based on SSH. Most Linux workstations
 have it installed by default, if not, install it or ask your local IT
