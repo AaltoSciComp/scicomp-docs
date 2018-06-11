@@ -12,6 +12,9 @@ user can select what they want.  Modules include everything from
 compilers (+their required development files), libraries, and programs.
 If you need a program installed, we will put it in the module system.
 
+In a system the size of Triton, it just isn't possible to install all
+software by default for every user.
+
 What is a module?
 -----------------
 
@@ -40,9 +43,17 @@ You can see that it has some meta-info, then adjusts various environment
 paths, so that when you run ``python`` it runs the program from
 ``/cvmfs/fgi.csc.fi/apps/el7/Python/3.5.2-foss-2016b/bin``.
 
-You can search for modules using the command ``module spider``
+You can search for modules using the command ``module spider``.
 
 You can list currently loaded modules using ``module list``.
+
+What's going on under the hood here?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In Linux systems, different environment variables like ``$PATH`` and
+``$LD_LIBRARY_PATH`` to figure out how to run programs.  Modules just
+cleverly manipulate these so that you can find the software you need,
+even if there are multiple versions available.
 
 Exercise: where is Matlab?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -85,8 +96,8 @@ can mean that loading module takes a long time, but there is a
 solution: ``module save $collection_name`` and ``module restore
 $collection_name``.
 
-Exercise: make a module collection
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Example: make a module collection
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Try loading the ``...`` module.  How long does it take?  Use ``module
 list`` to see how many things were actually loaded.::
 
@@ -111,8 +122,34 @@ Full reference
 
 .. include:: ../ref/modules.rst
 
+
+
+But what about *the software*?
+------------------------------
+
+You know how to load software now, but what about specific software
+packages?  You can try searching the output of ``module spider`` to
+see what you can find, because right now we don't have a much better
+place to look.  You can check the :doc:`applications index
+<../apps/index>` page, but this is getting to be a bit out of date.
+
+In general, we try to install common software for everyone.  For
+specialized things, you might want to try installing it yourself,
+first, using our existing modules as the base.
+
+Compilers and base libraries and so on are organised into
+*toolchains*, such as ``goolf`` (GCC openMP openBLAS LAPACK FFTW) and
+``iomkl`` (intel compilers, OpenMPI, IntelMLK).  You can search for
+these modules and load them to get the necessary base compilers.  For
+more info, see the apps page.
+
+
 Final notes
 -----------
+
+If you have loaded modules when you build/install software, remember
+to load the same modules when you run the software (also in Slurm
+jobs).
 
 The modules used to compile and run a program become part of its
 environment and must always be specified.
@@ -122,7 +159,9 @@ particular version of the module (``module load $name/$version``).
 Then, things will keep working even if we upgrade in the meantime (in
 fact, this is a primary advantage of modules).
 
-environment-modules use environment variables.  Thus, they must be
+We use the `Lmod <https://lmod.readthedocs.io/en/latest/>`__ system.
+
+Lmod uses environment variables.  Thus, they must be
 **sourced** by a shell and are are only transferred to child processes.
 Anything that clears the environment clears loaded modules.  Module
 loading is done by special functions (not scripts) that are
@@ -131,7 +170,29 @@ shell-specific and set environment variables.
 Some modules are provided by Aalto Science-IT, some by CSC.  You could
 even make your own user modules if needed.
 
-We use the `Lmod <https://lmod.readthedocs.io/en/latest/>`__ system.
+
+
+Exercises
+---------
+
+Before each exercise, ``module purge`` to clear all modules.
+
+1. ``module avail`` and check what you see.  Find some examples of
+   software that have many different versions available.
+
+2. Load some toolchain module such as ``goolfc/triton-2017a``.  List
+   what it loaded.  Use ``env | sort > filename`` to store environment
+   variables, then swap to ``goolfc/triton-2016a``.  Do the same, and
+   compare the two outputs using ``diff``.
+
+3. Load a module with many dependencies, such as
+   ``R/3.3.2-iomkl-triton-2017a-libX11-1.6.3`` and save it as a
+   collection.  Compare the time needed to load the module and the
+   collection.
+
+4. (Advanced) Load GROMACS. Use 'which' to find where command 'gmx' is
+   and then use 'ldd' to find out what libraries it uses. Load
+   incompatible toolchain e.g. goolf. Check ldd output again.
 
 
 Next steps

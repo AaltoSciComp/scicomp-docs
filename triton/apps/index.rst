@@ -68,11 +68,21 @@ goolf-triton-2016a as the base.
 New software will in time be installed against all toolchains, if you
 have preference on some toolchain, we'll start with that.
 
+Python
+~~~~~~
+
+See the :doc:`Python page <python>`.
+
+R
+~~~
+
+See the :doc:`R page <r>`.
+
+
 Matlab
 ~~~~~~
 
-Described on a `separate
-page <matlab>`.
+See the :doc:`Matlab page <matlab>`.
 
 GPAW
 ~~~~
