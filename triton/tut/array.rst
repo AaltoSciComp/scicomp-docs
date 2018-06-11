@@ -204,6 +204,19 @@ Array jobs have less overhead for accounting and scheduling, but you
 still want them to not be too short. 30 minutes is a good target time,
 so try to combine smaller tasks to fit that.
 
+
+Exercises
+=========
+
+1. Look at 'man sbatch' and investigate --array parameter
+
+2. Submit an array job that runs 10 tasks starting 1, and every task
+   outputs that job array id
+
+3. Make job array id changing with the step 2 (like 1, 3, 5,
+   etc)
+
+
 What's next?
 ============
 

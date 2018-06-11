@@ -39,6 +39,7 @@ Quick contents and links
 	 * `tut/interactive`
 	 * `tut/serial`
 	 * `tut/array`
+	 * `tut/gpu`
 
        * Cluster usage details
 

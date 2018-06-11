@@ -65,8 +65,9 @@ node regardless of number of processors), use ``--mem``.
 
 ``--exclusive``
 
-compiling:
-  ``gcc -fomp hello_omp.c -o hello_omp``
+compiling::
+
+  gcc -fomp hello_omp.c -o hello_omp
 
 
 
@@ -111,6 +112,19 @@ As a reminder, here is the quick reference of all slurm options
 
 .. include:: ../ref/slurm.rst
 
+
+Exercises
+---------
+
+In ``triton-examples`` (at ``/scratch/scip/examples``), you find some
+examples.  You may need some help from :doc:`../usage/general` to do
+these:
+
+1. Find the files ``openmp/hello_omp.{c.slrm}`` that have a short
+   example of OpenMP.  Compile and run it - a slurm script is included.
+
+2. Find the files ``mpi/hello_mpi.{c.slrm}`` that have a short example
+   of MPI.  Compile and run it - a slurm script is included.
 
 Next steps
 ----------

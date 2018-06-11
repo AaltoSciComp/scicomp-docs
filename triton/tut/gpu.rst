@@ -131,6 +131,14 @@ better to parallelize by splitting tasks into different jobs.
 
 
 
+Exercises
+---------
+
+In ``triton-examples`` (at ``/scratch/scip/examples`` and also on
+github), you find some examples:
+
+1. Compile and run using ``srun`` the ``gpu/pi.cu`` example.
+
 
 Next steps
 ----------

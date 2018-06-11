@@ -136,17 +136,24 @@ right below one of the limits you see here.
 Exercises
 =========
 
-1. Create a simple batch script with multiple job steps (``srun``s):
+1. Basics
+
+   a.  Submit a batch job
+   b. Set time to 1 hour and 15 minutes, memory to 500MB.
+   c. Change the job's name and output file
+   d. Monitor the job with ``slurm watch queue``
+
+2. Create a simple batch script with multiple job steps (``srun``s):
    e.g. ``hostname``, ``echo Hello, world!``, and ``date``.  How does
    this appear in ``slurm history``.  When would you use extra
    ``srun`` commands, and when not?
 
-2. Create a batch script which does nothing (or some pointless
+3. Create a batch script which does nothing (or some pointless
    operation for a while), for example ``sleep 300`` (wait for 300
    seconds) in the ``debug`` partition.  Check the queue to see when
    it starts running.  Then, cancel the job.  What output is produced?
 
-3. (Advanced) Create a batch script that runs in another language.
+4. (Advanced) Create a batch script that runs in another language.
    Does it run?  What are some of the advantages and problems here?
 
 
