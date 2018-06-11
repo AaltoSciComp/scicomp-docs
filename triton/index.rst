@@ -95,7 +95,6 @@ Overview
    accounts.rst
    usagepolicy.rst
    acknowledgingtriton.rst
-   techdetails.rst
 
 Tutorials
 =========
