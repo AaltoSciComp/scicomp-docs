@@ -56,6 +56,14 @@ You should configure this with the hostname, username, and save the
 settings so that you can connect quickly.
 
 
+Exercise
+--------
+
+1. Connect to Triton.  List your home directory and work directory.
+
+2. Check the uptime and load of the login node: ``uptime`` and
+   ``htop``.  What else can you learn about the node?
+
 
 Set up key-based login
 ======================

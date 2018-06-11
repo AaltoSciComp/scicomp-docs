@@ -216,6 +216,14 @@ binds together all types of remote access, and learning to use it well
 will help you for a long time.
 
 
+Exercises
+^^^^^^^^^
+1. Mount your work directory by SMB and transfer a file to Triton.
+   Note that you must be on ``eduroam``, the ``aalto`` *with Aalto
+   laptop*, or connected to the Aalto VPN
+
+2. (Advanced) If you have a Linux on Mac computer, study the ``rsync``
+   manual page and try to transfer a file.
 
 
 Accessing files from Department workstations
