@@ -8,7 +8,6 @@ access it remotely.
 Basics
 ======
 
-
 Triton has various ways to store data.  Each has a purpose, and when
 you are dealing with the large data sets or intensive IO, efficiency
 becomes important.
@@ -27,6 +26,10 @@ Compare this to what is available at Aalto:
    not high performance enough (it just takes one person to start
    50-node job that brings it down for everyone).
 
+A file consists of its contents and metadata.  The metadata is things
+like user, group, timestamps, permissions.  To view metadata, use ``ls
+-l`` or ``stat``.
+
 Think about I/O before you start! - General notes
 =================================================
 
@@ -44,6 +47,11 @@ best approach for you calculations.
    less that couple of days.
 -  Some programs use local disk as swap-space. Only turn on if you know
    it is reasonable.
+
+Filesystem performance can be measures by both IOPS (input-output
+operations per second) and stream I/O speed.  ``/usr/bin/time -v`` can
+give you some hints here.  You can see the :doc:`profiling
+<../usage/profiling>` page for more info.
 
 Avoid many small files! Use a few big ones instead. (we have a
 :doc:`dedicated page <../usage/smallfiles>` on the matter)
@@ -66,6 +74,10 @@ place for calculations, data analyzes etc.  Not backed up.  It is
 shared on all nodes, and has very fast access.  It is divided into two
 parts, scratch (by groups) or work (per-user).  In general, always
 change to ``$WRKDIR`` when you first log in and start doing work.
+
+Lustre separates metadata and contents onto separate object and
+metadata servers.  This allows fast access to large files, but a
+larger overhead than normal filesystems.
 
 See :doc:`../usage/lustre`
 
@@ -241,6 +253,38 @@ CS
 
 Work directories are available at ``/m/cs/work/``, and group scratch
 directories at ``/m/cs/scratch/$project/``.
+
+
+Exercises
+=========
+
+1. Use ``strace -c`` to compare the number of system calls in ``ls``,
+   ``ls -l``, and ``ls --color``.  You can use the directory
+   ``/scratch/scip/lustre_2017/many-files/`` as a place with many
+   files in it.
+
+2. Using ``strace -c``, compare the times of ``find`` and ``lfs find``
+   on the directory mentioned above.  Why is it different?
+
+3. (Advanced, requires slurm knowledge from future tutorials)  You
+   will find some sample files in ``/scratch/scip/examples/io``.
+   Create a temporary directory and...
+
+   a) Run ``create_iodata.sh`` to make some data files in ``data/``
+
+   b) Compare the IO operations of ``find`` and ``lfs find`` on this
+      directory.
+
+   c) use the ``iotest.sh`` script to do some basic analysis.  How
+      long does it take?  Submit it as a slurm batch job.
+
+   d) Modify the iotest.sh script to copy the ``data/`` directory to
+      local storage, do the operations, then remove the data.  Compare
+      to previous strategy.
+
+   e) Use ``tar`` to compress the data while it is on lustre.  Unpack
+      this tar archive to local storage, do the operations, then
+      remove.  Compare to previous strategies.
 
 
 

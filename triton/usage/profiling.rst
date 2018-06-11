@@ -133,17 +133,19 @@ where, and what type of patterns it has (big reads, random access, etc).
 Note that you can see the time information when CPU profiling: if
 input/output functions take a lot of time, you need to improve IO.
 
+``/usr/bin/time -v`` prints some useful info about IO operations and
+statistics.
+
 Lowest level: use strace to print the time taken in every system call
-that accesses files. This is not that great.
+that accesses files. This is not that great.::
 
-::
-
-    #  Use strace to print the total bytes 
+    #  Use strace to print the total bytes
     strace -e trace=desc $command |& egrep 'write' | awk --field-separator='='  '{ x+=$NF } END { print x }'
     strace -e trace=desc $command |& egrep 'read' | awk --field-separator='='  '{ x+=$NF } END { print x }'
 
     # Number of calls only
     strace -e trace=file -c  $command
+
 
 Memory profiling
 ----------------
