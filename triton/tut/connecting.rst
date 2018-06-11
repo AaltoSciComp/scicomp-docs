@@ -10,24 +10,25 @@ and then open a session to ``triton.aalto.fi``.
 
 .. note::
 
+   Are you here from Summer KickStart 2018?  You just need to :doc:`make
+   sure you have an account <../accounts>` and then be able to connect
+   via ssh (first section here), and you don't need to worry about the
+   graphical application parts.  Everything else, we do tomorrow.
+
+.. note::
+
    Triton uses Aalto accounts, but your :doc:`account must be
    activated first <../accounts>`.
 
 
-Login shell: ssh
-================
-
-
-When you first log in, a set of in-cluster SSH keys is generated for
-you. This is used to access all other Triton nodes. You shouldn't set
-any password here (just push enter), because it is only used internally
-in Triton.
+Connecting via ssh
+==================
 
 Linux
 -----
 
 All Linux distributions come with an ssh client, so you don't need to do
-anything.  To use graphical applications, use the standard "-X" option,
+anything.  To use graphical applications, use the standard ``-X`` option,
 nothing extra needed.
 
 ::
@@ -46,13 +47,12 @@ Windows
 -------
 
 You need to install a ssh client yourself:  `PuTTY <https://www.chiark.greenend.org.uk/~sgtatham/putty/>`__ is
-the standard one.  Use `WinSCP <https://winscp.net>`__ to transfer
-files.  If you want to run graphical programs, you need an X server on
+the standard one.  If you want to run graphical programs, you need an X server on
 Windows: see this
 `link <http://www.geo.mtu.edu/geoschem/docs/putty_install.html>`__ for
 some instructions.
 
-You can configure this with the hostname, username, and save the
+You should configure this with the hostname, username, and save the
 settings so that you can connect quickly.
 
 
@@ -147,15 +147,16 @@ Openssh on linux can be made nicer if you set up a config file
 
 
 
-File access
-===========
+Transferring files
+==================
 
 You'll actually learn this in the next section, the `data storage
-tutorial <storage>`.  It is easiest to mount them using SMB, and they
-are also mounted on ``taltta.aalto.fi``, at
-``/m/triton/{scratch,work}/``, which you can access over ssh or
-``sftp``/``sshfs``.  See the next
-tutorial (or :doc:`FAQ <../usage/faq>`).
+tutorial <storage>`.  It is easiest to mount them using SMB, and on
+Aalto workstations and  ``taltta.aalto.fi`` they are mounted at
+``/m/triton/{scratch,work}/``.  You can also use an ``sftp`` client to
+transfer files, which works over ssh so it will work from almost
+anywhere.  See the next tutorial (or :doc:`FAQ <../usage/faq>`).
+
 
 
 
