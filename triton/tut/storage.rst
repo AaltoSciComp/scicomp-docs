@@ -154,37 +154,17 @@ Depending on your OS, you may need to use either your username
 directly or ``AALTO\username``.
 
 
-Remote mounting using sshfs
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-``sshfs`` is a neat program that lets you mount remote filesystems via
-ssh only.  It is well-supported in Linux, for other operating systems
-check.  On Ubuntu, you can mount by "File → Connect to
-server" and using ``sftp://triton.aalto.fi/scratch/work/USERNAME``.
-
-The below is slightly more generic, and makes the ``triton_work`` on
-your local computer access all files in ``/scratch/work/USERNAME``.
-Can be done with other folders.
-
-::
-
-    mkdir triton_work
-    sshfs USERNAME@triton.aalto.fi:/scratch/work/USERNAME triton_work
-
-This, and the options below, only use ``ssh`` to connect so in
-principle are the most generic ways to connect from anywhere, if you
-set up ssh properly.
-
 Using scp or sftp
 ^^^^^^^^^^^^^^^^^
 
-You can use ``scp`` and ``sftp`` to copy your files to/from triton, and for accessing
-the Triton home directory this is the only way. Note however the quite
-limited disk quota in your home directory.  ``sftp`` is basically
-equivalent to ``scp``, but you can find nice graphical clients for it
-(they are basically the same protocol).
+The *scp* and *sftp* protocols use ssh to transfer files.  On Linux
+and Mac, the the ``scp`` and ``sftp`` command line programs are the
+must fundamental way to do this, and are available everywhere.
 
-::
+A more user-friendly way of doing this (with a nice GUI) is the
+`Filezilla program <https://filezilla-project.org/>`__.
+
+Below is an example of the "raw" scp usage::
 
     # copying to HOME
     user@pc123 $ scp testCluster.m user12@triton:
@@ -193,14 +173,35 @@ equivalent to ``scp``, but you can find nice graphical clients for it
     user@pc123 $ scp testCluster.m user12@triton:/scratch/work/USERNAME/
     ...
 
-These both use ``ssh``, so are the most general ways to connect.
-
 Rsync
 ^^^^^
 
 Rsync is similar to scp, but is smarter at restarting files.  Use rsync
 for large file transfers.  ``rsync`` actually uses ``ssh``, so
 you can ``rsync`` from anywhere you can ``ssh`` from.
+
+
+Remote mounting using sshfs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+``sshfs`` is a neat program that lets you mount remote filesystems via
+ssh only.  It is well-supported in Linux, and somewhat on other
+operating systems.  It's true advantage is that you can mount any
+remote ssh server - it doesn't have to be set up specially for SMB or
+any other type of mounting.  On Ubuntu, you can mount by "File → Connect to
+server" and using ``sftp://triton.aalto.fi/scratch/work/USERNAME``.
+
+The below uses command line programs to do the same, and makes the
+``triton_work`` on your local computer access all files in
+``/scratch/work/USERNAME``.  Can be done with other folders.::
+
+    mkdir triton_work
+    sshfs USERNAME@triton.aalto.fi:/scratch/work/USERNAME triton_work
+
+Note that ``ssh`` binds together many ways of accessing Triton, with a
+similar syntax and options.  ``ssh`` is a very important program and
+binds together all types of remote access, and learning to use it well
+will help you for a long time.
 
 
 

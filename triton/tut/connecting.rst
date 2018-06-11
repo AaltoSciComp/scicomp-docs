@@ -50,7 +50,7 @@ You need to install a ssh client yourself:  `PuTTY <https://www.chiark.greenend.
 the standard one.  If you want to run graphical programs, you need an X server on
 Windows: see this
 `link <http://www.geo.mtu.edu/geoschem/docs/putty_install.html>`__ for
-some instructions.
+some hints.
 
 You should configure this with the hostname, username, and save the
 settings so that you can connect quickly.
@@ -153,9 +153,11 @@ Transferring files
 You'll actually learn this in the next section, the `data storage
 tutorial <storage>`.  It is easiest to mount them using SMB, and on
 Aalto workstations and  ``taltta.aalto.fi`` they are mounted at
-``/m/triton/{scratch,work}/``.  You can also use an ``sftp`` client to
-transfer files, which works over ssh so it will work from almost
-anywhere.  See the next tutorial (or :doc:`FAQ <../usage/faq>`).
+``/m/triton/{scratch,work}/``.  You can also use an sftp (which works
+over ssh, so will work from anywhere you can access Triton) client such
+as Filezilla to
+transfer files.  See the :doc:`next tutorial <storage>` (or :doc:`FAQ
+<../usage/faq>`).
 
 
 
