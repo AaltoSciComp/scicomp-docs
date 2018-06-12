@@ -1,11 +1,11 @@
 Parallel R example
 ------------------
 
-:download:`Rparallel_4.slrm </triton/examples/r/r_parallel.slrm>`:
+:download:`r_parallel.slrm </triton/examples/r/r_parallel.slrm>`:
 
 .. literalinclude:: /triton/examples/r/r_parallel.slrm
 
-:download:`Rparallel_4.R </triton/examples/r/r_parallel.R>`:
+:download:`r_parallel.R </triton/examples/r/r_parallel.R>`:
 
 .. literalinclude:: /triton/examples/r/r_parallel.R
   :language: r

@@ -1,7 +1,7 @@
 R OpenMP Example
 ----------------
 
-:download:`ROpenMP_4.slrm </triton/examples/r/r_openmp.slrm>`:
+:download:`r_openmp.slrm </triton/examples/r/r_openmp.slrm>`:
 
 .. literalinclude:: /triton/examples/r/r_openmp.slrm
 
