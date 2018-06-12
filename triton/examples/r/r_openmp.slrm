@@ -9,4 +9,4 @@
 
 module load R
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
-time srun Rscript --default-packages=methods,utils,stats R-benchmark-25-triton.R
+time srun Rscript --default-packages=methods,utils,stats R-benchmark-25.R

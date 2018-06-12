@@ -6,6 +6,6 @@ R OpenMP Example
 .. literalinclude:: /triton/examples/r/r_openmp.slrm
 
 The benchmark script is available
-:download:`here </triton/examples/r/R-benchmark-25-triton.R>`
-(it is a modified version of script from `this
+:download:`here <http://r.research.att.com/benchmarks/R-benchmark-25.R>_`
+(more information about it is available `here
 page <https://www.r-bloggers.com/r-benchmark-for-high-performance-analytics-and-computing-i/>`_).
