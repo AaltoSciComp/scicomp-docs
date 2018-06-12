@@ -7,5 +7,5 @@ invertRandom <- function(index) {
     return(max(B %*% A));
 }
 ptm<-proc.time()
-mclapply(1:16,invertRandom, mc.cores=Sys.getenv('SLURM_ARRAY_TASK_ID'))
+mclapply(1:16,invertRandom, mc.cores=Sys.getenv('SLURM_CPUS_PER_TASK'))
 proc.time()-ptm
