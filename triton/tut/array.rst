@@ -102,6 +102,7 @@ numbers start at one, not zero!
     #SBATCH -n 1
     #SBATCH -t 04:00:00
     #SBATCH --mem-per-cpu=2500
+    #SBATCH --array=1-3
 
     n=$SLURM_ARRAY_TASK_ID                  # define n
     line=`sed "${n}q;d" arrayparams.txt`    # get n:th line (1-indexed) of the file

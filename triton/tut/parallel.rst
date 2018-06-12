@@ -69,12 +69,19 @@ compiling::
 
   gcc -fomp hello_omp.c -o hello_omp
 
+Multithreading
+--------------
 
-
-
+Some programs use multiple threads for their parallel computations. A good
+example of this kind of program is MATLAB, that user parallel pool of workers;
+or R, which uses the ``parallel``-package for its parallel applys.
+Threaded applications behave similarly to OpenMP applications in that one
+needs to specify the number of cores per task and amount of memory per core.
 
 MPI and multi-node software
 ---------------------------
+
+MPI programs use the MPI libraries 
 ``-N``, ``-c``, ``--exclusive``, ``--mem-per-core``, ``--mem``,
 
 
