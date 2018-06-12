@@ -2,7 +2,6 @@ library(pracma)
 library(parallel)
 args=commandArgs(trailingOnly=TRUE)
 invertRandom <- function(index) {
-    #require(pracma)
     A<-matrix(runif(2000*2000),ncol=2000,nrow=2000);
     A<-A + t(A);
     B<-pinv(A);
