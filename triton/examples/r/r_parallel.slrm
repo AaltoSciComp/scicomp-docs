@@ -8,5 +8,4 @@
 #SBATCH -o r_parallel.out
 
 module load R
-export OMP_NUM_THREADS=1
-srun Rscript r_parallel.R $SLURM_CPUS_PER_TASK
+srun Rscript r_parallel.R

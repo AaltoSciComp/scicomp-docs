@@ -1,6 +1,5 @@
 library(pracma)
 library(parallel)
-args=commandArgs(trailingOnly=TRUE)
 invertRandom <- function(index) {
     A<-matrix(runif(2000*2000),ncol=2000,nrow=2000);
     A<-A + t(A);
@@ -8,5 +7,5 @@ invertRandom <- function(index) {
     return(max(B %*% A));
 }
 ptm<-proc.time()
-mclapply(1:16,invertRandom, mc.cores=as.integer(args))
+mclapply(1:16,invertRandom, mc.cores=Sys.getenv('SLURM_ARRAY_TASK_ID'))
 proc.time()-ptm
