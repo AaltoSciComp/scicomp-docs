@@ -9,4 +9,4 @@
 
 module load matlab
 export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK:-1}
-srun time -p matlab_multithread -nojvm -nosplash -r "parallel_Matlab() ; exit(0)"
+srun time -p matlab_multithread -nojvm -nosplash -r "int_parallel() ; exit(0)"
