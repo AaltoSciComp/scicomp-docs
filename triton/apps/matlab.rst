@@ -170,43 +170,7 @@ instance. In order to do this, you can call the ``rng()`` function,
 passing the value of ``$SLURM_ARRAY_TASK_ID`` to it.
 
 
-Parallel Matlab with Matlab's internal parallelization
-------------------------------------------------------
-
-::
-
-    #!/bin/bash -l
-    #SBATCH -p short
-    #SBATCH -t 00:15:00
-    #SBATCH --nodes=1
-    #SBATCH --ntasks=1
-    #SBATCH --cpus-per-task=4
-    #SBATCH --mem-per-cpu=2G
-    #SBATCH -o parallel_Matlab.out
-    if [ -n "$SLURM_CPUS_PER_TASK" ]; then
-        omp_threads=$SLURM_CPUS_PER_TASK
-    else
-        omp_threads=1
-    fi
-    module load matlab
-    export OMP_NUM_THREADS=$omp_threads
-    srun time -p matlab_multithread -nojvm -nosplash -r "parallel_Matlab() ; exit(0)"
-
-parallel\_Matlab.m::
-
-    function parallel_Matlab()
-            try
-                    tic;
-                    A = rand(2000,2000);
-                    A = A + A.';
-                    B = pinv(A);
-                    max(max(B * A))
-                    toc
-            catch error
-                    disp('Error occured');
-                    exit(0)
-            end
-    end
+.. include:: ../examples/matlab/int_parallel.rst
 
 Parallel matlab with parpool
 ----------------------------

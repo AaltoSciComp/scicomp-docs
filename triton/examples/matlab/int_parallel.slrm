@@ -1,0 +1,12 @@
+#!/bin/bash -l
+#SBATCH -p short
+#SBATCH -t 00:15:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem-per-cpu=2G
+#SBATCH -o parallel_Matlab.out
+
+module load matlab
+export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK:-1}
+srun time -p matlab_multithread -nojvm -nosplash -r "parallel_Matlab() ; exit(0)"
