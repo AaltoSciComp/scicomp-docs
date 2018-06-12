@@ -6,7 +6,8 @@ There are hundreds of people using Triton.  They all have different
 software needs, including conflicting versions required!  How do we
 handle this without making a mess?
 
-The answer is the standard "environment module" system.  It allows us to
+The answer is the standard "module" system `Lmod <https://lmod.readthedocs.io/en/latest/>`__.
+It allows us to
 have unlimited number of different software packages installed, and the
 user can select what they want.  Modules include everything from
 compilers (+their required development files), libraries, and programs.
@@ -85,7 +86,7 @@ Loading modules
 
 Normally, you run ``module load MODULE_NAME``. Do it in your open shell,
 your scripts, or whatever.  You could put it in your
-``~.bash_profile``, but then it will always automatically load it -
+``~/.bash_profile``, but then it will always automatically load it -
 perhaps even if you don't expect it.  Watch out for this if you get
 un-explainable bugs - it may be best to explicitely load what you
 need.  You can load any number of modules, and there is a basic

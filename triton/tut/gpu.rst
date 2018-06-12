@@ -51,10 +51,11 @@ or ``--gres=gpu:telsap100:1``.
 
 Note: before summer 2016, you also had to specify a GPU partition
 (``-p gpu`` or ``-p gpushort``).  Now, this is automatically detected,
-and the recommendation is to leave this off.
+and the recommendation is to leave this off **but you still need it
+for ``sinteractive``.
 
-If you ever get `libcuda.so.1: cannot open shared object file: No such
-file or directory`, this means you are attempting to use a CUDA
+If you ever get ``libcuda.so.1: cannot open shared object file: No such
+file or directory``, this means you are attempting to use a CUDA
 program on a node without a GPU.  This especially happens if you try
 to test GPU code on the login node, and happens (for example) even if
 you try to import the GPU ``tensorflow`` module in Python on the login
