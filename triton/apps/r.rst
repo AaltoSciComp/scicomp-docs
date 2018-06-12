@@ -14,13 +14,13 @@ Simply load the latest R.
 
 ::
 
-    module load R
+    module load r
     R
 
 It is best to pick a version of R and stick with it.  Do ``module
-spider R`` and use the whole name::
+spider r`` and use the whole name::
 
-  module load R/3.3.1-goolf-triton-2016a-libX11-1.6.3
+  module load r/3.4.3-python-2.7.14
 
 
 Installing packages
@@ -72,17 +72,17 @@ There are two ways to install packages.
 Simple R serial job
 ~~~~~~~~~~~~~~~~~~~
 
-.. include:: ../examples/r_serial.rst
+.. include:: ../examples/r/r_serial.rst
 
 Simple R job using OpenMP for parallelization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. include:: ../examples/r_openmp.rst
+.. include:: ../examples/r/r_openmp.rst
 
 Simple R parallel job using 'parallel'-package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. include:: ../examples/r_parallel.rst
+.. include:: ../examples/r/r_parallel.rst
 
 Example
 ~~~~~~~
