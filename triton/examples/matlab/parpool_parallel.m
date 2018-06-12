@@ -12,7 +12,11 @@ function parpool_parallel(n)
                 addpath(strcat(matlabroot, '/examples/distcomp/main'));
                 % The path for r2016b
                 % addpath(strcat(matlabroot, '/examples/distcomp'));
+
+                % simulate 10000 blackjack hands with 100 players
+                tic;
                 pctdemo_aux_parforbench(10000,100,n);
+                toc
         catch error
                 getReport(error)
                 disp('Error occured');

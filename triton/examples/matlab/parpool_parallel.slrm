@@ -1,4 +1,3 @@
-
 #!/bin/bash -l
 #SBATCH -p short
 #SBATCH -t 00:15:00
@@ -10,4 +9,4 @@
 
 module load matlab
 
-srun matlab_multithread -nosplash -r "parpool_parallel($SLURM_CPUS_PER_TASK) ; exit(0)"
+srun matlab_multithread -nodisplay -r "parpool_parallel($SLURM_CPUS_PER_TASK) ; exit(0)"
