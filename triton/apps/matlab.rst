@@ -172,46 +172,7 @@ passing the value of ``$SLURM_ARRAY_TASK_ID`` to it.
 
 .. include:: ../examples/matlab/int_parallel.rst
 
-Parallel matlab with parpool
-----------------------------
-
-::
-
-    #!/bin/bash -l
-    #SBATCH -p short
-    #SBATCH -t 00:15:00
-    #SBATCH --nodes=1
-    #SBATCH --ntasks=1
-    #SBATCH --cpus-per-task=4
-    #SBATCH --mem-per-cpu=2G
-    #SBATCH -o parallel_Matlab2.out
-
-    module load matlab/r2017b
-    srun matlab_multithread -nosplash -r "parallel_Matlab2($SLURM_CPUS_PER_TASK) ; exit(0)"
-
-parallel\_Matlab2.m::
-
-    function parallel_Matlab2(n)
-            % Try-catch expression that quits the Matlab session if your code crashes
-            try
-                    % Initialize the parallel pool
-                    c=parcluster();
-                    t=tempname()
-                    mkdir(t)
-                    c.JobStorageLocation=t;
-                    parpool(c,n);
-                    % The actual program calls from matlab's example.
-                    % The path for r2017b
-                    addpath(strcat(matlabroot, '/examples/distcomp/main'));
-                    % The path for r2016b
-                    % addpath(strcat(matlabroot, '/examples/distcomp'));
-                    pctdemo_aux_parforbench(10000,100,n);
-            catch error
-                    getReport(error)
-                    disp('Error occured');
-                    exit(0)
-            end
-    end
+.. include:: ../examples/matlab/parpool_parallel.rst
 
 Parallel matlab in exclusive mode
 ---------------------------------
