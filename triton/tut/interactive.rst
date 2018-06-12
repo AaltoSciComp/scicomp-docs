@@ -60,7 +60,7 @@ scripts.
 
 How do you find the right time/CPU/memory requirements?  Slurm (the
 queuing system) has extensive reporting. For example,
-"``slurm history`` will show you the actual run time and actual memory
+``slurm history`` will show you the actual run time and actual memory
 used of your job. There is a little bit about this below and more in
 the next tutorial.
 
@@ -133,13 +133,13 @@ partitions are:
 
 **time/CPU/memory requirements:** The commands srun/sinteractive have
 many more options that let you specific resources. The most important
-for interactive running are probably *--mem*, *--cpus-per-task* *(-c)*,
-and *--time* *(-t)*.
+for interactive running are probably ``--mem``, ``--cpus-per-task`` (``-c``),
+and ``--time` (``-t``).
 
 
 .. include:: ../ref/slurm.rst
 
-****How much time/memory/CPU resources should you request?****  The less
+**How much time/memory/CPU resources should you request?**  The less
 you request, the faster you are likely to run. As for all you need, but
 not ridiculously large amounts. If you request something slightly less
 than a node size (note that we have different size nodes) or partition

@@ -20,12 +20,8 @@ automated and reproducible.
 A basic script
 ==============
 
-Let's say we want to run "``echo 'hello world'``". We have to tell the
-system how to run it
-
-Simple submission scriptbash
-
-::
+Let's say we want to run ``echo 'hello world'``. We have to tell the
+system how to run it.  Here is a simple submission script::
 
     #!/bin/bash
     #SBATCH --time=0-00:05:00    # 5 mins
@@ -40,11 +36,7 @@ Simple submission scriptbash
     # can be seen individually with "slurm history"
     srun echo 'hello, world'
 
-Then run it with ``sbatch``:
-
-Submit the job
-
-::
+Then submit it with ``sbatch``::
 
     $ sbatch hello.sh
 
@@ -125,7 +117,7 @@ available. The "batch" partition is designed for all the normal long
 jobs. There are also partitions for GPUs, huge memory nodes, interactive
 shells, and so on. Most of the time, you should leave the partition off,
 and slurm will use all possible partitions. You can specify your
-partitions with "``-p PARTITION_NAME``" to whatever command you are
+partitions with ``-p PARTITION_NAME`` to whatever command you are
 running, which is mainly needed if you want to force interactive or GPU
 partitions. The available partitions are listed below and on the
 reference page. For the fastest running, consider if you code can be
@@ -143,7 +135,7 @@ Exercises
    c. Change the job's name and output file
    d. Monitor the job with ``slurm watch queue``
 
-2. Create a simple batch script with multiple job steps (``srun``s):
+2. Create a simple batch script with multiple job steps (``srun``):
    e.g. ``hostname``, ``echo Hello, world!``, and ``date``.  How does
    this appear in ``slurm history``.  When would you use extra
    ``srun`` commands, and when not?

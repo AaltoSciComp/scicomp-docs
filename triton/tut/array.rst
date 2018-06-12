@@ -156,7 +156,7 @@ More control
 ============
 
 You can specify the ``--array=`` option either in the script itself
-using the ``#SBATCH`` syntax, or on the command line. So, you can
+using the ``#SBATCH`` syntax, or on the command line to ``sbatch``. So, you can
 control what runs different ways. Let's say you have a fixed number of
 parameters: put that directly in the script. Or if you are just running
 replicas, run them from the command line as you need more. In any case,
@@ -193,7 +193,7 @@ job? There are different strategies
    of the same parameters. You increase the array ID until you have
    enough statistics to get your result.
 
-You probably want to look at the slurm -o option to direct the script
+You probably want to look at the slurm ``-o`` option to direct the script
 output to somewhere useful. See the ``sbatch`` manual page, ``-o``,
 ``-e``, and ``--open-mode`` options. In the filenames, use ``%a`` for array
 index and ``%A`` (array jobs) for array jobid.  For normal jobs, use
@@ -209,7 +209,7 @@ so try to combine smaller tasks to fit that.
 Exercises
 =========
 
-1. Look at 'man sbatch' and investigate --array parameter
+1. Look at ``man sbatch`` and investigate ``--array`` parameter
 
 2. Submit an array job that runs 10 tasks starting 1, and every task
    outputs that job array id
