@@ -73,26 +73,30 @@ First install Xcode through Managed Software Centre (either search Xcode, or nav
 
 .. code-block:: bash
 
-	# Go to wherever you want to have your Brew (generally home directory) and run this
+	# Go to wherever you want to have your Brew and run this
 	mkdir Homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz -C Homebrew --strip 1
 
-	# The next steps depends on the shell you're using, the default shell being zsh.
-	# You can check which shell you're using with `echo $SHELL`.
-	# For bash, replace .zshrc with .bashrc or .bash_profile or the like.
-	echo "export PATH=\$PATH:$(pwd)/Homebrew/bin" >> ~/.zshrc
+	# This is a MUST!!!
+	echo "export PATH=\$PATH:$(pwd)/Homebrew/bin" >> ~/.bash_profile
 
-
-	# Reload the profile. Again, depends on your shell.
-	source ~/.zshrc
+	# Reload the profile
+	source ~/.bash_profile
 
 	# Check if brew is correctly installed.
 	which brew    # /Users/username/Homebrew/bin/brew
 
 ------------------------------------------------------------------------
 
-Backup Service(Beta)
---------------------
-We are providing a full clone-backup service for "Aalto Mac" users who work at the CS department. We use Time Machine. It is encrypted and automatic; hourly backup on charge mode in the background. It is "clone" because we can restore your environment in its entirity. You can think of it as a snapshot backup(though it isn't). It works under Aalto network i.e., it will work anywhere as long as you use Aalto vpn. We provide twice the space of your SSD; your Mac has 250GB of space, you get 500GB of backup space. If you would like to enroll in the program please pay a visit to our office, A243.
+Backup Service
+--------------
+We provide a full clone-backup service for Aalto-installation Macs. Aalto-installation means the OS is installed from Aalto repository. We use Apple `Time Machine <https://en.wikipedia.org/wiki/Time_Machine_(macOS)>`_. Backup is **wireless, encrypted, automatic, periodic and can be used even outside the campus** using :ref:`Aalto VPN <aalto_vpn>`. It is "clone" because we can restore your environment in its entirity. You can think of it as a snapshot backup(though it isn't). We provide twice the space of your SSD; your Mac has 250GB of space, you get 500GB of backup space. If you would like to enroll in the program please pay a visit to our office, T-talo A243.
+
+Encryption
+~~~~~~~~~~
+We provide two options for encryption:
+
+1. You set your own encryption key and only you know it. **The key is neither recoverable nor resettable**. You lose it, you lose your backup.
+2. We set it on behalf of you and only we know it.
 
 Restore
 ~~~~~~~
@@ -104,9 +108,9 @@ With Time Machine you have two options for restore.
 
 .. raw:: html
 
-	<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-		<iframe src="https://www.youtube.com/embed/6bcf54aRBPk" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-	</div>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube.com/embed/6bcf54aRBPk" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
 
 
 
@@ -120,12 +124,12 @@ Trouble-shooting
 
 Can't find the backup destination
 #################################
-This happens because either 1). you changed your password or the 2). server is down. Debug in the following manner,
+This happens because either 1). you changed your Aalto password or 2). the server is down. Debug in the following manner,
 
 .. code-block:: bash
 	
 	# Is the server alive?
-	ping cs-239.org.aalto.fi
+	ping timemachine.cs.aalto.fi
 
 	# If alive, probably it's your keychain. 
 	# Watch the video below.
@@ -136,9 +140,9 @@ This happens because either 1). you changed your password or the 2). server is d
 
 .. raw:: html
 
-	<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-		<iframe src="https://www.youtube.com/embed/jexhHxZ75w4" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-	</div>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube.com/embed/jexhHxZ75w4" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
 
 
 Corrupted backup
@@ -150,13 +154,18 @@ Corrupted backup
    :alt: alternate text
    :figclass: align-center
 
-This is an unfortunate situation with an unknown reason. If your backup data is unnecessary, start a new backup. If you want to fix the backup, please visit us. We can try to fix it but we cannot guarantee it.
+This is an unfortunate situation with an unknown reason. We take a snapshot of your backup. Please contact guru@cs.aalto.fi. 
 
 
 -----------------------------------------------------
 
 Common problems
 ---------------
+
+Insane CPU rampage by `UserEventAgent`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+It is a mysterious bug which Apple hasn't solved yet. We can reinstall your system for you.
 
 
 
