@@ -38,6 +38,8 @@ Linux shell servers
       ``magi`` (and ``taltta.aalto.fi``) (see
       `storage <aaltostorage>`__).
 
+.. _aalto_vpn:
+
 VPN / web proxy
 ~~~~~~~~~~~~~~~
 
