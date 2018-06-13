@@ -179,6 +179,19 @@ The command ``slurm q`` will tell you the currently running processes (a good wa
 
 The command ``slurm cancel`` will cancel a job by job-id (useful is something keeps running after you don't need it anymore).
 
+Exercises
+=========
+
+1. Check out some of these commands: ``sinfo``, ``squeue``.  Run
+   ``scontrol show job $jobid`` on some running job - does anything
+   look interesting?
+
+2. Run ``srun -p debug hostname`` - what do you see and why?  Run
+   ``slurm history`` and find that jobid.  Run ``sacct -j $jobid`` and
+
+3. Run ``scontrol show node wsm1``  What is this?
+
+
 
 What's next
 ===========
