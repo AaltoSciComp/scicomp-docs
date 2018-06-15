@@ -48,6 +48,8 @@ Quick contents and links
 
        * `Applications <apps>`
 
+       * `Quick Reference <ref/index>`
+
        For full contents, see below.
 
      * **News**
