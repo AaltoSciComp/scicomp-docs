@@ -36,6 +36,8 @@ Subpages:
    by-science-it
    linux-shell-tutorial
 
+For course announcements at Aalto, see `the Science-IT training page
+<http://science-it.aalto.fi/scip/>`__.
 
 A: Basics
 =========
@@ -49,6 +51,21 @@ A: Basics
 
        There is not currently a dedicated course, but, but all of our
        information is found at :doc:`../aalto/welcomeresearchers`.
+
+   * * A10
+       Configuring Mac for scientific work
+
+     * Getting your Mac computer set up for scientific computing
+       tasks.  After this, you can follow most of the other
+       instructions below which assume a Linux-like system.
+
+   * * A11
+       Configuring Windows for scientific work
+
+     * Like A10, but for Windows.  (Why isn't there a Linux course?
+       Because these are to get you close enough to Linux to have the
+       power you need for computing.)
+
 
 ..
   Lapiokurssi - computer as a tool.  What the different computational
@@ -64,7 +81,7 @@ B: Scientific computing
 ..
   https://training.linuxfoundation.org/linux-courses/system-administration-training/introduction-to-linux%20
 
-Core courses:
+**Core courses:**
 
 .. list-table::
 
@@ -72,7 +89,7 @@ Core courses:
 
        Basic shell
      * Let's face it: the linux command line is the basis of most data
-       science.  `Check out Software Carpentry shell-novice sections 1-3
+       science.  `Check out Software Carpentry shell-novice sections 1-4
        <http://swcarpentry.github.io/shell-novice/>`__
 
    * * B14
@@ -86,18 +103,19 @@ Core courses:
 
        Text editors and IDEs
      * Your best friend is a good text editor.  `Software Carpentry
-       shell-novice, part of section 3 <http://swcarpentry.github.io/shell-novice/>`__.
+       shell-novice, part of section 3
+       <http://swcarpentry.github.io/shell-novice/>`__.
 
    * * B20
 
        Shell scripting
      * If you can do it on the Linux shell, you can automate it.
-       Continue with `Software Carpentry shell-novice above section 4-end
-       <http://swcarpentry.github.io/shell-novice/>`__
+       Continue with the :doc:`Science-IT Linux shell tutorial
+       <linux-shell-tutorial>`, first few sections.
 
    * * B21
 
-       Version control
+       Version control for you
      * Version control lets you track changes, go back in time, and
        collaborate on code and papers: an absolute requirement for
        scientific computing.  `CodeRefinery Introduction to version
@@ -110,7 +128,7 @@ Core courses:
        Different expert tips for making ssh better, too.
 
 
-Other courses:
+**Other courses:**
 
 .. list-table::
 
@@ -123,17 +141,19 @@ Other courses:
 
    * * B50
 
-       Advanced version control
-     * Previously, you learned only the basics.  Now for the real stuff.
+       Version control for teams
+     * Previously, you learned only the basics.  Now for the real
+       stuff.  `CodeRefinery collaborative distributed version control
+       lesson <http://coderefinery.org/lessons/>`__
 
    * * B51
 
        Jupyter Notebooks
      * Notebooks are an efficient way to make self-documenting code
-       and scripts and do data science well.  `CodeRefinery jupyter
+       and scripts and do data science well.  `CodeRefinery Jupyter
        course <http://coderefinery.org/lessons/>`__.
 
-Software development track: Do you do programming?  These courses are
+**Software development track:** Do you do programming?  These courses are
 for you.  This does *not* teach you how to program: you need to find
 your own course for that, but this will make sure you can do
 scientific programming well.
@@ -170,6 +190,11 @@ scientific programming well.
 C: High performance computing
 =============================
 
+When your own computer is not enough, you need more power.  For that,
+high-performance computing is your next step.  Level C is about using
+HPC, level D is about programming it yourself.
+
+**Core courses:**
 
 .. list-table::
 
@@ -186,12 +211,17 @@ C: High performance computing
 
        Slurm
      * See :doc:`training by Science-IT <by-science-it>` or
-       :doc:`../triton/tut/modules`
+       :doc:`interactive <../triton/tut/interactive>`,
+       :doc:`serial <../triton/tut/serial>`,
+       :doc:`array <../triton/tut/array>`
    * * C22
 
        HPC Storage
      * See :doc:`training by Science-IT <by-science-it>`  or
-       :doc:`../triton/tut/modules`
+       :doc:`storage basics <../triton/tut/storage>`,
+       :doc:`lustre <../triton/usage/lustre>`,
+       :doc:`local storage <../triton/usage/localstorage>`,
+       :doc:`small files <../triton/usage/small files>`
    * * C23
 
        Parallel computing
@@ -199,7 +229,9 @@ C: High performance computing
    * * C24
 
        Advanced shell scripting and automation
-     * Hands-on, putting everything together.
+     * Hands-on, putting everything together.  Various courses,
+       finishing the :doc:`linux shell tutorial
+       <linux-shell-tutorial>` is a good start.
 
 
 D: Advanced high performance computing
