@@ -2071,6 +2071,7 @@ Ideas for exercises
  * function to find all broken links
  * rename files replacing spaces with the underscores. Tip: ``rename``
  * (homework?) Implement a profiler, that summarizes PS4/date output mentioned above
+ * script that joins 'getent group ...' and 'getent passwd ...' to list group members in style like 'login, Full Name'
 
 
 Bonus material
