@@ -7,6 +7,11 @@ which contain 8 V100 GPUs and are optimized for deep learning.
 
 .. _dgx: https://en.wikipedia.org/wiki/Nvidia_DGX-1
 
+.. warning::
+
+   The DGX usage in Slurm, and this page in general, are under
+   development and testing.  For latest changes, you can check git
+   history using the link in the top right corner.
 
 Access and prerequisites
 ========================
@@ -14,9 +19,10 @@ Access and prerequisites
 The DGX machines have been specifically bought by several groups, and
 thus general access is not available.  If you should have access but
 don't, :doc:`email our support alias <../help>` with a CC to your
-group leader, and we will fix this.  You can check the access list by
+group leader, and we will fix this.  You can check the groups which may access it by running ``grep PartitionName=dgx /etc/slurm/slurm.conf`` and checking ``AllowedGroups=``.  access list by
 running ``getent group dgx``.
 
+You also need a :doc:`Triton account <../accounts>`.
 
 Basics
 ======
@@ -94,7 +100,7 @@ The necessary Slurm parameters are:
 * ``--gres=gpu:v100:1`` to request GPUs (Slurm also manages GPUs and
   limits you to the proper devices).
 
-  * To request more than one graphics card, ``--gres=gpu:2:v100:1``
+  * To request more than one graphics card, ``--gres=gpu:v100:2``
 
 * ``--export=HOME,USER,TERM`` to limit the environment exported.
   Because these are a different operating system, you need to clear
@@ -105,10 +111,9 @@ The necessary Slurm parameters are:
   request a login shell, or else the environment won't be properly
   set by Slurm.
 
-
 * To set the run time, ``--time=HH:MM:SS``.  If you want more CPUs,
-add ``-c N``.  If you want more (system) memory, use ``--mem=5GB`` and
-so on.  (These are completely generic slurm options.)
+  add ``-c N``.  If you want more (system) memory, use ``--mem=5GB``
+  and so on.  (These are completely generic slurm options.)
 
 To check running and jobs: ``squeue -p dgx`` (whole cluster) or
 ``slurm q`` (for your own jobs).
@@ -176,10 +181,14 @@ info above and tutorials for more info)::
 Other notes
 ===========
 
-Forwarding ports is no different than the rest of Triton - you just
-need to go through the login node: ``ssh -L
-local_port:dgxNN.int.triton.aalto.fi:remote_port``.
+Note: if you are using tensorboard, just have it write data to the
+scratch filesystem, mount that on your workstation, and follow it that
+way.  See the :doc:`data storage tutorial <../tut/storage>`.
 
+Within jobs, us ``/tmp`` for temporary local files.  This is
+bind-mounted per user (not per job, make sure that you prefix by job
+ID or something to not get conflicts) to the ``/raid`` SSD area.
+(note: see below, this doesn't work yet)
 
 Known bugs
 ==========
@@ -188,6 +197,6 @@ Known bugs
   option to make a login shell.
 * You have to limit the environment variables you export, because they
   are different.  But you have to export at least ``HOME`` and possibly more.
-* The ``/m/`` tree is not there (but ``/scratch`` is).
 * You can't figure out modules are available without getting an interactive shell there.
-
+* It might be that the ``/tmp`` directory is not automatically
+  bind-mounted to the RAID array per-job.  We need to investigate more.
