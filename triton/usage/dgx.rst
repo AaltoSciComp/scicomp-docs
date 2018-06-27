@@ -12,21 +12,28 @@ Access and prerequisites
 ========================
 
 The DGX machines have been specifically bought by several groups, and
-thus public access is not available.  You can check the access list by
-running ``getent group dgx``.  If you should have access but don't,
-:doc:`email our support alias <../help>` with a CC to your group
-leader, and we will fix this.
+thus general access is not available.  If you should have access but
+don't, :doc:`email our support alias <../help>` with a CC to your
+group leader, and we will fix this.  You can check the access list by
+running ``getent group dgx``.
 
 
 Basics
 ======
 
-The DGX machines have a special operating system from Nvidia, and
-thus form a very special case.  Their OS is based on Ubuntu 16.04,
-while the rest of Triton is CentOS, so we have had to some work to
-integrate them.  You may find some problems, please be aggressive
-about filing issues (but also aggressive about checking yourself if
-you can solve them).
+The DGX machines have a special operating system from Nvidia based on
+Ubuntu 16.04, and thus form a very special of a Triton node because
+the rest of Triton is CentOS.  We have done work to make them work
+together, but it will require special effort to make code run on both
+halves.  You may find some problems, so please be aggressive about
+filing issues (but also aggressive about checking the background
+yourself and giving us good information).
+
+Basic reading: :doc:`../tut/connecting`.
+
+Unlike before, direct access is not available: you should connect to
+the login node and submit jobs via Slurm, not running directly
+interactively.
 
 Software and modules
 --------------------
@@ -60,34 +67,79 @@ The current available modules are::
   -------------------- /usr/share/lmod/lmod/modulefiles/Core ---------------------
   lmod/5.8    settarg/5.8
 
-Unlike the rest of Triton, you can't see which modules are avali
+Unlike the rest of Triton, you can't see which modules are available
+on the login node: currently see above (which might go out of date)
+or get an interactive shell on the DGX node (see below) and run
+``module avail`` yourself.
 
 Running jobs
 ------------
 
+Basic reading: tutorials on :doc:`interactive jobs
+<../tut/interactive>`, :doc:`serial jobs <../tut/serial>`
+
 All runs on the DGX machines go via Slurm.  For an introduction to
-slurm, see the tutorials on :doc:`interactive jobs
-<../tut/interactive>`, :doc:`serial jobs <../tut/serial>`, and those
-after.
+slurm, see the tutorials linked above, and in general all the rest of
+the Triton user guide.  Slurm is a cluster scheduling system, which
+takes job requests (code, CPU/memory/time/hardware requirements) and
+distributes it to nodes.  You basically need to declare what your jobs
+require, and tell it to run on DGX nodes.
 
-The necessary slurm parameters to run on the DGX nodes are ``-p
-dgx --gres=gpu:v100``  (the second one obviously requesting the
-graphics card - to just test a shell, you could leave it off to get
-resources sooner).  If you want more CPUs, add ``-c N``.  If you want
-more (system) memory, use ``--mem=5GB`` and so on.
+Basic required slurm options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Because of environment mismatch, you need ot clear most environment
-variables using ``export`` as you see below.  If there are extra
-environment variables you need, add them here.
+The necessary Slurm parameters are:
 
-For example, to get an interactive shell, run (special to DGX nodes,
-you should use the full path of bash)::
+* ``-p dgx`` to indicate that we want to run in the DGX partitions.
+* ``--gres=gpu:v100:1`` to request GPUs (Slurm also manages GPUs and
+  limits you to the proper devices).
 
-  srun -p dgx --gres=gpu:v100 --export=HOME,USER,TERM --pty /bin/bash -l
+  * To request more than one graphics card, ``--gres=gpu:2:v100:1``
+
+* ``--export=HOME,USER,TERM`` to limit the environment exported.
+  Because these are a different operating system, you need to clear
+  most environment variables.  If there are extra environment
+  variables you need, add them here.
+
+* ``/bin/bash -l``: you need to give the full path to ``bash`` and
+  request a login shell, or else the environment won't be properly
+  set by Slurm.
+
+
+* To set the run time, ``--time=HH:MM:SS``.  If you want more CPUs,
+add ``-c N``.  If you want more (system) memory, use ``--mem=5GB`` and
+so on.  (These are completely generic slurm options.)
+
+To check running and jobs: ``squeue -p dgx`` (whole cluster) or
+``slurm q`` (for your own jobs).
+
+
+Getting an interactive shell for own work
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For example, to get an interactive shell, run::
+
+  srun -p dgx --gres=gpu:v100:1 --export=HOME,USER,TERM --pty /bin/bash -l
 
 From here, you can do whatever you want interactively with your
-dedicated resources.  Remember to log out when done, otherwise your
-resources stay dedicated to you!
+dedicated resources almost as if you logged in directly.  Remember to
+log out when done, otherwise your resources stay dedicated to you and
+no one else can use them!
+
+
+Batch scripts
+~~~~~~~~~~~~~
+
+Similarly to the rest of Triton, you can make batch scripts::
+
+  #!/bin/bash -l
+  #SBATCH -p dgx
+  #SBATCH --gres=gpu:1
+  #SBATCH --mem=5G --time=5:00
+  #SBATCH --export=HOME,USER,TERM
+
+  your shell commands here
+
 
 Nvidia containers
 =================
@@ -101,7 +153,6 @@ procedures::
 
   # Get a shell within the image:
   singularity_wrapper shell
-
 
   # Execute Python within the image
   singularity_wrapper exec python3 code.py
