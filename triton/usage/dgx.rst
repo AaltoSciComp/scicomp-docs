@@ -19,8 +19,10 @@ Access and prerequisites
 The DGX machines have been specifically bought by several groups, and
 thus general access is not available.  If you should have access but
 don't, :doc:`email our support alias <../help>` with a CC to your
-group leader, and we will fix this.  You can check the groups which may access it by running ``grep PartitionName=dgx /etc/slurm/slurm.conf`` and checking ``AllowedGroups=``.  access list by
-running ``getent group dgx``.
+group leader, and we will fix this.  You can check the groups which
+may access it by running ``grep PartitionName=dgx
+/etc/slurm/slurm.conf`` and checking ``AllowedGroups=`` and check
+group membership by running ``getent group $groupname``.
 
 You also need a :doc:`Triton account <../accounts>`.
 
@@ -102,7 +104,7 @@ The necessary Slurm parameters are:
 
   * To request more than one graphics card, ``--gres=gpu:v100:2``
 
-* ``--export=HOME,USER,TERM`` to limit the environment exported.
+* ``--export=HOME,USER,TERM,WRKDIR`` to limit the environment exported.
   Because these are a different operating system, you need to clear
   most environment variables.  If there are extra environment
   variables you need, add them here.
@@ -124,7 +126,7 @@ Getting an interactive shell for own work
 
 For example, to get an interactive shell, run::
 
-  srun -p dgx --gres=gpu:v100:1 --export=HOME,USER,TERM --pty /bin/bash -l
+  srun -p dgx --gres=gpu:v100:1 --export=HOME,USER,TERM,WRKDIR --pty /bin/bash -l
 
 From here, you can do whatever you want interactively with your
 dedicated resources almost as if you logged in directly.  Remember to
@@ -141,7 +143,7 @@ Similarly to the rest of Triton, you can make batch scripts::
   #SBATCH -p dgx
   #SBATCH --gres=gpu:1
   #SBATCH --mem=5G --time=5:00
-  #SBATCH --export=HOME,USER,TERM
+  #SBATCH --export=HOME,USER,TERM,WRKDIR
 
   your shell commands here
 
@@ -172,7 +174,7 @@ info above and tutorials for more info)::
   #SBATCH -p dgx
   #SBATCH --gres=gpu:1
   #SBATCH --mem=5G --time=5:00
-  #SBATCH --export=HOME,USER,TERM
+  #SBATCH --export=HOME,USER,TERM,WRKDIR
 
   module load nvidia-tensorflow
   singularity_wrapper exec python -V
@@ -196,7 +198,13 @@ Known bugs
 * You have to give the full path to ``/bin/bash`` and give the ``-l``
   option to make a login shell.
 * You have to limit the environment variables you export, because they
-  are different.  But you have to export at least ``HOME`` and possibly more.
-* You can't figure out modules are available without getting an interactive shell there.
-* It might be that the ``/tmp`` directory is not automatically
-  bind-mounted to the RAID array per-job.  We need to investigate more.
+  are different.  But you have to export at least ``HOME`` and
+  possibly more (see above).
+* You can't figure out modules are available without getting an
+  interactive shell there.
+* The ``/tmp`` directory is not automatically to a per-user tmpdir (or
+  ``/raid``).  Actually, it is, but it unmounts right away.  For now,
+  use ``/raid`` directly and we will eventually get someone figures
+  out what is happening deep inside of it.
+* ``/scratch`` isn't automatically mounted for some reason.  For now,
+  we manually mount it on each reboot but this needs fixing.
