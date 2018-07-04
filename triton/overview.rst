@@ -56,6 +56,12 @@ Different types of nodes:
   E5-2680 v3 @ 2.50GHz and memory configuration 256GB DDR4-2400.
   There are 4x Tesla P100 16GB cards per node.
 
+* 2 Nvidia DGX-1 compute nodes for gpu computing.  CPUs are 2x20 core
+  Xeon E5-2698 v4 @ 2.2GHz and memory configuration 512GB DDR4-2133.
+  There are 8x Tesla V100 16GB cards per node.  These nodes have a
+  special operating system, unlike the rest of the cluster, and thus
+  these nodes require special considerations.  See :doc:`the DGX page <usage/dgx>`.
+
 .. include:: ref/hardware.rst
 
 

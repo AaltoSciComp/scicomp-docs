@@ -8,9 +8,8 @@ tutorial <../tut/gpu>` which you should read first.
 Overview
 ========
 
-Triton has GPU cards from two different Nvidia generations. SL390s G7
-nodes with Fermi generation cards (M2050,M2070,M2090) and PowerEdge
-C4130 servers with newer Kelper and Pascal generations of K80/P100 cards.
+Triton has GPU cards from four different Nvidia generations, as
+described below.
 
 Hardware breakdown
 ==================
@@ -18,14 +17,18 @@ Hardware breakdown
 .. csv-table::
    :delim: |
 
-   Card          | total amount   | nodes        | architecture   | compute threads per GPU   | memory per card   | CUDA compute capability   | Slurm feature name
-   Tesla M2090   | 22             | gpu[1-11]    | Fermi          | 512                       | 6G                | 2.0                       | ``m2090``
-   Tesla M2070   | 6              | gpu[17-19]   | Fermi          | 448                       | 6G                | 2.0                       | ``m2070``
-   Tesla M2050   | 10             | gpu[12-16]   | Fermi          | 448                       | 3G                | 2.0                       | ``m2050``
-   Tesla K80\*   | 12             | gpu[20-22]   | Kepler         | 2x2496                    | 2x12GB            | 3.7                       | ``teslak80``
-   Tesla P100    | 20             | gpu[23-27]   | Pascal         | 3854                      | 16GB              | 6.0                       | ``teslap100``
+   Card          | total amount   | nodes        | architecture   | compute threads per GPU   | memory per card   | CUDA compute capability   | Slurm gres name  | Slurm feature name
+   Tesla M2090   | 22             | gpu[1-11]    | Fermi          | 512                       | 6G                | 2.0                       | ``m2090``        | ``fermi``
+   Tesla M2070   | 6              | gpu[17-19]   | Fermi          | 448                       | 6G                | 2.0                       | ``m2070``        | ``fermi``
+   Tesla M2050   | 10             | gpu[12-16]   | Fermi          | 448                       | 3G                | 2.0                       | ``m2050``        | ``fermi``
+   Tesla K80\*   | 12             | gpu[20-22]   | Kepler         | 2x2496                    | 2x12GB            | 3.7                       | ``teslak80``     | ``kepler``
+   Tesla P100    | 20             | gpu[23-27]   | Pascal         | 3854                      | 16GB              | 6.0                       | ``teslap100``    | ``pascal``
+   Tesla V100    | 16             | dgx[01-02]   | Volta          | 5120                      | 16GB              | 7.0                       | ``v100``         | ``volta``
 
 * Note: Tesla K80 cards are in essence two GK210 GPUs on a single chip
+* Note: V100 cards are part of DGX machines, which were purchased by
+  several groups and are currently special access only.  They are also a
+  different operating system, please see :doc:`dgx`.
 
 Detail info about cards available at
 http://en.wikipedia.org/wiki/Nvidia_Tesla and for general info about
