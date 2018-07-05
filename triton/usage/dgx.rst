@@ -196,15 +196,14 @@ Known bugs
 ==========
 
 * You have to give the full path to ``/bin/bash`` and give the ``-l``
-  option to make a login shell.
+  option to make a login shell to read necessary shell initialization.
 * You have to limit the environment variables you export, because they
   are different.  But you have to export at least ``HOME`` and
   possibly more (see above).
 * You can't figure out modules are available without getting an
   interactive shell there.
 * The ``/tmp`` directory is not automatically to a per-user tmpdir (or
-  ``/raid``).  Actually, it is, but it unmounts right away.  For now,
-  use ``/raid`` directly and we will eventually get someone figures
-  out what is happening deep inside of it.
+  ``/raid``).  For large amounts of intermediates, use a per-user
+  subdirectory of ``/raid`` for your work.
 * ``/scratch`` isn't automatically mounted for some reason.  For now,
   we manually mount it on each reboot but this needs fixing.
