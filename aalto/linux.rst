@@ -45,7 +45,7 @@ Basics
 -  Installation is fully automated via netboot. Once configuration is
    set up, you can reboot and PXE boot to get a fresh install. There is
    almost no local data (except the filesystem for tmp data on the hard
-   disks which is not used for anything by default, /l/ below), so
+   disks which is not used for anything by default, ``/l/`` below), so
    reinstalling is a low-cost operation. The same should be true for
    upgrading, once the new OS is ready you reboot and netinstall.
    Installation takes less than two hours.
@@ -381,7 +381,7 @@ There are two reasons for this.
   # Check disk usage
   du -sh * 
   
-The sum should be less than the max quota which is 20GB. If your disk is full then delete something or move it to a local directory, `/l/`.
+The sum should be less than the max quota which is 20GB. If your disk is full then delete something or move it to a local directory, ``/l/``.
 
 .. rubric:: 2. Something went wrong with your browser profile
 

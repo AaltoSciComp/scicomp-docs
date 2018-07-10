@@ -1681,7 +1681,7 @@ Other STDIN tricks that one can use in the scripts
  # or pass STDIN to a pipeline  (/dev/stdin can be omitted)
  cat /dev/stdin | cut -d' ' -f 2,3 | sort
 
-In the simplest cases like ``./script arg1 arg2 ...`, you check *$#* and then assign
+In the simplest cases like ``./script arg1 arg2 ...``, you check *$#* and then assign
 *$1, $2, ...* the way your script requires.
 
 ::

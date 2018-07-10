@@ -162,8 +162,8 @@ This is an unfortunate situation with an unknown reason. We take a snapshot of y
 Common problems
 ---------------
 
-Insane CPU rampage by `UserEventAgent`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Insane CPU rampage by ``UserEventAgent``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 It is a mysterious bug which Apple hasn't solved yet. We can reinstall your system for you.
 

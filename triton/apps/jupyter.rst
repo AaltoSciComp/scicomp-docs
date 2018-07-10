@@ -300,9 +300,9 @@ should apply to both JupyterHub and ``sjupyter``):
   which sometimes breaks things, see FAQ for more hints.)
 * Julia: currently doesn't seem to play nicely with global
   installations (if anyone knows something otherwise, let us know).
-  Just load two modules: `module load julia`, `module
-  load jupyterhub/live`, and then install the kernel `julia` and
-  `Pkg.add("IJulia")` and it will install locally for you.
+  Just load two modules: ``module load julia``, ``module
+  load jupyterhub/live``, and then install the kernel ``julia`` and
+  ``Pkg.add("IJulia")`` and it will install locally for you.
 * We do not yet have a kernel management policy.  Kernels may be added
   or removed over time.  We would like to keep them synced with the
   most common Triton modules, but it will take some time to get this

@@ -153,7 +153,7 @@ Nvidia containers
 
 Some of the Nvidia containers designed for the DGX machines are
 available as modules - see above.  They are integrated with our Triton
-:doc:`singularity <../singularity>` setup, so you can use those same
+:doc:`singularity <../apps/singularity>` setup, so you can use those same
 procedures::
 
   module load nvidia-tensorflow

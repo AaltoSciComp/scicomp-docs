@@ -92,7 +92,7 @@ CodeRefinery Gitlab and Gitlab CI service
 
 CodeRefinery is a publically funded project (by Nordforsk / Nordic
 e-Infrastructure Collaboration) which provides teaching and a `GitLab
-platform for Nordic researchers <coderefinery_repo_`_.  This is
+platform for Nordic researchers <coderefinery_repo_>`_.  This is
 functionally the same as the Aalto Gitlab and may be more useful if
 you have cross-university collaboration, but requires more activation
 to set up.
@@ -157,7 +157,7 @@ FAQ
   in the `privacy policy <versionprivacy_>`_.  In 2017, it's 6 months
   after Aalto account closed, 24 months after last login, or 12 months
   after last login of an external collaborator.
-* **Are there continuous integration (CI) services available?**  Not
+- **Are there continuous integration (CI) services available?**  Not
   from Aalto, but the CodeRefinery project has free CI services to
   Nordics, see `their site <coderefinery_repo_>`__
   and the description above.

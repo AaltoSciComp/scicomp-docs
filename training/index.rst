@@ -221,7 +221,7 @@ HPC, level D is about programming it yourself.
        :doc:`storage basics <../triton/tut/storage>`,
        :doc:`lustre <../triton/usage/lustre>`,
        :doc:`local storage <../triton/usage/localstorage>`,
-       :doc:`small files <../triton/usage/small files>`
+       :doc:`small files <../triton/usage/smallfiles>`
    * * C23
 
        Parallel computing
@@ -261,7 +261,7 @@ D: Advanced high performance computing
        internals of MPI or program MPI applications.  `Materials here
        <http://science-it.aalto.fi/scip/mpi-intro-spring-2018/>`__.
 
-    * * Dxx
+   * * Dxx
 
        HTCondor
      * Condor allows you to use many workstations as a high throughput

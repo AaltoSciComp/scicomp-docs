@@ -26,7 +26,7 @@ worth trying to work together and learn from each other - your group
 is the expert in it's work, after all.
 
 
-.. _issuetrcker:
+.. _issuetracker:
 
 Issue tracker
 ~~~~~~~~~~~~~

@@ -170,5 +170,5 @@ FAQ
 FAQ about version.aalto.fi
 ==========================
 
-Moved to :doc:`the gitlab page <../aalto/gitlab>`.
+Moved to :doc:`the gitlab page <../aalto/git>`.
 

@@ -6,10 +6,10 @@ Examples
 
    master_worker.rst
    python_openmp.rst
-   
-   r_serial.rst
-   r_parallel.rst
-   r_openmp.rst
+
+   r/r_serial.rst
+   r/r_parallel.rst
+   r/r_openmp.rst
 
 
 
