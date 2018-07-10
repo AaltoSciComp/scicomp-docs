@@ -149,8 +149,8 @@ below) - if not, request it!
 The scratch filesystem can be remote mounted using SMB inside secure
 Aalto networks at the URLs
 
-* scratch: ``smb://lgw01.triton.aalto.fi/scratch/``.
-* work: ``smb://lgw01.triton.aalto.fi/work/$username/``.
+* scratch: ``smb://data.triton.aalto.fi/scratch/``.
+* work: ``smb://data.triton.aalto.fi/work/$username/``.
 
 On different operating systems:
 
@@ -159,7 +159,7 @@ On different operating systems:
 * Windows: In the file manager, go to Computer and "Map Network
   Drive".  In Windows 10 → "This PC" → right click → "Add Network
   Location".  Use the URLs above but replace ``smb://`` with ``\\`` and
-  ``/`` with ``\``.  For example, ``\\lgw01.triton.aalto.fi\scratch\``.
+  ``/`` with ``\``.  For example, ``\\data.triton.aalto.fi\scratch\``.
 * Mac: Finder → Go → Connect to Server.  Use the ``smb://`` URLs above.
 
 Depending on your OS, you may need to use either your username

@@ -224,8 +224,8 @@ Filesystem list
       desk. Human error is the greatest risk here).
    -  Accessible on ``magi``/``taltta`` at the same path.
    -  SMB mounting:
-      ``smb://lgw01.triton.aalto.fi/scratch/$dept/$dir/`` or
-      ``lgw02``.  (Username may need to be ``AALTO\yourusername``.)
+      ``smb://data.triton.aalto.fi/scratch/$dept/$dir/``.  (Username
+      may need to be ``AALTO\yourusername``.)
 
 -  **Triton work:** personal large file storage and work (Triton)
 
@@ -233,8 +233,8 @@ Filesystem list
    -  This is the equivalent of scratch, but per-person. Data is lost
       once you leave.
    -  Accessible on ``magi``/``taltta`` at the same path.
-   - SMB mounting: ``smb://lwg01.triton.aalto.fi/work/$username`` or
-     ``lgw02``.  (Username may need to be ``AALTO\yourusername``.)
+   - SMB mounting: ``smb://data.triton.aalto.fi/work/$username``.
+     (Username may need to be ``AALTO\yourusername``.)
 
 -  **local:** local disks for high performance
 
