@@ -104,6 +104,7 @@ Tutorials
 .. toctree::
    :maxdepth: 1
 
+   tut/intro.rst
    tut/connecting.rst
    tut/storage.rst
    tut/modules.rst

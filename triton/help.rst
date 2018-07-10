@@ -50,6 +50,8 @@ requests, problems that may affect several users.
    automatically blocks people when their organizational unit
    changes.  Yes, this is bad but it's not in our control...
 
+.. _esupport-triton-address:
+
 Email ticketing system
 ~~~~~~~~~~~~~~~~~~~~~~
 
