@@ -36,7 +36,7 @@ at https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues. Feel
 free to post your issue there. Either admins or other
 users can reply --- and you should feel free to reply and help others,
 too. The system is accessible from anywhere in the world,
-but you need to login with HAKA (using your Aalto account). All newly
+but you need to login with HAKA (using the button). All newly
 created issues are reported to admins by email.
 
 This is primary support channel and meant for general issues like
