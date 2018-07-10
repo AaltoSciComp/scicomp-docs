@@ -261,8 +261,15 @@ D: Advanced high performance computing
        internals of MPI or program MPI applications.  `Materials here
        <http://science-it.aalto.fi/scip/mpi-intro-spring-2018/>`__.
 
+    * * Dxx
+
+       HTCondor
+     * Condor allows you to use many workstations as a high throughput
+       cluster, ideal for mid-range embarrassingly parallel problems.
+       `Materials here <http://science-it.aalto.fi/scip/condor2017/>`__.
+
 Also see the `Science-IT training archive
-<http://science-it.aalto.fi/scip/>`__ for more level 3 courses.
+<http://science-it.aalto.fi/scip/>`__ for more level D courses.
 
 Recommended programming courses
 ===============================
