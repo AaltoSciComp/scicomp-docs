@@ -47,10 +47,8 @@ main considerations are before starting your research.  :doc:`Services
 .. toctree::
    :maxdepth: 1
 
-   outline
    services
    organization
-   datapolicy
 
 .. _scicomp_dmp:
 
@@ -82,7 +80,8 @@ accessed from any computer.  By storing on a central system, you get
 backups, sharing, large amounts of space, and guaranteed support.
 
 See the :doc:`Aalto environment <../aalto/index>` section, and specifically
-:doc:`Aalto data storage <../aalto/aaltostorage>`
+:doc:`Aalto data storage for the services <../aalto/aaltostorage>` and
+:doc:`../aalto/aaltodata` for requesting storage space.
 
 
 Tools, resources, and instructions

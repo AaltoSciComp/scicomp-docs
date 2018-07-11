@@ -15,6 +15,8 @@ for Research page
    mac
    windows
    aaltostorage
+   aaltodata
+   datapolicy
    remoteaccess
    remotejupyter
    paniikki
