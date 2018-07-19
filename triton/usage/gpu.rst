@@ -14,16 +14,8 @@ described below.
 Hardware breakdown
 ==================
 
-.. csv-table::
-   :delim: |
+.. include:: ../ref/gpu.rst
 
-   Card          | total amount   | nodes        | architecture   | compute threads per GPU   | memory per card   | CUDA compute capability   | Slurm gres name  | Slurm feature name
-   Tesla M2090   | 22             | gpu[1-11]    | Fermi          | 512                       | 6G                | 2.0                       | ``m2090``        | ``fermi``
-   Tesla M2070   | 6              | gpu[17-19]   | Fermi          | 448                       | 6G                | 2.0                       | ``m2070``        | ``fermi``
-   Tesla M2050   | 10             | gpu[12-16]   | Fermi          | 448                       | 3G                | 2.0                       | ``m2050``        | ``fermi``
-   Tesla K80\*   | 12             | gpu[20-22]   | Kepler         | 2x2496                    | 2x12GB            | 3.7                       | ``teslak80``     | ``kepler``
-   Tesla P100    | 20             | gpu[23-27]   | Pascal         | 3854                      | 16GB              | 6.0                       | ``teslap100``    | ``pascal``
-   Tesla V100    | 16             | dgx[01-02]   | Volta          | 5120                      | 16GB              | 7.0                       | ``v100``         | ``volta``
 
 * Note: Tesla K80 cards are in essence two GK210 GPUs on a single chip
 * Note: V100 cards are part of DGX machines, which were purchased by
@@ -42,7 +34,7 @@ GPU partitions
 --------------
 
 There are two queues governing these nodes: ``gpu`` and ``gpushort``, where the
-latter is for jobs up to 4 hours.
+latter is for jobs up to 4 hours.  Partitions are automatically selected.
 
 The latest details can always be found with the following command::
 
@@ -53,17 +45,19 @@ GPU node allocation
 
 For gpu resource allocation one has to request a GPU resource, with
 ``--gres=gpu:N`` , where ``N``
-stands for number of requested GPU cards. To request a specific card,
-one must use syntax  ``--gres=gpu:CARD_TYPE:N`` ,  see 'Slurm feature
-name' in the table above.
+stands for number of requested GPU cards.  To request a GPU with a
+certain architecture, use ``--constraint=GENERATION``.   To request a specific card,
+one must use syntax  ``--gres=gpu:CARD_TYPE:N``.  See the table below
+for "slurm feature name" or "Slurm gres name".  For the full current
+list of configured SLURM gpu cards names run ``slurm features``.
 
-::
 
-    --gres=gpu:2
-    --gres=gpu:teslak80:1
+Example usages::
 
-For the full current list of configured SLURM gpu cards names run
-``slurm features``.
+   --gres=gpu:2
+   --gres=gpu:1 --constraint=pascal
+   --gres=gpu:telsap100:1
+
 
 Note: Before summer 2016, you also had to specify a GPU partition with
 ``-p gpu`` or ``-p gpushort``.  Now, this is automatically detected
@@ -89,17 +83,13 @@ only difference is that they have nvidia kernel modules for Tesla cards.
 Running a GPU job in serial
 ---------------------------
 
-Quick interactive run
-
-::
+Quick interactive run::
 
     $ module load CUDA
     $ srun -t 00:30:00 --gres=gpu:1 $WRKDIR/my_gpu_binary
 
 Allocating a gpu node for longer interactive session, this will give you
-a shell sessions
-
-::
+a shell sessions::
 
     $ module load CUDA
     $ sinteractive -t 4:00:00 --gres=gpu:1
@@ -144,7 +134,7 @@ This shows the gpu usage with 1 second interval. The GPU utilized by process
 with PID X is shown in the first column of the second table. The first table
 lists the GPUs by their ID Checking the ``Volatile GPU-Util`` column gives the
 utilization of GPU. If your code uses less than 50% of the GPU you should
-try to improve the data loading / CPU part of your code as the GPU is 
+try to improve the data loading / CPU part of your code as the GPU is
 underutilized.
 
 If you run multi-GPU job you should verify that the all GPUs are properly
@@ -193,8 +183,8 @@ nvidia-smi utility
 ------------------
 
 Could be useful for debugging, in case one want to see the actual gpu
-cards available on the node. If this command returns an error, it is
-time to report that something is wrong on the node.
+cards available on the node. If this command returns an error, you should
+report that something is wrong on the node.
 
 ::
 

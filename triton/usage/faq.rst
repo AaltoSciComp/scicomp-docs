@@ -4,6 +4,13 @@ Frequently asked questions
 
 Frequently Asked Questions. The latest are at the beginning.
 
+libcuda.so.1: cannot open shared object file: No such file or directory
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+You are trying to run a GPU program (using CUDA) on a node without a
+GPU (and thus, no ``libcuda.so.1``.  Remember to :doc:`specify that
+you need GPUs <../tut/gpu>`
+
+
 Why are my jobs waiting in the queue with reason AssocGrpMemRunMinutes/AssocGrpCPURunMinutes or such
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

@@ -42,24 +42,21 @@ This means you request the ``gpu`` resources, and one of them
   srun --gres=gpu:1 -t 2:00:00 --mem=10G -c 3
 
 ... and you've got yourself the basics.  Of course, once you are ready
-for serious runs, you should put your code into slurm scripts.
+for serious runs, you should put your code into :doc:`slurm scripts <serial>`.
 
-If you want to restrict yourself to a certain type of card, you can be
-more specific in the ``--gres``, for example ``--gres=gpu:teslak80:1``
-or ``--gres=gpu:telsap100:1``.
-
+If you want to restrict yourself to a certain type of card, you should
+use the ``--constraint`` option.  For example, to restrict to Kepler
+generation (K80s), use ``--constraint=kepler`` or all new cards,
+``--constraint='kepler|pascal'`` (note the quotes - this is very
+important, because ``|`` is a shell pipe symbol!).
 
 Note: before summer 2016, you also had to specify a GPU partition
 (``-p gpu`` or ``-p gpushort``).  Now, this is automatically detected,
-and the recommendation is to leave this off **but you still need it
-for** ``sinteractive``.
+and the recommendation is to leave this off.
 
-If you ever get ``libcuda.so.1: cannot open shared object file: No such
-file or directory``, this means you are attempting to use a CUDA
-program on a node without a GPU.  This especially happens if you try
-to test GPU code on the login node, and happens (for example) even if
-you try to import the GPU ``tensorflow`` module in Python on the login
-node.
+Our available GPUs and architectures:
+
+.. include:: ../ref/gpu
 
 
 
@@ -68,10 +65,12 @@ Ready software
 
 We support these machine learning packages out of the box:
 
-* tensorflow: ``anaconda2`` / ``anaconda3`` modules.
-* theano:
-* keras:
-* ...
+* tensorflow: ``anaconda2`` / ``anaconda3`` modules.  Use ``--constraint='kepler|pascal|volta'``
+* keras: same as tensorflow
+* pytorch: same module as tensorflow
+* Detectron: via :doc:`singularity images <../apps/singularity>`
+* CNTK:
+* Torch: currently possibly but not easy, in the future through singularity
 
 See the :doc:`GPU computing reference <../usage/gpu>` page for more
 details.
@@ -99,6 +98,12 @@ for Python.
 
 Making efficient use of GPUs
 ----------------------------
+
+When running a job, you want to check that the GPU is being fully
+utilized.  To do this, ssh to your node (while the job is running),
+and run ``nvidia-smi``, find your process (which might take some work)
+and check the ``GPU-Util`` column.  It should be close to 100%,
+otherwise see below.
 
 Input/output
 ~~~~~~~~~~~~
@@ -129,6 +134,16 @@ Other
 Most of the time, using more than one GPU isn't worth it, unless you
 specially optimize, because communication takes too much time.  It's
 better to parallelize by splitting tasks into different jobs.
+
+FAQ
+---
+
+If you ever get ``libcuda.so.1: cannot open shared object file: No such
+file or directory``, this means you are attempting to use a CUDA
+program on a node without a GPU.  This especially happens if you try
+to test GPU code on the login node, and happens (for example) even if
+you try to import the GPU ``tensorflow`` module in Python on the login
+node.
 
 
 
