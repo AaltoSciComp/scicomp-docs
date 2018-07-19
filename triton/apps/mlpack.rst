@@ -2,6 +2,10 @@
 MLPack
 ======
 
+:lastupdated: 2014
+:supportlevel: C
+
+
 http://www.mlpack.org/
 
 #. module load cmake; module load armadillo/4.3-mkl; module load mkl

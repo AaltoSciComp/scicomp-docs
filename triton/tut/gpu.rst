@@ -56,7 +56,7 @@ and the recommendation is to leave this off.
 
 Our available GPUs and architectures:
 
-.. include:: ../ref/gpu
+.. include:: ../ref/gpu.rst
 
 
 

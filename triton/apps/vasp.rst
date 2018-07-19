@@ -171,3 +171,18 @@ Validation
 
 The vasp.mpi.NGZhalf builds have been verified to pass all the tests in
 the `vasptest <http://www.nsc.liu.se/~pla/vasptest/>`__ suite.
+
+
+
+Other
+~~~~~
+
+Old makefiles
+
+Here is a number of Makefiles copy-pasted from old Rocks installation.
+Can be useful in general, though may require adaptation to new
+installation. Please, send us a fully working copy if you have one.
+
+See old wiki: https://wiki.aalto.fi/display/Triton/Applications
+
+Rename vasp.x.y.makefile => vasp.x.y/makefile

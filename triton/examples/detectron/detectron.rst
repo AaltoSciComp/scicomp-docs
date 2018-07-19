@@ -1,6 +1,9 @@
 Detectron
 =========
 
+Detectron uses :doc:`Singularity containers </triton/usage/singularity>`,
+so you should refer to that page first for general information.
+
 Detectron-image is based on a 
 `Dockerfile <https://github.com/facebookresearch/Detectron/blob/master/docker/Dockerfile>`_ 
 from Detectron's repository. In this image Detectron has been installed to /detectron.

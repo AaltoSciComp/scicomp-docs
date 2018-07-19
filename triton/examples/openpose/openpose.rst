@@ -1,6 +1,9 @@
 OpenPose
 ========
 
+This uses :doc:`Singularity containers </triton/usage/singularity>`,
+so you should refer to that page first for general information.
+
 OpenPose has been compiled against system OpenBLAS and most recent
 Caffe, CUDA and cuDNN. Image is based on a Ubuntu 16.04 base image.
 

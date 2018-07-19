@@ -2,6 +2,8 @@
 Armadillo
 =========
 
+:supportlevel: C
+
 Armadillo http://arma.sourceforge.net/ is C++ linear algebra library
 that is needed to support some other software stacks. To get best
 performance using MKL as backend is adviced.

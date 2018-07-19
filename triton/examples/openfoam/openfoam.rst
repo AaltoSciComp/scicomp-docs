@@ -1,6 +1,9 @@
 OpenFOAM (with ParaView)
 ========================
 
+This uses :doc:`Singularity containers </triton/usage/singularity>`,
+so you should refer to that page first for general information.
+
 OpenFOAM and ParaView have been installed from the Ubuntu 16.04 Docker
 image provided by OpenFOAM people. It has minimal amount of other
 software installed.

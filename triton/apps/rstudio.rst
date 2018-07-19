@@ -2,6 +2,10 @@
 RStudio
 =======
 
+:supportlevel: C
+:lastupdated: 2014
+
+
 http://www.rstudio.com/ is an IDE for R
 
 ::
@@ -10,3 +14,13 @@ http://www.rstudio.com/ is an IDE for R
 
     mkdir build && cd build
     cmake .. -DRSTUDIO_TARGET=Desktop -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/share/apps/rstudio/0.98/ -DBOOST_ROOT=$BOOST_ROOT
+
+..
+  mkdir build
+  cd build
+
+  ml load cmake
+  ml load boost
+  yum install pam-devel
+  ml load R
+  ml load r-uuid

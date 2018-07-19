@@ -121,26 +121,21 @@ Detailed instructions
 
    usage/*
 
+.. _application-list:
 .. _apps:
 
 Applications
 ============
 
-Supplied software:
+See our :doc:`general information <apps/index>` and the full list below:
 
 .. toctree::
    :maxdepth: 1
    :glob:
 
+   apps/index
    apps/*
 
-Custom software installation:
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-
-   apps/custom/*
 
 Reference and Examples
 ======================

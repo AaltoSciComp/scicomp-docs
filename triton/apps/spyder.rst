@@ -2,6 +2,9 @@
 Spyder
 ======
 
+:supportlevel: C
+:lastupdated: 2014
+
 Spyder is the Scientific PYthon Development
 EnviRonment:\ https://pythonhosted.org/spyder/
 

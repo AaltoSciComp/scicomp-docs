@@ -1,6 +1,9 @@
 Fenics
 ======
 
+This uses :doc:`Singularity containers </triton/usage/singularity>`,
+so you should refer to that page first for general information.
+
 Fenics-images are based on `these images <https://quay.io/repository/fenicsproject/stable?tab=tags>`_.
 
 Usage

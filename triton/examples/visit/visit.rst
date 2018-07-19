@@ -1,6 +1,9 @@
 VisIT
 =====
 
+This uses :doc:`Singularity containers </triton/usage/singularity>`,
+so you should refer to that page first for general information.
+
 Visit has been compiled using the build_visit-script from the VisIT page on an
 Ubuntu image. It has minimal amount of other software installed.
 

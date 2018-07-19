@@ -2,6 +2,10 @@
 Lammps
 ======
 
+:supportlevel: C
+:lastupdated: 2014
+
+
 `http://lammps.sandia.gov/ <http://lammps.sandia.gov/doc/Section_start.html#start_5>`__
 
 Building LAMMPS as a library
