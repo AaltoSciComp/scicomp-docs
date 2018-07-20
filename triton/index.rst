@@ -33,9 +33,11 @@ Quick contents and links
        * Tutorials (start here)
 
 	 * `accounts`
+	 * `tut/intro`
 	 * `tut/connecting`
-	 * `tut/storage`
 	 * `tut/modules`
+	 * `tut/applications`
+	 * `tut/storage`
 	 * `tut/interactive`
 	 * `tut/serial`
 	 * `tut/array`
@@ -109,8 +111,9 @@ get their accounts (except maybe the last ones)
 
    tut/intro.rst
    tut/connecting.rst
-   tut/storage.rst
    tut/modules.rst
+   tut/applications.rst
+   tut/storage.rst
    Interactive jobs - running your first command <tut/interactive>
    Running in the queue <tut/serial>
    tut/array.rst
