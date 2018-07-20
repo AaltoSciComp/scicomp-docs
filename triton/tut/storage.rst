@@ -299,7 +299,7 @@ Exercises
 Next steps
 ==========
 
-The next tutorial is :doc:`about software and modules <modules>`.
+The next tutorial is about :doc:`interactive jobs <interactive>`.
 
 Optimizing data storage isn't very glamorous, but it's an important
 part of high-performance computing.  You can find some hints on the

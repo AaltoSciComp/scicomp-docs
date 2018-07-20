@@ -1,6 +1,6 @@
-==========
-Toolchains
-==========
+========================
+Compilers and toolchains
+========================
 
 The modules in Triton are organized in so-called toolchains. These are
 collections of compilers and tools that are used for compiling

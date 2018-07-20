@@ -199,4 +199,4 @@ Before each exercise, ``module purge`` to clear all modules.
 Next steps
 ----------
 
-The next tutorial is about :doc:`interactive jobs <interactive>`.
+Next, move on to :doc:`the applications tutorial <applications>`

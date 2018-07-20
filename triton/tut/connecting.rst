@@ -178,4 +178,4 @@ well, you can really do almost anything from anywhere.  The
 ``.ssh/config`` file is valuable to set up.  If ssh is annoying to
 use, ask for some help in getting it working well.
 
-Next, move on to :doc:`the storage tutorial <storage>`
+The next tutorial is :doc:`about software and modules <modules>`.

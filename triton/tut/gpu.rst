@@ -50,9 +50,15 @@ generation (K80s), use ``--constraint=kepler`` or all new cards,
 ``--constraint='kepler|pascal'`` (note the quotes - this is very
 important, because ``|`` is a shell pipe symbol!).
 
-Note: before summer 2016, you also had to specify a GPU partition
-(``-p gpu`` or ``-p gpushort``).  Now, this is automatically detected,
-and the recommendation is to leave this off.
+.. note:: Old ways of specifying things
+
+   Note: before summer 2016, you also had to specify a GPU partition
+   (``-p gpu`` or ``-p gpushort``).  Now, this is automatically detected,
+   and the recommendation is to leave this off.
+
+   Note: before summer 2018, the recommended way of specifying a GPU was
+   ``--gres=gpu:telsak80:1``.  Now, ``--constraint=`` is preferred since
+   you can specify more than one type.
 
 Our available GPUs and architectures:
 
@@ -65,7 +71,8 @@ Ready software
 
 We support these machine learning packages out of the box:
 
-* tensorflow: ``anaconda2`` / ``anaconda3`` modules.  Use ``--constraint='kepler|pascal|volta'``
+* :doc:`tensorflow <../apps/tensorflow>`: ``anaconda2`` /
+  ``anaconda3`` modules.  Use ``--constraint='kepler|pascal|volta'``
 * keras: same as tensorflow
 * pytorch: same module as tensorflow
 * Detectron: via :doc:`singularity images <../apps/singularity>`
