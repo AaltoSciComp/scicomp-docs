@@ -1,8 +1,8 @@
 MNE
 ~~~
 
-:contact:
 :lastupdate: 2018
+:maintainer:
 
 ::
 
