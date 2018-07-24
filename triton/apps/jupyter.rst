@@ -2,10 +2,29 @@
 Jupyter
 =======
 
-.. note::
+.. note:: Quick link
 
-   Quick link: Triton's JupyterHub is available at
+   Triton's JupyterHub is available at
    http://jupyter.triton.aalto.fi.
+
+.. note:: For new users
+
+   Are you new to Triton and want to access JupyterHub?  Triton is a
+   high-performance computing cluster, and JupyterHub is just one of
+   our services - one of the easiest ways to get started.  You still
+   need a Triton account.  This site has many instructions, but you
+   should read at least:
+
+   * :doc:`About us <../tut/intro>` and :doc:`how to get help
+     <../help>`.
+   * :doc:`The accounts page <../accounts>`, in order to request a
+     Triton account.
+   * Possibly the :doc:`storage page <../tut/storage>` to learn about
+     the places to store data and how to transfer data.
+   * The JupyterHub section of this page (below).
+
+   If you want to use Triton more, you should finish the entire
+   :ref:`tutorials section <tutorials>`.
 
 .. figure:: /images/jupyter_demo.gif
    :scale: 60%

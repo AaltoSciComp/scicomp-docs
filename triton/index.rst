@@ -101,6 +101,8 @@ Overview
    usagepolicy.rst
    acknowledgingtriton.rst
 
+.. _tutorials:
+
 Tutorials
 =========
 These are designed to be read in-order by every Triton user when they
