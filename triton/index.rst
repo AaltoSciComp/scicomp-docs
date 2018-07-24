@@ -104,7 +104,7 @@ Overview
 Tutorials
 =========
 These are designed to be read in-order by every Triton user when they
-get their accounts (except maybe the last ones)
+get their accounts (except maybe the last ones).
 
 .. toctree::
    :maxdepth: 1
