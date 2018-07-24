@@ -61,3 +61,62 @@ As a batch script (submit with ``sbatch``)::
 
   module load anaconda3
   python my_script.py
+
+
+Example 2 (older)
+-----------------
+
+.. warning::
+
+   You no longer need to manually install tensorflow, so the first
+   part of this example is not relevant anymore.
+
+This chapter gives a step-by-step guide how to run the tensorflow
+cifar10 example on 4 gpu's. All commands below are typed on the login
+node, it is not necessary to ssh to a gpu node first.
+
+First load anaconda (python), CUDA and cudnn
+
+::
+
+    $ module load anaconda2 CUDA/7.5.18 cudnn/4
+
+After that create a conda environment to install tensorflow in:
+
+::
+
+    $ conda create -n tensorflow python=2.7
+
+    $ source activate tensorflow
+    $ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.8.0-cp27-none-linux_x86_64.whl
+    $ pip install --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.8.0-cp27-none-linux_x86_64.whl
+
+For some (unclear) reason you have to run the pip command twice, first
+with ``--ignore-installed`` and second time without to make the conda
+environment work.
+
+Now we can create a batch script (``submit_cifar.sh``) that runs this
+code on 4 gpus
+
+::
+
+    #!/bin/bash
+
+    #Request 4 gpus
+    #SBATCH --gres=gpu:4 --constraint='kepler|pascal|volta'
+    #SBATCH --mem-per-cpu 10G
+    #SBATCH -t 4:00:00
+
+    module load anaconda2 CUDA/7.5.18 cudnn/4
+    source activate tensorflow
+
+    python -m tensorflow.models.image.cifar10.cifar10_multi_gpu_train --num-gpus 4
+
+You can submit this job with
+
+::
+
+    $ sbatch submit_cifar.sh
+
+and you'll be able to find the results in the slurm log file.
+

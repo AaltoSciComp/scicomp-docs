@@ -2,9 +2,9 @@
 GPU computing
 =============
 
-.. note::
+.. seealso::
 
-   This page is still under development.
+   Main article: :doc:`../usage/gpu`
 
 .. highlight:: bash
 
@@ -75,12 +75,12 @@ We support these machine learning packages out of the box:
   ``anaconda3`` modules.  Use ``--constraint='kepler|pascal|volta'``
 * keras: same as tensorflow
 * pytorch: same module as tensorflow
-* Detectron: via :doc:`singularity images <../usage/singularity>`
+* :doc:`Detectron <../apps/detectron>`: via :doc:`singularity images <../usage/singularity>`
 * CNTK:
 * Torch: currently possibly but not easy, in the future through singularity
 
-See the :doc:`GPU computing reference <../usage/gpu>` page for more
-details.
+See the :ref:`application list <application-list>` or :ref:`GPU
+computing reference <../usage/gpu>` for more details.
 
 
 

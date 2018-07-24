@@ -2,8 +2,9 @@
 GPU Computing
 =============
 
-This is the reference page.  There is also the :doc:`basic GPU
-tutorial <../tut/gpu>` which you should read first.
+.. seealso::
+
+   Introductory tutorial: :doc:`../tut/gpu` (read this first)
 
 Overview
 ========
@@ -179,6 +180,8 @@ for a more information on cuda-gdb.
 Applications and known issues
 =============================
 
+Check the :ref:`application-list` for most software.
+
 nvidia-smi utility
 ------------------
 
@@ -190,6 +193,7 @@ report that something is wrong on the node.
 
     gpuxx$ nvidia-smi -L   # gives a list of GPU cards on the node
 
+
 cuDNN
 -----
 
@@ -197,82 +201,6 @@ cuDNN
 ``module spider cudnn``. Note that (at least the later versions of)
 cudnn require newer cards and cannot be used on the old fermi cards.
 E.g. tensorflow does not run on the older fermi cards for this reason.
-
-Tensorflow example
-------------------
-
-This chapter gives a step-by-step guide how to run the tensorflow
-cifar10 example on 4 gpu's. All commands below are typed on the login
-node, it is not necessary to ssh to a gpu node first.
-
-First load anaconda (python), CUDA and cudnn
-
-::
-
-    $ module load anaconda2 CUDA/7.5.18 cudnn/4
-
-After that create a conda environment to install tensorflow in:
-
-::
-
-    $ conda create -n tensorflow python=2.7
-
-    $ source activate tensorflow
-    $ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.8.0-cp27-none-linux_x86_64.whl
-    $ pip install --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.8.0-cp27-none-linux_x86_64.whl
-
-For some (unclear) reason you have to run the pip command twice, first
-with ``--ignore-installed`` and second time without to make the conda
-environment work.
-
-Now we can create a batch script (``submit_cifar.sh``) that runs this
-code on 4 gpus
-
-::
-
-    #!/bin/bash
-
-    #Request 4 gpus
-    #SBATCH --gres=gpu:teslak80:4
-    #SBATCH --mem-per-cpu 10G
-    #SBATCH -t 4:00:00
-
-    module load anaconda2 CUDA/7.5.18 cudnn/4
-    source activate tensorflow
-
-    python -m tensorflow.models.image.cifar10.cifar10_multi_gpu_train --num-gpus 4
-
-You can submit this job with
-
-::
-
-    $ sbatch submit_cifar.sh
-
-and you'll be able to find the results in the slurm log file.
-
-Theano configuration
---------------------
-
-If you're using the theano library, you need to tell theano to store
-compiled code on the local disk on the compute node. Create a file
-``~/.theanorc`` with the contents
-
-::
-
-    [global]
-    base_compiledir=/tmp/%(user)s/theano
-
-Also make sure that in your batch job script you create this directory
-before you launch theano. E.g.
-
-::
-
-    mkdir -p /tmp/${USER}/theano
-
-The problem is that by default the ``base_compiledir`` is in your home
-directory (``~/.theano/``), and then if you first happen to run a job on a
-newer processor, a later job that happens to run on an older processor
-will crash with an "Illegal instruction" error.
 
 
 Nvidia MPS
