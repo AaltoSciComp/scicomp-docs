@@ -15,8 +15,10 @@ Jupyter
    need a Triton account.  This site has many instructions, but you
    should read at least:
 
-   * :doc:`About us <../tut/intro>` and :doc:`how to get help
-     <../help>`.
+   * :doc:`About us <../tut/intro>`, :doc:`how to get help
+     <../help>`, and :doc:`acknowledging Triton
+     usage<../acknowledgingtriton.rst>` (this JupyterHub is part of
+     Triton, and thus Science-IT must be acknowledged in publications).
    * :doc:`The accounts page <../accounts>`, in order to request a
      Triton account.
    * Possibly the :doc:`storage page <../tut/storage>` to learn about
