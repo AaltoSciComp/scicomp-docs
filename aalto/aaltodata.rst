@@ -1,6 +1,6 @@
-===============================
-Data storage: requesting space
-===============================
+==================================================
+Data: outline, requesting space, requesting access
+==================================================
 
 .. note::
 
@@ -418,8 +418,8 @@ See :doc:`data storage <../aalto/aaltostorage>` for full info.
 
 .. _instructions:
 
-Instructions
-------------
+Instructions for storage and access
+-----------------------------------
 
 .. note::
 
@@ -431,12 +431,15 @@ Instructions
    (summary above).
 
 
-Responsible contacts:
+Existing data groups and responsible contacts:
 
-* CS: `CS-IT (guru) email here <http://do.cs.aalto.fi>`_
-* NBE: `NBE IT (it-nbe) email here <https://wiki.aalto.fi/display/NBE/IT+Information>`_
+* CS: `Existing groups <https://wiki.aalto.fi/display/CSdept/Data+groups>`_
+  and `CS-IT (guru) email here <http://do.cs.aalto.fi>`_
+* NBE: `Existing groups <https://wiki.aalto.fi/display/NBE/Data+groups>`_ and
+  `NBE IT (it-nbe) email here <https://wiki.aalto.fi/display/NBE/IT+Information>`_
 * PHYS:
 * Aalto: Aalto IT servicedesk
+
 
 Requesting to be added to a group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -493,15 +496,4 @@ owners should be long-term (e.g. professor level) staff.
 
        This is for our day to day work in algorithms development, we
        don't expect anything too confidential.
-
-Existing data groups
---------------------
-
-Here are some lists of existing data groups, listing group names,
-owners, and so on. Refer to it should you need to get access to
-existing data (although best is to ask your supervisor).
-
-* `CS list <https://wiki.aalto.fi/display/CSdept/Data+groups>`_
-* `NBE list <https://wiki.aalto.fi/display/NBE/Data+groups>`_
-
 
