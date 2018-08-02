@@ -1,6 +1,6 @@
-===========================
-Encrypition for researchers
-===========================
+==========================
+Encryption for researchers
+==========================
 
 This page describes the basics of encryption to an audience of
 researchers. It describes how it may be useful (nd when not needed) in a
