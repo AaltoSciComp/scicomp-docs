@@ -156,10 +156,13 @@ On different operating systems:
 
 * Linux (Ubuntu for example): File manager (Nautilus) → File →
   Connect to server.  Use the ``smb://`` URLs above.
-* Windows: In the file manager, go to Computer and "Map Network
-  Drive".  In Windows 10 → "This PC" → right click → "Add Network
-  Location".  Use the URLs above but replace ``smb://`` with ``\\`` and
-  ``/`` with ``\``.  For example, ``\\data.triton.aalto.fi\scratch\``.
+* Windows: In the file manager, go to Computer (in menu bar on top, at
+  least in Windows 10) → Map Network Drive) and "Map Network Drive".
+  In Windows 10 → "This PC" → right click → "Add Network Location".
+  (Note that this is different from right-click "Add network location"
+  which just makes a folder link and has had some problems in the past.)
+  Use the URLs above but replace ``smb://`` with ``\\`` and ``/`` with
+  ``\``.  For example, ``\\data.triton.aalto.fi\scratch\``.
 * Mac: Finder → Go → Connect to Server.  Use the ``smb://`` URLs above.
 
 Depending on your OS, you may need to use either your username
