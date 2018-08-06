@@ -2134,7 +2134,7 @@ On Linux/Mac: generate a key on the client machine
 
 ::
 
- ssh-keygen -t rsa -b 4096  # you will be prompted for a location to save the keys, and a passphrase for the keys. Make sure passphrase is strong (!)
+ ssh-keygen -o  # you will be prompted for a location to save the keys, and a passphrase for the keys. Make sure passphrase is strong (!)
  ssh-copy-id aalto_login@triton.aalto.fi   # transfer file to a Triton, or/and any other host you want to login to
 
 From now on you should be able to login with the SSH key instead of

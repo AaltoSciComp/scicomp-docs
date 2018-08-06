@@ -94,7 +94,7 @@ triton connections.
 
 ::
 
-    ssh-keygen -b 4096 -t rsa
+    ssh-keygen -o
 
 **Then, copy the key to computers you want to log into:** Use the
 ``ssh-copy-id`` script to copy the public key file to Triton.  This will
