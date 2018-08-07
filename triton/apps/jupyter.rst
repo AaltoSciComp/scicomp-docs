@@ -17,7 +17,7 @@ Jupyter
 
    * :doc:`About us <../tut/intro>`, :doc:`how to get help
      <../help>`, and :doc:`acknowledging Triton
-     usage<../acknowledgingtriton.rst>` (this JupyterHub is part of
+     usage<../acknowledgingtriton>` (this JupyterHub is part of
      Triton, and thus Science-IT must be acknowledged in publications).
    * :doc:`The accounts page <../accounts>`, in order to request a
      Triton account.
