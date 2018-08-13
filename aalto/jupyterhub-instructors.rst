@@ -72,13 +72,19 @@ consisting of:
    needed, not the rest of the OS.
 
 5. Do you want a ``/coursedata`` directory for shared data?  If so,
-   tell us its quota.
+   tell us its quota.  Note: currently coursedata contents are assumed
+   to be *public* to all people at Aalto.
 
 6. Lead contact person.
 
 7. Time period and expiry date - default is six months after the
    course is over, by which time data will be removed.  But if it will
    be used the next year, then we'll keep it up until then.
+
+You can access your course data via SMB mounting at the URLs
+``smb://jhnas.org.aalto.fi/course/$courseslug`` and the course data
+using ``smb://jhnas.org.aalto.fi/course/coursedata/$courseslug`` (with
+Windows, use ``\\`` instead of ``/` and don't include ``smb://``)
 
 
 nbgrader

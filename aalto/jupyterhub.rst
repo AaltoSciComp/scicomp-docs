@@ -37,7 +37,7 @@ stack installed.
 You may access your data remotely by SMB mounting it on your own
 computer from inside the Aalto network or via Aalto VPN.  The SMB url
 is ``smb://jhnas.org.aalto.fi/u/USERNAME``, or on Windows
-``\\jhnas.org.aalto.fi\u\username``. (note: does not work yet)
+``\\jhnas.org.aalto.fi\u\username``.
 
 Each container is basically a Linux container primarily running a
 Juptyer notebook server.  You may create Jupyter notebooks to interact
