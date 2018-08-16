@@ -44,7 +44,7 @@ Schedule
 
    Date (default Th)  | Time (default 13:00-14:00)  | Loc   | Topic
    9.8      |       | B337  | Note different room, 3rd floor northwest corner of building
-   16.8     |       | A106  |
+   16.8     |       | CS 3rd floor bridge  |
    23.8     |       | B337  | Note different room, 3rd floor northwest corner of building
    30.8     |       | A106  |
    6.9      |       | A106  |
