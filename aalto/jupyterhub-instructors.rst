@@ -4,7 +4,9 @@ Teaching Jupyterhub instructions for instructors
 
 .. seealso::
 
-   Main article: :doc:`Jupyterhub for Teaching <jupyterhub>`.
+   Main article: :doc:`Jupyterhub for Teaching <jupyterhub>`.  For
+   research purposes, see :doc:`Triton JupyterHub
+   </triton/apps/jupyter>`.
 
 Basics
 ======
@@ -50,12 +52,18 @@ consisting of:
    You can take and extend this image for your own course if you would
    like, but it would be best to stay as generic as possible.
 
-3. A list of instructors (Aalto usernames).  This can be null if not
+3. A course directory ``/course``, available only to instructors.
+   This comes default, with a quota of 1GB (combined with
+   coursedata).  Note: instructors should manage assignments and so on
+   using git or some other version control system.
+
+4. A list of instructors (Aalto usernames).  This can be null if not
    using nbgrader or ``/coursedata``.  Instructors will be added to a
    Aalto unix group named ``jupyter-$coursename`` to limit data
-   access.
+   access.  To request new instructors, contact CS-IT and ask that
+   people be added/removed from your group ``jupyter-$coursename``.
 
-4. A list of students (Aalto usernames).  This can be null if anyone
+5. A list of students (Aalto usernames).  This can be null if anyone
    with an Aalto account should be able to access the environment
    (this is recommended to be as open as possible and to save manual
    effort).
@@ -66,20 +74,22 @@ consisting of:
    b. Should non-students be allowed to submit assignments?  Default
       yes.
 
-4. A list of computational resources per image.  Default is currently
+6. A list of computational resources per image.  Default is currently
    512MB and 1 processor (oversubscribed).  Note that because this is
    a container, *only* the memory of the actual Python processes are
    needed, not the rest of the OS.
 
-5. Do you want a ``/coursedata`` directory for shared data?  If so,
+7. Do you want a ``/coursedata`` directory for shared data?  If so,
    tell us its quota.  Note: currently coursedata contents are assumed
-   to be *public* to all people at Aalto.
+   to be *public* to all people at Aalto.  Note: quota is shared with
+   the course directory.
 
-6. Lead contact person.
+8. Lead contact person.
 
-7. Time period and expiry date - default is six months after the
+9. Time period and expiry date - default is six months after the
    course is over, by which time data will be removed.  But if it will
-   be used the next year, then we'll keep it up until then.
+   be used the next year, then we'll keep it up until then.  You must
+   agree to manage data well.
 
 You can access your course data via SMB mounting at the URLs
 ``smb://jhnas.org.aalto.fi/course/$courseslug`` and the course data
@@ -111,11 +121,6 @@ To use nbgrader:
 
 - Request a course as above.
 
-- Name all of your assignments like ``$courseslug-$assignmentname``,
-  for example ``mlbp2018-week1``.  Assignment names are an accidental
-  global namespace in nbgrader once they are copied to a user's
-  notebook directory.
-
 - Once you log in to your course's environment, a per-course
   ``/course`` (instructors only) and ``/srv/nbgrader/exchange``
   (instructors and students) are mounted.
@@ -129,7 +134,37 @@ To use nbgrader:
 the student's code as the instructor.  In fact, students can do all
 sorts of bad things with this, and the only way to stop them is to
 check notebooks yourself.  In fact, we can't recommend bulk usage of
-nbgrader because of this.  (We are working on a local solution.)
+nbgrader because of this.  (Our in-development local solution:
+https://github.com/AaltoScienceIT/isolate-namespace )
+
+
+Instructions and hints to instructors
+=====================================
+
+- Request a course when you are sure you will use it.  You can use the
+  general use containers for writing notebooks before that point.
+
+- Store your course data in a git repository (or some other version
+  control system) and push it to version.aalto.fi or some such.
+
+- We have a test course which you can use as a sandbox for testing
+  nbgrader and courses.  No data here is private even after deleted,
+  and data is not guaranteed to be persistent.  Use only for testing.
+  Use the general use notebook for writing and sharing your files
+  (using git).
+
+- When using ``nbgrader``, name all of your assignments like
+  ``$courseslug-$assignmentname``, for example ``mlbp2018-week1``.
+  Assignment names are an accidental global namespace in nbgrader once
+  they are copied to a user's notebook directory.
+
+- The course environments are not captive: students can install
+  whatever they want.  Even if we try to stop them, they can use the
+  general use images or download files.  If you want to check that
+  students have *not* used some modules as a shortcut, 1) have an
+  assertion they haven't used the module ``'tensorflow' not in
+  sys.modules``, or 2) autograde in an environment which does not have
+  these extra packages.  Really, #2 is the only true solution.
 
 
 Limits
@@ -141,14 +176,18 @@ Limits
 
 - We don't have unlimited computational resources, but we can try to
   procure what is necessary.  Work as hard as you can to spread the
-  load and de-peak deadlines.
+  load and de-peak deadlines.  You should discuss estimated number of
+  students and estimated deadlines (days of the week) before courses
+  start so that we can spread the load some.
 
 - There is no integration to any other learning management systems,
   such as the CS department A+ (yet).  The only unique identifier of
-  students is the Aalto username.
+  students is the Aalto username.  ``nbgrader`` can get you a csv file
+  with these usernames, what happens after that point is up to you.
 
 - Currently there is nothing in place to return marked-up assignments
   to students.  We can possibly make a root script to do this.
+  Organize assignments by username and we can do the rest.
 
 
 More info

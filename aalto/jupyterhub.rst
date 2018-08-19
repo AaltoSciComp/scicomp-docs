@@ -98,13 +98,17 @@ running notebooks which is periodically cleaned up (this is separate
 from your data).  Your actual data is yours only and you are
 responsible for it.  We do not access your data, but when necessary
 for the operation of the system, may look at the metadata such as
-permissions, timestamp, filename (``stat filename``).
+permissions, timestamp, filename (``stat filename``).  Your
+``/notebooks`` directory may be deleted once your have been inactive
+for one year, and at most once your Aalto home directory is removed
+(after your account expires).  Some courses will use the ``feedback/``
+directory to return assignments to you.
 
 The use of your own data and submission of data to your course
 instructors is the responsibility of you and the instructors.
 
 See :doc:`the separate document <jupyterhub-privacy>` for uselessly
-legal information. (note: not written yet)
+long legal information. (note: not written yet)
 
 
 
@@ -119,10 +123,24 @@ FAQ and bugs
   there.  To switch back and forth in any container, change ``/tree``
   in the URL to ``/lab/tree``.
 
+* **Can I request more software be installed?**  Yes, let us know and
+  we will include it if it is easy.  We aim to have featureful
+  environments by default.
+
 * **How do I know what assignments I have already submitted?**
   Currently you can't.
+
+* **Can I know right away what my score is?**  nbgrader is not
+  currently designed for this.
 
 * **Are there backups?**  Data storage is provided by the Aalto
   Teamwork system.  There are snapshots available in ``.snapshot`` in
   every directory, but this directory does not appear until you try to
-  list it by the full name.
+  list it by the full name.  But, you should use ``git`` as your
+  primary backup mechanism, obviously.
+
+* **Is git installed?**  Yes, and you should use it.  Currently you
+  have to configure your username and email each time you use it,
+  because this isn't persistent.  Git will guide you through doing
+  this.  In the future, your Aalto directory name/email will be
+  automatically set.
