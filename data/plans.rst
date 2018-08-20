@@ -131,3 +131,110 @@ help you to make something competitive, even if you think you don't :
   requirements for you, but the default services we offer for data
   storage (designed to keep data safe and secure, and uuushareable).  It
   also sounds good to say.  (see the :doc:`outline <outline>`)
+
+
+Model Academy of Finland DMP
+============================
+
+You can see the Academy's detailed info `in their supplement
+<oafg_>`_.  This guide isn't to replace their guidelines (there is a
+lot there that isn't duplicated here), but make it clear what the
+Aalto correspondences are.  You can also see the `Aalto guidelines
+<ardm_plan_>`_, but this is also a bit abstract to be immediately
+usable.
+
+.. _oafg: http://www.aka.fi/en/funding/how-to-apply/application-guidelines/detailed-academy-data-management-plan-guidelines-and-best-practices-in-dmptuuli/
+
+.. _ardm_plan: http://www.aalto.fi/en/research/research_data_management/data_management_planning/
+
+With all the time spent on writing your plan, don't forget to do
+something useful, too.
+
+1. General description of the data
+
+   - No specific extra advice here - see academy guidelines.
+
+2. Ethical and legal compliance
+
+   - For identifiable human data, say that you will follow the `Aalto
+     personal data policy <apdp_>`_.  In particular, data will only be
+     stored only on systems meeting the Aalto guidelines for personal
+     data storage.  Preferable, store this on the department network
+     drives only - not on personal computers.  You can request ethical
+     evaluation from the `Aalto Research Ethics Committee <arec_>`_.
+     Is Finland, this is required in quite few cases, but publishers
+     are requiring this more and more often.  Thus, you may want to
+     check your journal requirements and request ethical evaluation
+     anyway.
+
+.. _apdp: https://inside.aalto.fi/display/AboutAalto/Aalto+University+Personal+Data+Policy
+.. _arec: https://inside.aalto.fi/display/AboutAalto/Research+Ethics+Committee
+
+   - Data always will be made available under the `Aalto data
+     management policy <aodp_>`_.  (You can commit to this, because
+     the policy only says you should make decisions "strategically" so
+     there are actually no obligations.)
+
+.. _aodp: https://inside.aalto.fi/download/attachments/50234575/2016_02_10_datapolicy.pdf?version=1&modificationDate=1455967763618&api=v2
+
+   - Software will be made open source if it matches the criteria under the :doc:`Aalto open source
+     policy <../aalto/opensource>`.  If software exceeds that
+     criteria, there will be discussions with Aalto innovation
+     services for commercialization or licensing.
+
+   - There are plenty of other intellectual property concerns which I
+     can't go into here, and you need to study yourself.  Aalto
+     Research and Innovation Services has lawyers which can help with
+     this - you can consult in advance or say you will use them.
+3. Documentation and metadata
+
+   - It is harder to comment on this because it is so field-specific.
+     Make sure you have READMEs and documents.
+
+   - Everyone talks about "metadata" but this is such a broad term
+     that it is essentially meaningless.  I personally put this into
+     three types:
+
+     - Cataloging: You can say that the metadata required by your
+       repository will be used.
+
+     - Necessary to understand: you will use README files, use formats
+       that are self-describing such as CSV files with useful headers
+       and comments, include code, and whatever is needed to make
+       someone understand the data later (including yourself).
+
+     - Necessary to automatically process: data should be
+       automatically usable with the least amount of manual effort.
+       This is highly domain-specific, and depends on if your domain
+       already has standards to make this possible.  Use the best
+       possible practices here, taking into account cost vs benefit.
+
+
+4. Storage and backup during the research project.
+
+   - Aalto really excels here.  Basically, just use the :doc:`Aalto
+     network drives <../aalto/aaltodata>`.  This storage is large,
+     free, shareable, snapshotted, backed up to an offsite
+     datacenter.  Access is controlled via Aalto accounts plus unix
+     groups.  If people need to make other copies (and it's allowed
+     for security reasons), they can.  Big data is stored on
+     :doc:`/triton/index` from which it has direct access to any
+     computational power you may need.
+
+5. Opening, publishing, and archiving the data after the research
+   project.
+
+   - This gets more abstract, and really depends on what you want.
+     There are many options, and maybe it is best to consult the
+     `Aalto page on this <ardm_pub_>`_, though it's again rather abstract.
+
+   - You can check the :doc:`services page <services>` to see what
+     common services are available.  If you don't have any more
+     specialized repository to use, Zenodo is a good choice.  Always
+     prefer a specialized, domain-specific repository if you can.
+
+   - You can say that organization of data is a part of research,
+     though the extra requirements needed to open are small.  Give
+     some estimate of the total/extra amount of work needed.
+
+.. _ardm_pub: http://www.aalto.fi/en/research/research_data_management/open_access_to_research_data/
