@@ -145,7 +145,13 @@ Instructions and hints to instructors
   general use containers for writing notebooks before that point.
 
 - Store your course data in a git repository (or some other version
-  control system) and push it to version.aalto.fi or some such.
+  control system) and push it to :doc:`version.aalto.fi </aalto/git>`
+  or some such system.  ``git`` and relevant tools are all installed
+  in the images.
+
+- You know that you are linked as an instructor to a course if, when
+  you spawn that course's environment, you get the ``/course``
+  directory.
 
 - We have a test course which you can use as a sandbox for testing
   nbgrader and courses.  No data here is private even after deleted,
@@ -165,6 +171,9 @@ Instructions and hints to instructors
   assertion they haven't used the module ``'tensorflow' not in
   sys.modules``, or 2) autograde in an environment which does not have
   these extra packages.  Really, #2 is the only true solution.
+
+- Students should use you, not us, as the first point of contact for
+  problems in the system.  Forward relevant problems to us.
 
 
 Limits
@@ -194,3 +203,5 @@ More info
 =========
 
 Contact: CS-IT.
+
+For source code and reporting issues, see the main jupyterhub page.

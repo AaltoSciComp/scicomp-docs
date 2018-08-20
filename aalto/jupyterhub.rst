@@ -144,3 +144,27 @@ FAQ and bugs
   because this isn't persistent.  Git will guide you through doing
   this.  In the future, your Aalto directory name/email will be
   automatically set.
+
+More info
+=========
+
+Students, your first point of contact for course-related matters and
+bugs with JuptyerHub should be your instructors, not us.  They will
+answer questions and send the relevant ones to us.  But, if you can
+actively help with other things, feel free to comment via github
+below.
+
+The preferred way to send feedback and development requests is via
+github issues and pull requests.  However, we're not saying it's best
+to give github all our information, so you can also send tickets to
+CS-IT.
+
+Our source is open and on github:
+
+- `single-user image
+  <https://github.com/AaltoScienceIT/jupyter-aalto-singleuser>`__
+  (everything about a user's environment)
+
+- `server itself
+  <https://github.com/AaltoScienceIT/jupyterhub-aalto>`__ (logging in,
+  course profiles, etc).
