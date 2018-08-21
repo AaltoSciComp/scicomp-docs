@@ -160,9 +160,11 @@ Instructions and hints to instructors
   (using git).
 
 - When using ``nbgrader``, name all of your assignments like
-  ``$courseslug-$assignmentname``, for example ``mlbp2018-week1``.
+  ``$courseslug-NN-$assignmentname``, for example ``mlbp2018-01-regression``.
+  The ``NN`` is some assignment number, so that things are sorted properly.
   Assignment names are an accidental global namespace in nbgrader once
-  they are copied to a user's notebook directory.
+  they are copied to a user's notebook directory, so you should use
+  names which won't clash with anyone else's.
 
 - The course environments are not captive: students can install
   whatever they want.  Even if we try to stop them, they can use the
@@ -174,6 +176,87 @@ Instructions and hints to instructors
 
 - Students should use you, not us, as the first point of contact for
   problems in the system.  Forward relevant problems to us.
+
+
+Using git
+=========
+
+`git <https://git-scm.com/>`__ is a version control system which lets
+you track file versions, examine history, and share.  We assume you
+have basic knowledge of git, and here we will give practical tips to
+use git to manage a course's files.  Our vision is that you should use
+nbgrader to manage the normal course files, not the students
+submissions.  Thus, to set up the next year's course, you just clone
+the existing git repository to the new ``/course`` directory.  You
+backup the entire old course directory to maintain the old students
+work.  Of course, there are other options, too.
+
+Create a new git repository in your ``/course/`` directory and do some
+basic setup::
+
+  cd /course/
+  git init
+  git config core.sharedRepository group
+
+You should make a ``.gitignore`` file excluding some common things
+(TODO: maybe more is needed)::
+
+  gradebook.db
+  release
+  submitted
+  autograded
+  feedback
+  .nbgrader.log
+  .ipynb-checkpoints
+
+The main directory you syncronize with git is the ``source/``
+directory, which has the original files, along with whatever other
+course notes/management files you may have.  Everything else is
+auto-generated.  Remember to name files like ``$courseslug-NN-name``
+as described above.
+
+Public copy of assignments
+==========================
+
+However, let's say you want to make your assignments publicly
+available so that anyone can access them to follow along.  This is
+also important because your course environment will go away after a
+few months - do you want students to be able to refer to it later?  If
+so, do the below.
+
+- change to the ``release/`` directory and ``git init``.  Create a new
+  repo here.
+- Manually ``git add`` the necessary assignment files after they are
+  generated from the ``source`` directory.  Why do we need a new repo?
+  Because you can't have the instructor solutions/answers made public.
+
+- Update files (``git commit -a`` or some such) occasionally when new
+  versions come out.
+
+- Add a ``requirements.txt`` file listing the different packages you
+  need installed for a student to use the notebooks.  See the
+  `MyBinder instructions
+  <https://mybinder.readthedocs.io/en/latest/using.html#preparing-a-repository-for-binder>`__
+  for different ways to do this, but a normal Python
+  ``requirements.txt`` file is easiest for most cases.  On each line,
+  put in a name of a package from the Python Package Index.  There are
+  other formats for ``R``, ``conda``, etc, see the page.
+
+- Then, push this ``release/`` repo to a public repository (check
+  mybinder for supported locations).  Make sure you don't ever
+  accidentally push the course repository!
+
+- Then, go to https://mybinder.org/ and use the UI to create a URL for
+  the resources.  You can paste this URL into your course info, but
+  recommend people use our resources first if they can (see below for
+  the reason).
+
+- Note that mybinder has a limit of 100 simultaneous users for a
+  repository, to prevent too much use for single organization's
+  projects.  It's possible that limits will change or decrease later.
+  Either way, for Aalto primary academic purposes we should use our
+  resources first to avoid over-burdening free resources, and students
+  should be advised as such.
 
 
 Limits
