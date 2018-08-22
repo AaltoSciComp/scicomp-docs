@@ -91,11 +91,6 @@ consisting of:
    be used the next year, then we'll keep it up until then.  You must
    agree to manage data well.
 
-You can access your course data via SMB mounting at the URLs
-``smb://jhnas.org.aalto.fi/course/$courseslug`` and the course data
-using ``smb://jhnas.org.aalto.fi/course/coursedata/$courseslug`` (with
-Windows, use ``\\`` instead of ``/` and don't include ``smb://``)
-
 
 nbgrader
 ========
@@ -123,7 +118,7 @@ To use nbgrader:
 
 - Once you log in to your course's environment, a per-course
   ``/course`` (instructors only) and ``/srv/nbgrader/exchange``
-(instructors and students) are mounted.
+  (instructors and students) are mounted.
 
 - You can use the ``Formgrader`` tab at the top to manage the process
   (this automatically appears for instructors).  This is the easiest
@@ -149,14 +144,13 @@ To use nbgrader:
   well, but we have tried to patch it in order to do this.  We may
   still have missed some of the points here.
 
-
-**WARNING:** nbgrader is `not secure
-<https://github.com/jupyter/nbgrader/issues/483>`__, because it runs
-the student's code as the instructor.  In fact, students can do all
-sorts of bad things with this, and the only way to stop them is to
-check notebooks yourself.  In fact, we can't recommend bulk usage of
-nbgrader because of this.  (Our in-development local solution:
-https://github.com/AaltoScienceIT/isolate-namespace )
+- nbgrader is `not secure
+  <https://github.com/jupyter/nbgrader/issues/483>`__, because it runs
+  the student's code as the instructor.  Students can do all
+  sorts of bad things with this, and the only way to stop them is to
+  check notebooks yourself before autograding.  We have a custom-build
+  solution at https://github.com/AaltoScienceIT/isolate-namespace, but
+  it will require manual work.
 
 
 
@@ -282,6 +276,14 @@ Instructions/hints
 
 - Students should use you, not us, as the first point of contact for
   problems in the system.  Forward relevant problems to us.
+
+- You can access your course data via SMB mounting at the URLs
+  ``smb://jhnas.org.aalto.fi/course/$courseslug`` and the course data
+  using ``smb://jhnas.org.aalto.fi/course/coursedata/$courseslug``
+  (with Windows, use ``\\`` instead of ``/` and don't include
+  ``smb://``).  This can be very nice for managing files.  This may
+  mess up group-writeability permissions.
+
 
 Limits
 ------
