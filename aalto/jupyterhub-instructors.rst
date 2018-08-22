@@ -123,10 +123,31 @@ To use nbgrader:
 
 - Once you log in to your course's environment, a per-course
   ``/course`` (instructors only) and ``/srv/nbgrader/exchange``
-  (instructors and students) are mounted.
+(instructors and students) are mounted.
 
 - You can use the ``Formgrader`` tab at the top to manage the process
-  (this automatically appears for instructors).
+  (this automatically appears for instructors).  This is the easiest
+  way, because it will automatically set up the course directory, open
+  assignments, etc.
+
+- It's good to know how we arrange the course directory anyway,
+  especially if you want to manage things yourself without Formgrader.
+  The "course directory" (nbgrader term) is ``/course``.  The original
+  assignments go in ``/course/source``.  The other directories are
+  ``/course/{nbgrader_step}`` and, for the most part, are
+  automatically managed.
+
+- New assignments should be in ``/course/source``.  Remember to name
+  your assignments like ``$courseslug-*``.  Also don't use ``+`` in
+  the assignment filename (nbgrader #928).
+
+- Manage your assignments with ``git``.  See below for some hints
+  about how to do this.
+
+- If you ever get permission denied errors, let us know.  nbgrader
+  does not support multiple instructors editing the same files that
+  well, but we have tried to patch it in order to do this.  We may
+  still have missed some of the points here.
 
 
 **WARNING:** nbgrader is `not secure
@@ -137,45 +158,6 @@ check notebooks yourself.  In fact, we can't recommend bulk usage of
 nbgrader because of this.  (Our in-development local solution:
 https://github.com/AaltoScienceIT/isolate-namespace )
 
-
-Instructions and hints to instructors
-=====================================
-
-- Request a course when you are sure you will use it.  You can use the
-  general use containers for writing notebooks before that point.
-
-- Store your course data in a git repository (or some other version
-  control system) and push it to :doc:`version.aalto.fi </aalto/git>`
-  or some such system.  ``git`` and relevant tools are all installed
-  in the images.
-
-- You know that you are linked as an instructor to a course if, when
-  you spawn that course's environment, you get the ``/course``
-  directory.
-
-- We have a test course which you can use as a sandbox for testing
-  nbgrader and courses.  No data here is private even after deleted,
-  and data is not guaranteed to be persistent.  Use only for testing.
-  Use the general use notebook for writing and sharing your files
-  (using git).
-
-- When using ``nbgrader``, name all of your assignments like
-  ``$courseslug-NN-$assignmentname``, for example ``mlbp2018-01-regression``.
-  The ``NN`` is some assignment number, so that things are sorted properly.
-  Assignment names are an accidental global namespace in nbgrader once
-  they are copied to a user's notebook directory, so you should use
-  names which won't clash with anyone else's.
-
-- The course environments are not captive: students can install
-  whatever they want.  Even if we try to stop them, they can use the
-  general use images or download files.  If you want to check that
-  students have *not* used some modules as a shortcut, 1) have an
-  assertion they haven't used the module ``'tensorflow' not in
-  sys.modules``, or 2) autograde in an environment which does not have
-  these extra packages.  Really, #2 is the only true solution.
-
-- Students should use you, not us, as the first point of contact for
-  problems in the system.  Forward relevant problems to us.
 
 
 Using git
@@ -259,8 +241,50 @@ so, do the below.
   should be advised as such.
 
 
+Instructions and hints to instructors
+=====================================
+
+Instructions/hints
+------------------
+
+- Request a course when you are sure you will use it.  You can use the
+  general use containers for writing notebooks before that point.
+
+- Store your course data in a git repository (or some other version
+  control system) and push it to :doc:`version.aalto.fi </aalto/git>`
+  or some such system.  ``git`` and relevant tools are all installed
+  in the images.
+
+- You know that you are linked as an instructor to a course if, when
+  you spawn that course's environment, you get the ``/course``
+  directory.
+
+- We have a test course which you can use as a sandbox for testing
+  nbgrader and courses.  No data here is private even after deleted,
+  and data is not guaranteed to be persistent.  Use only for testing.
+  Use the general use notebook for writing and sharing your files
+  (using git).
+
+- When using ``nbgrader``, name all of your assignments like
+  ``$courseslug-NN-$assignmentname``, for example ``mlbp2018-01-regression``.
+  The ``NN`` is some assignment number, so that things are sorted properly.
+  Assignment names are an accidental global namespace in nbgrader once
+  they are copied to a user's notebook directory, so you should use
+  names which won't clash with anyone else's.
+
+- The course environments are not captive: students can install
+  whatever they want.  Even if we try to stop them, they can use the
+  general use images or download files.  If you want to check that
+  students have *not* used some modules as a shortcut, 1) have an
+  assertion they haven't used the module ``'tensorflow' not in
+  sys.modules``, or 2) autograde in an environment which does not have
+  these extra packages.  Really, #2 is the only true solution.
+
+- Students should use you, not us, as the first point of contact for
+  problems in the system.  Forward relevant problems to us.
+
 Limits
-======
+------
 
 - This is not a captive environment: students may always trivially
   remove their files and data, and may share notebooks across
@@ -280,6 +304,9 @@ Limits
 - Currently there is nothing in place to return marked-up assignments
   to students.  We can possibly make a root script to do this.
   Organize assignments by username and we can do the rest.
+
+- There is currently no plagiarism detection support.  You will have
+  to handle this yourself somehow so far.
 
 
 More info
