@@ -112,18 +112,29 @@ upstream) which are:
   with this power comes responsibility - try hard to keep things
   organized.
 
+- We can have the assignments in ``/notebooks`` while providing
+  whole-filesystem access (so that students can also access
+  ``/coursedata``).
+
+- Submissions are hidden by more than just timestamps.
+
+- While not part of nbgrader, we have a way to isolate the grading
+  process so that students can't access other instructor files.
+
 To use nbgrader:
 
 - Request a course as above.
 
-- Once you log in to your course's environment, a per-course
+- Once you log in to your course's environment, the per-course
   ``/course`` (instructors only) and ``/srv/nbgrader/exchange``
-  (instructors and students) are mounted.
+  (instructors and students, if requested) are mounted.
 
-- You can use the ``Formgrader`` tab at the top to manage the process
-  (this automatically appears for instructors).  This is the easiest
-  way, because it will automatically set up the course directory, open
-  assignments, etc.
+- You can use the ``Formgrader`` tab at the top to manage the whole
+  nbgrader process (this automatically appears for instructors).  This
+  is the easiest way, because it will automatically set up the course
+  directory, create assignment directories, etc.  But, you can use the
+  ``nbgrader`` command line, too.  It is especially useful for
+  autograding.
 
 - It's good to know how we arrange the course directory anyway,
   especially if you want to manage things yourself without Formgrader.
@@ -185,17 +196,19 @@ You should make a ``.gitignore`` file excluding some common things
   .nbgrader.log
   .ipynb-checkpoints
 
-The main directory you syncronize with git is the ``source/``
-directory, which has the original files, along with whatever other
-course notes/management files you may have.  Everything else is
-auto-generated.  Remember to name files like ``$courseslug-NN-name``
-as described above.
+The git repository is in ``/course``, but the main subdirectory of
+interest is the ``source/`` directory, which has the original files,
+along with whatever other course notes/management files you may have
+which are under ``/course``.  Everything else is auto-generated.
+Remember to name the assignments like ``$courseslug-NN-name`` as
+described above.
 
 Public copy of assignments
 ==========================
 
-However, let's say you want to make your assignments publicly
-available so that anyone can access them to follow along.  This is
+Let's say you want to make your assignments publicly
+available so that anyone can access them to follow along without being
+an Aalto student or being registered.  This is
 also important because your course environment will go away after a
 few months - do you want students to be able to refer to it later?  If
 so, do the below.
@@ -280,7 +293,7 @@ Instructions/hints
 - You can access your course data via SMB mounting at the URLs
   ``smb://jhnas.org.aalto.fi/course/$courseslug`` and the course data
   using ``smb://jhnas.org.aalto.fi/course/coursedata/$courseslug``
-  (with Windows, use ``\\`` instead of ``/` and don't include
+  (with Windows, use ``\\`` instead of ``/`` and don't include
   ``smb://``).  This can be very nice for managing files.  This may
   mess up group-writeability permissions.
 
@@ -290,7 +303,8 @@ Limits
 
 - This is not a captive environment: students may always trivially
   remove their files and data, and may share notebooks across
-  different courses.
+  different courses.  See above for the link to isolate-environment
+  with instructions for fixing this.
 
 - We don't have unlimited computational resources, but we can try to
   procure what is necessary.  Work as hard as you can to spread the
