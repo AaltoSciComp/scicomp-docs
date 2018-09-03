@@ -25,3 +25,4 @@ for Research page
    python
    opensource
    matlab_standalone
+   jupyterhub

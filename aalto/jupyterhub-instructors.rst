@@ -4,9 +4,9 @@ Teaching Jupyterhub instructions for instructors
 
 .. seealso::
 
-   Main article: :doc:`Jupyterhub for Teaching <jupyterhub>`.  For
-   research purposes, see :doc:`Triton JupyterHub
-   </triton/apps/jupyter>`.
+   Main article with general usage instructions: :doc:`Jupyterhub for
+   Teaching <jupyterhub>`.  For research purposes, see :doc:`Triton
+   JupyterHub </triton/apps/jupyter>`.
 
 Basics
 ======
@@ -328,6 +328,7 @@ Limits
 More info
 =========
 
-Contact: CS-IT.
+Contact: CS-IT via the guru alias (students, contact your course
+instructors first).
 
 For source code and reporting issues, see the main jupyterhub page.

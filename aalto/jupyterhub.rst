@@ -4,15 +4,16 @@ JupyterHub for Teaching
 
 .. note::
 
-   This page is about the JupyterHub for teaching,
-   https://jupyter.cs.aalto.fi.  The Triton JupyterHub for research is
-   documented at :doc:`../triton/apps/jupyter`.
+   This page is about the JupyterHub for light use and teaching,
+   https://jupyter.cs.aalto.fi.  The :doc:`Triton <../triton/index>`
+   JupyterHub for research is documented at
+   :doc:`../triton/apps/jupyter`.
 
 
-https://jupyter.cs.aalto.fi is a JupyterHub installation for teaching.
-Anyone at Aalto may use this for generic light computing needs,
-teachers may create courses with assignments using `nbgrader
-<https://nbgrader.readthedocs.io/en/stable/>`__.
+https://jupyter.cs.aalto.fi is a JupyterHub installation for teaching
+and light usage.  Anyone at Aalto may use this for generic light
+computing needs, teachers may create courses with assignments using
+`nbgrader <https://nbgrader.readthedocs.io/en/stable/>`__.
 
 
 Basic usage
@@ -25,7 +26,7 @@ Your persistent storage has a quota of 1GB.  Your data belongs to you,
 may be accessed from outside, and currently is planned to last no more
 than one year from last login.  (TODO: in the future, the user
 directories will be mounted on other Aalto computers).  You are
-limited to one CPU and XXX MB of memory.
+limited to one CPU and 256MB memory.
 
 There are some general use computing containers.  You will began with
 Jupyter in the ``/notebooks`` directory, which is your persistent
@@ -85,6 +86,11 @@ sometimes.
 
 Instructors
 ===========
+
+.. toctree::
+   :hidden:
+
+   jupyterhub-instructors
 
 See the separate :doc:`instructors guide <jupyterhub-instructors>`.
 
@@ -151,15 +157,18 @@ More info
 Students, your first point of contact for course-related matters and
 bugs with JuptyerHub should be your instructors, not us.  They will
 answer questions and send the relevant ones to us.  But, if you can
-actively help with other things, feel free to comment via github
-below.
+actively help with other things, feel free to comment via Github
+repositories below.
 
 The preferred way to send feedback and development requests is via
-github issues and pull requests.  However, we're not saying it's best
-to give github all our information, so you can also send tickets to
+Github issues and pull requests.  However, we're not saying it's best
+to give Github all our information, so you can also send tickets to
 CS-IT.
 
-Our source is open and on github:
+Students and others who have difficulty in usage outside of a course
+can contact CS-IT via the guru alias.
+
+Our source is open and on Github:
 
 - `single-user image
   <https://github.com/AaltoScienceIT/jupyter-aalto-singleuser>`__
