@@ -18,6 +18,7 @@ for Research page
    aaltodata
    datapolicy
    remoteaccess
+   jupyterhub
    remotejupyter
    paniikki
    htcondor
@@ -25,4 +26,3 @@ for Research page
    python
    opensource
    matlab_standalone
-   jupyterhub

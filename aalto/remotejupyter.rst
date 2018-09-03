@@ -1,6 +1,11 @@
-=======================
-Remote Jupyter Notebook
-=======================
+========================================
+Remote Jupyter Notebook on shell servers
+========================================
+
+.. seealso::
+
+   We now have a :doc:`General use student/teaching JupyterHub
+   <jupyterhub>` installation which may serve your uses more simply.
 
 Here we describe how you can utilise Aalto computing resources for Jupyter Notebook remotely. The guide is targeted for UNIX users at the moment.
 
