@@ -100,21 +100,21 @@ Privacy policy
 
 This system is managed by Aalto CS-IT.  We do not store separate
 accounts or user data beyond a minimal database of usernames and
-running notebooks which is periodically cleaned up (this is separate
-from your data).  Your actual data is yours only and you are
+technical logs of notebooks which are periodically removed (this is
+separate from your data).  Your actual data is yours only and you are
 responsible for it.  We do not access your data, but when necessary
-for the operation of the system, may look at the metadata such as
-permissions, timestamp, filename (``stat filename``).  Your
-``/notebooks`` directory may be deleted once your have been inactive
-for one year, and at most once your Aalto home directory is removed
-(after your account expires).  Some courses will use the ``feedback/``
-directory to return assignments to you.
+for the operation of the system, but we use and may look at the
+metadata such as permissions, timestamp, filename (``stat filename``).
+Your ``/notebooks`` directory may be deleted once your have been
+inactive for one year, and at the latest once your Aalto home
+directory is removed (after your account expires).  Some courses will
+use the ``feedback/`` directory to return assignments to you.
 
 The use of your own data and submission of data to your course
 instructors is the responsibility of you and the instructors.
 
-See :doc:`the separate document <jupyterhub-privacy>` for uselessly
-long legal information. (note: not written yet)
+See :doc:`the separate privacy policy document <jupyterhub-privacy>`
+for longer, less useful information.
 
 
 
@@ -129,9 +129,13 @@ FAQ and bugs
   there.  To switch back and forth in any container, change ``/tree``
   in the URL to ``/lab/tree``.
 
+* **Can I login with a shell?**  Run a new terminal within the
+  notebook interface.
+
 * **Can I request more software be installed?**  Yes, let us know and
   we will include it if it is easy.  We aim to have featureful
-  environments by default.
+  environments by default, but won't go so far as to install large
+  specialist software.
 
 * **How do I know what assignments I have already submitted?**
   Currently you can't.
@@ -145,11 +149,13 @@ FAQ and bugs
   list it by the full name.  But, you should use ``git`` as your
   primary backup mechanism, obviously.
 
-* **Is git installed?**  Yes, and you should use it.  Currently you
+* **Is git installed?** Yes, and you should use it.  Currently you
   have to configure your username and email each time you use it,
-  because this isn't persistent.  Git will guide you through doing
-  this.  In the future, your Aalto directory name/email will be
-  automatically set.
+  because this isn't persistent (because home directories are not
+  persistent).  Git will guide you through doing this.  In the future,
+  your Aalto directory name/email will be automatically set.  As a
+  workaround, run ``git config`` without the ``--global`` option in
+  each repository.
 
 More info
 =========

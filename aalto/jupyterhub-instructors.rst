@@ -281,14 +281,29 @@ Instructions/hints
 
 - The course environments are not captive: students can install
   whatever they want.  Even if we try to stop them, they can use the
-  general use images or download files.  If you want to check that
-  students have *not* used some modules as a shortcut, 1) have an
-  assertion they haven't used the module ``'tensorflow' not in
-  sys.modules``, or 2) autograde in an environment which does not have
-  these extra packages.  Really, #2 is the only true solution.
+  general use images (which may get more software at any time) or
+  download and re-upload the notebook files.  Either way, autograding
+  is done in the instructors environment, so if you want to limit the
+  software that students can use, this must be done at the autograding
+  stage or via other hacks.
+
+  - 1) If you want to check that students have *not* used some particular
+    Python modules, have an hidden test that they haven't used the
+    module, like: ``'tensorflow' not in sys.modules``.
+
+  - 2) autograde in an environment which does not have these extra
+    packages.  Really, #2 is the only true solution.  See the
+    information under
+    https://github.com/AaltoScienceIT/isolate-namespace for
+    information on doing this.
+
+  - In all cases, it is good practice to pre-import all modules the
+    students are expected to be able to use and tell students that
+    other modules should not be imported.
 
 - Students should use you, not us, as the first point of contact for
-  problems in the system.  Forward relevant problems to us.
+  problems in the system.  Please announce this to students.  Forward
+  relevant problems to us.
 
 - You can access your course data via SMB mounting at the URLs
   ``smb://jhnas.org.aalto.fi/course/$courseslug`` and the course data
@@ -296,6 +311,14 @@ Instructions/hints
   (with Windows, use ``\\`` instead of ``/`` and don't include
   ``smb://``).  This can be very nice for managing files.  This may
   mess up group-writeability permissions.
+
+- You are the data controller of any assignments which students
+  submit.  We do not access these assignments on your behalf, and a
+  submission of an assignment is an agreement between you and the
+  student.
+
+- You should always do random checks of a fair fraction of notebooks,
+  to avoid unexpected problems.
 
 
 Limits
