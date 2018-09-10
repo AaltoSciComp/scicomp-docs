@@ -14,6 +14,18 @@ the past few summer kickstarts on `the training archive
 <http://science-it.aalto.fi/scip/>`__, for example `2017
 <http://science-it.aalto.fi/scip/kickstart2017/>`__:
 
+.. list-table::
+
+   * * Linux shell
+
+       B10, B20
+     * Introduction to the Linux environment and shell up to advanced
+       shell scripting.  An important prerequisite for Triton usage,
+       and in general any computational research.  :doc:`Materials
+       <linux-shell-tutorial>`.
+
+
+
 The following are our course course in HPC
 
 

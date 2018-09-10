@@ -89,8 +89,10 @@ B: Scientific computing
 
        Basic shell
      * Let's face it: the linux command line is the basis of most data
-       science.  `Check out Software Carpentry shell-novice sections 1-4
-       <http://swcarpentry.github.io/shell-novice/>`__
+       science.  `Check out Software Carpentry shell-novice sections
+       1-4 <http://swcarpentry.github.io/shell-novice/>`__.  Our
+       :doc:`shell course <linux-shell-tutorial>` covers this at the
+       beginning, too.
 
    * * B14
 
