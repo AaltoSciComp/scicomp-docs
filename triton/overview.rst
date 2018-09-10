@@ -9,7 +9,7 @@ Triton is a joint installation by a number of Aalto School of Science
 faculties within `Science-IT
 project <http://sci.aalto.fi/en/research/muu_tutkimustoiminta/science-it/>`__,
 which was founded in 2009 to facilitate the HPC Infrastructure in all of
-School of Science. It is now available to all Aalto researchers.
+School of Science. It is now available to all Aalto researchers.
 
 As of 2016, Triton is part of `FGCI - Finnish Grid and Cloud
 Infrastructure <https://www.csc.fi/-/fgci>`__ (predecessor of `Finnish
@@ -29,7 +29,7 @@ Different types of nodes:
    each equipped with 2x Six-Core AMD Opteron 2435 2.6GHz processors.
    192 compute nodes opt[1-64,68-80,249-360] have 32GB, 32 have 64GB
    opt[81-112], 112 others have 16GB opt[361-488], 4xDDR Infiniband port
-   and local 10k SAS drive with diskspace available ~215GB.
+   and local 10k SAS drive with diskspace available ~215GB.
 
 *  142 compute nodes `HP SL390s
    G7 <http://h10010.www1.hp.com/wwpc/us/en/sm/WF06a/15351-15351-3896136-3896139-4236125-4198401.html>`__,
@@ -37,7 +37,7 @@ Different types of nodes:
    X5650 <http://ark.intel.com/products/47922/Intel-Xeon-Processor-X5650-%2812M-Cache-2_66-GHz-6_40-GTs-Intel-QPI%29>`__
    2.67GHz (Westmere six-core each). 118 compute nodes cn[113-224],
    tb[003-008] have 48 GB of DDR3-1066 memory, others cn[225-248] have
-   96GB, each node has 4xQDR Infiniband port,  cn[113-224], tb[003-008]
+   96GB, each node has 4xQDR Infiniband port,  cn[113-224], tb[003-008]
    have about 830 GB of local disk space (2 striped 7.2k SATA drives),
    while cn[225-248] about 380GB on single drive. 16 nodes have by two
    additional SATA drives.

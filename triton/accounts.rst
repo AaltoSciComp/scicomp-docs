@@ -30,8 +30,9 @@ A few prerequisites:
      Please tell us who your supervisor is in your account request.
    - Students coming to one of our `Scientific Computing in Practice
      courses <scip_>`_ which uses Triton.
-   - Students in other courses should ask their instructor to contact
-     us first to discuss if Triton is an appropriate resource.
+   - Other students not doing research needing computational
+     facilities should check out our :doc:`introduction for students
+     <../aalto/welcomestudents>`.
 
 .. _scip: http://science-it.aalto.fi/scip/
 
