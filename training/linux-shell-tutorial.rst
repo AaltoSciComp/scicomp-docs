@@ -7,7 +7,12 @@ Course basics
 =============
 Linux Shell tutorial by Science IT at Aalto University.
 
-Abstract: BASH practicalities, shell scripting. Learning by doing.  Corresponds to 4 sessions 3h each, session rough schedule 2x1h25m with 10m break in between.
+Abstract: consists of two parts: Linux Shell Basics and Linux Shell Scripting. The first 
+covers introductory level. The second covers actual BASH scripting. Learning by doing.
+
+Linux Shell Basics: 2 sessions x 3h
+
+Linux Shell Scripting: 4 sessions x 3h, session rough schedule 2x1h25m with 10m break in between.
 
 Setting up instructions for the lecturer: Main terminal white&black
 with the enlarged font size.  One small terminal at the top that shows
@@ -25,23 +30,27 @@ Based on
  - common sense and 20+ years Linux experience
  - see also other references in the text
 
-Getting a shell
----------------
 
-Before the course: set yourself up with a BASH shell.  Connect to a
-server or open on your own computer. Examples and demos given during the lecture
-are done on Triton, though should work on all other Linux installations.
-Ask for help if needed:
-
-- Linux and Mac users: just open a terminal window.
-- Windows users: install PuTTY [#putty]_ then SSH to any interactive server
-  at Aalto or your department.
-
------------------------------------------------------------------------------
+Linux Shell Basics
+==================
 
 1. session: interactive shell
 =============================
 Interactive usage of BASH
+
+First touch: getting a shell
+----------------------------
+
+Set yourself up with a BASH shell.  Connect to a server or open on your own computer.
+Examples and demos given during the lecture are done on Triton, though should work
+on all other Linux installations.
+
+- Linux and Mac users: just open a terminal window. If you wish you can login to Triton.
+- Windows users: install PuTTY [#putty]_ then *SSH* to any interactive server
+  at Aalto or your department.
+
+-----------------------------------------------------------------------------
+
 
 - Shell -- is what you get when your terminal window is open. It is a
   command-line (CLI), an interface that interpreters and executes the
@@ -66,7 +75,7 @@ Interactive usage of BASH
 What's a UNIX process?
 ----------------------
 - To understand a shell, let's first understand what processes are.
-- All programs are a process
+- All programs are a process: process is a program in action
 - Processes have:
 
   - Process ID (integer)
@@ -82,26 +91,38 @@ What's a UNIX process?
 
 Process stat commands::
 
-   pstree
-   pstree -u $USER
-   pstree -pu $USER
-   ps auxw
+  ps auxw
+  top
+  pstree
+  pstree -u $USER
+  pstree -pu $USER
 
 You can find info about your user::
 
   id
   echo $SHELL
-  echo $HOME
 
-Where you are::
+Your default shell is not a /bin/bash? Login to kosh/taltta and run ``chsh -s /bin/bash``
 
-  pwd
+Another way to find out what SHELL you are running::
 
-Who am I: ``id``, ``echo $HOME``, ``echo $SHELL``
-(Your default shell is not a /bin/bash? Login to kosh/taltta and run ``chsh -s /bin/bash``)
+  ps -p $$
 
 Where am I: ``pwd`` (this shows the first piece of process
 information: current directory)
+
+Getting help in terminal
+------------------------
+
+Before you Google for the command examples, try
+
+::
+
+  man command_name
+
+Your best friend ever -- ``man`` -- collection of manuals. Type
+*/search_word* for searching through the man page.  But... if it's a
+builtin, you need to use ``help``
 
 
 Built-in and external commands
@@ -110,7 +131,7 @@ Built-in and external commands
 There are two types of commands:
 
 - shell built-in: ``cd``, ``pwd``, ``echo``, ``test``, etc.
-- external: ``ls``, ``date``, ``less``, ``lpr``, ``test``, etc.
+- external: ``ls``, ``date``, ``less``, ``lpr``, ``cat``, etc.
 - some can be both: e.g. ``test``.  Options not always the same!
 - For the most part, these behave similarly, which is a good thing!
   You don't have to tell which is which.
@@ -119,13 +140,88 @@ There are two types of commands:
 
 - **echo**: prints out ``echo something to type`` # types whatever you put after
 
-Your best friend ever -- ``man`` -- collection of manuals. Type
-*/search_word* for searching through the man page.  But... if it's a
-builtin, you need to use ``help``
-
 **Disable built-in command** ``enable -n echo``, after this */usr/bin/echo*
 becomes a default instead of built-in *echo*
 
+Working with the processes
+--------------------------
+
+All processes are related, a command executed in shell is a child process of
+the shell. When child process is terminated it is reported back to parent process.
+When you log out all shell child processes terminated along with the shell.
+One can kill a process or make it "nicer".
+
+::
+
+  psgrep -af <name>
+  kill <PID>
+  pkill <name>
+  renice #priority <PID>
+
+Making process "nicer" means it will run only when nothing else in the system wants to.
+User can increase nice value from 0 (the base priority) up to 19. For instance it is 
+useful when you archive your data on system and do not care how long it takes in
+the background.
+
+
+Foreground and background processes
+-----------------------------------
+The shell has a concept of foreground and background processes: a
+foreground process is directly connected to your screen and
+keyboard. A background process doesn't have input connected.  There
+can only be one foreground at a time (obviously).
+
+If you add *&* right after the command will send the process to
+background. Example: ``firefox --no-remote &`` same can be done with
+any terminal command/function, like ``man pstree &``.  In the big
+picture, the ``&`` serves the same role as ``;`` to separate commands,
+but backgrounds the first and goes straight to the next.
+
+If you have already running process, then Ctrl-z and then
+``bg``. Drawback: there is no easy way to redirect the running task
+output, so if it generates output it covers your screen.
+
+List the jobs running in the background with ``jobs``, get a job back
+online with  ``fg`` or ``fg <job_number>``. There can be multiple
+background jobs (remember forkbombs).
+
+Kill the foreground job: Ctrl-c
+
+
+Exit the shell
+--------------
+``logout`` or Ctrl-d (``export IGNOREEOF=1`` to *.bashrc* to prevent
+Ctrl-d from quitting).
+
+Of course, quitting your shell is annoying, since you have to start
+over.  Luckily there are programs so that you don't have to do this.
+In order to keep your sessions running while you logged out, you
+should discover the ``screen`` program.
+
+ - ``screen`` to start a session
+ - Ctrl-a-d to detach the session while you are connected
+ - ``screen -ls`` to list currently running sessions
+ - ``screen -rx <session_id>`` to attach the session, one can use TAB for the autocompletion or skip the <session_id> if there is only one session running
+ - ``tmux`` is a newer program with the same style.  It has some extra
+   features and some missing features still.
+
+Some people have their ``screen`` open forever, which just keeps
+running and never gets closed.  Wherever they are, they ssh in,
+connect, and resume right where they left off.
+
+Example: ``irssi`` on kosh / lyta
+
+
+[Lecture notes: that should be a first half, then joint hands-on/break ~30 mins]
+
+:Exercise 1.1:
+ - for Aalto users: set your SHELL to BASH if you have not yet done so: ``chsh -s /bin/bash`` on kosh
+ - using any of the above mentioned tools list all your running processes
+   - see ``man ps`` and find out how to list a process tree with ps
+ - with pgrep list all bash and then zsh sessions on kosh or triton
+ - log in to triton and run ``man ps``, send it to background, and ``logout``, then
+   log in again. Is it still there? Try ``nohup man ps &``
+  
 
 Files and directories
 ---------------------
@@ -193,10 +289,7 @@ Some advanced permission bits:
 
 **Advanced file status** to get file meta info ``stat <file_or_dir>``
 
-[Lecture notes: that should be a first half, then joint hands-on/break ~30 mins]
-
-
-:Exercise 1.1:
+:Exercise 1.2:
  - mkdir in your ``$HOME`` (or ``$WRKDIR`` if on Triton), cd there and 'touch' a file.
    Rename it. Make a copy and then remove the original
  - list all files in /usr/bin and /usr/sbin that start with non-letter characters with
@@ -205,7 +298,7 @@ Some advanced permission bits:
  - Run ``file *`` to see what kind of files you have, how to list dot files also while avoiding . and .. directories on the list?
  - (*) Discover ``stat file`` output. What metadata do you find?
 
-:Exercise 1.2:
+:Exercise 1.3:
  - on Triton use the recently created directory at ``$WRKDIR``, allow user and group members
    full access and no access for others
  - change group ownership to (any group that you belong to is fine), set s-bit for the group and
@@ -492,6 +585,10 @@ Leftovers can be said as a homework, one can go through them next session or giv
  - (*) Using pipes and commands echo/tr/uniq, find doubled words out of 'My
    Do Do list: Find a a Doubled Word'. Any easier way to do it?
 
+
+
+Linux Shell Scripting
+=====================
 
 2. session: BASH magic
 ======================
@@ -1978,54 +2075,6 @@ On Triton we have installed Tollef Fog Heen's version of parallel from *moreutil
 GNU project has its own though, with different syntax, but of exactly the same name, so do not get
 confused.
 
-
-Foreground and background processes
------------------------------------
-The shell has a concept of foreground and background processes: a
-foreground process is directly connected to your screen and
-keyboard. A background process doesn't have input connected.  There
-can only be one foreground at a time (obviously).
-
-
-If you add *&* right after the command will send the process to
-background. Example: ``firefox --no-remote &`` same can be done with
-any terminal command/function, like ``tar ... &``.  In the big
-picture, the ``&`` serves the same role as ``;`` to separate commands,
-but backgrounds the first and goes straight to the next.
-
-If you have already running process, then Ctrl-z and then
-``bg``. Drawback: there is no easy way to redirect the running task
-output, so if it generates output it covers your screen.
-
-List the jobs running in the background with ``jobs``, get a job back
-online with  ``fg`` or ``fg <job_number>``. There can be multiple
-background jobs (remember forkbombs).
-
-Kill the foreground job: Ctrl-c
-
-
-Exit the shell
---------------
-``logout`` or Ctrl-d (``export IGNOREEOF=1`` to *.bashrc* to prevent
-Ctrl-d from quitting).
-
-Of course, quitting your shell is annoying, since you have to start
-over.  Luckily there are programs so that you don't have to do this.
-In order to keep your sessions running while you logged out, you
-should discover the ``screen`` program.
-
- - ``screen`` to start a session
- - Ctrl-a-d to detach the session while you are connected
- - ``screen -ls`` to list currently running sessions
- - ``screen -rx <session_id>`` to attach the session, one can use TAB for the autocompletion or skip the <session_id> if there is only one session running
- - ``tmux`` is a newer program with the same style.  It has some extra
-   features and some missing features still.
-
-Some people have their ``screen`` open forever, which just keeps
-running and never gets closed.  Wherever they are, they ssh in,
-connect, and resume right where they left off.
-
-Example: ``irssi`` on kosh / lyta
 
 
 About homework assignments
