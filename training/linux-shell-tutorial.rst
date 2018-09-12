@@ -220,7 +220,8 @@ Example: ``irssi`` on kosh / lyta
    - see ``man ps`` and find out how to list a process tree with ps
  - with pgrep list all bash and then zsh sessions on kosh or triton
  - log in to triton and run ``man ps``, send it to background, and ``logout``, then
-   log in again. Is it still there? Try ``nohup man ps &``
+   log in again. Is it still there? Play with the ``screen``, run a session , then detouch it
+   and log out, then log in back and get your original screen session back.
   
 
 Files and directories
