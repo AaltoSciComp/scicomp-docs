@@ -34,8 +34,8 @@ Based on
 PART #1. Linux Shell Basics
 ===========================
 
-1. session: interactive shell
-=============================
+1.1 session: interactive shell
+==============================
 Interactive usage of BASH
 
 First touch: getting a shell
@@ -49,8 +49,9 @@ on all other Linux installations.
 - Windows users: install PuTTY [#putty]_ then *SSH* to any interactive server
   at Aalto or your department.
 
------------------------------------------------------------------------------
 
+About Linux Shell
+-----------------
 
 - Shell -- is what you get when your terminal window is open. It is a
   command-line (CLI), an interface that interpreters and executes the
@@ -144,9 +145,9 @@ There are two types of commands:
 **Disable built-in command** ``enable -n echo``, after this */usr/bin/echo*
 becomes a default instead of built-in *echo*
 
+
 Working with the processes
 --------------------------
-
 All processes are related, a command executed in shell is a child process of
 the shell. When child process is terminated it is reported back to parent process.
 When you log out all shell child processes terminated along with the shell.
@@ -161,7 +162,7 @@ One can kill a process or make it "nicer".
 
 Making process "nicer", ``renice 19 <PID>``, means it will run only when nothing
 else in the system wants to.
-User can increase nice value from 0 (the base priority) up to 19. For instance it is 
+User can increase nice value from 0 (the base priority) up to 19. It is 
 useful when you backup your data in background or alike.
 
 
@@ -222,17 +223,20 @@ Example: ``irssi`` on kosh / lyta
 
 [Lecture notes: that should be a first half, then joint hands-on/break ~30 mins]
 
-:Exercise 1.1:
+:Exercise 1.1.1:
  - for Aalto users: set your SHELL to BASH if you have not yet done so: ``chsh -s /bin/bash`` on kosh
  - use ps / top / pstree to list all the running processes that belong to you
+ 
    - (*) see ``man ps`` and find out how to list a processes tree with ps, both
    all processes and only your own (but all your processes, associated with all terminals)
+
  - with pgrep list all bash and then zsh sessions on kosh or triton
  - log in to triton/kosh and run ``man ps``, send it to background, and ``logout``, then
    log in again. Is it still there? Play with the ``screen``, run a session , then detouch it
    and log out, then log in back and get your original screen session back.
  - run ``man htop``, send it to backround, and then kill it with ``kill``. Tip: one can
    do it by background job number or by PID.
+   
    - (*) get any X Window application (firefox, xterm, etc) to run on Triton / kosh
   
 
@@ -240,7 +244,6 @@ Files and directories
 ---------------------
 Files contain data.  They have a name, permissions, owner
 (user+group), contents, and some other metadata.
-
 
 ``ls`` is the standard way of getting information about files.
 
@@ -257,7 +260,7 @@ There are a variety of commands to manipulate files/directories:
 Note that ``cd`` is a shell builtin which change's the shell's own
 working directory.  This is the base from which all other commands
 work: ``ls`` by default tells you the current directory.  ``.`` is the
-current directory, ``..`` is the parent directory, etc.  This is
+current directory, ``..`` is the parent directory, ``~`` is your HOME.  This is
 inherited to other commands you run.
 
 **Discover other ls features** ``ls -lX``, ``ls -ltr``, ``ls -Q``
@@ -278,7 +281,8 @@ Permissions
   user, group, others respectively
 - ``ls -l`` gives you details on files.
 
-Modifying permissions
+Modifying permissions: the easy part
+------------------------------------
 
 ::
 
@@ -298,28 +302,72 @@ Some advanced permission bits:
 - t-bit: sticky bit, for directories it prevents from removing file by
   another user (example */tmp*)
 
+Setting default access permissions: add to *.bashrc* ``umask 027``
+[#umask]_.  The ``umask`` is what permissions are *removed* from any newly
+created file by default.  So ``umask 027`` means "by default,
+g-w,o-rwx any newly created files".  It's not really changing the
+permissions, just the default the operating system will create with.
+
+
+Modifying permissions: advanced
+------------------------
+Advanced access permissions
+
+* In "normal" unix, files have only "owner" and "group", and permissions
+  for owner/group/others.  This can be rather limiting.
+* Access control lists (ACLS) are an extension that allows an
+  arbitrary number of users and groups to have access rights to files.
+* ACLs don't show up in normal ``ls -l`` output, but there is an extra
+  plus sign: ``-rw-rwxr--+``.  ACLs generally work well, but there are
+  some programs that won't preserve them when you copy/move files, etc.
+* POSIX (unx) ACLs are controlled with ``getfacl`` and ``setfacl``
+
+ - Allow read access for a user ``setfacl -m u:<user>:r <file_or_dir>``
+ - Allow read/write access for a group ``setfacl -m g:<group>:rw <file_or_dir>``
+ - Revoke granted access ``setfacl -x u:<user> <file_or_dir>``
+ - See current stage ``getfacl <file_or_dir>``
+
+**Hint** even though file has a read access the top directory must be
+ searchable before external user or group will be able to access
+ it. Best practice on Triton ``chmod -R o-rwx $WRKDIR; chmod o+x
+ $WRKDIR``.  Execute (``x``) without read (``r``) means that you can
+ access files inside if you know the exact name, but not list the
+ directory.  The permissions of the files themselves still matter.
+
+
 **File managers** on Triton we have installed Midnight Commander -- ``mc``
 
 **Advanced file status** to get file meta info ``stat <file_or_dir>``
 
-:Exercise 1.2:
+
+[Lecture notes: hands-on ~30 mins till the end of this session]
+
+:Exercise 1.1.2:
  - mkdir in your ``$HOME`` (or ``$WRKDIR`` if on Triton), cd there and 'touch' a file.
    Rename it. Make a copy and then remove the original
  - list all files in /usr/bin and /usr/sbin that start with non-letter characters with
    one ``ls`` command
- - (*) ``ls`` lists all files/directories but dotted, but how to ``ls`` dot files/directories only?
- - Run ``file *`` to see what kind of files you have, how to list dot files also while avoiding . and .. directories on the list?
+ - (*) list with ``ls`` dot files/directories only (by default it lists all files/directories but dotted)
+ - Run ``file *`` to see what kind of files you have, how to list dot files also while
+ avoiding . and .. directories on the list?
  - (*) Discover ``stat file`` output. What metadata do you find?
 
-:Exercise 1.3:
- - on Triton use the recently created directory at ``$WRKDIR``, allow user and group members
+:Exercise 1.1.3:
+ - create a directory, use ``chmod`` to allow user and any group members
    full access and no access for others
- - change group ownership to (any group that you belong to is fine), set s-bit for the group and
+ - change that directory group ownership with ``chown`` or ``chgrp`` (any group that you
+   belong to is fine), set s-bit for the group and
    apply t-bit to a directory, check that the upper directory has *o+x* bit set: now you should
-   have a private working space for your group
- - create a directory and a subdirectory in it and set their permissions to 700 with one command
+   have a private working space for your group. Tip: see groups that you are a member of ``id -Gn``
+ - (*) create a directory and a subdirectory in it and set their permissions to 700 with one command
  - ``ls -ld`` tells you that directory has permissions ``rwxr-Sr--``, do group members have
    access there?
+ - create a directory, use ``setfacl`` to set its permissions so that only you and some
+ user/group of your choice would have access to it.
+ 
+
+1.2 session
+===========
 
 Hotkeys
 -------
@@ -347,7 +395,7 @@ Common hotkeys:
 - Ctrl-k -- remove end of the line, from cursor
 - Ctrl-w -- remove previous word
 
-**inputrc** Check */etc/inpurc* for some default key bindings, more can be defined *~/.inputrc* (left as an exercise)
+**inputrc** Check */etc/inpurc* for some default key bindings, more can be defined *~/.inputrc* (left as a home exercise)
 
 **CDPATH** helps changing directories faster. When you type ``cd dirname``, the shell tries to go
 to one of the local subdirectories and if it is not found shell will try the same command from every
@@ -382,14 +430,6 @@ One of the things to play with: command line prompt defined in PS1 [#ps1]_
 For special characters see PROMPTING at ``man bash``. To make it
 permanent, should be added to *.bashrc* like ``export PS1``.
 
-:Home exercise:
-  - customize a prompt ``$PS1``, make sure is has a current
-    directory name and the hostname in it in the format
-    *hostname:/path/to/current/dir*. Hint: save the original
-    PS1 like ``oldPS1=$PS1`` to be able to recover it any time.
-  - make it colorful
-  - take a look at https://www.tldp.org/LDP/abs/html/sample-bashrc.html 
-    Do you get any good ideas?
 
 Creating/editing/viewing file
 ------------------------------
@@ -422,9 +462,28 @@ Other quick ways to add something to a file (no need for an editor)
 
 Try: add above mentioned ``export PS1`` to *.bashrc*. Remember ``source .bashrc`` to enable changes
 
-:Home exercise: Set some default options for the ``less`` program in your
-	    bashrc.  Examples: case-insensitive searching, long
-	    prompt, wrapping lines.
+
+Utilities: the building blocks of shell
+---------------------------------------
+
+ - wide range of all kind of utilities available in Linux
+ - shell is a glue to bind them all together
+
+
+:Exercise 1.2.1:
+  - open ~/.bashrc for eiditng and add there CDPATH example from above, customize
+  it for your needs and test
+  - (*) Set some default options for the ``less`` program in your bashrc.
+  Examples: case-insensitive searching, long prompt, wrapping lines.
+  - customize a prompt ``$PS1``, make sure is has a current
+    directory name and the hostname in it in the format
+    *hostname:/path/to/current/dir*. Hint: save the original
+    PS1 like ``oldPS1=$PS1`` to be able to recover it any time.
+
+    - (*) make it colorful
+    - take a look at https://www.tldp.org/LDP/abs/html/sample-bashrc.html 
+    Do you get any good ideas?
+
 
 
 Input and output: redirect and pipes
@@ -581,18 +640,13 @@ at ``man grep``.  Some examples:
 [Lecturer's notes: ~20 minutes at the end of the session to proceed with the hands-on excersises.
 Leftovers can be said as a homework, one can go through them next session or give hints by email.]
 
-:Exercise 1.3:
+:Exercise 1.2.3:
  - make a pipe that counts number of files/directories (including dot files) in your directory
  - grep directories out of ``ls -l``
  - grep all but blank lines in triton:/etc/bashrc
  - (*) expand the previous one to filter out commented lines also (line starts with #)
  - expand ``du -hs * | sort -h`` to list dot files/directories also
  - (*) count unique logged in users on triton
-
-:Homework:
- - Finish up the exercises mentioned during the session if you have anything left
- - Get familiar with any of the text editor of your choice, nano, vim or
-   emacs. We will use it heavily during remaining sessions.
  - Play with the commands grep, cut: find at least two ways to
    extract IP addresses only out of /etc/hosts. Are there other ways?
  - (*) Using pipes and commands echo/tr/uniq, find doubled words out of 'My
@@ -600,10 +654,10 @@ Leftovers can be said as a homework, one can go through them next session or giv
 
 
 
-Linux Shell Scripting
-=====================
+PART #2. Linux Shell Scripting
+==============================
 
-2. session: BASH magic
+2.1 session: BASH magic
 ======================
 Last time, we focused on interactive things from the command line.
 Now, we build on that some and end up with making our own scripts.
@@ -1117,7 +1171,7 @@ BASH allows indirect referencing, consider::
  
 
 
-3. session: programming logic
+2.2 session: programming logic
 =============================
 Tests: ``[[ ]]``
 ----------------
@@ -1587,7 +1641,7 @@ needed, one can terminate loop or jump to a next iteration.
 
 
 
-4. session: arrays, traps, input and more
+2.3 session: arrays, traps, input and more
 =========================================
 
 Arrays
@@ -2140,44 +2194,6 @@ Ideas for exercises
 Bonus material
 ==============
 Parts that did not fit.
-
-
-Files and dirs: advanced
-------------------------
-Advanced access permissions
-
-* In normal unix, files have only "owner" and "group", and permissions
-  for owner/group/others.  This can be rather limiting.
-* Access control lists (ACLS) are an extension that allows an
-  arbitrary number of users and groups to have access rights to files.
-* ACLs don't show up in normal ``ls -l`` output, but there is an extra
-  plus sign: ``-rw-rwxr--+``.  ACLs generally work well, but there are
-  some programs that won't preserve them when you copy/move files, etc.
-* POSIX (unx) ACLs are controlled with ``getfacl`` and ``setfacl``
-
- - Allow read access for a user ``setfacl -m u:<user>:r <file_or_dir>``
- - Allow read/write access for a group ``setfacl -m g:<group>:rw <file_or_dir>``
- - Revoke granted access ``setfacl -x u:<user> <file_or_dir>``
- - See current stage ``getfacl <file_or_dir>``
-
-**Hint** even though file has a read access the top directory must be
- searchable before external user or group will be able to access
- it. Best practice on Triton ``chmod -R o-rwx $WRKDIR; chmod o+x
- $WRKDIR``.  Execute (``x``) without read (``r``) means that you can
- access files inside if you know the exact name, but not list the
- directory.  The permissions of the files themselves still matter.
-
-Setting default access permissions: add to *.bashrc* ``umask 027``
-[#umask]_.  The ``umask`` is what permissions are *removed* from any newly
-created file by default.  So ``umask 027`` means "by default,
-g-w,o-rwx any newly created files".  It's not really changing the
-permissions, just the default the operating system will create with.
-
-:Home exercise: practice with setfacl: set a directory permissions so
-		that only you and some user/group of your choice would
-		have access to a file.
-
-
 
 [FIXME: should be moved to another tutorial *SSH: beyond login*]
 
