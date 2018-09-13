@@ -31,8 +31,8 @@ Based on
  - see also other references in the text
 
 
-Linux Shell Basics
-==================
+PART #1. Linux Shell Basics
+===========================
 
 1. session: interactive shell
 =============================
@@ -91,11 +91,12 @@ What's a UNIX process?
 
 Process stat commands::
 
-  ps auxw
   top
+  htop
   pstree
   pstree -u $USER
   pstree -pu $USER
+  ps auxw
 
 You can find info about your user::
 
@@ -158,10 +159,10 @@ One can kill a process or make it "nicer".
   pkill <name>
   renice #priority <PID>
 
-Making process "nicer" means it will run only when nothing else in the system wants to.
+Making process "nicer", ``renice 19 <PID>``, means it will run only when nothing
+else in the system wants to.
 User can increase nice value from 0 (the base priority) up to 19. For instance it is 
-useful when you archive your data on system and do not care how long it takes in
-the background.
+useful when you backup your data in background or alike.
 
 
 Foreground and background processes
@@ -187,9 +188,16 @@ background jobs (remember forkbombs).
 
 Kill the foreground job: Ctrl-c
 
+**Hint** For running X Window apps while you logged in from other
+Linux / MacOS make sure you use ``ssh -X ...`` to log in. For Windows users,
+you need to install Xming [#xming]_ on your workstation.
 
-Exit the shell
---------------
+**Hint** For immediate job-state change notices ``set notify``. To automatically
+stop background processes if they try writing to the screen ``stty tostop``
+
+
+Exit the shell and 'screen' utility
+-----------------------------------
 ``logout`` or Ctrl-d (``export IGNOREEOF=1`` to *.bashrc* to prevent
 Ctrl-d from quitting).
 
@@ -216,12 +224,16 @@ Example: ``irssi`` on kosh / lyta
 
 :Exercise 1.1:
  - for Aalto users: set your SHELL to BASH if you have not yet done so: ``chsh -s /bin/bash`` on kosh
- - using any of the above mentioned tools list all your running processes
-   - see ``man ps`` and find out how to list a process tree with ps
+ - use ps / top / pstree to list all the running processes that belong to you
+   - (*) see ``man ps`` and find out how to list a processes tree with ps, both
+   all processes and only your own (but all your processes, associated with all terminals)
  - with pgrep list all bash and then zsh sessions on kosh or triton
- - log in to triton and run ``man ps``, send it to background, and ``logout``, then
+ - log in to triton/kosh and run ``man ps``, send it to background, and ``logout``, then
    log in again. Is it still there? Play with the ``screen``, run a session , then detouch it
    and log out, then log in back and get your original screen session back.
+ - run ``man htop``, send it to backround, and then kill it with ``kill``. Tip: one can
+   do it by background job number or by PID.
+   - (*) get any X Window application (firefox, xterm, etc) to run on Triton / kosh
   
 
 Files and directories
@@ -2088,6 +2100,7 @@ References
 ==========
 .. [#absguide] http://tldp.org/LDP/abs/html/index.html
 .. [#putty] https://www.putty.org/
+.. [#xming] http://www.straightrunning.com/XmingNotes/
 .. [#ps1] https://www.ibm.com/developerworks/linux/library/l-tip-prompt/
 .. [#find1] https://alvinalexander.com/unix/edu/examples/find.shtml
 .. [#find2] http://www.softpanorama.org/Tools/Find/index.shtml
