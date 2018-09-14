@@ -328,7 +328,8 @@ Advanced access permissions
  - Revoke granted access ``setfacl -x u:<user> <file_or_dir>``
  - See current stage ``getfacl <file_or_dir>``
 
-**Hint** even though file has a read access the top directory must be
+**Hint**
+ even though file has a read access the top directory must be
  searchable before external user or group will be able to access
  it. Best practice on Triton ``chmod -R o-rwx $WRKDIR; chmod o+x
  $WRKDIR``.  Execute (``x``) without read (``r``) means that you can
@@ -464,13 +465,6 @@ Other quick ways to add something to a file (no need for an editor)
 Try: add above mentioned ``export PS1`` to *.bashrc*. Remember ``source .bashrc`` to enable changes
 
 
-Utilities: the building blocks of shell
----------------------------------------
-
- - wide range of all kind of utilities available in Linux
- - shell is a glue to bind them all together
-
-
 :Exercise 1.2.1:
   - open ~/.bashrc for eiditng and add there CDPATH example from above, customize
   it for your needs and test
@@ -486,6 +480,18 @@ Utilities: the building blocks of shell
     Do you get any good ideas?
 
 
+Utilities: the building blocks of shell
+---------------------------------------
+
+ - wide range of all kind of utilities available in Linux
+ - shell is a glue to bind them all together
+
+::
+
+  cat; sort; tr; cut; head; wc; grep; # and many others
+ 
+We catch many of them on the way.
+
 
 Input and output: redirect and pipes
 ------------------------------------
@@ -499,9 +505,7 @@ Input and output: redirect and pipes
 
 Pipe: output of the first command as an input for the second one ``command_a | command_b``::
 
- # cat, sort, tr, cut, head, wc, grep examples
- 
- # send man page to a default printer
+  # send man page to a default printer
  man -t ls | lpr
  
  # see what directories use the most space
