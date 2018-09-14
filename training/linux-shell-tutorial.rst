@@ -45,7 +45,8 @@ Set yourself up with a BASH shell.  Connect to a server or open on your own comp
 Examples and demos given during the lecture are done on Triton, though should work
 on all other Linux installations.
 
-- Linux and Mac users: just open a terminal window. If you wish you can login to Triton.
+- Linux and Mac users: just open a terminal window. If you wish you can login
+  to Triton or any other `Aalto Linux server <http://scicomp.aalto.fi/aalto/remoteaccess.html>`__.
 - Windows users: install PuTTY [#putty]_ then *SSH* to any interactive server
   at Aalto or your department.
 
@@ -90,16 +91,16 @@ What's a UNIX process?
 
 - These concepts bind together *all* UNIX programs.
 
-Process stat commands::
+Process stat commands (feel frre to try, but we play more with them later)::
 
   top
   htop
   pstree
-  pstree -u $USER
-  pstree -pu $USER
+  pstree $USER
+  pstree -pau $USER
   ps auxw
 
-You can find info about your user::
+You can find info about your user (try them right away)::
 
   id
   echo $SHELL
