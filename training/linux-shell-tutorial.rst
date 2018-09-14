@@ -343,6 +343,61 @@ mounted directories otherwise supported on ext4, lustre, etc (thus works on Trit
 **Advanced file status** to get file meta info ``stat <file_or_dir>``
 
 
+find
+----
+* ``find`` is a very unixy program: it finds files, but in the most
+  flexible way possible.
+* It is a amazingly complicated program
+* It is a number one in searching files in shell
+
+With no options, just recursively lists all files starting in current directory::
+
+  find
+
+The first option gives a starting directory::
+
+  find /etc/
+
+Other search options: by modification/accessing time, by ownership, by access
+type, joint conditions, case-insensitive, that do not match, etc [#find1]_
+[#find2]_::
+
+ # -or-  'find ~ $WRKDIR -name file.txt' one can search more than one dir at once
+ find ~ -name file.txt
+ 
+ # look for jpeg files in the current dir only
+ find . -maxdepth 1 -name '*.jpg' -type f
+ 
+ # find all files of size more than 10M and less than 100M
+ find . -type -f -size +10M -size -100M
+ 
+ # find everything that does not belong to you
+ find ~ ! -user $USER | xargs ls -ld
+ 
+ # open all directories to group members
+ find . -type d -exec chmod g+rwx {} \;
+ 
+ # find all s-bitted binaries
+ find /usr/{bin,sbin} -perm /u=s
+ 
+ # find and remove all files older than 7 days
+ find path/dir -type f -mtime +7 -exec rm -f {} \;
+
+Find syntax is actually an entire boolean logic language given on the
+command line: it is a single expression evaluated left to right with
+certain precedence.  Thus, you can get amazingly complex if you want to.
+
+**find on Triton**  On Triton's WRKDIR it is ``lfs find``.  This uses a raw lustre connection
+to make it more efficient than accessing every file. Has somewhat limited abilities as comparing
+to GNU find. For details ``man lfs`` on Triton.
+
+**Fast find -- locate**  Another utility that you may find useful ``locate <pattern>``, but on
+workstations only.  This uses a cached database of all files, and
+just searches that database so it is much faster.
+
+**Too many arguments**  error solved with the ``find ... | xargs``
+
+
 [Lecture notes: hands-on ~30 mins till the end of this session]
 
 :Exercise 1.1.2:
@@ -350,27 +405,27 @@ mounted directories otherwise supported on ext4, lustre, etc (thus works on Trit
    Rename it. Make a copy and then remove the original
  - list all files in /usr/bin and /usr/sbin that start with non-letter characters with
    one ``ls`` command
+ - Find with ``find`` all the files in your $HOME that are readable or writable by everyone
  - (*) list with ``ls`` dot files/directories only (by default it lists all files/directories but dotted)
- - Run ``file *`` to see what kind of files you have, how to list dot files also while
- avoiding . and .. directories on the list?
  - (*) Discover ``stat file`` output. What metadata do you find?
-
-:Exercise 1.1.3:
  - create a directory, use ``chmod`` to allow user and any group members
    full access and no access for others
- - change that directory group ownership with ``chown`` or ``chgrp`` (any group that you
+ - (*) change that directory group ownership with ``chown`` or ``chgrp`` (any group that you
    belong to is fine), set s-bit for the group and
    apply t-bit to a directory, check that the upper directory has *o+x* bit set: now you should
    have a private working space for your group. Tip: see groups that you are a member of ``id -Gn``
- - (*) create a directory and a subdirectory in it and set their permissions to 700 with one command
  - ``ls -ld`` tells you that directory has permissions ``rwxr-Sr--``, do group members have
    access there?
- - create a directory, use ``setfacl`` to set its permissions so that only you and some
- user/group of your choice would have access to it.
+ - create a directory (in WRKDIR if on Triton and in /tmp if on any other server),
+ use ``setfacl`` to set its permissions so that only you and some
+ user/group of your choice would have access to it
+ - (*) create a directory and a subdirectory in it and set their permissions to 700 with one command
+ 
  
 
 1.2 session: interactive usage
 ==============================
+Interactive BASH
 
 Hotkeys
 -------
@@ -860,62 +915,6 @@ argument to the another command or just redirected as usual.
  # essentially, in some cases pipe and process substituion do the same
  ls -s | cat
  cat <(ls -s)
-
-
-find
-----
-* ``find`` is a very unixy program: it finds files, but in the most
-  flexible way possible.
-* It is a amazingly complicated program
-* It is a number one in searching files in shell
-
-With no options, just recursively lists all files starting in current directory::
-
-  find
-  find | grep some_filename
-
-The first option gives a starting directory::
-
-  find /etc/
-
-More options: by modification/accessing time, by ownership, by access
-type, joint conditions, case-insensitive, that do not match, etc [#find1]_
-[#find2]_::
-
- # -or-  'find ~ $WRKDIR -name file.txt' one can search more than one dir at once
- find ~ -name file.txt
- 
- # look for jpeg files in the current dir only
- find . -maxdepth 1 -name '*.jpg' -type f
- 
- # find all files of size more than 10M and less than 100M
- find . -type -f -size +10M -size -100M
- 
- # find everything that does not belong to you
- find ~ ! -user $USER | xargs ls -ld
- 
- # open all directories to group members
- find . -type d -exec chmod g+rwx {} \;
- 
- # find all s-bitted binaries
- find /usr/{bin,sbin} -perm /u=s
- 
- # find and remove all files older than 7 days
- find path/dir -type f -mtime +7 -exec rm -f {} \;
-
-Find syntax is actually an entire boolean logic language given on the
-command line: it is a single expression evaluated left to right with
-certain precedence.  Thus, you can get amazingly complex if you want to.
-
-**find on Triton**  On Triton's WRKDIR it is ``lfs find``.  This uses a raw lustre connection
-to make it more efficient than accessing every file. Has somewhat limited abilities as comparing
-to GNU find. For details ``man lfs`` on Triton.
-
-**Fast find -- locate**  Another utility that you may find useful ``locate <pattern>``, but on
-workstations only.  This uses a cached database of all files, and
-just searches that database so it is much faster.
-
-**Too many arguments**  error solved with the ``find ... | xargs``
 
 
 Aliases
