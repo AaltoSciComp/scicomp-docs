@@ -34,12 +34,11 @@ Based on
 PART #1. Linux Shell Basics
 ===========================
 
-1.1 session: interactive shell
-==============================
-Interactive usage of BASH
+1.1 session: processes and files
+================================
 
-First touch: getting a shell
-----------------------------
+First touch: getting a BASH shell
+---------------------------------
 
 Set yourself up with a BASH shell.  Connect to a server or open on your own computer.
 Examples and demos given during the lecture are done on Triton, though should work
@@ -271,8 +270,8 @@ inherited to other commands you run.
 **Quotation matters** ``echo "$USER"`` vs ``echo '$USER'``
 
 
-Permissions
------------
+File/directory permissions
+--------------------------
 - Permissions are one of the types of file metadata.
 - They tell you if you can *read* a file, *write* a file, and
   *execute a file/list directory*
@@ -284,6 +283,8 @@ Permissions
 
 Modifying permissions: the easy part
 ------------------------------------
+
+chmod/chown is what will work on all filesystems
 
 ::
 
@@ -297,7 +298,7 @@ Modifying permissions: the easy part
  # changing group ownership (you must be a group member)
  chgrp group_name <file or directory>
 
-Some advanced permission bits:
+Extra permission bits:
 
 - s-bit:  setuid/setgid bit, preserves user and/or group IDs.
 - t-bit: sticky bit, for directories it prevents from removing file by
@@ -309,10 +310,19 @@ created file by default.  So ``umask 027`` means "by default,
 g-w,o-rwx any newly created files".  It's not really changing the
 permissions, just the default the operating system will create with.
 
+**Hint**
+ even though file has a read access the top directory must be
+ searchable before external user or group will be able to access
+ it. Best practice on Triton ``chmod -R o-rwx $WRKDIR; chmod o+x
+ $WRKDIR``.  Execute (``x``) without read (``r``) means that you can
+ access files inside if you know the exact name, but not list the
+ directory.  The permissions of the files themselves still matter.
+
 
 Modifying permissions: advanced
 ------------------------
-Advanced access permissions
+Advanced access permissions, has limited usage, moslty do no work on NFS
+mounted directories otherwise supported on ext4, lustre, etc (thus works on Triton $WRKDIR)
 
 * In "normal" unix, files have only "owner" and "group", and permissions
   for owner/group/others.  This can be rather limiting.
@@ -327,15 +337,6 @@ Advanced access permissions
  - Allow read/write access for a group ``setfacl -m g:<group>:rw <file_or_dir>``
  - Revoke granted access ``setfacl -x u:<user> <file_or_dir>``
  - See current stage ``getfacl <file_or_dir>``
-
-**Hint**
- even though file has a read access the top directory must be
- searchable before external user or group will be able to access
- it. Best practice on Triton ``chmod -R o-rwx $WRKDIR; chmod o+x
- $WRKDIR``.  Execute (``x``) without read (``r``) means that you can
- access files inside if you know the exact name, but not list the
- directory.  The permissions of the files themselves still matter.
-
 
 **File managers** on Triton we have installed Midnight Commander -- ``mc``
 
@@ -368,8 +369,8 @@ Advanced access permissions
  user/group of your choice would have access to it.
  
 
-1.2 session
-===========
+1.2 session: interactive usage
+==============================
 
 Hotkeys
 -------
@@ -468,6 +469,7 @@ Try: add above mentioned ``export PS1`` to *.bashrc*. Remember ``source .bashrc`
 :Exercise 1.2.1:
   - open ~/.bashrc for eiditng and add there CDPATH example from above, customize
   it for your needs and test
+  - add ``umask 027`` to .bashrc
   - (*) Set some default options for the ``less`` program in your bashrc.
   Examples: case-insensitive searching, long prompt, wrapping lines.
   - customize a prompt ``$PS1``, make sure is has a current
