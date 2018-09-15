@@ -1,6 +1,6 @@
-================================================
-Teaching Jupyterhub instructions for instructors
-================================================
+=======================================================
+Teaching Jupyterhub instructions for course instructors
+=======================================================
 
 .. seealso::
 
@@ -12,15 +12,21 @@ Basics
 ======
 
 The JupyterHub installation provides a way to provide a notebook-based
-computational environment to students.  Optionally, you may use
-`nbgrader (notebook grader
+computational environment to students.  It is best to not think of
+this service as a way to *do assignments* in a restricted fashion, but as a general *light
+computing environment* that can also be used for courses.  Thus,
+students should feel empowered to do their own computing.  Jupyter
+works best for project/report type workflows, not lesson/exercise
+workflows but of course it can do that too.
+
+Optionally, you may use `nbgrader (notebook grader
 <https://nbgrader.readthedocs.io/en/stable/>`__ to make assignments,
 submit them to students, collect them, autograde them, manually grade,
 and then export a csv/database of grades.  From that point, it is up
-to you to manage.  There is currently no integration with any other
-system, except that Aalto accounts are used to login.
+to you to manage everything.  There is currently no integration with
+any other system, except that Aalto accounts are used to login.
 
-Currently we support Python the best, but there are `other language
+Currently we support Python the most, but there are `other language
 kernels available for Jupyter
 <https://github.com/jupyter/jupyter/wiki/Jupyter-kernels>`__.  For
 research purposes, see the :doc:`Triton Jupyter page
@@ -153,7 +159,7 @@ To use nbgrader:
 - If you ever get permission denied errors, let us know.  nbgrader
   does not support multiple instructors editing the same files that
   well, but we have tried to patch it in order to do this.  We may
-  still have missed some of the points here.
+  still have missed some things here.
 
 - nbgrader is `not secure
   <https://github.com/jupyter/nbgrader/issues/483>`__, because it runs
@@ -189,10 +195,10 @@ You should make a ``.gitignore`` file excluding some common things
 (TODO: maybe more is needed)::
 
   gradebook.db
-  release
-  submitted
-  autograded
-  feedback
+  release/
+  submitted/
+  autograded/
+  feedback/
   .nbgrader.log
   .ipynb-checkpoints
 
@@ -351,7 +357,7 @@ Limits
 More info
 =========
 
-Contact: CS-IT via the guru alias (students, contact your course
-instructors first).
+Contact: CS-IT via the guru alias guru @ cs dot aalto.fi (students,
+contact your course instructors first).
 
 For source code and reporting issues, see the main jupyterhub page.
