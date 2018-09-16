@@ -7,8 +7,10 @@ Course basics
 =============
 Linux Shell tutorial by Science IT at Aalto University.
 
-Abstract: consists of two parts: Linux Shell Basics and Linux Shell Scripting. The first 
-covers introductory level. The second covers actual BASH scripting. Learning by doing.
+Abstract: This course consists of two parts: Linux Shell Basics and Linux Shell Scripting. The first 
+covers introductory level shell usage (which also is a backdoor
+introduction to Linux basics). The second covers actual BASH
+scripting, using learning by doing.
 
 Linux Shell Basics: 2 sessions x 3h
 
@@ -50,18 +52,18 @@ on all other Linux installations.
   at Aalto or your department.
 
 
-About Linux Shell
------------------
+About the Linux Shell
+---------------------
 
-- Shell -- is what you get when your terminal window is open. It is a
+- A *shell* is what you get when your terminal window is open. It is a
   command-line (CLI), an interface that interpreters and executes the
   commands.
 - The name comes from being a "shell" (layer) around the operating
   system.  It connects and binds all programs together.
 - This is the basic, raw method of using UNIX-like systems.  It may
   not be used everyday, but it's really good (necessary) for any type
-  of automation and scripting - as is often need in Science or when
-  using Triton.
+  of automation and scripting - as is often needed in science, when
+  connecting pieces together, or when using Triton.
 - There are multiple shells.  This talk is about `bash
   <https://en.wikipedia.org/wiki/Bash_(Unix_shell)>`__, which is the
   most common one.  `zsh <https://en.wikipedia.org/wiki/Z_shell>`__ is
@@ -69,31 +71,43 @@ About Linux Shell
   powerful features.  `tcsh <https://en.wikipedia.org/wiki/Tcsh>`__ is
   another shell from a completely different family (the csh family),
   which has quite different syntax.
-- ``bash`` is a "Bourne shell": the "bourne-again shell".  Open source
+- ``bash`` is a "Bourne shell": the "bourne-again shell".  An open source
   version of original Bourne shell.
+- It may not be obvious, but the concepts here also apply to Windows
+  programs and will help you understand them.  They also apply more
+  directly to Mac programs, because Mac is unix under the hood.
+
+Basic shell operation
+---------------------
+- You type things on the screen (standard input or stdin).  The shell
+  uses this to make a command.
+- The shell takes the command, splits it into words, does a lot more
+  preprocessing, and then runs it.
+- When the command runs, the keyboard (still standard input) goes to
+  the process, output (standard output) goes to the screen.
 
 
 What's a UNIX process?
 ----------------------
 - To understand a shell, let's first understand what processes are.
-- All programs are a process: process is a program in action
+- All programs are a process: process is a program in action.
 - Processes have:
 
   - Process ID (integer)
-  - Name
+  - Name (command being run)
   - Command line arguments
   - input and output: ``stdin`` (input, like from keyboard),
     ``stdout`` (output, like to screen), ``stderr`` (like stdout)
   - Return code (integer) when complete
   - Working directory
-  - environment variables: key-values which get inherited.
+  - environment variables: key-values which get inherited across processes.
 
-- These concepts bind together *all* UNIX programs.
+- These concepts bind together *all* UNIX programs, even graphical ones.
 
-Process stat commands (feel frre to try, but we play more with them later)::
+Process listing commands (feel free to try, but we play more with them later)::
 
-  top
-  htop
+  top              # (q to quit)
+  htop             # (q to quit)
   pstree
   pstree $USER
   pstree -pau $USER
@@ -104,7 +118,7 @@ You can find info about your user (try them right away)::
   id
   echo $SHELL
 
-Your default shell is not a /bin/bash? Login to kosh/taltta and run ``chsh -s /bin/bash``
+Is your default shell is a ``/bin/bash``? Login to kosh/taltta and run ``chsh -s /bin/bash``
 
 Another way to find out what SHELL you are running::
 
@@ -116,15 +130,13 @@ information: current directory)
 Getting help in terminal
 ------------------------
 
-Before you Google for the command examples, try
-
-::
+Before you Google for the command examples, try::
 
   man command_name
 
 Your best friend ever -- ``man`` -- collection of manuals. Type
 */search_word* for searching through the man page.  But... if it's a
-builtin, you need to use ``help``
+builtin, you need to use ``help``.
 
 
 Built-in and external commands
@@ -146,11 +158,12 @@ There are two types of commands:
 becomes a default instead of built-in *echo*
 
 
-Working with the processes
---------------------------
+Working with processes
+----------------------
 All processes are related, a command executed in shell is a child process of
 the shell. When child process is terminated it is reported back to parent process.
-When you log out all shell child processes terminated along with the shell.
+When you log out all shell child processes terminated along with the
+shell.  You can see the whole family tree with ``ps af``.
 One can kill a process or make it "nicer".
 
 ::
@@ -173,42 +186,41 @@ foreground process is directly connected to your screen and
 keyboard. A background process doesn't have input connected.  There
 can only be one foreground at a time (obviously).
 
-If you add *&* right after the command will send the process to
-background. Example: ``firefox --no-remote &`` same can be done with
+If you add ``&`` right after the command will send the process to
+background. Example: ``firefox --no-remote &``, and same can be done with
 any terminal command/function, like ``man pstree &``.  In the big
 picture, the ``&`` serves the same role as ``;`` to separate commands,
 but backgrounds the first and goes straight to the next.
 
-If you have already running process, then Ctrl-z and then
+If you have already running process, you can background with Ctrl-z and then
 ``bg``. Drawback: there is no easy way to redirect the running task
 output, so if it generates output it covers your screen.
 
 List the jobs running in the background with ``jobs``, get a job back
 online with  ``fg`` or ``fg <job_number>``. There can be multiple
-background jobs (remember forkbombs).
+background jobs.
 
-Kill the foreground job: Ctrl-c
+Kill a foreground job: Ctrl-c
 
-**Hint** For running X Window apps while you logged in from other
+**Hint:** For running X Window apps while you logged in from other
 Linux / MacOS make sure you use ``ssh -X ...`` to log in. For Windows users,
 you need to install Xming [#xming]_ on your workstation.
 
-**Hint** For immediate job-state change notices ``set notify``. To automatically
+**Hint:** For immediate job-state change notifications, use ``set notify``. To automatically
 stop background processes if they try writing to the screen ``stty tostop``
 
 
 Exit the shell and 'screen' utility
 -----------------------------------
-``logout`` or Ctrl-d (``export IGNOREEOF=1`` to *.bashrc* to prevent
-Ctrl-d from quitting).
+``logout`` or Ctrl-d (if you don't want Ctrl-d to quit, set ``export IGNOREEOF=1`` in *.bashrc*).
 
 Of course, quitting your shell is annoying, since you have to start
 over.  Luckily there are programs so that you don't have to do this.
 In order to keep your sessions running while you logged out, you
-should discover the ``screen`` program.
+should learn about the ``screen`` program.
 
  - ``screen`` to start a session
- - Ctrl-a-d to detach the session while you are connected
+ - *Ctrl-a d* to detach the session while you are connected
  - ``screen -ls`` to list currently running sessions
  - ``screen -rx <session_id>`` to attach the session, one can use TAB for the autocompletion or skip the <session_id> if there is only one session running
  - ``tmux`` is a newer program with the same style.  It has some extra
@@ -226,17 +238,17 @@ Example: ``irssi`` on kosh / lyta
 :Exercise 1.1.1:
  - for Aalto users: set your SHELL to BASH if you have not yet done so: ``chsh -s /bin/bash`` on kosh
  - use ps / top / pstree to list all the running processes that belong to you
- 
+
    - (*) see ``man ps`` and find out how to list a processes tree with ps, both
-   all processes and only your own (but all your processes, associated with all terminals)
+     all processes and only your own (but all your processes, associated with all terminals)
 
  - with pgrep list all bash and then zsh sessions on kosh or triton
  - log in to triton/kosh and run ``man ps``, send it to background, and ``logout``, then
-   log in again. Is it still there? Play with the ``screen``, run a session , then detouch it
+   log in again. Is it still there? Play with the ``screen``, run a session , then detach it
    and log out, then log in back and get your original screen session back.
  - run ``man htop``, send it to backround, and then kill it with ``kill``. Tip: one can
    do it by background job number or by PID.
-   
+
    - (*) get any X Window application (firefox, xterm, etc) to run on Triton / kosh
   
 
@@ -245,15 +257,12 @@ Files and directories
 Files contain data.  They have a name, permissions, owner
 (user+group), contents, and some other metadata.
 
-``ls`` is the standard way of getting information about files.
-
-::
+``ls`` is the standard way of getting information about files.  There
+are many options::
 
  ls, ls -l, ls -lA, ./, ../, *, ?, [], [!], {abc,xyz}, {1..10}, \
 
-There are a variety of commands to manipulate files/directories:
-
-::
+There are a variety of commands to manipulate files/directories::
 
  cd, mkdir, cp, rm, rm -r, mv, ln, touch
 
@@ -284,9 +293,7 @@ File/directory permissions
 Modifying permissions: the easy part
 ------------------------------------
 
-chmod/chown is what will work on all filesystems
-
-::
+chmod/chown is what will work on all filesystems::
 
  chmod u+rwx,g-rwx,o-rwx <files>   # u=user, g=group, o=others, a=all
  # -or-
@@ -310,33 +317,36 @@ created file by default.  So ``umask 027`` means "by default,
 g-w,o-rwx any newly created files".  It's not really changing the
 permissions, just the default the operating system will create with.
 
-**Hint**
- even though file has a read access the top directory must be
- searchable before external user or group will be able to access
- it. Best practice on Triton ``chmod -R o-rwx $WRKDIR; chmod o+x
- $WRKDIR``.  Execute (``x``) without read (``r``) means that you can
- access files inside if you know the exact name, but not list the
- directory.  The permissions of the files themselves still matter.
+**Hint:**
+even though file has a read access the top directory must be
+searchable before external user or group will be able to access
+it. Sometimes on Triton, people do ``chmod -R o-rwx $WRKDIR; chmod o+x
+$WRKDIR``.  Execute (``x``) without read (``r``) means that you can
+access files inside if you know the exact name, but not list the
+directory.  The permissions of the files themselves still matter.
 
 
-Modifying permissions: advanced
-------------------------
-Advanced access permissions, has limited usage, moslty do no work on NFS
-mounted directories otherwise supported on ext4, lustre, etc (thus works on Triton $WRKDIR)
+Modifying permissions: advanced (*)
+-----------------------------------
+Access Control Lists (ACLs) are advanced access permissions.  They
+don't work everywhere, for example mostly do no work on NFS
+mounted directories.  They are otherwise supported on ext4, lustre,
+etc (thus works on Triton $WRKDIR).
 
 * In "normal" unix, files have only "owner" and "group", and permissions
   for owner/group/others.  This can be rather limiting.
 * Access control lists (ACLS) are an extension that allows an
-  arbitrary number of users and groups to have access rights to files.
+  arbitrary number of users and groups to have access rights to
+  files.  The basic concept is that you have: 
 * ACLs don't show up in normal ``ls -l`` output, but there is an extra
   plus sign: ``-rw-rwxr--+``.  ACLs generally work well, but there are
   some programs that won't preserve them when you copy/move files, etc.
 * POSIX (unx) ACLs are controlled with ``getfacl`` and ``setfacl``
 
- - Allow read access for a user ``setfacl -m u:<user>:r <file_or_dir>``
- - Allow read/write access for a group ``setfacl -m g:<group>:rw <file_or_dir>``
- - Revoke granted access ``setfacl -x u:<user> <file_or_dir>``
- - See current stage ``getfacl <file_or_dir>``
+  - Allow read access for a user ``setfacl -m u:<user>:r <file_or_dir>``
+  - Allow read/write access for a group ``setfacl -m g:<group>:rw <file_or_dir>``
+  - Revoke granted access ``setfacl -x u:<user> <file_or_dir>``
+  - See current stage ``getfacl <file_or_dir>``
 
 **File managers** on Triton we have installed Midnight Commander -- ``mc``
 
@@ -385,10 +395,11 @@ type, joint conditions, case-insensitive, that do not match, etc [#find1]_
 
 Find syntax is actually an entire boolean logic language given on the
 command line: it is a single expression evaluated left to right with
-certain precedence.  Thus, you can get amazingly complex if you want to.
+certain precedence.  There are match expressions and action
+expressions.  Thus, you can get amazingly complex if you want to.
 
-**find on Triton**  On Triton's WRKDIR it is ``lfs find``.  This uses a raw lustre connection
-to make it more efficient than accessing every file. Has somewhat limited abilities as comparing
+**find on Triton**  On Triton's WRKDIR you should use ``lfs find``.  This uses a raw lustre connection
+to make it more efficient than accessing every file. It has somewhat limited abilities as comparing
 to GNU find. For details ``man lfs`` on Triton.
 
 **Fast find -- locate**  Another utility that you may find useful ``locate <pattern>``, but on
@@ -401,27 +412,33 @@ just searches that database so it is much faster.
 [Lecture notes: hands-on ~30 mins till the end of this session]
 
 :Exercise 1.1.2:
- - mkdir in your ``$HOME`` (or ``$WRKDIR`` if on Triton), cd there and 'touch' a file.
-   Rename it. Make a copy and then remove the original
+ - mkdir in your ``$HOME`` (or ``$WRKDIR`` if on Triton), cd there and ``touch`` a file.
+   Rename it. Make a copy and then remove the original.  What does
+   ``touch`` do?
  - list all files in /usr/bin and /usr/sbin that start with non-letter characters with
    one ``ls`` command
  - Find with ``find`` all the files in your $HOME that are readable or writable by everyone
- - (*) list with ``ls`` dot files/directories only (by default it lists all files/directories but dotted)
- - (*) Discover ``stat file`` output. What metadata do you find?
+ - (*) list with ``ls`` dot files/directories only (by default it
+   lists all files/directories but not those that begin with ``.``).
+   "dotfiles" are a convention where filenames that begin with ``.``
+   such as ``.bashrc`` are considered "hidden".
+ - (*) Explore ``stat file`` output. What metadata do you find?  Try
+   to stat files of different types (regular file, directory, link,
+   special device in /dev, named pipe)
  - create a directory, use ``chmod`` to allow user and any group members
    full access and no access for others
  - (*) change that directory group ownership with ``chown`` or ``chgrp`` (any group that you
    belong to is fine), set s-bit for the group and
    apply t-bit to a directory, check that the upper directory has *o+x* bit set: now you should
    have a private working space for your group. Tip: see groups that you are a member of ``id -Gn``
- - ``ls -ld`` tells you that directory has permissions ``rwxr-Sr--``, do group members have
+ - ``ls -ld`` tells you that directory has permissions ``rwxr-Sr--``. Do group members have
    access there?
  - create a directory (in WRKDIR if on Triton and in /tmp if on any other server),
- use ``setfacl`` to set its permissions so that only you and some
- user/group of your choice would have access to it
- - (*) create a directory and a subdirectory in it and set their permissions to 700 with one command
- 
- 
+   use ``setfacl`` to set its permissions so that only you and some
+   user/group of your choice would have access to it.
+ - (*) create a directory and a subdirectory in it and set their permissions to 700 with one command.
+
+
 
 1.2 session: interactive usage
 ==============================
@@ -2159,7 +2176,7 @@ Available on Triton. See details in the *$course_directory/assignment/homework.t
 References
 ==========
 .. [#absguide] http://tldp.org/LDP/abs/html/index.html
-.. [#putty] https://www.putty.org/
+.. [#putty] https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 .. [#xming] http://www.straightrunning.com/XmingNotes/
 .. [#ps1] https://www.ibm.com/developerworks/linux/library/l-tip-prompt/
 .. [#find1] https://alvinalexander.com/unix/edu/examples/find.shtml
@@ -2176,7 +2193,7 @@ Divide into two courses:
    building blocks like grep, find, etc (expand from coreutils), redirections/pipe, screen,
    script, ssh tricks
  * Linux Shell Programming (4 sessions): programming logic, starting from command substitution
- 
+
 Additional topics:
  * sed, awk, perl as helpers
  * select command
