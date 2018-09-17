@@ -7,5 +7,12 @@
 #SBATCH --mem=2G
 #SBATCH -o r_parallel.out
 
-module load R
+# Set the number of OpenMP-threads to 1,
+# as we're using parallel for parallelization
+export OMP_NUM_THREADS=1
+
+# Load the version of R you want to use
+module load r
+
+# Run your R script
 srun Rscript r_parallel.R
