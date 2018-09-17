@@ -1,6 +1,6 @@
-=======================================================
-Teaching Jupyterhub instructions for course instructors
-=======================================================
+==============================================
+Jupyterhub instructions for course instructors
+==============================================
 
 .. seealso::
 
@@ -80,8 +80,12 @@ consisting of:
    b. Should non-students be allowed to submit assignments?  Default
       yes.
 
+   c. There is a "private" mode where only instructors and test
+      students can see the image.  If you want, we can create your
+      course in this mode.
+
 6. A list of computational resources per image.  Default is currently
-   512MB and 1 processor (oversubscribed).  Note that because this is
+   512MB and 3 processors (oversubscribed).  Note that because this is
    a container, *only* the memory of the actual Python processes are
    needed, not the rest of the OS.
 
@@ -253,6 +257,15 @@ so, do the below.
   resources first to avoid over-burdening free resources, and students
   should be advised as such.
 
+- If you have a ``/coursedata`` directory, you will have to provide
+  these files some other way.  You could put them in the assignment
+  directory and the ``release/`` git repository, but then you'll need
+  to have notebooks able to load them from two places: ``/coursedata``
+  or ``.``.  I'd recommend do this: ``import os``, ``if
+  os.path.exists('/coursedata'): DATADIR='/coursedata'``,  ``else:
+  DATADIR='.'`` and then access all data files by
+  ``os.path.join('DATADIR', 'filename.dat')``.  This has the added
+  advantage that it's easy to swap out ``DATADIR`` later, too.
 
 Instructions and hints to instructors
 =====================================
@@ -326,6 +339,7 @@ Instructions/hints
 - You should always do random checks of a fair fraction of notebooks,
   to avoid unexpected problems.
 
+- You can tell what image you have using ``echo $JUPYTER_IMAGE_SPEC``.
 
 Limits
 ------

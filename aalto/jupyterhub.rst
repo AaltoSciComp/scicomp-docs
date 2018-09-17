@@ -1,6 +1,6 @@
-=======================
-JupyterHub for Teaching
-=======================
+==========
+JupyterHub
+==========
 
 .. note::
 
@@ -161,7 +161,8 @@ FAQ and bugs
 * **Can I request more software be installed?**  Yes, let us know and
   we will include it if it is easy.  We aim to have featureful
   environments by default, but won't go so far as to install large
-  specialist software.
+  specialist software.  It should be in standard repositories (conda
+  or pip for Python stuff).
 
 * **Are there other programming languages available?** Currently there
   is only Python, but we could install other open-source languages.
