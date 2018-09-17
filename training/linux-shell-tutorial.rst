@@ -168,7 +168,7 @@ One can kill a process or make it "nicer".
 
 ::
 
-  psgrep -af <name>
+  pgrep -af <name>
   kill <PID>
   pkill <name>
   renice #priority <PID>
@@ -237,7 +237,7 @@ Example: ``irssi`` on kosh / lyta
 
 :Exercise 1.1.1:
  - for Aalto users: set your SHELL to BASH if you have not yet done so: ``chsh -s /bin/bash`` on kosh
- - use ps / top / pstree to list all the running processes that belong to you
+ - use top / pstree / ps to list all the running processes that belong to you
 
    - (*) see ``man ps`` and find out how to list a processes tree with ps, both
      all processes and only your own (but all your processes, associated with all terminals)
@@ -264,7 +264,7 @@ are many options::
 
 There are a variety of commands to manipulate files/directories::
 
- cd, mkdir, cp, rm, rm -r, mv, ln, touch
+ cd, mkdir, cp, cp -r, rm, rm -r, mv, ln, touch
 
 Note that ``cd`` is a shell builtin which change's the shell's own
 working directory.  This is the base from which all other commands
@@ -353,6 +353,40 @@ etc (thus works on Triton $WRKDIR).
 **Advanced file status** to get file meta info ``stat <file_or_dir>``
 
 
+
+[Lecture notes: hands-on ~30 mins till the end of this session]
+
+:Exercise 1.1.2:
+ - mkdir in your ``$HOME`` (or ``$WRKDIR`` if on Triton), cd there and ``touch`` a file.
+   Rename it. Make a copy and then remove the original.  What does
+   ``touch`` do?
+ - list all files in /usr/bin and /usr/sbin that start with non-letter characters with
+   one ``ls`` command
+ - (*) list with ``ls`` dot files/directories only (by default it
+   lists all files/directories but not those that begin with ``.``).
+   "dotfiles" are a convention where filenames that begin with ``.``
+   such as ``.bashrc`` are considered "hidden".
+ - Explore ``stat file`` output. What metadata do you find?  Try
+   to stat files of different types (regular file, directory, link,
+   special device in /dev, named pipe)
+ - create a directory, use ``chmod`` to allow user and any group members
+   full access and no access for others
+ - (*) change that directory group ownership with ``chown`` or ``chgrp`` (any group that you
+   belong to is fine), set s-bit for the group and
+   apply t-bit to a directory, check that the upper directory has *o+x* bit set: now you should
+   have a private working space for your group. Tip: see groups that you are a member of ``id -Gn``
+ - ``ls -ld`` tells you that directory has permissions ``rwxr-Sr--``. Do group members have
+   access there?
+ - create a directory (in WRKDIR if on Triton and in /tmp if on any other server),
+   use ``setfacl`` to set its permissions so that only you and some
+   user/group of your choice would have access to it.
+ - (*) create a directory and a subdirectory in it and set their permissions to 700 with one command.
+
+
+
+1.2 session: interactive usage
+==============================
+
 find
 ----
 * ``find`` is a very unixy program: it finds files, but in the most
@@ -409,43 +443,71 @@ just searches that database so it is much faster.
 **Too many arguments**  error solved with the ``find ... | xargs``
 
 
-[Lecture notes: hands-on ~30 mins till the end of this session]
+File archivation
+----------------
+Archiving directories on Linux == ``tar``. It is a standard de-facto for making archives,
+archived files may have extenssions *.tar*, *.tar.gz* etc depending on compression.
 
-:Exercise 1.1.2:
- - mkdir in your ``$HOME`` (or ``$WRKDIR`` if on Triton), cd there and ``touch`` a file.
-   Rename it. Make a copy and then remove the original.  What does
-   ``touch`` do?
- - list all files in /usr/bin and /usr/sbin that start with non-letter characters with
-   one ``ls`` command
+::
+
+ # create tar archive gzipped on the way
+ tar -czf arhive_name.tar.gz directory_to_be_archived/
+ 
+ # extract files
+ tar -xzf archive_name.tar.gz -C path/to/directory
+ 
+Other command line options: *r* - append files to the end of an archive, *t* - list
+archive content. *f* is for the filename, and *z* requires compression. Without compression
+files/directories are simply packed as is.
+
+::
+
+ # 'j' for bzipping
+ tar -cjf archive_file.tar.bz2 dir1/ dir2/
+
+If ``tar`` mostly used for big archives, like projects, whole directory trees
+then one file compressing happens with ``zip``::
+
+ zip file.zip file
+ unzip file.zip
+ 
+
+Transferring files (+archiving on the fly)
+-----------------------------------------
+For Triton users the ability to transfer files to/from Triton is essential.
+Same applicable to file transfer between your home workstation and kosh etc.
+
+Several use cases::
+
+ # transferring a file from your HOME on kosh to your home worstaion
+ scp -r AALTO_LOGIN@kosh.aalto.fi:file_to_copy .
+ 
+ # transferring files from Triton to your Aalto workstation
+ scp -r triton.aalto.fi:/scratch/work/LOGIN_NAME/some/files path/to/copy/to
+
+(*) Another use case, copying to Triton, or making a directory backup with ``rsync``::
+
+ rsync -urlptDxv --chmod=Dg+s somefile triton.aalto.fi:/scratch/work/LOGIN_NAME  # copy a file to $WRKDIR
+ rsync -urlptDxv --chmod=Dg+s dir1/ triton.aalto.fi:/scratch/work/LOGINNAME/dir1/  # sync two directories
+
+(*) Archiving your Triton data to some other place::
+
+ # login to Triton
+ cd $WRKDIR
+ tar czf - path/to/dir | ssh kosh.aalto.fi 'cat > path/to/archive/dir/archive_file.tar.gz'
+
+[Lecture notes: this session has three theory+excersise hands-ons, roughly 40+20 minutes each]
+
+:Exercise 1.2.1:
  - Find with ``find`` all the files in your $HOME that are readable or writable by everyone
- - (*) list with ``ls`` dot files/directories only (by default it
-   lists all files/directories but not those that begin with ``.``).
-   "dotfiles" are a convention where filenames that begin with ``.``
-   such as ``.bashrc`` are considered "hidden".
- - (*) Explore ``stat file`` output. What metadata do you find?  Try
-   to stat files of different types (regular file, directory, link,
-   special device in /dev, named pipe)
- - create a directory, use ``chmod`` to allow user and any group members
-   full access and no access for others
- - (*) change that directory group ownership with ``chown`` or ``chgrp`` (any group that you
-   belong to is fine), set s-bit for the group and
-   apply t-bit to a directory, check that the upper directory has *o+x* bit set: now you should
-   have a private working space for your group. Tip: see groups that you are a member of ``id -Gn``
- - ``ls -ld`` tells you that directory has permissions ``rwxr-Sr--``. Do group members have
-   access there?
- - create a directory (in WRKDIR if on Triton and in /tmp if on any other server),
-   use ``setfacl`` to set its permissions so that only you and some
-   user/group of your choice would have access to it.
- - (*) create a directory and a subdirectory in it and set their permissions to 700 with one command.
+ - (*) apply ``chmod o-rwx`` to all recently found files with ``find``
+ - Make a tar.gz archive of any of your directory at your HOME (or WRKDIR if on Triton), when done
+   list the archive content
+ - Try any use case with file transfering that fits your profile best, either scp, rsync or ssh+tar
 
 
-
-1.2 session: interactive usage
-==============================
-Interactive BASH
-
-Hotkeys
--------
+How to make things faster: hotkeys
+----------------------------------
 - Is it annoying to have to type everything in the shell?  No, because
   we have hotkeys.  In fact, it can become much more efficient and
   powerful to use the shell.
@@ -538,20 +600,17 @@ Other quick ways to add something to a file (no need for an editor)
 Try: add above mentioned ``export PS1`` to *.bashrc*. Remember ``source .bashrc`` to enable changes
 
 
-:Exercise 1.2.1:
-  - open ~/.bashrc for eiditng and add there CDPATH example from above, customize
-  it for your needs and test
-  - add ``umask 027`` to .bashrc
-  - (*) Set some default options for the ``less`` program in your bashrc.
-  Examples: case-insensitive searching, long prompt, wrapping lines.
-  - customize a prompt ``$PS1``, make sure is has a current
-    directory name and the hostname in it in the format
-    *hostname:/path/to/current/dir*. Hint: save the original
-    PS1 like ``oldPS1=$PS1`` to be able to recover it any time.
-
-    - (*) make it colorful
-    - take a look at https://www.tldp.org/LDP/abs/html/sample-bashrc.html 
-    Do you get any good ideas?
+:Exercise 1.2.2:
+ - open *~/.bashrc* for eiditng and add there CDPATH example from above, customize
+   it for your needs and test. Tip: remember ``source ~/.bashrc``.
+ - add ``umask 027`` to *.bashrc*, try creating files
+ - customize a prompt ``$PS1`` and add it to your *.bashrc*, make sure is has
+   a current directory name and the hostname in it in the format *hostname:/path/to/current/dir*.
+   Hint: save the original PS1 like ``oldPS1=$PS1`` to be able to recover it any time.
+   Take a look at https://www.tldp.org/LDP/abs/html/sample-bashrc.html 
+   Do you get any good ideas?
+ - (*) Set some default options for the ``less`` program in your bashrc.
+   Examples: case-insensitive searching, long prompt, wrapping lines.
 
 
 Utilities: the building blocks of shell
@@ -559,10 +618,12 @@ Utilities: the building blocks of shell
 
  - wide range of all kind of utilities available in Linux
  - shell is a glue to bind them all together
+ - commandline is often a long list of those utilities joint into pipe
+   that pass output of each other further
 
 ::
 
-  cat; sort; tr; cut; head; wc; grep; # and many others
+  cat; sort; tr; cut; head; date; tail; wc; grep; find  # and many others
  
 We catch many of them on the way.
 
@@ -582,8 +643,8 @@ Pipe: output of the first command as an input for the second one ``command_a | c
   # send man page to a default printer
  man -t ls | lpr
  
- # see what directories use the most space
- du -hs * | sort -h
+ # see what files/directories use the most space, including hidden ones
+ du -hs * .[!.]* | sort -h
  
  # count a number of logged in users
  w -h | wc -l
@@ -716,8 +777,6 @@ at ``man grep``.  Some examples:
  # grep H1 and H2 header lines out of HTML file
  grep "<[Hh][12]>" file.html
 
-[Lecturer's notes: ~20 minutes at the end of the session to proceed with the hands-on excersises.
-Leftovers can be said as a homework, one can go through them next session or give hints by email.]
 
 :Exercise 1.2.3:
  - make a pipe that counts number of files/directories (including dot files) in your directory
@@ -2260,43 +2319,3 @@ readable by you only)::
 Now try::
 
  ssh triton
-
-Transferring files (archiving on the fly)
------------------------------------------
-For Triton users the ability to transfer files to/from Triton is essential.
-
-Assume a use case: you have logged in to kosh/taltta/lyta/etc. To get
-some files from Triton's WRKDIR to one of the directories available
-around:
-
-::
-
- scp -r triton.aalto.fi:/scratch/work/LOGIN_NAME/some/files path/to/copy/to
-
-Another use case, copying to Triton, or making a directory backup
-
-::
-
- rsync -urlptDxv --chmod=Dg+s somefile triton.aalto.fi:/scratch/work/LOGIN_NAME  # copy a file to $WRKDIR
- rsync -urlptDxv --chmod=Dg+s dir1/ triton.aalto.fi:/scratch/work/LOGINNAME/dir1/  # sync two directories
-
-Another use case, you want to archive your Triton data to some other place
-
-::
-
- # login to Triton
- cd $WRKDIR
- tar czf - path/to/dir | ssh kosh.aalto.fi 'cat > path/to/archive/dir/archive_file.tar.gz'
-
-*tar* is the de-facto standard for archiving on UNIX systems. *z*
- stands for compressing with GZIP, otherwise directory is packed, but
- not compressed
-
- - ``tar czvf path/to/archive.tar.gz directory/to/archive/  another/file/to/archive.txt``  # to archive
- - ``tar xzf path/to/archive.tar.gz -C path/to/directory``  # to extract
- - ``tar tzf archive.tar.gz``
-
-:Try: whatever use case you have, try transferring files.
-
-:Exercise: make an alias so *rsyncing* a copy of your local directory (or kosh:somedir) to Triton
-
