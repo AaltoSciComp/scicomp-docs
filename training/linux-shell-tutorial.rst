@@ -443,33 +443,38 @@ just searches that database so it is much faster.
 **Too many arguments**  error solved with the ``find ... | xargs``
 
 
-File archivation
-----------------
-Archiving directories on Linux == ``tar``. It is a standard de-facto for making archives,
-archived files may have extenssions *.tar*, *.tar.gz* etc depending on compression.
+File archiving
+--------------
+
+``tar`` is the de-facto standard tool for saving many files or
+directories into a single archive file.  Archive files may have
+extenssions *.tar*, *.tar.gz* etc depending on compression.
 
 ::
 
  # create tar archive gzipped on the way
- tar -czf arhive_name.tar.gz directory_to_be_archived/
+ tar -caf arhive_name.tar.gz directory_to_be_archived/
  
  # extract files
- tar -xzf archive_name.tar.gz -C path/to/directory
+ tar -xaf archive_name.tar.gz -C path/to/directory
  
-Other command line options: *r* - append files to the end of an archive, *t* - list
-archive content. *f* is for the filename, and *z* requires compression. Without compression
+Other command line options: *r* - append files to the end of an
+archive, *t* - list archive content. *f* is for the filename, and *a*
+selects the compression method based on the archive file suffix (in
+this example gzip, due to the .gz suffix. Without compression
 files/directories are simply packed as is.
 
 ::
 
- # 'j' for bzipping
- tar -cjf archive_file.tar.bz2 dir1/ dir2/
+ # xz has better compression ratio than gzip, but is very slow
+ tar -caf archive_file.tar.xz dir1/ dir2/
 
-If ``tar`` mostly used for big archives, like projects, whole directory trees
-then one file compressing happens with ``zip``::
+Individual files can be compressed directly, e.g. with ``gzip``::
 
- zip file.zip file
- unzip file.zip
+ # file.gz is created, file is removed in the process.
+ gzip file
+ # Uncompress
+ gunzip file.gz
  
 
 Transferring files (+archiving on the fly)
