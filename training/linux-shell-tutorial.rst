@@ -237,7 +237,8 @@ Example: ``irssi`` on kosh / lyta
 
 :Exercise 1.1.1:
  - for Aalto users: set your SHELL to BASH if you have not yet done so: ``chsh -s /bin/bash`` on kosh
- - use top / pstree / ps to list all the running processes that belong to you
+ - find out with *man* how to use *top* / *pstree* / *ps* to list all the running processes that belong to you
+   Tip: *top* has both command line options and hot keys.
 
    - (*) see ``man ps`` and find out how to list a processes tree with ps, both
      all processes and only your own (but all your processes, associated with all terminals)
@@ -248,6 +249,9 @@ Example: ``irssi`` on kosh / lyta
    and log out, then log in back and get your original screen session back.
  - run ``man htop``, send it to backround, and then kill it with ``kill``. Tip: one can
    do it by background job number or by PID.
+ - Imagine a use case: your current ssh session got stuck and does not response. Open another
+   ssh session to the same remote host and kill the first one. Tip: ``echo $$`` gives you current
+   bash PID.
 
    - (*) get any X Window application (firefox, xterm, etc) to run on Triton / kosh
   
@@ -257,10 +261,36 @@ Files and directories
 Files contain data.  They have a name, permissions, owner
 (user+group), contents, and some other metadata.
 
-``ls`` is the standard way of getting information about files.  There
-are many options::
+Filenames may contain any character except '/', which is reseved as a separator between
+directory and filenames. The special characters would require quotaion while dealing,
+with such filenames, though it makes sence to avoid them anyway.
 
- ls, ls -l, ls -lA, ./, ../, *, ?, [], [!], {abc,xyz}, {1..10}, \
+Path can be absolute, starts with '/' or relative, that is related to the current directory.
+
+``ls`` is the standard way of getting information about files. By default it lists 
+your current directory (i.e. *pwd*), but there are many options::
+
+ # list directory content
+ ls /scratch/work
+
+ # list directory files including dot files (i.e. hidden ones)
+ ls -A ~/directory1
+ 
+ # list all files and directories using long format (permissions, timestamps, etc)
+ ls -lA ../../directory2
+
+Special notations and expanssions in BASH, can be used with any command::
+
+ ./, ../, ~, *, ?, [], [!], {abc,xyz}, {1..10}
+ 
+For the quotation::
+
+ '', "", \
+
+BASH first expand the expanssions and substitute the wildcards, and then
+execute the command. Could be as complex as::
+
+ ls -l ~/[!abc]???/dir{123,456}/filename*.{1..9}.txt
 
 There are a variety of commands to manipulate files/directories::
 
@@ -271,6 +301,27 @@ working directory.  This is the base from which all other commands
 work: ``ls`` by default tells you the current directory.  ``.`` is the
 current directory, ``..`` is the parent directory, ``~`` is your HOME.  This is
 inherited to other commands you run.
+
+::
+
+ # copy a directory preserving all the metadata to two levels up
+ cp -a dir1/ ../../
+
+ # move all files with the names like filename1.txt, filename_abc.txt etc to dir2/
+ mv filename*.txt dir2/
+ 
+ # remove a directories/files in the current dir without asking for the confirmation
+ rm -rf dir2/ dir1/ filename*
+ 
+ # create an empty file if doesn't exist or update its access/modification time
+ touch filename
+ 
+ # create several directories at once
+ mkdir dir3 dir4 dir5
+ 
+ # make a link to a target file (hard link by default, -s for symlinks)
+ ln target_file ../link_name
+
 
 **Discover other ls features** ``ls -lX``, ``ls -ltr``, ``ls -Q``
 
@@ -443,38 +494,33 @@ just searches that database so it is much faster.
 **Too many arguments**  error solved with the ``find ... | xargs``
 
 
-File archiving
---------------
-
-``tar`` is the de-facto standard tool for saving many files or
-directories into a single archive file.  Archive files may have
-extenssions *.tar*, *.tar.gz* etc depending on compression.
+File archivation
+----------------
+Archiving directories on Linux == ``tar``. It is a standard de-facto for making archives,
+archived files may have extenssions *.tar*, *.tar.gz* etc depending on compression.
 
 ::
 
  # create tar archive gzipped on the way
- tar -caf arhive_name.tar.gz directory_to_be_archived/
+ tar -czf arhive_name.tar.gz directory_to_be_archived/
  
  # extract files
- tar -xaf archive_name.tar.gz -C path/to/directory
+ tar -xzf archive_name.tar.gz -C path/to/directory
  
-Other command line options: *r* - append files to the end of an
-archive, *t* - list archive content. *f* is for the filename, and *a*
-selects the compression method based on the archive file suffix (in
-this example gzip, due to the .gz suffix. Without compression
+Other command line options: *-r* - append files to the end of an archive, *-t* - list
+archive content. *-f* is for the filename, and *-z* requires compression. Without compression
 files/directories are simply packed as is.
 
 ::
 
- # xz has better compression ratio than gzip, but is very slow
- tar -caf archive_file.tar.xz dir1/ dir2/
+ # 'j' for bzipping
+ tar -cjf archive_file.tar.bz2 dir1/ dir2/
 
-Individual files can be compressed directly, e.g. with ``gzip``::
+If ``tar`` mostly used for big archives, like projects, whole directory trees,
+then one file compressing happens with ``zip``::
 
- # file.gz is created, file is removed in the process.
- gzip file
- # Uncompress
- gunzip file.gz
+ zip file.zip file
+ unzip file.zip
  
 
 Transferring files (+archiving on the fly)
@@ -495,7 +541,7 @@ Several use cases::
  rsync -urlptDxv --chmod=Dg+s somefile triton.aalto.fi:/scratch/work/LOGIN_NAME  # copy a file to $WRKDIR
  rsync -urlptDxv --chmod=Dg+s dir1/ triton.aalto.fi:/scratch/work/LOGINNAME/dir1/  # sync two directories
 
-(*) Archiving your Triton data to some other place::
+(*) Transferring and archiving your Triton data on the fly to some other place::
 
  # login to Triton
  cd $WRKDIR
