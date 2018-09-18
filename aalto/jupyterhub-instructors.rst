@@ -165,6 +165,11 @@ To use nbgrader:
   well, but we have tried to patch it in order to do this.  We may
   still have missed some things here.
 
+- To autograde from the command line, add the option
+  ``--Autograde.create_student=True`` so that it will automatically
+  add students to the grader database.  This happens automatically if
+  you click the lightning bolt to autograde from the Formgrader UI.
+
 - nbgrader is `not secure
   <https://github.com/jupyter/nbgrader/issues/483>`__, because it runs
   the student's code as the instructor.  Students can do all
