@@ -556,10 +556,17 @@ Several use cases::
 
 :Exercise 1.2.1:
  - Find with ``find`` all the files in your $HOME that are readable or writable by everyone
- - (*) apply ``chmod o-rwx`` to all recently found files with ``find``
+
+   - (*) apply ``chmod o-rwx`` to all recently found files with ``find``
+
  - Make a tar.gz archive of any of your directory at your HOME (or WRKDIR if on Triton), when done
-   list the archive content
- - Try any use case with file transfering that fits your profile best, either scp, rsync or ssh+tar
+   list the archive content, then append another file/directory to the existing archive.
+   
+   - (*) Extract only one particular file to some subdirectory from the archive
+   
+ - Transfer just created archive using either ``scp`` or ``rsync``.
+ 
+   - (*) Try ssh+tar combo to make transfer and archive on the fly.
 
 
 How to make things faster: hotkeys
@@ -613,6 +620,10 @@ Initialization files and configuration
   - ``.bashrc`` (when SSH) and
   - ``.bash_profile`` (interactive login to a workstation)
   - they are often a symlink from one to another
+  
+- take a look at https://www.tldp.org/LDP/abs/html/sample-bashrc.html 
+   Do you get any good ideas?
+
 
 One of the things to play with: command line prompt defined in PS1 [#ps1]_
 
@@ -657,14 +668,13 @@ Try: add above mentioned ``export PS1`` to *.bashrc*. Remember ``source .bashrc`
 
 
 :Exercise 1.2.2:
+ - link *.bash_profile* to *.bashrc*. Tip: see ``ln`` command from the previous session.
  - open *~/.bashrc* for eiditng and add there CDPATH example from above, customize
    it for your needs and test. Tip: remember ``source ~/.bashrc``.
- - add ``umask 027`` to *.bashrc*, try creating files
+ - add ``umask 027`` to *.bashrc*, try creating files. Tip: ``umask -S`` prints your current setting.
  - customize a prompt ``$PS1`` and add it to your *.bashrc*, make sure is has
    a current directory name and the hostname in it in the format *hostname:/path/to/current/dir*.
    Hint: save the original PS1 like ``oldPS1=$PS1`` to be able to recover it any time.
-   Take a look at https://www.tldp.org/LDP/abs/html/sample-bashrc.html 
-   Do you get any good ideas?
  - (*) Set some default options for the ``less`` program in your bashrc.
    Examples: case-insensitive searching, long prompt, wrapping lines.
 
@@ -679,7 +689,7 @@ Utilities: the building blocks of shell
 
 ::
 
-  cat; sort; tr; cut; head; date; tail; wc; grep; find  # and many others
+  cat; sort; tr; cut; head; date; tail; wc; grep; uniq; paste; find  # and many others
  
 We catch many of them on the way.
 
@@ -839,7 +849,6 @@ at ``man grep``.  Some examples:
  - grep directories out of ``ls -l``
  - grep all but blank lines in triton:/etc/bashrc
  - (*) expand the previous one to filter out commented lines also (line starts with #)
- - expand ``du -hs * | sort -h`` to list dot files/directories also
  - (*) count unique logged in users on triton
  - Play with the commands grep, cut: find at least two ways to
    extract IP addresses only out of /etc/hosts. Are there other ways?
