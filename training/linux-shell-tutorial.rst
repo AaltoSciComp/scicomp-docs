@@ -287,6 +287,9 @@ For the quotation::
 
  '', "", \
 
+Quotation matters `` "$USER"`` vs ``echo '$USER'``
+
+
 BASH first expand the expanssions and substitute the wildcards, and then
 execute the command. Could be as complex as::
 
@@ -295,12 +298,16 @@ execute the command. Could be as complex as::
 There are a variety of commands to manipulate files/directories::
 
  cd, mkdir, cp, cp -r, rm, rm -r, mv, ln, touch
+ 
+For file/directory meta information or content type::
+
+ ls, stat, file
 
 Note that ``cd`` is a shell builtin which change's the shell's own
 working directory.  This is the base from which all other commands
 work: ``ls`` by default tells you the current directory.  ``.`` is the
 current directory, ``..`` is the parent directory, ``~`` is your HOME.  This is
-inherited to other commands you run.
+inherited to other commands you run. ``cd`` with no options drops your to your $HOME.
 
 ::
 
@@ -318,6 +325,8 @@ inherited to other commands you run.
  
  # create several directories at once
  mkdir dir3 dir4 dir5
+ # -or-
+ mkdir dir{3,4,5}
  
  # make a link to a target file (hard link by default, -s for symlinks)
  ln target_file ../link_name
@@ -325,9 +334,7 @@ inherited to other commands you run.
 
 **Discover other ls features** ``ls -lX``, ``ls -ltr``, ``ls -Q``
 
-**Type of file in one line** ``file <filename>``
-
-**Quotation matters** ``echo "$USER"`` vs ``echo '$USER'``
+You may also find useful ``rename`` utility implemented by Larry Wall.
 
 
 File/directory permissions
