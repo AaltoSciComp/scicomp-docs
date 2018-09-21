@@ -628,8 +628,7 @@ Initialization files and configuration
   - ``.bash_profile`` (interactive login to a workstation)
   - they are often a symlink from one to another
   
-- take a look at https://www.tldp.org/LDP/abs/html/sample-bashrc.html 
-   Do you get any good ideas?
+- To get an idea how complicated .bashrc can be take a look at <https://www.tldp.org/LDP/abs/html/sample-bashrc.html>
 
 
 One of the things to play with: command line prompt defined in PS1 [#ps1]_
@@ -754,6 +753,11 @@ Redirects:
  
  # join file1 and 2 lines one by one using : as a delimiter
  paste -s -d : file1 file2 > file3
+ 
+ # go through file1 and replace spaces with a new line mark, then output to file2
+ tr -s ' ' '\n' < file1 > file2
+ # -or- in more readable format
+ cat file1 | tr -s ' ' '\n' > file2
 
 **This is the unix philosophy** and the true power of the shell.  The
 **unix philosophy** is a lot of small, specialized, good programs
@@ -855,10 +859,15 @@ at ``man grep``.  Some examples:
  - make a pipe that counts number of files/directories (including dot files) in your directory
  - grep directories out of ``ls -l``
  - grep all but blank lines in triton:/etc/bashrc
- - (*) expand the previous one to filter out commented lines also (line starts with #)
- - (*) count unique logged in users on triton
- - Play with the commands grep, cut: find at least two ways to
-   extract IP addresses only out of /etc/hosts. Are there other ways?
+
+   - expand the previous one to filter out commented lines also (line starts with #). Note that
+     lines may have spaces before # mark.
+
+ - count unique logged in users on triton. Tip: ``w`` or ``users`` gives you
+   a list of all currently login users, many of them have several sessions open.
+ - (*) Play with the commands grep, cut: find at least two ways to
+   extract IP addresses only out of /etc/hosts. Tip: *grep* has *-o* option, thus one can build
+   a regular expression that will grab exactly what you need.
  - (*) Using pipes and commands echo/tr/uniq, find doubled words out of 'My
    Do Do list: Find a a Doubled Word'. Any easier way to do it?
 
