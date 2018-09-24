@@ -79,13 +79,16 @@ If you are reading this, you probably have a grant deadline and you
 need to do something *right now*.  Use the resources above, but here
 is some more advice:
 
-* Read the :doc:`data management outline <../data/outline>` on this
+* Read the :doc:`data management outline <../aalto/aaltodata>` on this
   site.  You should be able to pull many of the practical pieces
-  (storage, confidentiality, archiving, etc) from here.
+  (storage, confidentiality, archiving, etc) from here.  **Read this
+  first!**.
 
-* Read the `Aalto-level guidelines <aalto_rdm_plans_>`_.
+* Read the `Aalto-level guidelines <aalto_rdm_plans_>`_.  These are
+  quite abstract and high level, and might tell you what people think
+  is important but not tell you how to do stuff.
 
-* To internally organize things, start with the `A4 DMP template
+* To internally organize things, you could start with the `A4 DMP template
   <dmpA4_>`_.  This can't be used for something you submit, but lets
   you know the big picture.  If you fill this out first and give it to
   someone, they can guide you in making the next version.
@@ -95,13 +98,19 @@ is some more advice:
   the same using a word processor), but breaks everything down into a
   nice form.
 
+  * If you don't like the idea of a web form, the `templates seem to be
+    available publically <dmptuuli_templates_>`_, too.  These seem to
+    have roughly the info as the DMPTuuli web forms.
+
 .. _aalto_rdm_plans: http://www.aalto.fi/en/research/research_data_management/
+.. _dmptuuli_templates: https://dmptuuli.fi/public_templates/
 
 Why do they want DMPs?  What should it include?  Answering these will
-help you to make something competitive, even if you think you don't :
+help you to know what to write, since there is not near enough room to
+make a plan that contains everything *you* need to know personally.:
 
 * The main purpose is to make sure that other researchers can use your
-  results as easily as they can use your factual results.  Can other
+  data as easily as they can use your published papers.  Can other
   researchers access your data?  Can your results be reproduced?
 
 * Most likely, whoever is reading doesn't care *that* much about the
@@ -116,21 +125,27 @@ help you to make something competitive, even if you think you don't :
 
 * How software you make related to data processing (and really all
   software) will be handled.  Even if data can't be released, software
-  can be open sourced which allows reproduction of results, some sort
-  of validation.
+  can be open sourced which allows reproduction of results and some
+  sort of validation.
 
 * How you preserve data for future use: both for you, and for others.
+  This is especially important.  Also, how will data be
+  *understandable* in 50 years?  Is the program that will read it
+  gone?  Do you have a README?  Is your data in a field-specific
+  standard structured format?  Is it opened and does it go into an
+  archive which will be around in 50-100 years (anything managed by
+  you or Aalto specific isn't a credible option for this)?
 
 * You should mention how you will follow the "Aalto Research Data
   Management Policy and related guidance".  The policy just says "you
-  will make strategic decisions", so sounds good while not binding you
-  to anything.
+  will make strategic decisions", so sounds good to the funder while
+  not binding you to anything.
 
 * For storage, organization, confidentiality, etc, you can say you
   will follow the Science-IT data management policy.  This isn't
   requirements for you, but the default services we offer for data
   storage (designed to keep data safe and secure, and uuushareable).  It
-  also sounds good to say.  (see the :doc:`outline <outline>`)
+  also sounds good to say.  (see the :doc:`outline <../aalto/aaltodata>`)
 
 
 Model Academy of Finland DMP
@@ -226,12 +241,15 @@ something useful, too.
 
    - This gets more abstract, and really depends on what you want.
      There are many options, and maybe it is best to consult the
-     `Aalto page on this <ardm_pub_>`_, though it's again rather abstract.
+     `Aalto page on this <ardm_pub_>`_, though it's again rather
+     abstract.
 
    - You can check the :doc:`services page <services>` to see what
      common services are available.  If you don't have any more
      specialized repository to use, Zenodo is a good choice.  Always
      prefer a specialized, domain-specific repository if you can.
+     Don't say it is archived on Aalto resources, since you or Aalto
+     can't commit to hosting things or the long term.
 
    - You can say that organization of data is a part of research,
      though the extra requirements needed to open are small.  Give
