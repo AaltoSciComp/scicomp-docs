@@ -71,6 +71,8 @@ As some concrete suggestions:
   :doc:`citation <outline>` and/or :doc:`full text <datapolicy>`.
 
 
+.. _dmp-emergency:
+
 
 Help!  I need a DMP right now!
 ==============================
