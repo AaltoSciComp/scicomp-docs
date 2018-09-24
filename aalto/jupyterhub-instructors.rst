@@ -69,6 +69,13 @@ consisting of:
    access.  To request new instructors, contact CS-IT and ask that
    people be added/removed from your group ``jupyter-$coursename``.
 
+   a. Primary group owner (e.g. main instructor or professor).  Data
+   is stored in a group according to :doc:`Science-IT data policy
+   <datapolicy>`, and this person is in change of knowing what data
+   exists, granting access and telling us what to do with the data
+   long-term and they should be a long-term staff member.  There can
+   be deputies (e.g. head TA) which can grant access.
+
 5. A list of students (Aalto usernames).  This can be null if anyone
    with an Aalto account should be able to access the environment
    (this is recommended to be as open as possible and to save manual
@@ -176,7 +183,7 @@ To use nbgrader:
   sorts of bad things with this, and the only way to stop them is to
   check notebooks yourself before autograding.  We have a custom-build
   solution at https://github.com/AaltoScienceIT/isolate-namespace, but
-  it will require manual work.
+  it will require manual work.  This requires a Linux computer.
 
 
 
@@ -280,6 +287,14 @@ Instructions/hints
 
 - Request a course when you are sure you will use it.  You can use the
   general use containers for writing notebooks before that point.
+
+- The course directory is stored according to the :doc:`Science-IT
+  data policy <datapolicy>`.  In short, all data is stored in group
+  directories (for these purposes, the course is a group).  The
+  instructor in change is the owner of the group: this does not mean
+  they own all files, but are responsible for granting access and
+  answering questions about what to do with the data in the long
+  term.  There can be a deputy who can also grant access.
 
 - Store your course data in a git repository (or some other version
   control system) and push it to :doc:`version.aalto.fi </aalto/git>`

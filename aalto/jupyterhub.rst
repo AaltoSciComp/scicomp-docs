@@ -201,6 +201,12 @@ FAQ and bugs
   general use server instead of a course server.  Stop your
   server and go spawn the notebook server of your course.
 
+* **I'm getting an error code**  Here are the ones we know about:
+
+  - 504 Gateway error: The hub isn't running in background.  This may
+    be hub just restarting or us doing maintenance.  If it persists for
+    more than 30 minutes, let someone know.
+
 More info
 =========
 
