@@ -98,7 +98,7 @@ computing resources.
 
    scicomp/index
 
-Cheatsheets: `git for normal people <_ch-gfnp_>`_, `Gitlab (produced by Gitlab, with Aalto link) <ch-gitlab_>`_
+Cheatsheets: `git for normal people <ch-gfnp_>`_, `Gitlab (produced by Gitlab, with Aalto link) <ch-gitlab_>`_
 
 .. _ch-gfnp: https://users.aalto.fi/~darstr1/cheatsheets/git-for-normal-people-cheatsheet_1.0.pdf
 .. _ch-gitlab: https://users.aalto.fi/~darstr1/cheatsheets/git-cheatsheet.pdf
