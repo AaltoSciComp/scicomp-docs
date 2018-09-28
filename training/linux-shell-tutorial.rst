@@ -477,10 +477,11 @@ type, joint conditions, case-insensitive, that do not match, etc [#find1]_
  find ~ ! -user $USER | xargs ls -ld
  
  # open all directories to group members
- find . -type d -exec chmod g+rwx {} \;
+ # tip: chmod applies x-bit to directories automatically
+ find . -type d -exec chmod g+rw {} \;
  
- # find all s-bitted binaries
- find /usr/{bin,sbin} -perm /u=s
+ # find all s-bitted executable binaries
+ find /usr/{bin,sbin} -type f -perm -u+x,u+s
  
  # find and remove all files older than 7 days
  find path/dir -type f -mtime +7 -exec rm -f {} \;
@@ -489,6 +490,8 @@ Find syntax is actually an entire boolean logic language given on the
 command line: it is a single expression evaluated left to right with
 certain precedence.  There are match expressions and action
 expressions.  Thus, you can get amazingly complex if you want to.
+Take a look at the 'EXAMPLES' section in *man find* for the comprehensive list
+of examples and explanations.
 
 **find on Triton**  On Triton's WRKDIR you should use ``lfs find``.  This uses a raw lustre connection
 to make it more efficient than accessing every file. It has somewhat limited abilities as comparing
