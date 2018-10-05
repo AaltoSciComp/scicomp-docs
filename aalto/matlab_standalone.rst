@@ -2,6 +2,8 @@
 Standalone Matlab
 =================
 
+General matlab hints: http://math.aalto.fi/opetus/Mattie/MattieO/matlab.html
+
 Installation and license activation on staff-owned computers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -64,3 +66,45 @@ Install Triton-MDCS integration scripts
 
 Continue MDCS setup from `Matlab Distributed Computing
 Server <LINK/Matlab%20Distributed%20Computing%20Server>`__.
+
+
+FAQ
+~~~
+
+Matlab freezes with Out of Memory errors
+''''''''''''''''''''''''''''''''''''''''
+Q: Matlabs freezes and I get errors like this.  What to do?::
+
+  Exception in thread "Explorer NavigationContext request queue" java.lang.OutOfMemoryError: GC overhead limit exceeded
+        at com.mathworks.matlab.api.explorer.FileLocation.<init>(FileLocation.java:89)
+        at com.mathworks.matlab.api.explorer.FileLocation.getParent(FileLocation.java:126)
+       ... ... ...
+
+A1: Add more memory in Home -> Preferences -> General -> Java Heap
+memory
+
+A2: Can you free up memory in your code sooner using the ``clear`` command?
+https://se.mathworks.com/help/matlab/ref/clear.html
+
+
+GPU acceleration?
+'''''''''''''''''
+Q: is there functional GPU acceleration?  Does the acceleration even work?
+
+A: run code::
+
+  >> g = gpuDevice;
+  >> ng
+
+A2: Just query some feature::
+
+  >> fprintf('%s\n', g.ComputeCapability)
+
+
+a3: Show multiple devices if found::
+
+  >> for ii = 1:gpuDeviceCount
+  g = gpuDevice(ii);
+  fprintf(1,'Device %i has ComputeCapability %s \n', ...
+  g.Index,g.ComputeCapability)
+  end
