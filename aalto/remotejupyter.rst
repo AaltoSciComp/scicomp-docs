@@ -16,11 +16,11 @@ Aalto provides two “light computing” servers: ``brute.org.aalto.fi``, ``forc
   :alt: alternate text
   :figclass: align-center
 
-  < System activity on Brute > 
+  < System activity on Brute >
 
 
 .. code-block:: bash
-	
+
 	ssh username@brute.org.aalto.fi
 
 	# Create your Kerberos ticket
@@ -34,7 +34,7 @@ Aalto provides two “light computing” servers: ``brute.org.aalto.fi``, ``forc
 
 	# Create your env
 	conda create -n env-name python=3.6 jupyter
-	
+
 	# Activate your python environment
 	source activate env-name
 
@@ -44,8 +44,8 @@ Aalto provides two “light computing” servers: ``brute.org.aalto.fi``, ``forc
 Now back to your laptop
 
 .. code-block:: bash
-	
-	# Forward the port 
+
+	# Forward the port
 	ssh -L 12520:localhost:12520 -N -f -l username brute.org.aalto.fi
 
 Now launch your browser and go to http://localhost:12520 with your token.
