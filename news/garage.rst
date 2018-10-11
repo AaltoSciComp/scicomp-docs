@@ -52,7 +52,7 @@ Schedule
    20.9     |       | A106  |
    27.9     |       | A106  |
    4.10     |       | A106  |
-   11.10    |       | A106  |
+   11.10    |       | Outside T1  | Stand as part of CS research day
    18.10    |       | A106  |
    25.10    |       | A106  |
    1.11     |       | A106  |
