@@ -84,7 +84,12 @@ across notebooks (and copy and paste is bad).  This doesn't mean to
 not use notebooks: but do keep this in mind, and once your methods are
 mature enough (you are using the same code in multiple places), try to
 move the core functions and classes out into a separate library, and
-import this into the day-to-day exploration notebooks.
+import this into the day-to-day exploration notebooks.  For more about
+problems with notebooks and how to avoid them, see this fun talk `"I
+don't like notebooks" by Joel Grus
+<https://docs.google.com/presentation/d/1n2RlMdmv1p25Xy5thJUhkKGvjtV-dkAIsUXP-AL4ffI/edit>`__.
+These problems are *not* specific to notebooks, and will make your
+science better.
 
 In a cluster environment, notebooks are inefficient for big
 calculations because you must reserve your resources in advance, but
