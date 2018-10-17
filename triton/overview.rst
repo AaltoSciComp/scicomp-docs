@@ -44,6 +44,8 @@ Different types of nodes:
 
 * 67 compute nodes Dell PowerEdge C4130 servers with 2x Xeon E5 2680 v3 2.5GHz 12-core CPUs. 51 nodes ``pe[1-48,65-67]`` have 128 GB of DDR4-2133 memory while 15 nodes ``pe[49-64]`` have 256GB.
 
+* 9 compute nodes ``pe[83-91]`` Dell PowerEdge C4130 with 2x Xeon X5 E5-2680 v4 2.4 GHz 14-core CPUs.
+
 * 5 compute nodes ``gpu[23-27]`` for gpu computing.  CPUs are 2x12core Xeon
   E5-2680 v3 @ 2.50GHz and memory configuration 256GB DDR4-2400.
   There are 4x Tesla P100 16GB cards per node.
