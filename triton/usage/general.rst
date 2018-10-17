@@ -203,9 +203,9 @@ information, see the `slurm MPI
 guide <http://slurm.schedmd.com/mpi_guide.html>`__.
 
 Triton has several generations of different architectures, as of Oct
-2016 we have Opterons along with  Westmere, IvyBridge and Haswell Xeons.
-They have different number on CPU cores per node: 12 for Opterons and
-Westmere, 20 on IvyBridge and 24 on Haswell.
+2018 we have Westmere, IvyBridge, Haswell, and Broadwell Xeons.  They
+have different number on CPU cores per node: 12 for Westmere, 20 on
+IvyBridge, 24 on Haswell, and 28 on Broadwell.
 
 Submit a small MPI job
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -264,7 +264,7 @@ MPI example using Open MPI
      
     ----------------- 12 CPU cores case ---------------------------------------
      
-    #SBATCH --constraint=[wsm|opt]    # require either Opterons or Westemers, both 12 cores per node 
+    #SBATCH --constraint=wsm     # require Westemers, 12 cores per node 
     #SBATCH -N 4                 # on four nodes 
     #SBATCH -n 48                # 48 processes to run (4 x 12 = 48)
      

@@ -46,9 +46,9 @@ Other BLAS libraries
 --------------------
 
 In general MKL and OpenBLAS are recommended since they both provide good
-performance on both the Xeon and Opteron nodes. Other BLAS libraries
+performance on all the node types we have. Other BLAS libraries
 have various issues such as crashing when running on the incorrect node
-(e.g. running an Xeon optimized library on an Opteron node or vice
+(e.g. running an Haswell optimized library on an Westmer node or vice
 versa), or poor performance. In particular, the Netlib reference BLAS
 has **VERY** poor performance and should be avoided at all cost. Use it
 only for testing or if you need to debug numeric output. As can be seen
@@ -66,39 +66,7 @@ numerical linear algebra algorithms, built on top of BLAS. The
 recommended LAPACK implementation on triton is **MKL**. See instructions
 above for how to use it.
 
-Another option is architecture specific optimization and run on either
-Opterons or Xeons only (see ``--constraint=opteron`` and
-``--constraint=xeon`` options for sbatch/salloc). ``module avail`` shows
-a number of alternatives:
-
-::
-
-    gotoblas2/opteron-1.13-gcc
-    gotoblas2/xeon-1.13-gcc
-    lapack/opteron-3.4.0-gcc
-    lapack/xeon-3.4.0-gcc
-
-These guys are compiled with the specific optimization for Xeons or
-Opterons. Although GotoBlas2 is no longer developed it still provides
-very efficient BLAS routines. Using that instead of generic BLAS is
-recommended.
-
-Usage for Opterons:
-
-::
-
-    $ module load gotoblas2/opteron-1.13-gcc
-    $ module load lapack/opteron-3.4.0-gcc
-
-Usage for Xeons:
-
-::
-
-    $ module load gotoblas2/xeon-1.13-gcc
-    $ module load lapack/xeon-3.4.0-gcc
-
-Check out with ``module list`` that you have no Opteron and Xeon libs
-loaded at the same time and thus overlaping.
+Check out with ``module spider`` for other LAPACK versions.
 
 Scalapack
 =========

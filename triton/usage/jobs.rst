@@ -321,9 +321,9 @@ The ``slurm`` command output can be customized. Look in the for variable
 names in /usr/local/bin/slurm and place them into your own
 $HOME/.config/slurmvars file.
 
-For example, more detailed node info for those interested to know if
-either Xeon or Opteron machines are free. This changes the look of
-``slurm partitions``.
+For example, more detailed node info for those interested to know
+which kind of machines are free. This changes the look of ``slurm
+partitions``.
 
 ::
 

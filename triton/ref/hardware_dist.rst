@@ -4,9 +4,6 @@
 
 
    Node type                            | CPU count
-   16GB Opteron (2009)                  | 1536
-   32GB Opteron (2009)                  | 2244
-   64GB Opteron (2009)                  | 384
    48GB Xeon Westmere (2012)            | 1404
    24GB Xeon Westmere + 2x GPU (2012)   | 120
    96GB Xeon Westmere (2012)            | 288

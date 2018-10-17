@@ -752,9 +752,7 @@ The cluster has a few compiler sets. Which one I suppose to use? What are the li
 
 Currently there are two different sets of compilers: (i) GNU compilers,
 native for Linux, installed by default, (ii) Intel compilers plus MKL, a
-commercial suite, recommended as the fastest compiler on Xeons. We
-recommend to use Intel compiler on Xeon nodes and gcc/gfortran on
-Opterons.
+commercial suite, often the fastest compiler on Xeons.
 
 FGI provides all FGI sites with 7 Intel licenses, thus only 7 users can
 compile/link with Intel at once.
@@ -939,9 +937,7 @@ The cluster has a few compiler sets. Which one I suppose to use? What are the li
 
 Currently there are two different sets of compilers: (i) GNU compilers,
 native for Linux, installed by default, (ii) Intel compilers plus MKL, a
-commercial suite, recommended as the fastest compiler on Xeons. We
-recommend to use Intel compiler on Xeon nodes and gcc/gfortran on
-Opterons.
+commercial suite, the fastest compiler on Xeons.
 
 FGI provides all FGI sites with 7 Intel licenses, thus only 7 users can
 compile/link with Intel at once.

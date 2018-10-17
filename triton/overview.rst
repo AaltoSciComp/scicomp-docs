@@ -23,14 +23,6 @@ Hardware
 
 Different types of nodes:
 
-*  (Outdated, to be recycled in fall 2016) 336 compute nodes `HP
-   ProLiant BL465c
-   G6 <http://h10010.www1.hp.com/wwpc/us/en/en/WF05a/3709945-3709945-3328410-241641-3328419-3948605.html>`__,
-   each equipped with 2x Six-Core AMD Opteron 2435 2.6GHz processors.
-   192 compute nodes opt[1-64,68-80,249-360] have 32GB, 32 have 64GB
-   opt[81-112], 112 others have 16GB opt[361-488], 4xDDR Infiniband port
-   and local 10k SAS drive with diskspace available ~215GB.
-
 *  142 compute nodes `HP SL390s
    G7 <http://h10010.www1.hp.com/wwpc/us/en/sm/WF06a/15351-15351-3896136-3896139-4236125-4198401.html>`__,
    each equipped with 2x `Intel Xeon
@@ -65,11 +57,6 @@ Different types of nodes:
 .. include:: ref/hardware.rst
 
 
-Above are 16x BL465c blades in C7000 enclosure (we have 22 such boxes
-all together), enclosure with 8x 1U SL390s nodes,  2U implementation of
-SL390s with Tesla cards installed and 8x SL230s G8 Ivy Bridge nodes in
-the enclosure.
-
 All Triton computing nodes are identical in respect to software and
 access to common file system. Each node has its own unique host name and
 ip-address.
@@ -85,13 +72,13 @@ The internal networks are unaccessible from outside. Only the login node
 ``triton.aalto.fi`` has an extra Ethernet connection to outside.
 
 High performance InfiniBand has fat-tree configuration in general. Nodes
-are ``opt[1-112]`` and ``wsm*`` connected with ratio 2:1, thus for each 2
+``wsm*`` are connected with ratio 2:1, thus for each 2
 downlinks there is 1 uplink to spine switches. ``ivb[1-24]``, ``ivb[25-48]``,
 ``pe[1-48]`` and ``pe[49-67]`` have been connected with only 4 uplinks each,
 ratio 6:1, which are mainly used for Lustre communication. Running MPI
 jobs possible on the entire subsystem, but not across the cluster. Large
 MPI jobs may run on a particular segment only: either on
-``opt[1-112],wsm*`` or ``ivb[1-24]`` or ``ivb[25-48]`` or ``pe[1-48]`` or ``pe[49-67]``,
+``wsm*`` or ``ivb[1-24]`` or ``ivb[25-48]`` or ``pe[1-48]`` or ``pe[49-67]``,
 but not across them.
 
 See the IB topology map at `cluster technical details <details.rst>`_ page.
