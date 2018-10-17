@@ -63,10 +63,9 @@ LAPACK
 
 **L**\ inear **A**\ lgebra **Pack**\ age (LAPACK) is a library of
 numerical linear algebra algorithms, built on top of BLAS. The
-recommended LAPACK implementation on triton is **MKL**. See instructions
-above for how to use it.
-
-Check out with ``module spider`` for other LAPACK versions.
+recommended LAPACK implementation on triton is **MKL**.
+Alternatively, our OpenBLAS modules and libraries also contain the
+LAPACK library compiled agains the OpenBLAS BLAS library.
 
 Scalapack
 =========
