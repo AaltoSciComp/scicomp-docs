@@ -21,7 +21,8 @@ A few prerequisites:
 -  you must accept :doc:`Triton usage
    policies <usagepolicy>`: requesting access to
    Triton cluster at Aalto University, you accept all the conditions
-   listed in the Triton usage policies.
+   listed in the Triton usage policies, including the data and privacy
+   policies.
 -  You should tell us your department/school in your account creation
    request.
 -  Accounts are for
@@ -36,7 +37,7 @@ A few prerequisites:
 
 .. _scip: http://science-it.aalto.fi/scip/
 
-You should have Triton access if you are in the ``triton-users``
+You know that you have Triton access if you are in the ``triton-users``
 group at Aalto: ``groups`` shows this on Aalto linux machines.
 
 Your department/unit
@@ -73,3 +74,8 @@ data. Consider who should have your data after you are done: does your
 group still need access to it?. You won't have access to the files
 after your account is deactivated. Note that scratch/work directory
 data are unrecoverable after deleting, which will happen eventually.
+
+Terms of use/privacy policy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+See the :doc:`usagepolicy` page.

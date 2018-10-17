@@ -48,23 +48,43 @@ these conditions of use:
    <acknowledgingtriton>`.
 
 
+.. _privacypolicy:
 
-Triton metadata policies
-------------------------
+Triton data (privacy) policy
+----------------------------
 
-In this section, we describe the use of personal data on Triton.  In
-this context, "personal data" refers to administrative metadata about
-users and cluster usage.
+In this section, we describe the use of data on Triton.
 
-Triton does not store basic account information. Only username and uid
-are stored within Triton, and actual account information is provided
-by Aalto ITS.  We do not consider Triton to hold a personal data file,
-but for full disclosure we describe the data we do hold.
+In summary:
+
+* The **Triton account** is not a separate account, it is part of the
+  Aalto account.  We do not control that.
+* **Triton usage statistics and logs.**  Triton is used for university
+  academic research only, so this information may be used for
+  reporting and management in any way.  Identifying information won't
+  be public, but note that
+* **Data stored on Triton.**  We are not the controller of this data.
+  Data in your personal directories is controlled by you, and data in
+  shared directories is controlled by the manager of that group.  See
+  the :ref:`section below <tritondata>` for more information on this data.
+* **HAKA login data** (JupyterHub only).  This is used to secure
+  access to JupyterHub.  Only your Aalto account name is requested, it
+  is compared and immediately discarded (Triton already has your Aalto
+  account).
+* **The triton-users mailing list** is automatically formed from all
+  Aalto accounts in the triton-users group (everyone with an
+  account).  This is used to send service announcement and information
+  related to scientific computing.  This subscription is intrinsically
+  tied to the Triton account and a requirement of the cluster usage.
+  (Email information held by Aalto IT services).
+
+We do not consider the Triton management data to consist of a personal
+data file, but for full disclosure we describe the data we do hold.
 
 *Note about research data*: This section does not cover any data which
 users store on the cluster: for that, the user is the controller and
-Science-IT is only a processor.  Terms are listed under the storage
-pages.
+Science-IT is only a processor.  You are responsible for any
+administrative privacy matters.
 
 
 Controller and contact
@@ -106,15 +126,15 @@ Sources of information
 ~~~~~~~~~~~~~~~~~~~~~~
 Data is produced during the use of Triton for research purposes.  This
 data is generated directly by users while using the cluster.  Account
-and directory information is provide by Aalto University, and in
-general not stored or processed here.
+information is provide by Aalto University, and in general not stored
+or processed here.
 
 Data sharing
 ~~~~~~~~~~~~
 Data may be used for internal Aalto reporting and accounting (usually
-but not always aggregated at the cost center level), and used in
+but not always aggregated at least at the group level), and used in
 non-identifiable forms in public reports and statistics.  It may also
-be shared as needed to investigate usage problems.
+be used as needed to investigate usage matters.
 
 All users of the cluster may inspect the usage information and job
 statistics of the entire cluster (including all other users).
@@ -126,38 +146,49 @@ account.  Technical logging data allows accounting and reporting, and
 may be kept indefinitely.  Where possible, this may be in anonymous
 form.
 
-
 Legal notices
 ~~~~~~~~~~~~~
-Data is stored in Finland in Aalto or CSC data centers.  Access is
-only via Aalto account.  Data is not transmitted outside of Finland.
+Data is stored in Finland in Aalto or CSC approved facilities.  Access
+is only via Aalto account.
 
 You may request rectification of your data.  However, most data is
-technical logging information which can not be removed.  You may cease
-using the cluster, remove your research data, and request your account
-be closed.  Should technical errors in data be identified, a bug
-should be reported.
+technical logging information which can not be removed or changed.
+You may cease using the cluster, remove your research data, and
+request your account be closed.  Should technical errors in data be
+identified, a bug should be reported.
 
 You may access and extract your own data using the standard interfaces
 described in the user guide.
 
-You may lodge a complaint with the Aalto data protection officer (link
-TODO) or the Finnish supervision authority `Tietosuoja
+You may lodge a complaint with the Aalto data protection officer or
+the Finnish supervision authority `Tietosuoja
 <http://www.tietosuoja.fi/>`__.
 
 
 
+.. _tritondata:
+
 Research and home data stored on cluster
 ----------------------------------------
 
-We provide a storage service for for data stored on the cluster.  For
-full disclosure, the following are our rules for access of this data:
+We provide a storage service for for data stored on the cluster
+(scratch and home directories):
 
-* We do not look into private files without your consent.
+Our responsibility is limited to keeping this data secure and
+providing access to the corresponding Aalto accounts.  The shared
+directory manager should be able to make choices about data.  We do
+not access this data except with an explicit request, but for
+management purpose we do use the file metadata (`stat $filename`).
+For full information, see the :doc:`Science-IT data policy
+<../aalto/datapolicy>`.
 
-* If your files are made cluster-readable (`chmod` "other"
-  permissions), we may look at contents.  Note that this is not the
-  default setting.
+* We do not look into private files without your explicit request (if
+  you want help with something, explicitly tell us if we can look at
+  them).
+
+* If your files are made cluster-readable (the `chmod` "other"
+  permissions), you give permission for others to look at contents.
+  Note that this is not the default setting.
 
 * Should you report a problem, we may run `stat` as superuser on
   relevant files to determine basic metadata without further checks.
