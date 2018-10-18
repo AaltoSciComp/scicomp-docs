@@ -3,7 +3,7 @@ Boost
 =====
 
 :supportlevel: C
-:lastupdated: 2014
+:pagelastupdated: 2014
 
 Boost is a numerical library needed by some other packages. There is a
 rpm-package of this in the default SL/RHEL repositories. In case the

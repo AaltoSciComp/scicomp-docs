@@ -3,7 +3,7 @@ RStudio
 =======
 
 :supportlevel: C
-:lastupdated: 2014
+:pagelastupdated: 2014
 
 
 http://www.rstudio.com/ is an IDE for R

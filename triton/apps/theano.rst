@@ -2,7 +2,7 @@ Theano
 ------
 
 :supportlevel:
-:lastupdated:
+:pagelastupdated:
 :maintainer:
 
 If you're using the theano library, you need to tell theano to store

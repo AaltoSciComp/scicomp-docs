@@ -2,7 +2,7 @@ RStan
 =====
 
 :supportlevel: B
-:lastupdated: 2018-07-26
+:pagelastupdated: 2018-07-26
 :maintainer:
 
 RStan is an R interface to Stan.  Stan is a platform for modeling.

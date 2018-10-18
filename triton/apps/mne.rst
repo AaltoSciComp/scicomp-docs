@@ -1,7 +1,7 @@
 MNE
 ~~~
 
-:lastupdate: 2018
+:pagelastupdate: 2018
 :maintainer:
 
 ::

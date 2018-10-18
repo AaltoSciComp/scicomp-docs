@@ -3,7 +3,7 @@ Lammps
 ======
 
 :supportlevel: C
-:lastupdated: 2014
+:pagelastupdated: 2014
 
 
 `http://lammps.sandia.gov/ <http://lammps.sandia.gov/doc/Section_start.html#start_5>`__

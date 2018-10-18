@@ -2,7 +2,7 @@ Tensorflow
 ==========
 
 :supportlevel: A
-:lastupdated: 2018-07-21
+:pagelastupdated: 2018-07-21
 :maintainer:
 
 .. highlight:: bash

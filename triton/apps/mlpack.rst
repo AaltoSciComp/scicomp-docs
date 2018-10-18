@@ -2,7 +2,7 @@
 MLPack
 ======
 
-:lastupdated: 2014
+:pagelastupdated: 2014
 :supportlevel: C
 
 

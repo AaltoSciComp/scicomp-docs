@@ -2,7 +2,7 @@ Software name (enough details to be searchable on the app list)
 ===============================================================
 
 :supportlevel: A or B or C
-:lastupdated: 2018
+:pagelastupdated: 2018
 :maintainer: name
 
 Brief description of what the software does.  Other names (for searching)
