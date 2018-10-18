@@ -22,6 +22,12 @@ spider r`` and use the whole name::
 
   module load r/3.4.3-python-2.7.14
 
+If you want to detect the number of cores, you should use the proper
+Slurm environment variables (defaulting to default)::
+
+  library(parallel)
+  as.integer(Sys.getenv('SLURM_JOB_CPUS_PER_NODE', parallel::detectCores()))
+
 
 Installing packages
 ~~~~~~~~~~~~~~~~~~~
