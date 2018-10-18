@@ -53,7 +53,13 @@ these conditions of use:
 Triton data (privacy) policy
 ----------------------------
 
-In this section, we describe the use of data on Triton.
+Triton is a part of Aalto University IT systems, thus is fundamentally
+governed by the Aalto Privacy Policy for Employees or Privacy Policy
+for Students, the `latest versions of which can always be found on
+aalto.fi <https://www.aalto.fi/services/privacy-notices>`__.
+
+For clarity, in this section, we describe the special cases of Triton
+data:
 
 In summary:
 
@@ -69,8 +75,8 @@ In summary:
   the :ref:`section below <tritondata>` for more information on this data.
 * **HAKA login data** (JupyterHub only).  This is used to secure
   access to JupyterHub.  Only your Aalto account name is requested, it
-  is compared and immediately discarded (Triton already has your Aalto
-  account).
+  is compared and immediately discarded (Triton is already linked to
+  your Aalto account).
 * **The triton-users mailing list** is automatically formed from all
   Aalto accounts in the triton-users group (everyone with an
   account).  This is used to send service announcement and information
@@ -79,12 +85,14 @@ In summary:
   (Email information held by Aalto IT services).
 
 We do not consider the Triton management data to consist of a personal
-data file, but for full disclosure we describe the data we do hold.
+data file (this is covered under Aalto policies), but for full
+disclosure we describe our use of data.
 
 *Note about research data*: This section does not cover any data which
 users store on the cluster: for that, the user is the controller and
 Science-IT is only a processor.  You are responsible for any
-administrative privacy matters.
+administrative privacy matters.  The following subsections relate only
+to administrative metadata.
 
 
 Controller and contact
@@ -99,10 +107,10 @@ Account information comes from `Aalto ITS registers
 The purpose for processing the personal data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Data is processed and stored in accordance with our agreement to
-provide a HPC cluster service, in accordance with the usage agreement.
-The cluster may only be used to support Aalto (not personal)
-activities, and all usage metadata represents Aalto activities and is
-owned by Aalto University.
+provide a HPC cluster service including accounting and reporting, in
+accordance with the usage agreement.  The cluster may only be used to
+support Aalto (not personal) activities, and all thus usage metadata
+represents Aalto activities and is owned by Aalto University.
 
 Types of data
 ~~~~~~~~~~~~~
@@ -143,8 +151,8 @@ Timeframe
 ~~~~~~~~~
 Data related to usage remains as long as the user has an active Triton
 account.  Technical logging data allows accounting and reporting, and
-may be kept indefinitely.  Where possible, this may be in anonymous
-form.
+may be kept as long as needed for security and reporting purposes
+(indefinitely).  Where possible, this may be in anonymous form.
 
 Legal notices
 ~~~~~~~~~~~~~
@@ -153,15 +161,24 @@ is only via Aalto account.
 
 You may request rectification of your data.  However, most data is
 technical logging information which can not be removed or changed.
+
 You may cease using the cluster, remove your research data, and
-request your account be closed.  Should technical errors in data be
+request your account be closed (this does not close your Aalto account
+because we do not control that), but historical usage data will remain
+for accounting purposes.  Should technical errors in data be
 identified, a bug should be reported.
 
 You may access and extract your own data using the standard interfaces
 described in the user guide.
 
-You may lodge a complaint with the Aalto data protection officer or
-the Finnish supervision authority `Tietosuoja
+Identifiable administrative metadata and accounting data is not
+transferred outside of the EU/EEA except under proper agreement.  (We
+have to say that, but in reality identifiable data is never
+transferred out of Aalto or maybe the FGCI consortium in Finland).
+
+You may lodge a complaint with the Aalto data protection officer (see
+Aalto privacy notices for up to date contact information) or the
+Finnish supervision authority `Tietosuoja
 <http://www.tietosuoja.fi/>`__.
 
 
