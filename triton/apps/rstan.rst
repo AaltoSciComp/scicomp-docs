@@ -8,8 +8,8 @@ RStan
 RStan is an R interface to Stan.  Stan is a platform for modeling.
 
 
-Basic installation.
------------
+Basic installation
+------------------
 
 RStan is installed as an R package and there is nothing too special
 about it.

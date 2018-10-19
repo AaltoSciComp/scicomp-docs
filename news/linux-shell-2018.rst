@@ -58,4 +58,4 @@ participate to at least 75% of the lectures.
 
 
 **Contact**: `Ivan Degtyarenko
- <https://people.aalto.fi/ivan.degtyarenko#contact>`__
+<https://people.aalto.fi/ivan.degtyarenko#contact>`__

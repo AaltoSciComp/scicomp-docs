@@ -79,7 +79,7 @@ We support these machine learning packages out of the box:
 * CNTK:
 * Torch: currently possibly but not easy, in the future through singularity
 
-See the :ref:`application list <application-list>` or :ref:`GPU
+See the :ref:`application list <application-list>` or :doc:`GPU
 computing reference <../usage/gpu>` for more details.
 
 

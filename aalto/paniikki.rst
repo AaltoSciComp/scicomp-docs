@@ -14,7 +14,7 @@ hall T1). This documentation is a Paniikki cheatsheet.
 
   < The blue box at the entrance is Paniikki >
 
-For more services directed at students, see :doc:`welcomestudents.rst`.
+For more services directed at students, see :doc:`welcomestudents`.
 
 The name
 ========

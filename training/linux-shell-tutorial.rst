@@ -539,7 +539,7 @@ Individual files can be compressed directly, e.g. with ``gzip``::
  
 
 Transferring files (+archiving on the fly)
------------------------------------------
+------------------------------------------
 For Triton users the ability to transfer files to/from Triton is essential.
 Same applicable to file transfer between your home workstation and kosh etc.
 
@@ -880,7 +880,7 @@ PART #2. Linux Shell Scripting
 ==============================
 
 2.1 session: BASH magic
-======================
+=======================
 Last time, we focused on interactive things from the command line.
 Now, we build on that some and end up with making our own scripts.
 
@@ -1338,7 +1338,7 @@ BASH allows indirect referencing, consider::
 
 
 2.2 session: programming logic
-=============================
+==============================
 Tests: ``[[ ]]``
 ----------------
 * ``[[ expression ]]`` returns 0=true/success or 1=false/failure depending on the
@@ -1808,7 +1808,7 @@ needed, one can terminate loop or jump to a next iteration.
 
 
 2.3 session: arrays, traps, input and more
-=========================================
+==========================================
 
 Arrays
 ------

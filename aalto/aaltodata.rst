@@ -433,10 +433,10 @@ Instructions for storage and access
 
 Existing data groups and responsible contacts:
 
-* CS: `Existing groups <https://wiki.aalto.fi/display/CSdept/Data+groups>`_
-  and `CS-IT (guru) email here <http://do.cs.aalto.fi>`_
-* NBE: `Existing groups <https://wiki.aalto.fi/display/NBE/Data+groups>`_ and
-  `NBE IT (it-nbe) email here <https://wiki.aalto.fi/display/NBE/IT+Information>`_
+* CS: `Existing groups <https://wiki.aalto.fi/display/CSdept/Data+groups>`__
+  and `CS-IT (guru) email here <http://do.cs.aalto.fi>`__
+* NBE: `Existing groups <https://wiki.aalto.fi/display/NBE/Data+groups>`__ and
+  `NBE IT (it-nbe) email here <https://wiki.aalto.fi/display/NBE/IT+Information>`__
 * PHYS:
 * Aalto: Aalto IT servicedesk
 

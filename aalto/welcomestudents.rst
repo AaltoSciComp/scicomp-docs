@@ -56,7 +56,7 @@ Computation
 As a student, you have access to various light computational
 resources.
 
-.. csvtable::
+.. csv-table::
    :delim: |
 
    Panikki computer lab | workstations, GPUs, software via modules

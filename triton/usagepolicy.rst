@@ -195,7 +195,7 @@ Our responsibility is limited to keeping this data secure and
 providing access to the corresponding Aalto accounts.  The shared
 directory manager should be able to make choices about data.  We do
 not access this data except with an explicit request, but for
-management purpose we do use the file metadata (`stat $filename`).
+management purpose we do use the file metadata (``stat $filename``).
 For full information, see the :doc:`Science-IT data policy
 <../aalto/datapolicy>`.
 
@@ -203,11 +203,11 @@ For full information, see the :doc:`Science-IT data policy
   you want help with something, explicitly tell us if we can look at
   them).
 
-* If your files are made cluster-readable (the `chmod` "other"
+* If your files are made cluster-readable (the ``chmod`` "other"
   permissions), you give permission for others to look at contents.
   Note that this is not the default setting.
 
-* Should you report a problem, we may run `stat` as superuser on
+* Should you report a problem, we may run ``stat`` as superuser on
   relevant files to determine basic metadata without further checks.
 
 * Should you have a problem that requires us to look at the contents
