@@ -142,6 +142,8 @@ managed by us as part of Triton so that you get dedicated resources
 and can easily scale to the full power of Triton.  Triton is part of
 the Finnish Grid and Cloud Infrastructure.  Triton is the largest
 publically known computing cluster in Finland after the CSC clusters.
+Triton provides a web-based interface via :doc:`JupyterHub
+<../triton/apps/jupyter>`.
 
 `CSC <https://csc.fi>`_ (the Finnish IT Center for Science) is a
 government-owned organization which provides a lot of services, most
