@@ -13,9 +13,6 @@ staff somewhere (but apparently not online).  There is also a handy list of
 
 .. _itsr: https://inside.aalto.fi/display/ITServices/IT+Services+for+Research
 
-.. note::
-
-   Under construction
 
 Aalto service units
 ===================
@@ -29,16 +26,19 @@ some of the key players:
   <cs-it_>`_, `NBE <nbe-it_>`_, `PHYS <phys-it_>`_.
 * **Science-IT**: Overlaps with SCI department IT groups.  They run the
   Triton cluster and support scientific computing.  The main target
-  audience is the departments which fund them, but can assist anyone
-  in the university.  The core Science-IT departments are CS, NBE, and
+  audience is the departments which fund them, but their resources are
+  for anyone in the university.
+  The core Science-IT departments are CS, NBE, and
   PHYS.  Science-IT runs a weekly :doc:`SciComp garage
   <../news/garage>`, where we provide hands on support for anything
-  related to scientific computing.   `Official site <sci-it_>`_, but
-  :doc:`this site <../index>` is its day-to-day guidance.
+  related to scientific computing.
+  :doc:`This site (scicomp.aalto.fi) <../index>` is the user
+  instructions, but there is also an `official site <sci-it_>`_.
 * **Aalto ITS** (IT Services): Provides central IT infrastructure.
   Their support for complicated research situations and special
   scientific software is limited, but they are the first place to
-  contact if not in the School of Science.  Their infrastructure is also used in SCI,
+  contact if not in the School of Science.  Their infrastructure is
+  used in all schools including SCI,
   but supported by department teams.  Their instructions are on `Aalto
   Inside <its_instr_>`_, but most importantly the already-mentioned
   `IT Services for Research <itsr_>`_ page.  Contact via `servicedesk
@@ -47,7 +47,7 @@ some of the key players:
   Provides support for grantwriting, innovation and commercialization,
   sponsored projects, legal services for research, and research
   infrastructures.
-* **CSC** is the Finnish academic computing center.  They provide a
+* **CSC** is the Finnish academic computing center (and more).  They provide a
   lot of basic infrastructure you use without knowing it, as well as
   computing and data services to researchers (all for free).
 
@@ -57,35 +57,47 @@ some of the key players:
 .. _nbe-it: https://wiki.aalto.fi/display/NBE/IT+Information
 .. _phys-it: https://wiki.aalto.fi/display/TFYintra/PHYS+IT
 
-Also, currently Aalto has information is scattered everywhere:
+Also, currently Aalto has information is scattered on websites
+everywhere:
 
 * `aalto.fi <http://aalto.fi>`__ is the normal homepage, but doesn't
-  have much practical information for researchers.
+  have much practical information for researchers.  As of late 2018,
+  information from inside and into is supposed to move here.  The new
+  site is very hard to navigate (sorry, we can't do anything about
+  that) and the old site can be accessed at old.aalto.fi for a while.
+  In the future, you might have to log in to see everything.
 * `it.aalto.fi <https://it.aalto.fi>`__ is a new location for IT
   instructions, and somewhat replaces the old IT instructions on
-  inside.aalto.fi and into.aalto.fi.  It is still under active
+  inside.aalto.fi and into.aalto.fi.  It is still under
   development.  These generally relate to how to do a specific task -
   but not necessarily what is the best thing to do.
-* `inside.aalto.fi <https://inside.aalto.fi>`__ is the typical
+* `inside.aalto.fi <https://inside.aalto.fi>`__ is the *former* typical
   "official" staff documentation area, where most service units have
-  their homepages. This is perhaps the most important place to look,
+  their homepages.  In the 2018 redesign, this is supposed to be
+  merged to aalto.fi, but we don't know how that is going.  It may not
+  be updated anymore.  (Former info: This is
+  perhaps the most important place to look,
   but is *not* visible in any public search engines or on the search
   engine on the Aalto homepage - you have to go directly here to
-  search (so most people never find the Aalto official information).
+  search (so most people never find the Aalto official information).)
 * `into.aalto.fi <https://into.aalto.fi>`__ is the student official
   information.  It contains a lot of duplicate information compared to
   Inside and is public, so if you search things at Aalto you tend to
-  find answers here.
+  find answers here.  We heard it is also supposed to merge with
+  aalto.fi - we have no idea how that is going, it was re-developed
+  in 2018.
 * `wiki.aalto.fi <https://wiki.aalto.fi>`__ is obviously the Aalto
-  wiki space.  Anyone can make a space here, and many department's
+  wiki space.  Anyone can make a space here, and many departments'
   internal sites are here.  Searching can randomly find useful
   information.  Most sites aren't publically searchable.
 * :doc:`scicomp.aalto.fi <../index>` is where you are now.  Scicomp
-  was started by the Science-IT group from the Triton (HPC cluster)
-  documentation, which is slowly taking over from our department's
+  was started by the Science-IT team from the Triton (HPC cluster)
+  documentation, and scicomp is slowly taking over from our
+  departments'
   research IT instructions.  Now is is our general guidance to
-  researchers.  We would rather combine with other official sites, but
-  currently there's nothing standard-based and open.
+  researchers and the best place to find information on research and
+  scientific computing - as opposed to general "staff computing" you
+  find other places.
 
 
 
@@ -100,7 +112,9 @@ Desktops are connected directly to the wired networks.  :doc:`Linux
 desktops <../aalto/linux>` have fast and automatic access to all of
 the university data storage systems, including Triton and department
 storage.  They also have a wide variety of scientific software already
-ready (and somewhat similar to Triton).
+ready (and somewhat similar to Triton).  We have some limited
+instructions and pointers to the main instructions for :doc:`mac
+<../aalto/mac>` and :doc:`windows <windows>` computers.
 
 Managed laptops are usable in and out of the Aalto networks, and you
 can become "primary user" which allows you to install some software
@@ -116,22 +130,26 @@ Aalto workstations have basic scientific software installed.  From the
 workstations, you can use the :doc:`HTCondor <../aalto/htcondor>`
 distributed computing framework.
 
-Most HPC at Aalto is performed on :doc:`Triton <../triton/index>`, the
-Aalto HPC cluster.  It is a fairly standard medium-sized cluster, and
+Most demanding computing at Aalto is performed on :doc:`Triton
+<../triton/index>`, the
+Aalto high performance computing cluster.  It is a fairly standard
+medium-sized cluster, and
 it's main advantage is the close integration into the Aalto
 environment: it shares Aalto accounts, its data storage (2PB) is
-also available on workstations, and has responsive local support.  If
+also available on workstations, and has local support.  If
 you need dedicated resources, you can purchase them and they can be
-managed by us as part of Triton.  Triton is part of the Finnish Grid
-and Cloud Infrastructure.
+managed by us as part of Triton so that you get dedicated resources
+and can easily scale to the full power of Triton.  Triton is part of
+the Finnish Grid and Cloud Infrastructure.  Triton is the largest
+publically known computing cluster in Finland after the CSC clusters.
 
 `CSC <https://csc.fi>`_ (the Finnish IT Center for Science) is a
-government-owned organization.  They provide a lot of services, most
+government-owned organization which provides a lot of services, most
 notably HPC, data, and IT infrastructure services to the academic
 sector.  All of their services are free to the academic community
 (paid directly by the state of Finland).  They also coordinate the
 Finnish Grid and Cloud Infrastructure.  They have the largest known
-cluster in Finland.
+clusters in Finland.
 
 
 
@@ -143,10 +161,12 @@ get a massive mess and data isn't usable in even 5 years.  Funders now
 require "data management plans".  Thus data management is not just a
 *hot* topic, it's an *important* one.  We have a :doc:`whole section
 on data <../data/index>`, and also there are higher level `guides from
-Aalto <aaltordm_>`_, or you can check :doc:`our guide for researchers
-<../data/outline/>`.  If you have specific questions, there is an
-official service email address you can use (see the Aalto pages), or
-you can ask the Science-IT team.
+Aalto <aaltordm_>`_.  If you just want to get something done, you
+should start with our :doc:`Aalto-specific guideline for Science-IT
+data storage <aaltodata>` (used in CS, NBE, PHYS) - if you follow our
+plan, you will be doing better than most people..  If you have
+specific questions, there is an official service email address you can
+use (see the Aalto pages), or you can ask the Science-IT team.
 
 .. _aaltordm: http://www.aalto.fi/en/research/research_data_management/
 
@@ -154,7 +174,7 @@ Aalto has many data storage options, most free.  In general, you
 should put your data in some centralized location shared with your
 group: if you keep it only on your own systems, the data dies when you
 leave.  We manage data by *projects*: a group of people
-with shared access and a manager.  Groups provide flexibility,
+with shared access and a leader.  Groups provide flexibility,
 sharing, and long-term management (so that you don't lose or forget
 about data every time someone leaves).  You can request as many
 projects as you need, and each can have its own access control and
@@ -180,12 +200,17 @@ data to these systems from lab equipment.
 CSC provides both high-performance Lustre filesystems (like Triton)
 and archive systems.
 
+
 In our :doc:`data management section <../data/index>`, we provide many
 more links to long-term data repositories, archival, and so on.  The
 `OpenScience.fi <https://openscience.fi>`_ project is state-supported
-and has a lot more information on data.  They also provide some
-data storage focused on safety and longer-term storage, though they
-are harder to use.
+and has a lot more information on data (maybe `fairdata.fi
+<https://www.fairdata.fi>`__ is the new site?).  They also provide some
+data storage focused on safety and longer-term storage (like `IDA
+<ida>`__), though they are not very used at Aalto because we provide
+such good services locally.
+
+.. _ida: https://www.fairdata.fi/en/ida/
 
 
 
@@ -200,15 +225,14 @@ aren't, you should ask to be).  If you use Triton or are in a Science-IT departm
 can be worth asking Science-IT about software you need - we are
 experts in this and working to simplify the mess that scientific
 software is.  Windows workstations can have things automatically
-installed, but you'll have to find the method from the ITS
-instructions above.
+installed, check the :doc:`windows page <windows>`.
 
 Triton and Aalto workstations have the central software available,
 currently for laptops you are on your own.
 
-On Triton, type ``module spider $name`` to search for available
-software.  We are working to unify the software stack available on
-Triton and Aalto workstations.
+On Triton and Linux workstations, type ``module spider $name`` to
+search for available software.  We are working to unify the software
+stack available on Triton and Aalto workstations.
 
 ITS has a `software and licenses <its_sw_>`_ (`FI <its_sw_fi_>`_)
 page, and also a `full list of licenses <its_sw_list_>`_.  There is
@@ -235,9 +259,17 @@ in a few years).
   this guide does *not* relate to that.  You also don't have to do
   that stuff in order to do the steps below.
 
-- Request a data group (see above) if you don't already have a good
-  location.  This will keep all of your data together, in the same
-  place.
+- Think about how you'll manage data.  It's always easy to just start
+  working, but it can be worth getting all project members on the same
+  page about where data will be stored and what you want to happen to
+  it in the end.  Having a very short thing written will also help a
+  lot to get newcomers started.  The :doc:`"practical DMP" section
+  here <../data/plans>` can help a lot - try filling out that A4 page
+  to consider the big sections.
+
+- Request a data group (see above) if you don't already have a shared
+  storage location.  This will keep all of your data together, in the same
+  place.  As people join, you can easily give them access.
 
   - If you already have a data group that is suitable (similar
     members), you can use that.  But there's no limit to the number of
@@ -250,14 +282,6 @@ in a few years).
   - In the same message, request the different data storage
     locations, e.g. scratch, project, archive.  Quotas can always be
     increased later.
-
-- Think about how you'll manage data.  It's always easy to just start
-  working, but it can be worth getting all project members on the same
-  page about where data will be stored and what you want to happen to
-  it in the end.  Having a very short thing written will also help a
-  lot to get newcomers started.  The :doc:`"practical DMP" section
-  here <../data/plans>` can help a lot - try filling out that A4 page
-  to consider the big sections.
 
 
 
@@ -278,7 +302,7 @@ If you do anything computational or code-based at all, you should
 consider the twice-yearly `CodeRefinery <http://coderefinery.org/>`__
 workshops (announced on our page).  If you have a Triton account or do
 high-performance computing or intensive computing or data-related
-tasks, you want to come to the Summer (3 days) or Winter (1 day)
+tasks, you should come to the Summer (3 days) or Winter (1 day)
 kickstart, which teaches you the basics of Triton and HPC usage (we
 say it is "required" if you have a Triton account).
 

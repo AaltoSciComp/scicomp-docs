@@ -3,13 +3,13 @@ Aalto Windows
 =============
 
 This page describes the Aalto centrally-managed Windows computers,
-where login is via Aalto accounts.  If you have a standalone laptop,
-some of this may be relevant, but for the most part you will access
-your data and Aalto resources via :doc:`remoteaccess`.
+where login is via Aalto accounts.  If you have a standalone laptop
+(login not using Aalto account), some of this may be relevant, but for
+the most part you will access your data and Aalto resources via
+:doc:`remoteaccess`.
 
-.. note::
+More instructions: https://inside.aalto.fi/display/ITServices/Windows
 
-   This page is still under development.
 
 
 Basics
@@ -17,34 +17,28 @@ Basics
 
 In the Aalto installations, login is via Aalto account only.
 
-- accounts
-- login/upgrades
-
-Initial setup
-~~~~~~~~~~~~~
+- You must be on the Aalto network the first time you connect.
 
 Full disk encryption
 ~~~~~~~~~~~~~~~~~~~~
 
-TODO: Aalto instructions
+Aalto Windows laptops come with this by default, tied to your login
+password.  To verify encryption, find "BitLocker" from the start menu
+and check that it is on.
 
 Note, that on standalone installations, you can do encryption by
 searching "TrueCrypt" in programs - it is already included.
 
-Remote usage
-~~~~~~~~~~~~
-
-
-Laptop-specific
----------------
 
 Data
 ----
-This section details built-in ways of accessing data storage
-locations.  For generic ways of accessing, see :doc:`remoteaccess`.
-For Aalto data storage locations, see :doc:`aaltostorage` and :doc:`../data/outline`.
 
-(project, archive, scratch, home mainly)
+This section details built-in ways of accessing data storage
+locations.  For generic ways of accessing remotely, see
+:doc:`remoteaccess`.  For Aalto data storage locations, see
+:doc:`aaltostorage` and :doc:`aaltodata`.
+
+Your home directory is automatically synced to some degree.
 
 You can store local data at
 ``C:\LocalUserData\User-data\<yourusername>``.  Note that this is not
@@ -68,8 +62,8 @@ Installing other software
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To install most other software, you need to apply for a workstation
-admin (``wa``) account.
-
+admin (``wa``) account.  Contact your department IT to get the process
+started.
 
 
 Common problems

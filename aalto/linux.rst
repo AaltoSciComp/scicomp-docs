@@ -13,15 +13,16 @@ This page is mainly about the Linux flavor in CS/PHYS/NBE, co-managed
 by these departments and Science-IT.  Most of it is relevant to all
 Aalto, though.
 
+
+
 Basics
-~~~~~~
+------
 
 -  Aalto home directory. In the Aalto Ubuntu workstations, your home
    directory will be your Aalto home directory. That is, the same home
    directory that you have in Aalto Windows machines and the Aalto
    Linux machines, including shell servers (kosh, taltta, lyta, brute, force).
--  New installations are using Ubuntu 16.04 LTS, but some former
-   installations might have Ubuntu 14.04.
+-  Most installations have Ubuntu 16.04, 18.04 is coming soon.
 -  `Some basic information from Aalto is availiable at
    Inside <https://inside.aalto.fi/display/ITServices/Linux>`__.
 -  **Login is with Aalto credentials**. Anyone can
@@ -39,8 +40,10 @@ Basics
    Triton <../triton/index>`. Science-IT is a school of
    science collaboration, and its administrators are embedded in NBE,
    PHYS, CS IT.
--  Workstations are on a dedicated VLAN. The network port must be
-   configured before it can be turned on. You can request other network
+-  Workstations are on a dedicated network VLAN. The network port must be
+   configured before it can be turned on and you can't just assume
+   that you can move your computer to anywhere else. You can request
+   other network
    ports enabled for personal computers, just ask.
 -  Installation is fully automated via netboot. Once configuration is
    set up, you can reboot and PXE boot to get a fresh install. There is
@@ -77,20 +80,71 @@ Basics
    data, even if the primary user changes, but it is better safe than
    sorry. Contact IT if you want wipes.
 
-Project groups
-~~~~~~~~~~~~~~
+Laptops
+~~~~~~~
 
-Unix groups provide access control to data and some
-workstations. See :doc:`data management <../data/index>`.
+-  You can get laptops with Linux on it.
+-  Each user should log in the first time while connected to the Aalto
+   network.  This will cache the authentication information, then you
+   can use it wherever you want.
+-  Home directories can be synced with the Aalto home directories. This
+   is done using unison. TODO: not documented, what about this?
+-  If you travel, make sure that your primary user is set correctly
+   before you go. The system configuration can't be updated remotely.
+-  Otherwise, environment is like the workstations.  You don't have
+   access to the ``module`` system, though.
+-  If the keychain password no longer works: see FAQ at the bottom.
 
-Storage available
-~~~~~~~~~~~~~~~~~
+Workstations
+~~~~~~~~~~~~
 
-See the general :doc:`storage page <aaltostorage>` for the full
-story.  All of the common shared directories are available by default.
+Most material on this page defaults to the workstation instructions.
 
-Full disk encryption
-~~~~~~~~~~~~~~~~~~~~
+
+
+Primary User
+------------
+
+The workstations have a concept of the "primary user". This user can
+install software from the existing software repositories and ssh
+remotely to the desktops.
+
+- Primary users are implemented as a group with name
+   ``$hostname-primaryuser``. You can check primary user of a computer
+   by using ``getent group $hostname-primaryuser`` or check your
+   primary-userness with ``groups``.
+-  If you have a laptop setup, make sure you have the PrimaryUser
+   set!  This can't be set remotely.
+-  **Make sure to let us know about primary users when you get a new
+   computer set up or change computers.** You don't have to, but it
+   makes it convenient for you.
+-  It is not currently possible to have group-based primary users (a
+   group of users all have primary user capabilities across a whole set
+   of computers, which would be useful in flexible office spaces). TODO:
+   are we working on this? (however, one user can have primary user
+   access across multiple computers, and hosts can have multiple primary
+   users, but this does not scale well)
+
+
+
+Data
+----
+
+See the general :doc:`storage page <aaltostorage>` for the full story
+(this is mainly oriented towards Linux).  All of the common shared
+directories are available on department Linux by default.
+
+We recommend that most data is stored in shared group directories, to
+provide access control and sharing.  See :doc:`the Aalto data page
+<aaltodata>`.
+
+You can use the program ``unison`` or ``unison-gtk`` to synchronise
+files.
+
+
+
+Full disk encryption (Laptops)
+------------------------------
 
 All new (Ubuntu 16.04) laptops come with full disk encryption by default
 (`instructions <https://inside.aalto.fi/display/ITServices/Disk+Encryption+in+Aalto+Linux>`__).
@@ -104,33 +158,22 @@ for alternative users for shared computers. Aalto ITS also has a backup
 master key.  (If you have local root access, you can do this with
 ``cryptsetup``, but if you mess up there's nothing we can do).
 
-Primary User
-~~~~~~~~~~~~
+Desktop workstations do not have full disk encryption, because data is
+not stored directly on them.
 
-**The workstations have a concept of the "primary user". This user can
-install software from the existing software repositories and ssh
-remotely to the desktops.**
 
--  Primary users are implemented as a group with name
-   ``$hostname-primaryuser``. You can check primary users by using the
-   group querying commands above.
--  If you have a laptop setup, make sure you have the PrimaryUser
-   privileges!
--  **Make sure to let us know about primary users when you get a new
-   computer set up or change computers.** You don't have to, but it
-   makes it convenient for you.
--  It is not currently possible to have group-based primary users (a
-   group of users all have primary user capabilities across a whole set
-   of computers, which would be useful in flexible office spaces). TODO:
-   are we working on this? (however, one user can have primary user
-   access across multiple computers, and hosts can have multiple primary
-   users, but this does not scale well)
 
-Installing software
-~~~~~~~~~~~~~~~~~~~
+Software
+--------
+
+Already available
+~~~~~~~~~~~~~~~~~
+- Python: ``module load anaconda3`` (or anaconda2) (desktops)
+- Matlab: automatically installed on desktops, Ubuntu package
+  on laptops.
 
 Ubuntu packages
-^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~
 
 If you have PrimaryUser privileges, you can install Ubuntu packages
 using one of the following commands:
@@ -145,18 +188,19 @@ using one of the following commands:
    standard operating environment!
 
 The module system
-^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~
 
 The command ``module`` provides a way to manage various installed
 versions of software across many computers. This is the way that we
 install custom software and newer versions of software, if it is not
 available in Ubuntu. Note that these are shell functions that alter
 environment variables, so this needs to be repeated in each new shell
-(or automated in login)
+(or automated in login).
 
 -  See the :doc:`Triton module docs <../triton/tut/modules>` docs for
    details.
--  ``module avail`` to list available package.
+-  ``module avail`` to list all available package.
+-  ``module spider $name`` to search for a particular name.
 -  ``module load $name`` to load a module. This adjusts environment
    variables to bring various directories into ``PATH``, ``LD_LIBRARY_PATH``,
    etc.
@@ -169,11 +213,14 @@ Useful modules:
    Anaconda distribution, and we'll try to keep this in sync across
    Aalto Linux and Triton.
 
-I need to be admin!
-~~~~~~~~~~~~~~~~~~~
-Most times you don't need to be.  Our Linux systems are centrally
-managed with non-standard improvements and features, and 90% of cases
-can be handled using existing tools:
+
+
+Admin rights
+------------
+
+Most times you don't need to be an admin on workstations.  Our Linux
+systems are centrally managed with non-standard improvements and
+features, and 90% of cases can be handled using existing tools:
 
 Do you want to:
 
@@ -191,8 +238,8 @@ Do you want to:
   none of these work and you have studied enough to understand the
   risk, you can ask us.  Make sure you give details of what you want
   to do.*
-- I need to change network or some other settings.  This computer is
-  bound to this certain network and settings can't be changed, users
+- I need to change network or some other settings.  Desktops are
+  bound to a certain network and settings can't be changed, users
   can't be managed, etc.
 - It's a laptop: *then yes, there are slightly more cases you need
   this, but see above first.*
@@ -201,53 +248,44 @@ Do you want to:
 
 If you do have root and something goes wrong, our help is limited to
 reinstalling (wiping all data - note that most data is stored on
-network drives anyway).  You will have to fill out a form and get a
-new ``wa`` account, we can't really do anything to make this faster
-unfortunately.
+network drives anyway).
 
-Remote access
-~~~~~~~~~~~~~
+If you do need root admin rights, you will have to fill out a form and get a
+new ``wa`` account, then Aalto has to approve.  Contact your
+department IT to get the process started.
 
-See the :doc:`remote access page <remoteaccess>`.
 
-Laptops
-~~~~~~~
 
--  You can get laptops with Linux on it.
--  Each user should log in the first time while connected to the Aalto
-   network, to cache authentication information.
--  Home directories can be synced with the Aalto home directories. This
-   is done using unison. TODO: not documented, what about this?
--  If you travel, make sure that your primary user is set correctly
-   before you go. The system configuration can't be updated remotely.
--  Otherwise, environment is like the workstations.
--  If the keychain password no longer works (it is an old Aalto password
-   and you have since changed it), see `this page on changing the
-   keyring
-   password <https://inside.aalto.fi/display/ITServices/Changing+your+Linux+keychain+password>`__.
-   Some places recommend changing the password on the laptop itself to
-   prevent this problem. The same procedure may apply to workstations as
-   well.
+Remote access to your workstation
+---------------------------------
 
-Triton
-~~~~~~
+If you are primary user, you can ssh to your own workstation from
+certain Aalto servers, including at least ``taltta``.  See the
+:doc:`remote access page <remoteaccess>`.
 
-Triton is not a main part of the department computers, but is heavily used by
-researchers. You should see the main documentation at the Triton user
-guide, but for convenience some is reproduced here.
 
--  :doc:`Triton user guide <../triton/index>`
--  **You can request a dedicate group node as part of Triton**.
 
-   -  This is paid however your group would normally pay for dedicated
-      resources
-   -  Your group gets interactive and dedicated login access
-   -  project/archive **are** mounted on your own node.
-   -  You can more easily scale from your own node to the rest of
-      triton.
-   -  You have high-performance access to the scratch filesystem.
-   -  The disadvantage is that it is not an identical environment to the
-      workstations (though all files are still there).
+More powerful computers
+-----------------------
+
+There are different options for powerful computing.
+
+First, we have desktop Linux workstations that are more powerful than
+normal.  If you want one of these, just ask.  It includes a
+medium-power GPU card.  You can buy a more powerful workstation if you
+need, but...
+
+Beyond that, we recommend the use of Triton rather than constructing
+own servers which will only be used part-time.  You can either use
+Triton as-is for free, or pay for dedicated hardware for your group.
+Your own hardware as part of Triton means that you can use all Triton
+and even CSC if you need with little extra work.  You could have your
+own login node, or resources as part of the queues.
+
+Triton is Aalto's high-performance computing cluster.  It is not a
+part of the department Linux, but is heavily used by researchers. You
+should see the main documentation at the :doc:`Triton user guide
+<../triton/index>`, but for convenience some is reproduced here:
 
 -  Triton is CentOS (compatible with the Finnish Grid and Cloud
    Infrastructure), while CS workstations are Ubuntu. So, they are not
@@ -270,11 +308,11 @@ guide, but for convenience some is reproduced here.
       and dedicated group nodes.
    -  TODO: make this actually happen.
 
--  Triton was renewed in 2016.
+-  Triton was renewed in 2016 and late 2018.
 -  All info in the :doc:`triton user guide <../triton/index>`
 
 Common problems
-~~~~~~~~~~~~~~~
+---------------
 
 Network shares are not accessible
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -316,7 +354,7 @@ password and requests you to input the old Aalto password.
 
 If you remember your old password, try this:
 
-#. Start application 'seahorse'
+#. Start application Passwords and Keys ("seahorse")
 #. Click the "Login" folder under "Passwords" with right mouse button
    and select "Change password"
 #. Type in your old password to the opening dialog
@@ -342,7 +380,7 @@ library provided services are available. There are links for journals
 
 Rsync complains about Quota, even though there is plenty left.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The reason usually is that default ``rsync -av`` tries to preserver
+The reason usually is that default ``rsync -av`` tries to preserve the
 group. Thus, there is wrong group in the target. Try using
 ``rsync -rlptDxvz --chmod=Dg+s <source> <target>``. This will make group
 setting correct on ``/scratch/`` etc and quota should then be fine.
@@ -379,13 +417,13 @@ There are two reasons for this.
   # Go to your user dir
   cd ~/..
   # Check disk usage
-  du -sh * 
-  
+  du -sh *
+
 The sum should be less than the max quota which is 20GB. If your disk is full then delete something or move it to a local directory, ``/l/``.
 
 .. rubric:: 2. Something went wrong with your browser profile
 
-If you get an error like "*The application did not identify itself*", following might solve the issue. 
+If you get an error like "*The application did not identify itself*", following might solve the issue.
 
 Open terminal,
 
