@@ -14,17 +14,10 @@ professor/group leader, you are a researcher!  You should acquaint
 yourself with all information on this site, starting with
 :doc:`welcomeresearchers` and use whatever you need.
 
-There are general IT instructions for students: `FI <itsFI_>`_ `SV
-<itsSV_>`_ `EN <itsEN_>`_.  There is an `introduction to IT services
-for students <itsrv_std_>`_ (`FI <itsrv_std_fi_>`_) There are also
-`research-focused instructions <itsr_>`_.
-
-.. _itsFI: https://into.aalto.fi/display/fiit/Etusivu
-.. _itsSV: https://into.aalto.fi/display/svit/Startsida
-.. _itsrv_std: https://into.aalto.fi/display/fiit/IT-pikaopas+opiskelijoille
-.. _itsrv_std_fi: https://into.aalto.fi/display/fiit/IT-pikaopas+opiskelijoille
-.. _itsrv_std_sv: https://into.aalto.fi/pages/viewpage.action?pageId=17334253
-.. _itsEN: https://into.aalto.fi/display/enit/Homepage
+General IT instructions can be found at https://it.aalto.fi.  There
+used to be some on into.aalto.fi, but these are gone now.  There also used
+to be a 2-page PDF introduction for students, but it also seems to be
+gone from online.
 
 
 
@@ -32,7 +25,9 @@ Accounts
 ========
 
 In general, your Aalto account is identical to that which researchers
-have --- the only difference is departmental affiliation.
+have --- the only difference is that you don't have an departmental
+affiliation.
+
 
 
 Getting help
@@ -44,10 +39,10 @@ the new central site for IT instructions.  Previously, some public
 instructions were on ``https://into.aalto.fi`` (studies focused) and
 ``https://inside.aalto.fi`` (staff focused) and finding information
 was a great challenge.  Note that in 2018, all of these are being
-updated.
+merged somehow, but the dust hasn't settled yet.
 
-This site, http://scicomp.aalto.fi, is intended for scientific
-computing support and might be useful to you.
+This site, http://scicomp.aalto.fi, is intended for research
+scientific computing support but has a few page useful to you.
 
 
 Computation
@@ -59,9 +54,12 @@ resources.
 .. csv-table::
    :delim: |
 
-   Panikki computer lab | workstations, GPUs, software via modules
+   Panikki computer lab | Linux workstations, GPUs, software via modules
+   Other computer labs | workstations, different OSs
    Shell servers | via ssh, software via modules, overcrowded
    JupyterHub | basic software, in web browser
+   Remote desktop | Windows and Linux, https://vdi.aalto.fi
+   Own computers | Software at https://download.aalto.fi
 
 The Jupyter service at https://jupyter.cs.aalto.fi is available to
 everyone with an Aalto account.  It provides at least basic Python and
@@ -70,7 +68,9 @@ R software; we try to keep it up to date with the things people need most.
 The `shell servers
 <https://inside.aalto.fi/display/ITServices/Servers+for+light+computing>`_
 ``brute`` and ``force`` are for light computing, and generally for
-students.  You may find them useful, but can often be overloaded. :doc:`Learn how to launch Jupyter notebook on there <../aalto/remotejupyter>`.
+students.  You may find them useful, but can often be
+overloaded. :doc:`Learn how to launch Jupyter notebook on there
+<../aalto/remotejupyter>`.
 
 For GPU computing, the `Paniikki Linux computer lab
 <http://usefulaaltomap.fi/#!/select/paniikki>`_ has GPUs in all
@@ -80,6 +80,12 @@ workstations <../aalto/linux>` apply there as well (mostly). Read the
 :doc:`Paniikki cheatsheet here <../aalto/paniikki>`. The
 software on these machines is managed by the Aalto-IT team.  This is
 the place if you need to play with GPUs, deep learning, etc.
+
+A new (2018) remote desktop service is available at
+https://vdi.aalto.fi.  This provides Windows and Linux desktops and is
+designed to replace the need for computer classrooms with special
+software installed.  You can access it via a web browser or the VMware
+Horizon client.
 
 The use of :doc:`Triton <../triton/index>` is for research purposes
 and students can't get access unless you are affiliated with a
@@ -101,7 +107,7 @@ note that everyone at Aalto can get an unlimted Google Drive account
 through the Aalto Google Apps service: `instructions
 <https://it.aalto.fi/instructions/google-drive-registration-and-closing-account>`__.
 Your Aalto Google account will expire once you are no longer
-affiliated, so your files here will be inaccessible.
+affiliated, so your files here will become inaccessible.
 
 .. _itsr: https://inside.aalto.fi/display/ITServices/IT+Services+for+Research
 
@@ -120,13 +126,20 @@ found for your own use via the Aalto software portals.
 .. _its_sw_fi: https://inside.aalto.fi/display/ITPK/Ohjelmistot+ja+lisenssit
 .. _its_sw_list: https://inside.aalto.fi/display/ITServices/University+software+licenses
 
-
 The Lmod (``module``) system provides more software on
 ``brute``/``force`` and in Paniikki.  For example, to access a bunch
 of scientific Python software, you can do ``module load anaconda3``.
 The :doc:`researcher-focused instructions are here
 </triton/tut/modules>`, but like many things on this site you may have
 to adapt to the student systems.
+
+Common software:
+
+.. csv-table::
+   :delim: |
+
+   Python | ``module load anaconda3`` on Linux
+   Tensorflow etc packages | same as Python, in Pannikki
 
 
 
