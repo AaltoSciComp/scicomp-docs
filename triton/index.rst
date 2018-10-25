@@ -26,7 +26,7 @@ Quick contents and links
 	 * `Aalto Science-IT <http://science-it.aalto.fi>`_ (external
 	   link)
 
-       * `Getting Help <help>`
+       * `Getting Help/Contact <help>`
 
 	 * `Triton issue tracker <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`_
 	   (most requests here, login with HAKA)
