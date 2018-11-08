@@ -110,7 +110,7 @@ address.  You can address your request to a specific person.
    PHYS/NBE   | Janne Blomqvist  | Otakaari 1, Y415a / Otakaari 3, F354
    CS/NBE     | Mikko Hakala     | T-building A243 / Otakaari 3, F354
    CS         | Simo Tuomisto    | T-building A243
-   ELEC       | Tarmo Simonen
+   ELEC       | Tarmo Simonen    | Otakaari 3, F417
    PHYS       | Ivan Degtyarenko | Otakaari 1, Y415a
    CS/SCI     | Richard Darst    | T-building A243
 
