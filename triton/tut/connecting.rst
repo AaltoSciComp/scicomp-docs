@@ -2,15 +2,22 @@
 Connecting to Triton
 ====================
 
-All access to Triton is via Secure Shell (ssh).  Access to
-``triton.aalto.fi`` is open from Aalto networks and CSC. For SSHing to
-Triton from outside of your department or CSC, please login first to a
-university server (like ``kosh.aalto.fi`` or  ``taltta.org.aalto.fi``)
-and then open a session to ``triton.aalto.fi``.
+All access to Triton is via Secure Shell (ssh).
+
+You can connect to ``triton.aalto.fi`` from Aalto and CSC networks.
+Aalto networks include: Wired workstation networks, ``eduroam``, and
+the ``aalto`` wireless network *only if you are using an Aalto managed
+laptop* (otherwise ``aalto`` is like ``aalto open``).  If you connect
+to the Aalto VPN, you will be on the Aalto networks.
+
+For SSHing to Triton from outside of your department or CSC, please
+login first to a university server (like ``kosh.aalto.fi`` or
+``taltta.org.aalto.fi``) and then open a session to
+``triton.aalto.fi``.
 
 .. note::
 
-   Are you here from Summer KickStart 2018?  You just need to :doc:`make
+   Are you here for a SciComp KickStart course?  You just need to :doc:`make
    sure you have an account <../accounts>` and then be able to connect
    via ssh (first section here), and you don't need to worry about the
    graphical application parts.  Everything else, we do tomorrow.
@@ -29,12 +36,16 @@ Linux
 
 All Linux distributions come with an ssh client, so you don't need to do
 anything.  To use graphical applications, use the standard ``-X`` option,
-nothing extra needed.
+nothing extra needed.::
 
-::
+  ssh triton.aalto.fi
+  # OR, if your username is different:
+  ssh username@triton.aalto.fi
 
+If you are from outside the Aalto networks::
+
+    ssh kosh.aalto.fi         # or ssh username@kosh.aalto.fi
     ssh triton.aalto.fi
-    ssh username@triton.aalto.fi      # if your username is different
 
 Mac
 ---
@@ -54,6 +65,10 @@ some hints.
 
 You should configure this with the hostname, username, and save the
 settings so that you can connect quickly.
+
+If you are outside the Aalto networks, you need to first connect to
+``kosh.aalto.fi`` or some other server, and then use the Linux
+instructions to connect to Triton.
 
 
 Exercise
@@ -127,11 +142,8 @@ __ https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/
 
 
 
-Advanced: set up ssh config file
-================================
-
-Linux/mac
----------
+Advanced: set up ssh config file (Linux/mac)
+============================================
 
 Openssh on linux can be made nicer if you set up a config file
 (``.ssh/config``)::
