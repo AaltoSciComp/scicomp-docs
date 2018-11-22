@@ -96,10 +96,16 @@ consisting of:
    a container, *only* the memory of the actual Python processes are
    needed, not the rest of the OS.
 
-7. Do you want a ``/coursedata`` directory for shared data?  If so,
-   tell us its quota.  Note: currently coursedata contents are assumed
-   to be *public* to all people at Aalto.  Note: quota is shared with
-   the course directory.
+7. Do you want a ``/mnt/jupyter/shareddata`` or ``/coursedata``
+   directory for shared data?  ``coursedata`` is only available when
+   your course's notebook.  ``shareddata`` is available in all
+   notebooks on jupyter.cs.aalto.fi and also other Aalto servers.
+   ``coursedata`` is also assumed to be public to everyone at Aalto,
+   though not as easy to access.
+   If so, tell us its quota.  Note: quota is shared with
+   the course directory.  If number of students times amount of data
+   is more than a few hundred MB, strongly consider one of the data
+   directories.
 
 8. Lead contact person.
 
