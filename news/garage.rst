@@ -59,8 +59,8 @@ Schedule
    8.11     |       | A106  |
    15.11    |       | A106  |
    22.11    |       | A106  |
-   29.11    |       | A106  |
-   6.12     |       | A106  | NO garage
+   29.11    |       | A106  | Possibly not, depending on Triton move
+   6.12     |       | A106  | NO garage (holiday)
    13.12    |       | A106  |
    20.12    |       | A106  |
 
