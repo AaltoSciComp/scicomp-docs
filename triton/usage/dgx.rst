@@ -16,13 +16,25 @@ which contain 8 V100 GPUs and are optimized for deep learning.
 Access and prerequisites
 ========================
 
-The DGX machines have been specifically bought by several groups, and
-thus general access is not available.  If you should have access but
-don't, :doc:`email our support alias <../help>` with a CC to your
-group leader, and we will fix this.  You can check the groups which
-may access it by running ``grep PartitionName=dgx
-/etc/slurm/slurm.conf`` and checking ``AllowedGroups=`` and check
-group membership by running ``getent group $groupname``.
+The DGX machines have been specifically bought by several groups and
+these groups have priority access.
+
+**General access:** you should us the ``dgx-common`` partition.  This has
+preemption enabled, which means that if a higher priority job comes,
+you job can be cancelled *at any time, even if it is running*.  The
+job will then be added back to the queue and possibly run again.  Design
+your code to take this into account.  Furthermore, your job will only
+start running when the priority partition is empty... so in effect
+jobs happen very slowly.  If you are using general access, all of the
+``-p dgx`` in the examples below need to be changed to ``-p
+dgx-common``.
+
+**Dedicated group access:** You can check the groups which may access
+it by running ``grep PartitionName=dgx /etc/slurm/slurm.conf`` and
+checking ``AllowedGroups=``, check your groups with ``groups``, and
+check all group members with ``getent group $groupname``. If you
+should have access but don't, :doc:`email our support alias <../help>`
+with a CC to your group leader, and we will fix this.
 
 You also need a :doc:`Triton account <../accounts>`.
 
@@ -98,7 +110,9 @@ Basic required slurm options
 
 The necessary Slurm parameters are:
 
-* ``-p dgx`` to indicate that we want to run in the DGX partitions.
+* ``-p dgx`` (dedicated group access) or ``-p dgx-common`` (general
+  access, jobs may be killed at any time, see above) to indicate that
+  we want to run in the DGX partitions.
 * ``--gres=gpu:v100:1`` to request GPUs (Slurm also manages GPUs and
   limits you to the proper devices).
 
@@ -117,7 +131,7 @@ The necessary Slurm parameters are:
   add ``-c N``.  If you want more (system) memory, use ``--mem=5GB``
   and so on.  (These are completely generic slurm options.)
 
-To check running and jobs: ``squeue -p dgx`` (whole cluster) or
+To check running and jobs: ``squeue -p dgx,dgx-common`` (whole cluster) or
 ``slurm q`` (for your own jobs).
 
 
