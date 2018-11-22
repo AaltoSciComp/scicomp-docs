@@ -61,9 +61,10 @@ resources.
    Remote desktop | Windows and Linux, https://vdi.aalto.fi
    Own computers | Software at https://download.aalto.fi
 
-The Jupyter service at https://jupyter.cs.aalto.fi is available to
-everyone with an Aalto account.  It provides at least basic Python and
-R software; we try to keep it up to date with the things people need most.
+The :doc:`Jupyter service <../aalto/jupyterhub>` at
+https://jupyter.cs.aalto.fi is available to everyone with an Aalto
+account.  It provides at least basic Python and R software; we try to
+keep it up to date with the things people need most.
 
 The `shell servers
 <https://inside.aalto.fi/display/ITServices/Servers+for+light+computing>`_
@@ -72,12 +73,14 @@ students.  You may find them useful, but can often be
 overloaded. :doc:`Learn how to launch Jupyter notebook on there
 <../aalto/remotejupyter>`.
 
-For GPU computing, the `Paniikki Linux computer lab
-<http://usefulaaltomap.fi/#!/select/paniikki>`_ has GPUs in all
+For GPU computing, the :doc:`Paniikki Linux computer lab
+<../aalto/paniikki>` (`map
+<http://usefulaaltomap.fi/#!/select/paniikki>`_) has GPUs in all
 workstations.  Software is available via ``module spider $name`` to
-search and ``module load $name`` to load.  The instructions for :doc:`Aalto
-workstations <../aalto/linux>` apply there as well (mostly). Read the
-:doc:`Paniikki cheatsheet here <../aalto/paniikki>`. The
+search and ``module load $name`` to load (and the module ``anaconda3``
+has Python, tensorflow, etc.).  Read the :doc:`Paniikki cheatsheet
+here <../aalto/paniikki>`.  The instructions for :doc:`Aalto
+workstations <../aalto/linux>` sort of apply there as well.  The
 software on these machines is managed by the Aalto-IT team.  This is
 the place if you need to play with GPUs, deep learning, etc.
 

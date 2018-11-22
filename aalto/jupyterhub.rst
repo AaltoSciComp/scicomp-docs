@@ -43,8 +43,8 @@ stack installed.
 
 You may access your data remotely by SMB mounting it on your own
 computer from inside the Aalto network or via Aalto VPN.  The SMB url
-is ``smb://jhnas.org.aalto.fi/u/USERNAME``, or on Windows
-``\\jhnas.org.aalto.fi\u\username``.
+is ``smb://jhnas.org.aalto.fi/$username``, or on Windows
+``\\jhnas.org.aalto.fi\$username``.
 
 Each notebook server is basically a Linux container primarily running a
 Juptyer notebook server.  You may create Jupyter notebooks to interact
@@ -206,6 +206,22 @@ FAQ and bugs
   - 504 Gateway error: The hub isn't running in background.  This may
     be hub just restarting or us doing maintenance.  If it persists for
     more than 30 minutes, let someone know.
+
+* **Stan/pystan/Rstan don't work.** Stan needs to do a
+  memory-intensive compilation when your program is run.  We can't
+  increase our memory limits too much, but we have a workaround: you
+  need to tell your program to use the ``clang`` compiler instead of
+  the ``gcc`` compiler by setting the environment variables
+  ``CC=clang`` and ``CXX=clang++``.  For R notebooks, this should be
+  done for you.  For RStudio, we don't know.  For Python, put the
+  following in your notebook::
+
+    import os
+    os.environ['CC'] = "clang"
+    os.environ['CXX'] = "clang++"
+
+  We should set this the default, but want to be sure there are no
+  problems first.
 
 More info
 =========

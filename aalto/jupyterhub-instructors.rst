@@ -345,8 +345,8 @@ Instructions/hints
   relevant problems to us.
 
 - You can access your course data via SMB mounting at the URLs
-  ``smb://jhnas.org.aalto.fi/course/$courseslug`` and the course data
-  using ``smb://jhnas.org.aalto.fi/course/coursedata/$courseslug``
+  ``smb://jhnas.org.aalto.fi/course/$courseslug/files/`` and the course data
+  using ``smb://jhnas.org.aalto.fi/course/$courseslug/data/``
   (with Windows, use ``\\`` instead of ``/`` and don't include
   ``smb://``).  This can be very nice for managing files.  This may
   mess up group-writeability permissions.
