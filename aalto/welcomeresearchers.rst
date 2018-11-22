@@ -65,7 +65,9 @@ everywhere:
   information from inside and into is supposed to move here.  The new
   site is very hard to navigate (sorry, we can't do anything about
   that) and the old site can be accessed at old.aalto.fi for a while.
-  In the future, you might have to log in to see everything.
+  This site is "not designed to have a logical structure and instead,
+  you are expected to search for information" (actual quote).
+  In the future, you might have to log in to see parts.
 * `it.aalto.fi <https://it.aalto.fi>`__ is a new location for IT
   instructions, and somewhat replaces the old IT instructions on
   inside.aalto.fi and into.aalto.fi.  It is still under
