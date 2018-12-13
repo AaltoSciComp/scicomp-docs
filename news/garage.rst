@@ -61,8 +61,8 @@ Schedule
    22.11    |       | A106  |
    29.11    |       | A106  | (yes, the Triton move was done on time)
    6.12     |       | A106  | NO garage (holiday)
-   13.12    |       | A106  |
-   20.12    |       | A106  |
+   13.12    |       | A106  | NO garage (CodeRefinery at same time)
+   20.12    |       | A106  | probably NO garage, but check back for updates.
 
 Dates after 2.8 to be decided later.
 
