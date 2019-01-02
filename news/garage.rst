@@ -43,26 +43,7 @@ Schedule
    :delim: |
 
    Date (default Th)  | Time (default 13:00-14:00)  | Loc   | Topic
-   9.8      |       | B337  | Note different room, 3rd floor northwest corner of building
-   16.8     |       | CS 3rd floor bridge  |
-   23.8     |       | B337  | Note different room, 3rd floor northwest corner of building
-   30.8     |       | A106  |
-   6.9      |       | A106  |
-   13.9     |       | A106  |
-   20.9     |       | A106  |
-   27.9     |       | A106  |
-   4.10     |       | A106  |
-   11.10    |       | Outside T1  | Stand as part of CS research day
-   18.10    |       | A106  |
-   25.10    |       | A106  |
-   1.11     |       | A106  |
-   8.11     |       | A106  |
-   15.11    |       | A106  |
-   22.11    |       | A106  |
-   29.11    |       | A106  | (yes, the Triton move was done on time)
-   6.12     |       | A106  | NO garage (holiday)
-   13.12    |       | A106  | NO garage (CodeRefinery at same time)
-   20.12    |       | A106  | probably NO garage, but check back for updates.
+   3.jan   |       | A106  | Rest of year decided soon
 
 Dates after 2.8 to be decided later.
 
