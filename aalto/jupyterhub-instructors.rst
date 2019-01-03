@@ -166,9 +166,8 @@ To use nbgrader:
   ``/course/{nbgrader_step}`` and, for the most part, are
   automatically managed.
 
-- New assignments should be in ``/course/source``.  Remember to name
-  your assignments like ``$courseslug-*``.  Also don't use ``+`` in
-  the assignment filename (nbgrader #928).
+- New assignments should be in ``/course/source``.  Also don't use
+  ``+`` in the assignment filename (nbgrader #928).
 
 - Manage your assignments with ``git``.  See below for some hints
   about how to do this.
@@ -228,8 +227,6 @@ The git repository is in ``/course``, but the main subdirectory of
 interest is the ``source/`` directory, which has the original files,
 along with whatever other course notes/management files you may have
 which are under ``/course``.  Everything else is auto-generated.
-Remember to name the assignments like ``$courseslug-NN-name`` as
-described above.
 
 Public copy of assignments
 ==========================
@@ -316,13 +313,6 @@ Instructions/hints
   and data is not guaranteed to be persistent.  Use only for testing.
   Use the general use notebook for writing and sharing your files
   (using git).
-
-- When using ``nbgrader``, name all of your assignments like
-  ``$courseslug-NN-$assignmentname``, for example ``mlbp2018-01-regression``.
-  The ``NN`` is some assignment number, so that things are sorted properly.
-  Assignment names are an accidental global namespace in nbgrader once
-  they are copied to a user's notebook directory, so you should use
-  names which won't clash with anyone else's.
 
 - The course environments are not captive: students can install
   whatever they want.  Even if we try to stop them, they can use the
