@@ -51,10 +51,10 @@ Instructions:
    *  If your publication is not already there, then see your
       department's ACRIS instructions, or the general help below.
 
-3. Link it to Science-IT: scroll down to relationships -> Equipment ->
-   Search "**Science-IT**" and select it.
+3. Link it to Science-IT: scroll down to "Relations" ->
+   "Facilities/Equipment" -> Search "**Science-IT**" and select it.
 4. Click **Save** at the bottom of the window.
-5. Repeat for all publications
+5. Repeat for all publications (and datasets, etc.)
 
 You are done!  You can see if your publications appears on the list
 above.
