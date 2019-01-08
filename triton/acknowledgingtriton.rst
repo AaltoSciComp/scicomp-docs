@@ -53,8 +53,15 @@ Instructions:
 
 3. Link it to Science-IT: scroll down to "Relations" ->
    "Facilities/Equipment" -> Search "**Science-IT**" and select it.
+   (This is on the main page, not the separate "Relations" page.)
 4. Click **Save** at the bottom of the window.
 5. Repeat for all publications (and datasets, etc.)
+
+.. figure:: /images/acris-linking.png
+  :align: center
+  :alt: Location of Facilities/Equipment link
+  :figclass: align-center
+
 
 You are done!  You can see if your publications appears on the list
 above.
