@@ -57,7 +57,7 @@ some of the key players:
 .. _nbe-it: https://wiki.aalto.fi/display/NBE/IT+Information
 .. _phys-it: https://wiki.aalto.fi/display/TFYintra/PHYS+IT
 
-Also, currently Aalto has information is scattered on websites
+Also, currently Aalto has information scattered on websites
 everywhere:
 
 * `aalto.fi <http://aalto.fi>`__ is the normal homepage, but doesn't
