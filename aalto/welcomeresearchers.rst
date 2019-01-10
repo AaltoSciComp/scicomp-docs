@@ -96,7 +96,7 @@ everywhere:
   was started by the Science-IT team from the Triton (HPC cluster)
   documentation, and scicomp is slowly taking over from our
   departments'
-  research IT instructions.  Now is is our general guidance to
+  research IT instructions.  Now it is our general guidance to
   researchers and the best place to find information on research and
   scientific computing - as opposed to general "staff computing" you
   find other places.
