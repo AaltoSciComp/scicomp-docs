@@ -27,13 +27,6 @@ system how to run it.  Here is a simple submission script::
     #SBATCH --time=0-00:05:00    # 5 mins
     #SBATCH --mem-per-cpu=500    # 500MB of memory
 
-    # Defaults to directory of when submitted.  Explicit cd if needed (slurm defaults
-    # to submission directory).
-    cd $WRKDIR/myproject/
-
-    # output goes into hello.out
-    # If you use srun for each command, the mem/cpu usage of each step
-    # can be seen individually with "slurm history"
     srun echo 'hello, world'
 
 Then submit it with ``sbatch``::
@@ -123,7 +116,8 @@ partitions. The available partitions are listed below and on the
 reference page. For the fastest running, consider if you code can be
 right below one of the limits you see here.
 
-.. include:: ../ref/partitions.rst
+You can see the partitions in the :doc:`quick
+reference<../ref/index>`.
 
 Exercises
 =========

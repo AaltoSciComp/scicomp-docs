@@ -23,7 +23,7 @@
                             | ``-p, --partition=``\ *partition*| **job partition.  Usually leave off and things are auto-detected.**
                             | ``--mem-per-cpu=``\ *n*         | **request n MB of memory per core**
                             | ``--mem=``\ *n*                 | **request n MB memory per node**
-                            | ``-c``, ``--cpus-per-task=``\ *n*  | Allocate *n* CPU's for each task. For multithreaded jobs. (compare --ntasks: -c means the number of cores for each process started.)
+                            | ``-c``, ``--cpus-per-task=``\ *n*  | **Allocate *n* CPU's for each task. For multithreaded jobs. (compare --ntasks: -c means the number of cores for each process started.)**
                             | ``-N``, ``--nodes=``\ *n-m*        | allocate minimum of n, maximum of m nodes.
                             | ``-n``, ``--ntasks=``\ *n*         | allocate resources for and start *n* tasks (one task=one process started, it is up to you to make them communicate. However the main script runs only on first node, the sub-processes run with "srun" are run this many times.)
                             | ``-J``, ``--job-name=``\ *name*    | short job name
@@ -32,7 +32,7 @@
                             | ``--exclusive``                | allocate exclusive access to nodes.  For large parallel jobs.
                             | ``--constraint=``\ *feature*   | request *feature* (see ``slurm features`` for the current list of configured features, or Arch under the :ref:`hardware list <hardware-list>`).  Multiple with ``--constraint="hsw|skl"``.
                             | ``--array=``\ *0-5,7,10-15*    | Run job multiple times, use variable ``$SLURM_ARRAY_TASK_ID`` to adjust parameters.
-                            | ``--gres=gpu:``\ *n*           | request *n* gpu cards
+                            | ``--gres=gpu``, ``--gres=gpu:``\ *n* | request one (or *n*) gpu cards
                             | ``--gres=spindle:``\ *n*       | request *n* local disk drives (works in all partitions)
                             | ``--mail-type=``\ *type*       | notify of events: ``BEGIN``, ``END``, ``FAIL``, ``ALL``, ``REQUEUE`` (not on triton) or ``ALL.`` MUST BE used with ``--mail-user=`` only
                             | ``--mail-user=``\ *your@email* | whome to send the email

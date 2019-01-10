@@ -68,7 +68,7 @@ Getting help
    Main article: :doc:`../help`
 
 There are many ways to get help.  Most daily questions should go to
-our :ref:`issue tracker <issuetracker>`, which is hosted on
+our :ref:`issue tracker <issuetracker>` (`direct link <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`__), which is hosted on
 :doc:`Aalto Gitlab <../../aalto/git>` (login with the HAKA button).
 This is especially important because many people end up asking the
 same questions, and in order to scale everyone needs to work together.
@@ -82,7 +82,7 @@ matters.  If it affects others (software, usage problems, etc), use
 the issue tracker, otherwise we will point you there and spend lots of
 time answering the same questions over and over.
 
-Also, always search these scicomp docs site and old issues in the issue
+Also, always search this scicomp docs site and old issues in the issue
 tracker.
 
 We have weekly :doc:`"SciComp garage" <../../news/garage>` sessions
@@ -101,3 +101,8 @@ requirements.  In an upcoming tutorial, you will learn how to use
 existing software.  Be aware that installing your own is possible (and
 people do it all the time), but does require some attention to
 details.
+
+
+What's next?
+============
+:doc:`connecting`
