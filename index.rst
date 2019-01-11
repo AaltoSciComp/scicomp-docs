@@ -52,7 +52,7 @@ Cheatsheets: `CS <ch-cs_>`_, `Data <ch-data_>`_.
 
 Data management
 ===============
-In this section, you can some information and instructions on data
+In this section, you can find some information and instructions on data
 management.  Concrete information: :doc:`main Aalto services
 <aalto/aaltostorage>` and :doc:`global services <data/services>`.
 Main Theoretical information: :doc:`Aalto-specific summary

@@ -43,6 +43,8 @@ Toolchains
 ==========
 .. include:: toolchains.rst
 
+.. _hardware-list:
+
 Hardware
 ========
 .. include:: hardware.rst

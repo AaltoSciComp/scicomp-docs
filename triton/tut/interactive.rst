@@ -32,15 +32,15 @@ should start here, but once you need more go to more advanced usage.
   your fairshare quota, making your jobs run slower in the future.
 
 
-srun (single process)
-=====================
+Single process
+==============
 
 The simplest way is to use srun. Let's say you run some program like
 this:
 
 ::
 
-    ./my_code 5000 1.1 1-5
+    python -c 'import os; print("hi from", os.uname().nodename)'
 
 You switch to use srun. All input/output still goes to your terminal
 (but note X forwarding for graphical applications doesn't work - see
@@ -48,7 +48,7 @@ below for that).
 
 ::
 
-    srun --mem=50G --time=5:00:00 ./my_code 5000 1.1 1-5
+    srun --mem=50G --time=5:00:00 python -c 'import os; print("hi from", os.uname().nodename)'
 
 This has some possible problems: it is connected to your shell. If your
 shell quits, the process gets lost. Also, this runs only one single
@@ -61,17 +61,19 @@ scripts.
 How do you find the right time/CPU/memory requirements?  Slurm (the
 queuing system) has extensive reporting. For example,
 ``slurm history`` will show you the actual run time and actual memory
-used of your job. There is a little bit about this below and more in
+used of your job.  You generally make a guess and adjust based on what
+you see.  There is a little bit about this below and more in
 the next tutorial.
 
 
-srun ``--pty`` (shell)
-======================
+Interactive shell
+=================
 
-So, let's say you need to go one step up. You want an actual shell to
-do several things. You can do that this way:
-
-::
+So, let's say you need to do something a bit fancier: what if you want
+an actual shell to do things interactively? You just need the extra
+``--pty`` and run ``bash``.  The ``-p interactive`` says "give me a
+partition dedicated to interactive usage (more on this later).  Full
+example::
 
     srun -p interactive --time=HH:MM:SS --mem=nnG --pty bash
 
@@ -83,8 +85,8 @@ the future.**  (Note that we specify the interactive partition with "-p
 interactive". More on this below.)
 
 
-sinteractive (shell)
-====================
+Interactive shell with graphics
+===============================
 
 sinteractive is very similar to srun, however it is more clever and thus
 allows you to do X forwarding. In the background, it starts the job,
@@ -96,7 +98,7 @@ process again.
 
      sinteractive --time=HH:MM:SS --mem=nnG
 
-**Just like with ``srun --pty``, remember to close the process when done.
+**Just like with** ``srun --pty``, **remember to close the process when done.
 However, it's even harder than before. Since there is a separate screen
 session running, just closing the terminal isn't enough. Exit all
 shells in the screen session on the node (C-d or ``exit``), or cancel
@@ -106,38 +108,17 @@ the process (see below).**
 More options
 ============
 
-**Partitions:** You have many different options for running the jobs.
-First off, there are different *partitions* to run in. Each partition
-specifies a different type of nodes, and different limits.
-
--  For example, the above examples used the "interactive" partition
-   which means that you have lower limits for time/CPU/memory, but can
-   get resources faster which is good for your own development (it is
-   also oversubscribed, which means that we assume not everyone is using
-   CPU 100% of the time).
--  Otherwise, debug/short/batch give you progressively more resources
-   but possibly longer waiting.
--  The are dedicated partitions for GPUs.
-
-In regular usage, this is usually decided automatically (based on time
-and memory requirements), but if you are doing stuff with an interactive
-shell, it's important to specify *interactive*. You don't need to do
-this if you are   You specify a partition with *-p partition* like
-above. We recommend interactive for things that start a shell for
-interactive running, otherwise leave it off and it will pick all
-available options based on your time/CPU/memory. If you need to go
-faster, try reducing the resources to the next lowest partition. The
-partitions are:
-
-.. include:: ../ref/partitions.rst
+**Partitions:** This used to be important, but is now mostly
+automatically set.  They trade off different resource limits and
+quickness which it is available.  For example, the ``-p interactive``
+tells us to us the interactive partition - which should always be
+available for quick tests.  ``-p debug`` is a short partition for
+debugging.  See a bit more in the :doc:`serial tutorial <serial>`.
 
 **time/CPU/memory requirements:** The commands srun/sinteractive have
 many more options that let you specific resources. The most important
 for interactive running are probably ``--mem``, ``--cpus-per-task`` (``-c``),
 and ``--time` (``-t``).
-
-
-.. include:: ../ref/slurm.rst
 
 **How much time/memory/CPU resources should you request?**  The less
 you request, the faster you are likely to run. As for all you need, but
@@ -157,13 +138,6 @@ CPUs to use (matching how many you request with slurm). If you don't
 get an entire node, your program might try to use all CPUs, and the OS
 will limit the number you can use (with cgroups, if you are
 interested). This leads to inefficiency.
-
-**Your own group node:** It's possible to purchase get a dedicated node
-for your group or for several groups. This gives you a place where you
-can run interactive jobs for as long as you want (shells open forever,
-etc), including computation directly on the node. When you need more
-power, you can "just add srun!" or create batch scripts from that node.
-Contact us to discuss.
 
 
 
