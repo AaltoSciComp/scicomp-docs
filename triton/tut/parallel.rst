@@ -6,8 +6,8 @@ Parallel computing
 
    This page is still under development.
 
-Parallel computing is what HPC is really all about: being able to use
-many CPUs at once.  By now, you should have read all of the previous
+Parallel computing is what HPC is really all about: processing things on
+more than one CPU at once. By now, you should have read all of the previous
 tutorials.
 
 Parallel programming models
@@ -23,16 +23,20 @@ The two main models are:
 
 * Shared memory programming (e.g. OpenMP) runs on only one node
   because, like the name says, all the memory has to be accessible to
-  all the processes.  Thus, scaleability is limited but it is much
-  easier.  Most typical parallel desktop programs use shared memory
-  models.
+  all the processes.  Thus, scaleability is limited to a number of CPU
+  cores available within one computational node. The code is  
+  easier to implement and the same code can still be run in serial mode.
+  Examples of application that utilize this model: Matlab, typical
+  parallel desktop programs.
 
 * Message passing programming (e.g. MPI, message passing interface)
   can run on multiple nodes via passing data through MPI software
-  libraries.  The largest-scale scientific programs are usually MPI.
-  MPI can scale better, but it's harder to get started.
+  libraries.  The large-scale scientific programs are MPI.
+  MPI can scale to thousands of CPU cores, but it's harder to
+  implement from the programmer point of view.
 
-Then, there are all sorts of combinations of these.
+Both models can be combined in one application, in this case we are
+talking about hybrid parallel programming model.
 
 Most historical scientific code is MPI, but these days more and more
 people are using shared memory models.
@@ -52,7 +56,7 @@ We start with OpenMP (multithreaded) programs first since they are
 simpler.  These instructions apply to OpenMP programs as well as other
 multithreaded programs.
 
-The first step is always to figure out how to how to make your
+The first step is always to figure out how to make your
 programs use multiple CPU cores.  OpenMP programs automatically use
 the right number of processors (using the slurm environment
 variables).  For other programs, might be worth checking
