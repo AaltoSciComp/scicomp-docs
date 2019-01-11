@@ -19,30 +19,42 @@ software by default for every user.
 What is a module?
 -----------------
 
-Let's look at ``Python/2.7.12-foss-2016.04`` module (abbreviated output
+Let's look at ``py-gpaw`` module (abbreviated output
 shown):
 
-::
+.. code-block:: none
 
-    $ module show Python/3.5.2-foss-2016b
+    $ module show py-gpaw
+    ------------------------------------------------------------------------------------------------------------------
+       /share/apps/spack/modules/linux-centos7-x86_64/Core/py-gpaw/1.3.0-openmpi-scalapack-python3.lua:
+    ------------------------------------------------------------------------------------------------------------------
+    whatis("Name : py-gpaw")
+    whatis("Version : 1.3.0")
+    whatis("Short description : GPAW is a density-functional theory (DFT) Python code based on the projector-augmented wave (PAW) method and the atomic simulation environment (ASE).")
+    help([[GPAW is a density-functional theory (DFT) Python code based on the
+    projector-augmented wave (PAW) method and the atomic simulation
+    environment (ASE).]])
+    load("py-scipy/1.1.0-python3")
+    load("libxc/3.0.0")
+    load("python/3.6.3")
+    load("fftw/3.3.8-openmpi")
+    load("py-ase/3.15.0-python3")
+    load("py-numpy/1.14.3-python3")
+    load("netlib-scalapack/2.0.2-openmpi")
+    load("openmpi/2.1.5")
+    load("openblas/0.3.2")
+    prepend_path("PATH","/share/apps/spack/software/py-gpaw/1.3.0/vmhtg6i/bin")
+    prepend_path("LIBRARY_PATH","/share/apps/spack/software/py-gpaw/1.3.0/vmhtg6i/lib")
+    prepend_path("LD_LIBRARY_PATH","/share/apps/spack/software/py-gpaw/1.3.0/vmhtg6i/lib")
+    prepend_path("CMAKE_PREFIX_PATH","/share/apps/spack/software/py-gpaw/1.3.0/vmhtg6i/")
+    prepend_path("PYTHONPATH","/share/apps/spack/software/py-gpaw/1.3.0/vmhtg6i/lib/python3.6/site-packages")
+    prepend_path("CPATH","/share/apps/spack/software/libxml2/2.9.8/f4u6mya/include/libxml2")
+    setenv("PY_GPAW_ROOT","/share/apps/spack/software/py-gpaw/1.3.0/vmhtg6i")
 
-    whatis("Description: Python is a programming language that lets you work more quickly and integrate your systems  more effectively. - Homepage: http://python.org/ ")
-    conflict("Python")
-    load("foss/2016b")
-    ...
-    prepend_path("CPATH","/cvmfs/fgi.csc.fi/apps/el7/Python/3.5.2-foss-2016b/include")
-    prepend_path("LD_LIBRARY_PATH","/cvmfs/fgi.csc.fi/apps/el7/Python/3.5.2-foss-2016b/lib")
-    prepend_path("LIBRARY_PATH","/cvmfs/fgi.csc.fi/apps/el7/Python/3.5.2-foss-2016b/lib")
-    prepend_path("MANPATH","/cvmfs/fgi.csc.fi/apps/el7/Python/3.5.2-foss-2016b/share/man")
-    prepend_path("PATH","/cvmfs/fgi.csc.fi/apps/el7/Python/3.5.2-foss-2016b/bin")
-    prepend_path("PKG_CONFIG_PATH","/cvmfs/fgi.csc.fi/apps/el7/Python/3.5.2-foss-2016b/lib/pkgconfig")
-    ...
-    setenv("EBROOTPYTHON","/cvmfs/fgi.csc.fi/apps/el7/Python/3.5.2-foss-2016b")
-    ...
 
 You can see that it has some meta-info, then adjusts various environment
-paths, so that when you run ``python`` it runs the program from
-``/cvmfs/fgi.csc.fi/apps/el7/Python/3.5.2-foss-2016b/bin``.
+paths, so that when you run ``gpaw`` it runs the program from
+``/share/apps/spack/software/py-gpaw/1.3.0/vmhtg6i/bin``.
 
 You can search for modules using the command ``module spider``.
 
