@@ -13,68 +13,82 @@ tutorials.
 Parallel programming models
 ---------------------------
 
-Parallel programming is a completely different way of programming (and
-a normal, serial code can't just be run as parallel without
-modifications).  Most Triton users don't need to write their own
+Parallel programming is a completely different way of programming.  Most
+Triton users don't need to write their own
 applications, at most they will be running existing programs, but in
 order to understand things, we start with some introduction.
 
 The two main models are:
 
-* Shared memory programming (e.g. OpenMP) runs on only one node
+* Shared memory program (or multithreading) runs on only one node
   because, like the name says, all the memory has to be accessible to
   all the processes.  Thus, scaleability is limited to a number of CPU
   cores available within one computational node. The code is  
-  easier to implement and the same code can still be run in serial mode.
-  Examples of application that utilize this model: Matlab, typical
-  parallel desktop programs.
+  easier to implement and the same code can still be run in a serial mode.
+  Examples of application that utilize this model: Matlab, R, OpenMP
+  applications, typical parallel desktop programs.
 
 * Message passing programming (e.g. MPI, message passing interface)
-  can run on multiple nodes via passing data through MPI software
-  libraries.  The large-scale scientific programs are MPI.
-  MPI can scale to thousands of CPU cores, but it's harder to
+  can run on multiple nodes interconnected with the network via passing
+  data through MPI software libraries. The large-scale scientific programs
+  are MPI. MPI can scale to thousands of CPU cores, but it's harder to
   implement from the programmer point of view.
 
-Both models can be combined in one application, in this case we are
-talking about hybrid parallel programming model.
+Both models, MPI and shared memory, can be combined in one application, in
+this case we are talking about hybrid parallel programming model.
 
 Most historical scientific code is MPI, but these days more and more
 people are using shared memory models.
 
-You can't just use the options on this page with any old code.  The
-code has to be able to use the multiple nodes and processors you
-offer.  Some programs will automatically do this if built and compiled
-the right way, but you always want to make sure for your particular
-circumstance.
+The important note is that a normal, serial code can't just be run as
+parallel without modifications. As a user it is your responsibility to 
+understand what parallel model implementation your code has, if any.
+Knowing this, you can proceed with the instructions below.
 
+Another important note regarding parallelizm is that all the applications 
+scale good up to some upper limit which depends on apllication implementation,
+size and type of problem you solve and some other factors. The best practice
+is to benchmark your code on different number of CPU cores before actual
+production run.
 
+OpenMP programs
+---------------
 
-OpenMP and single-node parallel programs
-----------------------------------------
+OpenMP is a standard de facto for the multithreading implementations. There
+are many others, but this one is the most common, suppported by all known 
+compiler suits. For other implementations of shared memory parallelism,
+please consult your code docs.
 
-We start with OpenMP (multithreaded) programs first since they are
-simpler.  These instructions apply to OpenMP programs as well as other
-multithreaded programs.
+Simple code compiling::
 
-The first step is always to figure out how to make your
-programs use multiple CPU cores.  OpenMP programs automatically use
-the right number of processors (using the slurm environment
-variables).  For other programs, might be worth checking
-yourself. (TODO).
+  gcc -fomp omp_program.c -o omp_program
 
-The basic slurm options you need are ``-c`` to specify the number of
-cores to use.  If your memory needs scale with the number of cores,
-use ``--mem-per-core``, if you require a fixed amount of memory (per
+Running an OpenMP code::
+
+  export OMP_PROC_BIND=TRUE
+  srun --cpus-per-task=12 --mem-per-cpu=2000 --time=45:00 omp_program
+
+The basic slurm options you need are ``--cpus-per-task=N`` (or ``-c N``) to specify the number of
+cores to use within one node.  If your memory needs scale with the number of cores,
+use ``--mem-per-core=``, if you require a fixed amount of memory (per
 node regardless of number of processors), use ``--mem``.
 
-``--exclusive``
+SLURM batch file will look similarly::
 
-compiling::
+  #!/bin/bash -l
+  #SBATCH --cpus-per-task=12
+  #SBATCH  --mem-per-cpu=2000
+  #SBATCH --time=45:00 
+  export OMP_PROC_BIND=TRUE
+  srun omp_program
 
-  gcc -fomp hello_omp.c -o hello_omp
+Good to know that OpenMP is both an environment and set of libraries, but
+those librarries always come as part of the compiler, thus no need to 
+load extra modules if you complie with the default ``gcc``.
 
-Multithreading
---------------
+
+Other programs and multithreading
+---------------------------------
 
 Some programs use multiple threads for their parallel computations. A good
 example of this kind of program is MATLAB, that user parallel pool of workers;
@@ -82,29 +96,42 @@ or R, which uses the ``parallel``-package for its parallel applys.
 Threaded applications behave similarly to OpenMP applications in that one
 needs to specify the number of cores per task and amount of memory per core.
 
-MPI and multi-node software
----------------------------
+MPI runs
+--------
 
-MPI programs use the MPI libraries 
-``-N``, ``-c``, ``--exclusive``, ``--mem-per-core``, ``--mem``,
+For compiling/running an MPI job one has to pick up one of the MPI library suit.
+Big vendors provide their own (Cray, Intel) while there are other popular MPI
+flavors available. To compile and run code you need to pick one. Since most of
+the MPI codes will also use math libs, makes sense to pick a toolchain that
+provides all at once.
 
+Loading module::
 
+  module load ioolf  # Intel Composer + MKL + OpenMPI
 
-Special software
-----------------
+Compiling a code::
 
-Matlab
-^^^^^^
-``matlab_multithread``, see :doc: `../apps/matlab`.
+  mpif90 mpi_prog.f -o mpi_prog
+  
+Running an MPI code in the batch mode::
 
-Python
-^^^^^^
+  #!/bin/bash
+  #SBATCH -N 2                 # on two compute nodes
+  #SBATCH -n 48                # 24 processes
+  #SBATCH --constraint=hsw     # run on pe[] nodes only
+  #SBATCH --time=4:00:00       # takes 4 hours all together
+  #SBATCH --mem-per-cpu=4000   # 4GB per process
 
-GPU and deep learning
-^^^^^^^^^^^^^^^^^^^^^
+  module load ioolf  # NOTE: should same as you used to compile the code
+  srun mpi_prog
 
-See :doc:`the gpu tutorial <gpu>` and :doc:`reference <../usage/gpu>`.
+In the example above we request two nodes with the Haswell CPUs (24 CPU cores each).
+Small MPI jobs will perfectly run also within one node.
 
+Triton has multiple architechtures around (12, 20, 24, 40 CPU cores per node),
+even though SLURM optimizes resources usage and allocate CPUs within one node, which
+gives better performance for the app, it still makes sense to put constraints
+explicitly.
 
 
 Monitoring performance
@@ -147,7 +174,3 @@ See the next pages:
   information.
 
 * :doc:`../usage/mpilibs`
-
-External links:
-
-*
