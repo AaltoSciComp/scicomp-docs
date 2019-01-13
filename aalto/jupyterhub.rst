@@ -26,9 +26,8 @@ computing and programming by anyone.
 
 Your persistent storage has a quota of 1GB.  Your data belongs to you,
 may be accessed from outside, and currently is planned to last no more
-than one year from last login.  (TODO: in the future, the user
-directories will be mounted on other Aalto computers).  You are
-limited to several CPUs and 512MB memory.
+than one year from last login.  You are
+limited to several CPUs and 1GB memory.
 
 Your notebook server is stopped after 60 minutes of idle time, or 4 hours
 max time.  Please close the Jupyter tab if you are not using it, or
@@ -36,13 +35,17 @@ else it may still appear as active.
 
 There are some general use computing environments.  You will began with
 Jupyter in the ``/notebooks`` directory, which is your persistent
-storage.
+storage.  Your server is completely re-created each time it restarts.
+Everything in your home directory is re-created, only ``/notebooks``
+is preserved.  (Certain files like ``.gitconfig`` are preserved by
+linking into ``/notebooks/.home/...``.)
 
 You begin with a computing server with the usual scipy
-stack installed.
+stack installed, plus a lot of other software used in courses here.
 
-You may access your data remotely by SMB mounting it on your own
-computer from inside the Aalto network or via Aalto VPN.  The SMB url
+You may access your data as a network drive by SMB mounting it on your own
+computer.  You must be inside the Aalto network or connected via Aalto
+VPN.  The SMB url
 is ``smb://jhnas.org.aalto.fi/$username``, or on Windows
 ``\\jhnas.org.aalto.fi\$username``.
 
@@ -64,7 +67,8 @@ though commercial purposes is not allowed).  For more information, see
 <http://www.aalto.fi/en/about/contact/services/it/policies/>`__.
 Heavy non-interactive computational use is not allowed (basically,
 don't script stuff to run in the background when you are not around.
-If you are using this service is person, it is OK).
+If you are using this service is person, it is OK).  For research
+computing, see :doc:`../triton/index`.
 
 
 
