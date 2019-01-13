@@ -20,13 +20,13 @@ Quick contents and links
 
        * About Triton
 
-         * `overview`
-         * `usagepolicy`
-	 * `acknowledgingtriton`
+         * :doc:`overview`
+         * :doc:`usagepolicy`
+	 * :doc:`acknowledgingtriton`
 	 * `Aalto Science-IT <http://science-it.aalto.fi>`_ (external
 	   link)
 
-       * `Getting Help/Contact <help>`
+       * :doc:`Getting Help/Contact <help>`
 
 	 * `Triton issue tracker <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`_
 	   (most requests here, login with HAKA)
@@ -35,25 +35,26 @@ Quick contents and links
 
        * Tutorials (start here)
 
-	 * `accounts`
-	 * `tut/intro`
-	 * `tut/connecting`
-	 * `tut/modules`
-	 * `tut/applications`
-	 * `tut/storage`
-	 * `tut/interactive`
-	 * `tut/serial`
-	 * `tut/array`
-	 * `tut/gpu`
+	 * :doc:`accounts`
+	 * :doc:`tut/intro`
+	 * :doc:`tut/connecting`
+	 * :doc:`tut/modules`
+	 * :doc:`tut/applications`
+	 * :doc:`tut/storage`
+	 * :doc:`tut/interactive`
+	 * :doc:`tut/serial`
+	 * :doc:`tut/array`
+	 * :doc:`tut/gpu`
+	 * :doc:`tut/parallel`
 
        * Cluster usage details
 
-	 * Parallel jobs (coming, for now see `usage/general`)
-	 * `usage/gpu`
+	 * Parallel jobs (coming, for now see :doc:`usage/general`)
+	 * :doc:`usage/gpu`
 
-       * `Applications <apps>`
+       * :ref:`Applications <apps>`
 
-       * `Quick Reference <ref/index>`
+       * :doc:`Quick Reference <ref/index>`
 
        For full contents, see below.
 
@@ -123,6 +124,7 @@ get their accounts (except maybe the last ones).
    Running in the queue <tut/serial>
    tut/array.rst
    tut/gpu.rst
+   tut/parallel.rst
 
 Detailed instructions
 =====================
