@@ -86,7 +86,10 @@ compilers, try ``module spider iomkl`` and, for example, ``module load
 iomkl/triton-2017a``.  (These stand for "gcc openmpi openblas lapack
 fftw" and "intel openmpi intel-mkl")
 
-For more info, see ``toolchain``
+Toolchains change often - check back for latest info if you need to
+use one.
+
+For more info, see `the toolchains page <usage/toolchains>`.
 
 
 Requesting new software

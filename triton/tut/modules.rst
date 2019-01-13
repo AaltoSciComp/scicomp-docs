@@ -154,7 +154,7 @@ Compilers and base libraries and so on are organised into
 *toolchains*, such as ``goolf`` (GCC openMP openBLAS LAPACK FFTW) and
 ``iomkl`` (intel compilers, OpenMPI, IntelMLK).  You can search for
 these modules and load them to get the necessary base compilers.  For
-more info, see the apps page.
+more info, see the :doc:`apps page <../apps/index>`.
 
 
 Final notes
