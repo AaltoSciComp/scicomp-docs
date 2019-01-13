@@ -30,7 +30,7 @@
                             | ``-o`` *output*                | print output into file *output*
                             | ``-e`` *error*                 | print errors into file *error*
                             | ``--exclusive``                | allocate exclusive access to nodes.  For large parallel jobs.
-                            | ``--constraint=``\ *feature*   | request *feature* (see ``slurm features`` for the current list of configured features, or Arch under the :ref:`hardware list <hardware-list>`).  Multiple with ``--constraint="hsw|skl"``.
+                            | ``--constraint=``\ *feature*   | request *feature* (see ``slurm features`` for the current list of configured features, or Arch under the :ref:`hardware list <hardware-list>`).  Multiple with ``--constraint="hsw\|skl"``.
                             | ``--array=``\ *0-5,7,10-15*    | Run job multiple times, use variable ``$SLURM_ARRAY_TASK_ID`` to adjust parameters.
                             | ``--gres=gpu``, ``--gres=gpu:``\ *n* | request one (or *n*) gpu cards
                             | ``--gres=spindle:``\ *n*       | request *n* local disk drives (works in all partitions)
