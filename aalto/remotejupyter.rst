@@ -45,8 +45,8 @@ Aalto provides two “light computing” servers: ``brute.org.aalto.fi``, ``forc
 
 	You might get messages like `The port 12520 is already in use, trying another port` while starting the notebook server. In that case, take note of the port the server is running in, e.g.
 	
-	[I 15:42:14.187 NotebookApp] The Jupyter Notebook is running at:
-	[I 15:42:14.187 NotebookApp] http://localhost:12470/?token=7710d65794c6914cfe690034e607b7eeda4c027b6e6fb945
+	`[I 15:42:14.187 NotebookApp] The Jupyter Notebook is running at:`
+	`[I 15:42:14.187 NotebookApp] http://localhost:12470/?token=7710d65794c6914cfe690034e607b7eeda4c027b6e6fb945`
 	
 	and replace "12520" below with the correct port number, 12470 in this case.
 
