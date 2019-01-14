@@ -2,6 +2,8 @@
 About Science-IT and Triton
 ===========================
 
+*This is the first tutorial.  The next is* :doc:`<connecting>`.
+
 Science-IT is an Aalto infrastructure for scientific computing.  Its
 roots was a collaboration between the Information and Computer Science
 department (now part of CS), Biomedical Engineering and Computational
@@ -25,10 +27,12 @@ heterogeneous, so we continually add new hardware and incrementally
 upgrade.  We are designed for scientific computing and data analysis.
 We use Linux as an operating system (like most supercomputers).  We
 are a cluster: many connected nodes with a scheduling system to divide
-work between them.
+work between them.  The network and some storage is shared, CPUs,
+memory, and other storage is not shared.
 
 On an international scale of universities, the power of Triton is
-relatively high and it has a very diverse range of uses.  However,
+relatively high and it has a very diverse range of uses, though `CSC
+has much more <https://research.csc.fi/computing-and-software>`__.  Using
 using this power requires more effort than using your own computer.
 
 
@@ -105,4 +109,4 @@ details.
 
 What's next?
 ============
-:doc:`connecting`
+The next tutorial is :doc:`connecting`.

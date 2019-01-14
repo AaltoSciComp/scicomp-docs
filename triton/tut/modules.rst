@@ -16,6 +16,32 @@ If you need a program installed, we will put it in the module system.
 In a system the size of Triton, it just isn't possible to install all
 software by default for every user.
 
+The summary
+-----------
+
+A module lets you adjust what software is available.  For example,
+let's see what our Python is::
+
+  $ which python3
+  /usr/bin/python3
+  $ python3 -V
+  Python 3.4.9
+
+Now let's load the anaconda3 module, a more up to date Python with a
+lot of libraries already included::
+
+  $ module load anaconda3
+  $ which python3
+  /share/apps2/anaconda/anaconda3/latest/bin/python3
+  $ python3 -V
+  Python 3.6.8 :: Anaconda custom (64-bit)
+
+As you see, we have a newer Python.  Let's go back to blank::
+
+  $ module purge
+
+
+
 What is a module?
 -----------------
 
@@ -54,7 +80,9 @@ shown):
 
 You can see that it has some meta-info, then adjusts various environment
 paths, so that when you run ``gpaw`` it runs the program from
-``/share/apps/spack/software/py-gpaw/1.3.0/vmhtg6i/bin``.
+``/share/apps/spack/software/py-gpaw/1.3.0/vmhtg6i/bin``.  This is
+almost magic: we can have many versions of any software installed, and
+everyone can pick what they want, with no conflicts.
 
 You can search for modules using the command ``module spider``.
 
@@ -109,9 +137,9 @@ can mean that loading module takes a long time, but there is a
 solution: ``module save $collection_name`` and ``module restore
 $collection_name``.
 
-Example: make a module collection
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Try loading the ``...`` module.  How long does it take?  Use ``module
+Exercise: make a module collection
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Try loading the ``graph-tool`` module.  How long does it take?  Use ``module
 list`` to see how many things were actually loaded.::
 
   module load graph-tool             # 600 seconds!
@@ -162,10 +190,11 @@ Final notes
 
 If you have loaded modules when you build/install software, remember
 to load the same modules when you run the software (also in Slurm
-jobs).
+jobs).  You'll learn about running jobs later, but the ``module load``
+should usually be put into the job script.
 
 The modules used to compile and run a program become part of its
-environment and must always be specified.
+environment and must always be loaded.
 
 If you are compiling things and want it to work in the future, load a
 particular version of the module (``module load $name/$version``).
@@ -191,7 +220,8 @@ Exercises
 Before each exercise, ``module purge`` to clear all modules.
 
 1. ``module avail`` and check what you see.  Find some examples of
-   software that have many different versions available.
+   software that have many different versions available.  Load the
+   oldest version of that software.
 
 2. Load some toolchain module such as ``goolfc/triton-2017a``.  List
    what it loaded.  Use ``env | sort > filename`` to store environment
@@ -201,7 +231,8 @@ Before each exercise, ``module purge`` to clear all modules.
 3. Load a module with many dependencies, such as
    ``R/3.3.2-iomkl-triton-2017a-libX11-1.6.3`` and save it as a
    collection.  Compare the time needed to load the module and the
-   collection.
+   collection.  (Does ``time`` not work?  Change your shell to bash,
+   see the previous tutorial.)
 
 4. (Advanced) Load GROMACS. Use 'which' to find where command 'gmx' is
    and then use 'ldd' to find out what libraries it uses. Load

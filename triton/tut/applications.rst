@@ -4,11 +4,14 @@ Applications
 
 The previous tutorial taught you about :doc:`modules <modules>`.
 Here, we talk a bit more about the overall process of finding,
-building, and compiling software.  In modern times, the difficulty of
-configuring and compiling software is taking up more and more time,
-thus the need to cover it.
+building, and compiling software.  These days, installing and managing
+scientific software is taking more and more time, thus we need to
+specifically talk about it some.
 
 .. seealso::
+
+   This assumes that you have read the previous tutorial about
+   :doc:`modules <modules>`.
 
    Main article: :doc:`../apps/index`
 
@@ -16,7 +19,7 @@ thus the need to cover it.
 Available software
 ==================
 
-You can find what we make available in different ways:
+You can find what software we have available in different ways:
 
 * First, you should check our :doc:`applications page <../apps/index>`
   and see if the software you need is already available and if it has
@@ -43,9 +46,9 @@ because not everything can be available at once.  Refer to the section
 on :doc:`modules <modules>` for info - basically ``module load
 $NAME``.
 
-Not all of the software we have available is documented.  You should
-also ``module spider $NAME`` to try to see if you can find a module
-that way.  Note that this is case sensitive in a weird away so it can
+Not all of the software we have available is documented.  You can
+``module spider $NAME`` to try to see if you can find a module
+that way.  Note that this is *partially* case sensitive so it can
 be hard to find things - you might need to look through ``module
 avail`` some, too.  To see just what a module does, remember ``module
 show``.
@@ -60,7 +63,10 @@ Singularity containers
 
 Some software has gotten so hard that it just can't be installed, and
 for that we use containers.  A software container is basically a
-complete self-contained operating system environment.
+complete self-contained operating system environment.  Another
+advantage of containers is that it makes it easy to move installed
+software from system to system, so that you can have the same
+environment everywhere.
 
 You can read about :doc:`singularity from its page
 <../usage/singularity>`.  For now, realize that, after you load some
@@ -89,7 +95,6 @@ fftw" and "intel openmpi intel-mkl")
 Toolchains change often - check back for latest info if you need to
 use one.
 
-For more info, see `the toolchains page <usage/toolchains>`.
 
 
 Requesting new software
@@ -100,6 +105,7 @@ possible to keep up with all requests.  If you need something, submit
 a request to our :ref:`issue tracker <issuetracker>`, but be aware
 that despite best efforts, we can't do everything.  See the :doc:`main
 applications info page <../apps/index>`.
+
 
 
 Exercises

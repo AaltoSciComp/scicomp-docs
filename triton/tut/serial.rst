@@ -2,6 +2,11 @@
 Serial Jobs
 ===========
 
+.. seealso::
+
+   This assumes you have read :doc:`the interactive jobs tutorial
+   <interactive>` first.
+
 Introduction
 ============
 
@@ -14,8 +19,11 @@ the optimal use of resources, and allocates code to nodes. You have to
 start your code in a structured way in order for this to work. Our
 `previous tutorial <interactive>` showed how to
 run things directly from the command line, without any scripting needed.
-Now let's see how to put these into scripts for making things more
-automated and reproducible.
+
+Now let's see how to put these into scripts.  Scripts allow jobs to
+run asynchronously, in batch, and without human supervision.
+
+
 
 A basic script
 ==============
@@ -29,7 +37,10 @@ system how to run it.  Here is a simple submission script::
 
     srun echo 'hello, world'
 
-Then submit it with ``sbatch``::
+(Need to edit a file?  You can use the editor ``nano``.)  Each
+``srun`` is a job step, and appears as a separate row in your
+history - which is useful for monitoring.  Then submit
+it with ``sbatch``::
 
     $ sbatch hello.sh
 
@@ -59,7 +70,8 @@ efficiently scheduled. If you exceed the limits, the jobs will be
 killed. At least you need to set ``--time``, ``--mem-per-cpu`` or
 ``--mem``.
 
-See the :doc:`reference page <../ref/index>` or the :doc:`details page
+See the :doc:`previous tutorial <interactive>`, the :doc:`reference
+page <../ref/index>` or the :doc:`details page
 <../usage/general>` for more information and advanced usage.
 
 The same parameters can be used in
@@ -74,8 +86,8 @@ It is important to note that slurm is a declarative system. You declare
 what you need, and slurm handles finding the resources without you
 having to worry about details. The more resources you request, the
 harder it will be to schedule and the longer you may have to wait. So,
-you should ask for what you need to ensure it runs, but after you get
-experience with your code reduce resources to just what is needed.
+you should ask for enough to make sure your job can complete, but once
+you get experience with your code reduce resources to just what is needed.
 
 In general, you don't want to go submitting too short jobs (under 5
 minutes) because there is a lot of startup, accounting, and scheduling
@@ -99,7 +111,12 @@ the status of jobs. There are commands to do this.
 |                                      | mem/cpu usage.                       |
 +--------------------------------------+--------------------------------------+
 
-See the full list of status commands on the reference page
+.. include:: ../ref/slurm_status.rst
+
+See the full list of status commands on the :doc:`reference page
+<../ref/index>`.
+
+
 
 Partitions
 ==========
@@ -111,10 +128,9 @@ jobs. There are also partitions for GPUs, huge memory nodes, interactive
 shells, and so on. Most of the time, you should leave the partition off,
 and slurm will use all possible partitions. You can specify your
 partitions with ``-p PARTITION_NAME`` to whatever command you are
-running, which is mainly needed if you want to force interactive or GPU
-partitions. The available partitions are listed below and on the
-reference page. For the fastest running, consider if you code can be
-right below one of the limits you see here.
+running, which is mainly needed if you want to force interactive or a
+test partition. The available partitions are listed on the
+reference page.
 
 You can see the partitions in the :doc:`quick
 reference<../ref/index>`.

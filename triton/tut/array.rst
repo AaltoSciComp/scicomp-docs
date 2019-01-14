@@ -43,7 +43,8 @@ with ``sbatch script.sh``::
 
     # Each array task runs the same program, but with a different input file.
     cd $SLURM_ARRAY_TASK_ID
-    srun ./my_application -input input_data_$SLURM_ARRAY_TASK_ID
+    srun echo I am number $SLURM_ARRAY_TASK_ID
+    # e.g. srun ./my_application -input input_data_$SLURM_ARRAY_TASK_ID
     cd ..
 
 Different parameters in script
@@ -76,7 +77,8 @@ by hand anyway, better to have it all together.)::
     esac
 
     cd $SLURM_ARRAY_TASK_ID
-    srun ./my_application $ARGS
+    srun I am doing $ARGS !
+    # e.g. python input.py $ARGS
     cd ..
 
 Read parameters from file
@@ -108,11 +110,12 @@ numbers start at one, not zero!
     line=`sed "${n}q;d" arrayparams.txt`    # get n:th line (1-indexed) of the file
 
     # Do whatever with arrayparams.txt
-    ./my_program $line
+    srun echo I am doing $line
+    # e.g. srun ./my_program $line
 
 
-Grouping runs together in bigger chunks
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(advanced) Grouping runs together in bigger chunks
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Let's say your tasks are very short - only a few minutes.  This is
 still a bit short to use array jobs, because you will still have too
 much overhead in scheduling.  We want to try for 30 minutes and if
@@ -209,13 +212,13 @@ so try to combine smaller tasks to fit that.
 Exercises
 =========
 
-1. Look at ``man sbatch`` and investigate ``--array`` parameter
+1. Look at ``man sbatch`` and investigate ``--array`` parameter.
 
 2. Submit an array job that runs 10 tasks starting 1, and every task
-   outputs that job array id
+   outputs that job array id.
 
-3. Make job array id changing with the step 2 (like 1, 3, 5,
-   etc)
+3. Make job array which runs every other index (like 1, 3, 5,
+   etc).  You'll have to look at the ``sbatch`` manual page.
 
 
 What's next?

@@ -118,7 +118,7 @@ debugging.  See a bit more in the :doc:`serial tutorial <serial>`.
 **time/CPU/memory requirements:** The commands srun/sinteractive have
 many more options that let you specific resources. The most important
 for interactive running are probably ``--mem``, ``--cpus-per-task`` (``-c``),
-and ``--time` (``-t``).
+and ``--time`` (``-t``).
 
 **How much time/memory/CPU resources should you request?**  The less
 you request, the faster you are likely to run. As for all you need, but
@@ -149,15 +149,15 @@ information on how much time, memory, etc is being used. Without this,
 you won't know how much time and memory to request. You always want to
 request the least possible, so that your stuff can run faster. The `next tutorial (about batch jobs) <serial>` goes into this in more detail. You probably want to be checking things like slurm history even if you aren't running batch, to see how many resources you are actually using.
 
-The command ``slurm q`` will tell you the currently running processes (a good way to make sure you have stopped everything). slurm history will tell you about recent jobs, including how much total memory they used and their total CPU time.
+The command ``slurm q`` will tell you the currently running processes (a good way to make sure you have stopped everything). ``slurm history`` will tell you about recent jobs, including how much total memory they used and their total CPU time.
 
-The command ``slurm cancel`` will cancel a job by job-id (useful is something keeps running after you don't need it anymore).
+The command ``scancel`` will cancel a job by job-id (useful is something keeps running after you don't need it anymore).
 
 Exercises
 =========
 
 1. Check out some of these commands: ``sinfo``, ``squeue``.  Run
-   ``scontrol show job $jobid`` on some running job - does anything
+   ``slurm job $jobid`` on some running job - does anything
    look interesting?
 
 2. Run ``srun -p debug hostname`` - what do you see and why?  Run

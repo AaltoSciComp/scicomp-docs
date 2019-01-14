@@ -2,6 +2,9 @@
 Connecting to Triton
 ====================
 
+*Tutorials: :doc:`previous <intro>`, :doc:`next <software>`.*
+
+
 All access to Triton is via Secure Shell (ssh).
 
 You can connect to ``triton.aalto.fi`` from Aalto and CSC networks.
@@ -34,7 +37,7 @@ Connecting via ssh
 Linux
 -----
 
-All Linux distributions come with an ssh client, so you don't need to do
+All Linux distributions come with an ``ssh`` client, so you don't need to do
 anything.  To use graphical applications, use the standard ``-X`` option,
 nothing extra needed.::
 
@@ -50,7 +53,7 @@ If you are from outside the Aalto networks::
 Mac
 ---
 
-ssh is installed by default, same as Linux.  Run it from a terminal,
+``ssh`` is installed by default, same as Linux.  Run it from a terminal,
 same command as Linux.  To run graphical applications, you need an to
 install an X server (XQuartz).
 
@@ -78,6 +81,25 @@ Exercise
 
 2. Check the uptime and load of the login node: ``uptime`` and
    ``htop``.  What else can you learn about the node?
+
+3. Go ahead and change your shell to bash (see next item).
+
+Change your shell to bash
+=========================
+
+The thing you are interacting with when you type is the **shell** -
+the layer around the operating system.  ``bash`` is the most common
+shell, but for some reason Aalto has the default shell as ``zsh``
+(which is more powerful in some ways, but harder to teach with).  We
+recommend that you change your shell to bash.
+
+You can determine if you shell is bash by running ``echo $SHELL``.
+Does it say bash?
+
+If not, ``ssh`` to ``kosh.aalto.fi`` and run ``chsh``.  Enter the full
+path ``/bin/bash`` and click OK.  It may take 15 minutes to update,
+and you will need to log in again.
+
 
 
 Set up key-based login

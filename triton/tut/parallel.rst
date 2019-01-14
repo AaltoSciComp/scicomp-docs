@@ -23,7 +23,7 @@ The two main models are:
 * Shared memory program (or multithreading) runs on only one node
   because, like the name says, all the memory has to be accessible to
   all the processes.  Thus, scaleability is limited to a number of CPU
-  cores available within one computational node. The code is  
+  cores available within one computational node. The code is
   easier to implement and the same code can still be run in a serial mode.
   Examples of application that utilize this model: Matlab, R, OpenMP
   applications, typical parallel desktop programs.
@@ -41,21 +41,26 @@ Most historical scientific code is MPI, but these days more and more
 people are using shared memory models.
 
 The important note is that a normal, serial code can't just be run as
-parallel without modifications. As a user it is your responsibility to 
+parallel without modifications. As a user it is your responsibility to
 understand what parallel model implementation your code has, if any.
 Knowing this, you can proceed with the instructions below.
 
-Another important note regarding parallelizm is that all the applications 
-scale good up to some upper limit which depends on apllication implementation,
+Another important note regarding parallelism is that all the applications
+scale good up to some upper limit which depends on application implementation,
 size and type of problem you solve and some other factors. The best practice
 is to benchmark your code on different number of CPU cores before actual
 production run.
+
+**If you want to run some program in parallel, you have to know
+something about it - is it shared memory or MPI?  A program doesn't
+magically get faster when you ask more processors if it's not designed
+to.**
 
 OpenMP programs
 ---------------
 
 OpenMP is a standard de facto for the multithreading implementations. There
-are many others, but this one is the most common, suppported by all known 
+are many others, but this one is the most common, supported by all known
 compiler suits. For other implementations of shared memory parallelism,
 please consult your code docs.
 
@@ -73,18 +78,18 @@ cores to use within one node.  If your memory needs scale with the number of cor
 use ``--mem-per-core=``, if you require a fixed amount of memory (per
 node regardless of number of processors), use ``--mem``.
 
-SLURM batch file will look similarly::
+The SLURM batch file will look similar::
 
   #!/bin/bash -l
   #SBATCH --cpus-per-task=12
   #SBATCH  --mem-per-cpu=2000
-  #SBATCH --time=45:00 
+  #SBATCH --time=45:00
   export OMP_PROC_BIND=TRUE
   srun omp_program
 
 Good to know that OpenMP is both an environment and set of libraries, but
-those librarries always come as part of the compiler, thus no need to 
-load extra modules if you complie with the default ``gcc``.
+those libraries always come as part of the compiler, thus no need to
+load extra modules if you compile with the default ``gcc``.
 
 
 Other programs and multithreading
@@ -99,7 +104,7 @@ needs to specify the number of cores per task and amount of memory per core.
 MPI runs
 --------
 
-For compiling/running an MPI job one has to pick up one of the MPI library suit.
+For compiling/running an MPI job one has to pick up one of the MPI library suites.
 Big vendors provide their own (Cray, Intel) while there are other popular MPI
 flavors available. To compile and run code you need to pick one. Since most of
 the MPI codes will also use math libs, makes sense to pick a toolchain that
@@ -112,7 +117,7 @@ Loading module::
 Compiling a code::
 
   mpif90 mpi_prog.f -o mpi_prog
-  
+
 Running an MPI code in the batch mode::
 
   #!/bin/bash
@@ -128,7 +133,7 @@ Running an MPI code in the batch mode::
 In the example above we request two nodes with the Haswell CPUs (24 CPU cores each).
 Small MPI jobs will perfectly run also within one node.
 
-Triton has multiple architechtures around (12, 20, 24, 40 CPU cores per node),
+Triton has multiple architectures around (12, 20, 24, 40 CPU cores per node),
 even though SLURM optimizes resources usage and allocate CPUs within one node, which
 gives better performance for the app, it still makes sense to put constraints
 explicitly.
@@ -158,10 +163,12 @@ In ``triton-examples`` (at ``/scratch/scip/examples``), you find some
 examples.  You may need some help from :doc:`../usage/general` to do
 these:
 
-1. Find the files ``openmp/hello_omp.{c.slrm}`` that have a short
+1. Find the files ``openmp/hello_omp.c`` and ``openmp/hello_omp.slrm``
+   that have a short
    example of OpenMP.  Compile and run it - a slurm script is included.
 
-2. Find the files ``mpi/hello_mpi.{c.slrm}`` that have a short example
+2. Find the files ``mpi/hello_mpi.c`` and ``mpi/hello_mpi.slrm`` that
+   have a short example
    of MPI.  Compile and run it - a slurm script is included.
 
 Next steps

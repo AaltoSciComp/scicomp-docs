@@ -36,13 +36,17 @@ Think about I/O before you start! - General notes
 When people think of computer speed, they usually think of CPU speed.
 But this is missing an important factor: how fast can data get to the
 CPU?  In very many cases, I/O (input/output) is the true bottleneck.
-This must be considered just as much as code efficiency.
+This must be considered just as much as code efficiency.  **In fact,
+modern computers and especially GPUs are so fast, that they can use
+data so quickly that they can slow down the cluster down for
+everyone.**
 
 The answer is that users have a variety of needs, and a variety of
 filesystems.  The following checklist aims to help you to choose the
 best approach for you calculations.
 
--  Do you need IO in the first place?
+-  How much IO in the first place?
+-  What's the pattern of it, and which filesystem is best for it?
 -  E.g. checkpointing code state to disk may be unwise if the code runs
    less that couple of days.
 -  Some programs use local disk as swap-space. Only turn on if you know
@@ -65,7 +69,7 @@ Home directories
 ^^^^^^^^^^^^^^^^
 The place you start when you log in.  For user init files, some small
 config files, etc.  No calculation data. Daily backup.  Usually you
-want to move to scratch first.
+want to use scratch instead.
 
 Lustre (/scratch)
 ^^^^^^^^^^^^^^^^^
@@ -73,7 +77,8 @@ This is the big, high-performance, 2PB Triton storage.  The primary
 place for calculations, data analyzes etc.  Not backed up.  It is
 shared on all nodes, and has very fast access.  It is divided into two
 parts, scratch (by groups) or work (per-user).  In general, always
-change to ``$WRKDIR`` when you first log in and start doing work.
+change to ``$WRKDIR`` or a group ``scratch`` directory when you first
+log in and start doing work.
 
 Lustre separates metadata and contents onto separate object and
 metadata servers.  This allows fast access to large files, but a
@@ -84,7 +89,9 @@ See :doc:`../usage/lustre`
 Local disks
 ^^^^^^^^^^^
 Local disks are on each node separately.  For the fastest IOs with
-single-node jobs. It is cleaned up after job is finished.
+single-node jobs. It is cleaned up after job is finished.  Since 2019,
+things have gotten a bit more complicated since our newest (skl) nodes
+don't have local disks.
 
 See the :doc:`Compute
 node local drives <../usage/localstorage>` page for further details and script
@@ -117,7 +124,7 @@ member.
     $ quota
     User quotas for darstr1
          Filesystem   space   quota   limit   grace   files   quota   limit   grace
-    /home              484M    977M   1075M           10264       0       0        
+    /home              484M    977M   1075M           10264       0       0
     /scratch          3237G    200G    210G       -    158M      1M      1M       -
 
     Group quotas
@@ -183,7 +190,7 @@ Below is an example of the "raw" scp usage::
 
     # copying to HOME
     user@pc123 $ scp testCluster.m user12@triton:
-    testCluster.m                                 100%  391     0.4KB/s   00:00    
+    testCluster.m                                 100%  391     0.4KB/s   00:00
     # copying to WRKDIR
     user@pc123 $ scp testCluster.m user12@triton:/scratch/work/USERNAME/
     ...
@@ -223,9 +230,11 @@ Exercises
 ^^^^^^^^^
 1. Mount your work directory by SMB and transfer a file to Triton.
    Note that you must be on ``eduroam``, the ``aalto`` *with Aalto
-   laptop*, or connected to the Aalto VPN
+   laptop*, or connected to the Aalto VPN.
 
-2. (Advanced) If you have a Linux on Mac computer, study the ``rsync``
+2. Or, use rsync, scp/sftp, or sshfs to transfer a file.
+
+3. (Advanced) If you have a Linux on Mac computer, study the ``rsync``
    manual page and try to transfer a file.
 
 
@@ -269,10 +278,15 @@ directories at ``/m/cs/scratch/$project/``.
 Exercises
 =========
 
+``strace`` is a command which tracks **system calls**, basically the
+number of times the operating system has to do something.  It can be
+used as a rudimentary way to see how much I/O load there is.
+
 1. Use ``strace -c`` to compare the number of system calls in ``ls``,
-   ``ls -l``, and ``ls --color``.  You can use the directory
+   ``ls -l``, ``ls --no-color``, and ``ls --color``.  You can use the directory
    ``/scratch/scip/lustre_2017/many-files/`` as a place with many
-   files in it.
+   files in it.  How many system calls per file were there for each
+   option?
 
 2. Using ``strace -c``, compare the times of ``find`` and ``lfs find``
    on the directory mentioned above.  Why is it different?

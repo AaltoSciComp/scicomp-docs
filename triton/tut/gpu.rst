@@ -4,6 +4,8 @@ GPU computing
 
 .. seealso::
 
+   This tutorial assumes you have read :doc:`interactive`.
+
    Main article: :doc:`../usage/gpu`
 
 .. highlight:: bash
@@ -133,7 +135,7 @@ data to the process.  So, increase the number of CPUs you request so
 that you can provide the GPU with enough data.  However, don't request
 too many: then, there aren't enough CPUs for everyone to use the GPUs,
 and they go to waste!  (For the K80 nodes, we have only 1.5 CPUs per
-GPU, but on all others we have 6 CPUs/GPU)
+GPU, but on all others we have 4-6 CPUs/GPU)
 
 Other
 ~~~~~
@@ -160,7 +162,9 @@ Exercises
 In ``triton-examples`` (at ``/scratch/scip/examples`` and also on
 github), you find some examples:
 
-1. Compile and run using ``srun`` the ``gpu/pi.cu`` example.
+1. Compile and run using ``srun`` the ``gpu/pi.cu`` example.  Load the
+   ``cuda`` module, ``nvcc`` it, then try running the program.  Does
+   it say zero?  Try running it with a GPU and see what happens.
 
 
 Next steps

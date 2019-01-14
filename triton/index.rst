@@ -120,8 +120,8 @@ get their accounts (except maybe the last ones).
    tut/modules.rst
    tut/applications.rst
    tut/storage.rst
-   Interactive jobs - running your first command <tut/interactive>
-   Running in the queue <tut/serial>
+   Interactive jobs: running your first command <tut/interactive>
+   Serial jobs: running in the queue <tut/serial>
    tut/array.rst
    tut/gpu.rst
    tut/parallel.rst
