@@ -12,3 +12,4 @@
    ``module unload`` *NAME*     | unload a module
    ``module save`` *ALIAS*      | save module to this alias (saved in ~/.lmod.d/)
    ``module restore`` *ALIAS*   | load saved module set (faster than loading individually)
+   ``module purge``             | unload all loaded modules (faster than unloading individually)
