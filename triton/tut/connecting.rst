@@ -89,9 +89,10 @@ Change your shell to bash
 
 The thing you are interacting with when you type is the **shell** -
 the layer around the operating system.  ``bash`` is the most common
-shell, but for some reason Aalto has the default shell as ``zsh``
-(which is more powerful in some ways, but harder to teach with).  We
-recommend that you change your shell to bash.
+shell, but the Aalto default shell used to be ``zsh`` (which is more
+powerful in some ways, but harder to teach with).  For new users (if
+you joined Aalto after autumn 2018) you should have bash as the
+default. We recommend that you check and change your shell to bash.
 
 You can determine if you shell is bash by running ``echo $SHELL``.
 Does it say bash?
