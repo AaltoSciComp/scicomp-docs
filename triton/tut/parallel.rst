@@ -2,10 +2,6 @@
 Parallel computing
 ==================
 
-.. note::
-
-   This page is still under development.
-
 Parallel computing is what HPC is really all about: processing things on
 more than one CPU at once. By now, you should have read all of the previous
 tutorials.
@@ -148,20 +144,11 @@ is far below, your code may not be working correctly in a parallel
 environment.
 
 
-Quick reference
----------------
-
-As a reminder, here is the quick reference of all slurm options
-
-.. include:: ../ref/slurm.rst
-
-
 Exercises
 ---------
 
 In ``triton-examples`` (at ``/scratch/scip/examples``), you find some
-examples.  You may need some help from :doc:`../usage/general` to do
-these:
+examples.
 
 1. Find the files ``openmp/hello_omp.c`` and ``openmp/hello_omp.slrm``
    that have a short
