@@ -40,7 +40,7 @@ this:
 
 ::
 
-    python -c 'import os; print("hi from", os.uname().nodename)'
+    python3 -c 'import os; print("hi from", os.uname().nodename)'
 
 You switch to use srun. All input/output still goes to your terminal
 (but note X forwarding for graphical applications doesn't work - see
@@ -48,7 +48,7 @@ below for that).
 
 ::
 
-    srun --mem=50G --time=5:00:00 python -c 'import os; print("hi from", os.uname().nodename)'
+    srun --mem=50G --time=5:00:00 python3 -c 'import os; print("hi from", os.uname().nodename)'
 
 This has some possible problems: it is connected to your shell. If your
 shell quits, the process gets lost. Also, this runs only one single
