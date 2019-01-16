@@ -47,8 +47,8 @@ Schedule
 
    Date (default Th)  | Time (default 14:00-15:00)  | Loc   | Topic
     3.jan  | 13-14   | A106  | Rest of year decided soon
-   17.jan  | 14-15   | ?     |
-   24.jan  | 14-15   | ?     |
+   17.jan  | 14-15   | CS A2 | CS building, 2nd floor coffee room in the A wing
+   24.jan  | 14-15   | CS A2 | CS building, 2nd floor coffee room in the A wing
    31.jan  | 14-15   | A237  |
     7.feb  | 14-15   | A237  |
    14.jan  | 14-15   | A237  |
