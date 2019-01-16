@@ -32,8 +32,8 @@
                             | ``--exclusive``                | allocate exclusive access to nodes.  For large parallel jobs.
                             | ``--constraint=``\ *feature*   | request *feature* (see ``slurm features`` for the current list of configured features, or Arch under the :ref:`hardware list <hardware-list>`).  Multiple with ``--constraint="hsw\\|skl"``.
                             | ``--array=``\ *0-5,7,10-15*    | Run job multiple times, use variable ``$SLURM_ARRAY_TASK_ID`` to adjust parameters.
-                            | ``--gres=gpu``, ``--gres=gpu:``\ *n* | request one (or *n*) gpu cards
-                            | ``--gres=spindle:``\ *n*       | request *n* local disk drives (works in all partitions)
+                            | ``--gres=gpu``                 | request a GPU, or ``--gres=gpu:``\ *n* for multiple
+                            | ``--gres=spindle``             | request nodes that have disks, ``spindle:``\ *n*, for a certain number of RAID0 disks
                             | ``--mail-type=``\ *type*       | notify of events: ``BEGIN``, ``END``, ``FAIL``, ``ALL``, ``REQUEUE`` (not on triton) or ``ALL.`` MUST BE used with ``--mail-user=`` only
                             | ``--mail-user=``\ *your@email* | whome to send the email
    ``srun``                 | ``-N`` *<N_nodes>* hostname    | Print allocated nodes (from within script)

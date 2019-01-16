@@ -2,6 +2,14 @@
 Data storage
 ============
 
+.. seealso::
+
+   * :doc:`../usage/lustre`
+   * :doc:`../usage/localstorage`
+   * :doc:`../usage/quotas`
+   * :doc:`../usage/smallfiles`
+   * The storage advanced page: :doc:`../usage/storage`
+
 In this tutorial, we go over places to store data on Triton and how to
 access it remotely.
 
@@ -12,50 +20,54 @@ Triton has various ways to store data.  Each has a purpose, and when
 you are dealing with the large data sets or intensive IO, efficiency
 becomes important.
 
-Roughly, we have small home directories (only for configuration
-files), large Lustre (scratch and work, large, primary calculation
-data), and special places for scratch during computations (local
-disks, ramfs, fast but temporary)
-
-Compare this to what is available at Aalto:
-
--  Aalto Linux has a separate home directory, not shared with Triton.
--  Departments can have their own shares, called variously project,
-   work, teamwork, archive.  These are not on Triton except the login
-   node, because they are
-   not high performance enough (it just takes one person to start
-   50-node job that brings it down for everyone).
+Roughly, we have small **home** directories (only for configuration
+files), large Lustre (**scratch** and **work**, large, primary calculation
+data), and special places for scratch during computations (**local
+disks**).  At Aalto, there is **aalto home**, **project**, and
+**archive** directories which, unlike Triton, are backed up but don't
+scale to the size of Triton.
 
 A file consists of its contents and metadata.  The metadata is things
 like user, group, timestamps, permissions.  To view metadata, use ``ls
 -l`` or ``stat``.
+
+Filesystem performance can be measures by both IOPS (input-output
+operations per second) and stream I/O speed.  ``/usr/bin/time -v`` can
+give you some hints here.  You can see the :doc:`profiling
+<../usage/profiling>` page for more info.
 
 Think about I/O before you start! - General notes
 =================================================
 
 When people think of computer speed, they usually think of CPU speed.
 But this is missing an important factor: how fast can data get to the
-CPU?  In very many cases, I/O (input/output) is the true bottleneck.
-This must be considered just as much as code efficiency.  **In fact,
-modern computers and especially GPUs are so fast, that they can use
-data so quickly that they can slow down the cluster down for
+CPU?  In very many cases, input/output (IO) is the true bottleneck and
+must be considered just as much as processor speed.  **In fact,
+modern computers and especially GPUs are so fast, it is very easy for
+a few GPUs with bad data access patterns to bring the cluster down for
 everyone.**
 
-The answer is that users have a variety of needs, and a variety of
-filesystems.  The following checklist aims to help you to choose the
-best approach for you calculations.
+The solution is similar to how you have to consider memory: there are
+different types of filesystems with different tradeoffs between speed,
+size, and performance, and you have to use the right one for the right
+job.  Often times, you have to use several in tandem: for example,
+store original data on **archive**, put your working copy on
+**scratch**, and maybe even make a per-calculation copy on **local
+disks**.
 
--  How much IO in the first place?
--  What's the pattern of it, and which filesystem is best for it?
--  E.g. checkpointing code state to disk may be unwise if the code runs
-   less that couple of days.
+Consider:
+
+-  How much IO in the first place?  Do you continually re-read the
+   same data?
+-  What's the pattern of it, and which filesystem is best for it?  If
+   you read all at once, scratch is fine, but if there are many small
+   files or random access, local disks may help.
+-  Do you write log files / checkpoints more often than is needed?
 -  Some programs use local disk as swap-space. Only turn on if you know
    it is reasonable.
 
-Filesystem performance can be measures by both IOPS (input-output
-operations per second) and stream I/O speed.  ``/usr/bin/time -v`` can
-give you some hints here.  You can see the :doc:`profiling
-<../usage/profiling>` page for more info.
+There's a checklist in the :doc:`storage details page
+<../usage/storage>`.
 
 Avoid many small files! Use a few big ones instead. (we have a
 :doc:`dedicated page <../usage/smallfiles>` on the matter)
@@ -71,18 +83,21 @@ The place you start when you log in.  For user init files, some small
 config files, etc.  No calculation data. Daily backup.  Usually you
 want to use scratch instead.
 
-Lustre (/scratch)
-^^^^^^^^^^^^^^^^^
+scratch and work: Lustre
+^^^^^^^^^^^^^^^^^^^^^^^^
 This is the big, high-performance, 2PB Triton storage.  The primary
-place for calculations, data analyzes etc.  Not backed up.  It is
+place for calculations, data analyzes etc.  Not backed up but is
+reliable against hardware failures (RAID6, redundant servers), but
+*not* safe against human error..  It is
 shared on all nodes, and has very fast access.  It is divided into two
-parts, scratch (by groups) or work (per-user).  In general, always
+parts, **scratch (by groups)** and **work (per-user)**.  In general, always
 change to ``$WRKDIR`` or a group ``scratch`` directory when you first
 log in and start doing work.
 
 Lustre separates metadata and contents onto separate object and
 metadata servers.  This allows fast access to large files, but a
-larger overhead than normal filesystems.
+larger overhead than normal filesystems.  See :doc:`our info on small
+files <../usage/smallfiles>`.
 
 See :doc:`../usage/lustre`
 
@@ -91,20 +106,22 @@ Local disks
 Local disks are on each node separately.  For the fastest IOs with
 single-node jobs. It is cleaned up after job is finished.  Since 2019,
 things have gotten a bit more complicated since our newest (skl) nodes
-don't have local disks.
+don't have local disks.  If you want to ensure you have local storage,
+submit your job with ``--gres=spindle``.
 
 See the :doc:`Compute
 node local drives <../usage/localstorage>` page for further details and script
 examples.
 
-**ramfs** - fast and highly temporary storage
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ramfs - fast and highly temporary storage
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-On Triton, ``$XDG_RUNTIME_DIR`` is a ramfs, which means that it looks like
-files but is stored only in memory.  Because of this, it is extremely
-fast, but has no persistence whatsoever.  Use it if you have to make
-small temporary files that don't need to last long.  Note that this is
-no different than just holding the data in memory, if you can hold in
+**On login nodes only**,
+``$XDG_RUNTIME_DIR`` is a ramfs, which means that it looks like files
+but is stored only in memory.  Because of this, it is extremely fast,
+but has no persistence whatsoever.  Use it if you have to make small
+temporary files that don't need to last long.  Note that this is no
+different than just holding the data in memory, if you can hold in
 memory that's better.
 
 
@@ -317,6 +334,9 @@ Next steps
 ==========
 
 The next tutorial is about :doc:`interactive jobs <interactive>`.
+
+If you are doing anything IO heavy, you might want to read the
+:doc:`advanced storage page <../usage/storage>`.
 
 Optimizing data storage isn't very glamorous, but it's an important
 part of high-performance computing.  You can find some hints on the

@@ -2,6 +2,10 @@
 Storage: Lustre (scratch)
 =========================
 
+.. seealso::
+
+   :doc:`the storage tutorial <../tut/storage>`.
+
 Lustre is scalable high performance file system created for HPC. It
 allows MPI-IO but mainly it provides large storage capacity and high
 sequential throughput for cluster applications. Currently the total
@@ -13,8 +17,12 @@ Working with small files
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 As Lustre is meant for large files, the performance with small (smaller
-than 10MB) files will not be optimal.If possible, try to avoid working
+than 10MB) files will not be optimal. If possible, try to avoid working
 with multiple small files.
+
+**Note: Triton has a default stripe of 1 already, so it is by default
+optimized for small files (but it's still not that great).  If you use
+large files, see below.**
 
 If small files are needed (i.e. source codes) you can tell Lustre not to
 spread data over all the nodes. This will help in performance.
@@ -24,7 +32,7 @@ following command to check status
 
 ::
 
-    lfs getstripe /scratch/path/to/dir
+    lfs getstripe -d /scratch/path/to/dir
 
 You can not change the striping of an existing file, but you can change
 the striping of new files created in a directory, then copy the file to
@@ -41,8 +49,9 @@ Working with lots of small files
 Large datasets which consist mostly of small (<1MB) files can be slow to
 process because of network overhead associated with individual files. If
 it is your case, please consult `Compute node local
-drives <localstorage>` page, see tar-example
-over there.
+drives <localstorage>` page, see the ``tar`` example
+over there or find some other way to compact your files together into
+one.
 
 Working with large files
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -64,7 +73,7 @@ directory:
     mkdir large_file
     lfs setstripe -c 4 large_file
 
-The above creates a directory "large\_file" and specifies that files
+The above creates a directory ``large_file`` and specifies that files
 created inside that directory will be striped over 4 OST's. For really
 really large files (hundreds of GB's) accessed in parallel from very
 large MPI runs, set the stripe count to "-1" which tells the system to
@@ -78,6 +87,8 @@ To reset back to the default settings, run
 
 Lustre: common recommendations
 ------------------------------
+
+- Minimize use of ``ls -l`` and ``ls --color`` when possible
 
 Several excellent recommendations are at
 
