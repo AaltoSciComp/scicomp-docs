@@ -33,6 +33,8 @@ Quick contents and links
 	 * `Suggestions for good support requests
 	   <https://research.csc.fi/support-request-howto>`_
 
+       * :doc:`Quick Reference <ref/index>`
+
        * Tutorials (start here)
 
 	 * :doc:`accounts`
@@ -53,8 +55,6 @@ Quick contents and links
 	 * :doc:`usage/gpu`
 
        * :ref:`Applications <apps>`
-
-       * :doc:`Quick Reference <ref/index>`
 
        For full contents, see below.
 
