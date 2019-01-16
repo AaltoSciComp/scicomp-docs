@@ -26,11 +26,12 @@ Schedule
 ========
 
 -  Days: Triton garage is every week from 14:00-15:00 on Thursdays.
--  Time: We promise to be there only the first 30 minutes or so, if
-   everyone leaves before then.  Usually we are there the whole time.
--  Location: See below.  T4_ and A106_ (CS building, by entrance
-   around back of T2), A237_ (CS buliding, by main coffee room on 2nd
-   floor A wing) and B121_ (CS building).
+-  Time: We promise to be there only the first 30 minutes, so if
+   everyone leaves before then we might leave too (usually we are
+   there the whole time).
+-  Location: See below.  Common locations:  T4_ and A106_ (CS
+   building, by entrance around back of T2), A237_ (CS building, by
+   main coffee room on 2nd floor A wing) and B121_ (CS building).
 
 .. _U121a: http://usefulaaltomap.fi/#!/select/main-U121a
 .. _U121b: http://usefulaaltomap.fi/#!/select/main-U121b
