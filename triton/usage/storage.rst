@@ -22,12 +22,13 @@ should read the :doc:`storage tutorial <../tut/storage>` first.
 Checklist
 ---------
 
-Do any of these apply to you  If so, consider your actions.
+Do any of these apply to you?  If so, consider your situation and ask
+us for help!
 
 If you have been sent this checklist because your jobs may be having
-too much IO, don't worry.  It's not *necessarily* a problem but please
+a lot of IO, don't worry.  It's not *necessarily* a problem but please
 go through this checklist and let us know what applies to you so we
-can help you.
+can give some recommendations.
 
 - Many small files being accessed in jobs (hundred or more).
 
@@ -38,7 +39,7 @@ can help you.
   disks, or read once and store in memory.
 
 - Number of files growing, for example all your runs have separate
-  input files, output files, slurm output files, and you have many runs.
+  input files, output files, Slurm output files, and you have many runs.
 
 - Constantly logging to certain files, writing to files from many
   parallel jobs at the same time.
@@ -49,11 +50,11 @@ can help you.
 - Is all your IO concatenated at one point, or spread out over the
   whole job?
 
-And in general, could you describe what kind of job it is,
-the type of disk read and write happens, and in what kinds of pattern?
-Many small files, a few large ones, reading same files over and over,
-etc.  All at the beginning, constant through the job, etc.  Or, were
-there any other jobs that had a large amount of disk read?
+( and if we've asked you specifically about your jobs, could you also
+describe what kind of job it is, the type of disk read and write
+happens, and in what kinds of pattern?  Many small files, a few large
+ones, reading same files over and over, etc.  How's it spread out
+across jobs? )
 
 If you think your IO may have bad patterns or even you just want to
 talk to make sure, let one of the Triton staff know or submit an issue
