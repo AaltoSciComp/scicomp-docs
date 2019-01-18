@@ -48,8 +48,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Aalto scientific computing guide'
-copyright = u'2017, Aalto Science-IT'
+project = u'Aalto scientific computing'
+copyright = u'2019, Aalto Science-IT'
 author = u'Aalto Science-IT'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -131,7 +131,7 @@ html_theme_options = {
     }
 html_context = {'display_github': True,
                 'github_user': 'AaltoScienceIT',
-                'github_repo': 'triton-docs',
+                'github_repo': 'scicomp-docs',
                 'github_version': 'master/',
                }
 
@@ -141,6 +141,7 @@ html_context = {'display_github': True,
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
 #html_title = None
+html_title = 'Aalto scientific computing'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -221,7 +222,7 @@ html_static_path = ['_static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Tritonuserguidedoc'
+htmlhelp_basename = 'AaltoScicomp'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -273,7 +274,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'tritonuserguide', u'Triton user guide Documentation',
+    (master_doc, 'aaltoscicomp', u'Aalto scientific computing',
      [author], 1)
 ]
 
@@ -287,8 +288,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'Tritonuserguide', u'Triton user guide Documentation',
-     author, 'Tritonuserguide', 'One line description of project.',
+    (master_doc, 'AaltoScicomp', u'Aalto scientific computing',
+     author, 'AaltoScicomp', 'One line description of project.',
      'Miscellaneous'),
 ]
 
