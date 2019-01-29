@@ -1103,23 +1103,30 @@ Aliases
 Aliases go to *.bashrc* and available later by default (really,
 anywhere they can be read by the shell).
 
-[Lecturer's notes: about 30 mins joint hands-on session + break]
+[Lecturer's notes: about 40 mins joint hands-on session + break]
 
 :Exercise 2.1:
  - Define above mentioned ``ping ...`` command as an alias (you name it, literally) in *.bashrc*
    once you verify it works. Then ``source .bashrc`` and try the new alias.
- - Pick up */scratch/scip/BASH/windows.txt* file and convert it to UNIX format using ``tr`` and
-   redirects only. Tip: remind first session examples.
- - Find all the files in your $HOME that are readable or writable by everyone
- - (*) Using find, duplicate current directory tree (to some other dir, only tree, no content)
+ - Create a directory structure, that has five directories and five subdirs in each directory
+   like ``dir1/subdir1``, ``dir1/subdir2``, ... ``dir5/subdir5``
+   with one command. Tip: use Brace expansions and see ``mkdir -p ...``
+ - Use command substitution to create an empty file with the date the in the name, like
+   ``file.YYYY-MM-DD.out``. Tip: investigate ``date +"..."`` output format.
+ - Create a one-liner with ``ls``, ``echo``, redirections etc that takes a file path
+   and says whether this file/directory exists or not. No other output.
+   See our ``ping -c 8.8.8.8 ...`` as an example.
+ - Use any of the earlier created files to compare there access time with ``stat -c '%y' filename``,
+   ``diff`` and the process substitution. 
+ - (*) Make a one-liner that copies a small file (or dir, but small, to save time/traffic)
+   from your Triton's $WRKDIR (or any other remote server) and sends confirmation to your
+   email with the directory listing attached. Tip: use examples in the text.
+ - (*) Using pipes and commands ``echo``, ``tr``, ``uniq``, find doubled words out of
+   `My Do Do list: Find a a Doubled Word.`
+ - (*) Pick up */scratch/scip/BASH/windows.txt* file and convert it to UNIX format using
+   ``tr`` and redirects only. Tip: remind first session examples.
+ - (*) Using ``find``, duplicate current directory tree (to some other dir, only tree, no content)
  - (*) Join *find* and *grep* power and find all the files in /{usr/,}{bin,sbin} that have '#!/bin/bash' in it
-
-:Exercise 2.2:
- - On Triton find (lfs find ... ) all the dirs/files at $WRKDIR that do not belong to your group.
-   Tip: on Triton at WRKDIR your username $USER and group name are the same. On any other filesystem,
-   ``$(id -gn)`` returns your group name.
- - Extend above command to fix the group ownership  (... | xargs)
- - On Triton go through all $WRKDIR subdirectories with 'lfs find ...' and set s-bit for the group 
 
 
 Your ~/bin and PATH
@@ -1321,7 +1328,7 @@ BASH allows indirect referencing, consider::
 
 [Lecturer's note: ~20 minutes for the hands-on exercises. Solution examples can be given at very end.]
 
-:Exercise 2.3:
+:Exercise 2.2:
  - Expand *lcd()* function to have WRKDIR as a default directory in case function is invoked
    without any input parameter.
  - Implement a 'fast find' function ``ff word``. The function should return a long listing
@@ -1334,7 +1341,12 @@ BASH allows indirect referencing, consider::
    return *filename* out of *path/to/filename.tar.gz* or alike. I.e. ``get_filename path/to/filename.tar.gz tar.gz``
  - (*) By now one should be able to explain: ``:() { :|:&; };:``. *&* in this case sends process
    to background. [WARNING: it is a forkbomb]
- 
+ - (*) On Triton write a function that ``lfs find ... `` all the dirs/files at $WRKDIR that do not
+   belong to your group and fix the group ownership. Use ``find ... | xargs``. Tip: on Triton at
+   WRKDIR your username $USER and group name are the same. On any other filesystem, ``$(id -gn)``
+   returns your group name. One can 
+ - (*) Expand the function above to set group's s-bit on all the $WRKDIR directories.
+
 
 
 2.2 session: programming logic
