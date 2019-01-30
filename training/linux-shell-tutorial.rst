@@ -1186,8 +1186,9 @@ that is $1, $2, and so forth::
 
  func_name arg1 arg2 arg3  # will become $1 $2 $3
 
-Functions in BASH have ``return`` but it only returns the exit code. By
-default variables are in the global space, once chaged in the function is
+Functions in BASH have ``return`` but it only returns the exit code. Useful
+in cases where you want to 'exit' the function and continue to the rest of the script.
+By default functions' variables are in the global space, once chaged in the function is
 seen everywhere else. ``local`` can be used to localize the vars. Compare::
 
  var=2; f() { var=3; }; f; echo $var
@@ -1329,8 +1330,10 @@ BASH allows indirect referencing, consider::
 [Lecturer's note: ~20 minutes for the hands-on exercises. Solution examples can be given at very end.]
 
 :Exercise 2.2:
- - Expand *lcd()* function to have WRKDIR as a default directory in case function is invoked
+ - Expand ``lcd()`` function to have WRKDIR as a default directory in case function is invoked
    without any input parameter.
+ - Implement a ``spaceusage()`` function with ``du ... | sort ...`` (see Part 1 text examples)
+   that takes directory path as an argument, and if missing uses current directory.
  - Implement a 'fast find' function ``ff word``. The function should return a long listing
    (ls -ldA) of any file or directory names that contain the <word>. Make search case insensitive.
    Note: your newly ceated functions should go to *~/bin/functions*
