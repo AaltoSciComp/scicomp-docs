@@ -86,6 +86,11 @@ different solutions to the problem.
 In general, at least try to combine all of your input data into some
 sort of single file that can be read in sequence.
 
+Try to do the least amount of work possible in the core training
+loops: any CPU usage, print, logging, preprocessing, postprocessing,
+etc. reduces the amount of time the GPU is working unless you
+do it properly (Amdhal's law).
+
 * Tensorflow: `data input pipelines <https://www.tensorflow.org/guide/performance/datasets>`__
 
 (more coming later)
