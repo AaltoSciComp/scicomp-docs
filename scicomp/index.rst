@@ -7,4 +7,5 @@ Scientific computing
 
    encryption
    git
+   jupyter-pitfalls
    python
