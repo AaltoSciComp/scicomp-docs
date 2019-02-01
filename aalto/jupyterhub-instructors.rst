@@ -13,11 +13,13 @@ Basics
 
 The JupyterHub installation provides a way to provide a notebook-based
 computational environment to students.  It is best to not think of
-this service as a way to *do assignments* in a restricted fashion, but as a general *light
-computing environment* that can also be used for courses.  Thus,
+this service as a way to *do assignments*, but as a general *light
+computing environment* that is designed to be easy enough to be used
+for courses.  Thus,
 students should feel empowered to do their own computing.  Jupyter
 works best for project/report type workflows, not lesson/exercise
-workflows but of course it can do that too.
+workflows but of course it can do that too.  In particular, there is
+no real possibility for real-time grading and so on.
 
 Optionally, you may use `nbgrader (notebook grader
 <https://nbgrader.readthedocs.io/en/stable/>`__ to make assignments,
@@ -25,6 +27,9 @@ submit them to students, collect them, autograde them, manually grade,
 and then export a csv/database of grades.  From that point, it is up
 to you to manage everything.  There is currently no integration with
 any other system, except that Aalto accounts are used to login.
+
+You may find the book `Teaching and Learning with Jupyter
+<https://jupyter4edu.github.io/jupyter-edu-book/>`__ helpful.
 
 Currently we support Python the most, but there are `other language
 kernels available for Jupyter
