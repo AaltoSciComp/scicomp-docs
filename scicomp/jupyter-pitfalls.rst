@@ -143,6 +143,52 @@ variables could be used to pass parameters into notebooks for batch
 execution, but could that be trying too hard?
 
 
+Summary
+-------
+
+..
+    todo: this was copied from elsewhere and can be merged into the
+    above.
+
+The notebooks can be great for starting projects and interactive
+exploration.  However, as a project gets more advanced, you will
+eventually find that the linear nature of notebooks is a limitation
+because code can not really be reused.  It is possible to define
+functions/classes within the notebook, but you lose the power of
+inspection (they are just seen as single blocks) and can't share code
+across notebooks (and copy and paste is bad).  This doesn't mean to
+not use notebooks: but do keep this in mind, and once your methods are
+mature enough (you are using the same code in multiple places), try to
+move the core functions and classes out into a separate library, and
+import this into the day-to-day exploration notebooks.  For more about
+problems with notebooks and how to avoid them, see this fun talk `"I
+don't like notebooks" by Joel Grus
+<https://docs.google.com/presentation/d/1n2RlMdmv1p25Xy5thJUhkKGvjtV-dkAIsUXP-AL4ffI/edit>`__.
+These problems are *not* specific to notebooks, and will make your
+science better.
+
+In a cluster environment, notebooks are inefficient for big
+calculations because you must reserve your resources in advance, but
+most of the time the notebooks are not using all their resources.
+Instead, use notebooks for exploration and light calculation.  When
+you need to scale up and run on the cluster, separate the calculation
+from the exploration.  Best is to create actual programs
+(start, run, end, non-interactive) and :doc:`submit those to the queue
+</triton/tut/serial>`.  Use notebooks to explore and process the
+output.  A general rule of thumb is "if you would be upset that your
+notebook restarted, it's time to split out the calculation".
+
+Notebooks are hard to :doc:`version control </scicomp/git>`, so you
+should look at the `Jupyter diff and merge tools
+<https://github.com/jupyter/nbdime>`__.  Just because notebooks is
+interactive doesn't mean version control is any less important!  The
+"split core functions into a library" is also related: that library
+should be in version control at least.
+
+Don't open the same notebook more than once at the same time - you
+will get conflicts.
+
+
 
 References
 ----------

@@ -41,13 +41,14 @@ instead of either scripts or interactive shells, the notebooks allow
 you to see a whole script + output and experiment interactively and
 visually.  They are good for developing and testing things, but once
 things work and you need to scale up, it is best to put your code into
-proper programs.  You must do this if you are going to large parallel
+proper programs (:doc:`more info <../scicomp/jupyter-pitfalls>`).  You
+must do this if you are going to large parallel
 computing.
 
+Triton's JupyterHub is available at https://jupyter.triton.aalto.fi.
 You can try them online at `try.jupyter.org
 <http://try.jupyter.org/>`_ (there is a temporary notebook with no
-long-term saving).  Triton's JupyterHub is available at
-https://jupyter.triton.aalto.fi.
+saving).
 
 You can always run notebooks yourself on your own (or remote)
 computers, but on Triton we have some facilities already set up to
@@ -69,48 +70,9 @@ How Jupyter notebooks work
 JupyterLab is the next iteration of this and has many more features,
 making it closer to an IDE or RStudio.
 
-Limitations
------------
 Notebooks are without a doubt a great tool.  However, they are only
-one tool, and you need to know their limitations.
-
-The notebooks can be great for starting projects and interactive
-exploration.  However, as a project gets more advanced, you will
-eventually find that the linear nature of notebooks is a limitation
-because code can not really be reused.  It is possible to define
-functions/classes within the notebook, but you lose the power of
-inspection (they are just seen as single blocks) and can't share code
-across notebooks (and copy and paste is bad).  This doesn't mean to
-not use notebooks: but do keep this in mind, and once your methods are
-mature enough (you are using the same code in multiple places), try to
-move the core functions and classes out into a separate library, and
-import this into the day-to-day exploration notebooks.  For more about
-problems with notebooks and how to avoid them, see this fun talk `"I
-don't like notebooks" by Joel Grus
-<https://docs.google.com/presentation/d/1n2RlMdmv1p25Xy5thJUhkKGvjtV-dkAIsUXP-AL4ffI/edit>`__.
-These problems are *not* specific to notebooks, and will make your
-science better.
-
-In a cluster environment, notebooks are inefficient for big
-calculations because you must reserve your resources in advance, but
-most of the time the notebooks are not using all their resources.
-Instead, use notebooks for exploration and light calculation.  When
-you need to scale up and run on the cluster, separate the calculation
-from the exploration.  Best is to create actual programs
-(start, run, end, non-interactive) and :doc:`submit those to the queue
-</triton/tut/serial>`.  Use notebooks to explore and process the
-output.  A general rule of thumb is "if you would be upset that your
-notebook restarted, it's time to split out the calculation".
-
-Notebooks are hard to :doc:`version control </scicomp/git>`, so you
-should look at the `Jupyter diff and merge tools
-<https://github.com/jupyter/nbdime>`__.  Just because notebooks is
-interactive doesn't mean version control is any less important!  The
-"split core functions into a library" is also related: that library
-should be in version control at least.
-
-Don't open the same notebook more than once at the same time - you
-will get conflicts.
+one tool, and you need to know their limitations.  See our other page
+on :doc:`limitations of notebooks <../scicomp/jupyter-pitfalls>`.
 
 
 
@@ -130,14 +92,18 @@ your own single-user server.  This is available on Triton.
 
 Connecting and starting
 -----------------------
-Currently jupyterHub is available only within Aalto networks, at
-https://jupyter.triton.aalto.fi.  If you are not within the Aalto
-networks (aalto open is not), either connect to the Aalto VPN (see
-`it.aalto.fi <https://it.aalto.fi>`__ or
-:doc:`../../aalto/remoteaccess`, this is the easiest and best
-supported) or
-set up a SSH proxy as described right below.
-You must also have a :doc:`Triton account <../accounts>`.
+Currently jupyterHub is available only within Aalto networks, or from
+the rest of the internet after a first Aalto login:
+https://jupyter.triton.aalto.fi.
+
+..
+    If you are not within the Aalto
+    networks (aalto open is not), either connect to the Aalto VPN (see
+    `it.aalto.fi <https://it.aalto.fi>`__ or
+    :doc:`../../aalto/remoteaccess`, this is the easiest and best
+    supported) or
+    set up a SSH proxy as described right below.
+    You must also have a :doc:`Triton account <../accounts>`.
 
 Once you log in, you must start your single-user server.  There are
 several options available that trade off between long run time and
@@ -151,46 +117,48 @@ server nodes are oversubscribed, which means that we can allocate more
 memory and CPU than is actually available.  We will monitor the nodes
 to try to ensure that there are enough resources available, so do
 report problems to us.  **Please request the minimum amount of memory
-you think you need** - you can always restart with more memory.
+you think you need** - you can always restart with more memory.  You
+can go over your memory request a little bit before you get problems.
 
 When you use Jupyter via this interface, the slurm billing weights are
 lower, so that the rest of your Triton priority does not decrease by
 as much.
 
-Proxy for remote access
-~~~~~~~~~~~~~~~~~~~~~~~
+..
+    Proxy for remote access
+    ~~~~~~~~~~~~~~~~~~~~~~~
 
-When connecting to JupyterHub outside of Aalto networks, you need to
-connect somehow.  This describes how you can do it using SSH.  Using
-the Aalto VPN is easier (Aalto laptops have it set up by default).  In
-a few weeks, this should no longer be needed.
+    When connecting to JupyterHub outside of Aalto networks, you need to
+    connect somehow.  This describes how you can do it using SSH.  Using
+    the Aalto VPN is easier (Aalto laptops have it set up by default).  In
+    a few weeks, this should no longer be needed.
 
-If you use the proxy instead of the VPN:
+    If you use the proxy instead of the VPN:
 
-* Install the proxy extension
+    * Install the proxy extension
 
-  * Install the extension FoxyProxy Standard (Firefox or Chrome).
-    Some versions do not work properly: the 5.x series for Firefox may
-    not work, but older and newer does.
+    * Install the extension FoxyProxy Standard (Firefox or Chrome).
+      Some versions do not work properly: the 5.x series for Firefox may
+      not work, but older and newer does.
 
-* Create a new proxy rule with the pattern ``*jupyter.triton.aalto.fi*``.
+      * Create a new proxy rule with the pattern ``*jupyter.triton.aalto.fi*``.
 
-  * Proxy type: SOCKS5, Proxy URL: ``localhost``, port ``8123``.
+    * Proxy type: SOCKS5, Proxy URL: ``localhost``, port ``8123``.
 
-* SSH to kosh or some other Aalto computer and use the ``-D 8123``.
-  This starts a proxy on your computer on port 8123.  This has to
-  always be running whenever you connect to the notebook.
+      * SSH to kosh or some other Aalto computer and use the ``-D 8123``.
+    This starts a proxy on your computer on port 8123.  This has to
+      always be running whenever you connect to the notebook.
 
-  * ``ssh -D 8123
-    username@kosh.aalto.fi``.
+      * ``ssh -D 8123
+	username@kosh.aalto.fi``.
 
-Now, when you go to ``jupyter.triton.aalto.fi``, you will
-*automatically* connect to the right place on Triton via FoxyProxy and
-the SSH proxy and can use Jupyter like normal.  But if the ssh
-connection goes down, then you can't connect and will get errors, and
-you will have to remember to restart it.  You should also remember
-that it will require SSH *inside* of Aalto too: it's simplest disable
-FoxyProxy inside of Aalto networks and enable only when you need.
+    Now, when you go to ``jupyter.triton.aalto.fi``, you will
+    *automatically* connect to the right place on Triton via FoxyProxy and
+    the SSH proxy and can use Jupyter like normal.  But if the ssh
+    connection goes down, then you can't connect and will get errors, and
+    you will have to remember to restart it.  You should also remember
+    that it will require SSH *inside* of Aalto too: it's simplest disable
+    FoxyProxy inside of Aalto networks and enable only when you need.
 
 
 Usage
@@ -232,83 +200,6 @@ at any time and/or notebooks may be killed whenever there is a
 shortage of resources or need of maintenance.  However, notebooks
 auto-save and do survive service restarts, and we will try to avoid
 killing things unnecessarily.
-
-
-
-Your own notebooks via ``sjupyter``
-===================================
-
-.. note::
-
-   Now that Jupyterhub exists, this method of running Jupyter is not
-   so important.  It is only needed if you need more resources than
-   JupyterHub can provide.
-
-We provide a command ``sjupyter`` which automates launching your own
-notebooks in the Slurm queue.  This gives you more flexibility in
-choosing your nodes and resources than Jupyterhub, but also will after
-your and your department's Triton priority more because you are
-blocking others from using these resources.
-
-
-.. _jupyter-proxy-setup:
-
-Set up the proxy
-----------------
-
-When running Jupyter on another system, the biggest problem is always
-making the conenction securely.  To do this here, we use a browser
-extension and SSH Proxy.
-
-* Install the proxy extension
-
-  * Install the extension FoxyProxy Standard (Firefox or Chrome).
-    Some versions do not work properly: the 5.x series for Firefox may
-    not work, but older and newer does.
-
-* Create a new proxy rule with the pattern ``*int.triton.aalto.fi*``
-  (or ``jupyter.triton.aalto.fi`` if you want to connect to that using
-  the proxy).
-
-  * Proxy type: SOCKS5, Proxy URL: ``localhost``, port ``8123``.
-
-  * DNS through the proxy: on.
-
-* SSH to triton and use the ``-D 8123``.  This starts a proxy on your
-  computer on port 8123.  This has to always be running whenever you
-  connect to the notebook.
-
-  * If you are in Aalto networks: ``ssh -D 8123
-    username@triton.aalto.fi``.
-  * If you are not in Aalto networks, you need to do an extra hop
-    through another Aalto server: ``ssh -D 8123
-    username@triton.aalto.fi -o ProxyCommand='ssh
-    username@kosh.aalto.fi -W %h:%p'``.
-
-Now, when you go to any address matching ``*.int.triton.aalto.fi*``,
-you will *automatically* connect to the right place on Triton.  You
-can use Jupyter like normal.  But if the ssh connection goes down,
-then you can't connect and will get errors, so be aware (especially
-with jupyter.triton.aalto.fi which you might expect to always work).
-
-Starting sjupyter
------------------
-
-We have the custom-built command ``sjupyter`` for
-starting Jupyter on Triton.
-
-To run in the Triton queue (using more resources), just use
-``sjupyter``.  This will start a notebook on the interactive Slurm
-queue.  All the normal rules apply: timelimits, memory limits, etc.
-If you want to request more resources, use the normal Slurm options
-such as ``-t``, ``--mem``, etc.  Notebooks can only last as long as
-your job lasts, and you will need to restart them.  Be efficient with
-resource usage: if you request a lot of resources and leave the
-notebook idle, no one else can use them.  Thus, try to use the
-(default) interactive partition, which handles this automatically.
-
-To run on the login node, run ``sjupyter --local``.  This is good for
-small testing and so on, which doesn't use too much CPU or memory.
 
 
 
@@ -423,6 +314,8 @@ See also
   Jupyter tutorial, but about the whole data science workflow using
   Jupyter.  It is annoying long (2 hours), but *very* complete and
   could be considered good "required watching")
+
+* :doc:`../scicomp/jupyter-pitfalls`
 
 * CSC has this service, too, however there is no long term storage yet
   so there is limited usefulness for research: https://notebooks.csc.fi/
