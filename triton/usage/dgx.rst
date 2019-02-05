@@ -68,24 +68,26 @@ automatically reuse the modules you use on the rest of Triton.
 The current available modules are::
 
   ----------------------- /share/apps/anaconda-ci/modules ------------------------
-  anaconda2/5.1.0-cpu        modules/anaconda2/5.1.0-cpu
-  anaconda2/5.1.0-gpu (D)    modules/anaconda2/5.1.0-gpu (D)
-  anaconda3/5.1.0-cpu        modules/anaconda3/5.1.0-cpu
-  anaconda3/5.1.0-gpu (D)    modules/anaconda3/5.1.0-gpu (D)
+     anaconda2/5.1.0-cpu        anaconda3/5.1.0-cpu
+     anaconda2/5.1.0-gpu (D)    anaconda3/5.1.0-gpu (D)
 
-  -------------------- /share/apps/singularity-ci/dgx/modules --------------------
-  nvidia-caffe/18.02-py2          nvidia-tensorflow/18.02-py2
-  nvidia-cntk/18.02-py3           nvidia-tensorflow/18.02-py3 (D)
-  nvidia-mxnet/18.02-py2          nvidia-theano/18.02
-  nvidia-mxnet/18.02-py3   (D)    nvidia-torch/18.02-py2
-  nvidia-pytorch/18.02-py3
+  ---------------- /share/apps/singularity-ci/dgx/modules/common -----------------
+     nvidia-caffe/18.02-py2          nvidia-pytorch/18.11-py3      (D)
+     nvidia-cntk/18.02-py3           nvidia-tensorflow/18.02-py2
+     nvidia-mxnet/18.02-py2          nvidia-tensorflow/18.02-py3
+     nvidia-mxnet/18.02-py3          nvidia-tensorflow/18.05-py3
+     nvidia-mxnet/18.08-py3          nvidia-tensorflow/19.01-py3   (D)
+     nvidia-mxnet/18.11-py3   (D)    nvidia-theano/18.02
+     nvidia-pytorch/18.02-py3        nvidia-torch/18.02-py2
+     nvidia-pytorch/18.08-py3        singularity-tensorflow/latest
 
   ------------------------- /share/apps/modulefiles/dgx --------------------------
-  matlab/r2012a    matlab/r2015b    matlab/r2016b
-  matlab/r2014a    matlab/r2016a    matlab/r2017b (D)
+     matlab/r2012a    matlab/r2015b    matlab/r2016b    matlab/r2018a
+     matlab/r2014a    matlab/r2016a    matlab/r2017b    matlab/r2018b (D)
 
   -------------------- /usr/share/lmod/lmod/modulefiles/Core ---------------------
-  lmod/5.8    settarg/5.8
+     lmod/6.6    settarg/6.6
+
 
 Unlike the rest of Triton, you can't see which modules are available
 on the login node: currently see above (which might go out of date)
