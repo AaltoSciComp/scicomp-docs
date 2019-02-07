@@ -29,7 +29,7 @@ How are we going to deliver this?
 We will distribute a cross-platform app. You install it on your Linux/Windows/Mac. When you start the app, click a container of your choice e.g. Tensorflow_py35. A jupyter notebook server will start on a most idle machine in Paniikki and you will be given an URL & token for the notebook. We are considering of using ElectronJS_ for the front-end and Singularity_ for the containers. We use containers because you can just take them if you want to use it somewhere else.
 
 .. _ElectronJS: https://electronjs.org
-.. _Singularity: http://singularity.lbl.gov
+.. _Singularity: https://www.sylabs.io/docs/
 
 Who could use it?
 =================
