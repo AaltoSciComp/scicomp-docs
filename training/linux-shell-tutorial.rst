@@ -1116,11 +1116,12 @@ anywhere they can be read by the shell).
  - Create a one-liner with ``ls``, ``echo``, redirections etc that takes a file path
    and says whether this file/directory exists or not. No other output.
    See our ``ping -c 8.8.8.8 ...`` as an example.
- - Use any of the earlier created files to compare there access time with ``stat -c '%y' filename``,
+ - Use any of the earlier created files to compare there modification times with ``stat -c '%y' filename``,
    ``diff`` and the process substitution. 
- - (*) Make a one-liner that copies a small file (or dir, but small, to save time/traffic)
+ - (*) Make a one-liner that copies a small dir (small (!), to save time/traffic)
    from your Triton's $WRKDIR (or any other remote server) and sends confirmation to your
-   email with the directory listing attached. Tip: use examples in the text.
+   email with the directory listing attached but use process substitution instead of saving
+   directory listing to a file. Tip: use examples in the text.
  - (*) Using pipes and commands ``echo``, ``tr``, ``uniq``, find doubled words out of
    `My Do Do list: Find a a Doubled Word.`
  - (*) Pick up */scratch/scip/BASH/windows.txt* file and convert it to UNIX format using
@@ -1141,10 +1142,10 @@ shell searches through when you enter a command. Binaries are at */bin*, */usr/b
  chmod +x ~/bin/script_name.sh
  script_name.sh
 
-You can find where a program is using ``which``::
+You can find where a program is using ``which`` or ``type -a``, we recommend the later one::
 
-  which ls
-  which cd      # nothing - not a program, it's a builtin!
+  type -a ls      # a binary
+  type -a cd      # builtin
 
 Other options::
 
@@ -1332,7 +1333,7 @@ BASH allows indirect referencing, consider::
 :Exercise 2.2:
  - Expand ``lcd()`` function to have WRKDIR as a default directory in case function is invoked
    without any input parameter.
- - Implement a ``spaceusage()`` function with ``du ... | sort ...`` (see Part 1 text examples)
+ - Implement a ``spaceusage()`` function with ``du ... | sort ...`` (see Aliases part examples)
    that takes directory path as an argument, and if missing uses current directory.
  - Implement a 'fast find' function ``ff word``. The function should return a long listing
    (ls -ldA) of any file or directory names that contain the <word>. Make search case insensitive.
