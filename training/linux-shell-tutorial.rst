@@ -1215,6 +1215,11 @@ the name of the command, like::
 
 here you avoid internal loops (forkbombs).
 
+Exporting a function with ``export -f function_name`` lets you pass a function to a sub-shell,
+by storing that function in a environment variable. Helpful when you want to use it within a 
+command substitution, or any other case that launches a subshell, like
+``find ... -exec bash -c 'function_name {}' \;``. 
+
 
 Variables
 ---------
@@ -1543,11 +1548,21 @@ Another option to handle flow, instead of nested *ifs*, is ``case``.
 
 ::
 
- read -p "Are you ready (y/n)? " yesno   # expects user input
+ read -p "Do you want to create a directory (y/n)? " yesno   # expects user input
  case $yesno in
-   y|yes) do_something_if_yes ;;
-   n|no) do_something_if_no ;;
-   *) do_something_else ;;
+   y|yes)
+     dir='dirname'
+     echo Creating a new directory $dir
+     mkdir $dir
+     cd $dir
+     ;;
+   n|no)
+     echo Proceeding in the current dir $(pwd)
+     ;;
+   *)
+     echo Invalid response
+     exit 1
+     ;;
  esac
  # $yesno can be replaced with ${yesno,,} to convert to a lower case on the fly
 
@@ -1587,7 +1602,8 @@ has been found.
  # to make a file executable 'cx filename'
 
 The following example is useful for Triton users:
-[array jobs](http://scicomp.aalto.fi/triton/tut/array.html),
+External hyperlinks, like `array jobs
+<http://scicomp.aalto.fi/triton/tut/array.html>`_,
 where you handle array subtasks based on the its index.
  
 
