@@ -1620,6 +1620,10 @@ where you handle array subtasks based on the its index.
    the access permissions 700.
 
    - (*) Add a sanity check so that directory name should allow alphanumeric characters only.
+   
+ - (*) Write a function (add to *~/bin/functions*) that validates an IPv4 using *=~* matching operator only.
+   The function should fail incorrect IPs like 0.1.2.3d or 233.204.3.257. The problem should be solved
+   with the regular expression only. Use ``return`` command to exit with the right exit code.
 
 
 Arithmetic
