@@ -1024,7 +1024,10 @@ discards all data written to it.
  
  # takes STDIN as an input and outputs STDOUT/STDERR to a file
  command < input_file &> output_file
- 
+
+Note, that ``&>`` and ``>&`` will do the same, redirect both STDOUT and STDERR
+to the same place, but the former syntax is preferable.
+
 ::
 
  # what happens if 8.8.8.8 is down? How to make the command more robust?
@@ -1114,15 +1117,16 @@ anywhere they can be read by the shell).
 [Lecturer's notes: about 40 mins joint hands-on session + break]
 
 :Exercise 2.1:
- - Define above mentioned ``ping ...`` command as an alias (you name it, literally) in *.bashrc*
-   once you verify it works. Then ``source .bashrc`` and try the new alias.
+ - Define above mentioned ``ping ...`` command as an alias (you name it) in *~/.bashrc*
+   once you verify it works. Then ``source ~/.bashrc`` and try the new alias. Tip: any path
+   that starts with *~* means the file or directory is in your HOME.
  - Create a directory structure, that has five directories and five subdirs in each directory
    like ``dir1/subdir1``, ``dir1/subdir2``, ... ``dir5/subdir5``
    with one command. Tip: use Brace expansions and see ``mkdir -p ...``
  - Use command substitution to create an empty file with the date the in the name, like
    ``file.YYYY-MM-DD.out``. Tip: investigate ``date +"..."`` output format.
  - Create a one-liner with ``ls``, ``echo``, redirections etc that takes a file path
-   and says whether this file/directory exists or not. No other output.
+   and says whether this file/directory exists or not. Redirect STDOUT/STDERR to /dev/null.
    See our ``ping -c 8.8.8.8 ...`` as an example.
  - Use any of the earlier created files to compare there modification times with ``stat -c '%y' filename``,
    ``diff`` and the process substitution. 
@@ -1292,6 +1296,7 @@ need to look them up when you need them.
  - Replace beginning part: ``${var#prefix}``
  - Replace trailing part: ``${var%suffix}``
  - Replace *pattern* with the *string*: ``${var/pattern/string}``
+ - Modify the case of alphabetic characters: ``${var,,}`` for lower case or ``${var^^}`` for upper case
 
 ::
 
@@ -1341,9 +1346,12 @@ BASH allows indirect referencing, consider::
 :Exercise 2.2:
  - Expand ``lcd()`` function to have WRKDIR as a default directory in case function is invoked
    without any input parameter.
+ - Expand the Exersice 2.1's ``ls ... && echo .. || echo`` example, make a function that check any
+   file/directory existense given as an argument, like ``checkexist path/to/file``. If no argument
+   given, function must return an error message "File or directory not found".
  - Implement a ``spaceusage()`` function with ``du ... | sort ...`` (see Aliases part examples)
    that takes directory path as an argument, and if missing uses current directory.
- - Implement a 'fast find' function ``ff word``. The function should return a long listing
+ - Using ``find`` utility, implement a 'fast find' function ``ff word``. The function should return a long listing
    (ls -ldA) of any file or directory names that contain the <word>. Make search case insensitive.
    Note: your newly ceated functions should go to *~/bin/functions*
  - Write two functions ``get_filename()`` and ``get_extension()``. Both should accept a full filename
@@ -1353,7 +1361,7 @@ BASH allows indirect referencing, consider::
    return *filename* out of *path/to/filename.tar.gz* or alike. I.e. ``get_filename path/to/filename.tar.gz tar.gz``
  - (*) By now one should be able to explain: ``:() { :|:&; };:``. *&* in this case sends process
    to background. [WARNING: it is a forkbomb]
- - (*) On Triton write a function that ``lfs find ... `` all the dirs/files at $WRKDIR that do not
+ - (*) On Triton write a function that ``lfs find`` all the dirs/files at $WRKDIR that do not
    belong to your group and fix the group ownership. Use ``find ... | xargs``. Tip: on Triton at
    WRKDIR your username $USER and group name are the same. On any other filesystem, ``$(id -gn)``
    returns your group name. One can 
@@ -1479,8 +1487,12 @@ Selected operators:
 
  # a number out of the text
  txt='Some text with #1278 in it'; regex='#([0-9]+ )'; [[ "$txt" =~ $regex ]] && echo ${BASH_REMATCH[1]} || echo do not match
+ 
+ # case insensitive matching
+ var1=ABCD, var2=abcd; [[ ${var1,,} =~ ${var2,,} ]] && ...
 
-**For case insesitive matching**, set ``shopt -s nocasematch``  (to disable it back ``shopt -u nocasematch``)
+**For case insesitive matching**, alternatively, in general, set ``shopt -s nocasematch``
+(to disable it back ``shopt -u nocasematch``)
 
 
 Conditionals: if/elif/else
@@ -1574,19 +1586,24 @@ has been found.
  # ln cx c-w
  # to make a file executable 'cx filename'
 
-:Exercise 3.1:
+The following example is useful for Triton users:
+[array jobs](http://scicomp.aalto.fi/triton/tut/array.html),
+where you handle array subtasks based on the its index.
+ 
+
+:Exercise 2.3:
  - Using BASH builtin functionality implement ``my_grep pattern string`` script that picks
    up a pattern ($1) and a string ($2) as an input and reports whether pattern matches any
-   part of the string or not.
+   part of the string or not. Tip: have your scripts in ``~/bin``
 
    - The script must check that number of input parameters is correct.
-   - Expand *my_grep* script to make search case insensitive
+   - (*) Expand *my_grep* script to make search case insensitive
 
  - Implement a ``my_mkdir`` script that either accepts a directory name as an input parameter or requests it
    with ``read`` if no input parameter is given. Script should create a directory if does not exist with
    the access permissions 700.
 
-   - Add a sanity check so that directory name should allow alphanumeric characters only.
+   - (*) Add a sanity check so that directory name should allow alphanumeric characters only.
 
 
 Arithmetic
@@ -1810,7 +1827,7 @@ needed, one can terminate loop or jump to a next iteration.
  done
 
 
-:Exercise 3.2:
+:Exercise 2.4:
  - Write separate scripts that count a sum of any *1+2+3+4+..+n*
    sequence, both the Gauss version and direct summation.  Accept the
    *n* on the command line.  Benchmark them with *time* for n=10000 or
