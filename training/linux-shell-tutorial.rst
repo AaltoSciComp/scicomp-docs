@@ -1571,14 +1571,30 @@ input or file descriptor.
 
 ``case`` tries to match the variable against each pattern in turn. Understands patterns rules like ``*, ?, [], |``.
 
+Here is the *case* that could be used as an idea for your *~/.bashrc*
+
 ::
 
- read -p "Enter your age? " age
- case $age in
-   [1-9]|1[0-2]) echo Child ;;
-   1[3-9]|[2-5][0-9]) echo Adult ;;
-   [6-9][0-9]) echo Senior ;;
-   *) echo Should be dead by now or wrong input ;;
+ host=$(hostname)
+ case $host in
+   myworkstation*)
+     export PRINTER=mynearbyprinter
+     # making your promt smiling when exit code is 0 :)
+     PS1='$(if [[ $? == 0 ]]; then echo "\[\e[32m\]:)"; else echo "\[\e[31m\]:("; fi)\[\e[0m\] \u@\h \w $ '
+   ;;
+   triton*)
+     [[ -n $WRKDIR ]] && alias cwd="cd $WRKDIR" && cwd
+   ;;
+   kosh*|brute*|force*)
+     PS1='\u@\h:\w\$'
+     export IGNOREEOF=0
+   ;&
+   *.aalto.fi)
+     kinit
+   ;;
+   *)
+     echo 'Where are you?'
+   ;;
  esac
 
 ``;;`` is important, if replaced with ``;&``, execution will continue with the command
@@ -1590,7 +1606,7 @@ has been found.
 
  # create a file 'cx'
  case "$0" in
-  *cx) chmod +x "$@" ;;
+  *cx) chmod +x "$@" ;&
   *cw) chmod +w "$@" ;;
   *c-w) chmod -w "$@" ;;
   *) echo "$0: seems that file name is somewhat different"; exit 1 ;;
@@ -1601,10 +1617,9 @@ has been found.
  # ln cx c-w
  # to make a file executable 'cx filename'
 
-The following example is useful for Triton users:
-External hyperlinks, like `array jobs
+The following example is useful for Triton users: `array jobs
 <http://scicomp.aalto.fi/triton/tut/array.html>`_,
-where you handle array subtasks based on the its index.
+where one handles array subtasks based on its index.
  
 
 :Exercise 2.3:
