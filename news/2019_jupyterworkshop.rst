@@ -1,14 +1,13 @@
-Jupyter Workshop, spring 2019
-=============================
+Jupyter Workshop, 8 March 2019
+==============================
 
 This workshop is to introduce the Aalto community to the Aalto
-JupyterHubs and how they can be used for teaching and research.  Most
-likely, the main focus of this workshop will be teaching and students,
-but research uses will be discussed too.  The workshop will introduce
-new users to Jupyter and also guide the future development of the
-services.  The main audience is teachers, but any interested people
-are welcome to attend.
-
+JupyterHubs and how they can be used for teaching (including
+independent projects) and research.  The workshop has the goals of
+introducing new users to Jupyter, providing advice on implementation
+in courses, and guiding future development.  The main audience is
+teachers, but any interested people are welcome to attend, but
+research uses will be discussed too.
 
 
 Date/time: 2019-03-08, 10:00-12:00
@@ -22,8 +21,9 @@ Program
 -------
 
 Currently being decided, probably topics below.  The first 30-60
-minutes will be a general introduction, the second half will be
-focused on practical examples and discussion.
+minutes will be a general introduction for those who are interested,
+the second half will be focused on practical examples and discussion
+for those who want to actively use.
 
 * Aalto JupyterHubs: jupyter.cs and jupyter.triton
 * nbgrader - how to use, limitations, etc
@@ -32,8 +32,8 @@ focused on practical examples and discussion.
 * Examples from previous courses
 * Discussion: what direction should development go?
 
-About Aalto JupyterHubs
------------------------
+About the Aalto JupyterHubs
+---------------------------
 
 `Jupyter <https://jupyter.org>`__ is an interactive computing
 ecosystem.  It is most known for the Jupyter (formerly IPython)
