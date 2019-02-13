@@ -1868,15 +1868,18 @@ needed, one can terminate loop or jump to a next iteration.
    *n* on the command line.  Benchmark them with *time* for n=10000 or
    more.
 
-   - For the direct summation one can avoid loops, how? Tip: discover ``eval $(echo {1..$n})``
+   - (*) For the direct summation one can avoid loops, how? Tip: discover ``eval $(echo {1..$n})``
 
- - On kosh/lyta run ``net ads search samaccountname=$USER accountExpires 2>/dev/null``
+ - Write a scirpt or function that counts a number of days till some deadline (or vacation/salary). 
+   Script should accept dates suitable to ``date -d`` like ``daystill 2019-6-1``.
+   Tip: investigate ``date +%s``.
+ - To Aalto users: on kosh/lyta run ``net ads search samaccountname=$USER accountExpires 2>/dev/null``
    to get your account expiration date. It is a 18-digit timestamp, the number of 100-nanoseconds
    intervals since Jan 1, 1601 UTC. Implement a function that accept a user name, and if not given
    uses current user by default, and then converts it to the human readable time format.
    Tip: http://meinit.nl/convert-active-directory-lastlogon-time-to-unix-readable-time
 
-   - Expand it to handle "Got 0 replies" response, i.e. account name not found.
+   - (*) Expand it to handle "Got 0 replies" response, i.e. account name not found.
 
  - Using for loop rename all the files in the directories *dir1/* and *dir2/* which file names
    are like *filename.txt* to *filename.edited.txt*. Where *filename* can be anything.
