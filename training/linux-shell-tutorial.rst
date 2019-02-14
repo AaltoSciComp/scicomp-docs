@@ -1636,6 +1636,7 @@ where one handles array subtasks based on its index.
 
    - (*) Add a sanity check so that directory name should allow alphanumeric characters only.
    
+ - (*) Write a function that validates a file path.
  - (*) Write a function (add to *~/bin/functions*) that validates an IPv4 using *=~* matching operator only.
    The function should fail incorrect IPs like 0.1.2.3d or 233.204.3.257. The problem should be solved
    with the regular expression only. Use ``return`` command to exit with the right exit code.
@@ -1883,6 +1884,8 @@ needed, one can terminate loop or jump to a next iteration.
 
  - Using for loop rename all the files in the directories *dir1/* and *dir2/* which file names
    are like *filename.txt* to *filename.edited.txt*. Where *filename* can be anything.
+ - Make script that accepts a directory path name and checks if there are files in there with
+   the spaces in the name, and if there are, rename them by replacing spaces with the underscores.
  - Get familiar with the ``getent`` and ``cut`` utilities. Join then with a loop construction 
    to write a *mygetentgroup* script
    that generates a list of users and their real names that belong to a given group. Like
