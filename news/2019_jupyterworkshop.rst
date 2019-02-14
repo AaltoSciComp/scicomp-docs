@@ -21,9 +21,11 @@ Program
 -------
 
 Currently being decided, probably topics below.  The first 30-60
-minutes will be a general introduction for those who are interested,
+minutes will be a general introduction about Jupyter and our services
+(good for those determining if this is of any use)
 the second half will be focused on practical examples and discussion
-for those who want to actively use.
+for those who want to actively use (sharing knowledge among those who
+are or will use it).
 
 * Aalto JupyterHubs: jupyter.cs and jupyter.triton
 * nbgrader - how to use, limitations, etc
