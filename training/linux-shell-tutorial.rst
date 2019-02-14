@@ -1886,13 +1886,13 @@ needed, one can terminate loop or jump to a next iteration.
    are like *filename.txt* to *filename.edited.txt*. Where *filename* can be anything.
  - Make script that accepts a directory path name and checks if there are files in there with
    the spaces in the name, and if there are, rename them by replacing spaces with the underscores.
- - Get familiar with the ``getent`` and ``cut`` utilities. Join then with a loop construction 
+ - Get familiar with the ``getent`` and ``cut`` utilities. Join them with a loop construction 
    to write a *mygetentgroup* script
    that generates a list of users and their real names that belong to a given group. Like::
    
      $ mygetentgroup group_name
-     meikalaj1: Jussi Meikalinen
-     meikalam1: Maija Meikalainen
+     meikalaj1: Jussi Meikäläinen
+     meikalam1: Maija Meikäläinen
      ...``
 
 
@@ -2420,30 +2420,19 @@ References
 
 To continue: course development ideas/topics
 ============================================
-Divide into two courses:
- * Linux Shell basics (2 sessions): files + processes (to be expanded), interactive usage,
-   building blocks like grep, find, etc (expand from coreutils), redirections/pipe, screen,
-   script, ssh tricks
- * Linux Shell Programming (4 sessions): programming logic, starting from command substitution
 
 Additional topics:
  * sed, awk, perl as helpers
  * select command
  * placeholders: working with the templates
- * managing processes: kill, nice
- * more Triton examples/demos
  * revise coreutils section, expand the examples and explanations, make it clear 
    that BASH is about getting those small utilities to work together
  * benchmark: C-code vs BASH, Python vs BASH, Perl vs BASH
 
 Ideas for exercises
 -------------------
- * function that validates a file path (pattern)
- * function that counts days left till a given date (salary, vacation, deadline etc)
  * function to find all broken links
- * rename files replacing spaces with the underscores. Tip: ``rename``
  * (homework?) Implement a profiler, that summarizes PS4/date output mentioned above
- * script that joins 'getent group ...' and 'getent passwd ...' to list group members in style like 'login, Full Name'
 
 
 Bonus material
