@@ -1888,11 +1888,12 @@ needed, one can terminate loop or jump to a next iteration.
    the spaces in the name, and if there are, rename them by replacing spaces with the underscores.
  - Get familiar with the ``getent`` and ``cut`` utilities. Join then with a loop construction 
    to write a *mygetentgroup* script
-   that generates a list of users and their real names that belong to a given group. Like
-   ``$ mygetentgroup group_name
-   meikalaj1: Jussi Meikalinen
-   meikalam1: Maija Meikalainen
-   ...``
+   that generates a list of users and their real names that belong to a given group. Like::
+   
+     $ mygetentgroup group_name
+     meikalaj1: Jussi Meikalinen
+     meikalam1: Maija Meikalainen
+     ...``
 
 
 2.3 session: arrays, traps, input and more
