@@ -1910,8 +1910,8 @@ needed, one can terminate loop or jump to a next iteration.
    - Expand it to handle "Got 0 replies" response, i.e. account name not found.
     
 
-Arrays, traps, input
-====================
+Arrays, input, Here Documents
+=============================
 
 Arrays
 ------
@@ -2254,6 +2254,8 @@ comment::
 
 **Hint** ``<<\LimtiString`` to turn off substitutions and place text as is with $ marks etc
 
+Traps, debugging,profiling
+==========================
 
 Catching kill signals: trap
 ---------------------------
@@ -2365,6 +2367,9 @@ For the larger scripts with loops and functions tracing output with the date sta
 can be summarized.
 
 
+Parallel, crontab, perl/awk/sed
+===============================
+
 Running in parallel with BASH
 -----------------------------
 The shell doesn't do parallelzation in the HPC way (threads, MPI), but
@@ -2415,6 +2420,70 @@ If no command is specified before the --, the commands after it are instead run 
 On Triton we have installed Tollef Fog Heen's version of parallel from *moreutils-parallel* CentOS' RPM.
 GNU project has its own though, with different syntax, but of exactly the same name, so do not get
 confused.
+
+
+Crontab
+-------
+Allows run tasks automatically in the background. Users may set their own crontabs. Once crontab
+task is set, it will run independently on whether you are logged in to the system or not.
+
+Run ``crontab -l`` to list all your current cron jobs, ``crontab -e`` to start editor. When in, you may add
+one or several lines, then save what you have added and exit the editor normally.
+
+::
+
+ # run 'script' daily at 23:30
+ 30 23 * * * $HOME/bin/backup_script > /home/user/log/backup.log 2>&1
+
+ # every two hours on Mon-Wed,Fri
+ 0 /2 * * 1-3,5 rm /path/to/my/tmp/dir/* >/dev/null 2>&1
+
+The executable script could be a normal command, but crontab's shell has quite limited functionality,
+in case of anything more sofisticated than just a single command and a redirection you end up writing
+a separate script.
+
+The first five positions corresponds to:
+
+ - minute (0-59)
+ - hour (0-23)
+ - day (1-31)
+ - month (1-12)
+ - day of week (0-7, 0 or 7 is Sunday)
+
+Possible values are:
+
+ - ``*`` any value
+ - ``,`` value list separator
+ - ``-`` range of values
+ - ``/`` steps
+
+You set your favorit editor:  ``export EDITOR=vim`` (can be a part of *~/.bashrc).
+
+As part of the crontab file you may set several environmet variables, like
+`MAILTO=name.surname@aalto.fi`` to recieve an output from the script or any possible errors.
+If *MAILTO* is defined but empty (``MAILTO=""``), no mail is sent.
+
+
+Perl, awk, sed
+--------------
+
+Powerful onliners. Please consult correspoding man pages and other docs for the details,
+here we provide some examples. As it was standed at very beginning of the course, shell, with all its
+functionality is only a glue in between all kind of utilities, like ``grep``, ``find``, etc.
+Perl, awk and sed are what makes terminal even more powerful. Even though Perl can do everything what
+can awk and sed, one still may find tons of examples with the later ones. Here we provide them too.
+
+Python is yet another alternative.
+
+::
+
+ # set delimiter to : and prints the first field of each line of passwd file (user name)
+ awk -F: '{print $1}' /etc/passwd
+ 
+ # sort lines by length, several ways to do it
+ cat file | perl -e 'print sort { length($a) <=> length($b) } <>'
+ cat file | awk '{ print length, $0 }' | sort -n -s | cut -d" " -f2-
+ 
 
 
 
