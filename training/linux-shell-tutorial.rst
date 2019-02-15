@@ -887,8 +887,9 @@ at ``man grep``.  Some examples:
 PART #2. Linux Shell Scripting
 ==============================
 
-2.1 session: BASH magic
-=======================
+Quoting, substitutions, aliases
+===============================
+
 Last time, we focused on interactive things from the command line.
 Now, we build on that some and end up with making our own scripts.
 
@@ -1142,6 +1143,9 @@ anywhere they can be read by the shell).
  - (*) Join *find* and *grep* power and find all the files in /{usr/,}{bin,sbin} that have '#!/bin/bash' in it
 
 
+Variables, functions, environment
+=================================
+
 Your ~/bin and PATH
 -------------------
 The PATH is an environment variable. It is a colon delimited list of directories that your
@@ -1263,7 +1267,7 @@ Built-in vars:
  - $$  current shell pid
  - $#  number of input parameters
  - $0  running script name, full path
- - $FUNCTION  function name being executed, [ note: actually an array ${FUNCTION[*]} ]
+ - $FUNCNAME  function name being executed, [ note: actually an array ${FUNCNAME[*]} ]
  - $1, $2 ... input parameter one by one (function/script)
  - "$@" all input parameters as is in one line
 
@@ -1373,9 +1377,9 @@ BASH allows indirect referencing, consider::
  - (*) Expand the function above to set group's s-bit on all the $WRKDIR directories.
 
 
+Conditionals
+============
 
-2.2 session: programming logic
-==============================
 Tests: ``[[ ]]``
 ----------------
 * ``[[ expression ]]`` returns 0=true/success or 1=false/failure depending on the
@@ -1627,20 +1631,24 @@ where one handles array subtasks based on its index.
    up a pattern ($1) and a string ($2) as an input and reports whether pattern matches any
    part of the string or not. Tip: have your scripts in ``~/bin``
 
-   - The script must check that number of input parameters is correct.
+   - The script must check that number of input parameters is correct (i.e. equal 2).
    - (*) Expand *my_grep* script to make search case insensitive
 
+ - Write a function ``pathvalid`` (add to *~/bin/functions* file) that validates a file path
+   like *path/to/file*. Let's say the path
+   should have only alphanumeric symbols, dots, underscore and slashes as a directory delimiter.
  - Implement a ``my_mkdir`` script that either accepts a directory name as an input parameter or requests it
-   with ``read`` if no input parameter is given. Script should create a directory if does not exist with
+   with ``read`` if no input parameter is given. Script should create a directory if it does not exist with
    the access permissions 700.
 
-   - (*) Add a sanity check so that directory name should allow alphanumeric characters only.
+   - (*) Use the *pathvalid* function to add a sanity check before creating a directory.
    
- - (*) Write a function that validates a file path.
  - (*) Write a function (add to *~/bin/functions*) that validates an IPv4 using *=~* matching operator only.
    The function should fail incorrect IPs like 0.1.2.3d or 233.204.3.257. The problem should be solved
    with the regular expression only. Use ``return`` command to exit with the right exit code.
 
+Loops
+=====
 
 Arithmetic
 ----------
@@ -1681,20 +1689,20 @@ Available operators:
 
  # condition ? integer_value_if_true : integer_value_if_false
  n=2; m=3; echo $((n<m?10:100))
+ 
+ # checking number of input parameters, if $# is zero, then exit
+ # (though the alternative [[ $# == 0 ]] is more often used, and intuitively more clear)
+ if ! (($#)); then echo Usage: $0 argument; exit1; fi
 
 ::
 
- #!/bin/bash
-
  # sum all numbers from 1..n, where n is a positive integer
  # Gauss method, summing pairs
-
  if (($#==1)); then
    n=$1
  else
    read -p 'Give me a positive integer ' n
  fi
- 
  echo Sum from 1..$n is $((n*(n+1)/2))
 
 Left for the exercise: make a summation directly 1+2+3+...+n and compare performance with the above one.
@@ -1709,8 +1717,8 @@ one of the option is ``bc``, often installed by default.
   echo "scale=10; 4*a(1)" | bc -l
 
 
-Loops
------
+For loops
+---------
 BASH offers several options for iterating over the lists of elements. The options include
 
  * Basic construction ``for arg in item1 item2 item3 ...``
@@ -1747,13 +1755,9 @@ BASH offers several options for iterating over the lists of elements. The option
  done
 
  # loop output can be piped or redirected as output of any other command
- for u in Aalto HY UTU; do
-   case "$u" in
-     Aalto|aalto|AALTO) echo My university is Aalto University ;;
-     HY|hy) echo My university is University of Helsinki ;;
-     UTU|utu) echo My university is University of Turku ;;
-     *) echo "Sorry, no university"; exit 1 ;;
-   esac
+ # loop other all Triton users to find out who has logged in within last month
+ for u in $(getent group triton-users | cut -d: -f4 | tr ',' ' '); do
+   echo $u: $(last -Rw -n 1 $u | head -1)
  done | sort > filename
 
 The *list* can be anything what produces a list, like Brace expansion *{1..10}*, command substitution etc.::
@@ -1775,6 +1779,9 @@ C-style, expressions evaluated according to the arithmetic evaluation rules::
 
 Loops can be nested.
 
+While/until loops
+-----------------
+
 Other useful loop statement are ``while`` and ``until``. Both execute continuously as long as the
 condition returns exit status zero/non-zero correspondingly.
 
@@ -1793,7 +1800,7 @@ condition returns exit status zero/non-zero correspondingly.
  done
  echo Sum of 1..$n is $s
 
- # endless loop, note : is noop command in BASH, does nothing
+ # endless loop, note ``:`` is a 'no operation' command in BASH, does nothing
  # can be run as sort of "deamon", process should be stopped with Ctrl-c or killed
  while true; do : ; done
 
@@ -1833,7 +1840,10 @@ All the things mentioned above for *for* loop applicable to ``while`` / ``until`
 *printf* should be familiar to programmers, allows formatted output
  similar to C printf. [#printf]_
 
-Loop control: normally *for* loop iterates until it has processed all its input arguments.
+Loop control
+------------
+
+Normally *for* loop iterates until it has processed all its input arguments.
 *while* and *until* loops iterate until the loop control returns a certain status. But if
 needed, one can terminate loop or jump to a next iteration.
 
@@ -1871,18 +1881,10 @@ needed, one can terminate loop or jump to a next iteration.
 
    - (*) For the direct summation one can avoid loops, how? Tip: discover ``eval $(echo {1..$n})``
 
- - Write a scirpt or function that counts a number of days till some deadline (or vacation/salary). 
+ - Write a scirpt or function ``daystill`` that counts a number of days till a deadline (or vacation/holyday). 
    Script should accept dates suitable to ``date -d`` like ``daystill 2019-6-1``.
    Tip: investigate ``date +%s``.
- - (*) To Aalto users: on kosh/lyta run ``net ads search samaccountname=$USER accountExpires 2>/dev/null``
-   to get your account expiration date. It is a 18-digit timestamp, the number of 100-nanoseconds
-   intervals since Jan 1, 1601 UTC. Implement a function that accept a user name, and if not given
-   uses current user by default, and then converts it to the human readable time format.
-   Tip: http://meinit.nl/convert-active-directory-lastlogon-time-to-unix-readable-time
-
-   - Expand it to handle "Got 0 replies" response, i.e. account name not found.
-
- - Using for loop rename all the files in the directories *dir1/* and *dir2/* which file names
+ - Using *for* loop rename all the files in the directories *dir1/* and *dir2/* which file names
    are like *filename.txt* to *filename.edited.txt*. Where *filename* can be anything.
  - Make script that accepts a directory path name and checks if there are files in there with
    the spaces in the name, and if there are, rename them by replacing spaces with the underscores.
@@ -1894,10 +1896,22 @@ needed, one can terminate loop or jump to a next iteration.
      meikalaj1: Jussi Meikäläinen
      meikalam1: Maija Meikäläinen
      ...``
+ - (*) Write a script that monitors yours (or someone else) activity on a server. That could be any 
+   common server like Triton. One can run a ``screen`` and then implement a
+   *while true; do ...; sleep 600; done* construction that would use ``w -h $user`` command to check once
+   in 10 minutes whether the user has logged in or not and if yes, report it to your email.
+   There are examples in the text.
+ - (*) To Aalto users: on kosh/lyta run ``net ads search samaccountname=$USER accountExpires 2>/dev/null``
+   to get your account expiration date. It is a 18-digit timestamp, the number of 100-nanoseconds
+   intervals since Jan 1, 1601 UTC. Implement a function that accept a user name, and if not given
+   uses current user by default, and then converts it to the human readable time format.
+   Tip: http://meinit.nl/convert-active-directory-lastlogon-time-to-unix-readable-time
 
+   - Expand it to handle "Got 0 replies" response, i.e. account name not found.
+    
 
-2.3 session: arrays, traps, input and more
-==========================================
+Arrays, traps, input
+====================
 
 Arrays
 ------
@@ -2043,6 +2057,17 @@ For a sake of demo: let us count unique users and their occurances (yes, one can
    echo ${arr[$j]} $j
  done
 
+:Exercise 2.5:
+ - make a script/function that produces an array of random numbers, make sure that numbers are unique
+ 
+   - one version should use BASH functionality only (Tip: ``$RANDOM``)
+   - the other can be done with one line (Tip: ``shuf``)
+
+ - Implement a Bubble sort using arrays and loops and other built-in BASH functionality (no *sort* etc).
+ - (*) Pick up the ``ipvalid`` function that we have developed earlier, implement IP matching
+   regular expression as ``^([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})$`` and
+   work with the $BASH_REMATCH[*] array to make sure that all numbers are in the range 0-255
+ - (*) Implement a one-liner that sorts text file lines by lines' length (Tip: awk or sed)
 
 
 Working with the input
@@ -2176,14 +2201,8 @@ If you implement a script that can accept both STDIN and positional
 parameters, you have to check both.
 
 
-:Exercise 4.1:
- - make a script/function that produces an array of random numbers, make sure that numbers are unique
- 
-   - one version should use BASH functionality only (Tip: ``$RANDOM``)
-   - the other can be done with one line (Tip: ``shuf``)
-
- - Implement a Bubble sort using arrays and loops and other built-in BASH functionality (no *sort* etc).
- - (*) Implement a one-liner that sorts text file lines by lines length (Tip: awk or sed)
+:Exercise 2.6:
+ - [FIXME]
 
 
 
@@ -2401,7 +2420,7 @@ confused.
 
 About homework assignments
 --------------------------
-Available on Triton. See details in the *$course_directory/assignment/homework.txt*.
+Available on Triton. See details in the *$course_directory*.
 
 
 
