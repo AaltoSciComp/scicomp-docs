@@ -1884,9 +1884,9 @@ needed, one can terminate loop or jump to a next iteration.
  - Write a scirpt or function ``daystill`` that counts a number of days till a deadline (or vacation/holyday). 
    Script should accept dates suitable to ``date -d`` like ``daystill 2019-6-1``.
    Tip: investigate ``date +%s``.
- - Using *for* loop rename all the files in the directories *dir1/* and *dir2/* which file names
-   are like *filename.txt* to *filename.edited.txt*. Where *filename* can be anything.
- - Make script that accepts a directory path name and checks if there are files in there with
+ - Using *for* loop rename all the files in a directory which file names
+   are like *filename.txt* to *filename.fixed.txt*. Where *filename* can be anything.
+ - Make script that accepts a list of files and checks if there are files in there with
    the spaces in the name, and if there are, rename them by replacing spaces with the underscores.
  - Get familiar with the ``getent`` and ``cut`` utilities. Join them with a loop construction 
    to write a *mygetentgroup* script
