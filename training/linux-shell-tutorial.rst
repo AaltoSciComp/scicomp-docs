@@ -1881,13 +1881,18 @@ needed, one can terminate loop or jump to a next iteration.
 
    - (*) For the direct summation one can avoid loops, how? Tip: discover ``eval $(echo {1..$n})``
 
- - Write a scirpt or function ``daystill`` that counts a number of days till a deadline (or vacation/holyday). 
-   Script should accept dates suitable to ``date -d`` like ``daystill 2019-6-1``.
+ - Write a scirpt or function ``days_till`` that counts a number of days till a deadline (or vacation/holyday). 
+   Script should accept dates suitable to ``date -d`` like ``days_till 2019-6-1``.
    Tip: investigate ``date +%s``.
  - Using *for* loop rename all the files in a directory which file names
    are like *filename.txt* to *filename.fixed.txt*. Where *filename* can be anything.
  - Make script that accepts a list of files and checks if there are files in there with
    the spaces in the name, and if there are, rename them by replacing spaces with the underscores.
+   Use BASH's builtin functionality only.
+   
+   - As a study case, compare it against
+     ``find . -depth -name '* *' -execdir rename 's/ /_/g' {} \;``
+   
  - Get familiar with the ``getent`` and ``cut`` utilities. Join them with a loop construction 
    to write a *mygetentgroup* script
    that generates a list of users and their real names that belong to a given group. Like::
@@ -1989,7 +1994,7 @@ Passing an array to a function as an argument could be the use case when you wan
    echo ${arr[@]}
  }
  
- # invoke the function, huom that no chages have been done to the original arr[@]
+ # invoke the function, huom that no changes have been done to the original arr[@]
  arr=(....)
  f arr[@]
  
@@ -2050,7 +2055,7 @@ For a sake of demo: let us count unique users and their occurances (yes, one can
        continue 2 
      fi 
    done
-   arr[$i]=1  # if neww, add a new array element
+   arr[$i]=1  # if new, add a new array element
  done
 
  for j in ${!arr[@]}; do    # printing out
@@ -2061,13 +2066,11 @@ For a sake of demo: let us count unique users and their occurances (yes, one can
  - make a script/function that produces an array of random numbers, make sure that numbers are unique
  
    - one version should use BASH functionality only (Tip: ``$RANDOM``)
-   - the other can be done with one line (Tip: ``shuf``)
+   - the other one can use ``shuf``
 
- - Implement a Bubble sort using arrays and loops and other built-in BASH functionality (no *sort* etc).
  - (*) Pick up the ``ipvalid`` function that we have developed earlier, implement IP matching
    regular expression as ``^([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})$`` and
-   work with the $BASH_REMATCH[*] array to make sure that all numbers are in the range 0-255
- - (*) Implement a one-liner that sorts text file lines by lines' length (Tip: awk or sed)
+   work with the ${BASH_REMATCH[*]} array to make sure that all numbers are in the range 0-255
 
 
 Working with the input
@@ -2484,7 +2487,6 @@ Python is yet another alternative.
  cat file | perl -e 'print sort { length($a) <=> length($b) } <>'
  cat file | awk '{ print length, $0 }' | sort -n -s | cut -d" " -f2-
  
-
 
 
 About homework assignments
