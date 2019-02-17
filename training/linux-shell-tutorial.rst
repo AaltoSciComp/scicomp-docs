@@ -1890,7 +1890,7 @@ Even though in most of the cases you can design the code to use conditionals or 
    Script should accept dates suitable to ``date -d`` like ``days_till 2019-6-1``.
    Tip: investigate ``date +%s``.
  - Using *for* loop rename all the files with the *.txt* extension to *.fixed.txt*.
-   Tip: combine 'for' or 'while' loop with 'find'.
+   Tip: combine 'for' loop with 'find'.
  - Make script that accepts a list of files and checks if there are files in there with
    the spaces in the name, and if there are, rename them by replacing spaces with the underscores.
    Use BASH's builtin functionality only.
@@ -1898,7 +1898,7 @@ Even though in most of the cases you can design the code to use conditionals or 
    - As a study case, compare it against
      ``find . -depth -name '* *' -execdir rename 's/ /_/g' {} \;``
    
- - Get familiar with the ``getent`` and ``cut`` utilities. Join them with a loop construction 
+ - (*) Get familiar with the ``getent`` and ``cut`` utilities. Join them with a loop construction 
    to write a *mygetentgroup* script or just a oneliner
    that generates a list of users and their real names that belong to a given group. Like::
    
@@ -1906,11 +1906,6 @@ Even though in most of the cases you can design the code to use conditionals or 
      meikalaj1: Jussi Meikäläinen
      meikalam1: Maija Meikäläinen
      ...``
- - (*) Write a script that monitors yours (or someone else) activity on a server. That could be any 
-   common server like Triton. One can run a ``screen`` and then implement a
-   *while true; do ...; sleep 600; done* construction that would use ``w -h $user`` command to check once
-   in 10 minutes whether the user has logged in or not and if yes, report it to your email.
-   There are examples in the text.
  - (*) To Aalto users: on kosh/lyta run ``net ads search samaccountname=$USER accountExpires 2>/dev/null``
    to get your account expiration date. It is a 18-digit timestamp, the number of 100-nanoseconds
    intervals since Jan 1, 1601 UTC. Implement a function that accept a user name, and if not given
