@@ -1725,28 +1725,39 @@ BASH offers several options for iterating over the lists of elements. The option
  * C-style *for loop* ``for ((i=1; i <= LIMIT ; i++))``
  * while and until constructs
 
+Simple loop over a list of items:
+ 
 ::
 
- # simple loop over a list of items, note that if you put 'list' in quotes it will be
- # considered as one item
- for school in SCI ELEC CHEM; do
-   echo "$school is the best!"
+ # note that if you put 'list' in quotes it will be considered as one item
+ for dir in dir1 dir2 dir3/subdir1; do
+   echo "Archiving $dir ..."
+   tar -caf ${dir//\/.}.tar.gz $dir && rm -rf $dir
  done
 
- # if path expansions used (*, ? etc), loop automatically lists current dir
- # using path expansion.
- # example below will convert all jpg files in the current directory to png.
- # ``*.jpg`` similar to ``ls *.jpg``
+If path expansions used (*, ?, [], etc), loop automatically lists current directory:
 
+::
+
+ # example below uses ImageMagick's utlity to convert all *.jpg files
+ # in the current directory to *.png.
+ # i.e. '*.jpg' similar to 'ls *.jpg'
  for f in *.jpg; do
-  convert $f ${f/.jpg/.png}
+  convert "$f" "${f/.jpg/.png}"   # quotes to avoid issues with the spaces in the name
  done
+ 
+ # another command line example renames *.JPG and *.JPEG files to *.jpg
+ # note: in reality one must check that a newly created *.jpg file does not exist
+ for f in *.JPG *JPEG; do mv -i "$f" "${f/.*/.jpg}"; done
 
  # do ... done in certain contexts, can be omitted by framing the command block within curly brackets
  # and certain for loop can be written in one line as well
  for i in {1..10}; { echo i is $i; }
 
- # if 'in list' omitted, for loop goes through script/function input parameters $@
+If *in list* omitted, *for* loop goes through script/function input parameters ``$@``
+
+::
+
  # here is a loop to rename files which names are given as input parameters
  # touch file{1..3}; ./newname file1 file2 file3
  for old; do
@@ -1754,7 +1765,13 @@ BASH offers several options for iterating over the lists of elements. The option
    mv -i "$old" "$new"
  done
 
- # loop output can be piped or redirected as output of any other command
+Note: as side note, while working with the files/directories, you will find lots of examples where
+loops can be emulated by ``find`` command.
+
+Loop output can be piped or redirected:
+
+::
+
  # loop other all Triton users to find out who has logged in within last month
  for u in $(getent group triton-users | cut -d: -f4 | tr ',' ' '); do
    echo $u: $(last -Rw -n 1 $u | head -1)
@@ -1766,8 +1783,6 @@ The *list* can be anything what produces a list, like Brace expansion *{1..10}*,
  for jobid in $(squeue -h -u $USER -t PD -o %A); do
    scontrol update JobId=$jobid StartTime=now+5days
  done
-
-
 
 C-style, expressions evaluated according to the arithmetic evaluation rules::
 
@@ -1811,7 +1826,7 @@ condition returns exit status zero/non-zero correspondingly.
    sleep 600
  done
 
- #  reads a file passed line by line,
+ # reads a file passed line by line,
  # IFS= variable before read command to prevent leading/trailing whitespace from being trimmed
  input=/path/to/txt/file
  while IFS= read -r line; do
@@ -1852,26 +1867,16 @@ needed, one can terminate loop or jump to a next iteration.
  - ``break n`` will terminate *n* levels of loops if they are nested, otherwise terminated only
      loop in which it is embedded. Same kind of behaviour for ``continue n``.
 
+Even though in most of the cases you can design the code to use conditionals or alike,
+*break* and *continue* certainly add the flexibility.
+
 ::
 
- for i in {1..10}; do
-   if (( i%2 == 0 )); then
-    continue
-   fi
-   echo $i  # output odd numbers only
+ # here we expand an earlier example to avoid errors in case $f is missing/not accesible
+ for f in *.JPG *.JPEG; do
+   [[ -r "$f" ]] || { echo "$f is missing on inaccessible"; continue; }
+   mv -i "$f" "${f/.*/.jpg}"
  done
-
- # this goes through all given directories to process found files
- # if directory is not accessible, it fails, if file is empty it tries next one
- dir_list='dir1 dir2 dir3'
- for dir in $dir_list; do
-   cd "$dir" || { echo $dir fails; break; }
-   for file in *; do
-     [[ -s $file ]] || { echo $dir/$file is empty; continue; }
-     echo processing $dir/$file
-   done
- done
-
 
 :Exercise 2.4:
  - Write separate scripts that count a sum of any *1+2+3+4+..+n*
@@ -1884,8 +1889,8 @@ needed, one can terminate loop or jump to a next iteration.
  - Write a scirpt or function ``days_till`` that counts a number of days till a deadline (or vacation/holyday). 
    Script should accept dates suitable to ``date -d`` like ``days_till 2019-6-1``.
    Tip: investigate ``date +%s``.
- - Using *for* loop rename all the files in a directory which file names
-   are like *filename.txt* to *filename.fixed.txt*. Where *filename* can be anything.
+ - Using *for* loop rename all the files with the *.txt* extension to *.fixed.txt*.
+   Tip: combine 'for' or 'while' loop with 'find'.
  - Make script that accepts a list of files and checks if there are files in there with
    the spaces in the name, and if there are, rename them by replacing spaces with the underscores.
    Use BASH's builtin functionality only.
@@ -1894,7 +1899,7 @@ needed, one can terminate loop or jump to a next iteration.
      ``find . -depth -name '* *' -execdir rename 's/ /_/g' {} \;``
    
  - Get familiar with the ``getent`` and ``cut`` utilities. Join them with a loop construction 
-   to write a *mygetentgroup* script
+   to write a *mygetentgroup* script or just a oneliner
    that generates a list of users and their real names that belong to a given group. Like::
    
      $ mygetentgroup group_name
@@ -1923,54 +1928,54 @@ Arrays
 BASH supports both indexed and associative one-dimensional arrays. Indexed array can be declared
 with ``declare -a array_name``, or first assignment does it automatically (note: indexed arrays only)::
 
- array=(my very first array)
- array=('my second' array [6]=sure)
- array[5]=234
+ arr=(my very first array)
+ arr=('my second' array [6]=sure)
+ arr[5]=234
 
 To access array elements (the curly braces are required, unlike normal
 variable expansion)::
 
  # elements one by one
- echo ${array[0]} ${array[1]}
+ echo ${arr[0]} ${array[1]}
  
  # array values at once
- ${array[@]} 
+ ${arr[@]} 
  
  # indexes at once
- ${!array[@]}
+ ${!arr[@]}
  
  # number of elements in the array
- ${#array[@]}
+ ${#arr[@]}
  
  # length of the element number 2
- ${#array[2]}
+ ${#arr[2]}
 
  # to append elements to the end of the array
- array+=(value)
+ arr+=(value)
 
  # assign a command output to array
- array=($(command))
+ arr=($(command))
  
  # emptying array
- array=()
+ arr=()
 
  # sorting array
- IFS=$'\n' sorted=($(sort <<<"${array[*]}"))
+ IFS=$'\n' sorted=($(sort <<<"${arr[*]}"))
  
  # array element inside arithmetic expanssion requires no ${}
- ((array[$i]++))
+ ((arr[$i]++))
  
  # split a string like 'one two three etc' or 'one,two,three,etc' to an array
  # note that IFS=', ' means that separator is either space or comma, not a sequence of them
- IFS=', ' read -r -a array <<< "$string"
+ IFS=', ' read -r -a arr <<< "$string"
  
  # spliting a word to an array letter by letter
- word=qwerty; array=($(echo $word | grep -o .))
+ word=qwerty; arr=($(echo $word | grep -o .))
 
 Loops through the indexed array::
 
- for i in ${!array[@]}; do
-   echo array[$i] is ${array[$i]}
+ for i in ${!arr[@]}; do
+   echo array[$i] is ${arr[$i]}
  done
 
 Negative index counts back from the end of the array, *[-1]* referencing to the last element.
@@ -1978,13 +1983,13 @@ Negative index counts back from the end of the array, *[-1]* referencing to the 
 Quick ways to print array with no loop::
 
  # with keys, as is
- declare -p array
+ declare -p arr
  
  # indexes -- values
- echo ${!array[@]} -- ${array[@]}
+ echo ${!arr[@]} -- ${arr[@]}
 
  # array elements values one per line
- printf "%s\n" "${array[@]}"
+ printf "%s\n" "${arr[@]}"
 
 Passing an array to a function as an argument could be the use case when you want to make it local::
 
@@ -2002,7 +2007,7 @@ Passing an array to a function as an argument could be the use case when you wan
 BASH associative arrays (this type of array supported in BASH since version 4.2) needs to be
 declared first (!) ``declare -A asarr``.
 
-Both indexed arrays and associative can be declared as array of integers, if all elements
+Both indexed arrays and associative can be declared as an array of integers, if all elements
 values are integers ``declare -ia array`` or ``declare -iA``. This way element values are
 treated as integers always.
 
@@ -2061,6 +2066,28 @@ For a sake of demo: let us count unique users and their occurances (yes, one can
  for j in ${!arr[@]}; do    # printing out
    echo ${arr[$j]} $j
  done
+ 
+Another working demo: script that automates backups or just makes a sync of data to a remote server.
+Same can be adapted to copy locally, to a usb drive or alike.
+
+::
+
+ # array of directories to be backuped, to skip one, just comment with #
+ declare -A dirs
+ dirs[wlocal]=/l/$USER
+ dirs[xpproject]=/m/phys/extra/project/xp
+ dirs[homebin]=$HOME/bin
+  
+ cmd='/usr/bin/rsync'                   # rsync 
+ args="-auvW --delete --progress $@"    # accept extra args, like '-n' for the dryrun first
+ serv='user@server:backups'             # copying to ~/backups that must exist
+ 
+ # array key is used for the remote dir name
+ for d in ${!dirs[@]}; do
+   echo "Syncing ${dirs[$d]}..."
+   $cmd $args ${dirs[$d]}/ $serv/$d
+ done
+
 
 :Exercise 2.5:
  - make a script/function that produces an array of random numbers, make sure that numbers are unique
