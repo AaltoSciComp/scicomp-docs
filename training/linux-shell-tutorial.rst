@@ -2085,7 +2085,8 @@ Same can be adapted to copy locally, to a usb drive or alike.
 
 
 :Exercise 2.5:
- - make a script/function that produces an array of random numbers, make sure that numbers are unique
+ - make a script/function that produces an array of random numbers, make sure that numbers
+   are unique. Print the array nicely using ``printf`` for formating.
  
    - one version should use BASH functionality only (Tip: ``$RANDOM``)
    - the other one can use ``shuf``
@@ -2114,11 +2115,22 @@ Let us go through the last two first and then get back to command line arguments
  # to variable(s)
  read -p 'Your names: ' firstn lastn
  
- # read into array, each word as a new array element
+ # read into array, each word as a new array element ('arr' declared automatically)
  read -a arr -p 'Your names: '
  
 Given input must be checked (!) with a pattern, especially if script creates directories,
-removes files, sends emails based on the input. *read* selected options
+removes files, sends emails based on the input.
+
+::
+
+ # request a new directory name till correct one is given (interapt with Ctrl-C)
+ regexp='^[a-zA-Z0-9/_-]+$'
+ until [[ "$newdir" =~ $regexp ]]; do
+   read -p 'New directory: ' newdir
+ done
+
+ 
+``read`` selected options
 
  * ``-a <ARRAY>``  read the data word-wise into the specified array <ARRAY> instead of normal variables
  * ``-N <NCHARS>`` reads <NCHARS> characters of input, ignoring any delimiter, then quits
@@ -2132,24 +2144,24 @@ through the input line by line::
 
  # IFS= is empty and echo argument in quotes to make sure we keep format
  # otherwise all spaces and new lines shrinked to one
- while IFS= read line; do
+ while IFS= read -r line; do
    echo "line is $line"    # do something useful with $line
  done
 
-Other STDIN tricks that one can use in the scripts
-
-::
+Though in general, whatever comes from STDIN can be proceeded as::
 
  # to check that STDIN is not empty
- if [[ -p /dev/stdin ]]; then ... fi
- 
+ if [[ -p /dev/stdin ]]; then
+   # passing STDIN to a pipeline  (/dev/stdin can be omitted)
+   cat /dev/stdin | cut -d' ' -f 2,3 | sort
+ fi
+
+Other STDIN tricks that one can use in the scripts::
+
  # to read STDIN to a variable, both commands do the same
  var=$(</dev/stdin)
  var=$(cat)
  
- # or pass STDIN to a pipeline  (/dev/stdin can be omitted)
- cat /dev/stdin | cut -d' ' -f 2,3 | sort
-
 In the simplest cases like ``./script arg1 arg2 ...``, you check *$#* and then assign
 *$1, $2, ...* the way your script requires.
 
@@ -2227,8 +2239,20 @@ parameters, you have to check both.
 
 
 :Exercise 2.6:
- - [FIXME]
-
+ - Make a ``getemail`` script that asks for the user Aalto email, check that given
+   email is correct (``^.*@aalto\.fi$`` or alike is enough) and if not, requests it
+   again till correct one is given or the user has pressed Ctrl-C.
+ - Make the same script as above but accept STDIN like ``echo email@address | getemail``
+ - Make the same script but accept the command line arguments, like ``getemail -h``
+   would return help info, ``getemail -e email@domain`` would accept an email.
+ - (*) Improve the *getemail* script:
+ 
+   - join all three approaches in to one script, priority should go like:
+     command line argument, STDIN, interactive request. Thus if email is given as an argument
+     other two possibilies skipped.
+   - for the interactive part, let it fail with the error message if wrong email is given for three times
+   - make regular expression more robust, let us say email supposed to have at least eight
+     alphanumeric character, dots can be used as a delimiter
 
 
 Here Documents blocks
