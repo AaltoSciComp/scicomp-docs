@@ -2123,7 +2123,7 @@ removes files, sends emails based on the input.
 
 ::
 
- # request a new directory name till correct one is given (interapt with Ctrl-C)
+ # request a new directory name till correct one is given (interrupt with Ctrl-C)
  regexp='^[a-zA-Z0-9/_-]+$'
  until [[ "$newdir" =~ $regexp ]]; do
    read -p 'New directory: ' newdir
@@ -2142,8 +2142,8 @@ removes files, sends emails based on the input.
 ``read`` is capable of reading STDIN, case like ``command | ./script``, with ``while read var`` it goes
 through the input line by line::
 
- # IFS= is empty and echo argument in quotes to make sure we keep format
- # otherwise all spaces and new lines shrinked to one
+ # IFS= is empty and echo argument in quotes to make sure we keep the format
+ # otherwise all spaces and new lines shrinked to one and leading/trailing whitespace trimmed
  while IFS= read -r line; do
    echo "line is $line"    # do something useful with $line
  done
@@ -2327,23 +2327,33 @@ in programs like ``kill``.
 ::
 
  # 'trap' catches listed signals only, others it silently ignores
- trap command list_of_signals
+ # Usage: trap group_of_commands/function list_of_signals
 
  trap 'echo Do something on exit' EXIT
- trap 'echo We are killed!' 1 2 15
- while :; do
-  sleep 30
- done
-
-While instead of *echo*, one can come up with something more clever:
-function that removes temp files, put something to the log file or a
-valuable error message to a screen.
+ 
+Expanding the backup script from the Arrays section, this can be added to the very
+beginning:: 
+ 
+ interrupted() {
+   echo 'Seems that backup has been interrupted in the middle'
+   echo 'Rerun the script later to let rsync to finish its job'
+   exit 1
+ }
+ 
+ trap interrupted 1 2 15
+ # ... the rest of the script
+ 
+In other situation, instead of *echo*, one can come up with something else:
+removing temp files, put something to the log file or output a
+valuable error message to the screen.
 
 **Hint** About signals see *Standard signals* section at ``man 7 signal``. Like Ctrl-c is INT (aka SIGINT).
 
 
 Debugging and profiling
 -----------------------
+BASH has no a debugger, but there are several ways to help with the debugging
+
 Check for syntax errors without actual running it ``bash -n script.sh``
 
 Or echos each command and its results with ``bash -xv script.sh``, or even adding options directly
@@ -2360,31 +2370,22 @@ To enable debugging for some parts of the code only::
   ... some code
   set -x
 
-Another debugging option is displaying current stage or variables status with ``echo``,
-though more elegant would be a function that only prints output if DEBUG is set to 'yes'.
+If you want to check quickly a few commands, with respect to how variables or other
+substitutions look like, use DEBUG variable set to *echo*.
 
 ::
 
  #!/bin/bash
 
- debug() {
-   [[ "$DEBUG" == 'yes' ]] && echo " Line $LINENO: $1"
- }
-
- command1
- debug "command1: variables list: $var1, $var2"
+ $DEBUG command1 $arguments
  command2
 
- # call this script like 'DEBUG=yes ./script.sh' otherwise the *debug* function produces no result and script can be used as is.
+ # call this script like 'DEBUG=echo ./script.sh' to see how *command1* looks like
+ # otherwise the script can be run as is.
 
 
-Another debugging technique is with trap: tracing the variables::
-
- declare -t VARIABLE=value
- trap "echo VARIABLE is being used here." DEBUG
-
-Or simply output variable values on exit::
-
+One can also ``trap`` at the EXIT, this should be the very first line in the script::
+ 
  trap 'echo Variable Listing --- a = $a  b = $b' EXIT  # will output variables value on exit
  
 For a sake of profiling one can use PS4 and ``date`` (GNU version that deals with nanoseconds). PS4 is
@@ -2458,13 +2459,18 @@ If no command is specified before the --, the commands after it are instead run 
 
  # normally the command is passed the argument at the end of its command line. With -i
  # option, any instances of "{}" in the command are replaced with the argument.
- parallel -i command {} -- arguments_list   
+ parallel command {} -- arguments_list   
 
- # will run three subshells that each print a message
- parallel bash -c "echo hi; sleep 2; echo bye" -- 1 2 3
+ # example of making a backup with parallel rsync
+ parallel -i rsync -auvW {}/ user@server:{}.backup -- dir1 dir2 dir3
+
+ # in case you want to run a command, say ten times, the arguments can be any dummy list
+ # normally parallel passes arguments at the end of the command, with '-i' they needs to 
+ # be placed explicitly with '{}', or can be skipped, like here
+ parallel -i date -- {1..10}
  
- # one more way of usage: run several independent processes in parallel
- parallel -j 3 -- ls df "echo hi"
+ #  if no command is specified before the --, the commands after it are instead run in parallel,
+ parallel -- ls df "echo hi"
 
 On Triton we have installed Tollef Fog Heen's version of parallel from *moreutils-parallel* CentOS' RPM.
 GNU project has its own though, with different syntax, but of exactly the same name, so do not get
