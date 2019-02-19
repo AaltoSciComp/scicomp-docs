@@ -42,7 +42,7 @@ projects** when needed to keep things organized.INLINE
 +--------------+--------------+--------------+--------------+--------------+--------------+
 | Filesystem   | Path (Linux) | Triton?      | Quota        | Backups?     | Notes        |
 +==============+==============+==============+==============+==============+==============+
-| home         | /u/.../$user | no           | 20 GiB       | yes,         | Used for     |
+| home         | /u/.../$user | no           | 40 GiB       | yes,         | Used for     |
 |              | name/unix    |              |              | $HOME/../.sn | personal and |
 |              |              |              |              | apshot/      | non-research |
 |              |              |              |              |              | files        |
