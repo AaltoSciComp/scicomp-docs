@@ -1362,7 +1362,7 @@ BASH allows indirect referencing, consider::
    that takes directory path as an argument, and if missing uses current directory.
  - Using ``find`` utility, implement a 'fast find' function ``ff word``. The function should return a long listing
    (ls -ldA) of any file or directory names that contain the <word>. Make search case insensitive.
-   Note: your newly ceated functions should go to *~/bin/functions*
+   Note: your newly ceated functions should go to *~/bin/functions* file.
  - Write two functions ``get_filename()`` and ``get_extension()``. Both should accept a full filename
    like *path/to/filename.ext* of any length and return *filename* or *ext* correspondingly.
    Extenssion can be of any length. Function should handle missing argument case correctly.
@@ -1643,9 +1643,15 @@ where one handles array subtasks based on its index.
 
    - (*) Use the *pathvalid* function to add a sanity check before creating a directory.
    
+ - (*) Make a ``bs`` utlity and place it to *~/bin* directory. The utility should help to start
+   writing a new BASH script. It must create a file in the current directory with a given name
+   ``bs script_name`` with the '#!/bin/bash' header, set +x bit and open that newly created file
+   in editor of your choice.
  - (*) Write a function (add to *~/bin/functions*) that validates an IPv4 using *=~* matching operator only.
    The function should fail incorrect IPs like 0.1.2.3d or 233.204.3.257. The problem should be solved
    with the regular expression only. Use ``return`` command to exit with the right exit code.
+
+
 
 Loops
 =====
@@ -2314,7 +2320,7 @@ In case you have a template file which contains variables as placeholders, repla
  $ cat template
  The name is $NAME, the email is $EMAIL
  
- $ NAME=Jussi EMAIL=jussi@gmail.com cat template | while IFS= read line; do eval echo $line; done
+ $ NAME=Jussi EMAIL=jussi@gmail.com; while IFS= read line; do eval echo $line; done < template
  The name is Jussi, the email is jussi@gmail.com
  
 
@@ -2557,6 +2563,8 @@ Python is yet another alternative.
  # placeholders replacement example above could be 
  NAME=Jussi EMAIL=jussi@gmail.com; sed -e "s/\$NAME/$NAME/" -e "s/\$EMAIL/$EMAIL/" template
  
+ # inline word replacing in all files at once
+ perl -i -p -e "s/TKK/Aalto/g" *.html
 
 
 About homework assignments
