@@ -2320,7 +2320,7 @@ In case you have a template file which contains variables as placeholders, repla
  $ cat template
  The name is $NAME, the email is $EMAIL
  
- $ NAME=Jussi EMAIL=jussi@gmail.com; while IFS= read line; do eval echo $line; done < template
+ $ NAME=Jussi EMAIL=jussi@gmail.com; while IFS= read -r l; do eval echo $l; done < template
  The name is Jussi, the email is jussi@gmail.com
  
 
