@@ -1766,7 +1766,7 @@ If *in list* omitted, *for* loop goes through script/function input parameters `
  done
 
 Note: as side note, while working with the files/directories, you will find lots of examples where
-loops can be emulated by ``find`` command.
+loops can be emulated by ``find ... -print0 | xargs -0 ...`` pipe.
 
 Loop output can be piped or redirected:
 
@@ -1782,6 +1782,15 @@ The *list* can be anything what produces a list, like Brace expansion *{1..10}*,
  # on Triton, do something to all pending jobs based on squeue output
  for jobid in $(squeue -h -u $USER -t PD -o %A); do
    scontrol update JobId=$jobid StartTime=now+5days
+ done
+
+ # using find to make a list of files to deal with; the benefit here is that you work
+ # with the filename as a variable, which gives you flexibility as comparing to 
+ # 'find ... -exec {}' or 'find ... print0 | xargs -0 ...'
+ for f in $(find . -type f -name '*.sh'); do
+   if ! bash -n $f &>/dev/null; then
+     mv $f ${f/.sh/.fixme.sh}
+   fi
  done
 
 C-style, expressions evaluated according to the arithmetic evaluation rules::
@@ -2255,8 +2264,8 @@ parameters, you have to check both.
      alphanumeric character, dots can be used as a delimiter
 
 
-Here Documents blocks
----------------------
+Here Document, placeholders
+---------------------------
 
 A here document takes the lines following and sends them to standard
 input.  It's a way to send larger blocks to stdin.
@@ -2271,11 +2280,9 @@ input.  It's a way to send larger blocks to stdin.
 
 Often used for messaging, be it an email or dumping bunch of text to file.::
 
- NAME=Jussi
- SURNAME=Meikalainen
- $DAYS=14
+ # NAME, SURNAME, EMAIL, DAYS are set earlier 
 
- mail -s 'Account expiration' $NAME.$SURNAME@aalto.fi<<END-OF-EMAIL
+ mail -s 'Account expiration' $EMAIL<<END-OF-EMAIL
  Dear $NAME $SURNAME,
 
  your account is about to expire in $DAYS days.
@@ -2300,10 +2307,19 @@ comment::
  and no need for #
  COMMENTS
 
-
 **Hint** ``<<\LimtiString`` to turn off substitutions and place text as is with $ marks etc
 
-Traps, debugging,profiling
+In case you have a template file which contains variables as placeholders, replacing them::
+
+ $ cat template
+ The name is $NAME, the email is $EMAIL
+ 
+ $ NAME=Jussi EMAIL=jussi@gmail.com cat template | while IFS= read line; do eval echo $line; done
+ The name is Jussi, the email is jussi@gmail.com
+ 
+
+
+Traps, debugging, profiling
 ==========================
 
 Catching kill signals: trap
@@ -2521,12 +2537,11 @@ If *MAILTO* is defined but empty (``MAILTO=""``), no mail is sent.
 
 Perl, awk, sed
 --------------
-
 Powerful onliners. Please consult correspoding man pages and other docs for the details,
 here we provide some examples. As it was standed at very beginning of the course, shell, with all its
 functionality is only a glue in between all kind of utilities, like ``grep``, ``find``, etc.
 Perl, awk and sed are what makes terminal even more powerful. Even though Perl can do everything what
-can awk and sed, one still may find tons of examples with the later ones. Here we provide them too.
+can awk and sed, one still may find tons of examples with the later ones. Here we provide some of them.
 
 Python is yet another alternative.
 
@@ -2538,6 +2553,9 @@ Python is yet another alternative.
  # sort lines by length, several ways to do it
  cat file | perl -e 'print sort { length($a) <=> length($b) } <>'
  cat file | awk '{ print length, $0 }' | sort -n -s | cut -d" " -f2-
+ 
+ # placeholders replacement example above could be 
+ NAME=Jussi EMAIL=jussi@gmail.com; sed -e "s/\$NAME/$NAME/" -e "s/\$EMAIL/$EMAIL/" template
  
 
 
@@ -2564,9 +2582,7 @@ To continue: course development ideas/topics
 ============================================
 
 Additional topics:
- * sed, awk, perl as helpers
  * select command
- * placeholders: working with the templates
  * revise coreutils section, expand the examples and explanations, make it clear 
    that BASH is about getting those small utilities to work together
  * benchmark: C-code vs BASH, Python vs BASH, Perl vs BASH
@@ -2575,6 +2591,11 @@ Ideas for exercises
 -------------------
  * function to find all broken links
  * (homework?) Implement a profiler, that summarizes PS4/date output mentioned above
+
+In general, there could one script that one starts building from the first line up to
+a parallelization. Like backup script with rsync.
+
+Git usage?
 
 
 Bonus material
