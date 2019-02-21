@@ -81,7 +81,8 @@ consisting of:
    long-term and they should be a long-term staff member.  There can
    be deputies (e.g. head TA) which can grant access.
 
-5. A list of students (Aalto usernames).  This can be null if anyone
+5. (optional, not recommended)  A list of students (Aalto usernames).
+   This can be null if anyone
    with an Aalto account should be able to access the environment
    (this is recommended to be as open as possible and to save manual
    effort).
@@ -118,6 +119,11 @@ consisting of:
    course is over, by which time data will be removed.  But if it will
    be used the next year, then we'll keep it up until then.  You must
    agree to manage data well.
+
+10. Schedule of your course - major lectures, exercises sessions, and
+    exams when the service *must* be running.  Deadlines (e.g. 18:00
+    on Friday) before which you expect many students to be using the
+    hub.  These get added to a calendar.
 
 
 nbgrader
