@@ -53,22 +53,22 @@ Schedule
     7.feb  | 14-15   | A237  |
    14.jan  | 14-15   | A237  |
    21.jan  | 14-15   | A237  |
-   28.jan  | 14-15   | A237  |
-    7.mar  | 14-15   | A237  |
-   14.mar  | 14-15   | A237  |
-   21.mar  | 14-15   | A237  |
-   28.mar  | 14-15   | A237  |
-    4.apr  | 14-15   | A237  |
-   11.apr  | 14-15   | A237  |
-   18.apr  | 14-15   | A237  |
-   25.apr  | 14-15   | A237  |
-    2.may  | 14-15   | A237  |
-    9.may  | 14-15   | A237  |
-   16.may  | 14-15   | A237  |
-   23.may  | 14-15   | A237  |
-   30.may  | 14-15   | A237  |
-    6.jun  | 14-15   | A237  |
-   13.jun  | 14-15   | A237  |
+   28.jan  | 13-14   | A106  | From today, room changes to A106 and time changes to 13-14
+    7.mar  | 13-14   | B337  | Note room is different
+   14.mar  | 13-14   | A106  |
+   21.mar  | 13-14   | A106  |
+   28.mar  | 13-14   | A106  |
+    4.apr  | 13-14   | B337  | Note room is different
+   11.apr  | 13-14   | A106  |
+   18.apr  | 13-14   | A106  |
+   25.apr  | 13-14   | A106  |
+    2.may  | 13-14   | A106  |
+    9.may  | 13-14   | A106  |
+   16.may  | 13-14   | A106  |
+   23.may  | 13-14   | A106  |
+   30.may  | 13-14   | A106  |
+    6.jun  | 13-14   | A106  |
+   13.jun  | 13-14   | A106  |
 
 Dates after 2.8 to be decided later.
 
