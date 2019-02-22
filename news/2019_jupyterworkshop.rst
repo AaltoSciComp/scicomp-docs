@@ -28,28 +28,28 @@ for those who want to actively use (sharing knowledge among those who
 are or will use it).
 
 
-* 10:00-10:15: Joakim Järvinen, Intro to Aalto JupyterHub
+* 10:00-10:15: **Intro to Aalto JupyterHub**, Joakim Järvinen
 
   * Strategic benefits of JupyterHub and its use in Machine Learning
     Basic Principles 2018
 
-* 10:15-10:35: Richard, JupyterHub details and ecosystem
+* 10:15-10:35: **Aalto JupyterHub details and ecosystem**, Richard Darst
 
   * Background, where we are going, and primary limitations.
 
-* 10:35-10:50: Petri Jehkonen and Eric Bach: Demos of Data Science and
-  Kernel Methods notebooks in courses.
+* 10:35-10:50: **Demos of Data Science and
+  Kernel Methods notebooks in courses**, Petri Jehkonen and Eric Bach
 * Discussion/break: 10 min
 
 * *(end of first half, begin details half for those who want to stay)*
-* 11:00-11:20: From start to Jupyter: demo of a full course
-  setup: Richard Darst
+* 11:00-11:20: **From start to Jupyter: demo of a full course
+  setup**, Richard Darst
 
-    * Requesting a course, tracking files, managing students, grading,
-      sharing files, integration with other services, etc.
+  * Requesting a course, tracking files, managing students, grading,
+    sharing files, integration with other services, etc.
 
-* 11:20-???:  Alexander Ilin and Joakim Järvinen: Notebook
-  construction for autograding
+* 11:20-???: **Notebook construction for autograding**, Alexander Ilin
+  and Joakim Järvinen
 
   * Making notebooks for autograding is quite challenging.  Learn how
     to do it well.
