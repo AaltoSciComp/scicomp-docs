@@ -10,3 +10,9 @@
     overflow: visible  !important;
   }
 }
+
+/* RST has an extra space after sub-lists in unordered lists.  This */
+/* fixes that annoying problem. */
+.rst-content .section ul p {
+    margin-bottom: 0px;
+}
