@@ -2310,20 +2310,22 @@ comment::
 
  : <<\COMMENTS
  here come text that is seen nowhere
- and no need for #
+ there is no need to comment every single line with #
  COMMENTS
 
 **Hint** ``<<\LimtiString`` to turn off substitutions and place text as is with $ marks etc
 
 In case you have a template file which contains variables as placeholders, replacing them::
 
- $ cat template
+ # 'template' file like:
  The name is $NAME, the email is $EMAIL
  
- $ NAME=Jussi EMAIL=jussi@gmail.com; while IFS= read -r l; do eval echo $l; done < template
- The name is Jussi, the email is jussi@gmail.com
+ # command to substitute the placeholders and redirect to 'output' file
+ # the original 'template' file remains as is
+ NAME=Jussi EMAIL=jussi@gmail.com
+ cat template | while IFS= read -r line; do eval echo $line; done > output
+ # resulting file: The name is Jussi, the email is jussi@gmail.com
  
-
 
 Traps, debugging, profiling
 ==========================
@@ -2423,12 +2425,13 @@ of indirection. The default is ``+``. Add the lines below right after '#!/bin/ba
  PS4='+\011$(date "+%s.%N")\011${LINENO}\011'
  set -x
  
- # optionally, if you want tracing output to be in a separate file
+Optionally, if you want tracing output to be in a separate file::
+
  PS4='+\011$(date "+%s.%N")\011${LINENO}\011'
  exec 5> ${0##*/}.$$.x && BASH_XTRACEFD='5' && set -x
 
- # or to get your script looking more professional, one can enable DEBUG, i.e. tracing only
- # happens when you run as 'DEBUG=profile ./script.sh'
+Or to get your script looking more professional, one can enable DEBUG, i.e. tracing only
+happens when you run as ``DEBUG=profile ./script.sh``::
 
  case $DEBUG in
    profile|PROFILE|p|P)
@@ -2437,7 +2440,7 @@ of indirection. The default is ``+``. Add the lines below right after '#!/bin/ba
  esac
 
 For the larger scripts with loops and functions tracing output with the date stamps and line numbers
-can be summarized.
+can be summarized. For further discussion please take a look at [#profiling]_
 
 
 Parallel, crontab, perl/awk/sed
@@ -2593,6 +2596,7 @@ References
 .. [#putty-sshkeys] https://the.earth.li/~sgtatham/putty/0.70/htmldoc/
 .. [#umask] https://www.computerhope.com/unix/uumask.htm
 .. [#printf] http://wiki.bash-hackers.org/commands/builtin/printf
+.. [#profiling] https://stackoverflow.com/questions/5014823/how-to-profile-a-bash-shell-script-slow-startup
 
 
 To continue: course development ideas/topics
