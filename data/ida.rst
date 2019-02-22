@@ -6,6 +6,11 @@ IDA data storage service
 
    This page is under development
 
+.. note::
+
+   IDA has changed in 2018/2019, and these instructions may no longer
+   be accurate.
+
 IDA is a storage service provided by the Ministry of Culture of
 Education / the Finnish Open Science and Research initiative / CSC. It
 can be used for storing very large files securely and for a reasonably
