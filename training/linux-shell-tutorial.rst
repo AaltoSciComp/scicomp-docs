@@ -2406,9 +2406,10 @@ substitutions look like, use DEBUG variable set to *echo*.
  # otherwise the script can be run as is.
 
 
-One can also ``trap`` at the EXIT, this should be the very first line in the script::
+One can also ``trap`` at the EXIT, this should be the very first lines in the script::
  
- trap 'echo Variable Listing --- a = $a  b = $b' EXIT  # will output variables value on exit
+ end() { echo Variable Listing: a = $a  b = $b; }
+ trap end EXIT  # will execute end() function on exit
  
 For a sake of profiling one can use PS4 and ``date`` (GNU version that deals with nanoseconds). PS4 is
 a built in BASH variable which is printed before each command bash displays during an execution trace.
@@ -2448,24 +2449,32 @@ The shell doesn't do parallelzation in the HPC way (threads, MPI), but
 can run some simple commands at the same time without interaction.
 
 The simplest way of parallelization is sending processes to a background and waiting in
-the script till they are done. To be on safe side, one should set a trap that kills all
-the background child processes if script is interupted abnormally::
+the script till they are done.::
 
- # at the beginning of the script, to get child processes down on exit
- trap 'killall $(jobs -p) 2>/dev/null' EXIT
  
  # in the script body one may run several processes, like
  command1 &
  command2 &
  command3 &
  
- # or it could be a loop or alike
- for i in arg1 arg2 arg3; do
-   myfunc $i &
+Here is an example that can be run as ``time script`` to demonstrate that execution takes
+5 seconds, that is the timing of the longest chunk, and all the processes are run in
+parallel and finished before script's exit.:: 
+
+ # trap is optional, just to be on the safe side
+ # at the beginning of the script, to get child processes down on exit
+ trap 'killall $(jobs -p) 2>/dev/null' EXIT
+
+ # dummy sleep commands groupped with echo and sent to the background
+ for i in 1 3 5; do
+   { sleep $i; echo sleep for $i s is over; } &
  done
  
- # the trick here is to make sure jobs are done before script is finished
+ # 'wait' makes sure jobs are done before script is finished
+ # try to comment it to see the difference
  wait
+ echo THE END
+
 
 Putting ``wait``at very end of the script makes it to wait till all the child processes are
 over and only then exit. Having ``trap`` at very beginning makes sure we kill all the process
