@@ -49,7 +49,7 @@ over your data.
 
 JupyterHub has no GPUs, but you can check out the :ref:`instructions
 for using the Paniikki GPUs with the JupyterHub data
-<jupyter-gpu-paniikki:>`.
+<jupyter-gpu-paniikki>`.
 
 Each notebook server is basically a Linux container primarily running a
 Juptyer notebook server.  You may create Jupyter notebooks to interact
