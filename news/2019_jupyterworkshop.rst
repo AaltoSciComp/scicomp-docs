@@ -20,12 +20,11 @@ Registration: none, just show up.
 Program
 -------
 
-Currently being decided, probably topics below.  The first 30-60
-minutes will be a general introduction about Jupyter and our services
-(good for those determining if this is of any use)
-the second half will be focused on practical examples and discussion
-for those who want to actively use (sharing knowledge among those who
-are or will use it).
+The first hour will be a general introduction about Jupyter and our
+services (good for those determining if this is of any use and
+strategy) the second half will be focused on practical examples and
+discussion for those who want to actively use (sharing knowledge among
+those who are or will use it).
 
 
 * 10:00-10:15: **Intro to Aalto JupyterHub**, Joakim Järvinen
