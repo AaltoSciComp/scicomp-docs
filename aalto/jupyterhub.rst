@@ -29,7 +29,7 @@ may be accessed from outside, and currently is planned to last no more
 than one year from last login.  You are
 limited to several CPUs and 1GB memory.
 
-Your notebook server is stopped after 60 minutes of idle time, or 4 hours
+Your notebook server is stopped after 60 minutes of idle time, or 8 hours
 max time.  Please close the Jupyter tab if you are not using it, or
 else it may still appear as active.
 
@@ -44,10 +44,12 @@ You begin with a computing server with the usual scipy
 stack installed, plus a lot of other software used in courses here.
 
 You may access your data as a network drive by SMB mounting it on your own
-computer.  You must be inside the Aalto network or connected via Aalto
-VPN.  The SMB url
-is ``smb://jhnas.org.aalto.fi/$username``, or on Windows
-``\\jhnas.org.aalto.fi\$username``.
+computer - see :doc:`jupyterhub-data`.  This allows you total control
+over your data.
+
+JupyterHub has no GPUs, but you can check out the :ref:`instructions
+for using the Paniikki GPUs with the JupyterHub data
+<jupyter-gpu-paniikki:>`.
 
 Each notebook server is basically a Linux container primarily running a
 Juptyer notebook server.  You may create Jupyter notebooks to interact
