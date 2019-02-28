@@ -49,12 +49,13 @@ over your data.
 
 JupyterHub has no GPUs, but you can check out the :ref:`instructions
 for using the Paniikki GPUs with the JupyterHub data
-<jupyter-gpu-paniikki>`.
+<jupyter-gpu-paniikki>`.  These instructions are still under
+development.
 
 Each notebook server is basically a Linux container primarily running a
 Juptyer notebook server.  You may create Jupyter notebooks to interact
-with code in notebooks.  To access a Linux shell, create a new
-terminal.
+with code in notebooks.  To access a Linux bash shell, create a new
+terminal - this is a great place to learn something new.
 
 
 Terms of use

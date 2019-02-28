@@ -16,7 +16,10 @@ computational environment to students.  It is best to not think of
 this service as a way to *do assignments*, but as a general *light
 computing environment* that is designed to be easy enough to be used
 for courses.  Thus,
-students should feel empowered to do their own computing.  Jupyter
+students should feel empowered to do their own computing and this
+should feel like a stepping stone to using their own systems set up
+for scientific computing.  Students' own data is persistent as they go
+through courses, and need to learn how to manage it themselves.  Jupyter
 works best for project/report type workflows, not lesson/exercise
 workflows but of course it can do that too.  In particular, there is
 no real possibility for real-time grading and so on.
@@ -41,89 +44,125 @@ research purposes, see the :doc:`Triton Jupyter page
 Basic course environment
 ========================
 
-The following are the properties of the course environment.  To
-request a course, please describe what you want from the items below.
-Note that if all you need is the normal Python environment and are not
-using nbgrader, you don't need to request a special course - students
-can just use the generic instance for their personal/studies
-computational needs.  We may update software in the generic instance
-to keep things up to date and add additional features people request,
-as long as it doesn't break backwards compatibility too badly.
+The following are the properties of the course environment.  **To get
+started with a course**, please read the below list and describe your
+needs from the relevant items.
 
-A course environment is basically some definitions in a config file
-consisting of:
+If all you need is a Python environment to do assignments and
+projects, you don't need to request anything special - students
+can just use the generic instance for their independent
+computational needs.  If your course needs special packages which
+compatible with existing packages, you can request them.  You *would*
+want a course environment if you want to (distribute assignments to
+students via the interface) and/or (collect assignments via the
+interface).
 
-1. A course slug, of the form ``nameYEAR`` (for example ``mlbp2018``)
+A course environment consists of:
+
+1. A course slug (of the form ``nameYEAR``, for example ``mlbp2018``)
    and full name.
 
-2. A docker container containing the Jupyter stack and additional
-   software.  By default, this is the `jupyter scipy stack
-   <https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html#jupyter-scipy-notebook>`__
-   (with our custom modifications, of course - github repo coming).
-   You can take and extend this image for your own course if you would
-   like, but it would be best to stay as generic as possible.
+2. Description of general computational load expected - number of
+   students, expected processor and memory usage, expected data size
+   both on disk and in memory, expected schedule (will everyone be
+   doing an assignment right before the deadline?).  You should
+   strongly discourage people from waiting until the last minute if
+   you have hundreds of students in the course.  We'll provide
+   feedback on how well we can handle the load.
 
-3. A course directory ``/course``, available only to instructors.
-   This comes default, with a quota of 1GB (combined with
+3. Course schedule (lectures/exercise sessions/deadlines).  We add
+   this to `our hub calendar
+   <https://calendar.google.com/calendar/embed?src=d01se1d7m4gehcoruig0qkn5e4%40group.calendar.google.com>`__,
+   which is used to avoid maintenance during important times.  You can
+   check the calendar to avoid major deadlines at the same times as
+   other courses.  Note: we've heard that late night deadlines are bad
+   for students well-being, so don't make deadlines late at night just
+   to reduce the peak load on our system.
+
+4. A docker container containing the Jupyter stack and additional
+   software.  By default, we have an image based on the scipy stack
+   and all the latest software that anyone else has requested, as long
+   as it is mutually compatible.  You can request additional software,
+   and this is shared among all courses.  If you need something
+   special, you may be asked to take our image and extend it
+   yourself.  Large updates to the image are done twice a year during
+   holidays.
+
+5. A course directory ``/course``, available only to instructors.
+   This comes by default, with a quota of a few gigabytes (combined with
    coursedata).  Note: instructors should manage assignments and so on
-   using git or some other version control system.
+   using git or some other version control system, because the course
+   directory lasts only one year, and is renewed for the next year.
 
-4. A list of instructors (Aalto usernames).  This can be null if not
-   using nbgrader or ``/coursedata``.  Instructors will be added to a
-   Aalto unix group named ``jupyter-$coursename`` to limit data
-   access.  To request new instructors, contact CS-IT and ask that
-   people be added/removed from your group ``jupyter-$coursename``.
+6. A list of instructors (Aalto emails or usernames).  Instructors
+   will be added to a Aalto unix group named ``jupyter-$courseslug``
+   to provide access control.  To request new instructors, contact
+   CS-IT and ask that people be added/removed from your group
+   ``jupyter-$courseslug``.
 
-   a. Primary group owner (e.g. main instructor or professor).  Data
-   is stored in a group according to :doc:`Science-IT data policy
-   <datapolicy>`, and this person is in change of knowing what data
-   exists, granting access and telling us what to do with the data
-   long-term and they should be a long-term staff member.  There can
-   be deputies (e.g. head TA) which can grant access.
+   a. Primary group owner (e.g. main instructor).  Data is stored in a
+      group according to :doc:`Science-IT data policy <datapolicy>`,
+      and this person is in change of knowing what data exists,
+      granting access and telling us what to do with the data
+      long-term and they should be a long-term staff member.  There
+      can be deputies (e.g. head TA) which can grant access.
 
-5. (optional, not recommended)  A list of students (Aalto usernames).
+   b. People who should be added to the announcement mailing list -
+      these will get updates for updates and maintenance breaks.
+
+   c. Lead contact person, if different from instructor.
+
+7. (optional, not recommended)  A list of students (Aalto usernames).
    This can be null if anyone
    with an Aalto account should be able to access the environment
    (this is recommended to be as open as possible and to save manual
-   effort).
+   effort).  If you provide a list of students, you will have to
+   request manual effort every time it changes, so this is *not
+   recommended*.
 
    a. Should non-students be allowed to spawn the environment?
       Default yes...
 
-   b. Should non-students be allowed to submit assignments?  Default
-      yes.
+8. Should the image start in "private mode", where only instructors
+   and students from the previous point can start the course
+   environment?  From our side, there is no major disadvantage to
+   going public from the start.
 
-   c. There is a "private" mode where only instructors and test
-      students can see the image.  If you want, we can create your
-      course in this mode.
+9. (optional, not recommended) A list of computational resources per
+   image.  Default is currently 2GB and 4 processors (oversubscribed).
+   Note that because this is a container, *only* the memory of the
+   actual Python processes are needed, not the rest of the OS, and
+   memory tends to be quite small.
 
-6. A list of computational resources per image.  Default is currently
-   512MB and 3 processors (oversubscribed).  Note that because this is
-   a container, *only* the memory of the actual Python processes are
-   needed, not the rest of the OS.
+10. Shared data directories.  If you have nontrivial data which needs
+    distributing, consider one of these shared directories which saves
+    it from being copied over and over.  If number of students times
+    amount of data is more than a few hundred MB, strongly consider
+    one of the data directories.
 
-7. Do you want a ``/mnt/jupyter/shareddata`` or ``/coursedata``
-   directory for shared data?  ``coursedata`` is only available when
-   your course's notebook.  ``shareddata`` is available in all
-   notebooks on jupyter.cs.aalto.fi and also other Aalto servers.
-   ``coursedata`` is also assumed to be public to everyone at Aalto,
-   though not as easy to access.
-   If so, tell us its quota.  Note: quota is shared with
-   the course directory.  If number of students times amount of data
-   is more than a few hundred MB, strongly consider one of the data
-   directories.
+    a.  You can use the "shareddata" directory
+	``/mnt/jupyter/shareddata``.  ``shareddata`` is available in
+	all notebooks on jupyter.cs.aalto.fi (even outside of your
+	course) and also (eventually) other Aalto servers.  This data
+	should be considered public (and have a valid license), even
+	though for now it's only accessible to Aalto accounts.
 
-8. Lead contact person.
+    b. ``/coursedata`` is only available within your course's
+       environment (as chosen from the list).  ``coursedata`` is also
+       assumed to be public to everyone at Aalto, though you have more
+       control over it.
 
-9. Time period and expiry date - default is six months after the
-   course is over, by which time data will be removed.  But if it will
-   be used the next year, then we'll keep it up until then.  You must
-   agree to manage data well.
+    c. If you use either of these, you can embed the paths directly in
+       your notebooks.  This is easy for hub use, but makes it harder
+       to copy the notebooks out of the hub to use on your own
+       computers.  This is something we are working on.
 
-10. Schedule of your course - major lectures, exercises sessions, and
-    exams when the service *must* be running.  Deadlines (e.g. 18:00
-    on Friday) before which you expect many students to be using the
-    hub.  These get added to a calendar.
+12. Time period and expiry date - default is six months after the
+    course is over, by which time data will be removed.  But if it will
+    be used the next year, then we'll keep it up until then.  We
+    intentionally replace the course directories every year both for
+    security and to encourage you to use maintainable processes!
+
 
 
 nbgrader
@@ -150,7 +189,7 @@ upstream) which are:
   whole-filesystem access (so that students can also access
   ``/coursedata``).
 
-- Submissions are hidden by more than just timestamps.
+- Submissions are hidden from other students better.
 
 - While not part of nbgrader, we have a way to isolate the grading
   process so that students can't access other instructor files.
@@ -201,6 +240,8 @@ To use nbgrader:
   solution at https://github.com/AaltoScienceIT/isolate-namespace, but
   it will require manual work.  This requires a Linux computer.
 
+  **If you use autograding, contact us first well in advance so we can
+  improve the documentation**
 
 
 Using git
@@ -238,6 +279,24 @@ The git repository is in ``/course``, but the main subdirectory of
 interest is the ``source/`` directory, which has the original files,
 along with whatever other course notes/management files you may have
 which are under ``/course``.  Everything else is auto-generated.
+
+
+Course data
+===========
+
+If your course uses data, request a ``coursedata`` or ``shareddata``
+directory as mentioned above.  You need to add the data there
+yourself, either through the Jupyter interface or SMB mounting of
+data.
+
+One trick is you may need to "chmod -R a+rX" the data directory so
+that the data becomes readable to students.
+
+Note: after you are added to relevant group to access the data, it
+make take up to 12 hours for your account information to be updated
+so that it can be accessed via remote mounting.
+
+
 
 Public copy of assignments
 ==========================
@@ -356,7 +415,9 @@ Instructions/hints
   using ``smb://jhnas.org.aalto.fi/course/$courseslug/data/``
   (with Windows, use ``\\`` instead of ``/`` and don't include
   ``smb://``).  This can be very nice for managing files.  This may
-  mess up group-writeability permissions.
+  mess up group-writeability permissions.  It will take up to half a
+  day to be able to access the course files after your request your
+  course.
 
 - You are the data controller of any assignments which students
   submit.  We do not access these assignments on your behalf, and a
@@ -367,6 +428,9 @@ Instructions/hints
   to avoid unexpected problems.
 
 - You can tell what image you have using ``echo $JUPYTER_IMAGE_SPEC``.
+
+- A notebook can tell if it is in the hub environment if the
+  ``AALTO_JUPYTERHUB`` environment variable is set.
 
 Limits
 ------
