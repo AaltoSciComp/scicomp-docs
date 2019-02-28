@@ -7,19 +7,38 @@ different ways to access it.  Most importantly, the data is a normal
 Aalto network drive, and thus it can be accessed remotely, from your
 own computers.
 
-Remote access
--------------
+On Paniikki and Aalto computers
+-------------------------------
+
+TODO: eventually, on Paniikki, and the Aalto servers kosh, lyta,
+brute, and force, the JupyterHub data will be available
+automatically.
+
+..
+  on Paniikki and the Aalto servers kosh, lyta, brute, and force,
+  you can simply access all Jupyter data at the path ``/m/jhnas/``.  In
+  a terminal, run ``/m/jhnas/u/makedir.sh`` and you will automatically
+  get a link from your home directory ``~/jupyter`` to your user data.
+
+Remote access via network drive
+-------------------------------
 
 Basic info
 ~~~~~~~~~~
-You can do a SMB mount.  
+You can do a SMB mount, which makes the data available as a network
+drive.  You will have the same copy of the data as on the hub -
+actually, same data, so edits immediately take effect on both places,
+just like your home directory.  *You must be on an Aalto network,
+which basically means* **eduroam**\ *, not aalto open*.
 
 * Linux: use "Connect to Server" from the file browser.  The path is
-  ``smb://jhnas.org.aalto.fi/$username``.
+  ``smb://jhnas.org.aalto.fi/$username``.  You may need to use
+  ``AALTO\username`` as your username.
 
 * Mac: same path as Linux above, "Connect to Server"
 
-* Windows: ``\\jhnas.org.aalto.fi\$username``.
+* Windows: ``\\jhnas.org.aalto.fi\$username``, and use username
+  ``AALTO\your_username``.
 
 .. _jupyter-gpu-paniikki:
 
@@ -49,7 +68,8 @@ Then, enter the server address ``smb://jhnas.org.aalto.fi``
 	    :align: center
 	    :alt: Server URL
 
-Go to the directory with your username.
+Go to the directory with your username.  At this point, you can set a
+bookmark that saves this for the future.
 
 Now you have to start Jupyter there.  To do that, start a terminal in
 the Jupyter directory.  You can do this by right clicking and
@@ -60,12 +80,16 @@ selecting "Open in Terminal":
 	    :align: center
 	    :alt: Right click, and select Open in Terminal
 
-Now that you have the terminal, you can load the Python modules with
-``module load anaconda3`` and start jupyter with ``jupyter notebook``.
-Note that the Paniikki anaconda3 modules may not have all the same
-software as the JupyterHub does.  In this case, you will need to make
-your own anaconda environment, or use one set up for your course
-already:
+Now that you have the terminal and the data, you can do whatever you
+want with it.  Presumably, you will start Jupyter here - but first you
+want to make the right software available.  If you course tells you
+how to do that using an Anaconda environment, go ahead and do it.
+(Please don't go installing large amounts of software like anaconda in
+the Jupyter data directories - they are for notebooks and small-medium
+data.)
+
+Using the built-in anaconda, you can load the Python modules with
+``module load anaconda3`` and start Jupyter with ``jupyter notebook``:
 
 .. figure:: /images/jupyterdata_04_startjupyter.png
 	    :scale: 75%
