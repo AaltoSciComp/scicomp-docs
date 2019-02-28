@@ -29,7 +29,9 @@ You can do a SMB mount, which makes the data available as a network
 drive.  You will have the same copy of the data as on the hub -
 actually, same data, so edits immediately take effect on both places,
 just like your home directory.  *You must be on an Aalto network,
-which basically means* **eduroam**\ *, not aalto open*.
+which for students practically means you must be connected to the*
+**Aalto VPN** or use an Aalto computer.  The "aalto" wifi network does *not*
+work unless you have an *Aalto* computer.
 
 * Linux: use "Connect to Server" from the file browser.  The path is
   ``smb://jhnas.org.aalto.fi/$username``.  You may need to use
@@ -38,7 +40,13 @@ which basically means* **eduroam**\ *, not aalto open*.
 * Mac: same path as Linux above, "Connect to Server"
 
 * Windows: ``\\jhnas.org.aalto.fi\$username``, and use username
-  ``AALTO\your_username``.
+  ``AALTO\your_username``.  Windows sometimes caches the
+  username/password for a long time, so if it does not work try
+  rebooting.
+
+You can also access course data and shared data by using
+``jhnas.org.aalto.fi/course/`` or ``jhnas.org.aalto.fi/shareddata/``.
+
 
 .. _jupyter-gpu-paniikki:
 
