@@ -25,6 +25,13 @@ Remote access via network drive
 
 Basic info
 ~~~~~~~~~~
+
+.. note::
+
+   These instructions are still being tested and updated, because
+   people have many different computers and we don't fully control the
+   data storage ourselves.  Please check back for updates.
+
 You can do a SMB mount, which makes the data available as a network
 drive.  You will have the same copy of the data as on the hub -
 actually, same data, so edits immediately take effect on both places,
@@ -35,9 +42,11 @@ work unless you have an *Aalto* computer.
 
 * Linux: use "Connect to Server" from the file browser.  The path is
   ``smb://jhnas.org.aalto.fi/$username``.  You may need to use
-  ``AALTO\username`` as your username.
+  ``AALTO\username`` as your username.  If there is separate "domain"
+  option, use ``AALTO`` for domain and just your username for the username.
 
-* Mac: same path as Linux above, "Connect to Server"
+* Mac: same path as Linux above, "Connect to Server".  Use
+  ``AALTO\your_username`` as the username.
 
 * Windows: ``\\jhnas.org.aalto.fi\$username``, and use username
   ``AALTO\your_username``.  Windows sometimes caches the
@@ -46,6 +55,13 @@ work unless you have an *Aalto* computer.
 
 You can also access course data and shared data by using
 ``jhnas.org.aalto.fi/course/`` or ``jhnas.org.aalto.fi/shareddata/``.
+
+.. seealso::
+
+   `Mounting network drives in Windows
+   <https://it.aalto.fi/instructions/deployment-network-drive-windows>`__
+   is the same instructions, but for Aalto home directories.  Anything
+   there should apply here, too.
 
 
 .. _jupyter-gpu-paniikki:
