@@ -37,8 +37,10 @@ drive.  You will have the same copy of the data as on the hub -
 actually, same data, so edits immediately take effect on both places,
 just like your home directory.  *You must be on an Aalto network,
 which for students practically means you must be connected to the*
-**Aalto VPN** or use an Aalto computer.  The "aalto" wifi network does *not*
-work unless you have an *Aalto* computer.
+**Aalto VPN** (see `vpn instructions
+<https://it.aalto.fi/searchpage?search_api_fulltext=vpn>`__) or use an
+Aalto computer.  The "aalto" wifi network does *not* work unless you
+have an *Aalto* computer.
 
 * Linux: use "Connect to Server" from the file browser.  The path is
   ``smb://jhnas.org.aalto.fi/$username``.  You may need to use
