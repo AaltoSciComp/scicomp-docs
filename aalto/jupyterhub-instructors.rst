@@ -79,7 +79,8 @@ A course environment consists of:
    for students well-being, so don't make deadlines late at night just
    to reduce the peak load on our system.
 
-4. A docker container containing the Jupyter stack and additional
+4. (optional, recommended to use the default)  A docker container
+   containing the Jupyter stack and additional
    software.  By default, we have an image based on the scipy stack
    and all the latest software that anyone else has requested, as long
    as it is mutually compatible.  You can request additional software,
@@ -138,7 +139,8 @@ A course environment consists of:
     distributing, consider one of these shared directories which saves
     it from being copied over and over.  If number of students times
     amount of data is more than a few hundred MB, strongly consider
-    one of the data directories.
+    one of the data directories.  Read more about this :ref:`below
+    <jupytercoursedata>`.
 
     a.  You can use the "shareddata" directory
 	``/mnt/jupyter/shareddata``.  ``shareddata`` is available in
@@ -281,6 +283,8 @@ along with whatever other course notes/management files you may have
 which are under ``/course``.  Everything else is auto-generated.
 
 
+.. _jupytercoursedata:
+
 Course data
 ===========
 
@@ -289,7 +293,18 @@ directory as mentioned above.  You need to add the data there
 yourself, either through the Jupyter interface or SMB mounting of
 data.
 
-One trick is you may need to "chmod -R a+rX" the data directory so
+If you use ``coursedata``, just start the course environment and
+instructors should have permissions to put files in there.  Please try
+to keep things organized!
+
+If you use ``shareddata``, ask for permission to put data there - we
+need to make the directory for you.  When asking, tell us the
+(computer readable short)name of the dataset.  In the shareddata
+directory, you find a README file with some more instructions.  All
+datasets should have a minimum README (copy the template) which makes
+it minimally usable for others.
+
+In both cases, you need to ``chmod -R a+rX`` the data directory so
 that the data becomes readable to students.
 
 Note: after you are added to relevant group to access the data, it
