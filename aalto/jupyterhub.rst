@@ -57,6 +57,11 @@ Juptyer notebook server.  You may create Jupyter notebooks to interact
 with code in notebooks.  To access a Linux bash shell, create a new
 terminal - this is a great place to learn something new.
 
+.. toctree::
+   :hidden:
+
+   jupyterhub-data
+
 
 Terms of use
 ============
