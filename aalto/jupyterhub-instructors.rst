@@ -46,7 +46,8 @@ Basic course environment
 
 The following are the properties of the course environment.  **To get
 started with a course**, please read the below list and describe your
-needs from the relevant items.
+needs from the relevant items (contact address is at the bottom of
+this page).
 
 If all you need is a Python environment to do assignments and
 projects, you don't need to request anything special - students
@@ -79,15 +80,27 @@ A course environment consists of:
    for students well-being, so don't make deadlines late at night just
    to reduce the peak load on our system.
 
-4. (optional, recommended to use the default)  A docker container
+4. (optional, recommended to use the default and add what you need)  A
+   list of required software, or a docker container
    containing the Jupyter stack and additional
    software.  By default, we have an image based on the scipy stack
    and all the latest software that anyone else has requested, as long
    as it is mutually compatible.  You can request additional software,
    and this is shared among all courses.  If you need something
    special, you may be asked to take our image and extend it
-   yourself.  Large updates to the image are done twice a year during
-   holidays.
+   yourself.  Large version updates to the image are done twice a year
+   during holidays.
+
+   a. (optional) A sample python file or notebook to test that the
+      environment
+      works for your course (which will be made public and open
+      source).  We also use use automated testing on our software
+      images, so that we can be sure that our server images still work
+      when they are updated.  If you send us a file, either ``.py`` or
+      ``.ipynb``, we will add this to our automatic tests.  The
+      minimum amount is something like ``import`` of the packages you
+      need, a more advanced thing would test the libraries a little
+      bit - do a minimal, quick calculation.
 
 5. A course directory ``/course``, available only to instructors.
    This comes by default, with a quota of a few gigabytes (combined with
