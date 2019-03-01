@@ -47,13 +47,16 @@ Basic course environment
 The following are the properties of the course environment.  **To get
 started with a course**, please read the below list and describe your
 needs from the relevant items (contact address is at the bottom of
-this page).
+this page).  **Don't worry too much about understanding or answering
+everything perfectly, there is a lot here - just let us know what you
+have as concisely as possible and we will work together to answer the
+rest.**
 
 If all you need is a Python environment to do assignments and
-projects, you don't need to request anything special - students
-can just use the generic instance for their independent
-computational needs.  If your course needs special packages which
-compatible with existing packages, you can request them.  You *would*
+projects, you don't need to request anything special - students can
+just use the generic instance for their independent computational
+needs.  If your course needs special packages which compatible with
+existing packages, let us know and we will install them.  You *would*
 want a course environment if you want to (distribute assignments to
 students via the interface) and/or (collect assignments via the
 interface).
