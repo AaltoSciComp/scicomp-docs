@@ -252,14 +252,17 @@ To use nbgrader:
 
 - nbgrader is `not secure
   <https://github.com/jupyter/nbgrader/issues/483>`__, because it runs
-  the student's code as the instructor.  Students can do all
-  sorts of bad things with this, and the only way to stop them is to
-  check notebooks yourself before autograding.  We have a custom-build
+  the student's code as the instructor.  We have a custom-build
   solution at https://github.com/AaltoScienceIT/isolate-namespace, but
   it will require manual work.  This requires a Linux computer.
 
-  **If you use autograding, contact us first well in advance so we can
-  improve the documentation**
+  **Autograding is not secure right now.  If you use autograding,
+  contact us first well in advance so we can improve the
+  documentation.**  Autograding is equivalent to accepting arbitrary
+  code from all students and running it *on your own computer*
+  automatically without checking input or outputs.  Do this at your
+  own risk, but we do *not* offer this as a secure service without our
+  custom add-ons.
 
 
 Using git

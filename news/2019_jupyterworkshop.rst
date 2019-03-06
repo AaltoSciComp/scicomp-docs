@@ -37,7 +37,12 @@ those who are or will use it).
   * Strategic benefits of JupyterHub and its use in Machine Learning
     Basic Principles 2018
 
-* 10:15-10:35: **Aalto JupyterHub details and ecosystem**, Richard Darst
+* 10:15-10:20: **The Aalto A+ learning management system**, Jaakko Kantojärvi
+
+  * What the A+ system is and how it relates (and could relate to) to
+    JupyterHub.
+
+* 10:20-10:35: **Aalto JupyterHub details and ecosystem**, Richard Darst
 
   * Background, where we are going, and primary limitations.
 
