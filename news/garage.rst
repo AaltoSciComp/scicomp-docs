@@ -51,9 +51,9 @@ Schedule
    24.jan  | 14-15   | CS A2 | CS building, 2nd floor coffee room in the A wing
    31.jan  | 14-15   | A237  |
     7.feb  | 14-15   | A237  |
-   14.jan  | 14-15   | A237  |
-   21.jan  | 14-15   | A237  |
-   28.jan  | 13-14   | A106  | From today, room changes to A106 and time changes to 13-14
+   14.feb  | 14-15   | A237  |
+   21.feb  | 14-15   | A237  |
+   28.feb  | 13-14   | A106  | From today, room changes to A106 and time changes to 13-14
     7.mar  | 13-14   | B337  | Note room is different
    14.mar  | 13-14   | A106  |
    21.mar  | 13-14   | A106  |
