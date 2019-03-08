@@ -68,7 +68,9 @@ already, and have announced dropping Python 2 support for future
 versions (or have already done so), so at this point you should use
 version 3 unless you're working on an existing project that for some
 reason hasn't yet been ported to version 3.  Accordingly, in this
-course we will use Python 3.
+course we will use Python 3. For more info, see `Python 3
+statement <https://python3statement.org/>`_ by many other the major
+projects.
 
 
 Practical details
@@ -83,3 +85,81 @@ For interactively testing things in Python, you can use a Jupyter
 notebook, or the ``ipython`` shell.  For writing Python code you will
 need a text editor; Jupyter Lab does have one, if you prefer to work
 in a browser based environment.
+
+You're not expected to know much Python at the start of the course,
+but a little bit of programming proficiency is needed as a
+prerequisite.
+
+The course focuses on hands-on exercises rather than lectures.
+
+
+Introduction to Python
+======================
+
+If you are not familiar with Python, a short introduction to the most
+common python builtin datatypes:
+
+Scalars
+-------
+
+Scalar types, that is, single elements of various types:
+
+::
+
+   i = 42       # integer
+   i = 2**77    # Integers are arbitrary precision
+   g = 3.14     # floating point number
+   c = 2 - 3j   # Complex number
+   b = True     # boolean
+   s = "Hello!" # String (Unicode)
+   q = b'Hello' # bytes (8-bit values)
+
+
+Collections
+-----------
+
+Collections are data structures capable of storing multiple values.
+
+::
+
+   l = [1, 2, 3]                      # list
+   l[1]                               # lists are indexed by int
+   d = {"Janne": 123, "Richard": 456} # dictionary
+   d["Janne"]
+   s = set()                          # Set of unique values
+
+
+Python type system
+------------------
+
+Python is strongly and dynamically typed.
+
+Strong here means, roughly, that it's not possible to circumvent the
+type system (at least, not easily, and not without invoking undefined
+behavior).
+
+::
+
+   x = 42
+   type(x)
+   x + "hello"
+
+Dynamic typing means that types are determined at runtime, and a
+variable can be redefined to refer to an instance of another type:
+
+::
+
+   x = 42
+   x = "hello"
+
+
+*Jargon*: Types are associated with rvalues, not lvalues. In
+statically typed language, types are associated with lvalues, and are
+(typically) reified during compilation.
+
+
+Exercise 1
+----------
+
+Why needs numpy anyway? Implement matrix mult with nested lists as
+your matrix representation.
