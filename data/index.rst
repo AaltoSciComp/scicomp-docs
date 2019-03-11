@@ -34,35 +34,30 @@ data.  For example,
 
 You can find more formal information at the `Aalto Research Data
 Management pages
-<http://www.aalto.fi/en/research/research_data_management/>`_.
+<http://www.aalto.fi/en/research/research_data_management/>`__, and
+here we focus on the practical side of things.
 
-Big considerations
-==================
 
-We recommend you read the :doc:`outline <outline>` to see what the
-main considerations are before starting your research.  :doc:`Services
-<services>` helps you be sure you know everything available.  For
-:doc:`Aalto open source information <../aalto/opensource>`, see its page.
-
-.. toctree::
-   :maxdepth: 1
-
-   services
-   organization
 
 .. _scicomp_dmp:
 
-Data management plans
-=====================
+Applying for funding
+====================
 
-A "data management plan" (DMP) can mean a formal thing that funders
-require (funder DMP).  However, it also worth thinking about how
-you'll manage data on a day to day basis (practical DMP).
-This section will contains some information on both, but focused on
-the latter.  For information on Funder DMPs, see the `Aalto Research Data
-Management pages`__.  We recommend that you first think about your
-practical DMP, so that the Funder DMP comes naturally.  The Funder DMP
-has more of a focus on sharing, standardization, and openness.
+When applying for funding, you may need to submit a **data management
+plan (DMP)** along with the grant application.  For hints on making
+one, see our :doc:`data management plan <plans>` page or the `Aalto
+Research Data Management pages`__..  However, be aware that a grant
+application data management plan ("Funder DMP") usually focuses on
+sounding like a grant, not being a usable work plan ("Practical DMP").
+Before you start accumulating data, browse the other links on this
+site and make sure that you organize things well!  Aalto info will
+only help you make a funder DMP, not organize your data during the
+project.
+
+Grantwriters and the Open Science and ACRIS teams can
+help you with producing data management plans for funding.  Science-IT
+can help you with funding or practical data management plans.
 
 __ http://www.aalto.fi/en/research/research_data_management/data_management_planning/
 
@@ -70,25 +65,106 @@ __ http://www.aalto.fi/en/research/research_data_management/data_management_plan
 
    plans
 
-Aalto data storage
+
+During the project
 ==================
 
-Aalto provides many tools and resources for storing data.  Overall,
-you should try to store the master copy of your data on some
-centralized storage system - which Aalto provides for free and can be
-accessed from any computer.  By storing on a central system, you get
-backups, sharing, large amounts of space, and guaranteed support.
+Make sure that you manage data well - just think, your data is
+possibly worth more than all your other devices combined.  Check out
+the :doc:`core lessons <corelessons>` to learn of the most common
+problems, and see if any of them apply to you.
 
-See the :doc:`Aalto environment <../aalto/index>` section, and specifically
-:doc:`Aalto data storage for the services <../aalto/aaltostorage>` and
-:doc:`../aalto/aaltodata` for requesting storage space.
+You may want to read our :doc:`welcome to researchers
+<../aalto/welcomeresearchers>` and :doc:`outline of data management at
+Aalto <../aalto/aaltodata>` pages.  For specific Aalto storage
+services, see :doc:`../aalto/aaltostorage`, and for other options see
+the :doc:`general services page <services>`.
+
+We recommend that each project or group gets a network drive, which is
+used as the centralized place for data storage, safekeeping, and
+possibly daily work.  See the :doc:`outline of data management at
+Aalto <../aalto/aaltodata>` page.
 
 
-Tools, resources, and instructions
-==================================
+.. toctree::
+   :maxdepth: 1
 
-There are a wide variety of other tools that may be useful, both
-inside and outside of Aalto:
+   services
+   organization
+
+
+
+Internal reporting
+==================
+
+Data is a top-level research output, even if not everyone considers it
+valuable now.  Open or not, the university wants to know what data
+exists.  Currently, this is done via `ACRIS
+<https://acris.aalto.fi/>`__ (`primary instructions
+<https://wiki.aalto.fi/display/ACRIShelp/ACRIShelp>`__).  In
+particular, you should create a "dataset" object for data you create
+(it doesn't have to be open).  For some hints, for now see the :doc:`ACRIS
+point on the services page <services>` or the `ACRIS instructions on
+data <https://wiki.aalto.fi/display/ACRIShelp/ACRIS+and+research+data>`__.
+
+
+
+Sharing and collaboration
+=========================
+
+Obviously, you will often need to share data within projects.
+Emailing things back and forth is rarely a good way to do things.
+Check other data sharing services from :doc:`our services page
+<services>` or `Aalto's IT services for research
+<https://inside.aalto.fi/display/ITServices/IT+Services+for+Research>`__
+page.
+
+We recommend, instead of seeing this as a sharing problem, see this as
+a storage problem: find a place to store data which everyone can
+access, and share via that.  This promotes long-term organization.
+
+
+
+Archival after the project
+==========================
+
+After a project is done, you may need to store data long-term for
+follow-up use.  You *shouldn't* do this just by assuming everyone
+keeps their copy: people leave, and eventually that a data will get
+lost.  The easiest and recommended way of doing this is by opening
+data and publishing it on a reputable worldwide archive once it is
+time.  For the most part, the university wants to avoid creating its
+own internal permanent archives, because they will end up requiring
+large effort to maintain.  It's better to use the publically-funded
+and managed worldwide services.
+
+
+
+Publication
+===========
+
+See our list of :doc:`storage services <services>` for recommendations
+on archival.  If you don't know what to pick (there isn't something
+specialized for your field), use Zenodo and report it in ACRIS (see
+"internal reporting" above).
+
+
+
+Licensing and intellectual property
+===================================
+
+Just because data is "out there" doesn't mean it's usable by others:
+big companies have ensured that data is by default closed.  Luckily,
+it is easy to make data reusable: just add a license.  There are
+plenty of options that can balance between "public domain, do
+anything" and "if you help us too".
+
+See our :doc:`Open Source page <../aalto/opensource>` for more info.
+
+
+
+Other info
+==========
 
 .. toctree::
    :maxdepth: 1

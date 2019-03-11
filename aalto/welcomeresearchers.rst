@@ -199,11 +199,14 @@ Within the Science-IT departments, Science-IT and department IT
 manages it and provides access.  For other schools/departments, both
 are provided by Aalto ITS but you will have to figure out your
 school's policies yourself.  It's even possible to directly collect
-data to these systems from lab equipment.
+data to these systems from lab equipment.  (In general, "work" is
+organized by the Aalto hierarchy, while "teamwork" is flatter.  If you
+consider yourself mainly Aalto staff who fits in the hierarchy, work
+is probably better.  If you consider yourself a research who
+collaborates with whoever, teamwork is better.)
 
 CSC provides both high-performance Lustre filesystems (like Triton)
 and archive systems.
-
 
 In our :doc:`data management section <../data/index>`, we provide many
 more links to long-term data repositories, archival, and so on.  The
