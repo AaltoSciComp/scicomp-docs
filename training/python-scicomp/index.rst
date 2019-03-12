@@ -124,6 +124,7 @@ Collections are data structures capable of storing multiple values.
 
    l = [1, 2, 3]                      # list
    l[1]                               # lists are indexed by int
+   l[1] = True                        # list elements can be any type
    d = {"Janne": 123, "Richard": 456} # dictionary
    d["Janne"]
    s = set()                          # Set of unique values
@@ -158,8 +159,102 @@ statically typed language, types are associated with lvalues, and are
 (typically) reified during compilation.
 
 
-Exercise 1
-----------
+Organizing Python code
+----------------------
 
-Why needs numpy anyway? Implement matrix mult with nested lists as
-your matrix representation.
+Start Python scripts with
+
+::
+
+   #!/usr/bin/env python3
+
+This ensures you get the correct python3 for the environment you are
+using.
+
+In general, don't put executable statements directly into the top
+level scope in your files (modules), as this code is then run if you
+try to import the module.
+
+Instead, use this common idiom:
+
+::
+
+   if __name__ == '__main__':
+       # your code goes here
+
+
+Exercise 1.1
+------------
+
+Who needs numpy anyway? Implement matrix multiplication with nested
+lists as your matrix representation. *Hint for beginners*: Create one
+function
+
+::
+
+   def creatematrix(n, m):
+       # ...
+
+which creates an NxM matrix filled with random values
+(e.g. random.random()). Then create another function
+
+::
+
+   def matrixmult(a, b):
+       # ...
+
+which multiplies together two matrices a and b.
+
+
+Exercies 1.2
+------------
+
+Lets continue with the previous example, and add some object oriented
+scaffolding around our matrix code.  Create a Matrix class with a
+constructor to create the random matrix, and overload the '*' operator
+to multiply two Matrix instances. Reuse the code from the previous
+exercise.
+
+
+Exercise 1.3
+------------
+
+The essence of science is experiment and measurement.  So lets measure
+our matrix multiplication implementation, and calculate how fast it
+can multiply matrices, in terms of "Gflops/s" (Giga floating point
+operations per second). *Hint*: A "flop" is a floating point multiply
+or addition/subtraction.  First figure out of many flops are needed to
+multiply two matrices. Then you need to time it; for this you can use
+the IPython magic %timeit command. And finally, equipped with this
+information, you can calculate a Gflops/s score for you multiplication
+method.
+
+
+Enter NumPy
+===========
+
+The NumPy package provides a N-dimensional array type, and syntax and
+utility functions for working with these arrays.
+
+In contrast to a python list, a numpy array can only hold elements of
+the same type. The element type can be seen via the 'dtype' attribute.
+
+::
+
+   import numpy as np
+   a = np.array([(1,2,3),(4,5,6)])
+   a.dtype
+   a[0, 0] = "hello"  # error!
+   a[0, 0] = 2**63    # error!
+
+What these restrictions buy you is that the memory layout of a numpy
+array is very efficient, similar to what you see in low level
+languages like C or Fortran.  This means operating on these arrays is
+very efficient; in fact, much of the speed advantage of numpy comes
+from the fact that array syntax is implemented in fast C code.
+
+Due to the memory layout of numpy being compatible with C and Fortran,
+numpy arrays allows one to use functionality written in these other
+languages.  Much of the SciPy ecosystem (NumPy, SciPy, etc.) consist
+of python wrappers around widely used and battle-tested numerical
+libraries written in C or Fortran such as LAPACK and BLAS.
