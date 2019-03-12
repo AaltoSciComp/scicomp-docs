@@ -1336,7 +1336,12 @@ need to look them up when you need them.
  
  # returns 'I hate you'
  var='I love you'; echo ${var/love/hate}
-
+ # other options for substitutions
+ var=' some text ';
+ echo ${var/# /}  # returns without the first space
+ echo ${var/% /}  # without the last space
+ echo ${var// /}  # without spaces at all
+ 
 Except for the *:=* the variable remains unchanged. If you want to
 redefine a variable::
 
@@ -1348,6 +1353,10 @@ BASH allows indirect referencing, consider::
  echo $var2  # returns text 'var1'
  echo ${!var2}  # returns 'Hello' instead of 'var1'
 
+To address special characters::
+
+ # replacing all tabs with the spaces in the var
+ var=${var//$'\t'/ }
 
 
 [Lecturer's note: ~20 minutes for the hands-on exercises. Solution examples can be given at very end.]
