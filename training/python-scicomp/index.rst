@@ -233,6 +233,9 @@ method.
 Enter NumPy
 ===========
 
+Introduction
+------------
+
 The NumPy package provides a N-dimensional array type, and syntax and
 utility functions for working with these arrays.
 
@@ -242,10 +245,10 @@ the same type. The element type can be seen via the 'dtype' attribute.
 ::
 
    import numpy as np
-   a = np.array([(1,2,3),(4,5,6)])
+   a = np.array(((1,2,3),(4,5,6)))
    a.dtype
    a[0, 0] = "hello"  # error!
-   a[0, 0] = 2**63    # error!
+   a[0, 0] = 2**100    # error!
 
 What these restrictions buy you is that the memory layout of a numpy
 array is very efficient, similar to what you see in low level
@@ -258,3 +261,96 @@ numpy arrays allows one to use functionality written in these other
 languages.  Much of the SciPy ecosystem (NumPy, SciPy, etc.) consist
 of python wrappers around widely used and battle-tested numerical
 libraries written in C or Fortran such as LAPACK and BLAS.
+
+
+Exercise 2.1
+------------
+
+1. In the example above we saw that ``2**100`` was too large. What is
+   the default datatype of a numpy integer array if we don't
+   explicitly specify some type, and what is the largest possible
+   integer we can store in such na element.
+
+2. What is the smallest negative element (that is, the largest
+   absolute value of a negative number)?  Is it different from the
+   largest positive number, and if so, why?
+
+3. What is the absolute value of the smallest negative element? Why?
+
+
+Other ways of creating NumPy arrays
+-----------------------------------
+
+There are many different ways to create NumPy arrays, here's a few of
+the most common ones:
+
+::
+
+   np.zeros((2, 3))      # 2x3 array with all elements 0
+   np.ones((3, 2), bool) # 3x2 boolean array
+   np.arange(3)          # Evenly spaced values in an interval
+   np.linspace(..)       # similar to above
+
+NumPy array slicing syntax
+--------------------------
+
+NumPy provides a convenient array syntax to reference subarrays,
+similar to MATLAB for Fortran.
+
+::
+
+   a[low:high:step]
+
+returns the array elements in the range ``[low, high)`` with a stride
+of ``step``. Equivalently for multidimensional arrays.  For
+multidimensional arrays NumPy by default stores arrays in row-major
+order, like C. Note that this is in contrast to e.g. Fortran, MATLAB
+or Julia that use a column-major layout.
+
+Using array syntax efficiently is **key** to using NumPy in a fashion
+that leads to short as well as efficient code.
+
+
+Views vs. copies
+----------------
+
+When slicing an array, you **DO NOT** get a copy of those elements,
+but rather a *view*.  That is, the data elements are the same as in
+the original array
+
+::
+
+   a = np.ones((2, 2))
+   b = a[1, 1:2]
+   b[0] = 2
+
+Views rather than copies is more efficient, particularly for large
+arrays, but they can sometimes be confusing. Be careful!
+
+If you do need a copy, NumPy arrays have a ``copy`` method to create a
+copy rather than getting a view.
+
+
+Array shape and size
+--------------------
+
+NumPy arrays have a shape and size attribute.
+
+::
+
+   a = np.zeros((2,3))
+   a.size               # Number of elements
+   a.shape              # shape tuple
+
+We can modify the shape of an array with the ``resize`` method. Or for
+the special case of flattening an array to a 1D array, ``ravel``.
+
+Combining and splitting arrays
+------------------------------
+
+For combining multiple arrays into a larger array, see the
+``concatenate``, ``stack``, ``block``, and the more specialized
+variants ``hstack``, ``vstack``, ``dstack``.
+
+Similarly, for splitting an array into multiple parts, there's
+``split``, ``hsplit``, ``vsplit``.
