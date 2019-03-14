@@ -262,6 +262,25 @@ languages.  Much of the SciPy ecosystem (NumPy, SciPy, etc.) consist
 of python wrappers around widely used and battle-tested numerical
 libraries written in C or Fortran such as LAPACK and BLAS.
 
+The Python list
+
+::
+
+   a_list = [1, "hello", 1.2]
+
+has roughly the following layout in memory:
+
+.. image:: a_list.svg
+
+In contrast, the NumPy array
+
+::
+
+   n = np.array((1,2,3))
+
+has the memory layout like
+
+.. image:: ndarray.svg
 
 Exercise 2.1
 ------------
@@ -310,6 +329,15 @@ or Julia that use a column-major layout.
 Using array syntax efficiently is **key** to using NumPy in a fashion
 that leads to short as well as efficient code.
 
+NumPy also provides so-called *advanced indexing*, where you can
+select elements with a list of indices.
+
+::
+
+   a = np.zeros((3, 3))
+   b = a[(0, 1), (1, 1)]
+   b[0] = 1    # Will this modify a?
+
 
 Views vs. copies
 ----------------
@@ -330,6 +358,8 @@ arrays, but they can sometimes be confusing. Be careful!
 If you do need a copy, NumPy arrays have a ``copy`` method to create a
 copy rather than getting a view.
 
+**NOTE** With advanced indexing, you always get a copy!
+
 
 Array shape and size
 --------------------
@@ -342,8 +372,9 @@ NumPy arrays have a shape and size attribute.
    a.size               # Number of elements
    a.shape              # shape tuple
 
-We can modify the shape of an array with the ``resize`` method. Or for
-the special case of flattening an array to a 1D array, ``ravel``.
+We can modify the shape of an array with the ``reshape`` or ``resize``
+methods. Or for the special case of flattening an array to a 1D array,
+``ravel``.
 
 Combining, splitting and rolling arrays
 ---------------------------------------
@@ -371,6 +402,63 @@ element in the previously created array.
 Then, figure out the indices where the array ``y`` changes sign. What
 are the ``x`` values for these indices?
 
+
+NumPy I/O
+---------
+
+NumPy has functionality for saving and loading NumPy arrays from
+files.  For reading/writing textfiles there is ``loadtxt`` and
+``savetxt``. See also ``genfromtxt`` with more sophisticated handling
+of missing values etc.
+
+For large arrays, it's faster to use a binary format. For these NumPy
+defines a ``.npy`` format. Loading and saving these files can be done
+with the ``load`` and ``save`` methods.  There's also the ``.npz``
+format, which is a zip archive containing several numpy ndarrays in
+one file. ``.npz`` format files can be read/written with ``load``,
+``savez`` and ``savez_compressed`` methods. This is a good choice for
+temporary or intermediate files such as checkpoints etc. Note that the
+format is Numpy-specific, and other languages might not easily be able
+to read it. Similarly, for long-term archiving other formats might be
+a better choice.
+
+
+Random Numbers in NumPy
+-----------------------
+
+The ``numpy.random`` module contains functionality to create
+pseudorandom numbers following different distributions.
+
+Linear algebra in Numpy
+-----------------------
+
+The ``dot`` method provides a generalized dot product. It can compute
+dot products of 1D vectors, matrix-vector products as well as
+matrix-matrix products.  It is an interface to the famous BLAS
+library, of which multiple highly optimized versions exist.  The
+``numpy.linalg`` module contains interfaces to the most common linear
+algebra operations, such as calculating eigenvalues, Cholesky and
+singular value decompositions, solving linear systems, least squares,
+(pseudo)inverse. This module is an interface to the LAPACK library
+(which in turn builds on top of BLAS).
+
+Exercise 2.3
+------------
+
+Remember our first exercise, implementing matrix multiplication? Now
+do the same, but use NumPy arrays and the ``dot`` method. Compare
+performance to the code you wrote yourself earlier, using the IPython
+%timeit macro.
+
+
+SciPy
+=====
+
+SciPy is a library that builds on top of NumPy.
+
+
+Matplotlib
+==========
 
 
 Homework
