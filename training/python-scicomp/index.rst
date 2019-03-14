@@ -345,8 +345,8 @@ NumPy arrays have a shape and size attribute.
 We can modify the shape of an array with the ``resize`` method. Or for
 the special case of flattening an array to a 1D array, ``ravel``.
 
-Combining and splitting arrays
-------------------------------
+Combining, splitting and rolling arrays
+---------------------------------------
 
 For combining multiple arrays into a larger array, see the
 ``concatenate``, ``stack``, ``block``, and the more specialized
@@ -354,3 +354,26 @@ variants ``hstack``, ``vstack``, ``dstack``.
 
 Similarly, for splitting an array into multiple parts, there's
 ``split``, ``hsplit``, ``vsplit``.
+
+To roll an array, that is shift the elements along a give axis, use
+``roll``.
+
+
+Exercise 2.2
+------------
+
+Create an array ``x`` of 100 evenly spaced numbers in the range
+[-2*pi, 2*pi].
+
+Next, create an array ``y``, where each element is the ``sin`` of each
+element in the previously created array.
+
+Then, figure out the indices where the array ``y`` changes sign. What
+are the ``x`` values for these indices?
+
+
+
+Homework
+========
+
+XY model?
