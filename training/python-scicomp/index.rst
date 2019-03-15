@@ -454,7 +454,21 @@ performance to the code you wrote yourself earlier, using the IPython
 SciPy
 =====
 
-SciPy is a library that builds on top of NumPy.
+SciPy is a library that builds on top of NumPy. It contains a lot of
+interfaces to battle-tested numerical routines written in Fortran or
+C, as well as python implementations of many common
+algorithms. Briefly, it contains functionality for
+
+- Special functions (Bessel, Gamma, etc.)
+- Numerical integration
+- Optimization
+- Interpolation
+- Fast Fourier Transform (FFT)
+- Linear algebra (more complete than in NumPy)
+- Sparse matrices
+- Statistics
+- More I/O routine, e.g. Matrix Market format for sparse matrices,
+  MATLAB files (.mat), etc.
 
 
 Matplotlib
