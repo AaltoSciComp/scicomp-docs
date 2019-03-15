@@ -471,11 +471,72 @@ algorithms. Briefly, it contains functionality for
   MATLAB files (.mat), etc.
 
 
+Exercise 3.1
+------------
+
+Using scipy, calculate the integral of the function ``sin`` in the
+interval ``[0, pi]``, and compare with the analytical result.
+
+
+Exercise 3.2
+------------
+
+Use the SciPy sparse matrix functionality to create a random sparse
+matrix with a probability of non-zero elements of 0.05 and size 10000
+x 10000. The use the SciPy sparse linear algebra support to calculate
+the matrix-vector product of the sparse matrix you just created and a
+random vector. Use the %timeit macro to measure how long it
+takes. Does the optional ``format`` argument when you create the
+sparse matrix make a difference?
+
+Then, compare to how long it takes if you'd instead first convert the
+sparse matrix to a normal NumPy dense array, and use the NumPy ``dot``
+method to calculate the matrix-vector product.
+
+Can you figure out a quick rule of thumb when it's worth using a
+sparse matrix representation vs. a dense representation?
+
+
 Matplotlib
 ==========
 
+Matplotlib is the 'standard' Python plotting library. It is quite
+full-featured, and provides a MATLAB-like plotting API.
 
-Homework
-========
+To use it, typically you start with
 
-XY model?
+::
+
+   import matplotlib.pyplot as plt
+   # ...
+   x = linspace(-4, 4)
+   plt.plot(x, np.sin(x))
+   plt.show()
+
+When using Jupyter notebooks, use the magic
+
+::
+
+   %matplotlib inline
+
+which will cause matplotlib plots to appear inline in the
+notebooks. Very convenient for quick analysis!
+
+
+Demo application
+================
+
+To demonstrate how to make a simple simulation program, here the
+lecturer will 'live-code' a small simulation program.  For a suitable
+model, lets choose a suitably fascinating problem that can be
+simulated with a relatively simple model. First, some background.
+
+Topological phase transitions
+-----------------------------
+
+Historically, for a long time we believed there were two kinds of
+phase transitions in nature.
+
+
+the Kosterlitz-Thouless transition
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
