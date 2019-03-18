@@ -156,6 +156,13 @@ for longer, less useful information.
 FAQ and bugs
 ============
 
+* **I started the wrong environment and can't get back to the course
+  selection list.**  In JupyterLab, use the menu bar, "Hub->Control
+  Panel".  On the classic notebooks, use the "Control panel" button on
+  the top right.  Unfortunately JupyterLab isn't made so intuitively
+  and there's not much we can do about it.  (Emergency backup: you can
+  always change the URL path to ``/hub/home``).
+
 * **Is JuptyerLab available?** Yes, and it's nice.  There are two
   general use instances that are actually the same, the only
   difference is one starts JupyterLab by default and one starts
