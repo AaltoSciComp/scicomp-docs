@@ -315,7 +315,7 @@ Common problems
 ---------------
 
 Network shares are not accessible
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If network shares do not work, there is usually two things to try:
 
@@ -328,7 +328,7 @@ If network shares do not work, there is usually two things to try:
    the directory.
 
 Graphical User Interface on Aalto CS Linux desktop is sluggish, unstable or does not start
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  
 
@@ -345,7 +345,7 @@ Graphical User Interface on Aalto CS Linux desktop is sluggish, unstable or does
          ``bash -c 'cd && du -sch .[!.]\* \* \|sort -h'``
 
 Enter password to unlock your login keyring
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You should change your Aalto password in your main Aalto workstation. If
 you change the password through e.g. https://password.aalto.fi, then
@@ -369,24 +369,24 @@ If changing password didn't help, then try this:
    automatically.
 
 In linux some process is stuck and freezez the whole session
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 You can kill a certain (own) process via text console.
 
 How do I use eJournals, Netmot and other Aalto library services from home?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 There is a weblogin possibility at Aalto Library. After this, all
 library provided services are available. There are links for journals
 (nelli) and netmot.
 
 Rsync complains about Quota, even though there is plenty left.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The reason usually is that default ``rsync -av`` tries to preserve the
 group. Thus, there is wrong group in the target. Try using
 ``rsync -rlptDxvz --chmod=Dg+s <source> <target>``. This will make group
 setting correct on ``/scratch/`` etc and quota should then be fine.
 
 Quota exceeded or unable to write files to project / work / scratch / archive
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Most likely this is due to wrong Linux filesystem permissions. Quota
 is set per group (e.g. braindata) and by default file go to the
@@ -407,7 +407,7 @@ There are two easy ways to fix this
 - Contact NBE-IT and we will reset the directory permissions for the given directory
 
 I cannot start Firefox
-^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~
 There are two reasons for this.
 
 .. rubric:: 1. Your network home disk is full

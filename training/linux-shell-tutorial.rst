@@ -879,8 +879,8 @@ at ``man grep``.  Some examples:
  - (*) Play with the commands grep, cut: find at least two ways to
    extract IP addresses only out of /etc/hosts. Tip: *grep* has *-o* option, thus one can build
    a regular expression that will grab exactly what you need.
- - (*) Using pipes and commands echo/tr/uniq, find doubled words out of 'My
-   Do Do list: Find a a Doubled Word'. Any easier way to do it?
+ - (*) Using pipes and commands echo/tr/uniq, find doubled words out of ``My
+   Do Do list: Find a a Doubled Word``. Any easier way to do it?
 
 
 
@@ -1136,7 +1136,7 @@ anywhere they can be read by the shell).
    email with the directory listing attached but use process substitution instead of saving
    directory listing to a file. Tip: use examples in the text.
  - (*) Using pipes and commands ``echo``, ``tr``, ``uniq``, find doubled words out of
-   `My Do Do list: Find a a Doubled Word.`
+   ``My Do Do list: Find a a Doubled Word.``
  - (*) Pick up */scratch/scip/BASH/windows.txt* file and convert it to UNIX format using
    ``tr`` and redirects only. Tip: remind first session examples.
  - (*) Using ``find``, duplicate current directory tree (to some other dir, only tree, no content)
@@ -2337,7 +2337,7 @@ In case you have a template file which contains variables as placeholders, repla
  
 
 Traps, debugging, profiling
-==========================
+===========================
 
 Catching kill signals: trap
 ---------------------------
@@ -2555,10 +2555,10 @@ Possible values are:
  - ``-`` range of values
  - ``/`` steps
 
-You set your favorit editor:  ``export EDITOR=vim`` (can be a part of *~/.bashrc).
+You set your favorite editor:  ``export EDITOR=vim`` (can be a part of ~/.bashrc).
 
 As part of the crontab file you may set several environmet variables, like
-`MAILTO=name.surname@aalto.fi`` to recieve an output from the script or any possible errors.
+``MAILTO=name.surname@aalto.fi`` to recieve an output from the script or any possible errors.
 If *MAILTO* is defined but empty (``MAILTO=""``), no mail is sent.
 
 

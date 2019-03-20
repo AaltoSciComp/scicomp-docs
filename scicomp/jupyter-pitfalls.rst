@@ -52,7 +52,7 @@ eventually.  Plan for it and do it quickly once you need to.  You can
 set modules to automatically reload with ``%load_ext autoreload``,
 ``%autoreload 1``, and then ``%aimport module_name``.  Then your edits
 to the Python source code are immediately used without restarting and
-your work is not slowed down much.  See more at the ``IPython docs on
+your work is not slowed down much.  See more at the `IPython docs on
 autoreload
 <https://ipython.readthedocs.io/en/stable/config/extensions/autoreload.html>`__
 (note: this is Python kernel specific).
@@ -194,5 +194,5 @@ References
 ----------
 
 * This funny talk `"I don't like notebooks" by Joel Grus
-<https://docs.google.com/presentation/d/1n2RlMdmv1p25Xy5thJUhkKGvjtV-dkAIsUXP-AL4ffI>`__
-provided a starting point of this list.
+  <https://docs.google.com/presentation/d/1n2RlMdmv1p25Xy5thJUhkKGvjtV-dkAIsUXP-AL4ffI>`__
+  provided a starting point of this list.

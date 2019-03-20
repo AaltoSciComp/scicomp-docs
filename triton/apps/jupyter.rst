@@ -41,7 +41,7 @@ instead of either scripts or interactive shells, the notebooks allow
 you to see a whole script + output and experiment interactively and
 visually.  They are good for developing and testing things, but once
 things work and you need to scale up, it is best to put your code into
-proper programs (:doc:`more info <../scicomp/jupyter-pitfalls>`).  You
+proper programs (:doc:`more info </scicomp/jupyter-pitfalls>`).  You
 must do this if you are going to large parallel
 computing.
 
@@ -72,7 +72,7 @@ making it closer to an IDE or RStudio.
 
 Notebooks are without a doubt a great tool.  However, they are only
 one tool, and you need to know their limitations.  See our other page
-on :doc:`limitations of notebooks <../scicomp/jupyter-pitfalls>`.
+on :doc:`limitations of notebooks </scicomp/jupyter-pitfalls>`.
 
 
 
@@ -321,7 +321,7 @@ See also
   Jupyter.  It is annoying long (2 hours), but *very* complete and
   could be considered good "required watching")
 
-* :doc:`../scicomp/jupyter-pitfalls`
+* :doc:`/scicomp/jupyter-pitfalls`
 
 * CSC has this service, too, however there is no long term storage yet
   so there is limited usefulness for research: https://notebooks.csc.fi/

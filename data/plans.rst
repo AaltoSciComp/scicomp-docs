@@ -203,6 +203,7 @@ something useful, too.
      can't go into here, and you need to study yourself.  Aalto
      Research and Innovation Services has lawyers which can help with
      this - you can consult in advance or say you will use them.
+
 3. Documentation and metadata
 
    - It is harder to comment on this because it is so field-specific.

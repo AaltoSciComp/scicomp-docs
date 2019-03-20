@@ -29,7 +29,7 @@ To run octave with the GUI, run it with::
 Installing packages
 ~~~~~~~~~~~~~~~~~~~
 
-Before installing packages you should create a file `~/.octaverc` with the 
+Before installing packages you should create a file ``~/.octaverc`` with the 
 following content::
 
     package_dir = ['/scratch/work/',getenv('USER'),'/octave'];
@@ -40,11 +40,11 @@ following content::
     setenv("CC","gcc")
     setenv("F77","gfortran")
 
-This sets up `/scratch/work/$USER/octave` to be your Octave package directory
-and sets `gcc` to be your compiler. By setting Octave package directory to
+This sets up ``/scratch/work/$USER/octave`` to be your Octave package directory
+and sets ``gcc`` to be your compiler. By setting Octave package directory to
 your work directory you won't run into any quota issues.
 
-After this you should load `gcc`- and `texinfo`-modules. This gives you an 
+After this you should load ``gcc``\ - and ``texinfo``\ -modules. This gives you an 
 up-to-date compiler and tools that Octave uses for its documentation::
 
     module load gcc
@@ -54,7 +54,7 @@ Now you can install packages in octave with e.g.::
 
     pkg install -forge -local io
 
-After this you can unload the `gcc`- and `texinfo`-modules::
+After this you can unload the ``gcc``\ - and ``texinfo``\ -modules::
 
     module unload gcc
     module unload texinfo
