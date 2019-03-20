@@ -43,21 +43,38 @@ A: Basics
 =========
 
 .. list-table::
+   :header-rows: 1
+
+   * *
+
+     *
+
+     * Reading
+
+     * Video
 
    * * A01
+
        University IT systems
 
      * This covers the basics of research facilities at Aalto and how to use them.
 
-       There is not currently a dedicated course, but, but all of our
-       information is found at :doc:`../aalto/welcomeresearchers`.
+
+     * For now see :doc:`../aalto/welcomeresearchers`.
+
+     *
 
    * * A10
+
        Configuring Mac for scientific work
 
      * Getting your Mac computer set up for scientific computing
        tasks.  After this, you can follow most of the other
        instructions below which assume a Linux-like system.
+
+     *
+
+     *
 
    * * A11
        Configuring Windows for scientific work
@@ -66,6 +83,9 @@ A: Basics
        Because these are to get you close enough to Linux to have the
        power you need for computing.)
 
+     *
+
+     *
 
 ..
   Lapiokurssi - computer as a tool.  What the different computational
@@ -84,44 +104,74 @@ B: Scientific computing
 **Core courses:**
 
 .. list-table::
+   :header-rows: 1
+
+   * *
+
+     *
+
+     * Reading
+
+     * Video
 
    * * B10
 
        Basic shell
      * Let's face it: the linux command line is the basis of most data
-       science.  `Check out Software Carpentry shell-novice sections
+       science if you are doing more than running other people's
+       programs.
+
+     * `Software Carpentry shell-novice sections
        1-4 <http://swcarpentry.github.io/shell-novice/>`__.  Our
        :doc:`shell course <linux-shell-tutorial>` covers this at the
        beginning, too.
+
+     *
 
    * * B14
 
        Data management
      * If you do the obvious thing, your data will turn into a huge
        mess and you won't be able to work anymore.  This course gives
-       some practical hints.  (For now, check out :doc:`the data section <../data/index>`)
+       some practical hints.
+
+     * (For now, check out :doc:`the data section <../data/index>`)
+
+     *
 
    * * B23
 
        Text editors and IDEs
-     * Your best friend is a good text editor.  `Software Carpentry
+     * Your best friend is a good text editor - sometimes you just
+       need to edit things quickly on some remote system.
+
+     * `Software Carpentry
        shell-novice, part of section 3
        <http://swcarpentry.github.io/shell-novice/>`__.
+
+     *
 
    * * B20
 
        Shell scripting
      * If you can do it on the Linux shell, you can automate it.
-       Continue with the :doc:`Science-IT Linux shell tutorial
-       <linux-shell-tutorial>`, first few sections.
+
+     * Continue with the :doc:`Science-IT Linux shell tutorial
+       <linux-shell-tutorial>`.
+
+     *
 
    * * B21
 
        Version control for you
      * Version control lets you track changes, go back in time, and
        collaborate on code and papers: an absolute requirement for
-       scientific computing.  `CodeRefinery Introduction to version
+       scientific computing.
+
+     * `CodeRefinery Introduction to version
        control <http://coderefinery.org/lessons/>`__
+
+     *
 
    * * B22
 
@@ -129,31 +179,56 @@ B: Scientific computing
      * A short but important course: how to do work remotely.
        Different expert tips for making ssh better, too.
 
+     *
+
+     *
 
 **Other courses:**
 
 .. list-table::
+   :header-rows: 1
+
+   * *
+
+     *
+
+     * Reading
+
+     * Video
 
    * * B30
 
        Makefiles
      * Makefiles are like smart shell scripts.  We learn some about
-       them and in the process, become ever more efficient.  `Software
-       Carpentry make-novice <http://swcarpentry.github.io/make-novice/>`__.
+       them and in the process, become ever more efficient.
+
+     * `Software
+       Carpentry make-novice
+       <http://swcarpentry.github.io/make-novice/>`__.
+
+     *
 
    * * B50
 
        Version control for teams
      * Previously, you learned only the basics.  Now for the real
-       stuff.  `CodeRefinery collaborative distributed version control
+       stuff.
+
+     * `CodeRefinery collaborative distributed version control
        lesson <http://coderefinery.org/lessons/>`__
+
+     *
 
    * * B51
 
        Jupyter Notebooks
      * Notebooks are an efficient way to make self-documenting code
-       and scripts and do data science well.  `CodeRefinery Jupyter
+       and scripts and do data science well.
+
+     * `CodeRefinery Jupyter
        course <http://coderefinery.org/lessons/>`__.
+
+     *
 
 **Software development track:** Do you do programming?  These courses are
 for you.  This does *not* teach you how to program: you need to find
@@ -161,32 +236,64 @@ your own course for that, but this will make sure you can do
 scientific programming well.
 
 .. list-table::
+   :header-rows: 1
+
+   * *
+
+     *
+
+     * Reading
+
+     * Video
 
    * * B60
 
        Modular code development
+
+     *
+
      * `CodeRefinery lesson <http://coderefinery.org/lessons/>`__
+
+     *
 
    * * B61
 
        Software testing
+
+     *
+
      * `CodeRefinery lesson <https://coderefinery.github.io/testing/>`__
+
+     *
 
    * * B62
 
        Profiling
-     * Aalto course, see :doc:`../triton/usage/profiling` for now.
+
+     *
+
+     * See :doc:`../triton/usage/profiling` for now.
+
+     *
 
    * * B63
 
        Debugging
+
+     *
+
      * Aalto course, for example `course by Janne <https://users.aalto.fi/~jblomqvi/scip/2016/scip-slides/debugging.html>`__
+
+     *
 
    * * B02
 
        Software Licensing
+     *
+
      * `CodeRefinery lesson <http://cicero.xyz/v2/remark/github/coderefinery/software-licensing/master/talk.md/>`__
 
+     *
 
 
 C: High performance computing
@@ -199,76 +306,157 @@ HPC, level D is about programming it yourself.
 **Core courses:**
 
 .. list-table::
+   :header-rows: 1
+
+   * *
+
+     *
+
+     * Reading
+
+     * Video
 
    * * C01
 
        What is HPC?
-     * See :doc:`training by Science-IT <by-science-it>`
+
+     * Before you can use larger resources, you need to understand the
+       difference from your own computers
+
+     * :doc:`training by Science-IT <by-science-it>`,
+       :doc:`../triton/tut/intro`
+
+     *
+
    * * C20
 
        Modules and software
-     * See :doc:`training by Science-IT <by-science-it>` or
+
+     * Using and installing software on a cluster is different from
+       your own computer, because hundreds of people are sharing it.
+       Modules are the solution.
+
+     * :doc:`training by Science-IT <by-science-it>` or
        :doc:`../triton/tut/modules`
+
+     *
+
    * * C21
 
        Slurm
+
+     * On a cluster, you have to share resources with others.  Slurm
+       is one batch queuing system that makes it possible.
+
      * See :doc:`training by Science-IT <by-science-it>` or
        :doc:`interactive <../triton/tut/interactive>`,
        :doc:`serial <../triton/tut/serial>`,
        :doc:`array <../triton/tut/array>`
+
+     *
+
    * * C22
 
        HPC Storage
+
+     * Storage turns out to be just as important as computing power.
+       There are different places available, each with different
+       advantages.
+
      * See :doc:`training by Science-IT <by-science-it>`  or
        :doc:`storage basics <../triton/tut/storage>`,
        :doc:`lustre <../triton/usage/lustre>`,
        :doc:`local storage <../triton/usage/localstorage>`,
        :doc:`small files <../triton/usage/smallfiles>`
+
+     *
+
    * * C23
 
        Parallel computing
-     * See :doc:`training by Science-IT <by-science-it>`
+
+     * The point of a cluster is to run things in parallel.  How does
+       this work?
+
+     * See :doc:`training by Science-IT <by-science-it>`, and
+       :doc:`../triton/tut/parallel`.
+
+     *
+
    * * C24
 
        Advanced shell scripting and automation
-     * Hands-on, putting everything together.  Various courses,
+
+     * Hands-on shell scripting, putting everything together to
+       automate large computations on the cluster.
+
+     * Various courses,
        finishing the :doc:`linux shell tutorial
        <linux-shell-tutorial>` is a good start.
+
+     *
+
 
 
 D: Advanced high performance computing
 ======================================
 
 .. list-table::
+   :header-rows: 1
+
+   * *
+
+     *
+
+     * Reading
+
+     * Video
 
    * * Dxx
 
        Parallel programming computers
+
      * This is an academic course taught in the CS department.  It
        mainly covers OpenMP and CUDA.  Usually taught in 5th period
        (Apr-May), `search MyCourses/Oodi for CS-E4580
        <https://oodi.aalto.fi/a/opintjakstied.jsp?html=1&Kieli=6&Tunniste=CS-E4580>`__.
 
+     *
+
+     *
+
    * * Dxx
 
        GPU Programming
      * This was an advanced guest course, useful if you want to know
-       how to program GPU applications `Materials here
+       how to program GPU applications.
+
+     * `Materials here
        <http://science-it.aalto.fi/scip/gpu-computing-fall-2017/>`__.
+
+     *
 
    * * Dxx
 
        MPI Programming
      * This was an advanced guest course, useful if you want to know
-       internals of MPI or program MPI applications.  `Materials here
+       internals of MPI or program MPI applications.
+
+     * `Materials here
        <http://science-it.aalto.fi/scip/mpi-intro-spring-2018/>`__.
+
+     *
 
    * * Dxx
 
        HTCondor
      * Condor allows you to use many workstations as a high throughput
        cluster, ideal for mid-range embarrassingly parallel problems.
-       `Materials here <http://science-it.aalto.fi/scip/condor2017/>`__.
+
+     * `Materials here
+       <http://science-it.aalto.fi/scip/condor2017/>`__.
+
+     *
 
 Also see the `Science-IT training archive
 <http://science-it.aalto.fi/scip/>`__ for more level D courses.
