@@ -183,6 +183,21 @@ Instead, use this common idiom:
        # your code goes here
 
 
+When developing code it's often convenient to be able to reload a
+module into your IPython (or IPython notebook) session without having
+to restart the entire session. This can be done with the ``reload``
+function:
+
+::
+
+   from importlib import reload
+   import foo
+   foo.bar()
+   # Edit foo.py
+   reload(foo)
+   foo.bar()
+
+
 Exercise 1.1
 ------------
 
@@ -534,9 +549,114 @@ simulated with a relatively simple model. First, some background.
 Topological phase transitions
 -----------------------------
 
-Historically, for a long time we believed there were two kinds of
-phase transitions in nature.
+Historically, for a long time we believed there were two, and only
+two, kinds of phase transitions in nature.  So-called discontinous, or
+first-order, transitions which are characterized by the presence of a
+latent heat (mathematically, a discontinuity in the first derivative
+of the free energy with respect to some thermodynamic parameter),
+whereas continuous phase transitions are characterized by a
+discontinuity in the second or higher derivative of the free energy.
+
+However, in the 1970'ies, some experiments on ultrathin films of
+superfluid Helium-3 were made which produced data that existing
+theories could not describe.  Eventually Kosterlitz and Thouless (and
+independently Berezinskii in the then Soviet Union) were able to
+describe what was happening.  What they had discovered was an entirely
+new kind of phase transition which defied the existing classification
+schemes. Namely, there is *NO* discontinuity in any free energy
+derivative. So in a way, it's an *infinite*-order phase transition.
+
+What is happening is that *topological defects* (vortices in this
+case) in the system change how they interact with each other at the
+critical temperature. At low temperatures below the transition
+temperature the correlation function between spins decays as a power
+law, whereas above the transition temperature the correlation decays
+exponentially. This results in vortex-antivortex pairs at low
+temperature, and a *vortex unbinding* transition at the transition
+temperature with free vortices at higher temperatures.
+
+This work eventually resulted in the 2016 Nobel Prize in Physics. See
+the `scientific background for the 2016 physics prize
+<https://www.nobelprize.org/uploads/2018/06/advanced-physicsprize2016-1.pdf>`_.
+
+The XY model
+------------
+
+Topological phase transitions can be studied with a XY model (also
+called the planar model, or rotor model). Take a lattice with spins
+rotating in the plane. Each spin interacts with its neighbors, and the
+configuration energy of the system is given by
+
+$$ E = -J \\sum_{i \\ne j} s_i s_j,$$
+
+where the sum is over nearest neighbor spins.
+
+In this case we can ignore the constant J which determines the
+interaction strength. Also, since the spin vectors are all of equal
+lengths the dot product can be simplified, so we have
+
+$$ E = - \\sum_{i \\ne j} cos(\\theta_i - \\theta_j).$$
 
 
-the Kosterlitz-Thouless transition
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The Metropolis-Hastings Monte Carlo algorithm
+---------------------------------------------
+
+The Metropolis-Hastings algorithm is a Markov chain Monte Carlo method
+that can be used for finding the ground state for this kind of lattice
+model.  The basic idea is that for each spin ``s`` we do a *trial
+move*, to change the spin. We then calculate a random trial spin
+``s'``, and calculate an acceptance probability $$A = min(1,
+\\frac{P(s')}{P(s)}).$$ In this case the probability density is the
+Boltzmann distribution $$P(s) = \\frac{1}{Z} exp(-\\beta E(s)) ,$$
+where \\(\\beta\\) is the thermodynamic beta, or
+
+$$ \\beta = \\frac{1}{k_B T} ,$$
+
+where \\(k_B\\) is the Boltzmann constant. For this simulation we can
+set it to 1 and ignore it hereafter. \\(\\beta\\) is thus just the
+inverse of the temperature.
+
+Thus the quotient $$\\frac{P(s')}{P(s)}$$ can be calculated as
+$$exp(-\\beta (E' - E)).$$ Then finally, calculate a uniform random
+number ``r`` in the interval ``[0,1)``.  If $$r \\le A$$ the new state
+is accepted. Repeating this for all the spins constitutes a single
+Monte Carlo step in the algorithm.
+
+
+Homework: 2D Ising model
+========================
+
+This homework exercise shares many similarities with the XY model
+studied above.  The main difference is that in the 2D Ising model, the
+spins are perpendicular to the plane, and can take only two values,
+``+1`` and ``-1``. This model can be used to study the ferromagnetic
+phase transition. Below the critical temperature ferromagnetic
+domains, where the spins are aligned, form. Above the critical
+temperature this order breaks down. In the Ising model the
+configuration energy is defined as
+
+$$ E = - J \\sum_{i \\ne j} \\sigma_i \\sigma_j - \\mu H \\sum_j \\sigma_j,$$
+
+where J is the exchange energy, \\(\\mu\\) is the magnetic moment of
+the spins, and H is the external magnetic field in the direction
+perpendicular to the plane. To simplify, you can set J and \\(\\mu\\)
+to 1.
+
+Implement a simulation program simulating the 2D Ising model. Use the
+Metropolis-Hastings Monte Carlo algorithm. Visualize the results with
+matplotlib. Run the simulation at different temperatures and with
+different starting configurations (random vs. ordered), and see if you
+can find the critical temperature by observing your visualizations.
+
+If you find the above too easy, a few topics for further
+exploration. Not needed to pass the course.
+
+- Implement the Wolff algorithm, which flips whole clusters at a time
+  instead of individual spins.  This helps avoid a phenomena called
+  *critical slowing down* close to the critical temperature, which is
+  problematic for algorithms such as the Metropolis algorithm that
+  flip one spin at a time.
+
+- Calculate and plot the net magnetization, the magnetic
+  susceptibility, and the heat capacity of the system as a function of
+  the temperature. How do they behave around the critical temperature?
