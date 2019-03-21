@@ -466,6 +466,16 @@ performance to the code you wrote yourself earlier, using the IPython
 %timeit macro.
 
 
+Exercise 2.4
+------------
+
+Here's a number of quick numpy exercises to get you a feel of numpy
+functionality, index manipulation etc.
+
+
+More quick NumPy exercises like this one `over here
+<https://www.labri.fr/perso/nrougier/teaching/numpy.100/>`_.
+
 SciPy
 =====
 
