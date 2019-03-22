@@ -10,9 +10,11 @@ Aalto for free.  Resources are funded by departments, and distributed
 by a fairshare algorithm: members of departments and schools which
 provide direct funding have a greater share.
 
-Please contact us via the :doc:`support email address <help>` (not
+Please contact us via the `support email address <https://wiki.aalto.fi/display/Triton/Getting+help>`__ (not
 personal email) and we will set up your account.  Please tell us your
 department, supervisor, Aalto account, and see the conditions below.
+(For future help, you should probably use our issue tracker: see the
+:doc:`help` page.)
 
 A few prerequisites:
 

@@ -9,6 +9,10 @@ tracker <issuetracker>`.
 Whatever you do, these `guidelines for making good support requests
 <https://research.csc.fi/support-request-howto>`__ are very useful.
 
+.. seealso::
+
+   Are you just looking for a Triton account?  See :doc:`accounts`.
+
 
 The Triton docs
 ~~~~~~~~~~~~~~~
@@ -55,8 +59,8 @@ requests, problems that may affect several users.
 Email ticketing system
 ~~~~~~~~~~~~~~~~~~~~~~
 
-For private issues you can also contact us via `our email alias`__
-(available from our Wiki page - login required). This is primarily
+For private issues you can also contact us via `our email alias (on
+our wiki pages, login required)`__. This is primarily
 intended for specific issues such as requesting new accounts, quotas,
 etc.  Please avoid sending personal mails directly to admins, because
 it is best for all admins to be aware of issues, people may be absent,
