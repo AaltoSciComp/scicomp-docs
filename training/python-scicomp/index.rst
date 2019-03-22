@@ -505,6 +505,30 @@ functionality, index manipulation etc.
 More quick NumPy exercises like this one `over here
 <https://www.labri.fr/perso/nrougier/teaching/numpy.100/>`_.
 
+
+Exercise 2.5
+------------
+
+The topic of this exercise is ``np.einsum`` which implements the
+'Einstein summation convention'.  The `Einstein summation convention
+<https://en.wikipedia.org/wiki/Einstein_notation>`_ is a commonly used
+when working with tensors, but can also be useful for succintly
+representing array expressions.
+
+For instance, matrix multiplication can be expressed as
+
+$$ C^i_k = A^i_j B^j_k $$
+
+Implement this with the help of ``np.einsum``.
+
+Einstein notation is also available in pytorch and tensorflow. For
+more information about Einstein notation in NumPy see
+
+- `A basic introduction to NumPy's einsum <http://ajcr.net/Basic-guide-to-einsum/>`_
+- `Einsten Summation in NumPy <https://obilaniu6266h16.wordpress.com/2016/02/04/einstein-summation-in-numpy/>`_
+- `Einsum is all you need - Einstein summation in deep learning <https://rockt.github.io/2018/04/30/einsum>`_
+
+
 SciPy
 =====
 
