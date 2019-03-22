@@ -472,6 +472,35 @@ Exercise 2.4
 Here's a number of quick numpy exercises to get you a feel of numpy
 functionality, index manipulation etc.
 
+1. Reverse a vector. Given a vector, reverse it such that the last
+   element becomes the first, e.g. [1, 2, 3] => [3, 2, 1]
+
+2. Create an identity matrix of size 4x4.
+
+3. Create a 2D array with zeros on the borders and 1 inside.
+
+4. Create a random array with elements [0, 1), then add 10 to all
+   elements in the range [0.2, 0.7).
+
+5. What is ``np.round(0.5)``? What is ``np.round(1.5)``? Why?
+
+6. In addition to ``np.round``, explore ``np.ceil``, ``np.floor``,
+   ``np.trunc``. In particular, take note of how they behave with
+   negative numbers.
+
+7. Recall the identity \\(\\sin^2(x) + \\cos^2(x) = 1\\). Create a
+   random 4x4 array with values in the range [0, 10). Now test the
+   equality with ``np.equal``. What result do you get with
+   ``np.allclose``instead of ``np.equal``?
+
+8. Create a 1D array with 10 random elements. Sort it.
+
+9. What's the difference between ``np_array.sort()`` and
+   ``np.sort(np_array)``?
+
+10. For the random array in question 8, instead of sorting it, perform
+    an indirect sort. That is, return the list of indices which would
+    index the array in sorted order.
 
 More quick NumPy exercises like this one `over here
 <https://www.labri.fr/perso/nrougier/teaching/numpy.100/>`_.
