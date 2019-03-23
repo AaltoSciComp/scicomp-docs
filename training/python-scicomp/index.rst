@@ -600,6 +600,69 @@ When using Jupyter notebooks, use the magic
 which will cause matplotlib plots to appear inline in the
 notebooks. Very convenient for quick analysis!
 
+Matplotlib has two slightly different interfaces, a state machine
+interface similar to MATLAB and an object based interface. The state
+machine interface is quick and easy to get started, but since it's
+based on hidden global state behind the scenes, for more complex stuff
+it might get confusing. Below is an example using the state machine
+interface.
+
+::
+
+   import numpy as np
+   import matplotlib.pyplot as plt
+
+   x = np.linspace(0.0, 3.0)
+
+   y1 = np.cos(2 * np.pi * x) * np.exp(-x)
+   y2 = np.cos(2 * np.pi * x)
+
+   plt.subplot(2, 1, 1)
+   plt.plot(x, y1, 'o-')
+   plt.title('A tale of 2 subplots')
+   plt.ylabel('Damped oscillation')
+
+   plt.subplot(2, 1, 2)
+   plt.plot(x, y2, '.-')
+   plt.xlabel('time (s)')
+   plt.ylabel('Undamped')
+
+   plt.show()
+
+And here is the same thing, but using the object-based interface
+
+::
+
+   import numpy as np
+   import matplotlib.pyplot as plt
+
+   x = np.linspace(0.0, 3.0)
+
+   y1 = np.cos(2 * np.pi * x) * np.exp(-x)
+   y2 = np.cos(2 * np.pi * x)
+
+   fig = plt.figure()
+   ax = fig.add_subplot(211)
+   ax.plot(x, y1, 'o-')
+   ax.set_title('A tale of 2 subplots, OO style')
+   ax.set_ylabel('Damped oscillation')
+
+   ax = fig.add_subplot(212)
+   ax.plot(x, y2, '.-')
+   ax.set_xlabel('time (s)')
+   ax.set_ylabel('Undamped')
+
+   plt.show()
+
+
+Exercise 4.1
+------------
+
+Try to recreate the figure below:
+
+.. image:: sin.svg
+
+
 
 Demo application
 ================
