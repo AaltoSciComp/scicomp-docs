@@ -45,9 +45,9 @@ are certainly things better left to other tools.
   slow language, which often doesn't matter if you can offload the
   heavy lifting to fast compiled code, e.g. by using Numpy array
   operations.  But if what you're trying to do isn't *vectorizable*
-  then you're out of luck.  And alternative to Python, albeit much
-  less mature and with a smaller ecosystem, but which provides a very
-  fast generated code, is *Julia*.
+  then you're out of luck.  An alternative to Python, albeit much less
+  mature and with a smaller ecosystem, but which provides very fast
+  generated code, is *Julia*.
 
 - Creating libraries that can be called from other languages.  In this
   case you'll often want to create a library with a C interface, which
