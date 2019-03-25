@@ -669,6 +669,14 @@ Exercise 4.2
 Create 1000 normally distributed numbers with \\(\\mu = 0\\) and
 \\(\\sigma = 10\\). Then create a histogram plot with 50 bins.
 
+Exercise 4.3
+------------
+
+Often it's useful to be able to plot things on a logarithmic
+scale. Create a plot with 4 subplots, one with a linear scale, one
+with logarithmic scale on the x-axis, one with logarithmic scale on
+the y-axis. Then create 4 functions, such that each will produce a
+straight line in one of the plots, and plot them.
 
 
 Demo application
