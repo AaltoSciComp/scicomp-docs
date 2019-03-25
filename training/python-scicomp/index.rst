@@ -663,6 +663,13 @@ Try to recreate the figure below:
 .. image:: sin.svg
 
 
+Exercise 4.2
+------------
+
+Create 1000 normally distributed numbers with \\(\\mu = 0\\) and
+\\(\\sigma = 10\\). Then create a histogram plot with 50 bins.
+
+
 
 Demo application
 ================
