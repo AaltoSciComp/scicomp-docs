@@ -839,6 +839,16 @@ reference
 
    fig.tight_layout()
 
+
+Exercise 4.4
+------------
+
+Find an image on the internet or already on the machine you're working
+on, load it into a NumPy array (you can use ``imageio.imread()`` for
+this), and see if you can create an Andy Warhol-like print by using a
+suitable colormap.
+
+
 Demo application
 ================
 
