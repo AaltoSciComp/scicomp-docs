@@ -35,6 +35,7 @@ Subpages:
 
    by-science-it
    linux-shell-tutorial
+   python-scicomp/index
 
 For course announcements at Aalto, see `the Science-IT training page
 <http://science-it.aalto.fi/scip/>`__.
