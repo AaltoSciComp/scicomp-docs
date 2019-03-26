@@ -885,6 +885,10 @@ A few other widely used libraries in the Scientific Python ecosystem:
 - `Numba <https://numba.pydata.org/>`_: JIT compiler that can
   accelerate (some) loops with NumPy expressions.
 
+- `MPI for Python (mpi4py) <https://mpi4py.readthedocs.io>`_: Python
+  bindings for the Message Passing Interface (MPI) standard for
+  creating parallel applications using Python.
+
 
 Homework: 2D Ising model
 ========================
