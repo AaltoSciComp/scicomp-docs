@@ -955,6 +955,8 @@ A few other widely used libraries in the Scientific Python ecosystem:
   bindings for the Message Passing Interface (MPI) standard for
   creating parallel applications using Python.
 
+- `SymPy <https://www.sympy.org>`_: Symbolic mathematics in Python.
+
 
 Homework: 2D Ising model
 ========================
