@@ -83,8 +83,16 @@ that as well, if you prefer.
 
 For interactively testing things in Python, you can use a Jupyter
 notebook, or the ``ipython`` shell.  For writing Python code you will
-need a text editor; Jupyter Lab does have one, if you prefer to work
-in a browser based environment.
+need a text editor or IDE; Jupyter Lab does have one, if you prefer to
+work in a browser based environment. Popular free programming text
+editors or IDE's with good Python support include:
+
+- Emacs
+- Vim
+- VS Code
+- Spyder
+- Eclipse + PyDev
+- PyCharm
 
 You're not expected to know much Python at the start of the course,
 but a little bit of programming proficiency is needed as a
@@ -96,8 +104,8 @@ The course focuses on hands-on exercises rather than lectures.
 Introduction to Python
 ======================
 
-If you are not familiar with Python, a short introduction to the most
-common python builtin datatypes:
+If you are not familiar with Python, a *very* short introduction;
+first, the builtin scalar and collection types:
 
 Scalars
 -------
@@ -128,6 +136,85 @@ Collections are data structures capable of storing multiple values.
    d = {"Janne": 123, "Richard": 456} # dictionary
    d["Janne"]
    s = set()                          # Set of unique values
+
+
+Control structures
+------------------
+
+Python has the usual control structures, that is conditional
+statements and loops:
+
+::
+
+   x = 2
+   if x == 3:
+       print('x is 3')
+   elif x == 2:
+       print('x is 2')
+   else:
+       print('x is something else')
+
+
+While loops loop until some condition is met:
+
+::
+
+   x = 0
+   while x < 42:
+       print('x is ', x)
+       x += 0.2
+
+
+For loops loop over some collection of values:
+
+::
+
+   xs = [1, 2, 3, 4]
+   for x in xs:
+       print(x)
+
+
+Often you want to loop over a sequence of integers, in that case the
+`range` function is useful:
+
+::
+
+   for x in range(9):
+       print(x)
+
+Another common need is to iterate over a collection, but at the same
+time also have an index number. For this there is the `enumerate`
+function:
+
+::
+
+   xs = [1, 'hello', 'world']
+   for ii, x in enumerate(xs):
+       print(ii, x)
+
+
+Functions and classes
+---------------------
+
+Python functions are defined by the `def` keyword. They take a number
+of arguments, and return a number of return values.
+
+::
+
+   def hello(name):
+       """Say hello to the person given by the argument"""
+       print('Hello', name)
+       return 'Hello ' + name
+
+Classes are defined by the class keyword:
+
+::
+
+   class Hello:
+       def __init__(self, name):
+           self._name = name
+       def say(self):
+           print('Hello', self._name)
 
 
 Python type system
