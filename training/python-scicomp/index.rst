@@ -98,7 +98,14 @@ You're not expected to know much Python at the start of the course,
 but a little bit of programming proficiency is needed as a
 prerequisite.
 
-The course focuses on hands-on exercises rather than lectures.
+Although not necessary for this course, knowledge of a version control
+system is useful when programming (or writing papers with LaTeX or
+other text-based formats).  The most common and powerful version
+control system today is git.  To get started with git, see our list of
+`Git tutorials </scicomp/git>`.
+
+The course focuses on hands-on demonstrations and exercises rather
+than lectures.
 
 
 Introduction to Python
@@ -175,7 +182,7 @@ For loops loop over some collection of values:
 
 
 Often you want to loop over a sequence of integers, in that case the
-`range` function is useful:
+``range`` function is useful:
 
 ::
 
@@ -183,7 +190,7 @@ Often you want to loop over a sequence of integers, in that case the
        print(x)
 
 Another common need is to iterate over a collection, but at the same
-time also have an index number. For this there is the `enumerate`
+time also have an index number. For this there is the ``enumerate``
 function:
 
 ::
@@ -196,8 +203,8 @@ function:
 Functions and classes
 ---------------------
 
-Python functions are defined by the `def` keyword. They take a number
-of arguments, and return a number of return values.
+Python functions are defined by the ``def`` keyword. They take a
+number of arguments, and return a number of return values.
 
 ::
 
@@ -206,7 +213,7 @@ of arguments, and return a number of return values.
        print('Hello', name)
        return 'Hello ' + name
 
-Classes are defined by the class keyword:
+Classes are defined by the ``class`` keyword:
 
 ::
 
