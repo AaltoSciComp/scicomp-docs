@@ -415,7 +415,7 @@ Exercise 2.1
 1. In the example above we saw that ``2**100`` was too large. What is
    the default datatype of a numpy integer array if we don't
    explicitly specify some type, and what is the largest possible
-   integer we can store in such na element.
+   integer we can store in such an element.
 
 2. What is the smallest negative element (that is, the largest
    absolute value of a negative number)?  Is it different from the
