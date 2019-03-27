@@ -314,10 +314,13 @@ epub_author = 'Aalto Science-IT'
 
 # -- Own options -------------------------------------------------------
 
+mathjax_path = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+
 # Following allows custom CSS to be included
 # https://github.com/rtfd/sphinx_rtd_theme/issues/117
 def setup(app):
     #app.add_javascript("custom.js")
+    app.add_javascript(mathjax_path)
     app.add_stylesheet("theme_overrides.css")
 
-mathjax_path = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+
