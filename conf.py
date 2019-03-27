@@ -319,3 +319,5 @@ epub_author = 'Aalto Science-IT'
 def setup(app):
     #app.add_javascript("custom.js")
     app.add_stylesheet("theme_overrides.css")
+
+mathjax_path = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
