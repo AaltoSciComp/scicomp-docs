@@ -115,11 +115,14 @@ todo_include_todos = True
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'alabaster'
 
-import sphinx_rtd_theme
-html_theme = "sphinx_rtd_theme"
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+on_rtd = os.environ.get('READTHEDOCS') == 'True'
+if on_rtd:
+    html_theme = 'default'
+else:
+    import sphinx_rtd_theme
+    html_theme = "sphinx_rtd_theme"
+    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -320,7 +323,8 @@ mathjax_path = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?
 # https://github.com/rtfd/sphinx_rtd_theme/issues/117
 def setup(app):
     #app.add_javascript("custom.js")
-    app.add_javascript(mathjax_path)
+    if on_rtd:
+        app.add_javascript(mathjax_path)
     app.add_stylesheet("theme_overrides.css")
 
 
