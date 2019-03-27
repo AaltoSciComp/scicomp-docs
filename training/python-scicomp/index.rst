@@ -338,6 +338,24 @@ the IPython magic %timeit command. And finally, equipped with this
 information, you can calculate a Gflops/s score for you multiplication
 method.
 
+Exercise 1.4
+------------
+
+Basic file I/O. Run the following python snippet to create a file
+``pangrams.txt``:
+
+::
+
+   with open('pangrams.txt', 'w') as f:
+       f.write("""The quick brown fox jumps over the lazy dog
+   Sphinx of black quartz, judge my vow
+   The dog ate my homework
+   Pack my box with five dozen liquor jugs
+   """)
+
+Next, create Python code to read that file, and check each line
+whether it's a pangram. A pangram is a sentence to uses all the
+letters of the alphabet.
 
 Enter NumPy
 ===========
