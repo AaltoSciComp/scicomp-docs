@@ -323,8 +323,8 @@ mathjax_path = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?
 # https://github.com/rtfd/sphinx_rtd_theme/issues/117
 def setup(app):
     #app.add_javascript("custom.js")
-    if on_rtd:
-        app.add_javascript(mathjax_path)
+    #if on_rtd:
+    #    app.add_javascript(mathjax_path)
     app.add_stylesheet("theme_overrides.css")
 
 
