@@ -600,7 +600,7 @@ functionality, index manipulation etc.
    ``np.trunc``. In particular, take note of how they behave with
    negative numbers.
 
-7. Recall the identity \\(\\sin^2(x) + \\cos^2(x) = 1\\). Create a
+7. Recall the identity :math:`\sin^2(x) + \cos^2(x) = 1`. Create a
    random 4x4 array with values in the range [0, 10). Now test the
    equality with ``np.equal``. What result do you get with
    ``np.allclose``instead of ``np.equal``?
@@ -629,7 +629,7 @@ representing array expressions.
 
 For instance, matrix multiplication can be expressed as
 
-$$ C^i_k = A^i_j B^j_k $$
+.. math:: C^i_k = A^i_j B^j_k
 
 Implement this with the help of ``np.einsum``.
 
@@ -778,8 +778,8 @@ Try to recreate the figure below:
 Exercise 4.2
 ------------
 
-Create 1000 normally distributed numbers with \\(\\mu = 0\\) and
-\\(\\sigma = 10\\). Then create a histogram plot with 50 bins.
+Create 1000 normally distributed numbers with :math:`\mu = 0` and
+:math:`\sigma = 10`. Then create a histogram plot with 50 bins.
 
 Exercise 4.3
 ------------
@@ -916,7 +916,7 @@ called the planar model, or rotor model). Take a lattice with spins
 rotating in the plane. Each spin interacts with its neighbors, and the
 configuration energy of the system is given by
 
-$$ E = -J \\sum_{i \\ne j} s_i s_j,$$
+.. math:: E = -J \sum_{i \ne j} s_i s_j,
 
 where the sum is over nearest neighbor spins.
 
@@ -924,7 +924,7 @@ In this case we can ignore the constant J which determines the
 interaction strength. Also, since the spin vectors are all of equal
 lengths the dot product can be simplified, so we have
 
-$$ E = - \\sum_{i \\ne j} cos(\\theta_i - \\theta_j).$$
+.. math:: E = - \sum_{i \ne j} \cos(\theta_i - \theta_j).
 
 
 The Metropolis-Hastings Monte Carlo algorithm
@@ -934,22 +934,36 @@ The Metropolis-Hastings algorithm is a Markov chain Monte Carlo method
 that can be used for finding the ground state for this kind of lattice
 model.  The basic idea is that for each spin ``s`` we do a *trial
 move*, to change the spin. We then calculate a random trial spin
-``s'``, and calculate an acceptance probability $$A = min(1,
-\\frac{P(s')}{P(s)}).$$ In this case the probability density is the
-Boltzmann distribution $$P(s) = \\frac{1}{Z} exp(-\\beta E(s)) ,$$
-where \\(\\beta\\) is the thermodynamic beta, or
+``s'``, and calculate an acceptance probability
 
-$$ \\beta = \\frac{1}{k_B T} ,$$
+.. math:: A = min(1, \frac{P(s')}{P(s)}).
 
-where \\(k_B\\) is the Boltzmann constant. For this simulation we can
-set it to 1 and ignore it hereafter. \\(\\beta\\) is thus just the
-inverse of the temperature.
+In this case the probability density is the
+Boltzmann distribution
 
-Thus the quotient $$\\frac{P(s')}{P(s)}$$ can be calculated as
-$$exp(-\\beta (E' - E)).$$ Then finally, calculate a uniform random
-number ``r`` in the interval ``[0,1)``.  If $$r \\le A$$ the new state
-is accepted. Repeating this for all the spins constitutes a single
-Monte Carlo step in the algorithm.
+.. math:: P(s) = \frac{1}{Z} exp(-\beta E(s)) ,
+
+
+where :math:`\beta` is the thermodynamic beta, or
+
+.. math:: \beta = \frac{1}{k_B T} ,
+
+where :math:`k_B` is the Boltzmann constant. For this simulation we
+can set it to 1 and ignore it hereafter. :math:`\beta` is thus just
+the inverse of the temperature.
+
+Thus the quotient
+
+.. math:: \frac{P(s')}{P(s)}
+
+can be calculated as
+
+.. math:: exp(-\beta (E' - E)).
+
+Then finally, calculate a uniform random number ``r`` in the interval
+``[0,1)``.  If :math:`r \le A` the new state is accepted. Repeating
+this for all the spins constitutes a single Monte Carlo step in the
+algorithm.
 
 
 Other useful Scientific Python libraries
@@ -998,11 +1012,11 @@ domains, where the spins are aligned, form. Above the critical
 temperature this order breaks down. In the Ising model the
 configuration energy is defined as
 
-$$ E = - J \\sum_{i \\ne j} \\sigma_i \\sigma_j - \\mu H \\sum_j \\sigma_j,$$
+.. math:: E = - J \sum_{i \ne j} \sigma_i \sigma_j - \mu H \sum_j \sigma_j,
 
-where J is the exchange energy, \\(\\mu\\) is the magnetic moment of
+where J is the exchange energy, :math:`\mu` is the magnetic moment of
 the spins, and H is the external magnetic field in the direction
-perpendicular to the plane. To simplify, you can set J and \\(\\mu\\)
+perpendicular to the plane. To simplify, you can set J and :math:`\mu`
 to 1.
 
 Implement a simulation program simulating the 2D Ising model. Use the
