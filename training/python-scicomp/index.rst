@@ -931,10 +931,10 @@ The Metropolis-Hastings Monte Carlo algorithm
 ---------------------------------------------
 
 The Metropolis-Hastings algorithm is a Markov chain Monte Carlo method
-that can be used for finding the ground state for this kind of lattice
-model.  The basic idea is that for each spin ``s`` we do a *trial
-move*, to change the spin. We then calculate a random trial spin
-``s'``, and calculate an acceptance probability
+that can be used for sampling a probability distribution.  In this
+case, the basic idea is that for each spin ``s`` we do a *trial move*,
+to change the spin. We then calculate a random trial spin ``s'``, and
+calculate an acceptance probability
 
 .. math:: A = min(1, \frac{P(s')}{P(s)}).
 
