@@ -614,6 +614,12 @@ functionality, index manipulation etc.
     an indirect sort. That is, return the list of indices which would
     index the array in sorted order.
 
+11. Create a 4x4 array of zeros, and another 4x4 array of ones. Next
+    combine them into a single 8x4 array with the content of the zeros
+    array on top and the ones on the bottom.  Finally, do the same,
+    but create a 4x8 array with the zeros on the left and the ones on
+    the rigth.
+
 More quick NumPy exercises like this one `over here
 <https://www.labri.fr/perso/nrougier/teaching/numpy.100/>`_.
 
