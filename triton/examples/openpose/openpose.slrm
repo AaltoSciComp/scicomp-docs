@@ -4,8 +4,10 @@
 #SBATCH --gres=gpu:teslak80:1
 #SBATCH --mem=8G
 
-module use /share/apps2/singularity/modules
-module purge
-module load OpenPose
+module load singularity-openpose/v1.4.0
 
-singularity_wrapper exec ./build/examples/openpose/openpose.bin --video examples/media/video.avi --no_display --write_video $WRKDIR/openpose.avi
+# Print out usage flags
+singularity_wrapper exec openpose --help
+
+# Run example
+singularity_wrapper exec openpose --video examples/media/video.avi --display 0 --write_video $WRKDIR/openpose.avi
