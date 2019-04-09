@@ -2621,6 +2621,7 @@ Ideas for exercises
 -------------------
  * function to find all broken links
  * (homework?) Implement a profiler, that summarizes PS4/date output mentioned above
+ * (homework?) Script that makes 'pe1 pe2 ... gpu32' out of 'pe[1-16],gpu11,gpu32'
 
 In general, there could one script that one starts building from the first line up to
 a parallelization. Like backup script with rsync.
