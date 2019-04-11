@@ -54,6 +54,10 @@ requests, problems that may affect several users.
    automatically blocks people when their organizational unit
    changes.  Yes, this is bad but it's not in our control...
 
+   If you have an Aalto visitor account, login with HAKA won't work -
+   use your email address and Aalto password.
+
+
 .. _esupport-triton-address:
 
 Email ticketing system
