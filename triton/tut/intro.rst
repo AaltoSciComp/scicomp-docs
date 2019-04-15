@@ -2,7 +2,7 @@
 About Science-IT and Triton
 ===========================
 
-*This is the first tutorial.  The next is* :doc:`<../connecting>`.
+*This is the first tutorial.  The next is* :doc:`<connecting>`.
 
 Science-IT is an Aalto infrastructure for scientific computing.  Its
 roots was a collaboration between the Information and Computer Science
