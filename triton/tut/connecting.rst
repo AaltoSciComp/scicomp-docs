@@ -2,7 +2,7 @@
 Connecting to Triton
 ====================
 
-*Tutorials:* :doc:`previous <intro>`, :doc:`next <software>`.
+*Tutorials:* :doc:`previous <intro>`, :doc:`next <modules>`.
 
 
 All access to Triton is via Secure Shell (ssh).
