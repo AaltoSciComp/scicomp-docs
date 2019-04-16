@@ -76,11 +76,12 @@ once the function ``serial_Matlab`` has finished. Using a
 try-catch-statement will allow your job to finish in case of any error
 within the program.  If you don't do this, Matlab will drop into
 interactive mode and do nothing while your cluster time wastes. 
+
 NOTE: Starting from version r2019a the launch options  ``-r ...; exit(0)`` can be easily 
-replaced with the ``-batch`` option (`see here for details <https://se.mathworks.com/help/matlab/ref/matlablinux.html>`). 
+replaced with the ``-batch`` option (`see here for details <https://se.mathworks.com/help/matlab/ref/matlablinux.html>`__). 
 So the command from the slurm script above for Matlab r2019a will look like::
 
-srun matlab -nojvm -nosplash -r "serial_Matlab($n,$m) ; exit(0)"
+    srun matlab -nojvm -nosplash -r "serial_Matlab($n,$m) ; exit(0)"
 
 
 Multiple serial batchjobs
