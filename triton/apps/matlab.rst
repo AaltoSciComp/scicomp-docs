@@ -53,7 +53,7 @@ sample slurm script is provided underneath::
     m=2
     srun matlab -nojvm -nosplash -r "serial_Matlab($n,$m) ; exit(0)"
 
-The actual calculation is done in ``serial_Matlab.m``\ -file::
+The above script can then be saved as a file (e.g. matlab_test.slrm) and the job can be submitted with ``sbatch matlab_test.slrm``. The actual calculation is done in ``serial_Matlab.m``\ -file::
 
     function C = serial_Matlab(n,m)
             try
@@ -75,7 +75,13 @@ Remember to *always* set exit into your slurm script so that the program quits
 once the function ``serial_Matlab`` has finished. Using a
 try-catch-statement will allow your job to finish in case of any error
 within the program.  If you don't do this, Matlab will drop into
-interactive mode and do nothing while your cluster time wastes.
+interactive mode and do nothing while your cluster time wastes. 
+NOTE: Starting from version r2019a the launch options  ``-r ...; exit(0)`` can be easily 
+replaced with the ``-batch`` option (`see here for details <https://se.mathworks.com/help/matlab/ref/matlablinux.html>`). 
+So the command from the slurm script above for Matlab r2019a will look like::
+
+srun matlab -nojvm -nosplash -r "serial_Matlab($n,$m) ; exit(0)"
+
 
 Multiple serial batchjobs
 -------------------------
