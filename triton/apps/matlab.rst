@@ -78,10 +78,11 @@ within the program.  If you don't do this, Matlab will drop into
 interactive mode and do nothing while your cluster time wastes. 
 
 NOTE: Starting from version r2019a the launch options  ``-r ...; exit(0)`` can be easily 
-replaced with the ``-batch`` option (`see here for details <https://se.mathworks.com/help/matlab/ref/matlablinux.html>`__). 
-So the command from the slurm script above for Matlab r2019a will look like::
+replaced with the ``-batch`` option which automatically exits matlab at the end of the command that is passed 
+(`see here for details <https://se.mathworks.com/help/matlab/ref/matlablinux.html>`__). 
+So the last command from the slurm script above for Matlab r2019a will look like::
 
-    srun matlab -nojvm -nosplash -r "serial_Matlab($n,$m) ; exit(0)"
+    srun matlab -nojvm -nosplash -batch "serial_Matlab($n,$m);"
 
 
 Multiple serial batchjobs
