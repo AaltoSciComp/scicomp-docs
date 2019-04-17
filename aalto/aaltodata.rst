@@ -8,7 +8,7 @@ Data: outline, requesting space, requesting access
    First, we expect you to read and understand the top information.
    Then, see the :ref:`instructions <instructions>` at bottom.
 
-This page is about how handle data - not the raw storage part, which
+This page is about how to handle data - not the raw storage part, which
 you can find at :doc:`data storage <../aalto/aaltostorage>`.  Aalto has high-level
 information on `research data management <aaltordm_>`_, too.
 
@@ -93,7 +93,7 @@ Groups
 ~~~~~~
 
 Everywhere on this page, "group" refers to a certain file access group
-groups (such as a unix group), not an organizational (research) group. They will often the
+groups (such as a unix group), not an organizational (research) group. They will often be the
 same, but there can be many
 more access groups made for more fine-grained data access.
 
