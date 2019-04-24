@@ -275,9 +275,9 @@ will appear below Bookmark header on the same menu.
 Copying files
 .............
 
-If your workstatios has no NFS mounts from Triton (ICS and BECS have,
-consult with your local admins for exact paths), you may always use SSH.
-Either copy your files from triton to a local directory on your
+If your workstatios has no NFS mounts from Triton (CS and NBE have,
+consult with your local admins for exact paths), you may always use
+SSH.  Either copy your files from triton to a local directory on your
 workstation, like::
 
     $ sftp user1@triton.aalto.fi:/triton/path/to/dir/* .
@@ -535,9 +535,9 @@ name:
 How can I access my Triton files from outside?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If your workstatios has no NFS mounts from Triton (ICS and BECS have,
-consult with your local admins for exact paths), you may always use SSH.
-Either copy your files from triton to a local directory on your
+If your workstatios has no NFS mounts from Triton (CS and NBE have,
+consult with your local admins for exact paths), you may always use
+SSH.  Either copy your files from triton to a local directory on your
 workstation, like
 
 ::
