@@ -280,26 +280,27 @@ consult with your local admins for exact paths), you may always use SSH.
 Either copy your files from triton to a local directory on your
 workstation, like::
 
-    $ scp -pr user1@triton.aalto.fi:/triton/path/to/dir .
+    $ sftp user1@triton.aalto.fi:/triton/path/to/dir/* .
 
 
 How can I copy Triton files from outside of Aalto?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-It is an extension of the previous question. In case you are outside of
-Aalto and has neither direct access to Triton nor access to NFS mounted
-directories on your directory servers. Say you want to copy your Triton
-files to your home workstation. It could be done by setting up an SSH
-tunnel to your department SSH server. A few steps to be done: set tunnel
-to your local department server, then from your department server to
-Triton, and then run any scp/ssh command you want from your client using
-that tunnel. The tunnel should be up during whole session.
+It is an extension of the previous question. In case you are outside
+of Aalto and has neither direct access to Triton nor access to NFS
+mounted directories on your directory servers. Say you want to copy
+your Triton files to your home workstation. It could be done by
+setting up an SSH tunnel to your department SSH server. A few steps to
+be done: set tunnel to your local department server, then from your
+department server to Triton, and then run any rsync/sftp/ssh command
+you want from your client using that tunnel. The tunnel should be up
+during whole session.
 
 ::
 
     client: ssh -L9509:localhost:9509 department.ssh.server
     department server: ssh -L9509:localhost:22 triton.aalto.fi
-    client: scp -P 9509 -pr localhost:/triton/own/dir /local/dir 
+    client: sftp -P 9509 localhost:/triton/own/dir/* /local/dir
 
 Note that port 9509 is taken for example only. One can use any other
 available port. Alaternatively, if you have a Linux or Mac OS X machine,
@@ -319,7 +320,7 @@ with a command like:
 
 ::
 
-    scp filename triton:remote_filename
+    rsync filename triton:remote_filename
 
 
 .. _faq-connecttoserveronnode:
@@ -541,7 +542,7 @@ workstation, like
 
 ::
 
-    $ scp -pr user1@triton.aalto.fi:/triton/path/to/dir .
+    $ rsync -pr user1@triton.aalto.fi:/triton/path/to/dir .
 
 or use SSHFS – filesystem client based on SSH. Most Linux workstations
 have it installed by default, if not, install it or ask your local IT
@@ -586,20 +587,21 @@ press ``Ctrl+D``, it will appear below Bookmark header on the same menu.
 How can I copy Triton files from outside of Aalto?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-It is an extension of the previous question. In case you are outside of
-Aalto and has neither direct access to Triton nor access to NFS mounted
-directories on your directory servers. Say you want to copy your Triton
-files to your home workstation. It could be done by setting up an SSH
-tunnel to your department SSH server. A few steps to be done: set tunnel
-to your local department server, then from your department server to
-Triton, and then run any scp/ssh command you want from your client using
-that tunnel. The tunnel should be up during whole session.
+It is an extension of the previous question. In case you are outside
+of Aalto and has neither direct access to Triton nor access to NFS
+mounted directories on your directory servers. Say you want to copy
+your Triton files to your home workstation. It could be done by
+setting up an SSH tunnel to your department SSH server. A few steps to
+be done: set tunnel to your local department server, then from your
+department server to Triton, and then run any rsync/sftp/ssh command
+you want from your client using that tunnel. The tunnel should be up
+during whole session.
 
 ::
 
     client: ssh -L9509:localhost:9509 department.ssh.server
     department server: ssh -L9509:localhost:22 triton.aalto.fi
-    client: scp -P 9509 -pr localhost:/triton/own/dir /local/dir 
+    client: sftp -P 9509 localhost:/triton/own/dir/* /local/dir
 
 Note that port 9509 is taken for example only. One can use any other
 available port. Alaternatively, if you have a Linux or Mac OS X machine,
@@ -619,7 +621,7 @@ with a command like:
 
 ::
 
-    scp filename triton:remote_filename
+    rsync filename triton:remote_filename
 
 I need to connect to some server on a node
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

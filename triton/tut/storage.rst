@@ -193,29 +193,33 @@ Depending on your OS, you may need to use either your username
 directly or ``AALTO\username``.
 
 
-Using scp or sftp
-^^^^^^^^^^^^^^^^^
+Using sftp
+^^^^^^^^^^
 
-The *scp* and *sftp* protocols use ssh to transfer files.  On Linux
-and Mac, the the ``scp`` and ``sftp`` command line programs are the
-must fundamental way to do this, and are available everywhere.
+The *sftp* protocol uses ssh to transfer files.  On Linux and Mac, the
+``sftp`` command line program are the must fundamental way to do this,
+and are available everywhere.
 
 A more user-friendly way of doing this (with a nice GUI) is the
 `Filezilla program <https://filezilla-project.org/>`__.
 
-Below is an example of the "raw" scp usage::
+Below is an example of the "raw" sftp usage::
 
+    # Copying from HOME to local PC
+    user@pc123 $ sftp user12@triton.aalto.fi:filename
+    Connected to triton.aalto.fi.
+    Fetching /home/user12/filename to filename
     # copying to HOME
-    user@pc123 $ scp testCluster.m user12@triton:
-    testCluster.m                                 100%  391     0.4KB/s   00:00
+    user@pc123 $ sftp -b - user12@triton <<< 'put testCluster.m'
+    sftp> put foo
     # copying to WRKDIR
-    user@pc123 $ scp testCluster.m user12@triton:/scratch/work/USERNAME/
+    user@pc123 $ sftp -b - user12@triton:/scratch/work/USERNAME/ <<< 'put testCluster.m'
     ...
 
 Rsync
 ^^^^^
 
-Rsync is similar to scp, but is smarter at restarting files.  Use rsync
+Rsync is similar to sftp, but is smarter at restarting files.  Use rsync
 for large file transfers.  ``rsync`` actually uses ``ssh``, so
 you can ``rsync`` from anywhere you can ``ssh`` from.
 
@@ -249,7 +253,7 @@ Exercises
    Note that you must be on ``eduroam``, the ``aalto`` *with Aalto
    laptop*, or connected to the Aalto VPN.
 
-2. Or, use rsync, scp/sftp, or sshfs to transfer a file.
+2. Or, use rsync, sftp, or sshfs to transfer a file.
 
 3. (Advanced) If you have a Linux on Mac computer, study the ``rsync``
    manual page and try to transfer a file.

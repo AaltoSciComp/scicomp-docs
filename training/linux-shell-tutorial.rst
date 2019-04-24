@@ -554,10 +554,10 @@ Same applicable to file transfer between your home workstation and kosh etc.
 Several use cases::
 
  # transferring a file from your HOME on kosh to your home worstaion
- scp -r AALTO_LOGIN@kosh.aalto.fi:file_to_copy .
+ sftp AALTO_LOGIN@kosh.aalto.fi:file_to_copy
  
  # transferring files from Triton to your Aalto workstation
- scp -r triton.aalto.fi:/scratch/work/LOGIN_NAME/some/files path/to/copy/to
+ sftp triton.aalto.fi:/scratch/work/LOGIN_NAME/some/files/* path/to/copy/to
 
 (*) Another use case, copying to Triton, or making a directory backup with ``rsync``::
 
@@ -582,7 +582,7 @@ Several use cases::
    
    - (*) Extract only one particular file to some subdirectory from the archive
    
- - Transfer just created archive using either ``scp`` or ``rsync``.
+ - Transfer just created archive using either ``sftp`` or ``rsync``.
  
    - (*) Try ssh+tar combo to make transfer and archive on the fly.
 

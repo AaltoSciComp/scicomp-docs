@@ -87,7 +87,7 @@ Check the SETGID bit and group ownership for directories:
 otherwise when you try to make new files in that directory, they are
 group= 'domain users' and it fails.
 
-I can't rsync/scp/etc
+I can't rsync/sftp/etc
 ---------------------
 
 It is related to the above mentioned issue, something like rsync -a ...

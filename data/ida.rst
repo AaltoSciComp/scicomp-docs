@@ -98,7 +98,7 @@ Main instructions: http://openscience.fi/ida-user-instructions
 iRODS (and thus IDA) is an API-based file storage service. Thus, you use
 separate commands to get and put files. This comes out of the fact that
 this is designed for very big files and flexible, long-term storage.
-This is not too hard - it is like using FTP or scp. There are also
+This is not too hard - it is like using FTP or sftp. There are also
 mountable filesystems, however this should not be used for daily work
 since they are not very efficient.
 
