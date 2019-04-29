@@ -256,8 +256,7 @@ priorities:
 
    ``slurm s``         | list of jobs per user with their current priorities
    ``slurm full``      | as above but almost all of the job parameters are listed
-   ``slurm shares``    | displays usage (RawUsage) and current
-   FairShare weights (FairShare, higher is better) values for all users
+   ``slurm shares``    | displays usage (RawUsage) and current FairShare weights (FairShare, higher is better) values for all users
    ``slurm j <jobid>`` | shows ``<jobid>`` detailed info including priority, requested nodes etc.
 
 ..
