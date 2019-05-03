@@ -155,6 +155,11 @@ If you are building your image from Dockerfile, you can run::
 Step 5: Let us know what image you want to have in Triton
 ---------------------------------------------------------
 
+.. warning::
+  Do note that images built to Triton are visible to all users.
+  Do not include sensitive code/data in the docker images. You should retreive
+  such data from your project/work folder during job runtime.
+
 We need the following information for the automatic build:
 
   - What is the Docker url of the image
