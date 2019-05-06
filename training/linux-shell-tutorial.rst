@@ -1750,7 +1750,7 @@ Simple loop over a list of items:
    tar -caf ${dir//\/.}.tar.gz $dir && rm -rf $dir
  done
 
-If path expansions used (*, ?, [], etc), loop automatically lists current directory:
+If path expansions used (\*, ?, [], etc), loop automatically lists current directory:
 
 ::
 

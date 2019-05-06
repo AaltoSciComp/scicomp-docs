@@ -48,7 +48,7 @@ for you.  It has three basic commands:
    "run command" which does something.  If you don't know what this
    is, use the first two instead.
 
-Under the hood, ``singularity_wrapper` does this:
+Under the hood, ``singularity_wrapper`` does this:
 
 #. Choosing appropriate image based on module version
 #. Binding of basic paths (``-B /l:/l``, ``/m:/m``, ``/scratch:/scratch``)
