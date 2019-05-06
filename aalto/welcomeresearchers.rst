@@ -25,9 +25,9 @@ some of the key players:
   may be able to provide some useful advice.  Known links: `CS
   <cs-it_>`_, `NBE <nbe-it_>`_, `PHYS <phys-it_>`_.
 * **Science-IT**: Overlaps with SCI department IT groups.  They run the
-  Triton cluster and support scientific computing.  The main target
-  audience is the departments which fund them, but their resources are
-  for anyone in the university.
+  Triton cluster and support scientific computing.  Their services may
+  be used throughout the entire university, but support is organized from
+  the departments which fund them.
   The core Science-IT departments are CS, NBE, and
   PHYS.  Science-IT runs a weekly :doc:`SciComp garage
   <../news/garage>`, where we provide hands on support for anything
@@ -36,7 +36,7 @@ some of the key players:
   instructions, but there is also an `official site <sci-it_>`_.
 * **Aalto ITS** (IT Services): Provides central IT infrastructure.
   Their support for complicated research situations and special
-  scientific software is limited, but they are the first place to
+  scientific software is limited, but they may be the first place to
   contact if not in the School of Science.  Their infrastructure is
   used in all schools including SCI,
   but supported by department teams.  Their instructions are on `Aalto
@@ -46,7 +46,8 @@ some of the key players:
 * **Research and Innovation Services**: Administrative-type support.
   Provides support for grantwriting, innovation and commercialization,
   sponsored projects, legal services for research, and research
-  infrastructures.
+  infrastructures.  (From 2019, they are split into Research Services
+  and Innovation Services)
 * **CSC** is the Finnish academic computing center (and more).  They provide a
   lot of basic infrastructure you use without knowing it, as well as
   computing and data services to researchers (all for free).
@@ -67,11 +68,11 @@ everywhere:
   that) and the old site can be accessed at old.aalto.fi for a while.
   This site is "not designed to have a logical structure and instead,
   you are expected to search for information" (actual quote).
-  In the future, you might have to log in to see parts.
+  Some information is randomly hidden unless you log in.
 * `it.aalto.fi <https://it.aalto.fi>`__ is a new location for IT
   instructions, and somewhat replaces the old IT instructions on
-  inside.aalto.fi and into.aalto.fi.  It is still under
-  development.  These generally relate to how to do a specific task -
+  inside.aalto.fi and into.aalto.fi.  These generally relate to how to
+  do a specific task -
   but not necessarily what is the best thing to do.
 * `inside.aalto.fi <https://inside.aalto.fi>`__ is the *former* typical
   "official" staff documentation area, where most service units have
