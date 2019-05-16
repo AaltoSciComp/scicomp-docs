@@ -66,11 +66,10 @@ Schedule
     9.may  | 13-14   | A106  |
    16.may  | 13-14   | A106  |
    23.may  | 13-14   | A106  |
-   30.may  | 13-14   | A106  |
+   30.may  |         |       | No garage, holiday.
     6.jun  | 13-14   | A106  |
    13.jun  | 13-14   | A106  |
 
-Dates after 2.8 to be decided later.
 
 Topics
 ======
