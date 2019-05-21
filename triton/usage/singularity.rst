@@ -81,7 +81,7 @@ Creating your own Singularity images to run in Triton
 
 All images used in Triton are built from Docker images stored in
 our private Docker registry in
-`exoti.cs.aalto.fi <https://exoti.cs.aalto.fi>`_. They build
+`registry.cs.aalto.fi <https://registry.cs.aalto.fi>`_. They build
 automatically from Docker pushes using our continuous integration builder. If
 you want to build your own Singularity image to Triton, we can create a user
 for you to the registry and add your image to the automatic build.
@@ -94,26 +94,20 @@ for you to the registry and add your image to the automatic build.
 Steps to get your images building are outlined below. You'll need to do steps
 1 to 3 only once.
 
-Step 1: Ask us for access to exoti.cs.aalto.fi
-----------------------------------------------
+Step 1: Log in to registry.cs.aalto.fi
+--------------------------------------
 
-Create a new issue to
-`our issue tracker <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`_
-where you explain that you require access to our registry. We'll create an
-account for you. After this you'll need to go to
-`exoti.cs.aalto.fi <https://exoti.cs.aalto.fi>`_ and request a password change.
-You'll get an automatic email with a link to the password reset page.
+Go to
+`registry.cs.aalto.fi <https://registry.cs.aalto.fi>`_ and click `Gitlab` under
+`Social logins`. This will redirect you to a `Gitlab`-page that you can use
+for authentication. In this page use your Aalto username and password to login.
 
-**DO NOT** use your Aalto password as your password. When you do a
-``docker login`` Docker will save your password in plaintext into your
-home directory.
-
-In the future we'll remove this step.
+In the future we'll improve the authentication page.
 
 Step 2: Create an application token
----------------------------------------------------------------
+-----------------------------------
 
-For added security you should not use your main password for ``docker login``.
+For added security you cannot use your main password for ``docker login``.
 By clicking on your username, you'll get to your user settings. From there, do
 the following:
 
@@ -127,7 +121,7 @@ Step 3: Docker login
 
 On your own workstation run::
 
-  docker login exoti.cs.aalto.fi
+  docker login registry.cs.aalto.fi
 
 Your username is same as your Aalto username. As a password give the
 application token you created in step 2.
@@ -138,19 +132,19 @@ Step 4: Push your images to registry
 If you have an existing image in Dockerhub, you can run::
 
   docker pull <dockerhub user>/<image>:<tag>
-  docker tag <dockerhub user>/<image>:<tag> exoti.cs.aalto.fi/<your username>/<image>:<tag>
-  docker push exoti.cs.aalto.fi/<your username>/<image>:<tag>
+  docker tag <dockerhub user>/<image>:<tag> registry.cs.aalto.fi/<your username>/<image>:<tag>
+  docker push registry.cs.aalto.fi/<your username>/<image>:<tag>
 
 For example::
 
   docker pull library/ubuntu:latest
-  docker tag library/ubuntu:latest exoti.cs.aalto.fi/$USER/ubuntu:latest
-  docker push exoti.cs.aalto.fi/$USER/ubuntu:latest
+  docker tag library/ubuntu:latest registry.cs.aalto.fi/$USER/ubuntu:latest
+  docker push registry.cs.aalto.fi/$USER/ubuntu:latest
 
 If you are building your image from Dockerfile, you can run::
 
-  docker build -it exoti.cs.aalto.fi/$USER/my_image:latest /path/to/my/dockerfile
-  docker push exoti.cs.aalto.fi/$USER/my_image:latest
+  docker build -it registry.cs.aalto.fi/$USER/my_image:latest /path/to/my/dockerfile
+  docker push registry.cs.aalto.fi/$USER/my_image:latest
 
 Step 5: Let us know what image you want to have in Triton
 ---------------------------------------------------------
@@ -163,7 +157,7 @@ Step 5: Let us know what image you want to have in Triton
 We need the following information for the automatic build:
 
   - What is the Docker url of the image
-    (e.g. ``exoti.cs.aalto.fi/$USER/my_image``)?
+    (e.g. ``registry.cs.aalto.fi/$USER/my_image``)?
   - What tags do you want built (we recommend you use ``latest`` and ``dev``)?
   - Does the image utilize GPUs?
 
