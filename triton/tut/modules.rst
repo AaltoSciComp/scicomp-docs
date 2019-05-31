@@ -112,13 +112,22 @@ So first search for it::
     matlab:
   ----------------------------------------------------------------------------
        Versions:
-          matlab/r2014a
-          matlab/r2015b
+          ...
           matlab/r2016a
           matlab/r2016b
           matlab/r2017b
+          matlab/r2018a
+          matlab/r2018b
+          matlab/r2019a
+
 
 We see there are a lot of versions available.
+
+Load the latest version of Matlab as::
+
+  module load matlab
+  
+run it to check the version you got, then close it and swap the version with the older one, try
 
 
 Loading modules
