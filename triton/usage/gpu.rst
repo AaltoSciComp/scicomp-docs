@@ -9,7 +9,7 @@ GPU Computing
 Overview
 ========
 
-Triton has GPU cards from four different Nvidia generations, as
+Triton has GPU cards from four different NVIDIA generations, as
 described below.
 
 Hardware breakdown

@@ -11,21 +11,20 @@ GPU computing
 .. highlight:: bash
 
 GPUs and accelerators are basically very special parallel processors:
-they can apply the same instructions to lots of different data at the
-same time.  You can get a speedup of 100x or more... but only in the
+they can apply the same instructions to a big chunk of data at the
+same time.  The speedup can be  100x or more... but only in the
 specific cases where your code fits the model.  It happens that
 machine learning/deep learning methods are able to use this type of
 parallelism, so now these are the standard for this type of research.
 
-On Triton, we have a large number of Nvidia GPU cards of different
-generations, and are constantly getting more.  Our GPUs are not for
-desktops, but specialized research-grade server GPUs with large
-memory, high bandwidth, and for scientific purposes generally
-exceed the best desktop GPUs.
+On Triton, we have a large number of NVIDIA GPU cards from different
+generations, and are constantly getting more.  Our GPUs are not your
+typical desktop GPUs, but specialized research-grade server GPUs with
+large memory, high bandwidth and specialized instructions. For
+scientific purposes they generally exceed the best desktop GPUs.
 
 Some nomenclature: a GPU is a graphical processing unit, CUDA is the
-software interface for Nvidia GPUs.  (we only support CUDA)
-
+software interface for Nvidia GPUs. Currently we only support CUDA.
 
 
 Getting started
@@ -49,43 +48,27 @@ for serious runs, you should put your code into :doc:`slurm scripts <serial>`.
 If you want to restrict yourself to a certain type of card, you should
 use the ``--constraint`` option.  For example, to restrict to Kepler
 generation (K80s), use ``--constraint=kepler`` or all new cards,
-``--constraint='kepler|pascal'`` (note the quotes - this is very
+``--constraint='pascal|volta'`` (note the quotes - this is very
 important, because ``|`` is a shell pipe symbol!).
-
-.. note:: Old ways of specifying things
-
-   Note: before summer 2016, you also had to specify a GPU partition
-   (``-p gpu`` or ``-p gpushort``).  Now, this is automatically detected,
-   and the recommendation is to leave this off.
-
-   Note: before summer 2018, the recommended way of specifying a GPU was
-   ``--gres=gpu:telsak80:1``.  Now, ``--constraint=`` is preferred since
-   you can specify more than one type.
 
 Our available GPUs and architectures:
 
 .. include:: ../ref/gpu.rst
-
-
 
 Ready software
 --------------
 
 We support these machine learning packages out of the box:
 
-* :doc:`tensorflow <../apps/tensorflow>`: ``anaconda2`` /
+* :doc:`Tensorflow <../apps/tensorflow>`: ``anaconda2`` /
   ``anaconda3`` modules.  Use ``--constraint='kepler|pascal|volta'``
-* keras: same as tensorflow
+* keras: same module as tensorflow
 * pytorch: same module as tensorflow
 * :doc:`Detectron <../apps/detectron>`: via :doc:`singularity images <../usage/singularity>`
-* CNTK:
-* Torch: currently possibly but not easy, in the future through singularity
+* CNTK: via :doc:`singularity images <../usage/singularity>`
 
 See the :ref:`application list <application-list>` or :doc:`GPU
 computing reference <../usage/gpu>` for more details.
-
-
-
 
 Compiling code yourself
 -----------------------
@@ -93,17 +76,15 @@ Compiling code yourself
 To compile things for GPUs, you need to load the relevant ``CUDA``
 modules::
 
-  module avail CUDA
-  module load CUDA
+  module avail cuda
+  module load gcc
+  module load cuda
 
   nvcc cuda_code.cu -o cuda_code         # compile your CUDA code
 
 More information is in the :doc:`reference <../usage/gpu>`, but most
 people will use pre-built software through channels such as Anaconda
 for Python.
-
-
-
 
 Making efficient use of GPUs
 ----------------------------
