@@ -59,11 +59,6 @@ Example usages::
    --gres=gpu:1 --constraint=pascal
    --gres=gpu:telsap100:1
 
-
-Note: Before summer 2016, you also had to specify a GPU partition with
-``-p gpu`` or ``-p gpushort``.  Now, this is automatically detected
-and the recommendation is to leave it off.
-
 When using multiple GPU's please verify that the code actually uses them with
 instructions given in `Monitoring GPU usage`_.
 
@@ -77,8 +72,8 @@ only difference is that they have nvidia kernel modules for Tesla cards.
 
 ::
 
-    $ module avail CUDA    # list installed CUDA modules
-    $ module load CUDA/7.5.18   # load CUDA environment that you need
+    $ module avail cuda    # list installed CUDA modules
+    $ module load cuda/10.0.130   # load CUDA environment that you need
     $ nvcc --version   # see actual CUDA version that you got
 
 Running a GPU job in serial
@@ -86,13 +81,13 @@ Running a GPU job in serial
 
 Quick interactive run::
 
-    $ module load CUDA
+    $ module load cuda
     $ srun -t 00:30:00 --gres=gpu:1 $WRKDIR/my_gpu_binary
 
 Allocating a gpu node for longer interactive session, this will give you
 a shell sessions::
 
-    $ module load CUDA
+    $ module load cuda
     $ sinteractive -t 4:00:00 --gres=gpu:1
     gpuXX$ .... run something
     gpuXX$ exit
@@ -112,7 +107,7 @@ Where ``gpu_job.sh`` is
     #SBATCH --time=01:15:00          ## wallclock time hh:mm:ss
     #SBATCH --gres=gpu:teslak80:1    ## one K80 requested
 
-    module load CUDA
+    module load cuda
 
     ## run my GPU accelerated executable, note the --gres
     srun --gres=gpu:1  $WRKDIR/my_gpu_binary
@@ -157,7 +152,7 @@ installed on those nodes only).
 ::
 
     $ sinteractive -t 1:00:00 --gres=gpu:1    # open a session on a gpu node
-    $ module load CUDA                        # set CUDA environment
+    $ module load cuda                        # set CUDA environment
     $ nvcc cuda_code.cu -o cuda_code          # compile your CUDA code
     .. or compile normally any other code with 'make'
 
@@ -222,7 +217,7 @@ job one must remember to shut it down. Example job script:
    #SBATCH --time=01:15:00          ## wallclock time hh:mm:ss
    #SBATCH --gres=gpu:teslak80:1    ## one K80 requested
 
-   module load CUDA
+   module load cuda
 
    ## Start the MPS server
    CUDA_MPS_LOG_DIRECTORY=nvidia-mps srun --gres=gpu:1 nvidia-cuda-mps-control -d&
@@ -239,13 +234,13 @@ CUDA samples
 
 There are CUDA code samples provided by Nvidia that can be useful for a
 sake of testing or getting familiar with CUDA. Placed
-at ``$CUDA_HOME/samples``. To play with:
+at ``$CUDA_ROOT/samples``. To play with:
 
 ::
 
     $ sinteractive -t 1:00:00 --gres=gpu:1
-    $ module load CUDA
-    $ cp -r $CUDA_HOME/samples $WRKDIR
+    $ module load cuda
+    $ cp -r $CUDA_ROOT/samples $WRKDIR
     $ cd $WRKDIR/samples
     $ make TARGET_ARCH=x86_64
     $ ./bin/x86_64/linux/release/deviceQuery
