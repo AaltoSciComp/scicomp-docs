@@ -126,7 +126,7 @@ We see there are a lot of versions available.
 Load the latest version of Matlab as::
 
   module load matlab
-  
+
 run it to check the version you got, then close it and swap the version with the older one, try
 
 
@@ -177,21 +177,9 @@ Full reference
 But what about *the software*?
 ------------------------------
 
-You know how to load software now, but what about specific software
-packages?  You can try searching the output of ``module spider`` to
-see what you can find, because right now we don't have a much better
-place to look.  You can check the :doc:`applications index
-<../apps/index>` page, but this is getting to be a bit out of date.
-
-In general, we try to install common software for everyone.  For
-specialized things, you might want to try installing it yourself,
-first, using our existing modules as the base.
-
-Compilers and base libraries and so on are organised into
-*toolchains*, such as ``goolf`` (GCC openMP openBLAS LAPACK FFTW) and
-``iomkl`` (intel compilers, OpenMPI, IntelMLK).  You can search for
-these modules and load them to get the necessary base compilers.  For
-more info, see the :doc:`apps page <../apps/index>`.
+You know how to load modules software now, but what about specific software
+packages?  See the upcoming :doc:`applications tutorial
+<applications>` for more info.
 
 
 Final notes
@@ -232,10 +220,16 @@ Before each exercise, ``module purge`` to clear all modules.
    software that have many different versions available.  Load the
    oldest version of that software.
 
-2. Load some toolchain module such as ``goolfc/triton-2017a``.  List
-   what it loaded.  Use ``env | sort > filename`` to store environment
-   variables, then swap to ``goolfc/triton-2016a``.  Do the same, and
-   compare the two outputs using ``diff``.
+2. ``PATH`` is an environment variable that shows from where programs
+   are run.  See it's current value using ``echo $PATH``.  Then, load
+   some toolchain module such as ``goolfc/triton-2017a``.  List what
+   it loaded.  Check the value of ``PATH`` again.  Why is there so
+   much stuff?
+
+3. (Advanced of #2).  Same as number 2, but use ``env | sort >
+   filename`` to store environment variables, then swap to
+   ``goolfc/triton-2016a``.  Do the same, and compare the two outputs
+   using ``diff``.
 
 3. Load a module with many dependencies, such as
    ``R/3.3.2-iomkl-triton-2017a-libX11-1.6.3`` and save it as a
