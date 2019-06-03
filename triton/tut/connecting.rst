@@ -64,7 +64,8 @@ You need to install a ssh client yourself:  `PuTTY <https://www.chiark.greenend.
 the standard one.  If you want to run graphical programs, you need an X server on
 Windows: see this
 `link <http://www.geo.mtu.edu/geoschem/docs/putty_install.html>`__ for
-some hints.
+some hints.  (Side note: putty dot org is an advertisement site trying to
+get you to install something else.)
 
 You should configure this with the hostname, username, and save the
 settings so that you can connect quickly.
@@ -77,15 +78,17 @@ instructions to connect to Triton.
 Exercise
 --------
 
-1. Connect to Triton.  List your home directory and work directory.
+1. Connect to Triton.  List your home directory and work directory
+   ``$WRKDIR``.
 
 2. Check the uptime and load of the login node: ``uptime`` and
-   ``htop``.  What else can you learn about the node?
+   ``htop`` (``q`` to quit).  What else can you learn about the node?
 
-3. Go ahead and change your shell to bash (see next item).
+3. Check what your default shell is: ``echo $SHELL``.  Go ahead and
+   change your shell to bash (see next item).
 
-Change your shell to bash
-=========================
+Change your shell to bash (Aalto)
+=================================
 
 The thing you are interacting with when you type is the **shell** -
 the layer around the operating system.  ``bash`` is the most common
@@ -95,11 +98,10 @@ you joined Aalto after autumn 2018) you should have bash as the
 default. We recommend that you check and change your shell to bash.
 
 You can determine if you shell is bash by running ``echo $SHELL``.
-Does it say bash?
+Does it say ``/bin/bash``?
 
-If not, ``ssh`` to ``kosh.aalto.fi`` and run ``chsh``.  Enter the full
-path ``/bin/bash`` and click OK.  It may take 15 minutes to update,
-and you will need to log in again.
+If not, ``ssh`` to ``kosh.aalto.fi`` and run ``chsh -s /bin/bash``.
+It may take 15 minutes to update, and you will need to log in again.
 
 
 
@@ -146,7 +148,7 @@ you do this yourself, you may set set the permissions on
 Finally, you should be able to login automatically.  A program called
 ``ssh-agent`` (or ``gnome-keyring``) decrypts the key once and holds it and uses
 it each time you need to connect.  If it doesn't work automatically, try
-running ssh-add once.
+running ``ssh-add`` yourself once.
 
 Mac
 ---
