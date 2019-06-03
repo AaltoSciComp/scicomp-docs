@@ -9,6 +9,8 @@ Linux shell crash course
    :doc:`linux shell course </training/linux-shell-tutorial>` or the
    references below.
 
+   This is :doc:`basic B-level </training/index>`: no prerequisites.
+
 If you are reading this case, you probably need to do some sort of
 scientific computing involving the **Linux shell**, or command line
 interface.  You may wonder why we are still using a command line
@@ -34,10 +36,15 @@ automatically - which is the point of scientific computing.
 
 You type a **command**, which may include **arguments**.  Output gets
 shown to the screen.  Spaces separate commands and arguments.
+Example: ``cp -i file1.txt file2.txt``.  *cp* is the command, *-i* is
+an option, *file1.txt* and *file2.txt* are arguments.
 
 Files are represented by **filenames**, like ``file.txt``.
 **Directories** are separated by ``/``, for example ``mydir/file.txt``
-is ``file.txt`` inside of ``mydir``.
+is **file.txt** inside of **mydir**.
+
+**Exercise:** Start a shell.  On Linux or Mac, the "terminal"
+application does this.
 
 
 
@@ -80,8 +87,8 @@ ask for confirmation!
 Current directory
 -----------------
 
-Unlike with a graphical file browser, there is a concept of ``current
-working directory``: each shell is in a current directory.  If you
+Unlike with a graphical file browser, there is a concept of **current
+working directory**: each shell is in a current directory.  If you
 ``ls``, it lists files in your current directory.  If a program tries
 to open a file, it opens it *relative to that directory*.
 
@@ -94,8 +101,9 @@ directory**, the parent of all files and directories.
 dir).  By the same token, ``../..`` the parent of the parent, and so
 on.
 
-**Exercise:** Change to some directory.  What do (``cd -``) and
-(``cd`` with no arguments) do?
+**Exercise:** Change to some directory and then another.  What do
+(``cd -``) and (``cd`` with no arguments) do?  Try each a few times in
+a row.
 
 
 Online manuals for any command
@@ -110,7 +118,7 @@ not read everything.  Use ``q`` to quit or ``/`` to search (``n`` and
 ``--help`` or ``-h`` is a standard argument that **prints a short
 help** directly.
 
-**Exercise:**: briefly look at the manual pages and ``--help`` output
+**Exercise:** briefly look at the manual pages and ``--help`` output
 for the commands we have learned thus far.  How can you make ``rm``
 ask before removing a file?
 
