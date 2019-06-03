@@ -1,6 +1,9 @@
 ========================
-Linux shell crass course
+Linux shell crash course
 ========================
+
+This is a kickstart for the Linux shell, to teach the minimum amount
+needed for other courses which use the shell.
 
 If you are reading this case, you probably need to do some sort of
 scientific computing involving the **Linux shell**, or command line
@@ -21,10 +24,10 @@ What's a shell?
 ---------------
 
 It's the complicated looking thing where you type commands and get
-output.
+output.  (It's actually not that complicated)
 
 You type a **command**, which may include **arguments**.  Output gets
-shown to the screen.  Spaces separate commands.
+shown to the screen.  Spaces separate commands and arguments.
 
 It seems boring, but the real power is that you can **script**
 (program) commands to run automatically.
