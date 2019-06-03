@@ -35,6 +35,10 @@ automatically - which is the point of scientific computing.
 You type a **command**, which may include **arguments**.  Output gets
 shown to the screen.  Spaces separate commands and arguments.
 
+Files are represented by **filenames**, like ``file.txt``.
+**Directories** are separated by ``/``, for example ``mydir/file.txt``
+is ``file.txt`` inside of ``mydir``.
+
 
 
 Editing and viewing files
@@ -81,10 +85,17 @@ working directory``: each shell is in a current directory.  If you
 ``ls``, it lists files in your current directory.  If a program tries
 to open a file, it opens it *relative to that directory*.
 
-``cd`` will **change working directories** for your current shell.
-Normally, you will ``cd`` to a working directory, and use relative
-paths from there.
+``cd dirname`` will **change working directories** for your current
+shell.  Normally, you will ``cd`` to a working directory, and use
+relative paths from there. ``/`` alone refers to the **root
+directory**, the parent of all files and directories.
 
+``cd ..`` will change to the **parent directory** (dir containing this
+dir).  By the same token, ``../..`` the parent of the parent, and so
+on.
+
+**Exercise:** Change to some directory.  What do (``cd -``) and
+(``cd`` with no arguments) do?
 
 
 Online manuals for any command
@@ -96,6 +107,12 @@ to read, some are impossible.  In general you look for what you need,
 not read everything.  Use ``q`` to quit or ``/`` to search (``n`` and
 ``N`` to search again forward and backwards).
 
+``--help`` or ``-h`` is a standard argument that **prints a short
+help** directly.
+
+**Exercise:**: briefly look at the manual pages and ``--help`` output
+for the commands we have learned thus far.  How can you make ``rm``
+ask before removing a file?
 
 
 Tab completion
@@ -122,3 +139,10 @@ See also
 * Software Carpentry has a `basic shell course
   <http://swcarpentry.github.io/shell-novice/>`__.  Sections one to 3
   are details of what is above (the rest is about shell scripting).
+
+**Exercise:** for some fun, look at the manual pages for ``cat``,
+``head``, ``tail``, ``grep``.
+
+**Exercise (advanced):** read the :doc:`Linux shell course
+</training/linux-shell-tutorial>` and understand what "pipes" and
+"piping" are.
