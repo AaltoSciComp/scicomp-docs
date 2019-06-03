@@ -62,7 +62,7 @@ please consult your code docs.
 
 Simple code compiling::
 
-  gcc -fomp omp_program.c -o omp_program
+  gcc -fopenmp -O2 -g omp_program.c -o omp_program
 
 Running an OpenMP code::
 
@@ -108,26 +108,23 @@ provides all at once.
 
 Loading module::
 
-  module load ioolf  # Intel Composer + MKL + OpenMPI
+  module load openmpi  # GCC + OpenMPI
 
 Compiling a code::
 
-  mpif90 mpi_prog.f -o mpi_prog
+  mpif90 -O2 -g mpi_prog.f -o mpi_prog
 
 Running an MPI code in the batch mode::
 
   #!/bin/bash
-  #SBATCH -N 2                 # on two compute nodes
-  #SBATCH -n 48                # 24 processes
-  #SBATCH --constraint=hsw     # run on pe[] nodes only
+  #SBATCH -n 16                # 16 processes
+  #SBATCH --constraint=avx     # run on nodes with AVX instructions
   #SBATCH --time=4:00:00       # takes 4 hours all together
   #SBATCH --mem-per-cpu=4000   # 4GB per process
 
-  module load ioolf  # NOTE: should same as you used to compile the code
-  srun mpi_prog
+  module load openmpi  # NOTE: should same as you used to compile the code
+  srun ./mpi_prog
 
-In the example above we request two nodes with the Haswell CPUs (24 CPU cores each).
-Small MPI jobs will perfectly run also within one node.
 
 Triton has multiple architectures around (12, 20, 24, 40 CPU cores per node),
 even though SLURM optimizes resources usage and allocate CPUs within one node, which
