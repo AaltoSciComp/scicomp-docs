@@ -142,6 +142,7 @@ Exercises
 
 .. include:: ../examples/tensorflow/tensorflow_mnist.rst
 
+.. include:: ../examples/pytorch/pytorch_mnist.rst
 
 Other examples
 ~~~~~~~~~~~~~~
