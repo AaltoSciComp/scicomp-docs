@@ -9,3 +9,4 @@ Scientific computing
    git
    jupyter-pitfalls
    python
+   shell
