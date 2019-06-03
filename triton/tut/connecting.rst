@@ -2,7 +2,7 @@
 Connecting to Triton
 ====================
 
-*Tutorials:* :doc:`previous <intro>`, :doc:`next <modules>`.
+*Tutorials:* :doc:`previous (intro) <intro>`, :doc:`next <modules>`.
 
 
 All access to Triton is via Secure Shell (ssh).
@@ -29,6 +29,28 @@ login first to a university server (like ``kosh.aalto.fi`` or
 
    Triton uses Aalto accounts, but your :doc:`account must be
    activated first <../accounts>`.
+
+.. seealso::
+
+      The :doc:`shell crash course </scicomp/shell>` is a prerequisite
+      to this material.
+
+
+There are different ways of connecting::
+
+.. list-table::
+    :header-rows: 1
+
+    * * Method
+      * About
+    * * ssh
+      * Works everywhere, from everywhere.  Firewalls may make things
+	hard sometimes.
+    * Jupyter.triton.aalto.fi
+      * Jupyter interface, but provides shell access.
+    * * vdi.aalto.fi
+      * Virtual desktop, you have to ``ssh`` anyway but gets you past
+	firewalls.
 
 
 Connecting via ssh
@@ -74,6 +96,13 @@ If you are outside the Aalto networks, you need to first connect to
 ``kosh.aalto.fi`` or some other server, and then use the Linux
 instructions to connect to Triton.
 
+Advanced options
+----------------
+
+Check the :doc:`advanced ssh information </scicomp/ssh>` to learn how
+to log in without a password, automatically save your username and
+other options, and more.  It really will save you time.
+
 
 Exercise
 --------
@@ -85,10 +114,48 @@ Exercise
    ``htop`` (``q`` to quit).  What else can you learn about the node?
 
 3. Check what your default shell is: ``echo $SHELL``.  Go ahead and
-   change your shell to bash (see next item).
+   change your shell to bash if it's not yet (see below).
+
+
+
+Connecting via https://jupyter.triton.aalto.fi
+==============================================
+
+Jupyter is a web-based way of doing computing.  But what some people
+forget is that it has a full-featured terminal and console included.
+
+Go to https://jupyter.triton.aalto.fi (not **.cs.**\ aaalto) and log
+in.  Select "Slurm 5 day, 2G" and start.
+
+To start a terminal, click File→New→Terminal - you do anything you
+need to do from here, same as ``ssh``.  If you need to edit text
+files, you can also do that through JupyterLab (note: change to the
+right directory *before* creating a new file!).
+
+To learn more about Jupyterlab, you need to read up elsewhere, there
+are plenty of tutorials.
+
+
+
+Connecting via https://vdi.aalto.fi
+===================================
+
+If you go to https://vdi.aalot.fi, you can access a cloud-based Aalto
+workstation.  HTML access works from everywhere, or download the
+"VMWare Horizon Client" for a better connection.  Start a Ubuntu
+desktop (you get Aalto Ubuntu).  From there, you **have to use the
+normal ssh instructions** (via the Terminal application) using the
+instructions you see above: ``ssh triton.aalto.fi``.
+
+For more information, see `it.aalto.fi
+<https://it.aalto.fi/instructions/aalto-university-virtual-desktop-infrastructure-vdiaaltofi>`__.
+
+
 
 Change your shell to bash (Aalto)
 =================================
+
+*Only needed if you shell isn't already* ``bash``.
 
 The thing you are interacting with when you type is the **shell** -
 the layer around the operating system.  ``bash`` is the most common
@@ -103,92 +170,6 @@ Does it say ``/bin/bash``?
 If not, ``ssh`` to ``kosh.aalto.fi`` and run ``chsh -s /bin/bash``.
 It may take 15 minutes to update, and you will need to log in again.
 
-
-
-Set up key-based login
-======================
-
-Note: this section is only for connecting *to* Triton.  Once you are
-connected the first time, a key for internal connections is
-automatically made.
-
-Linux
------
-
-We highly recommend you follow these steps on the first login to set up
-passwordless SSH.  This will make your life much more pleasant, and can
-be used when connecting to computers other than Triton. Using keys will
-save you the trouble of entering passwords every time, since ssh stores
-the key once and uses it for logging you in in the future.
-
-**First, create the keypair on your own computer.** **Do not copy
-private keys from other computers - one computer=one private key, and
-copy only the public key (.pub) to any computer you want to log in to.**
-Protect your SSH keyfiles with a *passphrase*. When asked to enter one,
-use 3+ words, mixing languages, CAsE, or inflection, but make it
-something you can remember without sticky notes.  `xkcd has some
-opinions on this. <https://www.xkcd.com/936/>`__  A key without a
-passphrase is like a password just sitting on disk - so be careful
-here.  Passwordless keys are OK in certain cases, such as internal
-triton connections.
-
-::
-
-    ssh-keygen -o
-
-**Then, copy the key to computers you want to log into:** Use the
-``ssh-copy-id`` script to copy the public key file to Triton.  This will
-put the key in ``~/.ssh/authorized_keys`` (you can check this file to see
-everything that's there).   (To do this manually, put the contents of
-``.ssh/id_rsa.pub`` file into ``~/.ssh/authorized_keys`` on Triton.  If
-you do this yourself, you may set set the permissions on
-``.authorized_keys`` file: ``chmod u=rwx .ssh/``, ``chmod u=rw``
-``.ssh/authorized_keys``.)
-
-Finally, you should be able to login automatically.  A program called
-``ssh-agent`` (or ``gnome-keyring``) decrypts the key once and holds it and uses
-it each time you need to connect.  If it doesn't work automatically, try
-running ``ssh-add`` yourself once.
-
-Mac
----
-You can follow same instructions from Linux.
-
-Windows
--------
-Realistically, on windows setting up keys takes some time.  You don't
-need to worry about it (you will still have an ssh key on triton that
-is used for internal connections).
-
-You can make keys using ``puttygen``.  Here is `a tutorial`__.  You
-should make a new key for each computer you have.
-
-__ https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/
-
-
-
-Advanced: set up ssh config file (Linux/mac)
-============================================
-
-Openssh on linux can be made nicer if you set up a config file
-(``.ssh/config``)::
-
-    # Host alias triton: "ssh triton" instead of "ssh triton.aalto.fi".
-    # You can set more options here.
-    Host triton
-        User YOUR_USERNAME
-        Hostname triton.aalto.fi
-        # Only if not on Aalto networks:
-        # Next line *automatically* proxies you through kosh.aalto.fi.  You
-        # probably want to set up a "kosh" host if username is different, and
-        # set up public key authentication on kosh too.
-        ProxyCommand ssh kosh.aalto.fi -W %h:%p
-    # Defaults for all hosts.
-    Host *
-        # Following two lines allow SSH to reuse connections - second connections
-        # open very fast.  If problems (channels exceeded), disable it.
-        ControlMaster   auto
-        ControlPath     /tmp/.ssh-USERNAME-mux-%r@%h:%p
 
 
 
@@ -213,6 +194,7 @@ What's next?
 ``ssh`` is one of the most fundamental Linux programs: by using it
 well, you can really do almost anything from anywhere.  The
 ``.ssh/config`` file is valuable to set up.  If ssh is annoying to
-use, ask for some help in getting it working well.
+use, ask for some help in getting it working well.  See the :doc:`advanced
+ssh information </scicomp/ssh>`.
 
 The next tutorial is :doc:`about software and modules <modules>`.

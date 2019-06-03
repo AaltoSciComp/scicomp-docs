@@ -10,3 +10,4 @@ Scientific computing
    jupyter-pitfalls
    python
    shell
+   ssh
