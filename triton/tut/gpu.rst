@@ -140,6 +140,13 @@ node.
 Exercises
 ---------
 
+.. include:: ../examples/tensorflow/tensorflow_mnist.rst
+
+
+Other examples
+~~~~~~~~~~~~~~
+
+
 In ``triton-examples`` (at ``/scratch/scip/examples`` and also on
 github), you find some examples:
 
