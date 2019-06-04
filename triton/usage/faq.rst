@@ -80,14 +80,10 @@ You can find out the remaining time of any job that is running with
 Inside a job script or *sinteractive* session you can use the
 environment variable SLURM\_JOB\_ID to refer to the current job ID.
 
-``Disk quota exceeded`` error
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``Disk quota exceeded`` error but I have plenty of space
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*Main article: `Triton Quotas <quotas>`\ * *and*
-
-::
-
-    space exceeded but I have plenty of space
+*Main article: `Triton Quotas <quotas>`
 
 Everyone should have a group quota, but no user quota. All files need to
 be in a proper group (either a shared group with quota, or your "user
