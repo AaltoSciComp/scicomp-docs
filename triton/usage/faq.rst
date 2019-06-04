@@ -80,14 +80,10 @@ You can find out the remaining time of any job that is running with
 Inside a job script or *sinteractive* session you can use the
 environment variable SLURM\_JOB\_ID to refer to the current job ID.
 
-``Disk quota exceeded`` error
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``Disk quota exceeded`` error but I have plenty of space
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*Main article: `Triton Quotas <quotas>`\ * *and*
-
-::
-
-    space exceeded but I have plenty of space
+Main article: `Triton Quotas <quotas>`
 
 Everyone should have a group quota, but no user quota. All files need to
 be in a proper group (either a shared group with quota, or your "user
@@ -680,11 +676,11 @@ command.
 
 ``quota`` is a wrapper at ``/usr/local/bin/quota`` on front end which
 merges output from classic quota utility that supports NFS and Lustre's
-``lfs quota``. NFS ``$HOME`` directory is limited to 1GB for everyone
+``lfs quota``. NFS ``$HOME`` directory is limited to 10GB for everyone
 and intended for initialization files mainly. Grace period is set to 7
-days and "hard" quota is set to 1.1GB, which means you may exceed your
-1GB quota by 100MB and have 7 days to go below 1GB again. However none
-can exceed 1.1GB limit.
+days and "hard" quota is set to 11GB, which means you may exceed your
+10GB quota by 1GB and have 7 days to go below 10GB again. However none
+can exceed 11GB limit.
 
 Note: Lustre mounted under ``/triton`` is the right place for your
 simulation files. It is fast and has large quotas.
@@ -831,191 +827,6 @@ Use ``file`` utility:
     for GNU/Linux 2.4.0, dynamically linked (uses shared libs), not stripped
 
 it displays the type of an executable or object file.
-
-Why all of the files on triton cluster are in one color? How can I make them colorful? Like green for execution files, blue for folds
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-That is made intentionally due to high load on Lustre filesystem. Being
-a high performance filesystem Lustre still has its own bottlenecks, and
-one of the common Lustre troublemakers are ``ls -lr`` or ``ls --color``
-which generate lots of requests to Lustre meta servers which regular
-usage by all users may get whole system in stuck. Please follow the
-recommendations given at the last section at :doc:`Data storage on the Lustre
-file system <lustre>`
-
-How do I subscribe to triton-users maillist?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Having a user account on Triton also means being on the
-mailing list automatically (since 2016). That is where support team sends
-all the Triton related announcements. All the Triton users MUST be
-subscibed to the list. (Before 2016, if you were not on the list, you
-should have mailed us to fix this: but this isn't need now.  Just in case you are not yet there, please send
-an email to your local team member and ask to add your email. Same also
-if you want to replace your email with a new one.)
-
-How to unsubscribe? You will be removed from the maillist as soon as
-your Triton account is deleted from the system. Otherwise no way.
-
-I can't save anything to my ``$HOME`` directory, get some fsync error.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Most probably your quota has exceeded, check it out with ``quota``
-command.
-
-``quota`` is a wrapper at ``/usr/local/bin/quota`` on front end which
-merges output from classic quota utility that supports NFS and Lustre's
-``lfs quota``. NFS ``$HOME`` directory is limited to 1GB for everyone
-and intended for initialization files mainly. Grace period is set to 7
-days and "hard" quota is set to 1.1GB, which means you may exceed your
-1GB quota by 100MB and have 7 days to go below 1GB again. However none
-can exceed 1.1GB limit.
-
-Note: Lustre mounted under ``/triton`` is the right place for your
-simulation files. It is fast and has large quotas.
-
-What node names like cn[01-224] mean?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-All the hardware delivered by the vendor has been labeled with some
-short name. In particular every single compute node has a label like
-Cn01 or GPU001 etc. we used this notation to name compute nodes, that is
-cn01 is just a hostname for Cn01, gpu001 is a hostname for GPU001 etc.
-Shorthands like cn[01-224] mean all the hostnames in the range cn01,
-cn02, cn03 .. cn224. Same for gpu[001-008], tb[003-008], fn[01-02].
-Similar notations can be used with SLURM commands like:
-
-::
-
-    $ scontrol show node cn[01-12]
-
-What is a good scaling factor for parallel applications? What is the recommended number of processors for parallel jobs?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-| The good scaling factor is 1.5 or higher. It means that your program
-  is running 1.5 times faster when you double the number of nodes.
-| There is no way to know in advance the exact "universal" optimal
-  number of CPUs. It dependes on many factors, like the application
-  itself, type of MPI libraries, the initial input, I/O volume and the
-  current network state. Certainly, you must not expect that, as many
-  CPUs your application has got, that faster it will run. In general the
-  scaling on Triton is good since we have Infiniband for nodes
-  interconnect and DDN / Lustre for I/O.
-
-Few recommendations about CPU number:
-
--  benchmark your applications on different number of CPU cores 1, 2,
-   12, 24, 36, and larger. Check out with the developers, your
-   application may have ready scalability benchmarks and recommendations
-   for compiler, MPI libraries choice.
--  benchmark on shared memory i.e. up to 12 CPU cores within one node
-   and then on different nodes (distributed memory): involving
-   interconnect make have huge difference
--  if you are not sure about program scalability and you have no time
-   for testing, don't run on more than 12 CPU cores within one node
--  be considerate! it is not you against others! do not try to fill up
-   the cluster just for being cool
-
-Can you recovery some files from my ``$HOME`` or ``$WRKDIR`` directory?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Short answer: yes for $HOME directory and no for $WRKDIR.
-
-| $HOME is slow NFS with small quota mounted through Ethernet. Intended
-  mainly for user initialization files and for some plain configs. We
-  make regular backups from ``$HOME``.
-| ``$WRKDIR`` (aka ``/triton``) is fast Lustre, has large quota, mounted
-  through InfiniBand. Though no backups made from ``/triton``, the DDN
-  storage system as such is secure and safe place for your data, though
-  you can always loose your data deleting them by mistake. Every user
-  must take care about his work files himself. We provide as much
-  diskspace to every user, as one needs and the amount of data is
-  growing rapidly. That is the reason why the user should manage his
-  important data himself. Consider backups of your valuable data on
-  DVDs/ USB drives or other resources outside of Triton.
-
-The cluster has a few compiler sets. Which one I suppose to use? What are the limits for commercial compilers?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Currently there are two different sets of compilers: (i) GNU compilers,
-native for Linux, installed by default, (ii) Intel compilers plus MKL, a
-commercial suite, the fastest compiler on Xeons.
-
-FGI provides all FGI sites with 7 Intel licenses, thus only 7 users can
-compile/link with Intel at once.
-
-Code is compiled with shared libraries and it stops with an error message: ``error while loading shared libraries: libsome.so: cannot open shared object file: No such file or directory``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-That means your program can't find libraries which has been used at
-linking/compiling time. You may always check shared library
-dependencies:
-
-::
-
-    $ ldd YOUR_PROGRAM # print the list of libraries required by program
-
-| If some of libraries is marked as not found, then you should first (i)
-  find the exact path to that lib (suppose it is installed), then second
-  (ii) explicitly add it to your environment variable
-  $LD\_LIBRARY\_PATH.
-| For instance, if your code has been previously compiled with the
-  ``libmpi.so.0`` but on SL6.2 it reports an error like
-  ``error while loading shared libraries: libmpi.so.0`` try to locate
-  the library:
-
-::
-
-    $ locate libmpi.so.0
-    /usr/lib64/compat-openmpi/lib/libmpi.so.0
-    /usr/lib64/compat-openmpi/lib/libmpi.so.0.0.2
-
-and the add it to your ``$LD_LIBRARY_PATH``
-
-::
-
-    export LD_LIBRARY_PATH=/usr/lib64/compat-openmpi/lib:$LD_LIBARY_PATH # export the lib in BASH environment
-
-or, as in case of libmpi.so.0 we have ready module config, just run
-
-::
-
-    module load compat-openmpi-x86_64
-
-In case your code is missing some specific libs, not installed on Triton
-(say you got a binary compiled from somewhere else), you have a few
-choices: (i) get statically linked program or (ii) find/download missing
-libs (for instance from developers' site). For the second, copy libs to
-your $WRKDIR and add paths to ``$LD_LIBRARY_PATH``, in the same maner as
-described above.
-
-See also:
-
-::
-
-    ldconfig -p # print the list of system-wide available shared libraries
-
-While compiling should I use static or shared version of some library?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-One can use both, though for shared libs all your linked libs must be
-either in your ``$WRKDIR`` in ``/shared/apps`` or must be installed by
-default on all the compute nodes like vast majority of GCC and other
-default Linux libs.
-
-I've got a binary file, may I find out somehow whether it is 32-bit or 64-bit compiled?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Use ``file`` utility:
-
-::
-
-    # file /usr/bin/gcc
-    /usr/bin/gcc: ELF 64-bit LSB executable, AMD x86-64, version 1 (SYSV),
-    for GNU/Linux 2.4.0, dynamically linked (uses shared libs), not stripped
-
-it displays the type of an executable or object file.
-
 
 
 Graphical programs don't work (X11, -X)
