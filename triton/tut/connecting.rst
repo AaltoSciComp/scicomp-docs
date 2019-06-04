@@ -140,7 +140,7 @@ are plenty of tutorials.
 Connecting via https://vdi.aalto.fi
 ===================================
 
-If you go to https://vdi.aalot.fi, you can access a cloud-based Aalto
+If you go to https://vdi.aalto.fi, you can access a cloud-based Aalto
 workstation.  HTML access works from everywhere, or download the
 "VMWare Horizon Client" for a better connection.  Start a Ubuntu
 desktop (you get Aalto Ubuntu).  From there, you **have to use the
