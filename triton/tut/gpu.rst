@@ -97,6 +97,13 @@ and run ``nvidia-smi``, find your process (which might take some work)
 and check the ``GPU-Util`` column.  It should be close to 100%,
 otherwise see below.
 
+After job has finished, you can use ``slurm history`` to obtain the
+``JobID`` and run::
+
+   sacct -j INSERT_JOBID_HERE -o comment -p
+
+This will show the GPU utilization.
+
 Input/output
 ~~~~~~~~~~~~
 
@@ -167,7 +174,7 @@ Exercises
 
    HINT: Check out ``mktemp --help``,
    :ref:`command output substitutions <linux-training-substitute-command-output>`-section
-   from our Linux shell tutorial and API page for Python's
+   from our Linux shell tutorial and the API page for Python's
    `os.environ <https://docs.python.org/3/library/os.html#os.environ>`_.
 
 Next steps

@@ -206,4 +206,6 @@ There is a full description of `running jobs on
 Triton <../usage/general>`, and the `reference
 page <../ref/index>` lists many useful commands.
 
+Running multiple instances of a ``sbatch`` script is easier with
+:doc:`array jobs<../tut/array>`.
 
