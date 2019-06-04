@@ -144,6 +144,8 @@ Exercises
 
 .. include:: ../examples/pytorch/pytorch_mnist.rst
 
+.. include:: ../examples/cntk/cntk_mnist.rst
+
 Other examples
 ~~~~~~~~~~~~~~
 
