@@ -45,7 +45,8 @@ Quick contents and links
 	 * :doc:`tut/storage`
 	 * :doc:`tut/interactive`
 	 * :doc:`tut/serial`
-	 * :doc:`tut/array`
+         * :doc:`tut/array`
+         * :doc:`tut/dependency`
 	 * :doc:`tut/gpu`
 	 * :doc:`tut/parallel`
 
@@ -123,6 +124,7 @@ get their accounts (except maybe the last ones).
    Interactive jobs: running your first command <tut/interactive>
    Serial jobs: running in the queue <tut/serial>
    tut/array.rst
+   tut/dependency.rst
    tut/gpu.rst
    tut/parallel.rst
 
