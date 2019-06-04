@@ -165,9 +165,10 @@ Exercises
    an unique folder in ``/dev/shm`` before running the Python code.
    Modify CNTK sample so that it loads data from the new location.
 
-   HINT: Check out ``mktemp --help`` and our section on
-   :ref:`command output substitutions<linux-training-substitute-command-output>`
-   from our Linux shell tutorial.
+   HINT: Check out ``mktemp --help``,
+   :ref:`command output substitutions <linux-training-substitute-command-output>`-section
+   from our Linux shell tutorial and API page for Python's
+   `os.environ <https://docs.python.org/3/library/os.html#os.environ>`_.
 
 Next steps
 ----------
