@@ -176,13 +176,18 @@ Exercises
 3. Run one of the samples given above. Try using ``sbatch`` as well.
 
 4. Modify CTNK sample slurm script in a way that it copies datasets to
-   an unique folder in ``/dev/shm`` before running the Python code.
-   Modify CNTK sample so that it loads data from the new location.
+   an unique folder in ``/dev/shm`` or ``$TMPDIR`` before running the
+   Python code. Modify CNTK sample so that it loads data from the new
+   location.
 
    HINT: Check out ``mktemp --help``,
    :ref:`command output substitutions <linux-training-substitute-command-output>`-section
    from our Linux shell tutorial and the API page for Python's
    `os.environ <https://docs.python.org/3/library/os.html#os.environ>`_.
+
+   Solution to ex. 4:
+   :download:`cntk_mnist_ex4.py</triton/examples/cntk/cntk_mnist_ex4.py>` 
+   :download:`cntk_mnist_ex4.sh</triton/examples/cntk/cntk_mnist_ex4.sh>`.
 
 Next steps
 ----------
