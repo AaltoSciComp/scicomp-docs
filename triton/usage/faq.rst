@@ -680,11 +680,11 @@ command.
 
 ``quota`` is a wrapper at ``/usr/local/bin/quota`` on front end which
 merges output from classic quota utility that supports NFS and Lustre's
-``lfs quota``. NFS ``$HOME`` directory is limited to 1GB for everyone
+``lfs quota``. NFS ``$HOME`` directory is limited to 10GB for everyone
 and intended for initialization files mainly. Grace period is set to 7
-days and "hard" quota is set to 1.1GB, which means you may exceed your
-1GB quota by 100MB and have 7 days to go below 1GB again. However none
-can exceed 1.1GB limit.
+days and "hard" quota is set to 11GB, which means you may exceed your
+10GB quota by 1GB and have 7 days to go below 10GB again. However none
+can exceed 11GB limit.
 
 Note: Lustre mounted under ``/triton`` is the right place for your
 simulation files. It is fast and has large quotas.
@@ -865,11 +865,11 @@ command.
 
 ``quota`` is a wrapper at ``/usr/local/bin/quota`` on front end which
 merges output from classic quota utility that supports NFS and Lustre's
-``lfs quota``. NFS ``$HOME`` directory is limited to 1GB for everyone
+``lfs quota``. NFS ``$HOME`` directory is limited to 10GB for everyone
 and intended for initialization files mainly. Grace period is set to 7
-days and "hard" quota is set to 1.1GB, which means you may exceed your
-1GB quota by 100MB and have 7 days to go below 1GB again. However none
-can exceed 1.1GB limit.
+days and "hard" quota is set to 11GB, which means you may exceed your
+10GB quota by 1GB and have 7 days to go below 10GB again. However none
+can exceed 11GB limit.
 
 Note: Lustre mounted under ``/triton`` is the right place for your
 simulation files. It is fast and has large quotas.
