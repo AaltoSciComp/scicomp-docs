@@ -955,6 +955,7 @@ At the end of the line ``\`` removes the new line character, thus the command ca
  echo online || \
  echo offline
 
+.. _linux-training-substitute-command-output:
 
 Substitute a command output
 ---------------------------

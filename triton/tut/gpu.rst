@@ -62,11 +62,13 @@ We support these machine learning packages out of the box:
 
 * :doc:`Tensorflow <../apps/tensorflow>`: ``anaconda2`` /
   ``anaconda3`` modules.  Use ``--constraint='kepler|pascal|volta'``
-* keras: same module as tensorflow
-* pytorch: same module as tensorflow
+* Keras: same module as tensorflow
+* PyTorch: same module as tensorflow
 * :doc:`Detectron <../apps/detectron>`: via :doc:`singularity images <../usage/singularity>`
 * CNTK: via :doc:`singularity images <../usage/singularity>`
 
+Do note that most of the pre-installed software has CUDA already present.
+Thus you **do not need to load CUDA** as a module when loading these.
 See the :ref:`application list <application-list>` or :doc:`GPU
 computing reference <../usage/gpu>` for more details.
 
@@ -137,7 +139,7 @@ node.
 
 
 
-Exercises
+Examples
 ---------
 
 .. include:: ../examples/tensorflow/tensorflow_mnist.rst
@@ -146,17 +148,26 @@ Exercises
 
 .. include:: ../examples/cntk/cntk_mnist.rst
 
-Other examples
-~~~~~~~~~~~~~~
+Exercises
+---------
 
+1. Run ``nvidia-smi`` on a GPU node with ``srun``. Use ``slurm history``
+   to check which GPU node you ended up on. Try setting a constraint
+   to force a different GPU architecture.
 
-In ``triton-examples`` (at ``/scratch/scip/examples`` and also on
-github), you find some examples:
+2. Copy ``/scratch/scip/examples/gpu/pi.cu`` to your work directory.
+   Compile it using ``cuda`` module and ``nvcc``. Run it. Does it say zero?
+   Try running it with a GPU and see what happens.
 
-1. Compile and run using ``srun`` the ``gpu/pi.cu`` example.  Load the
-   ``cuda`` module, ``nvcc`` it, then try running the program.  Does
-   it say zero?  Try running it with a GPU and see what happens.
+3. Run one of the samples given above. Try using ``sbatch`` as well.
 
+4. Modify CTNK sample slurm script in a way that it copies datasets to
+   an unique folder in ``/dev/shm`` before running the Python code.
+   Modify CNTK sample so that it loads data from the new location.
+
+   HINT: Check out ``mktemp --help`` and our section on
+   :ref:`command output substitutions<linux-training-substitute-command-output>`
+   from our Linux shell tutorial.
 
 Next steps
 ----------
