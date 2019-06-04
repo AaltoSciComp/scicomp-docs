@@ -117,6 +117,13 @@ If you are loading lots of data, package the data into a container
 format first: lots of small files are your worst enemy, and we have a
 :doc:`dedicated page on small files <../usage/smallfiles>`.
 
+If your dataset consists of individual files and it is not too big,
+it is a good idea to have the data stored in one file, which is then
+copied to nodes ramdisk ``/dev/shm`` or temporary disk ``/tmp``.
+
+If your data is too big to fit to the disk, we recommend that you
+contact us for efficient data handling models.
+
 Enough CPUs
 ~~~~~~~~~~~
 
