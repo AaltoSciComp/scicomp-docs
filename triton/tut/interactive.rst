@@ -108,14 +108,7 @@ the process (see below).**
 More options
 ============
 
-**Partitions:** This used to be important, but is now mostly
-automatically set.  They trade off different resource limits and
-quickness which it is available.  For example, the ``-p interactive``
-tells us to us the interactive partition - which should always be
-available for quick tests.  ``-p debug`` is a short partition for
-debugging.  See a bit more in the :doc:`serial tutorial <serial>`.
-
-**time/CPU/memory requirements:** The commands srun/sinteractive have
+**Time/CPU/memory requirements:** The commands srun/sinteractive have
 many more options that let you specific resources. The most important
 for interactive running are probably ``--mem``, ``--cpus-per-task`` (``-c``),
 and ``--time`` (``-t``).
@@ -139,6 +132,13 @@ get an entire node, your program might try to use all CPUs, and the OS
 will limit the number you can use (with cgroups, if you are
 interested). This leads to inefficiency.
 
+**Partitions:** Now almost always automatically set, but used to be
+important.  Partitions are groups of nodes reserved for different
+purposes.  For example, ``-p interactive`` tells us to us the
+interactive partition - which should always be available for quick
+tests.  ``-p debug`` is a short partition for debugging.  See a bit
+more in the :doc:`serial tutorial <serial>`.
+
 
 
 Monitoring your usage
@@ -156,14 +156,59 @@ The command ``scancel`` will cancel a job by job-id (useful is something keeps r
 Exercises
 =========
 
-1. Check out some of these commands: ``sinfo``, ``squeue``.  Run
+1. The program ``/scratch/scip/examples/slurm/memory-hog.py``
+   uses up a lot of memory to do nothing.  Let's play with it.  It's
+   run like this: ``python
+   /scratch/scip/examples/slurm/memory-hog.py 50M``, where the
+   last argument is however much memory you want to eat.  (also
+   available from `triton-examples/slurm
+   <https://github.com/AaltoScienceIT/triton-examples/tree/master/slurm>`__)
+
+   a) Try running the program with ``50M``
+
+   b) Run the program with ``50M`` and ``srun --mem=500M``.
+
+   c) Increase the amount of memory allocated until the job fails.
+      What happens?
+
+   d) Play around with different parameters: how much memory can you
+      use?
+
+   e) Look at the job history using ``slurm history`` - can you see
+      how much memory it actually used?
+
+2. The program ``/scratch/scip/examples/slurm/pi.py`` (also
+   available from `triton-examples/slurm
+   <https://github.com/AaltoScienceIT/triton-examples/tree/master/slurm>`__)
+   calculates pi using a simple stochastic algorithm.  You give it one
+   argument: the number of trials.
+
+   The ``time`` program allows you to time any program.  e.g. you can
+   ``time python x.py`` to print the amount of time it takes.
+
+   a) Run the program, timing it with ``time``, a few times,
+      increasing the number of trials, until it takes about 10
+      seconds: ``time python /scratch/scip/examples/slurm/pi.py
+      500`` and so on.
+
+   b) Add ``srun`` in front (``srun python ...``).  What changes?
+
+   c) Tell srun to use five CPUs (``-c 5``).  Does it go any faster?
+
+   d) Use the ``--threads=5`` option to the Python program to tell it
+      to also use five threads.  ``... python .../pi.py --threads=5``
+
+   e) Play around with it some.  What do you find?
+
+   f) Look at the job history using ``slurm history`` - can you see
+      how much time each process used?  What's the relation between
+      TotalCPUTime and WallTime?
+
+3. Check out some of these commands: ``sinfo``, ``squeue``.  Run
    ``slurm job $jobid`` on some running job - does anything
    look interesting?
 
-2. Run ``srun -p debug hostname`` - what do you see and why?  Run
-   ``slurm history`` and find that jobid.  Run ``sacct -j $jobid`` and
-
-3. Run ``scontrol show node wsm1``  What is this?
+4. Run ``scontrol show node wsm1``  What is this?
 
 
 

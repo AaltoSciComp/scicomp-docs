@@ -52,8 +52,8 @@ something about it - is it shared memory or MPI?  A program doesn't
 magically get faster when you ask more processors if it's not designed
 to.**
 
-OpenMP programs
----------------
+Shared memory: OpenMP programs
+------------------------------
 
 OpenMP is a standard de facto for the multithreading implementations. There
 are many others, but this one is the most common, supported by all known
@@ -97,8 +97,8 @@ or R, which uses the ``parallel``-package for its parallel applys.
 Threaded applications behave similarly to OpenMP applications in that one
 needs to specify the number of cores per task and amount of memory per core.
 
-MPI runs
---------
+Message passing programs: MPI
+-----------------------------
 
 For compiling/running an MPI job one has to pick up one of the MPI library suites.
 Big vendors provide their own (Cray, Intel) while there are other popular MPI

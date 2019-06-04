@@ -17,11 +17,14 @@ must use a batch queuing system (slurm) in order to allocate resources.
 The queue system takes computation requests from everyone, figures out
 the optimal use of resources, and allocates code to nodes. You have to
 start your code in a structured way in order for this to work. Our
-`previous tutorial <interactive>` showed how to
+:doc:`previous tutorial <interactive>` showed how to
 run things directly from the command line, without any scripting needed.
 
-Now let's see how to put these into scripts.  Scripts allow jobs to
-run asynchronously, in batch, and without human supervision.
+Now let's see how to put these into scripts.  A **shell script** takes
+any commands that you might type directly into a shell and automates
+them.  The **slurm scripts** that we make in this lesson do do this.
+Scripts allow jobs to run asynchronously, in batch, and without human
+supervision.
 
 
 
@@ -29,7 +32,9 @@ A basic script
 ==============
 
 Let's say we want to run ``echo 'hello world'``. We have to tell the
-system how to run it.  Here is a simple submission script::
+system how to run it.  Here is a simple submission script, put it in a
+file called ``hello.slrm`` (you can use the editor nano: ``nano
+hello.slrm``)::
 
     #!/bin/bash
     #SBATCH --time=0-00:05:00    # 5 mins
@@ -37,29 +42,53 @@ system how to run it.  Here is a simple submission script::
 
     srun echo 'hello, world'
 
-(Need to edit a file?  You can use the editor ``nano``.)  Each
-``srun`` is a job step, and appears as a separate row in your
-history - which is useful for monitoring.  Then submit
-it with ``sbatch``::
+**Whatever your application or programming language requires, you put
+it in the script.**
 
-    $ sbatch hello.sh
+Each ``srun`` is a job step, and appears as a separate row in your
+history - which is useful for monitoring.  Then submit it with
+``sbatch``::
+
+    $ sbatch hello.slrm
 
 This sends it to the queue to wait. Since the time requested is short,
 it will probably run on the debug partition, which is reserved for small
 test jobs (see below). Let's see if it is in the queue:
 
-Checking job status
-
-::
+Checking job status with ``slurm q``::
 
     $ slurm q
     JOBID              PARTITION NAME                  TIME       START_TIME    STATE NODELIST(REASON)
-    13031249           debug     hello.sh              0:00              N/A  PENDING (None)
+    13031249           debug     hello.slrm            0:00              N/A  PENDING (None)
 
 Keep rerunning ``slurm q`` until you see it finish.
 
+You can use ``scancel`` with that jobid to cancel the job before it
+finishes.
+
 The output is then saved to ``slurm-13031249.out`` in your current
 directory (the number being the job ID).
+
+
+
+Loading modules in scripts
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Need to load modules for your software?  Do it in the batch scripts.
+In general, anything you can do from the shell, you can do here::
+
+    #!/bin/bash
+    #SBATCH --time=0-00:05:00    # 5 mins
+    #SBATCH --mem-per-cpu=500    # 500MB of memory
+
+    module load anaconda3
+    python -V
+
+**Exercise**: Try the Python version-printing script above.  Try
+changing to different modules, ``anaconda2``, ``Python``, and others
+if you can find them.
+
+
 
 Job parameters
 ~~~~~~~~~~~~~~
@@ -95,6 +124,14 @@ overhead. If you are testing, short things are fine, but once you get to
 bulk production try to have each job take at least 30 minutes if
 possible. If you have lots of things to run, combine them into fewer
 jobs.
+
+
+
+Full slurm reference
+====================
+
+.. include:: ../ref/slurm.rst
+
 
 Status of the jobs
 ==================
@@ -140,18 +177,21 @@ Exercises
 
 1. Basics
 
-   a.  Submit a batch job
+   a. Submit a batch job that just runs ``hostname``.
    b. Set time to 1 hour and 15 minutes, memory to 500MB.
-   c. Change the job's name and output file
-   d. Monitor the job with ``slurm watch queue``
+   c. Change the job's name and output file.
+   d. Monitor the job with ``slurm watch queue``.
+   e. Check the output.  Does it match ``slurm history``?
 
-2. Create a simple batch script with multiple job steps (``srun``):
-   e.g. ``hostname``, ``echo Hello, world!``, and ``date``.  How does
-   this appear in ``slurm history``.  When would you use extra
-   ``srun`` commands, and when not?
+2. Create a simple batch script using ``pi.py`` based on the pi
+   calculation of the :doc:`interactive job tutorial exercises
+   <interactive>`.  Create multiple job steps (separate ``srun``
+   lines), each of which runs ``pi.py`` with a greater and greater
+   number of tries.  How does this appear in ``slurm history``.  When
+   would you use extra ``srun`` commands, and when not?
 
 3. Create a batch script which does nothing (or some pointless
-   operation for a while), for example ``sleep 300`` (wait for 300
+   operation for a while), for example ``sleep 300`` (waits for 300
    seconds) in the ``debug`` partition.  Check the queue to see when
    it starts running.  Then, cancel the job.  What output is produced?
 

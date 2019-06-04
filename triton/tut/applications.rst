@@ -86,8 +86,10 @@ software from system to system, so that you can have the same
 environment everywhere.
 
 You can read about :doc:`singularity from its page
-<../usage/singularity>`.  For now, realize that, after you load some
-modules, you may need to run ``singularity_wrapper`` to use them.
+<../usage/singularity>`.  If you load a module that uses singularity,
+nothing will happen at first.  You execute your software using
+``singularity_wrapper exec``, or use ``singularity_wrapper shell`` to
+get a shell in there.
 
 
 Compilers and toolchains
@@ -133,8 +135,10 @@ Exercises
    enough to do ``python`` and ``import tensorflow`` -- though you
    will get an error which you will learn to solve in a later lesson.
 
-2. Figure out how to run ``openfoam``.  Run ``foamExec`` so that it
-   fails with the error message ``no application specified``.
+2. Figure out how to run ``openfoam`` by searching the docs (use the
+   new image).  Using ``singularity_wrapper``, run ``foamExec`` so
+   that it fails with the error message ``no application specified``.
+   Try ``singularity_wrapper shell``, too.
 
 
 Next steps

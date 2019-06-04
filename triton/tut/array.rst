@@ -19,9 +19,10 @@ later. Still, for most people, this is as far as you need to go.
 Basic examples
 ==============
 
-When you run an array job, Slurm runs your job script many times, with
-one difference: the environment variable ``SLURM_ARRAY_TASK_ID``. You
-just need to have your job script or code read this variable and take
+When you run an array job (with ``--array=1-5``), Slurm runs your job
+script many (5) times, with
+one difference: the environment variable ``SLURM_ARRAY_TASK_ID``
+(1,2,3,4,5). You have your job script or code read this variable and take
 the right action, depending on what you need to do.
 
 Below are four examples.  The first and third are probably most
@@ -66,7 +67,7 @@ by hand anyway, better to have it all together.)::
     #SBATCH -n 1
     #SBATCH -t 04:00:00
     #SBATCH --mem-per-cpu=2500
-    #SBATCH --array=0-29
+    #SBATCH --array=0-4
 
     case $SLURM_ARRAY_TASK_ID in
         0) ARGS="-res 5 -arg 3" ;;
@@ -171,6 +172,9 @@ directly pass it as a command line argument to your program, use it to
 pattern input files, or even have your own code access the process
 environment and get the variable.
 
+You can use ``%N``, like ``--array=1-100%10``, to limit number of jobs
+running at once.
+
 Note that arrays are *only* a feature of ``sbatch``. You can't use them
 directly from the command line with ``srun``: you have to make a batch
 script and submit with ``sbatch``.
@@ -212,10 +216,21 @@ so try to combine smaller tasks to fit that.
 Exercises
 =========
 
-1. Look at ``man sbatch`` and investigate ``--array`` parameter.
+1. Look at ``man sbatch`` and investigate the ``--array`` parameter.
 
-2. Submit an array job that runs 10 tasks starting 1, and every task
-   outputs that job array id.
+2. Using the ``pi.py`` example from the :doc:`interactive tutorial
+   <interactive>`, make an array job that calculates pi 10 times.
+
+   a) The ``pi.py`` program takes an extra option: ``--seed=SEED``.
+      Use the array task ID as the seed.
+
+   b) Verify that the runs worked.  Average all values together to get
+      your more accurate pi.
+
+3. Using one of the techniques above, use ``memory-hog.py`` from the
+   :doc:`interactive tutorial <interactive>`.  Make an array job that
+   runs this with five different values of the memory (5M, 50M, 100M,
+   200M, 500M).  You have to use one of the techniques above.
 
 3. Make job array which runs every other index (like 1, 3, 5,
    etc).  You'll have to look at the ``sbatch`` manual page.
