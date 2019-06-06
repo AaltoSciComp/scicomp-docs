@@ -1,5 +1,5 @@
-fmriprep
-~~~
+FMRIprep
+~~~~~~~~
 
 ::
 
@@ -9,6 +9,18 @@ fmriprep is installed as a singularity container. By default it will always run 
 
 To run fmriprep for one subject, without free-surfer reconall, using ica-aroma
 
+
 ::
 
-singularity_wrapper exec fmriprep <path-to-bids> <your-scratch-folder> participant --participant-label 01 --use-aroma --fs-no-reconall --fs-license-file /scratch/shareddata/set1/freesurfer/license.txt
+    singularity_wrapper exec fmriprep <path-to-bids> <your-scratch-folder> participant --participant-label 01 --use-aroma --fs-no-reconall --fs-license-file /scratch/shareddata/set1/freesurfer/license.txt
+
+
+===============
+POST-processing
+===============
+
+There are various options such as:
+    - https://github.com/HBClab/NuisanceRegression
+    - https://xcpengine.readthedocs.io/
+    - https://fitlins.readthedocs.io/en/latest/
+    - https://github.com/arielletambini/denoiser
