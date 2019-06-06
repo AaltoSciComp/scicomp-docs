@@ -124,9 +124,9 @@ get their accounts (except maybe the last ones).
    Interactive jobs: running your first command <tut/interactive>
    Serial jobs: running in the queue <tut/serial>
    tut/array.rst
-   tut/dependency.rst
    tut/gpu.rst
    tut/parallel.rst
+   tut/dependency.rst
 
 Detailed instructions
 =====================
