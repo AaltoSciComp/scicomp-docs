@@ -45,31 +45,22 @@ Schedule
    :header-rows: 1
    :delim: |
 
-   Date (default Th)  | Time (default 14:00-15:00)  | Loc   | Topic
-    3.jan  | 13-14   | A106  | Rest of year decided soon
-   17.jan  | 14-15   | CS A2 | CS building, 2nd floor coffee room in the A wing
-   24.jan  | 14-15   | CS A2 | CS building, 2nd floor coffee room in the A wing
-   31.jan  | 14-15   | A237  |
-    7.feb  | 14-15   | A237  |
-   14.feb  | 14-15   | A237  |
-   21.feb  | 14-15   | A237  |
-   28.feb  | 13-14   | A106  | From today, room changes to A106 and time changes to 13-14
-    7.mar  | 13-14   | B337  | Note room is different
-   14.mar  | 13-14   | A106  |
-   21.mar  | 13-14   | A106  |
-   28.mar  | 13-14   | A106  |
-    4.apr  | 13-14   | B337  | Note room is different
-   11.apr  | 13-14   | A106  |
-   18.apr  | 13-14   | A106  |
-   25.apr  | 13-14   | A106  |
-    2.may  | 13-14   | A106  |
-    9.may  | 13-14   | A106  |
-   16.may  | 13-14   | A106  |
-   23.may  | 13-14   | A106  |
-   30.may  |         |       | No garage, holiday.
+   Date (default Th)  | Time (default 13:00-14:00)  | Loc   | Topic
     6.jun  | 13-14   | A106  |
    13.jun  | 13-14   | A106  |
+   20.jun  | 13-14   |       |  No garage, Juhannus Friday
+   27.jun  | 13-14   | A106  |
+    4.jul  | 13-14   | A106  |
+   11.jul  | 13-14   | A106  |
+   18.jul  | 13-14   | A106  |
+   25.jul  | 13-14   | A106  |
+    1.aug  | 13-14   | A106  |
+    8.aug  | 13-14   | A106  |
+   15.aug  | 13-14   | A106  |
+   22.aug  | 13-14   | A106  |
+   29.aug  | 13-14   | A106  |
 
+Autumn: Already booked, every Thursday 13-14 A106 until 19.dec.
 
 Topics
 ======
