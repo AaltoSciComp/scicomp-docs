@@ -16,7 +16,7 @@ Python distributions
 |                          | Python to use            | How to install own       |
 |                          |                          | packages                 |
 +==========================+==========================+==========================+
-| Simple programs with     | Anaconda 2/3             | pip install --user       |
+| Simple programs with     | Anaconda 2/3             | ``pip install --user`` |
 | common packages, not     |                          |                          |
 | switching between        |                          |                          |
 | Pythons often            |                          |                          |
@@ -68,7 +68,7 @@ manager system that can do this for you. There are three important
 related concepts:
 
 -  pip: the Python package installer. Installs Python packages globally,
-   in a user's directory (--user), or anywhere. Installs from the
+   in a user's directory (``--user``), or anywhere. Installs from the
    `Python Package Index <https://pypi.python.org/pypi>`__.
 -  virtualenv: Creates a directory that has all self-contained packages
    that is manageable by the user themself. When the virtualenv is
@@ -125,10 +125,10 @@ A few notes about conda environments:
    you are doing this might work.
 -  The commands below will fail:
 
-   -  conda create -n foo pip # tries to use the global dir, use the
-      --user flag instead
+   -  ``conda create -n foo pip`` # tries to use the global dir, use the
+      ``--user`` flag instead
 
-   -  conda create --prefix $WRKDIR/foo --clone root # will fail as our
+   -  ``conda create --prefix $WRKDIR/foo --clone root`` # will fail as our
       anaconda module has additional packages (e.g. via pip) installed.
 
 Basic pip usage
@@ -145,7 +145,7 @@ Instead, use this:
 your projects. It is quite likely that eventually, you will get some
 incompatibilities between the Python you are using and the modules
 installed. In that case, you are on your own (simple recommendation is
-to remove all modules from ~/.local/lib/pythonN.N and reinstall). **If
+to remove all modules from ``~/.local/lib/pythonN.N`` and reinstall). **If
 you get incompatible module errors, our first recommendation will be to
 remove everything installed this way and not do it anymore.**
 
