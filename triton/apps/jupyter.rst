@@ -228,7 +228,15 @@ should apply to both JupyterHub and ``sjupyter``):
 Since these are the normal Triton modules, you can submit installation
 requests for software in these so that it is automatically available.
 
-If you want to install your own kernels:
+Installing kernels from virtualenvs or Anaconda environments:
+* Activate the environment (however you do it normally)
+* (Install ipykernel if not already there: do this if next step does
+  not work: ``pip install ipykernel``)
+* ``python -m ipykernel
+  install --user --name=python-YOURENV --display-name="YOUR-ENV"``
+
+
+If you want to install your own non-Python kernels:
 
 * First, ``module load jupyterhub/live``.  This loads
   the anaconda environment which contains all the server code and
