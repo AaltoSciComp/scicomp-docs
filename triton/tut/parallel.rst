@@ -3,20 +3,20 @@ Parallel computing
 ==================
 
 Parallel computing is what HPC is really all about: processing things on
-more than one CPU at once. By now, you should have read all of the previous
+more than one CPU at once. By now, you should have read most of the previous
 tutorials.
 
 Parallel programming models
 ---------------------------
 
-Parallel programming is a completely different way of programming.  Most
+**Parallel programming** is a completely different way of programming.  Most
 Triton users don't need to write their own
 applications, at most they will be running existing programs, but in
 order to understand things, we start with some introduction.
 
 The two main models are:
 
-* Shared memory program (or multithreading) runs on only one node
+* **Shared memory program (or multithreading)** runs on only one node
   because, like the name says, all the memory has to be accessible to
   all the processes.  Thus, scaleability is limited to a number of CPU
   cores available within one computational node. The code is
@@ -24,7 +24,7 @@ The two main models are:
   Examples of application that utilize this model: Matlab, R, OpenMP
   applications, typical parallel desktop programs.
 
-* Message passing programming (e.g. MPI, message passing interface)
+* **Message passing programming** (e.g. **MPI**, message passing interface)
   can run on multiple nodes interconnected with the network via passing
   data through MPI software libraries. The large-scale scientific programs
   are MPI. MPI can scale to thousands of CPU cores, but it's harder to
@@ -36,8 +36,10 @@ this case we are talking about hybrid parallel programming model.
 Most historical scientific code is MPI, but these days more and more
 people are using shared memory models.
 
-The important note is that a normal, serial code can't just be run as
-parallel without modifications. As a user it is your responsibility to
+The choice above isn't a choice you make - *it is part of the software
+design itself*.  You *can't* just take serial code and run it as
+parallel without fundamentally changing it. As a user it is your
+responsibility to
 understand what parallel model implementation your code has, if any.
 Knowing this, you can proceed with the instructions below.
 
@@ -55,7 +57,7 @@ to.**
 Shared memory: OpenMP programs
 ------------------------------
 
-OpenMP is a standard de facto for the multithreading implementations. There
+**OpenMP** is a standard de facto for the multithreading implementations. There
 are many others, but this one is the most common, supported by all known
 compiler suits. For other implementations of shared memory parallelism,
 please consult your code docs.
@@ -130,6 +132,20 @@ Triton has multiple architectures around (12, 20, 24, 40 CPU cores per node),
 even though SLURM optimizes resources usage and allocate CPUs within one node, which
 gives better performance for the app, it still makes sense to put constraints
 explicitly.
+
+
+What to use in practice?
+------------------------
+
+.. csv-table::
+   :header-rows: 1
+   :delim: |
+
+   Method   | Minimal Slurm options to use  | notes
+   OpenMP   | ``-c`` only | Limited to one node
+   MPI      | ``-n`` only usually    |
+   Hybrid   | ``-c`` and ``-n``      | Somewhat special case
+   Other programs doing it themselves | Usually only `-c` | **Must** configure program to use environment variable ``$SLURM_CPUS_PER_TASK`` threads/processes, which is set to the ``-c`` option.
 
 
 Monitoring performance
