@@ -11,7 +11,7 @@ data gets forgotten.  Funders pay a lot for research, and they want
 However, it *is* worth doing a bit of planning about data, even aside
 from the required bureaucratic exercise.  It is true that researches
 focus on the next paper.  Data has long-term value even inside Aalto,
-and if you don't try hard it will get lost.  Do 
+and if you don't try hard it will get lost.
 
 Practical DMP
 =============
@@ -51,7 +51,10 @@ There are plenty of other good resources about making funder DMPs.
 
 * The `DMPTuuli <https://www.dmptuuli.fi/>`_ is a combination
   template, instructions, and web form which makes it easy to do the
-  mechanical assembly of DMPs.  This is highly recommended.
+  mechanical assembly of DMPs.  They also have `public docx/pdf
+  templates <dmptuuli_templates_>`_ which can be used even without the
+  web form.  Aalto recommends this service, though be aware it helps
+  you fill out a form, not plan your work.
 
 As some concrete suggestions:
 
