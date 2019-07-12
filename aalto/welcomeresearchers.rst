@@ -221,7 +221,7 @@ such good services locally.
 .. _ida: https://www.fairdata.fi/en/ida/
 
 Aalto provides, with Aalto accounts, `Google Drive <gdrive_>`_
-(unlimited, also Team Drives), `Dropbox <dropbox>`_ (unlimited), and
+(unlimited, also Team Drives), `Dropbox <dropbox_>`_ (unlimited), and
 `Microsoft OneDrive <onedrive_>`_ (5TB).  Be aware that once you leave
 Aalto, this data will disappear!
 

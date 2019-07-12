@@ -36,7 +36,7 @@ login first to a university server (like ``kosh.aalto.fi`` or
       to this material.
 
 
-There are different ways of connecting::
+There are different ways of connecting:
 
 .. list-table::
     :header-rows: 1

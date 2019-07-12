@@ -16,7 +16,7 @@ Python distributions
 |                          | Python to use            | How to install own       |
 |                          |                          | packages                 |
 +==========================+==========================+==========================+
-| Simple programs with     | Anaconda 2/3             | ``pip install --user`` |
+| Simple programs with     | Anaconda 2/3             | ``pip install --user``   |
 | common packages, not     |                          |                          |
 | switching between        |                          |                          |
 | Pythons often            |                          |                          |

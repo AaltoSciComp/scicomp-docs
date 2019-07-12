@@ -229,6 +229,7 @@ Since these are the normal Triton modules, you can submit installation
 requests for software in these so that it is automatically available.
 
 Installing kernels from virtualenvs or Anaconda environments:
+
 * Activate the environment (however you do it normally)
 * (Install ipykernel if not already there: do this if next step does
   not work: ``pip install ipykernel``)

@@ -22,7 +22,7 @@ scratch, so if you ever get a "disk quota exceeded" error, then read on.
 
    If that fixes something, and problem recurs, then:
      ``module load teflon``
-     
+
 How quotas work
 ---------------
 
@@ -71,7 +71,7 @@ user-private-group does not exist on Aalto Linux workstations.
     # AUTOMATIC ON TRITON: Fix everything.
     #  (only for $WRKDIR or group directories, still in testing):
     /share/apps/bin/quotafix -sg --fix /path/to/dir/
-     
+
     # MANUAL ON TRITON: use find yourself.
     # $GROUP is your username for work, or project-group name for scratch.
     lfs find /path/to/dir -type d -print0 | xargs -0 chmod g+s
@@ -88,7 +88,7 @@ otherwise when you try to make new files in that directory, they are
 group= 'domain users' and it fails.
 
 I can't rsync/sftp/etc
----------------------
+----------------------
 
 It is related to the above mentioned issue, something like rsync -a ...
 or cp -p ... are trying to save original group ownership attribute,
@@ -102,7 +102,7 @@ which will not work. Try this instead:
 
     ## mainly one should avoid -g (as well as -a) since it preserves the old group (with no quota)
     $ rsync -urlptDxv --chmod=Dg+s somefile triton.aalto.fi:/path/to/work/directory
-     
+
     ## avoid '-p' with cp, or if you want to keep timestapms, mode etc, then use '--preserve='
     $ cp -r --preserve=mode,timestamps  somefile /path/to/mounted/triton/work/directory
 

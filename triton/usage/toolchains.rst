@@ -5,12 +5,12 @@ Compilers and toolchains
 Individual compilers
 ~~~~~~~~~~~~~~~~~~~~
 
-Some of our compilers are available as individual modules. 
+Some of our compilers are available as individual modules.
 If you simply want a compiler, we recommend you use these modules.
 
 .. include:: ../ref/compilers.rst
 
-If you need libraries or tools (e.g. `openmpi` or `cmake`) to compile
+If you need libraries or tools (e.g. ``openmpi`` or ``cmake``) to compile
 your software, use modules with lower-case names. These modules are
 individual modules that do not have extra toolchain requirements.
 
