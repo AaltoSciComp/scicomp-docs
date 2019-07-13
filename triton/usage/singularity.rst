@@ -99,7 +99,7 @@ Step 1: Log in to registry.cs.aalto.fi
 
 Go to
 `registry.cs.aalto.fi <https://registry.cs.aalto.fi>`_ and click ``Gitlab`` under
-``Social logins``. This will redirect you to a `Gitlab`-page that you can use
+``Social logins``. This will redirect you to a ``Gitlab`` page that you can use
 for authentication. In this page use your Aalto username and password to login.
 
 In the future we'll improve the authentication page.

@@ -46,7 +46,7 @@ There are different ways of connecting:
     * * ssh
       * Works everywhere, from everywhere.  Firewalls may make things
 	hard sometimes.
-    * Jupyter.triton.aalto.fi
+    * * Jupyter.triton.aalto.fi
       * Jupyter interface, but provides shell access.
     * * vdi.aalto.fi
       * Virtual desktop, you have to ``ssh`` anyway but gets you past
