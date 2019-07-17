@@ -116,7 +116,7 @@ Obviously, you will often need to share data within projects.
 Emailing things back and forth is rarely a good way to do things.
 Check other data sharing services from :doc:`our services page
 <services>` or `Aalto's IT services for research
-<https://inside.aalto.fi/display/ITServices/IT+Services+for+Research>`__
+<https://www.aalto.fi/en/services/it-services-for-research>`__
 page.
 
 We recommend, instead of seeing this as a sharing problem, see this as

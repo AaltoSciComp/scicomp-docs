@@ -112,7 +112,7 @@ through the Aalto Google Apps service: `instructions
 Your Aalto Google account will expire once you are no longer
 affiliated, so your files here will become inaccessible.
 
-.. _itsr: https://inside.aalto.fi/display/ITServices/IT+Services+for+Research
+.. _itsr: https://www.aalto.fi/en/services/it-services-for-research
 
 
 

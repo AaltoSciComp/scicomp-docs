@@ -74,7 +74,7 @@ Quick contents and links
 	 <http://science-it.aalto.fi/scip/>`_: organized
 	 by Science IT. Including Triton kickstarts and many others
        * `Parallel computing <https://wiki.aalto.fi/download/attachments/65022076/parallel_computing.2012-04-12.pdf?version=1&modificationDate=1334828664000&api=v2>`_
-       * `Aalto IT Services for Research <https://inside.aalto.fi/display/ITServices/IT+Services+for+Research>`_
+       * `Aalto IT Services for Research <https://www.aalto.fi/en/services/it-services-for-research>`_
        * `Software Carpentry <http://software-carpentry.org/>`_
 	 (scientific computation basics) and
 	 `Code Refinery <http://coderefinery.org/>`_ (more focused on

@@ -11,7 +11,7 @@ These aren't generic IT instructions - ITS has an introduction for
 staff somewhere (but apparently not online).  There is also a handy list of
 `research-focused services <itsr_>`_ provided by ITS.
 
-.. _itsr: https://inside.aalto.fi/display/ITServices/IT+Services+for+Research
+.. _itsr: https://www.aalto.fi/en/services/it-services-for-research
 
 
 Aalto service units

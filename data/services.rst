@@ -136,7 +136,7 @@ Aalto
 * See :doc:`../aalto/aaltostorage`.
 
 * Also information is available from Aalto ITS, some `here
-  <https://inside.aalto.fi/display/ITServices/IT+Services+for+Research>`_.
+  <https://www.aalto.fi/en/services/it-services-for-research>`_.
 
 * **Aalto home directories** are small and intended mainly for personal
   stuff.  Once you leave, this data dies, so don't put important

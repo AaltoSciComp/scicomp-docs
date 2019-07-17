@@ -34,7 +34,7 @@ The Aalto environment
 =====================
 Aalto provides a wide variety of support for scientific computing.
 For a summary, see the `IT Services for Research page
-<https://inside.aalto.fi/display/ITServices/IT+Services+for+Research>`_.
+<https://www.aalto.fi/en/services/it-services-for-research>`_.
 For information about data storage at Aalto, see the section on data
 management below.
 
