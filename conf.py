@@ -326,5 +326,6 @@ def setup(app):
     #if on_rtd:
     #    app.add_javascript(mathjax_path)
     app.add_stylesheet("theme_overrides.css")
+    app.add_javascript("redirect-to-https.js")
 
 
