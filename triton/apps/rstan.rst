@@ -40,6 +40,19 @@ You should detect the number of cores with::
 
   as.integer(Sys.getenv('SLURM_JOB_CPUS_PER_NODE', parallel::detectCores()))
 
+Common Rstan problems
+---------------------
+
+* Models must be compiled on the machine that is running them, Triton
+  or other workstations.  The compiled model files aren't necessarily
+  portable, since they depend on the libraries available when build.
+  One symptom of this problem is error messages which talk about
+  loading libraries and ``GLIBC_2.23`` or some such.
+
+* In order to compile models, you must have the compiler available on
+  the nodes.  Thus, the Intel compilers (``iomkl``) won't work.  It
+  also won't work if the Intel compiler license servers are down.
+  Using the GNU compiler toolchains are more reliable.
 
 
 Example
