@@ -51,6 +51,9 @@ history - which is useful for monitoring.  Then submit it with
 
     $ sbatch hello.slrm
 
+.. warning:: You must use ``sbatch``, not ``bash`` to submit the job
+   to process the `#SBATCH` headers and run in the background.
+
 This sends it to the queue to wait. Since the time requested is short,
 it will probably run on the debug partition, which is reserved for small
 test jobs (see below). Let's see if it is in the queue:
@@ -194,6 +197,10 @@ Exercises
    operation for a while), for example ``sleep 300`` (waits for 300
    seconds) in the ``debug`` partition.  Check the queue to see when
    it starts running.  Then, cancel the job.  What output is produced?
+
+4. What happens if you submit a batch script with ``bash`` instead of
+   ``sbatch``?  Does it appear to run?  Does it use all the Slurm
+   options?
 
 4. (Advanced) Create a batch script that runs in another language.
    Does it run?  What are some of the advantages and problems here?
