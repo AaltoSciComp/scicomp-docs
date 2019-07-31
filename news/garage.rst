@@ -25,7 +25,7 @@ Come if you want to:
 Schedule
 ========
 
--  Days: Triton garage is every week from 14:00-15:00 on Thursdays.
+-  Days: Triton garage is every week from 13:00-14:00 on Thursdays.
 -  Time: We promise to be there only the first 30 minutes, so if
    everyone leaves before then we might leave too (usually we are
    there the whole time).
