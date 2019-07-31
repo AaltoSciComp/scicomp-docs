@@ -27,6 +27,6 @@ Comsol in Triton is best run in Batch-mode. To check which versions of Comsol ar
 -  Comsol uses a lot of temp file storage, which by default goes to
    $HOME. Fix a bit like the following::
 
-       $ rm -rf ~/.comsol/v43a/recoveries
+       $ rm -rf ~/.comsol/
        $ mkdir /scratch/work/$USER/comsol_revoveries/
-       $ ln -s /scratch/work/$USER/comsol_revoveries/ ~/.comsol/
+       $ ln -sT /scratch/work/$USER/comsol_revoveries/ ~/.comsol/
