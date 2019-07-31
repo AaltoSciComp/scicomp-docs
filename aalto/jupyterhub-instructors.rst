@@ -153,7 +153,9 @@ A course environment consists of:
 
 10. Shared data directories.  If you have nontrivial data which needs
     distributing, consider one of these shared directories which saves
-    it from being copied over and over.  If number of students times
+    it from being copied over and over.  The notebook directory itself
+    can only support files of up to 2MB to prevent possible problems.
+    If number of students times
     amount of data is more than a few hundred MB, strongly consider
     one of the data directories.  Read more about this :ref:`below
     <jupytercoursedata>`.
