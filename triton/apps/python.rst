@@ -62,7 +62,7 @@ Install your own packages easily
 
 Installing your own packages with ``pip install`` won't work, since it
 tries to install globally for all users. Instead, you should do this
-(add ``-user``) to install the package in your home directory
+(add ``--user``) to install the package in your home directory
 (``~/.local/lib/pythonN.N/``)::
 
   pip install --user $package_name
