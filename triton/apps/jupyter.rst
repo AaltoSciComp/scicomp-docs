@@ -292,9 +292,8 @@ FAQ/common problems
 
 * **My server seems inaccessible / I can't get to the control panel to
   restart my server.  Especially with JupyterLab**.  In JupyterLab,
-  there is a "Hub" menu that lets you go to the control panel.  If
-  that doesn't work, change your browser URL path to ``/hub/home`` and
-  you can get to the control panel.
+  use File→Hub Control Panel.  If you can't get there, you can change
+  the URL to ``/hub/home``.
 
 * **My R kernel keeps dying**.  Some people seem to have global R
   configuration, either in ``.bashrc`` or ``.Renviron`` or some such
