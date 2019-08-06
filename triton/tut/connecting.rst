@@ -43,14 +43,19 @@ There are different ways of connecting:
 
     * * Method
       * About
+      * From where?
     * * ssh
       * Works everywhere, from everywhere.  Firewalls may make things
 	hard sometimes.
-    * * Jupyter.triton.aalto.fi
-      * Jupyter interface, but provides shell access.
-    * * vdi.aalto.fi
-      * Virtual desktop, you have to ``ssh`` anyway but gets you past
-	firewalls.
+      * Aalto networks only, otherwise ssh to kosh and then Triton
+    * * https://jupyter.triton.aalto.fi
+      * Jupyter interface, but provides shell access via web browser.
+      * Whole internet
+    * * https://vdi.aalto.fi
+      * Virtual desktop, from there you have to ``ssh`` to Triton
+	anyway but gets you past firewalls and can run graphical
+	programs via SSH.
+      * Whole internet
 
 
 Connecting via ssh
