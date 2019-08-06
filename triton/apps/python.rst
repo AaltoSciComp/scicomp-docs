@@ -45,7 +45,7 @@ Triton supports all of these.
 Quickstart
 ----------
 
-Use ``module load anaconda2`` or ``module load anaconda3`` to get a
+Use ``module load anaconda3`` (or ``module load anaconda2``) to get a
 modern Python.
 
 If you have simple needs, use :ref:`pip install --user
@@ -103,8 +103,8 @@ versions):
 
 ::
 
-    module load anaconda2    # python2
     module load anaconda3    # python3
+    module load anaconda2    # python2
 
 Conda environments
 ~~~~~~~~~~~~~~~~~~
@@ -128,7 +128,7 @@ thus messing up quota accounting. This prevents that.
    load same version each time you source the environment::
 
        # Load anaconda first.  This must always be done before activating the env!
-       module load anaconda2     # or anaconda3
+       module load anaconda3     # or anaconda3
 
 -  Create an environment::
 
