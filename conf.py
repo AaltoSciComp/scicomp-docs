@@ -33,6 +33,12 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.mathjax',
 ]
+try:
+    sys.path.insert(0, '_ext/sphinx_ext_minipres')
+    import minipres
+    extensions.append('minipres')
+except:
+    print("could not import minipres")
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
