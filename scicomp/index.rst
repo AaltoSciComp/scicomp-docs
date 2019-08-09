@@ -11,3 +11,4 @@ Scientific computing
    python
    shell
    ssh
+   zen-of-scicomp
