@@ -32,6 +32,19 @@ I know that *not all* research code will be perfect.
 
 But if you don't build on a good base, you will end up with misery.
 
+.. image:: images/zen-of-scicomp-pyramid.svg
+    :width: 60%
+    :align: center
+
+|
+|
+
+.. image:: images/zen-of-scicomp-tower.svg
+    :width: 49%
+
+.. image:: images/zen-of-scicomp-block.svg
+    :width: 49%
+
 
 
 Yes, you can't do everything perfectly
