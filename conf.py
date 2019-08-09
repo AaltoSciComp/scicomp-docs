@@ -33,12 +33,6 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.mathjax',
 ]
-try:
-    sys.path.insert(0, '_ext/sphinx_ext_minipres')
-    import minipres
-    extensions.append('minipres')
-except:
-    print("could not import minipres")
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -333,5 +327,4 @@ def setup(app):
     #    app.add_javascript(mathjax_path)
     app.add_stylesheet("theme_overrides.css")
     app.add_javascript("redirect-to-https.js")
-
-
+    app.add_javascript("https://users.aalto.fi/~darstr1/minipres-stable.js")
