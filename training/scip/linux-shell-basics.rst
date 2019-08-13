@@ -17,13 +17,13 @@ We will start with somewhat basics like files and processes and go up to command
 - Tue 3.9.2019 klo 12:00-15:00 // Otakaari 1, U135a
 - Thu 5.9.2019 klo 12:00-15:00 // Otakaari 1, U135a
 
-**Course material:** will be mostly based on the first part of scicomp.aalto.fi/training/linux-shell-tutorial
+**Course material:** will be mostly based on the first part of `scicomp.aalto.fi/training/linux-shell-tutorial <http://scicomp.aalto.fi/training/linux-shell-tutorial.html>`__.
 
 Additional materials and homework assignments at triton.aalto.fi:/scratch/scip/BASH
 
 **Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
 
-**Registration:** register here
+**Registration:** `register here <https://www.webropolsurveys.com/S/B8A10DFFBB77147D.par>`__
 
 **Credits:** No ECTS.
 
