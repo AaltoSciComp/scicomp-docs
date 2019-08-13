@@ -6,7 +6,7 @@ Science-IT training courses
 Science-IT puts on various training courses, mainly at the C (HPC)
 level.  Our guests sometimes put on specialized courses at the B or D
 level, too.  Our past courses, including material, can be seen on `the
-Science-IT training page <http://science-it.aalto.fi/scip/>`__.
+Science-IT training page <https://scicomp.aalto.fi/training/scip/index.html>`__.
 
 Our courses are not yet split into modules with separate pages, but
 our existing modules are roughly as follows.  To find slides, look at
