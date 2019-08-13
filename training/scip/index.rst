@@ -11,7 +11,7 @@ Examples of topics covered at different lectures: HPC crash course, Triton kicks
 Lectures by date and topics
 ---------------------------
 
-*Fall 2019 / Winter 2019 courses:* Linux Shell basics (2x3h), Data analyses with R and Python (6 x 3h) Condor introduction (2x2h), Matlab Basics (4x3h), GPU computing (4x3h),  CodeRefinery (3-day workshop), Triton winter kickstart (1x4h)
+*Fall 2019 / Winter 2019 courses:* Linux Shell basics (2x3h), Data analysis with R and Python (6 x 3h) Condor introduction (2x2h), Matlab Basics (4x3h), GPU computing (4x3h),  CodeRefinery (3-day workshop), Triton winter kickstart (1x4h)
 
 *Spring 2020:* Matlab continuation course, Introduction into MPI, Linux Shell Scripting, Python for scientific computing, Programming with Julia. On top of them Summer Kickstart in June.
 
