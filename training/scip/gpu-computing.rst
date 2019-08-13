@@ -2,7 +2,7 @@
 Sept 2019 / GPU Computing in Practice
 =====================================
 
-Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/traning/scip/>`__ lecture series at Aalto University.
+Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
 
 **Audience:** Employees and students looking for the extensive intro into GPU computing.
 

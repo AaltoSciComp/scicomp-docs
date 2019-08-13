@@ -2,7 +2,7 @@
 Sept 2019 / Linux Shell Basics
 ==============================
 
-Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/traning/scip/>`__ lecture series at Aalto University.
+Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
 
 **Audience:** employees and students looking for an extensive intro into Linux shell / terminal.
 
