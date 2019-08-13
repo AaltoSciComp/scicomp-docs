@@ -23,7 +23,7 @@ Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/sci
 
 **Registration:** `open for the registration <https://www.webropolsurveys.com/S/3933BB03C478419B.par>`__
 
-**Credits (opintopisteet):** Credits available for the Aalto students and course certificate can be provided on request for the outsiders. Since the main focus of the course is learning through experience, the students will be required to perform simulations for homework and hand in result report. Credits/sertifecate require full time participation. Full course hours correspond roughly to 1 ECTS.
+**Credits (opintopisteet):** Credits available for the Aalto students and course certificate can be provided on request for the outsiders. Since the main focus of the course is learning through experience, the students will be required to perform simulations for homework and hand in result report. Credits/certificate require full time participation and ahndling assignments. Full course hours correspond roughly to 1 ECTS.
 
 **Other comments:** Participants will be provided with access to Triton for running examples. Participants are expected to bring their own laptops. We will use SSH for Triton connection. One can follow the theoretical part without a laptop, though if you want to try the tutorial you’d better have one.
 
