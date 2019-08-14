@@ -37,7 +37,7 @@ Subpages:
    python-scicomp/index
 
 For course announcements at Aalto, see `the Scientific Computing in Practice courses page
-</traning/scip/index.html>`__.
+</training/scip/index.html>`__.
 
 A: Basics
 =========
