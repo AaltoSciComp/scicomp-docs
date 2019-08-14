@@ -33,12 +33,11 @@ Subpages:
 .. toctree::
    :maxdepth: 1
 
-   by-science-it
    linux-shell-tutorial
    python-scicomp/index
 
-For course announcements at Aalto, see `the Science-IT training page
-<http://science-it.aalto.fi/scip/>`__.
+For course announcements at Aalto, see `the Scientific Computing in Practice courses page
+</traning/scip/index.html>`__.
 
 A: Basics
 =========
