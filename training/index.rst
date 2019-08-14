@@ -323,7 +323,7 @@ HPC, level D is about programming it yourself.
      * Before you can use larger resources, you need to understand the
        difference from your own computers
 
-     * :doc:`training by Science-IT <by-science-it>`,
+     * :doc:`training by Science-IT <scip/index>`,
        :doc:`../triton/tut/intro`
 
      *
@@ -336,7 +336,7 @@ HPC, level D is about programming it yourself.
        your own computer, because hundreds of people are sharing it.
        Modules are the solution.
 
-     * :doc:`training by Science-IT <by-science-it>` or
+     * :doc:`Scientific Computing in Practice training by Science-IT <scip/index>` or
        :doc:`../triton/tut/modules`
 
      *
@@ -348,7 +348,7 @@ HPC, level D is about programming it yourself.
      * On a cluster, you have to share resources with others.  Slurm
        is one batch queuing system that makes it possible.
 
-     * See :doc:`training by Science-IT <by-science-it>` or
+     * See :doc:`Scientific Computing in Practice training by Science-IT <scip/index>` or
        :doc:`interactive <../triton/tut/interactive>`,
        :doc:`serial <../triton/tut/serial>`,
        :doc:`array <../triton/tut/array>`
@@ -363,7 +363,7 @@ HPC, level D is about programming it yourself.
        There are different places available, each with different
        advantages.
 
-     * See :doc:`training by Science-IT <by-science-it>`  or
+     * See :doc:`Scientific Computing in Practice training by Science-IT <scip/index>`  or
        :doc:`storage basics <../triton/tut/storage>`,
        :doc:`lustre <../triton/usage/lustre>`,
        :doc:`local storage <../triton/usage/localstorage>`,
@@ -378,7 +378,7 @@ HPC, level D is about programming it yourself.
      * The point of a cluster is to run things in parallel.  How does
        this work?
 
-     * See :doc:`training by Science-IT <by-science-it>`, and
+     * See :doc:`Scientific Computing in Practice training by Science-IT <scip/index>`, and
        :doc:`../triton/tut/parallel`.
 
      *
