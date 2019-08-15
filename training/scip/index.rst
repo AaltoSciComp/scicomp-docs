@@ -16,8 +16,7 @@ Lectures by date and topics
 *Spring 2020:* Matlab continuation course, Introduction into MPI, Linux Shell Scripting, Python for scientific computing, Programming with Julia. On top of them Summer Kickstart in June.
 
 .. toctree::
-   :maxdepth: 1
-   :glob:
+   :titlesonly:
 
    linux-shell-basics
    gpu-computing
