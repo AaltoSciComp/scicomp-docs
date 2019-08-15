@@ -19,7 +19,11 @@ Lectures by date and topics
    :maxdepth: 1
    :glob:
 
-   *
+   linux-shell-basics
+   gpu-computing
+   data-analysis
+   htcondor-introduction
+   matlab-basics
 
 Archive
 -------
