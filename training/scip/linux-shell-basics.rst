@@ -27,7 +27,7 @@ Additional materials and homework assignments at triton.aalto.fi:/scratch/scip/B
 
 **Registration:** `register here <https://www.webropolsurveys.com/S/B8A10DFFBB77147D.par>`__
 
-**Credits:** No ECTS.
+**Credits:** Course certificate can be provided on request, though no official ECTS.
 
 **Other comments:** During the tutorials we’ll use a Linux terminal, means that either you have a Linux/Mac laptop or you have a Windows laptop with the SSH client installed for accessing any of Linux server (kosh/lyta etc at Aalto). If needed participants can be provided with access to Triton for running examples. *Participants are expected to bring their own laptops.*
 
