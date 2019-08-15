@@ -23,6 +23,7 @@ Lectures by date and topics
    data-analysis
    htcondor-introduction
    matlab-basics
+   Dec 2019 / CodeRefinery <https://coderefinery.org/workshops/2019-12-10-espoo/>
 
 Archive
 -------
