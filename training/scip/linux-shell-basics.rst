@@ -14,7 +14,7 @@ There is an advaced part of this course given later in the spring. There on we g
 
 **Lecturer:** Ivan Degtyarenko, D. Sc., Science IT / Department of Applied Physics, Aalto University
 
-**Time, date, place:**
+**Time, date, place:** the copurse consists of two hands-on sessions
 
 - Tue 3.9.2019 klo 12:00-15:00 // Otakaari 1, U135a
 - Thu 5.9.2019 klo 12:00-15:00 // Otakaari 1, U135a
