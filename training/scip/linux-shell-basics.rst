@@ -6,9 +6,11 @@ Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/sci
 
 **Audience:** employees and students looking for an extensive intro into Linux shell / terminal.
 
-**About the course:** Linux shell is what you get when you open a terminal. This course we cover all the basics that we will need later on for most part of the courses given this fall/spring. It is oriented on Linux new comers, those Windows/Mac users for whom terminal window is a black box rather than a door to the real computing.
+**About the course:** Linux shell is what you get when you open a terminal. This course will cover all the basics that we will need later on for the most part of the courses given during the year. We will unleash the power of that blinking cursor in the terminal window. Windows/Mac/Linux users are warmly welcome.
 
 We will start with somewhat basics like files and processes and go up to command line magic like redirections and pipes. This should be enough to get started with the Linux terminal.
+
+There is an advaced part of this course given later in the spring. There on we go through the programming techniques including advanced ones, while here we get familiar with the command line.
 
 **Lecturer:** Ivan Degtyarenko, D. Sc., Science IT / Department of Applied Physics, Aalto University
 
