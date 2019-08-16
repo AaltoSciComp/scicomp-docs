@@ -25,7 +25,7 @@ Teaching will be interactive, “learning by doing”.
 
 **Lecturers:** Enrico Glerean, D.Sc., CS/NBE Department, SCI
 
-**Registration:** `link for registration <https://www.webropolsurveys.com/S/50CE4F5C7D47F656.par>`__
+**Registration:** `link for registration (not open yet) <https://www.webropolsurveys.com/S/50CE4F5C7D47F656.par>`__
 
 **Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
 
