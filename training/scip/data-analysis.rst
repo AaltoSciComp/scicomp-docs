@@ -23,7 +23,7 @@ Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/sci
 
 **Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
 
-**Registration:** `regisration is open <https://www.webropolsurveys.com/S/3933BB03C478419B.par>`__
+**Registration:** `regisration is open <https://www.webropolsurveys.com/S/427A39987ED882BA.par>`__
 
 **Credits:** Credits available for the Aalto students and course certificate can be provided on request for the outsiders. Full course hours correspond roughly to 2 ECTS. Students who wish to get a certificate should hand in the homework assignments and participate to at least 4 of 6 lectures.
 
