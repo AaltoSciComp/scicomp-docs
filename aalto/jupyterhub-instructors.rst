@@ -8,6 +8,10 @@ Jupyterhub instructions for course instructors
    Teaching <jupyterhub>`.  For research purposes, see :doc:`Triton
    JupyterHub </triton/apps/jupyter>`.
 
+   nbgrader documentation is at https://nbgrader.readthedocs.io/, and
+   is necessary reading to understand how to use it.  It is not
+   duplicated here.
+
 Basics
 ======
 
