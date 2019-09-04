@@ -32,6 +32,7 @@ Schedule
 -  Location: See below.  Common locations:  T4_ and A106_ (CS
    building, by entrance around back of T2), A237_ (CS building, by
    main coffee room on 2nd floor A wing) and B121_ (CS building).
+-  We are piloting also a data & science garage at NBE every first wednesday of the month, room F336 13:00. NBE garage will also cover issues related to working with personal data, research ethics, best practices in biomedical research. 
 
 .. _U121a: http://usefulaaltomap.fi/#!/select/main-U121a
 .. _U121b: http://usefulaaltomap.fi/#!/select/main-U121b
