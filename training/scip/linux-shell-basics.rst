@@ -25,7 +25,7 @@ Additional materials and homework assignments at triton.aalto.fi:/scratch/scip/B
 
 **Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
 
-**Registration:** `register here <https://www.webropolsurveys.com/S/B8A10DFFBB77147D.par>`__
+**Registration:** closed, the course is over 
 
 **Credits:** Course certificate can be provided on request, though no official ECTS.
 
