@@ -50,8 +50,8 @@ some of the key players:
   from the previous "research and innovation services").
 * **CSC** is the Finnish academic computing center (and more).  They provide a
   lot of basic infrastructure you use without knowing it, as well as
-  computing and data services to researchers (all for free).  `website
-  <csc_>`_
+  computing and data services to researchers (all for free).  `research.csc.fi
+  <https://research.csc.fi/csc>`_
 
 .. _its_instr: https://inside.aalto.fi/display/ITServices/Home
 .. _sci-it: http://science-it.aalto.fi/
