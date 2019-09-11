@@ -39,8 +39,8 @@ some of the key players:
   specialized than Science-IT. ITS may be the first place to
   contact if not in the School of Science.  Their infrastructure is
   used in all schools including SCI, and the base on which everyone
-  builds.  Their instructions are on `Aalto
-  Inside <its_instr_>`_, but most importantly the already-mentioned
+  builds.  Their instructions are on `aalto.fi
+  <its_instr_>`_, but most importantly the already-mentioned
   `IT Services for Research <itsr_>`_ page.  Contact via `servicedesk
   <https://it.aalto.fi/contact>`__.
 * **Aalto Research Services**: Administrative-type support.
@@ -53,7 +53,7 @@ some of the key players:
   computing and data services to researchers (all for free).  `research.csc.fi
   <csc_>`_
 
-.. _its_instr: https://inside.aalto.fi/display/ITServices/Home
+.. _its_instr: https://aalto.fi/it
 .. _sci-it: http://science-it.aalto.fi/
 .. _cs-it: https://wiki.aalto.fi/display/CSdept/IT
 .. _nbe-it: https://wiki.aalto.fi/display/NBE/IT+Information
@@ -73,15 +73,10 @@ everywhere:
   there is no indication of which ones.  In general, unless you know
   what you are looking for, don't expect to find anything here without
   extensive work.
-* `it.aalto.fi <https://it.aalto.fi>`__ is a new location for IT
-  instructions, and somewhat replaces the old IT instructions on
-  inside.aalto.fi and into.aalto.fi.  These generally relate to how to
-  do a specific task -
-  but not necessarily what is the best thing to do.
 * `inside.aalto.fi <https://inside.aalto.fi>`__ is the *former* typical
   "official" staff documentation area, but now gone since 2019 with
   all information moved to aalto.fi.  It wasn't in search engines, but
-  once you found a page it wasn't that hard to navigate.
+  once you found a page it wasn't easy to find other information.
 * `into.aalto.fi <https://into.aalto.fi>`__ is the student official
   information.  It used to contain a lot of duplicate information to
   inside but was public, so people would end up there.
@@ -263,11 +258,12 @@ stack available on Triton and Aalto workstations so that they have all
 the same stuff.
 
 ITS has a `software and licenses <its_sw_>`_ (`FI <its_sw_fi_>`_)
-page, and also a `full list of licenses <its_sw_list_>`_.  There is
+page, and also a `full list of licenses <its_sw_list_>`_ (broken link,
+missing on new page).  There is
 also https://download.aalto.fi/.
 
-.. _its_sw: https://inside.aalto.fi/display/ITServices/Software+and+licenses
-.. _its_sw_fi: https://inside.aalto.fi/display/ITPK/Ohjelmistot+ja+lisenssit
+.. _its_sw: https://www.aalto.fi/en/services/university-software-licenses
+.. _its_sw_fi: https://www.aalto.fi/fi/palvelut/yliopiston-ohjelmistolisenssit
 .. _its_sw_list: https://inside.aalto.fi/display/ITServices/University+software+licenses
 .. _sw_download: http://download.aalto.fi/
 
