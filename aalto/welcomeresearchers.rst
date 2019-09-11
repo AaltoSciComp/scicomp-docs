@@ -51,7 +51,7 @@ some of the key players:
 * **CSC** is the Finnish academic computing center (and more).  They provide a
   lot of basic infrastructure you use without knowing it, as well as
   computing and data services to researchers (all for free).  `research.csc.fi
-  <https://research.csc.fi/csc>`_
+  <csc_>`_
 
 .. _its_instr: https://inside.aalto.fi/display/ITServices/Home
 .. _sci-it: http://science-it.aalto.fi/
@@ -102,8 +102,9 @@ everywhere:
 
 End-user systems
 ================
-Aalto provides computers to it's employees, obviously.  You can choose
-a managed system or standalone.  If it's standalone, you are on your
+Aalto provides computers to it's employees, obviously. Wherther it is
+an Aalto wide managed system or standalone depends on your department
+policies.  If it's standalone, you are on your
 own.  If managed, login is through your Aalto account.  You can get
 laptop or desktop, and Linux, Mac, or Windows.
 
@@ -117,16 +118,21 @@ available (and somewhat similar to Triton).  We have some limited
 instructions and pointers to the main instructions for :doc:`mac
 <../aalto/mac>` and :doc:`windows <windows>` computers.
 
-Managed laptops are usable in and out of the Aalto networks, and you
-can become "primary user" which allows you to install some software
-yourself (Linux at least).
+Managed laptops are usable in and out of the Aalto networks.
 
+On both managed desktops and laptops you can become a "primary user"
+which allows you to install needed software that is found from the 
+official repositories. Additionally, in some cases, Workstation
+Administrator (wa.) account can be given which close to normal
+root/Administrator account with some limitations. The "primary user"
+is widely accepted and recommended by Aalto ITS to all users while
+wa. accounts are regulated by the department policies or Aalto ITS.
 
 
 Computing
 =========
 
-You have two primary Aalto options: workstations and Triton.  The
+Having a valid Aalto account you have two primary options: workstations and Triton.  The
 Aalto workstations have basic scientific software installed.  From the
 workstations, you can use the :doc:`HTCondor <../aalto/htcondor>`
 distributed computing framework.
@@ -139,7 +145,7 @@ it's main advantage is the close integration into the Aalto
 environment: it shares Aalto accounts, its data storage (2PB) is
 also available on workstations, and has local support.  If
 you need dedicated resources, you can purchase them and they can be
-managed by us as part of Triton so that you get dedicated resources
+managed by Science IT team as part of Triton so that you get dedicated resources
 and can easily scale to the full power of Triton.  Triton is part of
 the Finnish Grid and Cloud Infrastructure.  Triton is the largest
 publically known computing cluster in Finland after the CSC clusters.
@@ -209,7 +215,7 @@ instructions <teamwork_>`_
 .. _teamwork: https://www.aalto.fi/en/services/file-storage-space-for-research-and-groups-teamwork
 
 CSC provides both high-performance Lustre filesystems (like Triton)
-and archive systems.  `CSC research portal <csc_>`.
+and archive systems.  `CSC research portal <csc_>`_.
 
 In our :doc:`data management section <../data/index>`, we provide many
 more links to long-term data repositories, archival, and so on.  The
