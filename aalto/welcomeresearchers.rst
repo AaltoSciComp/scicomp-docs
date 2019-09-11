@@ -23,7 +23,8 @@ some of the key players:
 * **Department IT**: Only a few departments (mainly in SCI) have their
   own IT staff.  Others have people such as laboratory managers which
   may be able to provide some useful advice.  Known links: `CS
-  <cs-it_>`_, `NBE <nbe-it_>`_, `PHYS <phys-it_>`_.
+  <cs-it_>`_, `NBE <nbe-it_>`_, `PHYS <phys-it_>`_, `Math
+  <math-it_>`_.
 * **Science-IT**: Overlaps with SCI department IT groups.  They run the
   Triton cluster and support scientific computing.  Their services may
   be used throughout the entire university, but support is organized from
@@ -58,6 +59,7 @@ some of the key players:
 .. _cs-it: https://wiki.aalto.fi/display/CSdept/IT
 .. _nbe-it: https://wiki.aalto.fi/display/NBE/IT+Information
 .. _phys-it: https://wiki.aalto.fi/display/TFYintra/PHYS+IT
+.. _math-it: https://wiki.aalto.fi/display/mathintra/Computer+Instructions
 .. _csc: https://research.csc.fi/
 
 Also, currently Aalto has information scattered on websites
