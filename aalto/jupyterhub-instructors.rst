@@ -213,14 +213,15 @@ upstream) which are:
   whole-filesystem access (so that students can also access
   ``/coursedata``).
 
-- Submissions are hidden from other students better.
-
-- While not part of nbgrader, we have a way to isolate the grading
-  process so that students can't access other instructor files.
+- We've added some extra security and sharing measures (most of these
+  are contributed straight to nbgrader).
 
 To use nbgrader:
 
 - Request a course as above.
+
+- Read the `nbgrader user instructions
+  <https://nbgrader.readthedocs.io/>`__.
 
 - Once you log in to your course's environment, the per-course
   ``/course`` (instructors only) and ``/srv/nbgrader/exchange``
