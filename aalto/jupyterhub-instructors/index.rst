@@ -1,5 +1,3 @@
-
-
 JupyterHub for instructors
 ==========================
 
@@ -29,7 +27,7 @@ JupyterHub for instructors
 
 
 More info
-=========
+---------
 
 Contact: CS-IT via the guru alias guru @ cs dot aalto.fi (students,
 contact your course instructors first).
