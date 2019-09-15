@@ -228,17 +228,41 @@ should apply to both JupyterHub and ``sjupyter``):
 Since these are the normal Triton modules, you can submit installation
 requests for software in these so that it is automatically available.
 
-Installing kernels from virtualenvs or Anaconda environments:
-
+Installing kernels from virtualenvs or Anaconda environments
+------------------------------------------------------------
 * Activate the environment (however you do it normally)
 * (Install ipykernel if not already there: do this if next step does
   not work: ``pip install ipykernel``)
 * ``python -m ipykernel
   install --user --name=python-YOURENV --display-name="YOUR-ENV"``
 
+Install your own kernels from other modules
+-------------------------------------------
 
-If you want to install your own non-Python kernels:
+This works if the module has Python installed and working.  This has
+to be done once in any Triton shell::
 
+  module load jupyterhub/live
+  envkernel lmod --user --name INTERNAL_NAME --display-name="Singularity my kernel" MODULE_NAME
+  module purge
+
+
+Install your own kernels from Singularity image
+-----------------------------------------------
+First, find the ``.simg`` file name.  If you are using this from one
+of the Triton modules, you can use ``module show MODULE_NAME`` and
+look for ``SING_IMAGE`` in the output.
+
+Then, install a kernel for your own user using envkernel.  This has to
+be done once in any Triton shell::
+
+  module load jupyterhub/live
+  envkernel singularity --user --name KERNEL_NAME --display-name="Singularity my kernel" SIMG_IMAGE
+  module purge
+
+
+Install your own non-Python kernels
+-----------------------------------
 * First, ``module load jupyterhub/live``.  This loads
   the anaconda environment which contains all the server code and
   configuration.  (This step may not be needed for all kernels)
