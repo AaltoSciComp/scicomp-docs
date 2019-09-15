@@ -265,9 +265,15 @@ Collaboration
 -------------
 
 Is science like monks working in their cells, or a community effort?
-In your classes, you just learn certain academic skills.  There's a
-whole other art of *applying* those skills which isn't taught.  If you
-don't work together, you will fall behind.
+
+These skills move so fast that learning peer-to-peer is one of the
+best ways to do it.
+
+There's a whole other art of applying these skills which isn't taught
+in classes.
+
+If you don't work together, you will fall behind.
+
 
 * L0: you work alone and re-invent everything
 * L1: you occasionally talk about results or problems
