@@ -123,9 +123,10 @@ Instructors
 .. toctree::
    :hidden:
 
-   jupyterhub-instructors
+   jupyterhub-instructors/index
 
-See the separate :doc:`instructors guide <jupyterhub-instructors>`.
+See the separate :doc:`instructors guide
+<jupyterhub-instructors/index>`.
 This service may be either used as general light computing for your
 students, or using nbgrader to release and collect assignments.
 
