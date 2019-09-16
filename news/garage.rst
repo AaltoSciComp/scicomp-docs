@@ -25,14 +25,14 @@ Come if you want to:
 Schedule
 ========
 
--  Days: Triton garage is every week from 13:00-14:00 on Thursdays.
--  Time: We promise to be there only the first 30 minutes, so if
-   everyone leaves before then we might leave too (usually we are
-   there the whole time).
--  Location: See below.  Common locations:  T4_ and A106_ (CS
-   building, by entrance around back of T2), A237_ (CS building, by
-   main coffee room on 2nd floor A wing) and B121_ (CS building).
--  We are piloting also a data & science garage at NBE every first wednesday of the month, room F336 13:00. NBE garage will also cover issues related to working with personal data, research ethics, best practices in biomedical research. 
+Note: all garages are open to all people.
+
+General garage (CS Building)
+----------------------------
+-  Days: Every Thursday, 13-14
+-  Time: 13-14, we may leave after 30 minutes if there is no one (this
+   rarely happens).
+-  Location: Usually A106_ in the CS building, but see below.
 
 .. _U121a: http://usefulaaltomap.fi/#!/select/main-U121a
 .. _U121b: http://usefulaaltomap.fi/#!/select/main-U121b
@@ -46,22 +46,25 @@ Schedule
    :header-rows: 1
    :delim: |
 
-   Date (default Th)  | Time (default 13:00-14:00)  | Loc   | Topic
-    6.jun  | 13-14   | A106  |
-   13.jun  | 13-14   | A106  |
-   20.jun  | 13-14   |       |  No garage, Juhannus Friday
-   27.jun  | 13-14   | A106  |
-    4.jul  | 13-14   | A106  |
-   11.jul  | 13-14   | A106  |
-   18.jul  | 13-14   | A106  |
-   25.jul  | 13-14   | A106  |
-    1.aug  | 13-14   | A106  |
-    8.aug  | 13-14   | A106  |
-   15.aug  | 13-14   | A106  |
-   22.aug  | 13-14   | A106  |
-   29.aug  | 13-14   | A106  |
+   Date (default Th)  | Time (default 13:00-14:00)  | Loc
+   Thursdays 4.sep - 19.dec  | 13-14   | A106
 
-Autumn: Already booked, every Thursday 13-14 A106 until 19.dec.
+NBE garage, F-building
+----------------------
+
+We are piloting also a data & science garage at NBE every first
+wednesday of the month, room F336 13:00. NBE garage will also cover
+issues related to working with personal data, research ethics, best
+practices in biomedical research.
+
+.. csv-table::
+   :header-rows: 1
+   :delim: |
+
+   Date (default Th)  | Time (default 13:00-14:00)  | Loc
+   First wednesdays  | 13-14   | F336
+
+
 
 Topics
 ======
