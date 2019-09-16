@@ -2,22 +2,18 @@
 Scicomp garage
 ==============
 
-The Aalto Scicomp Garage is a help session for scientific computing at
-Aalto organized by the Science-IT team (Triton admins).  It's the best
+The Aalto Scicomp Garage is a hands-on help session for scientific computing
+and data-intensive research at
+Aalto organized by the Science-IT team (Triton/HPC support).  Other
+teams are sometimes present, such as CSC.  It's the best
 time to talk to the people behind scientific computing at Aalto.  This
 is a place to get stuff done, so bring your laptop and coffee/food,
 and come hang out.
 
-Most of the time, we are just there to answer questions.
-
-Sometimes, there may be a short presentation on some topic, but you
-can still ask questions to the other staff before, during, and after
-that.
-
 Come if you want to:
 
 -  Solve problems
--  Discuss bigger problems
+-  Discuss what the best strategy are for your problems
 -  Network with others who are doing similar work
 -  Learn something new
 -  Give feedback
@@ -33,6 +29,7 @@ General garage (CS Building)
 -  Time: 13-14, we may leave after 30 minutes if there is no one (this
    rarely happens).
 -  Location: Usually A106_ in the CS building, but see below.
+-  A CSC representative is usually present.
 
 .. _U121a: http://usefulaaltomap.fi/#!/select/main-U121a
 .. _U121b: http://usefulaaltomap.fi/#!/select/main-U121b
