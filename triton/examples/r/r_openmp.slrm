@@ -7,6 +7,6 @@
 #SBATCH --mem=2G
 #SBATCH -o r_openmp.out
 
-module load R
+module load r
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 time srun Rscript --default-packages=methods,utils,stats R-benchmark-25.R

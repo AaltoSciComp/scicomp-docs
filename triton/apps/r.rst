@@ -17,16 +17,18 @@ Simply load the latest R.
     module load r
     R
 
-It is best to pick a version of R and stick with it.  Do ``module
-spider r`` and use the whole name::
+As any packages you install against R are specific to the version you
+installed them with, it is best to pick a version of R and stick with it.
+You can do this by checking the R version with ``module spider r`` and
+using the whole name when loading the module::
 
-  module load r/3.4.3-python-2.7.14
+  module load r/3.6.1-python3
 
 If you want to detect the number of cores, you should use the proper
-Slurm environment variables (defaulting to default)::
+Slurm environment variables (defaulting to all cores)::
 
   library(parallel)
-  as.integer(Sys.getenv('SLURM_JOB_CPUS_PER_NODE', parallel::detectCores()))
+  as.integer(Sys.getenv('SLURM_CPUS_PER_TASK', parallel::detectCores()))
 
 
 Installing packages
@@ -46,25 +48,18 @@ There are two ways to install packages.
    This should guide you to selecting a download mirror and offer you
    the option to install in your home directory.
 
-   Before installing packages you should set a package location,
-   because the default location of the home directory can quickly fill
-   up and loading them from the home directory is very slow.
+   If you have a lot of packages, you can run out of home quota. In this
+   case you should move your package directory to your work directory and
+   replace it the ``~/R``-directory with a symlink that points to your
+   ``$WRKDIR/R``.
+
    Example of doing this is here:
 
    ::
 
-       module load R
-       export R_LIBS=$WRKDIR/R/$EBVERSIONR
-       mkdir -p $R_LIBS
+       mv ~/R $WRKDIR/R
+       ln -s $WRKDIR/R ~/R
 
-   Afterwards setting
-
-   ::
-
-       export R_LIBS=$WRKDIR/R/$EBVERSIONR
-
-   after loading R module will point R to the correct library location
-   (you can put this in your ``.bashrc`` file).
    More info on R library paths can be
    found `here <https://stat.ethz.ch/R-manual/R-devel/library/base/html/libPaths.html>`__.
    Looking at
