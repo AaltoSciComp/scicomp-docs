@@ -26,32 +26,90 @@ Course environment options
 --------------------------
 
 When requesting a course, please read the following and tell us your
-requirements in the course request email.
+requirements in the course request email.  If you are using the hub
+without a specific course item in the selection list, please let us
+know at least 3a, 6, 7, and 8 below.
 
-A course environment consists of:
+Required metadata is:
 
-1. A course slug (of the form ``nameYEAR``, for example ``mlbp2018``)
-   and full name.  (required)
+.. list-table::
 
-2. How many students, how computationally intensive the workload is,
-   how much of peak load you expect during courses or right before
-   deadlines.  Expected processor and memory usage, expected data size
-   both on disk and in memory.  Expected schedule (will everyone be
-   doing an assignment right before the deadline?).  You should
-   strongly discourage people from waiting until the last minute if
-   you have hundreds of students in the course.  We'll provide
-   feedback on how well we can handle the load.  (required)
+   * * 1. Course slug
+     * Permanent identifier of course, of the form ``nameYEAR``, for
+       example ``mlbp2018``) and full name.
 
-3. Course schedule (lectures/exercise sessions/deadlines).  We add
-   this to `our hub calendar
-   <https://calendar.google.com/calendar/embed?src=d01se1d7m4gehcoruig0qkn5e4%40group.calendar.google.com>`__,
-   which is used to avoid maintenance during important times.  You can
-   check the calendar to avoid major deadlines at the same times as
-   other courses.  Note: we've heard that late night deadlines are bad
-   for students well-being, so don't make deadlines late at night just
-   to reduce the peak load on our system.
+   * * 2. Course display name
+     * What students see in the interface
 
-4. (optional, recommended to use the default and add what you need)  A
+   * * 3. Contact
+     * Who to ask about day-to-day matters, could be multiple.  Aalto
+       emails or usernames.
+
+   * *
+     * 3a. Who should be added to the "announcement" issue and gets
+       announcements about updates during the periods.
+
+   * * 4. Supervisor
+     * Long-term staff who can answer questions about old data even if
+       the course TAs move on.  Might be same as contact.  This is the
+       "primary owner" of all data according to the :doc:`Science-IT
+       data policy </aalot/datapolicy>`.
+
+   * * 5. Instructors
+     * Who will have access to the instructor data?  Instructors will
+       be added to a Aalto unix group named ``jupyter-$courseslug`` to
+       provide access control.  To request new instructors, contact
+       CS-IT and ask that people be added/removed from your group
+       ``jupyter-$courseslug``.
+
+   * * 6. Number of students
+     * Just to keep track of expected load and so on.
+
+   * * 7. Course schedule
+     * Sessions when all students will be using it (e.g. lectures,
+       tutorials).  Deadlines when you expect many students will be
+       working. Will be added to `our hub calendar
+       <https://calendar.google.com/calendar/embed?src=d01se1d7m4gehcoruig0qkn5e4%40group.calendar.google.com>`__,
+       to avoid doing maintenance when at critical moments.  Please do
+       whatever you can to de-peak loads, but in reality we can
+       probably handle whatever you throw at as.  Very late night
+       deadlines are usually not good since we often do maintenance
+       then (and are bad for students...).
+
+   * * 8. Expected load
+     * What kind of assignments?  Lots of CPU, memory intensive?
+       Knowing how people use the resources helps us to make things
+       work well.
+
+   * * 9. Course time frame
+     * What periods is the course?  Note: these aren't automatically
+       used yet, you may still have to mail us to make it private or
+       not.
+
+   * *
+     * 9a. Start date - course is in private mode before this
+
+   * *
+     * 9b. End date - course is in private mode after this
+
+   * *
+     * 9c. Archive date - course goes into "archive" mode after this
+       time, no longer visible to instructors.
+
+   * *
+     * 9a. Delete date - data removed.  Not automatic, contacts will
+       get an email to confirm.
+
+
+A course environment consists of (comment on any specifics here):
+
+1. A course directory ``/course``, available only to instructors.
+   This comes by default, with a quota of a few gigabytes (combined with
+   coursedata).  Note: instructors should manage assignments and so on
+   using git or some other version control system, because the course
+   directory lasts only one year, and is renewed for the next year.
+
+2. **Software** (optional, recommended to use the default and add what you need)  A
    list of required software, or a docker container
    containing the Jupyter stack and additional
    software.  By default, we have an image based on the scipy stack
@@ -73,53 +131,13 @@ A course environment consists of:
       need, a more advanced thing would test the libraries a little
       bit - do a minimal, quick calculation.
 
-5. A course directory ``/course``, available only to instructors.
-   This comes by default, with a quota of a few gigabytes (combined with
-   coursedata).  Note: instructors should manage assignments and so on
-   using git or some other version control system, because the course
-   directory lasts only one year, and is renewed for the next year.
-
-6. A list of instructors (Aalto emails or usernames).  Instructors
-   will be added to a Aalto unix group named ``jupyter-$courseslug``
-   to provide access control.  To request new instructors, contact
-   CS-IT and ask that people be added/removed from your group
-   ``jupyter-$courseslug``.
-
-   a. Primary group owner (e.g. main instructor).  Data is stored in a
-      group according to :doc:`Science-IT data policy </aalot/datapolicy>`,
-      and this person is in change of knowing what data exists,
-      granting access and telling us what to do with the data
-      long-term and they should be a long-term staff member.  There
-      can be deputies (e.g. head TA) which can grant access.
-
-   b. People who should be added to the announcement mailing list -
-      these will get updates for updates and maintenance breaks.
-
-   c. Lead contact person, if different from instructor.
-
-7. (optional, not recommended)  A list of students (Aalto usernames).
-   This can be null if anyone
-   with an Aalto account should be able to access the environment
-   (this is recommended to be as open as possible and to save manual
-   effort).  If you provide a list of students, you will have to
-   request manual effort every time it changes, so this is *not
-   recommended*.
-
-   a. Should non-students be allowed to spawn the environment?
-      Default yes...
-
-8. Should the image start in "private mode", where only instructors
-   and students from the previous point can start the course
-   environment?  From our side, there is no major disadvantage to
-   going public from the start.
-
-9. (optional, not recommended) A list of computational resources per
+3. **Computational resources** (optional, not recommended) A list of computational resources per
    image.  Default is currently 2GB and 4 processors (oversubscribed).
    Note that because this is a container, *only* the memory of the
    actual Python processes are needed, not the rest of the OS, and
    memory tends to be quite small.
 
-10. Shared data directories.  If you have nontrivial data which needs
+4.  **Shared data directories.**  If you have nontrivial data which needs
     distributing, consider one of these shared directories which saves
     it from being copied over and over.  The notebook directory itself
     can only support files of up to 2MB to prevent possible problems.
@@ -144,10 +162,3 @@ A course environment consists of:
        your notebooks.  This is easy for hub use, but makes it harder
        to copy the notebooks out of the hub to use on your own
        computers.  This is something we are working on.
-
-12. Time period and expiry date - default is six months after the
-    course is over, by which time data will be removed.  But if it will
-    be used the next year, then we'll keep it up until then.  We
-    intentionally replace the course directories every year both for
-    security and to encourage you to use maintainable processes!
-
