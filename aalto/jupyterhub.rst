@@ -160,8 +160,7 @@ FAQ and bugs
 * **I started the wrong environment and can't get back to the course
   selection list.**  In JupyterLab, use the menu bar, "Hub->Control
   Panel".  On the classic notebooks, use the "Control panel" button on
-  the top right.  Unfortunately JupyterLab isn't made so intuitively
-  and there's not much we can do about it.  (Emergency backup: you can
+  the top right.  (Emergency backup: you can
   always change the URL path to ``/hub/home``).
 
 * **Is JuptyerLab available?** Yes, and it's nice.  There are two
@@ -184,8 +183,15 @@ FAQ and bugs
   specialist software.  It should be in standard repositories (conda
   or pip for Python stuff).
 
+* **Can I do stuff with my class's assignments and not have it
+  submitted?**  You have your personal storage space ``/notebooks/``,
+  which you can use for whatever you want.  You can always make a copy
+  of the assignment files there and play around with them as much as
+  you want - even after the course is over, of course.
+
 * **Are there other programming languages available?** Currently there
-  is only Python, but we could install other open-source languages.
+  is Python, R, and Julia.  More could be added if there is a good
+  Jupyter kernel for it.
 
 * **What can I use this for?** Intended uses include anything related
   to courses, own exploration of programming, own data analysis, and
