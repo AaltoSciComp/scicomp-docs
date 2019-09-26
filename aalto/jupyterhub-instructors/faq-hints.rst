@@ -77,3 +77,14 @@ Instructions/hints
 
 - A notebook can tell if it is in the hub environment if the
   ``AALTO_JUPYTERHUB`` environment variable is set.
+
+
+
+FAQ
+---
+
+- **Something with nbgrader is giving an error in the web browser**.
+  Try running the equivalent command from the command line.  That will
+  usually give you more debugging information, and may tell you what
+  is going wrong.
+
