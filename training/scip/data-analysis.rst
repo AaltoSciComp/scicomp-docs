@@ -94,7 +94,6 @@ class in the classwork-2018 branch.  By day, we have covered:
 
   * 01_Course_intro_and_Jupyter.ipynb
   * 02_Jupyter_demo_pi.ipynb
-  * 04_Installing_jupyter_kernels.ipynb
   * python/01_Python_intro.ipynb
   * python/02_Python_data_types_and_structures.ipynb
   * python/03_Numpy.ipynb
