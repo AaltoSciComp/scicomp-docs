@@ -55,7 +55,7 @@ Aalto software
 ~~~~~~~~~~~~~~
 
 There is a `Windows software self-service portal
-<https://inside.aalto.fi/display/ITServices/Self-service+portal+for+Windows+workstations>`__
+<https://www.aalto.fi/en/services/self-service-portal-for-requesting-windows-software-installations>`__
 which can be used to install some software automatically.
 
 Installing other software
