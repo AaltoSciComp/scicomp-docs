@@ -230,11 +230,20 @@ requests for software in these so that it is automatically available.
 
 Installing kernels from virtualenvs or Anaconda environments
 ------------------------------------------------------------
-* Activate the environment (however you do it normally)
-* (Install ipykernel if not already there: do this if next step does
-  not work: ``pip install ipykernel``)
-* ``python -m ipykernel
-  install --user --name=python-YOURENV --display-name="YOUR-ENV"``
+You can do this::
+
+  module load jupyterhub/live
+  envkernel conda --user --name INTERNAL_NAME --display-name="My conda" /path/to/conda_env
+
+Or for Python virtualenvs::
+
+  module load jupyterhub/live
+  envkernel virtualenv --user --name INTERNAL_NAME --display-name="My virtualenv" /path/to/conda_env
+
+You have to have the package ``ipykernel`` installed in the
+environment: activate the environment and do ``pip install
+ipykernel``.
+
 
 Install your own kernels from other modules
 -------------------------------------------
