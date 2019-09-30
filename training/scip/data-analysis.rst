@@ -90,20 +90,25 @@ been presented, it may still change.  The links below go to the “raw”
 notebooks, and you can find the work and “solutions” we have done in
 class in the classwork-2018 branch.  By day, we have covered:
 
-* Day 1: Notebooks 01_Course_intro_and_Jupyter.ipynb ,
-  02_Jupyter_demo_pi.ipynb, and r/01_Introduction_to_R.ipynb .
-* Day 2: Notebooks 03_Update_course_git.ipynb,
-  r/02_Summaries_and_Groups.ipynb, r/03_Data_Access.ipynb .
-* Day 3: Notebooks r/04_Joining.ipynb, r/05_Lists_and_Functions.ipynb,
-  r/06_Models_Nests_and_Maps.ipynb, and r/07_R_in_Triton.ipynb .
-* Day 4: Notebooks python/01_Python_intro.ipynb,
-  python/02_Python_data_types_and_structures.ipynb,
-  python/03_Numpy.ipynb, python/04_Pandas.ipynb (first portion).
-* Day 5: 04_Pandas.ipynb (remainder), python/05_Python_IO.ipynb,
-  python/6_Pandas_split-apply-combine.ipynb,
-* Day 6: python/7_Pandas_parallel.ipynb,
-  python/8_Profiling_and_debugging.ipynb, python/9_Matplotlib.ipynb,
-  04_Installing_jupyter_kernels.ipynb,
+* Day 1: Python
+
+  * python/01_Course_intro_and_Jupyter.ipynb
+  * python/02_Jupyter_demo_pi.ipynb
+  * python/01_Python_intro.ipynb
+  * python/02_Python_data_types_and_structures.ipynb
+  * python/03_Numpy.ipynb
+  * python/10_Tidy_data.ipynb
+  * python/04_Pandas.ipynb (or moved to next day)
+
+* Day 2: Python
+
+* Day 3: Python, plotting
+
+* Day 4: R
+
+* Day 5: R
+
+* Day 6: R
 
 To get the repository::
 
