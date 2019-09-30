@@ -92,13 +92,14 @@ class in the classwork-2018 branch.  By day, we have covered:
 
 * Day 1: Python
 
-  * python/01_Course_intro_and_Jupyter.ipynb
-  * python/02_Jupyter_demo_pi.ipynb
+  * 01_Course_intro_and_Jupyter.ipynb
+  * 02_Jupyter_demo_pi.ipynb
+  * 04_Installing_jupyter_kernels.ipynb
   * python/01_Python_intro.ipynb
   * python/02_Python_data_types_and_structures.ipynb
   * python/03_Numpy.ipynb
   * python/10_Tidy_data.ipynb
-  * python/04_Pandas.ipynb (or moved to next day)
+  * python/04_Pandas.ipynb (or moved to the next day)
 
 * Day 2: Python
 
