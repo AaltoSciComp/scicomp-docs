@@ -88,7 +88,9 @@ https://github.com/AaltoScienceIT/python-r-data-analysis-course.  Note
 that it is a work in progress and until (and even after) something has
 been presented, it may still change.  The links below go to the “raw”
 notebooks, and you can find the work and “solutions” we have done in
-class in the classwork-2018 branch.  By day, we have covered:
+class in the `classwork-2019 branch`_.  By day, we have covered:
+
+.. _classwork-2019 branch: https://github.com/AaltoScienceIT/python-r-data-analysis-course/tree/classwork-2019
 
 * Day 1: Python
 
@@ -97,10 +99,13 @@ class in the classwork-2018 branch.  By day, we have covered:
   * python/01_Python_intro.ipynb
   * python/02_Python_data_types_and_structures.ipynb
   * python/03_Numpy.ipynb
-  * python/10_Tidy_data.ipynb
-  * python/04_Pandas.ipynb (or moved to the next day)
 
 * Day 2: Python
+
+  * python/03_Numpy.ipynb
+  * python/10_Tidy_data.ipynb
+  * python/04_Pandas.ipynb (or moved to the next day)
+  * Time handling
 
 * Day 3: Python, plotting
 
