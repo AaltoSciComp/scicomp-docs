@@ -45,6 +45,7 @@ General garage (CS Building)
 
    Date (default Th)  | Time (default 13:00-14:00)  | Loc
    Thursdays 4.sep - 19.dec  | 13-14   | A106
+   3.oct     | 13-15   | outside T1 - no garage, visit us at CS research day instead
 
 NBE garage, F-building
 ----------------------
