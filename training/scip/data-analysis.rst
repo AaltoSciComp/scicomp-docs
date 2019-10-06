@@ -109,6 +109,13 @@ class in the `classwork-2019 branch`_.  By day, we have covered:
 
 * Day 3: Python, plotting
 
+  * python/04_Pandas.ipynb (continuing from previous lecture)
+  * python/05_Python_IO.ipynb
+  * python/06_Pandas_split_apply_combine.ipynb
+  * python/08_Profiling_and_debugging.ipynb (if time allows)
+  * python/09_Matplotlib.ipynb
+  * Presentation of homework exercises (if time allows)
+
 * Day 4: R
 
 * Day 5: R
