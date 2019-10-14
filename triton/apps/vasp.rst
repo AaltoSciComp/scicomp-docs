@@ -27,7 +27,7 @@ VASP 5.4.4
 ==========
 
 The binaries are compiled with the Intel compiler suite and the MKL
-library, the used toolchain module is ``iomklc/triton-2017a``. Example
+library, the used toolchain module is ``intel/2019a``. Example
 batch script
 
 ::
@@ -37,11 +37,29 @@ batch script
    #SBATCH -t 0-6
    #SBATCH --mem-per-cpu=1500
    ml vasp/5.4.4
-   srun vasp_std
+   mpirun vasp_std
 
+Note that contrary to our usual instructions where we strongly
+recommend to use ``srun`` to launch MPI applications, here we must use
+``mpirun`` as the ``srun`` launcher does not work when using Intel
+MPI.
+
+
+Potentials
+==========
+
+Potentials are stored at ``/share/apps/vasp/pot``.
+
+
+
+Old VASP versions (obsolete, for reference only!)
+=================================================
+
+These old versions are unlikely to work as they use old MPI and IB
+libraries that have stopped working due to upgrades over the years.
 
 VASP 5.4.1
-==========
+~~~~~~~~~~
 
 Currently the binaries are compiled with GFortran instead of Intel
 Fortran (the Intel Fortran binaries crashed, don't know why yet).
@@ -57,13 +75,7 @@ Example batch script
     module load vasp/5.4.1-gmvolf-triton-2016a
     srun vasp_std
 
-Potentials
-==========
 
-Potentials are stored at ``/share/apps/vasp/pot``.
-
-VASP on old triton (obsolete, for reference only!)
-==================================================
 
 For each VASP version, there are two binaries compiled with slightly
 different options:
