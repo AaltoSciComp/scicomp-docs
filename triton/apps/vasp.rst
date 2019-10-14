@@ -37,11 +37,11 @@ batch script
    #SBATCH -t 0-6
    #SBATCH --mem-per-cpu=1500
    ml vasp/5.4.4
-   mpirun vasp_std
+   mpiexec vasp_std
 
 Note that contrary to our usual instructions where we strongly
 recommend to use ``srun`` to launch MPI applications, here we must use
-``mpirun`` as the ``srun`` launcher does not work when using Intel
+``mpiexec`` as the ``srun`` launcher does not work when using Intel
 MPI.
 
 
