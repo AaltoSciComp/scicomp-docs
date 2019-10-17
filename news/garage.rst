@@ -2,13 +2,16 @@
 Scicomp garage
 ==============
 
-The Aalto Scicomp Garage is a hands-on help session for scientific computing
-and data-intensive research at
-Aalto organized by the Science-IT team (Triton/HPC support).  Other
-teams are sometimes present, such as CSC.  It's the best
-time to talk to the people behind scientific computing at Aalto.  This
-is a place to get stuff done, so bring your laptop and coffee/food,
-and come hang out.
+The Aalto Scientific Computing Garage is a hands-on help session for
+scientific computing and data-intensive research at Aalto organized by
+the Science-IT team (Triton/HPC support).  Other teams, such as CSC,
+are sometimes present.  It's the best time to get advice and hands-on
+help from the people behind scientific computing at Aalto.  This is a
+place to get stuff done, so bring your laptop and coffee/food, and
+come hang out.
+
+If you need more help than the issue trackers, this is the place to
+be.  It's not just Triton, but all aspects of scientific computing.
 
 Come if you want to:
 
