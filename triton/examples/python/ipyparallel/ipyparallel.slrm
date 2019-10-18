@@ -8,7 +8,7 @@ ipcontroller --ip="*" &
 sleep 5
 # Run the engines in slurm job steps (makes four of them, since we use
 # the -N slurm option)...
-srun ipengine --location=`hostname -f` &
+srun ipengine --location=$(hostname -f) &
 
 sleep 5
 # Put the actual Python isn't in a job step.  This is assuming that
