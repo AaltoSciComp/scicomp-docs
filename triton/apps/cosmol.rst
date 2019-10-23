@@ -14,6 +14,7 @@ Comsol in Triton is best run in Batch-mode. To check which versions of Comsol ar
           #SBATCH -n 20
 
 	  cd $WRKDIR/my_comsol_directory
+	  module load Java
           module load comsol
 
 	  # Details of your input and output files
