@@ -123,13 +123,20 @@ for the commands we have learned thus far.  How can you make ``rm``
 ask before removing a file?
 
 
-Tab completion
---------------
+History and tab completion
+--------------------------
 
-Annoyed at typing so much?  Everyone is, so shells have **tab
+Annoyed at typing so much?  We've got two ways to make work faster.
+
+First, each shell keeps its **(shell) history**.  By pushing the up
+arrow key, you can access previous lines.  Never type similar things
+twice, go up in history and find the previous line, modify it, then
+push enter to re-run.
+
+Shells also have **tab
 completion**.  Type the first few letters of any command or filename
 and push tab once or twice... it will either complete it or show you
-the options.  This is so important that it's used often, many command
+the options.  This is so important that it's used often, and many command
 arguments can also be completed.
 
 **Exercise:** Play around with tab completion.  Type ``pytho`` and
