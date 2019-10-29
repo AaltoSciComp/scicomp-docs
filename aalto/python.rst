@@ -23,6 +23,10 @@ To use it::
     $ ml anaconda3
     $ source activate neuroimaging
 
+A more up-to-date yet under development version of the environment can be activated with::
+
+    $ source activate neuroimaging2
+
 To see the full list of packages what are installed in the environment, use::
 
     $ conda list
