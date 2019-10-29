@@ -21,6 +21,8 @@ To get some details of the high-throughput computing, take a look at `What is HT
 
 **Course materials:** 
 
+- `The first session material (.zip) <upload/condor_1.2019-10-29.zip>`__
+
 **Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
 
 **Registration:** `register here <https://www.webropolsurveys.com/S/1964EAAB01B1375F.par>`__
