@@ -144,3 +144,7 @@ October) at 12:00.  To return, create a repository at
 account, you can send a ``.tar.gz`` or ``.zip`` archive to Janne as
 attachment via email, or create a repo e.g. on ``gitlab.com`` (make
 sure to make it private, and share it with Janne only!).
+
+**Update: For exercise 4, the ntsb.gov site is down, so we have
+mirrored the data needed at:**
+https://users.aalto.fi/~tuomiss1/rcourse/elfaro.kmz
