@@ -137,8 +137,8 @@ To set up the git merge and diff hooks (Triton magic), copy and paste these insi
 The homework is in the git repository in the ``/homework``
 directory. A README file in that directory explains the instructions:
 just take each notebook as a starting point and try to solve the
-exercise inside of it.  The deadline to return is 31.10 (last day of
-October) at 12:00.  To return, create a repository at
+exercise inside of it.  The deadline to return is 15.11 (middle of
+November) at 12:00.  To return, create a repository at
 ``version.aalto.fi`` and send Janne a link to a commit in the repo
 (make sure to share it with Janne first!). If you don't have an Aalto
 account, you can send a ``.tar.gz`` or ``.zip`` archive to Janne as
