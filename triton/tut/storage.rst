@@ -221,7 +221,8 @@ Rsync
 
 Rsync is similar to sftp, but is smarter at restarting files.  Use rsync
 for large file transfers.  ``rsync`` actually uses ``ssh``, so
-you can ``rsync`` from anywhere you can ``ssh`` from.
+you can ``rsync`` from anywhere you can ``ssh`` from. ``Rsync`` is installed 
+by default on Linux and Mac terminals. On Windows machines we recommend using `GIT-bash <https://gitforwindows.org/>`__.
 
 While there are better places on the internet to read about rsync, it is good
 to try it out to sychronise a local folder on your triton's scratch. Sometimes
@@ -237,7 +238,7 @@ If you might want to just check if your local files are different from the remot
 
     rsync --dry-run -avzc ...
 
-Sometimes you want to copy only certain files. E.g. go through all folders, consider only files ending with `py`::
+Sometimes you want to copy only certain files. E.g. go through all folders, consider only files ending with ``py``::
     
     rsync -avzc --include '*/' --include '*.py' --exclude '*' ...
 
