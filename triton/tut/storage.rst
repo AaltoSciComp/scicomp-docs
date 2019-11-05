@@ -216,6 +216,13 @@ Below is an example of the "raw" sftp usage::
     user@pc123 $ sftp -b - user12@triton:/scratch/work/USERNAME/ <<< 'put testCluster.m'
     ...
 
+With all modern OS it is also possible to just open your OS file manager (e.g. Nautilus on Linux) and just put as address in the bar::
+
+    sftp://triton.aalto.fi
+
+If you are connecting from remote and cannot use the VPN, you might connect instead to department machines like kosh, taltta, amor. 
+
+
 Rsync
 ^^^^^
 
