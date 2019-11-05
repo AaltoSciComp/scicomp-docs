@@ -223,6 +223,32 @@ Rsync is similar to sftp, but is smarter at restarting files.  Use rsync
 for large file transfers.  ``rsync`` actually uses ``ssh``, so
 you can ``rsync`` from anywhere you can ``ssh`` from.
 
+While there are better places on the internet to read about rsync, it is good
+to try it out to sychronise a local folder on your triton's scratch. Sometimes
+the issue with copying files is related to group permissions. This command takes
+care of permissions and makes sure that all your local files are identical (= same
+MD5 fingerprint) to your remote files::
+
+    rsync -avzc -e "ssh" --chmod=g+s,g+rw --group=GROUPNAME PATHTOLOCALFOLDER USERNAME@triton.aalto.fi:/scratch/DEPT/PROJECTNAME/REMOTEFOLDER/ 
+
+Replease the bits in CAPS with your own case. Briefly, -a tries to preserve all attributes of the file, -v verbose to see what rsync is doing, -z use compression, -c skip files that have identical MD5 checksum, -e specify to use ssh (not necessary but needed for the commands coming after), --chmod sets the group permissions to shared (as common practice on scratch project folders), --group set the groupname to the group you belong to (note that GROUPNAME == PROJECTNAME on our scratch filesystem).
+
+If you might want to just check if your local files are different from the remote ones. You can then run rsync in "dry run" so that you only see what the command would do, without actually doing anything.::
+
+    rsync --dry-run -avzc ...
+
+Sometimes you want to copy only certain files. E.g. go through all folders, consider only files ending with `py`::
+    
+    rsync -avzc --include '*/' --include '*.py' --exclude '*' ...
+
+Sometimes you want to copy only files under a certain size (e.g. 100MB)::
+
+   rsync -avzc --max-size=100m ...
+
+Rsync does NOT delete files by default, i.e. if you delete a file from the local folder, the remote file will not be deleted automatically, unless you specify the `--delete` option.
+
+Please note that when working with files containing code or simple text, git is a better option to synchronise your local folder with your remote one, because not only it will keep the two folders in sycn, but you will also gain version controlling so that you can revert to previous version of your code, or txt/csv files.
+
 
 Remote mounting using sshfs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
