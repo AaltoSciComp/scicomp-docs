@@ -2489,9 +2489,9 @@ parallel and finished before script's exit.::
  echo THE END
 
 
-Putting ``wait``at very end of the script makes it to wait till all the child processes are
+Putting ``wait`` at very end of the script makes it to wait till all the child processes are
 over and only then exit. Having ``trap`` at very beginning makes sure we kill all the process
-whatever happens to the script. Otherwise they may stay running on their own even if script has
+whatever happens to the script. Otherwise they may stay running on their own even if the script has
 exited.
 
 Another way to run in parallel yet avoiding sending to the background is using ``parallel``.
