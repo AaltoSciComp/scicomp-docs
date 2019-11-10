@@ -30,3 +30,22 @@ so that it can be accessed via remote mounting.
 Don't include large amount of data in the assignment directories -
 there will be at least four, if not more, copies of data made for
 every student.
+
+
+
+Data from other courses
+-----------------------
+
+Sometimes, when you are in course A's environment, you want to access
+the data from course B.  For example, A is the next year's edition of
+the course B, and it could be useful to check the old files.
+
+You can access the files for every course which you are an instructor
+of at the path ``/m/jhnas/jupyter/course/``.  The ``files/``
+sub-directory is the entire course directory for that course, the same
+as ``/course/`` in each course image.  You can also access the course
+data directory at ``data/`` there.
+
+All old courses (for which you are listed as an instructor) are
+available, but if the course is in the "achived" state, you can't
+modify the files.
