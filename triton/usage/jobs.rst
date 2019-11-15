@@ -162,7 +162,9 @@ exit code, in case the jobs did not finish cleanly.
         1052751.3  runtask    2012-04-10T19:09      99M      1M    00:00.003    00:00:30     1    1     1      0:0 COMPLETED
         1052751.4  runtask    2012-04-10T19:09      99M      1M    00:00.003    00:00:30     1    1     1      0:0 COMPLETED
 
-Recognized time forms are *n* min, *n* hours, *n* days, *n* weeks
+Output time information is displayed as days-hours:minutes:seconds.
+
+Recognized time forms for the input parameter are *n* min, *n* hours, *n* days, *n* weeks
 (without space).
 
 *Elapsed* is the wall clock time from job start to finish.
