@@ -107,3 +107,18 @@ The git repository is in ``/course``, but the main subdirectory of
 interest is the ``source/`` directory, which has the original files,
 along with whatever other course notes/management files you may have
 which are under ``/course``.  Everything else is auto-generated.
+
+
+Autograding
+-----------
+
+.. seealso:
+
+   :doc:`autograding`
+
+.. warning::
+
+   ``nbgrader autograde`` is not secure, because arbitrary student
+   code is run with instructor permissions.  Read more from the
+   instructor page.
+
