@@ -21,6 +21,7 @@ JupyterHub for instructors
    course-data
    nbgrader
    nbgrader-hints
+   autograding
    public-copy
    faq-hints
 

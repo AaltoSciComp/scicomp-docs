@@ -70,11 +70,6 @@ To use nbgrader:
   well, but we have tried to patch it in order to do this.  We may
   still have missed some things here.
 
-- To autograde from the command line, add the option
-  ``--Autograde.create_student=True`` so that it will automatically
-  add students to the grader database.  This happens automatically if
-  you click the lightning bolt to autograde from the Formgrader UI.
-
 
 
 Version control of course assignments
@@ -112,22 +107,3 @@ The git repository is in ``/course``, but the main subdirectory of
 interest is the ``source/`` directory, which has the original files,
 along with whatever other course notes/management files you may have
 which are under ``/course``.  Everything else is auto-generated.
-
-
-
-
-Autograding
------------
-
-.. warning::
-
-   ``nbgrader autograde`` is not secure, because arbitrary student
-   code is run with instructor permissions.  Contact us to use our
-   autograding system, doing it yourself puts security of your course
-   materials and privacy of students at risk.
-
-nbgrader is `not secure
-<https://github.com/jupyter/nbgrader/issues/483>`__, because it runs
-the student's code as the instructor.  We have a custom-build solution
-using our own grading server.  Contact us and we can do autograding
-for you.  We have to run it manually, so please batch the requests.
