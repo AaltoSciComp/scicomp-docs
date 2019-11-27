@@ -87,18 +87,21 @@ Required metadata is:
        not.
 
    * *
-     * 9a. Start date - course is in private mode before this
+     * 9a. Public date - course automatically becomes public on this
+       date (until then, students can't see it).
 
    * *
-     * 9b. End date - course is in private mode after this
+     * 9b. Hide date - course automatically goes back to private mode
+       on this date. (it's fine and recommended to give a long buffer
+       here).
 
    * *
      * 9c. Archive date - course goes into "archive" mode after this
-       time, no longer visible to instructors.
+       time, gets hidden from instructors, too.
 
    * *
      * 9a. Delete date - data removed.  Not automatic, contacts will
-       get an email to confirm.
+       get an email to confirm (we aren't crazy).
 
 
 A course environment consists of (comment on any specifics here):
