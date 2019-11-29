@@ -53,7 +53,8 @@ Editing and viewing files
 
 ``nano`` is an **editor** which allows you to **edit files** directly
 from the shell.  This is a simple console editor which always gets the
-job done.
+job done.  Use *Control-x* (control and x at the same time), then
+``y`` when requested and *enter*, to save and exit.
 
 ``less`` is a **pager** (file viewer) which lets you **view files**
 without editing them.  (``q`` to quit, ``/`` to search, ``n`` / ``N``
