@@ -65,6 +65,22 @@ match more closely to real work.
 
 
 
+Autograding at Aalto
+--------------------
+1. Design your notebook well
+2. Collect your notebooks using the nbgrader interface.  Don't click
+   any "autograde" buttons (unless you check the notebook yourself
+   first).
+3. Send an email to guru asking specifying your course and assignment
+   and ask for autograding.  We will run *actually* secure autograding
+   on our server soon, and send you a report on what worked or
+   didn't.  Everything gets automatically updated in your environment.
+4. Proceed as normal, for example...:
+5. If autograding didn't work for some people, you can check them,
+   modify if needed, and re-run the autograding yourself (since you
+   just checked it).
+
+
 Designing notebooks for autograding
 -----------------------------------
 
