@@ -189,7 +189,8 @@ creative, and use the most common license that serves your needs.
 Top-level recommendations:
 
 #. Use this nice site: https://choosealicense.com/. It contains
-   everything you need to know, including what is here.
+   everything you need to know, including what is here. If you need
+   something more specific you can have a look at http://oss-watch.ac.uk/apps/licdiff/.
 #. **MIT** for software which should be basically public domain,
    **Apache 2.0** for larger almost-public domain things (the Apache
    license protects more against patent trolling). Anyone can
