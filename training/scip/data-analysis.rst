@@ -48,7 +48,7 @@ employees and students.
 
 **Credits:** Credits available for the Aalto students and course
 certificate can be provided on request for the outsiders. Full course
-hours correspond roughly to 2 ECTS. Students who wish to get a
+hours correspond roughly to 1 ECTS. Students who wish to get a
 certificate should hand in the homework assignments and participate to
 at least 4 of 6 lectures.
 
