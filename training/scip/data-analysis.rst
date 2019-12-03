@@ -44,7 +44,7 @@ the main building)
 **Cost:** Free of charge for FGCI consortium members including Aalto
 employees and students.
 
-**Registration:** `regisration is open <https://www.webropolsurveys.com/S/427A39987ED882BA.par>`__
+**Registration:** `registration is open <https://www.webropolsurveys.com/S/427A39987ED882BA.par>`__
 
 **Credits:** Credits available for the Aalto students and course
 certificate can be provided on request for the outsiders. Full course
