@@ -72,9 +72,9 @@ Hardware
 Software
 ========
 First thing first, you DO NOT have a sudo right in Aalto classroom
-machines and you never will. We provide mostly used SW and if you need
-more you could inquire via servicedesk@aalto.fi.  We try to have good
-base software.
+machines and you never will. We provide the most used SW and if you need
+more you could inquire via servicedesk@aalto.fi.  We try to have a good
+base software that covers most people's needs.
 
 .. csv-table::
    :header-rows: 1
@@ -82,9 +82,9 @@ base software.
 
    What?  |  How?
 
-   Python via Anaconda | ``module load anaconda3`` (anaconda2 for Python2)
+   Python via Anaconda | ``module load anaconda3`` (anaconda3 for Python2)
    Python (system) | Default available
-   Tensorflow | in the Python environments
+   Tensorflow | in the Python environments, e.g. anaconda3 above
 
 
 Modules
@@ -96,7 +96,7 @@ are some sample commands:
 .. include:: /triton/ref/modules.rst
 
 There are some modules set up specifically for different courses: if
-you just load the environment, you will have everything you need.
+you just load the environment with "module load", you will have everything you need.
 
 Read the details in `Module environment page <http://scicomp.aalto.fi/triton/apps/index.html#module-environment>`_.
 
@@ -130,7 +130,7 @@ Assume we are in Paniikki and wants to do our homework for CS-E4820 Machine Lear
 	$ module purge
 
 
-Example 2: general Python software
+Example 2: General Python software
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Need Python and general software?  The anaconda modules have Python, a
 bunch of useful scientific and data packages, and machine learning
