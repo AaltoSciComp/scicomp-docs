@@ -82,7 +82,7 @@ base software that covers most people's needs.
 
    What?  |  How?
 
-   Python via Anaconda | ``module load anaconda3`` (anaconda3 for Python2)
+   Python via Anaconda | ``module load anaconda3`` (anaconda3 for Python3)
    Python (system) | Default available
    Tensorflow | in the Python environments, e.g. anaconda3 above
 
