@@ -102,7 +102,27 @@ After job has finished, you can use ``slurm history`` to obtain the
 
    sacct -j INSERT_JOBID_HERE -o comment -p
 
-This will show the GPU utilization.
+This will show the GPU utilization.  If this is low, then what?  Check
+the normal ``seff`` command and see if the CPU utilization is 100%.
+This could mean that the GPUs are not able to supply data fast enough,
+see the section on CPUs below.  Similarly, your code may not be able
+to load data fast enough, see the input/output section below.
+
+Also, is your code itself efficient enough?  Are you using the
+framework pipelines the way they should work?  Is it only using GPU
+for a small portion of the entire task?  `Amdahl's law
+<https://en.wikipedia.org/wiki/Amdahl's_law>`__ of parallelization
+speedup is relevant here.
+
+Enough CPUs
+~~~~~~~~~~~
+
+When using a GPU, you need to also request enough CPUs to supply the
+data to the process.  So, increase the number of CPUs you request so
+that you can provide the GPU with enough data.  However, don't request
+too many: then, there aren't enough CPUs for everyone to use the GPUs,
+and they go to waste!  (For the K80 nodes, we have only 1.5 CPUs per
+GPU, but on all others we have 4-6 CPUs/GPU)
 
 Input/output
 ~~~~~~~~~~~~
@@ -115,7 +135,8 @@ improvement of our server-grade GPUs compared to desktop models.
 
 If you are loading lots of data, package the data into a container
 format first: lots of small files are your worst enemy, and we have a
-:doc:`dedicated page on small files <../usage/smallfiles>`.
+:doc:`dedicated page on small files <../usage/smallfiles>`.  Each
+framework has a way to do this efficiently in a whole pipeline.
 
 If your dataset consists of individual files and it is not too big,
 it is a good idea to have the data stored in one file, which is then
@@ -123,16 +144,6 @@ copied to nodes ramdisk ``/dev/shm`` or temporary disk ``/tmp``.
 
 If your data is too big to fit to the disk, we recommend that you
 contact us for efficient data handling models.
-
-Enough CPUs
-~~~~~~~~~~~
-
-When using a GPU, you need to also request enough CPUs to supply the
-data to the process.  So, increase the number of CPUs you request so
-that you can provide the GPU with enough data.  However, don't request
-too many: then, there aren't enough CPUs for everyone to use the GPUs,
-and they go to waste!  (For the K80 nodes, we have only 1.5 CPUs per
-GPU, but on all others we have 4-6 CPUs/GPU)
 
 Other
 ~~~~~
