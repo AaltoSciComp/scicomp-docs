@@ -16,10 +16,12 @@ Production code vs research code
 Yes, many things about software development may not apply to you:
 
 * Production code:
+
   * you sort of know what the target is
   * code is the main result
 
 * Research code:
+
   * you don't know what the target is
   * code is secondary
 
