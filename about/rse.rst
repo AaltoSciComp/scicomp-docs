@@ -83,7 +83,10 @@ We strongly prefer good computational researchers (PhD level
 preferred) who can improve their software development skills than the
 other way around.  This role can be combined with other roles, but
 note that this is not targeted to those who intend to follow a
-tenure-track academic career path.
+tenure-track academic career path.  New RSEs will get a training
+period which rounds out any missing skills.  They will also be
+involved in a complete support package: they will have the chance to
+be involved in teaching an infrastructure development.
 
 
 
