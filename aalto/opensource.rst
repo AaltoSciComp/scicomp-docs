@@ -140,8 +140,10 @@ Step-by-step guide for release under this policy
    may be someone lower too.
 
 #. You are responsible for making sure that you have the right to
-   release your code. For example, that any other included software has
-   compatible licenses.
+   release your code. For example, that there are no other agreements
+   other rights (intellectual property and privacy), legal
+   restrictions, or anything else restricting a release. Also, any
+   other included software must have compatible licenses.
 
 #. Put a copyright license in the source repository. In the best case,
    each individual source file should list copyright and authors, but in
