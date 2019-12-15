@@ -13,8 +13,8 @@ from the required bureaucratic exercise.  It is true that researches
 focus on the next paper.  Data has long-term value even inside Aalto,
 and if you don't try hard it will get lost.
 
-Practical DMP
-=============
+Actual plan
+===========
 
 In this section, we outline recommend ways to use Aalto resources for
 different use cases.
@@ -35,8 +35,8 @@ work together because you can't share information.  For this, see the
 
 
 
-Funder DMP
-==========
+Funder plan
+===========
 
 There are plenty of other good resources about making funder DMPs.
 
@@ -46,15 +46,14 @@ There are plenty of other good resources about making funder DMPs.
 * The Aalto RDM pages have a subsection dedicated to `data management
   plans <aaltordm_>`_.
 
-.. _aaltordm: http://www.aalto.fi/en/research/research_data_management/data_management_planning/
-
-
 * The `DMPTuuli <https://www.dmptuuli.fi/>`_ is a combination
   template, instructions, and web form which makes it easy to do the
   mechanical assembly of DMPs.  They also have `public docx/pdf
   templates <dmptuuli_templates_>`_ which can be used even without the
   web form.  Aalto recommends this service, though be aware it helps
   you fill out a form, not plan your work.
+
+.. _aaltordm: http://www.aalto.fi/en/research/research_data_management/data_management_planning/
 
 As some concrete suggestions:
 
@@ -187,15 +186,11 @@ something useful, too.
      check your journal requirements and request ethical evaluation
      anyway.
 
-.. _apdp: https://inside.aalto.fi/display/AboutAalto/Aalto+University+Personal+Data+Policy
-.. _arec: https://inside.aalto.fi/display/AboutAalto/Research+Ethics+Committee
-
    - Data always will be made available under the `Aalto data
      management policy <aodp_>`_.  (You can commit to this, because
      the policy only says you should make decisions "strategically" so
      there are actually no obligations.)
 
-.. _aodp: https://inside.aalto.fi/download/attachments/50234575/2016_02_10_datapolicy.pdf?version=1&modificationDate=1455967763618&api=v2
 
    - Software will be made open source if it matches the criteria under the :doc:`Aalto open source
      policy <../aalto/opensource>`.  If software exceeds that
@@ -260,5 +255,11 @@ something useful, too.
    - You can say that organization of data is a part of research,
      though the extra requirements needed to open are small.  Give
      some estimate of the total/extra amount of work needed.
+
+.. _apdp: https://inside.aalto.fi/display/AboutAalto/Aalto+University+Personal+Data+Policy
+
+.. _arec: https://inside.aalto.fi/display/AboutAalto/Research+Ethics+Committee
+
+.. _aodp: https://inside.aalto.fi/download/attachments/50234575/2016_02_10_datapolicy.pdf?version=1&modificationDate=1455967763618&api=v2
 
 .. _ardm_pub: http://www.aalto.fi/en/research/research_data_management/open_access_to_research_data/
