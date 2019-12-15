@@ -12,7 +12,7 @@ General
 
 To export grades, ``nbgrader export`` is your central point.  It will
 generate a CSV file (using a custom MyCourses exporter), which you can
-download and upload to MyCourses.
+download, check, and upload to MyCourses.
 
 
 

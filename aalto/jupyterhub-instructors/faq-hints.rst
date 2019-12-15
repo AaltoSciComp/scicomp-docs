@@ -88,3 +88,12 @@ FAQ
   usually give you more debugging information, and may tell you what
   is going wrong.
 
+- I see **Server not running ... Would you like to restart it?** This
+  particular error also happens if there are temporary network
+  problems (even a few seconds and it comes back).  It doesn't
+  necessarily mean that your server isn't running, but there is no way
+  to recover.  I always tell people: if you see this message, refresh
+  the page.  If the server is still running, it recovers.  If it's
+  actually not running, it will give you the option to restart it
+  again.  If there are still network problems, you'll see an error
+  message saying that.
