@@ -2,8 +2,16 @@
 Welcome, students!
 ==================
 
+.. seealso::
+
+   Primary information is at Aalto's `IT Services for Students
+   <https://www.aalto.fi/en/services/it-services-for-students>`_ page,
+   which focuses on basic services.  This focuses on students in
+   computing and data intensive programs.
+
 Welcome to the Aalto!  We are glad you are interested in scientific
-computing and data.  This site may be useful to you, but are
+computing and data.  `scicomp.aalto.fi <https://scicomp.aalto.fi>`_
+may be useful to you, but is
 somewhat targeted to research usage.  However, it can still
 serve as a good introduction to resources for scientific and
 data-intensive computing at Aalto if you are a student.  This page is
@@ -14,10 +22,12 @@ professor/group leader, you are a researcher!  You should acquaint
 yourself with all information on this site, starting with
 :doc:`welcomeresearchers` and use whatever you need.
 
-General IT instructions can be found at https://it.aalto.fi.  There
+General IT instructions can be found at https://www.aalto.fi/en/it-help.  There
 used to be some on into.aalto.fi, but these are gone now.  There also used
 to be a 2-page PDF introduction for students, but it also seems to be
-gone from online.
+gone from online.  `IT Services for Students
+<https://www.aalto.fi/en/services/it-services-for-students>`_ is
+now the best introduction.
 
 
 
@@ -34,12 +44,8 @@ Getting help
 ============
 
 As a student, the `ITS servicedesks <https://it.aalto.fi/contact>`__
-are the first place to go for help.  The site https://it.aalto.fi is
-the new central site for IT instructions.  Previously, some public
-instructions were on ``https://into.aalto.fi`` (studies focused) and
-``https://inside.aalto.fi`` (staff focused) and finding information
-was a great challenge.  Note that in 2018, all of these are being
-merged somehow, but the dust hasn't settled yet.
+are the first place to go for help.  The site https://www.aalto.fi/en/it-help is
+the new central site for IT instructions.
 
 This site, http://scicomp.aalto.fi, is intended for research
 scientific computing support but has a few page useful to you.
@@ -49,29 +55,31 @@ Computation
 ===========
 
 As a student, you have access to various light computational
-resources.
+resources which are suitable for most courses that need extra power:
 
 .. csv-table::
    :delim: |
 
-   Panikki computer lab | Linux workstations, GPUs, software via modules
+   :doc:`Paniikki computer lab <paniikki.rst>` | Linux workstations, GPUs, software via modules
    Other computer labs | workstations, different OSs
-   Shell servers | via ssh, software via modules, overcrowded
-   JupyterHub | basic software, in web browser
-   Remote desktop | Windows and Linux, https://vdi.aalto.fi
+   `Shell servers <https://www.aalto.fi/en/services/linux-shell-servers-at-aalto>`_ | via ssh, software via modules, overcrowded.  `Brute and Force <https://www.aalto.fi/en/services/servers-for-light-duty-calculation>`_ are for computation, others not.
+   `JupyterHub <jupyterhub>`_ | basic software, in web browser
+   `Remote desktop <https://vdi.aalto.fi>`_ | Windows and Linux
    Own computers | Software at https://download.aalto.fi
 
 The :doc:`Jupyter service <../aalto/jupyterhub>` at
 https://jupyter.cs.aalto.fi is available to everyone with an Aalto
 account.  It provides at least basic Python and R software; we try to
-keep it up to date with the things people need most.
+keep it up to date with the things people need most for courses that
+use programming or data.
 
 The `shell servers
-<https://inside.aalto.fi/display/ITServices/Servers+for+light+computing>`_
+<https://www.aalto.fi/en/services/linux-shell-servers-at-aalto>`_
 ``brute`` and ``force`` are for light computing, and generally for
 students.  You may find them useful, but can often be
-overloaded. :doc:`Learn how to launch Jupyter notebook on there
-<../aalto/remotejupyter>`.
+overloaded. `Light computing shell servers
+<https://www.aalto.fi/en/services/servers-for-light-duty-calculation>`_. :doc:`Learn
+how to launch Jupyter notebook on there <../aalto/remotejupyter>`.
 
 For GPU computing, the :doc:`Paniikki Linux computer lab
 <../aalto/paniikki>` (`map
@@ -82,10 +90,12 @@ has Python, tensorflow, etc.).  Read the :doc:`Paniikki cheatsheet
 here <../aalto/paniikki>`.  The instructions for :doc:`Aalto
 workstations <../aalto/linux>` sort of apply there as well.  The
 software on these machines is managed by the Aalto-IT team.  This is
-the place if you need to play with GPUs, deep learning, etc.
+the place if you need to play with GPUs, deep learning, etc, and helps
+you transition to serious computing on large clusters.
 
 A new (2018) remote desktop service is available at
-https://vdi.aalto.fi.  This provides Windows and Linux desktops and is
+https://vdi.aalto.fi (`instructions <https://www.aalto.fi/en/services/vdiaaltofi-how-to-use-aalto-virtual-desktop-infrastructure>`_).
+This provides Windows and Linux desktops and is
 designed to replace the need for computer classrooms with special
 software installed.  You can access it via a web browser or the VMware
 Horizon client.
@@ -108,7 +118,7 @@ The `IT Services for Research <itsr_>`_ page contains some other cloud
 services which may be useful for data storage.  Of the cloud services,
 note that everyone at Aalto can get an unlimted Google Drive account
 through the Aalto Google Apps service: `instructions
-<https://it.aalto.fi/instructions/google-drive-registration-and-closing-account>`__.
+<https://www.aalto.fi/en/services/google-drive-registration-and-closing-of-an-account>`__.
 Your Aalto Google account will expire once you are no longer
 affiliated, so your files here will become inaccessible.
 
@@ -125,8 +135,8 @@ also http://download.aalto.fi/.  Various scientific software can be
 found for your own use via the Aalto software portals.
 
 
-.. _its_sw: https://inside.aalto.fi/display/ITServices/Software+and+licenses
-.. _its_sw_fi: https://inside.aalto.fi/display/ITPK/Ohjelmistot+ja+lisenssit
+.. _its_sw: https://www.aalto.fi/en/services/softwares-for-staff-and-students-homeuse
+.. _its_sw_fi: https://www.aalto.fi/fi/palvelut/ohjelmistot-henkilokunnan-ja-opiskelijoiden-kotikoneisiin
 .. _its_sw_list: https://inside.aalto.fi/display/ITServices/University+software+licenses
 
 The Lmod (``module``) system provides more software on
@@ -142,7 +152,7 @@ Common software:
    :delim: |
 
    Python | ``module load anaconda3`` on Linux
-   Tensorflow etc packages | same as Python, in Pannikki
+   Tensorflow etc packages | same as Python, in Paniikki
 
 
 
