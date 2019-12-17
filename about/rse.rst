@@ -37,17 +37,20 @@ include:
 
 * Setting up a project in version control with all the features.  This
   also includes version control of data.
-* Creating or automating a workflow, especially using data
-* Optimizing some code
-* Efficiency storing data for intensive analysis
 * Preparing code or data for release and publication
-* Making existing software more modular
+* Creating or automating a workflow, especially those processing data
+  or running simulations
+* Optimizing some code - both for speed and/or adaptability
+* Efficiency storing data for intensive analysis.  Data replication
+  and management.
+* Making existing software more modular and reusable
 * Help properly using, for example, machine learning library
-  pipelines
+  pipelines, instead of hacking things together yourself
 * Setting up automatic software testing
-* Transforming projects from individual to collaborative.
+* Transforming projects from individual to collaborative - either
+  within a group, or open source.
 * Generalized "code clean-up" which takes a project from development
-  to stablalized
+  to stabilized
 
 **Dedicated service:** Our RSEs may also provide
 programming-as-a-service for specific projects.  Normally, this would
@@ -55,7 +58,8 @@ be for larger projects which need long-term support and maintenance,
 including those which just want a service and not necessarily to learn
 how to do it themselves.  As part of this service, one can get:
 
-* Developing or maintaining specific software or services.
+* Developing or maintaining specific software, services, demos, or
+  implementations.
 * Software support that lasts beyond the time frame of a single
   student's attention
 * Software development as a service
