@@ -1,0 +1,33 @@
+========================
+Jan 2020 / Triton Winter Kickstart
+========================
+
+Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
+
+**Audience:** Aalto employees and students just started on Triton.
+
+**About the course:**
+
+Four hours kickstart for Aalto people to get started on Triton, a computational cluster at Aalto. Overall we give you hints, ready solutions and copy/paste examples on how to use computational and storage resources, and how to compile, run and monitor your applications.
+
+Teaching will be interactive, “learning by doing”.
+
+The course is obligatory for all new Triton users and recommended to all interested in the field.
+
+**Time, date:** Mon 20.1, 12:00-16:30 (with a break in between)
+
+**Place:** T-building, T2
+
+**Lecturering by:** Science IT people
+
+**Registration:** `link for registration <https://www.webropolsurveys.com/S/50CE4F5C7D47F656.par>`__
+
+**Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
+
+**No-show:** If you registered but then it has happened so that you can’t attend the course, please let us know!
+
+**Course prerequisite requirements and other details:**
+
+Participants will be provided with access to Triton for running examples. Participants are expected to bring their laptops with the pre-installed SSH client, capable of using a wireless net (preferably Eduroam or Aalto, otherwise Aalto Open).
+
+**Additional course info at:** Ivan Degtyarenko, ivan.degtyarenko -at- aalto.fi
