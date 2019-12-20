@@ -18,6 +18,7 @@ Lectures by date and topics
 .. toctree::
    :titlesonly:
 
+   triton-winter-kickstart
    linux-shell-basics
    gpu-computing
    data-analysis
