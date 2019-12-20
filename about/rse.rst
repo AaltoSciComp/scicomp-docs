@@ -22,7 +22,7 @@ subject to change.**
 For researchers
 ---------------
 
-You program or anylyze data in your daily work, and you know something is missing:
+You program or analyze data in your daily work, and you know something is missing:
 your code and data is less organized, less efficient, less managed than others,
 and it's affecting the quality of your work.  Or maybe you don't know
 how to start your project, or publish it.  You're too busy with the
@@ -60,9 +60,9 @@ how to do it themselves.  As part of this service, one can get:
 
 * Developing or maintaining specific software, services, demos, or
   implementations.
+* Software development as a service
 * Software support that lasts beyond the time frame of a single
   student's attention
-* Software development as a service
 * Adding features to existing software
 
 
