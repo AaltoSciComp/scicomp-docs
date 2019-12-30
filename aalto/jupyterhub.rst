@@ -249,6 +249,9 @@ FAQ and bugs
   We should set this the default, but want to be sure there are no
   problems first.
 
+** **RStudio doesn't appear**.  It seems that it doesn't work from the
+   Edge browser.  We don't know why, but try another browser.
+
 More info
 =========
 
