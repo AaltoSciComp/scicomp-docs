@@ -132,8 +132,15 @@ for researchers and grouped by level of skill needed.
 
 
 
-Metadocs
+About
 ========
+
+.. toctree::
+   :maxdepth: 2
+   :titlesonly:
+
+   about/index
+   README
 
 These docs are open source: all content is licensed under CC-BY 4.0
 and all examples under CC0 (public domain).  Additionally, this is an
@@ -143,10 +150,6 @@ links at the top of every page.  Either make Github issues, pull
 requests, or ask for direct commit access.  Be bold: the biggest
 problem is missing information, and mistakes can always be fixed.
 
-.. toctree::
-   :maxdepth: 1
-
-   README
 
 * :ref:`genindex`
 * :ref:`search`
