@@ -33,7 +33,10 @@ memory, and other storage is not shared.
 On an international scale of universities, the power of Triton is
 relatively high and it has a very diverse range of uses, though `CSC
 has much more <https://research.csc.fi/computing-and-software>`__.  Using
-using this power requires more effort than using your own computer.
+using this power requires more effort than using your own computer -
+you will need to get/be comfortable in the shell, using shell
+scripting, managing software, managing data, and so on.  Triton is a
+good system to use for learning.
 
 
 Getting skills
@@ -104,7 +107,8 @@ Triton, being a shared system, has more complicated software
 requirements.  In an upcoming tutorial, you will learn how to use
 existing software.  Be aware that installing your own is possible (and
 people do it all the time), but does require some attention to
-details.
+details.  Either way, you will need to know the basics of software on
+Linux.
 
 
 What's next?
