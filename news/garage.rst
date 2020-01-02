@@ -42,17 +42,6 @@ General garage (CS Building)
 .. _B121:  http://usefulaaltomap.fi/#!/select/r030-bwing
 .. _F254:  http://usefulaaltomap.fi/#!/select/F-F254
 
-Autumn 2019:
-
-.. csv-table::
-   :header-rows: 1
-   :delim: |
-
-   Date (default Th)  | Time (default 13:00-14:00)  | Loc
-   Thursdays 4.sep - 19.dec  | 13-14   | A106
-   3.oct     | 13-15   | outside T1 - no garage, visit us at CS research day instead
-   12.dec    |         | Cancelled, CodeRefinery in progress
-
 Spring 2020:
 
 .. csv-table::
@@ -60,7 +49,7 @@ Spring 2020:
    :delim: |
 
    Date (default Th)  | Time (default 13:00-14:00)  | Loc
-   Thursdays 9.jan - 18.jun  | 13-14   | A106
+   Thursdays 2.jan - 18.jun  | 13-14   | A106
    12.mar     | 13-14  | room is different, check back for info
 
 NBE garage, F-building
