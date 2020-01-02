@@ -212,6 +212,8 @@ Array jobs have less overhead for accounting and scheduling, but you
 still want them to not be too short. 30 minutes is a good target time,
 so try to combine smaller tasks to fit that.
 
+Want to avoid having a lot of different output files, but still
+
 
 Exercises
 =========
@@ -234,6 +236,9 @@ Exercises
 
 3. Make job array which runs every other index (like 1, 3, 5,
    etc).  You'll have to look at the ``sbatch`` manual page.
+
+4. Make an array job that runs pi 10 times, always logging to the same file,
+   and using a prefix
 
 
 What's next?
