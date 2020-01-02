@@ -4,7 +4,7 @@ Paniikki – Computer Lab For Students
 
 Paniikki is a cutting edge computer lab in the computer science
 department. It is located in `T-building C106
-<http://usefulaaltomap.fi/#!/select/paniikki>`_ (right under lecture
+<https://usefulaaltomap.fi/#!/select/paniikki>`_ (right under lecture
 hall T1). This documentation is a Paniikki cheatsheet.
 
 .. figure:: /images/paniikki_map.png
@@ -98,7 +98,7 @@ are some sample commands:
 There are some modules set up specifically for different courses: if
 you just load the environment with "module load", you will have everything you need.
 
-Read the details in `Module environment page <http://scicomp.aalto.fi/triton/apps/index.html#module-environment>`_.
+Read the details in :doc:`Module environment page </triton/tut/modules>`.
 
 Example 1
 ^^^^^^^^^

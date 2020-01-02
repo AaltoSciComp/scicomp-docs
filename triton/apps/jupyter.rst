@@ -5,7 +5,7 @@ Jupyter
 .. note:: Quick link
 
    Triton's JupyterHub is available at
-   http://jupyter.triton.aalto.fi.
+   https://jupyter.triton.aalto.fi.
 
 .. note:: For new users
 
@@ -34,7 +34,7 @@ Jupyter
    :alt: alternate text
    :figclass: align-center
 
-   < Triton `JupyterHub <http://scicomp.aalto.fi/triton/apps/jupyter.html#jupyterhub>`_ Demo >
+   < Triton JupyterHub Demo >
 
 Jupyter notebooks are a way of interactive, web-based computing:
 instead of either scripts or interactive shells, the notebooks allow

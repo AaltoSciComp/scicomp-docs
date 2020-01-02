@@ -47,7 +47,7 @@ As a student, the `ITS servicedesks <https://it.aalto.fi/contact>`__
 are the first place to go for help.  The site https://www.aalto.fi/en/it-help is
 the new central site for IT instructions.
 
-This site, http://scicomp.aalto.fi, is intended for research
+This site, https://scicomp.aalto.fi, is intended for research
 scientific computing support but has a few page useful to you.
 
 
@@ -83,7 +83,7 @@ how to launch Jupyter notebook on there <../aalto/remotejupyter>`.
 
 For GPU computing, the :doc:`Paniikki Linux computer lab
 <../aalto/paniikki>` (`map
-<http://usefulaaltomap.fi/#!/select/paniikki>`_) has GPUs in all
+<https://usefulaaltomap.fi/#!/select/paniikki>`_) has GPUs in all
 workstations.  Software is available via ``module spider $name`` to
 search and ``module load $name`` to load (and the module ``anaconda3``
 has Python, tensorflow, etc.).  Read the :doc:`Paniikki cheatsheet
@@ -160,7 +160,7 @@ Other notes
 ===========
 It can be hard to find your way around Aalto, the official campus maps
 and directions are known for being confusing confusing.  Try
-`UsefulAaltoMap <http://usefulaaltomap.fi>`_ instead.
+`UsefulAaltoMap <https://usefulaaltomap.fi>`_ instead.
 
 Do you have suggestions for this page?  Please leave on `issue on
 Github <scicomp_github_issues_>`_ (make sure you have a good title

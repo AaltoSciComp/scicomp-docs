@@ -55,7 +55,7 @@ Examples and demos given during the lecture are done on Triton, though should wo
 on all other Linux installations.
 
 - Linux and Mac users: just open a terminal window. If you wish you can login
-  to Triton or any other `Aalto Linux server <http://scicomp.aalto.fi/aalto/remoteaccess.html>`__.
+  to Triton or any other `Aalto Linux server <https://scicomp.aalto.fi/aalto/remoteaccess.html>`__.
 - Windows users: install PuTTY [#putty]_ then *SSH* to any interactive server
   at Aalto or your department.
 
@@ -1632,7 +1632,7 @@ has been found.
  # to make a file executable 'cx filename'
 
 The following example is useful for Triton users: `array jobs
-<http://scicomp.aalto.fi/triton/tut/array.html>`_,
+<https://scicomp.aalto.fi/triton/tut/array.html>`_,
 where one handles array subtasks based on its index.
  
 

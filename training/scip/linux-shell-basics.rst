@@ -2,7 +2,7 @@
 Sept 2019 / Linux Shell Basics
 ==============================
 
-Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
+Part of :doc:`Scientific Computing in Practice <index>` lecture series at Aalto University.
 
 **Audience:** employees and students looking for an extensive intro into Linux shell / terminal.
 
@@ -19,7 +19,7 @@ There is an advaced part of this course given later in the spring. There on we g
 - Tue 3.9.2019 klo 12:00-15:00 // Otakaari 1, U135a
 - Thu 5.9.2019 klo 12:00-15:00 // Otakaari 1, U135a
 
-**Course material:** will be mostly based on the first part of `scicomp.aalto.fi/training/linux-shell-tutorial <http://scicomp.aalto.fi/training/linux-shell-tutorial.html>`__.
+**Course material:** will be mostly based on the first part of `scicomp.aalto.fi/training/linux-shell-tutorial <https://scicomp.aalto.fi/training/linux-shell-tutorial.html>`__.
 
 Additional materials and homework assignments at triton.aalto.fi:/scratch/scip/BASH
 

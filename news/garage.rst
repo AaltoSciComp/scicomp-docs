@@ -34,13 +34,13 @@ General garage (CS Building)
 -  Location: Usually A106_ in the CS building, but see below.
 -  A CSC representative is usually present.
 
-.. _U121a: http://usefulaaltomap.fi/#!/select/main-U121a
-.. _U121b: http://usefulaaltomap.fi/#!/select/main-U121b
-.. _T4:    http://usefulaaltomap.fi/#!/select/cs-A238
-.. _A106:  http://usefulaaltomap.fi/#!/select/r030-awing
-.. _A237:  http://usefulaaltomap.fi/#!/select/r030-awing
-.. _B121:  http://usefulaaltomap.fi/#!/select/r030-bwing
-.. _F254:  http://usefulaaltomap.fi/#!/select/F-F254
+.. _U121a: https://usefulaaltomap.fi/#!/select/main-U121a
+.. _U121b: https://usefulaaltomap.fi/#!/select/main-U121b
+.. _T4:    https://usefulaaltomap.fi/#!/select/cs-A238
+.. _A106:  https://usefulaaltomap.fi/#!/select/r030-awing
+.. _A237:  https://usefulaaltomap.fi/#!/select/r030-awing
+.. _B121:  https://usefulaaltomap.fi/#!/select/r030-bwing
+.. _F254:  https://usefulaaltomap.fi/#!/select/F-F254
 
 Spring 2020:
 

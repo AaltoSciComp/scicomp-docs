@@ -131,7 +131,7 @@ else:
 html_theme_options = {
     'display_version': False,
     #'navigation_depth': 3,
-    #'canonical_url': 'http://scicomp.aalto.fi/'
+    #'canonical_url': 'https://scicomp.aalto.fi/'
     }
 html_context = {'display_github': True,
                 'github_user': 'AaltoScienceIT',

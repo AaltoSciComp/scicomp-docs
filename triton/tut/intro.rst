@@ -12,7 +12,7 @@ still serves all Aalto and is organized from the School of Science.
 
 Our basic administrative web page is http://science-it.aalto.fi, but
 it has mostly administrative info.  This site,
-http://scicomp.aalto.fi, is our practical info for users.
+https://scicomp.aalto.fi, is our practical info for users.
 
 You are now at the first step of the Triton tutorial.
 
