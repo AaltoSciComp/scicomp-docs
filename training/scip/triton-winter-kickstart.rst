@@ -30,4 +30,14 @@ The course is obligatory for all new Triton users and recommended to all interes
 
 Participants will be provided with access to Triton for running examples. Participants are expected to bring their laptops with the pre-installed SSH client, capable of using a wireless net (preferably Eduroam or Aalto, otherwise Aalto Open).
 
+* If you do not yet have access to Triton, :doc:`request an account
+  </triton/accounts>` in advance.
+* Then, try to :doc:`connect to Triton </triton/tut/connecting>` to be
+  ready.
+* If you aren't familiar with the Linux shell, :doc:`read the crash
+  course </scicomp/shell>`
+* If you aren't able to do any of these on time, don't worry: just
+  come early and let us know: this preparation just makes things
+  quicker to start.
+
 **Additional course info at:** Ivan Degtyarenko, ivan.degtyarenko -at- aalto.fi
