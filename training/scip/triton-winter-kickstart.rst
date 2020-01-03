@@ -16,7 +16,7 @@ The course is obligatory for all new Triton users and recommended to all interes
 
 **Time, date:** Mon 20.1, 12:00-16:30 (with a break in between)
 
-**Place:** T-building, T2
+**Place:** `T-building, T2 <https://usefulaaltomap.fi/#!/select/T2>`_
 
 **Lecturering by:** Science IT people
 
