@@ -24,6 +24,14 @@ into four big levels A-D:
    * * **Special tracks**
      * Programming, scientific papers/posters/presentations, etc.  Can be at any level.
 
+For course announcements at Aalto, see :doc:`the Scientific Computing
+in Practice courses page <scip/index>`.
+
+.. toctree::
+   :maxdepth: 1
+
+   scip/index
+
 If you're starting research, ask your advisor what level of skill they
 expect you to have.  There are both courses and self-study materials
 below.  A few hours now can save you days of time during your career.
@@ -36,8 +44,6 @@ Subpages:
    linux-shell-tutorial
    python-scicomp/index
 
-For course announcements at Aalto, see `the Scientific Computing in Practice courses page
-</training/scip/index.html>`__.
 
 A: Basics
 =========
