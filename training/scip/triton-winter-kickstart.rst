@@ -20,7 +20,7 @@ The course is obligatory for all new Triton users and recommended to all interes
 
 **Lecturering by:** Science IT people
 
-**Registration:** TBA
+**Registration:** `Registration link <https://link.webropolsurveys.com/S/B3CCDA95D766F143>`__
 
 **Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
 
