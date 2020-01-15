@@ -4,7 +4,7 @@ March 2020 / Linux Shell Scripting
 
 Part of :doc:`Scientific Computing in Practice <index>` lecture series at Aalto University.
 
-**Audience:** employees and students looking for an extensive intro into Linux shell / terminal.
+**Audience:** employees and students, intermediate or advanced level in Linux/Mac shell
 
 **About the course:** You know that SLURM batch script is a regular BASH shell script mostly? You know that when you login to Triton your terminal is a fully enabled shell scripting environment? Do you know how to create an alias, a function, how to use loops and traps in a shell? How to work with variables and arrays? The course is oriented on those who want to start using BASH programming fully and use terminal efficiently.
 
@@ -12,9 +12,9 @@ We expect that course participants are familiar with the `shell basics <linux-sh
 
 **Lecturer:** Ivan Degtyarenko, D. Sc., Science IT / Department of Applied Physics, Aalto University
 
-**Time, date, place:**
+**Place:** Otakaari 1, U135a
 
-Otakaari 1, U135a
+**Time, date, place:**
 
 - Mon 16.3, 10:00-13:00
 - Wed 18.3, 10:00-13:00
