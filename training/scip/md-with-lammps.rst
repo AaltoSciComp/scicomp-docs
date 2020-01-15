@@ -10,7 +10,7 @@ Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/sci
 
 **Lecturer:** Filippo Federici, D. Sc., Department of Applied Physics, Aalto University
 
-**Time, date:** TBC
+**Time, date:**
 
 - Mon 24.2, 10:00-13:00
 - Wed 26.2, 10:00-13:00
@@ -21,8 +21,7 @@ Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/sci
 
 **Cost:** Free of charge for FGCI consortium members and Aalto employees, students.
 
-.. **Registration:** `open for the registration <https://link.webropolsurveys.com/S/B77B68F140A99F86>`__
-**Registration:** TBC
+**Registration:** `open for the registration <https://link.webropolsurveys.com/S/B77B68F140A99F86>`__
 
 **Credits (opintopisteet):** Credits available for the Aalto students and course certificate can be provided on request for the outsiders. Since the main focus of the course is learning through experience, the students will be required to perform simulations for homework and hand in result reports weekly. Additional credits can be earned with project work. Full course hours correspond roughly to 1 ECTS, plus another one for the project work, if done.
 
