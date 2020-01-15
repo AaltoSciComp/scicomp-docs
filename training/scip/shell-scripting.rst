@@ -8,13 +8,13 @@ Part of :doc:`Scientific Computing in Practice <index>` lecture series at Aalto 
 
 **About the course:** You know that SLURM batch script is a regular BASH shell script mostly? You know that when you login to Triton your terminal is a fully enabled shell scripting environment? Do you know how to create an alias, a function, how to use loops and traps in a shell? How to work with variables and arrays? The course is oriented on those who want to start using BASH programming fully and use terminal efficiently.
 
-We expect that course participants are familiar with the `shell basics <linux-shell-basics>`__ (experience with BASH, ZSH, etc). We somewhat touch the  `Part 1 of the Linux Shell tutorial <../linux-shell-tutorial>`__, and continue to Part 2. Though we expect that participant knows how to create a directory and can edit file from the linux shell command line. We will be scripting a lot, there will be lots of demos and real practicing.
+We expect that course participants are familiar with the `shell basics <linux-shell-basics.html>`__ (experience with BASH, ZSH, etc). We somewhat touch the  `Part 1 of the Linux Shell tutorial </training/linux-shell-tutorial.html>`__, and continue to Part 2. Though we expect that participant knows how to create a directory and can edit file from the linux shell command line. We will be scripting a lot, there will be lots of demos and real practicing.
 
 **Lecturer:** Ivan Degtyarenko, D. Sc., Science IT / Department of Applied Physics, Aalto University
 
 **Place:** Otakaari 1, U135a
 
-**Time, date, place:**
+**Time, date:**
 
 - Mon 16.3, 10:00-13:00
 - Wed 18.3, 10:00-13:00
