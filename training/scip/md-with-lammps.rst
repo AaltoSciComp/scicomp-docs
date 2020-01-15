@@ -1,5 +1,5 @@
 ========================================================
-Feb/March 2020 / Hands-on Molecular Dynamics with LAMMPS
+Feb-March 2020 / Hands-on Molecular Dynamics with LAMMPS
 ========================================================
 
 Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
