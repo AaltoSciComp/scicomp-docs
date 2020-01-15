@@ -1,5 +1,5 @@
 ============================
-April 2020 / Matlab Advances
+April 2020 / Matlab Advances (tbc)
 ============================
 
 Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
@@ -10,26 +10,22 @@ Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/sci
 
 MATLAB is a high-level technical computing language and interactive environment for algorithm development, data visualization, data analysis and numerical computation in general.  — The Mathworks Inc.
 
-The goal of the course is to introduce the participants to the basics of the MATLAB computing environment, and give some insight into how it can be used in scientific computing. Additionally, topics involving writing efficient MATLAB code, such as vectorization, logical indexing and pre-allocation will be discussed.
-
 Teaching will be interactive, “learning by doing”.
 
 **Course webpage**
 
-Check a detailed list of topics and other information at the `Matlab Basics course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/tree/master/AY20192020/MatlabBasics2019#matlab-basics-2019-ay-2019-2020>`__.
-
 **Schedule:**
 
-- Wed 20.11, 12:00-15:00
-- Thu 21.11, 12:00-15:00
-- Wed 27.11, 12:00-15:00
-- Thu 28.11, 12:00-15:00
+.. - Wed 20.11, 12:00-15:00
+.. - Thu 21.11, 12:00-15:00
+.. - Wed 27.11, 12:00-15:00
+.. - Thu 28.11, 12:00-15:00
 
-**Place:** Otakaari 1, U135a (the auditorium next to the student’s HUB/cafeteria)
+**Place:** T2, T-building
 
 **Lecturers:** Enrico Glerean, D.Sc., CS/NBE Department, SCI
 
-**Registration:** `link for registration <https://www.webropolsurveys.com/S/50CE4F5C7D47F656.par>`__
+.. **Registration:** `link for registration <https://www.webropolsurveys.com/S/50CE4F5C7D47F656.par>`__
 
 **Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
 
@@ -43,5 +39,5 @@ Check a detailed list of topics and other information at the `Matlab Basics cour
 
 **Additional course info at:** enrico.glerean -at- aalto.fi
 
-Additional material (e.g. data files and examples) are published at the  `Matlab Basics course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/tree/master/AY20192020/MatlabBasics2019#matlab-basics-2019-ay-2019-2020>`__
+.. Additional material (e.g. data files and examples) are published at the  `Matlab Basics course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/tree/master/AY20192020/MatlabBasics2019#matlab-basics-2019-ay-2019-2020>`__
 
