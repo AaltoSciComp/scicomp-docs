@@ -18,6 +18,8 @@ Lectures by date and topics
 .. toctree::
    :titlesonly:
 
+   md-with-lammps 
+   mpi-introduction
    triton-winter-kickstart
    linux-shell-basics
    gpu-computing
