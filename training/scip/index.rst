@@ -23,12 +23,12 @@ Fall / Winter 2020 courses (tentative plan): Linux Shell basics, Data analysis w
    md-with-lammps 
    mpi-introduction
    triton-winter-kickstart
-   linux-shell-basics
-   gpu-computing
-   data-analysis
-   htcondor-introduction
-   matlab-basics
    Dec 2019 / CodeRefinery <https://coderefinery.org/workshops/2019-12-10-espoo/>
+   matlab-basics
+   htcondor-introduction
+   data-analysis
+   gpu-computing
+   linux-shell-basics
 
 Archive
 -------
