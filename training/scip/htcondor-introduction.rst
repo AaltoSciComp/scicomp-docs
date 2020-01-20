@@ -1,6 +1,6 @@
-===================================================
+==============================================================
 Oct 2019 / Introduction to distributed computing with HTCondor
-===================================================
+==============================================================
 
 Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
 

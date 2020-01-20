@@ -1,6 +1,6 @@
-========================
+==================================
 Jan 2020 / Triton Winter Kickstart
-========================
+==================================
 
 Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
 

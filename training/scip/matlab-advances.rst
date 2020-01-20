@@ -1,6 +1,6 @@
-============================
+==================================
 April 2020 / Matlab Advances (tbc)
-============================
+==================================
 
 Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
 
