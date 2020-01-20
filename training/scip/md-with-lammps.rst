@@ -4,7 +4,7 @@ Feb-March 2020 / Hands-on Molecular Dynamics with LAMMPS
 
 Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
 
-**Audience:** Employees and students looking for the extensive intro into GPU computing.
+**Audience:** Employees and students looking for the extensive intro into Molecular Dynamics simulations with LAMMPS.
 
 **About the course:** The course covers the basic theoretical concepts of molecular dynamics, such as equation of motion, numerical integration and interaction models, and the way these are applied in practice to real problems. The tutorial session walk the students through typical study cases, in simplified form, and shows how these are cracked using the LAMMPS simulation package. It will be shown how to combine simulation and analysis strategies in order to study the atomic scale behaviour of fluids, solids and mixed systems.
 

@@ -4,7 +4,7 @@ Feb 2020 / MPI introduction
 
 Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
 
-**Audience:** Employees and students looking for the extensive intro into GPU computing.
+**Audience:** Employees and students looking for the extensive intro into MPI programming model.
 
 **About the course:** In this introduction to MPI programming we are going to cover all the basic functionalities of the API, and see how these are applied to real problems. Starting from simple, well-established algorithms, we will build up towards more advanced and realistic examples commonly found in computational physics and chemistry. Finally, we will explore how the strengths of OpenMP multithreading and MPI can be combined with hybrid parallel programming.
 
