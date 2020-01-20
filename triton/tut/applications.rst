@@ -50,7 +50,7 @@ For reference, here are the most common applications:
 * **R:** ``module load r`` for a basic R package.  :doc:`More info
   <../apps/r>`.
 
-* **Matlab:** ``module load anaconda3`` for the latest Matlab version.
+* **Matlab:** ``module load matlab`` for the latest Matlab version.
   :doc:`More info <../apps/matlab>`.
 
 
