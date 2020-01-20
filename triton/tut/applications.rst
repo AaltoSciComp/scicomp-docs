@@ -106,7 +106,7 @@ the necessary libraries.  Instead, load a :doc:`toolchain
 libraries.
 
 For GCC-based tool chains, check ``module spider goolf`` and, for
-example, ``module load goolf/triton-2017a``.  For Inter-based
+example, ``module load goolf/triton-2017a``.  For Intel-based
 compilers, try ``module spider iomkl`` and, for example, ``module load
 iomkl/triton-2017a``.  (These stand for "gcc openmpi openblas lapack
 fftw" and "intel openmpi intel-mkl")
