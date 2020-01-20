@@ -115,7 +115,6 @@ address.  You can address your request to a specific person.
    :delim: |
 
    Dept       | Name             | Location
-   PHYS/NBE   | Janne Blomqvist  | Otakaari 1, Y415a / Otakaari 3, F354
    CS/NBE     | Mikko Hakala     | T-building A243 / Otakaari 3, F354
    CS         | Simo Tuomisto    | T-building A243
    ELEC       | Tarmo Simonen    | Otakaari 3, F417
