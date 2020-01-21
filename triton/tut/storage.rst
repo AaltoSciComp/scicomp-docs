@@ -201,7 +201,9 @@ The *sftp* protocol uses ssh to transfer files.  On Linux and Mac, the
 and are available everywhere.
 
 A more user-friendly way of doing this (with a nice GUI) is the
-`Filezilla program <https://filezilla-project.org/>`__.
+`Filezilla program <https://filezilla-project.org/>`__. Make sure you are using
+`Aalto VPN <https://www.aalto.fi/en/services/establishing-a-remote-connection-vpn-to-an-aalto-network>`__, then 
+you can put triton.aalto.fi as SFTP server with port 22.
 
 Below is an example of the "raw" sftp usage::
 
@@ -220,7 +222,7 @@ With all modern OS it is also possible to just open your OS file manager (e.g. N
 
     sftp://triton.aalto.fi
 
-If you are connecting from remote and cannot use the VPN, you might connect instead to department machines like kosh, taltta, amor. 
+If you are connecting from remote and cannot use the VPN, you might connect instead to department machines like kosh.aalto.fi, taltta.aalto.fi, amor.org.aalto.fi (for NBE). 
 
 
 Rsync
