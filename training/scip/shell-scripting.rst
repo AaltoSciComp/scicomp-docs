@@ -16,10 +16,10 @@ We expect that course participants are familiar with the `shell basics <linux-sh
 
 **Time, date:**
 
-- Mon 16.3, 10:00-13:00
-- Wed 18.3, 10:00-13:00
 - Mon 23.3, 10:00-13:00
 - Wed 25.3, 10:00-13:00
+- Mon 30.3, 10:00-13:00
+- Wed 1.4, 10:00-13:00
 
 **Course material:** will be mostly based on the second part of the `scicomp.aalto.fi/training/linux-shell-tutorial </training/linux-shell-tutorial.html>`__.
 
