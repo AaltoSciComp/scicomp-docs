@@ -69,6 +69,20 @@ Finally, if you get binaries from the wrong environment (check with
 
     $ rehash
 
+MNE Analyze
+-----------
+
+Note: this was tested only for NBE workstations. If you wish to run mne_analyse from your workstation you should follow this procedure. Open a new terminal and make sure you have the *bash* shell (`echo $SHELL`, if you do not have it, just type `bash`) and then::
+
+    $ module load mne
+    $ source /work/modules/Ubuntu/14.04/amd64/common/mne/MNE-2.7.4-3434-Linux-x86_64/bin/mne_setup_sh
+    $ export SUBJECTS_DIR=PATHTOSUBJECTFOLDER
+    $ export SUBJECT=SUBJECTID
+    $ mne_analyze
+
+Please note that the path of the "source" command might change with most up to date versions of the tool. Please note that the "PATHTOSUBJECTFOLDER" and "SUBJECTID" are specific to the data you have. Please refer to MNE documentation for more help on these.
+
+
 Mayavi
 ------
 If you experience problems with the 3D visualizations that use Mayavi (for
