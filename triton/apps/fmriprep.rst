@@ -13,6 +13,7 @@ Here an example to run fmriprep for one subject, using an interactive session, w
 ::
     # Example running in an interactive session
     ssh triton.aalto.fi
+    module load singularity-fmriprep
     sinteractive --time=24:00:00 --mem=20G # you might need more memory or time depending on the size
     singularity_wrapper exec fmriprep <path-to-bids> <path-to-your-derivatives-folder> -w <path-to-your-scratch-temporary-folder> participant --participant-label 01 --use-aroma --fs-no-reconall --fs-license-file /scratch/shareddata/set1/freesurfer/license.txt
 
