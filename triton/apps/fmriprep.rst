@@ -7,13 +7,18 @@ FMRIprep
 
 fmriprep is installed as a singularity container. By default it will always run the current latest version. If you need a version that is not currently installed on triton, please open an issue at https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues
 
-To run fmriprep for one subject, without free-surfer reconall, using ica-aroma
+Here an example to run fmriprep for one subject, using an interactive session, without free-surfer reconall, using ica-aroma. The raw data in BIDS format are in the path `<path-to-bids>`, then you can create a folder for the derivatives that is different than the BIDS folder `<path-to-your-derivatives-folder>`. Also create a temporary folder under your scratch/work folders for storing temporary files `<path-to-your-scratch-temporary-folder>` for example `/scratch/work/USERNAME/tmp/`. The content of this folder is removed after fmriprep has finished.    
 
 
 ::
+    # Example running in an interactive session
+    ssh triton.aalto.fi
+    sinteractive --time=24:00:00 --mem=20G # you might need more memory or time depending on the size
+    singularity_wrapper exec fmriprep <path-to-bids> <path-to-your-derivatives-folder> -w <path-to-your-scratch-temporary-folder> participant --participant-label 01 --use-aroma --fs-no-reconall --fs-license-file /scratch/shareddata/set1/freesurfer/license.txt
 
-    singularity_wrapper exec fmriprep <path-to-bids> <your-scratch-folder> participant --participant-label 01 --use-aroma --fs-no-reconall --fs-license-file /scratch/shareddata/set1/freesurfer/license.txt
+This might give the exit error *"OSError: handle is closed"*, this is a python thing, see https://neurostars.org/t/fmriprep-error-oserror-handle-is-closed/4030. The general rule is that if the reports are generated, then everything is done with the preprocessing.
 
+If you want to parallelyze things you can write a script that cycles through each subject labels and queues SBATCH jobs for each subject (it can be an array job or a series of serial jobs). It is important you tune your memory and time requirements before processing many subjects at once.
 
 ===============
 POST-processing
