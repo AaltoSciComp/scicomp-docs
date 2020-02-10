@@ -68,7 +68,8 @@ In summary:
 * **Triton usage statistics and logs.**  Triton is used for university
   academic research only, so this information may be used for
   reporting and management in any way.  Identifying information won't
-  be public, but note that
+  be public, but note that it will be used for internal operations and
+  contacting users as needed.
 * **Data stored on Triton.**  We are not the controller of this data.
   Data in your personal directories is controlled by you, and data in
   shared directories is controlled by the manager of that group.  See
