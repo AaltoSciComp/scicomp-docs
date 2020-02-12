@@ -60,8 +60,9 @@ Ready software
 
 We support these machine learning packages out of the box:
 
-* :doc:`Tensorflow <../apps/tensorflow>`: ``anaconda2`` /
-  ``anaconda3`` modules.  Use ``--constraint='kepler|pascal|volta'``
+* :doc:`Tensorflow <../apps/tensorflow>`:
+  ``anaconda`` module.  Use ``--constraint='kepler|pascal|volta'``.
+  See the Tensorflow page for info on older versions.
 * Keras: same module as tensorflow
 * PyTorch: same module as tensorflow
 * :doc:`Detectron <../apps/detectron>`: via :doc:`singularity images <../usage/singularity>`

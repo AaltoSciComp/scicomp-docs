@@ -27,14 +27,14 @@ let's see what our Python is::
   $ python3 -V
   Python 3.4.9
 
-Now let's load the anaconda3 module, a more up to date Python with a
+Now let's load the ``anaconda`` module, a more up to date Python with a
 lot of libraries already included::
 
-  $ module load anaconda3
+  $ module load anaconda
   $ which python3
-  /share/apps2/anaconda/anaconda3/latest/bin/python3
+  /share/apps/anaconda-ci/fgci-centos7-generic/software/anaconda/2020-01-tf2/0251cd77/bin/python3
   $ python3 -V
-  Python 3.6.8 :: Anaconda custom (64-bit)
+  Python 3.7.6
 
 As you see, we have a newer Python.  Let's go back to blank::
 

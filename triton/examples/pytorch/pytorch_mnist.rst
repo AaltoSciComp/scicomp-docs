@@ -12,7 +12,7 @@ The full code for the example is in
 One can run this example with ``srun``::
 
   wget https://raw.githubusercontent.com/AaltoScienceIT/scicomp-docs/master/triton/examples/pytorch/pytorch_mnist.py
-  module load anaconda3/latest
+  module load anaconda
   srun -t 00:15:00 --gres=gpu:1 python pytorch_mnist.py
 
 or with ``sbatch`` by submitting

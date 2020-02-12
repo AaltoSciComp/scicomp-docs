@@ -84,7 +84,7 @@ In general, anything you can do from the shell, you can do here::
     #SBATCH --time=0-00:05:00    # 5 mins
     #SBATCH --mem-per-cpu=500    # 500MB of memory
 
-    module load anaconda3
+    module load anaconda
     python -V
 
 **Exercise**: Try the Python version-printing script above.  Try

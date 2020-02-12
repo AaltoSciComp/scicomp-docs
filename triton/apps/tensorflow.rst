@@ -14,24 +14,27 @@ Basic usage
 
 First, check the tutorials up to and including :doc:`../tut/gpu`.
 
-With tensorflow, you have to decide at *install time* if you want a
-version that runs on CPUs or GPUs.  This means that we can't install
-it for everyone and expect it to work everywhere - you have to load
-something different if you want it to run on login node/regular nodes
-(probably for testing) or GPU nodes.  You probably want to use GPUs.
+The basic way to use is via the Python in the ``anaconda`` module.
+The versions with ``-tf2`` (the default ones) have Tensorflow 2
+installed, so it works on both the CPU and GPU queues.  If you use
+``module spider anaconda``, you can see a ``-tf1`` version available.
 
-The basic way to use is via the Python in the ``anaconda3`` module (or
-``anaconda2``) - but these modules have the GPU version installed, so
-you can't run or test on the login node.
+.. warning:: Tensorflow 1.x was CPU-only or GPU-only
 
-If you ``module spider anaconda3`` (or 2), you can see several
-versions ending in ``-cpu`` or ``-gpu``.  These have respectively the
-CPU and GPU versions of tensorflow installed.  Don't load any
-additional CUDA modules, anaconda includes everything.
+   With tensorflow 1.x, you have to decide at *install time* if you want a
+   version that runs on CPUs or GPUs.  This means that we can't install
+   it for everyone and expect it to work everywhere - you have to load
+   something different if you want it to run on login node/regular nodes
+   (probably for testing) or GPU nodes.  The old ``-cpu`` and ``-gpu``
+   versions in the ``anaconda2`` and ``anaconda3`` modules denoted this.
+
+   With tensorflow 2.x, they solved this problem (thankfully)
+
+Don't load any additional CUDA modules, anaconda includes everything.
 
 If you use GPUs, you need ``--constraint='kepler|pascal|volta'`` in
 order to select a GPU new enough to run tensorflow.  (Note that as we
-get never cards, this will need further updating).
+get newer cards, this will need further updating).
 
 .. include:: ../examples/tensorflow/tensorflow_mnist.rst
 

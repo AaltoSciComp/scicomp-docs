@@ -208,7 +208,7 @@ Software and kernels
 We have various kernels automatically installed (these instructions
 should apply to both JupyterHub and ``sjupyter``):
 
-* Python (2 and 3 via ``anacondaN/latest`` modules + a few
+* Python (2 and 3 via some recent anaconda modules + a few
   more Python modules.)
 * Matlab (latest module)
 * Bash kernel
@@ -382,12 +382,3 @@ config and setup is hackish.
     pip install matlab_kernel
     cd $MATLABROOT/extern/engines/python/
     python setup.py
-
-  R support:
-    https://irkernel.github.io/installation/
-    ``module load anaconda3 R/3.4.1-iomkl-triton-2017a``.
-
-
-  Bash:
-    ml load anaconda3
-    python -m bash_kernel.install
