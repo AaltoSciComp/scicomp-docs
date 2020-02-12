@@ -13,12 +13,17 @@ Python distributions
 |                          | Python to use            | How to install own       |
 |                          |                          | packages                 |
 +==========================+==========================+==========================+
-| Most of the use cases,   | Anaconda 2/3             | conda environment +      |
+| I don't really care,     | Anaconda                 |                          |
+| I just want recent stuff | ``module load anaconda`` |                          |
+| and to not worry.        |                          |                          |
+|                          |                          |                          |
++--------------------------+--------------------------+--------------------------+
+| Most of the use cases,   | Anaconda                 | conda environment +      |
 | but sometimes different  |                          | conda                    |
 | versions of modules      |                          |                          |
 | needed                   |                          |                          |
 +--------------------------+--------------------------+--------------------------+
-| Simple programs with     | Anaconda 2/3             | ``pip install --user``   |
+| Simple programs with     | Anaconda                 | ``pip install --user``   |
 | common packages, not     |                          |                          |
 | switching between        |                          |                          |
 | Pythons often            |                          |                          |
@@ -80,6 +85,14 @@ remove everything installed this way and use conda/virtual
 environments instead.**  It's not a bad idea to do this when you
 switch to environments anyway.
 
+.. note:: Example of dangers of ``pip install --user``
+
+   Someone did ``pip install --user tensorflow``.  Some time later,
+   they noticed that they couldn't use Tensorflow + GPUs.  We couldn't
+   reproduce the problem, but in the end found they had this local
+   install that was hiding any Tensorflow in any module (forcing a CPU
+   version on them).
+
 Note: ``pip`` installs from the `Python Package Index
 <https://pypi.python.org/pypi>`__.
 
@@ -91,7 +104,7 @@ Anaconda and conda environments
 -------------------------------
 
 `Anaconda <https://www.continuum.io>`__ is a Python distribution by
-Continuum Analytics. It is nothing fancy, they just take a lot of
+Continuum Analytics (open source, of course). It is nothing fancy, they just take a lot of
 useful scientific packages and put them all together, make sure they
 work, and do some sort of optimization. They also include most of the
 most common computing and data science packages. It is also all open
@@ -105,6 +118,14 @@ versions):
 
     module load anaconda     # python3
     module load anaconda2    # python2
+
+.. note::
+
+   Before 2020, Python3 was via the ``anaconda3`` module (note the
+   ``3`` on the end).  That's still there, but in 2020 we completely
+   revised our Anaconda installation system, and dropped active
+   maintenance of Python 2.  All updates are in ``anaconda`` only in
+   the future.
 
 Conda environments
 ~~~~~~~~~~~~~~~~~~
