@@ -244,9 +244,26 @@ You have to have the package ``ipykernel`` installed in the
 environment: activate the environment and do ``pip install
 ipykernel``.
 
-
-Install your own kernels from other modules
+Installing a different R module as a kernel
 -------------------------------------------
+
+Load your R modules, install R kernel normally (to some ``NAME``),
+use envkernel as a wrapper to re-write the kernel (reading the
+``NAME`` and rewriting to the same ``NAME``), after it loads the
+modules you need::
+
+  # Load jupyterhub/live, and the R module(s) you need.
+  module load jupyterhub/live
+  module load r/3.6.1-python3
+  # start R, install R kernel
+  R
+  > install.packages('IRkernel')
+  > IRkernel::installspec(name='NAME', displayname='R 3.6 module')')
+  # Use envkernel to re-write, loading the R modules.
+  envkernel lmod --user --kernel-template=NAME --name=NAME  r/3.6.1-python3
+
+Install your own kernels from other Python modules
+--------------------------------------------------
 
 This works if the module has Python installed and working.  This has
 to be done once in any Triton shell::
@@ -254,7 +271,6 @@ to be done once in any Triton shell::
   module load jupyterhub/live
   envkernel lmod --user --name INTERNAL_NAME --display-name="Singularity my kernel" MODULE_NAME
   module purge
-
 
 Install your own kernels from Singularity image
 -----------------------------------------------
