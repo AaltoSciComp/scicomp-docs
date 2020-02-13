@@ -20,6 +20,12 @@ This is the hands-on compliment our training programs, mainly
 to put those sessons in practice, this is for you.  Attendance
 in these courses is useful but by no means required.
 
+.. note::
+
+   If you are in Aalto, please take `our survey
+   <https://forms.gle/wxnCpCGxdUfGGqfw6>`_ to express interest
+   (necessary to secure funding) and/or request a consultation.
+
 **This is draft information about a pilot project, information is
 subject to change.**
 
