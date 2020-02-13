@@ -82,6 +82,12 @@ how to do it themselves.  As part of this service, one can get:
 For RSE candidates
 ------------------
 
+.. note:: Already a hidden RSE at Aalto?
+
+   Let Richard Darst know if you want to join our upcoming RSE
+   community - hopefully we can provide support and networking.  Check
+   out some of the other international communities, too.
+
 Do you like coding and research, but don't want an academic career
 path with publications as your sole purpose?  Be a Research Software
 Engineer with us!  Our pilot is designed to bridge the gap between
