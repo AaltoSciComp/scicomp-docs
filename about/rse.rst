@@ -82,12 +82,6 @@ how to do it themselves.  As part of this service, one can get:
 For RSE candidates
 ------------------
 
-.. note:: Already a hidden RSE at Aalto?
-
-   Let Richard Darst know if you want to join our upcoming RSE
-   community - hopefully we can provide support and networking.  Check
-   out some of the other international communities, too.
-
 Do you like coding and research, but don't want an academic career
 path with publications as your sole purpose?  Be a Research Software
 Engineer with us!  Our pilot is designed to bridge the gap between
@@ -112,6 +106,30 @@ tenure-track academic career path.  New RSEs will get a training
 period which rounds out any missing skills.  They will also be
 involved in a complete support package: they will have the chance to
 be involved in teaching an infrastructure development.
+
+
+
+Already an (underground) RSE at Aalto?
+--------------------------------------
+
+RSEs have been an essential part of science for ages, but hardy ever
+recognised.  We have many here at Aalto.  Aalto SciComp is trying to
+make a community of these people.  By taking part, you can
+
+* Network with others in similar situations and discover career
+  opportunities.
+
+* Share knowledge among ourselves (maybe have relevant training, too)
+
+* Take part in developing our services - basically, be a voice of the
+  users.
+
+* More directly help the community by, for example, directly updating
+  this site, helping to develop services, or teaching with us.
+
+Until a mailing list gets set up, let Richard Darst know if you want
+to join.  So far nothing has started, we are building this all up as
+of early 2020.
 
 
 
@@ -177,3 +195,19 @@ Dedicated service:
 
 * Time frame typically months or more.  Can include long-term
   maintenance or support at a small full-time equivalent.
+
+
+
+See also
+--------
+
+* `Nordic RSE community <https://nordic-rse.org/>`_, currently in the
+  process of being formed (Aalto SciComp is part of this).
+
+* The `UK RSE association <https://rse.ac.uk/>`_ is quite advanced in
+  promoting RSE careers.
+
+* `RSE international <https://researchsoftware.org/>`_.
+
+* Note the bottom section on page 105(print)/106(PDF) of the `2018
+  Research, Art, and Impact assessment <https://www.aalto.fi/sites/g/files/flghsv161/files/2019-03/rai_2018_report_s.pdf>`_.
