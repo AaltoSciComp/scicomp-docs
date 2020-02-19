@@ -3,12 +3,14 @@ Your own notebooks via ``sjupyter``
 
 .. note::
 
-   Now that Jupyterhub exists, this method of running Jupyter is not
+   Now that :doc:`Triton Jupyterhub <jupyter>` exists, this method of
+   running Jupyter is not
    so important.  It is only needed if you need more resources than
    JupyterHub can provide.
 
 We provide a command ``sjupyter`` which automates launching your own
-notebooks in the Slurm queue.  This gives you more flexibility in
+notebooks in the Slurm queue.  To use this, ``module load sjupyter``.
+This gives you more flexibility in
 choosing your nodes and resources than Jupyterhub, but also will after
 your and your department's Triton priority more because you are
 blocking others from using these resources.
@@ -59,6 +61,10 @@ Starting sjupyter
 
 We have the custom-built command ``sjupyter`` for
 starting Jupyter on Triton.
+
+First, you must load the ``sjupyter`` module::
+
+  module load sjupyter
 
 To run in the Triton queue (using more resources), just use
 ``sjupyter``.  This will start a notebook on the interactive Slurm
