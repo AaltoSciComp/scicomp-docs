@@ -75,15 +75,23 @@ tries to install globally for all users. Instead, you should do this
 This is quick and effective best used for leaf packages without many
 dependencies and if you don't switch Python modules often.
 
-**Warning!** If you do this, then the module will be shared among all
-your projects. It is quite likely that eventually, you will get some
-incompatibilities between the Python you are using and the modules
-installed. In that case, you are on your own (simple recommendation is
-to remove all modules from ``~/.local/lib/pythonN.N`` and reinstall). **If
-you get incompatible module errors, our first recommendation will be to
-remove everything installed this way and use conda/virtual
-environments instead.**  It's not a bad idea to do this when you
-switch to environments anyway.
+.. warning:: ``pip install --user`` can result in incompatibilities
+
+   If you do this, then the module will be shared among all
+   your projects. It is quite likely that eventually, you will get some
+   incompatibilities between the Python you are using and the modules
+   installed. In that case, you are on your own (simple recommendation is
+   to remove all modules from ``~/.local/lib/pythonN.N`` and reinstall). **If
+   you get incompatible module errors, our first recommendation will be to
+   remove everything installed this way and use conda/virtual
+   environments instead.**  It's not a bad idea to do this when you
+   switch to environments anyway.
+
+   If you encounter problems, remove all your user packages::
+
+      rm -r ~/.local/lib/python*.*/
+
+   and reinstall everything *after* loading the environment you want.
 
 .. note:: Example of dangers of ``pip install --user``
 
@@ -107,7 +115,8 @@ Anaconda and conda environments
 Continuum Analytics (open source, of course). It is nothing fancy, they just take a lot of
 useful scientific packages and put them all together, make sure they
 work, and do some sort of optimization. They also include most of the
-most common computing and data science packages. It is also all open
+most common computing and data science packages and non-Python
+compiled software and libraries. It is also all open
 source, and is packaged nicely so that it can easily be installed on
 any major OS.
 
