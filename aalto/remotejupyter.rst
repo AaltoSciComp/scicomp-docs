@@ -30,7 +30,7 @@ Aalto provides two “light computing” servers: ``brute.org.aalto.fi``, ``forc
 	tmux
 
 	# Load Anaconda
-	module use /work/modules/modulefiles/common/; module refresh; module load anaconda3
+	module load anaconda
 
 	# Create your env
 	conda create -n env-name python=3.6 jupyter

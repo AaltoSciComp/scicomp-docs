@@ -3,7 +3,8 @@ Python
 ======
 
 The scientific python ecosystem is also available on Aalto Linux
-workstations, including the anaconda2 and anaconda3 modules providing
+workstations, including the anaconda (Python 3) and anaconda2
+(Python2) modules providing
 the Anaconda python distribution. For a more indepth description see
 the generic `python page under scientific computing docs
 </scicomp/python>`.
