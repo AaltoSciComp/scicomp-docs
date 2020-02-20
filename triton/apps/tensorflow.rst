@@ -2,7 +2,7 @@ Tensorflow
 ==========
 
 :supportlevel: A
-:pagelastupdated: 2019-06-03
+:pagelastupdated: 2020-02-20
 :maintainer:
 
 .. highlight:: bash
@@ -14,24 +14,28 @@ Basic usage
 
 First, check the tutorials up to and including :doc:`../tut/gpu`.
 
-With tensorflow, you have to decide at *install time* if you want a
-version that runs on CPUs or GPUs.  This means that we can't install
-it for everyone and expect it to work everywhere - you have to load
-something different if you want it to run on login node/regular nodes
-(probably for testing) or GPU nodes.  You probably want to use GPUs.
+The basic way to use is via the Python in the ``anaconda`` module.
+The versions with ``-tf2`` (the default ones) have Tensorflow 2
+installed.  If you use ``module spider anaconda``, you can see a
+``-tf1`` version available.
 
-The basic way to use is via the Python in the ``anaconda3`` module (or
-``anaconda2``) - but these modules have the GPU version installed, so
-you can't run or test on the login node.
+.. warning:: Older versions of Tensorflow were CPU-only or GPU-only
 
-If you ``module spider anaconda3`` (or 2), you can see several
-versions ending in ``-cpu`` or ``-gpu``.  These have respectively the
-CPU and GPU versions of tensorflow installed.  Don't load any
-additional CUDA modules, anaconda includes everything.
+   With older versions of tensorflow (<1.15.0), you have to decide at
+   *install time* if you want a version that runs on CPUs or GPUs. This
+   means that we can't install it for everyone and expect it to work
+   everywhere - you have to load something different if you want it to
+   run on login node/regular nodes (probably for testing) or GPU nodes.
+   The old ``-cpu`` and ``-gpu`` versions in the ``anaconda2``- and
+   ``anaconda3``-modules denoted this.
+
+   From tensorflow versions >= 1.15.0, they solved this problem (thankfully)
+
+Don't load any additional CUDA modules, anaconda includes everything.
 
 If you use GPUs, you need ``--constraint='kepler|pascal|volta'`` in
 order to select a GPU new enough to run tensorflow.  (Note that as we
-get never cards, this will need further updating).
+get newer cards, this will need further updating).
 
 .. include:: ../examples/tensorflow/tensorflow_mnist.rst
 
@@ -40,12 +44,11 @@ Common problems
 ---------------
 
 * **ImportError: libcuda.so.1: cannot open shared object file: No such
-  file or directory**.  GPU tensorflow can only be imported on GPU
-  nodes (even though you'd think that you can import it and just not
-  use the GPUs).  So you can only run this code in the GPU queue.  You
-  could try something where you use CPU tensorflow for testing on
-  login and GPU tensorflow for running in batch.
+  file or directory**. Older versions of GPU tensorflow can only be imported
+  on GPU nodes (even though you'd think that you can import it and just not
+  use the GPUs).  So you can only run this code in the GPU queue. Solution
+  for this is to use the newer `anaconda`-modules.
 
 * Random CUDA errors: don't load any other CUDA modules, only
-  anaconda.  Anaconda includes the necessary libraries in compatible
+  ``anaconda``.  Anaconda includes the necessary libraries in compatible
   versions.

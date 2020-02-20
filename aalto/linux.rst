@@ -168,7 +168,7 @@ Software
 
 Already available
 ~~~~~~~~~~~~~~~~~
-- Python: ``module load anaconda3`` (or anaconda2) (desktops)
+- Python: ``module load anaconda`` (or anaconda2 for Python 2) (desktops)
 - Matlab: automatically installed on desktops, Ubuntu package
   on laptops.
 
@@ -209,7 +209,7 @@ environment variables, so this needs to be repeated in each new shell
 
 Useful modules:
 
--  ``anaconda3`` and ``anaconda2`` will always be kept up to date with the latest Python
+-  ``anaconda`` and ``anaconda2`` will always be kept up to date with the latest Python
    Anaconda distribution, and we'll try to keep this in sync across
    Aalto Linux and Triton.
 

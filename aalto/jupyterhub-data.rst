@@ -115,12 +115,15 @@ the Jupyter data directories - they are for notebooks and small-medium
 data.)
 
 Using the built-in anaconda, you can load the Python modules with
-``module load anaconda3`` and start Jupyter with ``jupyter notebook``:
+``module load anaconda`` and start Jupyter with ``jupyter notebook``:
 
 .. figure:: /images/jupyterdata_04_startjupyter.png
 	    :scale: 75%
 	    :align: center
-	    :alt: Start jupyter with the anaconda3 module.
+	    :alt: Start jupyter with the anaconda module.
+
+	    Note that now, you need to ``module load anaconda``, not
+	    anaconda\ **3** like the image shows.
 
 
 

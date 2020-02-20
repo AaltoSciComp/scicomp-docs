@@ -12,9 +12,9 @@ Python OpenMP example
     #SBATCH --cpus-per-task=4
     #SBATCH --mem-per-cpu=2G
     #SBATCH -o parallel_Python.out
-    
-    module load anaconda3 
-     
+
+    module load anaconda
+
     export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
     srun -c $SLURM_CPUS_PER_TASK python parallel_Python.py
 

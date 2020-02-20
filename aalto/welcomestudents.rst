@@ -85,7 +85,7 @@ For GPU computing, the :doc:`Paniikki Linux computer lab
 <../aalto/paniikki>` (`map
 <https://usefulaaltomap.fi/#!/select/paniikki>`_) has GPUs in all
 workstations.  Software is available via ``module spider $name`` to
-search and ``module load $name`` to load (and the module ``anaconda3``
+search and ``module load $name`` to load (and the module ``anaconda``
 has Python, tensorflow, etc.).  Read the :doc:`Paniikki cheatsheet
 here <../aalto/paniikki>`.  The instructions for :doc:`Aalto
 workstations <../aalto/linux>` sort of apply there as well.  The
@@ -141,7 +141,7 @@ found for your own use via the Aalto software portals.
 
 The Lmod (``module``) system provides more software on
 ``brute``/``force`` and in Paniikki.  For example, to access a bunch
-of scientific Python software, you can do ``module load anaconda3``.
+of scientific Python software, you can do ``module load anaconda``.
 The :doc:`researcher-focused instructions are here
 </triton/tut/modules>`, but like many things on this site you may have
 to adapt to the student systems.
@@ -151,7 +151,7 @@ Common software:
 .. csv-table::
    :delim: |
 
-   Python | ``module load anaconda3`` on Linux
+   Python | ``module load anaconda`` on Linux
    Tensorflow etc packages | same as Python, in Paniikki
 
 

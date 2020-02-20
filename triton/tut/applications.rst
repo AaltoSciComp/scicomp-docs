@@ -43,7 +43,7 @@ Common applications
 
 For reference, here are the most common applications:
 
-* **Python:** ``module load anaconda3`` for the Anaconda distribution
+* **Python:** ``module load anaconda`` for the Anaconda distribution
   of Python 3, including a lot of useful packages.  :doc:`More info
   <../apps/python>`.
 

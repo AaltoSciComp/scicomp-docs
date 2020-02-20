@@ -82,9 +82,9 @@ base software that covers most people's needs.
 
    What?  |  How?
 
-   Python via Anaconda | ``module load anaconda3`` (anaconda3 for Python3)
+   Python via Anaconda | ``module load anaconda``
    Python (system) | Default available
-   Tensorflow | in the Python environments, e.g. anaconda3 above
+   Tensorflow | in the Python environments, e.g. anaconda above
 
 
 Modules
@@ -138,11 +138,12 @@ libraries.
 
 .. code-block:: bash
 
-   # Latest Python 2
+   # Latest Python 3
+   $ module load anaconda
+
+   # Old Python 2
    $ module load anaconda2
 
-   # Latest Python 3
-   $ module load anaconda3
 
 Example 3: List all software
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
