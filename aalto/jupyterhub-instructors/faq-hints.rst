@@ -78,6 +78,29 @@ Instructions/hints
 - A notebook can tell if it is in the hub environment if the
   ``AALTO_JUPYTERHUB`` environment variable is set.
 
+- You can install an identical version of nbgrader as we have using::
+
+    pip install git+https://github.com/AaltoScienceIT/nbgrader@live
+
+  This may be useful if you get metadata mismatch errors between your
+  system and ours.  There used to be more differences, these days the
+  differences are minimal because most of our important changes have
+  been accepted upstream.
+
+- You can get an ``environment.yml`` file of currently installed
+  packages using::
+
+    conda env export -n base --no-builds
+
+  But note this is everything installed: you should remove everything
+  from this file except what your assignments actually depend on,
+  since being less strict will increase the chances that it's
+  reproduceable.  ``nbgrader`` should be removed (it pins to an
+  unreleased development version which isn't available), and perhaps
+  the ``prefix`` should too.  For actual versions installed, see
+  ``base`` and ``standard`` dockerfiles in `the singleuser-image repo
+  <https://github.com/AaltoScienceIT/jupyter-aalto-singleuser>`_.
+
 
 
 FAQ
