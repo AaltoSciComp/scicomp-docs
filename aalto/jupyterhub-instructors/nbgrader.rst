@@ -23,6 +23,28 @@ The course directory is ``/course/``.  Within this are ``source/``,
 
 
 
+Things which don't (necessarily) work in nbgrader
+-------------------------------------------------
+
+* **Autograde**: if you click the thing, it will work, but is the same
+  as running all your students code *on your own computer* with no
+  security whatsoever.  A slightly clever student is able to see other
+  students work (a privacy breach), alter their grades.
+
+* **Feedback**: While it appears to work, it is designed to operate by
+  hashing the contents of the notebook.  Thus, if you have to edit the
+  notebook to make it execute, the hash will be different and the
+  built-in feedback distribution will not work.
+
+* Furthermore, don't expect hidden tests to stay hidden, grading to
+  happen actually automatically, things to be fully automatic, and so
+  on.  Do expect a computing environment optimized for learning.
+
+These are just intrinsic to how nbgrader works.  We'd hope to fix
+these sometime, but it will require a more coordinated development
+effort.
+
+
 Aalto specifics
 ---------------
 
