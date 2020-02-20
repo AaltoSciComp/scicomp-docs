@@ -30,6 +30,47 @@ If students submit assignments/you use autograding
 
 
 
+Testing releasing assignments, without students seeing
+------------------------------------------------------
+
+Sometimes instructors want to release and collect assignments as a
+test, while the course is running.  To understand how the solution is
+simpler than "make a new course", we need to understand what "release"
+and "collect" do: they just move files around.  So, you can just move
+them to a different place (called the **exchange**) instead of the one
+that all students see.  Nbgrader docs sure doesn't do a good job of
+explaining it, but behind the scenes it's quite simple, and that
+simplicity means it's easy to control if you know what you are up
+to...
+
+You can equally move your test files around to a test, instructor-only
+exchange for your own testing.  (Actually, this isn't even needed, you
+can just copy them directly, test, and put back in the ``submitted/``
+directory.  But some people want more.  So, from the jupyter terminal,
+we have made these extra aliases::
+
+   # Release to test exchange (as instructor):
+   nbgrader-instructor-exchange release_assignment  $assignment_id
+   # Fetch from test exchange (as instructor, pretending to be a student):
+   nbgrader-instructor-exchange fetch_assignment  $assignment_id
+   # Submit to test exchange (as instructor, pretending to be a student):
+   nbgrader-instructor-exchange submit $assignment_id
+   # Collect to test exchange (as instructor):
+   nbgrader-instructor-exchange collect $assignment_id
+
+This copies files to and from ``/course/test-instructor-exchange/``,
+which you can examine and fully control.  If you are doing this, you
+probably need that control anyway.  These terms match the normal
+nbgrader terminology.
+
+There's no easy way to make a switch between "live exchange" and
+"instructor exchange" in the web interface, but because of the power
+of the command line, we can easily do it anyway.
+
+(use ``type -a nbgrader-instructor-exchange`` to see just what it does.)
+
+
+
 Known problems
 --------------
 
