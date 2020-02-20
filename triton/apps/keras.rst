@@ -2,7 +2,7 @@ Keras
 =====
 
 :supportlevel:
-:pagelastupdated: 2018
+:pagelastupdated: 2020-02-20
 :maintainer:
 
 Keras is a neural network library which runs on tensorflow (among
@@ -11,10 +11,8 @@ other things).
 Basic usage
 -----------
 
-Keras is available in the ``anaconda`` module (GPU version) and
-some other anaconda modules.  Run ``module spider anaconda`` to list
-available modules.  The ``tf2`` (tensorflow 2) versions work on both
-CPU and GPU.
+Keras is available in the ``anaconda`` module and some other anaconda
+modules.  Run ``module spider anaconda`` to list available modules.
 
 You probably want to learn how to run in the :doc:`GPU queues
 <../tut/gpu>`.  The other information in the :doc:`tensorflow
