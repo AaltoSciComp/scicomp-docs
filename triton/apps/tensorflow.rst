@@ -50,5 +50,5 @@ Common problems
   for this is to use the newer `anaconda`-modules.
 
 * Random CUDA errors: don't load any other CUDA modules, only
-  `anaconda`.  Anaconda includes the necessary libraries in compatible
+  ``anaconda``.  Anaconda includes the necessary libraries in compatible
   versions.
