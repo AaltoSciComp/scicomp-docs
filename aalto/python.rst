@@ -27,8 +27,8 @@ To use it::
 A more up-to-date yet under development version of the environment can be activated with::
 
     $ ml purge
-    $ ml anaconda
-    $ source activate neuroimaging3
+    $ ml anaconda3
+    $ source activate neuroimaging2
 
 To see the full list of packages what are installed in the environment, use::
 
