@@ -20,7 +20,7 @@ Fall / Winter 2020 courses (tentative plan): Linux Shell basics, Data analysis w
    :titlesonly:
 
    May 2020 / CodeRefinery (tbc) <https://coderefinery.org/workshops/>
-   matlab-advances
+   matlab-advanced
    shell-scripting
    md-with-lammps 
    mpi-introduction
