@@ -27,7 +27,9 @@ Teaching will be interactive, “learning by doing”.
 
 **Lecturers:** Enrico Glerean, D.Sc., CS/NBE Department, SCI
 
-**Registration:** `link for registration https://webropol.com/s/matlabAdv2020`__
+**Registration:** 
+
+`link for registration https://webropol.com/s/matlabAdv2020`__
 
 **Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
 
