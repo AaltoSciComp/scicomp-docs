@@ -18,16 +18,16 @@ Teaching will be interactive, “learning by doing”.
 
 **Schedule:**
 
-.. - Wed 15/04/2020, 12:00–15:00, Otakaari 1, Y342a: Data loading and dealing with large datasets
-.. - Fri 17/04/2020, 12:00–15:00, Otakaari 1, Y342a: Advanced programming techniques 
-.. - Wed 22/04/2020, 12:00–15:00, Otakaari 1, Y342a: Parallelisation (CPUs/GPUs/HPC)
-.. - Fri 24/04/2020, 12:00–15:00, Otakaari 1, Y342a: Making high quality figures
+- Wed 15/04/2020, 12:00–15:00, Otakaari 1, Y342a: Data loading and dealing with large datasets
+- Fri 17/04/2020, 12:00–15:00, Otakaari 1, Y342a: Advanced programming techniques 
+- Wed 22/04/2020, 12:00–15:00, Otakaari 1, Y342a: Parallelisation (CPUs/GPUs/HPC)
+- Fri 24/04/2020, 12:00–15:00, Otakaari 1, Y342a: Making high quality figures
 
 **Place:** Y342a, Otakaari 1
 
 **Lecturers:** Enrico Glerean, D.Sc., CS/NBE Department, SCI
 
-.. **Registration:** `link for registration https://webropol.com/s/matlabAdv2020`__
+**Registration:** `link for registration https://webropol.com/s/matlabAdv2020`__
 
 **Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
 
