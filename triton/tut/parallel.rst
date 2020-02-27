@@ -106,6 +106,9 @@ flavors available. To compile and run code you need to pick one. Since most of
 the MPI codes will also use math libs, makes sense to pick a toolchain that
 provides all at once.
 
+For basic use of MPI programs, you usually need the ``-n`` option to
+specify the number of MPI threads.
+
 Loading module::
 
   module load openmpi  # GCC + OpenMPI
@@ -144,14 +147,17 @@ environment.
 Exercises
 ---------
 
+1. Run ``srun -c 4 hostname``, ``srun -n 4 hostname``, and ``srun -N 4
+   hostname``.  What's the difference and why?
+
 In ``triton-examples`` (at ``/scratch/scip/examples``), you find some
 examples.
 
-1. Find the files ``openmp/hello_omp.c`` and ``openmp/hello_omp.slrm``
+2. Find the files ``openmp/hello_omp.c`` and ``openmp/hello_omp.slrm``
    that have a short
    example of OpenMP.  Compile and run it - a slurm script is included.
 
-2. Find the files ``mpi/hello_mpi.c`` and ``mpi/hello_mpi.slrm`` that
+3. Find the files ``mpi/hello_mpi.c`` and ``mpi/hello_mpi.slrm`` that
    have a short example
    of MPI.  Compile and run it - a slurm script is included.
 
