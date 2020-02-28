@@ -13,17 +13,17 @@ Whatever you do, these `guidelines for making good support requests
 
    Are you just looking for a Triton account?  See :doc:`accounts`.
 
-Three golden rules of asking for help
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Give enough information
+~~~~~~~~~~~~~~~~~~~~~~~
 
 We get many requests for help which are too vague to give a useful
 response.  So, when sending us a question, always answer these
 questions and you'll get the fastest useful response:
 
 * **Has it ever worked?**  (If so, what has changed?)
-* **What do you want in the end?**  (Your `ultimate goal
-  <https://en.wikipedia.org/wiki/XY_problem>`_, not what you want
-  right now.)
+* **What are you trying to accomplish?**  (Your `ultimate goal
+  <https://en.wikipedia.org/wiki/XY_problem>`_, not current technical
+  task.)
 * **What did you do?**  (Be specific enough to be reproducible - copy and
   paste exact commands you run, scripts, inputs, output messages, etc.)
 
