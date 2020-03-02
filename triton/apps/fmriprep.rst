@@ -3,7 +3,7 @@ FMRIprep
 
 ::
 
-    module load singularity-fmriprep
+    module load singularity-fmriprep/latest  # stick to the latest!
 
 fmriprep is installed as a singularity container. By default it will always run the current latest version. If you need a version that is not currently installed on triton, please open an issue at https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues
 
@@ -15,7 +15,7 @@ Here an example to run fmriprep for one subject, using an interactive session, w
     # Example running in an interactive session
     ssh triton.aalto.fi
     sinteractive --time=24:00:00 --mem=20G # you might need more memory or time depending on the size
-    module load singularity-fmriprep
+    module load singularity-fmriprep/latest
     singularity_wrapper exec fmriprep <path-to-bids> <path-to-your-derivatives-folder> -w <path-to-your-scratch-temporary-folder> participant --participant-label 01 --use-aroma --fs-no-reconall --fs-license-file /scratch/shareddata/set1/freesurfer/license.txt
 
 
