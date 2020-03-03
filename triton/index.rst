@@ -63,6 +63,7 @@ Quick contents and links
 
        **Shortcuts**
 
+       * `Issue tracker <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`_
        * `Quick Reference <ref/index>`
        * `Triton Cheatsheet <https://users.aalto.fi/~darstr1/cheatsheets/triton-cheatsheet.pdf>`_
        * `Triton FAQ <usage/faq>`
