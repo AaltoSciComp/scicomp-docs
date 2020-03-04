@@ -659,14 +659,16 @@ How do I subscribe to triton-users maillist?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Having a user account on Triton also means being on the
-triton-users@lists.aalto.fi mailist. That is where support team sends
+triton-users at aalto.fi mailist. That is where support team sends
 all the Triton related announcements. All the Triton users MUST be
-subscibed to the list. Just in case you are not yet there, please send
-an email to your local team member and ask to add your email. Same also
-if you want to replace your email with a new one.
+subscibed to the list. It is automatically kept up to date these days,
+but just in case you are not yet there, please send
+an email to your local team member and ask to add your email.
 
 How to unsubscribe? You will be removed from the maillist as soon as
-your Triton account is deleted from the system. Otherwise no way.
+your Triton account is deleted from the system. Otherwise no way,
+since we can't notify about urgent things that affect data integrity
+or other issues.
 
 I can't save anything to my ``$HOME`` directory, get some fsync error.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
