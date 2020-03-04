@@ -50,7 +50,7 @@ Spring 2020:
 
    Date (default Th)  | Time (default 13:00-14:00)  | Loc
    Thursdays 2.jan - 18.jun  | 13-14   | A106
-   12.mar     | 13-14  | room is different, check back for info
+   12.mar     | 13-14  | A211, CS building
 
 NBE garage, F-building
 ----------------------
