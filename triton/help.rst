@@ -23,7 +23,7 @@ questions and you'll get the fastest useful response:
 * **Has it ever worked?**  (If so, what has changed?)
 * **What are you trying to accomplish?**  (Your `ultimate goal
   <https://en.wikipedia.org/wiki/XY_problem>`_, not current technical
-  task.)
+  obstacle.)
 * **What did you do?**  (Be specific enough to be reproducible - copy and
   paste exact commands you run, scripts, inputs, output messages, etc.)
 
