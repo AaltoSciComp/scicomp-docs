@@ -23,14 +23,14 @@ questions and you'll get the fastest useful response:
 * **Has it ever worked?**  (If so, what has changed?)
 * **What are you trying to accomplish?**  (Your `ultimate goal
   <https://en.wikipedia.org/wiki/XY_problem>`_, not current technical
-  task.)
+  obstacle.)
 * **What did you do?**  (Be specific enough to be reproducible - copy and
   paste exact commands you run, scripts, inputs, output messages, etc.)
 
 If you don't know something, it's OK, just do your best and we'll help
 from there!  You can also chat with us to brainstorm about issues in
-general.  A much more detailed guide is available from `UiT HPC
-<https://hpc-uit.readthedocs.io/en/latest/help/writing-support-requests.html>`_.
+general.  A much more detailed guide is available from `Sigma2 documentation
+<https://documentation.sigma2.no/help/how_to_write_good_support_requests.html>`_.
 
 
 The Triton docs
