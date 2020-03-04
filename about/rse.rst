@@ -127,9 +127,8 @@ make a community of these people.  By taking part, you can
 * More directly help the community by, for example, directly updating
   this site, helping to develop services, or teaching with us.
 
-Until a mailing list gets set up, let Richard Darst know if you want
-to join.  So far nothing has started, we are building this all up as
-of early 2020.
+Join `our RSE mailing list
+<https://list.aalto.fi/mailman/listinfo/rse>`_ to be kept up to date.
 
 
 
