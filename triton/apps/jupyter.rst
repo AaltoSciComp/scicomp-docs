@@ -252,15 +252,15 @@ use envkernel as a wrapper to re-write the kernel (reading the
 ``NAME`` and rewriting to the same ``NAME``), after it loads the
 modules you need::
 
-  # Load jupyterhub/live, and the R module(s) you need.
+  # Load jupyterhub/live, and R 3.6.1 with IRkernel.
+  module load r-irkernel/1.1-python3
   module load jupyterhub/live
-  module load r/3.6.1-python3
-  # start R, install R kernel
-  R
-  > install.packages('IRkernel')
-  > IRkernel::installspec(name='NAME', displayname='R 3.6 module')')
+
+  # Use Rscript to install jupyter kernel
+  Rscript -e "library(IRkernel); IRkernel::installspec(name='NAME', displayname='R 3.6.1')"
+
   # Use envkernel to re-write, loading the R modules.
-  envkernel lmod --user --kernel-template=NAME --name=NAME  r/3.6.1-python3
+  envkernel lmod --user --kernel-template=NAME --name=NAME r-irkernel/1.1-python3
 
 Install your own kernels from other Python modules
 --------------------------------------------------
