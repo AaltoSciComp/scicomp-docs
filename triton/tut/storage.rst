@@ -368,7 +368,24 @@ used as a rudimentary way to see how much I/O load there is.
       this tar archive to local storage, do the operations, then
       remove.  Compare to previous strategies.
 
+4. What do all of the following have in common?
 
+   a) A job is submitted but fails with no output or messages.
+
+   b) I can't start a Jupyter server on jupyter.triton.
+
+   c) Some files are randomly empty.  Or the file had content, I tried
+      to save it again, and now it's empty!
+
+   d) I can't log in.
+
+   e) I can log in with ssh, but ``ssh -X`` doesn't work for graphical programs.
+
+   f) I get an error message about corruption, such as
+      ``InvalidArchiveError("Error with archive ... You probably need
+      to delete and re-download or re-create this file.``
+
+   g) I can't install my own Python/R/etc libraries.
 
 Next steps
 ==========
