@@ -47,6 +47,13 @@ some use cases). Triton supports all of these.
    These are compiled and optimized for Triton, and are highly
    recommended.  The default system Python is old and won't be updated.
 
+Make sure your environments are **reproducible** - you can recreate
+them from scratch.  History shows you will probably have to do this
+eventually, and it also ensures that others can always use your code.
+We recommend a minimal ``requirements.txt`` (pip) or
+``environment.yml`` (conda), hand-created with the minimal
+dependencies in there.
+
 Quickstart
 ----------
 
