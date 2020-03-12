@@ -99,7 +99,7 @@ Procedures:
   so on.  We'll give guidance from there for advanced cases.
 
 * Go to the `Triton issue tracker
-  <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>` and
+  <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`_ and
   find the "Garage" issue.  Post your more specific question there,
   including anything you know so far.
 
