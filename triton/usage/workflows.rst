@@ -30,7 +30,7 @@ Summary table for remote data analysis workflows
 
 
 .. list-table::
-      :header-rows: 1
+   :header-rows: 1
 
    * * Workflow
      * Pros
