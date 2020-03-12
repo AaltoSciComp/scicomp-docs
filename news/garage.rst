@@ -50,7 +50,8 @@ Spring 2020:
 
    Date (default Th)  | Time (default 13:00-14:00)  | Loc
    Thursdays 2.jan - 18.jun  | 13-14   | A106
-   12.mar     | 13-14  | A211, CS building
+   12.mar     | 13-14  | in-person cancelled, see "online" below.
+   19.mar-??  | 13-14  | probably cancelled, see "online" below.
 
 NBE garage, F-building
 ----------------------
@@ -66,6 +67,47 @@ practices in biomedical research.
 
    Date (default Th)  | Time (default 13:00-14:00)  | Loc
    First wednesdays  | 13-14   | F336
+
+
+Online
+------
+
+To prevent unnecessary in-person contacts, we are going to try an
+online garage.
+
+.. csv-table::
+   :header-rows: 1
+   :delim: |
+
+   Date (default Th)  | Time (default 13:00-14:00)  | Loc
+   12.mar     | 13-14  | https://aalto.zoom.us/j/177010905
+
+.. note::
+
+   This is our first time!  Let us know what you think, and we will
+   adapt based on feedback.
+
+   Check back on this page for updates, or join the link above.
+
+Procedures:
+
+* Join the conference at the link above (you can join via Chrome
+  without registering).  **You can join even if you
+  have general questions, no specific question, or want to discuss
+  with others even if you won't get one-on-one help.** You can chat
+  with us and other users, ask general questions, see what's new, and
+  so on.  We'll give guidance from there for advanced cases.
+
+* Go to the `Triton issue tracker
+  <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>` and
+  find the "Garage" issue.  Post your more specific question there,
+  including anything you know so far.
+
+* You will be contacted and via that Triton issue (or somehow) and
+  told how to join a particular one-on-one meeting with someone to
+  handle your problem.  You will share your screen and the person will
+  help you.
+
 
 
 
