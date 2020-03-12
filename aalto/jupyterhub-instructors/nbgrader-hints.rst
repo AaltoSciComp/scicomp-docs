@@ -101,6 +101,34 @@ else.  Of course, many variations are possible.
 
 
 
+Converting usernames to emails
+------------------------------
+
+JupyterHub has no access to emails or student numbers.  If you do need
+to link to email addresses, you can do the following.
+
+* ssh to kosh.aalto.fi
+
+* cd to wherever you have exported a csv file with your grades (for
+  example your course directory, ``cd
+  /m/jhnas/jupyter/course/$course_slug/files/``).
+
+* Run ``/m/jhnas/jupyter/software/bin/username-to-email.py
+  exported_grades.csv`` - this will add an email column right after
+  the username column.  If the username column is not the zeroth
+  (counting from zero), use the ``-c $N`` option to tell it that the
+  usernames are in the ``N``\ th column (zero indexed).
+
+* Save the output somewhere, for example you could redirect it using
+  ``>`` to a new filename.
+
+This script is also `available on github`__.
+
+__ https://github.com/AaltoScienceIT/jupyterhub-aalto/blob/master/user-scripts/username-to-email.py
+
+
+
+
 Our scripts and resources
 -------------------------
 
