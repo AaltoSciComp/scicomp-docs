@@ -9,13 +9,16 @@ here. See Aalto Inside for more details.
 Linux shell servers
 ~~~~~~~~~~~~~~~~~~~
 
--  CS department servers:
+-  Department servers have **project**, **archive**, **scratch**, etc
+   mounted, so are good to use for research purposes.
 
-   -  ``magi``: Department staff server (no heavy computing,
-      access to workstations and has file systems mounted, use kinit
-      command first if project directories are not visible)
+   -  CS: ``magi.cs.aalto.fi``: Department staff server (no heavy computing,
+      access to workstations and has file systems mounted, use the ``kinit``
+      command first if project directories are not accessible)
 
--  `Aalto servers <https://inside.aalto.fi/display/ITServices/Linux+shell+servers>`__
+   - NBE: ``amor.nbe.aalto.fi``, same as above.
+
+-  `Aalto servers <https://www.aalto.fi/en/services/linux-shell-servers-at-aalto>`__
 
    -  ``kosh.aalto.fi``, ``lyta.aalto.fi``: Aalto, for general login use
       (no heavy compting)
@@ -28,15 +31,18 @@ Linux shell servers
       is kind of outdated and different.
 
 -  Your **home** directory is shared on all Aalto shell servers, and
-   that means .ssh/authorized\_keys as well.
+   that means ``.ssh/authorized_keys`` as well.
+
 -  You can use any of these to mount things remotely via sshfs. This is
    easy on Linux, harder but possible on other OSs. You are on your own
-   here. magi is recommended since kerberos is not needed.
+   here.  You still need ``kinit`` at the same time.
 
    -  The CS filesystems **project** and **archive** and Triton
       filesystems **scratch** and **work** are mounted on
       ``magi`` (and ``taltta.aalto.fi``) (see
       `storage <aaltostorage>`__).
+
+For any of these, if you can't access something, run ``kinit``!
 
 .. _aalto_vpn:
 
@@ -47,10 +53,9 @@ To access certain things, you need to be able to connect to the Aalto
 networks via VPN. This is easy and automatically set up on Aalto
 computers.
 
-For the main Aalto instructions,
-`see it.aalto.fi and search for "VPN"
-<https://it.aalto.fi/searchpage?search_api_fulltext=vpn>`__.  This
-section has some quick reference info.
+`Main Aalto instructions
+`<https://www.aalto.fi/en/services/establishing-a-remote-connection-vpn-to-an-aalto-network>`__.
+This section has some quick reference info.
 
 -  Generic: OpenConnect/Cisco AnyConnect protocols. ``vpn.aalto.fi``
 -  Aalto Linux: Status bar → Network → VPN Connections → Aalto TLS
@@ -72,7 +77,11 @@ ssh proxy. You are on your own
 here. ``ssh -D 8080 $username@kosh.aalto.fi``. Configure your web
 browser or other applications to use a SOCKS5 proxy on ``localhost:8080``
 for connections. Remember to revert when done or else you can't connect
-to anything. The extension FoxyProxy Standard may be useful here.
+to anything ("proxy refusing connections"). The extension FoxyProxy
+Standard may be useful here, because you can direct *only the domains
+you want through the proxy*.
+
+
 
 Remote mounting of network filesystems
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -84,32 +93,38 @@ the shell servers):
 
 - In all cases, username=aalto username, domain=AALTO,
   password=Aalto password.
-- ``smb://home.org.aalto.fi/`` for your home directory
-- ``smb://tw-cs.org.aalto.fi/project/$name/`` for project
-  directories (``$name``\ =project name)
-- ``smb://tw-cs.org.aalto.fi/archive/$name/`` for archive
-  directories (``$name``\ =project name)
-- For scratch directories, see :doc:`Triton storage
+- For NBE/PHYS, replace ``tw-cs`` with ``tw-nbe`` or ``tw-phys``.
+- **Home** directories: ``smb://home.org.aalto.fi/``
+- **Project** directories: ``smb://tw-cs.org.aalto.fi/project/$name/``
+  (``$name``\ =project name)
+- **Archive** directories: ``smb://tw-cs.org.aalto.fi/archive/$name/``
+  (``$name``\ =project name)
+- **Scratch directories**, see :doc:`Triton storage
   <../triton/tut/storage>`.
-- ``smb://work.org.aalto.fi`` for "Aalto work" directories (different
+- ``smb://work.org.aalto.fi`` for **Aalto work** directories (different
   than Triton ``work``).
 
 Depending on your OS, you may need to use either your username
 directly or ``AALTO\username``
 
-On Ubuntu: Files → Left sidebar → Connect to server → use the URLs above.
-For other Linuxes, you can probably figure it out.
+On **Ubuntu**: Files → Left sidebar → Connect to server → use the URLs above.
+For other Linuxes, you can probably figure it out.  (It varies
+depending on operating system, look around in the finder)
 
-On mac laptops: Finder → Go menu item → Connect to server → use the URLs
+On **Mac** laptops: Finder → Go menu item → Connect to server → use the URLs
 above.
 
-On windows laptops:  To do the mounting, Windows Explorer → Computer → Map network drive →
+On **Windows** laptops:  To do the mounting, Windows Explorer → Computer → Map network drive →
 select a free letter.  ``smb://`` becomes ``\\`` (without the ``smb:``), and ``/`` becomes
 ``\``.  For example, a full URL could be
 ``\\tw-cs.org.aalto.fi\project\mygroup``.  You can also just enter
 it into the file manager bar.
 
-Remember that you must connect to the Aalto VPN first!
+.. warning:: Must use VPN or Aalto network.
+
+   Remember that you must connect to the Aalto VPN first, unless you are
+   on an *Aalto laptop* on the ``aalto`` network.
+
 
 Accessing you Linux workstation / Triton remotely
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -131,27 +146,13 @@ Accessing you Linux workstation / Triton remotely
       want to read up on ssh keys, ProxyCommand, ControlMaster. It can
       make your experience much better.
 
-Remote Windows desktop
-~~~~~~~~~~~~~~~~~~~~~~
+Remote desktop
+~~~~~~~~~~~~~~
 
-Aalto has a windows remote desktop available. As usual, you must be on
-the Aalto VPN or Aalto networks.
+Aalto has remote desktops available at https://vdi.aalto.fi.  This
+works from any network.
 
--  Server name ``rds01.org.aalto.fi`` (or ``rds02``).
--  login with Aalto credentials, username: ``AALTO\$username``
--  From Linux: the GUI program ``remmina`` lets you connect.  Follow
-   the instructions to add a server connection.
-   Username is Aalto username and password is Aalto password.  If you are on the
-   Aalto network, you can turn the quality settings quite high (True
-   color, Quality=best).  Security=negotiate.
--  From Linux: the command line program ``rdesktop`` can connect:
-   ``rdesktop -u 'AALTO\$username' -g 1360x760 rds01.org.aalto.fi``
-
-As usual (on Linux), you can also access this directly through SSH
-forwarding instead of the VPN (``remmina`` seems to be able to do this
-automatically):
-
--  ``ssh -L 3389:rds01.org.aalto.fi:3389 kosh.aalto.fi``
--  ``rdesktop -u 'AALTO\$username' -g 1360x760 localhost``
-
+There are both Windows and Linux desktops available.  They are
+arranged as virtual machines with the normal desktop installations, so
+have access to all the important filesystems and all ``/m/{dept}/...``.
 
