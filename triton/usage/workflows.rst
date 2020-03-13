@@ -4,6 +4,14 @@ Remote workflows at Aalto
 
 .. note::
 
+   The more specific remote access instructions for scicomp is at
+   :doc:`/aalto/remoteaccess` (recent email had duplicate links to
+   this page).  This page explains the options, including other
+   systems.
+
+
+.. note::
+
    How can you work from home?  For that matter, how can you work on more than your desktop/laptop while at work?  There are many options which trade off between graphical interfaces and more power.  Read more for details.
 
 You have most likely created your own workflow to analyse data at Aalto and most likely you are using a dedicated desktop workstation in Otaniemi. However, with increased mobility of working conditions and recent global events that recommend tele-working, you might be asking yourself: "how do I stop using my workstation at the dept, and get analysis/figures/papers done from home?".
