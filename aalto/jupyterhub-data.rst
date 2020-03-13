@@ -23,22 +23,31 @@ On Paniikki, and the Aalto servers ``kosh.aalto.fi``,
 possibly more), the JupyterHub is available automatically.  **You can,
 for example, use the Paniikki GPUs.**
 
-Data is available within the paths ``/m/jhnas/jupyter``.
+Data is available within the paths ``/m/jhnas/jupyter``.  The path on
+Linux servers is also available on the hub, if you want to write
+portable files.
 
 .. csv-table::
    :delim: |
    :header-rows: 1
 
-   Name                    | Path on Linux servers
-   personal notebooks      | ``/m/jhnas/jupyter/u/$nn/$username/``
-   course data             | ``/m/jhnas/jupyter/course/$course_slug/data/``
-   course instructor files | ``/m/jhnas/jupyter/course/$course_slug/files/``
-   shared data             | ``/m/jhnas/jupyter/shareddata/``
+   Name                    | Path on hub     | Path on Linux servers
+   personal notebooks      | ``/notebooks``  | ``/m/jhnas/jupyter/u/$nn/$username/``
+   course data             | ``/coursedata`` | ``/m/jhnas/jupyter/course/$course_slug/data/``
+   course instructor files | ``/course``     | ``/m/jhnas/jupyter/course/$course_slug/files/``
+   shared data             | ``/m/jhnas/jupyter/shareddata/`` | ``/m/jhnas/jupyter/shareddata/``
+
+.. csv-table::
+   :delim: |
+   :header-rows: 1
+
+      Variable seen above | Meaning
+      ``$username``       | Your Aalto username
+      ``$nn``             | The two numbers you see in ``echo $HOME`` (the last two digits of your Aalto uid, ``id``)
+      ``$course_slug``    | The short name of your course.
 
 You can change directly to your notebook directory by using ``cd
-/m/jhnas/jupyter/${HOME%/unix}``.  For your personal notebooks,
-``$nn`` is the last two digits of your user id (you can get this with
-``echo $HOME``).
+/m/jhnas/jupyter/${HOME%/unix}``.
 
 **You can link it to your home directory so that it's easily
 available**.  In a terminal, run ``/m/jhnas/u/makedir.sh`` and you
