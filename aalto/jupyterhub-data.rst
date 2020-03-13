@@ -3,22 +3,47 @@ Accessing JupyterHub data
 =========================
 
 Unlike many JupyterHub deployments, your data is *yours* and have many
-different ways to access it.  Most importantly, the data is a normal
-Aalto network drive, and thus it can be accessed remotely, from your
-own computers.
+different ways to access it.  Thus, we don't just have jupyter.cs, but
+a whole constellation of ways to access and do *your work*, depending on what
+suits you best for each part.
+
+Your data (and as an instructor, your course's data) can be accessed
+many ways:
+
+* On jupyter.cs.
+* Via network drive *on your own computer as local files*.
+* On Aalto shell servers (such as kosh.aalto.fi).
+* On other department/university workstations.
 
 On Paniikki and Aalto computers
 -------------------------------
 
-TODO: eventually, on Paniikki, and the Aalto servers kosh, lyta,
-brute, and force, the JupyterHub data will be available
-automatically.
+On Paniikki, and the Aalto servers ``kosh.aalto.fi``,
+``lyta.aalto.fi``, ``brute.aalto.fi``, and ``force.aalto.fi`` (and
+possibly more), the JupyterHub is available automatically.  **You can,
+for example, use the Paniikki GPUs.**
 
-..
-  on Paniikki and the Aalto servers kosh, lyta, brute, and force,
-  you can simply access all Jupyter data at the path ``/m/jhnas/``.  In
-  a terminal, run ``/m/jhnas/u/makedir.sh`` and you will automatically
-  get a link from your home directory ``~/jupyter`` to your user data.
+Data is available within the paths ``/m/jhnas/jupyter``.
+
+.. csv-table::
+   :delim: |
+   :header-rows: 1
+
+   Name                    | Path on Linux servers
+   personal notebooks      | ``/m/jhnas/jupyter/u/$nn/$username/``
+   course data             | ``/m/jhnas/jupyter/course/$course_slug/data/``
+   course instructor files | ``/m/jhnas/jupyter/course/$course_slug/files/``
+   shared data             | ``/m/jhnas/jupyter/shareddata/``
+
+You can change directly to your notebook directory by using ``cd
+/m/jhnas/jupyter/${HOME%/unix}``.  For your personal notebooks,
+``$nn`` is the last two digits of your user id (you can get this with
+``echo $HOME``).
+
+**You can link it to your home directory so that it's easily
+available**.  In a terminal, run ``/m/jhnas/u/makedir.sh`` and you
+will automatically get a link from ``~/jupyter`` in your home
+directory to your user data.
 
 Remote access via network drive
 -------------------------------
@@ -26,11 +51,15 @@ Remote access via network drive
 Basic info
 ~~~~~~~~~~
 
-.. note::
+.. csv-table::
+   :delim: |
+   :header-rows: 1
 
-   These instructions are still being tested and updated, because
-   people have many different computers and we don't fully control the
-   data storage ourselves.  Please check back for updates.
+   Name                    | Network drive path
+   personal notebooks      | ``smb://jhnas.org.aalto.fi/$username/``
+   course data             | ``smb://jhnas.org.aalto.fi/course/$course_slug/data/``
+   course instructor files | ``smb://jhnas.org.aalto.fi/course/$course_slug/files/``
+   shared data             | ``smb://jhnas.org.aalto.fi/shareddata/``
 
 You can do a SMB mount, which makes the data available as a network
 drive.  You will have the same copy of the data as on the hub -
@@ -61,7 +90,7 @@ You can also access course data and shared data by using
 .. seealso::
 
    `Mounting network drives in Windows
-   <https://it.aalto.fi/instructions/deployment-network-drive-windows>`__
+   <https://www.aalto.fi/en/services/deployment-of-a-network-drive-in-windows>`__
    is the same instructions, but for Aalto home directories.  Anything
    there should apply here, too.
 
@@ -74,37 +103,18 @@ Using GPUs
 One problem with our JupyterHub so far is that we don't have GPUs
 available.  But, because our data is available to other computers, you
 can use the :doc:`paniikki` GPUs (quite good ones) to get all the
-power you need.  To do this, you just need to make the data available
-on these classroom computers, and then start Jupyter or whatever you
-need.
+power you need.  To do this, you just need to access the Jupyter data
+on these classroom computers.
 
-First, log in to a Paniikki computer and open the file browser.
-Depending on your desktop, you can use "Places --> Connect to server",
-or "Connect to Server from the file browser.
+**Terminal**: First, start a terminal.  You can navigate to your data
+following the instructions above: ``cd
+/m/jhnas/jupyter/${HOME%/unix}``.  From there, navigate to the right
+directories and do what is needed.
 
-.. figure:: /images/jupyterdata_01_connect_menu.png
-	    :scale: 75%
-	    :align: center
-	    :alt: Connect to Server
-
-Then, enter the server address ``smb://jhnas.org.aalto.fi``
-
-.. figure:: /images/jupyterdata_02_servername.png
-	    :scale: 75%
-	    :align: center
-	    :alt: Server URL
-
-Go to the directory with your username.  At this point, you can set a
-bookmark that saves this for the future.
-
-Now you have to start Jupyter there.  To do that, start a terminal in
-the Jupyter directory.  You can do this by right clicking and
-selecting "Open in Terminal":
-
-.. figure:: /images/jupyterdata_03_startterminal.png
-	    :scale: 75%
-	    :align: center
-	    :alt: Right click, and select Open in Terminal
+**File browser**: Navigate to the path
+``/m/jhnas/jupyter/u/$nn/$username``, where ``$nn`` is the two numbers
+you see when you do ``echo $HOME`` in a terminal.  To open a terminal
+from a location, right click and select "Open in Terminal".
 
 Now that you have the terminal and the data, you can do whatever you
 want with it.  Presumably, you will start Jupyter here - but first you
