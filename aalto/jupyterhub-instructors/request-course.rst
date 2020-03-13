@@ -53,7 +53,7 @@ Required metadata is:
      * Long-term staff who can answer questions about old data even if
        the course TAs move on.  Might be same as contact.  This is the
        "primary owner" of all data according to the :doc:`Science-IT
-       data policy </aalot/datapolicy>`.
+       data policy </aalto/datapolicy>`.
 
    * * 5. Instructors
      * Who will have access to the instructor data?  Instructors will
