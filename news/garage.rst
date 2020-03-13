@@ -82,6 +82,11 @@ online garage.
    Date (default Th)  | Time (default 13:00-14:00)  | Loc
    12.mar     | 13-14  | https://aalto.zoom.us/j/177010905
 
+.. warning::
+
+   If joining by web browser, use Chrome.  Audio doesn't work with
+   Firefox or Safari.
+
 .. note::
 
    This is our first time!  Let us know what you think, and we will
