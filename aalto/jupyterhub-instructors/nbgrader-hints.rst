@@ -120,7 +120,9 @@ to link to email addresses, you can do the following.
   usernames are in the ``N``\ th column (zero indexed).
 
 * Save the output somewhere, for example you could redirect it using
-  ``>`` to a new filename.
+  ``>`` to a new filename.  A full example::
+
+    /m/jhnas/jupyter/software/bin/username-to-email.py mycourses_export.csv > mycourses_usernames.csv
 
 This script is also `available on github`__.
 
