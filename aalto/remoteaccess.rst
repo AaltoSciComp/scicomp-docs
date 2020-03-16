@@ -54,7 +54,7 @@ networks via VPN. This is easy and automatically set up on Aalto
 computers.
 
 `Main Aalto instructions
-`<https://www.aalto.fi/en/services/establishing-a-remote-connection-vpn-to-an-aalto-network>`__.
+<https://www.aalto.fi/en/services/establishing-a-remote-connection-vpn-to-an-aalto-network>`__.
 This section has some quick reference info.
 
 -  Generic: OpenConnect/Cisco AnyConnect protocols. ``vpn.aalto.fi``
