@@ -7,6 +7,9 @@ Instructions/hints
 - Request a course when you are sure you will use it.  You can use the
   general use containers for writing notebooks before that point.
 
+- Don't forget about the :doc:`flexible ways of accessing course data
+  <../coursedata>`.
+
 - The course directory is stored according to the :doc:`Science-IT
   data policy </aalto/datapolicy>`.  In short, all data is stored in group
   directories (for these purposes, the course is a group).  The
