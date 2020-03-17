@@ -71,7 +71,7 @@ During the project
 
 Make sure that you manage data well - just think, your data is
 possibly worth more than all your other devices combined.  Check out
-the :doc:`core lessons <corelessons>` to learn of the most common
+the core lessons corelessons (non here yet) to learn of the most common
 problems, and see if any of them apply to you.
 
 You may want to read our :doc:`welcome to researchers

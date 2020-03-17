@@ -15,7 +15,7 @@ service for groups who provide their own funding.  Departments/school
 and groups can co-fund the program to gain a dedicated share.
 
 This is the hands-on compliment our training programs, mainly
-:doc:`scientific computing in practice sessions </training/scip>` and
+:doc:`scientific computing in practice sessions </training/scip/index>` and
 `CodeRefinery <https://coderefinery.org>`_.  If you want a kickstart
 to put those sessons in practice, this is for you.  Attendance
 in these courses is useful but by no means required.

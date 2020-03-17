@@ -147,7 +147,7 @@ the Finnish Grid and Cloud Infrastructure.  Triton is the largest
 publically known computing cluster in Finland after the CSC clusters.
 Triton provides a web-based interface via :doc:`JupyterHub
 <../triton/apps/jupyter>`.  To get started with Triton, :doc:`request
-access </triton/accounts>`, check the :ref:`tutorials <tutorials_>`
+access </triton/accounts>`, check the :ref:`tutorials <tutorials>`
 sequence, and you'll learn all you need.
 
 `CSC <https://csc.fi>`_ (the Finnish IT Center for Science) is a

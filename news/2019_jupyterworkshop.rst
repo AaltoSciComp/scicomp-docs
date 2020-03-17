@@ -4,7 +4,7 @@ Jupyter Workshop, 8 March 2019
 Jupyter notebooks are a web-based system for interactive computing,
 and the :doc:`Aalto Juptyerhub <../aalto/jupyterhub>`
 (https://jupyter.cs.aalto.fi) extends this with some :doc:`features
-useful for teaching <../aalto/jupyterhub-instructors>`.
+useful for teaching <../aalto/jupyterhub-instructors/index>`.
 
 This workshop is to introduce the Aalto community to the Aalto
 JupyterHubs and how they can be used for teaching (including
