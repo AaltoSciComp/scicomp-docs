@@ -1,0 +1,9 @@
+{%- extends "!footer.html" %}
+
+{% block extrafooter %}
+  {%- if gitstamp %}
+    <p style="margin-top: 12px">
+      <span class="lastupdated">This page last updated {{ gitstamp }}.</span>
+    </p>
+  {%- endif %}
+{% endblock %}

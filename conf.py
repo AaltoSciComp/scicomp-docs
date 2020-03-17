@@ -33,6 +33,14 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.mathjax',
 ]
+# Add timestamps from git
+try:
+    # https://github.com/jdillard/sphinx-gitstamp
+    import sphinx_gitstamp
+    extensions.append('sphinx_gitstamp')
+    gitstamp_fmt = "%d %b %Y"
+except:
+    print("sphinx_gitstamp is not installed, won't use git timestamps.")
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
