@@ -17,7 +17,9 @@ Instructions/hints
 
 - To add more instructors/TAs, go to `domesti.cs.aalto.fi
   <https://domesti.cs.aalto.fi>`_ and you can do it yourself.  You
-  must be connected to an Aalto network.
+  must be connected to an Aalto network.  See the `Aalto VPN guide
+  <https://www.aalto.fi/en/services/establishing-a-remote-connection-vpn-to-an-aalto-network>`_
+  for help with connecting to an Aalto network from outside.
 
 - Store your course data in a git repository (or some other version
   control system) and push it to :doc:`version.aalto.fi </aalto/git>`
