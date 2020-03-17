@@ -58,7 +58,8 @@ Required metadata is:
    * * 5. Instructors
      * Who will have access to the instructor data?  Instructors will
        be added to a Aalto unix group named ``jupyter-$courseslug`` to
-       provide access control.  To request new instructors, contact
+       provide access control.  To request new instructors, you do
+       this yourself (:doc:`see the relevant FAQ <faq-hints>`).  Or, email
        CS-IT and ask that people be added/removed from your group
        ``jupyter-$courseslug``.
 
