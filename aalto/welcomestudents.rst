@@ -60,7 +60,7 @@ resources which are suitable for most courses that need extra power:
 .. csv-table::
    :delim: |
 
-   :doc:`Paniikki computer lab <paniikki.rst>` | Linux workstations, GPUs, software via modules
+   :doc:`Paniikki computer lab <paniikki>` | Linux workstations, GPUs, software via modules
    Other computer labs | workstations, different OSs
    `Shell servers <https://www.aalto.fi/en/services/linux-shell-servers-at-aalto>`_ | via ssh, software via modules, overcrowded.  `Brute and Force <https://www.aalto.fi/en/services/servers-for-light-duty-calculation>`_ are for computation, others not.
    `JupyterHub <jupyterhub>`_ | basic software, in web browser

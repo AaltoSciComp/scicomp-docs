@@ -52,7 +52,7 @@ history - which is useful for monitoring.  Then submit it with
     $ sbatch hello.slrm
 
 .. warning:: You must use ``sbatch``, not ``bash`` to submit the job
-   to process the `#SBATCH` headers and run in the background.
+   to process the ``#SBATCH`` headers and run in the background.
 
 This sends it to the queue to wait. Since the time requested is short,
 it will probably run on the debug partition, which is reserved for small

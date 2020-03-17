@@ -75,7 +75,7 @@ Finally, if you get binaries from the wrong environment (check with
 MNE Analyze
 -----------
 
-Note: this was tested only for NBE workstations. If you wish to run `mne_analyze` from your workstation you should follow this procedure. Open a new terminal and make sure you have the *bash* shell (`echo $SHELL`, if you do not have it, just type `bash`) and then::
+Note: this was tested only for NBE workstations. If you wish to run ``mne_analyze`` from your workstation you should follow this procedure. Open a new terminal and make sure you have the *bash* shell (``echo $SHELL``, if you do not have it, just type ``bash``) and then::
 
     $ module load mne
     $ source /work/modules/Ubuntu/14.04/amd64/common/mne/MNE-2.7.4-3434-Linux-x86_64/bin/mne_setup_sh

@@ -47,7 +47,7 @@ Common problems
   file or directory**. Older versions of GPU tensorflow can only be imported
   on GPU nodes (even though you'd think that you can import it and just not
   use the GPUs).  So you can only run this code in the GPU queue. Solution
-  for this is to use the newer `anaconda`-modules.
+  for this is to use the newer ``anaconda``-modules.
 
 * Random CUDA errors: don't load any other CUDA modules, only
   ``anaconda``.  Anaconda includes the necessary libraries in compatible

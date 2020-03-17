@@ -52,7 +52,7 @@ some of the key players:
 * **CSC** is the Finnish academic computing center (and more).  They provide a
   lot of basic infrastructure you use without knowing it, as well as
   computing and data services to researchers (all for free).  `research.csc.fi
-  <csc_>`_
+  <https://research.csc.fi/>`_
 
 .. _its_instr: https://aalto.fi/it
 .. _sci-it: http://science-it.aalto.fi/
@@ -60,7 +60,6 @@ some of the key players:
 .. _nbe-it: https://wiki.aalto.fi/display/NBE/IT+Information
 .. _phys-it: https://wiki.aalto.fi/display/TFYintra/PHYS+IT
 .. _math-it: https://wiki.aalto.fi/display/mathintra/Computer+Instructions
-.. _csc: https://research.csc.fi/
 
 Also, currently Aalto has information scattered on websites
 everywhere:
@@ -214,7 +213,7 @@ instructions <teamwork_>`_
 .. _teamwork: https://www.aalto.fi/en/services/file-storage-space-for-research-and-groups-teamwork
 
 CSC provides both high-performance Lustre filesystems (like Triton)
-and archive systems.  `CSC research portal <csc_>`_.
+and archive systems.  `CSC research portal <https://research.csc.fi/>`_.
 
 In our :doc:`data management section <../data/index>`, we provide many
 more links to long-term data repositories, archival, and so on.  The
@@ -323,7 +322,7 @@ selected by researchers for researchers, so we make sure that
 everything is relevant to you.
 
 Check our :doc:`upcoming training page
-<../training/scip/>` for a list of upcoming courses.
+<../training/scip/index>` for a list of upcoming courses.
 If you do anything computational or code-based at all, you should
 consider the twice-yearly `CodeRefinery <http://coderefinery.org/>`__
 workshops (announced on our page).  If you have a Triton account or do

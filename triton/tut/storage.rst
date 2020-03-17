@@ -255,7 +255,7 @@ Sometimes you want to copy only files under a certain size (e.g. 100MB)::
 
    rsync -avzc --max-size=100m ...
 
-Rsync does NOT delete files by default, i.e. if you delete a file from the local folder, the remote file will not be deleted automatically, unless you specify the `--delete` option.
+Rsync does NOT delete files by default, i.e. if you delete a file from the local folder, the remote file will not be deleted automatically, unless you specify the ``--delete`` option.
 
 Please note that when working with files containing code or simple text, git is a better option to synchronise your local folder with your remote one, because not only it will keep the two folders in sycn, but you will also gain version controlling so that you can revert to previous version of your code, or txt/csv files.
 
