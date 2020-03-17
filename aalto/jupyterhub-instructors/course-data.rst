@@ -3,6 +3,11 @@
 Course data
 ===========
 
+.. seealso::
+
+   One of the best features of jupyter.cs is powerful data access.
+   See :doc:`../jupyterhub-data`
+
 If your course uses data, request a ``coursedata`` or ``shareddata``
 directory as mentioned above.  You need to add the data there
 yourself, either through the Jupyter interface or SMB mounting of

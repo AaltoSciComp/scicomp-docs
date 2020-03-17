@@ -54,6 +54,10 @@ available**.  In a terminal, run ``/m/jhnas/u/makedir.sh`` and you
 will automatically get a link from ``~/jupyter`` in your home
 directory to your user data.
 
+**Permission denied?** Run ``kinit`` in the shell - this authenticates
+yourself to the Aalto server and is required for secure access.  If
+you log in with ssh keys, you may need to do this.
+
 Remote access via network drive
 -------------------------------
 

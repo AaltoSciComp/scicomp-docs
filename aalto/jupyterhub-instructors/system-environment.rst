@@ -51,10 +51,11 @@ Data
 
 Data is available from outside JupyterHub: it is hosted on an
 Aalto-wide server provided by Aalto.  Thus, you can access it on your
-laptops, on Aalto public shell servers, and more.
+laptops, on Aalto public shell servers, and more.  A fast summary is
+below, but see :doc:`../jupyterhub-data` for the main info.
 
 * From your own laptop: The SMB server ``jhnas.org.aalto.fi`` path
-  ``/vol/jupyter/{u,courses}``.
+  ``/vol/jupyter/{course,$username}``.
 
   * Linux: "Connect to server" from the file browser, URL
     ``smb://jhnas.org.aalto.fi/vol/jupyter``
