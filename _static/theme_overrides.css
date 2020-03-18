@@ -19,3 +19,9 @@
 .rst-content .section li ol {
     margin-bottom: 0px;
 }
+
+/* Strikethrough */
+/* https://stackoverflow.com/questions/6518788/rest-strikethrough */
+.strike {
+    text-decoration: line-through;
+}
