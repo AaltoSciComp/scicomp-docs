@@ -31,6 +31,6 @@ Additional materials and homework assignments at triton.aalto.fi:/scratch/scip/B
 
 **Credits:** Credits available for the Aalto students and course certificate can be provided on request for the outsiders. Credits/certificate require full time participation and handling home work/assignments. Full course hours correspond roughly to 1 ECTS.
 
-**Other comments:** During the tutorials we’ll use a Linux terminal, means that either you have a Linux/Mac laptop or you have a Windows laptop with the SSH client installed for accessing any of Linux server (kosh/lyta etc at Aalto). If needed participants can be provided with access to Triton for running examples. *Participants are expected to bring their own laptops.*
+**Other comments:** For the online course we expect you to have Zoom client installed on your local workstation/laptop. Then we expect you to have access to Linux-like shell terminal, means that either you have a Linux/Mac laptop or you have a Windows laptop with the SSH client installed for accessing any of Linux server (kosh/lyta etc at Aalto). If needed participants can be provided with access to Triton for running examples. *Participants are expected to bring their own laptops.*
 
 **Additional course info at:** ivan.degtyarenko -at- aalto.fi
