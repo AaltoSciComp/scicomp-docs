@@ -12,7 +12,7 @@ We expect that course participants are familiar with the `shell basics <linux-sh
 
 **Lecturer:** Ivan Degtyarenko, D. Sc., Science IT / Department of Applied Physics, Aalto University
 
-**Place:** Otakaari 1, U135a
+**Place:** Online, Zoom link to be announced, check this page before the session begins
 
 **Time, date:**
 
