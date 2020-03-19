@@ -81,18 +81,16 @@ online garage.
 
    Date (default Th)  | Time (default 13:00-14:00)  | Loc
    12.mar     | 13-14  | https://aalto.zoom.us/j/177010905
+   19.mar     | 13-14  | https://aalto.zoom.us/j/177010905
+   26.mar     | 13-14  | https://aalto.zoom.us/j/177010905
+    2.apr     | 13-14  | https://aalto.zoom.us/j/177010905
+    9.apr     | 13-14  | https://aalto.zoom.us/j/177010905
+   16.apr     | 13-14  | https://aalto.zoom.us/j/177010905
 
 .. warning::
 
    If joining by web browser, use Chrome.  Audio doesn't work with
    Firefox or Safari.
-
-.. note::
-
-   This is our first time!  Let us know what you think, and we will
-   adapt based on feedback.
-
-   Check back on this page for updates, or join the link above.
 
 Procedures:
 
@@ -103,15 +101,11 @@ Procedures:
   with us and other users, ask general questions, see what's new, and
   so on.  We'll give guidance from there for advanced cases.
 
-* Go to the `Triton issue tracker
-  <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`_ and
-  find the "Garage" issue.  Post your more specific question there,
-  including anything you know so far.
-
-* You will be contacted and via that Triton issue (or somehow) and
-  told how to join a particular one-on-one meeting with someone to
-  handle your problem.  You will share your screen and the person will
-  help you.
+* (Optional) If you want us to prepare or share links/code with us, go
+  to the `Triton issue tracker
+  <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`_,
+  make an issue, and point out that you want to discuss in the garage.
+  We will also follow up there afterwards.
 
 
 
