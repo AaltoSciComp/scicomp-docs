@@ -26,6 +26,9 @@ true for formatting errors - if you can't do ReStructudedText
 perfectly, just do your best (and pretend it's markdown because all
 the basics are similar).
 
+When you submit a change, there is continuous testing that will notify
+you of errors, so that you can make changes with confidence.
+
 Contributing gives consent to use content under the licenses (CC-BY
 4.0 or CC0 for examples).
 

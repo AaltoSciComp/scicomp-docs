@@ -1,0 +1,35 @@
+name: Check sphinx warnings
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  check-warnings:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8]
+    steps:
+      - uses: actions/checkout@v2
+      # https://github.com/actions/setup-python
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install deps
+        run: |
+          pip install sphinx sphinx_rtd_theme
+          pip install -r meta/requirements.txt
+      - name: Build project
+        run: |
+          make clean html SPHINXOPTS="-w warnings.txt"
+      - name: Cat warnings
+        run: |
+          cat warnings.txt
+      - name: Check warnings
+        run: |
+          python meta/check-warnings.py --fail warnings.txt
