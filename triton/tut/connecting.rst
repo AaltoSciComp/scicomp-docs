@@ -2,8 +2,6 @@
 Connecting to Triton
 ====================
 
-*Tutorials:* :doc:`previous (intro) <intro>`, :doc:`next <modules>`.
-
 
 All access to Triton is via Secure Shell (ssh).
 
@@ -104,9 +102,15 @@ instructions to connect to Triton.
 Advanced options
 ----------------
 
-Check the :doc:`advanced ssh information </scicomp/ssh>` to learn how
-to log in without a password, automatically save your username and
-other options, and more.  It really will save you time.
+See the :doc:`advanced ssh information </scicomp/ssh>` to learn how
+to log in without a password, automatically save your username 
+and more. It really will save you time.
+
+``ssh`` is one of the most fundamental Linux programs: by using it
+well, you can really do almost anything from anywhere.  The
+``.ssh/config`` file is valuable to set up.  If ssh is annoying to
+use, ask for some help in getting it working well.  
+
 
 
 Exercise
@@ -120,6 +124,26 @@ Exercise
 
 3. Check what your default shell is: ``echo $SHELL``.  Go ahead and
    change your shell to bash if it's not yet (see below).
+
+
+
+Change your shell to bash (Aalto)
+---------------------------------
+
+*Only needed if you shell isn't already* ``bash``.
+
+The thing you are interacting with when you type is the **shell** -
+the layer around the operating system.  ``bash`` is the most common
+shell, but the Aalto default shell used to be ``zsh`` (which is more
+powerful in some ways, but harder to teach with).  For new users (if
+you joined Aalto after autumn 2018) you should have bash as the
+default. We recommend that you check and change your shell to bash.
+
+You can determine if your shell is bash by running ``echo $SHELL``.
+Does it say ``/bin/bash``?
+
+If not, ``ssh`` to ``kosh.aalto.fi`` and run ``chsh -s /bin/bash``.
+It may take 15 minutes to update, and you will need to log in again.
 
 
 
@@ -157,49 +181,7 @@ For more information, see `it.aalto.fi
 
 
 
-Change your shell to bash (Aalto)
-=================================
-
-*Only needed if you shell isn't already* ``bash``.
-
-The thing you are interacting with when you type is the **shell** -
-the layer around the operating system.  ``bash`` is the most common
-shell, but the Aalto default shell used to be ``zsh`` (which is more
-powerful in some ways, but harder to teach with).  For new users (if
-you joined Aalto after autumn 2018) you should have bash as the
-default. We recommend that you check and change your shell to bash.
-
-You can determine if you shell is bash by running ``echo $SHELL``.
-Does it say ``/bin/bash``?
-
-If not, ``ssh`` to ``kosh.aalto.fi`` and run ``chsh -s /bin/bash``.
-It may take 15 minutes to update, and you will need to log in again.
-
-
-
-
-Transferring files
-==================
-
-You'll actually learn this in an upcoming section, the `Data storage
-tutorial <storage>`.  It is easiest to mount them using SMB, and on
-Aalto workstations and  ``taltta.aalto.fi`` they are mounted at
-``/m/triton/{scratch,work}/``.  You can also use an sftp (which works
-over ssh, so will work from anywhere you can access Triton) client such
-as Filezilla to
-transfer files.  See the :doc:`Data storage tutorial <storage>` (or :doc:`FAQ
-<../usage/faq>`).
-
-
-
-
 What's next?
 ============
-
-``ssh`` is one of the most fundamental Linux programs: by using it
-well, you can really do almost anything from anywhere.  The
-``.ssh/config`` file is valuable to set up.  If ssh is annoying to
-use, ask for some help in getting it working well.  See the :doc:`advanced
-ssh information </scicomp/ssh>`.
 
 The next tutorial is about :doc:`software and modules <modules>`.
