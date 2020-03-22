@@ -1036,7 +1036,7 @@ to the same place, but the former syntax is preferable.
  ping -c 1 8.8.8.8 > /dev/null && echo online || echo down
  
  # takes a snapshot of the directory list and send it to email, then renames the file
- ls -l > listing && { mail -s "ls -l $(pwd)" jussi.meikalainen@aalto.fi < listing; mv listing listing.$(date +"%Y-%m-%d-%H-%M") }
+ ls -l > listing && { mail -s "ls -l $(pwd)" jussi.meikalainen@aalto.fi < listing; mv listing listing.$(date +"%Y-%m-%d-%H-%M"); }
  
  # a few ways to empty a file
  > filename
@@ -1274,7 +1274,7 @@ Built-in vars:
 
 ::
 
- example() { echo -e " number of input params: $#\n input params: $@\n shell process id: $$\n script name: $0\n function name: $FUNCNAME"; return 1; }; f arg1 arg2; echo "exit code: $?"
+ f() { echo -e " number of input params: $#\n input params: $@\n shell process id: $$\n script name: $0\n function name: $FUNCNAME"; return 1; }; f arg1 arg2; echo "exit code: $?"
 
 What if you assing a variable to a variable like::
 
