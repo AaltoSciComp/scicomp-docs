@@ -81,7 +81,7 @@ Mac
 ---
 
 ``ssh`` is installed by default, same as Linux.  Run it from a terminal,
-same command as Linux.  To run graphical applications, you need an to
+same command as Linux.  To run graphical applications, you need to
 install an X server (XQuartz).
 
 Windows
@@ -181,13 +181,13 @@ It may take 15 minutes to update, and you will need to log in again.
 Transferring files
 ==================
 
-You'll actually learn this in the next section, the `data storage
+You'll actually learn this in an upcoming section, the `Data storage
 tutorial <storage>`.  It is easiest to mount them using SMB, and on
 Aalto workstations and  ``taltta.aalto.fi`` they are mounted at
 ``/m/triton/{scratch,work}/``.  You can also use an sftp (which works
 over ssh, so will work from anywhere you can access Triton) client such
 as Filezilla to
-transfer files.  See the :doc:`next tutorial <storage>` (or :doc:`FAQ
+transfer files.  See the :doc:`Data storage tutorial <storage>` (or :doc:`FAQ
 <../usage/faq>`).
 
 
@@ -202,4 +202,4 @@ well, you can really do almost anything from anywhere.  The
 use, ask for some help in getting it working well.  See the :doc:`advanced
 ssh information </scicomp/ssh>`.
 
-The next tutorial is :doc:`about software and modules <modules>`.
+The next tutorial is about :doc:`software and modules <modules>`.

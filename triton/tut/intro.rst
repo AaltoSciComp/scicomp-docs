@@ -33,7 +33,7 @@ memory, and other storage is not shared.
 On an international scale of universities, the power of Triton is
 relatively high and it has a very diverse range of uses, though `CSC
 has much more <https://research.csc.fi/computing-and-software>`__.  Using
-using this power requires more effort than using your own computer -
+this power requires more effort than using your own computer -
 you will need to get/be comfortable in the shell, using shell
 scripting, managing software, managing data, and so on.  Triton is a
 good system to use for learning.
@@ -54,7 +54,7 @@ courses.
 Science-IT has created a (still under development) :doc:`modular
 training plan <../../training/index>`, divided into A (basics, use
 basic software), B (Linux usage), C (high performance computing), and
-D (advanced HPC).  In order to use Triton well, you need be somewhat
+D (advanced HPC).  In order to use Triton well, you need to be somewhat
 proficient at Linux usage (B level).  In order to do parallel work,
 you need to be good at the B-level and also somewhat proficient at the
 HPC level (C-level).  This tutorial and user guide covers the C-level,
@@ -62,7 +62,7 @@ but it is up to you to reach the B-level first.
 
 See our :doc:`training program and plan <../../training/index>` for
 suggested material for self-study and lessons.  We offer routine
-training, see `our Scientific Computing in Practice lecture series
+training, see our `Scientific Computing in Practice lecture series
 <http://science-it.aalto.fi/scip/>`__ page for info.
 
 
