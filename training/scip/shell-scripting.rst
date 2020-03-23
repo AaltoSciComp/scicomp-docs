@@ -15,11 +15,11 @@ We expect that course participants are familiar with the `shell basics <linux-sh
 
 **Lecturer:** Ivan Degtyarenko, D. Sc., Science IT / Department of Applied Physics, Aalto University
 
-**Place:** Online, Zoom links to be announced, each for every session, check this page before the session begins
+**Place:** Online, common Zoom link for all the sessions `aalto.zoom.us/j/947220751 <https://aalto.zoom.us/j/947220751>`__
 
 **Time, date (all times EET):**
 
-- Mon 23.3, 10:00-13:00, `aalto.zoom.us/j/947220751 <https://aalto.zoom.us/j/947220751>`__
+- Mon 23.3, 10:00-13:00
 - Wed 25.3, 10:00-13:00
 - Mon 30.3, 10:00-13:00
 - Wed 1.4, 10:00-13:00
