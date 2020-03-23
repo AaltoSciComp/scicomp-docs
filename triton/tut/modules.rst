@@ -92,7 +92,7 @@ What's going on under the hood here?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In Linux systems, different environment variables like ``$PATH`` and
-``$LD_LIBRARY_PATH`` to figure out how to run programs.  Modules just
+``$LD_LIBRARY_PATH`` help figure out how to run programs.  Modules just
 cleverly manipulate these so that you can find the software you need,
 even if there are multiple versions available.
 
@@ -127,14 +127,14 @@ Load the latest version of Matlab as::
 
   module load matlab
 
-run it to check the version you got, then close it and swap the version with the older one, try
+Run it to check the version you got, then close it and swap the version with an older one.
 
 
 Loading modules
 ---------------
 
 Normally, you run ``module load MODULE_NAME``. Do it in your open shell,
-your scripts, or whatever.  You could put it in your
+your scripts, etc.  You could put it in your
 ``~/.bash_profile``, but then it will always automatically load it -
 perhaps even if you don't expect it.  Watch out for this if you get
 un-explainable bugs - it may be best to explicitely load what you
@@ -144,24 +144,25 @@ dependency/conflict system.
 Each time you load a module, it resolves all the dependencies.  This
 can mean that loading module takes a long time, but there is a
 solution: ``module save $collection_name`` and ``module restore
-$collection_name``.
+$collection_name``
 
 Exercise: make a module collection
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Try loading the ``graph-tool`` module.  How long does it take?  Use ``module
-list`` to see how many things were actually loaded.::
+Try loading the ``graph-tool`` module. How long does it take?  Use ``module
+list`` to see how many things were actually loaded::
 
   module load graph-tool             # 600 seconds!
   module list                        # 72 modules!
 
 Then, do ``module save my-collection``.  Then ``module purge`` to
-unload everything.  Now, do ``module restore my-collection``.  Was it
-much faster?::
+unload everything.  Now, do ``module restore my-collection``::
 
   module save my-gt
   module purge
   module restore my-gt               # only 3 seconds
   module list                        # same 72 modules
+
+Was it much faster?
 
 You may occasionally need to rebuild your collections if we
 re-organize things (it will tell you, just re-save).
@@ -178,8 +179,8 @@ But what about *the software*?
 ------------------------------
 
 You know how to load modules software now, but what about specific software
-packages?  See the upcoming :doc:`applications tutorial
-<applications>` for more info.
+packages?  See the upcoming :doc:`Applications 
+<applications>` tutorial for more info.
 
 
 Final notes
@@ -193,16 +194,16 @@ should usually be put into the job script.
 The modules used to compile and run a program become part of its
 environment and must always be loaded.
 
-If you are compiling things and want it to work in the future, load a
-particular version of the module (``module load $name/$version``).
+If you are compiling things and want them to work in the future, load a
+particular version of the module (``module load $name/$version``)
 Then, things will keep working even if we upgrade in the meantime (in
-fact, this is a primary advantage of modules).
+fact, this is a primary advantage of modules)
 
 We use the `Lmod <https://lmod.readthedocs.io/en/latest/>`__ system.
 
 Lmod uses environment variables.  Thus, they must be
-**sourced** by a shell and are are only transferred to child processes.
-Anything that clears the environment clears loaded modules.  Module
+**sourced** by a shell and are only transferred to child processes.
+Anything that clears the environment clears the loaded modules too. Module
 loading is done by special functions (not scripts) that are
 shell-specific and set environment variables.
 
@@ -216,33 +217,33 @@ Exercises
 
 Before each exercise, ``module purge`` to clear all modules.
 
-1. ``module avail`` and check what you see.  Find some examples of
-   software that have many different versions available.  Load the
-   oldest version of that software.
+1. ``module avail`` and check what you see.  Find a software that has 
+   many different versions available.  
+   Load the oldest version. 
 
 2. ``PATH`` is an environment variable that shows from where programs
    are run.  See it's current value using ``echo $PATH``.  Then, load
-   some toolchain module such as ``goolfc/triton-2017a``.  List what
+   some toolchain module such as ``goolfc/triton-2017a``  List what
    it loaded.  Check the value of ``PATH`` again.  Why is there so
    much stuff?
 
-3. (Advanced of #2).  Same as number 2, but use ``env | sort >
+3. (Advanced) Same as number 2, but use ``env | sort >
    filename`` to store environment variables, then swap to
    ``goolfc/triton-2016a``.  Do the same, and compare the two outputs
-   using ``diff``.
+   using ``diff``
 
-3. Load a module with many dependencies, such as
+4. Load a module with many dependencies, such as
    ``R/3.3.2-iomkl-triton-2017a-libX11-1.6.3`` and save it as a
    collection.  Compare the time needed to load the module and the
    collection.  (Does ``time`` not work?  Change your shell to bash,
-   see the previous tutorial.)
+   see the previous tutorial)
 
-4. (Advanced) Load GROMACS. Use 'which' to find where command 'gmx' is
-   and then use 'ldd' to find out what libraries it uses. Load
-   incompatible toolchain e.g. goolf. Check ldd output again.
+5. (Advanced) Load GROMACS.  Use ``which`` to find where command ``gmx`` is
+   and then use ``ldd`` to find out what libraries it uses. Load
+   incompatible toolchain e.g. goolf. Check ``ldd`` output again.
 
 
-Next steps
+What's next?
 ----------
 
-Next, move on to :doc:`the applications tutorial <applications>`
+Next, move on to the :doc:`Applications <applications>` tutorial.
