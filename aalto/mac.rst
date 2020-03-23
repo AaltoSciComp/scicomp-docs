@@ -88,14 +88,22 @@ First install Xcode through Managed Software Centre (either search Xcode, or nav
 	mkdir Homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz -C Homebrew --strip 1
 
 	# This is a MUST!!!
-	echo "export PATH=\$PATH:$(pwd)/Homebrew/bin" >> ~/.bash_profile
+	echo "export PATH=\$PATH:$(pwd)/Homebrew/bin" >> ~/.zprofile
 
 	# Reload the profile
-	source ~/.bash_profile
+	source ~/.zprofile
 
 	# Check if brew is correctly installed.
 	which brew    # /Users/username/Homebrew/bin/brew
 
+Older versions of MacOS (pre Mojave) use bash as the default shell, therefore you need to setup the environment differently:
+
+.. code-block:: bash
+
+	echo "export PATH=\$PATH:$(pwd)/Homebrew/bin" >> ~/.bash_profile
+
+	# Reload the profile
+	source ~/.bash_profile
 
 
 Admin rights
