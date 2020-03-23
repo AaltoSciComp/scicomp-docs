@@ -244,6 +244,6 @@ Before each exercise, ``module purge`` to clear all modules.
 
 
 What's next?
-----------
+------------
 
 Next, move on to the :doc:`Applications <applications>` tutorial.
