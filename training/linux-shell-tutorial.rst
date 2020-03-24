@@ -1647,13 +1647,14 @@ where one handles array subtasks based on its index.
  
 
 :Exercise 2.3:
- - Re-implement the above mentioned example ``... [[ -d $d && ! $(echo $PATH|grep $d) ]] ...`` with the matching operator ``=~``
+ - Re-implement the above mentioned example
+   ``... [[ -d $d && ! $(echo $PATH|grep $d) ]] ...`` with the matching operator ``=~``
  - Improve the ``tarit.sh`` script we developed recently:
 
    - add check for the number of the given arguments. Hint: ``$#`` must be zero or one.
    - validate the given path like *path/to/file*. Hint: ``[[ $d =~ regexpr ]]``,
- the path should have only alphanumeric symbols, dots, underscore and slashes as
- a directory delimiter.
+     the path may have only alphanumeric symbols, dots, underscore and slashes as
+     a directory delimiter.
 
  - Improve ``cx`` script:
 
@@ -1661,9 +1662,9 @@ where one handles array subtasks based on its index.
    - add option for ``cr`` that would add read rights for all. Hint: ``chmod a+r ...``
 
  - (*) Write a function (add to *bin/functions*) that validates an IPv4 using
- *=~* matching operator only. The function should fail incorrect IPs like 0.1.2.3d
- or 233.204.3.257. The problem should be solved with the regular expression only.
- Use ``return`` command to exit with the right exit code.
+   *=~* matching operator only. The function should fail incorrect IPs like 0.1.2.3d
+   or 233.204.3.257. The problem should be solved with the regular expression only.
+   Use ``return`` command to exit with the right exit code.
 
 
 Loops
