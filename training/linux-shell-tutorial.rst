@@ -1648,30 +1648,22 @@ where one handles array subtasks based on its index.
 
 :Exercise 2.3:
  - Re-implement the above mentioned example ``... [[ -d $d && ! $(echo $PATH|grep $d) ]] ...`` with the matching operator ``=~``
- - Using BASH builtin functionality implement ``my_grep pattern string`` script that picks
-   up a pattern ($1) and a string ($2) as an input and reports whether pattern matches any
-   part of the string or not. Tip: have your scripts in ``~/bin``
+ - Improve the ``tarit.sh`` script we developed recently:
 
-   - The script must check that number of input parameters is correct (i.e. equal 2).
-   - (*) Expand *my_grep* script to make search case insensitive
+   - add check for the number of the given arguments. Hint: ``$#`` must be zero or one.
+   - validate the given path like *path/to/file*. Hint: ``[[ $d =~ regexpr ]]``,
+ the path should have only alphanumeric symbols, dots, underscore and slashes as
+ a directory delimiter.
 
- - Write a function ``pathvalid`` (add to *~/bin/functions* file) that validates a file path
-   like *path/to/file*. Let's say the path
-   should have only alphanumeric symbols, dots, underscore and slashes as a directory delimiter.
- - Implement a ``my_mkdir`` script that either accepts a directory name as an input parameter or requests it
-   with ``read`` if no input parameter is given. Script should create a directory if it does not exist with
-   the access permissions 700.
+ - Improve ``cx`` script:
 
-   - (*) Use the *pathvalid* function to add a sanity check before creating a directory.
-   
- - (*) Make a ``bs`` utlity and place it to *~/bin* directory. The utility should help to start
-   writing a new BASH script. It must create a file in the current directory with a given name
-   ``bs script_name`` with the '#!/bin/bash' header, set +x bit and open that newly created file
-   in editor of your choice.
- - (*) Write a function (add to *~/bin/functions*) that validates an IPv4 using *=~* matching operator only.
-   The function should fail incorrect IPs like 0.1.2.3d or 233.204.3.257. The problem should be solved
-   with the regular expression only. Use ``return`` command to exit with the right exit code.
+   - check that given file(s) exist, if not, exit the script with the corresponding error
+   - add option for ``cr`` that would add read rights for all. Hint: ``chmod a+r ...``
 
+ - (*) Write a function (add to *bin/functions*) that validates an IPv4 using
+ *=~* matching operator only. The function should fail incorrect IPs like 0.1.2.3d
+ or 233.204.3.257. The problem should be solved with the regular expression only.
+ Use ``return`` command to exit with the right exit code.
 
 
 Loops
