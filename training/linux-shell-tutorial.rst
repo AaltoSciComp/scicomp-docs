@@ -1565,6 +1565,25 @@ an arithmetic expression ``$(( ))``, or a command substitution.
  fi
  ... the rest of the code
 
+Expanding *tarit.sh* to a script
+
+::
+
+ #!/bin/bash
+
+ # usage: tarit.sh <dirname>
+
+ d=$1
+ 
+ # if dirname is given, we archive it
+ if [[ -d $d ]]; then
+   tar caf $(basename $d).$(date +%Y-%m-%d).tar.gz $d
+ elif [[ -z $d ]]; then 
+   tar caf $(basename $(pwd)).$(date +%Y-%m-%d).tar.gz .
+ else
+   echo $d does not exist
+ fi
+
 
 case
 ----
