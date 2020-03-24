@@ -1463,7 +1463,17 @@ In addition, double brackets inherit several operands to work with integers main
  [[ ( $aalto < $hy && $aalto > $utu ) || $hy > $utu ]]; echo $?
 
  # note that [[ ]] always require spaces before and after brackets
+
+::
+
+ # Some use cases for [[ ]]
  
+ # if dir exists and is not empty, then do smth
+ $d=path/to/dir; [[ -d $d && $(ls -A $d) ]] && tar caf ...
+ 
+ # append PATH
+ d=path/to/bin; [[ -d $d && ! $(echo $PATH|grep $d) ]] && export PATH=$PATH:$d
+
 The matching operator ``=~`` brings more opportunities, because regular expressions come in play.
 Even more: matched strings in parentheses assigned to *${BASH_REMATCH[]}* array elements!
 
