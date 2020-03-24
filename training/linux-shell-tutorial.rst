@@ -1927,25 +1927,28 @@ Even though in most of the cases you can design the code to use conditionals or 
  done
 
 :Exercise 2.4:
- - Write separate scripts that count a sum of any *1+2+3+4+..+n*
-   sequence, both the Gauss version and direct summation.  Accept the
-   *n* on the command line.  Benchmark them with *time* for n=10000 or
-   more.
-
-   - (*) For the direct summation one can avoid loops, how? Tip: discover ``eval $(echo {1..$n})``
-
- - Write a scirpt or function ``days_till`` that counts a number of days till a deadline (or vacation/holyday). 
-   Script should accept dates suitable to ``date -d`` like ``days_till 2019-6-1``.
-   Tip: investigate ``date +%s``.
- - Using *for* loop rename all the files with the *.txt* extension to *.fixed.txt*.
-   Tip: combine 'for' loop with 'find'.
- - Make script that accepts a list of files and checks if there are files in there with
+ - Using ``for`` loop rename all the files with the *.txt* extension to *.fixed.txt*.
+   Tip: create dummy .txt files with ``mkdir d{1..3}; touch d{1..3}/{1..3}.txt``.
+   Tip #2: combine 'for' loop with 'find': ``for f in $(find . -name '*.txt'); ...``.
+ - Using built-in arithmetic write a script *daystill.sh* that counts a number of days till a
+   deadline (vacation/salary). 
+   Script takes date as an argument, date format suitable to ``date -d`` like ``days_till 2019-6-1``.
+   Tip: use ``date +%s`` and convert seconds to days (roughly).
+ - Make script that takes a list of files and checks if there are files in there with
    the spaces in the name, and if there are, rename them by replacing spaces with the underscores.
    Use BASH's builtin functionality only.
    
    - As a study case, compare it against
      ``find . -depth -name '* *' -execdir rename 's/ /_/g' {} \;``
    
+ - Write separate scripts that count a sum of any *1+2+3+4+..+n*
+   sequence, both the Gauss version (see above) and summation with ``for ((...))``.  Where
+   *n* is an argument, like *gauss.sh 1000*. Benchmark them with ``time`` for n=10000 or
+   more.
+
+   - (*) Implement both methods within one script as functions and benchmark them whithin the file
+   - (*) For the direct summation one can avoid loops, how? Tip: discover ``eval $(echo {1..$n})``
+
  - (*) Get familiar with the ``getent`` and ``cut`` utilities. Join them with a loop construction 
    to write a *mygetentgroup* script or just a oneliner
    that generates a list of users and their real names that belong to a given group. Like::
