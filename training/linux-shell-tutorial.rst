@@ -1647,6 +1647,7 @@ where one handles array subtasks based on its index.
  
 
 :Exercise 2.3:
+ - Re-implement the above mentioned example ``... [[ -d $d && ! $(echo $PATH|grep $d) ]] ...`` with the matching operator ``=~``
  - Using BASH builtin functionality implement ``my_grep pattern string`` script that picks
    up a pattern ($1) and a string ($2) as an input and reports whether pattern matches any
    part of the string or not. Tip: have your scripts in ``~/bin``
