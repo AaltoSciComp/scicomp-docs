@@ -444,6 +444,13 @@ Existing data groups and responsible contacts:
 Requesting to be added to a group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. note::
+
+   **CS department**: New!  Group owners/managers can add members to
+   their groups self-service.  Go to https://domesti.cs.aalto.fi from
+   Aalto networks, over VPN, or remote desktop at
+   https://vdi.aalto.fi, and it should be obvious.
+
 Send an email to the responsible contact (see above) and **CC the
 group owner or responsible person**, and include this information:
 
