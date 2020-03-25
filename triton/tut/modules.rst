@@ -101,6 +101,7 @@ Let's  use the ``module purge`` command to **unload** all the loaded modules (``
   $ module purge
 
 Or explicitly unload the ``anaconda`` module by using the ``module unload anaconda`` command::
+
   $ module unload anaconda
 
 You can load any number of modules in your open shell,
