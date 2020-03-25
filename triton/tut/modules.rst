@@ -68,7 +68,9 @@ Loading modules
 Let's dive right into an example and load a module.
 
 Let's assume we've written a Python script that is only compatible with Python version 3.5.0 or higher.
-We open a shell to find out where and what version our Python is::
+We open a shell to find out where and what version our Python is. The
+**which** program looks up the current detected version of a program -
+very useful when testing modules.::
 
   $ which python3
   /usr/bin/python3
