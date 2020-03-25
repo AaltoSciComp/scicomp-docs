@@ -93,7 +93,7 @@ We can see a list of the all the loaded modules in our working shell using the `
 
   $ module list
   Currently Loaded Modules:
-    1)anaconda/2020-02-tf2
+    1) anaconda/2020-02-tf2
 
 
 Let's  use the ``module purge`` command to **unload** all the loaded modules (``anaconda`` in this case)::
@@ -122,7 +122,7 @@ Let's say you want to use Matlab.  You log in and try in the shell::
 
 So first search for it using the ``module spider`` command::
 
-  module spider matlab
+  $ module spider matlab
 
   ----------------------------------------------------------------------------
     matlab:
@@ -141,7 +141,7 @@ We see there are a lot of versions available.
 
 Load the latest version of Matlab as::
 
-  module load matlab
+  $ module load matlab
 
 Run it to check the version you got, then close it and swap the version with an older one.
 
@@ -172,16 +172,16 @@ Let's see how to this in an example.
 Try loading the ``graph-tool`` module. How long does it take?  Use ``module
 list`` to see how many things were actually loaded::
 
-  module load graph-tool             # 600 seconds!
-  module list                        # 72 modules!
+  $ module load graph-tool             # 600 seconds!
+  $ module list                        # 72 modules!
 
 Then, do ``module save my-collection``.  Then ``module purge`` to
 unload everything.  Now, do ``module restore my-collection``::
 
-  module save my-gt
-  module purge
-  module restore my-gt               # only 3 seconds
-  module list                        # same 72 modules
+  $ module save my-gt
+  $ module purge
+  $ module restore my-gt               # only 3 seconds
+  $ module list                        # same 72 modules
 
 Was it much faster?
 
