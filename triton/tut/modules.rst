@@ -151,7 +151,8 @@ What's going on under the hood here?
 In Linux systems, different environment variables like ``$PATH`` and
 ``$LD_LIBRARY_PATH`` help figure out how to run programs.  Modules just
 cleverly manipulate these so that you can find the software you need,
-even if there are multiple versions available.
+even if there are multiple versions available.  You can see these variables
+with the **echo** command, e.g. ``echo $PATH``.
 
 When you load a module in a shell, the module command changes the current shell's environment variables,
 and the environment variables are passed on to all the child processes. 
