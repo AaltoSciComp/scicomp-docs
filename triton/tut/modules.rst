@@ -2,6 +2,9 @@
 Software Modules
 ================
 
+What is a module?
+-----------------
+
 There are hundreds of people using Triton.  They all have different
 software needs, including conflicting versions required!  How do we
 handle this without making a mess?
@@ -16,37 +19,11 @@ If you need a program installed, we will put it in the module system.
 In a system the size of Triton, it just isn't possible to install all
 software by default for every user.
 
-The summary
------------
+A module lets you adjust what software is available, 
+and makes it easy to switch between different versions. 
 
-A module lets you adjust what software is available.  For example,
-let's see what our Python is::
-
-  $ which python3
-  /usr/bin/python3
-  $ python3 -V
-  Python 3.4.9
-
-Now let's load the ``anaconda`` module, a more up to date Python with a
-lot of libraries already included::
-
-  $ module load anaconda
-  $ which python3
-  /share/apps/anaconda-ci/fgci-centos7-generic/software/anaconda/2020-01-tf2/0251cd77/bin/python3
-  $ python3 -V
-  Python 3.7.6
-
-As you see, we have a newer Python.  Let's go back to blank::
-
-  $ module purge
-
-
-
-What is a module?
------------------
-
-Let's look at ``py-gpaw`` module (abbreviated output
-shown):
+As an example, let's inspect the ``py-gpaw`` module (abbreviated output
+shown)
 
 .. code-block:: none
 
@@ -78,33 +55,71 @@ shown):
     setenv("PY_GPAW_ROOT","/share/apps/spack/software/py-gpaw/1.3.0/vmhtg6i")
 
 
-You can see that it has some meta-info, then adjusts various environment
-paths, so that when you run ``gpaw`` it runs the program from
-``/share/apps/spack/software/py-gpaw/1.3.0/vmhtg6i/bin``.  This is
-almost magic: we can have many versions of any software installed, and
-everyone can pick what they want, with no conflicts.
+The command ``module show py-gpaw`` shows some meta-info (name of the module, its version, etc.)
+And then adjusts various environment paths, 
+so that when you run ``gpaw`` it runs the program from
+``/share/apps/spack/software/py-gpaw/1.3.0/vmhtg6i/bin``.  
+This is almost magic: we can have many versions of any software installed, 
+and everyone can pick what they want, with no conflicts.
 
-You can search for modules using the command ``module spider``.
+Loading modules
+---------------
 
-You can list currently loaded modules using ``module list``.
+Let's dive right into an example and load a module.
 
-What's going on under the hood here?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Let's assume we've written a Python script that is only compatible with Python version 3.5.0 or higher.
+We open a shell to find out where and what version our Python is. The
+**which** program looks up the current detected version of a program -
+very useful when testing modules.::
 
-In Linux systems, different environment variables like ``$PATH`` and
-``$LD_LIBRARY_PATH`` help figure out how to run programs.  Modules just
-cleverly manipulate these so that you can find the software you need,
-even if there are multiple versions available.
+  $ which python3
+  /usr/bin/python3
+  $ python3 -V
+  Python 3.4.9
 
-Exercise: where is Matlab?
+But we need a newer version of Python.  To this end, we can **load** the ``anaconda`` module 
+using the ``module load anaconda`` commdand, 
+that has a more up to date Python with lots of libraries already included::
+
+  $ module load anaconda
+  $ which python3
+  /share/apps/anaconda-ci/fgci-centos7-generic/software/anaconda/2020-01-tf2/0251cd77/bin/python3
+  $ python3 -V
+  Python 3.7.6
+
+As you see, we have a newer version of Python, in a different directory. 
+
+We can see a list of the all the loaded modules in our working shell using the ``module list`` command::
+
+  $ module list
+  Currently Loaded Modules:
+    1)anaconda/2020-02-tf2
+
+
+Let's  use the ``module purge`` command to **unload** all the loaded modules (``anaconda`` in this case)::
+
+  $ module purge
+
+Or explicitly unload the ``anaconda`` module by using the ``module unload anaconda`` command::
+  $ module unload anaconda
+
+You can load any number of modules in your open shell,
+your scripts, etc.  You could load modules in your
+``~/.bash_profile``, but then it will always automatically load it -
+perhaps even if you don't expect it.  Watch out for this if you get
+un-explainable bugs - it may be best to explicitly load what you
+need. 
+
+
+Exercise: Where is Matlab?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Let's say you want to use Matlab.  You log in and try::
+Let's say you want to use Matlab.  You log in and try in the shell::
 
   $ matlab
   -bash: matlab: command not found
 
-So first search for it::
+So first search for it using the ``module spider`` command::
 
   module spider matlab
 
@@ -130,24 +145,29 @@ Load the latest version of Matlab as::
 Run it to check the version you got, then close it and swap the version with an older one.
 
 
-Loading modules
----------------
+What's going on under the hood here?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Normally, you run ``module load MODULE_NAME``. Do it in your open shell,
-your scripts, etc.  You could put it in your
-``~/.bash_profile``, but then it will always automatically load it -
-perhaps even if you don't expect it.  Watch out for this if you get
-un-explainable bugs - it may be best to explicitely load what you
-need.  You can load any number of modules, and there is a basic
-dependency/conflict system.
+In Linux systems, different environment variables like ``$PATH`` and
+``$LD_LIBRARY_PATH`` help figure out how to run programs.  Modules just
+cleverly manipulate these so that you can find the software you need,
+even if there are multiple versions available.  You can see these variables
+with the **echo** command, e.g. ``echo $PATH``.
 
+When you load a module in a shell, the module command changes the current shell's environment variables,
+and the environment variables are passed on to all the child processes. 
+
+Making a module collection
+--------------------------
+
+There is a basic dependency/conflict system to handle module dependency.
 Each time you load a module, it resolves all the dependencies.  This
 can mean that loading module takes a long time, but there is a
 solution: ``module save $collection_name`` and ``module restore
 $collection_name``
 
-Exercise: make a module collection
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Let's see how to this in an example.
+
 Try loading the ``graph-tool`` module. How long does it take?  Use ``module
 list`` to see how many things were actually loaded::
 
@@ -168,19 +188,12 @@ You may occasionally need to rebuild your collections if we
 re-organize things (it will tell you, just re-save).
 
 
+
 Full reference
 --------------
 
 .. include:: ../ref/modules.rst
 
-
-
-But what about *the software*?
-------------------------------
-
-You know how to load modules software now, but what about specific software
-packages?  See the upcoming :doc:`Applications 
-<applications>` tutorial for more info.
 
 
 Final notes
@@ -199,10 +212,8 @@ particular version of the module (``module load $name/$version``)
 Then, things will keep working even if we upgrade in the meantime (in
 fact, this is a primary advantage of modules)
 
-We use the `Lmod <https://lmod.readthedocs.io/en/latest/>`__ system.
-
-Lmod uses environment variables.  Thus, they must be
-**sourced** by a shell and are only transferred to child processes.
+We use the Lmod system and Lmod works by changing environment variables.  
+Thus, they must be *sourced* by a shell and are only transferred to child processes.
 Anything that clears the environment clears the loaded modules too. Module
 loading is done by special functions (not scripts) that are
 shell-specific and set environment variables.
@@ -243,7 +254,10 @@ Before each exercise, ``module purge`` to clear all modules.
    incompatible toolchain e.g. goolf. Check ``ldd`` output again.
 
 
+
 What's next?
 ------------
 
-Next, move on to the :doc:`Applications <applications>` tutorial.
+You know how to load modules software now, but what about specific software
+packages?  Move on to the upcoming :doc:`Applications 
+<applications>` tutorial for more info.
