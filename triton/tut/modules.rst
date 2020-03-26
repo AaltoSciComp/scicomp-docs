@@ -167,7 +167,7 @@ can mean that loading module takes a long time, but there is a
 solution: ``module save $collection_name`` and ``module restore
 $collection_name``
 
-Let's see how to this in an example.
+Let's see how to do this in an example.
 
 Try loading the ``graph-tool`` module. How long does it take?  Use ``module
 list`` to see how many things were actually loaded::
@@ -261,4 +261,4 @@ What's next?
 
 You know how to load modules software now, but what about specific software
 packages?  Move on to the upcoming :doc:`Applications 
-<applications>` tutorial for more info.
+<applications>` tutorial for more information.
