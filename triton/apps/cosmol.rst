@@ -30,4 +30,4 @@ Comsol in Triton is best run in Batch-mode. To check which versions of Comsol ar
 
        $ rm -rf ~/.comsol/
        $ mkdir /scratch/work/$USER/comsol_revoveries/
-       $ ln -sT /scratch/work/$USER/comsol_revoveries/ ~/.comsol/
+       $ ln -sT /scratch/work/$USER/comsol_revoveries/ ~/.comsol
