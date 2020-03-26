@@ -241,7 +241,7 @@ MD5 fingerprint) to your remote files::
 
     rsync -avzc -e "ssh" --chmod=g+s,g+rw --group=GROUPNAME PATHTOLOCALFOLDER USERNAME@triton.aalto.fi:/scratch/DEPT/PROJECTNAME/REMOTEFOLDER/ 
 
-Replease the bits in CAPS with your own case. Briefly, -a tries to preserve all attributes of the file, -v verbose to see what rsync is doing, -z use compression, -c skip files that have identical MD5 checksum, -e specify to use ssh (not necessary but needed for the commands coming after), --chmod sets the group permissions to shared (as common practice on scratch project folders), --group set the groupname to the group you belong to (note that GROUPNAME == PROJECTNAME on our scratch filesystem).
+Replease the bits in CAPS with your own case. Briefly, ``-a`` tries to preserve all attributes of the file, ``-v`` verbose to see what rsync is doing, ``-z`` use compression, ``-c`` skip files that have identical MD5 checksum, ``-e`` specify to use ssh (not necessary but needed for the commands coming after), ``--chmod`` sets the group permissions to shared (as common practice on scratch project folders), ``--group`` set the groupname to the group you belong to (note that GROUPNAME == PROJECTNAME on our scratch filesystem).
 
 If you might want to just check if your local files are different from the remote ones. You can then run rsync in "dry run" so that you only see what the command would do, without actually doing anything.::
 

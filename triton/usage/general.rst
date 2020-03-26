@@ -147,7 +147,7 @@ and to generate output in a unique directory.
 
 The array indices need not be sequential. E.g. if you discover that
 after the above array job is finished, the job task id's 7 and 19
-failed, you can relaunch just those jobs with "–array=7,19". While the
+failed, you can relaunch just those jobs with ``--array=7,19``. While the
 array job above is a set of serial jobs, parallel array jobs are
 possible. For more information, see the `Slurm job array
 documentation <http://slurm.schedmd.com/job_array.html>`__.
@@ -230,8 +230,8 @@ Small MPI example using mvapich2
 For "-n" less or equal to 12 this job will fit on any of the available
 nodes, if you put something more that 12 but below 20, it will go to
 either Haswell or IvyBridge nodes, and in case of up to 24 to Haswell
-only. Independently on the requested "-n X" one can always define the
-"–constraint=" and explicitly request specific CPU arch. See large MPI
+only. Independently on the requested ``--n X`` one can always define the
+``--constraint=`` and explicitly request specific CPU arch. See large MPI
 jobs examples below.
 
 Submit a large MPI job
@@ -371,8 +371,8 @@ there are some with 2 and 4. See  ``slurm features``  for the full list.
 
     #SBATCH --gres=spindle:4
 
-GPU cards with --gres=
-^^^^^^^^^^^^^^^^^^^^^^
+GPU cards with ``--gres=``
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 See details at :doc:`Slurm commands <../ref/slurm>`
 
