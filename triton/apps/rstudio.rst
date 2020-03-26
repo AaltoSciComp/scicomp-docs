@@ -6,7 +6,7 @@ RStudio
 :pagelastupdated: 2014
 
 
-http://www.rstudio.com/ is an IDE for R
+https://www.rstudio.com/ is an IDE for R
 
 ::
 

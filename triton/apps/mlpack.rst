@@ -6,7 +6,7 @@ MLPack
 :supportlevel: C
 
 
-http://www.mlpack.org/
+https://www.mlpack.org/
 
 #. module load cmake; module load armadillo/4.3-mkl; module load mkl
 #. mkdir build && cd build

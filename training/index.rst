@@ -128,7 +128,7 @@ B: Scientific computing
        programs.
 
      * `Software Carpentry shell-novice sections
-       1-4 <http://swcarpentry.github.io/shell-novice/>`__.  Our
+       1-4 <https://swcarpentry.github.io/shell-novice/>`__.  Our
        :doc:`shell course <linux-shell-tutorial>` covers this at the
        beginning, too.
 
@@ -153,7 +153,7 @@ B: Scientific computing
 
      * `Software Carpentry
        shell-novice, part of section 3
-       <http://swcarpentry.github.io/shell-novice/>`__.
+       <https://swcarpentry.github.io/shell-novice/>`__.
 
      *
 
@@ -175,7 +175,7 @@ B: Scientific computing
        scientific computing.
 
      * `CodeRefinery Introduction to version
-       control <http://coderefinery.org/lessons/>`__
+       control <https://coderefinery.org/lessons/>`__
 
      *
 
@@ -210,7 +210,7 @@ B: Scientific computing
 
      * `Software
        Carpentry make-novice
-       <http://swcarpentry.github.io/make-novice/>`__.
+       <https://swcarpentry.github.io/make-novice/>`__.
 
      *
 
@@ -221,7 +221,7 @@ B: Scientific computing
        stuff.
 
      * `CodeRefinery collaborative distributed version control
-       lesson <http://coderefinery.org/lessons/>`__
+       lesson <https://coderefinery.org/lessons/>`__
 
      *
 
@@ -232,7 +232,7 @@ B: Scientific computing
        and scripts and do data science well.
 
      * `CodeRefinery Jupyter
-       course <http://coderefinery.org/lessons/>`__.
+       course <https://coderefinery.org/lessons/>`__.
 
      *
 
@@ -258,7 +258,7 @@ scientific programming well.
 
      *
 
-     * `CodeRefinery lesson <http://coderefinery.org/lessons/>`__
+     * `CodeRefinery lesson <https://coderefinery.org/lessons/>`__
 
      *
 
@@ -297,7 +297,7 @@ scientific programming well.
        Software Licensing
      *
 
-     * `CodeRefinery lesson <http://cicero.xyz/v2/remark/github/coderefinery/software-licensing/master/talk.md/>`__
+     * `CodeRefinery lesson <https://cicero.xyz/v2/remark/github/coderefinery/software-licensing/master/talk.md/>`__
 
      *
 

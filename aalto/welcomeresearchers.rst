@@ -217,10 +217,10 @@ and archive systems.  `CSC research portal <https://research.csc.fi/>`_.
 
 In our :doc:`data management section <../data/index>`, we provide many
 more links to long-term data repositories, archival, and so on.  The
-`fairdata.fi <https://fairdata.fi>`_ project is state-supported
+`fairdata.fi <https://fairdata.fi/>`_ project is state-supported
 and has a lot more information on data.  They also provide some
-data storage focused on safety and longer-term storage (like `IDA
-<ida>`__), though they are not very used at Aalto because we provide
+data storage focused on safety and longer-term storage (like :doc:`IDA
+</data/ida>`), though they are not very used at Aalto because we provide
 such good services locally.
 
 .. _ida: https://www.fairdata.fi/en/ida/
@@ -324,7 +324,7 @@ everything is relevant to you.
 Check our :doc:`upcoming training page
 <../training/scip/index>` for a list of upcoming courses.
 If you do anything computational or code-based at all, you should
-consider the twice-yearly `CodeRefinery <http://coderefinery.org/>`__
+consider the twice-yearly `CodeRefinery <https://coderefinery.org/>`__
 workshops (announced on our page).  If you have a Triton account or do
 high-performance computing or intensive computing or data-related
 tasks, you should come to the Summer (3 days) or Winter (1 day)

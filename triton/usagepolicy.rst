@@ -18,7 +18,7 @@ these conditions of use:
    password, ssh private key), sensitive data and files.
 
 #. You shall immediately report any known or suspected security breach
-   or misuse of Triton cluster or credentials to the `cluster support
+   or misuse of Triton cluster or credentials to the :doc:`cluster support
    team <help>`.
 
 #. Use of the cluster is at your own risk. There is no guarantee that
@@ -99,11 +99,11 @@ to administrative metadata.
 Controller and contact
 ~~~~~~~~~~~~~~~~~~~~~~
 *Controller*: Aalto Science-IT, Aalto University, Espoo, Finland.
-`Contact information <help>`_.  Please use the support email alias for
+:doc:`Contact information <help>`.  Please use the support email alias for
 account and personal data queries.
 
 Account information comes from `Aalto ITS registers
-<https://inside.aalto.fi/display/ITPK/Rekisteriselosteet>`__.
+<https://www.aalto.fi/en/services/privacy-notices>`__.
 
 The purpose for processing the personal data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

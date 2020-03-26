@@ -18,13 +18,13 @@ long time. Quota can be in many TB, and quota is allocated by
 application.
 
 The upstream instructions can be found at
-http://openscience.fi/ida-user-instructions. The upstream description
-can be found at http://openscience.fi/ida
+https://www.fairdata.fi/en/ida/user-guide/. The upstream description
+can be found at https://www.fairdata.fi/en/ida/
 
 What it is for
 --------------
 
-Main article: http://openscience.fi/ida
+Main article: https://www.fairdata.fi/en/ida/
 
 IDA is for stable research data which needs safe, somewhat long term
 storage. (However, it isn't for very long term archival, another system
@@ -46,20 +46,20 @@ says they encourage its use).
 Registering and applying for space
 ----------------------------------
 
-Main article: http://openscience.fi/becoming-an-ida-user
+Main article: https://www.fairdata.fi/en/ida/becoming-an-ida-user/
 
 Everyone can apply for IDA space via your CSC account (but all IDA
 space is allocated to projects, not individual users). Anyone at a
 Finnish university can get a CSC account automatically. IDA space is
 
 First, you need a CSC account. You can get this online via the Aalto
-authentication: `https://sui.csc.fi/. <https://sui.csc.fi/>`__
+authentication: `https://my.csc.fi <https://my.csc.fi/>`__.
 
 Once you have the CSC account, you need a CSC project. Only senior level
 staff (postdoc or above) can do this - you probably want it to be
 someone who will be here long term, since that is the point!. Apply for
 the project through the scientists user interface (SUI)
-(https://sui.csc.fi). The SUI can be rather confusing. First, go to
+(https://my.csc.fi). The SUI can be rather confusing. First, go to
 eService → Resources and Applications → select "Academic CSC
 project".  The bottom of the page then changes to an application form.
 Fill this out: say you need a project for IDA (or whatever). You need
@@ -93,7 +93,7 @@ See our page on :doc:`encryption for scientists <../scicomp/encryption>`.
 Access
 ------
 
-Main instructions: http://openscience.fi/ida-user-instructions
+Main instructions: https://www.fairdata.fi/en/ida/
 
 iRODS (and thus IDA) is an API-based file storage service. Thus, you use
 separate commands to get and put files. This comes out of the fact that
@@ -116,21 +116,20 @@ Browser
 ~~~~~~~
 
 Through the CSC SUI, you can brows and upload files. See
-http://openscience.fi/ida-browser.  This is probably not good for
+https://www.fairdata.fi/en/ida/user-guide/#files-view.  This is probably not good for
 extremely large files.
 
 Command line
 ~~~~~~~~~~~~
 
-Main instructions:
-`http://openscience.fi/ida-command-line. <http://openscience.fi/ida-command-line>`__
+Main instructions: https://www.fairdata.fi/en/ida/user-guide/#command-line-tools
 
 **irods commands:** Aalto workstations and Triton have the irods command
 line tools (the "icommands"). Use the module system:
 ``module load irods``.
 
 **Configuration file:** You need to set up the config file (see the
-openscience.fi instructions). You need a extra path in it here:
+fairdata.fi instructions). You need a extra path in it here:
 
 On Aalto Linux, this is needed in the config file
 ``.irods/irods_environment.json`` (be careful with commas to make sure
@@ -140,15 +139,6 @@ it stays valid JSON):
 
 On Triton, the corresponding directory is
 ``"/share/apps/irods/4.1.9/var/lib/irods/plugins/"``
-
-Network mounting
-~~~~~~~~~~~~~~~~
-
-The IDA directories can be mounted via
-DAV:\ http://openscience.fi/ida-network-directory
-
-There is also an irods 4.x fuse module (irodsFs) included by default.
-Use it like normal, though it is quite slow.
 
 Practical usage
 ---------------
@@ -161,14 +151,11 @@ More resources
 
 Documentation
 
--  http://openscience.fi/ida-user-instructions - Instructions from
-   avointiede
+-  https://www.fairdata.fi/en/ida/ - Instructions from
+   fairdata
 -  CSC webinar on IDA and opening data (2017):
    https://www.youtube.com/watch?v=b8nVRgUBH0Q,
    https://www.csc.fi/web/training/-/webinar_ida_2017.
--  https://research.csc.fi/csc-guide-archiving-data-to-the-archive-servers
-   - CSC documentation, note that this is a bit out of date and less
-   complete than Avointiede's one.
 -  The CSC archive also uses irods, but it uses version 3 which is not
    compatible with these command line tools.
 

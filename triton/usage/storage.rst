@@ -91,6 +91,6 @@ loops: any CPU usage, print, logging, preprocessing, postprocessing,
 etc. reduces the amount of time the GPU is working unless you
 do it properly (Amdhal's law).
 
-* Tensorflow: `data input pipelines <https://www.tensorflow.org/guide/performance/datasets>`__
+* Tensorflow: `data input pipelines <https://www.tensorflow.org/guide/data_performance>`__
 
 (more coming later)

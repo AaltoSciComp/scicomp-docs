@@ -58,7 +58,7 @@ management.  Concrete information: :doc:`main Aalto services
 Main Theoretical information: :doc:`Aalto-specific summary
 <data/outline>` and `Aalto's
 Research Data Management pages
-<http://www.aalto.fi/en/research/research_data_management/>`_.
+<https://www.aalto.fi/en/services/research-data-management-rdm-and-open-science>`_.
 
 .. toctree::
    :maxdepth: 2

@@ -24,9 +24,9 @@ Hardware breakdown
   different operating system, please see :doc:`dgx`.
 
 Detail info about cards available at
-http://en.wikipedia.org/wiki/Nvidia_Tesla and for general info about
+https://en.wikipedia.org/wiki/Nvidia_Tesla and for general info about
 Nvidia GPUs
-http://www.nvidia.com/object/tesla-supercomputing-solutions.html
+https://www.nvidia.com/object/tesla-supercomputing-solutions.html
 
 Using GPU nodes
 ===============
@@ -67,7 +67,7 @@ GPU nodes environment and CUDA
 
 User environment on ``gpu*`` nodes is the same as on other nodes, the
 only difference is that they have nvidia kernel modules for Tesla cards.
-`CUDA <http://www.nvidia.com/object/cuda_home_new.html>`__ comes through
+`CUDA <https://www.nvidia.com/object/cuda_home_new.html>`__ comes through
 ``module``.
 
 ::
@@ -169,7 +169,7 @@ pair ``-g -G``, like follows:
     $ nvcc -g -G cuda_code.cu -o cuda_code
 
 See `CUDA-GDB User
-Guide <http://developer.download.nvidia.com/compute/DevZone/docs/html/C/doc/cuda-gdb.pdf>`__
+Guide <https://developer.download.nvidia.com/compute/DevZone/docs/html/C/doc/cuda-gdb.pdf>`__
 for a more information on cuda-gdb.
 
 Applications and known issues
@@ -202,7 +202,7 @@ Nvidia MPS
 ----------
 
 `Nvidia Multi-Process Service (MPS)
-<http://docs.nvidia.com/deploy/mps/index.html>`__ provides a way to
+<https://docs.nvidia.com/deploy/mps/index.html>`__ provides a way to
 share a single GPU among multiple processes. It can be used to
 increase the GPU utilization by timesharing the GPU access, e.g. one
 process can upload data to the GPU while another is running a
@@ -252,7 +252,7 @@ Attachments and useful links
 ============================
 
 * `CUDA C Programming
-  Guide <http://developer.download.nvidia.com/compute/DevZone/docs/html/C/doc/CUDA_C_Programming_Guide.pdf>`__
+  Guide <https://developer.download.nvidia.com/compute/DevZone/docs/html/C/doc/CUDA_C_Programming_Guide.pdf>`__
 * `CUDA Zone on
-  NVIDIA <http://developer.nvidia.com/category/zone/cuda-zone>`__
-* `CUDA FAQ <http://developer.nvidia.com/cuda/cuda-faq>`__
+  NVIDIA <https://developer.nvidia.com/category/zone/cuda-zone>`__
+* `CUDA FAQ <https://developer.nvidia.com/cuda/cuda-faq>`__

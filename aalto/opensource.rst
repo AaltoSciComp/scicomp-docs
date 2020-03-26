@@ -87,7 +87,7 @@ commercial or contains patentable inventions. In these cases, contact
 according to Finnish legislation you are actually required to report the
 invention to Innovation Services.
 
-.. _innosrv: http://innovation.aalto.fi/contact-us/
+.. _innosrv: https://innovation.aalto.fi/contact-us/
 
 
 Traps and acting early
@@ -263,10 +263,10 @@ References
    evidence that this policy is applicable to all Aalto.
 
 -  Aalto Innovation Services:
-   \ `http://innovation.aalto.fi/ <http://innovation.aalto.fi/>`__
+   \ `https://innovation.aalto.fi/ <https://innovation.aalto.fi/>`__
 
 -  Choosing an open source license:
-   \ `http://choosealicense.com/ <http://choosealicense.com/>`__
+   \ `https://choosealicense.com/ <https://choosealicense.com/>`__
 
 -  Aalto copyright advice:
    `http://copyright.aalto.fi/ <http://copyright.aalto.fi/>`__

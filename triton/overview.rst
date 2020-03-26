@@ -24,9 +24,9 @@ Hardware
 Different types of nodes:
 
 *  144 compute nodes `HP SL390s
-   G7 <http://h10010.www1.hp.com/wwpc/us/en/sm/WF06a/15351-15351-3896136-3896139-4236125-4198401.html>`__,
+   G7 <https://h10010.www1.hp.com/wwpc/us/en/sm/WF06a/15351-15351-3896136-3896139-4236125-4198401.html>`__,
    each equipped with 2x `Intel Xeon
-   X5650 <http://ark.intel.com/products/47922/Intel-Xeon-Processor-X5650-%2812M-Cache-2_66-GHz-6_40-GTs-Intel-QPI%29>`__
+   X5650 <https://ark.intel.com/products/47922/Intel-Xeon-Processor-X5650-%2812M-Cache-2_66-GHz-6_40-GTs-Intel-QPI%29>`__
    2.67GHz (Westmere six-core each). 118 compute nodes wsm[1-112,137-144],
    have 48 GB of DDR3-1066 memory, others wsm[113-136] have
    96GB, each node has 4xQDR Infiniband port,  wsm[1-112,137-144]
@@ -81,8 +81,6 @@ downlinks there is 1 uplink to spine switches. The islands are
 those islands are mainly used for Lustre communication.
 Running MPI jobs possible on the entire island or its segment, but not
 across the cluster.
-
-See the IB topology map at `cluster technical details <details.rst>`_ page.
 
 Disk arrays
 ===========

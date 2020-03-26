@@ -25,7 +25,7 @@ Typically a toolchain contains a compiler and a MPI implementation, but
 it can also contain additional mathematical and computational libraries.
 
 Naming convention is from
-`EasyBuild <https://github.com/hpcugent/easybuild>`__ that is used to
+`EasyBuild <https://github.com/easybuilders/easybuild>`__ that is used to
 administer the software collections. It goes like:
 
 <compiler><mpi><blas><lapack><fftw><cuda>

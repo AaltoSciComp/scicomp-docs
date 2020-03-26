@@ -6,7 +6,7 @@ Spyder
 :pagelastupdated: 2014
 
 Spyder is the Scientific PYthon Development
-EnviRonment:\ https://pythonhosted.org/spyder/
+EnviRonment:\ https://www.spyder-ide.org/
 
 This guide shows you how to set this up with different version of Qt4
 and python compared to the default version provided by operating system.

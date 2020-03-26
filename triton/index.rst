@@ -31,7 +31,7 @@ Quick contents and links
 	 * `Triton issue tracker <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`_
 	   (most requests here, login with HAKA)
 	 * `Suggestions for good support requests
-	   <https://research.csc.fi/support-request-howto>`_
+	   <https://docs.csc.fi/support/support-howto/>`_
 
        * :doc:`Quick Reference <ref/index>`
 
@@ -76,22 +76,22 @@ Quick contents and links
 	 by Science IT. Including Triton kickstarts and many others
        * `Parallel computing <https://wiki.aalto.fi/download/attachments/65022076/parallel_computing.2012-04-12.pdf?version=1&modificationDate=1334828664000&api=v2>`_
        * `Aalto IT Services for Research <https://www.aalto.fi/en/services/it-services-for-research>`_
-       * `Software Carpentry <http://software-carpentry.org/>`_
+       * `Software Carpentry <https://software-carpentry.org/>`_
 	 (scientific computation basics) and
-	 `Code Refinery <http://coderefinery.org/>`_ (more focused on
+	 `Code Refinery <https://coderefinery.org/>`_ (more focused on
 	 programming techniques)
 
        **General links**
 
        * `CSC <https://www.csc.fi/>`_ - Finland's academic computing center.
        * `FGCI user's guide
-	 <https://research.csc.fi/fgci-user-guide>`_ at CSC: That is a
+	 <https://docs.csc.fi/cloud/fgci/fgci-user-guide-overview/>`_ at CSC: That is a
 	 general Guide to FGCI resources. Triton is one of them.
-       * `Taito user guide
-	 <https://research.csc.fi/taito-user-guide>`_ at CSC: a
+       * `CSC HPC guides
+	 <https://research.csc.fi/guides>`_ at CSC: a
 	 Triton like cluster at CSC. Similar setup, thus examples and
 	 instructions can be useful.
-       * `Aalto research data management information <http://www.aalto.fi/en/research/research_data_management/>`_
+       * `Aalto research data management information <https://www.aalto.fi/en/services/research-data-management-rdm-and-open-science>`_
 
 
 

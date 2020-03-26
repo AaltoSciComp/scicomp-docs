@@ -16,7 +16,7 @@ everything from small to very large projects with speed and efficiency.
 Git is easy to learn and has a tiny footprint with lightning fast
 performance. It outclasses SCM tools like Subversion, CVS, Perforce, and
 ClearCase with features like cheap local branching, convenient staging
-areas, and multiple workflows.*" `Git <http://git-scm.com/>`__
+areas, and multiple workflows.*" `Git <https://git-scm.com/>`_
 
 
 .. note::
@@ -30,23 +30,23 @@ areas, and multiple workflows.*" `Git <http://git-scm.com/>`__
 Basic git tutorials
 ===================
 
--  There is an `interactive git tutorial <http://try.github.io/>`__ from
+-  There is an `interactive git tutorial <https://try.github.io/>`_ from
    codeschool and github. Good for your first use.
 -  Software carpentry has a `good
-   tutorial <http://swcarpentry.github.io/git-novice/>`__ focused on
+   tutorial <https://swcarpentry.github.io/git-novice/>`_ focused on
    researchers.
 -  Gitlab
-   `cheatsheet <https://gitlab.com/gitlab-com/marketing/blob/master/design/print/git-cheatsheet/print-pdf/git-cheatsheet.pdf>`__.
+   `cheatsheet <https://gitlab.com/gitlab-com/marketing/blob/master/design/print/git-cheatsheet/print-pdf/git-cheatsheet.pdf>`_.
 
 More references
 ===============
 
 -  You can search for many tutorials online.
--  `software-carpentry.org <http://software-carpentry.org>`__ (an
+-  `software-carpentry.org <https://software-carpentry.org>`_ (an
    organization that teaches development to scientists) has a very good
    `tutorial
-   online <http://software-carpentry.org/v5/novice/git/index.html>`__.
--  The book "`Pro Git <http://git-scm.com/book/>`__" is online.
+   online <https://swcarpentry.github.io/git-novice/>`_.
+-  The book "`Pro Git <https://git-scm.com/book/>`_" is online.
 
    -  Read chapters 1-3 for a good introduction to using git for your
       own projects.
@@ -54,22 +54,24 @@ More references
       with others.
 
 -  There's a `somewhat official documentation
-   place <http://git-scm.com/documentation>`__ - including videos.
+   place <https://git-scm.com/doc>`_ - including videos.
 -  There is an `official
-   tutorial <http://git-scm.com/docs/gittutorial>`__ but it is probably
+   tutorial <https://git-scm.com/docs/gittutorial>`_ but it is probably
    too theoretical.
 -  All git commands have very good but very detailed manual pages - type
    ``man git COMMAND`` or ``git help COMMAND`` to see them.
 -  `Interactive git
-   cheatsheet <http://ndpsoftware.com/git-cheatsheet.html>`__. (very
+   cheatsheet <https://ndpsoftware.com/git-cheatsheet.html>`_. (very
    good once you know the basics)
 - `A Visual Git Reference
-  <http://marklodato.github.com/visual-git-guide/index-en.html>`__
+  <http://marklodato.github.io/visual-git-guide/index-en.html>`_
 
 Gitlab-specific information:
 
 -  `A
-   tutorial <https://www.digitalocean.com/community/articles/how-to-use-the-gitlab-user-interface-to-manage-projects>`__
+   tutorial
+   <https://www.digitalocean.com/community/tutorials/how-to-use-the-gitlab-user-interface-to-manage-projects`_
+
 
 
 Other hosting services

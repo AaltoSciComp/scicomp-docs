@@ -23,7 +23,7 @@ shorter and/or smaller (less CPU's, less memory) jobs. For an in-depth
 explanation see
 http://tech.ryancox.net/2014/04/scheduler-limit-remaining-cputime-per.html
 and for a graphical simulator you can play around with:
-https://marylou.byu.edu/simulation/grpcpurunmins.php . You can see the
+https://rc.byu.edu/simulation/grpcpurunmins.php . You can see the
 exact limits of your account with
 
 ::
@@ -339,7 +339,7 @@ shorter and/or smaller (less CPU's, less memory) jobs. For an in-depth
 explanation see
 http://tech.ryancox.net/2014/04/scheduler-limit-remaining-cputime-per.html
 and for a graphical simulator you can play around with:
-https://marylou.byu.edu/simulation/grpcpurunmins.php . You can see the
+https://rc.byu.edu/simulation/grpcpurunmins.php . You can see the
 exact limits of your account with
 
 ::
@@ -463,7 +463,7 @@ Can I change zsh to bash?
 
 Yes. Change shell to your Aalto account and re-login to Triton to get
 your newly changed shell to work. For Aalto account changes one can
-login to `kosh.aalto.fi <http://kosh.aalto.fi>`__, run ``kinit`` first
+login to ``kosh.aalto.fi``, run ``kinit`` first
 and then run ``chsh``, then type /bin/bash. To find out what is your
 current shell, run ``echo $SHELL``
 
@@ -572,7 +572,7 @@ The SSHFS method described above works from any console. Though in case
 of Linux desktops, when one has a GUI like Gnome or Unity (read all
 Ubuntu users) one may use Nautilus – default file manager -- to mount
 remote SSH directory. Click \ ``File -> Connect to Server``\  choose
-\ ``SSH``\ , input `triton.aalto.fi <http://triton.aalto.fi>`__ as a
+\ ``SSH``\ , input ``triton.aalto.fi`` as a
 server and directory \ ``/triton/PATH/TO/DIR``\  you'd like to mount,
 type your name. Leave password field empty if you use SSH key. As soon
 as Nautilus will establish connection it will appear on the left-hand
@@ -789,7 +789,7 @@ and the add it to your ``$LD_LIBRARY_PATH``
 
     export LD_LIBRARY_PATH=/usr/lib64/compat-openmpi/lib:$LD_LIBARY_PATH # export the lib in BASH environment
 
-or, as in case of `libmpi.so <http://libmpi.so>`__.0 we have ready
+or, as in case of ``libmpi.so.0`` we have ready
 module config, just run
 
 ::

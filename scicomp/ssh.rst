@@ -84,7 +84,7 @@ is used for internal connections).
 You can make keys using ``puttygen``.  Here is `a tutorial`__.  You
 should make a new key for each computer you have.
 
-__ https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/
+__ https://devops.ionos.com/tutorials/use-ssh-keys-with-putty-on-windows/
 
 
 
@@ -133,6 +133,6 @@ Openssh on Linux and Mac can be made nicer if you set up a config file
 References
 ==========
 
-- https://wiki.mozilla.org/Security/Guidelines/OpenSSH
+- https://infosec.mozilla.org/guidelines/openssh
 - https://blog.0xbadc0de.be/archives/300
-- http://nvlpubs.nist.gov/nistpubs/ir/2015/NIST.IR.7966.pdf
+- https://nvlpubs.nist.gov/nistpubs/ir/2015/NIST.IR.7966.pdf
