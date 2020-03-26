@@ -119,7 +119,7 @@ General notes
 -  The table below details the types of filesystems available.
 -  The path /**m/$dept/** is designed to be a standard location for mounts.
    In particular, this is shared with Triton.
--  The server ``magi`` is ``magi.TODO`` and is for the CS
+-  The server ``magi`` is ``magi.cs.aalto.fi`` and is for the CS
    department. Home directory is mounted here without kerberos
    protection but directories under /m/ need active kerberos ticket
    (that can be acquired with 'kinit' command) . ``taltta`` is
