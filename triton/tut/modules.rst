@@ -78,7 +78,7 @@ very useful when testing modules.::
   Python 3.4.9
 
 But we need a newer version of Python.  To this end, we can **load** the ``anaconda`` module 
-using the ``module load anaconda`` commdand, 
+using the ``module load anaconda`` command, 
 that has a more up to date Python with lots of libraries already included::
 
   $ module load anaconda
@@ -186,7 +186,7 @@ unload everything.  Now, do ``module restore my-collection``::
 Was it much faster?
 
 You may occasionally need to rebuild your collections if we
-re-organize things (it will tell you, just re-save).
+re-organize things (it will tell you, and you just save your collection again).
 
 
 
