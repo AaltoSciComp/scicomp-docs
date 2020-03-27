@@ -1,10 +1,10 @@
 Julia language on triton
 ========================
 
-The `Julia programming language <http://julialang.org/>`__ is a
+The `Julia programming language <https://julialang.org/>`__ is a
 high-level, high-performance dynamic programming language for technical
 computing, in the same space as e.g. MATLAB, Scientific Python, or R.
-For more details, see the web page http://julialang.org/ .
+For more details, see the web page https://julialang.org/ .
 
 Interactive usage
 -----------------

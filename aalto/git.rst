@@ -163,5 +163,5 @@ FAQ
   and the description above.
 
 .. _versionprivacy: https://version.aalto.fi/policies/version_aalto_policy_eng.pdf
-.. _coderefinery_repo: http://coderefinery.org/repository/
+.. _coderefinery_repo: https://coderefinery.org/repository/
 

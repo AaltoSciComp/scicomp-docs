@@ -187,7 +187,7 @@ after the above array job is finished, the job task id's 7 and 19
 failed, you can relaunch just those jobs with ``--array=7,19``. While the
 array job above is a set of serial jobs, parallel array jobs are
 possible. For more information, see the `Slurm job array
-documentation <http://slurm.schedmd.com/job_array.html>`__.
+documentation <https://slurm.schedmd.com/job_array.html>`__.
 
 How do you map from ``$SLURM_ARRAY_TASK_ID`` to the parameters of the
 job? There are different strategies
@@ -242,7 +242,7 @@ What's next?
 The next tutorial is about :doc:`GPU computing <gpu>`.
 
 For more information, you can see the CSC guide on array jobs:
-`https://research.csc.fi/taito-array-jobs. <https://research.csc.fi/taito-array-jobs>`_
+`https://research.csc.fi/taito-array-jobs. <https://docs.csc.fi/computing/running/array-jobs/>`_
 
 For more detailed information about running on Triton, see the main page
 `Running programs on Triton <../usage/general>`.

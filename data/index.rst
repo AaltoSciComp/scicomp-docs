@@ -34,7 +34,7 @@ data.  For example,
 
 You can find more formal information at the `Aalto Research Data
 Management pages
-<http://www.aalto.fi/en/research/research_data_management/>`__, and
+<https://www.aalto.fi/en/services/research-data-management-rdm-and-open-science>`__, and
 here we focus on the practical side of things.
 
 
@@ -59,7 +59,7 @@ Grantwriters and the Open Science and ACRIS teams can
 help you with producing data management plans for funding.  Science-IT
 can help you with funding or practical data management plans.
 
-__ http://www.aalto.fi/en/research/research_data_management/data_management_planning/
+__ https://www.aalto.fi/en/services/data-management-plan-dmp
 
 .. toctree::
 
@@ -174,6 +174,6 @@ Other info
 External links
 ==============
 
-* `Finland Open Science Initiative (ATT) <http://openscience.fi/>`_
+* `Finland Open Science Initiative (ATT) <https://www.avointiede.fi/en>`_
 * `Aalto Research Data Management pages
-  <http://www.aalto.fi/en/research/research_data_management/>`_.
+  <https://www.aalto.fi/en/services/research-data-management-rdm-and-open-science>`_.

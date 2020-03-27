@@ -107,14 +107,14 @@ dependencies and if you don't switch Python modules often.
    version on them).
 
 Note: ``pip`` installs from the `Python Package Index
-<https://pypi.python.org/pypi>`__.
+<https://pypi.org/>`__.
 
 .. _conda:
 
 Anaconda and conda environments
 -------------------------------
 
-`Anaconda <https://www.continuum.io>`__ is a Python distribution by
+`Anaconda <https://www.anaconda.com>`__ is a Python distribution by
 Continuum Analytics (open source, of course). It is nothing fancy,
 they just take a lot of useful scientific packages and their dependencies
 and put them all together, make sure they work, and do some optimization.
@@ -292,7 +292,7 @@ related concepts:
 
 -  pip: the Python package installer. Installs Python packages globally,
    in a user's directory (``--user``), or anywhere. Installs from the
-   `Python Package Index <https://pypi.python.org/pypi>`__.
+   `Python Package Index <https://pypi.org/>`__.
 -  virtualenv: Creates a directory that has all self-contained packages
    that is manageable by the user themself. When the virtualenv is
    activated, all the operating-system global packages are no longer
@@ -302,19 +302,19 @@ related concepts:
    can be uninterrupted). It also allows different projects to have
    different versions of things installed. virtualenv isn't magic, it
    could *almost* be seen as just manipulating ``PYTHONPATH``, ``PATH``, and the
-   like. Docs: http://docs.python-guide.org/en/latest/dev/virtualenvs/
+   like. Docs: https://docs.python-guide.org/dev/virtualenvs/
 -  conda: Sort of a combination of package manager and virtual
    environment. However, it *only* installed packages into environments,
    and is *not* limited to Python packages. It can also install other
    libraries (c, fortran, etc) into the environment. This is extremely
    useful for scientific computing, and the reason it was created. Docs
-   for envs: http://conda.pydata.org/docs/using/envs.html.
+   for envs: https://conda.io/projects/conda/en/latest/user-guide/concepts/environments.html.
 
 So, to install packages, there is ``pip`` and ``conda``. To make virtual
 environments, there is ``venv`` and ``conda``.
 
 Advanced users can see this `rosetta
-stone <http://conda.pydata.org/docs/_downloads/conda-pip-virtualenv-translator.html>`__
+stone <https://conda.io/projects/conda/en/latest/commands.html#conda-vs-pip-vs-virtualenv-commands>`__
 for reference.
 
 On Triton we have added some packages on top of the Anaconda

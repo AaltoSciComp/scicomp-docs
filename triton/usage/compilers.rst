@@ -12,8 +12,8 @@ Triton has the GCC set of compilers installed by default, but we
 recommend that you use the provided module versions. The GNU Compiler
 Collection (aka GCC) includes front ends for C, C+, Objective-C,
 Fortran, Java, Ada, and Go, as well as libraries for these languages
-(libstdc+, libgcj,...). In case of missing features,  `contact
-admins <../help>`_.
+(libstdc+, libgcj,...). In case of missing features,  :doc:`contact
+admins <../help>`.
 
 ::
 

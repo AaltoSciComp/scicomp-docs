@@ -112,7 +112,7 @@ Procedures:
 
 Topics
 ======
-* `Triton intro: interactive jobs <../triton/tut/interactive>`_
+* :doc:`Triton intro: interactive jobs <../triton/tut/interactive>`
 * `Git <http://rkd.zgib.net/scicomp/scip2015/git.html>`_
 
 

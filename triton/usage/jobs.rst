@@ -104,7 +104,7 @@ A pending job may have these reasons:
    GrpCPURunMins limit, which currently is 1.5M minutes per user. Wait a
    while for running jobs to proceed, so that new jobs may start. Also,
    shorter job time limits help. See `GrpCPURunMins
-   visualizer <https://marylou.byu.edu/simulation/GrpCPURunMins-Visualizer/index.html>`__
+   visualizer <https://rc.byu.edu/simulation/GrpCPURunMins-Visualizer/index.html>`__
    .
 
 In case of the first two one can check currently estimated time the job

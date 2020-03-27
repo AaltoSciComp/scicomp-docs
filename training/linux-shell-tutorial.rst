@@ -2523,7 +2523,7 @@ exited.
 Another way to run in parallel yet avoiding sending to the background is using ``parallel``.
 This utility runs  the  specified  command, passing it a single one of the specified arguments.
 This is repeated for each argument. Jobs may be run in parallel. The default is to run one job per CPU.
-If no command is specified before the --, the commands after it are instead run in parallel.
+If no command is specified before the ``--``, the commands after it are instead run in parallel.
 
 ::
 
@@ -2631,7 +2631,7 @@ References
 .. [#find2] http://www.softpanorama.org/Tools/Find/index.shtml
 .. [#putty-sshkeys] https://the.earth.li/~sgtatham/putty/0.70/htmldoc/
 .. [#umask] https://www.computerhope.com/unix/uumask.htm
-.. [#printf] http://wiki.bash-hackers.org/commands/builtin/printf
+.. [#printf] https://wiki.bash-hackers.org/commands/builtin/printf
 .. [#profiling] https://stackoverflow.com/questions/5014823/how-to-profile-a-bash-shell-script-slow-startup
 
 

@@ -26,7 +26,7 @@ later?  If so, do the below.
 - Add a ``requirements.txt`` file listing the different packages you
   need installed for a student to use the notebooks.  See the
   `MyBinder instructions
-  <https://mybinder.readthedocs.io/en/latest/using.html#preparing-a-repository-for-binder>`__
+  <https://mybinder.readthedocs.io/en/latest/introduction.html#preparing-a-repository-for-binder>`__
   for different ways to do this, but a normal Python
   ``requirements.txt`` file is easiest for most cases.  On each line,
   put in a name of a package from the Python Package Index.  There are

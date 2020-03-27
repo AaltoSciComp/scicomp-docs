@@ -53,7 +53,7 @@ There are plenty of other good resources about making funder DMPs.
   web form.  Aalto recommends this service, though be aware it helps
   you fill out a form, not plan your work.
 
-.. _aaltordm: http://www.aalto.fi/en/research/research_data_management/data_management_planning/
+.. _aaltordm: https://www.aalto.fi/en/services/data-management-plan-dmp
 
 As some concrete suggestions:
 
@@ -106,7 +106,7 @@ is some more advice:
     available publically <dmptuuli_templates_>`_, too.  These seem to
     have roughly the info as the DMPTuuli web forms.
 
-.. _aalto_rdm_plans: http://www.aalto.fi/en/research/research_data_management/
+.. _aalto_rdm_plans: https://www.aalto.fi/en/services/data-management-plan-dmp
 .. _dmptuuli_templates: https://dmptuuli.fi/public_templates/
 
 Why do they want DMPs?  What should it include?  Answering these will
@@ -162,9 +162,9 @@ Aalto correspondences are.  You can also see the `Aalto guidelines
 <ardm_plan_>`_, but this is also a bit abstract to be immediately
 usable.
 
-.. _oafg: http://www.aka.fi/en/funding/how-to-apply/application-guidelines/detailed-academy-data-management-plan-guidelines-and-best-practices-in-dmptuuli/
+.. _oafg: https://www.aka.fi/en/funding/apply-for-funding/az-index-of-application-guidelines/data-management-plan/data-management-plan/
 
-.. _ardm_plan: http://www.aalto.fi/en/research/research_data_management/data_management_planning/
+.. _ardm_plan: https://www.aalto.fi/en/services/data-management-plan-dmp
 
 With all the time spent on writing your plan, don't forget to do
 something useful, too.
@@ -256,10 +256,10 @@ something useful, too.
      though the extra requirements needed to open are small.  Give
      some estimate of the total/extra amount of work needed.
 
-.. _apdp: https://inside.aalto.fi/display/AboutAalto/Aalto+University+Personal+Data+Policy
+.. _apdp: https://www.aalto.fi/en/services/aalto-university-data-protection-policy
 
-.. _arec: https://inside.aalto.fi/display/AboutAalto/Research+Ethics+Committee
+.. _arec: https://www.aalto.fi/en/services/research-ethics-committee
 
 .. _aodp: https://inside.aalto.fi/download/attachments/50234575/2016_02_10_datapolicy.pdf?version=1&modificationDate=1455967763618&api=v2
 
-.. _ardm_pub: http://www.aalto.fi/en/research/research_data_management/open_access_to_research_data/
+.. _ardm_pub: https://www.aalto.fi/en/services/publishing-and-reusing-open-data

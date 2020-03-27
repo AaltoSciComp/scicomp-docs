@@ -234,10 +234,10 @@ Finnish services
 
     It is said to be a safe place to store your data, but if you read
     closely a different "long-term preservation" service `is coming
-    <https://openscience.fi/digital-preservation>`__, so IDA isn't that.  IDA
+    <https://www.fairdata.fi/en/fairdata-pas/>`__, so IDA isn't that.  IDA
     might have a use case for confidential data which can't leave
     Finland, but it says `it claims it is not suitable for such
-    <https://openscience.fi/ida-faq>`__.  They also say that metadata
+    <https://www.fairdata.fi/en/ida/>`__.  They also say that metadata
     "`shall
     <https://sui.csc.fi/web/guest/terms-of-use/-/asset_publisher/FMMBc3VntxT0/content/id/465885>`__"
     be added, which makes you think it is only for data which is
@@ -252,8 +252,8 @@ Finnish services
   * **AVAA** is basically a merging of IDA and Etsin.  You can set
     some metadata in IDA so that your data is available via the web.
     There are some instruction in the IDA user guide (`browser
-    <https://openscience.fi/ida-browser-sharing>`__, `command line
-    <https://openscience.fi/ida-commands-sharing>`__).  Overall,
+    <https://www.fairdata.fi/en/ida/user-guide/>`__, `command line
+    <https://www.fairdata.fi/en/ida/user-guide/>`__).  Overall,
     having to use three different services for publishing a file takes
     a fair amount of work, so if you want to open data, Zenodo is
     faster.
@@ -270,7 +270,7 @@ Finnish services
   even for funder DMPs, you need to know what to say).  You can check
   our :doc:`data management plans <plans>` page, including the
   "emergency DMP" section.  Aalto also has a `little bit of guidance
-  <http://www.aalto.fi/en/research/research_data_management/data_management_planning/>`__.
+  <https://www.aalto.fi/en/services/data-management-plan-dmp>`__.
 
 EU services
 ~~~~~~~~~~~
@@ -290,7 +290,7 @@ EU services
   When you put data in Zenodo, also make an ACRIS dataset entry linked
   with the DOI.
 
-* **EUDAT** (http://eudat.eu) provides a lot of different services:
+* **EUDAT** (https://eudat.eu) provides a lot of different services:
   B2share is a lot like Zenodo, but smaller and last we checked the
   user interface wasn't as good (and it didn't provide DOIs).  B2Drop
   is a Dropbox-like file sharing service (powered by nextcloud), which
@@ -308,7 +308,7 @@ Global services (with special Aalto support)
   account does.  This account ends when you leave Aalto, so this
   should not be used for permanent storage).  You have to enable your
   account using `ITS instructions here
-  <https://it.aalto.fi/instructions/google-drive-registration-and-closing-account>`__.
+  <https://www.aalto.fi/en/services/google-drive-registration-and-closing-of-an-account>`__.
   Access the Aalto Google Drive from https://gdrive.aalto.fi.  This
   service can be great for sharing, but because it is tied to your
   Aalto account, you should not store valuable research data here.
@@ -320,7 +320,7 @@ Global services (with special Aalto support)
 * **Microsoft OneDrive** is like Google Drive, and Aalto has a special
   agreement.  You can find
   `instructions from ITS here
-  <https://it.aalto.fi/instructions/deploying-onedrive-business>`__.
+  <https://www.aalto.fi/en/services/onedrive-quick-guide>`__.
   Theoretically, OneDrive has a higher security rating than Google
   Drive, but it is still not suitable for legally confidential data.
 

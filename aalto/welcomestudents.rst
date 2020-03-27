@@ -63,7 +63,7 @@ resources which are suitable for most courses that need extra power:
    :doc:`Paniikki computer lab <paniikki>` | Linux workstations, GPUs, software via modules
    Other computer labs | workstations, different OSs
    `Shell servers <https://www.aalto.fi/en/services/linux-shell-servers-at-aalto>`_ | via ssh, software via modules, overcrowded.  `Brute and Force <https://www.aalto.fi/en/services/servers-for-light-duty-calculation>`_ are for computation, others not.
-   `JupyterHub <jupyterhub>`_ | basic software, in web browser
+   :doc:`JupyterHub <jupyterhub>` | basic software, in web browser
    `Remote desktop <https://vdi.aalto.fi>`_ | Windows and Linux
    Own computers | Software at https://download.aalto.fi
 

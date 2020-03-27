@@ -12,7 +12,7 @@ Contributing
 
 This documentation is Open Source (CC-BY 4.0), and we welcome
 contributions from the Aalto community.  The project is run on Github
-(https://github.com/AaltoScienceIT/triton-docs).
+(https://github.com/AaltoScienceIT/scicomp-docs).
 
 To contribute, you can always use the normal Github contribution
 mechanims: make a pull request or comments.  If you are at Aalto, you
@@ -68,9 +68,9 @@ allows more semantic markup, more power to compile into different
 formats (since there isn't embedded HTML), and advanced things like
 indexing, permanent references, etc.
 
-Restructured text `home <http://docutils.sourceforge.net/rst.html>`_
+Restructured text `home <https://docutils.sourceforge.io/rst.html>`_
 and `quick reference
-<http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_.
+<https://docutils.sourceforge.io/docs/user/rst/quickref.html>`_.
 
 Note: Literal inline text uses `````` instead of a single ````` (second
 works but gives warning).
@@ -116,27 +116,27 @@ like this::
 
 ----
 
-Inline `link <http://python.org>`_, or
+Inline `link <https://www.python.org>`_, or
 anonymous__, or
 separate_, or
 `different text <separate_>`_ links.
 Trailing underscores indicate links.
 
-__ http://python.org
+__ https://www.python.org
 
-.. _separate: http://python.org
+.. _separate: https://www.python.org
 
 ::
 
-    Inline `link <http://python.org>`_, or
+    Inline `link <https://www.python.org>`_, or
     anonymous__, or
     separate_, or
     `different text <separate_>`_ links.
     Trailing underscores indicate links.
 
-    __ http://python.org
+    __ https://www.python.org
 
-    .. _separate: http://python.org
+    .. _separate: https://www.python.org
 
 ----
 
@@ -154,7 +154,7 @@ that for internal links there are no trailing underscores::
 
 ----
 
-Internal links.  `Permanent references across files <http://www.sphinx-doc.org/en/stable/markup/inline.html#role-ref>`_
+Internal links.  `Permanent references across files <https://www.sphinx-doc.org/en/stable/usage/restructuredtext/roles.html#role-ref>`_
 
 Label things this way (note only one colon)::
 
