@@ -1927,7 +1927,7 @@ Even though in most of the cases you can design the code to use conditionals or 
    Tip #2: combine 'for' loop with 'find': ``for f in $(find . -name '*.txt'); ...``.
  - Use the ``while`` example with *.cvs*, take the *demospace/Finnish_Univ_students_2018.csv*
    to count total number of students around Finland. Tip: add checking that the number of
-   students field is not empty
+   students field is a number ``[[ $totalnmb =~ ^[0-9]+$ ]]``
  - Using built-in arithmetic write a script *daystill.sh* that counts a number of days till a
    deadline (vacation/salary). 
    Script takes date as an argument, date format suitable to ``date -d`` like ``days_till 2019-6-1``.
