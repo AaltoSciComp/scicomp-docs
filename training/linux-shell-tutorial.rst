@@ -1851,22 +1851,19 @@ condition returns exit status zero/non-zero correspondingly.
 ::
 
  while condition; do
+   command1
+   command2
    ...
  done
 
- # sum of all numbers 1..n
- read -p 'Give a positive integer: ' n
- i=1
+ # sum of all numbers 1..n; n expected as an argument
+ n=$1 i=1
  until ((i > n)); do
-   ((s+=i))
-   ((i++))
+   ((s+=i)); ((i++))
  done
  echo Sum of 1..$n is $s
 
- # endless loop, note ``:`` is a 'no operation' command in BASH, does nothing
- # can be run as sort of "deamon", process should be stopped with Ctrl-c or killed
- while true; do : ; done
-
+ # endless loop, can be stopped with Ctrl-c or killed
  # drop an email every 10 minutes about running jobs on Triton
  # can be used in combination with 'screen', and run in background
  while true; do
@@ -1874,29 +1871,27 @@ condition returns exit status zero/non-zero correspondingly.
    sleep 600
  done
 
- # reads a file passed line by line,
- # IFS= variable before read command to prevent leading/trailing whitespace from being trimmed
- input=/path/to/txt/file
+ # with the help of 'read var' passes file line by line,
+ # IFS= variable before read command to prevent leading/trailing
+ # whitespace from being trimmed
+ input='/path/to/txt/file'
  while IFS= read -r line; do
   echo $line
  done < "$input"
 
- # reading file fieldwise
- file="/etc/passwd"
- while IFS=: read -r f1 f2 f3 f4 f5 f6 f7; do
-   printf 'Username: %s, Shell: %s, Home Dir: %s\n' "$f1" "$f7" "$f6"
- done <"$file"
+ # reading file fieldwise, IFS= is a delimiter, note quoting with \
+ file='/path/to/file.csv'
+ while IFS=\; read -r f1 f2 f3 f4; do
+   printf 'Field1: %s, Field2: %s, Field4: %s\n' "$f1" "$f2" "$f4"
+ done < "$file"
 
- # reading command output, this will be run in a subshell, and thus all variables used
- # inside the loop will die when loop is over
- file -b * | while read line; do
-   do something with the lines
- done
-
- # to avoid above situation, one can use process substitution
- while read line; do
-   do something with the lines
+ # process substitution
+ while IFS= read -r line; do
+   # do something with the lines
  done < <(file -b *)
+ # instead, one can mistakenly try 'file -b * | while read line; do ... done'
+ # with pipe, 'while' body will be run in a subshell, and thus all variables
+ # used inside the loop will die when loop is over
 
 All the things mentioned above for *for* loop applicable to ``while`` / ``until`` loops.
 
@@ -1930,6 +1925,9 @@ Even though in most of the cases you can design the code to use conditionals or 
  - Using ``for`` loop rename all the files with the *.txt* extension to *.fixed.txt*.
    Tip: create dummy .txt files with ``mkdir d{1..3}; touch d{1..3}/{1..3}.txt``.
    Tip #2: combine 'for' loop with 'find': ``for f in $(find . -name '*.txt'); ...``.
+ - Use the ``while`` example with *.cvs*, take the *demospace/Finnish_Univ_students_2018.csv*
+   to count total number of students around Finland. Tip: add checking that the number of
+   students field is not empty
  - Using built-in arithmetic write a script *daystill.sh* that counts a number of days till a
    deadline (vacation/salary). 
    Script takes date as an argument, date format suitable to ``date -d`` like ``days_till 2019-6-1``.
