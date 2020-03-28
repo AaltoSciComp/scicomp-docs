@@ -1922,6 +1922,7 @@ Even though in most of the cases you can design the code to use conditionals or 
  done
 
 :Exercise 2.4:
+ - Expand *tarit.sh* so that it would accept none or multiple directories. 
  - Using ``for`` loop rename all the files with the *.txt* extension to *.fixed.txt*.
    Tip: create dummy .txt files with ``mkdir d{1..3}; touch d{1..3}/{1..3}.txt``.
    Tip #2: combine 'for' loop with 'find': ``for f in $(find . -name '*.txt'); ...``.
