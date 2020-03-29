@@ -1974,14 +1974,14 @@ BASH supports both indexed and associative one-dimensional arrays. Indexed array
 with ``declare -a array_name``, or first assignment does it automatically (note: indexed arrays only)::
 
  arr=(my very first array)
- arr=('my second' array [6]=sure)
- arr[5]=234
+ arr=('Otakaari 1' Espoo 02150 [6]='PL 11000')
+ arr[5]=AALTO
 
 To access array elements (the curly braces are required, unlike normal
 variable expansion)::
 
  # elements one by one
- echo ${arr[0]} ${array[1]}
+ echo ${arr[0]} ${arr[1]}
  
  # array values at once
  ${arr[@]} 
@@ -2003,6 +2003,12 @@ variable expansion)::
  
  # emptying array
  arr=()
+ 
+ # to destroy, delete an array
+ unset arr
+
+ # to unset a single array element
+ unset arr[6]
 
  # sorting array
  IFS=$'\n' sorted=($(sort <<<"${arr[*]}"))
@@ -2020,7 +2026,7 @@ variable expansion)::
 Loops through the indexed array::
 
  for i in ${!arr[@]}; do
-   echo array[$i] is ${arr[$i]}
+   echo arr[$i] is ${arr[$i]}
  done
 
 Negative index counts back from the end of the array, *[-1]* referencing to the last element.
