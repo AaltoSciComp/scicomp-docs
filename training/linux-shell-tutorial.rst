@@ -2276,8 +2276,9 @@ arguments, so we check both::
  done
 
 Often, the above mentioned ways are more than enough for simple scripts.
-But what if arguments are like ``./script [-f filename] [-z] [-b]`` or more complex?
-(common notaion: arguments in the square brackets are optional). What if you write
+But what if options and arguments are like
+ ``./script [-f filename] [-z] [-b] [arg1 [arg2 [...]]]`` or more complex?
+(common notaion: options in the square brackets are optional). What if you write
 a production ready script that will be used by many other as well?
 
 It is were ``getopt`` offers a more efficient way of handling script's input options.
@@ -2287,7 +2288,8 @@ first is a list of valid input options -- sequence of letters and colons. If let
 followed by a colon, the option requires an argument, if folowed by two colons, argument
 is optional. For example, the string ``getopt "sdf:"`` says that the options -s, -d and -f
 are valid and -f requires an argument, like *-f filename*.
-The secondargument required by  *getopt* is a list of input parameters, i.e. just ``$@``.
+The second argument required by  *getopt* is a list of input parameters (options + arguments)
+to check, i.e. just ``$@``.
 
 Let us use *cx* script as a demo:
 
