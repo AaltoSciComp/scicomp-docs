@@ -2232,15 +2232,44 @@ In the simplest cases like ``./script arg1 arg2 ...``, you check *$#* and then a
    exit 1
  fi
  
-To work with all input arguments at once you have *$@*::
+To work with all input arguments at once we have *$@*::
 
  if (($#>0)); then
    for i; do
      echo $i
      # ... do something useful with each element of $@
-     # note that for loop uses $@ by default if no other list given with 'in list'
+     # note that 'for ...' uses $@ by default if no other list given with 'in ...'
    done
  fi
+
+As a use case, our *tarit.sh* script. The script can accept STDIN and
+arguments, so we check both::
+
+ # Usage: tarit.sh [dirname1 [dirname2 [dirname3 ...]]]
+ # or     command | tarit.sh
+ 
+ # by default no directories to archive. i.e. current
+ args=''
+ 
+ # checking for STDIN, if any, assigning STDIN to $args
+ [[ -p /dev/stdin ]] && args=$(</dev/stdin)
+ 
+ # if arguments are given, appending the $args
+ [[ -n $@ ]] && args+=" $@"
+ 
+ # no arguments, no stdin, then it is a current dir
+ [[ -z "$args" ]] && args="$(pwd)"
+ 
+ # by now we should have a directory list in $args to archive
+ for d in $args; do
+   # checking that directory exists, if so, archive it
+   if [[ -d "$d" ]]; then
+     echo Archiving $d ...
+     tar caf ${d##*/}.$(date +%Y-%m-%d).tar.gz "$d"
+   else
+     echo "   $d does not exist, skipping."
+   fi
+ done
 
 Often, the above mentioned ways are more than enough for simple scripts.
 But what if arguments are like ``./script [-f filename] [-z] [-b]`` or more complex?
@@ -2250,39 +2279,73 @@ a production ready script that will be used by many other as well?
 It is were ``getopt`` offers a more efficient way of handling script's input options.
 In the simplest case ``getopt`` command (do not get confused with ``getopts`` built-in BASH
 function of similar kind) requires two parameters to work:
-fisrt is a list of letters -- valid input options -- and colons. If letter followed by a colon, the
-option requires an argument, if folowed by two colons, argument is optional. For example, the string
-``getopt "sdf:"`` says that the options -s, -d and -f are valid and -f requires an argument, like
-*-f filename*. The second *getopt* argument is a list of input parameters, often just $@.
+first is a list of valid input options -- sequence of letters and colons. If letter
+followed by a colon, the option requires an argument, if folowed by two colons, argument
+is optional. For example, the string ``getopt "sdf:"`` says that the options -s, -d and -f
+are valid and -f requires an argument, like *-f filename*.
+The secondargument required by  *getopt* is a list of input parameters, i.e. just ``$@``.
+
+Let us use *cx* script as a demo:
 
 ::
 
- # here is the whole trick: getopt validates the input parameters, returns the correct ones
+ # common usage function with the exit at the end
+ usage() {
+   echo "Usage: $sname [options] file [file [file...]]"
+   echo '       -a, gives access to all, like a+x, by default +x'
+   echo '       -d <directory/path/bin>, path to the bin directory'
+   echo "          can be used in 'cx' to copy a new script there"
+   echo '       -v, verbose mode for chmod'
+   echo '       -h, this help message'
+   exit 1
+ }
+ 
+ # whole trick is in this part: getopt validates the input parameters,
+ # structures them by dividing options and arguments with --,
+ # and returns them to a variable
  # then they are reassigned back to $@ with 'set --'
- opts=$(getopt "sdf:" "$@") || exit 1   # instead of exit, can be 'usage' message/function
+ opts=$(getopt "avhd:" "$@") || usage
  set -- $opts
- 
- # note: in one line one can do it like, though ugly
- #set -- $(getopt "sdf:" "$@" || kill -HUP $$)
- # $( ... || exit) does not work, since exit from inside a subshell, closes the subshell only
- 
- # since script input parameters have been validated and structured, we can go through them
- # we start an endless while and go through $@ with 'case' one by one
- # 'shift' makes another trick, every time it is invoked, it shifts down $@ params,
- # $2 becomes $1, $2 becomes $3, etc while old $1 is unset
- # getopt adds -- to $@ which separates valid options and the rest that did not qualify
- while :; do
+
+ # defining variables' default values
+ ALL=''
+ CMD='/usr/bin/chmod'
+ sname=${0##*/}  # the name this script was called by
+
+ # by now we have a well structured $@ which we can trust.
+ # to go through options one by one we start an endless 'while' loop
+ # with the nested 'case'. 'shift' makes another trick, every time
+ # it is invoked it is equal to 'unset $1', thus $@ arguments are
+ # "shifted down", $2 becomes $1, $2 becomes $3, etc
+ # 'getopt' adds -- to $@ which separates valid options and the rest
+ # that did not qualify, when it comes to '--' we 'break' the loop
+ while true; do
    case ${1} in
-     -s) SORTED=0 ;;
-     -d) DEBUG=0 ;;
-     -f) shift; file=$1 ;; # shift to take next item as an argument to -f
+     -h) usage ;; # output help message and exit
+     -a) ALL=a ;; # if -a is given we set ALL
+     -v) CMD+=' -v' ;; # if verbose mode required
+     -d) shift # shift to take next item as a directory path for -d
+         BINDIR="$1"
+         if [[ -z "$BINDIR" || ! -d "$BINDIR" ]]; then
+           echo "ERROR: the directory does not exist"
+           usage
+         fi
+      ;;
      --) shift; break ;;   # remove --
    esac
    shift
  done
- # by now $@ has only rubish filtered out by 'getopt', could be a file name
+
+ # script body
  
- .. the rest of the code
+ case "$sname" in
+   cx*) $CMD ${ALL}+rx "$@" && \
+        [[ -n "$BINDIR" ]] && cp -p $@ $BINDIR ;;
+   cw*) $CMD ${ALL}+w "$@" ;;
+   cr*) $CMD ${ALL}+r "$@" ;;
+   c-w*) $CMD ${ALL}-w "$@" ;;
+   *) echo "ERROR: no idea what $sname is supposed to do"; exit 1 ;;
+ esac
 
 ``getopt`` can do way more, go for ``man getopt`` for details, as an example::
 
@@ -2290,25 +2353,25 @@ option requires an argument, if folowed by two colons, argument is optional. For
  # accepts long options like '--filename myfile' along with '-f myfile'
  getopt -n $(basename $0)  -o "hac::f:" --long "help,filename:,compress::"  -- "$@"
 
-If you implement a script that can accept both STDIN and positional
-parameters, you have to check both.
 
 
 :Exercise 2.6:
- - Make a ``getemail`` script that asks for the user Aalto email, check that given
-   email is correct (``^.*@aalto\.fi$`` or alike is enough) and if not, requests it
-   again till correct one is given or the user has pressed Ctrl-C.
- - Make the same script as above but accept STDIN like ``echo email@address | getemail``
- - Make the same script but accept the command line arguments, like ``getemail -h``
-   would return help info, ``getemail -e email@domain`` would accept an email.
- - (*) Improve the *getemail* script:
- 
-   - join all three approaches in to one script, priority should go like:
-     command line argument, STDIN, interactive request. Thus if email is given as an argument
-     other two possibilies skipped.
-   - for the interactive part, let it fail with the error message if wrong email is given for three times
-   - make regular expression more robust, let us say email supposed to have at least eight
-     alphanumeric character, dots can be used as a delimiter
+ - Using the latest *tarit.sh* (see lecture notes) version as an example,
+   expand above *cx* script to
+   accept STDIN, like ``command | cx [options]``, where ``command`` produces a list of
+   files. Example ``find . -t file -name '*.sh' | cx -a -d /path/to/bin``.
+ - Using *cx* demo as an example, expand the latest version of our *tarit.sh*
+   (see lecture notes) to make it accepting the following options and arguments:
+   ``tarit.sh -h -y -d <directory/with/backups> [dirname1 [dirname2 [dirname3 ...]]]``.
+   By default, with no args, it still should make an archive of the current directory.
+   ``-h`` returns usage info, ``-d <directory/path/with/backups>`` is a directory the
+   tar archives will go to, your script has to check that directory exists, the
+   script must also check whether a newly created archive already exist and if so, skip
+   creating the archive with the corresponding warning message.
+
+    - (*) ``-y`` should force overwriting already existing archive.
+    - (*) ``-s`` should make script silent, so that no errors or other messages
+          would come from any inline command.
 
 
 Here Document, placeholders
