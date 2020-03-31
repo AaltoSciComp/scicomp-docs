@@ -2223,6 +2223,7 @@ In the simplest cases like ``./script arg1 arg2 ...``, you check *$#* and then a
 
 ::
 
+ # here we require exactly two arguments
  if (($#==2)); then
    var1=$1 var2=$2
    # ... do something useful
@@ -2234,12 +2235,15 @@ In the simplest cases like ``./script arg1 arg2 ...``, you check *$#* and then a
  
 To work with all input arguments at once we have *$@*::
 
- if (($#>0)); then
+ # $# is a number of arguments on the command line, must be non-zero
+ if (($#)); then
    for i; do
-     echo $i
+     echo "$i"
      # ... do something useful with each element of $@
      # note that 'for ...' uses $@ by default if no other list given with 'in ...'
    done
+ else
+   echo 'No command line arguments given'
  fi
 
 As a use case, our *tarit.sh* script. The script can accept STDIN and
@@ -2254,8 +2258,8 @@ arguments, so we check both::
  # checking for STDIN, if any, assigning STDIN to $args
  [[ -p /dev/stdin ]] && args=$(</dev/stdin)
  
- # if arguments are given, appending the $args
- [[ -n $@ ]] && args+=" $@"
+ # if arguments are given, appending the $args with $@
+ (($#)) && args+=" $@"
  
  # no arguments, no stdin, then it is a current dir
  [[ -z "$args" ]] && args="$(pwd)"
