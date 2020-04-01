@@ -2277,7 +2277,7 @@ arguments, so we check both::
 
 Often, the above mentioned ways are more than enough for simple scripts.
 But what if options and arguments are like
- ``./script [-f filename] [-z] [-b] [arg1 [arg2 [...]]]`` or more complex?
+``./script [-f filename] [-z] [-b] [arg1 [arg2 [...]]]`` or more complex?
 (common notaion: options in the square brackets are optional). What if you write
 a production ready script that will be used by many other as well?
 
@@ -2322,7 +2322,7 @@ Let us use *cx* script as a demo:
  # to go through options one by one we start an endless 'while' loop
  # with the nested 'case'. 'shift' makes another trick, every time
  # it is invoked it is equal to 'unset $1', thus $@ arguments are
- # "shifted down", $2 becomes $1, $2 becomes $3, etc
+ # "shifted down", $2 becomes $1, $3 becomes $2, etc
  # 'getopt' adds -- to $@ which separates valid options and the rest
  # that did not qualify, when it comes to '--' we 'break' the loop
  while true; do
@@ -2377,7 +2377,7 @@ Let us use *cx* script as a demo:
 
     - (*) ``-y`` should force overwriting already existing archive.
     - (*) ``-s`` should make script silent, so that no errors or other messages
-          would come from any inline command.
+      would come from any inline command.
 
 
 Here Document, placeholders
