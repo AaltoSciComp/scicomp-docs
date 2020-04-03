@@ -313,7 +313,7 @@ Global services (with special Aalto support)
   service can be great for sharing, but because it is tied to your
   Aalto account, you should not store valuable research data here.
 
-  Googre Drive has a "team drives" concept, which will allow you to
+  Google Drive (organizations only) has a "shared drive" concept, which will allow you to
   put data into groups which can easily be inherited as time goes on,
   even if the original people move on.
 
@@ -323,6 +323,13 @@ Global services (with special Aalto support)
   <https://www.aalto.fi/en/services/onedrive-quick-guide>`__.
   Theoretically, OneDrive has a higher security rating than Google
   Drive, but it is still not suitable for legally confidential data.
+
+* **Dropbox** is like the above two.  You can find `ITS instructions
+  here
+  <https://www.aalto.fi/en/services/aalto-dropbox-quick-guide>`_.  You
+  can sign up using a detailed procedure there.  Again, this isn't
+  suitable for confidential/personal data, and everything vanishes
+  once you leave Aalto.
 
 Global services
 ~~~~~~~~~~~~~~~
