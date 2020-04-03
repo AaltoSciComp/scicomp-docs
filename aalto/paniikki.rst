@@ -1,6 +1,6 @@
-====================================
-Paniikki – Computer Lab For Students
-====================================
+===================================
+Paniikki: Computer Lab For Students
+===================================
 
 Paniikki is a cutting edge computer lab in the computer science
 department. It is located in `T-building C106
