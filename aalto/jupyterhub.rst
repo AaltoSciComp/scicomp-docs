@@ -72,7 +72,7 @@ used for academic purposes (but note that self-exploration and
 programming for own interests is considered an academic purpose,
 though commercial purposes is not allowed).  For more information, see
 `the Aalto policies
-<http://www.aalto.fi/en/about/contact/services/it/policies/>`__.
+<https://www.aalto.fi/en/services/it-policies-and-guidelines>`__.
 Heavy non-interactive computational use is not allowed (basically,
 don't script stuff to run in the background when you are not around.
 If you are using this service is person, it is OK).  For research

@@ -23,7 +23,7 @@
                             ! ``-p, --partition=``\ *partition*! **job partition.  Usually leave off and things are auto-detected.**
                             ! ``--mem-per-cpu=``\ *n*         ! **request n MB of memory per core**
                             ! ``--mem=``\ *n*                 ! **request n MB memory per node**
-                            ! ``-c``, ``--cpus-per-task=``\ *n*  ! **Allocate *n* CPU's for each task. For multithreaded jobs. (compare --ntasks: -c means the number of cores for each process started.)**
+                            ! ``-c``, ``--cpus-per-task=``\ *n*  ! **Allocate *n* CPU's for each task. For multithreaded jobs. (compare ``--ntasks``: ``-c`` means the number of cores for each process started.)**
                             ! ``-N``, ``--nodes=``\ *n-m*        ! allocate minimum of n, maximum of m nodes.
                             ! ``-n``, ``--ntasks=``\ *n*         ! allocate resources for and start *n* tasks (one task=one process started, it is up to you to make them communicate. However the main script runs only on first node, the sub-processes run with "srun" are run this many times.)
                             ! ``-J``, ``--job-name=``\ *name*    ! short job name

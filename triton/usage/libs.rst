@@ -29,7 +29,7 @@ provided both in the "mkl" modules and in the "intel" modules; the
 Linking with MKL is a bit tricky and the exact link options varies from
 version to version. Intel provides a webpage to build the correct
 linking options at
-http://software.intel.com/en-us/articles/intel-mkl-link-line-advisor .
+https://software.intel.com/en-us/articles/intel-mkl-link-line-advisor .
 
 Using OpenBLAS
 --------------
@@ -105,15 +105,15 @@ above for how to link to it.
 +--------------+--------------------------------+--------------------------------------------------------------------------------------------+
 | FFTW 3.3.2   | fftw/3.3.2                     | -lfftw3 / -lfftw3\_mpi                                                                     |
 +--------------+--------------------------------+--------------------------------------------------------------------------------------------+
-| MKL          | intel/VERSION or mkl/VERSION   | See http://software.intel.com/en-us/articles/intel-mkl-link-line-advisor                   |
+| MKL          | intel/VERSION or mkl/VERSION   | See https://software.intel.com/en-us/articles/intel-mkl-link-line-advisor                  |
 +--------------+--------------------------------+--------------------------------------------------------------------------------------------+
 
 Links
 =====
 
--  BLAS at `www.netlib.org/blas <http://www.netlib.org/blas>`__
--  LAPACK at `www.netlib.org/lapack <http://www.netlib.org/lapack>`__
+-  BLAS at `www.netlib.org/blas <https://www.netlib.org/blas>`__
+-  LAPACK at `www.netlib.org/lapack <https://www.netlib.org/lapack>`__
 -  GotoBLAS FAQ at
    [www.tacc.utexas.edu/tacc-projects/gotoblas2/faq\|http://www.tacc.utexas.edu/tacc-projects/gotoblas2/faq]
 -  ACML User's Guide (pdf file) at
-   `developer.amd.com/assets <http://developer.amd.com/assets/acml_userguide.pdf>`__
+   `developer.amd.com/assets <https://developer.amd.com/assets/acml_userguide.pdf>`__

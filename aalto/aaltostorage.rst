@@ -10,7 +10,7 @@ page describes them all, so that you can have an easy reference.
 When starting a new project, please first consider the big picture of
 good Research Data Management: See the :doc:`general data management
 pages here <../data/index>` and `Aalto's
-page <http://www.aalto.fi/en/research/research_data_management/>`__. On
+page <https://www.aalto.fi/en/services/research-data-management-rdm-and-open-science>`__. On
 Aalto's page, there are links to solutions for Opening, Collaborating
 and Archiving. Our department's resources are just one part of that.
 
@@ -103,8 +103,8 @@ projects** when needed to keep things organized.INLINE
 |              | \_html/      |              |              |              | rs.aalto.fi/ |
 |              |              |              |              |              | ~USER/ <http |
 |              | (/m/webhome/ |              |              |              | s://users.aa |
-|              | ...)         |              |              |              | lto.fi/%7EUS |
-|              |              |              |              |              | ER/>`__      |
+|              | ...)         |              |              |              | lto.fi/~USER |
+|              |              |              |              |              | />`__        |
 +--------------+--------------+--------------+--------------+--------------+--------------+
 | custom       |              |              |              |              | Contact us   |
 | solutions    |              |              |              |              | for special  |
@@ -119,7 +119,7 @@ General notes
 -  The table below details the types of filesystems available.
 -  The path /**m/$dept/** is designed to be a standard location for mounts.
    In particular, this is shared with Triton.
--  The server ``magi`` is ``magi.TODO`` and is for the CS
+-  The server ``magi`` is ``magi.cs.aalto.fi`` and is for the CS
    department. Home directory is mounted here without kerberos
    protection but directories under /m/ need active kerberos ticket
    (that can be acquired with 'kinit' command) . ``taltta`` is
@@ -251,8 +251,8 @@ Filesystem list
       permissions should protect most other cases.
    -  When you are done with the computer, you are also responsible for
       secure management/wiping/cleanup of this data.
-   -  See the note about disk wiping under `Aalto
-      Linux <../aalto/linux>`__ (under "when you are done with your
+   -  See the note about disk wiping under :doc:`Aalto
+      Linux <../aalto/linux>` (under "when you are done with your
       computer"). IT should do this, but if it's important you must
       mention it, too.
 
@@ -264,9 +264,9 @@ Filesystem list
       much and clean up when done.
    -  TODO: are these available everywhere?
 
--  **webhome:** web space for `users.aalto.fi <http://users.aalto.fi>`__
+-  **webhome:** web space for `users.aalto.fi <https://users.aalto.fi>`__
 
-   -  This is the space for `users.aalto.fi <http://users.aalto.fi>`__
+   -  This is the space for `users.aalto.fi <https://users.aalto.fi>`__
       space can be accessed from the ``public_html`` link in your home
       directory.
    -  This is not a real research filesystem, but convenient to note

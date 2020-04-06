@@ -12,7 +12,7 @@ This page is about how to handle data - not the raw storage part, which
 you can find at :doc:`data storage <../aalto/aaltostorage>`.  Aalto has high-level
 information on `research data management <aaltordm_>`_, too.
 
-.. _aaltordm: http://www.aalto.fi/en/research/research_data_management/
+.. _aaltordm: https://www.aalto.fi/en/services/research-data-management-rdm-and-open-science
 
 What is data management?
 ------------------------
@@ -248,7 +248,7 @@ Personal data (research data about others, not about you)
 data is very highly regulated (mainly by the Personal Data Act, soon by
 the General Data Protection Regulation). Aalto has a `document that
 describes what is needed to process personal data for
-research <https://into.aalto.fi/display/enregulations/The+processing+of+personal+data+in+scientific+research>`__,
+research <https://www.aalto.fi/en/services/how-to-handle-personal-data-in-research>`__,
 which is basically a research-oriented summary of the Personal Data Act.
 Depending on the type of project, approval from the `Research Ethics
 Committee <https://inside.aalto.fi/display/AboutAalto/Research+Ethics+Committee>`__
@@ -277,7 +277,7 @@ Openness
 
 Aalto strongly encourages to share the data openly or under controlled
 access with a goal of 50% data shared by 2020 (see
-`The Aalto RDM pages <http://www.aalto.fi/en/research/research_data_management/>`__).
+`The Aalto RDM pages <https://www.aalto.fi/en/services/research-data-management-rdm-and-open-science>`__).
 In short, Aalto says that you "must" make
 strategic decisions about openness for the best benefits (which
 practically probably means you can do what you would like).
@@ -286,13 +286,13 @@ impact for your work and benefits society more.
 
 Zenodo (https://zenodo.org/) is an excellent platform for sharing data, getting
 your data cited (it provides a DOI), and control what you share with
-different policies (http://about.zenodo.org/policies/).  For
+different policies (https://about.zenodo.org/policies/).  For
 larger data, there are other resources, such as IDA/AVAA provided by CSC
 (see below).
 
 There are lists of data repositories:
-`r3data <http://www.re3data.org/>`__, and `Nature Scientific Data's
-list <http://www.nature.com/sdata/policies/repositories>`__.
+`r3data <https://www.re3data.org/>`__, and `Nature Scientific Data's
+list <https://www.nature.com/sdata/policies/repositories>`__.
 
 Datasets can and should also be listed on `ACRIS
 <https://acris.aalto.fi>`__, just like papers - this allows you to get
@@ -309,7 +309,7 @@ Please see:
 
 * :ref:`The DMP section on this site <scicomp_dmp>`
 * The `Aalto data management plan
-  page <http://www.aalto.fi/en/research/research_data_management/data_management_planning/>`__
+  page <https://www.aalto.fi/en/services/data-management-plan-dmp>`__
 
 Long-term archival
 ~~~~~~~~~~~~~~~~~~
@@ -321,11 +321,11 @@ available for this, such as
 
 -  the EU-funded `Zenodo <https://zenodo.org/>`__ for open published
    data (embargoed data and closed data is also somewhat supported).
--  Finland's `IDA <http://openscience.fi/ida>`__ (for large data,
+-  Finland's `IDA <https://www.fairdata.fi/en/ida/>`__ (for large data,
    closed or open). There are :doc:`Aalto-specific instructions
    for IDA here <../data/ida>`.
 -  There is supposed to be an alternate `Finnish digital preservation
-   service <http://openscience.fi/digital-preservation>`__ coming in
+   service <https://www.fairdata.fi/en/fairdata-pas/>`__ coming in
    2017, and it's unclear what the intention of IDA is in light of that.
 
 Archival when you leave
@@ -366,7 +366,7 @@ normal ways), but not for individuals.
    these projects have to be owned by a senior-level staff person, so
    you have to transfer it to a group anyway.
 -  Finland aims to have a long-term archival service by 2017
-   (`PAS <http://openscience.fi/digital-preservation>`__), but this is
+   (`PAS <https://www.avointiede.fi/en/digital-preservation>`__), but this is
    probably not intended for own data, only well-curated data. Anyway,
    if you need something
    that long and it isn't confidential, consider opening it.
@@ -443,6 +443,13 @@ Existing data groups and responsible contacts:
 
 Requesting to be added to a group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note::
+
+   **CS department**: New!  Group owners/managers can add members to
+   their groups self-service.  Go to https://domesti.cs.aalto.fi from
+   Aalto networks, over VPN, or remote desktop at
+   https://vdi.aalto.fi, and it should be obvious.
 
 Send an email to the responsible contact (see above) and **CC the
 group owner or responsible person**, and include this information:

@@ -47,7 +47,7 @@ computing.
 
 Triton's JupyterHub is available at https://jupyter.triton.aalto.fi.
 You can try them online at `try.jupyter.org
-<http://try.jupyter.org/>`_ (there is a temporary notebook with no
+<https://try.jupyter.org/>`_ (there is a temporary notebook with no
 saving).
 
 You can always run notebooks yourself on your own (or remote)

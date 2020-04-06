@@ -6,7 +6,7 @@ HTCondor
 
     -  SCIP courses: look for `Introduction to distributed computing with
        HTCondor <http://science-it.aalto.fi/scip>`__
-    -  HTCondor official manuals: http://www.cs.wisc.edu/condor/manual/
+    -  HTCondor official manuals: https://research.cs.wisc.edu/htcondor/manual/
 
 Introduction
 ------------
@@ -48,7 +48,7 @@ HTCondor official manuals
 -------------------------
 
 The detailed manual can be found from
-http://www.cs.wisc.edu/condor/manual/. Current version of Condor we have
+https://research.cs.wisc.edu/htcondor/manual/. Current version of Condor we have
 can be checked with ``condor_q -version``.
 
 Before you run with Condor
@@ -205,7 +205,7 @@ Startup script ``requirements=`` can be always tested with
 -  ``condor_status -constraint '(OpSysLongName>="Ubuntu 12.04") && (TotalCPus >= 4)' -available``
 
 More commands and their usage examples you can find at `Condor User
-Manual <http://research.cs.wisc.edu/htcondor/manual/v7.9/index.html>`__.
+Manual <https://research.cs.wisc.edu/htcondor/manual/v7.9/index.html>`__.
 
 Additional "requirements"/"constraints" options that have been
 configured on PHYS workstations only: CPUModel, CPUModelName,
@@ -223,7 +223,7 @@ Checkpointing and condor\_compile
 
 HTCondor has no checkpoitning or remote system calls support on Ubuntu
 (according to\ `manual
-pages <http://research.cs.wisc.edu/htcondor/manual/v8.0/1_5Availability.html>`__).
+pages <https://research.cs.wisc.edu/htcondor/manual/v8.0/1_5Availability.html>`__).
 
 HTCondor config
 ---------------
@@ -277,7 +277,7 @@ Job may take several minutes to start, if it takes longer, check out job
 log (defined with ``log =`` directive in the submit script) and then run
 ``condor_q -analyze <job_id>`` to see possible reasons. More debugging
 options at `condor\_q
-manual <http://research.cs.wisc.edu/htcondor/manual/v7.9/condor_q.html>`__.
+manual <https://research.cs.wisc.edu/htcondor/manual/v7.9/condor_q.html>`__.
 
 I've copy/pasted example files from this page, but when try to run they produce some errors
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -92,7 +92,7 @@ Lustre: common recommendations
 
 Several excellent recommendations are at
 
--  http://www.nas.nasa.gov/hecc/support/kb/Lustre-Best-Practices_226.html
+-  https://www.nas.nasa.gov/hecc/support/kb/Lustre-Best-Practices_226.html
 -  http://www.nics.tennessee.edu/computing-resources/file-systems/io-lustre-tips.
 
 They are fully applicable to our case.
@@ -105,4 +105,4 @@ avoid those potential situations. Common Lustre troublemakers are
 heavy bulk i/o.
 
 For advanced user, these slides can be interesting:
-http://www.eofs.eu/fileadmin/lad2012/06_Daniel_Kobras_S_C_Lustre_FS_Bottleneck.pdf
+https://www.eofs.eu/fileadmin/lad2012/06_Daniel_Kobras_S_C_Lustre_FS_Bottleneck.pdf

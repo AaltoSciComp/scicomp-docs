@@ -32,7 +32,7 @@ memory, and other storage is not shared.
 
 On an international scale of universities, the power of Triton is
 relatively high and it has a very diverse range of uses, though `CSC
-has much more <https://research.csc.fi/computing-and-software>`__.  Using
+has much more <https://research.csc.fi/computing>`__.  Using
 this power requires more effort than using your own computer -
 you will need to get/be comfortable in the shell, using shell
 scripting, managing software, managing data, and so on.  Triton is a

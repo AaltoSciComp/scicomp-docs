@@ -1851,22 +1851,19 @@ condition returns exit status zero/non-zero correspondingly.
 ::
 
  while condition; do
+   command1
+   command2
    ...
  done
 
- # sum of all numbers 1..n
- read -p 'Give a positive integer: ' n
- i=1
+ # sum of all numbers 1..n; n expected as an argument
+ n=$1 i=1
  until ((i > n)); do
-   ((s+=i))
-   ((i++))
+   ((s+=i)); ((i++))
  done
  echo Sum of 1..$n is $s
 
- # endless loop, note ``:`` is a 'no operation' command in BASH, does nothing
- # can be run as sort of "deamon", process should be stopped with Ctrl-c or killed
- while true; do : ; done
-
+ # endless loop, can be stopped with Ctrl-c or killed
  # drop an email every 10 minutes about running jobs on Triton
  # can be used in combination with 'screen', and run in background
  while true; do
@@ -1874,29 +1871,27 @@ condition returns exit status zero/non-zero correspondingly.
    sleep 600
  done
 
- # reads a file passed line by line,
- # IFS= variable before read command to prevent leading/trailing whitespace from being trimmed
- input=/path/to/txt/file
+ # with the help of 'read var' passes file line by line,
+ # IFS= variable before read command to prevent leading/trailing
+ # whitespace from being trimmed
+ input='/path/to/txt/file'
  while IFS= read -r line; do
   echo $line
  done < "$input"
 
- # reading file fieldwise
- file="/etc/passwd"
- while IFS=: read -r f1 f2 f3 f4 f5 f6 f7; do
-   printf 'Username: %s, Shell: %s, Home Dir: %s\n' "$f1" "$f7" "$f6"
- done <"$file"
+ # reading file fieldwise, IFS= is a delimiter, note quoting with \
+ file='/path/to/file.csv'
+ while IFS=\; read -r f1 f2 f3 f4; do
+   printf 'Field1: %s, Field2: %s, Field4: %s\n' "$f1" "$f2" "$f4"
+ done < "$file"
 
- # reading command output, this will be run in a subshell, and thus all variables used
- # inside the loop will die when loop is over
- file -b * | while read line; do
-   do something with the lines
- done
-
- # to avoid above situation, one can use process substitution
- while read line; do
-   do something with the lines
+ # process substitution
+ while IFS= read -r line; do
+   # do something with the lines
  done < <(file -b *)
+ # instead, one can mistakenly try 'file -b * | while read line; do ... done'
+ # with pipe, 'while' body will be run in a subshell, and thus all variables
+ # used inside the loop will die when loop is over
 
 All the things mentioned above for *for* loop applicable to ``while`` / ``until`` loops.
 
@@ -1927,9 +1922,13 @@ Even though in most of the cases you can design the code to use conditionals or 
  done
 
 :Exercise 2.4:
+ - Expand *tarit.sh* so that it would accept none or multiple directories. 
  - Using ``for`` loop rename all the files with the *.txt* extension to *.fixed.txt*.
    Tip: create dummy .txt files with ``mkdir d{1..3}; touch d{1..3}/{1..3}.txt``.
    Tip #2: combine 'for' loop with 'find': ``for f in $(find . -name '*.txt'); ...``.
+ - Use the ``while`` example with *.cvs*, take the *demospace/Finnish_Univ_students_2018.csv*
+   to count total number of students around Finland. Tip: add checking that the number of
+   students field is a number ``[[ $totalnmb =~ ^[0-9]+$ ]]``
  - Using built-in arithmetic write a script *daystill.sh* that counts a number of days till a
    deadline (vacation/salary). 
    Script takes date as an argument, date format suitable to ``date -d`` like ``days_till 2019-6-1``.
@@ -1975,14 +1974,14 @@ BASH supports both indexed and associative one-dimensional arrays. Indexed array
 with ``declare -a array_name``, or first assignment does it automatically (note: indexed arrays only)::
 
  arr=(my very first array)
- arr=('my second' array [6]=sure)
- arr[5]=234
+ arr=('Otakaari 1' Espoo 02150 [6]='PL 11000')
+ arr[5]=AALTO
 
 To access array elements (the curly braces are required, unlike normal
 variable expansion)::
 
  # elements one by one
- echo ${arr[0]} ${array[1]}
+ echo ${arr[0]} ${arr[1]}
  
  # array values at once
  ${arr[@]} 
@@ -2004,6 +2003,12 @@ variable expansion)::
  
  # emptying array
  arr=()
+ 
+ # to destroy, delete an array
+ unset arr
+
+ # to unset a single array element
+ unset arr[6]
 
  # sorting array
  IFS=$'\n' sorted=($(sort <<<"${arr[*]}"))
@@ -2021,7 +2026,7 @@ variable expansion)::
 Loops through the indexed array::
 
  for i in ${!arr[@]}; do
-   echo array[$i] is ${arr[$i]}
+   echo arr[$i] is ${arr[$i]}
  done
 
 Negative index counts back from the end of the array, *[-1]* referencing to the last element.
@@ -2218,6 +2223,7 @@ In the simplest cases like ``./script arg1 arg2 ...``, you check *$#* and then a
 
 ::
 
+ # here we require exactly two arguments
  if (($#==2)); then
    var1=$1 var2=$2
    # ... do something useful
@@ -2227,57 +2233,125 @@ In the simplest cases like ``./script arg1 arg2 ...``, you check *$#* and then a
    exit 1
  fi
  
-To work with all input arguments at once you have *$@*::
+To work with all input arguments at once we have *$@*::
 
- if (($#>0)); then
+ # $# is a number of arguments on the command line, must be non-zero
+ if (($#)); then
    for i; do
-     echo $i
+     echo "$i"
      # ... do something useful with each element of $@
-     # note that for loop uses $@ by default if no other list given with 'in list'
+     # note that 'for ...' uses $@ by default if no other list given with 'in ...'
    done
+ else
+   echo 'No command line arguments given'
  fi
 
+As a use case, our *tarit.sh* script. The script can accept STDIN and
+arguments, so we check both::
+
+ # Usage: tarit.sh [dirname1 [dirname2 [dirname3 ...]]]
+ # or     command | tarit.sh
+ 
+ # by default no directories to archive. i.e. current
+ args=''
+ 
+ # checking for STDIN, if any, assigning STDIN to $args
+ [[ -p /dev/stdin ]] && args=$(</dev/stdin)
+ 
+ # if arguments are given, appending the $args with $@
+ (($#)) && args+=" $@"
+ 
+ # no arguments, no stdin, then it is a current dir
+ [[ -z "$args" ]] && args="$(pwd)"
+ 
+ # by now we should have a directory list in $args to archive
+ for d in $args; do
+   # checking that directory exists, if so, archive it
+   if [[ -d "$d" ]]; then
+     echo Archiving $d ...
+     tar caf ${d##*/}.$(date +%Y-%m-%d).tar.gz "$d"
+   else
+     echo "   $d does not exist, skipping."
+   fi
+ done
+
 Often, the above mentioned ways are more than enough for simple scripts.
-But what if arguments are like ``./script [-f filename] [-z] [-b]`` or more complex?
-(common notaion: arguments in the square brackets are optional). What if you write
+But what if options and arguments are like
+``./script [-f filename] [-z] [-b] [arg1 [arg2 [...]]]`` or more complex?
+(common notaion: options in the square brackets are optional). What if you write
 a production ready script that will be used by many other as well?
 
 It is were ``getopt`` offers a more efficient way of handling script's input options.
 In the simplest case ``getopt`` command (do not get confused with ``getopts`` built-in BASH
 function of similar kind) requires two parameters to work:
-fisrt is a list of letters -- valid input options -- and colons. If letter followed by a colon, the
-option requires an argument, if folowed by two colons, argument is optional. For example, the string
-``getopt "sdf:"`` says that the options -s, -d and -f are valid and -f requires an argument, like
-*-f filename*. The second *getopt* argument is a list of input parameters, often just $@.
+first is a list of valid input options -- sequence of letters and colons. If letter
+followed by a colon, the option requires an argument, if folowed by two colons, argument
+is optional. For example, the string ``getopt "sdf:"`` says that the options -s, -d and -f
+are valid and -f requires an argument, like *-f filename*.
+The second argument required by  *getopt* is a list of input parameters (options + arguments)
+to check, i.e. just ``$@``.
+
+Let us use *cx* script as a demo:
 
 ::
 
- # here is the whole trick: getopt validates the input parameters, returns the correct ones
+ # common usage function with the exit at the end
+ usage() {
+   echo "Usage: $sname [options] file [file [file...]]"
+   echo '       -a, gives access to all, like a+x, by default +x'
+   echo '       -d <directory/path/bin>, path to the bin directory'
+   echo "          can be used in 'cx' to copy a new script there"
+   echo '       -v, verbose mode for chmod'
+   echo '       -h, this help message'
+   exit 1
+ }
+ 
+ # whole trick is in this part: getopt validates the input parameters,
+ # structures them by dividing options and arguments with --,
+ # and returns them to a variable
  # then they are reassigned back to $@ with 'set --'
- opts=$(getopt "sdf:" "$@") || exit 1   # instead of exit, can be 'usage' message/function
+ opts=$(getopt "avhd:" "$@") || usage
  set -- $opts
- 
- # note: in one line one can do it like, though ugly
- #set -- $(getopt "sdf:" "$@" || kill -HUP $$)
- # $( ... || exit) does not work, since exit from inside a subshell, closes the subshell only
- 
- # since script input parameters have been validated and structured, we can go through them
- # we start an endless while and go through $@ with 'case' one by one
- # 'shift' makes another trick, every time it is invoked, it shifts down $@ params,
- # $2 becomes $1, $2 becomes $3, etc while old $1 is unset
- # getopt adds -- to $@ which separates valid options and the rest that did not qualify
- while :; do
+
+ # defining variables' default values
+ ALL=''
+ CMD='/usr/bin/chmod'
+ sname=${0##*/}  # the name this script was called by
+
+ # by now we have a well structured $@ which we can trust.
+ # to go through options one by one we start an endless 'while' loop
+ # with the nested 'case'. 'shift' makes another trick, every time
+ # it is invoked it is equal to 'unset $1', thus $@ arguments are
+ # "shifted down", $2 becomes $1, $3 becomes $2, etc
+ # 'getopt' adds -- to $@ which separates valid options and the rest
+ # that did not qualify, when it comes to '--' we 'break' the loop
+ while true; do
    case ${1} in
-     -s) SORTED=0 ;;
-     -d) DEBUG=0 ;;
-     -f) shift; file=$1 ;; # shift to take next item as an argument to -f
+     -h) usage ;; # output help message and exit
+     -a) ALL=a ;; # if -a is given we set ALL
+     -v) CMD+=' -v' ;; # if verbose mode required
+     -d) shift # shift to take next item as a directory path for -d
+         BINDIR="$1"
+         if [[ -z "$BINDIR" || ! -d "$BINDIR" ]]; then
+           echo "ERROR: the directory does not exist"
+           usage
+         fi
+      ;;
      --) shift; break ;;   # remove --
    esac
    shift
  done
- # by now $@ has only rubish filtered out by 'getopt', could be a file name
+
+ # script body
  
- .. the rest of the code
+ case "$sname" in
+   cx*) $CMD ${ALL}+rx "$@" && \
+        [[ -n "$BINDIR" ]] && cp -p $@ $BINDIR ;;
+   cw*) $CMD ${ALL}+w "$@" ;;
+   cr*) $CMD ${ALL}+r "$@" ;;
+   c-w*) $CMD ${ALL}-w "$@" ;;
+   *) echo "ERROR: no idea what $sname is supposed to do"; exit 1 ;;
+ esac
 
 ``getopt`` can do way more, go for ``man getopt`` for details, as an example::
 
@@ -2285,25 +2359,25 @@ option requires an argument, if folowed by two colons, argument is optional. For
  # accepts long options like '--filename myfile' along with '-f myfile'
  getopt -n $(basename $0)  -o "hac::f:" --long "help,filename:,compress::"  -- "$@"
 
-If you implement a script that can accept both STDIN and positional
-parameters, you have to check both.
 
 
 :Exercise 2.6:
- - Make a ``getemail`` script that asks for the user Aalto email, check that given
-   email is correct (``^.*@aalto\.fi$`` or alike is enough) and if not, requests it
-   again till correct one is given or the user has pressed Ctrl-C.
- - Make the same script as above but accept STDIN like ``echo email@address | getemail``
- - Make the same script but accept the command line arguments, like ``getemail -h``
-   would return help info, ``getemail -e email@domain`` would accept an email.
- - (*) Improve the *getemail* script:
- 
-   - join all three approaches in to one script, priority should go like:
-     command line argument, STDIN, interactive request. Thus if email is given as an argument
-     other two possibilies skipped.
-   - for the interactive part, let it fail with the error message if wrong email is given for three times
-   - make regular expression more robust, let us say email supposed to have at least eight
-     alphanumeric character, dots can be used as a delimiter
+ - Using the latest *tarit.sh* (see lecture notes) version as an example,
+   expand above *cx* script to
+   accept STDIN, like ``command | cx [options]``, where ``command`` produces a list of
+   files. Example ``find . -t file -name '*.sh' | cx -a -d /path/to/bin``.
+ - Using *cx* demo as an example, expand the latest version of our *tarit.sh*
+   (see lecture notes) to make it accepting the following options and arguments:
+   ``tarit.sh -h -y -d <directory/with/backups> [dirname1 [dirname2 [dirname3 ...]]]``.
+   By default, with no args, it still should make an archive of the current directory.
+   ``-h`` returns usage info, ``-d <directory/path/with/backups>`` is a directory the
+   tar archives will go to, your script has to check that directory exists, the
+   script must also check whether a newly created archive already exist and if so, skip
+   creating the archive with the corresponding warning message.
+
+    - (*) ``-y`` should force overwriting already existing archive.
+    - (*) ``-s`` should make script silent, so that no errors or other messages
+      would come from any inline command.
 
 
 Here Document, placeholders
@@ -2523,7 +2597,7 @@ exited.
 Another way to run in parallel yet avoiding sending to the background is using ``parallel``.
 This utility runs  the  specified  command, passing it a single one of the specified arguments.
 This is repeated for each argument. Jobs may be run in parallel. The default is to run one job per CPU.
-If no command is specified before the --, the commands after it are instead run in parallel.
+If no command is specified before the ``--``, the commands after it are instead run in parallel.
 
 ::
 
@@ -2631,7 +2705,7 @@ References
 .. [#find2] http://www.softpanorama.org/Tools/Find/index.shtml
 .. [#putty-sshkeys] https://the.earth.li/~sgtatham/putty/0.70/htmldoc/
 .. [#umask] https://www.computerhope.com/unix/uumask.htm
-.. [#printf] http://wiki.bash-hackers.org/commands/builtin/printf
+.. [#printf] https://wiki.bash-hackers.org/commands/builtin/printf
 .. [#profiling] https://stackoverflow.com/questions/5014823/how-to-profile-a-bash-shell-script-slow-startup
 
 

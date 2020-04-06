@@ -136,8 +136,8 @@ Strategies
    access.
 -  Unpack to local disk, pack to scratch when done.
 
-   -  Main article: `Compute node local
-      drives <LINK/Compute%20node%20local%20drives>`__
+   -  Main article: :doc:`Compute node local
+      drives <localstorage>`,
    -  This strategy can be combined with many of the other strategies
       below
    -  This strategy is especially good when your data is

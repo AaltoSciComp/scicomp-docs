@@ -39,7 +39,7 @@ There are two ways to install packages.
 #. You can usually install packages yourself, which allows you to keep
    up to date and reinstall as needed. Good instructions can be
    found
-   `here <http://statistics.berkeley.edu/computing/R-packages>`__, for
+   `here <https://statistics.berkeley.edu/computing/R-packages>`__, for
    example::
 
      R

@@ -8,8 +8,8 @@ from <cre2_>`_ (previously we had one in `Otaniemi from 12-14 December
 <cre_>`_).  We highly recommend this workshop.  (note: It is full and
 registration is closed).
 
-.. _cre: http://coderefinery.org/workshops/2018-12-12-espoo/
-.. _cre2: http://coderefinery.org/workshops/2018-05-29-espoo/
+.. _cre: https://coderefinery.org/workshops/2017-12-12-espoo/
+.. _cre2: https://coderefinery.org/workshops/2018-05-29-espoo/
 
 If you have an Aalto centrally-managed laptop, this page gives hints
 on software installation.  You have to use these instructions
