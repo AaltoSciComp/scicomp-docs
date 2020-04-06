@@ -279,13 +279,13 @@ Before each exercise, ``module purge`` to clear all modules.
 
 2. ``PATH`` is an environment variable that shows from where programs
    are run.  See it's current value using ``echo $PATH``.  Then, load
-   some toolchain module such as ``goolfc/triton-2017a``  List what
+   a  module such as ``py-gpaw``.  List what
    it loaded.  Check the value of ``PATH`` again.  Why is there so
    much stuff?
 
 3. (Advanced) Same as number 2, but use ``env | sort >
    filename`` to store environment variables, then swap to
-   ``goolfc/triton-2016a``.  Do the same, and compare the two outputs
+   ``py-gpaw/1.3.0-openmpi-scalapack-python3``.  Do the same, and compare the two outputs
    using ``diff``
 
 4. Load a module with many dependencies, such as
