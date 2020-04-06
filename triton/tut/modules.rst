@@ -22,43 +22,35 @@ software by default for every user.
 A module lets you adjust what software is available, 
 and makes it easy to switch between different versions. 
 
-As an example, let's inspect the ``py-gpaw`` module (abbreviated output
+As an example, let's inspect the ``gcc`` module (abbreviated output
 shown)
 
 .. code-block:: none
 
-    $ module show py-gpaw
-    ------------------------------------------------------------------------------------------------------------------
-       /share/apps/spack/modules/linux-centos7-x86_64/Core/py-gpaw/1.3.0-openmpi-scalapack-python3.lua:
-    ------------------------------------------------------------------------------------------------------------------
-    whatis("Name : py-gpaw")
-    whatis("Version : 1.3.0")
-    whatis("Short description : GPAW is a density-functional theory (DFT) Python code based on the projector-augmented wave (PAW) method and the atomic simulation environment (ASE).")
-    help([[GPAW is a density-functional theory (DFT) Python code based on the
-    projector-augmented wave (PAW) method and the atomic simulation
-    environment (ASE).]])
-    load("py-scipy/1.1.0-python3")
-    load("libxc/3.0.0")
-    load("python/3.6.3")
-    load("fftw/3.3.8-openmpi")
-    load("py-ase/3.15.0-python3")
-    load("py-numpy/1.14.3-python3")
-    load("netlib-scalapack/2.0.2-openmpi")
-    load("openmpi/2.1.5")
-    load("openblas/0.3.2")
-    prepend_path("PATH","/share/apps/spack/software/py-gpaw/1.3.0/vmhtg6i/bin")
-    prepend_path("LIBRARY_PATH","/share/apps/spack/software/py-gpaw/1.3.0/vmhtg6i/lib")
-    prepend_path("LD_LIBRARY_PATH","/share/apps/spack/software/py-gpaw/1.3.0/vmhtg6i/lib")
-    prepend_path("CMAKE_PREFIX_PATH","/share/apps/spack/software/py-gpaw/1.3.0/vmhtg6i/")
-    prepend_path("PYTHONPATH","/share/apps/spack/software/py-gpaw/1.3.0/vmhtg6i/lib/python3.6/site-packages")
-    prepend_path("CPATH","/share/apps/spack/software/libxml2/2.9.8/f4u6mya/include/libxml2")
-    setenv("PY_GPAW_ROOT","/share/apps/spack/software/py-gpaw/1.3.0/vmhtg6i")
+    $ module show gcc
+    ----------------------------------------------------------------------------------------------
+       /share/apps/spack/envs/fgci-centos7-generic/lmod/linux-centos7-x86_64/all/gcc/9.2.0.lua:
+    ----------------------------------------------------------------------------------------------
+    whatis("Name : gcc")
+    whatis("Version : 9.2.0")
+    whatis("Short description : The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, and Go, as well as libraries for these languages.")
+    whatis("Configure options : --disable-multilib --enable-languages=c,c++,fortran --with-mpfr=/share/apps/spack/envs/fgci-centos7-generic/software/mpfr/3.1.6/m6xmzws --with-gmp=/share/apps/spack/envs/fgci-centos7-generic/software/gmp/6.1.2/mnsg5g2 --enable-lto --with-quad --with-system-zlib --with-mpc=/share/apps/spack/envs/fgci-centos7-generic/software/mpc/1.1.0/uaijipe --with-isl=/share/apps/spack/envs/fgci-centos7-generic/software/isl/0.19/indu5p6")
+    help([[The GNU Compiler Collection includes front ends for C, C++, Objective-C,
+    Fortran, Ada, and Go, as well as libraries for these languages.]])
+    family("compiler")
+    prepend_path("PATH","/share/apps/spack/envs/fgci-centos7-generic/software/gcc/9.2.0/dnrscms/bin")
+    prepend_path("MANPATH","/share/apps/spack/envs/fgci-centos7-generic/software/gcc/9.2.0/dnrscms/share/man")
+    prepend_path("LIBRARY_PATH","/share/apps/spack/envs/fgci-centos7-generic/software/gcc/9.2.0/dnrscms/lib")
+    prepend_path("LD_LIBRARY_PATH","/share/apps/spack/envs/fgci-centos7-generic/software/gcc/9.2.0/dnrscms/lib")
+    prepend_path("LIBRARY_PATH","/share/apps/spack/envs/fgci-centos7-generic/software/gcc/9.2.0/dnrscms/lib64")
+    prepend_path("LD_LIBRARY_PATH","/share/apps/spack/envs/fgci-centos7-generic/software/gcc/9.2.0/dnrscms/lib64")
+    prepend_path("CPATH","/share/apps/spack/envs/fgci-centos7-generic/software/gcc/9.2.0/dnrscms/include")
+    ...
 
-
-The command ``module show py-gpaw`` shows some meta-info (name of the module, its version, etc.)
+The command ``module show gcc`` shows some meta-info (name of the module, its version, etc.)
 And then adjusts various environment paths, 
-so that when you run ``gpaw`` it runs the program from
-``/share/apps/spack/software/py-gpaw/1.3.0/vmhtg6i/bin``.  
+so that when you run ``gcc`` it runs the program from
+``/share/apps/spack/envs/fgci-centos7-generic/software/gcc/9.2.0/dnrscms/bin/gcc``.  
 This is almost magic: we can have many versions of any software installed, 
 and everyone can pick what they want, with no conflicts.
 
@@ -67,29 +59,29 @@ Loading modules
 
 Let's dive right into an example and load a module.
 
-Let's assume we've written a Python script that is only compatible with Python version 3.5.0 or higher.
-We open a shell to find out where and what version our Python is. The
+Let's assume you've written a Python script that is only compatible with Python version 3.7.0 or higher.
+You open a shell to find out where and what version our Python is. The
 **which** program looks up the current detected version of a program -
 very useful when testing modules.::
 
   $ which python3
   /usr/bin/python3
   $ python3 -V
-  Python 3.4.9
+  Python 3.6.8
 
-But we need a newer version of Python.  To this end, we can **load** the ``anaconda`` module 
+But you need a newer version of Python.  To this end, you can **load** the ``anaconda`` module 
 using the ``module load anaconda`` command, 
 that has a more up to date Python with lots of libraries already included::
 
   $ module load anaconda
-  $ which python3
+  $ which python
   /share/apps/anaconda-ci/fgci-centos7-generic/software/anaconda/2020-01-tf2/0251cd77/bin/python3
-  $ python3 -V
+  $ python -V
   Python 3.7.6
 
-As you see, we have a newer version of Python, in a different directory. 
+As you see, you now have a newer version of Python, in a different directory. 
 
-We can see a list of the all the loaded modules in our working shell using the ``module list`` command::
+You can see a list of the all the loaded modules in our working shell using the ``module list`` command::
 
   $ module list
   Currently Loaded Modules:
@@ -128,13 +120,16 @@ So first search for it using the ``module spider`` command::
     matlab:
   ----------------------------------------------------------------------------
        Versions:
-          ...
+          matlab/r2012a
+          matlab/r2014a
+          matlab/r2015b
           matlab/r2016a
           matlab/r2016b
           matlab/r2017b
           matlab/r2018a
           matlab/r2018b
           matlab/r2019a
+          matlab/r2019b
 
 
 We see there are a lot of versions available.
@@ -143,7 +138,56 @@ Load the latest version of Matlab as::
 
   $ module load matlab
 
-Run it to check the version you got, then close it and swap the version with an older one.
+It never hurts to double check the version and in fact is recommended. So let's do just that::
+
+  $ module list
+  Currently Loaded Modules:
+    1) matlab/r2019b
+
+If you don't specify the version (just as the above example) the latest version of the module is usually loaded. 
+This is not however always the case. To see an example, let's see what versions of R are available::
+
+  $ module spider r
+
+  ----------------------------------------------------------------------------
+    r:
+  ----------------------------------------------------------------------------
+       Versions:
+          r/3.4.3-python-2.7.14
+          r/3.4.3-python2
+          r/3.4.3-python3
+          r/3.5.0-python-2.7.14
+          r/3.5.0-python2
+          r/3.5.3-python-2.7.14
+          r/3.6.1-python3
+
+Let's try loading the latest version::
+
+  $ module load r
+
+You see the currently loaded modules::
+
+  $ module list
+  Currently Loaded Modules:
+    1) pcre/8.42        12) libpthread-stubs/0.4  23) libxml2/2.9.9        34) jdk/8u181-b13          45) libice/1.0.9
+    2) ncurses/6.1      13) xproto/7.0.31         24) font-util/1.3.2      35) fontconfig/2.12.3      46) libx11/1.6.7
+    3) zlib/1.2.11      14) libxau/1.0.8          25) libxft/2.3.2         36) pixman/0.34.0          47) libsm/1.2.2
+    4) readline/7.0     15) libxcb/1.13           26) tk/8.6.8             37) cairo/1.14.12-python2  48) libxt/1.1.5
+    5) sqlite/3.23.1    16) libxext/1.3.3         27) python/2.7.15        38) libjpeg-turbo/1.5.90   49) harfbuzz/1.4.6-python2
+    6) openssl/1.0.2k   17) libxscrnsaver/1.2.2   28) tar/1.31             39) libtiff/4.0.9          50) gobject-introspection/1.49.2-python2
+    7) tcl/8.6.8        18) libpng/1.6.34         29) gettext/0.19.8.1     40) bzip2/1.0.6            51) pango/1.41.0-python2
+    8) kbproto/1.0.7    19) renderproto/0.11.1    30) gdbm/1.18.1          41) freetype/2.7.1         52) openblas/0.3.2
+    9) xextproto/7.3.0  20) libxrender/0.9.10     31) perl/5.26.2          42) libssh2/1.8.0          53) r/3.4.3-python2
+   10) libbsd/0.9.1     21) libiconv/1.15         32) libffi/3.2.1         43) curl/7.60.0
+   11) libxdmcp/1.1.2   22) xz/5.2.4              33) glib/2.56.1-python2  44) icu4c/60.1
+
+The last loaded module clearly shows that the version of the R loaded is ``r/3.4.3-python2``.
+To load the latest version of R, use the whole name of the module::
+
+  $ module load r/3.6.1-python3
+
+Additionally because we upgrade the modules from time to time, it is always a good idea to 
+load a particular version of the modules when compiling and subsequently for all your future runs.
 
 
 What's going on under the hood here?
