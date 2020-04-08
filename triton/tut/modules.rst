@@ -305,6 +305,4 @@ Before each exercise, ``module purge`` to clear all modules.
 What's next?
 ------------
 
-You know how to load modules software now, but what about specific software
-packages?  Move on to the upcoming :doc:`Applications 
-<applications>` tutorial for more information.
+The next tutorial covers :doc:`data storage <storage>`.

@@ -9,9 +9,6 @@ specifically talk about it some.
 
 .. seealso::
 
-   This assumes that you have read the previous tutorial about
-   :doc:`modules <modules>`.
-
    Main article: :doc:`../apps/index`
 
 
@@ -116,4 +113,4 @@ Exercises
 What's next?
 ============
 
-The next tutorial is :doc:`modules <modules>`
+The next tutorial covers :doc:`software modules <modules>` in more detail.
