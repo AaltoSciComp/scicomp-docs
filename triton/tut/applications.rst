@@ -2,8 +2,7 @@
 Applications
 ============
 
-The previous tutorial taught you about :doc:`modules <modules>`.
-Here, we talk a bit more about the overall process of finding,
+In this tutorial, we talk about the overall process of finding,
 building, and compiling software.  These days, installing and managing
 scientific software is taking more and more time, thus we need to
 specifically talk about it some.
@@ -16,32 +15,47 @@ specifically talk about it some.
    Main article: :doc:`../apps/index`
 
 
-Available software
-==================
+Available softwares
+===================
 
-You can find what software we have available in different ways:
+You can find what softwares we have available in different ways:
 
-* First, you should check our :doc:`applications page <../apps/index>`
-  and see if the software you need is already available and if it has
+* First, you should check our :doc:`Applications  <../apps/index>` page
+  and see if the software you need is already available and has
   instructions.
-* You should also search this site to see what you can find (though
-  not that not everything is in the Triton section here - some applies
+* If you find the software you need available, you can usually load it via a module.
+  Next tutorial, :doc:`Software modules <modules>` explains what modules
+  are and how to work with them.
+* You can also search this tutorial to see what you can find (though
+  note that not everything is in the Triton section here - some applies
   to Aalto workstations or own computers).
-* Then, you should search the `issue tracker
+* It's always a good idea to search the `issue tracker
   <https://version.aalto.fi/gitlab/AaltoScienceIT/triton>`__ to see if
   there are previous issues about it - not everything is always
   updated.
-* Check the available modules with ``module spider`` and ``module
-  avail`` (next section) to see what's available but undocumented.
 
-If you find software available, you will usually load it via a module:
 
+
+Modules
+=======
+
+You can learn about modules on the :doc:`Software modules <modules>` tutorial.
+But generally, ``module`` is a command that allows you to get and remove 
+access to other software - because not everything can be available at once.  
+The :doc:`Softwar modules <modules>` tutorial teaches how to
+load modules using the command ``module load $NAME``, etc.
+
+Not all of the software we have available is documented.  You can
+``module spider $NAME`` to try to see if you can find a module
+that way.  Note that this is *partially* case sensitive so it can
+be hard to find things - you might need to look through ``module
+avail`` too, to find all the available modules.
 
 
 Common applications
-===================
+^^^^^^^^^^^^^^^^^^^
 
-For reference, here are the most common applications:
+For reference, here are the most common softwares:
 
 * **Python:** ``module load anaconda`` for the Anaconda distribution
   of Python 3, including a lot of useful packages.  :doc:`More info
@@ -54,23 +68,6 @@ For reference, here are the most common applications:
   :doc:`More info <../apps/matlab>`.
 
 
-Modules
-=======
-
-As you learned in the :doc:`previous tutorial <modules>`, ``module`` is
-a command that allows you to get and remove access to other software -
-because not everything can be available at once.  Refer to the section
-on :doc:`modules <modules>` for info - basically ``module load
-$NAME``.
-
-Not all of the software we have available is documented.  You can
-``module spider $NAME`` to try to see if you can find a module
-that way.  Note that this is *partially* case sensitive so it can
-be hard to find things - you might need to look through ``module
-avail`` some, too.  To see just what a module does, remember ``module
-show``.
-
-
 Singularity containers
 ======================
 
@@ -78,42 +75,17 @@ Singularity containers
 
    Main article: :doc:`../usage/singularity`
 
-Some software has gotten so hard that it just can't be installed, and
-for that we use containers.  A software container is basically a
+Some softwares have become so complicated that they just can't be installed, 
+and for that we use containers.  A software container is basically a
 complete self-contained operating system environment.  Another
-advantage of containers is that it makes it easy to move installed
+advantage of containers is that they make it easy to move installed
 software from system to system, so that you can have the same
 environment everywhere.
 
-You can read about :doc:`singularity from its page
-<../usage/singularity>`.  If you load a module that uses singularity,
-nothing will happen at first.  You execute your software using
-``singularity_wrapper exec``, or use ``singularity_wrapper shell`` to
-get a shell in there.
-
-
-Compilers and toolchains
-========================
-
-.. seealso::
-
-   Main article: :doc:`../usage/toolchains`
-
-Some people need to compile your own code.  You can try to use the
-operating system ``gcc``, but it is likely too old and doesn't have
-the necessary libraries.  Instead, load a :doc:`toolchain
-<../usage/toolchains>` which contains a fixed compiler and support
-libraries.
-
-For GCC-based tool chains, check ``module spider goolf`` and, for
-example, ``module load goolf/triton-2017a``.  For Intel-based
-compilers, try ``module spider iomkl`` and, for example, ``module load
-iomkl/triton-2017a``.  (These stand for "gcc openmpi openblas lapack
-fftw" and "intel openmpi intel-mkl")
-
-Toolchains change often - check back for latest info if you need to
-use one.
-
+You can read about singularity containers :doc:`here <../usage/singularity>`.  
+If you load a module that uses singularity, nothing will happen at first.  
+You execute your software using ``singularity_wrapper exec``, 
+or use ``singularity_wrapper shell`` to get a shell in there.
 
 
 Requesting new software
@@ -122,8 +94,8 @@ Requesting new software
 We aim to install a good base of software for our users - but it's not
 possible to keep up with all requests.  If you need something, submit
 a request to our :ref:`issue tracker <issuetracker>`, but be aware
-that despite best efforts, we can't do everything.  See the :doc:`main
-applications info page <../apps/index>`.
+that despite best efforts, we can't do everything.  
+See the main :doc:`Applications <../apps/index>` page for more information.
 
 
 
@@ -141,7 +113,7 @@ Exercises
    Try ``singularity_wrapper shell``, too.
 
 
-Next steps
-==========
+What's next?
+============
 
-The next tutorial is :doc:`data storage <storage>`
+The next tutorial is :doc:`Data storage <storage>`
