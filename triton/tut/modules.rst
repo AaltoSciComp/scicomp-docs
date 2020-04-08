@@ -144,8 +144,11 @@ It never hurts to double check the version and in fact is recommended. So let's 
   Currently Loaded Modules:
     1) matlab/r2019b
 
-If you don't specify the version (just as the above example) the latest version of the module is usually loaded. 
-This is not however always the case. To see an example, let's see what versions of R are available::
+
+Exercise: Where is R?
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+If you don't specify the version - just as the above Matlab example - the latest version of the module is usually loaded. 
+This is not however always the case.  To see an example, let's see what versions of R are available::
 
   $ module spider r
 
@@ -231,7 +234,6 @@ Was it much faster?
 
 You may occasionally need to rebuild your collections if we
 re-organize things (it will tell you, and you just save your collection again).
-
 
 
 Full reference
