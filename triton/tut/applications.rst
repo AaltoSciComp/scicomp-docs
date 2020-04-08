@@ -24,7 +24,7 @@ You can find what softwares we have available in different ways:
   and see if the software you need is already available and has
   instructions.
 * If you find the software you need available, you can usually load it via a module.
-  Next tutorial, :doc:`Software modules <modules>` explains what modules
+  The next tutorial, :doc:`Software modules <modules>` explains what modules
   are and how to work with them.
 * You can also search this tutorial to see what you can find (though
   note that not everything is in the Triton section here - some applies
@@ -42,7 +42,7 @@ Modules
 You can learn about modules on the :doc:`Software modules <modules>` tutorial.
 But generally, ``module`` is a command that allows you to get and remove 
 access to other software - because not everything can be available at once.  
-The :doc:`Softwar modules <modules>` tutorial teaches how to
+The :doc:`Software modules <modules>` tutorial teaches how to
 load modules using the command ``module load $NAME``, etc.
 
 Not all of the software we have available is documented.  You can
@@ -116,4 +116,4 @@ Exercises
 What's next?
 ============
 
-The next tutorial is :doc:`Data storage <storage>`
+The next tutorial is :doc:`modules <modules>`
