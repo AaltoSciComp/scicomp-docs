@@ -40,8 +40,8 @@ Quick contents and links
 	 * :doc:`accounts`
 	 * :doc:`tut/intro`
 	 * :doc:`tut/connecting`
-	 * :doc:`tut/modules`
 	 * :doc:`tut/applications`
+	 * :doc:`tut/modules`
 	 * :doc:`tut/storage`
 	 * :doc:`tut/interactive`
 	 * :doc:`tut/serial`
