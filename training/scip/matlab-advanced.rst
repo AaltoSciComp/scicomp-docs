@@ -2,6 +2,8 @@
 April 2020 / Matlab Advanced
 ============================
 
+**THE COURSE IS BEING RE-STRUCTURED TO HAPPEN ONLINE IN MAY. MORE INFO LATER ON THIS PAGE**
+
 Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
 
 **Audience:** Aalto employees and students.
@@ -17,6 +19,8 @@ Teaching will be interactive, “learning by doing”.
 `Matlab Advanced course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/tree/master/AY20192020/MatlabAdvanced2020#matlab-advanced-2020-ay-2019-2020>`__
 
 **Schedule:**
+
+**THE COURSE IS BEING RE-STRUCTURED TO HAPPEN ONLINE IN MAY. MORE INFO LATER ON THIS PAGE**
 
 - Wed 15/04/2020, 12:00–15:00, Otakaari 1, Y342a: Data loading and dealing with large datasets
 - Fri 17/04/2020, 12:00–15:00, Otakaari 1, Y342a: Advanced programming techniques 
