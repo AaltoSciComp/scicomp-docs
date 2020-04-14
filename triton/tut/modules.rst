@@ -147,8 +147,8 @@ It never hurts to double check the version and in fact is recommended. So let's 
 
 Exercise: Where is R?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-If you don't specify the version - just as the above Matlab example - the latest version of the module is usually loaded. 
-This is not however always the case.  To see an example, let's see what versions of R are available::
+If you don't specify the version - just as the above Matlab example - the default version of the module is usually loaded, whichis usually the latest version. 
+The default version, however,is not always latest version.  To see an example, let's see what versions of R are available::
 
   $ module spider r
 
@@ -164,7 +164,7 @@ This is not however always the case.  To see an example, let's see what versions
           r/3.5.3-python-2.7.14
           r/3.6.1-python3
 
-Let's try loading the latest version::
+Let's try loading the default version::
 
   $ module load r
 
@@ -185,7 +185,7 @@ You see the currently loaded modules::
    11) libxdmcp/1.1.2   22) xz/5.2.4              33) glib/2.56.1-python2  44) icu4c/60.1
 
 The last loaded module clearly shows that the version of the R loaded is ``r/3.4.3-python2``.
-To load the latest version of R, use the whole name of the module::
+To load the latest version of R, use the *fullName* of the module::
 
   $ module load r/3.6.1-python3
 
@@ -231,6 +231,17 @@ unload everything.  Now, do ``module restore my-collection``::
   $ module list                        # same 72 modules
 
 Was it much faster?
+
+Generally, it is a good idea to save your modules 
+as a collection to have your desired modules
+all set up each time you want to re-compile/re-build::
+
+  $ module anaconda/2020-02-tf2 gcc/9.2.0
+  $ module save my-modules
+
+So the subsequent times that you want to compile/build,
+you simply ``module restore my-modules`` and this way
+you can be sure you have the same previous environment.
 
 You may occasionally need to rebuild your collections if we
 re-organize things (it will tell you, and you just save your collection again).
