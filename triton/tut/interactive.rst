@@ -104,6 +104,10 @@ session running, just closing the terminal isn't enough. Exit all
 shells in the screen session on the node (C-d or ``exit``), or cancel
 the process (see below).**
 
+If you are off-campus, you might want to use https://vdi.aalto.fi as a
+virtual desktop to connect to Triton to run graphical programs.
+Otherwise, expect things to be very slow.
+
 
 More options
 ============
