@@ -70,7 +70,7 @@ Gitlab-specific information:
 
 -  `A
    tutorial
-   <https://www.digitalocean.com/community/tutorials/how-to-use-the-gitlab-user-interface-to-manage-projects`_
+   <https://www.digitalocean.com/community/tutorials/how-to-use-the-gitlab-user-interface-to-manage-projects>`_
 
 
 
