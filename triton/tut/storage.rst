@@ -77,12 +77,12 @@ Home directories
 ^^^^^^^^^^^^^^^^
 The place you start when you log in.  Home directory should be used for init files, 
 small config files, etc.  It is however not suitable for storing calculation data. 
-Home directories are daily backuped.  You usually want to use scratch instead.
+Home directories are backed up daily.  You usually want to use scratch instead.
 
 scratch and work: Lustre
 ^^^^^^^^^^^^^^^^^^^^^^^^
 Scratch is the big, high-performance, 2PB Triton storage.  It is the primary
-place for calculations, data analyzes etc. It is not backuped but is
+place for calculations, data analyzes etc. It is not backed up but is
 reliable against hardware failures (RAID6, redundant servers), but
 *not* safe against human error..  It is
 shared on all nodes, and has very fast access.  It is divided into two
@@ -382,7 +382,7 @@ used as a rudimentary way to see how much I/O load there is.
 
 
 What's next?
-==========
+============
 
 .. seealso::
 
