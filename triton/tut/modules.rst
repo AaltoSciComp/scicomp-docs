@@ -87,6 +87,9 @@ You can see a list of the all the loaded modules in our working shell using the 
   Currently Loaded Modules:
     1) anaconda/2020-02-tf2
 
+.. note::
+  The ``module load`` and ``module list`` commands can be abbreviated as ``ml``
+
 
 Let's  use the ``module purge`` command to **unload** all the loaded modules (``anaconda`` in this case)::
 
@@ -168,7 +171,7 @@ Let's try loading the default version::
 
   $ module load r
 
-You see the currently loaded modules::
+You can list all the dependencies the R module requires and loads::
 
   $ module list
   Currently Loaded Modules:
@@ -189,9 +192,12 @@ To load the latest version of R, use the *fullName* of the module::
 
   $ module load r/3.6.1-python3
 
-Additionally because we upgrade the modules from time to time, it is always a good idea to 
-load a particular version of the modules when compiling and subsequently for all your future runs.
+.. note::
 
+  We upgrade the modules from time to time and so the default version may change. 
+  Thus, it is always a good idea to load a particular version of the modules 
+  when compiling and subsequently for all your future runs.
+  
 
 What's going on under the hood here?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -243,9 +249,11 @@ So the subsequent times that you want to compile/build,
 you simply ``module restore my-modules`` and this way
 you can be sure you have the same previous environment.
 
-You may occasionally need to rebuild your collections if we
-re-organize things (it will tell you, and you just save your collection again).
-
+.. note::
+  You may occasionally need to rebuild your collections in case we
+  re-organize things (it will prompt you to rebuild your collection
+  and you simply save it again).
+  
 
 Full reference
 --------------
