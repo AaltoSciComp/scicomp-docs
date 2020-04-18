@@ -252,6 +252,17 @@ FAQ and bugs
 * **RStudio doesn't appear**.  It seems that it doesn't work from the
   Edge browser.  We don't know why, but try another browser.
 
+* **I've exceeded my quota**.  You should reduce the space you use,
+  the quota is 1GB.  If this isn't enough and you actually need more
+  for your classes, tell your instructor to contact us.  To find large
+  directories files: open a terminal and run ``du -h /notebooks/ |
+  sort -h`` to find all large files.  Then clean up that stuff
+  somehow, for example ``rm -r``.  Note that
+  ``.home/.local/share/jupyter/nbgrader_cache`` will continue to grow
+  and eventually needs to be cleaned up - after the respective course
+  is done.
+
+
 More info
 =========
 
