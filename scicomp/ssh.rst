@@ -83,25 +83,45 @@ Once the password is added, you can ssh into Triton as normal but will immediate
 Config file: don't type so many options
 =======================================
 
-Openssh on Linux and Mac can be made nicer if you set up a config file
-(``.ssh/config``)::
+Remembering the full settings list for the server you are working on each time you log in can be tedious. A ssh ``config`` file allows you to store your preferred settings and map them to much simpler login commands. To create a new user-restricted ``config`` file
+::
+    touch ~/.ssh/config && chmod 600 ~/.ssh/config
 
-    # Host alias triton: "ssh triton" instead of "ssh triton.aalto.fi".
-    # You can set more options here.
+
+For a new configuration, you need specify in ``config`` at minimum the
+
+- Host: the name of the settings list
+- User: your login name when connecting to the server
+- Hostname: the address of the server
+
+So for the simple Triton example, it would be
+::
+    # Configuration file for simplifying SSH logins
+    #
+    # HPC slurm cluster
     Host triton
-        User YOUR_USERNAME
+        User LOGIN_NAME
         Hostname triton.aalto.fi
-        # Only if not on Aalto networks:
-        # Next line *automatically* proxies you through kosh.aalto.fi.  You
-        # probably want to set up a "kosh" host if username is different, and
-        # set up public key authentication on kosh too.
-        ProxyCommand ssh kosh.aalto.fi -W %h:%p
-    # Defaults for all hosts.
-    Host *
-        # Following two lines allow SSH to reuse connections - second connections
-        # open very fast.  If problems (channels exceeded), disable it.
-        ControlMaster   auto
-        ControlPath     /tmp/.ssh-USERNAME-mux-%r@%h:%p
+
+and you would use ``ssh triton`` to log in. Any additional server configs can follow the first one and must start with declaring the configuration ``Host``.
+::
+    # general login server
+    Host kosh
+        User LOGIN_NAME
+        Hostname kosh.aalto.fi
+    # light-computing server
+    Host brute
+        User LOGIN_NAME
+        Hostname brute.aalto.fi
+
+There are optional ssh settings that may be useful for your work, such as
+::
+        # Turn on X11 forwarding for Xterm graphics access
+        ForwardX11 yes
+        # Connect through another server (eg Kosh) if not connected directly to Aalto network
+        ProxyCommand ssh kosh.aalto.fi -W %r@%h:%p
+        # Specify which ssh private key is used for login identification
+        IdentityFile ~/.ssh/id_rsa_triton
 
 
 
