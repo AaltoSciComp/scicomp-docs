@@ -124,27 +124,29 @@ There are optional ssh settings that may be useful for your work, such as
         IdentityFile ~/.ssh/id_rsa_triton
 
 
-
 ..
   The purpose of this document is to describe how to use ssh such that
   usage is reasonably convenient and secure. Key takeaways:
 
+  - Logging into server with ssh and verify the server authenticity
   - Creating ssh keys
-      - Do not copy private keys around. Instead create a separate
-        private/public key pair for each device, and copy the public
-        keys to those hosts you need to connect to.
-      - Always protect the private key by a passphrase.
-  - Use a ssh agent (ssh-agent, GNOME keyring, macOS keyring, putty
-    Pageant, etc.) in order to avoid having to type your key password
-    all the time.
-  - Prefer ProxyJump/ProxyCommand to agent forwarding.
-
-
+      - Generate complex key with strong password
+      - One key for each server
+  - Login with ssh key
+      - ssh-agent holds password for session
+      - save password
+  - Setting up an ssh-config file to save & map your preferred login settings
 
 
 References
 ==========
 
-- https://infosec.mozilla.org/guidelines/openssh
+- https://www.ssh.com/ssh/
 - https://blog.0xbadc0de.be/archives/300
-- https://nvlpubs.nist.gov/nistpubs/ir/2015/NIST.IR.7966.pdf
+- https://www.phcomp.co.uk/Tutorials/Unix-And-Linux/ssh-passwordless-login.html
+- https://en.wikibooks.org/wiki/OpenSSH/
+- https://linuxize.com/post/ssh-command-in-linux/#how-to-use-the-ssh-command
+- https://linuxize.com/post/how-to-setup-passwordless-ssh-login/
+- https://hpc-uit.readthedocs.io/en/latest/account/login.html
+- https://www.mn.uio.no/geo/english/services/it/help/using-linux/ssh-tips-and-tricks.html
+- https://infosec.mozilla.org/guidelines/openssh
