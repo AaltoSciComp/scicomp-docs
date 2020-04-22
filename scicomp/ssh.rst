@@ -41,71 +41,43 @@ You will not receive an authenticity prompt upon first login if the server's *pu
     ssh-keygen -f ~/.ssh/known_hosts -F kosh.aalto.fi
 
 
-Login without password: ssh keys
-================================
+SSH keys: better than just passwords
+====================================
 
-You may get tired of typing a password all the time: and you should,
-using a key is faster and more secure.  You make a *ssh key* on your
-own computer, copy the *public* key to the other server, and then can
-login without a password.
+By default, you will need to type your password each time you wish to ssh into Triton, which can be tiresome, particularly if you regularly have multiple sessions open simultaneously. A more secure (and faster) way to authenticate yourself is to use a *shh key pair* and encrypt the this with a strong password. `xkcd <https://www.xkcd.com/936/>`__ has good and amusing recommendations on the subject of passwords. This authentication method will allow you to log into multiple ssh sessions while only needing to enter your password once, saving you time and keystrokes.
 
-Note: this section is only for connecting *to* Triton.  Once you are
-connected the first time, a key for internal connections is
-automatically made.
+Generate an SSH key
+-------------------
 
-Linux
------
+While there are many options for the key generation program ``ssh-keygen``, here are the four main ones.
 
-We highly recommend you follow these steps on the first login to set up
-passwordless SSH.  This will make your life much more pleasant, and can
-be used when connecting to computers other than Triton. Using keys will
-save you the trouble of entering passwords every time, since ssh stores
-the key once and uses it for logging you in in the future.
+- *-t* -> the cryptosystem used to make the unique key-pair and encrypt it.
+- *-b* -> the number of key bits
+- *-f* -> filename of key
+- *-C* -> comment on what the key is for
 
-**First, create the keypair on your own computer.** **Do not copy
-private keys from other computers - one computer=one private key, and
-copy only the public key (.pub) to any computer you want to log in to.**
-Protect your SSH keyfiles with a *passphrase*. When asked to enter one,
-use 3+ words, mixing languages, CAsE, or inflection, but make it
-something you can remember without sticky notes.  `xkcd has some
-opinions on this. <https://www.xkcd.com/936/>`__  A key without a
-passphrase is like a password just sitting on disk - so be careful
-here.  Passwordless keys are OK in certain cases, such as internal
-triton connections.
-
+Here are our recommended input options for key generation.
 ::
+    ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_triton -C "triton key for ${USER}"
 
-    ssh-keygen -o
+After running this command in the terminal, you will be prompted to enter a password. **PLEASE** use a strong unique password. Upon confirming the password, you will be presented with the key fingerprint as both a SHA256 hex string as well as randomart image. Your new key pair should be found in the hidden ``~/.ssh`` directory. If you wish to use keys for other servers, you should generate **new** key pairs and use **different** passwords.
 
-**Then, copy the key to computers you want to log into:** Use the
-``ssh-copy-id`` script to copy the public key file to Triton.  This will
-put the key in ``~/.ssh/authorized_keys`` (you can check this file to see
-everything that's there).   (To do this manually, put the contents of
-``.ssh/id_rsa.pub`` file into ``~/.ssh/authorized_keys`` on Triton.  If
-you do this yourself, you may set set the permissions on
-``.authorized_keys`` file: ``chmod u=rwx .ssh/``, ``chmod u=rw``
-``.ssh/authorized_keys``.)
+Copy public key to server
+-------------------------
 
-Finally, you should be able to login automatically.  A program called
-``ssh-agent`` (or ``gnome-keyring``) decrypts the key once and holds
-it and uses it each time you need to connect.  If it doesn't work
-automatically, try running ``ssh-add`` yourself once.
+In order to use your key-pair to login to Triton, you first need to securely copy the desired *public key* to the machine with ``ssh-copy-id``. The script will also add the key to the ``~/.ssh/authorized_keys`` file on the server. You will be prompted to enter your Aalto password to initiate the secure copy of the file to Triton.
+::
+    ssh-copy-id -i ~/.ssh/id_rsa_triton.pub login_name@triton.aalto.fi
 
-Mac
----
-You can follow same instructions from Linux.
 
-Windows
--------
-Realistically, on windows setting up keys takes some time.  You don't
-need to worry about it (you will still have an ssh key on triton that
-is used for internal connections).
+Login with SSH key
+-------------------
 
-You can make keys using ``puttygen``.  Here is `a tutorial`__.  You
-should make a new key for each computer you have.
+To avoid having to type the decryption password, the *private key* it needs to be added to the ``ssh-agent`` with the command
+::
+    ssh-add ~/.ssh/id_rsa_triton
 
-__ https://devops.ionos.com/tutorials/use-ssh-keys-with-putty-on-windows/
-
+Once the password is added, you can ssh into Triton as normal but will immediately be connected without any further prompts. If you are unsure whether a ``ssh-agent`` process is running on your machine, ``ps -C ssh-agent`` will tell you if there is. To start a new agent, use ``eval $(ssh-agent)``.
 
 
 Config file: don't type so many options
