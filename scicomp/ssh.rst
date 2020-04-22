@@ -2,23 +2,43 @@
 SSH
 ===
 
-.. seealso::
+This walk-through presumes that the user
 
-   For triton specific instructions see :doc:`Connecting to triton
-   page </triton/tut/connecting>`.
+- is working on a Linux machine or Mac
+- has ``OpenSSH`` installed: ``ssh -V`` in the terminal to check
+- has an account on the server of interest
+- is connected to the Aalto network
 
-``ssh`` is a easy, secure way of connecting to remote computers.  The
-Internet is practically run on it.  This page tells you how to *make
-ssh work nicer*.
+We will be focusing on connecting to *Triton* but the methods described below are applicable to any of Aalto's other :doc:`remote servers </aalto/remoteaccess.html>`.
 
 
 Basic use: connect to a server
 ==============================
 
-``ssh username@host.fi`` is the basic method of use - ``username`` is
-the username, and ``host.fi`` is the server to which you connect, for
-example ``triton.aalto.fi``.  See :doc:`connecting to triton
-</triton/tut/connecting>`.
+The standard login command is ``ssh login_name@host_name``,  where ``login_name`` is your standard Aalto login and ``host_name`` is the address of the server you with to connect. In the case of Triton, the ``host_name`` is ``triton.aalto.fi``.
+
+First time login
+----------------
+
+For Triton, you will be prompted to affirm that you wish to *ssh* into this server for the first time.
+::
+    The authenticity of host 'triton.aalto.fi (130.233.229.116)' can't be established.
+    ECDSA key fingerprint is SHA256:04Wt813WFsYjZ7KiAyo3u6RiGBelq1R19oJd2GXIAho.
+    Are you sure you want to continue connecting (yes/no)?
+
+Compare the key fingerprint you get to the one for the machine at this **link**, and if they do not match, please contact SciComp IT **immediately**. If they do match, type ``yes`` and press enter. You will receive a notice
+::
+    Warning: Permanently added 'triton.aalto.fi,130.233.229.116' (ECDSA) to the list of known hosts.
+
+The *public key* that identifies Triton will be stored in ``~/.ssh/known_hosts`` and you ought not get this prompt again. You will be also asked to input your Aalto password before you are fully logged in.
+
+Known servers
+-------------
+
+You will not receive an authenticity prompt upon first login if the server's *public key* can be found in a list of known hosts. To check whether a server, *Kosh* for example, is known
+::
+    ssh-keygen -f /etc/ssh/ssh_known_hosts -F kosh.aalto.fi
+    ssh-keygen -f ~/.ssh/known_hosts -F kosh.aalto.fi
 
 
 Login without password: ssh keys
