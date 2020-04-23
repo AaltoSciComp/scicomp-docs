@@ -80,12 +80,8 @@ online garage.
    :delim: |
 
    Date (default Th)  | Time (default 13:00-14:00)  | Loc
-   12.mar     | 13-14  | https://aalto.zoom.us/j/177010905
-   19.mar     | 13-14  | https://aalto.zoom.us/j/177010905
-   26.mar     | 13-14  | https://aalto.zoom.us/j/177010905
-    2.apr     | 13-14  | https://aalto.zoom.us/j/177010905
-    9.apr     | 13-14  | https://aalto.zoom.us/j/177010905
-   16.apr     | 13-14  | https://aalto.zoom.us/j/177010905
+   12.mar-16.apr | 13-14  | https://aalto.zoom.us/j/177010905
+   23.apr - ???  | 13-14  | https://aalto.zoom.us/j/177010905 - continuing until further notice
 
 .. warning::
 
