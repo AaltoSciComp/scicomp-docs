@@ -37,7 +37,7 @@ You can submit this program to Triton using ``srun``. All input/output still goe
 (but note X forwarding for graphical applications doesn't work - see
 below).
 
-.. code-block:: none
+:: 
 
     $ srun --mem=100M --time=1:00:00 python3 -c 'import os; print("hi from", os.uname().nodename)'
     srun: job 52204499 queued and waiting for resources
@@ -49,7 +49,7 @@ effectively become non-interactive.
 You can open a new shell on triton and run the command ``slurm q`` to see all the jobs
 you have submitted to the queue
 
-.. code::
+::
 
   $ slurm q
   JOBID              PARTITION NAME                  TIME       START_TIME    STATE NODELIST(REASON)
@@ -68,25 +68,17 @@ Once resources are allocated to your job, you see the name of the machine
 in the Triton cluster your program ran on, output to your terminal
 
 ::
+   srun: job 52204499 has been allocated resources
+   hi from ivb17.int.triton.aalto.fi
 
-    srun: job 52204499 has been allocated resources
-    hi from ivb17.int.triton.aalto.fi
-
-
-How do you find the right time/CPU/memory requirements?  Slurm (the
-queuing system) has extensive reporting. For example,
-``slurm history`` will show you the actual run time and actual memory
-used of your job.  You generally make a guess and adjust based on what
-you see.  There is a little bit about this below and more in
-the next tutorial.
 
 .. note::
 
-  Interactive jobs are useful for debugging purposes, to test your setup 
-  and configurations before you put your tasks in a batch script.
-  Or if you need graphical applications such as Matlab. 
-  Additionally, if your task is small and not worth writing a batch script for, 
-  interactive job is the way to go.
+   Interactive jobs are useful for debugging purposes, to test your setup 
+   and configurations before you put your tasks in a batch script for later execution.
+   Or if you need graphical applications - such as Matlab, RStudio, etc. 
+   Additionally, if your task is small and not worth writing a batch script for, 
+   interactive job is the way to go.
 
 
 Interactive shell
@@ -99,7 +91,8 @@ For this, you just need srun's ``--pty`` option coupled with the shell
 you want
 
 ::
-    srun -p interactive --time=2:00:00 --mem=600 --pty bash 
+
+  srun -p interactive --time=2:00:00 --mem=600 --pty bash 
 
 The command prompt will appear when the job starts.
 And you will have a bash shell runnnig on one of the 
@@ -109,7 +102,7 @@ for a duration of 2 hours, where you can run your programs in.
 The option ``-p interactive`` requests a node in the interactive
 partition which is dedicated to interactive usage (more on this later). 
 
-..note::
+.. note::
 
   you can use ``sinfo`` to see information such as the available partitions,
   number of nodes in each, their time limits etc. 
