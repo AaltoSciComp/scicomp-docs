@@ -68,9 +68,9 @@ Once resources are allocated to your job, you see the name of the machine
 in the Triton cluster your program ran on, output to your terminal
 
 ::
-   srun: job 52204499 has been allocated resources
-   hi from ivb17.int.triton.aalto.fi
 
+  srun: job 52204499 has been allocated resources
+  hi from ivb17.int.triton.aalto.fi
 
 .. note::
 
@@ -142,8 +142,8 @@ process again.
   virtual desktop to connect to Triton to run graphical programs.
   Otherwise, expect things to be very slow.
 
-Monitor your usage
-==================
+Monitoring your usage
+=====================
 
 When your jobs enter the queue, you need to be able to get
 information on how much time, memory, etc. your jobs are using 
@@ -155,9 +155,14 @@ You will learn more about these command later on.
 As shown in a previous example, the command ``slurm q`` will tell you the currently running processes,
 which is a good way to make sure you have stopped everything. 
 
+.. note::
+  
+  Generally, estimating the amount of time or memory you need comes down to 
+  monitoring you slurm history and utilizing command-line tools such as 
+  ``time`` on a few of your jobs and averaging. This is basically a trial and error process.
 
-Resource parameters
-===================
+Setting resource parameters
+===========================
 
 Slurm comes with a multitude of parameters which you can specify to
 ensure you will be allocated enough memory, CPU cores, time, etc.
