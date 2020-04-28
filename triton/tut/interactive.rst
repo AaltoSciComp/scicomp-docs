@@ -24,11 +24,6 @@ And in the next tutorial we will go through the more common and
 advanced way of submitting jobs, batch scripts.
 
 
-jobs that you would use this for, you will almost always get your time
-right away. Still, you have to request the resources you need
-(time/cores/memory). It also means that if you don't do things
-properly, it is inefficient because you request more than you need. You
-
 Your first interactive job
 ==========================
 
