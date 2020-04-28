@@ -2,61 +2,81 @@
 Interactive jobs
 ================
 
-Introduction
-============
+Introduction to slurm
+=====================
 
 Triton is a large system that combines many different individual
-computers. At the same time, hundreds of people are using it. Thus, we
-don't just have machines sitting around to run directly on. You need to
-share resources among everyone by applying for them using the queuing
-system, slurm. As you will see, this is very fast and lets you get
-basically whatever you need.
+computer nodes. Hundreds of people are using Triton simultaneously.
+Thus, resources (CPU time, memory, etc.) need to be shared among everyone.
 
-This page discusses what is necessary to use Triton interactively. This
-means no scripts, no overhead. You "**just add srun!**". For the small
+This resource sharing is done by a software called a job scheduler or
+workload manager. Triton's workload manager is **slurm**. 
+Triton users submit jobs which are then scheduled and allocated
+resources by the workload manager, slurm. 
+
+
+There are two ways you can submit your jobs to slurm queue system:
+either interactively using ``srun`` or by submitting a script
+using ``sbatch``. 
+
+This tutorial walks you through running your jobs interactively.
+And in the next tutorial we will go through the more common and
+advanced way of submitting jobs, batch scripts.
+
+
 jobs that you would use this for, you will almost always get your time
 right away. Still, you have to request the resources you need
 (time/cores/memory). It also means that if you don't do things
 properly, it is inefficient because you request more than you need. You
-should start here, but once you need more go to more advanced usage.
 
-.. note::
+Your first interactive job
+==========================
 
-  Advantages of interactive running:  It's good for getting started
-  quickly and scaling up: "just add srun!". It's good when task is so
-  small that scripting isn't worth it.
-
-  Downsides include: You have to be there and wait for things to run. If
-  your shell connection gets interrupted, you lose the process. If you
-  don't stop interactive shells, they will continue it will count against
-  your fairshare quota, making your jobs run slower in the future.
-
-
-Single process
-==============
-
-The simplest way is to use srun. Let's say you run some program like
-this:
+Let's say you want to run the following program
 
 ::
 
     python3 -c 'import os; print("hi from", os.uname().nodename)'
 
-You switch to use srun. All input/output still goes to your terminal
+You can submit this program to Triton using ``srun``. All input/output still goes to your terminal
 (but note X forwarding for graphical applications doesn't work - see
-below for that).
+below).
+
+.. code-block:: none
+
+    $ srun --mem=100M --time=1:00:00 python3 -c 'import os; print("hi from", os.uname().nodename)'
+    srun: job 52204499 queued and waiting for resources
+
+Here, we are asking for 100 Megabytes of memory for a duration of an hour. 
+While your job - with **jobID** 52204499 - is waiting to be allocated resources, your shell
+effectively become non-interactive. 
+
+You can open a new shell on triton and run the command ``slurm q`` to see all the jobs
+you have submitted to the queue
+
+.. code::
+
+  $ slurm q
+  JOBID              PARTITION NAME                  TIME       START_TIME    STATE NODELIST(REASON)
+  52204499           short-ivb python3               0:00              N/A  PENDING (None)
+
+You can see information such as the state, which partition the requested node reside in, etc.
+
+.. note::
+
+  The fact that we had to open another shell can be impractical 
+  if you need to run other jobs or just simply use the current shell. 
+  Additionally, if your shell quits while waiting (your internet may disconnect), 
+  the process cancels and you have to run the ``srun`` command again. 
+
+Once resources are allocated to your job, you see the name of the machine
+in the Triton cluster your program ran on, output to your terminal
 
 ::
 
-    srun --mem=50G --time=5:00:00 python3 -c 'import os; print("hi from", os.uname().nodename)'
+    srun: job 52204499 has been allocated resources
+    hi from ivb17.int.triton.aalto.fi
 
-This has some possible problems: it is connected to your shell. If your
-shell quits, the process gets lost. Also, this runs only one single
-process. If you need to do multiple things in a row, then you have to
-wait before each one starts. Note: srun is used directly with a command
-to run, not batch scripts like sbatch is (though of course you could run
-a shell script). srun does not look at the #SBATCH options inside of
-scripts.
 
 How do you find the right time/CPU/memory requirements?  Slurm (the
 queuing system) has extensive reporting. For example,
@@ -65,97 +85,114 @@ used of your job.  You generally make a guess and adjust based on what
 you see.  There is a little bit about this below and more in
 the next tutorial.
 
+.. note::
+
+  Interactive jobs are useful for debugging purposes, to test your setup 
+  and configurations before you put your tasks in a batch script.
+  Or if you need graphical applications such as Matlab. 
+  Additionally, if your task is small and not worth writing a batch script for, 
+  interactive job is the way to go.
+
 
 Interactive shell
 =================
 
-So, let's say you need to do something a bit fancier: what if you want
-an actual shell to do things interactively? You just need the extra
-``--pty`` and run ``bash``.  The ``-p interactive`` says "give me a
-partition dedicated to interactive usage (more on this later).  Full
-example::
+What if you want an actual shell to do things interactively? 
+Put more precisely, you want access to a node in the cluster
+through an interactive bash shell. 
+For this, you just need srun's ``--pty`` option coupled with the shell
+you want
 
-    srun -p interactive --time=HH:MM:SS --mem=nnG --pty bash
+::
+    srun -p interactive --time=2:00:00 --mem=600 --pty bash 
 
-Now you have a shell... do whatever you need to do. **Close the shell
-when you are done!  If you don't, the process will keep running until
-your time limit. All of this time will be counted against your usage.
-It doesn't cost money, but does mean that your priority will go down in
-the future.**  (Note that we specify the interactive partition with "-p
-interactive". More on this below.)
+The command prompt will appear when the job starts.
+And you will have a bash shell runnnig on one of the 
+computation nodes with at least 600 Megabytes of memory,
+for a duration of 2 hours, where you can run your programs in. 
 
+The option ``-p interactive`` requests a node in the interactive
+partition which is dedicated to interactive usage (more on this later). 
+
+..note::
+
+  you can use ``sinfo`` to see information such as the available partitions,
+  number of nodes in each, their time limits etc. 
+
+.. warning::
+  
+  Remember to exit the shell when you are done!
+  The shell will be running if you don't and
+  it will count towards your usage. 
+  This effectively means your priority will degrade
+  in the future.
+  
 
 Interactive shell with graphics
 ===============================
 
-sinteractive is very similar to srun, however it is more clever and thus
-allows you to do X forwarding. In the background, it starts the job,
-starts a screen session on the node, then sshes to there and connects to
-the screen. You can also ssh to this node again and connect to the
+``sinteractive`` is very similar to ``srun``, but more clever and thus
+allows you to do X forwarding. It starts a screen session on the node, 
+then sshes to there and connects to the screen. 
+You can also ssh to this node again and connect to the
 process again.
 
 ::
 
-     sinteractive --time=HH:MM:SS --mem=nnG
+     sinteractive --time=1:00:00 --mem=1000
 
-**Just like with** ``srun --pty``, **remember to close the process when done.
-However, it's even harder than before. Since there is a separate screen
-session running, just closing the terminal isn't enough. Exit all
-shells in the screen session on the node (C-d or ``exit``), or cancel
-the process (see below).**
+.. warning::
 
-If you are off-campus, you might want to use https://vdi.aalto.fi as a
-virtual desktop to connect to Triton to run graphical programs.
-Otherwise, expect things to be very slow.
+  Just like with ``srun --pty bash``, remember to exit the shell.
+  Since there is a separate screen session running, just closing the terminal isn't enough. 
+  Exit all shells in the screen session on the node (C-d or ``exit``), or cancel
+  the process (see below).
 
+.. note::
 
-More options
-============
+  If you are off-campus, you might want to use https://vdi.aalto.fi as a
+  virtual desktop to connect to Triton to run graphical programs.
+  Otherwise, expect things to be very slow.
 
-**Time/CPU/memory requirements:** The commands srun/sinteractive have
-many more options that let you specific resources. The most important
-for interactive running are probably ``--mem``, ``--cpus-per-task`` (``-c``),
-and ``--time`` (``-t``).
+Monitor your usage
+==================
 
-**How much time/memory/CPU resources should you request?**  The less
-you request, the faster you are likely to run. As for all you need, but
-not ridiculously large amounts. If you request something slightly less
-than a node size (note that we have different size nodes) or partition
-limit (see below), you are more likely to fit into a spare spot. We
-have many nodes with 12 cores, and some with 20 or 24. If you request
-24, you have very limited options. If you request 10, or 18, you will
-have a lot more options. Same with memory: most common cutoffs are 48,
-64, 128, 256GB. Use smaller values when interactive testing, then more
-for batch running overnight.
+When your jobs enter the queue, you need to be able to get
+information on how much time, memory, etc. your jobs are using 
+in order to know what requirements to ask for. 
 
-**Configure your program well:** Also, note that requesting more CPUs
-doesn't magically mean that your program becomes parallel. Make sure
-you turn that on in your code to enable that. Also specify how many
-CPUs to use (matching how many you request with slurm). If you don't
-get an entire node, your program might try to use all CPUs, and the OS
-will limit the number you can use (with cgroups, if you are
-interested). This leads to inefficiency.
+The command ``slurm h`` gives you information such as the actual memory used by your recent jobs, total CPU time, etc.
+You will learn more about these command later on. 
 
-**Partitions:** Now almost always automatically set, but used to be
-important.  Partitions are groups of nodes reserved for different
-purposes.  For example, ``-p interactive`` tells us to us the
-interactive partition - which should always be available for quick
-tests.  ``-p debug`` is a short partition for debugging.  See a bit
-more in the :doc:`serial tutorial <serial>`.
+As shown in a previous example, the command ``slurm q`` will tell you the currently running processes,
+which is a good way to make sure you have stopped everything. 
 
 
+Resource parameters
+===================
 
-Monitoring your usage
-=====================
+Slurm comes with a multitude of parameters which you can specify to
+ensure you will be allocated enough memory, CPU cores, time, etc.
+You saw two of them in use in the above examples (``--mem`` and ``--time``)
+and you will learn more in the following tutorials. 
 
-When you start running in the queue, you need to be able to get
-information on how much time, memory, etc is being used. Without this,
-you won't know how much time and memory to request. You always want to
-request the least possible, so that your stuff can run faster. The `next tutorial (about batch jobs) <serial>` goes into this in more detail. You probably want to be checking things like slurm history even if you aren't running batch, to see how many resources you are actually using.
+Because you are sharing resource with other users, **you should always estimate the amount of time, memory, etc.
+you need and then request them accordingly** for efficiency reasons.
+Moreover, the default memory and time limits are intentionally set low and may not be 
+sufficient for your jobs to run/finish. 
 
-The command ``slurm q`` will tell you the currently running processes (a good way to make sure you have stopped everything). ``slurm history`` will tell you about recent jobs, including how much total memory they used and their total CPU time.
+The general rule of thumb is to request the least possible, so that your stuff can run faster. 
+That is because the **less you request, the faster you are likely to be allocated resources.** 
+If you request something slightly less than a node size (note that we have different size nodes) 
+or partition limit, you are more likely to fit into a spare spot. 
 
-The command ``scancel`` will cancel a job by job-id (useful is something keeps running after you don't need it anymore).
+For example, we have many nodes with 12 cores, and some with 20 or 24. If you request 24 cores, 
+you have very limited options. However, you are more likely to be allocated a node if you request 10 cores.
+The same applies to memory: most common cutoffs are 48, 64, 128, 256GB. 
+It's best to use smaller values when submitting interactive jobs, and more for batch scripts.
+
+
+The `next tutorial <serial>` covers more resource parameters and how to estimate them in more detail. 
 
 Exercises
 =========
@@ -216,10 +253,8 @@ Exercises
 
 
 
-What's next
-===========
+What's next?
+============
 
-Read the next tutorial on `serial batch
-jobs <serial>`. You can put these same
-commands into a script to run many things in the background, without you
-having to wait.
+In the next tutorial on `serial batch jobs <serial>` you will learn how to put the above-mentioned 
+commands in a script, namely a batch script that allows for a multitude of jobs to run unattended. 
