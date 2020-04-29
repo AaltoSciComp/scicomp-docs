@@ -152,7 +152,7 @@ in order to know what requirements to ask for.
 The command ``slurm h`` gives you information such as the actual memory used by your recent jobs, total CPU time, etc.
 You will learn more about these command later on. 
 
-As shown in a previous example, the command ``slurm q`` will tell you the currently running processes,
+As shown in a previous example, the command ``slurm queue`` will tell you the currently running processes,
 which is a good way to make sure you have stopped everything. 
 
 .. note::
