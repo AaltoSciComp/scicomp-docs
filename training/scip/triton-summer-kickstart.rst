@@ -55,7 +55,7 @@ BTW, HPC stands for High Performance Computing
 
   Module #1.3 (2h): CSC resources overview // lecture with demos
 
-  *An overview of CSC computing environment and services including Sisu/Taito, storage, Cloud services, notebooks, containers, etc // TBA*
+  *An overview of CSC computing environment and services including Puhti supercomputer, Allas data management solution, Cloud services, notebooks, containers, etc // TBA*
 
   Module #1.4 (.5h): Connecting to Triton // tutorial
 
