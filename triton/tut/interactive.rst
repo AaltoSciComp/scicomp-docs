@@ -149,7 +149,7 @@ When your jobs enter the queue, you need to be able to get
 information on how much time, memory, etc. your jobs are using 
 in order to know what requirements to ask for. 
 
-The command ``slurm h`` gives you information such as the actual memory used by your recent jobs, total CPU time, etc.
+The command ``slurm history`` gives you information such as the actual memory used by your recent jobs, total CPU time, etc.
 You will learn more about these command later on. 
 
 As shown in a previous example, the command ``slurm queue`` will tell you the currently running processes,
