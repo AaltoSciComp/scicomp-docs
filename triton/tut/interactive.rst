@@ -12,7 +12,7 @@ Thus, resources (CPU time, memory, etc.) need to be shared among everyone.
 This resource sharing is done by a software called a job scheduler or
 workload manager. Triton's workload manager is **slurm**. 
 Triton users submit jobs which are then scheduled and allocated
-resources by the workload manager, slurm. 
+resources by the workload manager. 
 
 
 There are two ways you can submit your jobs to slurm queue system:
