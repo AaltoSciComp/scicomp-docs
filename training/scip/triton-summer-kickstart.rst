@@ -34,7 +34,7 @@ interested in the field.
 
 **Lecturering by:** Science IT (Aalto) and CSC people
 
-**Registration:** `registration link <https://link.webropolsurveys.com/S/B3CCDA95D766F143>`__
+**Registration:** `registration link <https://link.webropolsurveys.com/S/B1752A5EBD3BF08F>`__
 
 Days’ time schedule is flexible, here is the tentative plan. 30 minutes break
 around 12:00, plus short 10 minutes breaks in between. You will be given time
@@ -61,7 +61,7 @@ BTW, HPC stands for High Performance Computing
 
   *Get connected to Triton in preparation for day 2 // Science-IT staff*
 
-  See the Connecting to Triton tutorial – if you can ssh to Triton and run “hostname”, you are ready for tomorrow.
+  See the `Connecting to Triton tutorial </triton/tut/connecting.html>`__ – if you can ssh to Triton and run “hostname”, you are ready for tomorrow.
 
 **Day #2:**
 
