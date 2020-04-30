@@ -48,19 +48,19 @@ BTW, HPC stands for High Performance Computing
 
   Module #1.2 (1h): HPC crash course: what is behind the front-end // lecture
 
-  *HPC fundamentals: terminology, architectures, interconnects, infrastructure behind, as well as MPI vs shared memory // Ivan Degtyarenko
+  *HPC fundamentals: terminology, architectures, interconnects, infrastructure behind, as well as MPI vs shared memory // Ivan Degtyarenko*
 
   Module #1.3 (1h): CSC resources overview // lecture with demos
 
-  *An overview of CSC computing environment and services including Puhti supercomputer, Allas data management solution, Cloud services, notebooks, containers, etc // Jussi Enkovaar and Henrik Nortamo
+  *An overview of CSC computing environment and services including Puhti supercomputer, Allas data management solution, Cloud services, notebooks, containers, etc // Jussi Enkovaar and Henrik Nortamo*
 
   Module #1.4 (1h): HTCondor setup at Aalto // lecture with demos
 
   *Did you know that department workstations around could be accessible for computing? It is were HTCondor comes in game // Matthew West
 
-  Module #Extra (.5h): Connecting to Triton // tutorial
+  Module #1.5 (.5h): Connecting to Triton // tutorial
 
-  *Get connected to Triton in preparation for day 2 // Enrico Glerean
+  *Get connected to Triton in preparation for day 2 // Enrico Glerean*
 
   See the `Connecting to Triton tutorial </triton/tut/connecting.html>`__ – if you can ssh to Triton and run “hostname”, you are ready for tomorrow.
 
@@ -68,7 +68,7 @@ BTW, HPC stands for High Performance Computing
 
   Module #2.1 (4h): Getting started on Triton, SLURM basics, module // tutorial
 
-  *Triton’s workflow, running and monitoring serial jobs on Triton. Interactively and in batch mode. module and toolchains, special resources like GPU // Richard Darst
+  *Triton’s workflow, running and monitoring serial jobs on Triton. Interactively and in batch mode. module and toolchains, special resources like GPU // Richard Darst*
 
   See the Triton tutorials (“connecting” to “running in the queue”)
 
@@ -76,7 +76,7 @@ BTW, HPC stands for High Performance Computing
 
   Module #3.1 (4h): SLURM advances // tutorial
 
-  *Running in parallel with MPI and OpenMP, array jobs, running on GPU with –gres, local drives, constrains // Simo Tuomisto
+  *Running in parallel with MPI and OpenMP, array jobs, running on GPU with –gres, local drives, constrains // Simo Tuomisto*
 
   See the same Triton tutorials (“array jobs” to “GPU computing”)
 
