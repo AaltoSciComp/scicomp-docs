@@ -8,36 +8,35 @@ Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/sci
 
 **About the course:**
 
-Two days kickstart for the researchers to get started with the available
+Three days kickstart for the researchers to get started with the available
 computational resources at Aalto (=FGCI resources in general) and CSC.
 The course is modular, we cover one by one several aspects. First day
 dedicated to the computational resources in general: one will get whole
 picture what computational resources are available in particular what is
 HTCondor, what CSC has to offer and how to access a Triton cluster at
-Aalto. The day two is focused on Triton usage practicalities, given in
+Aalto. The days two and three are focused on Triton usage practicalities, given in
 the hands-on style tutorial, there will be lot of practical things on
-how to get started on Triton. We will go through basics and some
-advances like running in parallel, running on GPU, troubleshooting.
+how to get started on Triton. We will go through all the basics and advances like running in parallel, running on GPU, troubleshooting.
 During the course there will be particular use cases like examples in
 Matlab, Python, machine learning.
 
 Overall we give you hints, ready solutions and copy/paste examples on how
-to find, run and monitor your applications. In addition to how to optimize
+to find, run and monitor your applications and manage your data. In addition to how to optimize
 your workflow in terms of filesystem traffic, memory usage etc.
 
 The course is obligatory for all new Triton users and recommended to all
 interested in the field.
 
-**Time, date:** Mon 8.6 / Tue 9.6, 9:30-16:00 (with a lunch break in between)
+**Time, date:** Mon 8.6, Tue 9.6, Wed 10.6, 12:00-16:00
 
 **Place:** Online: Zoom link is TBA
 
-**Lecturering by:** Science IT (Aalto) and CSC people
+**Lecturering by:** Aalto Science IT and CSC people
 
 **Registration:** `registration link <https://link.webropolsurveys.com/S/B1752A5EBD3BF08F>`__
 
-Days’ time schedule is flexible, here is the tentative plan. 30 minutes break
-around 12:00, plus short 10 minutes breaks in between. You will be given time
+Days’ time schedule is flexible, here is the tentative plan. 
+Short 10 minutes breaks in between. You will be given time
 to try and ask, it’s more like an informal help session to get you started
 with the computing resources.
 
@@ -45,35 +44,39 @@ BTW, HPC stands for High Performance Computing
 
 **Day #1:**
 
-  Module #1.1 (1.5h): HPC crash course: what is behind the front-end // lecture
+  Module #1.1 (15m): Welcoming, course details
 
-  *HPC fundamentals: terminology, architectures, interconnects, infrastructure behind, as well as MPI vs shared memory // TBA*
+  Module #1.2 (1h): HPC crash course: what is behind the front-end // lecture
 
-  Module #1.2 (1h): HTCondor setup at Aalto // lecture with demos
+  *HPC fundamentals: terminology, architectures, interconnects, infrastructure behind, as well as MPI vs shared memory // Ivan Degtyarenko
 
-  *Did you know that department workstations around could be accessible for computing? It is were HTCondor comes in game // TBA*
+  Module #1.3 (1h): CSC resources overview // lecture with demos
 
-  Module #1.3 (2h): CSC resources overview // lecture with demos
+  *An overview of CSC computing environment and services including Puhti supercomputer, Allas data management solution, Cloud services, notebooks, containers, etc // Jussi Enkovaar and Henrik Nortamo
 
-  *An overview of CSC computing environment and services including Puhti supercomputer, Allas data management solution, Cloud services, notebooks, containers, etc // TBA*
+  Module #1.4 (1h): HTCondor setup at Aalto // lecture with demos
 
-  Module #1.4 (.5h): Connecting to Triton // tutorial
+  *Did you know that department workstations around could be accessible for computing? It is were HTCondor comes in game // Matthew West
 
-  *Get connected to Triton in preparation for day 2 // Science-IT staff*
+  Module #Extra (.5h): Connecting to Triton // tutorial
+
+  *Get connected to Triton in preparation for day 2 // Enrico Glerean
 
   See the `Connecting to Triton tutorial </triton/tut/connecting.html>`__ – if you can ssh to Triton and run “hostname”, you are ready for tomorrow.
 
 **Day #2:**
 
-  Module #2.1 (3h): Getting started on Triton, SLURM basics, module // tutorial
+  Module #2.1 (4h): Getting started on Triton, SLURM basics, module // tutorial
 
-  *Triton’s workflow, running and monitoring serial jobs on Triton. Interactively and in batch mode. module and toolchains, special resources like GPU // TBA*
+  *Triton’s workflow, running and monitoring serial jobs on Triton. Interactively and in batch mode. module and toolchains, special resources like GPU // Richard Darst
 
   See the Triton tutorials (“connecting” to “running in the queue”)
 
-  Module #2.2 (2.5h): SLURM advances // tutorial
+**Day #3**
 
-  *Running in parallel with MPI and OpenMP, array jobs, running on GPU with –gres, local drives, constrains // TBA*
+  Module #3.1 (4h): SLURM advances // tutorial
+
+  *Running in parallel with MPI and OpenMP, array jobs, running on GPU with –gres, local drives, constrains // Simo Tuomisto
 
   See the same Triton tutorials (“array jobs” to “GPU computing”)
 
