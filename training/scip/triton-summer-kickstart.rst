@@ -52,7 +52,7 @@ BTW, HPC stands for High Performance Computing
 
   Module #1.3 (1h): CSC resources overview // lecture with demos
 
-  *An overview of CSC computing environment and services including Puhti supercomputer, Allas data management solution, Cloud services, notebooks, containers, etc // Jussi Enkovaar and Henrik Nortamo*
+  *An overview of CSC computing environment and services including Puhti supercomputer, Allas data management solution, Cloud services, notebooks, containers, etc // Jussi Enkovaara and Henrik Nortamo*
 
   Module #1.4 (1h): HTCondor setup at Aalto // lecture with demos
 
