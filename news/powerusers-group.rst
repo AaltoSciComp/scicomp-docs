@@ -13,7 +13,7 @@ others more than usual.  You will get to network with Aalto staff,
 learn from them, and discuss your needs.  It will help both your
 current research and future career prospects.
 
-The powerusers group is run by Aalto Scientific Computing in
+The powerusers group is run by Aalto Scientific Computing (Science-IT) in
 collaboration with others at Aalto.  Aalto SciComp is in the School of
 Science, but serves the whole university - and we explicitly invite
 others from other schools to join.
