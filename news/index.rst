@@ -8,3 +8,4 @@ News
    garage.rst
    new_project_paniikki_utilisation_pr.rst
    2019_jupyterworkshop.rst
+   powerusers-group
