@@ -2,32 +2,34 @@
 Jun 2020 / Triton Summer Kickstart
 ==================================
 
-Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
+Part of the :doc:`Scientific Computing in Practice </training/scip/index>`
+lecture series at Aalto University.
 
 **Audience:** All FGCI consortium members looking for the HPC crash course.
 
 **About the course:**
 
-Three days kickstart for the researchers to get started with the available
-computational resources at Aalto (=FGCI resources in general) and CSC.
+Three day kickstart for researchers to get started with the available
+computational resources at Aalto and CSC (and FGCI resources in general).
 The course is modular, we cover one by one several aspects. First day
 dedicated to the computational resources in general: one will get whole
 picture what computational resources are available in particular what is
 HTCondor, what CSC has to offer and how to access a Triton cluster at
 Aalto. The days two and three are focused on Triton usage practicalities, given in
 the hands-on style tutorial, there will be lot of practical things on
-how to get started on Triton. We will go through all the basics and advances like running in parallel, running on GPU, troubleshooting.
+how to get started on Triton. We will go through all the basics and
+advanced topics like running in parallel, running on GPU, and troubleshooting.
 During the course there will be particular use cases like examples in
 Matlab, Python, machine learning.
 
 Overall we give you hints, ready solutions and copy/paste examples on how
-to find, run and monitor your applications and manage your data. In addition to how to optimize
+to find, run and monitor your applications, and manage your data. In addition to how to optimize
 your workflow in terms of filesystem traffic, memory usage etc.
 
 The course is obligatory for all new Triton users and recommended to all
 interested in the field.
 
-**Time, date:** Mon 8.6, Tue 9.6, Wed 10.6, 12:00-16:00
+**Time, date:** Mon 8.6, Tue 9.6, Wed 10.6, 12:00-16:00 EEST
 
 **Place:** Online: Zoom link is TBA
 
@@ -35,14 +37,16 @@ interested in the field.
 
 **Registration:** `registration link <https://link.webropolsurveys.com/S/B1752A5EBD3BF08F>`__
 
-Days’ time schedule is flexible, here is the tentative plan. 
-Short 10 minutes breaks in between. You will be given time
+The daily schedule is flexible, below is the tentative plan.
+There will be frequent breaks. You will be given time
 to try and ask, it’s more like an informal help session to get you started
 with the computing resources.
 
-BTW, HPC stands for High Performance Computing
+BTW, HPC stands for High Performance Computing.
 
-**Day #1:**
+
+
+**Day #1 (Mon 8.jun):**
 
   Module #1.1 (15m): Welcoming, course details
 
@@ -56,15 +60,17 @@ BTW, HPC stands for High Performance Computing
 
   Module #1.4 (1h): HTCondor setup at Aalto // lecture with demos
 
-  *Did you know that department workstations around could be accessible for computing? It is were HTCondor comes in game // Matthew West
+  *Did you know that department workstations around could be accessible for computing? It is were HTCondor comes in game // Matthew West*
 
   Module #1.5 (.5h): Connecting to Triton // tutorial
 
   *Get connected to Triton in preparation for day 2 // Enrico Glerean*
 
-  See the `Connecting to Triton tutorial </triton/tut/connecting.html>`__ – if you can ssh to Triton and run “hostname”, you are ready for tomorrow.
+  See the :doc:`Connecting to Triton tutorial </triton/tut/connecting>` – if you can ssh to Triton and run ``hostname``, you are ready for tomorrow.
 
-**Day #2:**
+
+
+**Day #2 (Tue 9.jun):**
 
   Module #2.1 (4h): Getting started on Triton, SLURM basics, module // tutorial
 
@@ -72,7 +78,8 @@ BTW, HPC stands for High Performance Computing
 
   See the Triton tutorials (“connecting” to “running in the queue”)
 
-**Day #3**
+
+**Day #3 (Wed 10.jun):**
 
   Module #3.1 (4h): SLURM advances // tutorial
 
@@ -94,6 +101,7 @@ Participants are expected to have SSH client installed.
 * Then, try to :doc:`connect to Triton </triton/tut/connecting>` to be
   ready.
 * If you aren't familiar with the Linux shell, :doc:`read the crash
-  course </scicomp/shell>`
+  course </scicomp/shell>` or `watch the video
+  <https://youtu.be/56p6xX0aToI>`__.
 
 **Additional course info at:** Ivan Degtyarenko, ivan.degtyarenko -at- aalto.fi
