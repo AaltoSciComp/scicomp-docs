@@ -72,20 +72,30 @@ BTW, HPC stands for High Performance Computing.
 
 **Day #2 (Tue 9.jun):**
 
-  Module #2.1 (4h): Getting started on Triton, SLURM basics, module // tutorial
+  Module #2.1 (4h): Getting started on Triton, SLURM basics, software,
+  and storage// tutorial
+
+  * :doc:`/triton/tut/connecting`
+  * :doc:`/triton/tut/applications`
+  * :doc:`/triton/tut/modules`
+  * :doc:`/triton/tut/storage`
+  * :doc:`/triton/tut/interactive`
+  * :doc:`/triton/tut/serial`
 
   *Triton’s workflow, running and monitoring serial jobs on Triton. Interactively and in batch mode. module and toolchains, special resources like GPU // Richard Darst*
 
-  See the Triton tutorials (“connecting” to “running in the queue”)
 
 
 **Day #3 (Wed 10.jun):**
 
   Module #3.1 (4h): SLURM advances // tutorial
 
-  *Running in parallel with MPI and OpenMP, array jobs, running on GPU with –gres, local drives, constrains // Simo Tuomisto*
+  * :doc:`/triton/tut/array`
+  * :doc:`/triton/tut/gpu`
+  * :doc:`/triton/tut/parallel`
 
-  See the same Triton tutorials (“array jobs” to “GPU computing”)
+  *Running in parallel with MPI and OpenMP, array jobs, running on GPU with ``-gres``, local drives, constraints // Simo Tuomisto*
+
 
 
 **Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
