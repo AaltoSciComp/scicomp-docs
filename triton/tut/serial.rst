@@ -45,10 +45,10 @@ Let's take a look at the following script
    #!/bin/bash
    #SBATCH --time=00:05:00    
    #SBATCH --mem-per-cpu=100  
-   #SBATCH --output=result.out
+   #SBATCH --output=/scratch/work/%u/hello.%j.out
    #SBATCH --partition debug
 
-   srun echo "Hello ${USER}! You are on ${HOSTNAME}"
+   srun echo "Hello ${USER}! You are on node ${HOSTNAME}"
 
 Let's name it ``hello.sh`` (create a file using your editor of choice, e.g.nano; 
 write the script above and save it)
@@ -80,8 +80,8 @@ You can check the status of you jobs using ``slurm q``
    52428672           debug     hello.sh              0:00              N/A  PENDING (None)
 
 Once the job is completed successfully, the state changes to *COMPLETED* and the 
-output is then saved to ``result.out`` in your current
-directory (the number being the job ID).
+output is then saved to ``hello.%j.out`` in your work
+directory ("%j" is replaced by the jobID).
 
 Setting resource parameters
 ===========================
