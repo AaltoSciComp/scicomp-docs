@@ -48,36 +48,32 @@ BTW, HPC stands for High Performance Computing.
 
 **Day #1 (Mon 8.jun):**
 
-  Module #1.1 (15m): Welcoming, course details
+  **Module #1.1 (15m): Welcome, course details**
 
-  Module #1.2 (1h): HPC crash course: what is behind the front-end // lecture
+  **Module #1.2 (1h): HPC crash course: what is behind the front-end** //
+  lecture // *HPC fundamentals: terminology, architectures, interconnects, infrastructure behind, as well as MPI vs shared memory // Ivan Degtyarenko*
 
-  *HPC fundamentals: terminology, architectures, interconnects, infrastructure behind, as well as MPI vs shared memory // Ivan Degtyarenko*
-
-  Module #1.3 (1h): CSC resources overview // lecture with demos
-
+  **Module #1.3 (1h): CSC resources overview** // lecture with demos //
   *An overview of CSC computing environment and services including Puhti supercomputer, Allas data management solution, Cloud services, notebooks, containers, etc // Jussi Enkovaara and Henrik Nortamo*
 
-  Module #1.4 (1h) Ways of working: (remote) workflows at Aalto.
-
-  * :doc:`/triton/usage/workflows`
-
+  **Module #1.4 (1h) Gallery of computing workflows** //
   *There are more options that just Triton by ssh, like we will learn
   later.  We'll give an overview of all the ways you can work. //
   Enrico Glerean*
 
-  Module #1.5 (.5h): Connecting to Triton // tutorial
+  * Aalto: :doc:`/triton/usage/workflows`
 
+  **Module #1.5 (.5h): Connecting to the cluster** // tutorial //
   *Get connected to Triton in preparation for day 2 // Enrico Glerean*
 
-  See the :doc:`Connecting to Triton tutorial </triton/tut/connecting>` – if you can ssh to Triton and run ``hostname``, you are ready for tomorrow.
+  * Aalto: :doc:`Connecting to Triton tutorial </triton/tut/connecting>` – if you can ssh to Triton and run ``hostname``, you are ready for tomorrow.
 
 
 
 **Day #2 (Tue 9.jun):**
 
-  Module #2.1 (4h): Getting started on Triton, SLURM basics, software,
-  and storage// tutorial
+  **Module #2.1 (4h): Getting started on the cluster** // tutorial // *SLURM basics, software,
+  and storage.  Workflow, running and monitoring serial jobs on Triton. Interactively and in batch mode. module and toolchains, special resources like GPU // Richard Darst*
 
   * :doc:`/triton/tut/connecting`
   * :doc:`/triton/tut/applications`
@@ -86,25 +82,18 @@ BTW, HPC stands for High Performance Computing.
   * :doc:`/triton/tut/interactive`
   * :doc:`/triton/tut/serial`
 
-  *Triton’s workflow, running and monitoring serial jobs on Triton. Interactively and in batch mode. module and toolchains, special resources like GPU // Richard Darst*
-
 
 
 **Day #3 (Wed 10.jun):**
 
-  Module #3.1 (2h): SLURM advances // tutorial
+  **Module #3.1 (2h): Advanced SLURM** // tutorial // *Running in parallel with MPI and OpenMP, array jobs, running on GPU with ``-gres``, local drives, constraints // Simo Tuomisto*
 
   * :doc:`/triton/tut/array`
   * :doc:`/triton/tut/gpu`
   * :doc:`/triton/tut/parallel`
 
-  *Running in parallel with MPI and OpenMP, array jobs, running on GPU with ``-gres``, local drives, constraints // Simo Tuomisto*
-
-  Module #3.2 (1.5h): HTCondor at Aalto // lecture with demos
-
-  *Did you know that department workstations can be used for
+  **Module #3.2 (1.5h): HTCondor** (at Aalto) // lecture with demos // *Did you know that department workstations can be used for
   distributed computing? HTCondor lets you // Matthew West*
-  HTCondor hands-on
 
 
 
