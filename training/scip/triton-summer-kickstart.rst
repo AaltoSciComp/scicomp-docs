@@ -58,9 +58,13 @@ BTW, HPC stands for High Performance Computing.
 
   *An overview of CSC computing environment and services including Puhti supercomputer, Allas data management solution, Cloud services, notebooks, containers, etc // Jussi Enkovaara and Henrik Nortamo*
 
-  Module #1.4 (1h): HTCondor setup at Aalto // lecture with demos
+  Module #1.4 (1h) Ways of working: (remote) workflows at Aalto.
 
-  *Did you know that department workstations around could be accessible for computing? It is were HTCondor comes in game // Matthew West*
+  * :doc:`/triton/usage/workflows`
+
+  *There are more options that just Triton by ssh, like we will learn
+  later.  We'll give an overview of all the ways you can work. //
+  Enrico Glerean*
 
   Module #1.5 (.5h): Connecting to Triton // tutorial
 
@@ -88,13 +92,20 @@ BTW, HPC stands for High Performance Computing.
 
 **Day #3 (Wed 10.jun):**
 
-  Module #3.1 (4h): SLURM advances // tutorial
+  Module #3.1 (2h): SLURM advances // tutorial
 
   * :doc:`/triton/tut/array`
   * :doc:`/triton/tut/gpu`
   * :doc:`/triton/tut/parallel`
 
   *Running in parallel with MPI and OpenMP, array jobs, running on GPU with ``-gres``, local drives, constraints // Simo Tuomisto*
+
+  Module #3.2 (1.5h): HTCondor at Aalto // lecture with demos
+
+  *Did you know that department workstations can be used for
+  distributed computing? HTCondor lets you // Matthew West*
+  HTCondor hands-on
+
 
 
 
