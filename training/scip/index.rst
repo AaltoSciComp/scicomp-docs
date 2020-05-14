@@ -19,7 +19,7 @@ Fall / Winter 2020 courses (tentative plan): Linux Shell basics, Data analysis w
 .. toctree::
    :titlesonly:
 
-   triton-summer-kickstart
+   summer-kickstart
    May 2020 / CodeRefinery <https://coderefinery.org/workshops/upcoming>
    matlab-advanced
    shell-scripting
