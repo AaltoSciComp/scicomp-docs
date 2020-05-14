@@ -31,6 +31,7 @@ in Practice courses page <scip/index>`.
    :maxdepth: 1
 
    scip/index
+   scicomp-announcements-maillist
 
 If you're starting research, ask your advisor what level of skill they
 expect you to have.  There are both courses and self-study materials
