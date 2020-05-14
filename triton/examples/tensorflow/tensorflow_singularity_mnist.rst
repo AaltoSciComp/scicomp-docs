@@ -18,6 +18,6 @@ One can run this example with ``srun``::
 or with ``sbatch`` by submitting
 :download:`tensorflow_singularity_mnist.sh</triton/examples/tensorflow/tensorflow_singularity_mnist.sh>`:
 
-.. literalinclude:: /triton/examples/tensorflow/tensorflow_mnist.sh
+.. literalinclude:: /triton/examples/tensorflow/tensorflow_singularity_mnist.sh
 
 Do note that by default Keras downloads datasets to ``$HOME/.keras/datasets``.
