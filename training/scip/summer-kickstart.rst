@@ -1,5 +1,5 @@
 ==================================
-Jun 2020 / Triton Summer Kickstart
+Jun 2020 / FGCI Summer Kickstart
 ==================================
 
 Part of the :doc:`Scientific Computing in Practice </training/scip/index>`
