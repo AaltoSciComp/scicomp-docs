@@ -32,3 +32,5 @@ There are various other images available that can be installed very
 quickly if required.
 
 .. include:: ../examples/tensorflow/tensorflow_singularity_mnist.rst
+
+.. include:: ../examples/pytorch/pytorch_singularity_mnist.rst
