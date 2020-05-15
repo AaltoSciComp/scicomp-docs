@@ -51,3 +51,7 @@ Hardware
 
 .. include:: hardware_dist.rst
 
+GPUs
+====
+
+.. include:: gpu.rst
