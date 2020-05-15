@@ -2,7 +2,7 @@ Tensorflow
 ==========
 
 :supportlevel: A
-:pagelastupdated: 2020-02-20
+:pagelastupdated: 2020-05-15
 :maintainer:
 
 .. highlight:: bash
@@ -13,6 +13,9 @@ Basic usage
 -----------
 
 First, check the tutorials up to and including :doc:`../tut/gpu`.
+
+If you plan on using NVIDIA's containers to run your model, please check
+the page about :doc:`nvidiacontainers`.
 
 The basic way to use is via the Python in the ``anaconda`` module.
 The versions with ``-tf2`` (the default ones) have Tensorflow 2
@@ -39,6 +42,7 @@ get newer cards, this will need further updating).
 
 .. include:: ../examples/tensorflow/tensorflow_mnist.rst
 
+.. include:: ../examples/tensorflow/tensorflow_singularity_mnist.rst
 
 Common problems
 ---------------

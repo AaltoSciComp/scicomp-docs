@@ -2,7 +2,7 @@ NVIDIA's singularity containers
 ===============================
 
 :supportlevel: A
-:pagelastupdated: 2020-04-27
+:pagelastupdated: 2020-05-15
 :maintainer:
 
 .. highlight:: bash
