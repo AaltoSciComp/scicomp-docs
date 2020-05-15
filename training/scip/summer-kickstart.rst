@@ -1,5 +1,5 @@
 ==================================
-Jun 2020 / Triton Summer Kickstart
+Jun 2020 / FGCI Summer Kickstart
 ==================================
 
 Part of the :doc:`Scientific Computing in Practice </training/scip/index>`
@@ -9,25 +9,26 @@ lecture series at Aalto University.
 
 **About the course:**
 
-Three day kickstart for researchers to get started with the available
-computational resources at Aalto and CSC (and FGCI resources in general).
-The course is modular, we cover one by one several aspects. First day
-dedicated to the computational resources in general: one will get whole
-picture what computational resources are available in particular what is
-HTCondor, what CSC has to offer and how to access a Triton cluster at
-Aalto. The days two and three are focused on Triton usage practicalities, given in
-the hands-on style tutorial, there will be lot of practical things on
-how to get started on Triton. We will go through all the basics and
-advanced topics like running in parallel, running on GPU, and troubleshooting.
-During the course there will be particular use cases like examples in
-Matlab, Python, machine learning.
+The first time FGCI wide kickstart for all FGCI consortium members.
+We'll have support representatives from several Universities. Most of material
+will be common for all the particitants and in adition we organize 
+breaking rooms for different sites (= sort of parallel sessions) when needed.
 
-Overall we give you hints, ready solutions and copy/paste examples on how
-to find, run and monitor your applications, and manage your data. In addition to how to optimize
-your workflow in terms of filesystem traffic, memory usage etc.
+Overall, it is a three day kickstart for researchers to get started with the
+available computational resources at FGCI and CSC.
+The course is modular, see the tentative schedule below. On the day one we start
+with the basic HPC intro, go through the available resources at CSC and then switch to 
+the FGCI sites practicalities. The days two and three we cover one by one steps
+on how to get started on the local computational clusters. Learning by doing.
 
-The course is obligatory for all new Triton users and recommended to all
-interested in the field.
+In addition, on the last day we will have HTCondor introduction for all interested.
+
+By the end of the course you get the hints, ready solutions and copy/paste examples
+on how to find, run and monitor your applications, and manage your data. In addition
+to how to optimize your workflow in terms of filesystem traffic, memory usage etc.
+
+Aalto users note: the course is obligatory for all new Triton users and
+recommended to all interested in the field.
 
 **Time, date:** Mon 8.6, Tue 9.6, Wed 10.6, 12:00-16:00 EEST
 
