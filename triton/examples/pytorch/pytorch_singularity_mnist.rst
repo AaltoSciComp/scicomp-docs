@@ -16,7 +16,7 @@ One can run this example with ``srun``::
   srun -t 00:15:00 --gres=gpu:1 singularity_wrapper exec python pytorch_mnist.py
 
 or with ``sbatch`` by submitting
-:download:`pytorch_mnist.sh</triton/examples/pytorch/pytorch_singularity_mnist.sh>`:
+:download:`pytorch_singularity_mnist.sh</triton/examples/pytorch/pytorch_singularity_mnist.sh>`:
 
 .. literalinclude:: /triton/examples/pytorch/pytorch_singularity_mnist.sh
 
