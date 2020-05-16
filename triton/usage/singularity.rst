@@ -2,7 +2,7 @@
 Singularity Containers
 ======================
 
-For more information see: https://sylabs.io/docs/
+For more information see: https://sylabs.io/docs
 
 
 Basic Idea
