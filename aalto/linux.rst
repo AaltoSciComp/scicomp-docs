@@ -5,11 +5,11 @@ Aalto Linux
 
 Aalto Linux is provided to all departments in Aalto.  Department IT
 co-maintains this, and in some departments provides more support
-(specifically, CS, NBE, PHYS at least).  It contains a lot of software
+(specifically, CS, NBE, PHYS and Math at least).  It contains a lot of software
 and features to support scientific computing and data.  Both laptop and desktop
 setups are available.
 
-This page is mainly about the Linux flavor in CS/PHYS/NBE, co-managed
+This page is mainly about the Linux flavor in CS/PHYS/NBE and partly Math, co-managed
 by these departments and Science-IT.  Most of it is relevant to all
 Aalto, though.
 
@@ -22,9 +22,8 @@ Basics
    directory will be your Aalto home directory. That is, the same home
    directory that you have in Aalto Windows machines and the Aalto
    Linux machines, including shell servers (kosh, taltta, lyta, brute, force).
--  Most installations have Ubuntu 16.04, 18.04 is coming soon.
--  `Some basic information from Aalto is availiable at
-   Inside <https://inside.aalto.fi/display/ITServices/Linux>`__.
+-  Most installations have Ubuntu 16.04 or 18.04, 20.04 is coming soon.
+-  A pretty good guide is availiable at https://linux.aalto.fi .
 -  **Login is with Aalto credentials**. Anyone can
    log in to any computer.  Since login is tied to your Aalto account,
    login is tied to your contract status.  Please contact HR if you
@@ -146,7 +145,7 @@ files.
 Full disk encryption (Laptops)
 ------------------------------
 
-All new (Ubuntu 16.04) laptops come with full disk encryption by default
+All new (Ubuntu 16.04 and 18.04) laptops come with full disk encryption by default
 (`instructions <https://inside.aalto.fi/display/ITServices/Disk+Encryption+in+Aalto+Linux>`__).
 This is a big deal and quite secure, if you use a good password.
 
@@ -376,7 +375,7 @@ How do I use eJournals, Netmot and other Aalto library services from home?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 There is a weblogin possibility at Aalto Library. After this, all
 library provided services are available. There are links for journals
-(nelli) and netmot.
+(nelli) and netmot. Or use VPN which should already be configured.
 
 Rsync complains about Quota, even though there is plenty left.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
