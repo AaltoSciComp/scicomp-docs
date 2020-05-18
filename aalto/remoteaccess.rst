@@ -17,6 +17,9 @@ Linux shell servers
       command first if project directories are not accessible)
 
    - NBE: ``amor.nbe.aalto.fi``, same as above.
+   
+   - Math: ``elliptic.aalto.fi``, ``illposed.aalto.fi``, 
+     same as above (but no project, archive and scratch directories)
 
 -  `Aalto servers <https://www.aalto.fi/en/services/linux-shell-servers-at-aalto>`__
 
