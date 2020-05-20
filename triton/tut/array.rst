@@ -295,7 +295,7 @@ Exercises
 What's next?
 ============
 
-.. see-also::
+.. seealso::
    
    For more information, you can see the
    `CSC guide on array jobs <https://docs.csc.fi/computing/running/array-jobs/>`_
