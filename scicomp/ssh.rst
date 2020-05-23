@@ -101,9 +101,8 @@ For a new configuration, you need specify in ``config`` at minimum the
 - User: your login name when connecting to the server
 - Hostname: the address of the server
 
-So for the simple Triton example, it would be
+So for the simple Triton example, it would be::
 
-::
     # Configuration file for simplifying SSH logins
     #
     # HPC slurm cluster
@@ -111,9 +110,8 @@ So for the simple Triton example, it would be
         User LOGIN_NAME
         Hostname triton.aalto.fi
 
-and you would use ``ssh triton`` to log in. Any additional server configs can follow the first one and must start with declaring the configuration ``Host``.
+and you would use ``ssh triton`` to log in. Any additional server configs can follow the first one and must start with declaring the configuration ``Host``::
 
-::
     # general login server
     Host kosh
         User LOGIN_NAME
@@ -123,9 +121,8 @@ and you would use ``ssh triton`` to log in. Any additional server configs can fo
         User LOGIN_NAME
         Hostname brute.aalto.fi
 
-There are optional ssh settings that may be useful for your work, such as
+There are optional ssh settings that may be useful for your work, such as::
 
-::
         # Turn on X11 forwarding for Xterm graphics access
         ForwardX11 yes
         # Connect through another server (eg Kosh) if not connected directly to Aalto network
