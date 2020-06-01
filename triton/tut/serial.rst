@@ -6,20 +6,20 @@ Serial Jobs
 Introduction to batch scripts
 =============================
 
-You learned, in the :doc:`interactive jobs <interactive>` 
+You learned, in the :doc:`interactive jobs <interactive>`
 how all Triton users must do their computation by submitting jobs
-to the Slurm batch system to ensure efficient resource sharing. 
+to the Slurm batch system to ensure efficient resource sharing.
 
 You additionally learned the interactive way to submit jobs,
 e.g. you could simply have an interative Bash session on a
 compute node. This proves useful for tests and debugging.
 Slurm jobs, however, are normally batch jobs, meaning that
-they are run unattended and asynchronously, without human 
-supervision. 
+they are run unattended and asynchronously, without human
+supervision.
 
 To create a batch job, you need to create a job script and subsequently
-submit it to Slurm. A job script is simply a **shell script**, 
-e.g. Bash, where you put your **resource requests** and **job steps**. 
+submit it to Slurm. A job script is simply a **shell script**,
+e.g. Bash, where you put your **resource requests** and **job steps**.
 You will see what these two components are shortly.
 You have already seen how to do these interactively; and in this tutorial
 you will learn how to bundle them in your job scripts.
@@ -35,26 +35,26 @@ Your first job script
 
 A job script is simply a shell script (Bash). And so the first line
 in the script should be the `shebang <https://en.wikipedia.org/wiki/Shebang_(Unix)>`_ directive (``#!``) followed by the
-full path to the executable binary of the shell's interpreter, which is 
+full path to the executable binary of the shell's interpreter, which is
 Bash in our case. What then follow are the resource requests and the job steps.
 
-Let's take a look at the following script 
+Let's take a look at the following script
 
 .. code-block:: bash
 
    #!/bin/bash
-   #SBATCH --time=00:05:00    
-   #SBATCH --mem-per-cpu=100  
+   #SBATCH --time=00:05:00
+   #SBATCH --mem-per-cpu=100
    #SBATCH --output=/scratch/work/%u/hello.%j.out
    #SBATCH --partition debug
 
    srun echo "Hello $USER! You are on node $HOSTNAME"
 
-Let's name it ``hello.sh`` (create a file using your editor of choice, e.g.nano; 
+Let's name it ``hello.sh`` (create a file using your editor of choice, e.g.nano;
 write the script above and save it)
 
-The symbol ``#`` followed by the *SBATCH* directives are understood 
-by Slurm as parameters, determining the resource requests. 
+The symbol ``#`` followed by the *SBATCH* directives are understood
+by Slurm as parameters, determining the resource requests.
 Here, we have requested a time limit of 5 minutes, along with 100 MB of RAM per CPU.
 
 Resource requests are followed by job steps, which are the actual
@@ -72,7 +72,7 @@ Having written the script, you need to submit the job to Slum through the ``sbat
    to process the ``#SBATCH`` headers and run in the background.
 
 When the job enters the queue successfully, the response that the job has been submitted
-is printed in your terminal, along with the *job ID* assigned to the job. 
+is printed in your terminal, along with the *job ID* assigned to the job.
 
 You can check the status of you jobs using ``slurm q``::
 
@@ -80,7 +80,7 @@ You can check the status of you jobs using ``slurm q``::
    JOBID              PARTITION NAME                  TIME       START_TIME    STATE NODELIST(REASON)
    52428672           debug     hello.sh              0:00              N/A  PENDING (None)
 
-Once the job is completed successfully, the state changes to *COMPLETED* and the 
+Once the job is completed successfully, the state changes to *COMPLETED* and the
 output is then saved to ``hello.%j.out`` in your work
 directory ("%j" is replaced by the jobID).
 
@@ -88,7 +88,7 @@ Setting resource parameters
 ===========================
 
 In both the above example and the tutorial on :doc:`interactive jobs <interactive>`, you learned
-that resources are requested through job parameters such as ``--mem``, ``--time``, etc. 
+that resources are requested through job parameters such as ``--mem``, ``--time``, etc.
 
 .. seealso::
 
@@ -97,7 +97,7 @@ that resources are requested through job parameters such as ``--mem``, ``--time`
    <../usage/general>` for more information and advanced usage.
 
 Please keep in mind that these parameters are hard values. If, for example, you request 5 GB of memory
-and your job uses substantially more, Slurm will kill your job. 
+and your job uses substantially more, Slurm will kill your job.
 
 .. note::
 
@@ -107,14 +107,14 @@ and your job uses substantially more, Slurm will kill your job.
    first one to be killed!  Don't count on this.
 
 We recommend you be as specific as possible when setting your resource parameters
-as they determine how fast your jobs will run. 
+as they determine how fast your jobs will run.
 Therefore, please try to gain more understanding on how much resources your code needs
-to fine-tune your requested resources. 
+to fine-tune your requested resources.
 
 .. note::
 
    In general, please do not submit too short jobs (under 5
-   minutes) unless you are debugging. For your bulk production, try to 
+   minutes) unless you are debugging. For your bulk production, try to
    have each job take at least 30 minutes, if possible.
    The reason behind this is that there is a big amount of startup, accounting, and scheduling overhead.
 
@@ -132,7 +132,7 @@ Another example could be the command ``sacct --format=jobid,elapsed,ncpus,ntasks
 which will show information as indicated in the ``--format`` option (job ID, the elapsed time,
 number of occupied CPUs, etc.). You can specify any field of interest to be shown using ``--format``.
 
-You can see more commands below. 
+You can see more commands below.
 
 .. include:: ../ref/slurm_status.rst
 
@@ -140,7 +140,7 @@ Partitions
 ==========
 
 A partition is a set of computing nodes dedicated to a specific purpose.
-Examples include partitions assigned to debugging("debug" partition), 
+Examples include partitions assigned to debugging("debug" partition),
 batch processing("batch" partition), GPUs("gpu" partition), etc.
 
 Command ``sinfo`` lists the available partitions. Let's see the first 4 partitions listed
@@ -161,7 +161,7 @@ You can specify a partition to be listed by ``sinfo``::
    debug        up    1:00:00      1  drain pe3
    debug        up    1:00:00      1   idle pe83
 
-Take a look at the manpage using ``man sinfo`` for more details. 
+Take a look at the manpage using ``man sinfo`` for more details.
 
 Generally, you don't need to specify the partition; Slurm will
 use any posssible partition. However, you can do so with ``-p PARTITION_NAME``
@@ -216,4 +216,4 @@ What's next?
 ============
 
 Running multiple instances of a ``sbatch`` script is easier with
-:doc:`array jobs<../tut/array>`. 
+:doc:`array jobs<../tut/array>`.
