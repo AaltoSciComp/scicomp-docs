@@ -61,19 +61,20 @@ Resource requests are followed by job steps, which are the actual
 tasks to be done. Each ``srun`` is a job step, and appears as a separate row in your
 history - which is useful for monitoring.
 
-Having written the script, you need to submit the job to Slum through the ``sbatch`` command
-
-::
+Having written the script, you need to submit the job to Slum through the ``sbatch`` command::
 
    $ sbatch hello.sh
    Submitted batch job 52428672
 
+.. warning::
+
+   You must use ``sbatch``, not ``bash`` to submit the job
+   to process the ``#SBATCH`` headers and run in the background.
+
 When the job enters the queue successfully, the response that the job has been submitted
 is printed in your terminal, along with the *job ID* assigned to the job. 
 
-You can check the status of you jobs using ``slurm q``
-
-::
+You can check the status of you jobs using ``slurm q``::
 
    $ slurm q
    JOBID              PARTITION NAME                  TIME       START_TIME    STATE NODELIST(REASON)
@@ -97,6 +98,13 @@ that resources are requested through job parameters such as ``--mem``, ``--time`
 
 Please keep in mind that these parameters are hard values. If, for example, you request 5 GB of memory
 and your job uses substantially more, Slurm will kill your job. 
+
+.. note::
+
+   Actually, there is a little bit of grace period in killing jobs
+   (about an hour), and you can go over memory a little bit.  But, if
+   you go over the memory limit and the node runs out, you will be the
+   first one to be killed!  Don't count on this.
 
 We recommend you be as specific as possible when setting your resource parameters
 as they determine how fast your jobs will run. 
