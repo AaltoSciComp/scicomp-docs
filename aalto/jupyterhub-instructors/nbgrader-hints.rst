@@ -126,7 +126,7 @@ to link to email addresses, you can do the following.
 
 This script is also `available on github`__.
 
-__ https://github.com/AaltoScienceIT/jupyterhub-aalto/blob/master/user-scripts/username-to-email.py
+__ https://github.com/AaltoSciComp/jupyterhub-aalto/blob/master/user-scripts/username-to-email.py
 
 
 
@@ -134,7 +134,7 @@ __ https://github.com/AaltoScienceIT/jupyterhub-aalto/blob/master/user-scripts/u
 Our scripts and resources
 -------------------------
 
-Some scripts at https://github.com/AaltoScienceIT/jupyter-wiki .
+Some scripts at https://github.com/AaltoSciComp/jupyter-wiki .
 
 We are soon going to revise all of our instructor info which can be
 useful to you later.

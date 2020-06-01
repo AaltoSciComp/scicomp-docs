@@ -196,7 +196,7 @@ Exercises
    /scratch/scip/examples/slurm/memory-hog.py 50M``, where the
    last argument is however much memory you want to eat.  (also
    available from `triton-examples/slurm
-   <https://github.com/AaltoScienceIT/triton-examples/tree/master/slurm>`__)
+   <https://github.com/AaltoSciComp/triton-examples/tree/master/slurm>`__)
 
    a) Try running the program with ``50M``
 
@@ -213,7 +213,7 @@ Exercises
 
 2. The program ``/scratch/scip/examples/slurm/pi.py`` (also
    available from `triton-examples/slurm
-   <https://github.com/AaltoScienceIT/triton-examples/tree/master/slurm>`__)
+   <https://github.com/AaltoSciComp/triton-examples/tree/master/slurm>`__)
    calculates pi using a simple stochastic algorithm.  You give it one
    argument: the number of trials.
 

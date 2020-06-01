@@ -21,9 +21,9 @@ To get some details of the high-throughput computing, take a look at `What is HT
 
 **Course materials:**
 
-- `Course slides (.pdf) <https://github.com/AaltoScienceIT/scicomp-docs/raw/master/training/scip/upload/Introduction%20to%20Condor.pdf>`__
-- `The first session material (.zip) <https://github.com/AaltoScienceIT/scicomp-docs/raw/master/training/scip/upload/condor_1.2019-10-29.zip>`__
-- `The second session material (.zip) <https://github.com/AaltoScienceIT/scicomp-docs/raw/master/training/scip/upload/condor_2.zip>`__
+- `Course slides (.pdf) <https://github.com/AaltoSciComp/scicomp-docs/raw/master/training/scip/upload/Introduction%20to%20Condor.pdf>`__
+- `The first session material (.zip) <https://github.com/AaltoSciComp/scicomp-docs/raw/master/training/scip/upload/condor_1.2019-10-29.zip>`__
+- `The second session material (.zip) <https://github.com/AaltoSciComp/scicomp-docs/raw/master/training/scip/upload/condor_2.zip>`__
 
 
 

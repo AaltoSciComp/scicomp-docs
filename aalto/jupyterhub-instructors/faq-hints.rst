@@ -54,7 +54,7 @@ Instructions/hints
   - 2) autograde in an environment which does not have these extra
     packages.  Really, #2 is the only true solution.  See the
     information under
-    https://github.com/AaltoScienceIT/isolate-namespace for
+    https://github.com/AaltoSciComp/isolate-namespace for
     information on doing this.
 
   - In all cases, it is good practice to pre-import all modules the
@@ -89,7 +89,7 @@ Instructions/hints
 
 - You can install an identical version of nbgrader as we have using::
 
-    pip install git+https://github.com/AaltoScienceIT/nbgrader@live
+    pip install git+https://github.com/AaltoSciComp/nbgrader@live
 
   This may be useful if you get metadata mismatch errors between your
   system and ours.  There used to be more differences, these days the
@@ -108,7 +108,7 @@ Instructions/hints
   unreleased development version which isn't available), and perhaps
   the ``prefix`` should too.  For actual versions installed, see
   ``base`` and ``standard`` dockerfiles in `the singleuser-image repo
-  <https://github.com/AaltoScienceIT/jupyter-aalto-singleuser>`_.
+  <https://github.com/AaltoSciComp/jupyter-aalto-singleuser>`_.
 
 
 

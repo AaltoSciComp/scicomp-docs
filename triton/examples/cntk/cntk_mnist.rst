@@ -11,7 +11,7 @@ The full code for the example is in
 :download:`cntk_mnist.py</triton/examples/cntk/cntk_mnist.py>`.
 One can run this example with ``srun``::
 
-  wget https://raw.githubusercontent.com/AaltoScienceIT/scicomp-docs/master/triton/examples/cntk/cntk_mnist.py
+  wget https://raw.githubusercontent.com/AaltoSciComp/scicomp-docs/master/triton/examples/cntk/cntk_mnist.py
   module load anaconda
   srun -t 00:15:00 --gres=gpu:1 python cntk_mnist.py
 

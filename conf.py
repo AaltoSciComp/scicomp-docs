@@ -142,7 +142,7 @@ html_theme_options = {
     #'canonical_url': 'https://scicomp.aalto.fi/'
     }
 html_context = {'display_github': True,
-                'github_user': 'AaltoScienceIT',
+                'github_user': 'AaltoSciComp',
                 'github_repo': 'scicomp-docs',
                 'github_version': 'master/',
                }
