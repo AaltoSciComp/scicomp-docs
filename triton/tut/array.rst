@@ -4,12 +4,12 @@ Array jobs
 
 .. highlight:: bash
 
-More often than not, problems involve running similar programs in parallel 
+More often than not, problems involve running similar programs in parallel
 where there is no dependency or communication among the processes.
 Their results are thus combined as the final output, e.g. Monte Carlo simulations.
 
-In Slurm context, *job arrays* are the way to run several instances of a 
-single-threaded program, known as the *embarrassingly parallel* paradigm. 
+In Slurm context, *job arrays* are the way to run several instances of a
+single-threaded program, known as the *embarrassingly parallel* paradigm.
 
 Introduction
 ============
@@ -17,7 +17,7 @@ Introduction
 Array jobs allow you to parallelize your computations. They are used when you need
 to run the same job many times with only slight changes among the jobs. For example,
 you need to run 1000 jobs each with a different seed value for the random number generator.
-Or perhaps you need to apply the same computation to a collection of data sets. 
+Or perhaps you need to apply the same computation to a collection of data sets.
 These can be done by submitting a single array job.
 
 Slurm job array is a collection of jobs that are to be executed with identical
@@ -28,13 +28,13 @@ as many times as indicated by the ``--array`` directive, e.g.,
 
   #SBATCH --array=0-4
 
-creates an array of 5 jobs (tasks) with index values 0, 1, 2, 3, 4. 
+creates an array of 5 jobs (tasks) with index values 0, 1, 2, 3, 4.
 
 The array tasks are copies of the "master" batch script that are automatically submitted
 to Slurm. Slurm provides a unique environment variable ``SLURM_ARRAY_TASK_ID`` to each
-task which could be used for handling input output files to each task. 
+task which could be used for handling input output files to each task.
 
-.. note:: 
+.. note::
 
    You can alternatively pass the ``--array`` option as a command-line argument to
    ``sbatch``.
@@ -53,28 +53,28 @@ as you wish. Let's name it ``hello.sh`` and write it as follows.
    #SBATCH --time=00:15:00
    #SBATCH --mem=200
    # You may put the commands below:
-   
+
    # Job step
    srun echo "I am array task number" $SLURM_ARRAY_TASK_ID
-  
+
 Submitting the job script to Slurm with ``sbatch hello.sh``, you will get the message
 
 ::
 
   $ Submitted batch job 52608925
 
-The job ID in the message is that of the "master" job - which is also used in the 
-batch script using ``%A`` for the output files (with the slurm ``-o`` option). To create unique output files for 
+The job ID in the message is that of the "master" job - which is also used in the
+batch script using ``%A`` for the output files (with the slurm ``-o`` option). To create unique output files for
 each task in the job array, ``%a`` is used that is filled in with the array task ID.
 
 Once the jobs are completed, the output files will be created in your work directory,
-with the help ``%u`` to determine your user name. 
+with the help ``%u`` to determine your user name.
 
 ::
 
    $ ls $WRKDIR
    task_number_52608925_12.out  task_number_52608925_3.out   task_number_52608925_8.out  task_number_52608925_9.out
-   task_number_52608925_0.out   task_number_52608925_13.out  task_number_52608925_4.out  
+   task_number_52608925_0.out   task_number_52608925_13.out  task_number_52608925_4.out
    task_number_52608925_1.out   task_number_52608925_14.out  task_number_52608925_5.out
    task_number_52608925_10.out  task_number_52608925_15.out  task_number_52608925_6.out
    task_number_52608925_11.out  task_number_52608925_2.out   task_number_52608925_7.out
@@ -88,24 +88,24 @@ You can ``cat`` one of the files to see the output of each task
 
 .. important::
 
-   If your current directory is your home directory, please remember to direct 
+   If your current directory is your home directory, please remember to direct
    your results to your work directory. You can keep your scripts/source codes
    in you home directory since it is backed up daily and should keep your calculations
-   and analyses on your work directory. 
+   and analyses on your work directory.
 
 More examples
 =============
 
 The following examples give you an idea on how to use job arrays for different
-use cases and how to utilize the ``$SLURM_ARRAY_TASK_ID`` environment variable. 
+use cases and how to utilize the ``$SLURM_ARRAY_TASK_ID`` environment variable.
 
 
 Reading input files
 -------------------
 
 In many cases, you would like to process several data files, that is, pass different
-input files to your code to be processed. This can be achieved by using 
-``$SLURM_ARRAY_TASK_ID`` envinronment variable.  
+input files to your code to be processed. This can be achieved by using
+``$SLURM_ARRAY_TASK_ID`` envinronment variable.
 
 You could utilize to process several data files. In this case,
 In the example below, the is used to change to
@@ -125,18 +125,18 @@ with ``sbatch script.sh``::
 Hardcoding arguments in the batch script
 ----------------------------------------
 
-One way to pass arguments to your code is by hardcoding them in the batch script 
-you want to submit to Slurm. 
+One way to pass arguments to your code is by hardcoding them in the batch script
+you want to submit to Slurm.
 
 Assume you would like to run the Pi estimation code for 5 different seed values, each
 for 2.5 million iterations. You could assign a seed value to each task in you job array
-and save each output to a file. Having calculated all estimations, you could take the 
+and save each output to a file. Having calculated all estimations, you could take the
 average of all the Pi values to arrive at a more accurate estimate. An example of such
-a batch script is as follows. 
+a batch script is as follows.
 
 .. code-block:: bash
 
-   #!/bin/bash 
+   #!/bin/bash
    #SBATCH --job-name=pi_estimation
    #SBATCH --output=/dev/null
    #SBATCH --error=/dev/null
@@ -148,20 +148,20 @@ a batch script is as follows.
    case $SLURM_ARRAY_TASK_ID in
 
        0)
-           SEED=123
-           ;;
-       1)  
-           SEED=38
-           ;;
-       2)  
-           SEED=22 
-           ;;
-       3) 
-           SEED=60 
-           ;; 
-       4) 
-           SEED=432 
-           ;;
+	   SEED=123
+	   ;;
+       1)
+	   SEED=38
+	   ;;
+       2)
+	   SEED=22
+	   ;;
+       3)
+	   SEED=60
+	   ;;
+       4)
+	   SEED=432
+	   ;;
    esac
 
    python ~/trit_examples/pi.py 2500000 --seed=$SEED > pi_$SEED.json
@@ -174,8 +174,8 @@ Save the script as e.g. ``run_pi.sh`` and submit to Slurm.
    Submitted batch job 52655434
 
 Once finished, 5 files will be created in your current directory each containing the
-Pi estimation; total number of iterations (sum of iteration per task); 
-and total number of successes). 
+Pi estimation; total number of iterations (sum of iteration per task);
+and total number of successes).
 
 ::
 
@@ -186,7 +186,7 @@ Reading parameters from one file
 --------------------------------
 
 Another way to pass arguments to your code via script is to save the arguments
-to a file and have your script read the arguments from it. 
+to a file and have your script read the arguments from it.
 
 Drawing on the previous example, let's assume you now want to run ``pi.py``
 with different iterations. You can create a file, say ``iterations.txt``
@@ -203,8 +203,8 @@ and have all the values written to it, e.g.
 You can modify the previous script to have it read the ``iterations.txt``
 one line at a time and pass it on to ``pi.py``. Here, ``sed`` is used
 to get each line. Alternatively you can use any other command-line
-utility in its stead, e.g. ``awk``. Do not worry if you don't know 
-how ``sed`` works - Google search and ``man sed`` always help. 
+utility in its stead, e.g. ``awk``. Do not worry if you don't know
+how ``sed`` works - Google search and ``man sed`` always help.
 Also note that the line numbers start at 1, not 0.
 
 .. code-block:: bash
@@ -226,23 +226,23 @@ arguments from a csv file, etc.
 
 (Advanced) Grouping runs together in bigger chunks
 --------------------------------------------------
-If your jobs are many and too short - a few minutes -, 
-using array jobs may induce too much overhead in scheduling. 
+If your jobs are many and too short - a few minutes -,
+using array jobs may induce too much overhead in scheduling.
 Or you may simply have too many runs and creating too many array
-jobs again is not recommended. 
+jobs again is not recommended.
 
-.. important:: 
+.. important::
 
    A good target time for the array jobs would be approximately 30 minutes,
    so please try to combine your tasks so that each job would at least take this long.
 
 The workaround is exploiting shell's capabilities. For example,
-assume you want to run the Pi script with 50 different seed values. 
+assume you want to run the Pi script with 50 different seed values.
 You could define a chunk size of 10 and 5 array jobs. Even with as
 little as 5 array jobs, you can run 50 simulations.
 
 This method demands for more knowledge of shell scripting which will
-definitely be worth your while. 
+definitely be worth your while.
 
 .. code-block:: bash
 
@@ -296,7 +296,7 @@ What's next?
 ============
 
 .. seealso::
-   
+
    For more information, you can see the
    `CSC guide on array jobs <https://docs.csc.fi/computing/running/array-jobs/>`_
 
