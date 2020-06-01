@@ -136,8 +136,8 @@ Examples include partitions assigned to debugging("debug" partition),
 batch processing("batch" partition), GPUs("gpu" partition), etc.
 
 Command ``sinfo`` lists the available partitions. Let's see the first 4 partitions listed
-for the sake of brevity. 
-::
+for the sake of brevity::
+
    $ sinfo | head -n 5
    PARTITION     AVAIL  TIMELIMIT  NODES  STATE NODELIST
    interactive      up 1-00:00:00      2   drng pe[1-2]
