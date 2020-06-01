@@ -187,8 +187,7 @@ Also note that the line numbers start at 1, not 0.
 
     #!/bin/bash
     #SBATCH -n 1
-    #SBATCH --output=/dev/null
-    #SBATCH --error=/dev/null
+    #SBATCH --output=pi.2.out.log --open-mode=append
     #SBATCH --array=1-4
     #SBATCH --time=01:00:00
     #SBATCH --mem=500
@@ -224,8 +223,7 @@ definitely be worth your while.
 
    #!/bin/bash
    #SBATCH -n 1
-   #SBATCH --output=/dev/null
-   #SBATCH --error=/dev/null
+   #SBATCH --output=pi.3.out.log --open-mode=append
    #SBATCH --array=1-5
    #SBATCH --time=01:00:00
    #SBATCH --mem=500
