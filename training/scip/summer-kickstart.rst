@@ -11,13 +11,13 @@ lecture series at Aalto University.
 
 The first time FGCI wide kickstart for all FGCI consortium members.
 We'll have support representatives from several Universities. Most of material
-will be common for all the particitants and in adition we organize 
+will be common for all the particitants and in adition we organize
 breaking rooms for different sites (= sort of parallel sessions) when needed.
 
 Overall, it is a three day kickstart for researchers to get started with the
 available computational resources at FGCI and CSC.
 The course is modular, see the tentative schedule below. On the day one we start
-with the basic HPC intro, go through the available resources at CSC and then switch to 
+with the basic HPC intro, go through the available resources at CSC and then switch to
 the FGCI sites practicalities. The days two and three we cover one by one steps
 on how to get started on the local computational clusters. Learning by doing.
 
