@@ -333,7 +333,7 @@ used as a rudimentary way to see how much I/O load there is.
    on the directory mentioned above.  Why is it different?
 
 3. (Advanced, requires slurm knowledge from future tutorials)  You
-   will find some sample files in ``/scratch/scip/examples/io``.
+   will find some sample files in ``/scratch/scip/hpc-examples/io``.
    Create a temporary directory and...
 
    a) Run ``create_iodata.sh`` to make some data files in ``data/``

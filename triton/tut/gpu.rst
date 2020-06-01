@@ -181,7 +181,7 @@ Exercises
    to check which GPU node you ended up on. Try setting a constraint
    to force a different GPU architecture.
 
-2. Copy ``/scratch/scip/examples/gpu/pi.cu`` to your work directory.
+2. Copy ``/scratch/scip/hpc-examples/gpu/pi.cu`` to your work directory.
    Compile it using ``cuda`` module and ``nvcc``. Run it. Does it say zero?
    Try running it with a GPU and see what happens.
 
