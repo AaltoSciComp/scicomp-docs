@@ -138,30 +138,20 @@ a batch script is as follows.
 
    #!/bin/bash
    #SBATCH --job-name=pi_estimation
-   #SBATCH --output=/dev/null
-   #SBATCH --error=/dev/null
+   #SBATCH --output=pi.out.log --open-mode=append
    #SBATCH --array=0-4
    #SBATCH --time=01:00:00
    #SBATCH --mem=500
-   # You may put the commands after SBATCH directives
+   # Note that all jobs will write to the same file.  This makes less
+   # files, but will be hard to tell the outputs apart.
 
    case $SLURM_ARRAY_TASK_ID in
 
-       0)
-	   SEED=123
-	   ;;
-       1)
-	   SEED=38
-	   ;;
-       2)
-	   SEED=22
-	   ;;
-       3)
-	   SEED=60
-	   ;;
-       4)
-	   SEED=432
-	   ;;
+       0)  SEED=123 ;;
+       1)  SEED=38  ;;
+       2)  SEED=22  ;;
+       3)  SEED=60  ;;
+       4)  SEED=432 ;;
    esac
 
    python ~/trit_examples/pi.py 2500000 --seed=$SEED > pi_$SEED.json
