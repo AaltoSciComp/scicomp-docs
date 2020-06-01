@@ -48,7 +48,7 @@ Let's take a look at the following script
    #SBATCH --output=/scratch/work/%u/hello.%j.out
    #SBATCH --partition debug
 
-   srun echo "Hello ${USER}! You are on node ${HOSTNAME}"
+   srun echo "Hello $USER! You are on node $HOSTNAME"
 
 Let's name it ``hello.sh`` (create a file using your editor of choice, e.g.nano; 
 write the script above and save it)
