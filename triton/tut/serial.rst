@@ -153,9 +153,8 @@ for the sake of brevity::
    jupyter-short    up 1-00:00:00      2   drng pe[1-2]
    grid             up 3-00:00:00      1  drain pe76
 
-You can specify a partition to be listed by ``sinfo``
+You can specify a partition to be listed by ``sinfo``::
 
-::
    $ sinfo --partition=debug
    PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
    debug        up    1:00:00      1 drain* wsm1
