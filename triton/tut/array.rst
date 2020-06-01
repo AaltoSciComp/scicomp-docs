@@ -22,9 +22,7 @@ These can be done by submitting a single array job.
 
 Slurm job array is a collection of jobs that are to be executed with identical
 parameters. This means that there is one single batch script that is to be run
-as many times as indicated by the ``--array`` directive, e.g.,
-
-::
+as many times as indicated by the ``--array`` directive, e.g.::
 
   #SBATCH --array=0-4
 
@@ -57,9 +55,7 @@ as you wish. Let's name it ``hello.sh`` and write it as follows.
    # Job step
    srun echo "I am array task number" $SLURM_ARRAY_TASK_ID
 
-Submitting the job script to Slurm with ``sbatch hello.sh``, you will get the message
-
-::
+Submitting the job script to Slurm with ``sbatch hello.sh``, you will get the message::
 
   $ Submitted batch job 52608925
 
@@ -68,9 +64,7 @@ batch script using ``%A`` for the output files (with the slurm ``-o`` option). T
 each task in the job array, ``%a`` is used that is filled in with the array task ID.
 
 Once the jobs are completed, the output files will be created in your work directory,
-with the help ``%u`` to determine your user name.
-
-::
+with the help ``%u`` to determine your user name::
 
    $ ls $WRKDIR
    task_number_52608925_12.out  task_number_52608925_3.out   task_number_52608925_8.out  task_number_52608925_9.out
@@ -79,9 +73,7 @@ with the help ``%u`` to determine your user name.
    task_number_52608925_10.out  task_number_52608925_15.out  task_number_52608925_6.out
    task_number_52608925_11.out  task_number_52608925_2.out   task_number_52608925_7.out
 
-You can ``cat`` one of the files to see the output of each task
-
-::
+You can ``cat`` one of the files to see the output of each task::
 
    $ cat task_number_52608925_5.out
    I am array task number 5
@@ -156,18 +148,14 @@ a batch script is as follows.
 
    python ~/trit_examples/pi.py 2500000 --seed=$SEED > pi_$SEED.json
 
-Save the script as e.g. ``run_pi.sh`` and submit to Slurm.
-
-::
+Save the script as e.g. ``run_pi.sh`` and submit to Slurm::
 
    $ sbatch run_pi.sh
    Submitted batch job 52655434
 
 Once finished, 5 files will be created in your current directory each containing the
 Pi estimation; total number of iterations (sum of iteration per task);
-and total number of successes).
-
-::
+and total number of successes)::
 
    $ cat pi_22.json
    {"successes": 1963163, "pi_estimate": 3.1410608, "iterations": 2500000}
@@ -180,9 +168,7 @@ to a file and have your script read the arguments from it.
 
 Drawing on the previous example, let's assume you now want to run ``pi.py``
 with different iterations. You can create a file, say ``iterations.txt``
-and have all the values written to it, e.g.
-
-::
+and have all the values written to it, e.g.::
 
    $ cat iterations.txt
    100
