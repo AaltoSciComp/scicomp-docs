@@ -9,7 +9,7 @@ where there is no dependency or communication among the processes.
 Their results are thus combined as the final output, e.g. Monte Carlo simulations.
 
 In Slurm context, *job arrays* are the way to run several instances of a 
-single-threaded program, known as *embarassingly parallel* paradigm. 
+single-threaded program, known as the *embarrassingly parallel* paradigm. 
 
 Introduction
 ============
@@ -52,7 +52,7 @@ as you wish. Let's name it ``hello.sh`` and write it as follows.
    #SBATCH --array=0-15
    #SBATCH --time=00:15:00
    #SBATCH --mem=200
-   # You may put the commands after SBATCH directives
+   # You may put the commands below:
    
    # Job step
    srun echo "I am array task number" $SLURM_ARRAY_TASK_ID
@@ -64,7 +64,7 @@ Submitting the job script to Slurm with ``sbatch hello.sh``, you will get the me
   $ Submitted batch job 52608925
 
 The job ID in the message is that of the "master" job - which is also used in the 
-batch script using ``%A`` for the output files. To create unique output files for 
+batch script using ``%A`` for the output files (with the slurm ``-o`` option). To create unique output files for 
 each task in the job array, ``%a`` is used that is filled in with the array task ID.
 
 Once the jobs are completed, the output files will be created in your work directory,
