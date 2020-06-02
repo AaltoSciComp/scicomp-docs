@@ -38,7 +38,7 @@ University specific information:
 
 * Aalto: this course is obligatory for all new Triton users and
   recommended to all interested in scientific computing in general.
-  :doc:`Basic reference information is at the Triton page </triton/>`
+  :doc:`Basic reference information is at the Triton page </triton/index>`
 
 * `University of Helsinki <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART>`__
 
