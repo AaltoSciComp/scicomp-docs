@@ -38,6 +38,13 @@ University specific information:
 * Aalto: this course is obligatory for all new Triton users and
   recommended to all interested in the field.
 
+* `University of Helsinki <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART>`__
+
+
+
+Practical information
+---------------------
+
 **Time, date:** Mon 8.6, Tue 9.6, Wed 10.6, 12:00-16:00 EEST
 
 **Place:** Online: Zoom link will be sent to registered participants.
@@ -45,7 +52,18 @@ University specific information:
 **Lecturering by:** Aalto Science IT and CSC people
 
 **Registration:** `registration link
- <https://link.webropolsurveys.com/S/B1752A5EBD3BF08F>`__
+<https://link.webropolsurveys.com/S/B1752A5EBD3BF08F>`__
+
+**Cost:** Free of charge for FGCI consortium members including Aalto
+ employees and students.
+
+**Additional course info at:** Ivan Degtyarenko, ivan.degtyarenko -at-
+ aalto.fi
+
+
+
+Schedule
+--------
 
 **Schedule**: The daily schedule will be adjusted based on the
 audience; below is the tentative plan.  There will be frequent
@@ -116,10 +134,8 @@ informal help session to get you started with the computing resources.
 
 
 
-
-**Cost:** Free of charge for FGCI consortium members including Aalto
- employees and students.
-
+Prerequisites and preparation
+-----------------------------
 
 **Course prerequisite requirements and other details:**
 
@@ -130,7 +146,7 @@ cluster or Triton for running examples.
 
   * Aalto: if you do not yet have access to Triton, :doc:`request an
     account </triton/accounts>` in advance.
-  * Helsinki:
+  * Helsinki: `Notes at the bottom <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART>`__
   * Tampere:
   * Others: Aalto will provide you with a guest Triton account.
 
@@ -181,6 +197,3 @@ How to attend this course:
 
 
 
-
-**Additional course info at:** Ivan Degtyarenko, ivan.degtyarenko -at-
- aalto.fi
