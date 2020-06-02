@@ -42,6 +42,7 @@ University specific information:
 
 * `University of Helsinki <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART>`__
 
+* Tampere:
 
 
 Practical information
@@ -98,7 +99,9 @@ informal help session to get you started with the computing resources.
     Glerean
 
     * Aalto: :doc:`/triton/usage/workflows`
-    * Helsinki: `Remote access to university resources <https://wiki.helsinki.fi/display/it4sci/Remote+access+to+University+resources>`__
+    * Helsinki: `Remote access to university resources
+      <https://wiki.helsinki.fi/display/it4sci/Remote+access+to+University+resources>`__
+    * Tampere:
 
   * Module #1.5 (.5h): **Connecting to the cluster** // tutorial //
     Get connected in preparation for day 2 // Enrico Glerean
@@ -106,6 +109,8 @@ informal help session to get you started with the computing resources.
     * Aalto: :doc:`Connecting to Triton tutorial
       </triton/tut/connecting>` – if you can ssh to Triton and run
       ``hostname``, you are ready for tomorrow.
+    * Helsinki:
+    * Tampere:
 
 * **Day #2 (Tue 9.jun):**
 
@@ -116,9 +121,19 @@ informal help session to get you started with the computing resources.
     Darst
 
     * :doc:`/triton/tut/connecting`
+
+      * Aalto: (link above)
+      * Helsinki:
+      * Tampere:
+
     * :doc:`/triton/tut/applications`
     * :doc:`/triton/tut/modules`
     * :doc:`/triton/tut/storage`
+
+      * Aalto: (link above)
+      * Helsinki:
+      * Tampere:
+
     * :doc:`/triton/tut/interactive`
     * :doc:`/triton/tut/serial`
 
