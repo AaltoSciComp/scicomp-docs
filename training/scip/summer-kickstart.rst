@@ -1,4 +1,5 @@
-================================== Jun 2020 / FGCI Summer Kickstart
+==================================
+Jun 2020 / FGCI Summer Kickstart
 ==================================
 
 Part of the :doc:`Scientific Computing in Practice
