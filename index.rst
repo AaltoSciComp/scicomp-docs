@@ -88,6 +88,19 @@ Cheatsheets: `Triton <ch-triton_>`_
 
 
 
+Aalto Research Software Engineering
+===================================
+
+Skills to do science are different than skills to write good research
+code.  The Aalto Research Software Engineering group provides support
+and mentoring to those using computing and data.
+
+.. toctree::
+   :maxdepth: 2
+
+   rse/index
+
+
 Scientific computing
 ====================
 In this section, you find general (not Aalto specific) scientific
