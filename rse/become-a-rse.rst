@@ -1,5 +1,5 @@
-For RSE candidates
-------------------
+For RSE candidates and community
+================================
 
 Do you like coding and research, but don't want an academic career
 path with publications as your sole purpose?  Be a Research Software
@@ -25,3 +25,30 @@ tenure-track academic career path.  New RSEs will get a training
 period which rounds out any missing skills.  They will also be
 involved in a complete support package: they will have the chance to
 be involved in teaching an infrastructure development.
+
+
+
+Aalto community chats
+---------------------
+
+We have biweekly chats for the Aalto RSE/scientific computing
+poweruser meetings.  This is a way to network with similarly-minded
+people.  Check back for updates on when these are.
+
+RSEs have been an essential part of science for ages, but hardy ever
+recognised.  We have many here at Aalto.  Aalto SciComp is trying to
+make a community of these people.  By taking part, you can
+
+* Network with others in similar situations and discover career
+  opportunities.
+
+* Share knowledge among ourselves (maybe have relevant training, too)
+
+* Take part in developing our services - basically, be a voice of the
+  users.
+
+* More directly help the community by, for example, directly updating
+  this site, helping to develop services, or teaching with us.
+
+Join `our RSE mailing list
+<https://list.aalto.fi/mailman/listinfo/rse>`_ to be kept up to date.

@@ -3,9 +3,9 @@ For units such as departments
 
 Our pilot is funded by departments and schools, and members of these
 units can receive the basic services free of charge (in accordance to
-the shares of funding).  If a research group would like dedicated
-advanced services (see list above), they can directly fund this
-program.  This could be, for example, co-funding salaries or
+the shares of funding).  If a research group would like :doc:`dedicated
+advanced services <researchers>` (see list above), they will directly
+fund this and replace your share.
 
 Benefits to schools/departments:
 
@@ -21,3 +21,9 @@ Benefits to groups:
   group, without having to fund or hire a full-time.
 * Your RSEs get joint training and share competence within our RSE
   group.
+
+
+The RSE program is a part of Aalto Scientific Computing (Science-IT),
+so is integrated to our training programs and infrastructure
+maintenance.  You don't just get a service, but a connection to a
+community of experts.
