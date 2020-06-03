@@ -347,7 +347,7 @@ together with, learning from, and teaching your colleagues and you
 will get much further.
 
 There are some good `cheatsheets
-<https://users.aalto.fi/~darstr1/cheatsheets/>`__ which our team
+<https://aaltoscicomp.github.io/cheatsheets/>`__ which our team
 maintains.  They are somewhat sepcialized, but useful in the right
 places.
 

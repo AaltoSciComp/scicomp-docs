@@ -45,8 +45,8 @@ management below.
 
 Cheatsheets: `CS <ch-cs_>`_, `Data <ch-data_>`_.
 
-.. _ch-cs: https://users.aalto.fi/~darstr1/cheatsheets/cs-cheatsheet.pdf
-.. _ch-data: https://users.aalto.fi/~darstr1/cheatsheets/sci-data-cheatsheet.pdf
+.. _ch-cs: https://aaltoscicomp.github.io/cheatsheets/cs-cheatsheet.pdf
+.. _ch-data: https://aaltoscicomp.github.io/cheatsheets/sci-data-cheatsheet.pdf
 
 
 
@@ -67,7 +67,7 @@ Research Data Management pages
 
 Cheatsheets: `Data <ch-data_>`_, `A4 Data management plan <ch-dmpA4_>`_.
 
-.. _ch-dmpA4: https://users.aalto.fi/~darstr1/cheatsheets/DMP-A4-both.pdf
+.. _ch-dmpA4: https://aaltoscicomp.github.io/cheatsheets/DMP-A4-both.pdf
 
 
 
@@ -84,7 +84,7 @@ capacity.
 
 Cheatsheets: `Triton <ch-triton_>`_
 
-.. _ch-triton: https://users.aalto.fi/~darstr1/cheatsheets/triton-cheatsheet.pdf
+.. _ch-triton: https://aaltoscicomp.github.io/cheatsheets/triton-cheatsheet.pdf
 
 
 
@@ -100,8 +100,8 @@ computing resources.
 
 Cheatsheets: `git for normal people <ch-gfnp_>`_, `Gitlab (produced by Gitlab, with Aalto link) <ch-gitlab_>`_
 
-.. _ch-gfnp: https://users.aalto.fi/~darstr1/cheatsheets/git-for-normal-people-cheatsheet_1.0.pdf
-.. _ch-gitlab: https://users.aalto.fi/~darstr1/cheatsheets/git-cheatsheet.pdf
+.. _ch-gfnp: https://aaltoscicomp.github.io/cheatsheets/git-for-normal-people-cheatsheet_1.0.pdf
+.. _ch-gitlab: https://aaltoscicomp.github.io/cheatsheets/git-cheatsheet.pdf
 
 
 
