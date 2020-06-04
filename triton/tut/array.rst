@@ -28,6 +28,22 @@ the right action, depending on what you need to do.
 Below are four examples.  The first and third are probably most
 recommended for starting out.
 
+.. warning::
+
+   When running array job you're basically running identical
+   copies of a single job. Thus it is incresingly important to
+   know how your code behaves with respect to the file system:
+     - Does it use libraries/environment stored in the work directory?
+     - How much input data it needs?
+     - How much output data the job creates?
+
+   For example, running an array job with hundreds of workers
+   that uses a Python environment stored in the work disk can
+   inadvertently harm the filesystem as there will be hundreds of
+   thousands of file calls.
+
+   If you're unsure how your job will behave, ask admins for help.
+
 Different inputs
 ~~~~~~~~~~~~~~~~
 
