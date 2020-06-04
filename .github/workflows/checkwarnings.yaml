@@ -23,7 +23,7 @@ jobs:
       - name: Install deps
         run: |
           pip install sphinx sphinx_rtd_theme
-          pip install -r meta/requirements.txt
+          pip install -r requirements.txt
       - name: Build project
         run: |
           make clean html SPHINXOPTS="-w warnings.txt"

@@ -89,7 +89,7 @@ language = 'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build', 'triton/apps/TEMPLATE.rst']
+exclude_patterns = ['_build', 'triton/apps/TEMPLATE.rst', 'venv*']
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -333,6 +333,7 @@ def setup(app):
     #app.add_javascript("custom.js")
     #if on_rtd:
     #    app.add_javascript(mathjax_path)
+    # sphinx 4.0: must be renamed to add_css_file and add_js_file.
     app.add_stylesheet("theme_overrides.css")
     app.add_javascript("redirect-to-https.js")
     app.add_javascript("https://users.aalto.fi/~darstr1/minipres-stable.js")
