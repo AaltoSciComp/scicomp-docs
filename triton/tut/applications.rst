@@ -111,7 +111,7 @@ Exercises
    Using ``singularity_wrapper``, run ``python -V`` and obtain python version.
    Compare that to the python version on the login node.
    Try ``singularity_wrapper shell`` too and use ``cat`` to check the
-   operating system version stored in ``/etc/issue``.
+   operating system version stored in ``/etc/issue``: ``cat /etc/issue``.
 
 
 What's next?

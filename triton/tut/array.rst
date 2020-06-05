@@ -42,6 +42,7 @@ task which could be used for handling input output files to each task.
    When running array job you're basically running identical
    copies of a single job. Thus it is increasingly important to
    know how your code behaves with respect to the file system:
+
      - Does it use libraries/environment stored in the work directory?
      - How much input data it needs?
      - How much output data the job creates?
