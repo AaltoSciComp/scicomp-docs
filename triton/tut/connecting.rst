@@ -122,7 +122,9 @@ Exercise
    ``$WRKDIR``.
 
 2. Check the uptime and load of the login node: ``uptime`` and
-   ``htop`` (``q`` to quit).  What else can you learn about the node?
+   ``htop`` (``q`` to quit - if ``htop`` is not available, then
+   ``top`` works almost as well).  What else can you learn about the
+   node?
 
 3. Check what your default shell is: ``echo $SHELL``.  Go ahead and
    change your shell to bash if it's not yet (see below).
