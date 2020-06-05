@@ -27,14 +27,10 @@ large memory, high bandwidth and specialized instructions,
 that are constantly increasing in number. For scientific purposes,
 they generally outperform the best desktop GPUs.
 
-
 .. seealso::
 
    Please ensure you have read :doc:`interactive` and :doc:`serial`
    before you proceed with this tutorial.
-
-   You can see the main article: :doc:`../usage/gpu` for more
-   detailed information.
 
 GPU jobs
 --------
@@ -229,8 +225,9 @@ Exercises
 What's next?
 ------------
 
-Check out our :doc:`reference information <../usage/gpu>` about GPU
-computing, including examples of different machine learning frameworks.
+You can see the main article: :doc:`../usage/gpu` for more
+detailed information regarding GPU computing,
+including examples of different machine learning frameworks.
 
 This guide assumes you are using pre-existing GPU programs.  If you
 need to write your own, that's a whole other story, and you can find
