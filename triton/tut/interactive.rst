@@ -190,13 +190,13 @@ The `next tutorial <serial>` covers more resource parameters and how to estimate
 Exercises
 =========
 
-1. The program ``/scratch/scip/examples/slurm/memory-hog.py``
+1. The program ``/scratch/scip/hpc-examples/slurm/memory-hog.py``
    uses up a lot of memory to do nothing.  Let's play with it.  It's
    run like this: ``python
-   /scratch/scip/examples/slurm/memory-hog.py 50M``, where the
+   /scratch/scip/hpc-examples/slurm/memory-hog.py 50M``, where the
    last argument is however much memory you want to eat.  (also
-   available from `triton-examples/slurm
-   <https://github.com/AaltoScienceIT/triton-examples/tree/master/slurm>`__)
+   available from `hpc-examples/slurm
+   <https://github.com/AaltoSciComp/hpc-examples/tree/master/slurm>`__)
 
    a) Try running the program with ``50M``
 
@@ -211,9 +211,9 @@ Exercises
    e) Look at the job history using ``slurm history`` - can you see
       how much memory it actually used?
 
-2. The program ``/scratch/scip/examples/slurm/pi.py`` (also
-   available from `triton-examples/slurm
-   <https://github.com/AaltoScienceIT/triton-examples/tree/master/slurm>`__)
+2. The program ``/scratch/scip/hpc-examples/slurm/pi.py`` (also
+   available from `hpc-examples/slurm
+   <https://github.com/AaltoSciComp/hpc-examples/tree/master/slurm>`__)
    calculates pi using a simple stochastic algorithm.  You give it one
    argument: the number of trials.
 
@@ -222,7 +222,7 @@ Exercises
 
    a) Run the program, timing it with ``time``, a few times,
       increasing the number of trials, until it takes about 10
-      seconds: ``time python /scratch/scip/examples/slurm/pi.py
+      seconds: ``time python /scratch/scip/hpc-examples/slurm/pi.py
       500`` and so on.
 
    b) Add ``srun`` in front (``srun python ...``).  What changes?

@@ -150,7 +150,7 @@ Exercises
 1. Run ``srun -c 4 hostname``, ``srun -n 4 hostname``, and ``srun -N 4
    hostname``.  What's the difference and why?
 
-In ``triton-examples`` (at ``/scratch/scip/examples``), you find some
+In ``hpc-examples`` (at ``/scratch/scip/hpc-examples``), you find some
 examples.
 
 2. Find the files ``openmp/hello_omp.c`` and ``openmp/hello_omp.slrm``

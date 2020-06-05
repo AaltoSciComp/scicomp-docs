@@ -167,4 +167,4 @@ Github <scicomp_github_issues_>`_ (make sure you have a good title
 that mentions the audience is students, so we can put the information
 in the right place).  Better yet, send a pull request to us yourself.
 
-.. _scicomp_github_issues: https://github.com/AaltoScienceIT/scicomp-docs/issues
+.. _scicomp_github_issues: https://github.com/AaltoSciComp/scicomp-docs/issues

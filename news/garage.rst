@@ -81,7 +81,8 @@ online garage.
 
    Date (default Th)  | Time (default 13:00-14:00)  | Loc
    12.mar-16.apr | 13-14  | https://aalto.zoom.us/j/177010905
-   23.apr - ???  | 13-14  | https://aalto.zoom.us/j/177010905 - continuing until further notice
+   23.apr-28.may | 13-14  | https://aalto.zoom.us/j/177010905
+   04.jun-???    | 13-14  | https://aalto.zoom.us/j/65371910202 - continuing until further notice
 
 .. warning::
 

@@ -389,9 +389,9 @@ generalizable.  The Ansible role is a good start but the jupyterhub
 config and setup is hackish.
 
 * Ansible config role:
-  https://github.com/AaltoScienceIT/ansible-role-fgci-jupyterhub
+  https://github.com/AaltoSciComp/ansible-role-fgci-jupyterhub
 * Configuration and automated conda environment setup:
-  https://github.com/AaltoScienceIT/triton-jupyterhub
+  https://github.com/AaltoSciComp/triton-jupyterhub
 
 ..
   Matlab support:

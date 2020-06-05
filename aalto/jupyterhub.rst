@@ -290,9 +290,9 @@ makes your work better no matter what you do.
 Our source is open and on Github:
 
 - `single-user image
-  <https://github.com/AaltoScienceIT/jupyter-aalto-singleuser>`__
+  <https://github.com/AaltoSciComp/jupyter-aalto-singleuser>`__
   (everything about a user's environment)
 
 - `server itself
-  <https://github.com/AaltoScienceIT/jupyterhub-aalto>`__ (logging in,
+  <https://github.com/AaltoSciComp/jupyterhub-aalto>`__ (logging in,
   course profiles, etc).

@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     python-sphinx-rtd-theme \
     && rm -rf /var/lib/apt/lists/*
-RUN pip install -r /docbuild/meta/requirements.txt
+RUN pip install -r /docbuild/requirements.txt
 
 RUN mkdir -p /docbuild
 

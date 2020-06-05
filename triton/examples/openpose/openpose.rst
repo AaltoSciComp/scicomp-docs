@@ -8,7 +8,7 @@ OpenPose has been compiled against OpenBlas, Caffe, CUDA and cuDNN.
 Image is based on a `nvidia/cuda:10.1-cudnn7-devel-ubuntu18.04 <https://hub.docker.com/r/nvidia/cuda/tags>`_ docker image.
 
 Dockerfile for this image is available
-`here <https://raw.githubusercontent.com/AaltoScienceIT/scienceit-dockerfiles/master/OpenPose/v1.5.1/Dockerfile>`_.
+`here <https://raw.githubusercontent.com/AaltoSciComp/scienceit-dockerfiles/master/OpenPose/v1.5.1/Dockerfile>`_.
 
 Within the container OpenPose is installed under ``/opt/openpose``. Due to
 the way the libraries are organized, ``singularity_wrapper`` changes the
@@ -19,7 +19,7 @@ Running OpenPose example
 
 One can run this example with ``srun``::
 
-  wget https://raw.githubusercontent.com/AaltoScienceIT/scicomp-docs/master/triton/examples/openpose/openpose.sh
+  wget https://raw.githubusercontent.com/AaltoSciComp/scicomp-docs/master/triton/examples/openpose/openpose.sh
   module load singularity-openpose
   sbatch openpose.slrm
 

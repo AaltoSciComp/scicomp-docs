@@ -12,7 +12,7 @@ Contributing
 
 This documentation is Open Source (CC-BY 4.0), and we welcome
 contributions from the Aalto community.  The project is run on Github
-(https://github.com/AaltoScienceIT/scicomp-docs).
+(https://github.com/AaltoSciComp/scicomp-docs).
 
 To contribute, you can always use the normal Github contribution
 mechanims: make a pull request or comments.  If you are at Aalto, you

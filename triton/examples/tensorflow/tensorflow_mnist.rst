@@ -11,7 +11,7 @@ The full code for the example is in
 :download:`tensorflow_mnist.py</triton/examples/tensorflow/tensorflow_mnist.py>`.
 One can run this example with ``srun``::
 
-  wget https://raw.githubusercontent.com/AaltoScienceIT/scicomp-docs/master/triton/examples/tensorflow/tensorflow_mnist.py
+  wget https://raw.githubusercontent.com/AaltoSciComp/scicomp-docs/master/triton/examples/tensorflow/tensorflow_mnist.py
   module load anaconda
   srun -t 00:15:00 --gres=gpu:1 python tensorflow_mnist.py
 

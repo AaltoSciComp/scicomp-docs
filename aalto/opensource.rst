@@ -255,6 +255,9 @@ community.  (TODO)
 References
 ~~~~~~~~~~
 
+- `CSC open source policy
+  <https://github.com/CSCfi/open-source-policy>`__, with similar
+  practical effects to what we have here.
 
 -  Aalto Research Data Management Policy:
    \ `https://inside.aalto.fi/download/attachments/43223812/2016\_02\_10\_datapolicy.pdf?version=1&modificationDate=1455967763618&api=v2 <https://inside.aalto.fi/download/attachments/43223812/2016_02_10_datapolicy.pdf?version=1&modificationDate=1455967763618&api=v2>`__

@@ -84,13 +84,13 @@ https://jupyter.triton.aalto.fi .  You will need an Aalto account.
 **Course material**
 
 You can find our git repository at
-https://github.com/AaltoScienceIT/python-r-data-analysis-course.  Note
+https://github.com/AaltoSciComp/python-r-data-analysis-course.  Note
 that it is a work in progress and until (and even after) something has
 been presented, it may still change.  The links below go to the “raw”
 notebooks, and you can find the work and “solutions” we have done in
 class in the `classwork-2019 branch`_.  By day, we have covered:
 
-.. _classwork-2019 branch: https://github.com/AaltoScienceIT/python-r-data-analysis-course/tree/classwork-2019
+.. _classwork-2019 branch: https://github.com/AaltoSciComp/python-r-data-analysis-course/tree/classwork-2019
 
 * Day 1: Python
 
@@ -124,7 +124,7 @@ class in the `classwork-2019 branch`_.  By day, we have covered:
 
 To get the repository::
 
-  git clone https://github.com/AaltoScienceIT/python-r-data-analysis-course/
+  git clone https://github.com/AaltoSciComp/python-r-data-analysis-course/
 
 To set up the git merge and diff hooks (Triton magic), copy and paste these inside the repository::
 
