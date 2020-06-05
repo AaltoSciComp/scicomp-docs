@@ -11,6 +11,12 @@ Linux shell crash course
 
    This is :doc:`basic B-level </training/index>`: no prerequisites.
 
+.. admonition:: Watch this in video format
+
+   There is a `companion video on YouTube
+   <https://youtu.be/56p6xX0aToI>`__, if you would also like that format.
+
+
 If you are reading this case, you probably need to do some sort of
 scientific computing involving the **Linux shell**, or command line
 interface.  You may wonder why we are still using a command line
