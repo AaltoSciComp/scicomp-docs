@@ -66,8 +66,8 @@ it will be easy to do via :doc:`singularity <../usage/singularity>`.
 
 
 
-Software list
--------------
+Software documentation pages
+----------------------------
 
 .. csv-table::
    :delim: |
