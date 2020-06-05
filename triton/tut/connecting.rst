@@ -180,8 +180,8 @@ desktop (you get Aalto Ubuntu).  From there, you **have to use the
 normal ssh instructions** (via the Terminal application) using the
 instructions you see above: ``ssh triton.aalto.fi``.
 
-For more information, see `it.aalto.fi
-<https://it.aalto.fi/instructions/aalto-university-virtual-desktop-infrastructure-vdiaaltofi>`__.
+For more information, see `the IT help
+<https://www.aalto.fi/en/services/vdiaaltofi-how-to-use-aalto-virtual-desktop-infrastructure>`__.
 
 
 
