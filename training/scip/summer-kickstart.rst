@@ -128,7 +128,7 @@ informal help session to get you started with the computing resources.
     * Aalto: :doc:`Connecting to Triton tutorial
       </triton/tut/connecting>` – if you can ssh to Triton and run
       ``hostname``, you are ready for tomorrow.
-    * Helsinki:
+    * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART>`__
     * Tampere: `Connecting to Narvi <https://narvi-docs.readthedocs.io/narvi/tut/connecting.html>`__
 
 * **Day #2 (Tue 9.jun):**
@@ -141,16 +141,16 @@ informal help session to get you started with the computing resources.
 
     * :doc:`/triton/tut/connecting`
 
-      * Aalto: (link above)
-      * Helsinki:
+      * Aalto: (same)
+      * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART>`__
       * Tampere: `Connecting to Narvi <https://narvi-docs.readthedocs.io/narvi/tut/connecting.html>`__
 
     * :doc:`/triton/tut/applications`
     * :doc:`/triton/tut/modules`
     * :doc:`/triton/tut/storage`
 
-      * Aalto: (link above)
-      * Helsinki:
+      * Aalto: (same)
+      * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART>`__
       * Tampere: `Narvi storage <https://narvi-docs.readthedocs.io/narvi/tut/storage.html>`__
 
     * :doc:`/triton/tut/interactive`
@@ -205,6 +205,8 @@ cluster or Triton for running examples.
   we can't keep up.
 
   * Aalto: :doc:`connecting to Triton </triton/tut/connecting>`
+  * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART>`__
+  * Tampere: `Connecting to Narvi <https://narvi-docs.readthedocs.io/narvi/tut/connecting.html>`__
 
 
 Other preparation
