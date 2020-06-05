@@ -84,6 +84,9 @@ If you load a module that uses singularity, nothing will happen at first.
 You execute your software using ``singularity_wrapper exec``, 
 or use ``singularity_wrapper shell`` to get a shell in there.
 
+We also provide :doc:`some containers built by NVIDIA <../apps/nvidiacontainers>`.
+These containers are from NVIDIA's NGC-repository and meant for GPU
+computations.
 
 Requesting new software
 =======================
@@ -104,10 +107,11 @@ Exercises
    enough to do ``python`` and ``import tensorflow`` -- though you
    will get an error which you will learn to solve in a later lesson.
 
-2. Figure out how to run ``openfoam`` by searching the docs (use the
-   new image).  Using ``singularity_wrapper``, run ``foamExec`` so
-   that it fails with the error message ``no application specified``.
-   Try ``singularity_wrapper shell``, too.
+2. Figure out how to load the module for NVIDIA's tensorflow container.
+   Using ``singularity_wrapper``, run ``python -V`` and obtain python version.
+   Compare that to the python version on the login node.
+   Try ``singularity_wrapper shell`` too and use ``cat`` to check the
+   operating system version stored in ``/etc/issue``: ``cat /etc/issue``.
 
 
 What's next?

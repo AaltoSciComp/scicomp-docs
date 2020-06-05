@@ -12,8 +12,8 @@ The full code for the example is in
 One can run this example with ``srun``::
 
   wget https://raw.githubusercontent.com/AaltoSciComp/scicomp-docs/master/triton/examples/cntk/cntk_mnist.py
-  module load anaconda
-  srun -t 00:15:00 --gres=gpu:1 python cntk_mnist.py
+  module load nvidia-cntk
+  srun -t 00:15:00 --gres=gpu:1 singularity_wrapper exec python cntk_mnist.py
 
 or with ``sbatch`` by submitting
 :download:`cntk_mnist.sh</triton/examples/cntk/cntk_mnist.sh>`:
