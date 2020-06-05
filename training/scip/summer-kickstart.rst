@@ -4,9 +4,6 @@ Jun 2020 / FGCI Summer Kickstart
 
 .. admonition:: News
 
-   This workshop may be streamed.  This is not decided yet, but if it
-   is, it will be at https://twitch.tv/coderefinery.
-
    Before the workshop:
 
    * See the :ref:`prerequisites <kickstart-2020-prereq>` below.
@@ -16,6 +13,18 @@ Jun 2020 / FGCI Summer Kickstart
 
    * Verify you can connect to your cluster (but if you can't, the
      last thing on Monday will a help session to get it working).
+
+   **Check back here for other updates that don't get their own
+   email**.  Minor announcements and past communication are also
+   available at `this issue
+   <https://github.com/AaltoSciComp/scicomp-docs/issues/105>`__.  If
+   you are from Aalto and have technical issues, please post on `the
+   issue tracker
+   <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`__.
+
+   This workshop may be streamed.  This is not decided yet, but if it
+   is, it will be at https://twitch.tv/coderefinery.
+
 
 
 Part of the :doc:`Scientific Computing in Practice
