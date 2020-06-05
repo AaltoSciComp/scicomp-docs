@@ -94,7 +94,7 @@ informal help session to get you started with the computing resources.
     // An overview of CSC computing environment and services
     including Puhti supercomputer, Allas data management solution,
     Cloud services, notebooks, containers, etc // Jussi Enkovaara and
-    Henrik Nortamo
+    Henrik Nortamo // `Slides (.pdf) <https://kannu.csc.fi/s/3K8q93XSwtSgHEa>`__
 
   * Module #1.4 (1h) **Gallery of computing workflows** // There are
     more options that just Triton by ssh, like we will learn later.
