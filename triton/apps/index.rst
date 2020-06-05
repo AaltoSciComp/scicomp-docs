@@ -17,6 +17,10 @@ When you need software, check the following for instructions (roughly in this or
   <https://version.aalto.fi/gitlab/AaltoScienceIT/triton>`__ for other
   people who have asked - some instructions only live there.
 
+If you have difficulty, it's usually a good idea to search the issue
+tracker anyway, in order to learn from the experience of others.
+
+
 
 Compilers
 ---------
