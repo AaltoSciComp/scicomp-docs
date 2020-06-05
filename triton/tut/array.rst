@@ -37,6 +37,22 @@ task which could be used for handling input output files to each task.
    You can alternatively pass the ``--array`` option as a command-line argument to
    ``sbatch``.
 
+.. important::
+
+   When running array job you're basically running identical
+   copies of a single job. Thus it is increasingly important to
+   know how your code behaves with respect to the file system:
+     - Does it use libraries/environment stored in the work directory?
+     - How much input data it needs?
+     - How much output data the job creates?
+
+   For example, running an array job with hundreds of workers
+   that uses a Python environment stored in the work disk can
+   inadvertently cause a lot of filesystem load as there will be
+   hundreds of thousands of file calls.
+
+   If you're unsure how your job will behave, ask admins for help.
+
 Your first array job
 ====================
 
@@ -84,22 +100,6 @@ You can ``cat`` one of the files to see the output of each task::
    your results to your work directory. You can keep your scripts/source codes
    in you home directory since it is backed up daily and should keep your calculations
    and analyses on your work directory.
-
-.. warning::
-
-   When running array job you're basically running identical
-   copies of a single job. Thus it is incresingly important to
-   know how your code behaves with respect to the file system:
-     - Does it use libraries/environment stored in the work directory?
-     - How much input data it needs?
-     - How much output data the job creates?
-
-   For example, running an array job with hundreds of workers
-   that uses a Python environment stored in the work disk can
-   inadvertently harm the filesystem as there will be hundreds of
-   thousands of file calls.
-
-   If you're unsure how your job will behave, ask admins for help.
 
 More examples
 =============
