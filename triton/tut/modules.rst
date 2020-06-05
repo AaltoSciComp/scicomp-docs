@@ -59,6 +59,15 @@ Loading modules
 
 Let's dive right into an example and load a module.
 
+.. warning::
+
+   If you are in not at Aalto, then you need to ``module load
+   fgci-common`` first, before any of the other commands will work
+   (and you will need to *keep doing this* for every other exercise
+   here).
+   If you are at CSC or not in Finland, the concepts here apply to
+   you, but not the actual names of what we are loading.
+
 Let's assume you've written a Python script that is only compatible with Python version 3.7.0 or higher.
 You open a shell to find out where and what version our Python is. The
 **which** program looks up the current detected version of a program -
