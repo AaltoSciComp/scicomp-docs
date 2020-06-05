@@ -64,6 +64,9 @@ For reference, here are the most common softwares:
 * **Matlab:** ``module load matlab`` for the latest Matlab version.
   :doc:`More info <../apps/matlab>`.
 
+If one of these ``module load`` commands does not work at your site,
+try ``module spider $NAME`` and see if you can find it.  This is
+actually covered under the upcoming :doc:`modules <modules>` tutorial.
 
 Singularity containers
 ======================
