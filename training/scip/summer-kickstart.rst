@@ -42,7 +42,10 @@ University specific information:
 
 * `University of Helsinki <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART>`__
 
-* Tampere:
+* Tampere: this course is recommended for all new Narvi users and also all
+  interested in HPC. Most things should work with simply replacing triton 
+  -> narvi. Some differences in configuration are listed in 
+  `Narvi differences <https://narvi-docs.readthedocs.io/narvi/kickstart-diffs.html>`__
 
 
 Practical information
@@ -101,7 +104,7 @@ informal help session to get you started with the computing resources.
     * Aalto: :doc:`/triton/usage/workflows`
     * Helsinki: `Remote access to university resources
       <https://wiki.helsinki.fi/display/it4sci/Remote+access+to+University+resources>`__
-    * Tampere:
+    * Tampere: `Tampere workflows <https://narvi-docs.readthedocs.io/narvi/usage/workflows.html>`__
 
   * Module #1.5 (.5h): **Connecting to the cluster** // tutorial //
     Get connected in preparation for day 2 // Enrico Glerean
@@ -110,7 +113,7 @@ informal help session to get you started with the computing resources.
       </triton/tut/connecting>` – if you can ssh to Triton and run
       ``hostname``, you are ready for tomorrow.
     * Helsinki:
-    * Tampere:
+    * Tampere: `Connecting to Narvi <https://narvi-docs.readthedocs.io/narvi/tut/connecting.html>`__
 
 * **Day #2 (Tue 9.jun):**
 
@@ -124,7 +127,7 @@ informal help session to get you started with the computing resources.
 
       * Aalto: (link above)
       * Helsinki:
-      * Tampere:
+      * Tampere: `Connecting to Narvi <https://narvi-docs.readthedocs.io/narvi/tut/connecting.html>`__
 
     * :doc:`/triton/tut/applications`
     * :doc:`/triton/tut/modules`
@@ -132,7 +135,7 @@ informal help session to get you started with the computing resources.
 
       * Aalto: (link above)
       * Helsinki:
-      * Tampere:
+      * Tampere: `Narvi storage <https://narvi-docs.readthedocs.io/narvi/tut/storage.html>`__
 
     * :doc:`/triton/tut/interactive`
     * :doc:`/triton/tut/serial`
@@ -145,6 +148,7 @@ informal help session to get you started with the computing resources.
 
     * :doc:`/triton/tut/array`
     * :doc:`/triton/tut/gpu`
+      * Tampere: `Narvi GPU computing differences <https://narvi-docs.readthedocs.io/narvi/tut/gpu.html>`__
     * :doc:`/triton/tut/parallel`
 
   * Module #3.2 (1.5h): **HTCondor** (at Aalto) // lecture with demos
