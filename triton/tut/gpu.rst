@@ -33,9 +33,6 @@ they generally outperform the best desktop GPUs.
    Please ensure you have read :doc:`interactive` and :doc:`serial`
    before you proceed with this tutorial.
 
-   You can see the main article: :doc:`../usage/gpu` for more
-   detailed information. 
-
 GPU jobs
 --------
 
@@ -154,7 +151,7 @@ This also shows the GPU utilization.
    speedup is relevant here.
 
 Monitoring CPUs
-^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~
 
 If the GPU utilization of your jobs are low, you can do
 the ``seff <jobID>`` command and see if the CPU utilization is 100%.
@@ -169,7 +166,7 @@ and they would go to waste (For the K80 nodes, we have only 1.5 CPUs per
 GPU, but on all others we have 4-6 CPUs/GPU).
 
 Input/output
-^^^^^^^^^^^^
+~~~~~~~~~~~~
 
 Deep learning work is intrinsically very data-hungry.  Remember what
 we said about storage and input/output being important before
@@ -229,8 +226,9 @@ Exercises
 What's next?
 ------------
 
-Check out our :doc:`reference information <../usage/gpu>` about GPU
-computing, including examples of different machine learning frameworks.
+You can see the main article: :doc:`../usage/gpu` for more
+detailed information regarding GPU computing,
+including examples of different machine learning frameworks.
 
 This guide assumes you are using pre-existing GPU programs.  If you
 need to write your own, that's a whole other story, and you can find
