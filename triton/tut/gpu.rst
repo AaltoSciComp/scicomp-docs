@@ -154,7 +154,7 @@ This also shows the GPU utilization.
    speedup is relevant here.
 
 Monitoring CPUs
-^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~
 
 If the GPU utilization of your jobs are low, you can do
 the ``seff <jobID>`` command and see if the CPU utilization is 100%.
@@ -169,7 +169,7 @@ and they would go to waste (For the K80 nodes, we have only 1.5 CPUs per
 GPU, but on all others we have 4-6 CPUs/GPU).
 
 Input/output
-^^^^^^^^^^^^
+~~~~~~~~~~~~
 
 Deep learning work is intrinsically very data-hungry.  Remember what
 we said about storage and input/output being important before
