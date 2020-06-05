@@ -23,7 +23,7 @@ A module lets you adjust what software is available,
 and makes it easy to switch between different versions. 
 
 As an example, let's inspect the ``gcc`` module (abbreviated output
-shown)
+shown) with ``module show gcc``:
 
 .. code-block:: none
 
@@ -107,8 +107,8 @@ un-explainable bugs - it may be best to explicitly load what you
 need. 
 
 
-Exercise: Where is Matlab?
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Type-along: Where is Matlab?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Let's say you want to use Matlab.  You log in and try in the shell::
 
@@ -148,9 +148,9 @@ It never hurts to double check the version and in fact is recommended. So let's 
     1) matlab/r2019b
 
 
-Exercise: Where is R?
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-If you don't specify the version - just as the above Matlab example - the default version of the module is usually loaded, whichis usually the latest version. 
+Type-along: Where is R?
+^^^^^^^^^^^^^^^^^^^^^^^
+If you don't specify the version - just as the above Matlab example - the default version of the module is usually loaded, which is usually the latest version. 
 The default version, however,is not always latest version.  To see an example, let's see what versions of R are available::
 
   $ module spider r
@@ -192,12 +192,26 @@ To load the latest version of R, use the *fullName* of the module::
 
   $ module load r/3.6.1-python3
 
-.. note::
 
-  We upgrade the modules from time to time and so the default version may change. 
-  Thus, it is always a good idea to load a particular version of the modules 
-  when compiling and subsequently for all your future runs.
-  
+Module versions
+---------------
+
+What's the difference between ``module load r`` and ``module load
+r/3.6.1-python3``?
+
+The first loading ``r`` loads the latest one.  The second loading
+``r/3.6.1-python3`` loads that exact version, which is supposed to not
+change.  If you always want the latest of something, you can load it
+without the version (but then *when* stuff randomly stops working, you're
+going to have to figure out what happened).  Once you are past that
+(possibly from day one!), it's usually a good idea to load specific
+version, so that your environment will stay the same until you are
+done.
+
+This is most important for compiled software, but applies to
+everything.
+
+
 
 What's going on under the hood here?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -209,7 +223,11 @@ even if there are multiple versions available.  You can see these variables
 with the **echo** command, e.g. ``echo $PATH``.
 
 When you load a module in a shell, the module command changes the current shell's environment variables,
-and the environment variables are passed on to all the child processes. 
+and the environment variables are passed on to all the child processes.
+
+You can explore more with ``module show $NAME``.
+
+
 
 Making a module collection
 --------------------------
@@ -273,11 +291,6 @@ should usually be put into the job script.
 The modules used to compile and run a program become part of its
 environment and must always be loaded.
 
-If you are compiling things and want them to work in the future, load a
-particular version of the module (``module load $name/$version``)
-Then, things will keep working even if we upgrade in the meantime (in
-fact, this is a primary advantage of modules)
-
 We use the Lmod system and Lmod works by changing environment variables.  
 Thus, they must be *sourced* by a shell and are only transferred to child processes.
 Anything that clears the environment clears the loaded modules too. Module
@@ -285,14 +298,15 @@ loading is done by special functions (not scripts) that are
 shell-specific and set environment variables.
 
 Some modules are provided by Aalto Science-IT, some by CSC.  You could
-even make your own user modules if needed.
+even `make your own user modules
+<https://lmod.readthedocs.io/en/latest/020_advanced.html>`__.
 
 
 
 Exercises
 ---------
 
-Before each exercise, ``module purge`` to clear all modules.
+Before each exercise, run ``module purge`` to clear all modules.
 
 1. ``module avail`` and check what you see.  Find a software that has 
    many different versions available.  
@@ -307,7 +321,7 @@ Before each exercise, ``module purge`` to clear all modules.
 3. (Advanced) Same as number 2, but use ``env | sort >
    filename`` to store environment variables, then swap to
    ``py-gpaw/1.3.0-openmpi-scalapack-python3``.  Do the same, and compare the two outputs
-   using ``diff``
+   using ``diff``.
 
 4. Load a module with many dependencies, such as
    ``R/3.3.2-iomkl-triton-2017a-libX11-1.6.3`` and save it as a
