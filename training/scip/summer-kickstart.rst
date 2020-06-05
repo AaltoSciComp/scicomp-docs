@@ -241,4 +241,10 @@ How to attend this course:
     end.
 
 
+Streaming
+---------
 
+This workshop may be streamed, so that anyone can follow along.  We
+are still deciding if we will do this, but if we do it will be at the
+`CodeRefinery Twitch stream, https://www.twitch.tv/coderefinery
+<https://www.twitch.tv/coderefinery>`__.
