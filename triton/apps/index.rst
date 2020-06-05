@@ -56,11 +56,10 @@ your request to the tracker.  We want to support as much software as
 possible, but unfortunately we don't have the resources to do
 everything centrally.
 
-Software is generally easy to install if it is in `Easybuild
-<https://github.com/easybuilders/easybuild-easyconfigs/find/master>`__
-(use the find file feature to see if an easyconfig is there) or `Spack
+Software is generally easy to install if it is in `Spack
 <https://spack.readthedocs.io/en/latest/package_list.html>`__ (check
-that package list page).  If it has easy-to-install Ubuntu packages,
+that package list page), a scientific software management and building
+system.  If it has easy-to-install Ubuntu packages,
 it will be easy to do via :doc:`singularity <../usage/singularity>`.
 
 
