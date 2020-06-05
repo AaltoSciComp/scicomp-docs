@@ -102,6 +102,8 @@ instructions to connect to Triton.
 Advanced options
 ----------------
 
+You can :doc:`verify the ssh key fingerprints <../usage/ssh-fingerprints>`.
+
 See the :doc:`advanced ssh information </scicomp/ssh>` to learn how
 to log in without a password, automatically save your username 
 and more. It really will save you time.
