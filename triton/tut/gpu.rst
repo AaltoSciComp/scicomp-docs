@@ -86,16 +86,16 @@ module. You can see what versions of CUDA is available using ``module spider``::
 When submitting a batch script, you need to load the ``cuda`` module,
 compile your code, and subsequently run the executable.
 An example of such a submission script is shown below wherein the
-output of the code is written to a file named ``hello.out``
+output of the code is written to a file named ``helloworld.out``
 in the current directory::
 
    #!/bin/bash
-   #SBATCH --time=00:35:00
-   #SBATCH --job-name=gpuTest
+   #SBATCH --time=00:05:00
+   #SBATCH --job-name=helloworld
    #SBATCH --mem-per-cpu=500M
-   #SBATCH --cpus-per-task=2
+   #SBATCH --cpus-per-task=1
    #SBATCH --gres=gpu:1
-   #SBATCH --output=hello.out
+   #SBATCH --output=helloworld.out
 
    module load cuda
    nvcc helloworld.cu -o helloworld
@@ -225,7 +225,7 @@ Exercises
 What's next?
 ------------
 
-You can see the main article: :doc:`../usage/gpu` for more
+You can see the main article, :doc:`../usage/gpu`, for more
 detailed information regarding GPU computing,
 including examples of different machine learning frameworks.
 
