@@ -2,168 +2,117 @@
 GPU computing
 =============
 
-.. seealso::
+Introduction
+------------
 
-   This tutorial assumes you have read :doc:`interactive`.
+GPUs, short for graphical processing unit, are massively-parallel 
+processors that are optimized to perform parallel operations. 
+Computations that might take days to run on CPUs, take substantially 
+less time on GPUs. This speed-up specially comes in handy when dealing 
+with large amounts of data, e.g. in machine learning/deep learning tasks, 
+which is why GPUs have become an indispensable tool in the research community. 
 
-   Main article: :doc:`../usage/gpu`
-
-.. highlight:: bash
-
-GPUs and accelerators are basically very special parallel processors:
-they can apply the same instructions to a big chunk of data at the
-same time.  The speedup can be  100x or more... but only in the
-specific cases where your code fits the model.  It happens that
-machine learning/deep learning methods are able to use this type of
-parallelism, so now these are the standard for this type of research.
+The programs we normally write in common programming languages, e.g. C++ are
+executed by the CPU. We need to explicitly communicate with the GPU if we want
+GPU to execute the program. That is, upload the program and the input data to the GPU,
+and transfer the result from the GPU to the main memory. What enable this procedure 
+are programming environments designed to communicate with GPUs in such a manner.
+An example of such an API is `CUDA <https://en.wikipedia.org/wiki/CUDA>`_ 
+which is the native programming interface for NVIDIA GPUs.
 
 On Triton, we have a large number of NVIDIA GPU cards from different
-generations, and are constantly getting more.  Our GPUs are not your
+generations and currently only support CUDA. Triton GPUs are not the
 typical desktop GPUs, but specialized research-grade server GPUs with
-large memory, high bandwidth and specialized instructions. For
-scientific purposes they generally exceed the best desktop GPUs.
-
-Some nomenclature: a GPU is a graphical processing unit, CUDA is the
-software interface for Nvidia GPUs. Currently we only support CUDA.
+large memory, high bandwidth and specialized instructions,
+that are constantly increasing in number. For scientific purposes,
+they generally outperform the best desktop GPUs.
 
 
-Getting started
----------------
+.. seealso::
 
-GPUs are, just like anything, resources which are scheduled by slurm.
-So in addition to time, memory, and CPUs, you have to specify how many
-GPUs you want.  This is done with the ``--gres`` (generic resources)
-option::
+   Please ensure you have read :doc:`interactive` and :doc:`serial`
+   before you proceed with this tutorial.
 
-  srun --gres=gpu:1 $my_code
+   You can see the main article: :doc:`../usage/gpu` for more
+   detailed information. 
 
-This means you request the ``gpu`` resources, and one of them
-(``1``).  Combining this with the other required slurm options::
+GPU jobs
+--------
 
-  srun --gres=gpu:1 -t 2:00:00 --mem=10G -c 3
+To request GPUs on Slurm, you should use the ``--gres`` option either in 
+your batch script or as a command-line argument to your interactive job.
+Used with a SBATCH directive in a batch script, exactly one  GPU is 
+requested as follows. ::
 
-... and you've got yourself the basics.  Of course, once you are ready
-for serious runs, you should put your code into :doc:`slurm scripts <serial>`.
+   #SBATCH --gres=gpu:1
+  
+You can request as many GPUs as you'd like using ``#SBATCH --gres=gpu:<n>``
+wherein ``n`` denotes the number of the requested GPUs.
 
-If you want to restrict yourself to a certain type of card, you should
-use the ``--constraint`` option.  For example, to restrict to Kepler
-generation (K80s), use ``--constraint=kepler`` or all new cards,
-``--constraint='pascal|volta'`` (note the quotes - this is very
-important, because ``|`` is a shell pipe symbol!).
+.. note::
 
-Our available GPUs and architectures:
+   Most of the time, using more than one GPU isn't worth it, unless you
+   specially optimize, because communication takes too much time.  It's
+   better to parallelize by splitting tasks into different jobs.
 
-.. include:: ../ref/gpu.rst
+You can restrict yourself to a certain type of GPU card by using
+using the ``--constraint`` option.  For example, to restrict to Kepler
+generation (K80s), use ``--constraint='kepler'`` or only Pascal or Volta
+generations with ``--constraint='pascal|volta'`` (Remember to use the quotes
+since ``|`` is the shell pipe)
 
-Ready software
---------------
+Available machine learning frameworks
+-------------------------------------
 
-We support these machine learning packages out of the box:
+We support the following machine learning frameworks out of the box:
 
 * :doc:`Tensorflow <../apps/tensorflow>`:
-  ``anaconda`` module.  Use ``--constraint='kepler|pascal|volta'``.
+  ``module load anaconda/2020-02-tf2``.
   See the Tensorflow page for info on older versions.
-* Keras: same module as tensorflow
-* PyTorch: same module as tensorflow
+* Keras: ``module load anaconda/2020-02-tf2``
+* PyTorch:``module load anaconda/2020-02-tf2``
 * :doc:`Detectron <../apps/detectron>`: via :doc:`singularity images <../usage/singularity>`
 * CNTK: via :doc:`singularity images <../usage/singularity>`
 
-Do note that most of the pre-installed software has CUDA already present.
-Thus you **do not need to load CUDA** as a module when loading these.
+Please note that most of the pre-installed softwares have CUDA already present.
+Thus you **do not need to load CUDA** as a seperate module when loading these.
 See the :ref:`application list <application-list>` or :doc:`GPU
 computing reference <../usage/gpu>` for more details.
 
-Compiling code yourself
------------------------
+Compiling CUDA-based code
+-------------------------
 
-To compile things for GPUs, you need to load the relevant ``CUDA``
-modules::
+To compile CUDA-based code for GPUs, you need to load the relevant ``cuda``
+module. You can see what versions of CUDA is available using ``module spider``::
 
-  module avail cuda
-  module load gcc
-  module load cuda
+   module spider cuda
 
-  nvcc cuda_code.cu -o cuda_code         # compile your CUDA code
+When submitting a batch script, you need to load the ``cuda`` module,
+compile your code, and subsequently run the executable.
+An example of such a submission script is shown below wherein the 
+output of the code is written to a file named ``hello.out``
+in the current directory::
+  
+   #!/bin/bash
+   #SBATCH --time=00:35:00
+   #SBATCH --job-name=gpuTest
+   #SBATCH --mem-per-cpu=500M
+   #SBATCH --cpus-per-task=2
+   #SBATCH --gres=gpu:1
+   #SBATCH --output=hello.out
 
-More information is in the :doc:`reference <../usage/gpu>`, but most
-people will use pre-built software through channels such as Anaconda
-for Python.
+   module load cuda
+   nvcc helloworld.cu -o helloworld
+   ./helloworld
 
-Making efficient use of GPUs
-----------------------------
+.. note::
 
-When running a job, you want to check that the GPU is being fully
-utilized.  To do this, ssh to your node (while the job is running),
-and run ``nvidia-smi``, find your process (which might take some work)
-and check the ``GPU-Util`` column.  It should be close to 100%,
-otherwise see below.
-
-After job has finished, you can use ``slurm history`` to obtain the
-``JobID`` and run::
-
-   sacct -j INSERT_JOBID_HERE -o comment -p
-
-This will show the GPU utilization.  If this is low, then what?  Check
-the normal ``seff`` command and see if the CPU utilization is 100%.
-This could mean that the GPUs are not able to supply data fast enough,
-see the section on CPUs below.  Similarly, your code may not be able
-to load data fast enough, see the input/output section below.
-
-Also, is your code itself efficient enough?  Are you using the
-framework pipelines the way they should work?  Is it only using GPU
-for a small portion of the entire task?  `Amdahl's law
-<https://en.wikipedia.org/wiki/Amdahl's_law>`__ of parallelization
-speedup is relevant here.
-
-Enough CPUs
-~~~~~~~~~~~
-
-When using a GPU, you need to also request enough CPUs to supply the
-data to the process.  So, increase the number of CPUs you request so
-that you can provide the GPU with enough data.  However, don't request
-too many: then, there aren't enough CPUs for everyone to use the GPUs,
-and they go to waste!  (For the K80 nodes, we have only 1.5 CPUs per
-GPU, but on all others we have 4-6 CPUs/GPU)
-
-Input/output
-~~~~~~~~~~~~
-
-Deep learning work is intrinsically very data-hungry.  Remember what
-we said about storage and input/output being important before
-(:doc:`in the storage tutorial <storage>`)?  Now
-it's really important.  In fact, faster memory bandwidth is the main
-improvement of our server-grade GPUs compared to desktop models.
-
-If you are loading lots of data, package the data into a container
-format first: lots of small files are your worst enemy, and we have a
-:doc:`dedicated page on small files <../usage/smallfiles>`.  Each
-framework has a way to do this efficiently in a whole pipeline.
-
-If your dataset consists of individual files and it is not too big,
-it is a good idea to have the data stored in one file, which is then
-copied to nodes ramdisk ``/dev/shm`` or temporary disk ``/tmp``.
-
-If your data is too big to fit to the disk, we recommend that you
-contact us for efficient data handling models.
-
-Other
-~~~~~
-
-Most of the time, using more than one GPU isn't worth it, unless you
-specially optimize, because communication takes too much time.  It's
-better to parallelize by splitting tasks into different jobs.
-
-FAQ
----
-
-If you ever get ``libcuda.so.1: cannot open shared object file: No such
-file or directory``, this means you are attempting to use a CUDA
-program on a node without a GPU.  This especially happens if you try
-to test GPU code on the login node, and happens (for example) even if
-you try to import the GPU ``tensorflow`` module in Python on the login
-node.
-
-
+   If you ever get ``libcuda.so.1: cannot open shared object file: No such
+   file or directory``, this means you are attempting to use a CUDA
+   program on a node without a GPU.  This especially happens if you try
+   to test GPU code on the login node, and happens (for example) even if
+   you try to import the GPU ``tensorflow`` module in Python on the login
+   node.
 
 Examples
 ---------
@@ -173,6 +122,82 @@ Examples
 .. include:: ../examples/pytorch/pytorch_mnist.rst
 
 .. include:: ../examples/cntk/cntk_mnist.rst
+
+Monitoring efficient use of GPUs
+--------------------------------
+
+When running a GPU job, you should check that the GPU is being fully
+utilized. Additionally, for the sake of troubleshooting and ensuring 
+that GPU is executing your code, not GPUs, you can run an interactive job::
+
+   sinteractive --gres=gpu:1 --time=1:00:00 --mem=1G -c 3
+
+When assigned a node in the GPU partition, you can ``ssh`` to the node
+and run ``nvidia-smi``. You can find your process by e.g. using ``htop``
+and inspect the ``GPU-Util`` column. It should be close to 100%.
+
+
+Once the job has finished, you can use ``slurm history`` to obtain the
+``jobID`` and run::
+
+   sacct -j <jobID> -o comment -p
+
+This also shows the GPU utilization. 
+
+.. note::
+
+   There are factors to be considered regarding efficient use of GPUs.
+   For instance, is your code itself efficient enough? Are you using the
+   framework pipelines in the intended fashion? Is it only using GPU
+   for a small portion of the entire task?  `Amdahl's law
+   <https://en.wikipedia.org/wiki/Amdahl's_law>`__ of parallelization
+   speedup is relevant here.
+
+Monitoring CPUs
+^^^^^^^^^^^^^^^
+
+If the GPU utilization of your jobs are low, you can do
+the ``seff <jobID>`` command and see if the CPU utilization is 100%.
+This could mean that the GPUs are not able to supply data fast enough.
+
+Please keep in mind that when using a GPU, you need to also 
+request enough CPUs to supply the data to the process. 
+So, you can increase the number of CPUs you request so that 
+enough data is provided for the GPU. However, you shouldn't request
+too many: There wouldn't be enough CPUs for everyone to use the GPUs,
+and they would go to waste (For the K80 nodes, we have only 1.5 CPUs per
+GPU, but on all others we have 4-6 CPUs/GPU).
+
+Input/output
+^^^^^^^^^^^^
+
+Deep learning work is intrinsically very data-hungry.  Remember what
+we said about storage and input/output being important before
+(:doc:`Data storage <storage>`)? This matter becomes very important
+when working with GPUs. In fact, faster memory bandwidth is the main
+improvement of our server-grade GPUs compared to desktop models.
+
+If you are loading big amounts of data, you should package 
+the data into a container format first; lots of small files 
+are your worst enemy.  Each framework has a way to do this 
+efficiently in a whole pipeline.
+
+.. seealso::
+
+   Please refer to the :doc:`small files <../usage/smallfiles>` page 
+   for more detailed information.
+
+If your data consists of individual files that are not too big,
+it is a good idea to have the data stored in one file, which is then
+copied to nodes ramdisk ``/dev/shm`` or temporary disk ``/tmp``.
+
+If your data is too big to fit in the disk, we recommend that you
+contact us for efficient data handling models.
+
+Available GPUs and architectures
+--------------------------------
+
+.. include:: ../ref/gpu.rst
 
 Exercises
 ---------
@@ -201,15 +226,11 @@ Exercises
    :download:`cntk_mnist_ex4.py</triton/examples/cntk/cntk_mnist_ex4.py>` 
    :download:`cntk_mnist_ex4.sh</triton/examples/cntk/cntk_mnist_ex4.sh>`.
 
-Next steps
-----------
+What's next?
+------------
 
-Check out or :doc:`reference information <../usage/gpu>` about GPU
-computing, including examples of different machine learning languages.
-
-If you came straight to this page, you should also read
-:doc:`interactive` and :doc:`serial` (actually you should have read
-them first, but don't worry).
+Check out our :doc:`reference information <../usage/gpu>` about GPU
+computing, including examples of different machine learning frameworks.
 
 This guide assumes you are using pre-existing GPU programs.  If you
 need to write your own, that's a whole other story, and you can find
