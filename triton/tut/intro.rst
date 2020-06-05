@@ -51,19 +51,18 @@ However, research is not a consumer product, and the fact is that you
 need more knowledge to use Triton than most people learn in academic
 courses.
 
-Science-IT has created a (still under development) :doc:`modular
-training plan <../../training/index>`, divided into A (basics, use
-basic software), B (Linux usage), C (high performance computing), and
-D (advanced HPC).  In order to use Triton well, you need to be somewhat
-proficient at Linux usage (B level).  In order to do parallel work,
-you need to be good at the B-level and also somewhat proficient at the
-HPC level (C-level).  This tutorial and user guide covers the C-level,
-but it is up to you to reach the B-level first.
+Science-IT has created a (still under development) `modular
+training plan <https://handsonscicomp.readthedocs.io>`__, which
+divides useful knowledge into levels.  In order to use Triton well, you need to be somewhat
+proficient at Linux usage (C level).  In order to do parallel work,
+you need to be good at the D-level and also somewhat proficient at the
+HPC level (E-level).  This tutorial and user guide covers the D-level,
+but it is up to you to reach the C-level first.
 
-See our :doc:`training program and plan <../../training/index>` for
+See our `training program and plan <https://handsonscicomp.readthedocs.io>`__ for
 suggested material for self-study and lessons.  We offer routine
-training, see our `Scientific Computing in Practice lecture series
-<http://science-it.aalto.fi/scip/>`__ page for info.
+training, see our :doc:`Scientific Computing in Practice lecture series
+</training/scip/index>` page for info.
 
 
 
@@ -92,7 +91,7 @@ time answering the same questions over and over.
 Also, always search this scicomp docs site and old issues in the issue
 tracker.
 
-We have weekly :doc:`"SciComp garage" <../../news/garage>` sessions
+We have weekly :doc:`"SciComp garage" </news/garage>` sessions
 where we provide help in person.
 
 However, the most important thing is to be able to continually develop
