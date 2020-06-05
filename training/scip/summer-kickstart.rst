@@ -2,6 +2,22 @@
 Jun 2020 / FGCI Summer Kickstart
 ==================================
 
+.. admonition:: News
+
+   This workshop may be streamed.  This is not decided yet, but if it
+   is, it will be at https://twitch.tv/coderefinery.
+
+   Before the workshop:
+
+   * See the :ref:`prerequisites <kickstart-2020-prereq>` below.
+
+   * Request a HPC account (see university-specific instructions in
+     prerequisites).
+
+   * Verify you can connect to your cluster (but if you can't, the
+     last thing on Monday will a help session to get it working).
+
+
 Part of the :doc:`Scientific Computing in Practice
 </training/scip/index>` lecture series at Aalto University.
 
@@ -156,6 +172,7 @@ informal help session to get you started with the computing resources.
     distributed computing? HTCondor lets you // Matthew West
 
 
+.. _kickstart-2020-prereq:
 
 Prerequisites
 -------------
@@ -169,7 +186,8 @@ cluster or Triton for running examples.
     account </triton/accounts>` in advance.
   * Helsinki: `Account notes at the bottom of this page <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART>`__
   * Tampere: your cluster will require ssh keys to connect.
-  * Others: Aalto will provide you with a guest Triton account.
+  * Others: Aalto will provide you with a guest Triton account, check
+    back for more information.
 
 * Participants are expected to have a SSH client installed (for
   options, see :doc:`the Triton connecting tutorial for examples
