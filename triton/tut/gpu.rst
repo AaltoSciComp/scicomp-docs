@@ -17,7 +17,7 @@ executed by the CPU. We need to explicitly communicate with the GPU if we want
 GPU to execute the program. That is, upload the program and the input data to the GPU,
 and transfer the result from the GPU to the main memory. What enable this procedure 
 are programming environments designed to communicate with GPUs in such a manner.
-An example of such an API is `CUDA <https://en.wikipedia.org/wiki/CUDA>_` 
+An example of such an API is `CUDA <https://en.wikipedia.org/wiki/CUDA>`_ 
 which is the native programming interface for NVIDIA GPUs.
 
 On Triton, we have a large number of NVIDIA GPU cards from different
