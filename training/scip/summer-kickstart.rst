@@ -150,19 +150,45 @@ informal help session to get you started with the computing resources.
 
     * :doc:`/triton/tut/connecting`
 
+      * Every site will have its own ways of connecting.  The basic
+	lessons of ``ssh`` is the same for everyone, but it will have
+	a different hostname and possibly different initial steps
+	(jump hosts).
       * Aalto: (same)
       * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART>`__
-      * Tampere: `Connecting to Narvi <https://narvi-docs.readthedocs.io/narvi/tut/connecting.html>`__
+      * Tampere: `Connecting to Narvi
+	<https://narvi-docs.readthedocs.io/narvi/tut/connecting.html>`__.
+	Note, that you will need SSH keys.
 
     * :doc:`/triton/tut/applications`
+
+      * Each site will be quite different here, so don't worry about
+	making the exercises work outside of Aalto, but think and
+	prepare for what comes next (where we'll explain the differences).
+
     * :doc:`/triton/tut/modules`
+
+      * In other sites, you should ``module load fgci-common`` to be
+	able to make the Aalto modules available.  Other specifics,
+	such as ``matlab``, won't directly work.
+
     * :doc:`/triton/tut/storage`
 
       * Aalto: (same)
       * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART>`__
       * Tampere: `Narvi storage <https://narvi-docs.readthedocs.io/narvi/tut/storage.html>`__
+      * This topic is *very* site-specific.  The general principles
+	will apply everywhere, but the exact paths/servers will vary.
 
     * :doc:`/triton/tut/interactive`
+
+      * The basic Slurm concepts are the same across all clusters (at
+	least all those that use Slurm, but that is everyone in
+	Finland).  However, partition names may be different.  You can
+	list partitions at your site using ``sinfo -O partition`` and
+	list nodes at your site with ``sinfo -N``.  How these work
+	will vary depending on your site - definitely read up on this.
+
     * :doc:`/triton/tut/serial`
 
 * **Day #3 (Wed 10.jun):**
