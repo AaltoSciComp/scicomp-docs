@@ -14,6 +14,9 @@ reused, so that you can be cited?
 This page is specifically about packaging and distribution, and
 doesn't repeat standard programming practices for scientists.
 
+`Watch a related talk in video form
+<https://www.youtube.com/watch?v=NSemlYagjIU>`__.
+
 
 
 Use the proper tools
