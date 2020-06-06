@@ -184,9 +184,26 @@ On different operating systems:
   Use the URLs above but replace ``smb://`` with ``\\`` and ``/`` with
   ``\``.  For example, ``\\data.triton.aalto.fi\scratch\``.
 * Mac: Finder → Go → Connect to Server.  Use the ``smb://`` URLs above.
+* From Aalto managed computers, you can use ``lgw01.triton.aalto.fi``
+  instead of ``data.triton.aalto.fi`` and it might auto-login.
 
 Depending on your OS, you may need to use either your username
 directly or ``AALTO\username``.
+
+.. warning::
+
+   In the future, you will only be able to do this from Aalto managed
+   computers.  This remote mounting will really help your work, so we
+   recommend you to request an Aalto managed computer (citing this
+   section) to make your work as smooth as possible (or use
+   vdi.aalto.fi, see below.
+
+
+Via `vdi.aalto.fi <https://vdi.aalto.fi>`__
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+vdi.aalto.fi (described under :doc:`connecting`) has Triton
+directories mounted (see below).
 
 
 Remote mounting using sshfs
@@ -292,9 +309,10 @@ expire, and you have to renew them with ``kinit`` to keep going.
 Generic
 ^^^^^^^
 
-The staff shell server ``taltta.aalto.fi`` has scratch and work mounted
-at ``/m/triton``, and department directories are also in the standard
-paths ``/m/{cs,nbe}/{scratch,work}/``.
+The staff shell server ``taltta.aalto.fi`` has scratch and work
+mounted at ``/m/triton``. Department workstations and vdi.aalto.fi
+have directories are also in the standard paths
+``/m/{cs,nbe}/{scratch,work}/``.
 
 NBE
 ^^^
