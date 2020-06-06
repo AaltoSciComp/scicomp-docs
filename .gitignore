@@ -1,6 +1,7 @@
 /_build/
 .DS_Store
-warnings.txt   # from "make check"
+# from "make check":
+warnings.txt
 
 # Emacs backup files
 *~
