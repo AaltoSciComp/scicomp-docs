@@ -27,29 +27,24 @@ advanced way of submitting jobs, batch scripts.
 Your first interactive job
 ==========================
 
-Let's say you want to run the following program
+Let's say you want to run the following command::
 
-::
-
-    python3 -c 'import os; print("hi from", os.uname().nodename)'
+    $ python3 -c 'import os; print("hi from", os.uname().nodename)'
 
 You can submit this program to Triton using ``srun``. All input/output still goes to your terminal
-(but note X forwarding for graphical applications doesn't work - see
-below).
-
-:: 
+(but note that graphical applications don't work this way - see
+below)::
 
     $ srun --mem=100M --time=1:00:00 python3 -c 'import os; print("hi from", os.uname().nodename)'
     srun: job 52204499 queued and waiting for resources
 
-Here, we are asking for 100 Megabytes of memory for a duration of an hour. 
+Here, we are asking for 100 Megabytes of memory (``--mem=100M``) for a
+duration of an hour (``--time=1:00:00``).
 While your job - with **jobID** 52204499 - is waiting to be allocated resources, your shell
 effectively become non-interactive. 
 
 You can open a new shell on triton and run the command ``slurm q`` to see all the jobs
-you have submitted to the queue
-
-::
+you have submitted to the queue::
 
   $ slurm q
   JOBID              PARTITION NAME                  TIME       START_TIME    STATE NODELIST(REASON)
@@ -65,9 +60,7 @@ You can see information such as the state, which partition the requested node re
   the process cancels and you have to run the ``srun`` command again. 
 
 Once resources are allocated to your job, you see the name of the machine
-in the Triton cluster your program ran on, output to your terminal
-
-::
+in the Triton cluster your program ran on, output to your terminal::
 
   srun: job 52204499 has been allocated resources
   hi from ivb17.int.triton.aalto.fi
@@ -80,17 +73,19 @@ in the Triton cluster your program ran on, output to your terminal
    Additionally, if your task is small and not worth writing a batch script for, 
    interactive job is the way to go.
 
+   Don't go opening 20 shells to run 20 ``srun`` jobs at once.  Look
+   at the :doc:`next tutorial about serial jobs <serial>`.
+
 
 Interactive shell
 =================
 
 What if you want an actual shell to do things interactively? 
 Put more precisely, you want access to a node in the cluster
-through an interactive bash shell. 
+through an interactive bash shell that has all of the requested
+resources available.
 For this, you just need srun's ``--pty`` option coupled with the shell
-you want
-
-::
+you want::
 
   srun -p interactive --time=2:00:00 --mem=600 --pty bash 
 
@@ -100,7 +95,9 @@ computation nodes with at least 600 Megabytes of memory,
 for a duration of 2 hours, where you can run your programs in. 
 
 The option ``-p interactive`` requests a node in the interactive
-partition which is dedicated to interactive usage (more on this later). 
+**partition** which is dedicated to interactive usage (more on this
+later).  A partition is a group of nodes you can run on, with set
+limits.
 
 .. note::
 
@@ -238,11 +235,13 @@ Exercises
       how much time each process used?  What's the relation between
       TotalCPUTime and WallTime?
 
-3. Check out some of these commands: ``sinfo``, ``squeue``.  Run
+3. Check out some of these commands: ``sinfo``, ``sinfo -N``, ``squeue``.  Run
    ``slurm job $jobid`` on some running job - does anything
    look interesting?
 
-4. Run ``scontrol show node wsm1``  What is this?
+4. Run ``scontrol show node csl1``  What is this?  (``csl1`` is the
+   name of a node on Triton - if you are not on Triton, look at the
+   ``sinfo -N`` command and try one of those names).
 
 
 
