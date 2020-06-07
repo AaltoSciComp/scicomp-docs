@@ -198,7 +198,8 @@ You can clone the repository by running
    uses up a lot of memory to do nothing.  Let's play with it.
    It's run as follows:
    ``python hpc-examples/slurm/memory-hog.py 50M``, where the
-   last argument is however much memory you want to eat.
+   last argument is however much memory you want to eat.  You can use
+   ``--help`` to see the options of the program.
 
    a) Try running the program with ``50M``.
 
