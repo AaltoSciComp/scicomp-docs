@@ -113,7 +113,7 @@ informal help session to get you started with the computing resources.
   * Module #1.2 (1h): **HPC crash course: what is behind the
     front-end** // lecture // HPC fundamentals: terminology,
     architectures, interconnects, infrastructure behind, as well as
-    MPI vs shared memory // Ivan Degtyarenko
+    MPI vs shared memory // Ivan Degtyarenko // `Slides (.pdf) <https://users.aalto.fi/degtyai1/SCiP2020_kick.HPC_crash_course.2020-06-06.pdf>`__
 
   * Module #1.3 (1h): **CSC resources overview** // lecture with demos
     // An overview of CSC computing environment and services
