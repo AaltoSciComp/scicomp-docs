@@ -14,8 +14,8 @@ reused, so that you can be cited?
 This page is specifically about packaging and distribution, and
 doesn't repeat standard programming practices for scientists.
 
-`Watch a related talk in video form
-<https://www.youtube.com/watch?v=NSemlYagjIU>`__.
+`Watch a humorous, somewhat related talk "How to make package managers
+cry" <https://www.youtube.com/watch?v=NSemlYagjIU>`__.
 
 
 
@@ -28,6 +28,9 @@ Learn them and use them.  Don't invent your own way of doing things.
 * `Python (pip) <https://packaging.python.org/tutorials/packaging-projects/>`__
 * `Python (conda via conda-forge) <https://conda-forge.org/docs/>`__
 * `R <https://cran.r-project.org/manuals.html#R-exts>`__
+
+Use the simplest, most boring, reliable, and mainstream system there
+is (that suits your needs).
 
 
 Minimize dependencies
@@ -74,7 +77,9 @@ works in conjunction with all the dependencies.  Perhaps also have a
 minimal example in the README file that someone can use to verify that
 they installed properly (could be the same as the tests).  The tests
 don't have to be fancy, even something that runs the code in a full
-expected use case will let you detect major problems early.
+expected use case will let you detect major problems early.  This way,
+when someone is installing the software for someone else, they can
+check if they did it correctly.
 
 
 Don't expect the latest OS
@@ -119,7 +124,21 @@ but make good packaging first, and use that packaging to install in
 the container.
 
 
+Other
+-----
+
+There is plenty more you should do, but it's not specific to the topic
+of this page.  For example,
+
+* Have versions and releases
+* Use a package repository suitable to your language and tool.
+* Have good documentation
+* Have a changelog
+* etc...
+
+
 See also
 --------
 
+* `Video "How to make package managers cry" <https://www.youtube.com/watch?v=NSemlYagjIU>`__.
 * https://softdev4research.github.io/4OSS-lesson/
