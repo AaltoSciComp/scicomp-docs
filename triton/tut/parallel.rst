@@ -91,7 +91,7 @@ Simple code compiling::
 Running an OpenMP code::
 
   export OMP_PROC_BIND=TRUE
-  srun --cpus-per-task=12 --mem-per-cpu=2000 --time=45:00 omp_program
+  srun --cpus-per-task=4 --mem-per-cpu=2000 --time=00:30:00 omp_program
 
 The basic slurm options you need are ``--cpus-per-task=N`` (or ``-c N``) to specify the number of
 cores to use within one node.  If your memory needs scale with the number of cores,
@@ -101,16 +101,26 @@ node regardless of number of processors), use ``--mem``.
 The SLURM batch file will look similar::
 
   #!/bin/bash -l
-  #SBATCH --cpus-per-task=12
+  #SBATCH --cpus-per-task=4
   #SBATCH  --mem-per-cpu=2000
-  #SBATCH --time=45:00
+  #SBATCH --time=00:30:00
+
   export OMP_PROC_BIND=TRUE
   srun omp_program
 
 Good to know that OpenMP is both an environment and set of libraries, but
-those libraries always come as part of the compiler, thus no need to
-load extra modules if you compile with the default ``gcc``.
+those libraries always come as part of the compiler. Thus during runtime
+you should load the same compiler that you used for compiling the code.
 
+.. warning::
+
+   Normally you should **not** use ``--ntasks=N`` when you want to
+   run shared memory codes. The number of tasks is only relevant to MPI codes
+   and by specifying it you might launch multiple copies of your program
+   that all compete on the reserved CPUs.
+
+   Only hybrid parallelization codes should have both ``--ntasks=N`` and
+   ``--cpus-per-task=C`` to be greater than one.
 
 Other programs and multithreading
 ---------------------------------
@@ -135,7 +145,8 @@ specify the number of MPI threads.
 
 Loading module::
 
-  module load openmpi  # GCC + OpenMPI
+  module load gcc/9.2.0      # GCC
+  module load openmpi/3.1.4  # OpenMPI
 
 Compiling a code::
 
@@ -149,7 +160,7 @@ Running an MPI code in the batch mode::
   #SBATCH --time=4:00:00       # takes 4 hours all together
   #SBATCH --mem-per-cpu=4000   # 4GB per process
 
-  module load openmpi  # NOTE: should same as you used to compile the code
+  module load openmpi/3.1.4  # NOTE: should same as you used to compile the code
   srun ./mpi_prog
 
 
@@ -177,13 +188,19 @@ Exercises
 In ``hpc-examples`` (at ``/scratch/scip/hpc-examples``), you find some
 examples.
 
-2. Find the files ``openmp/hello_omp.c`` and ``openmp/hello_omp.slrm``
-   that have a short
-   example of OpenMP.  Compile and run it - a slurm script is included.
+2. Find the files ``openmp/hello_omp/hello_omp.c`` and 
+   ``openmp/hello_omp/hello_omp.slrm`` that have a short example of OpenMP.
+   Compile and run it - a slurm script is included.
 
-3. Find the files ``mpi/hello_mpi.c`` and ``mpi/hello_mpi.slrm`` that
-   have a short example
-   of MPI.  Compile and run it - a slurm script is included.
+3. Find the files in ``python/python_openmp``. Try running the
+   example with a few different ``--constraint=X`` and ``--cpus-per-task=C``.
+   In your opinion, what architecture / cpu number combination would provide the
+   best efficiency? Use ``seff`` to verify.
+
+4. Find the files ``mpi/hello_mpi/hello_mpi.c`` and
+   ``mpi/hello_mpi/hello_mpi.slrm`` that
+   have a short example of MPI.
+   Compile and run it - a slurm script is included.
 
 Next steps
 ----------
