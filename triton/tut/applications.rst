@@ -121,7 +121,18 @@ Exercises
    Using ``singularity_wrapper``, run ``python -V`` and obtain python version.
    Compare that to the python version on the login node.
    Try ``singularity_wrapper shell`` too and use ``cat`` to check the
-   operating system version stored in ``/etc/issue``: ``cat /etc/issue``.
+   operating system version stored in ``/etc/issue``: ``cat
+   /etc/issue``.  Verify that this is different from what is outside
+   the container.
+
+3. Find the Applications page link above, and check the list for how
+   to find if we already have your software installed.  See if we have
+   what you need, using any of those strategies.
+
+4. (optional) From the Applications page, find the Spack package list
+   (warning: it's a very long page and takes a while to load).  Does
+   it have anything useful to you?
+
 
 
 What's next?
