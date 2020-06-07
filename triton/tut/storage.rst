@@ -184,9 +184,26 @@ On different operating systems:
   Use the URLs above but replace ``smb://`` with ``\\`` and ``/`` with
   ``\``.  For example, ``\\data.triton.aalto.fi\scratch\``.
 * Mac: Finder → Go → Connect to Server.  Use the ``smb://`` URLs above.
+* From Aalto managed computers, you can use ``lgw01.triton.aalto.fi``
+  instead of ``data.triton.aalto.fi`` and it might auto-login.
 
 Depending on your OS, you may need to use either your username
 directly or ``AALTO\username``.
+
+.. warning::
+
+   In the future, you will only be able to do this from Aalto managed
+   computers.  This remote mounting will really help your work, so we
+   recommend you to request an Aalto managed computer (citing this
+   section) to make your work as smooth as possible (or use
+   vdi.aalto.fi, see below.
+
+
+Via `vdi.aalto.fi <https://vdi.aalto.fi>`__
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+vdi.aalto.fi (described under :doc:`connecting`) has Triton
+directories mounted (see below).
 
 
 Remote mounting using sshfs
@@ -241,7 +258,7 @@ With all modern OS it is also possible to just open your OS file manager (e.g. N
 
     sftp://triton.aalto.fi
 
-If you are connecting from remote and cannot use the VPN, you can connect instead to department machines like kosh.aalto.fi, taltta.aalto.fi, amor.org.aalto.fi (for NBE). The port is 22. *Note:* If you do not see your shared folder, you need to manually specify the full path (i.e. the folder is there, just not yet visible).
+If you are connecting from remote and cannot use the VPN, you can connect instead to department machines like kosh.aalto.fi, amor.org.aalto.fi (for NBE). The port is 22. *Note:* If you do not see your shared folder, you need to manually specify the full path (i.e. the folder is there, just not yet visible).
 
 
 Using rsync
@@ -279,11 +296,11 @@ Rsync does NOT delete files by default, i.e. if you delete a file from the local
 Please note that when working with files containing code or simple text, git is a better option to synchronise your local folder with your remote one, because not only it will keep the two folders in sycn, but you will also gain version controlling so that you can revert to previous version of your code, or txt/csv files.
 
 
-Accessing files from Department workstations
-============================================
+Accessing files from workstations and shell servers
+===================================================
 
-This varies per department, with some strategies that work from
-everywhere.
+This varies per department: each department can manage its data as it
+likes.  So, we can't make general promises.
 
 These mounts that are already on workstations require a valid Kerberos
 ticket (usually generated when you log in). On long sessions these might
@@ -292,9 +309,9 @@ expire, and you have to renew them with ``kinit`` to keep going.
 Generic
 ^^^^^^^
 
-The staff shell server ``taltta.aalto.fi`` has scratch and work mounted
-at ``/m/triton``, and department directories are also in the standard
-paths ``/m/{cs,nbe}/{scratch,work}/``.
+Department workstations and vdi.aalto.fi have scratch mounted at the
+standard paths ``/m/{cs,nbe}/{scratch,work}/``.  Actually,
+*everyone's* work directories can be accessed from ``/m/cs/work/``.
 
 NBE
 ^^^
