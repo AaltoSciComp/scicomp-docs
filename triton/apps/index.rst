@@ -17,6 +17,10 @@ When you need software, check the following for instructions (roughly in this or
   <https://version.aalto.fi/gitlab/AaltoScienceIT/triton>`__ for other
   people who have asked - some instructions only live there.
 
+If you have difficulty, it's usually a good idea to search the issue
+tracker anyway, in order to learn from the experience of others.
+
+
 
 Compilers
 ---------
@@ -56,18 +60,17 @@ your request to the tracker.  We want to support as much software as
 possible, but unfortunately we don't have the resources to do
 everything centrally.
 
-Software is generally easy to install if it is in `Easybuild
-<https://github.com/easybuilders/easybuild-easyconfigs/find/master>`__
-(use the find file feature to see if an easyconfig is there) or `Spack
+Software is generally easy to install if it is in `Spack
 <https://spack.readthedocs.io/en/latest/package_list.html>`__ (check
-that package list page).  If it has easy-to-install Ubuntu packages,
+that package list page), a scientific software management and building
+system.  If it has easy-to-install Ubuntu packages,
 it will be easy to do via :doc:`singularity <../usage/singularity>`.
 
 
 
 
-Software list
--------------
+Software documentation pages
+----------------------------
 
 .. csv-table::
    :delim: |

@@ -64,6 +64,9 @@ For reference, here are the most common softwares:
 * **Matlab:** ``module load matlab`` for the latest Matlab version.
   :doc:`More info <../apps/matlab>`.
 
+If one of these ``module load`` commands does not work at your site,
+try ``module spider $NAME`` and see if you can find it.  This is
+actually covered under the upcoming :doc:`modules <modules>` tutorial.
 
 Singularity containers
 ======================
@@ -97,6 +100,13 @@ a request to our :ref:`issue tracker <issuetracker>`, but be aware
 that despite best efforts, we can't do everything.  
 See the main :doc:`Applications <../apps/index>` page for more information.
 
+
+A plea: make your software reusable!
+====================================
+
+Five years from now, when you are releasing your own software that you
+want others to use, :doc:`make it easy to install and reusable
+</scicomp/packaging-software>`.
 
 
 Exercises

@@ -14,7 +14,6 @@ default: html
 	@echo "Build successful.  Run 'make check' to check for important warnings"
 
 check:
-	make clean
 	make html SPHINXOPTS="-w warnings.txt"
 	python meta/check-warnings.py --fail warnings.txt
 	@echo
