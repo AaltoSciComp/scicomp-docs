@@ -1,9 +1,9 @@
 ================
-Software Modules
+Software modules
 ================
 
-What is a module?
------------------
+Introduction to modules
+-----------------------
 
 There are hundreds of people using Triton.  They all have different
 software needs, including conflicting versions required!  How do we
@@ -61,12 +61,12 @@ Let's dive right into an example and load a module.
 
 .. warning::
 
-   If you are in not at Aalto, then you need to ``module load
+   If you are not at Aalto, then you need to run ``module load
    fgci-common`` first, before any of the other commands will work
    (and you will need to *keep doing this* for every other exercise
    here).
-   If you are at CSC or not in Finland, the concepts here apply to
-   you, but not the actual names of what we are loading.
+   If you are at CSC or not in Finland, the concepts here also apply to
+   you, but the actual names of the modules loaded may differ.
 
 Let's assume you've written a Python script that is only compatible with Python version 3.7.0 or higher.
 You open a shell to find out where and what version our Python is. The
