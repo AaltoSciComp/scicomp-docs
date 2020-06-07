@@ -10,7 +10,7 @@ Optimizing data storage isn't very glamorous, but is an important
 part of high-performance computing.
 
 Basics
-======
+------
 
 Triton has various ways to store data.  Each has a purpose, and when
 you are dealing with large data sets or intensive I/O, efficiency
@@ -33,7 +33,7 @@ give you some hints here.  You can see the :doc:`profiling
 <../usage/profiling>` page for more information.
 
 Think about I/O before you start! - General notes
-=================================================
+-------------------------------------------------
 
 When people think of computer speed, they usually think of CPU speed.
 But this is missing an important factor: How fast can data get to the
@@ -69,18 +69,18 @@ Avoid many small files! Use a few big ones instead. (we have a
 :doc:`dedicated page <../usage/smallfiles>` on the matter)
 
 Available data storage options
-==============================
+------------------------------
 
 .. include:: ../ref/storage.rst
 
 Home directories
-^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~
 The place you start when you log in.  Home directory should be used for init files, 
 small config files, etc.  It is however not suitable for storing calculation data. 
 Home directories are backed up daily.  You usually want to use scratch instead.
 
 scratch and work: Lustre
-^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~
 Scratch is the big, high-performance, 2PB Triton storage.  It is the primary
 place for calculations, data analyzes etc. It is not backed up but is
 reliable against hardware failures (RAID6, redundant servers), but
@@ -98,7 +98,7 @@ files <../usage/smallfiles>` page for more information.
 See :doc:`../usage/lustre`
 
 Local disks
-^^^^^^^^^^^
+~~~~~~~~~~~
 Local disks are on each node separately.  It is used for the fastest I/Os 
 with single-node jobs and is cleaned up after job is finished.  Since 2019,
 things have gotten a bit more complicated given that our newest (skl) nodes
@@ -110,7 +110,7 @@ node local drives <../usage/localstorage>` page for further details and script
 examples.
 
 ramfs - fast and highly temporary storage
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **On login nodes only**,
 ``$XDG_RUNTIME_DIR`` is a ramfs, which means that it looks like files
@@ -122,7 +122,7 @@ memory that's better.
 
 
 Quotas
-======
+------
 
 All directories under ``/scratch`` (as well as ``/home``) have quotas. Two
 quotas are set per-filesystem: disk space and file number.
@@ -151,13 +151,13 @@ page for a solution.
 
 
 Accessing and transferring files remotely
-=========================================
+-----------------------------------------
 
 Transferring files to/from Triton is exactly the same as any other
 remote Linux server.
 
 Remote mounting using SMB
-^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 By far, remote mounting of files is the easiest method to transfer files.  If you are
 not on the Aalto networks (wired, ``eduroam``, or ``aalto`` with
@@ -200,14 +200,14 @@ directly or ``AALTO\username``.
 
 
 Via `vdi.aalto.fi <https://vdi.aalto.fi>`__
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 vdi.aalto.fi (described under :doc:`connecting`) has Triton
 directories mounted (see below).
 
 
 Remote mounting using sshfs
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ``sshfs`` is a neat program that lets you mount remote filesystems via
 ssh only.  It is well-supported in Linux, and somewhat on other
@@ -230,7 +230,7 @@ will help you for a long time.
 
 
 Using sftp
-^^^^^^^^^^
+~~~~~~~~~~
 
 The *SFTP* protocol uses ssh to transfer files.  On Linux and Mac, the
 ``sftp`` command line program are the must fundamental way to do this,
@@ -262,7 +262,7 @@ If you are connecting from remote and cannot use the VPN, you can connect instea
 
 
 Using rsync
-^^^^^^^^^^^
+~~~~~~~~~~~
 
 Rsync is similar to sftp, but is smarter at restarting files.  Use rsync
 for large file transfers.  ``rsync`` actually uses the ssh protocol so
@@ -297,7 +297,7 @@ Please note that when working with files containing code or simple text, git is 
 
 
 Accessing files from workstations and shell servers
-===================================================
+---------------------------------------------------
 
 This varies per department: each department can manage its data as it
 likes.  So, we can't make general promises.
@@ -307,34 +307,34 @@ ticket (usually generated when you log in). On long sessions these might
 expire, and you have to renew them with ``kinit`` to keep going.
 
 Generic
-^^^^^^^
+~~~~~~~
 
 Department workstations and vdi.aalto.fi have scratch mounted at the
 standard paths ``/m/{cs,nbe}/{scratch,work}/``.  Actually,
 *everyone's* work directories can be accessed from ``/m/cs/work/``.
 
 NBE
-^^^
+~~~
 
 Work directories are available at ``/m/nbe/work`` and group scratch
 directories at ``/m/nbe/scratch/$project/``.
 
 PHYS
-^^^^
+~~~~
 
 Directories available on demand through SSHFS. See the `Data
 transferring <https://wiki.aalto.fi/display/TFYintra/Data+transferring>`__ page
 at PHYS Intranet (accessible by PHYS users only).
 
 CS
-^^
+~~
 
 Work directories are available at ``/m/cs/work/``, and group scratch
 directories at ``/m/cs/scratch/$project/``.
 
 
 Exercises
-=========
+---------
 
 ``strace`` is a command which tracks **system calls**, basically the
 number of times the operating system has to do something.  It can be
@@ -399,7 +399,7 @@ used as a rudimentary way to see how much I/O load there is.
 
 
 What's next?
-============
+------------
 
 .. seealso::
 
