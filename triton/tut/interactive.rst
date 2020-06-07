@@ -192,7 +192,8 @@ The scripts you need for the following exercises can be found here:
 `hpc-examples/slurm
 <https://github.com/AaltoSciComp/hpc-examples/tree/master/slurm>`__)
 You can clone the repository by running
-``git clone https://github.com/AaltoSciComp/hpc-examples.git``
+``git clone https://github.com/AaltoSciComp/hpc-examples.git``.  This repository
+will be used for the rest of the tutorial exercises.
 
 1. The program ``hpc-examples/slurm/memory-hog.py``
    uses up a lot of memory to do nothing.  Let's play with it.
