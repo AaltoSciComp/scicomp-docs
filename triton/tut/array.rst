@@ -277,7 +277,9 @@ Exercises
 2. Using one of the techniques above, use ``memory-hog.py`` from the
    :doc:`interactive tutorial <interactive>`.  Make an array job that
    runs this with five different values of the memory (5M, 50M, 100M,
-   200M, 500M).
+   200M, 500M) - this is memory that memory-hog script requests,
+   **not** the requested from Slurm (each job in an array requests the
+   same memory).
 
 3. Make job array which runs every other index, e.g. the array can be
    indexed as 1, 3, 5...(``sbatch`` manual page can be of help)
