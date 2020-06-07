@@ -8,6 +8,7 @@ Scientific computing
    encryption
    git
    jupyter-pitfalls
+   packaging-software
    python
    shell
    ssh

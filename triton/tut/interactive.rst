@@ -2,12 +2,12 @@
 Interactive jobs
 ================
 
-Introduction to slurm
+Introduction to Slurm
 =====================
 
 Triton is a large system that combines many different individual
 computer nodes. Hundreds of people are using Triton simultaneously.
-Thus, resources (CPU time, memory, etc.) need to be shared among everyone.
+Thus resources (CPU time, memory, etc.) need to be shared among everyone.
 
 This resource sharing is done by a software called a job scheduler or
 workload manager. Triton's workload manager is **slurm**. 
@@ -94,6 +94,14 @@ And you will have a bash shell runnnig on one of the
 computation nodes with at least 600 Megabytes of memory,
 for a duration of 2 hours, where you can run your programs in. 
 
+.. warning::
+  
+  Remember to exit the shell when you are done!
+  The shell will be running if you don't and
+  it will count towards your usage. 
+  This effectively means your priority will degrade
+  in the future.
+
 The option ``-p interactive`` requests a node in the interactive
 **partition** which is dedicated to interactive usage (more on this
 later).  A partition is a group of nodes you can run on, with set
@@ -104,14 +112,6 @@ limits.
   you can use ``sinfo`` to see information such as the available partitions,
   number of nodes in each, their time limits etc. 
 
-.. warning::
-  
-  Remember to exit the shell when you are done!
-  The shell will be running if you don't and
-  it will count towards your usage. 
-  This effectively means your priority will degrade
-  in the future.
-  
 
 Interactive shell with graphics
 ===============================
@@ -137,7 +137,7 @@ process again.
 
   If you are off-campus, you might want to use https://vdi.aalto.fi as a
   virtual desktop to connect to Triton to run graphical programs.
-  Otherwise, expect things to be very slow.
+  Otherwise, programs may run very slowly.
 
 Monitoring your usage
 =====================
@@ -147,7 +147,7 @@ information on how much time, memory, etc. your jobs are using
 in order to know what requirements to ask for. 
 
 The command ``slurm history`` gives you information such as the actual memory used by your recent jobs, total CPU time, etc.
-You will learn more about these command later on. 
+You will learn more about these commands later on. 
 
 As shown in a previous example, the command ``slurm queue`` will tell you the currently running processes,
 which is a good way to make sure you have stopped everything. 
@@ -167,8 +167,8 @@ You saw two of them in use in the above examples (``--mem`` and ``--time``)
 and you will learn more in the following tutorials. 
 
 Because you are sharing resource with other users, **you should always estimate the amount of time, memory, etc.
-you need and then request them accordingly** for efficiency reasons.
-Moreover, the default memory and time limits are intentionally set low and may not be 
+you need and then request them accordingly** for efficiency reasons;
+the default memory and time limits are intentionally set low and may not be 
 sufficient for your jobs to run/finish. 
 
 The general rule of thumb is to request the least possible, so that your stuff can run faster. 
@@ -181,8 +181,11 @@ you have very limited options. However, you are more likely to be allocated a no
 The same applies to memory: most common cutoffs are 48, 64, 128, 256GB. 
 It's best to use smaller values when submitting interactive jobs, and more for batch scripts.
 
+.. seealso::
 
-The `next tutorial <serial>` covers more resource parameters and how to estimate them in more detail. 
+   This `reference page <https://slurm.schedmd.com/sbatch.html>`_ covers the existing resource parameters
+   and options you can use in both your interactive jobs and `batch jobs <serial>` which you will learn about
+   in the next tutorial.
 
 Exercises
 =========
@@ -248,5 +251,6 @@ Exercises
 What's next?
 ============
 
-In the next tutorial on `serial batch jobs <serial>` you will learn how to put the above-mentioned 
-commands in a script, namely a batch script that allows for a multitude of jobs to run unattended. 
+In the next tutorial on `serial batch jobs <serial>`, you will learn how to put the above-mentioned 
+commands in a script, namely a batch script (a.k.a submission script)
+that allows for a multitude of jobs to run unattended. 
