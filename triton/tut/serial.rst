@@ -50,15 +50,17 @@ Let's take a look at the following script
 
    srun echo "Hello $USER! You are on node $HOSTNAME"
 
-Let's name it ``hello.sh`` (create a file using your editor of choice, e.g.nano;
+Let's name it ``hello.sh`` (create a file using your editor of choice, e.g. ``nano``;
 write the script above and save it)
 
-The symbol ``#`` followed by the *SBATCH* directives are understood
-by Slurm as parameters, determining the resource requests.
+The symbol ``#`` is a comment in a **bash script**, and Slurm
+understands ``#SBATCH`` as parameters, determining the resource
+requests.
 Here, we have requested a time limit of 5 minutes, along with 100 MB of RAM per CPU.
 
 Resource requests are followed by job steps, which are the actual
-tasks to be done. Each ``srun`` is a job step, and appears as a separate row in your
+tasks to be done. Each ``srun`` within the a slurm script is a job
+step, and appears as a separate row in your
 history - which is useful for monitoring.
 
 Having written the script, you need to submit the job to Slum through the ``sbatch`` command::
@@ -139,7 +141,7 @@ You can see more commands below.
 Partitions
 ==========
 
-A partition is a set of computing nodes dedicated to a specific purpose.
+A **slurm partition** is a set of computing nodes dedicated to a specific purpose.
 Examples include partitions assigned to debugging("debug" partition),
 batch processing("batch" partition), GPUs("gpu" partition), etc.
 
@@ -164,7 +166,9 @@ You can specify a partition to be listed by ``sinfo``::
 Take a look at the manpage using ``man sinfo`` for more details.
 
 Generally, you don't need to specify the partition; Slurm will
-use any posssible partition. However, you can do so with ``-p PARTITION_NAME``
+use any posssible partition (though this is Aalto-specific, however
+other sites may have other requirements here). However, you can do so
+with ``-p PARTITION_NAME``
 This is mainly needed if you want to force interactive or
 debug partition (Slurm usually runs short jobs on the debug partition).
 
