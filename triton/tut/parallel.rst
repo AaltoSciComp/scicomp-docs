@@ -3,32 +3,39 @@ Parallel computing
 ==================
 
 Parallel computing is what HPC is really all about: processing things on
-more than one CPU at once. By now, you should have read all of the previous
+more than one processor at once. By now, you should have read all of the previous
 tutorials.
 
 Parallel programming models
 ---------------------------
 
-Parallel programming is a completely different way of programming.  Most
-Triton users don't need to write their own
-applications, at most they will be running existing programs, but in
-order to understand things, we start with some introduction.
+Parallel programming is used to create programs that can execute
+instructions on multiple processors at a same time. Most of our users that
+run their programs in parallel utilize existing parallel execution features
+that are present in their programs and thus do not need to learn how to create
+parallel programs. But even when one is running programs in parallel,
+it is important to understand different models of parallel execution.
 
 The two main models are:
 
-* Shared memory program (or multithreading) runs on only one node
-  because, like the name says, all the memory has to be accessible to
-  all the processes.  Thus, scaleability is limited to a number of CPU
-  cores available within one computational node. The code is
-  easier to implement and the same code can still be run in a serial mode.
-  Examples of application that utilize this model: Matlab, R, OpenMP
-  applications, typical parallel desktop programs.
+* Shared memory (or multithreaded) programs run multiple independent
+  workers on the same machine. As the name suggests, all of the computer's
+  memory has to be accessible to all of the processes. **Thus programs
+  that utilize this model are limited to one node only.** Likewise, the
+  maximum number of workers is usually the number of CPU cores available
+  on the computational node. The code is easier to implement and the same
+  code can still be run in a serial mode. Example applications that
+  utilize this model: Matlab, R, Python multithreading/multiprocessing,
+  OpenMP applications, BLAS libraries, FFTW libraries, typical
+  multithreaded parallel pesktop programs.
 
 * Message passing programming (e.g. MPI, message passing interface)
   can run on multiple nodes interconnected with the network via passing
-  data through MPI software libraries. The large-scale scientific programs
-  are MPI. MPI can scale to thousands of CPU cores, but it's harder to
-  implement from the programmer point of view.
+  data through MPI software libraries. Almost all large-scale scientific
+  programs utilize MPI. MPI can scale to thousands of CPU cores, but
+  depending on the case it can be harder to implement from the
+  programmer's point of view. Example applications that utilize this
+  model: CP2K, GPAW, LAMMPS, OpenFoam.
 
 Both models, MPI and shared memory, can be combined in one application, in
 this case we are talking about hybrid parallel programming model.
@@ -36,21 +43,38 @@ this case we are talking about hybrid parallel programming model.
 Most historical scientific code is MPI, but these days more and more
 people are using shared memory models.
 
-The important note is that a normal, serial code can't just be run as
-parallel without modifications. As a user it is your responsibility to
-understand what parallel model implementation your code has, if any.
-Knowing this, you can proceed with the instructions below.
+.. important::
 
-Another important note regarding parallelism is that all the applications
-scale good up to some upper limit which depends on application implementation,
-size and type of problem you solve and some other factors. The best practice
-is to benchmark your code on different number of CPU cores before actual
-production run.
+   Normal serial code can't just be run in parallel without
+   modifications. As a user it is your responsibility to
+   understand what parallel model implementation your code has, if any.
 
-**If you want to run some program in parallel, you have to know
-something about it - is it shared memory or MPI?  A program doesn't
-magically get faster when you ask more processors if it's not designed
-to.**
+   When deciding whether using parallel programming is worth
+   the effort, one should be mindful of
+   `Amdahl's law <https://en.wikipedia.org/wiki/Amdahl%27s_law>`_ and
+   `Gustafson's law <https://en.wikipedia.org/wiki/Gustafson%27s_law>`_.
+   All programs have some parts that can only be executed in serial and
+   thus the theoretical speedup that one can get from using parallel
+   programming depends on two factors:
+
+     1. How much of programs' execution could be done in parallel?
+     2. What would be the speedup for that parallel part?
+
+   Thus if your program runs mainly in serial but has a small parallel
+   part, running it in parallel might not be worth it. Sometimes, doing
+   data parallelism with e.g. :doc:`array jobs <array>` is much more
+   fruitful approach.
+
+   Another important note regarding parallelism is that all the applications
+   scale good up to some upper limit which depends on application implementation,
+   size and type of problem you solve and some other factors. The best practice
+   is to benchmark your code on different number of CPU cores before
+   you start actual production runs.
+
+   **If you want to run some program in parallel, you have to know
+   something about it - is it shared memory or MPI?  A program doesn't
+   magically get faster when you ask more processors if it's not designed
+   to.**
 
 Shared memory: OpenMP programs
 ------------------------------
