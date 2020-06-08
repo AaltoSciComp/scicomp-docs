@@ -191,6 +191,7 @@ Exercises
 The scripts you need for the following exercises can be found here:
 `hpc-examples/slurm
 <https://github.com/AaltoSciComp/hpc-examples/tree/master/slurm>`__
+
 You can clone the repository by running
 ``git clone https://github.com/AaltoSciComp/hpc-examples.git``.  This repository
 will be used for the rest of the tutorial exercises.
@@ -231,7 +232,7 @@ will be used for the rest of the tutorial exercises.
    b) Add ``srun`` in front (``srun python ...``).  Use the ``seff <jobID>``
       command to see how much time the program took to run.
       (If you'd like to use the ``time`` command, you can run
-      ``srun --mem=<m> --time=<t>time python time python hpc-examples/slurm/pi.py <iters>``)
+      ``srun --mem=<m> --time=<t> time python hpc-examples/slurm/pi.py <iters>``)
 
    c) Tell srun to use five CPUs (``-c 5``).  Does it go any faster?
 
