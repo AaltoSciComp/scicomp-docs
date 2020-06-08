@@ -86,8 +86,9 @@ Diffence between multithreaded and multiprocess
 
 Shared memory programs usually parallelize by using multiple threads or
 processes. Processes are individual program executions while threads are
-basically smaller program executions within a process. Slurm reservations
-for both methods behave similarly: use ``--cpus-per-task=C``
+basically smaller program executions within a process. Processes can
+launch both subprocesses and threads. Slurm reservations for both methods
+behave similarly.
 
 Depending on a program, you might have multiple processes (Matlab parallel
 pool, R parallel-library, Python multiprocessing) or have multiple threads
@@ -100,6 +101,25 @@ pool, R parallel-library, Python multiprocessing) or have multiple threads
    processes, but BLAS libraries that R uses can utilize multiple threads.
    If you encounter bad performace when you use parallel processes
    try setting ``OMP_NUM_THREADS=1`` in your slurm script.
+
+Running multithreaded/multiprocess applications
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The basic slurm option that specifies how many CPUs your job requires is
+``--cpus-per-task=N`` (or ``-c N``). If your memory requirement scales
+with the number of cores, use ``--mem-per-core=M``, if you
+require a fixed amount of memory (per node regardless of number of
+processors), use ``--mem=M``.
+
+.. warning::
+
+   Normally you should **not** use ``--ntasks=N`` when you want to
+   run shared memory codes. The number of tasks is only relevant to MPI codes
+   and by specifying it you might launch multiple copies of your program
+   that all compete on the reserved CPUs.
+
+   Only hybrid parallelization codes should have both ``--ntasks=N`` and
+   ``--cpus-per-task=C`` set to be greater than one.
 
 Running a typical OpenMP program
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -118,12 +138,6 @@ Running an OpenMP code::
   export OMP_PROC_BIND=TRUE
   srun --cpus-per-task=4 --mem-per-cpu=2000 --time=00:30:00 omp_program
 
-The basic slurm options you need are ``--cpus-per-task=N`` (or ``-c N``)
-to specify the number of cores to use within one node. If your memory
-needs scale with the number of cores, use ``--mem-per-core=``, if you
-require a fixed amount of memory (per node regardless of number of
-processors), use ``--mem``.
-
 The SLURM batch file will look similar::
 
   #!/bin/bash -l
@@ -137,16 +151,6 @@ The SLURM batch file will look similar::
 It is good to know that OpenMP is both an environment and set of libraries, but
 those libraries always come as part of the compiler. Thus during runtime
 you should load the same compiler that you used for compiling the code.
-
-.. warning::
-
-   Normally you should **not** use ``--ntasks=N`` when you want to
-   run shared memory codes. The number of tasks is only relevant to MPI codes
-   and by specifying it you might launch multiple copies of your program
-   that all compete on the reserved CPUs.
-
-   Only hybrid parallelization codes should have both ``--ntasks=N`` and
-   ``--cpus-per-task=C`` set to be greater than one.
 
 .. include:: /triton/examples/python/python_openmp/python_openmp.rst
 
@@ -172,8 +176,8 @@ a version of the library with dependency on the MPI version you require.
    you will need to load the same version of the library when you are
    running the code.
 
-   Also, the MPI libraries are usually linked to Slurm and network
-   drivers. Thus, when Slurm or driver versions are updated, some
+   Also, the MPI libraries are usually linked to slurm and network
+   drivers. Thus, when slurm or driver versions are updated, some
    older versions of MPI might break. If you're still using said
    versions, let us know. If you're just starting a new project, it
    is recommended to use our recommended MPI libraries.
@@ -217,7 +221,7 @@ constraints explicitly.
 
    It is important to use ``srun`` when you launch your program.
    This allows for the MPI libraries to obtain task placement information
-   (nodes, number of tasks per node etc.) from the Slurm queue.
+   (nodes, number of tasks per node etc.) from the slurm queue.
 
 Spreading MPI workers evenly
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
