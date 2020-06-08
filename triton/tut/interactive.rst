@@ -230,8 +230,7 @@ will be used for the rest of the tutorial exercises.
    b) Add ``srun`` in front (``srun python ...``).  Use the ``seff <jobID>``
       command to see how much time the program took to run.
       (If you'd like to use the ``time`` command, you can run
-      ``srun --mem=<m> --time=<t> bash -c
-      "time python time python hpc-examples/slurm/pi.py <iters>"``)
+      ``srun --mem=<m> --time=<t>time python time python hpc-examples/slurm/pi.py <iters>``)
 
    c) Tell srun to use five CPUs (``-c 5``).  Does it go any faster?
 
