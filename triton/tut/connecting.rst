@@ -5,7 +5,7 @@ Connecting to Triton
 
 All access to Triton is via Secure Shell (ssh).
 
-You can connect to ``triton.aalto.fi`` from Aalto and CSC networks.
+You can connect to ``triton.aalto.fi`` via ssh from Aalto and CSC networks.
 Aalto networks include: Wired workstation networks, ``eduroam``, and
 the ``aalto`` wireless network *only if you are using an Aalto managed
 laptop* (otherwise ``aalto`` is like ``aalto open``).  If you connect
