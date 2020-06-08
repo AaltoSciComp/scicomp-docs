@@ -148,7 +148,9 @@ Running an OpenMP code::
   module load gcc/9.2.0
   srun --cpus-per-task=4 --mem=500 --time=00:05:00 hello_omp
 
-The slurm batch file will look similar:
+The
+:download:`slurm script<https://raw.githubusercontent.com/AaltoSciComp/hpc-examples/master/openmp/hello_omp/hello_omp.slrm>`
+will look similar:
 
 .. literalinclude:: /triton/examples/openmp/hello_omp/hello_omp.slrm
 
