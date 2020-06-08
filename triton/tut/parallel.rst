@@ -132,24 +132,25 @@ are many others, but this one is the most common, supported by all known
 compiler suits. For other implementations of shared memory parallelism,
 please consult your code docs.
 
+Let's consider
+`hello_omp-example <https://github.com/AaltoSciComp/hpc-examples/tree/master/openmp/hello_omp>`_
+from HPC examples repository.
+
 Simple code compiling::
 
-  gcc -fopenmp -O2 -g omp_program.c -o omp_program
+  wget https://raw.githubusercontent.com/AaltoSciComp/hpc-examples/master/openmp/hello_omp/hello_omp.c
+  module load gcc/9.2.0
+  gcc -fopenmp -O2 -g hello_omp.c -o hello_omp
 
 Running an OpenMP code::
 
   export OMP_PROC_BIND=TRUE
-  srun --cpus-per-task=4 --mem-per-cpu=2000 --time=00:30:00 omp_program
+  module load gcc/9.2.0
+  srun --cpus-per-task=4 --mem=500 --time=00:05:00 hello_omp
 
-The SLURM batch file will look similar::
+The slurm batch file will look similar:
 
-  #!/bin/bash -l
-  #SBATCH --cpus-per-task=4
-  #SBATCH  --mem-per-cpu=2000
-  #SBATCH --time=00:30:00
-
-  export OMP_PROC_BIND=TRUE
-  srun omp_program
+.. literalinclude:: /triton/examples/openmp/hello_omp/hello_omp.slrm
 
 It is good to know that OpenMP is both an environment and set of libraries, but
 those libraries always come as part of the compiler. Thus during runtime
@@ -213,7 +214,6 @@ Running an MPI code in the batch mode::
 
   module load openmpi/3.1.4  # NOTE: should be the same as you used to compile the code
   srun ./mpi_prog
-
 
 Triton has multiple architectures around (12, 20, 24, 40 CPU cores per node),
 even though SLURM optimizes resources usage and allocate CPUs within one node,
