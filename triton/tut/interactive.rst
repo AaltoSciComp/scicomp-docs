@@ -14,7 +14,6 @@ workload manager. Triton's workload manager is **slurm**.
 Triton users submit jobs which are then scheduled and allocated
 resources by the workload manager.
 
-
 There are two ways you can submit your jobs to slurm queue system:
 either interactively using ``srun`` or by submitting a script
 using ``sbatch``.
@@ -190,11 +189,9 @@ It's best to use smaller values when submitting interactive jobs, and more for b
 Exercises
 =========
 
-The scripts you need for the following exercises can be found here:
+The scripts you need for the following exercises can be in this git repository:
 `hpc-examples/slurm
-<https://github.com/AaltoSciComp/hpc-examples/tree/master/slurm>`__
-
-You can clone the repository by running
+<https://github.com/AaltoSciComp/hpc-examples/tree/master/slurm>`__.  You can clone the repository by running
 ``git clone https://github.com/AaltoSciComp/hpc-examples.git``.  This repository
 will be used for the rest of the tutorial exercises.
 
@@ -217,10 +214,12 @@ will be used for the rest of the tutorial exercises.
       how much memory it actually used? - Note that Slurm only measures memory
       every 60 seconds or so.
       To make the program last longer, so that the memory used can be measured,
-      give the ``--sleep`` option to the Python process, like this: ``python memory-hog.py 50M --sleep=60``.
+      give the ``--sleep`` option to the Python process, like this:
+      ``python hpc-examples/slurm/memory-hog.py 50M --sleep=60`` -
+      keep it available.
 
 2. The program ``hpc-examples/slurm/pi.py``
-   calculates Pi using a simple stochastic algorithm.  The program takes
+   calculates pi using a simple stochastic algorithm.  The program takes
    one positional argument: the number of trials.
 
    The ``time`` program allows you to time any program,  e.g. you can
@@ -229,7 +228,7 @@ will be used for the rest of the tutorial exercises.
    a) Run the program, timing it with ``time``, a few times,
       increasing the number of trials, until it takes about 10
       seconds: ``time python hpc-examples/slurm/pi.py
-      500`` and so on.
+      500``, then 5000, then 50000, and so on.
 
    b) Add ``srun`` in front (``srun python ...``).  Use the ``seff <jobid>``
       command to see how much time the program took to run.
