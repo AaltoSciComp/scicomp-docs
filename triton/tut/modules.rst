@@ -25,7 +25,9 @@ and makes it easy to switch between different versions.
 As an example, let's inspect the ``gcc`` module (abbreviated output
 shown) with ``module show gcc``:
 
-.. code-block:: none
+.. highlight:: console
+
+.. code-block:: console
 
     $ module show gcc
     ----------------------------------------------------------------------------------------------
@@ -48,8 +50,9 @@ shown) with ``module show gcc``:
     ...
 
 The command ``module show gcc`` shows some meta-info (name of the module, its version, etc.)
-And then adjusts various environment paths, 
-so that when you run ``gcc`` it runs the program from
+When you load this module, it adjusts various environment paths (as
+you see there),
+so that when you type ``gcc`` it runs the program from
 ``/share/apps/spack/envs/fgci-centos7-generic/software/gcc/9.2.0/dnrscms/bin/gcc``.  
 This is almost magic: we can have many versions of any software installed, 
 and everyone can pick what they want, with no conflicts.
@@ -59,12 +62,12 @@ Loading modules
 
 Let's dive right into an example and load a module.
 
-.. warning::
+.. important::
 
    If you are not at Aalto, then you need to run ``module load
    fgci-common`` first, before any of the other commands will work
-   (and you will need to *keep doing this* for every other exercise
-   here).
+   (and you will need to *keep doing this* for every other tutorial in
+   this series).  You have to do this *every time you start a new shell*.
    If you are at CSC or not in Finland, the concepts here also apply to
    you, but the actual names of the modules loaded may differ.
 
