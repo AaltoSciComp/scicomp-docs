@@ -59,7 +59,11 @@ size, and performance, and you have to use the right one for the right
 job.  Often times.  So you have to use several in tandem: For example,
 store original data on **archive**, put your working copy on
 **scratch**, and maybe even make a per-calculation copy on **local
-disks**.
+disks**.  Check out `wikipedia:Memory Hierarchy`__ and `wikipedia:List of
+interface bit rates`__.
+
+__ https://en.wikipedia.org/wiki/Memory_hierarchy
+__ https://en.wikipedia.org/wiki/List_of_interface_bit_rates
 
 The following factors are useful to consider:
 
@@ -205,7 +209,7 @@ generally available shell server anymore.
 NBE
 ~~~
 
-Work directories are available at ``/m/nbe/work`` and group scratch
+On workstations, work directories are available at ``/m/nbe/work`` and group scratch
 directories at ``/m/nbe/scratch/$project/``, including the shell
 server ``amor.org.aalto.fi``.
 
@@ -219,9 +223,9 @@ at PHYS wiki.
 CS
 ~~
 
-Work directories are available at ``/m/cs/work/``, and group scratch
+On workstations, work directories are available at ``/m/cs/work/``, and group scratch
 directories at ``/m/cs/scratch/$project/``.  The department shell
-server is ``magi.cs.aalto.fi``.
+server is ``magi.cs.aalto.fi`` and has these available.
 
 
 
@@ -393,6 +397,11 @@ Exercises
    :doc:`/aalto/aaltostorage`.  Which do you
    think are suitable for your work?  Do you need to share with
    others?  Ask your group what they use and if you can use that, too.
+
+.. note::
+
+   Many of the following exercises don't work out of the box on other
+   sites (depends on local files).
 
 **Remote access:**
 
