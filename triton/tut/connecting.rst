@@ -14,7 +14,7 @@ to the Aalto VPN, you will be on the Aalto networks.
 For SSHing to Triton from outside of your department or CSC, please
 login first to a university server (like ``kosh.aalto.fi`` or
 ``taltta.org.aalto.fi``) and then open a session to
-``triton.aalto.fi``.
+``triton.aalto.fi`` - or use the ``-J`` option in modern ssh.
 
 .. note::
 
@@ -55,6 +55,8 @@ There are different ways of connecting:
 	programs via SSH.
       * Whole internet
 
+.. highlight:: bash
+
 
 Connecting via ssh
 ==================
@@ -70,9 +72,17 @@ nothing extra needed.::
   # OR, if your username is different:
   ssh username@triton.aalto.fi
 
-If you are from outside the Aalto networks::
 
-    ssh kosh.aalto.fi         # or ssh username@kosh.aalto.fi
+If you are from outside the Aalto networks, use the ProxyJump option
+in modern OpenSSH::
+
+
+    ssh -J kosh.aalto.fi triton.aalto.fi
+    # OR, if your username is different:
+    ssh -J username@kosh.aalto.fi username@triton.aalto.fi
+
+    # If you do not have the -J option:
+    ssh kosh.aalto.fi
     ssh triton.aalto.fi
 
 Mac
