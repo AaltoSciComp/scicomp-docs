@@ -198,6 +198,12 @@ even though SLURM optimizes resources usage and allocate CPUs within one node,
 which gives better performance for the app, it still makes sense to put
 constraints explicitly.
 
+.. important::
+
+   It is important to use ``srun`` when you launch your program.
+   This allows for the MPI libraries to obtain task placement information
+   (nodes, number of tasks per node etc.) from the Slurm queue.
+
 Spreading MPI workers evenly
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
