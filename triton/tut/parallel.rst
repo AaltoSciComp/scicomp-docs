@@ -110,7 +110,7 @@ The SLURM batch file will look similar::
   export OMP_PROC_BIND=TRUE
   srun omp_program
 
-Good to know that OpenMP is both an environment and set of libraries, but
+It is good to know that OpenMP is both an environment and set of libraries, but
 those libraries always come as part of the compiler. Thus during runtime
 you should load the same compiler that you used for compiling the code.
 
