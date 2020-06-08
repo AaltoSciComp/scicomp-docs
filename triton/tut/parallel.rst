@@ -120,7 +120,7 @@ you should load the same compiler that you used for compiling the code.
    that all compete on the reserved CPUs.
 
    Only hybrid parallelization codes should have both ``--ntasks=N`` and
-   ``--cpus-per-task=C`` to be greater than one.
+   ``--cpus-per-task=C`` set to be greater than one.
 
 Other programs and multithreading
 ---------------------------------
@@ -130,6 +130,8 @@ example of this kind of program is MATLAB, that user parallel pool of workers;
 or R, which uses the ``parallel``-package for its parallel applys.
 Threaded applications behave similarly to OpenMP applications in that one
 needs to specify the number of cores per task and amount of memory per core.
+
+.. include:: /triton/examples/python/python_openmp/python_openmp.rst
 
 Message passing programs: MPI
 -----------------------------
