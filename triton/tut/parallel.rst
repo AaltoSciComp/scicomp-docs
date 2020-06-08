@@ -18,16 +18,18 @@ it is important to understand different models of parallel execution.
 
 The two main models are:
 
-* Shared memory (or multithreaded) programs run multiple independent
-  workers on the same machine. As the name suggests, all of the computer's
-  memory has to be accessible to all of the processes. **Thus programs
-  that utilize this model are limited to one node only.** Likewise, the
-  maximum number of workers is usually the number of CPU cores available
-  on the computational node. The code is easier to implement and the same
-  code can still be run in a serial mode. Example applications that
-  utilize this model: Matlab, R, Python multithreading/multiprocessing,
+* Shared memory (or multithreaded/multiprocess) programs run multiple
+  independent workers on the same machine. As the name suggests, all of
+  the computer's memory has to be accessible to all of the processes.
+  **Thus programs that utilize this model should request multiple CPUs on
+  one node and utilize requested processors by using multiple threads or
+  subprocesses.**
+  Likewise, the maximum number of workers is usually the number of CPU cores
+  available on the computational node. The code is easier to implement
+  and the same   code can still be run in a serial mode. Example applications
+  that utilize this model: Matlab, R, Python multithreading/multiprocessing,
   OpenMP applications, BLAS libraries, FFTW libraries, typical
-  multithreaded parallel pesktop programs.
+  multithreaded/multiprocess parallel desktop programs.
 
 * Message passing programming (e.g. MPI, message passing interface)
   can run on multiple nodes interconnected with the network via passing
@@ -76,16 +78,37 @@ people are using shared memory models.
    magically get faster when you ask more processors if it's not designed
    to.**
 
-Shared memory: OpenMP/multithreaded
------------------------------------
+Shared memory: OpenMP/multithreaded/multiprocess
+------------------------------------------------
+
+Diffence between multithreaded and multiprocess
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Shared memory programs usually parallelize by using multiple threads or
+processes. Processes are individual program executions while threads are
+basically smaller program executions within a process. Slurm reservations
+for both methods behave similarly: use ``--cpus-per-task=C``
+
+Depending on a program, you might have multiple processes (Matlab parallel
+pool, R parallel-library, Python multiprocessing) or have multiple threads
+(OpenMP threads of BLAS libraries that R/numpy use).
+
+.. warning::
+
+   Some programs (e.g. R) can utilize both multithread and multiprocess
+   parallelism. For example, R has parallel-library for running multiple
+   processes, but BLAS libraries that R uses can utilize multiple threads.
+   If you encounter bad performace when you use parallel processes
+   try setting ``OMP_NUM_THREADS=1`` in your slurm script.
+
+Running a typical OpenMP program
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 OpenMP is a standard de facto for the multithreading implementations. There
 are many others, but this one is the most common, supported by all known
 compiler suits. For other implementations of shared memory parallelism,
 please consult your code docs.
 
-Running a typical OpenMP program
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Simple code compiling::
 
   gcc -fopenmp -O2 -g omp_program.c -o omp_program
@@ -95,10 +118,11 @@ Running an OpenMP code::
   export OMP_PROC_BIND=TRUE
   srun --cpus-per-task=4 --mem-per-cpu=2000 --time=00:30:00 omp_program
 
-The basic slurm options you need are ``--cpus-per-task=N`` (or ``-c N``) to specify the number of
-cores to use within one node.  If your memory needs scale with the number of cores,
-use ``--mem-per-core=``, if you require a fixed amount of memory (per
-node regardless of number of processors), use ``--mem``.
+The basic slurm options you need are ``--cpus-per-task=N`` (or ``-c N``)
+to specify the number of cores to use within one node. If your memory
+needs scale with the number of cores, use ``--mem-per-core=``, if you
+require a fixed amount of memory (per node regardless of number of
+processors), use ``--mem``.
 
 The SLURM batch file will look similar::
 
@@ -123,15 +147,6 @@ you should load the same compiler that you used for compiling the code.
 
    Only hybrid parallelization codes should have both ``--ntasks=N`` and
    ``--cpus-per-task=C`` set to be greater than one.
-
-Other programs and multithreading
----------------------------------
-
-Some programs use multiple threads for their parallel computations. A good
-example of this kind of program is MATLAB, that user parallel pool of workers;
-or R, which uses the ``parallel``-package for its parallel applys.
-Threaded applications behave similarly to OpenMP applications in that one
-needs to specify the number of cores per task and amount of memory per core.
 
 .. include:: /triton/examples/python/python_openmp/python_openmp.rst
 
