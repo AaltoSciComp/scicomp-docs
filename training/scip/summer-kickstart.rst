@@ -199,7 +199,11 @@ informal help session to get you started with the computing resources.
 
     * :doc:`/triton/tut/array`
     * :doc:`/triton/tut/gpu`
+
+      * Aalto: (same as above)
+      * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART>`__
       * Tampere: `Narvi GPU computing differences <https://narvi-docs.readthedocs.io/narvi/tut/gpu.html>`__
+
     * :doc:`/triton/tut/parallel`
 
   * Module #3.2 (1.5h): **HTCondor** (at Aalto) // lecture with demos
