@@ -40,7 +40,7 @@ below)::
 
 Here, we are asking for 100 Megabytes of memory (``--mem=100M``) for a
 duration of an hour (``--time=1:00:00``).
-While your job - with **jobID** 52204499 - is waiting to be allocated resources, your shell
+While your job - with **jobid** 52204499 - is waiting to be allocated resources, your shell
 effectively become non-interactive. 
 
 You can open a new shell on triton and run the command ``slurm q`` to see all the jobs
@@ -185,6 +185,8 @@ It's best to use smaller values when submitting interactive jobs, and more for b
    and options you can use in both your interactive jobs and `batch jobs <serial>` which you will learn about
    in the next tutorial.
 
+.. _triton-tut-exercise-repo:
+
 Exercises
 =========
 
@@ -229,7 +231,7 @@ will be used for the rest of the tutorial exercises.
       seconds: ``time python hpc-examples/slurm/pi.py
       500`` and so on.
 
-   b) Add ``srun`` in front (``srun python ...``).  Use the ``seff <jobID>``
+   b) Add ``srun`` in front (``srun python ...``).  Use the ``seff <jobid>``
       command to see how much time the program took to run.
       (If you'd like to use the ``time`` command, you can run
       ``srun --mem=<m> --time=<t> time python hpc-examples/slurm/pi.py <iters>``)
@@ -244,15 +246,13 @@ will be used for the rest of the tutorial exercises.
       TotalCPUTime and WallTime?
 
 3. Check out some of these commands: ``sinfo``, ``sinfo -N``, ``squeue``.  Run
-   ``slurm job <jobID>`` on some running job - does anything
+   ``slurm job <jobid>`` on some running job - does anything
    look interesting?
 
 4. Run ``scontrol show node csl1``  What is this?  (``csl1`` is the
    name of a node on Triton - if you are not on Triton, look at the
    ``sinfo -N`` command and try one of those names).
-
-
-
+   
 What's next?
 ============
 
