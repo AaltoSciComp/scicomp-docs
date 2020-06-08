@@ -39,7 +39,9 @@ advanced way of submitting jobs, batch scripts.
      people that have visited more often are asked to wait slightly
      longer for their table, as a balancing mechanic.
 
-   Thanks to `Sabry Razick <https://github.com/Sabryr>`__ for the idea.
+   Thanks to `HPC Carpentry
+   <https://hpc-carpentry.github.io/hpc-intro/13-scheduler/index.html>`__
+   / `Sabry Razick <https://github.com/Sabryr>`__ for the idea.
 
 .. highlight:: console
 
