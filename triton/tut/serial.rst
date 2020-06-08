@@ -6,7 +6,7 @@ Serial Jobs
 Introduction to batch scripts
 =============================
 
-You learned, in the :doc:`interactive jobs <interactive>`
+You learned, in the :doc:`interactive jobs <interactive>`,
 how all Triton users must do their computation by submitting jobs
 to the Slurm batch system to ensure efficient resource sharing.
 
@@ -20,7 +20,7 @@ supervision.
 To create a batch job, you need to create a job script and subsequently
 submit it to Slurm. A job script is simply a **shell script**,
 e.g. Bash, where you put your **resource requests** and **job steps**.
-You will see what these two components are shortly.
+You will see what these two components are in this tutorial.
 You have already seen how to do these interactively; and in this tutorial
 you will learn how to bundle them in your job scripts.
 
@@ -71,10 +71,11 @@ Having written the script, you need to submit the job to Slum through the ``sbat
 .. warning::
 
    You must use ``sbatch``, not ``bash`` to submit the job
-   to process the ``#SBATCH`` headers and run in the background.
+   since it is Slurm that understands the ``SBATCH`` directives,
+   not Bash.
 
 When the job enters the queue successfully, the response that the job has been submitted
-is printed in your terminal, along with the *job ID* assigned to the job.
+is printed in your terminal, along with the *jobid* assigned to the job.
 
 You can check the status of you jobs using ``slurm q``::
 
@@ -84,7 +85,7 @@ You can check the status of you jobs using ``slurm q``::
 
 Once the job is completed successfully, the state changes to *COMPLETED* and the
 output is then saved to ``hello.%j.out`` in your work
-directory ("%j" is replaced by the jobID).
+directory ("%j" is replaced by the jobid and "%u" by your username).
 
 Setting resource parameters
 ===========================
@@ -127,11 +128,11 @@ Once you submit your jobs, it goes into a queue. The two most useful commands to
 the status of your jobs with are ``slurm q`` and ``slurm h`` (You've seen both in use).
 
 For example, command ``scontrol show -d jobid <jobid>`` provides you detailed information
-on a job. Information such as where *stderr* and *stdout* will be redirected to. These information
+on a running job. Information such as where *stderr* and *stdout* will be redirected to. These information
 can be particularly beneficial for troubleshooting.
 
 Another example could be the command ``sacct --format=jobid,elapsed,ncpus,ntasks,state,MaxRss``
-which will show information as indicated in the ``--format`` option (job ID, the elapsed time,
+which will show information as indicated in the ``--format`` option (jobid, the elapsed time,
 number of occupied CPUs, etc.). You can specify any field of interest to be shown using ``--format``.
 
 You can see more commands below.
@@ -168,7 +169,7 @@ Take a look at the manpage using ``man sinfo`` for more details.
 Generally, you don't need to specify the partition; Slurm will
 use any posssible partition (though this is Aalto-specific, however
 other sites may have other requirements here). However, you can do so
-with ``-p PARTITION_NAME``
+with ``-p PARTITION_NAME``.
 This is mainly needed if you want to force interactive or
 debug partition (Slurm usually runs short jobs on the debug partition).
 
@@ -184,7 +185,7 @@ Full reference
 .. seealso::
 
    There is a full description of `running jobs on
-   Triton <../usage/general>`, and the `reference
+   Triton <../usage/general>` and the `reference
    page <../ref/index>` lists many useful commands.
 
 Exercises
@@ -197,10 +198,10 @@ Exercises
    c. Monitor the job with ``slurm watch queue``.
    d. Check the output.  Does it match ``slurm history``?
 
-2. Create a simple batch script using ``pi.py`` based on the pi
-   calculation of the :doc:`interactive job tutorial exercises
-   <interactive>`.  Create multiple job steps (separate ``srun``
-   lines), each of which runs ``pi.py`` with a greater and greater
+2. Create a simple batch script to run the Pi calculation script ``pi.py``
+   used in :ref:`triton-tut-exercise-repo`.
+   Create multiple job steps (separate ``srun``
+   lines), each of which runs ``pi.py`` with a greater
    number of tries.  How does this appear in ``slurm history``?  When
    would you use extra ``srun`` commands, and when not?
 
