@@ -190,7 +190,8 @@ Exercises
 
 The scripts you need for the following exercises can be found here:
 `hpc-examples/slurm
-<https://github.com/AaltoSciComp/hpc-examples/tree/master/slurm>`__)
+<https://github.com/AaltoSciComp/hpc-examples/tree/master/slurm>`__
+
 You can clone the repository by running
 ``git clone https://github.com/AaltoSciComp/hpc-examples.git``.  This repository
 will be used for the rest of the tutorial exercises.
@@ -211,9 +212,10 @@ will be used for the rest of the tutorial exercises.
       you use before the job fails?
 
    d) Look at the job history using ``slurm history`` - can you see
-      how much memory it actually used?
-      
-      Note, Slurm only measures memory every 60 seconds or so.  To make the program last longer, so that can be measured, give the ``--sleep`` option to the Python process, like this: ``python memory-hog.py 50M --sleep=60``.
+      how much memory it actually used? - Note that Slurm only measures memory
+      every 60 seconds or so.
+      To make the program last longer, so that the memory used can be measured,
+      give the ``--sleep`` option to the Python process, like this: ``python memory-hog.py 50M --sleep=60``.
 
 2. The program ``hpc-examples/slurm/pi.py``
    calculates Pi using a simple stochastic algorithm.  The program takes
