@@ -206,7 +206,8 @@ will be used for the rest of the tutorial exercises.
 
    b) Run the program with ``50M`` and ``srun --mem=500M``.
 
-   c) Increase the amount of memory allocated.  How much memory can
+   c) Increase the amount of memory the Python process tries to use (not the
+      amount of memory Slurm allocates).  How much memory can
       you use before the job fails?
 
    d) Look at the job history using ``slurm history`` - can you see
