@@ -21,9 +21,8 @@ The two main models are:
 * Shared memory (or multithreaded/multiprocess) programs run multiple
   independent workers on the same machine. As the name suggests, all of
   the computer's memory has to be accessible to all of the processes.
-  **Thus programs that utilize this model should request multiple CPUs on
-  one node and utilize requested processors by using multiple threads or
-  subprocesses.**
+  **Thus programs that utilize this model should request one node,
+  one task and multiple CPUs.**
   Likewise, the maximum number of workers is usually the number of CPU cores
   available on the computational node. The code is easier to implement
   and the same   code can still be run in a serial mode. Example applications
@@ -36,11 +35,15 @@ The two main models are:
   data through MPI software libraries. Almost all large-scale scientific
   programs utilize MPI. MPI can scale to thousands of CPU cores, but
   depending on the case it can be harder to implement from the
-  programmer's point of view. Example applications that utilize this
+  programmer's point of view. **Programs that utilize this model should
+  request single/multiple nodes with multiple tasks each. You should
+  not request multiple CPUs per task.** Example applications that utilize this
   model: CP2K, GPAW, LAMMPS, OpenFoam.
 
 Both models, MPI and shared memory, can be combined in one application, in
 this case we are talking about hybrid parallel programming model.
+**Programs that utilize this model can require both multiple tasks
+and multiple CPUs per task.**
 
 Most historical scientific code is MPI, but these days more and more
 people are using shared memory models.
