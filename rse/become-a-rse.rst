@@ -1,6 +1,12 @@
 For RSE candidates and community
 ================================
 
+This page is designed to guide people into the interesting world of
+research software engineering: providing a view into the types of
+skills that are useful to research groups at Aalto.  It also provide
+links to training material which our RSEs should learn after
+starting.
+
 Do you like coding and research, but don't want an academic career
 path with publications as your sole purpose?  Be a Research Software
 Engineer with us!  Our pilot is designed to bridge the gap between
@@ -17,6 +23,11 @@ If (some of) the following apply to you, you are a good candidate:
 * I am interested in going to a scientist-developer kind of role in a
   company, but need more experience before I can make the transition.
 
+
+
+General qualifications and duties
+---------------------------------
+
 We strongly prefer good computational researchers (PhD level
 preferred) who can improve their software development skills than the
 other way around.  This role can be combined with other roles, but
@@ -28,27 +39,99 @@ be involved in teaching an infrastructure development.
 
 
 
-Aalto community chats
----------------------
+Job advertisements
+------------------
 
-We have biweekly chats for the Aalto RSE/scientific computing
-poweruser meetings.  This is a way to network with similarly-minded
-people.  Check back for updates on when these are.
+From time to time, job advertisements are posted on the `Aalto
+University job portal <https://www.aalto.fi/en/open-positions>`__,
+with notices on various other channels including Aalto scientific
+computing mailing lists.
 
-RSEs have been an essential part of science for ages, but hardy ever
-recognised.  We have many here at Aalto.  Aalto SciComp is trying to
-make a community of these people.  By taking part, you can
 
-* Network with others in similar situations and discover career
-  opportunities.
+Required Skillset
+-----------------
 
-* Share knowledge among ourselves (maybe have relevant training, too)
+This is a large list of the types of technologies which are used by
+our researchers.  No one person is expected to know everything, but we
+will hire a variety of people to cover many of the things you see
+here.
 
-* Take part in developing our services - basically, be a voice of the
-  users.
+Most important is *do you want to learn things from this list?  Can
+you do so mostly independently but with the help of a great team?*
 
-* More directly help the community by, for example, directly updating
-  this site, helping to develop services, or teaching with us.
 
-Join `our RSE mailing list
-<https://list.aalto.fi/mailman/listinfo/rse>`_ to be kept up to date.
+
+General skills
+~~~~~~~~~~~~~~
+
+* Basic mandatory skills include Linux, shell scripting, some
+  low-level programming language (C, Fortran), and programming in
+  several more languages (Python particularly advantageous).
+* Good knowledge of computer clusters, batch systems, and
+  high-performance computing.
+* Any additional programming, workflow, research, or system tools are
+  a plus.  You should have a wide range of skills, but the exact
+  skills are not so important.  Most important is sufficient fluency
+  to pick up anything quickly.  These skills should be listed as an
+  appendix to the cover letter if not included in the CV.
+* Advanced parallel programming skills are a plus, but equally
+  important is the ability to create good, simple, practical tools.
+* As an example, the ideal candidate will have near-perfect knowledge
+  of all `Software Carpentry <swc_>`_, `CodeRefinery <cr_>`_, and the generic parts of
+  our :ref:`HPC lessons <tutorials>` - or be able to fill in gaps with
+  minimal effort.
+* But at the same time, we don't just want people from purely
+  computational backgrounds.  You'll work with people from
+  experimental sciences, digital humanities, etc, and good people from
+  these backgrounds are important, too.
+* A good attitude towards mentoring and teaching and an ability to
+  explain complex subjects in an accessible way.
+* Commitment to diversity and equality of researchers among many
+  different backgrounds.
+* Good knowledge of English.  Finnish advantageous but not required,
+  our internal working language is English.
+
+.. _swc: https://software-carpentry.org/lessons/
+.. _cr: https://coderefinery.org/lessons/
+
+Specific examples
+~~~~~~~~~~~~~~~~~
+
+* Advanced experience of debugging/profiling/developing Linux tools,
+  incl Git, Intel and GNU compiler suits and corresponding tools.
+* Software building tools like Make, CMake and alike.
+* Advanced knowledge of parallel programming models, experience of
+  parallel programming (OpenMP, MPI).
+* Advanced GPU computing / programming (CUDA, OpenACC, OpenMP models),
+  experience of porting software to GPUs.
+* Profiling and optimization - both of low-level languages and
+  high-level.
+* Knowledge of scientific software and packages incl Matlab,
+  Mathematica, Python libs, others is beneficial.
+* Experimental data collection, LabView, etc.
+* Git, GitHub, git-based collaborative workflows
+* Software testing, CI, documentation, portability, etc.
+* Workflow automation, shell scripting, porting from single machines
+  to clusters.
+* Data management, data engineering, data wrangling.
+* Docker, Singularity, containers.
+* Reproducible research.
+* Open source software development, community formation.
+* Software packaging and distribution, (e.g. PyPI, conda, etc.).
+* Data analysis tools like R, Python, pandas, numpy, etc. are
+  beneficial
+* Julia, Matlab, Mathematica.
+* Web development, cloud operations.
+* Scientific Computing on other operating systems.
+
+
+
+Training resources
+------------------
+
+* `Hands-on scientific computing <hosc_>`_
+* `Software Carpentry <swc_>`_
+* `CodeRefinery <cr_>`_
+* :ref:`HPC and Triton <tutorials>`
+
+.. _hosc: https://handsonscicomp.readthedocs.io/

@@ -31,7 +31,8 @@ be updated.**
 
    For researchers, groups, and group leaders <researchers>
    For departments and school <units>
-   RSE community and joining <become-a-rse>
+   RSE community and joining <community>
+   Become a RSE <become-a-rse>
    implementation
 
 
