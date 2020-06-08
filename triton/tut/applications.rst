@@ -52,6 +52,12 @@ avail`` too, to find all the available modules.
 Common applications
 ^^^^^^^^^^^^^^^^^^^
 
+.. important::
+
+   This is Aalto-specific.  Some of these will work if you ``module
+   load fgci-common`` at other Finnish sites.  This is introduced in
+   the next lesson.
+
 For reference, here are the most common softwares:
 
 * **Python:** ``module load anaconda`` for the Anaconda distribution
@@ -112,6 +118,9 @@ want others to use, :doc:`make it easy to install and reusable
 Exercises
 =========
 
+If you are not at Aalto, you need to ``module load fgci-common``
+before you can do these.
+
 1. Figure out how to use ``tensorflow`` (this is not a software
    problem, but a searching the documentation problem).  Make it work
    enough to do ``python`` and ``import tensorflow`` -- though you
@@ -125,13 +134,16 @@ Exercises
    /etc/issue``.  Verify that this is different from what is outside
    the container.
 
-3. Find the Applications page link above, and check the list for how
-   to find if we already have your software installed.  See if we have
-   what you need, using any of those strategies.
+3. Find the Applications page link above, and check the list for ways
+   to find out if we already have your software installed.  See if we have
+   what you need, using any of the strategies on that list.
 
 4. (optional) From the Applications page, find the Spack package list
    (warning: it's a very long page and takes a while to load).  Does
    it have anything useful to you?
+
+5. (optional) Discuss among your group what software you need, if it's
+   available, and how you might get it.
 
 
 
