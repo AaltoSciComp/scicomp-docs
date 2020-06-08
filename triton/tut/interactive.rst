@@ -67,14 +67,13 @@ in the Triton cluster your program ran on, output to your terminal::
 
 .. note::
 
-   Interactive jobs are useful for debugging purposes, to test your setup 
+   Interactive jobs are useful for debugging purposes, to test your setup
    and configurations before you put your tasks in a batch script for later execution.
-   Or if you need graphical applications - such as Matlab, RStudio, etc. 
+   Or if you need graphical applications - such as Matlab, RStudio, etc.
    Additionally, if your task is small and not worth writing a batch script for, 
    interactive job is the way to go.
-
-   Don't go opening 20 shells to run 20 ``srun`` jobs at once.  Look
-   at the :doc:`next tutorial about serial jobs <serial>`.
+   Keep in mind that you shouldn't open 20 shells to run 20 ``srun`` jobs at once.
+   Please have a look at the :doc:`next tutorial about serial jobs <serial>`.
 
 
 Interactive shell
@@ -87,7 +86,7 @@ resources available.
 For this, you just need srun's ``--pty`` option coupled with the shell
 you want::
 
-  srun -p interactive --time=2:00:00 --mem=600 --pty bash 
+  srun -p interactive --time=2:00:00 --mem=600 --pty bash
 
 The command prompt will appear when the job starts.
 And you will have a bash shell runnnig on one of the 
@@ -110,8 +109,7 @@ limits.
 .. note::
 
   you can use ``sinfo`` to see information such as the available partitions,
-  number of nodes in each, their time limits etc. 
-
+  number of nodes in each, their time limits, etc.
 
 Interactive shell with graphics
 ===============================
@@ -129,9 +127,9 @@ process again.
 .. warning::
 
   Just like with ``srun --pty bash``, remember to exit the shell.
-  Since there is a separate screen session running, just closing the terminal isn't enough. 
+  Since there is a separate screen session running, just closing the terminal isn't enough.
   Exit all shells in the screen session on the node (C-d or ``exit``), or cancel
-  the process (see below).
+  the process.
 
 .. note::
 
@@ -190,56 +188,61 @@ It's best to use smaller values when submitting interactive jobs, and more for b
 Exercises
 =========
 
-1. The program ``/scratch/scip/hpc-examples/slurm/memory-hog.py``
-   uses up a lot of memory to do nothing.  Let's play with it.  It's
-   run like this: ``python
-   /scratch/scip/hpc-examples/slurm/memory-hog.py 50M``, where the
-   last argument is however much memory you want to eat.  (also
-   available from `hpc-examples/slurm
-   <https://github.com/AaltoSciComp/hpc-examples/tree/master/slurm>`__)
+The scripts you need for the following exercises can be found here:
+`hpc-examples/slurm
+<https://github.com/AaltoSciComp/hpc-examples/tree/master/slurm>`__)
+You can clone the repository by running
+``git clone https://github.com/AaltoSciComp/hpc-examples.git``.  This repository
+will be used for the rest of the tutorial exercises.
 
-   a) Try running the program with ``50M``
+1. The program ``hpc-examples/slurm/memory-hog.py``
+   uses up a lot of memory to do nothing.  Let's play with it.
+   It's run as follows:
+   ``python hpc-examples/slurm/memory-hog.py 50M``, where the
+   last argument is however much memory you want to eat.  You can use
+   ``--help`` to see the options of the program.
+
+   a) Try running the program with ``50M``.
 
    b) Run the program with ``50M`` and ``srun --mem=500M``.
 
-   c) Increase the amount of memory allocated until the job fails.
-      What happens?
+   c) Increase the amount of memory the Python process tries to use (not the
+      amount of memory Slurm allocates).  How much memory can
+      you use before the job fails?
 
-   d) Play around with different parameters: how much memory can you
-      use?
-
-   e) Look at the job history using ``slurm history`` - can you see
+   d) Look at the job history using ``slurm history`` - can you see
       how much memory it actually used?
+      
+      Note, Slurm only measures memory every 60 seconds or so.  To make the program last longer, so that can be measured, give the ``--sleep`` option to the Python process, like this: ``python memory-hog.py 50M --sleep=60``.
 
-2. The program ``/scratch/scip/hpc-examples/slurm/pi.py`` (also
-   available from `hpc-examples/slurm
-   <https://github.com/AaltoSciComp/hpc-examples/tree/master/slurm>`__)
-   calculates pi using a simple stochastic algorithm.  You give it one
-   argument: the number of trials.
+2. The program ``hpc-examples/slurm/pi.py``
+   calculates Pi using a simple stochastic algorithm.  The program takes
+   one positional argument: the number of trials.
 
-   The ``time`` program allows you to time any program.  e.g. you can
+   The ``time`` program allows you to time any program,  e.g. you can
    ``time python x.py`` to print the amount of time it takes.
 
    a) Run the program, timing it with ``time``, a few times,
       increasing the number of trials, until it takes about 10
-      seconds: ``time python /scratch/scip/hpc-examples/slurm/pi.py
+      seconds: ``time python hpc-examples/slurm/pi.py
       500`` and so on.
 
-   b) Add ``srun`` in front (``srun python ...``).  What changes?
+   b) Add ``srun`` in front (``srun python ...``).  Use the ``seff <jobID>``
+      command to see how much time the program took to run.
+      (If you'd like to use the ``time`` command, you can run
+      ``srun --mem=<m> --time=<t>time python time python hpc-examples/slurm/pi.py <iters>``)
 
    c) Tell srun to use five CPUs (``-c 5``).  Does it go any faster?
 
    d) Use the ``--threads=5`` option to the Python program to tell it
       to also use five threads.  ``... python .../pi.py --threads=5``
 
-   e) Play around with it some.  What do you find?
-
-   f) Look at the job history using ``slurm history`` - can you see
+   e) Look at the job history using ``slurm history`` - can you see
       how much time each process used?  What's the relation between
       TotalCPUTime and WallTime?
 
 3. Check out some of these commands: ``sinfo``, ``sinfo -N``, ``squeue``.  Run
-   ``slurm job $jobid`` on some running job - does anything
+   ``slurm job <jobID>`` on some running job - does anything
    look interesting?
 
 4. Run ``scontrol show node csl1``  What is this?  (``csl1`` is the
