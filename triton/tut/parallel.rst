@@ -76,14 +76,16 @@ people are using shared memory models.
    magically get faster when you ask more processors if it's not designed
    to.**
 
-Shared memory: OpenMP programs
-------------------------------
+Shared memory: OpenMP/multithreaded
+-----------------------------------
 
 OpenMP is a standard de facto for the multithreading implementations. There
 are many others, but this one is the most common, supported by all known
 compiler suits. For other implementations of shared memory parallelism,
 please consult your code docs.
 
+Running a typical OpenMP program
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Simple code compiling::
 
   gcc -fopenmp -O2 -g omp_program.c -o omp_program
@@ -136,50 +138,106 @@ needs to specify the number of cores per task and amount of memory per core.
 Message passing programs: MPI
 -----------------------------
 
-For compiling/running an MPI job one has to pick up one of the MPI library suites.
-Big vendors provide their own (Cray, Intel) while there are other popular MPI
-flavors available. To compile and run code you need to pick one. Since most of
-the MPI codes will also use math libs, makes sense to pick a toolchain that
-provides all at once.
+For compiling/running an MPI job one has to pick up one of the MPI library
+suites. There are various different MPI libraries that all implement the
+MPI standard. We recommend that you use either:
 
-For basic use of MPI programs, you usually need the ``-n`` option to
-specify the number of MPI threads.
+  - OpenMPI (e.g. ``openmpi/3.1.4``)
+  - Intel's MPI (e.g. ``intel-parallel-studio/cluster.2020.0-intelmpi``)
+
+Some libraries/programs might have already existing requirement for a certain
+MPI version. If so, use that version or ask for administrators to create
+a version of the library with dependency on the MPI version you require.
+
+.. warning::
+
+   Different versions of MPI are not compatible with each other. Each
+   version of MPI will create code that will run correctly with only
+   that version of MPI. Thus if you create code with a certain version,
+   you will need to load the same version of the library when you are
+   running the code.
+
+   Also, the MPI libraries are usually linked to Slurm and network
+   drivers. Thus, when Slurm or driver versions are updated, some
+   older versions of MPI might break. If you're still using said
+   versions, let us know. If you're just starting a new project, it
+   is recommended to use our recommended MPI libraries.
+
+For basic use of MPI programs, you will need to use the
+``-n N``/``--ntasks=N``-option to specify the number of MPI workers.
+
+Running a typical MPI program
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Loading module::
 
   module load gcc/9.2.0      # GCC
   module load openmpi/3.1.4  # OpenMPI
 
-Compiling a code::
+Compiling the code (depending on module and language)::
 
-  mpif90 -O2 -g mpi_prog.f -o mpi_prog
+  mpifort  -O2 -g mpi_prog.f -o mpi_prog # OpenMPI   + Fortran code
+  mpicc    -O2 -g mpi_prog.c -o mpi_prog # OpenMPI   + C code
+  mpiifort -O2 -g mpi_prog.f -o mpi_prog # Intel MPI + Fortran code
+  mpiicc   -O2 -g mpi_prog.c -o mpi_prog # Intel MPI + C code
 
 Running an MPI code in the batch mode::
 
   #!/bin/bash
   #SBATCH -n 16                # 16 processes
   #SBATCH --constraint=avx     # run on nodes with AVX instructions
-  #SBATCH --time=4:00:00       # takes 4 hours all together
-  #SBATCH --mem-per-cpu=4000   # 4GB per process
+  #SBATCH --time=04:00:00      # takes 4 hours all together
+  #SBATCH --mem-per-cpu=2000   # 2GB per process
 
-  module load openmpi/3.1.4  # NOTE: should same as you used to compile the code
+  module load openmpi/3.1.4  # NOTE: should be the same as you used to compile the code
   srun ./mpi_prog
 
 
 Triton has multiple architectures around (12, 20, 24, 40 CPU cores per node),
-even though SLURM optimizes resources usage and allocate CPUs within one node, which
-gives better performance for the app, it still makes sense to put constraints
-explicitly.
+even though SLURM optimizes resources usage and allocate CPUs within one node,
+which gives better performance for the app, it still makes sense to put
+constraints explicitly.
 
+Spreading MPI workers evenly
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In many cases you might require more than one node during your job's runtime.
+
+When this is the case, it is usually recommended to split the number of
+workers somewhat evenly among the workers. To do this, one can use
+``-N N``/``--nodes=N`` and ``--ntasks-per-node=n``. For example, the previous example
+could be written as::
+
+  #!/bin/bash
+  #SBATCH --nodes=2            # 2 nodes
+  #SBATCH --ntasks-per-node=8  # 8 processes per node * 2 nodes = 16 processes in total
+  #SBATCH --constraint=avx     # run on nodes with AVX instructions
+  #SBATCH --time=04:00:00      # takes 4 hours all together
+  #SBATCH --mem-per-cpu=2000   # 2GB per process
+
+  module load openmpi/3.1.4  # NOTE: should be the same as you used to compile the code
+  srun ./mpi_prog
+
+This way the number of workers is distributed more evenly, which in turn
+reduces communication overhead between workers.
 
 Monitoring performance
 ----------------------
 
 You can use the ``seff`` program (with a jobid) to list what percent
 of available processors and memory you used.  If your processor usage
-is far below, your code may not be working correctly in a parallel
-environment.
+is far below 100%, your code may not be working correctly in a parallel
+environment. If your memory usage is far below 100%, you might have a
+problem with your requirements.
 
+.. important::
+
+   When making job reservations it is important to distinguish
+   between requirements for the whole job (such as ``--mem``) and
+   requirements for **each individual task/cpu** (such as ``--mem-per-cpu``).
+   E.g. requesting ``--mem-per-cpu=2G`` with ``--ntasks=2`` and ``--cpus-per-task=4``
+   will create a total memory reservation of
+   (2 tasks)*(4 cpus / task)*(2GB / cpu)=16GB.
 
 Exercises
 ---------
