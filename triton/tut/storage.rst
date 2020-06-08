@@ -49,7 +49,7 @@ When people think of computer speed, they usually think of CPU speed.
 But this is missing an important factor: How fast can data get to the
 CPU?  In many cases, input/output (IO) is the true bottleneck and
 must be considered just as much as processor speed.  **In fact,
-modern computers and especially GPUs are so fast that it becomes very easy 
+modern computers and especially GPUs are so fast that it becomes very easy
 for a few GPUs with bad data access patterns to bring the cluster down for
 everyone.**
 
@@ -94,8 +94,8 @@ and availability.  You need to balance between these.
 
 Home directories
 ~~~~~~~~~~~~~~~~
-The place you start when you log in.  Home directory should be used for init files, 
-small config files, etc.  It is however not suitable for storing calculation data. 
+The place you start when you log in.  Home directory should be used for init files,
+small config files, etc.  It is however not suitable for storing calculation data.
 Home directories are backed up daily.  You usually want to use scratch instead.
 
 scratch and work: Lustre
@@ -118,7 +118,7 @@ See :doc:`../usage/lustre`
 
 Local disks
 ~~~~~~~~~~~
-Local disks are on each node separately.  It is used for the fastest I/Os 
+Local disks are on each node separately.  It is used for the fastest I/Os
 with single-node jobs and is cleaned up after job is finished.  Since 2019,
 things have gotten a bit more complicated given that our newest (skl) nodes
 don't have local disks.  If you want to ensure you have local storage,
@@ -162,7 +162,7 @@ member.
 
     $ quota
     User quotas for darstr1
-         Filesystem   space   quota   limit   grace   files   quota   limit   grace
+	 Filesystem   space   quota   limit   grace   files   quota   limit   grace
     /home              484M    977M   1075M           10264       0       0
     /scratch          3237G    200G    210G       -    158M      1M      1M       -
 
@@ -328,7 +328,7 @@ and are available everywhere.
 
 A more user-friendly way of doing this (with a nice GUI) is the
 `Filezilla program <https://filezilla-project.org/>`__. Make sure you are using
-`Aalto VPN <https://www.aalto.fi/en/services/establishing-a-remote-connection-vpn-to-an-aalto-network>`__, then 
+`Aalto VPN <https://www.aalto.fi/en/services/establishing-a-remote-connection-vpn-to-an-aalto-network>`__, then
 you can put triton.aalto.fi as SFTP server with port 22.
 
 Below is an example of the "raw" SFTP usage::
@@ -356,7 +356,7 @@ Using rsync
 
 Rsync is similar to sftp, but is smarter at restarting files.  Use rsync
 for large file transfers.  ``rsync`` actually uses the ssh protocol so
-you can ``rsync`` from anywhere you can ``ssh`` from. ``rsync`` is installed 
+you can ``rsync`` from anywhere you can ``ssh`` from. ``rsync`` is installed
 by default on Linux and Mac terminals. On Windows machines we recommend using `GIT-bash <https://gitforwindows.org/>`__.
 
 While there are better places on the internet to read about rsync, it is good
@@ -365,7 +365,7 @@ the issue with copying files is related to group permissions. This command takes
 care of permissions and makes sure that all your local files are identical (= same
 MD5 fingerprint) to your remote files::
 
-    rsync -avzc -e "ssh" --chmod=g+s,g+rw --group=GROUPNAME PATHTOLOCALFOLDER USERNAME@triton.aalto.fi:/scratch/DEPT/PROJECTNAME/REMOTEFOLDER/ 
+    rsync -avzc -e "ssh" --chmod=g+s,g+rw --group=GROUPNAME PATHTOLOCALFOLDER USERNAME@triton.aalto.fi:/scratch/DEPT/PROJECTNAME/REMOTEFOLDER/
 
 Replace the bits in CAPS with your own case. Briefly, ``-a`` tries to preserve all attributes of the file, ``-v`` increases verbosity to see what rsync is doing, ``-z`` uses compression, ``-c`` skips files that have identical MD5 checksum, ``-e`` specifies to use ssh (not necessary but needed for the commands coming after), ``--chmod`` sets the group permissions to shared (as common practice on scratch project folders), and ``--group`` sets the groupname to the group you belong to (note that GROUPNAME == PROJECTNAME on our scratch filesystem).
 
@@ -374,7 +374,7 @@ If you want to just check that your local files are different from the remote on
     rsync --dry-run -avzc ...
 
 Sometimes you want to copy only certain files. E.g. go through all folders, consider only files ending with ``py``::
-    
+
     rsync -avzc --include '*/' --include '*.py' --exclude '*' ...
 
 Sometimes you want to copy only files under a certain size (e.g. 100MB)::
