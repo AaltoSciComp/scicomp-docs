@@ -198,6 +198,8 @@ environment variables, so this needs to be repeated in each new shell
 
 -  See the :doc:`Triton module docs <../triton/tut/modules>` docs for
    details.
+-  ``module load triton-modules`` will make most Triton software
+   available on Aalto workstations (otherwise, most is hidden).
 -  ``module avail`` to list all available package.
 -  ``module spider $name`` to search for a particular name.
 -  ``module load $name`` to load a module. This adjusts environment
@@ -211,7 +213,7 @@ Useful modules:
 -  ``anaconda`` and ``anaconda2`` will always be kept up to date with the latest Python
    Anaconda distribution, and we'll try to keep this in sync across
    Aalto Linux and Triton.
-
+- ``triton-modules``: a metamodule that makes other Triton software available.
 
 
 Admin rights
