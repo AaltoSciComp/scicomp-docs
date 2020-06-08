@@ -114,6 +114,14 @@ with the number of cores, use ``--mem-per-core=M``, if you
 require a fixed amount of memory (per node regardless of number of
 processors), use ``--mem=M``.
 
+.. important::
+
+   The number of threads/processes you launch should match the
+   number of requested processors. If you create a lower number, you will
+   not utilize all CPUs. If you launch a larger number, you will
+   oversubscribe the CPUs and the code will run slower as different
+   threads/processes will have to swap in/out of the CPUs.
+
 .. warning::
 
    Normally you should **not** use ``--ntasks=N`` when you want to
