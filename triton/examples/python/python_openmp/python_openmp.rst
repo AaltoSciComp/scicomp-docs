@@ -8,7 +8,7 @@ that calculates multiplicative inverse of five symmetric matrices of
 size 2000x2000.
 
 .. literalinclude:: /triton/examples/python/python_openmp/python_openmp.py
-   :lines: 8-20
+   :lines: 8-19
 
 The full code for the example is in
 `HPC examples-repository <https://github.com/AaltoSciComp/hpc-examples>`_.
