@@ -1,3 +1,6 @@
 [submodule "_ext/sphinx_ext_minipres"]
 	path = _ext/sphinx_ext_minipres
 	url = https://github.com/rkdarst/sphinx_ext_minipres.git
+[submodule "triton/hpc-examples"]
+	path = triton/hpc-examples
+	url = https://github.com/AaltoSciComp/hpc-examples.git
