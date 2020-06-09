@@ -22,6 +22,11 @@ from the School of Science with additional university-level funding -
 **our HPC services are available to all Aalto University, free of
 charge**.
 
+.. toctree::
+   :maxdepth: 1
+
+   for-proposals
+
 What we do
 ----------
 
