@@ -22,6 +22,29 @@ This tutorial walks you through running your jobs interactively.
 And in the next tutorial we will go through the more common and
 advanced way of submitting jobs, batch scripts.
 
+.. admonition:: An analogy: the HPC Diner
+
+   You're eating out at the HPC Diner.  What happens when you arrive?
+
+   - A host greets you and takes your party size and estimated dining
+     time.
+   - You are given a number and asked to wait a bit.
+   - The host looks at who is currently waiting.
+   - If you are two people, you might squeeze in soon.
+   - If you are a lot of people, the host will try to slowly free up
+     enough tables to join to eat together.
+   - If you are a really large party, you might need an advance
+     reservation (or have to wait a really long time).
+   - They want everyone to get a fair share of their food.  Thus,
+     people that have visited more often are asked to wait slightly
+     longer for their table, as a balancing mechanic.
+
+   Thanks to `HPC Carpentry
+   <https://hpc-carpentry.github.io/hpc-intro/13-scheduler/index.html>`__
+   / `Sabry Razick <https://github.com/Sabryr>`__ for the idea.
+
+.. highlight:: console
+
 
 Your first interactive job
 ==========================
