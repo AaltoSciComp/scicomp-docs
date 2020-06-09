@@ -30,9 +30,9 @@ shown) with ``module show gcc``:
 .. code-block:: console
 
     $ module show gcc
-    ----------------------------------------------------------------------------------------------
-       /share/apps/spack/envs/fgci-centos7-generic/lmod/linux-centos7-x86_64/all/gcc/9.2.0.lua:
-    ----------------------------------------------------------------------------------------------
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        /share/apps/spack/envs/fgci-centos7-generic/lmod/linux-centos7-x86_64/all/gcc/9.2.0.lua:
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     whatis("Name : gcc")
     whatis("Version : 9.2.0")
     whatis("Short description : The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, and Go, as well as libraries for these languages.")
@@ -47,6 +47,9 @@ shown) with ``module show gcc``:
     prepend_path("LIBRARY_PATH","/share/apps/spack/envs/fgci-centos7-generic/software/gcc/9.2.0/dnrscms/lib64")
     prepend_path("LD_LIBRARY_PATH","/share/apps/spack/envs/fgci-centos7-generic/software/gcc/9.2.0/dnrscms/lib64")
     prepend_path("CPATH","/share/apps/spack/envs/fgci-centos7-generic/software/gcc/9.2.0/dnrscms/include")
+    prepend_path("CMAKE_PREFIX_PATH","/share/apps/spack/envs/fgci-centos7-generic/software/gcc/9.2.0/dnrscms/")
+    setenv("CC","/share/apps/spack/envs/fgci-centos7-generic/software/gcc/9.2.0/dnrscms/bin/gcc")
+    setenv("CXX","/share/apps/spack/envs/fgci-centos7-generic/software/gcc/9.2.0/dnrscms/bin/g++")
     ...
 
 The command ``module show gcc`` shows some meta-info (name of the module, its version, etc.)
@@ -87,9 +90,9 @@ that has a more up to date Python with lots of libraries already included::
 
   $ module load anaconda
   $ which python
-  /share/apps/anaconda-ci/fgci-centos7-generic/software/anaconda/2020-01-tf2/0251cd77/bin/python3
+  /share/apps/anaconda-ci/fgci-centos7-generic/software/anaconda/2020-03-tf2/521551bc/bin/python
   $ python -V
-  Python 3.7.6
+  Python 3.6.10 :: Anaconda, Inc.
 
 As you see, you now have a newer version of Python, in a different directory.
 
@@ -97,7 +100,7 @@ You can see a list of the all the loaded modules in our working shell using the 
 
   $ module list
   Currently Loaded Modules:
-    1) anaconda/2020-02-tf2
+    1) anaconda/2020-03-tf2
 
 .. note::
   The ``module load`` and ``module list`` commands can be abbreviated as ``ml``
@@ -211,9 +214,10 @@ Module versions
 What's the difference between ``module load r`` and ``module load
 r/3.6.1-python3``?
 
-The first loading ``r`` loads the latest one.  The second loading
+The first loading ``r`` loads the version that Lmod assumes to be the
+latest one. **This is necessarily not the latest one.** The second loading
 ``r/3.6.1-python3`` loads that exact version, which is supposed to not
-change.  If you always want the latest of something, you can load it
+change.  If you're not interested about the specific version, you can load it
 without the version (but then *when* stuff randomly stops working, you're
 going to have to figure out what happened).  Once you are past that
 (possibly from day one!), it's usually a good idea to load specific
@@ -245,38 +249,42 @@ Making a module collection
 --------------------------
 
 There is a basic dependency/conflict system to handle module dependency.
-Each time you load a module, it resolves all the dependencies.  This
-can mean that loading module takes a long time, but there is a
-solution: ``module save $collection_name`` and ``module restore
+Each time you load a module, it resolves all the dependencies. This
+can result in long loading times or be annoying to do each time you
+log in to the system. However, there is a solution: 
+``module save $collection_name`` and ``module restore
 $collection_name``
 
 Let's see how to do this in an example.
 
-Try loading the ``graph-tool`` module. How long does it take?  Use ``module
-list`` to see how many things were actually loaded::
+Let's say that for compiling / running your program you need:
 
-  $ module load graph-tool             # 600 seconds!
-  $ module list                        # 72 modules!
+  - a compiler
+  - CMake
+  - MPI libraries
+  - FFTW libraries
+  - BLAS libraries
 
-Then, do ``module save my-collection``.  Then ``module purge`` to
-unload everything.  Now, do ``module restore my-collection``::
+You could run this each time you want to compile/run your code::
 
-  $ module save my-gt
+  $ module load gcc/9.2.0 cmake/3.15.3 openmpi/3.1.4 fftw/3.3.8-openmpi openblas/0.3.7
+  $ module list           # 15 modules
+
+Let's say this environment works for you. Now you can save it with
+``module save my-env``.  Then ``module purge`` to
+unload everything.  Now, do ``module restore my-env``::
+
+  $ module save my-env
   $ module purge
-  $ module restore my-gt               # only 3 seconds
-  $ module list                        # same 72 modules
-
-Was it much faster?
+  $ module restore my-env
+  $ module list           # same 15 modules
 
 Generally, it is a good idea to save your modules
 as a collection to have your desired modules
-all set up each time you want to re-compile/re-build::
-
-  $ module anaconda/2020-02-tf2 gcc/9.2.0
-  $ module save my-modules
+all set up each time you want to re-compile/re-build.
 
 So the subsequent times that you want to compile/build,
-you simply ``module restore my-modules`` and this way
+you simply ``module restore my-env`` and this way
 you can be sure you have the same previous environment.
 
 .. note::
@@ -284,12 +292,10 @@ you can be sure you have the same previous environment.
   re-organize things (it will prompt you to rebuild your collection
   and you simply save it again).
 
-
 Full reference
 --------------
 
 .. include:: ../ref/modules.rst
-
 
 
 Final notes
@@ -313,8 +319,6 @@ Some modules are provided by Aalto Science-IT, some by CSC.  You could
 even `make your own user modules
 <https://lmod.readthedocs.io/en/latest/020_advanced.html>`__.
 
-
-
 Exercises
 ---------
 
@@ -332,20 +336,17 @@ Before each exercise, run ``module purge`` to clear all modules.
 
 3. (Advanced) Same as number 2, but use ``env | sort >
    filename`` to store environment variables, then swap to
-   ``py-gpaw/1.3.0-openmpi-scalapack-python3``.  Do the same, and compare the two outputs
-   using ``diff``.
+   ``py-gpaw/1.3.0-openmpi-scalapack-python3``.
+   Do the same, and compare the two outputs using ``diff``.
 
 4. Load a module with many dependencies, such as
-   ``R/3.3.2-iomkl-triton-2017a-libX11-1.6.3`` and save it as a
-   collection.  Compare the time needed to load the module and the
-   collection.  (Does ``time`` not work?  Change your shell to bash,
-   see the previous tutorial)
+   ``r-ggplot2`` and save it as a collection.  Compare the time
+   needed to load the module and the collection.  (Does ``time``
+   not work?  Change your shell to bash, see the previous tutorial)
 
-5. (Advanced) Load GROMACS.  Use ``which`` to find where command ``gmx`` is
-   and then use ``ldd`` to find out what libraries it uses. Load
-   incompatible toolchain e.g. goolf. Check ``ldd`` output again.
-
-
+5. (Advanced) Load ``openfoam-org/7-openmpi-metis``.
+   Use ``which`` to find where executable ``blockMesh`` is
+   coming from and then use ``ldd`` to find out what libraries it uses.
 
 What's next?
 ------------
