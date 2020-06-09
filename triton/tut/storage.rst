@@ -299,7 +299,7 @@ Remote mounting using sshfs
 
 ``sshfs`` is a neat program that lets you mount remote filesystems via
 ssh only.  It is well-supported in Linux, and somewhat on other
-operating systems.  It's true advantage is that you can mount any
+operating systems.  Its true advantage is that you can mount any
 remote ssh server - it doesn't have to be set up specially for SMB or
 any other type of mounting.  On Ubuntu, you can mount by "File → Connect to
 server" and using ``sftp://triton.aalto.fi/scratch/work/USERNAME``.
