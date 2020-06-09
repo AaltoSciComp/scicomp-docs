@@ -30,7 +30,7 @@ creates an array of 5 jobs (tasks) with index values 0, 1, 2, 3, 4.
 
 The array tasks are copies of the "master" batch script that are automatically submitted
 to Slurm. Slurm provides a unique environment variable ``SLURM_ARRAY_TASK_ID`` to each
-task which could be used for handling input output files to each task.
+task which could be used for handling input/output files to each task.
 
 .. note::
 
@@ -44,8 +44,8 @@ task which could be used for handling input output files to each task.
    know how your code behaves with respect to the file system:
 
      - Does it use libraries/environment stored in the work directory?
-     - How much input data it needs?
-     - How much output data the job creates?
+     - How much input data does it need?
+     - How much output data does the job create?
 
    For example, running an array job with hundreds of workers
    that uses a Python environment stored in the work disk can
@@ -62,6 +62,7 @@ as you wish. Let's name it ``hello.sh`` and write it as follows.
 
 .. code-block:: bash
 
+   #!/bin/bash
    #SBATCH --job-name=slurm_env_var
    #SBATCH --output=/scratch/work/%u/task_number_%A_%a.out
    #SBATCH --array=0-15
@@ -76,8 +77,8 @@ Submitting the job script to Slurm with ``sbatch hello.sh``, you will get the me
 
   $ Submitted batch job 52608925
 
-The job ID in the message is that of the "master" job - which is also used in the
-batch script using ``%A`` for the output files (with the slurm ``-o`` option). To create unique output files for
+The jobid in the message is that of the "master" job - which is also used in the
+batch script using ``%A`` for the output files (with the slurm ``--output`` option). To create unique output files for
 each task in the job array, ``%a`` is used that is filled in with the array task ID.
 
 Once the jobs are completed, the output files will be created in your work directory,
@@ -163,7 +164,7 @@ a batch script is as follows.
        4)  SEED=432 ;;
    esac
 
-   python ~/trit_examples/pi.py 2500000 --seed=$SEED > pi_$SEED.json
+   python ~/hpc-examples/slurm/pi.py 2500000 --seed=$SEED > pi_$SEED.json
 
 Save the script as e.g. ``run_pi.sh`` and submit to Slurm::
 
@@ -211,7 +212,7 @@ Also note that the line numbers start at 1, not 0.
 
     n=$SLURM_ARRAY_TASK_ID
     iteration=`sed -n "${n} p" iterations.txt`      # Get n-th line (1-indexed) of the file
-    python ~/pi.py ${iteration} > pi_iter_${n}.json
+    python ~/hpc-examples/slurm/pi.py ${iteration} > pi_iter_${n}.json
 
 You can additionally do this procedure in a more complex way, e.g. read in multiple
 arguments from a csv file, etc.
@@ -255,7 +256,7 @@ definitely be worth your while.
 
    for i in $indexes
    do
-       python ~/pi.py 1500000 --seed=$i > ${DIRECTORY}/pi_$i.json
+       python ~/hpc-examples/slurm/pi.py 1500000 --seed=$i > ${DIRECTORY}/pi_$i.json
    done
 
 .. important::
@@ -263,25 +264,24 @@ definitely be worth your while.
    The array indices need not be sequential, e.g. if you discover that
    after the array job is finished, the job task id's 2 and 5
    failed, you can relaunch just those jobs with ``--array=2,5``.
-   In this case you can simply pass the ``--array`` option
+   To do this, you can simply pass the ``--array`` option
    as a command-line argument to ``sbatch``.
 
 Exercises
 =========
 
-1. Using the ``pi.py`` example from the :doc:`interactive tutorial
-   <interactive>`, create a job array that calculates a combination
+1. Using the ``pi.py`` example from :ref:`triton-tut-exercise-repo`,
+   create a job array that calculates a combination
    of different iterations and seed values. Average them all to arrive
    at a more accurate Pi.
 
-2. Using one of the techniques above, use ``memory-hog.py`` from the
-   :doc:`interactive tutorial <interactive>`.  Make an array job that
-   runs this with five different values of the memory (5M, 50M, 100M,
-   200M, 500M) - this is memory that memory-hog script requests,
-   **not** the requested from Slurm (each job in an array requests the
-   same memory).
+2. Make an array job that runs ``memory-hog.py`` from 
+   :ref:`triton-tut-exercise-repo` with five different values of memory (5M, 50M, 100M,
+   200M, 500M) using one of the techniques above - this is the memory that the
+   memory-hog script requests, **not** the requested from Slurm
+   (each job in an array requests the same memory).
 
-3. Make job array which runs every other index, e.g. the array can be
+3. Make a job array which runs every other index, e.g. the array can be
    indexed as 1, 3, 5...(``sbatch`` manual page can be of help)
 
 
@@ -295,7 +295,7 @@ What's next?
 
    Please check the `quick reference <../ref/index>` when needed.
 
-   if you need more detailed information about running on Triton, see the main page
+   If you need more detailed information about running on Triton, see the main page
    `Running programs on Triton <../usage/general>`.
 
 The next tutorial is about :doc:`GPU computing <gpu>`.
