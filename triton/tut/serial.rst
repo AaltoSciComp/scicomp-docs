@@ -48,7 +48,7 @@ Let's take a look at the following script
    #SBATCH --time=00:05:00
    #SBATCH --mem-per-cpu=100
    #SBATCH --output=/scratch/work/%u/hello.%j.out
-   #SBATCH --partition debug
+   #SBATCH --partition=debug
 
    srun echo "Hello $USER! You are on node $HOSTNAME"
 
