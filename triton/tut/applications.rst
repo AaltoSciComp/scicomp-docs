@@ -37,8 +37,8 @@ Modules
 =======
 
 You can learn about modules on the :doc:`Software modules <modules>` tutorial.
-But generally, ``module`` is a command that allows you to get and remove 
-access to other software - because not everything can be available at once.  
+But generally, ``module`` is a command that allows you to get and remove
+access to other software - because not everything can be available at once.
 The :doc:`Software modules <modules>` tutorial teaches how to
 load modules using the command ``module load $NAME``, etc.
 
@@ -81,16 +81,16 @@ Singularity containers
 
    Main article: :doc:`../usage/singularity`
 
-Some softwares have become so complicated that they just can't be installed, 
+Some softwares have become so complicated that they just can't be installed,
 and for that we use containers.  A software container is basically a
 complete self-contained operating system environment.  Another
 advantage of containers is that they make it easy to move installed
 software from system to system, so that you can have the same
 environment everywhere.
 
-You can read about singularity containers :doc:`here <../usage/singularity>`.  
-If you load a module that uses singularity, nothing will happen at first.  
-You execute your software using ``singularity_wrapper exec``, 
+You can read about singularity containers :doc:`here <../usage/singularity>`.
+If you load a module that uses singularity, nothing will happen at first.
+You execute your software using ``singularity_wrapper exec``,
 or use ``singularity_wrapper shell`` to get a shell in there.
 
 We also provide :doc:`some containers built by NVIDIA <../apps/nvidiacontainers>`.
@@ -103,7 +103,7 @@ Requesting new software
 We aim to install a good base of software for our users - but it's not
 possible to keep up with all requests.  If you need something, submit
 a request to our :ref:`issue tracker <issuetracker>`, but be aware
-that despite best efforts, we can't do everything.  
+that despite best efforts, we can't do everything.
 See the main :doc:`Applications <../apps/index>` page for more information.
 
 

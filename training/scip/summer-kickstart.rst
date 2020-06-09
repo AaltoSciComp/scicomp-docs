@@ -202,7 +202,9 @@ informal help session to get you started with the computing resources.
 
       * Aalto: (same as above)
       * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART>`__
-      * Tampere: `Narvi GPU computing differences <https://narvi-docs.readthedocs.io/narvi/tut/gpu.html>`__
+      * Tampere: `Narvi GPU computing differences
+	<https://narvi-docs.readthedocs.io/narvi/tut/gpu.html>`__
+      * At other sites, you may need to use ``-p gpu`` in addition to ``--gres=gpu``.
 
     * :doc:`/triton/tut/parallel`
 

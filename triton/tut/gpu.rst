@@ -2,6 +2,8 @@
 GPU computing
 =============
 
+
+
 Introduction
 ------------
 
@@ -32,6 +34,8 @@ they generally outperform the best desktop GPUs.
    Please ensure you have read :doc:`interactive` and :doc:`serial`
    before you proceed with this tutorial.
 
+
+
 GPU jobs
 --------
 
@@ -57,6 +61,8 @@ generation (K80s), use ``--constraint='kepler'`` or only Pascal or Volta
 generations with ``--constraint='pascal|volta'`` (Remember to use the quotes
 since ``|`` is the shell pipe)
 
+
+
 Available machine learning frameworks
 -------------------------------------
 
@@ -74,6 +80,8 @@ Please note that most of the pre-installed softwares have CUDA already present.
 Thus you **do not need to load CUDA** as a seperate module when loading these.
 See the :ref:`application list <application-list>` or :doc:`GPU
 computing reference <../usage/gpu>` for more details.
+
+
 
 Compiling CUDA-based code
 -------------------------
@@ -110,6 +118,8 @@ in the current directory::
    you try to import the GPU ``tensorflow`` module in Python on the login
    node.
 
+
+
 Examples
 ---------
 
@@ -118,6 +128,8 @@ Examples
 .. include:: ../examples/pytorch/pytorch_mnist.rst
 
 .. include:: ../examples/cntk/cntk_mnist.rst
+
+
 
 Monitoring efficient use of GPUs
 --------------------------------
@@ -190,6 +202,8 @@ copied to nodes ramdisk ``/dev/shm`` or temporary disk ``/tmp``.
 If your data is too big to fit in the disk, we recommend that you
 contact us for efficient data handling models.
 
+
+
 Available GPUs and architectures
 --------------------------------
 
@@ -202,7 +216,7 @@ Exercises
    to check which GPU node you ended up on. Try setting a constraint
    to force a different GPU architecture.
 
-2. Copy ``/scratch/scip/hpc-examples/gpu/pi.cu`` to your work directory.
+2. Use ``hpc-examples/gpu/pi.cu`` from :ref:`the previous exercises <triton-tut-exercise-repo>`.
    Compile it using ``cuda`` module and ``nvcc``. Run it. Does it say zero?
    Try running it with a GPU and see what happens.
 
@@ -221,6 +235,8 @@ Exercises
    Solution to ex. 4:
    :download:`cntk_mnist_ex4.py</triton/examples/cntk/cntk_mnist_ex4.py>`
    :download:`cntk_mnist_ex4.sh</triton/examples/cntk/cntk_mnist_ex4.sh>`.
+
+
 
 What's next?
 ------------

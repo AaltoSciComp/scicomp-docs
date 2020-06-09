@@ -6,6 +6,8 @@ Parallel computing is what HPC is really all about: processing things on
 more than one processor at once. By now, you should have read all of the previous
 tutorials.
 
+
+
 Parallel programming models
 ---------------------------
 
@@ -80,6 +82,8 @@ people are using shared memory models.
    something about it - is it shared memory or MPI?  A program doesn't
    magically get faster when you ask more processors if it's not designed
    to.**
+
+
 
 Shared memory: OpenMP/multithreaded/multiprocess
 ------------------------------------------------
@@ -167,6 +171,8 @@ those libraries always come as part of the compiler. Thus during runtime
 you should load the same compiler that you used for compiling the code.
 
 .. include:: /triton/examples/python/python_openmp/python_openmp.rst
+
+
 
 Message passing programs: MPI
 -----------------------------
@@ -259,6 +265,8 @@ could be written as::
 This way the number of workers is distributed more evenly, which in turn
 reduces communication overhead between workers.
 
+
+
 Monitoring performance
 ----------------------
 
@@ -277,28 +285,31 @@ problem with your requirements.
    will create a total memory reservation of
    (2 tasks)*(4 cpus / task)*(2GB / cpu)=16GB.
 
+
+
 Exercises
 ---------
 
 1. Run ``srun -c 4 hostname``, ``srun -n 4 hostname``, and ``srun -N 4
    hostname``.  What's the difference and why?
 
-In ``hpc-examples`` (at ``/scratch/scip/hpc-examples``), you find some
-examples.
+The following use ``hpc-examples`` from :ref:`the previous exercises <triton-tut-exercise-repo>`:
 
-2. Find the files ``openmp/hello_omp/hello_omp.c`` and 
-   ``openmp/hello_omp/hello_omp.slrm`` that have a short example of OpenMP.
+2. Find the files ``hpc-examples/openmp/hello_omp/hello_omp.c`` and
+   ``hpc-examples/hello_omp/hello_omp.slrm`` that have a short example of OpenMP.
    Compile and run it - a slurm script is included.
 
-3. Find the files in ``python/python_openmp``. Try running the
+3. Find the files in ``hpc-examples/python/python_openmp``. Try running the
    example with a few different ``--constraint=X`` and ``--cpus-per-task=C``.
    In your opinion, what architecture / cpu number combination would provide the
    best efficiency? Use ``seff`` to verify.
 
-4. Find the files ``mpi/hello_mpi/hello_mpi.c`` and
-   ``mpi/hello_mpi/hello_mpi.slrm`` that
+4. Find the files ``hpc-examples/mpi/hello_mpi/hello_mpi.c`` and
+   ``hpc-examples/mpi/hello_mpi/hello_mpi.slrm`` that
    have a short example of MPI.
    Compile and run it - a slurm script is included.
+
+
 
 Next steps
 ----------

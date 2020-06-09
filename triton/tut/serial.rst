@@ -30,6 +30,8 @@ you will learn how to bundle them in your job scripts.
    <interactive>` tutorial to learn the basics
    of Slurm.
 
+.. highlight:: console
+
 Your first job script
 =====================
 
@@ -40,7 +42,7 @@ Bash in our case. What then follow are the resource requests and the job steps.
 
 Let's take a look at the following script
 
-.. code-block:: bash
+.. code-block:: slurm
 
    #!/bin/bash
    #SBATCH --time=00:05:00
@@ -63,7 +65,8 @@ tasks to be done. Each ``srun`` within the a slurm script is a job
 step, and appears as a separate row in your
 history - which is useful for monitoring.
 
-Having written the script, you need to submit the job to Slum through the ``sbatch`` command::
+Having written the script, you need to submit the job to Slum through
+the ``sbatch`` command::
 
    $ sbatch hello.sh
    Submitted batch job 52428672
@@ -199,7 +202,7 @@ Exercises
    d. Check the output.  Does it match ``slurm history``?
 
 2. Create a simple batch script to run the Pi calculation script ``pi.py``
-   used in :ref:`triton-tut-exercise-repo`.
+   used in :ref:`the previous exercises <triton-tut-exercise-repo>`.
    Create multiple job steps (separate ``srun``
    lines), each of which runs ``pi.py`` with a greater
    number of tries.  How does this appear in ``slurm history``?  When
@@ -214,7 +217,8 @@ Exercises
    ``sbatch``?  Does it appear to run?  Does it use all the Slurm
    options?
 
-4. (Advanced) Create a batch script that runs in another language.
+5. (Advanced) Create a batch script that runs in another language
+   using a different ``#!`` line.
    Does it run?  What are some of the advantages and problems here?
 
 What's next?

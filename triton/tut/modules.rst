@@ -19,8 +19,8 @@ If you need a program installed, we will put it in the module system.
 In a system the size of Triton, it just isn't possible to install all
 software by default for every user.
 
-A module lets you adjust what software is available, 
-and makes it easy to switch between different versions. 
+A module lets you adjust what software is available,
+and makes it easy to switch between different versions.
 
 As an example, let's inspect the ``gcc`` module (abbreviated output
 shown) with ``module show gcc``:
@@ -53,8 +53,8 @@ The command ``module show gcc`` shows some meta-info (name of the module, its ve
 When you load this module, it adjusts various environment paths (as
 you see there),
 so that when you type ``gcc`` it runs the program from
-``/share/apps/spack/envs/fgci-centos7-generic/software/gcc/9.2.0/dnrscms/bin/gcc``.  
-This is almost magic: we can have many versions of any software installed, 
+``/share/apps/spack/envs/fgci-centos7-generic/software/gcc/9.2.0/dnrscms/bin/gcc``.
+This is almost magic: we can have many versions of any software installed,
 and everyone can pick what they want, with no conflicts.
 
 Loading modules
@@ -81,8 +81,8 @@ very useful when testing modules.::
   $ python3 -V
   Python 3.6.8
 
-But you need a newer version of Python.  To this end, you can **load** the ``anaconda`` module 
-using the ``module load anaconda`` command, 
+But you need a newer version of Python.  To this end, you can **load** the ``anaconda`` module
+using the ``module load anaconda`` command,
 that has a more up to date Python with lots of libraries already included::
 
   $ module load anaconda
@@ -91,7 +91,7 @@ that has a more up to date Python with lots of libraries already included::
   $ python -V
   Python 3.7.6
 
-As you see, you now have a newer version of Python, in a different directory. 
+As you see, you now have a newer version of Python, in a different directory.
 
 You can see a list of the all the loaded modules in our working shell using the ``module list`` command::
 
@@ -116,7 +116,7 @@ your scripts, etc.  You could load modules in your
 ``~/.bash_profile``, but then it will always automatically load it -
 perhaps even if you don't expect it.  Watch out for this if you get
 un-explainable bugs - it may be best to explicitly load what you
-need. 
+need.
 
 
 Type-along: Where is Matlab?
@@ -135,16 +135,16 @@ So first search for it using the ``module spider`` command::
     matlab:
   ----------------------------------------------------------------------------
        Versions:
-          matlab/r2012a
-          matlab/r2014a
-          matlab/r2015b
-          matlab/r2016a
-          matlab/r2016b
-          matlab/r2017b
-          matlab/r2018a
-          matlab/r2018b
-          matlab/r2019a
-          matlab/r2019b
+	  matlab/r2012a
+	  matlab/r2014a
+	  matlab/r2015b
+	  matlab/r2016a
+	  matlab/r2016b
+	  matlab/r2017b
+	  matlab/r2018a
+	  matlab/r2018b
+	  matlab/r2019a
+	  matlab/r2019b
 
 
 We see there are a lot of versions available.
@@ -162,7 +162,7 @@ It never hurts to double check the version and in fact is recommended. So let's 
 
 Type-along: Where is R?
 ^^^^^^^^^^^^^^^^^^^^^^^
-If you don't specify the version - just as the above Matlab example - the default version of the module is usually loaded, which is usually the latest version. 
+If you don't specify the version - just as the above Matlab example - the default version of the module is usually loaded, which is usually the latest version.
 The default version, however,is not always latest version.  To see an example, let's see what versions of R are available::
 
   $ module spider r
@@ -171,13 +171,13 @@ The default version, however,is not always latest version.  To see an example, l
     r:
   ----------------------------------------------------------------------------
        Versions:
-          r/3.4.3-python-2.7.14
-          r/3.4.3-python2
-          r/3.4.3-python3
-          r/3.5.0-python-2.7.14
-          r/3.5.0-python2
-          r/3.5.3-python-2.7.14
-          r/3.6.1-python3
+	  r/3.4.3-python-2.7.14
+	  r/3.4.3-python2
+	  r/3.4.3-python3
+	  r/3.5.0-python-2.7.14
+	  r/3.5.0-python2
+	  r/3.5.3-python-2.7.14
+	  r/3.6.1-python3
 
 Let's try loading the default version::
 
@@ -268,7 +268,7 @@ unload everything.  Now, do ``module restore my-collection``::
 
 Was it much faster?
 
-Generally, it is a good idea to save your modules 
+Generally, it is a good idea to save your modules
 as a collection to have your desired modules
 all set up each time you want to re-compile/re-build::
 
@@ -283,7 +283,7 @@ you can be sure you have the same previous environment.
   You may occasionally need to rebuild your collections in case we
   re-organize things (it will prompt you to rebuild your collection
   and you simply save it again).
-  
+
 
 Full reference
 --------------
@@ -303,7 +303,7 @@ should usually be put into the job script.
 The modules used to compile and run a program become part of its
 environment and must always be loaded.
 
-We use the Lmod system and Lmod works by changing environment variables.  
+We use the Lmod system and Lmod works by changing environment variables.
 Thus, they must be *sourced* by a shell and are only transferred to child processes.
 Anything that clears the environment clears the loaded modules too. Module
 loading is done by special functions (not scripts) that are
@@ -320,9 +320,9 @@ Exercises
 
 Before each exercise, run ``module purge`` to clear all modules.
 
-1. ``module avail`` and check what you see.  Find a software that has 
-   many different versions available.  
-   Load the oldest version. 
+1. ``module avail`` and check what you see.  Find a software that has
+   many different versions available.
+   Load the oldest version.
 
 2. ``PATH`` is an environment variable that shows from where programs
    are run.  See it's current value using ``echo $PATH``.  Then, load

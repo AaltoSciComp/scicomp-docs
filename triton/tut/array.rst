@@ -2,7 +2,7 @@
 Array jobs
 ==========
 
-.. highlight:: bash
+.. highlight:: console
 
 More often than not, problems involve running similar programs in parallel
 where there is no dependency or communication among the processes.
@@ -10,6 +10,8 @@ Their results are thus combined as the final output, e.g. Monte Carlo simulation
 
 In Slurm context, *job arrays* are the way to run several instances of a
 single-threaded program, known as the *embarrassingly parallel* paradigm.
+
+
 
 Introduction
 ============
@@ -54,13 +56,15 @@ task which could be used for handling input/output files to each task.
 
    If you're unsure how your job will behave, ask admins for help.
 
+
+
 Your first array job
 ====================
 
 Let's see a job array in action. Create a file with your favorite editor and name it
 as you wish. Let's name it ``hello.sh`` and write it as follows.
 
-.. code-block:: bash
+.. code-block:: slurm
 
    #!/bin/bash
    #SBATCH --job-name=slurm_env_var
@@ -103,6 +107,8 @@ You can ``cat`` one of the files to see the output of each task::
    in you home directory since it is backed up daily and should keep your calculations
    and analyses on your work directory.
 
+
+
 More examples
 =============
 
@@ -121,7 +127,9 @@ You could utilize to process several data files. In this case,
 In the example below, the is used to change to
 the right directory, make the application read the correct input file,
 and to generate output in a unique directory. This script is submitted
-with ``sbatch script.sh``::
+with ``sbatch script.sh``:
+
+.. code-block:: slurm
 
     #!/bin/bash
     #SBATCH -n 1
@@ -144,7 +152,7 @@ and save each output to a file. Having calculated all estimations, you could tak
 average of all the Pi values to arrive at a more accurate estimate. An example of such
 a batch script is as follows.
 
-.. code-block:: bash
+.. code-block:: slurm
 
    #!/bin/bash
    #SBATCH --job-name=pi_estimation
@@ -164,7 +172,7 @@ a batch script is as follows.
        4)  SEED=432 ;;
    esac
 
-   python ~/hpc-examples/slurm/pi.py 2500000 --seed=$SEED > pi_$SEED.json
+   srun python ~/hpc-examples/slurm/pi.py 2500000 --seed=$SEED > pi_$SEED.json
 
 Save the script as e.g. ``run_pi.sh`` and submit to Slurm::
 
@@ -201,7 +209,7 @@ utility in its stead, e.g. ``awk``. Do not worry if you don't know
 how ``sed`` works - Google search and ``man sed`` always help.
 Also note that the line numbers start at 1, not 0.
 
-.. code-block:: bash
+.. code-block:: slurm
 
     #!/bin/bash
     #SBATCH -n 1
@@ -212,14 +220,14 @@ Also note that the line numbers start at 1, not 0.
 
     n=$SLURM_ARRAY_TASK_ID
     iteration=`sed -n "${n} p" iterations.txt`      # Get n-th line (1-indexed) of the file
-    python ~/hpc-examples/slurm/pi.py ${iteration} > pi_iter_${n}.json
+    srun python ~/hpc-examples/slurm/pi.py ${iteration} > pi_iter_${n}.json
 
 You can additionally do this procedure in a more complex way, e.g. read in multiple
 arguments from a csv file, etc.
 
 (Advanced) Grouping runs together in bigger chunks
 --------------------------------------------------
-If your jobs are many and too short - a few minutes -,
+If your jobs are many and too short (a few minutes),
 using array jobs may induce too much overhead in scheduling.
 Or you may simply have too many runs and creating too many array
 jobs again is not recommended.
@@ -237,7 +245,7 @@ little as 5 array jobs, you can run 50 simulations.
 This method demands for more knowledge of shell scripting which will
 definitely be worth your while.
 
-.. code-block:: bash
+.. code-block:: slurm
 
    #!/bin/bash
    #SBATCH -n 1
@@ -256,7 +264,7 @@ definitely be worth your while.
 
    for i in $indexes
    do
-       python ~/hpc-examples/slurm/pi.py 1500000 --seed=$i > ${DIRECTORY}/pi_$i.json
+       srun python ~/hpc-examples/slurm/pi.py 1500000 --seed=$i > ${DIRECTORY}/pi_$i.json
    done
 
 .. important::
@@ -267,22 +275,30 @@ definitely be worth your while.
    To do this, you can simply pass the ``--array`` option
    as a command-line argument to ``sbatch``.
 
+
+
 Exercises
 =========
 
-1. Using the ``pi.py`` example from :ref:`triton-tut-exercise-repo`,
-   create a job array that calculates a combination
-   of different iterations and seed values. Average them all to arrive
+1. Using the ``pi.py`` example from the :ref:`interactive tutorial
+   exercises <triton-tut-exercise-repo>`, create a job array that calculates a combination
+   of different iterations and seed values, and save them all to
+   different files.  Look at the outputs and see how you would combine
+   them together.  Advanced: average them all to arrive
    at a more accurate Pi.
 
-2. Make an array job that runs ``memory-hog.py`` from 
-   :ref:`triton-tut-exercise-repo` with five different values of memory (5M, 50M, 100M,
+2. Make an array job that runs ``memory-hog.py`` from
+   :ref:`interactive tutorial exercises <triton-tut-exercise-repo>`
+   with five different values of memory (5M, 50M, 100M,
    200M, 500M) using one of the techniques above - this is the memory that the
    memory-hog script requests, **not** the requested from Slurm
    (each job in an array requests the same memory).
 
 3. Make a job array which runs every other index, e.g. the array can be
    indexed as 1, 3, 5...(``sbatch`` manual page can be of help)
+
+4. Think about your typical work.  How could you split your stuff into
+   trivial pieces that can be run with array jobs?
 
 
 What's next?
