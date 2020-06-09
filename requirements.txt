@@ -2,3 +2,5 @@ sphinx
 sphinx_rtd_theme
 sphinx_gitstamp
 #recommonmark
+# For the slurm lexer
+pygments>=2.4
