@@ -9,7 +9,7 @@ SOURCEDIR     = .
 BUILDDIR      = _build/
 
 default: html
-	true  # this is needed, or the % rule below is done for default.
+	@true  # this is needed, or the % rule below is done for default.
 	@echo
 	@echo "Build successful.  Run 'make check' to check for important warnings"
 
