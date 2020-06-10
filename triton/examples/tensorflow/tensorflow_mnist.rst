@@ -6,6 +6,7 @@ Let's run the MNIST example from
 
 .. literalinclude:: /triton/examples/tensorflow/tensorflow_mnist.py
 	 :lines: 24-29
+	 :language: python
 
 The full code for the example is in
 :download:`tensorflow_mnist.py</triton/examples/tensorflow/tensorflow_mnist.py>`.
@@ -19,5 +20,6 @@ or with ``sbatch`` by submitting
 :download:`tensorflow_mnist.sh</triton/examples/tensorflow/tensorflow_mnist.sh>`:
 
 .. literalinclude:: /triton/examples/tensorflow/tensorflow_mnist.sh
+   :language: slurm
 
 Do note that by default Keras downloads datasets to ``$HOME/.keras/datasets``.

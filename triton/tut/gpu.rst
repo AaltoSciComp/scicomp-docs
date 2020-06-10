@@ -34,6 +34,8 @@ they generally outperform the best desktop GPUs.
    Please ensure you have read :doc:`interactive` and :doc:`serial`
    before you proceed with this tutorial.
 
+.. highlight:: console
+
 
 
 GPU jobs
@@ -42,7 +44,9 @@ GPU jobs
 To request GPUs on Slurm, you should use the ``--gres`` option either in
 your batch script or as a command-line argument to your interactive job.
 Used with a SBATCH directive in a batch script, exactly one  GPU is
-requested as follows. ::
+requested as follows. :
+
+.. code-block:: slurm
 
    #SBATCH --gres=gpu:1
 
@@ -89,13 +93,15 @@ Compiling CUDA-based code
 To compile CUDA-based code for GPUs, you need to load the relevant ``cuda``
 module. You can see what versions of CUDA is available using ``module spider``::
 
-   module spider cuda
+   $ module spider cuda
 
 When submitting a batch script, you need to load the ``cuda`` module,
 compile your code, and subsequently run the executable.
 An example of such a submission script is shown below wherein the
 output of the code is written to a file named ``helloworld.out``
-in the current directory::
+in the current directory:
+
+.. code-block:: slurm
 
    #!/bin/bash
    #SBATCH --time=00:05:00
@@ -138,7 +144,7 @@ When running a GPU job, you should check that the GPU is being fully
 utilized. Additionally, for the sake of troubleshooting and ensuring
 that GPU is executing your code, not GPUs, you can run an interactive job::
 
-   sinteractive --gres=gpu:1 --time=1:00:00 --mem=1G -c 3
+   $ sinteractive --gres=gpu:1 --time=1:00:00 --mem=1G -c 3
 
 When assigned a node in the GPU partition, you can ``ssh`` to the node
 and run ``nvidia-smi``. You can find your process by e.g. using ``htop``
@@ -148,7 +154,7 @@ and inspect the ``GPU-Util`` column. It should be close to 100%.
 Once the job has finished, you can use ``slurm history`` to obtain the
 ``jobID`` and run::
 
-   sacct -j <jobID> -o comment -p
+   $ sacct -j <jobID> -o comment -p
 
 This also shows the GPU utilization.
 
