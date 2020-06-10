@@ -217,7 +217,7 @@ informal help session to get you started with the computing resources.
     * Python Bindings
       
       * Quickstart: `Submitting and Managing Jobs <https://htcondor.readthedocs.io/en/latest/apis/python-bindings/users/Submitting-and-Managing-Jobs.html>`
-      * Making a workflow: `Diamond DAG <https://htcondor/htcondor-dags/tree/master/examples/basic_diamond>`
+      * Making a workflow: `Diamond DAG <https://github.com/htcondor/htcondor-dags/tree/master/examples/basic_diamond>`
 
 
 
