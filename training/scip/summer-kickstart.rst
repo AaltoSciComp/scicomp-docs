@@ -213,7 +213,7 @@ informal help session to get you started with the computing resources.
     distributed computing? HTCondor lets you // Matthew West
 
     * `Users Manual <https://htcondor.readthedocs.io/en/latest/users-manual/index.html>`__
-    * Binder: `https://mybinder.org/v2/gh/htcondor/htcondor-python-bindings-tutorials/master?urlpath=lab/tree/index.ipynb`__
+    * Binder: `https://mybinder.org/v2/gh/htcondor/htcondor-python-bindings-tutorials/master?urlpath=lab/tree/index.ipynb`
     * Python Bindings
       
       * Quickstart: `Submitting and Managing Jobs <https://htcondor.readthedocs.io/en/latest/apis/python-bindings/users/Submitting-and-Managing-Jobs.html>`__
