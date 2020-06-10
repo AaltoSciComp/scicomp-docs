@@ -36,11 +36,11 @@ Contributing gives consent to use content under the licenses (CC-BY
 Requirements and building
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The only software needed is Sphinx: Debian package
-``python-sphinx``, : PyPI: ``python-sphinx``.  It is already installed
-on Aalto workstations.
-
 To build the docs, run ``make html``.
+
+There is a ``requirements.txt`` file, but the only real Python
+dependencies to do basic tests is ``sphinx`` and ``sphinx_rtd_theme``
+(debian packages: ``python-sphinx`` and ``python-sphinx-rtd-theme``).
 
 HTML output is in ``_build/html/index.html``, and other output formats
 are available as well.
