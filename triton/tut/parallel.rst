@@ -6,6 +6,8 @@ Parallel computing is what HPC is really all about: processing things on
 more than one processor at once. By now, you should have read all of the previous
 tutorials.
 
+.. highlight:: console
+
 
 
 Parallel programming models
@@ -165,6 +167,7 @@ The
 will look similar:
 
 .. literalinclude:: /triton/examples/openmp/hello_omp/hello_omp.slrm
+   :language: slurm
 
 It is good to know that OpenMP is both an environment and set of libraries, but
 those libraries always come as part of the compiler. Thus during runtime
@@ -220,7 +223,9 @@ Compiling the code (depending on module and language)::
   mpiifort -O2 -g mpi_prog.f -o mpi_prog # Intel MPI + Fortran code
   mpiicc   -O2 -g mpi_prog.c -o mpi_prog # Intel MPI + C code
 
-Running an MPI code in the batch mode::
+Running an MPI code in the batch mode:
+
+.. code-block:: slurm
 
   #!/bin/bash
   #SBATCH -n 16                # 16 processes
@@ -250,7 +255,9 @@ In many cases you might require more than one node during your job's runtime.
 When this is the case, it is usually recommended to split the number of
 workers somewhat evenly among the workers. To do this, one can use
 ``-N N``/``--nodes=N`` and ``--ntasks-per-node=n``. For example, the previous example
-could be written as::
+could be written as:
+
+.. code-block:: slurm
 
   #!/bin/bash
   #SBATCH --nodes=2            # 2 nodes

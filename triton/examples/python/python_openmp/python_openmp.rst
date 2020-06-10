@@ -9,6 +9,7 @@ size 2000x2000.
 
 .. literalinclude:: /triton/examples/python/python_openmp/python_openmp.py
    :lines: 8-19
+   :language: python
 
 The full code for the example is in
 `HPC examples-repository <https://github.com/AaltoSciComp/hpc-examples>`_.
@@ -23,6 +24,7 @@ or with ``sbatch`` by submitting
 :download:`python_openmp.slrm<https://raw.githubusercontent.com/AaltoSciComp/hpc-examples/master/python/python_openmp/python_openmp.slrm>`:
 
 .. literalinclude:: /triton/examples/python/python_openmp/python_openmp.slrm
+   :language: slurm
 
 .. important::
 
