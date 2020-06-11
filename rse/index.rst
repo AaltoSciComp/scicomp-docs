@@ -52,7 +52,7 @@ in these courses is useful but by no means required.
 Other links
 ~~~~~~~~~~~
 
-* :doc:`Aalto Scientific Computing <index>`, the organization behind
+* :doc:`Aalto Scientific Computing </index>`, the organization behind
   this program.
 
 * `Nordic RSE community <https://nordic-rse.org/>`_, currently in the
