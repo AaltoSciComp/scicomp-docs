@@ -56,7 +56,10 @@ Other links
   this program.
 
 * `Nordic RSE community <https://nordic-rse.org/>`_, currently in the
-  process of being formed (Aalto SciComp is part of this).
+  process of being formed (Aalto SciComp and the RSE program is a
+  member).
+
+* `History of the RSEs concept <https://www.software.ac.uk/blog/2016-08-17-not-so-brief-history-research-software-engineers-0>`__
 
 * The `UK RSE association <https://rse.ac.uk/>`_ is quite advanced in
   promoting RSE careers.
