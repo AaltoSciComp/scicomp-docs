@@ -16,11 +16,12 @@ license can use pre-built binaries available on Triton. To this end,
 contact Ville Havu at the PHYS department after obtaining the license.
 
 On Triton the most recent version of FHI-aims is available via the
-module ``FHI-aims/latest-iomkl-triton-2017a``. It is compiled using
-the Intel compiler suite and the MKL library in the toolchain
-``iomkl/triton-2017a``. The MPI environment is OpenMPI from the
-toolchain ``iompi/triton-2017a``. The binaries are available in
-``/share/apps/easybuild/software/FHI-aims/iomkl-2017a/bin`` as
+modules ``FHI-aims/latest-intel-2020.0`` that is compiled using the
+Intel Parallel Studio and
+``FHI-aims/latest-OpenMPI-intel-2020.0-scalapack`` that is compiled
+without any Intel parallel libraries since in rare cases they can
+result in spurious segfaults. The binaries are available in
+``/share/apps/easybuild/software/FHI-aims/<module name>/bin`` as
 ``aims.YYMMDD.scalapack.mpi.x`` where ``YYMMDD`` indicates the version
 stamp.
 
@@ -39,5 +40,5 @@ To run FHI-aims on Triton a following example batch script can be used:
    #SBATCH -n 24
 
    export OMP_NUM_THREADS=1
-   module load FHI-aims/latest-iomkl-triton-2017a
+   module load FHI-aims/latest-intel-2020.0
    srun aims.YYMMDD.scalapack.mpi.x
