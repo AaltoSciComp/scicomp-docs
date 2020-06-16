@@ -315,6 +315,9 @@ Anything that clears the environment clears the loaded modules too. Module
 loading is done by special functions (not scripts) that are
 shell-specific and set environment variables.
 
+Triton modules are also available on Aalto Linux: use ``module load
+triton-modules`` to make them available.
+
 Some modules are provided by Aalto Science-IT, some by CSC.  You could
 even `make your own user modules
 <https://lmod.readthedocs.io/en/latest/020_advanced.html>`__.
