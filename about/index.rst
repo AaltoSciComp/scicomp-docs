@@ -138,9 +138,11 @@ and support computational competence.
 Who we are
 ----------
 
-This table lists everyone supporting Scientific Computing at Aalto
+This table lists people supporting Scientific Computing at Aalto
 University who considers themselves a part of ASC.  If you want to be
-added here, let us know.  We welcome all contributors.
+added here, let us know.  We welcome all contributors.  *There is no
+Aalto Scientific Computing, just people who want to make computing
+better.*
 
 .. list-table::
 
