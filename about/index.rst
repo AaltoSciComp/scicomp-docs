@@ -158,12 +158,6 @@ better.*
 
      * Data, Triton, teaching
 
-   * * Ivan Degtyarenko
-
-     *
-
-     *
-
    * * Enrico Glerean
 
      * Science-IT, NBE, RES, Aalto ethics committee.
@@ -171,17 +165,6 @@ better.*
      * Triton, Ethics and personal data, data.
 
 
-   * * Mikko Hakala
-
-     *
-
-     *
-
-   * * Simo Tuomisto
-
-     *
-
-     *
 
 Scientific outputs
 ------------------
