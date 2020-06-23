@@ -158,6 +158,12 @@ better.*
 
      * Data, Triton, teaching
 
+   * * Ivan Degtyarenko
+
+     * Science-IT, PHYS-YT
+
+     * Triton, HPC hardware, HPC OS, teaching
+
    * * Enrico Glerean
 
      * Science-IT, NBE, RES, Aalto ethics committee.
