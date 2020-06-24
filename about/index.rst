@@ -26,6 +26,7 @@ charge**.
    :maxdepth: 1
 
    for-proposals
+   join
 
 What we do
 ----------
