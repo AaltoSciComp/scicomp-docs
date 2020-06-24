@@ -30,8 +30,8 @@ be updated.**
    :maxdepth: 2
 
    For researchers, groups, and group leaders <researchers>
-   For departments and school <units>
-   RSE community and joining <community>
+   For departments and schools <units>
+   RSE community <community>
    Become a RSE <become-a-rse>
    implementation
 
