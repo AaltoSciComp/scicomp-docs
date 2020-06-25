@@ -14,8 +14,9 @@ Use of RSEs in research will increase your impact by making your
 software more reusable, open, and higher quality.  It will also have
 an immense impact on our internal productivity.
 
-It's easy to request help, anywhere from an initial consultation to
-longer-term service.  Read more below.
+It's easy to request help, anywhere from an personal consultation, to
+group seminar and getting started session, to work on a longer-term
+project.  Read more below.
 
 .. note::
 

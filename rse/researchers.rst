@@ -32,6 +32,9 @@ may need.
 Basic examples
 ~~~~~~~~~~~~~~
 
+Format could be personal work, lecture, or group seminar followed by a
+hands-on session, for example.
+
 * Setting up a project in version control with all the features.  This
   also includes version control of data.
 * Preparing code or data for release and publication
@@ -51,6 +54,9 @@ Basic examples
 
 More involved examples
 ~~~~~~~~~~~~~~~~~~~~~~
+
+These would combine co-working, mentoring, and independent work.  We
+go to you and work with you.
 
 * Developing or maintaining specific software, services, demos, or
   implementations.
