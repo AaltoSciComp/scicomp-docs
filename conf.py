@@ -127,6 +127,7 @@ todo_include_todos = True
 on_rtd = os.environ.get('READTHEDOCS') == 'True'
 if on_rtd:
     html_theme = 'default'
+    os.system('git fetch --unshallow')
 else:
     import sphinx_rtd_theme
     html_theme = "sphinx_rtd_theme"
