@@ -71,9 +71,7 @@ You can check the total disk read and write of your past jobs using::
   # A single jobid
   sacct -o jobid%10,user%8,jobname%10,NodeList,MaxDiskRead,MaxDiskWrite -j $jobid
 
-(we will add more tools to this later)
-
-
+.. include:: ../examples/jobstats/jobstats.rst
 
 Loading data for machine learning
 ---------------------------------

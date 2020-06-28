@@ -85,8 +85,10 @@ To reset back to the default settings, run
 
     lfs setstripe -d path/to/directory
 
+.. include:: ../examples/jobstats/jobstats.rst
+
 Lustre: common recommendations
-------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Minimize use of ``ls -l`` and ``ls --color`` when possible
 
