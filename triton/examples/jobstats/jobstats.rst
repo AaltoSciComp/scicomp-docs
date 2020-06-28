@@ -139,7 +139,7 @@ If your job opens/closes a large number of files it might either:
    your small files into larger collections.
 3. Your code might open a lot of libraries stored in the Lustre filesystem.
    Are you compiling code? Use
-   :doc:`local disks or ramdisk </triton/usage/localstorage` for that. Are
+   :doc:`local disks or ramdisk </triton/usage/localstorage>` for that. Are
    you loading an anaconda environment or R libraries from the Lustre
    filesystem? Move them to your ``$HOME``-directory.
 
