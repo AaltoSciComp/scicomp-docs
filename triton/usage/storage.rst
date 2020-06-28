@@ -64,14 +64,19 @@ in the issue tracker.
 Checking your stats
 -------------------
 
-You can check the total disk read and write of your past jobs using::
+You can monitor your jobs' Lustre usage with our
+:doc:`jobstats-utility </triton/usage/jobstats>`.
+
+You can also check the total disk read and write of your past jobs using::
 
   # All your recent jobs:
   sacct -o jobid%10,user%8,jobname%10,NodeList,MaxDiskRead,MaxDiskWrite -u $USER
   # A single jobid
   sacct -o jobid%10,user%8,jobname%10,NodeList,MaxDiskRead,MaxDiskWrite -j $jobid
 
-.. include:: ../examples/jobstats/jobstats.rst
+These statistics are calculated on the whole node and thus include
+IO caused by other jobs on the same server while your job is running.
+For more detailed stats, use jobstats.
 
 Loading data for machine learning
 ---------------------------------

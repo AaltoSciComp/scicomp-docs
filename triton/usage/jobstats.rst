@@ -46,11 +46,11 @@ were captured or that the percentage ratio could not be calculated.
 The different lines of the jobstats output are explained below:
 
 - ``Bytes read (% of load on a single server)``: This statistic shows the
-  percentage of bytes that were read from a single server. If this is
+  percentage of bytes that were read from a single Lustre server. If this is
   close to a 100%, see the recommendations below for avoiding hotspots.
 - ``Bytes read (Max)``: This statistic shows the number of bytes that
-  were read from the a single server. This number divided by the total
-  bytes read will produce the percentage of load on a single server.
+  were read from the a single Lustre server. This number divided by the total
+  bytes read will produce the percentage of load on a single Lustre server.
 - ``Bytes read (Total)``: This statistic shows the total number of bytes
   read by your job. If the number is very high, see the recommendations
   below for minimizing your data loading.
