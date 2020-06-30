@@ -3,7 +3,7 @@ Usage model and joining
 
 Aalto Scientific Computing operates with a community stakeholder model and is
 administered by the School of Science.  Schools, departments, and
-other units join an contribute resources, and get a fair-share of the
+other units join and contribute resources to get a fair-share of the
 output.  There are two different components to join:
 
 - HPC: Science-IT.  Get a share of computing resources via the :doc:`Triton
@@ -17,11 +17,12 @@ For everyone
 ------------
 
 Aalto Scientific Computing gets university-level support already, so
-our computing resources are usable by anyone (with a limited share).
+our computing resources are usable by anyone doing research at Aalto
+(with a limited share).
 By joining further, a unit gets something even more valuable: time.
 Our support for using our infrastructure is concentrated for member
-departments which provide joint staff with us or support the RSE
-program.
+departments which provide joint staff with us or support the :doc:`RSE
+program </rse/index>`, in addition to a greater share of resources.
 
 
 Triton: computing and data storage resources
