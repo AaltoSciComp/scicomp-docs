@@ -8,7 +8,7 @@ output.  There are two different components to join:
 
 - HPC: Science-IT.  Get a share of computing resources via the :doc:`Triton
   computing cluster </triton/index>`.
-- Aalto Research Software Engineers (RSE): Support of the RSE program
+- :doc:`Aalto Research Software Engineers (RSE) </rse/index>`: Support of the RSE program
   provides intensive hands-on support and service for research
   software development.
 
@@ -28,7 +28,8 @@ program </rse/index>`, in addition to a greater share of resources.
 Triton: computing and data storage resources
 --------------------------------------------
 
-Users from members of the
+:doc:`Triton </triton/index>` is the Aalto computing cluster, for
+computationally and data-intensive research.  Users from members of the
 community are allocated resources using a fair-share algorithm that
 guarantees a level of resources at least proportional to the stake,
 without the need for individual users to engage in separate
@@ -77,3 +78,10 @@ needed.  Their members will also receive priority for the project
 services.
 
 For more information, see the :doc:`RSE for units </rse/units>` page.
+
+
+Contact
+-------
+
+Let `Mikko Hakala <https://people.aalto.fi/mikko.hakala>`__ know, or
+contact us at our esupport-triton ↔ aalto.fi email address.
