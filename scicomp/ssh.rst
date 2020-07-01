@@ -133,10 +133,29 @@ There are optional ssh settings that may be useful for your work, such as::
         # Turn on X11 forwarding for Xterm graphics access
         ForwardX11 yes
         # Connect through another server (eg Kosh) if not connected directly to Aalto network
-        ProxyCommand ssh kosh.aalto.fi -W %r@%h:%p
+        ProxyJump LOGIN_NAME@kosh.aalto.fi
         # Specify which ssh private key is used for login identification
         IdentityFile ~/.ssh/id_rsa_triton
 
+
+Full sample config file
+-----------------------
+
+This is placed in ``~/.ssh/config``::
+
+    # general login server
+    Host kosh
+        User LOGIN_NAME
+        Hostname kosh.aalto.fi
+
+    # Triton, via kosh
+    Host triton
+        User LOGIN_NAME
+        Hostname triton.aalto.fi
+	ProxyJump kosh
+
+Note that the Triton rule uses the name ``kosh`` which is defined in
+the first part of the file.
 
 ..
   The purpose of this document is to describe how to use ssh such that
