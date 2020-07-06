@@ -109,18 +109,21 @@ obvious reason.**
 NBE garage, F-building
 ----------------------
 
-We are piloting also a data & science garage at NBE every first
-wednesday of the month, room F336 13:00. NBE garage will also cover
+NBE garage used to happen in person every first
+wednesday of the month, room F336 13:00. NBE garage covers also
 issues related to working with personal data, research ethics, best
-practices in biomedical research.
+practices in biomedical research. 
+
+**Due to the current situation NBE garage
+happens online at the same time of the Aalto Sci Comp garage (see above).**
 
 .. csv-table::
    :header-rows: 1
    :delim: |
 
    Date (default Th)  | Time (default 13:00-14:00)  | Loc
-   First wednesdays  | 13-14   | F336
-
+   First wednesdays (until February 2020) | 13-14   | F336
+   Every Thursday (part of AaltoSciComp/Triton garage | 13-14 | Online (see zoom link above) 
 
 
 
