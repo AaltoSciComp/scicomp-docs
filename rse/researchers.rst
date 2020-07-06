@@ -38,6 +38,8 @@ hands-on session, for example.
 * Setting up a project in version control with all the features.  This
   also includes version control of data.
 * Preparing code or data for release and publication
+* FAIR data (findable, accessible, interoperable, reusable) -
+  consultation and help.
 * Creating or automating a workflow, especially those processing data
   or running simulations
 * Optimizing some code - both for speed and/or adaptability

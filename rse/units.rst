@@ -14,6 +14,8 @@ Benefits to schools/departments:
   skills passively.
 * Provide hands-on technical research services to your community at a
   higher level than basic IT.
+* Help with data management and FAIR data - be more competitive for
+  funding, help get value out of your unit's data.
 
 Benefits to groups:
 
