@@ -16,15 +16,67 @@ be.  It's not just Triton, but all aspects of scientific computing.
 Come if you want to:
 
 -  Solve problems
--  Discuss what the best strategy are for your problems
--  Network with others who are doing similar work
--  Learn something new
--  Give feedback
+-  Discuss and figure out what your problem really is
+-  Brainstorm the best strategy are for your problems
+-  Work with someone on your issues in real time
+-  Network with others who are doing similar work and learn something
+   new
 
-Schedule
-========
+Notes:
 
-Note: all garages are open to all people.
+* All garages are open to all people (but see the specialities).
+
+* You don't have to have a specific question, you can come by just to
+  chat, listen, or figure out if you should have a question.
+
+
+
+Online
+======
+
+You can meet us online, every weekday, at 13:00, `online via zoom
+<https://aalto.zoom.us/j/65371910202>`__.  This garage is focused on
+**Triton/HPC, scientific computing, data with best representation by
+(CS, NBE, and PHYS).**
+
+.. admonition:: July 2020
+
+   During July, CS and Triton are well represented, and we will try to
+   help others as best we can.
+
+* Arrive between 13:00 - 13:15.  We leave at 13:15 if there is no one
+  around (and the person you need to talk to may leave).  Please don't
+  arrive early since we another meeting then.  Program always ends at
+  14:00.
+
+* This is best-effort: if you don't see anyone there by 13:15, we
+  couldn't make it so try again the next day.
+
+* We have these special topics on these days of the week:
+
+  .. csv-table::
+     :delim: |
+
+     Monday  | Tuesday | Wednesday | Thursday         | Friday
+             |         |           | Triton, HPC, CSC |
+
+* Join on Zoom via https://aalto.zoom.us/j/65371910202 .  If joining
+  by web browser, use Chrome.  Audio doesn't work with Firefox or
+  Safari.
+
+* We will try to greet everyone personally, if we don't get around to
+  you then send your topic by chat.
+
+* (Optional) If you want us to prepare, use the the `Triton issue
+  tracker
+  <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`_,
+  make an initial issue, and point out that you want to discuss in the
+  garage.  Then, we can easily follow up.
+
+
+
+In person
+=========
 
 General garage (CS Building)
 ----------------------------
@@ -49,9 +101,10 @@ Spring 2020:
    :delim: |
 
    Date (default Th)  | Time (default 13:00-14:00)  | Loc
-   Thursdays 2.jan - 18.jun  | 13-14   | A106
-   12.mar     | 13-14  | in-person cancelled, see "online" below.
-   19.mar-??  | 13-14  | probably cancelled, see "online" below.
+
+**Suspended for the time being (replaced with online, above) for the
+obvious reason.**
+
 
 NBE garage, F-building
 ----------------------
@@ -68,41 +121,6 @@ practices in biomedical research.
    Date (default Th)  | Time (default 13:00-14:00)  | Loc
    First wednesdays  | 13-14   | F336
 
-
-Online
-------
-
-To prevent unnecessary in-person contacts, we are going to try an
-online garage.
-
-.. csv-table::
-   :header-rows: 1
-   :delim: |
-
-   Date (default Th)  | Time (default 13:00-14:00)  | Loc
-   12.mar-16.apr | 13-14  | https://aalto.zoom.us/j/177010905
-   23.apr-28.may | 13-14  | https://aalto.zoom.us/j/177010905
-   04.jun-???    | 13-14  | https://aalto.zoom.us/j/65371910202 - continuing until further notice
-
-.. warning::
-
-   If joining by web browser, use Chrome.  Audio doesn't work with
-   Firefox or Safari.
-
-Procedures:
-
-* Join the conference at the link above (you can join via Chrome
-  without registering).  **You can join even if you
-  have general questions, no specific question, or want to discuss
-  with others even if you won't get one-on-one help.** You can chat
-  with us and other users, ask general questions, see what's new, and
-  so on.  We'll give guidance from there for advanced cases.
-
-* (Optional) If you want us to prepare or share links/code with us, go
-  to the `Triton issue tracker
-  <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`_,
-  make an issue, and point out that you want to discuss in the garage.
-  We will also follow up there afterwards.
 
 
 
