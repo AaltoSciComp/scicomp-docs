@@ -50,7 +50,7 @@ consist of PhD-level researchers.  Our main sub-programs are
 
 * Problems with Triton, using Triton
 * Help with software on Triton
-* Data advice, FAIR data
+* Data advice, FAIR data, confidential data, data organization
 * Suggestions on tools and workflows to use
 * General research software and research tools
 * Advice on other Aalto services
@@ -72,7 +72,7 @@ You can reach us by:
 * Weekly :doc:`SciComp Garage sessions </news/garage>`, where you can
   informally chat.  Especially useful when your question is not yet
   fully defined.
-
+* You can chat with us on `Aalto Microsoft Teams <https://teams.microsoft.com/l/team/19%3a688ad82e41aa46d48ad978aea767419c%40thread.tacv2/conversations?groupId=4089981d-a443-493d-ae3e-3df5c63caed6&tenantId=ae1a7724-4041-4462-a6dc-538cb199707e>`__. This is useful for quick things.
 
 
 Department IT
