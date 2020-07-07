@@ -101,6 +101,8 @@ Spring 2020:
    :delim: |
 
    Date (default Th)  | Time (default 13:00-14:00)  | Loc
+   2.jan - 5.mar      | 13-14                       | A106
+   12.mar -- ???      |                             | (replaced with online, see above)
 
 **Suspended for the time being (replaced with online, above) for the
 obvious reason.**
