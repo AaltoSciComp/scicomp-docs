@@ -112,7 +112,7 @@ NBE garage, F-building
 NBE garage used to happen in person every first
 wednesday of the month, room F336 13:00. NBE garage covers also
 issues related to working with **personal data, research ethics, best
-practices in biomedical research. 
+practices in biomedical research**. 
 
 **Due to the current situation NBE garage
 happens online at the same time of the Aalto Sci Comp garage (see above).**
