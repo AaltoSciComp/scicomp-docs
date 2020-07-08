@@ -25,6 +25,40 @@ departments which provide joint staff with us or support the :doc:`RSE
 program </rse/index>`, in addition to a greater share of resources.
 
 
+Staff network
+-------------
+
+*There is no Aalto Scientific Computing, just people who want to make
+computing better.*
+
+There is no "Aalto Scientific Computing" on paper, only different
+teams that work together to help researchers better than they could
+alone.  We invite interested staff to join our community, :doc:`help
+sessions </news/garage>`, infrastructure development, etc.  This
+program is just being developed (as of 2020), but it roughly includes:
+
+* Participation in admin meetings to help us develop infrastructure
+  (e.g.  Triton) in the best way for your users
+
+* Co-maintenance of infrastructure (for example, your unit's special
+  software) on Triton and in out automated software deployment
+  systems.
+
+* Networking, to learn how to solve your users' problems more
+  efficiently.
+
+* Continual professional development
+
+* This is not just for IT support or administrative support, but
+  high-quality research support that connects all aspects of work.
+
+This does not replace local support, it just makes it more powerful.
+
+.. todo::
+
+   How to take part.
+
+
 Triton: computing and data storage resources
 --------------------------------------------
 
@@ -83,5 +117,8 @@ For more information, see the :doc:`RSE for units </rse/units>` page.
 Contact
 -------
 
-Let `Mikko Hakala <https://people.aalto.fi/mikko.hakala>`__ know, or
-contact us at our esupport-triton ↔ aalto.fi email address.
+Let `Mikko Hakala <https://people.aalto.fi/mikko.hakala>`__ know about
+Science-IT related joining, `Richard Darst
+<https://people.aalto.fi/richard.darst>`__ know about the RSE program
+or SciComp community, or contact us at our esupport-triton ↔ aalto.fi
+email address.
