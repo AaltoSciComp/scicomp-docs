@@ -111,7 +111,7 @@ NBE garage, F-building
 
 NBE garage used to happen in person every first
 wednesday of the month, room F336 13:00. NBE garage covers also
-issues related to working with personal data, research ethics, best
+issues related to working with **personal data, research ethics, best
 practices in biomedical research. 
 
 **Due to the current situation NBE garage
@@ -154,4 +154,3 @@ Past events
 ===========
 
 Scicomp Garage has existed since Spring 2017.
-
