@@ -31,7 +31,7 @@ Staff network
 *There is no Aalto Scientific Computing, just people who want to make
 computing better.*
 
-There is no "Aalto Scientific Computing" on paper, only different
+You might be a department IT staff member, a lab engineer, a skilled postdoc or a doctoral candidates who helps other researchers with their technical/computational challenges. Why not joining forces and join our network of helpers? There is no "Aalto Scientific Computing" on paper, only different
 teams that work together to help researchers better than they could
 alone.  We invite interested staff to join our community, :doc:`help
 sessions </news/garage>`, infrastructure development, etc.  This
