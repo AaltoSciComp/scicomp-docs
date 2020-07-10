@@ -49,7 +49,7 @@ computation, FAIR principles, data management planning, as well as
 computation.
 
 Data management is designed with a focus on security.  Recommended
-storage locations are centrally located for security.  All data is
+storage locations are centrally located for security.  Computing nodes and data storage servers are physically located at CSC, Keilaranta 14, Espoo. The server room is certified security level 3 (VAHTI-3) i.e. only authorized personnel with clearance are given access to it and there is continuous camera surveillance. All data is
 access controlled by passwords and individual-level authorization, and
 firewalled to university networks.
 
