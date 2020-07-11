@@ -1,6 +1,6 @@
-=================
-Triton user guide
-=================
+==============
+Triton cluster
+==============
 
 Triton is the Aalto high-performance computing cluster.  It serves all
 researchers
