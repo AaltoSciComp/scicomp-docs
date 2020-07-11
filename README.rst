@@ -12,12 +12,15 @@ Contributing
 
 This documentation is Open Source (CC-BY 4.0), and we welcome
 contributions from the Aalto community.  The project is run on Github
-(https://github.com/AaltoSciComp/scicomp-docs).
+in the repository `AaltoSciComp/scicomp-docs <https://github.com/AaltoSciComp/scicomp-docs>`__.
 
 To contribute, you can always use the normal Github contribution
-mechanims: make a pull request or comments.  If you are at Aalto, you
+mechanisms: make a `pull request`__, issues__, or comments.  If you are at Aalto, you
 can also get direct write access.  Make a github issue, then contact
 us in person/by email for us to confirm.
+
+__ https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/proposing-changes-to-your-work-with-pull-requests
+__ https://docs.github.com/en/github/managing-your-work-on-github/managing-your-work-with-issues
 
 **The worst contribution is one that isn't made.** Don't worry about
 making things perfect: since this is in version control, we track all
@@ -29,14 +32,16 @@ the basics are similar).
 When you submit a change, there is continuous testing that will notify
 you of errors, so that you can make changes with confidence.
 
-Contributing gives consent to use content under the licenses (CC-BY
+Contributing gives agreement to use content under the licenses (CC-BY
 4.0 or CC0 for examples).
 
 
 Requirements and building
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To build the docs, run ``make html``.
+To build the docs, run ``make html``.  You can run ``make clean
+check`` to build it and report only the errors that would cause a
+failure.
 
 There is a ``requirements.txt`` file, but the only real Python
 dependencies to do basic tests is ``sphinx`` and ``sphinx_rtd_theme``

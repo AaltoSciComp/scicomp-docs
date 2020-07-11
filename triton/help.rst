@@ -147,7 +147,7 @@ We have regular training in topics relevant to HPC and scientific
 computing.  In particular, each January and June we have a "kickstart"
 course which teaches you everything you need to know to do HPC work.
 Each Triton user should come to one of these.  For the schedule, see
-`our training page <http://science-it.aalto.fi/scip/>`__.
+:doc:`our training page </training/scip/index>`.
 
 
 Getting a detailed bug report with triton-record-environment

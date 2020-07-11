@@ -10,10 +10,6 @@ department (now part of CS), Biomedical Engineering and Computational
 Science department (now NBE), and Applied Physics department.  Now, it
 still serves all Aalto and is organized from the School of Science.
 
-Our basic administrative web page is http://science-it.aalto.fi, but
-it has mostly administrative info.  This site,
-https://scicomp.aalto.fi, is our practical info for users.
-
 You are now at the first step of the Triton tutorial.
 
 

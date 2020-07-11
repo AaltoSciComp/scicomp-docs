@@ -23,8 +23,6 @@ Quick contents and links
          * :doc:`overview`
          * :doc:`usagepolicy`
 	 * :doc:`acknowledgingtriton`
-	 * `Aalto Science-IT <http://science-it.aalto.fi>`_ (external
-	   link)
 
        * :doc:`Getting Help/Contact <help>`
 
@@ -71,9 +69,9 @@ Quick contents and links
 
        **Scientific computing resources**
 
-       * `SCIP – Scientific Computing in Practice courses
-	 <http://science-it.aalto.fi/scip/>`_: organized
-	 by Science IT. Including Triton kickstarts and many others
+       * :doc:`SCIP – Scientific Computing in Practice courses
+	 </training/scip/index>`: organized
+	 by SciComp. Including Triton kickstarts and many others
        * `Parallel computing <https://wiki.aalto.fi/download/attachments/65022076/parallel_computing.2012-04-12.pdf?version=1&modificationDate=1334828664000&api=v2>`_
        * `Aalto IT Services for Research <https://www.aalto.fi/en/services/it-services-for-research>`_
        * `Software Carpentry <https://software-carpentry.org/>`_
