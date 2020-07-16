@@ -8,6 +8,7 @@ Scientific computing
    encryption
    git
    jupyter-pitfalls
+   nbscript
    packaging-software
    python
    shell
