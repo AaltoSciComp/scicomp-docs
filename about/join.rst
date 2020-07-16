@@ -40,17 +40,22 @@ program is just being developed (as of 2020), but it roughly includes:
 * Participation in admin meetings to help us develop infrastructure
   (e.g.  Triton) in the best way for your users
 
+* :doc:`Teaching </training/index>`, for example ensure our classes
+  are suitable to your audience, teach your own classes with our help
+  via `CodeRefinery <https://coderefinery.github.io/manuals/>`__, or
+  directly help us teach.
+
 * Co-maintenance of infrastructure (for example, your unit's special
   software) on Triton and in out automated software deployment
   systems.
 
-* Networking, to learn how to solve your users' problems more
-  efficiently.
+* Learn how to solve your users' problems more efficiently.
 
-* Continual professional development
+* Networking and continual professional development
 
 * This is not just for IT support or administrative support, but
-  high-quality research support that connects all aspects of work.
+  high-quality research support that connects all aspects of modern
+  work.
 
 This does not replace local support, it just makes it more powerful.
 
