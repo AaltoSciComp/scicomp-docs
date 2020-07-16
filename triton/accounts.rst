@@ -31,16 +31,14 @@ A few prerequisites:
 
    - Researchers (as in, affiliated with a research PI in any way).
      Please tell us who your supervisor is in your account request.
-   - Students coming to one of our `Scientific Computing in Practice
-     courses <scip_>`_ which uses Triton.  You will be specifically
+   - Students coming to one of our :doc:`Scientific Computing in Practice
+     courses </training/scip/index>` which uses Triton.  You will be specifically
      told if this is the case
    - Other students not doing research needing computational
      facilities should check out our :doc:`introduction for students
      <../aalto/welcomestudents>`.  **This includes most student
      projects as part of courses, unless you are effectively joining a
      research group to do a project.**
-
-.. _scip: http://science-it.aalto.fi/scip/
 
 You know that you have Triton access if you are in the ``triton-users``
 group at Aalto: ``groups`` shows this on Aalto linux machines.

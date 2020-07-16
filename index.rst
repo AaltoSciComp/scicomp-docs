@@ -7,13 +7,16 @@
 Aalto Scientific Computing
 ==========================
 
-This contains documentation about scientific and data-intensive computing
+This site contains documentation about scientific and data-intensive computing
 at Aalto and beyond.  It is targeted towards Aalto researchers, but
 has some useful information for everyone.  The data management section
 is useful even to non-computational researchers.
 
-These docs are maintained by `Aalto Science-IT
-<http://science-it.aalto.fi>`_ with the help of the Aalto community.
+:doc:`Aalto Scientific Computing
+</about/index>` maintains these pages with the :doc:`help of the Aalto community <README>`.
+[`twitter <https://twitter.com/SciCompAalto>`__]  We consist of
+Science-IT (HPC, the Triton cluster), certain department ITs, and
+other friends.  :doc:`You can join us </about/join>`.
 
 .. toctree::
    :maxdepth: 1

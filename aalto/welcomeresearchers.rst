@@ -33,8 +33,8 @@ some of the key players:
   PHYS.  Science-IT runs a weekly :doc:`SciComp garage
   <../news/garage>`, where we provide hands on support for anything
   related to scientific computing.
-  :doc:`This site (scicomp.aalto.fi) <../index>` is the main home, but
-  there is also an `formal site <sci-it_>`_.
+  :doc:`This site (scicomp.aalto.fi) <../index>` is the main home,
+  read more about us on the :doc:`about page</about/index>`.
 * **Aalto IT Services (ITS)**: Provides central IT infrastructure.
   They have a "Services for Research" group, but it is less
   specialized than Science-IT. ITS may be the first place to
@@ -55,7 +55,6 @@ some of the key players:
   <https://research.csc.fi/>`_
 
 .. _its_instr: https://aalto.fi/it
-.. _sci-it: http://science-it.aalto.fi/
 .. _cs-it: https://wiki.aalto.fi/display/CSdept/IT
 .. _nbe-it: https://wiki.aalto.fi/display/NBE/IT+Information
 .. _phys-it: https://wiki.aalto.fi/display/TFYintra/PHYS+IT
