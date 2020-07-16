@@ -1,6 +1,6 @@
-====================
-Scientific computing
-====================
+=========================
+Scientific computing tips
+=========================
 
 .. toctree::
    :maxdepth: 1

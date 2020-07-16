@@ -1,6 +1,6 @@
-=====================
-The Aalto environment
-=====================
+===========
+Aalto tools
+===========
 
 For more services provided at the Aalto level, see the `IT Services
 for Research page

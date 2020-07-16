@@ -1,6 +1,6 @@
-================
-About these docs
-================
+===============
+About this site
+===============
 
 These docs originally came from the Triton User Guide, but now serves
 as a general Aalto scientific computing guide.  The intention is a
