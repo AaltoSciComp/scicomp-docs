@@ -1,6 +1,39 @@
 FAQ and hints
 =============
 
+.. _jupyterhub-courses-repo:
+
+Shared course repository
+------------------------
+
+There's a lot to figure out and everyone has to learn by doing.  Why
+not learn from each other?  We have a shared `jupyterhub-courses
+<https://version.aalto.fi/gitlab/jupyterhub-courses>`__ repository on
+version.aalto.fi with a repository for each course.  You can browse
+and learn from how other courses make notebooks, thus saving you time.
+It also makes it easier for us to help you.
+
+- Decide who are the people to be added to the jupyterhub-courses
+  Gitlab organization (usually those who have long term contracts with
+  Aalto). You can add whoever you want to the your own courses's
+  repository itself, but organization side should be kept in smaller
+  group so that other TAs won't get access to courses which they might
+  participate in.
+
+- Setup git for your course. This is something that you might have
+  already done, but :doc:`here are some general tips for nbgrader
+  specifically <nbgrader>`.
+
+- After you have gotten an access to the organization, you can create
+  a course in version.aalto and then setup it as a new origin for your
+  git repository: ``git remote add new_remote_name
+  {address}``. (`Github help
+  <https://help.github.com/en/github/using-git/adding-a-remote>`__)
+
+- Now you can use to push to this new remote! For example, if your new
+  origin were "gitlab" then ``git push gitlab master`` would push into
+  version.aalto. Now you should be ready to go!
+
 Instructions/hints
 ------------------
 

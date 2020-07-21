@@ -166,3 +166,7 @@ A course environment consists of (comment on any specifics here):
        your notebooks.  This is easy for hub use, but makes it harder
        to copy the notebooks out of the hub to use on your own
        computers.  This is something we are working on.
+
+Also tell us if you want to join the :ref:`jupyterhub-courses group
+<jupyterhub-courses-repo>` to share knowledge about making notebooks
+for teaching.
