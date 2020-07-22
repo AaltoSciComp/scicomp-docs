@@ -60,6 +60,9 @@ Aalto specifics
 - We've added some extra security and sharing measures (most of these
   are contributed straight to nbgrader).
 
+- Join the :ref:`shared course repository <jupyterhub-courses-repo>`
+  to share knowledge with others
+
 To use nbgrader:
 
 - Request a course as above.
@@ -96,6 +99,12 @@ To use nbgrader:
 
 Version control of course assignments
 -------------------------------------
+
+.. seealso::
+
+   :ref:`Shared jupyterhub-courses version.aalto.fi Gitlab
+   organization <jupyterhub-courses-repo>` to share notebooks and
+   knowledge about running JupyterHub courses.
 
 `git <https://git-scm.com/>`__ is a version control system which lets
 you track file versions, examine history, and share.  We assume you
