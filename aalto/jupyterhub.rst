@@ -282,10 +282,12 @@ can contact CS-IT via the guru alias.
 
 Notebooks are *not* an end-all solution: for an entertaining look at
 some problems, see `"I don't like notebooks" by Joel Grus
-<https://docs.google.com/presentation/d/1n2RlMdmv1p25Xy5thJUhkKGvjtV-dkAIsUXP-AL4ffI>`__.
+<https://docs.google.com/presentation/d/1n2RlMdmv1p25Xy5thJUhkKGvjtV-dkAIsUXP-AL4ffI>`__
+or less humorous :doc:`pitfalls of Jupyter notebooks
+</scicomp/jupyter-pitfalls>`.
 Most of these aren't actually specific to notebooks and JupyterLab
-makes some better, but thinking hard about the downfalls of notebooks
-makes your work better no matter what you do.
+makes some of the problems better, but thinking hard about the
+downfalls of notebooks makes your work better no matter what you do.
 
 Our source is open and on Github:
 
