@@ -262,6 +262,13 @@ FAQ and bugs
   and eventually needs to be cleaned up - after the respective course
   is done.
 
+* **I don't see the assignments for my course**.  There are different
+  profiles you can start, and you can't tell which profile you have
+  started.  Go back to the hub control panel and restart your server.
+  To be more precise, click the "Control Panel" in the upper-right
+  corner, then click "Stop my Server", wait a little bit, then click
+  "Start My Server" and choose the profile for your course.
+
 
 More info
 =========

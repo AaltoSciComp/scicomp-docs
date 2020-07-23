@@ -66,6 +66,13 @@ Instructions/hints
   you spawn that course's environment, you get the ``/course``
   directory.
 
+- You can now make a direct link that will spawn a notebook server,
+  for example for a course with a slug of ``testcourse``:
+  ```https://jupyter.cs.aalto.fi/hub/spawn?profile=testcourse``.  If
+  the user is already running a server, it will **not switch to the
+  new course**.  Expect some subtle confusion with this and plan for
+  it.
+
 - We have a test course which you can use as a sandbox for testing
   nbgrader and courses.  No data here is private even after deleted,
   and data is not guaranteed to be persistent.  Use only for testing.
