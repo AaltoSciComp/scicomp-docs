@@ -75,6 +75,18 @@ This talk's outline:
 
 
 
+What can you do?
+----------------
+
+Below are many different aspects of scientific computing which you can
+improve.
+
+Some are good for everyone.  Some you may not need yet.  Different
+levels of maturity are presented for each topic, so that you can
+think about what is *right for you*.
+
+
+
 Version control
 ---------------
 
