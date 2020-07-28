@@ -69,6 +69,7 @@ It takes skill and practice to do this right.  *But it is part of
 being a scientist.*
 
 This talk's outline:
+
 * Describe different factors that influence code quality
 * Describe what the maturity levels are and when you might need them
 
