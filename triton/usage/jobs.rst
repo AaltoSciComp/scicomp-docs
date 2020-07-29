@@ -220,8 +220,10 @@ can run on it), you get billed for all memory but no CPU.  Same for
 all CPUs and little memory.  This encourages balanced use.  (this also
 applies to GPUs).
 
-GPUs also have a billing weight, currently 2/GPU/s for newer models and
-1/GPU/s for the older ones.
+GPUs also have a billing weight, currently tens of times higher than a
+CPU billing weight for the newest GPUs.  (In general all of these can
+change, for the latest info see search ``BillingWeights`` in
+``/etc/slurm/slurm.conf``).
 
 If you submit a long job but it ends early, you are only billed for
 the actual time you use (but the longer job might take longer to start
