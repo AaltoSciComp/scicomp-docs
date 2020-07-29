@@ -232,6 +232,44 @@ filenames.  Anytime you would open files, you just access from these
 key-value stores.  You also have ways of dumping and restoring the data
 if you need to analyze it from different programs.
 
+Specific example: Packing in a zipfile
+--------------------------------------
+
+Some program produces thousands of small files, and you can't change
+that.  So instead, you compress them into a zipfile after they are all
+made.  Then, you can access them individually in your analysis code  For
+example, to create the zipfile:
+
+.. code-block:: console
+
+   ## Create zip file, verify the data is in it (important!), delete
+   ## original data:
+   $ zip my_data.zip *.out
+   $ zipinfo my_data.zip
+   $ rm *.out
+
+
+And to iterate over every file from Python using the `zipfile module
+<https://docs.python.org/3/library/zipfile.html>`__:
+
+.. code-block:: python
+
+   import zipfile
+   with zipfile.Zipfile('my_data.zip') as data:
+       for filename in data.namelist():
+           with data.open(filename) as datafile:
+	       # Do whatever you need with the data, in this case read
+	       # to memory:
+	       raw_data = datafile.read()
+
+This strategy reduces the number of files, but doesn't give you
+high-performance streaming input if you needed to read tens of files
+per second.  The zipfile module can do anything you need with the
+files within the zipfile, as if they are real files.
+
+A similar strategy could be used from other languages.
+
+
 Performance tuning for small files
 ----------------------------------
 
