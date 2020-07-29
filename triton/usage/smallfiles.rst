@@ -215,11 +215,15 @@ databases that will work.  For example, sqlite is a single-file,
 serverless database for relational data, and there are other similar
 things for time serieses or graphs.
 
+You can see a concrete example of numerical arrays in HDF5 with Python
+in `the h5py tutorial
+<https://h5py.readthedocs.io/en/stable/quick.html>`__.
+
 Specific example: Unpacking to local disk
 -----------------------------------------
 
 You can see examples at `compute node local
-drives <localstorage>`
+drives <localstorage>`.
 
 Specific example: Key-value stores
 ----------------------------------
