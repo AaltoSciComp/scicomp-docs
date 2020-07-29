@@ -335,6 +335,12 @@ def setup(app):
     #if on_rtd:
     #    app.add_javascript(mathjax_path)
     # sphinx 4.0: must be renamed to add_css_file and add_js_file.
-    app.add_stylesheet("theme_overrides.css")
-    app.add_javascript("redirect-to-https.js")
-    app.add_javascript("https://users.aalto.fi/~darstr1/minipres-stable.js")
+    import sphinx
+    if sphinx.version_info[0] >= 3:
+        app.add_css_file("theme_overrides.css")
+        app.add_js_file("redirect-to-https.js")
+        app.add_js_file("https://users.aalto.fi/~darstr1/minipres-stable.js")
+    else:
+        app.add_stylesheet("theme_overrides.css")
+        app.add_javascript("redirect-to-https.js")
+        app.add_javascript("https://users.aalto.fi/~darstr1/minipres-stable.js")
