@@ -18,27 +18,31 @@ department, supervisor, Aalto account, and see the conditions below.
 
 A few prerequisites:
 
--  you must have valid Aalto account
--  you must have working email address (Aalto)
--  you must accept :doc:`Triton usage
-   policies <usagepolicy>`: requesting access to
-   Triton cluster at Aalto University, you accept all the conditions
-   listed in the Triton usage policies, including the data and privacy
+-  You must have valid Aalto account
+-  You must accept :doc:`Triton usage
+   policies <usagepolicy>`, including the data and privacy
    policies.
--  You should tell us your department/school in your account creation
+-  Also tell us your department/school in your account creation
    request.
--  Accounts are for
+-  You should have enough background to use Triton well, including
+   Linux skills.  Read
+   `hands-on scientific computing
+   <https://handsonscicomp.readthedocs.io/en/latest/>`__, and you
+   should know A ("Basics"), C ("Linux"), and D ("HPC") well.  Also
+   see the :ref:`Triton tutorials <tutorials>`.
 
-   - Researchers (as in, affiliated with a research PI in any way).
-     Please tell us who your supervisor is in your account request.
-   - Students coming to one of our :doc:`Scientific Computing in Practice
-     courses </training/scip/index>` which uses Triton.  You will be specifically
-     told if this is the case
-   - Other students not doing research needing computational
-     facilities should check out our :doc:`introduction for students
-     <../aalto/welcomestudents>`.  **This includes most student
-     projects as part of courses, unless you are effectively joining a
-     research group to do a project.**
+Accounts are for:
+
+- Researchers (as in, affiliated with a research PI in any way).
+  Please tell us who your supervisor is in your account request.
+- Students coming to one of our :doc:`Scientific Computing in Practice
+  courses </training/scip/index>` which uses Triton.  You will be specifically
+  told if this is the case
+- Other students not doing research needing computational
+  facilities should check out our :doc:`introduction for students
+  <../aalto/welcomestudents>`.  **This includes most student
+  projects as part of courses, unless you are effectively joining a
+  research group to do a project.**
 
 You know that you have Triton access if you are in the ``triton-users``
 group at Aalto: ``groups`` shows this on Aalto linux machines.
