@@ -99,7 +99,14 @@ Computer Science, Physics, and Neuroscience and Biomedical Engineering
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 These departments are members of Science-IT, and their local IT staff
-provide the greatest Science-IT support.
+provide a great deal of scientific computing support, and in fact all
+the Science-IT team above is contained here.  These departments resources
+are seamlessly integrated with Aalto's HPC resources.
+
+.. toctree::
+   :maxdepth: 1
+
+   cs-it
 
 
 Partners
