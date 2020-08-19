@@ -74,6 +74,8 @@ Quick contents and links
 	 by SciComp. Including Triton kickstarts and many others
        * `Parallel computing <https://wiki.aalto.fi/download/attachments/65022076/parallel_computing.2012-04-12.pdf?version=1&modificationDate=1334828664000&api=v2>`_
        * `Aalto IT Services for Research <https://www.aalto.fi/en/services/it-services-for-research>`_
+       * `Hands-on Scientific Computing <hosc_>`__: map of important
+	 computing skills
        * `Software Carpentry <https://software-carpentry.org/>`_
 	 (scientific computation basics) and
 	 `Code Refinery <https://coderefinery.org/>`_ (more focused on
@@ -110,7 +112,14 @@ Overview
 Tutorials
 =========
 These are designed to be read in-order by every Triton user when they
-get their accounts (except maybe the last ones).
+get their accounts (except maybe the last ones).  In order to use
+Triton well, in the `Hands-on SciComp roadmap <hosc_>`__ you should
+also know the `Basics (A) <hosc-a_>`__ and `Linux (C) <hosc-c_>`__
+levels as a prerequisite.
+
+.. _hosc: https://handsonscicomp.readthedocs.io/en/latest/
+.. _hosc-a: https://handsonscicomp.readthedocs.io/en/latest/#a-basics
+.. _hosc-c: https://handsonscicomp.readthedocs.io/en/latest/#c-linux-and-shell
 
 .. toctree::
    :maxdepth: 1
