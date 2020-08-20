@@ -23,6 +23,7 @@ Spring / Summer 2021: Introduction to MPI, Matlab continuation course, Linux She
    gpu-computing
    matlab-basics
    data-analysis
+   python-for-sc
    linux-shell-basics
    summer-kickstart
    May 2020 / CodeRefinery <https://coderefinery.org/workshops/upcoming>
