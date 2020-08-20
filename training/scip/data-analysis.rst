@@ -1,5 +1,5 @@
 ===============================================
-Oct 2019 / Practical R and Python data analysis
+Oct 2020 / Practical R and Python data analysis
 ===============================================
 
 Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
@@ -24,12 +24,11 @@ will cover similar information and concepts, so you may choose to only
 come to one part (see below). With lots of demos and hands-on
 exercises to try on your own.
 
-**Lecturer:** Janne Blomqvist, D. Sc., Science IT / Department of
-Applied Physics, Richard Darst, Ph. D., Science IT / Department of
-Computer Science, Simo Tuomisto, Science IT / Department of Computer
-Science
+**Lecturer:** Simo Tuomisto, Science IT / Department of Computer
+Science, Richard Darst, Ph. D., Science IT / Department of
+Computer Science
 
-**Time, date:**
+**Time, date:** TBA
 
 - Mon 30.9, 12:00-15:00 (Python)
 - Thu 3.10, 12:00-15:00 (Python)
@@ -38,8 +37,7 @@ Science
 - Mon 14.10, 12:00-15:00 (R)
 - Thu 17.10, 12:00-15:00 (R)
 
-**Place:** Otakaari 1, U135a (the auditorium next to Cafe Elissa in
-the main building)
+**Place:** online, Zoom link to be posted to the registered participants
 
 **Cost:** Free of charge for FGCI consortium members including Aalto
 employees and students.
@@ -49,14 +47,14 @@ employees and students.
 **Credits:** Credits available for the Aalto students and course
 certificate can be provided on request for the outsiders. Full course
 hours correspond roughly to 1 ECTS. Students who wish to get a
-certificate should hand in the homework assignments and participate to
-at least 4 of 6 lectures.
+certificate should hand in the special assignment and participate to
+at least 3 of 4 lectures.
 
 **Other comments:** During the tutorials we’ll use jupyter.cs.aalto.fi
 and jupyter.triton.aalto.fi.  It's also good to have an SSH client
-installed.  *Participants are expected to bring their own laptops.*
+installed.
 
-**Additional course info at:** janne.blomqvist -at aalto.fi, richard.darst -at- aalto.fi, simo.tuomisto -at- aalto.fi
+**Additional course info at:** simo.tuomisto -at- aalto.fi
 
 **Course preparation**
 
