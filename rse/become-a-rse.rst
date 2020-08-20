@@ -5,7 +5,7 @@ This page is designed to guide people into the interesting world of
 research software engineering: providing a view into the types of
 skills that are useful to research groups at Aalto.  It also provide
 links to training material which our RSEs should learn after
-starting.
+starting (so don't be intimidated by what you see on here!).
 
 Do you like coding and research, but don't want an academic career
 path with publications as your sole purpose?  Be a Research Software
