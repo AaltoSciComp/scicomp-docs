@@ -110,6 +110,7 @@ teaching and mentoring skills.
 * `Motivation and demotivation
   <https://teachtogether.tech/#s:motivation>`__, a chapter in Teaching
   Tech Together.
+* `History of the RSE concept <https://www.software.ac.uk/blog/2016-08-17-not-so-brief-history-research-software-engineers-0>`__
 
 
 
