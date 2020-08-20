@@ -2,7 +2,8 @@
 SCIP Archive
 ================================
 
-For current courses, see :doc:`../index`.  Below is a list of past courses.
+Currently active (upcoming) courses have been moved to the
+:doc:`training index <../index>`.  Below is a list of past courses.
 
 .. toctree::
    :titlesonly:
