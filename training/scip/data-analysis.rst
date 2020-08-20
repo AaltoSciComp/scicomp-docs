@@ -1,5 +1,5 @@
 ===============================================
-Oct 2020 / Practical R and Python data analysis
+Oct 2020 / Practical R  data analysis
 ===============================================
 
 Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
@@ -28,14 +28,12 @@ exercises to try on your own.
 Science, Richard Darst, Ph. D., Science IT / Department of
 Computer Science
 
-**Time, date:** TBA
+**Time, date:**
 
-- Mon 30.9, 12:00-15:00 (Python)
-- Thu 3.10, 12:00-15:00 (Python)
-- Mon 7.10, 12:00-15:00 (Python)
-- Thu 10.10, 12:00-15:00 (R)
-- Mon 14.10, 12:00-15:00 (R)
-- Thu 17.10, 12:00-15:00 (R)
+- Tue 5.10, 12:00-15:00
+- Wed 7.10, 12:00-15:00
+- Mon 12.10, 12:00-15:00
+- Wed 14.10, 12:00-15:00
 
 **Place:** online, Zoom link to be posted to the registered participants
 
