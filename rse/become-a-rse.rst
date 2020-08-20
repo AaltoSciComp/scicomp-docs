@@ -61,8 +61,9 @@ you do so mostly independently but with the help of a great team?*
 
 
 
-General skills
-~~~~~~~~~~~~~~
+General tech skills
+~~~~~~~~~~~~~~~~~~~~
+Our broad background on which we build:
 
 * Basic mandatory skills include Linux, shell scripting, some
   low-level programming language (C, Fortran), and programming in
@@ -76,6 +77,8 @@ General skills
   appendix to the cover letter if not included in the CV.
 * Advanced parallel programming skills are a plus, but equally
   important is the ability to create good, simple, practical tools.
+* Git, GitHub, git-based collaborative workflows.
+* Software testing, CI, documentation, reproducible, portability, etc.
 * As an example, the ideal candidate will have near-perfect knowledge
   of all `Software Carpentry <swc_>`_, `CodeRefinery <cr_>`_, and the generic parts of
   our :ref:`HPC lessons <tutorials>` - or be able to fill in gaps with
@@ -94,8 +97,25 @@ General skills
 .. _swc: https://software-carpentry.org/lessons/
 .. _cr: https://coderefinery.org/lessons/
 
+
+
+Teaching and mentoring skills
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+You won't be just preforming technical tasks.  As part of being a RSE,
+you need to help others to be self-sufficient as well.  This requires
+teaching and mentoring skills.
+
+* `How to help someone use a computer by Phil Agre
+  <https://www.librarian.net/stax/4965/how-to-help-someone-use-a-computer-by-phil-agre/>`__
+* `Motivation and demotivation
+  <https://teachtogether.tech/#s:motivation>`__, a chapter in Teaching
+  Tech Together.
+
+
+
 Specific examples
 ~~~~~~~~~~~~~~~~~
+This is a selection of advanced skills which are useful
 
 * Advanced experience of debugging/profiling/developing Linux tools,
   incl Git, Intel and GNU compiler suits and corresponding tools.
@@ -109,21 +129,25 @@ Specific examples
 * Knowledge of scientific software and packages incl Matlab,
   Mathematica, Python libs, others is beneficial.
 * Experimental data collection, LabView, etc.
-* Git, GitHub, git-based collaborative workflows
-* Software testing, CI, documentation, portability, etc.
 * Workflow automation, shell scripting, porting from single machines
   to clusters.
-* Data management, data engineering, data wrangling.
 * Docker, Singularity, containers.
-* Reproducible research.
-* Open source software development, community formation.
-* Software packaging and distribution, (e.g. PyPI, conda, etc.).
 * Data analysis tools like R, Python, pandas, numpy, etc. are
-  beneficial
+  beneficial.
 * Julia, Matlab, Mathematica.
 * Web development, cloud operations.
 * Scientific Computing on other operating systems.
 
+
+Open science and data
+~~~~~~~~~~~~~~~~~~~~~
+As a RSE, you should also serve as an advocate for open science,
+reproducible research, and data management.
+
+* Data management, data engineering, data wrangling.
+* Reproducible research.
+* Open source software development, community formation.
+* Software packaging and distribution, (e.g. PyPI, conda, etc.).
 
 
 Training resources
