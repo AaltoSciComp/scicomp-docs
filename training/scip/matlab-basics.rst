@@ -1,10 +1,10 @@
 ========================
-Nov 2019 / Matlab Basics
+Nov 2020 / Matlab Basics
 ========================
 
 Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
 
-**Audience:** Aalto employees and students.
+**Audience:** FCCI consortium members, students and employees looking for the basic intro into Matlab.
 
 **About the course:**
 
@@ -20,16 +20,16 @@ Check a detailed list of topics and other information at the `Matlab Basics cour
 
 **Schedule:**
 
-- Wed 20.11, 12:00-15:00
-- Thu 21.11, 12:00-15:00
-- Wed 27.11, 12:00-15:00
-- Thu 28.11, 12:00-15:00
+- Tue 10.11, 12:00-15:00
+- Thu 12.11, 12:00-15:00
+- Tue 17.11, 12:00-15:00
+- Thu 19.11, 12:00-15:00
 
-**Place:** Otakaari 1, U135a (the auditorium next to the student’s HUB/cafeteria)
+**Place:** Zoom link to be posted to the registered users
 
 **Lecturers:** Enrico Glerean, D.Sc., CS/NBE Department, SCI
 
-**Registration:** `link for registration <https://www.webropolsurveys.com/S/50CE4F5C7D47F656.par>`__
+**Registration:** `TBA <ttps://www.webropolsurveys.com/S/50CE4F5C7D47F656.par>`__
 
 **Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
 
