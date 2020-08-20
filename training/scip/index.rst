@@ -11,27 +11,26 @@ Examples of topics covered at different lectures: HPC crash course, Triton kicks
 Lectures by date and topics
 ---------------------------
 
-*Spring / Summer 2020:* Introduction to MPI, Molecular dynamics with LAMMPS, Matlab continuation course, Linux Shell Scripting, CodeRefinery. On top of them Summer Kickstart in June.
+*Fall / Winter 2020-21 courses (tentative plan):* Linux Shell Basics, Python for Scientists, Data analysis with R and Python, Matlab Basics, GPU computing, Triton winter kickstart
 
-Fall / Winter 2020 courses (tentative plan): Linux Shell basics, Data analysis with R and Python, HTCondor introduction, Matlab Basics, GPU computing, CodeRefinery (3-day workshop), Introduction to Julia programming language, Triton winter kickstart
+Spring / Summer 2021: Introduction to MPI, Matlab continuation course, Linux Shell Scripting, CodeRefinery. On top of them Summer Kickstart in June.
 
 
 .. toctree::
    :titlesonly:
 
+   winter-kickstart
+   gpu-computing
+   matlab-basics
+   data-analysis
+   linux-shell-basics
    summer-kickstart
    May 2020 / CodeRefinery <https://coderefinery.org/workshops/upcoming>
    matlab-advanced
    shell-scripting
    md-with-lammps 
    mpi-introduction
-   winter-kickstart
-   Dec 2019 / CodeRefinery <https://coderefinery.org/workshops/2019-12-10-espoo/>
-   matlab-basics
    htcondor-introduction
-   data-analysis
-   gpu-computing
-   linux-shell-basics
 
 Archive
 -------

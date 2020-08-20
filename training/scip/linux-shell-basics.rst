@@ -1,5 +1,5 @@
 ==============================
-Sept 2019 / Linux Shell Basics
+Sept 2020 / Linux Shell Basics
 ==============================
 
 Part of :doc:`Scientific Computing in Practice <index>` lecture series at Aalto University.
@@ -14,10 +14,11 @@ There is an advaced part of this course given later in the spring. There on we g
 
 **Lecturer:** Ivan Degtyarenko, D. Sc., Science IT / Department of Applied Physics, Aalto University
 
-**Time, date, place:** the course consists of two hands-on sessions
+**Time, date, place:** the course consists of three online hands-on sessions
 
-- Tue 3.9.2019 klo 12:00-15:00 // Otakaari 1, U135a
-- Thu 5.9.2019 klo 12:00-15:00 // Otakaari 1, U135a
+- Mon 7.9 klo 12:00-15:00 // Zoom link to be posted to the registered participants list
+- Wed 9.9 klo 12:00-15:00
+- Mon 11.9 klo 12:00-15:00
 
 **Course material:** will be mostly based on the first part of `scicomp.aalto.fi/training/linux-shell-tutorial <https://scicomp.aalto.fi/training/linux-shell-tutorial.html>`__.
 
@@ -25,10 +26,10 @@ Additional materials and homework assignments at triton.aalto.fi:/scratch/scip/B
 
 **Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
 
-**Registration:** closed, the course is over 
+**Registration:** `Webropole form for the registration <https://link.webropolsurveys.com/S/D54967EB85EBA5E7>`__
 
 **Credits:** Course certificate can be provided on request, though no official ECTS.
 
-**Other comments:** During the tutorials we’ll use a Linux terminal, means that either you have a Linux/Mac laptop or you have a Windows laptop with the SSH client installed for accessing any of Linux server (kosh/lyta etc at Aalto). If needed participants can be provided with access to Triton for running examples. *Participants are expected to bring their own laptops.*
+**Other comments:** During the tutorials we’ll use a Linux terminal, means that either you have a Linux/Mac computer at your place or a Windows PC with the SSH client installed for accessing any of Linux server (kosh/lyta etc at Aalto). We will touch the SSH connection issue on the first session.
 
 **Additional course info at:** ivan.degtyarenko -at- aalto.fi
