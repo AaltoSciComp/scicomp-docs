@@ -1,6 +1,8 @@
 ==================================
-Jan 2020 / Triton Winter Kickstart
+Jan 2021 / Triton Winter Kickstart
 ==================================
+
+*To be confirmed*
 
 Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
 
@@ -14,13 +16,13 @@ Teaching will be interactive, “learning by doing”.
 
 The course is obligatory for all new Triton users and recommended to all interested in the field.
 
-**Time, date:** Mon 20.1, 12:00-16:30 (with a break in between)
+**Time, date:** Mon ??.1, 12:00-16:30 (with a break in between)
 
-**Place:** `T-building, T2 <https://usefulaaltomap.fi/#!/select/T2>`_
+**Place:** Zoom link to be posted to the registered users
 
 **Lecturering by:** Science IT people
 
-**Registration:** `registration link <https://link.webropolsurveys.com/S/B3CCDA95D766F143>`__
+**Registration:** `TBA <htps://link.webropolsurveys.com/S/B3CCDA95D766F143>`__
 
 **Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
 
