@@ -18,7 +18,7 @@ There is an advaced part of this course given later in the spring. There on we g
 
 - Mon 7.9 klo 12:00-15:00 // Zoom link to be posted to the registered participants list
 - Wed 9.9 klo 12:00-15:00
-- Mon 11.9 klo 12:00-15:00
+- Fri 11.9 klo 12:00-15:00
 
 **Course material:** will be mostly based on the first part of `scicomp.aalto.fi/training/linux-shell-tutorial <https://scicomp.aalto.fi/training/linux-shell-tutorial.html>`__.
 
