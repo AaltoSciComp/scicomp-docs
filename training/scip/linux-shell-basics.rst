@@ -24,7 +24,7 @@ There is an advaced part of this course given later in the spring. There on we g
 
 Additional materials and homework assignments at triton.aalto.fi:/scratch/scip/BASH
 
-**Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
+**Cost:** Free of charge for FCCI consortium members including Aalto employees and students.
 
 **Registration:** `Webropole form for the registration <https://link.webropolsurveys.com/S/D54967EB85EBA5E7>`__
 
