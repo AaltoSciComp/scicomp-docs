@@ -15,6 +15,7 @@ JupyterHub for instructors
 .. toctree::
    :maxdepth: 1
 
+   news
    overview
    system-environment
    request-course
