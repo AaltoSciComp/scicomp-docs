@@ -14,3 +14,4 @@ Scientific computing tips
    shell
    ssh
    zen-of-scicomp
+   practical-git-prs
