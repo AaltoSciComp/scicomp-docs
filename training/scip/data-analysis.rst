@@ -1,32 +1,35 @@
 ===============================================
-Oct 2020 / Practical R  data analysis
+Oct 2020 / Data analysis with R and Python
 ===============================================
 
-Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
+Part of the `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
 
-**Audience:** Researchers who are or will soon be using R and Python
-for data analysis, who know a bit about these languages but haven’t
-studied best practices for data analysis in them. We do not assume
-familiarity with R (but some sort of knowledge of programming), but do
-assume a small amount of Python.
+**Audience:** Researchers who are using or will soon be using R and Python
+for data analysis, who know how to program with these languages, but do not
+necessarily know what are the best practices for data analysis.
+The course material is available in both R and Python, but this
+is not a course on the basics of scientific programming. If you wish to
+prep up your scientific programming skills, we recommend taking
+our :doc:`../scip/python-for-sc`-course.
 
 **About the course:** We provide a practical introduction and advice
-for data analysis in R and Python. The primary lessons will be in
-libraries and visualization in these languages (the data frame in R
-and pandas in Python) and optimizing data storage and access. Side
-lessons will include data storage formats, Jupyter notebooks, Triton
-and HPC for data processing, optimization of time and memory usage,
-profiling, workflow automation, and overall good practices. The course
-is suited both for beginners and those already using these tools but
-feel they should be better. Material will be divided approx. into two
-equal parts, 3 sessions of R and 3 sessions of Python.  The two haves
-will cover similar information and concepts, so you may choose to only
-come to one part (see below). With lots of demos and hands-on
-exercises to try on your own.
+for data analysis in R and Python. We will learn how you should organize
+your data for efficient data analysis, how to analyze the data, how to
+split your data/models based on your intended data analysis task,
+and how to visualize the results you obtain from this data analysis.
+The course is suited for people who are starting on doing data analysis
+and would like to start on a good workflow. The course material can be
+done with either R or Python.
 
-**Lecturer:** Simo Tuomisto, Science IT / Department of Computer
-Science, Richard Darst, Ph. D., Science IT / Department of
-Computer Science
+Course consists of four three hour sessions that will be done online
+via zoom. In these sessions we'll learn of core concepts of data analysis.
+We will do some exercises during the sessions, but most of the exercises
+will be available throught a GitHub repository (released a bit later)
+and are meant to be done between the sessions. We will go through the
+solutions at the start of each session.
+
+**Lecturer:** Simo Tuomisto, M. Sc., Science IT / Department of Computer
+Science
 
 **Time, date:**
 
@@ -48,99 +51,26 @@ hours correspond roughly to 1 ECTS. Students who wish to get a
 certificate should hand in the special assignment and participate to
 at least 3 of 4 lectures.
 
-**Other comments:** During the tutorials we’ll use jupyter.cs.aalto.fi
-and jupyter.triton.aalto.fi.  It's also good to have an SSH client
-installed.
+**Other comments:** 
 
 **Additional course info at:** simo.tuomisto -at- aalto.fi
 
 **Course preparation**
 
-This course will use https://jupyter.cs.aalto.fi and
-https://jupyter.triton.aalto.fi .  You will need an Aalto account.
-
-..
-  Make sure that you can connect via at least one of these ways (you
-  have to be on the Aalto networks):
-
-   * from the Aalto eduroam wireless network (recommended for personal
-     and standalone computers)
-   * from the aalto wireless network on an Aalto managed computer
-     (recommend when possible)
-   * from any network, via the Aalto VPN (or proxy as described in the
-     scicomp instructions).  This is the worst-case possibility
-   * You need a Triton account.  If you do not have one, read the
-     scicomp instructions and request one.
-   * If you can access https://jupyter.triton.aalto.fi and log in, you
-     are ready to go.
-   * It is best if you can SSH to Triton.  Install a ssh client in
-     advance, we can help with the rest of the connection process during
-     the course.
+This will be updated closer to the course.
 
 **Course material**
 
-You can find our git repository at
-https://github.com/AaltoSciComp/python-r-data-analysis-course.  Note
-that it is a work in progress and until (and even after) something has
-been presented, it may still change.  The links below go to the “raw”
-notebooks, and you can find the work and “solutions” we have done in
-class in the `classwork-2019 branch`_.  By day, we have covered:
+This is the preliminary plan for the course:
 
-.. _classwork-2019 branch: https://github.com/AaltoSciComp/python-r-data-analysis-course/tree/classwork-2019
+* Day 1: Understanding data science workflows
 
-* Day 1: Python
+* Day 2: Data ingestion, tidy data and efficient data formats
 
-  * 01_Course_intro_and_Jupyter.ipynb
-  * 02_Jupyter_demo_pi.ipynb
-  * python/01_Python_intro.ipynb
-  * python/02_Python_data_types_and_structures.ipynb
-  * python/03_Numpy.ipynb
+* Day 3: Running models
 
-* Day 2: Python
-
-  * python/03_Numpy.ipynb
-  * python/10_Tidy_data.ipynb
-  * python/04_Pandas.ipynb (or moved to the next day)
-  * Time handling
-
-* Day 3: Python, plotting
-
-  * python/04_Pandas.ipynb (continuing from previous lecture)
-  * python/05_Python_IO.ipynb
-  * python/06_Pandas_split_apply_combine.ipynb
-  * python/08_Profiling_and_debugging.ipynb (if time allows)
-  * python/09_Matplotlib.ipynb
-  * Presentation of homework exercises (if time allows)
-
-* Day 4: R
-
-* Day 5: R
-
-* Day 6: R
-
-To get the repository::
-
-  git clone https://github.com/AaltoSciComp/python-r-data-analysis-course/
-
-To set up the git merge and diff hooks (Triton magic), copy and paste these inside the repository::
-
-
-  /share/apps/jupyterhub/live/miniconda/bin/nbdime config-git --enable
-  sed --in-place -r 's@(= )[ a-z/-]*(git-nb)@\1/share/apps/jupyterhub/live/miniconda/bin/\2@' .git/config
+* Day 4: Scaling your analysis by splitting data and computations
 
 **Homework**
 
-The homework is in the git repository in the ``/homework``
-directory. A README file in that directory explains the instructions:
-just take each notebook as a starting point and try to solve the
-exercise inside of it.  The deadline to return is 15.11 (middle of
-November) at 12:00.  To return, create a repository at
-``version.aalto.fi`` and send Janne a link to a commit in the repo
-(make sure to share it with Janne first!). If you don't have an Aalto
-account, you can send a ``.tar.gz`` or ``.zip`` archive to Janne as
-attachment via email, or create a repo e.g. on ``gitlab.com`` (make
-sure to make it private, and share it with Janne only!).
-
-**Update: For exercise 4, the ntsb.gov site is down, so we have
-mirrored the data needed at:**
-https://users.aalto.fi/~tuomiss1/rcourse/elfaro.kmz
+This will be updated closer to the course.
