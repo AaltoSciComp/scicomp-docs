@@ -23,7 +23,7 @@ Additional materials and homework assignments at triton.aalto.fi:/scratch/scip/p
 
 **Cost:** Free of charge for FCCI consortium members including Aalto employees and students.
 
-**Registration:** `Webropole form for the registration <https://link.webropolsurveys.com/S/D54967EB85EBA5E7>`__
+**Registration:** `Webropole form for the registration <https://link.webropolsurveys.com/S/9DF02396D725FA71>`__
 
 **Credits:** 
 
