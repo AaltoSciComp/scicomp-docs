@@ -4,31 +4,51 @@ Training
 
 Scientific computing and data science require special, practical
 skills in programming and computer use.  However, these aren't often
-learned in courses.
-
-This page is your portal for training.  The focus is practical,
+learned in academic courses.  This page is your portal for getting
+these skills.  The focus is practical,
 hands-on courses for scientists, not theoretical academic courses.
-For course announcements at Aalto, see :doc:`the Scientific Computing
-in Practice courses page <scip/index>`.
+
+Scientific Computing in Practice
+================================
+
+SCIP is a lecture series at Aalto University which covers hands-on,
+practical scientific computing related topics. Lectures are open for
+the entire Aalto community as well as our partners at FGCI
+consortium.
+
+
+Examples of topics covered at different lectures: HPC crash course,
+Triton kickstarts, Linux Shell, Parallel programming models: MPI and
+OpenMP, GPU computing, Python for scientists, Data analysis with R
+and/or Python, Matlab, HTCondor and many others.
 
 .. toctree::
    :maxdepth: 1
 
+   scip/winter-kickstart
+   scip/gpu-computing
+   scip/matlab-basics
+   scip/data-analysis
+   scip/python-for-sc
+   scip/linux-shell-basics
    scip/index
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+
    scicomp-announcements-maillist
 
-If you're starting research, ask your advisor what level of skill they
-expect you to have.  There are both courses and self-study materials
-below.  A few hours now can save you days of time during your career.
 
-Subpages:
+*Tentative plans: Fall / Winter 2020-21 courses (tentative plan):*
+Linux Shell Basics, Python for Scientists, Data analysis with R and
+Python, Matlab Basics, GPU computing, Triton winter kickstart.
+*Spring / Summer 2021*: Introduction to MPI, Matlab continuation
+course, Linux Shell Scripting, CodeRefinery. On top of them Summer
+Kickstart in June.
 
-.. toctree::
-   :maxdepth: 1
-
-   linux-shell-tutorial
-   python-scicomp/index
-
+Anyone can sign up for announcements at the :doc:`SCIP announcement
+mailinglist <scicomp-announcements-maillist>`.
 
 Skills map
 ==========
@@ -41,8 +61,18 @@ Our training map `Hands-on Scientific Computing
 by level and category, providing you a strategy to get started.
 
 In order to do basic scientific computing, C (Linux and shell) is
-needed.  To use a computer cluster, D (Clusters and HPC) is useful  E
+needed.  To use a computer cluster, D (Clusters and HPC) is useful.  E
 (scientific coding) is useful if you are writing your own software.
+
+
+Our courses
+===========
+
+.. toctree::
+   :maxdepth: 1
+
+   linux-shell-tutorial
+   python-scicomp/index
 
 
 Recommended programming courses
