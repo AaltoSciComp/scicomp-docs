@@ -11,9 +11,9 @@ Examples of topics covered at different lectures: HPC crash course, Triton kicks
 Lectures by date and topics
 ---------------------------
 
-*Fall / Winter 2020-21 courses (tentative plan):* Linux Shell Basics, Python for Scientists, Data analysis with R and Python, Matlab Basics, GPU computing, Triton winter kickstart
+*Fall / Winter 2020-21 courses:* Linux Shell Basics, Python for Scientists, Data analysis with R and Python, Matlab Basics, GPU computing, Triton winter kickstart
 
-Spring / Summer 2021: Introduction to MPI, Matlab continuation course, Linux Shell Scripting, CodeRefinery. On top of them Summer Kickstart in June.
+Spring / Summer 2021 (tentative plan): Introduction to MPI, Matlab continuation course, Linux Shell Scripting, CodeRefinery. On top of them Summer Kickstart in June.
 
 
 .. toctree::
