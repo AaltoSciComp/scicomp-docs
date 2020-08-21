@@ -32,8 +32,3 @@ Spring / Summer 2021 (tentative plan): Introduction to MPI, Matlab continuation 
    md-with-lammps 
    mpi-introduction
    htcondor-introduction
-
-Archive
--------
-
-This course list is used to be at `science-it.aalto.fi/scip <http://science-it.aalto.fi/scip/>`__ page. We keep those pages for a while, though at some point the site will be obsoleted and removed.
