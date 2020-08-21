@@ -17,9 +17,6 @@ Currently active (upcoming) courses have been moved to the
    mpi-introduction
    htcondor-introduction
 
-Archive
--------
-
 This course list is used to be at `science-it.aalto.fi/scip
 <http://science-it.aalto.fi/scip/>`__ page, but that page is now
 deleted.  This series has existed since 2016.
