@@ -28,7 +28,7 @@ will be available throught a GitHub repository (released a bit later)
 and are meant to be done between the sessions. We will go through the
 solutions at the start of each session.
 
-**Lecturer:** Simo Tuomisto, M. Sc., Science IT / Department of Computer
+**Lecturer:** Simo Tuomisto, M. Sc., Aalto Scientific Computing / Department of Computer
 Science
 
 **Time, date:**
