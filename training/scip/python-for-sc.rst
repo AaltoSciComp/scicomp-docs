@@ -2,31 +2,84 @@
 Sept 2020 / Python for Scientists
 =================================
 
-Part of :doc:`Scientific Computing in Practice <index>` lecture series at Aalto University.
+Part of :doc:`Scientific Computing in Practice <index>` lecture series
+at Aalto University.
 
-**Audience:** advanced course for the Python programmers to get started with the NumPy, SciPy, Matplotlib, Pandas.
+This is a medium-advanced course in Python tools such as NumPy, SciPy,
+Matplotlib, and Pandas.  It is suitable for people who have a basic
+understanding of basic Python and want to know some internals and
+important libraries for science.
 
-**About the course:** 
+Prerequisites include basic programming in Python.
 
-**Lecturer:** Richard Darst, D. Sc., Science IT / Department of Computer Science, Aalto University
 
-**Time, date, place:** the course consists of four online hands-on sessions 3h each:
 
-- Mon 14.9 klo 12:00-15:00 // Zoom link to be posted to the registered participants list
-- Wed 16.9 klo 12:00-15:00
-- Mon 21.9 klo 12:00-15:00
-- Wed 23.9 klo 12:00-15:00
+Practical information
+---------------------
 
-**Course material:** will be mostly based on the `scicomp.aalto.fi/training/python-scicomp/ <https://scicomp.aalto.fi/training/python-scicomp/>`__.
+This is an online course via Zoom, which will also be streamed via
+Twitch so that anyone may follow along without registration.
 
-Additional materials and homework assignments at triton.aalto.fi:/scratch/scip/python-for-sc
+**Lecturer:** Richard Darst, PhD, Aalto Scientific Computing
 
-**Cost:** Free of charge for FCCI consortium members including Aalto employees and students.
+**Time, date, place:** the course consists of four online hands-on
+sessions 3h each:
 
-**Registration:** `Webropole form for the registration <https://link.webropolsurveys.com/S/9DF02396D725FA71>`__
+- Mon 14.9, 10:00-13:00
+- Wed 16.9, 10:00-13:00
+- Mon 21.9, 10:00-13:00
+- Wed 23.9, 10:00-13:00
 
-**Credits:** 
+**Registration:** This is on online workshop: we currently plan for
+registrations via Zoom up to our capicity (for lectures+exercises,
+priority for Aalto→Finland→Nordics), or Twitch (lectures, for anyone).
+`Registration for announcements and Zoom session
+<https://link.webropolsurveys.com/S/9DF02396D725FA71>`__.
 
-**Other comments:** 
+You may register as a **team**, and your team will be kept together
+during exercise sessions within a breakout room.  If you come together
+with your friends or research group, you will be able to learn a lot
+more.  Even more so if you bring a helper with your group.
+
+**Credits:** Certificates are not provided for this course.
 
 **Additional course info at:** richard.darst -at- aalto.fi
+
+
+
+Preparation
+-----------
+
+Prerequisites include basic programming in Python (at any level).
+
+**Preparation:** Online workshops can be a productive format, but it
+takes some effort to get ready.  Browse these resources:
+
+* `Attending an online workshop
+  <https://coderefinery.github.io/manuals/how-to-attend-online/>`__,
+  good to read in detail (ignore the CodeRefinery-specific parts).
+* `How to use HackMD to take answer questions and hold discussions <https://coderefinery.github.io/manuals/hackmd-mechanics/>`__.
+* `The Zoom mechanics we will use
+  <https://coderefinery.github.io/manuals/zoom-mechanics/>`__, might
+  be useful to browse.
+* It is useful to `watch <https://youtu.be/56p6xX0aToI>`__ or `read
+  <https://scicomp.aalto.fi/scicomp/shell/>`__ the Linux shell crash
+  course, since these basic command line concepts are always useful.
+
+Software installation:
+
+* Software requirements will be updated here later.
+* `Zoom <https://coderefinery.github.io/installation/zoom/>`__
+
+
+
+Material
+--------
+
+* :doc:`/training/python-scicomp/index`.
+
+
+Schedule
+--------
+
+To be decided
