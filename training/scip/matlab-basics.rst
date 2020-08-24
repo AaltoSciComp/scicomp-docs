@@ -21,15 +21,15 @@ Check a detailed list of topics and other information at the `Matlab Basics cour
 **Schedule:**
 
 - Tue 10.11, 12:00-15:00
-- Thu 12.11, 12:00-15:00
+- Wed 11.11, 12:00-15:00
 - Tue 17.11, 12:00-15:00
-- Thu 19.11, 12:00-15:00
+- Wed 18.11, 12:00-15:00
 
 **Place:** Zoom link to be posted to the registered users
 
-**Lecturers:** Enrico Glerean, D.Sc., CS/NBE Department, SCI
+**Lecturers:** Enrico Glerean, D.Sc., NBE Department, SCI
 
-**Registration:** `TBA <ttps://www.webropolsurveys.com/S/50CE4F5C7D47F656.par>`__
+**Registration:** `Register here <https://link.webropolsurveys.com/Participation/Public/9d2c94ef-5e80-4c1d-9e91-b68565c50757?displayId=Fin2059029>`__
 
 **Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
 
