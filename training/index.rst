@@ -29,7 +29,7 @@ and/or Python, Matlab, HTCondor and many others.
    scip/gpu-computing
    scip/matlab-basics
    scip/data-analysis
-   scip/python-for-sc
+   scip/python-for-scicomp
    scip/linux-shell-basics
    scip/index
 
