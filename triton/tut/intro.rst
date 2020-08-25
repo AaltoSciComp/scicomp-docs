@@ -87,7 +87,7 @@ time answering the same questions over and over.
 Also, always search this scicomp docs site and old issues in the issue
 tracker.
 
-We have weekly :doc:`"SciComp garage" </news/garage>` sessions
+We have weekly :doc:`"SciComp garage" </help/garage>` sessions
 where we provide help in person.
 
 However, the most important thing is to be able to continually develop

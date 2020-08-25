@@ -142,6 +142,7 @@ About
    :maxdepth: 2
    :titlesonly:
 
+   help/index
    about/index
    README
 

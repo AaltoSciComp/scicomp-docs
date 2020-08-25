@@ -34,7 +34,7 @@ computing better.*
 You might be a department IT staff member, a lab engineer, a skilled postdoc or a doctoral candidates who helps other researchers with their technical/computational challenges. Why not joining forces and join our network of specialists? There is no "Aalto Scientific Computing" on paper, only different
 teams that work together to help researchers better than they could
 alone.  We invite interested staff to join our community, :doc:`help
-sessions </news/garage>`, infrastructure development, etc.  This
+sessions </help/garage>`, infrastructure development, etc.  This
 program is just being developed (as of 2020), but it roughly includes:
 
 * Participation in admin meetings to help us develop infrastructure

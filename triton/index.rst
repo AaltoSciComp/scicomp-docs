@@ -65,7 +65,7 @@ Quick contents and links
        * `Quick Reference <ref/index>`
        * `Triton Cheatsheet <https://aaltoscicomp.github.io/cheatsheets/triton-cheatsheet.pdf>`_
        * `Triton FAQ <usage/faq>`
-       * `Scicomp Garage </news/garage>`
+       * `Scicomp Garage </help/garage>`
 
        **Scientific computing resources**
 
