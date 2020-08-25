@@ -69,11 +69,15 @@ You can reach us by:
   <https://wiki.aalto.fi/display/Triton/Getting+help>`__).  Use this
   only for things related to your account, quota, etc. - most other
   things go to the tracker above.
-* Weekly :doc:`SciComp Garage sessions </news/garage>`, where you can
+* Weekly :doc:`SciComp Garage sessions </help/garage>`, where you can
   informally chat.  Especially useful when your question is not yet
   fully defined.
-* You can chat with us on `Aalto Microsoft Teams <https://teams.microsoft.com/l/team/19%3a688ad82e41aa46d48ad978aea767419c%40thread.tacv2/conversations?groupId=4089981d-a443-493d-ae3e-3df5c63caed6&tenantId=ae1a7724-4041-4462-a6dc-538cb199707e>`__. This is useful for quick things.
+* You can chat with us on `Aalto Microsoft Teams <https://teams.microsoft.com/l/team/19%3a688ad82e41aa46d48ad978aea767419c%40thread.tacv2/conversations?groupId=4089981d-a443-493d-ae3e-3df5c63caed6&tenantId=ae1a7724-4041-4462-a6dc-538cb199707e>`__.  The invite code is ``e50tyij``.  This is useful for quick things.
 
+.. toctree::
+   :maxdepth: 1
+
+   garage
 
 Department IT
 ~~~~~~~~~~~~~
@@ -156,7 +160,7 @@ Community
 
 In addition to formal support, there is are informal activities, too:
 
-* The weekly :doc:`SciComp Garage </news/garage>`, designed to provide
+* The weekly :doc:`SciComp Garage </help/garage>`, designed to provide
   one-on-one help, but we invite anyone to come, hang out in the main
   room, and network with us.  This is for basic help and brainstorming.
 

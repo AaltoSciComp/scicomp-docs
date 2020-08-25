@@ -110,7 +110,7 @@ In person
 ~~~~~~~~~
 
 Come by one of the :doc:`Scientific computing garages
-<../news/garage>` any week.  It's the best place to get problems
+<../help/garage>` any week.  It's the best place to get problems
 solved fast.
 
 You can also come and talk to us face-to-face, but of course we have to

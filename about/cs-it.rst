@@ -60,7 +60,7 @@ Contact
 -------
 
 You can always drop by room A243 if we are there (not during covid-19,
-please) or join the :doc:`daily online garage </news/garage>`, or
+please) or join the :doc:`daily online garage </help/garage>`, or
 contact us by the `email address findable on our internal wiki
 <https://wiki.aalto.fi/display/CSdept/IT>`__.
 
