@@ -34,44 +34,44 @@ Notes:
 Online
 ======
 
+Triton, SciComp and CS
+----------------------
+
 You can meet us online, every weekday, at 13:00, `online via zoom
 <https://aalto.zoom.us/j/65371910202>`__.  This garage is focused on
-**Triton/HPC, scientific computing, data with best representation by
-(CS, NBE, and PHYS).**
+**Triton/HPC, scientific computing, data, and CS issues with best
+representation by (CS and Science-IT).**  Imagine this like walking
+into our office to ask for help.
 
-.. admonition:: July 2020
+* **Thursdays** are Triton focus days.  **Fridays** are CS focus
+  days.  But you can usually find someone to help any day of the week
+  (if not, we'll tell you when to come back).
 
-   During July, CS and Triton are well represented, and we will try to
-   help others as best we can.
+* This doesn't replace email or the `Triton issue
+  tracker
+  <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`__
+  for clearly-defined tasks.  Garage is good for discussion,
+  brainstorming, and deciding the best path.   If in doubt, come to
+  garage and we will help you decide.  Many people make an issue, then
+  come to garage to discuss.
 
 * Arrive between 13:00 - 13:15.  We leave at 13:15 if there is no one
   around (and the person you need to talk to may leave).  Please don't
   arrive early since we another meeting then.  Program always ends at
   14:00.
 
-* This is best-effort: if you don't see anyone there by 13:15, we
-  couldn't make it so try again the next day.
-
-* We have these special topics on these days of the week:
-
-  .. csv-table::
-     :delim: |
-
-     Monday  | Tuesday | Wednesday | Thursday         | Friday
-             |         |           | Triton, HPC, CSC |
-
 * Join on Zoom via https://aalto.zoom.us/j/65371910202 .  If joining
   by web browser, use Chrome.  Audio doesn't work with Firefox or
   Safari.
 
-* We will try to greet everyone personally, if we don't get around to
-  you then send your topic by chat.
 
-* (Optional) If you want us to prepare, use the the `Triton issue
-  tracker
-  <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`_,
-  make an initial issue, and point out that you want to discuss in the
-  garage.  Then, we can easily follow up.
+NBE/PHYS Online
+---------------
+
+This garage combines NBE, PHYS, and ITS (Aalto IT Services) staff,
+both from the computational and non-computational sides.
+
+This garage happens on Zoom every Monday/Wednesday/Friday from 11:00 to 12:00. The link is sent to department personnel lists.
 
 
 
@@ -80,32 +80,36 @@ In person
 
 General garage (CS Building)
 ----------------------------
--  Days: Every Thursday, 13-14
--  Time: 13-14, we may leave after 30 minutes if there is no one (this
-   rarely happens).
--  Location: Usually A106_ in the CS building, but see below.
--  A CSC representative is usually present.
 
-.. _U121a: https://usefulaaltomap.fi/#!/select/main-U121a
-.. _U121b: https://usefulaaltomap.fi/#!/select/main-U121b
-.. _T4:    https://usefulaaltomap.fi/#!/select/cs-A238
-.. _A106:  https://usefulaaltomap.fi/#!/select/r030-awing
-.. _A237:  https://usefulaaltomap.fi/#!/select/r030-awing
-.. _B121:  https://usefulaaltomap.fi/#!/select/r030-bwing
-.. _F254:  https://usefulaaltomap.fi/#!/select/F-F254
+**In-person garages suspended for the time being for the
+obvious reason.  The online garage above is more frequent and even
+better.**
 
-Spring 2020:
+..
+  -  Days: Every Thursday, 13-14
+  -  Time: 13-14, we may leave after 30 minutes if there is no one (this
+     rarely happens).
+  -  Location: Usually A106_ in the CS building, but see below.
+  -  A CSC representative is usually present.
 
-.. csv-table::
-   :header-rows: 1
-   :delim: |
+  .. _U121a: https://usefulaaltomap.fi/#!/select/main-U121a
+  .. _U121b: https://usefulaaltomap.fi/#!/select/main-U121b
+  .. _T4:    https://usefulaaltomap.fi/#!/select/cs-A238
+  .. _A106:  https://usefulaaltomap.fi/#!/select/r030-awing
+  .. _A237:  https://usefulaaltomap.fi/#!/select/r030-awing
+  .. _B121:  https://usefulaaltomap.fi/#!/select/r030-bwing
+  .. _F254:  https://usefulaaltomap.fi/#!/select/F-F254
 
-   Date (default Th)  | Time (default 13:00-14:00)  | Loc
-   2.jan - 5.mar      | 13-14                       | A106
-   12.mar -- ???      |                             | (replaced with online, see above)
+  Spring 2020:
 
-**Suspended for the time being (replaced with online, above) for the
-obvious reason.**
+  .. csv-table::
+     :header-rows: 1
+     :delim: |
+
+     Date (default Th)  | Time (default 13:00-14:00)  | Loc
+     2.jan - 5.mar      | 13-14                       | A106
+     12.mar -- ???      |                             | (replaced with online, see above)
+
 
 
 NBE garage, F-building
@@ -114,43 +118,21 @@ NBE garage, F-building
 NBE garage used to happen in person every first
 wednesday of the month, room F336 13:00. NBE garage covers also
 issues related to working with **personal data, research ethics, best
-practices in biomedical research**. 
+practices in biomedical research**.
 
 **Due to the current situation NBE garage
 happens online at the same time of the Aalto Sci Comp garage (see above).**
 
-.. csv-table::
-   :header-rows: 1
-   :delim: |
+..
+  .. csv-table::
+     :header-rows: 1
+     :delim: |
 
-   Date (default Th)  | Time (default 13:00-14:00)  | Loc
-   First wednesdays (until February 2020) | 13-14   | F336
-   Every Thursday (part of AaltoSciComp/Triton garage | 13-14 | Online (see zoom link above) 
-
-
-
-
-Topics
-======
-* :doc:`Triton intro: interactive jobs <../triton/tut/interactive>`
-* `Git <http://rkd.zgib.net/scicomp/scip2015/git.html>`_
+     Date (default Th)  | Time (default 13:00-14:00)  | Loc
+     First wednesdays (until February 2020) | 13-14   | F336
+     Every Thursday (part of AaltoSciComp/Triton garage | 13-14 | Online (see zoom link above)
 
 
-Possible special topics
-=======================
-
--  Profiling and performance monitoring
--  debugging
--  open source: making software and running a project, licenses
--  shell scripting and automation
--  unix intro
--  software testing
--  building good programs
--  porting python2 to python3
--  R
--  matlab
--  GPU / deep learning computing
--  molecular dynamics software
 
 Past events
 ===========
