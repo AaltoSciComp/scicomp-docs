@@ -71,7 +71,7 @@ NBE/PHYS Online
 This garage combines NBE, PHYS, and ITS (Aalto IT Services) staff,
 both from the computational and non-computational sides.
 
-Link is sent to department personnel lists.
+This garage happens on Zoom every Monday/Wednesday/Friday from 11:00 to 12:00. The link is sent to department personnel lists.
 
 
 
