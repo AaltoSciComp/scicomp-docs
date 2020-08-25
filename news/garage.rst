@@ -68,6 +68,10 @@ into our office to ask for help.
 NBE/PHYS Online
 ---------------
 
+This garage combines NBE, PHYS, and ITS (Aalto IT Services) staff,
+both from the computational and non-computational sides.
+
+Link is sent to department personnel lists.
 
 
 
