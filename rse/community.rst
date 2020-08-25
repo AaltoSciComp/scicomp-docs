@@ -35,6 +35,6 @@ Join `our RSE mailing list
 <https://list.aalto.fi/mailman/listinfo/rse>`_ to be kept up to date.
 
 Join the `Aalto Scientific Computing group on Aalto Microsoft Teams
-<asc-teams_>`__.
+<asc-teams_>`__.  The invite code is ``e50tyij``.
 
 .. _asc-teams: https://teams.microsoft.com/l/team/19%3a688ad82e41aa46d48ad978aea767419c%40thread.tacv2/conversations?groupId=4089981d-a443-493d-ae3e-3df5c63caed6&tenantId=ae1a7724-4041-4462-a6dc-538cb199707e
