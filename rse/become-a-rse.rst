@@ -48,11 +48,12 @@ with notices on various other channels including Aalto scientific
 computing mailing lists.
 
 
-Required Skillset
------------------
+Skillset
+--------
 
-This is a large list of the types of technologies which are used by
-our researchers.  No one person is expected to know everything, but we
+Below, we have a large list of the types of technologies which are valued
+our researchers and useful to our RSEs.  No one person is expected to
+know everything, but we
 will hire a variety of people to cover many of the things you see
 here.
 
@@ -62,7 +63,7 @@ you do so mostly independently but with the help of a great team?*
 
 
 General tech skills
-~~~~~~~~~~~~~~~~~~~~
+-------------------
 Our broad background on which we build:
 
 * Basic mandatory skills include Linux, shell scripting, some
@@ -100,7 +101,7 @@ Our broad background on which we build:
 
 
 Teaching and mentoring skills
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------
 You won't be just preforming technical tasks.  As part of being a RSE,
 you need to help others to be self-sufficient as well.  This requires
 teaching and mentoring skills.
@@ -115,7 +116,7 @@ teaching and mentoring skills.
 
 
 Specific examples
-~~~~~~~~~~~~~~~~~
+-----------------
 This is a selection of advanced skills which are useful
 
 * Advanced experience of debugging/profiling/developing Linux tools,
@@ -141,7 +142,7 @@ This is a selection of advanced skills which are useful
 
 
 Open science and data
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 As a RSE, you should also serve as an advocate for open science,
 reproducible research, and data management.
 
