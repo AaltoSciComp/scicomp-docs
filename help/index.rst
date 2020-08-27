@@ -60,24 +60,25 @@ consist of PhD-level researchers.  Our main sub-programs are
 
 You can reach us by:
 
-* This website
+* Searching this website
 * The `Triton issue tracker
   <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`__,
   which is where most Triton and scientific computing issues should
   go, even if not directly Triton related.
-* There is also an email address (get it from our `internal wiki
-  <https://wiki.aalto.fi/display/Triton/Getting+help>`__).  Use this
-  only for things related to your account, quota, etc. - most other
-  things go to the tracker above.
 * Weekly :doc:`SciComp Garage sessions </help/garage>`, where you can
   informally chat.  Especially useful when your question is not yet
   fully defined.
 * You can chat with us on `Aalto Microsoft Teams <https://teams.microsoft.com/l/team/19%3a688ad82e41aa46d48ad978aea767419c%40thread.tacv2/conversations?groupId=4089981d-a443-493d-ae3e-3df5c63caed6&tenantId=ae1a7724-4041-4462-a6dc-538cb199707e>`__.  The invite code is ``e50tyij``.  This is useful for quick things.
+* There is also an email address (get it from our `internal wiki
+  <https://wiki.aalto.fi/display/Triton/Getting+help>`__).  Use this
+  only for things related to your account, quota, etc. - most other
+  things go to the tracker above.
 
 .. toctree::
    :maxdepth: 1
 
    garage
+   community
 
 Department IT
 ~~~~~~~~~~~~~
