@@ -66,6 +66,8 @@ go to you and work with you.
 * Software support that lasts beyond the time frame of a single
   student's attention
 * Adding features to existing software
+* Contributing to some other open source software you need for your
+  research
 
 
 
