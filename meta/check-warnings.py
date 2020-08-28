@@ -20,6 +20,7 @@ errors = [
      "Duplicate target name, cannot be used as a unique reference",
      "Indirect hyperlink target",
      "Unknown directive type",
+     "Anonymous hyperlink mismatch",
     ]
 
 ignores = [
