@@ -1,4 +1,4 @@
-SciComp Community
+SciComp community
 =================
 
 Let's face it: we learn more from each other than from classes.  How
@@ -53,7 +53,7 @@ Mailing lists
 * If you do not have a Triton account, the :doc:`scicomp-announcements
   mailing list </training/scicomp-announcements-maillist>` provides
   the same information.  `Subscribe
-  here<https://list.aalto.fi/mailman/listinfo/scicomp-announcements>`__.
+  here <https://list.aalto.fi/mailman/listinfo/scicomp-announcements>`__.
 * Join `our RSE mailing list
   <https://list.aalto.fi/mailman/listinfo/rse>`__ for information on
   research software related topics.
