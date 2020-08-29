@@ -30,3 +30,16 @@
 .wy-side-nav-search > a img.logo, .wy-side-nav-search .wy-dropdown > a img.logo {
     max-width: 70%;
 }
+
+/* The following are for web accessibility of sphinx_rtd_theme: they
+ * solve some of the most frequent contrast issues.  Remove when this
+ * solved:
+ * https://github.com/readthedocs/sphinx_rtd_theme/issues/971
+ */
+/* background: #fcfcfc, note boxes #E7F2FA */
+a { color: #2779b0; }  /* original #2980B9, #1F5C84; */
+body { color: #292929; } /* original #404040, #383838 */
+footer { color: #737373; } /* original gray=#808080*/
+.rst-content tt.literal, .rst-content tt.literal, .rst-content code.literal {
+    color: #AB2314;
+}
