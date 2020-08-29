@@ -43,6 +43,8 @@ footer { color: #737373; } /* original gray=#808080*/
 .rst-content tt.literal, .rst-content tt.literal, .rst-content code.literal {
     color: #AB2314;
 }
+/* Sidebar background */
+.wy-side-nav-search { background-color: #2573A7;}
 
 /* Same, but for pygments */
 .highlight .ch { color: #3E7A89; } /* #! line */
