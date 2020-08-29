@@ -43,3 +43,11 @@ footer { color: #737373; } /* original gray=#808080*/
 .rst-content tt.literal, .rst-content tt.literal, .rst-content code.literal {
     color: #AB2314;
 }
+
+/* Same, but for pygments */
+.highlight .ch { color: #3E7A89; } /* #! line */
+.highlight .c1 { color: #3E7A89; } /* also comments */
+.highlight .nv { color: #AD3ECC; } /* variable */
+.highlight .gp { color: #B45608; } /* prompt character, $*/
+.highlight .si { color: #3975B1; } /* ${} variable text */
+.highlight .nc { color: #0C78A7; }
