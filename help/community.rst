@@ -75,8 +75,9 @@ Chat
 
 
 
-Social media
-------------
+External links / Social media
+-----------------------------
 
+* Github: `AaltoSciComp <https://github.com/AaltoSciComp/>`__
 * Twitter: `@SciCompAalto <https://twitter.com/SciCompAalto>`__
 * YouTube: `Aalto Scientific Computing <https://www.youtube.com/channel/UCNErdFO1_GzSkDx0bLKWXOA/>`__
