@@ -52,10 +52,10 @@ Skillset
 --------
 
 Below, we have a large list of the types of technologies which are valued
-our researchers and useful to our RSEs.  No one person is expected to
+our researchers and useful to our RSEs.  **No one person is expected to
 know everything, but we
 will hire a variety of people to cover many of the things you see
-here.
+here.**
 
 Most important is *do you want to learn things from this list?  Can
 you do so mostly independently but with the help of a great team?*
@@ -117,7 +117,8 @@ teaching and mentoring skills.
 
 Specific examples
 -----------------
-This is a selection of advanced skills which are useful
+This is a selection of advanced skills which are useful (remember,
+this is what you might learn, not what you already know):
 
 * Advanced experience of debugging/profiling/developing Linux tools,
   incl Git, Intel and GNU compiler suits and corresponding tools.
