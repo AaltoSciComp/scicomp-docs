@@ -76,7 +76,7 @@ Software installation:
 Material
 --------
 
-* :doc:`/training/python-scicomp/index`.
+* https://aaltoscicomp.github.io/python-for-scicomp/
 
 
 Schedule
