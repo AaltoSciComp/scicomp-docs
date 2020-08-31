@@ -2,6 +2,10 @@
 Python for Scientific Computing
 ===============================
 
+.. seealso::
+
+   This material has been moved to https://aaltoscicomp.github.io/python-for-scicomp/
+
 Abstract
 ========
 
