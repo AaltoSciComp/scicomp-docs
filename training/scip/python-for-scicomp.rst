@@ -76,7 +76,8 @@ Software installation:
 Material
 --------
 
-* https://aaltoscicomp.github.io/python-for-scicomp/
+* https://aaltoscicomp.github.io/python-for-scicomp/ (previous
+  version, will be updated)
 
 
 Schedule
