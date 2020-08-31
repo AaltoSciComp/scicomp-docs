@@ -41,6 +41,12 @@ try:
     gitstamp_fmt = "%d %b %Y"
 except:
     print("sphinx_gitstamp is not installed, won't use git timestamps.")
+try:
+    # https://github.com/jdillard/sphinx-gitstamp
+    import sphinx_rtd_theme_ext_color_contrast
+    extensions.append('sphinx_rtd_theme_ext_color_contrast')
+except:
+    print("sphinx_rtd_theme_ext_color_contrast is not installed")
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
