@@ -38,6 +38,12 @@ on a small amount of data for development and debugging, and the whole
 data for the actual processing.  You can read more general advice at
 :doc:`Jupyter notebook pitfalls <jupyter-pitfalls>`.
 
+Concrete examples include:
+
+* Run your notebook efficiently on a separate machine with GPUs.
+* Run your code in parallel with many more processors
+* Run your code as a Slurm batch job or array job, specifying exactly
+  the resources you need.
 
 
 nbscript basics
