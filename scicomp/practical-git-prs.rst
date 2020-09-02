@@ -115,6 +115,28 @@ How do you make a pull request
 .. _gh-pr: https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/proposing-changes-to-your-work-with-pull-requests
 .. _gl-mr: https://docs.gitlab.com/ee/README.html#merge-requests
 
+Pull request description
+~~~~~~~~~~~~~~~~~~~~~~~~
+- These days, I (rkdarst) tend to write my initial PR message into my
+  commit, then ``git-pr`` will use that when I push.  This also stores
+  it permanent.
+- There is also the concept of "pull request templates" within
+  Github/Gitlab.  (After fast PRs via ``git-pr`` I really don't like
+  this being required)
+- What should go in a description:
+
+  - Why are changes being made?
+  - What are the changes?
+  - Risks, benefits, etc...
+  - Is it done or a work in progress?  Need help?
+  - What should be reviewed?
+
+CI checks
+~~~~~~~~~
+- CI pipelines can run on the pull request and will report failures.
+  On Github, success is a green check.  Can be shared with checks of
+  direct pushes.
+- Even if there aren't tests, syntax checks and similar could be useful.
 
 
 Semantics around PRs
