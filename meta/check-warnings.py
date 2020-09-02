@@ -21,6 +21,7 @@ errors = [
      "Indirect hyperlink target",
      "Unknown directive type",
      "Anonymous hyperlink mismatch",
+     "toctree contains reference to nonexisting document",
     ]
 
 ignores = [
