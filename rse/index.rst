@@ -10,9 +10,16 @@ this applies equally to data.
 
 .. _rse-def: https://rse.ac.uk/who/
 
-Use of RSEs in research will increase your impact by making your
-software more reusable, open, and higher quality.  It will also have
-an immense impact on our internal productivity.
+The RSE service provides you with a dedicated person to assist you
+with computing, software, and data tasks in your research, for a longer
+period than basic staff.  Funding either comes from departments (for
+basic service) or the project itself.
+
+As a **researcher**, the RSE service will allow you to focus on what
+you want, the science, increase your impact by making your
+research outputs more reusable, open, and higher quality.  As a
+department, the RSE service will have an immense impact on our
+internal productivity.
 
 It's easy to request help, anywhere from an personal consultation, to
 group seminar and getting started session, to work on a longer-term
@@ -61,6 +68,8 @@ Other links
   member).
 
 * `History of the RSEs concept <https://www.software.ac.uk/blog/2016-08-17-not-so-brief-history-research-software-engineers-0>`__
+
+* `Keynote video by Mike Croucher on the rise of RSEs and their benefits <https://youtu.be/8ZSaAM8hhJ4>`__
 
 * The `UK RSE association <https://rse.ac.uk/>`_ is quite advanced in
   promoting RSE careers.
