@@ -119,10 +119,12 @@ Pull request description
 ~~~~~~~~~~~~~~~~~~~~~~~~
 - These days, I (rkdarst) tend to write my initial PR message into my
   commit, then ``git-pr`` will use that when I push.  This also stores
-  it permanent.
+  the description permanently in the git history.
 - There is also the concept of "pull request templates" within
-  Github/Gitlab.  (After fast PRs via ``git-pr`` I really don't like
-  this being required)
+  Github/Gitlab.  (They can keep changes organized, provide
+  checklists, and keep things moving.  But after fast small PRs via
+  ``git-pr`` I really don't like this being required for small
+  changes where I can write the important aspects myself.)
 - What should go in a description:
 
   - Why are changes being made?
