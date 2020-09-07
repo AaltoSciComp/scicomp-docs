@@ -169,6 +169,22 @@ plan), then long-term service is included, and this has no limits.
 However, this is shared among everyone in your unit, and focused on
 strategically support that helps many people.
 
+
+Tracking scientific benefits
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+What did you get out of the project?
+
+* Researcher time saved
+* Computer time saved
+* Number of papers supported
+* Software released or contributed to
+* Open science outcomes (e.g. open software, data management)
+* New work made possible (e.g. grant or project wouldn't have been
+  possible)
+* Qualitative experience: increased satisfaction, educational
+  outcomes, etc.
+
+
 Releasing the software
 ~~~~~~~~~~~~~~~~~~~~~~
 
