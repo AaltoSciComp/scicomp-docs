@@ -3,12 +3,12 @@ Research Software Engineers
 
 In 2020, Aalto Scientific Computing is beginning a Research Software/Data
 Engineer (RSE) program to improve the quality of our scientific
-computing and data use.  "`Research software engineer <rse-def_>`_" is a recent
+computing and data use.  "`Research software engineer <rse-history_>`_" is a recent
 term for a longstanding role: someone that works at the interface of
 research and software development, but not fully either.  We think
 this applies equally to data.
 
-.. _rse-def: https://rse.ac.uk/who/
+.. _rse-history: https://www.software.ac.uk/blog/2016-08-17-not-so-brief-history-research-software-engineers-0
 
 The RSE service provides you with a dedicated person to assist you
 with computing, software, and data tasks in your research, for a longer
@@ -68,6 +68,8 @@ Other links
   member).
 
 * `History of the RSEs concept <https://www.software.ac.uk/blog/2016-08-17-not-so-brief-history-research-software-engineers-0>`__
+
+* `Who is a RSE? <https://rse.ac.uk/who/>`__
 
 * `Keynote video by Mike Croucher on the rise of RSEs and their benefits <https://youtu.be/8ZSaAM8hhJ4>`__
 
