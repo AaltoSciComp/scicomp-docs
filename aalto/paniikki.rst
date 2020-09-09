@@ -20,7 +20,6 @@ The name
 ========
 Paniikki means "panic" in English which is a fascinating name as people in panic are in panic. I don't know which comes first, the space or the emotion. Anyway, people experience the both simultaneously.
 
--------------------------------------------
 
 Hardware
 ========
@@ -67,7 +66,6 @@ Hardware
    Memory properties| Spec
    RAM                        | 32GiB
 
--------------------------------------------
 
 Software
 ========
@@ -168,7 +166,6 @@ You want to use Matlab?
 	$ module load matlab/2017b
 	$ matlab
 
--------------------------------------------
 
 Questions?
 ==========
