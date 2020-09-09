@@ -192,7 +192,8 @@ You want to use Matlab?
 
 Questions?
 ==========
-If you have any question please contact seyoung.park@aalto.fi.
+If you have any question please contact servicedesk@aalto.fi and
+clearly mention the Paniikki classroom in the message.
 
 
 
