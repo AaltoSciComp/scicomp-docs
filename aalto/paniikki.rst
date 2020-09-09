@@ -92,8 +92,8 @@ Hardware
 
 Software
 ========
-First thing first, you DO NOT have a sudo right in Aalto classroom
-machines and you never will. We provide the most used SW and if you need
+First thing first, you don't have sudo rights on Aalto classroom
+machines and you can't, because they are shared. We provide the most used SW and if you need
 more you could inquire via servicedesk@aalto.fi.  We try to have a good
 base software that covers most people's needs.
 
