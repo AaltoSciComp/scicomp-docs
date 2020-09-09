@@ -22,4 +22,8 @@ make a community of these people.  By taking part, you can:
 * More directly help the community by, for example, :doc:`directly updating
   this site </README>`, helping to develop services, or teaching with us.
 
-To join the community, see the :doc:`general SciComp community page </help/community>`
+To join the community, see the :doc:`general SciComp community page
+</help/community>`.  Also, you should take part in the `Nordic-RSE
+Finland chats <https://nordic-rse.org/communities/finland/>`__ - there
+is a strong Aalto presence there, and we use that as our Aalto chat
+time, too.
