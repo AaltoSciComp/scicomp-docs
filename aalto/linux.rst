@@ -2,6 +2,11 @@
 Aalto Linux
 ===========
 
+.. seealso::
+
+   https://linux.aalto.fi/ provides official information on Aalto
+   Linux for all Aalto.  This page is a bit focused on the Science-IT
+   departments, but also useful for everyone.
 
 Aalto Linux is provided to all departments in Aalto.  Department IT
 co-maintains this, and in some departments provides more support
