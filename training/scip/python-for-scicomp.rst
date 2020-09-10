@@ -26,7 +26,7 @@ participants).  The course is also streamed via Twitch (the
 anyone may follow along without registration.  There is a HackMD link
 (collaborative edited notes) which is used for asking questions during
 the course.  The `actual material is here
-<https://aaltoscicomp.github.io/python-for-scicomp/`__.
+<https://aaltoscicomp.github.io/python-for-scicomp/>`__.
 
 **Lecturer:** Richard Darst, PhD, Aalto Scientific Computing
 
