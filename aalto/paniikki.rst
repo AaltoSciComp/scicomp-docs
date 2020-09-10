@@ -4,7 +4,7 @@ Paniikki: Computer Lab For Students
 
 Paniikki is a cutting edge computer lab in the computer science
 department. It is located in `T-building C106
-<https://usefulaaltomap.fi/#!/select/paniikki>`_ (right under lecture
+<https://usefulaaltomap.fi/#!/select/paniikki>`__ (right under lecture
 hall T1). This documentation is a Paniikki cheatsheet.
 
 .. figure:: /images/paniikki_map.png
@@ -20,7 +20,29 @@ The name
 ========
 Paniikki means "panic" in English which is a fascinating name as people in panic are in panic. I don't know which comes first, the space or the emotion. Anyway, people experience the both simultaneously.
 
--------------------------------------------
+Access
+======
+
+Physical
+########
+
+You can access Paniikki in the `T-building C106
+<https://usefulaaltomap.fi/#!/select/paniikki>`__.  It is right by the
+building's main entrance (you can see it through the windows by the
+building's main entrance).
+
+Remote
+######
+
+You can ssh via the normal `Aalto shell servers kosh and lyta
+<https://www.aalto.fi/en/services/linux-shell-servers-at-aalto>`__.
+Going through them, you can then ssh to one of the Paniikki computers.
+Be warned, there is no guarantee that you get an empty one... if it
+seems loaded (use ``htop`` to check), try a different one.
+
+You can find the `hostnames of the Paniikki computers on aalto.fi
+<https://www.aalto.fi/en/services/linux-computer-names-in-it-classrooms>`__.
+
 
 Hardware
 ========
@@ -67,12 +89,11 @@ Hardware
    Memory properties| Spec
    RAM                        | 32GiB
 
--------------------------------------------
 
 Software
 ========
-First thing first, you DO NOT have a sudo right in Aalto classroom
-machines and you never will. We provide the most used SW and if you need
+First thing first, you don't have sudo rights on Aalto classroom
+machines and you can't, because they are shared. We provide the most used SW and if you need
 more you could inquire via servicedesk@aalto.fi.  We try to have a good
 base software that covers most people's needs.
 
@@ -168,11 +189,11 @@ You want to use Matlab?
 	$ module load matlab/2017b
 	$ matlab
 
--------------------------------------------
 
 Questions?
 ==========
-If you have any question please contact seyoung.park@aalto.fi.
+If you have any question please contact servicedesk@aalto.fi and
+clearly mention the Paniikki classroom in the message.
 
 
 
