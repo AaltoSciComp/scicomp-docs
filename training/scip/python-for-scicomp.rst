@@ -80,7 +80,7 @@ takes some effort to get ready.  Browse these resources:
 
 Software installation:
 
-* See the `installation page of the course material <https://aaltoscicomp.github.io/installation/>`__.
+* See the `installation page of the course material <https://aaltoscicomp.github.io/python-for-scicomp/installation/>`__.
 * `Zoom <https://coderefinery.github.io/installation/zoom/>`__.
 
 
