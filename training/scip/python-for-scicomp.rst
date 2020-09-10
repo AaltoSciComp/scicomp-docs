@@ -8,27 +8,38 @@ at Aalto University.
 This is a medium-advanced course in Python tools such as NumPy, SciPy,
 Matplotlib, and Pandas.  It is suitable for people who have a basic
 understanding of basic Python and want to know some internals and
-important libraries for science.
+important libraries for science.  Read the `learner personas <https://aaltoscicomp.github.io/python-for-scicomp/#learner-personas>`__ to
+see if the course is right for you
 
-Prerequisites include basic programming in Python.
+`Prerequisites
+<https://aaltoscicomp.github.io/python-for-scicomp/#prerequisites>`__
+include basic programming in Python.
 
 
 
 Practical information
 ---------------------
 
-This is an online course via Zoom, which will also be streamed via
-Twitch so that anyone may follow along without registration.
+This is an online course via Zoom (link sent to registered
+participants).  The course is also streamed via Twitch (the
+`CodeRefinery channel <https://www.twitch.tv/coderefinery>`__) so that
+anyone may follow along without registration.  There is a HackMD link
+(collaborative edited notes) which is used for asking questions during
+the course.  The `actual material is here
+<https://aaltoscicomp.github.io/python-for-scicomp/>`__.
 
 **Lecturer:** Richard Darst, PhD, Aalto Scientific Computing
 
 **Time, date, place:** the course consists of four online hands-on
 sessions 3h each:
 
-- Mon 14.9, 10:00-13:00
-- Wed 16.9, 10:00-13:00
-- Mon 21.9, 10:00-13:00
-- Wed 23.9, 10:00-13:00
+- Fri 11.sep, 15:30-16:30 **Installation help session**
+- Mon 14.sep, 10:00-13:00 (Jupyter, numpy, matplotlib)
+- Wed 16.sep, 10:00-13:00 (scripts, packaging)
+- Mon 21.sep, 10:00-13:00 (scipy, pandas)
+- Wed 23.sep, 10:00-13:00 (library ecosystem, dependencies, Binder)
+- **Please connect to all sessions 10 minutes early**: icebreakers and
+  intro already starts then.
 
 **Registration:** This is on online workshop: we currently plan for
 registrations via Zoom up to our capicity (for lectures+exercises,
@@ -50,7 +61,8 @@ more.  Even more so if you bring a helper with your group.
 Preparation
 -----------
 
-Prerequisites include basic programming in Python (at any level).
+`Prerequisites include basic programming in Python
+<https://aaltoscicomp.github.io/python-for-scicomp/#prerequisites>`__.
 
 **Preparation:** Online workshops can be a productive format, but it
 takes some effort to get ready.  Browse these resources:
@@ -68,19 +80,30 @@ takes some effort to get ready.  Browse these resources:
 
 Software installation:
 
-* Software requirements will be updated here later.
-* `Zoom <https://coderefinery.github.io/installation/zoom/>`__
+* See the `installation page of the course material <https://aaltoscicomp.github.io/python-for-scicomp/installation/>`__.
+* `Zoom <https://coderefinery.github.io/installation/zoom/>`__.
 
 
 
 Material
 --------
 
-* https://aaltoscicomp.github.io/python-for-scicomp/ (previous
-  version, will be updated)
+* https://aaltoscicomp.github.io/python-for-scicomp/ (currently being updated)
 
 
-Schedule
---------
+News and notes
+--------------
 
-To be decided
+Week 37:
+
+* Please see the installation instructions (link above).  You need to
+  install anaconda *before* the first day, or else you will quickly
+  fall behind.  This class is so large that we won't be able to do
+  help you catch up.  You should also **verify your installation**
+  (this is part of the installation instructions).  On the Friday
+  before, we have an installation help session - you can join there
+  for help.
+
+* Please remember to join the meeting 10 minutes early.  Our
+  icebreakers and introductions already start then.  If you are on
+  time, you are late!
