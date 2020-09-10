@@ -2,6 +2,15 @@
 Sept 2020 / Python for Scientists
 =================================
 
+.. admonition:: Important info
+
+   * `Live stream <https://www.twitch.tv/coderefinery>`__
+   * `Installation instructions
+     <https://aaltoscicomp.github.io/python-for-scicomp/installation/>`__
+   * `Course material
+     <https://aaltoscicomp.github.io/python-for-scicomp/>`__
+   * `Registration <https://link.webropolsurveys.com/S/9DF02396D725FA71>`__
+
 Part of :doc:`Scientific Computing in Practice <index>` lecture series
 at Aalto University.
 
