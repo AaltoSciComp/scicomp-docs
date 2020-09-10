@@ -38,9 +38,12 @@ will see a lot of questions and answers, and thus learn a lot.
 Aalto community chats
 ---------------------
 
-We have biweekly chats for the Aalto RSE/scientific computing
-poweruser meetings.  This is a way to network with similarly-minded
-people.  Check back for updates on when these are.
+We have weekly chats for the Aalto scientific computing
+poweruser/RSEs as a way to network with the community and Aalto staff.
+Currently, these are done at `10:00 on Thursdays as part of
+the Nordic-RSE Finland chats
+<https://nordic-rse.org/communities/finland/>`__.  Anyone is welcome
+to join and discuss Aalto-related topics.
 
 
 
@@ -54,9 +57,9 @@ Mailing lists
   mailing list </training/scicomp-announcements-maillist>` provides
   the same information.  `Subscribe
   here <https://list.aalto.fi/mailman/listinfo/scicomp-announcements>`__.
-* Join `our RSE mailing list
+* Join `our Research Software Engineer mailing list
   <https://list.aalto.fi/mailman/listinfo/rse>`__ for information on
-  research software related topics.
+  research software related topics and the RSE community at Aalto.
 
 
 
