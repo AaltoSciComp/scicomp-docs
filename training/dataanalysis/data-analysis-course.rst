@@ -2,19 +2,11 @@
 Data analysis with R and Python
 ===============================================
 
-Chapter 1: Understanding data analysis workflows
-================================================
 
-Data analysis workflows can be commonly split 
+.. toctree::
+   :maxdepth: 1
 
-
-1. Data perparation and loading
-2. Modeling
-3. Model evaluation
-
-
-Data storage in memory
-----------------------
-
-Both R (`data.frame` and `tibble`) and pandas (`DataFrame`) are a collection of
-columnar vectors.
+   chapter-1-understanding
+   chapter-2-data
+   chapter-3-modeling
+   chapter-4-scaling
