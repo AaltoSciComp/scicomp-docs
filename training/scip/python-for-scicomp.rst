@@ -89,7 +89,14 @@ takes some effort to get ready.  Browse these resources:
 
 Software installation:
 
-* See the `installation page of the course material <https://aaltoscicomp.github.io/python-for-scicomp/installation/>`__.
+* See the `installation page of the course material
+  <https://aaltoscicomp.github.io/python-for-scicomp/installation/>`__.
+
+  * In principle, if you are at Aalto, the service
+    https://jupyter.cs.aalto.fi should be sufficient to do most of
+    this course without any local installations.  Perhaps not
+    everything, but it will be OK for most people.
+
 * `Zoom <https://coderefinery.github.io/installation/zoom/>`__.
 
 
