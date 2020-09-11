@@ -101,6 +101,35 @@ Software installation:
 
 
 
+Community standards
+-------------------
+
+This is a large course, and we will have many diverse groups attending
+it.  Everyone will be both a teacher and a learner and help to make
+the course successful.  Since this is a large and interactive course
+which we are just now prototyping, there will be some rough edges and
+not everything will go perfectly.  Please learn from our mistakes,
+too!
+
+This course consists of both lectures, hands-on exercises, and demos.
+It is designed to have a range of basic to advanced topics: there
+should be something for everyone.
+
+The main point this course is the exercises, and they will happen in
+breakout rooms where we expect people to work together and help each
+other.  We expect everyone to help each other as best as they can with
+respect for different levels of knowledge - at the same time be aware
+of your own limitations.  No one is better than anyone else, we just
+have different existing skills and backgrounds.
+
+If there is anything wrong, *tell us* - if you need to contact us
+privately, you can message the host on Zoom or :doc:`contact us
+outside the course </help/index>`.  This could be as simple as "speak
+louder / text on screen is unreadable" or someone is creating a
+harmful learning environment.
+
+
+
 Material
 --------
 
