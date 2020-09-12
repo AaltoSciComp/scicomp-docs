@@ -9,7 +9,9 @@ Sept 2020 / Python for Scientists
      <https://aaltoscicomp.github.io/python-for-scicomp/installation/>`__
    * `Course material
      <https://aaltoscicomp.github.io/python-for-scicomp/>`__
-   * `Registration <https://link.webropolsurveys.com/S/9DF02396D725FA71>`__
+   * Registration is full, but you can still follow the stream (see
+     below).  We aim for the stream to be as good as the main course,
+     so don't worry.
 
 Part of :doc:`Scientific Computing in Practice <index>` lecture series
 at Aalto University.
@@ -53,8 +55,7 @@ sessions 3h each:
 **Registration:** This is on online workshop: we currently plan for
 registrations via Zoom up to our capicity (for lectures+exercises,
 priority for Aalto→Finland→Nordics), or Twitch (lectures, for anyone).
-`Registration for announcements and Zoom session
-<https://link.webropolsurveys.com/S/9DF02396D725FA71>`__.
+(Registration is now full, check back here for stream info.)
 
 You may register as a **team**, and your team will be kept together
 during exercise sessions within a breakout room.  If you come together
