@@ -1,6 +1,13 @@
 Time tracking
 =============
 
+.. warning::
+
+   This page is still in draft form and being discussed and
+   developed.  See the note on the parent page.
+
+   This draft may turn out to be especially bad... please comment.
+
 Unfortunately (fortunately?), we have to track our time some, in order
 to justify the benefits of what we do.
 

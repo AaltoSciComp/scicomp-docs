@@ -35,3 +35,5 @@ For ourselves
 -------------
 
 .. toctree::
+
+   time-tracking
