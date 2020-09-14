@@ -3,7 +3,8 @@ How we work
 
 .. warning::
 
-   This page is still in draft form
+   This page is still in draft form and being discussed and
+   developed.  See the note on the parent page.
 
 
 This page is mostly focused on how long-term scheduled projects, which

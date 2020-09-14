@@ -3,7 +3,8 @@ Requesting RSE support
 
 .. warning::
 
-   This page is still in draft form
+   This page is still in draft form and being discussed and
+   developed.  See the note on the parent page.
 
 
 This page explains the typical process of contacting us and requesting
