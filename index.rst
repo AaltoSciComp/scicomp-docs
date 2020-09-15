@@ -152,3 +152,7 @@ problem is missing information, and mistakes can always be fixed.
 
 * :ref:`genindex`
 * :ref:`search`
+
+.. raw:: html
+
+   <a class="twitter-timeline" data-width="700" data-height="480" data-theme="dark" href="https://twitter.com/SciCompAalto?ref_src=twsrc%5Etfw">Tweets by SciCompAalto</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
