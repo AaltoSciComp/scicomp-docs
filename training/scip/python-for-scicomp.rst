@@ -44,7 +44,7 @@ the course.  The `actual material is here
 * Naoe Tatara, University of Oslo Libraries **(local organizer)**
 * Radovan Bast, University of Tromsø
 * Richard Darst, Aalto Scientific Computing **(organizer)**
-* Samantha Wittke, Finnish Geospatial Research Institune
+* Samantha Wittke, Finnish Geospatial Research Institute & Aalto University
 * Thor Wikfeldt, EuroCC National Competence Center Sweden, Uppsala University
 
 **Time, date, place:** the course consists of four online hands-on
