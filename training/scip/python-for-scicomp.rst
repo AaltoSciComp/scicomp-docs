@@ -45,7 +45,7 @@ the course.  The `actual material is here
 * Radovan Bast, University of Tromsø
 * Richard Darst, Aalto Scientific Computing **(organizer)**
 * Samantha Wittke, Finnish Geospatial Research Institune
-* Thor Wikfeldt, EuroHPC Competence Center
+* Thor Wikfeldt, EuroCC National Competence Center Sweden, Uppsala University
 
 **Time, date, place:** the course consists of four online hands-on
 sessions 3h each:
