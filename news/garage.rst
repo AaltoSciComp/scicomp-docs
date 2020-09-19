@@ -2,7 +2,10 @@
 Scicomp garage
 ==============
 
-.. seealso:: This page has been moved to :doc:`/help/garage`.  Below
-	     is an included for your convenience.
+.. seealso:: This page has been moved to :doc:`/help/garage` - please
+	     go there.
 
-.. include:: /help/garage.rst
+.. raw:: html
+
+      <meta http-equiv="Refresh" content="0; url='../help/garage/'" />
+
