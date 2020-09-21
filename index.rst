@@ -28,7 +28,7 @@ News
 ====
 .. include:: /news/index.rst
    :start-line: 3
-   :end-line: 5
+   :end-line: 7
 
 .. toctree::
    :maxdepth: 1
