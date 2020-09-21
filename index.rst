@@ -26,11 +26,14 @@ other friends.  :doc:`You can join us </about/join>`.
 
 News
 ====
+.. include:: /news/index.rst
+   :start-line: 3
+   :end-line: 7
+
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-   news/index
-
+   news/index.rst
 
 
 The Aalto environment
@@ -157,3 +160,4 @@ problem is missing information, and mistakes can always be fixed.
 
 * :ref:`genindex`
 * :ref:`search`
+
