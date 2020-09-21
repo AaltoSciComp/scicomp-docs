@@ -45,6 +45,7 @@ the course.  The `actual material is here
 <https://aaltoscicomp.github.io/python-for-scicomp/>`__.
 
 **Instructors and organizers:**
+
 * Anne Claire Fouilloux, University of Oslo Department of Geosciences
 * Naoe Tatara, University of Oslo Libraries **(local organizer)**
 * Radovan Bast, University of Tromsø
