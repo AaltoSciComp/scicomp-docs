@@ -38,7 +38,8 @@ Summary for users
    should be discussed with them.
 -  Data is not archived or saved for individual users. Data which must
    be saved should be in a shared project directory with an owner who is
-   still at Aalto.
+   still at Aalto. Individual users data is permantently deleted after 
+   6 months from the expiration date of the user account.
 -  There is no default named security level - of course we keep all data
    secure, but should you be dealing with legally confidential files,
    you must ask us.
@@ -127,6 +128,10 @@ Ownership, and access rights, and end-of-life
    successor they named may make decisions regarding the data access,
    including end-of-life. This defaults to their supervisor (e.g. head
    of department), but should be discussed on data opening.
+#. Data stored on folders that are not group directories (e.g. the content 
+   of /scratch/work/USERNAME or /home/USERNAME) will be permanently deleted 
+   after 6 months from the user's account expiration. Please remember to back up your data
+   if you know that your account is expiring soon. 
 #. Should researchers need a more complex access scheme, this must be
    discussed with IT support.
 
