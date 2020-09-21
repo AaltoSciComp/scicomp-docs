@@ -9,6 +9,11 @@ Sept 2020 / Python for Scientific Computing
      <https://aaltoscicomp.github.io/python-for-scicomp/installation/>`__
    * `Course material
      <https://aaltoscicomp.github.io/python-for-scicomp/>`__
+   * `Twitch recordings of videos
+     <https://www.twitch.tv/coderefinery/videos>`__ (unprocessed, and
+     last only 14 days)
+   * YouTube archive of videos (coming soon, if you want to help us
+     produce these get in contact with us)
    * Registration is full, but you can still follow the stream (see
      below).  We aim for the stream to be as good as the main course,
      so don't worry.
@@ -39,7 +44,14 @@ anyone may follow along without registration.  There is a HackMD link
 the course.  The `actual material is here
 <https://aaltoscicomp.github.io/python-for-scicomp/>`__.
 
-**Lecturer:** Richard Darst, PhD, Aalto Scientific Computing
+**Instructors and organizers:**
+
+* Anne Claire Fouilloux, University of Oslo Department of Geosciences
+* Naoe Tatara, University of Oslo Libraries **(local organizer)**
+* Radovan Bast, University of Tromsø
+* Richard Darst, Aalto Scientific Computing **(organizer)**
+* Samantha Wittke, Finnish Geospatial Research Institute & Aalto University
+* Thor Wikfeldt, EuroCC National Competence Center Sweden, Uppsala University
 
 **Time, date, place:** the course consists of four online hands-on
 sessions 3h each:
