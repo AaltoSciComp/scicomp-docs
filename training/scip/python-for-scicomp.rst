@@ -9,6 +9,11 @@ Sept 2020 / Python for Scientific Computing
      <https://aaltoscicomp.github.io/python-for-scicomp/installation/>`__
    * `Course material
      <https://aaltoscicomp.github.io/python-for-scicomp/>`__
+   * `Twitch recordings of videos
+     <https://www.twitch.tv/coderefinery/videos>`__ (unprocessed, and
+     last only 14 days)
+   * YouTube archive of videos (coming soon, if you want to help us
+     produce these get in contact with us)
    * Registration is full, but you can still follow the stream (see
      below).  We aim for the stream to be as good as the main course,
      so don't worry.
