@@ -215,5 +215,9 @@ For full information, see the :doc:`Science-IT data policy
   of files or directories, we must first have your explicit permission
   (either in writing or in person)
 
+* User-owned data (home directories, work directories) may be deleted
+  six months after an account expires.  Use a group-based storage
+  space instead.
+
 Our data storage service is suitable for confidential data.  You must
 ensure that permissions are such that technical access is limited.

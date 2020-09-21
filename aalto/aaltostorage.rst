@@ -235,6 +235,7 @@ Filesystem list
    -  Accessible on ``magi``/``taltta`` at the same path.
    - SMB mounting: ``smb://data.triton.aalto.fi/work/$username``.
      (Username may need to be ``AALTO\yourusername``.)
+   - Deleted six months after your account expires.
 
 -  **local:** local disks for high performance
 
@@ -281,6 +282,7 @@ Filesystem list
    -  Backed up daily.
    -  Not available on workstations.
    -  Quota: 1 GB
+   -  Deleted six months after your account expires.
 
 * **Aalto work**: Aalto's general storage space
 

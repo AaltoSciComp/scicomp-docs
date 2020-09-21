@@ -107,7 +107,8 @@ reliable against hardware failures (RAID6, redundant servers), but
 shared on all nodes, and has very fast access.  It is divided into two
 parts, **scratch (by groups)** and **work (per-user)**.  In general, always
 change to ``$WRKDIR`` or a group ``scratch`` directory when you first
-log in and start doing work.
+log in and start doing work. (note: home and work may be deleted six
+months after your account expires: use a group-based space instead).
 
 Lustre separates metadata and contents onto separate object and
 metadata servers.  This allows fast access to large files, but induces
