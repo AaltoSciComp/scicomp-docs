@@ -2,12 +2,14 @@
 News
 ====
 
-*23/09/2020* – Last day of our course on `"Python for Scientific Computing" <training/scip/python-for-scicomp>`__ covering packaging and binder. It can also be watched `live on CodeRefinery Twitch <https://www.twitch.tv/coderefinery>`__ if you did not have time to register. 
+*24/09/2020* – Join our informal chat about research software on zoom at 10:00: `RSE activities in Finland <https://nordic-rse.org/communities/finland/>`__. Today is also the SciComp garage day focused on HPC/Triton issues: `daily garage </help/garage/>`.  
 
 Check `other hands-on trainings coming in October and November </training/>`__. Join our `daily garage </help/garage/>`__ if you have issues to discuss related to computing or data management.
 
 News archive
 ~~~~~~~~~~~~
+
+*23/09/2020* – Last day of our course on `"Python for Scientific Computing" <training/scip/python-for-scicomp>`__ covering packaging and binder. It can also be watched `live on CodeRefinery Twitch <https://www.twitch.tv/coderefinery>`__ if you did not have time to register. 
 
 *22/09/2020* – Join us tonight (21:30 Helsinki time), for `Research Software Hour <https://researchsoftwarehour.github.io/>`__, a one hour interactive discussion with Radovan Bast and Richard Darst. Tonight we cover command line arguments and running things in parallel. You can watch `RSH past episodes on YouTube <https://www.youtube.com/playlist?list=PLpLblYHCzJAB6blBBa0O2BEYadVZV3JYf>`__ to get an idea of the topics covered. 
 
