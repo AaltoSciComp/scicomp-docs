@@ -1,5 +1,5 @@
 ===============================================
-Oct 2020 / Data analysis with R and Python
+Oct 2020 / Data analysis workflows
 ===============================================
 
 Part of the `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
@@ -10,7 +10,17 @@ necessarily know what are the best practices for data analysis.
 The course material is available in both R and Python, but this
 is not a course on the basics of scientific programming. If you wish to
 prep up your scientific programming skills, we recommend taking
-our :doc:`../scip/python-for-scicomp`-course.
+our :doc:`../scip/python-for-scicomp`-course.  Key topics include:
+
+- Data analysis workflows
+- Data preparation
+- Modeling
+- Scaling
+
+
+This doesn't teach programming or data analysis, but the skills you
+need to do that well.  If you are interested in Python for science
+skills, look at our :doc:`../scip/python-for-scicomp`-course.
 
 **About the course:** We provide a practical introduction and advice
 for data analysis in R and Python. We will learn how you should organize
@@ -51,9 +61,9 @@ hours correspond roughly to 1 ECTS. Students who wish to get a
 certificate should hand in the special assignment and participate to
 at least 3 of 4 lectures.
 
-**Other comments:** 
+**Other comments:**
 
-**Additional course info at:** simo.tuomisto -at- aalto.fi
+**Additional course info at:** scip -at- aalto.fi
 
 **Course preparation**
 
