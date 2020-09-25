@@ -44,7 +44,7 @@ Science
 employees and students.
 
 **Registration:** `registration is open <https://link.webropolsurveys.com/S/9F2A504AF3088DBD>`__
-(name of the course has changed since creation of the registration link).
+
 
 **Credits:** Credits available for the Aalto students and course
 certificate can be provided on request for the outsiders. Full course
