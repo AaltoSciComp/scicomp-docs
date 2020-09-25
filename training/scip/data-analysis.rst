@@ -54,7 +54,7 @@ at least 3 of 4 lectures.
 
 **Other comments:** 
 
-**Additional course info at:** simo.tuomisto -at- aalto.fi
+**Additional course info at:** scip -at- aalto.fi
 
 **Course preparation**
 
