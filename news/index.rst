@@ -2,12 +2,14 @@
 News
 ====
 
-*24/09/2020* – Join our informal chat about research software on zoom at 10:00: `RSE activities in Finland <https://nordic-rse.org/communities/finland/>`__. Today is also the SciComp garage day focused on HPC/Triton issues: `daily garage </help/garage/>`__.  
+*25/09/2020* – Friendly reminder that you can still register for our `Data analysis workflows with R and Python <https://scicomp.aalto.fi/training/scip/data-analysis/>`__. Link to registration is `here <https://link.webropolsurveys.com/Participation/Public/5cd6e04a-f735-4655-93b4-28c19228e03a?displayId=Fin2058059>`__.  
 
 Check `other hands-on trainings coming in October and November </training/>`__. Join our `daily garage </help/garage/>`__ if you have issues to discuss related to computing or data management.
 
 News archive
 ~~~~~~~~~~~~
+
+*24/09/2020* – Join our informal chat about research software on zoom at 10:00: `RSE activities in Finland <https://nordic-rse.org/communities/finland/>`__. Today is also the SciComp garage day focused on HPC/Triton issues: `daily garage </help/garage/>`__.  
 
 *23/09/2020* – Last day of our course on `"Python for Scientific Computing" <training/scip/python-for-scicomp>`__ covering packaging and binder. It can also be watched `live on CodeRefinery Twitch <https://www.twitch.tv/coderefinery>`__ if you did not have time to register. 
 
