@@ -1,6 +1,6 @@
-===============================================
-Oct 2020 / Data analysis with R and Python
-===============================================
+====================================================
+Oct 2020 / Data analysis workflows with R and Python
+====================================================
 
 Part of the `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
 
@@ -44,6 +44,7 @@ Science
 employees and students.
 
 **Registration:** `registration is open <https://link.webropolsurveys.com/S/9F2A504AF3088DBD>`__
+(name of the course has changed since creation of the registration link).
 
 **Credits:** Credits available for the Aalto students and course
 certificate can be provided on request for the outsiders. Full course
