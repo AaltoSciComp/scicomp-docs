@@ -1,0 +1,13 @@
+{% extends "!layout.html" %}
+
+{% block menu %}
+{{ super() }}
+
+
+{% for news in news_items %}
+<div class="news-item">
+  {{ news }}
+</div>
+{% endfor %}
+
+{% endblock menu %}

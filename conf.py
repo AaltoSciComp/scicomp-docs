@@ -336,6 +336,13 @@ epub_author = 'Aalto Science-IT'
 
 mathjax_path = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
 
+news_items = [
+    'item1',
+    'item2',
+    ]
+html_context['news_items'] = news_items
+
+
 # Following allows custom CSS to be included
 # https://github.com/rtfd/sphinx_rtd_theme/issues/117
 def setup(app):
