@@ -79,7 +79,7 @@ Please, don't send us personal email, because not everyone is here all
 the time and you may end up asking someone other than the best
 person.  Personal email is also very likely to get lost.  By the same
 token, we have a :ref:`service email address
-<esupport-triton-address>`, but this should only be used for account
+<scicomp-address>`, but this should only be used for account
 matters.  If it affects others (software, usage problems, etc), use
 the issue tracker, otherwise we will point you there and spend lots of
 time answering the same questions over and over.
