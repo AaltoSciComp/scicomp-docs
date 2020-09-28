@@ -14,12 +14,14 @@ our :doc:`../scip/python-for-scicomp`-course.
 
 **About the course:** We provide a practical introduction and advice
 for data analysis in R and Python. We will learn how you should organize
-your data for efficient data analysis, how to analyze the data, how to
-split your data/models based on your intended data analysis task,
-and how to visualize the results you obtain from this data analysis.
+your workflow, how to organize your data for efficient data analysis, how
+to obtain statistics and fit models into your data, and how to think about
+scaling your workflow.
+
 The course is suited for people who are starting on doing data analysis
-and would like to start on a good workflow. The exercises can be
-done with either R or Python.
+and would like to start on a good workflow.
+
+The exercises can be done with either R or Python.
 
 Course consists of four three hour sessions that will be done online
 via zoom. In these sessions we'll learn of core concepts of data analysis.
@@ -66,7 +68,7 @@ at least 3 of 4 lectures.
 Software installation is done via conda. Installation instructions are provided
 `here <https://aaltoscicomp.github.io/data-analysis-workflows-course/installation>`_.
 
-There will be an installation help session on Fri 2.10. between 13:00-15:00. 
+There will be an installation help session on Fri 2.10. between 13:00-15:00.
 There we can help you install the required software.
 
 **Course material**
