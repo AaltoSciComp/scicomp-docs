@@ -32,7 +32,7 @@ Science
 **Time, date:**
 
 - Fri 2.10., 13:00-15:00 **Installation help session**
-- Tue 5.10., 12:00-15:00 (Understanding data analysis workflows)
+- Mon 5.10., 12:00-15:00 (Understanding data analysis workflows)
 - Wed 7.10., 12:00-15:00 (Data preparation)
 - Mon 12.10., 12:00-15:00 (Modeling)
 - Wed 14.10., 12:00-15:00 (Scaling your analysis)
