@@ -2,12 +2,14 @@
 News
 ====
 
-*25/09/2020* – Friendly reminder that you can still register for our `Data analysis workflows with R and Python <https://scicomp.aalto.fi/training/scip/data-analysis/>`__. Link to registration is `here <https://link.webropolsurveys.com/Participation/Public/5cd6e04a-f735-4655-93b4-28c19228e03a?displayId=Fin2058059>`__.  
+*28/09/2020* – Friendly reminder that you can still register for our `Data analysis workflows with R and Python <https://scicomp.aalto.fi/training/scip/data-analysis/>`__. Link to registration is `here <https://link.webropolsurveys.com/Participation/Public/5cd6e04a-f735-4655-93b4-28c19228e03a?displayId=Fin2058059>`__. Also save the date: Mon 19/10/2020 at 14:00 "Triton users group meeting", come and hear about the future of Triton/ScienceIT/Aalto Scientific Computing, exciting news on new services, new hardware (GPUs!), and anything related to Aalto Scientific Computing. More details coming soon.  
 
 Check `other hands-on trainings coming in October and November </training/>`__. Join our `daily garage </help/garage/>`__ if you have issues to discuss related to computing or data management.
 
 News archive
 ~~~~~~~~~~~~
+
+*25/09/2020* – Friendly reminder that you can still register for our `Data analysis workflows with R and Python <https://scicomp.aalto.fi/training/scip/data-analysis/>`__. Link to registration is `here <https://link.webropolsurveys.com/Participation/Public/5cd6e04a-f735-4655-93b4-28c19228e03a?displayId=Fin2058059>`__.  
 
 *24/09/2020* – Join our informal chat about research software on zoom at 10:00: `RSE activities in Finland <https://nordic-rse.org/communities/finland/>`__. Today is also the SciComp garage day focused on HPC/Triton issues: `daily garage </help/garage/>`__.  
 
