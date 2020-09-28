@@ -18,33 +18,40 @@ your data for efficient data analysis, how to analyze the data, how to
 split your data/models based on your intended data analysis task,
 and how to visualize the results you obtain from this data analysis.
 The course is suited for people who are starting on doing data analysis
-and would like to start on a good workflow. The course material can be
+and would like to start on a good workflow. The exercises can be
 done with either R or Python.
 
 Course consists of four three hour sessions that will be done online
 via zoom. In these sessions we'll learn of core concepts of data analysis.
-We will do some exercises during the sessions, but most of the exercises
-will be available throught a GitHub repository (released a bit later)
-and are meant to be done between the sessions. We will go through the
-solutions at the start of each session.
+We will do exercises during the sessions (available via course's
+`GitHub repository <https://github.com/AaltoSciComp/data-analysis-workflows-course/>`_).
 
 **Lecturer:** Simo Tuomisto, M. Sc., Aalto Scientific Computing / Department of Computer
 Science
 
 **Time, date:**
 
-- Tue 5.10, 12:00-15:00
-- Wed 7.10, 12:00-15:00
-- Mon 12.10, 12:00-15:00
-- Wed 14.10, 12:00-15:00
+- Fri 2.10., 13:00-15:00 **Installation help session**
+- Tue 5.10., 12:00-15:00 (Understanding data analysis workflows)
+- Wed 7.10., 12:00-15:00 (Data preparation)
+- Mon 12.10., 12:00-15:00 (Modeling)
+- Wed 14.10., 12:00-15:00 (Scaling your analysis)
+- **Please connect to all sessions 10 minutes early:** icebreakers and intro
+  already starts then.
 
-**Place:** online, Zoom link to be posted to the registered participants
+**Place:**
+This is an online course via Zoom (link sent to registered
+participants).  The course is also streamed via Twitch (the
+`CodeRefinery channel <https://www.twitch.tv/coderefinery>`__) so that
+anyone may follow along without registration.  There is a HackMD link
+(collaborative edited notes), which is used for asking questions during
+the course.  The `actual material is here
+<https://aaltoscicomp.github.io/data-analysis-workflows-course/>`__.
 
 **Cost:** Free of charge for FGCI consortium members including Aalto
 employees and students.
 
 **Registration:** `registration is open <https://link.webropolsurveys.com/S/9F2A504AF3088DBD>`__
-
 
 **Credits:** Credits available for the Aalto students and course
 certificate can be provided on request for the outsiders. Full course
@@ -52,25 +59,23 @@ hours correspond roughly to 1 ECTS. Students who wish to get a
 certificate should hand in the special assignment and participate to
 at least 3 of 4 lectures.
 
-**Other comments:** 
-
 **Additional course info at:** scip -at- aalto.fi
 
-**Course preparation**
+**Preparation**
 
-This will be updated closer to the course.
+Software installation is done via conda. Installation instructions are provided
+`here <https://aaltoscicomp.github.io/data-analysis-workflows-course/installation>`_.
+
+There will be an installation help session on Fri 2.10. between 13:00-15:00. 
+There we can help you install the required software.
 
 **Course material**
 
-This is the preliminary plan for the course:
+Full course material can be found
+`here <https://aaltoscicomp.github.io/data-analysis-workflows-course/>`_.
 
-* Day 1: Understanding data science workflows
-
-* Day 2: Data ingestion, tidy data and efficient data formats
-
-* Day 3: Running models
-
-* Day 4: Scaling your analysis by splitting data and computations
+Exercises are provided via course's
+`GitHub repository <https://github.com/AaltoSciComp/data-analysis-workflows-course/>`_.
 
 **Homework**
 
