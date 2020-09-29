@@ -2,6 +2,11 @@
 Oct 2020 / Data analysis workflows with R and Python
 ====================================================
 
+.. admonition:: News
+
+   * Course Zoom is full, you can still register and you will get
+     information about the stream only.
+
 Part of the `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
 
 **Audience:** Researchers who are using or will soon be using R and Python
@@ -53,7 +58,10 @@ the course.  The `actual material is here
 **Cost:** Free of charge for FGCI consortium members including Aalto
 employees and students.
 
-**Registration:** `registration is open <https://link.webropolsurveys.com/S/9F2A504AF3088DBD>`__
+**Registration:** `registration is open
+<https://link.webropolsurveys.com/S/9F2A504AF3088DBD>`__  (note: Zoom
+meeting is full, further registrations will get information on
+streaming only)
 
 **Credits:** Credits available for the Aalto students and course
 certificate can be provided on request for the outsiders. Full course
