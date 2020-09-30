@@ -33,8 +33,7 @@ via zoom. In these sessions we'll learn of core concepts of data analysis.
 We will do exercises during the sessions (available via course's
 `GitHub repository <https://github.com/AaltoSciComp/data-analysis-workflows-course/>`_).
 
-**Lecturer:** Simo Tuomisto, M. Sc., Aalto Scientific Computing / Department of Computer
-Science
+
 
 **Time, date:**
 
@@ -45,6 +44,9 @@ Science
 - Wed 14.10., 12:00-15:00 (Scaling your analysis)
 - **Please connect to all sessions 10 minutes early:** icebreakers and intro
   already starts then.
+
+Practical information
+---------------------
 
 **Place:**
 This is an online course via Zoom (link sent to registered
@@ -63,13 +65,16 @@ employees and students.
 meeting is full, further registrations will get information on
 streaming only)
 
+**Instructors and organizers:** 
+
+* Simo Tuomisto, M. Sc., Aalto Scientific Computing / Department of Computer Science
+* Richard Darst Aalto Scientific Computing (coordination)
+
 **Credits:** Credits available for the Aalto students and course
 certificate can be provided on request for the outsiders. Full course
 hours correspond roughly to 1 ECTS. Students who wish to get a
 certificate should hand in the special assignment and participate to
 at least 3 of 4 lectures.
-
-**Additional course info at:** scip -at- aalto.fi
 
 **Preparation**
 
@@ -79,7 +84,77 @@ Software installation is done via conda. Installation instructions are provided
 There will be an installation help session on Fri 2.10. between 13:00-15:00.
 There we can help you install the required software.
 
-**Course material**
+**Additional course info at:** scip -at- aalto.fi
+
+
+Preparation
+-----------
+
+`Prerequisites include basic programming in Python
+<https://aaltoscicomp.github.io/python-for-scicomp/#prerequisites>`__ or R.
+
+**Preparation:** Online workshops can be a productive format, but it
+takes some effort to get ready.  Browse these resources:
+
+* `Attending an online workshop
+  <https://coderefinery.github.io/manuals/how-to-attend-online/>`__,
+  good to read in detail (ignore the CodeRefinery-specific parts).
+* `How to use HackMD to take answer questions and hold discussions <https://coderefinery.github.io/manuals/hackmd-mechanics/>`__.
+* `The Zoom mechanics we will use
+  <https://coderefinery.github.io/manuals/zoom-mechanics/>`__, might
+  be useful to browse.
+* It is useful to `watch <https://youtu.be/56p6xX0aToI>`__ or `read
+  <https://scicomp.aalto.fi/scicomp/shell/>`__ the Linux shell crash
+  course, since these basic command line concepts are always useful.
+
+Software installation:
+
+There will be an installation help session on Fri 2.10. between 13:00-15:00.
+There we can help you install the required software.
+
+* See the `installation page of the course material
+  <https://aaltoscicomp.github.io/data-analysis-workflows-course/installation/>`__.  Installation is done via conda.
+
+  * In principle, if you are at Aalto, the service
+    https://jupyter.cs.aalto.fi should be sufficient to do most of
+    this course without any local installations.  Perhaps not
+    everything, but it will be OK for most people.
+
+* `Zoom <https://coderefinery.github.io/installation/zoom/>`__.
+
+
+
+Community standards
+-------------------
+
+This is a large course, and we will have many diverse groups attending
+it.  Everyone will be both a teacher and a learner and help to make
+the course successful.  Since this is a large and interactive course
+which we are just now prototyping, there will be some rough edges and
+not everything will go perfectly.  Please learn from our mistakes,
+too!
+
+This course consists of both lectures, hands-on exercises, and demos.
+It is designed to have a range of basic to advanced topics: there
+should be something for everyone.
+
+The main point this course is the exercises, and they will happen in
+breakout rooms where we expect people to work together and help each
+other.  We expect everyone to help each other as best as they can with
+respect for different levels of knowledge - at the same time be aware
+of your own limitations.  No one is better than anyone else, we just
+have different existing skills and backgrounds.
+
+If there is anything wrong, *tell us* - if you need to contact us
+privately, you can message the host on Zoom or :doc:`contact us
+outside the course </help/index>`.  This could be as simple as "speak
+louder / text on screen is unreadable" or someone is creating a
+harmful learning environment.
+
+
+
+Material
+--------
 
 Full course material can be found
 `here <https://aaltoscicomp.github.io/data-analysis-workflows-course/>`_.
@@ -87,6 +162,24 @@ Full course material can be found
 Exercises are provided via course's
 `GitHub repository <https://github.com/AaltoSciComp/data-analysis-workflows-course/>`_.
 
-**Homework**
 
-This will be updated closer to the course.
+
+News and notes
+--------------
+
+Week 40:
+
+* Please see the installation instructions (link above).  You need to
+  install anaconda *before* the first day, or else you will quickly
+  fall behind.  This class is so large that we won't be able to do
+  help you catch up.  You should also **verify your installation**
+  (this is part of the installation instructions).  On the Friday
+  before, we have an installation help session - you can join there
+  for help.
+
+* Please remember to join the meeting 10 minutes early.  Our
+  icebreakers and introductions already start then.  If you are on
+  time, you are late!
+
+Homework
+--------
