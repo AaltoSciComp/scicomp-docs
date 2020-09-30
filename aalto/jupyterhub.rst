@@ -285,7 +285,7 @@ to give Github all our information, so you can also send tickets to
 CS-IT.
 
 Students and others who have difficulty in usage outside of a course
-can contact CS-IT via the :doc:`guru <jupyterhub-instructors#more-info>`
+can contact CS-IT via the :ref:`guru <jupyterhub-instructors-more-info>`
 alias.
 
 Notebooks are *not* an end-all solution: for an entertaining look at
