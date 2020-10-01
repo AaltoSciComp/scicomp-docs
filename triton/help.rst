@@ -77,7 +77,7 @@ requests, problems that may affect several users.
    use your email address and Aalto password.
 
 
-.. _esupport-triton-address:
+.. _scicomp-address:
 
 Email ticketing system
 ~~~~~~~~~~~~~~~~~~~~~~

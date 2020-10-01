@@ -125,5 +125,5 @@ Contact
 Let `Mikko Hakala <https://people.aalto.fi/mikko.hakala>`__ know about
 Science-IT related joining, `Richard Darst
 <https://people.aalto.fi/richard.darst>`__ know about the RSE program
-or SciComp community, or contact us at our esupport-triton ↔ aalto.fi
+or SciComp community, or contact us at our scicomp ↔ aalto.fi
 email address.

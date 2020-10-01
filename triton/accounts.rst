@@ -10,7 +10,7 @@ Aalto for free.  Resources are funded by departments, and distributed
 by a fairshare algorithm: members of departments and schools which
 provide direct funding have a greater share.
 
-Please contact us via the support email address **esupport-triton** *_at_* **aalto.fi** (not
+Please contact us via the support email address **scicomp** *_at_* **aalto.fi** (not
 personal email) and we will set up your account.  Please tell us your
 department, supervisor, Aalto account, and see the conditions below.
 (For future help, you should probably use our issue tracker: see the
@@ -72,7 +72,7 @@ Account deactivation / remove from mailing list
 
 Your account currently lasts as long as your Aalto account does. If
 you want to end your account early, contact your local support via the
-esupport-triton email address. This way, you will also be unsubscribed
+scicomp email address. This way, you will also be unsubscribed
 from the triton-users maillist (the mailing list is required for
 everyone who has an account).
 
