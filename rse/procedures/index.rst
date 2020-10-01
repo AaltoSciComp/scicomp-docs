@@ -11,7 +11,7 @@ Aalto RSE procedures
    pull request or contact us to discuss.
 
    The how-to-request us methods are not live yet, so contact us at
-   scicomp@aalto.fi instead.
+   scicomp at aalto.fi instead.
 
 
 This contains internal procedures about how we run our RSE program.
