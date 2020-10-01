@@ -27,6 +27,7 @@ JupyterHub for instructors
    faq-hints
 
 
+.. _jupyterhub-instructors-more-info:
 
 More info
 ---------

@@ -141,7 +141,7 @@ separate from your data).  Your actual data is yours only and you are
 responsible for it.  We do not access your data, but when necessary
 for the operation of the system, but we use and may look at file
 metadata such as permissions, timestamp, filename (``stat filename``).
-Your ``/notebooks`` directory may be deleted once your have been
+Your ``/notebooks`` directory may be deleted once it has been
 inactive for one year, and at the latest once your Aalto home
 directory is removed (after your account expires).  Some courses will
 use the ``feedback/`` directory to return assignments to you.
@@ -163,7 +163,7 @@ FAQ and bugs
   the top right.  (Emergency backup: you can
   always change the URL path to ``/hub/home``).
 
-* **Is JuptyerLab available?** Yes, and it's nice.  There are two
+* **Is JupyterLab available?** Yes, and it's nice.  There are two
   general use instances that are actually the same, the only
   difference is one starts JupyterLab by default and one starts
   classic notebooks by default.  Course environments always use
@@ -195,7 +195,7 @@ FAQ and bugs
 
 * **What can I use this for?** Intended uses include anything related
   to courses, own exploration of programming, own data analysis, and
-  so on (see Terms of Service above).  Long-term background processing
+  so on (see Terms of Use above).  Long-term background processing
   isn't good (but it's OK to leave small stuff running, close the tab,
   and come back).
 
@@ -223,7 +223,7 @@ FAQ and bugs
   workaround, run ``git config`` without the ``--global`` option in
   each repository.
 
-* **I don't see "Assignment list".**  You are probably not in a
+* **I don't see "Assignment list".**  You have probably launched the
   general use server instead of a course server.  Stop your
   server and go spawn the notebook server of your course.
 
@@ -285,7 +285,8 @@ to give Github all our information, so you can also send tickets to
 CS-IT.
 
 Students and others who have difficulty in usage outside of a course
-can contact CS-IT via the guru alias.
+can contact CS-IT via the :ref:`guru <jupyterhub-instructors-more-info>`
+alias.
 
 Notebooks are *not* an end-all solution: for an entertaining look at
 some problems, see `"I don't like notebooks" by Joel Grus
