@@ -35,7 +35,7 @@ We will do exercises during the sessions (available via course's
 
 
 
-**Time, date:**
+**Time, date: (Europe/Helsinki timezone)**
 
 - Fri 2.10., 13:00-15:00 **Installation help session**
 - Mon 5.10., 12:00-15:00 (Understanding data analysis workflows)
