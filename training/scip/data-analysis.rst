@@ -106,6 +106,9 @@ takes some effort to get ready.  Browse these resources:
 * It is useful to `watch <https://youtu.be/56p6xX0aToI>`__ or `read
   <https://scicomp.aalto.fi/scicomp/shell/>`__ the Linux shell crash
   course, since these basic command line concepts are always useful.
+* Study a bit of Jupyter if you haven't used it before.  The
+  `CodeRefinery lesson <https://coderefinery.github.io/jupyter/>`__
+  (episode on JupterLab interface) is enough.
 
 Software installation:
 
