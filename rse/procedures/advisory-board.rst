@@ -14,19 +14,19 @@ open on this page (though specific items may be retracted).
 Purpose of the advisory board
 -----------------------------
 
-The advisory board provides advice to the strategy and day to day
-implementation of the Aalto RSE program and its relation to scientific
-computing and teaching at Aalto.
+The advisory board provides advice to the strategy (and when relevant,
+day to day implementation) of the Aalto RSE program and its relation
+to research, scientific computing, and teaching at Aalto.
 
 
 
 Current advisory board
 ----------------------
 
-* SCI:
-* CS:
-* NBE:
-* PHYS:
+* ...
+* ...
+* ...
+* ...
 * ...
 * ...
 
@@ -41,7 +41,8 @@ located here, newest first.
 Next meeting
 ~~~~~~~~~~~~
 
-- Purpose of advisory board and its roles.
+- Purpose of advisory board and its roles.  How often to meet?
 - What are your priorities?
 - What is the threshold for your department to "pay" for service.
-- Outreach to find customers
+- How can we find customers?
+- How much do we focus on cost recovery, and how much on basic work?
