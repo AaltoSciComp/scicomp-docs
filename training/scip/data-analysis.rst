@@ -79,7 +79,7 @@ at least 3 of 4 lectures.
 **Preparation**
 
 Software installation is done via conda. Installation instructions are provided
-`here <https://aaltoscicomp.github.io/data-analysis-workflows-course/installation>`_.
+`here <https://aaltoscicomp.github.io/data-analysis-workflows-course/installation>`__.
 
 There will be an installation help session on Fri 2.10. between 13:00-15:00.
 There we can help you install the required software.
@@ -161,7 +161,7 @@ Material
 --------
 
 Full course material can be found
-`here <https://aaltoscicomp.github.io/data-analysis-workflows-course/>`_.
+`here <https://aaltoscicomp.github.io/data-analysis-workflows-course/>`__.
 
 Exercises are provided via course's
 `GitHub repository <https://github.com/AaltoSciComp/data-analysis-workflows-course/>`_.
