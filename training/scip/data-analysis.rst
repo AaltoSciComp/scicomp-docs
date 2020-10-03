@@ -7,6 +7,20 @@ Oct 2020 / Data analysis workflows with R and Python
    * Course Zoom is full, you can still register and you will get
      information about the stream only.
 
+   * Everyone is accepted to Twitch (some people are accepted to
+     Zoom.  If you have an email with the Zoom link, you are accepted
+     to Zoom.  Otherwise, you are accepted to Twitch.
+
+   * Please look below and `at the lesson installation page
+     <https://aaltoscicomp.github.io/data-analysis-workflows-course/installation/>`__
+     for information on installing the lesson.
+
+.. admonition:: Quick links
+
+   * Stream link: https://twitch.tv/coderefinery
+   * Zoom link: if accepted to Zoom, you have the link by email
+   * `Course lecture/exercise material <https://github.com/AaltoSciComp/data-analysis-workflows-course/>`__
+
 Part of the `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
 
 **Audience:** Researchers who are using or will soon be using R and Python
