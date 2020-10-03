@@ -39,6 +39,8 @@ click the "sign in with HAKA" button):
   it may be shared internal to Aalto for prioritization and
   reporting - don't submit confidential data), but we suggest it is
   not confidential so that we can all learn from each other.
+* You can come to our :doc:`daily garage </help/garage>` or contact us
+  by email at scicomp at aalto.fi.
 
 .. _consultation: https://version.aalto.fi/gitlab/AaltoRSE/rse-projects/issues/new?issuable_template=consultation
 .. _new_project: https://version.aalto.fi/gitlab/AaltoRSE/rse-projects/issues/new?issuable_template=new_project

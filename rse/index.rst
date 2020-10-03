@@ -31,6 +31,11 @@ project.  Read more below.
    <https://forms.gle/wxnCpCGxdUfGGqfw6>`_ to express interest
    (necessary to secure funding) and/or request a consultation.
 
+.. admonition:: Contact
+
+   Contact us at our :doc:`daily garage </help/garage>` or by email at
+   scicomp at aalto.fi.
+
 **This program is currently being developed, and information here may
 be updated.**
 
