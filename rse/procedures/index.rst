@@ -26,6 +26,7 @@ For researchers
 ---------------
 
 .. toctree::
+   :max-depth: 1
 
    how-we-work
    request
@@ -35,7 +36,17 @@ For ourselves
 -------------
 
 .. toctree::
+   :max-depth: 1
 
    time-tracking
    implementation
    job-descriptions
+
+
+Checklists
+----------
+
+.. toctree::
+   :max-depth: 1
+
+   checklist-python
