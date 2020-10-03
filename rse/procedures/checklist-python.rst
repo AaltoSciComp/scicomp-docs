@@ -1,15 +1,17 @@
-Python projects
-===============
+Python project checklist
+========================
 
 This checklist covers major considerations when creating a
 high-quality, maintainable, reusable Python codebase.  It is designed
 to be used along with a RSE to guide you through it (it is in a draft
-stage).
+stage, and doesn't have link to what these mean).  Not everything is
+expected for every project, but a sufficiently advanced complicated
+project will have most of these things.
 
-
-* License
 
 * Citeability and credit, authorship discussion
+
+* License
 
 * Version control
 
@@ -23,22 +25,33 @@ stage).
 
   * Standard project layout
   * Importable modules
-  * Command line interface
+  * Command line or other standard interface
   * (relates to packaging below)
 
-* Tests
+* `Tests <https://coderefinery.github.io/testing/>`__
 
   * Recommendation: pytest
-  * Simple integration tests
-  * More fine-grained test
+  * Simple system tests on basic examples
+  * More fine-grained integration or unit tests
   * CI setup
+  * Test coverage
 
-* Documentation
+* `Documentation <https://coderefinery.github.io/documentation/>`__
 
-  * README file: good enough?
-  * Project webpage
-  * Sphinx project
-  * readethedocs
+  * Forms / levels
+
+    * README file: good enough?
+    * Project webpage
+    * Sphinx project
+    * Read The Docs
+
+  * To include
+
+    * About
+    * Installation
+    * Tutorials
+    * How to / simple examples to copy
+    * Reference
 
 * Release
 
