@@ -49,7 +49,7 @@ We will do exercises during the sessions (available via course's
 
 
 
-**Time, date: (Europe/Helsinki timezone)**
+**Time, date (Europe/Helsinki timezone):**  (`convert 12:00 to your timezone <https://arewemeetingyet.com/Helsinki/2020-10-05/12:00/Data%20analysis%20workflows#eyJ1cmwiOiJodHRwczovL3NjaWNvbXAuYWFsdG8uZmkvdHJhaW5pbmcvc2NpcC9kYXRhLWFuYWx5c2lzLyJ9>`__)
 
 - Fri 2.10., 13:00-15:00 **Installation help session**
 - Mon 5.10., 12:00-15:00 (Understanding data analysis workflows)
