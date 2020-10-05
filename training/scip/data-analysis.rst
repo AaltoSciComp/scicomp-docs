@@ -4,16 +4,15 @@ Oct 2020 / Data analysis workflows with R and Python
 
 .. admonition:: News
 
-   * Course Zoom is full, you can still register and you will get
-     information about the stream only.
-
-   * Everyone is accepted to Twitch (some people are accepted to
-     Zoom.  If you have an email with the Zoom link, you are accepted
-     to Zoom.  Otherwise, you are accepted to Twitch.
-
-   * Please look below and `at the lesson installation page
+   * If joining us, please look below and `at the lesson installation page
      <https://aaltoscicomp.github.io/data-analysis-workflows-course/installation/>`__
      for information on installing the lesson.
+
+   * See the Twitch video archive link under "Quick links" below.
+
+   * Day 1: We had some technical problems with the stream and
+     recording, but overall things went OK.  We hope to see you
+     Wednesday.  Send videos to your friends.
 
 .. admonition:: Quick links
 
@@ -22,6 +21,7 @@ Oct 2020 / Data analysis workflows with R and Python
    * `Course lecture/exercise material
      <https://aaltoscicomp.github.io/data-analysis-workflows-course/>`__
    * HackMD link: https://hackmd.io/@rkdarst/data-workflows
+   * Video archive (14 days): https://www.twitch.tv/coderefinery/videos
 
 Part of the `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
 
