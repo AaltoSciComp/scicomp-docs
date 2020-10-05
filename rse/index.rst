@@ -1,16 +1,16 @@
 Research Software Engineers
 ===========================
 
-In 2020, Aalto Scientific Computing is beginning a Research Software/Data
+In 2020, Aalto Scientific Computing (Science-IT) is beginning a Research Software/Data
 Engineer (RSE) program to improve the quality of our scientific
-computing and data use.  "`Research software engineer <rse-history_>`_" is a recent
+computing and data science.  "`Research software engineer <rse-history_>`_" is a recent
 term for a longstanding role: someone that works at the interface of
 research and software development, but not fully either.  We think
 this applies equally to data.
 
 .. _rse-history: https://www.software.ac.uk/blog/2016-08-17-not-so-brief-history-research-software-engineers-0
 
-The RSE service provides you with a dedicated person to assist you
+The RSE service provides you with a dedicated specialist to assist you
 with computing, software, and data tasks in your research, for a longer
 period than basic staff.  Funding either comes from departments (for
 basic service) or the project itself.
@@ -22,8 +22,8 @@ department, the RSE service will have an immense impact on our
 internal productivity.
 
 It's easy to request help, anywhere from an personal consultation, to
-group seminar and getting started session, to work on a longer-term
-project.  Read more below.
+group seminar and getting you on the right path, to work on a
+longer-term project.  Read more below.
 
 .. note::
 
@@ -34,19 +34,24 @@ project.  Read more below.
 .. admonition:: Contact
 
    Contact us at our :doc:`daily garage </help/garage>` or by email at
-   scicomp at aalto.fi.
+   scicomp at aalto.fi.  See :ref:`requesting RSE <request-rse>` for more.
 
 **This program is currently being developed, and information here may
 be updated.**
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
+   :caption: Summary
 
    For researchers, groups, and group leaders <researchers>
    For departments and schools <units>
    RSE community <community>
    Become a RSE <become-a-rse>
-   implementation
+
+.. toctree::
+   :maxdepth: 2
+
+   procedures/index
 
 
 
