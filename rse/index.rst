@@ -39,20 +39,61 @@ longer-term project.  Read more below.
 **This program is currently being developed, and information here may
 be updated.**
 
+
+About the program
+-----------------
+
 .. toctree::
    :maxdepth: 1
-   :caption: Summary
 
    For researchers, groups, and group leaders <researchers>
    For departments and schools <units>
    RSE community <community>
    Become a RSE <become-a-rse>
 
+
+.. _request-rse:
+
+For those using our services
+----------------------------
+
+**To get started,** first browse :doc:`how we work <how-we-work>` and
+then :doc:`how to make a request <request>`.  When in doubt, come to
+:doc:`the SciComp garage </help/garage>` or email scicomp at aalto.fi.
+
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-   procedures/index
+   how-we-work
+   request
 
+
+Internal documents
+------------------
+
+.. warning::
+
+   The RSE program is just starting, and these present an *idea* about
+   the future, not requirement for how things must be.  Suggestions
+   are very welcome.
+
+.. toctree::
+   :maxdepth: 1
+
+   procedures/time-tracking
+   procedures/implementation
+   procedures/job-descriptions
+   procedures/units-info
+   procedures/advisory-board
+
+
+Checklists
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   checklists/python
 
 
 See also
