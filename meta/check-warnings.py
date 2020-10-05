@@ -22,6 +22,8 @@ errors = [
      "Unknown directive type",
      "Anonymous hyperlink mismatch",
      "toctree contains reference to nonexisting document",
+     "Title underline too short",
+     "Title overline too short",
     ]
 
 ignores = [
