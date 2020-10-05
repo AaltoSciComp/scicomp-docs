@@ -19,7 +19,9 @@ Oct 2020 / Data analysis workflows with R and Python
 
    * Stream link: https://twitch.tv/coderefinery
    * Zoom link: if accepted to Zoom, you have the link by email
-   * `Course lecture/exercise material <https://aaltoscicomp.github.io/data-analysis-workflows-course/>`__
+   * `Course lecture/exercise material
+     <https://aaltoscicomp.github.io/data-analysis-workflows-course/>`__
+   * HackMD link: https://hackmd.io/@rkdarst/data-workflows
 
 Part of the `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
 
