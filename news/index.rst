@@ -2,7 +2,7 @@
 News
 ====
 
-*05/10/2020* Today is Tuesday, however `Research Software Hour <https://researchsoftwarehour.github.io/>`__ has now moved from Tuesdays to Thursdays. Tune in on Twitch on *Friday 15 October at 21:30 (Helsinki time)* to watch live the next episode.Save the date: `**Mon 19/10/2020 at 14:00 "Triton users group meeting"** <https://scicomp.aalto.fi/news/usergroup2020/>`__, come and hear about the future of Triton/ScienceIT/Aalto Scientific Computing, exciting news on new services, new hardware (GPUs!), and anything related to Aalto Scientific Computing. More details coming soon.  
+*06/10/2020* Today is Tuesday, however `Research Software Hour <https://researchsoftwarehour.github.io/>`__ has now moved from Tuesdays to *Thursdays*. Tune in on Twitch on *Friday October 15 at 21:30 (Helsinki time)* to watch live the next episode.Save the date: `**Mon 19/10/2020 at 14:00 "Triton users group meeting"** <https://scicomp.aalto.fi/news/usergroup2020/>`__, come and hear about the future of Triton/ScienceIT/Aalto Scientific Computing, exciting news on new services, new hardware (GPUs!), and anything related to Aalto Scientific Computing. More details coming soon.  
 
 Check `other hands-on trainings coming in October and November </training/>`__. Join our `daily garage </help/garage/>`__ if you have issues to discuss related to computing or data management.
 
