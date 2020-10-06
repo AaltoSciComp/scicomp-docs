@@ -28,9 +28,15 @@ modular code has nothing except function/class/variable/import
 definitions touching the left margin - but in Jupyter, almost
 everything touches the left margin.
 
-Solution: be aware of the transition to modules - do it when you need
-to.  See the next point.  Try to plan so it's not too painful to do
-this.
+Solutions:
+
+- Slowly work towards functions/classes/etc where appropriate, but
+  realize it's not as easy to inspect their insides as non-function
+  code.
+- Be aware of the transition to modules - do it when you need to.  See
+  the next point.
+- Try to plan so it's not too painful to make the conversion when the
+  time comes.
 
 
 
@@ -47,15 +53,22 @@ interactive layer.  But when does that happen?  It is difficult to
 make that transition unless you really try hard, because it's easier
 to just keep on going.
 
-Solution: remember that you will probably need to form a proper module
-eventually.  Plan for it and do it quickly once you need to.  You can
-set modules to automatically reload with ``%load_ext autoreload``,
-``%autoreload 1``, and then ``%aimport module_name``.  Then your edits
-to the Python source code are immediately used without restarting and
-your work is not slowed down much.  See more at the `IPython docs on
-autoreload
-<https://ipython.readthedocs.io/en/stable/config/extensions/autoreload.html>`__
-(note: this is Python kernel specific).
+Solutions:
+
+- Remember that you will probably need to form a proper module
+  eventually.  Plan for it and do it quickly once you need to.
+- Make sure you notebooks aren't disconnected from your own Python
+  code in modules/packages.
+- You can set modules to automatically reload with ``%load_ext
+  autoreload``, ``%autoreload 1``, and then ``%aimport module_name``.
+  Then your edits to the Python source code are immediately used
+  without restarting and your work is not slowed down much.  See more
+  at the `IPython docs on autoreload
+  <https://ipython.readthedocs.io/en/stable/config/extensions/autoreload.html>`__
+  (note: this is Python kernel specific).
+- `importnb <https://pypi.org/project/importnb/>`__ to import
+  notebooks as modules - but maybe if you get to this, you need to
+  rethink your goal.
 
 
 
@@ -71,19 +84,44 @@ Solution: Include mini-tests / assertions liberally.  Split to modules
 when it is necessary - maybe you only create a proper testing system
 once you transition to modules.
 
+Solutions:
+
+- Various extensions to pytest that work with notebooks
+
+  - `nbval <https://github.com/computationalmodelling/nbval>`__,
+    `pytest-notebook
+    <https://pytest-notebook.readthedocs.io/en/latest/>`__: run
+    notebook, check actual outputs match outputs in ipynb.
+  - `pytest-ipynb <https://github.com/zonca/pytest-ipynb>`__: cells
+    are unit tests
+  - This list isn't complete or a recommendation
+
+- But just like with modularity above, a notebook designed to be
+  easily testable isn't designed for interactive work.
+- Transition to modules instead of testing in the notebook.
+
 
 
 Version control
 ---------------
 
-Notebooks can't be version controlled well.  Of course, they *can* be
-version controlled (and should be), and tools like `nbdime
-<https://github.com/jupyter/nbdime>`__ (notebook diff and merge) work
-well for what they try to do.
+Notebooks can't be version controlled well, since they are JSON
+format.  Of course, they *can* be version controlled (and should be),
+and there are a variety of good solutions so this shouldn't stop you.
 
-Solution: don't let this stop you.  Do version control your notebooks
-(and don't forget to commit often!), and use nbdime, Jupyter git
-integration, and so on well.
+Solutions:
+
+- Don't let this stop you.  Do version control your notebooks (and
+  don't forget to commit often!), even if you don't use any of the
+  other strategies.
+- `nbdime <https://github.com/jupyter/nbdime>`__ - diffing and
+  merging, VCS integration
+- Jupyter `lab <https://github.com/jupyterlab/jupyterlab-git>`__ /
+  notebook git integration work well.
+- Notebooks in other plain-text formats: Rmarkdown, `Jupytext
+  <https://jupytext.readthedocs.io/>`__ (pair notebooks with plain
+  text versions).
+- Remember, blobs in version control is still better than nothing.
 
 
 
@@ -91,20 +129,23 @@ Hidden state is opposed to reproducibility
 ------------------------------------------
 
 This is a bit of an obscure one: people always say that notebooks are
-good for reproducibility.  But they also allow you to run cells in
+good for reproducibility.  But they also allow you to *run cells in
 different orders, delete cells after it has run, change code after you
-run it, and so on.  And the whole point of notebooks is to be able to
-re-edit and re-run.  So it's very easy to get into a state where you
-have variables defined which aren't in your current code and you don't
-remember how you got them.  Since old output is saved, you might not
-realize this until it's too late.
+run it*, and so on.  And this is the whole point of notebooks.  So
+it's very easy to get into a state where you have variables defined
+which aren't in your current code and you don't remember how you got
+them.  Since old output is saved, you might not realize this until
+it's too late.
 
-Solution: Use "Restart and run all" liberally.  Unless you do, you
-can't be sure that your code will make your output.  So do that when
-needed.  (But wait... part of the point of notebooks is that you can
-keep data in memory because it might take a while to calculate... so
-"Restart and run all" defeats the purpose of that, so... balance it
-out.)
+Solutions:
+
+- Use "Restart and run all" liberally.  Unless you do, you can't be
+  sure that your code will reproduce your output.
+- But wait... part of the point of notebooks is that you can keep data
+  in memory instead of recalculating each time you run.  "Restart and
+  run all" defeats the purpose of that, so... balance it out.)
+- Design for modularity and clean interfaces, even within a notebook.
+  Don't make a mess.
 
 
 
@@ -119,28 +160,65 @@ you need?  Obviously this isn't specific to notebooks, but the
 interactive nature and modularity-second makes the problem more
 visible.
 
-Solution: Remember to name notebooks well.  Keep mind of when they
-start to feature drift too much, and take some time to sort your code
-logically once that happens.
+Solutions:
+
+- Remember to name notebooks wells, immediately after making them.
+- Keep mind of when they start to feature drift too much, or have too
+  many unrelated things in them.  Take some time to sort your code
+  logically once that happens.
 
 
 
 Difficult to integrate into other execution systems
 ---------------------------------------------------
 
-A notebook is designed for interactive use - you *can* run them all
-with ``nbconvert --to notebook --execute input.ipynb --output
-executed.ipynb``.  But there's no good command line interface to pass
-arguments, input and output, and so on.  So you write one notebook,
-but can't easily turn it into a flexible script to be used many
-times.
+A notebook is designed for interactive use - you *can* run them from
+the command line with various commands.  But there's no good command
+line interface to pass arguments, input and output, and so on.  So you
+write one notebook, but can't easily turn it into a flexible script to
+be used many times.
 
-Solution: Probably a lot of the solution is the same as modularizing.
-Use notebooks to explore, scripts to run in bulk.  Run notebooks in
-batch using nbconvert if you think you can manage it well enough and
-not have it become a mess.  I've had an idea that environment
-variables could be used to pass parameters into notebooks for batch
-execution, but could that be trying too hard?
+Solutions:
+
+- Modularize your code and notebooks.  Use notebooks to explore,
+  scripts to run in bulk.
+
+- Create command line interfaces to your libraries, use that instead
+  of notebooks.
+
+- There are many different tools to parameterize and execute
+  notebooks, if you think you can keep stuff organized:
+
+  - `nbconvert <https://nbconvert.readthedocs.io/>`__
+
+  - `papermill <https://github.com/nteract/papermill>`__
+
+  - `nbscript <https://github.com/NordicHPC/nbscript>`__
+    (:doc:`self-advertisement </scicomp/nbscript>`)
+
+  - ... and plenty more
+
+
+
+Jupyter disconnected from other computing
+-----------------------------------------
+
+This is also a philosophical one: some Jupyter systems are designed to
+insulate the user from the complexities of the operating system.  When
+someone needs to go beyond Jupyter to other forms of computing (such
+as ssh on cluster), are they prepared?
+
+Solutions:
+
+- This is more of a mindset than anything else.
+
+- System designers should not go through extra efforts to hide the
+  underlying operating system, nor separate the Jupyter systems from
+  other systems.
+
+- Include non-Jupyter training, some intro to the shell, etc. in the
+  Jupyter user training.
+
 
 
 Summary
