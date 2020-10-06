@@ -9,7 +9,8 @@ How we work
 
 This page is mostly focused on how long-term scheduled projects, which
 are funded by the research groups themselves, work.
-**Long-term tasks** are scheduled by FTE over weeks or months.
+**Long-term tasks** are scheduled by fraction of full-time-equivalent
+(FTE) over weeks or months.
 
 For short-term code review tasks, come to any of our :doc:`garage
 sessions </help/garage>` and we will immediately take a look.
@@ -19,12 +20,13 @@ Types of service
 
 * **Long-term** service deals with jobs that last months, and are
   scheduled in terms of FTE percentage over months.  This is often
-  directly as salary from some grant, as a researcher.
+  directly as salary from some grant, as a researcher would be.
 
 * **Medium-term** service deal with jobs scheduled in days.  For
-  simmplicity, these are often fee-for-service paid internally from
+  simplicity, these are often fee-for-service paid internally from
   basic funding.  Depending on your unit, they may also be free (paid
-  by unit basic funding)
+  by unit basic funding).  *This is not worked out yet - check back
+  for details*
 
 * **Short-term** could be a code review at one of our :doc:`garages
   </help/garage>` or a few hours of work.  This is generally free
@@ -34,7 +36,8 @@ Types of service
 Beginning
 ---------
 
-Check if it is a type of task that we can do: TODO
+Check if it is a type of task that we can do: best to ask us (TODO:
+improve this description later)
 
 To actually make a request for support, see :doc:`request`.
 
@@ -55,6 +58,8 @@ job helping you.
 * Researchers: provide access to code and documentation in advance, so
   that they can be browsed.  The more we know in advance, the better
   we can estimate the time required and how to best help you.
+* Final outputs, location, publication.
+* Time frame and schedule flexibility.
 
 
 
@@ -83,7 +88,8 @@ TODO
 Funding practicalities
 ~~~~~~~~~~~~~~~~~~~~~~
 
-TODO
+TODO: This will be developed as we begin the program.  See above for a
+description.
 
 
 Getting started
@@ -136,7 +142,8 @@ Software which is untested can hardly be considered scientific.  We
 will work with you to set up a automatic testing framework and other
 good practices so that you can ensure software quality, even after the
 project.  This also ensures faster and more accurate development in
-the future.  We'll teach you how to maintain this going forward.
+the future.  We'll teach you how to maintain this going forward.  This
+is in proportion to the complexity of the project and need.
 
 Overheads
 ~~~~~~~~~
@@ -165,15 +172,16 @@ finite resources and can't do everything for everyone.  You can expect
 us to try to passively keep supporting you for about as long as your
 project lasted.
 
-If your department or unit provides basic funding (see implementation
-plan), then long-term service is included, and this has no limits.
-However, this is shared among everyone in your unit, and focused on
-strategically support that helps many people.
+If your department or unit provides basic funding (see the
+:doc:`implementation plan <procedures/implementation>`), then long-term service
+is included, and this has no limits.  However, this is shared among
+everyone in your unit, and focused on strategically support that helps
+many people.
 
 
 Tracking scientific benefits
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-What did you get out of the project?
+We need to record the benefits of this service:
 
 * Researcher time saved
 * Computer time saved
@@ -191,7 +199,8 @@ Releasing the software
 
 A key goal of our support is releasing the software for broader use in
 the community (open science).  Ideally, this will be a continual
-process, but we can prepare you for release later on, too.
+process (continue releasing as development goes forward), but we can
+prepare you for a first release later on, too.
 
 We recognize the need to maintain a competitive advantage for your own
 work, but at the same time, if your work is not reproducible, it's not

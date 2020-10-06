@@ -27,10 +27,11 @@ right direction and where to look next.
 
 **You can also request longer-term programming as a service.**  This
 can be producing or modifying some software for you, or whatever you
-may need.
+may need.  This is expected to be paid from your grants.  (Need someone
+for a few months for your grant?  We can do that.)
 
-Basic examples
-~~~~~~~~~~~~~~
+Short-term examples
+~~~~~~~~~~~~~~~~~~~
 
 Format could be personal work, lecture, or group seminar followed by a
 hands-on session, for example.
@@ -102,9 +103,7 @@ show you by example so that you can do it yourself later.
 How to contact us and request help
 ----------------------------------
 
-To request a service, contact Aalto Scientific Computing or `answer
-our survey and request to be contacted
-<https://forms.gle/wxnCpCGxdUfGGqfw6>`__ this form.
+To request a service, see :ref:`the request area <request-rse>`.
 
 Requests are prioritized according to:
 

@@ -13,8 +13,9 @@ RSE support.
 Medium or long-term, scheduled projects
 ---------------------------------------
 
-If you have a long-term project as part of a grant, contact us to let
-us know.  For now, you can do that via the issue tracker links below.
+If you have a long-term project as part of a grant coming in the
+future, contact us to let us know.  For now, you can do that via the
+issue tracker links below, or let us know by email.
 
 
 Quick Consultations
@@ -26,6 +27,8 @@ We recommend you come to our daily :doc:`garage sessions
 
 Contact links
 -------------
+
+Our email is scicomp at aalto.fi.
 
 You submit your initial consultation/request help via Gitlab issues.
 Use these direct links to select the template (for version.aalto.fi,
@@ -51,4 +54,3 @@ Next steps
 ----------
 
 See :doc:`how-we-work` for more info.
-
