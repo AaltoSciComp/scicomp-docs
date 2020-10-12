@@ -2,6 +2,9 @@
 Oct 2020 / Data analysis workflows with R and Python
 ====================================================
 
+.. role:: strike
+    :class: strike
+
 .. admonition:: News
 
    * If joining us, please look below and `at the lesson installation page
@@ -13,6 +16,9 @@ Oct 2020 / Data analysis workflows with R and Python
    * Day 1: We had some technical problems with the stream and
      recording, but overall things went OK.  We hope to see you
      Wednesday.  Send videos to your friends.
+
+   * **Week 2 has been postponed to Wednesday/Friday (not Monday
+     anymore)**, see updated schedule below.
 
 .. admonition:: Quick links
 
@@ -56,8 +62,9 @@ We will do exercises during the sessions (available via course's
 - Fri 2.10., 13:00-15:00 **Installation help session**
 - Mon 5.10., 12:00-15:00 (Understanding data analysis workflows)
 - Wed 7.10., 12:00-15:00 (Data preparation)
-- Mon 12.10., 12:00-15:00 (Modeling)
-- Wed 14.10., 12:00-15:00 (Scaling your analysis)
+- :strike:`Mon 12.10., 12:00-15:00 (Modeling)`
+- Wed 14.10., 12:00-15:00 :strike:`(Scaling your analysis)` (Modeling)
+- Fri 16.10., 12:00-15:00 (Scaling your analysis)
 - **Please connect to all sessions 10 minutes early:** icebreakers and intro
   already starts then.
 
