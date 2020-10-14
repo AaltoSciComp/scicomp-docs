@@ -145,6 +145,11 @@ project.  This also ensures faster and more accurate development in
 the future.  We'll teach you how to maintain this going forward.  This
 is in proportion to the complexity of the project and need.
 
+We also pay particular attention to the maintenance burden of
+software: you'll be using software much longer than you write it.  We
+aim for simple, reliable strategies rather than the fanciest things
+*right now*.
+
 Overheads
 ~~~~~~~~~
 
