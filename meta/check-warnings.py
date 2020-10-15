@@ -24,6 +24,7 @@ errors = [
      "toctree contains reference to nonexisting document",
      "Title underline too short",
      "Title overline too short",
+     "both interpreted text role prefix and reference suffix",
     ]
 
 ignores = [
