@@ -79,11 +79,18 @@ they will probably make a move.
 Beyond
 ------
 
-Further career development is not a part of the Aalto RSE program (yet?),
-but beyond this step the RSE could become similar principal investigator who
-develops projects and applies for funding as a co-PI on significant
-national and international grants.  This would be a horizontal move
-outside of our team.
+Further career development is not a part of the Aalto RSE program
+(yet?), and to be honest it's hard to see an internal advancement at
+Aalto.  But at the same time, this isn't a dead-end internal job.  Especially
+the lower levels take the place of, for example, postdoctoral
+positions which are designed for post-degree training.  After this
+job, one will be very qualified for other research scientist/research
+engineer/data scientist type positions.
+
+Beyond this, we are researchers at heart, so one could begin working
+with PIs to design and develop research projects directly, apply for
+grants to fund them, and mentor junior researchers working on these
+projects.  This would be a horizontal move outside of our team.
 
 
 
