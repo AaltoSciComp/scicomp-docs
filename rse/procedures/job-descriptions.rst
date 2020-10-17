@@ -82,7 +82,7 @@ Beyond
 Further career development is not a part of the Aalto RSE program
 (yet?), and to be honest it's hard to see an internal advancement at
 Aalto.  But at the same time, this isn't a dead-end internal job.  Especially
-the lower levels take the place of, for example, postdoctoral
+at the lower levels it could take the place of, for example, postdoctoral
 positions which are designed for post-degree training.  After this
 job, one will be very qualified for other research scientist/research
 engineer/data scientist type positions.
