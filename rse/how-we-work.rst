@@ -52,10 +52,12 @@ job helping you.
 
 * What background knowledge is needed?  How long does it take to get
   started?
-* What type of contribution will the RSE make?  For purposes of
+* What type of contribution will the RSE make (see next section)?  For
+  purposes of
   scientific integrity, consider if this reaches the point of
-  scientific authorship.
-* Researchers: provide access to code and documentation in advance, so
+  scientific authorship (see bottom).
+* Researchers: provide access to code, documentation, and relevant
+  scientific background in advance, so
   that they can be browsed.  The more we know in advance, the better
   we can estimate the time required and how to best help you.
 * Final outputs, location, publication.
@@ -63,11 +65,51 @@ job helping you.
 
 
 
+What we can accomplish
+~~~~~~~~~~~~~~~~~~~~~~
+
+It is very important to consider what the practical outcome of the
+project will be, because different researchers have very different
+needs.  Together, we will think about these questions:
+
+- What's the object of focus
+
+  - Software
+
+  - Data
+
+  - Workflows
+
+- What is accomplished?
+
+  - Create a brand-new product based on scientific specification.  Is
+    this done in an agile way (continuous feedback) or is the exact
+    result known?
+
+  - Improve some existing workflow or software, possibly drastically.
+
+  - Improve some other project, primarily maintained by someone else.
+
+  - Prepare a project for publication, release, or being used by more
+    people.
+
+- Future plan
+
+  - Primarily teach via example, so that the researcher can fully
+    continue developing the project themselves.
+
+  - Provide a finished product, which won't need updates later
+
+  - Provide a product that will be continually maintained by
+    specialists (RSEs or similar - us?).
+
+
+
 Scheduling and planning
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 RSEs will be assigned based on discussion between the researchers,
-RSEs, Aalto Scientific Computing (the RSE group).  Your agreement is
+RSEs, and Aalto Scientific Computing (the RSE group).  Your agreement is
 with the RSE group, so your RSEs may change (even though we'll try to
 avoid this).
 
