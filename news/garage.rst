@@ -7,5 +7,5 @@ Scicomp garage
 
 .. raw:: html
 
-      <meta http-equiv="Refresh" content="0; url='../help/garage/'" />
+      <meta http-equiv="Refresh" content="0; url='../../help/garage/'" />
 
