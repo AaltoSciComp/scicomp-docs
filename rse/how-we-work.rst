@@ -50,7 +50,7 @@ and RSEs.  Depending on the size and complexity of the project, there
 may be several to find the right RSE and ensure that we can do a good
 job helping you.
 
-* What background knowledge is needed?  How long does it take to get
+* What scientific background knowledge is needed?  How long does it take to get
   started?
 * What type of contribution will the RSE make (see next section)?  For
   purposes of
