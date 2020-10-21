@@ -2,12 +2,18 @@
 News
 ====
 
-*16/10/2020* Today the fourth an last part of our course on `Data analysis workflows with R and Python <https://scicomp.aalto.fi/training/scip/data-analysis/>`__ . You can watch it on `CodeRefinery Twitch channel <https://www.twitch.tv/coderefinery>`__. Also, save the date: `**Mon 19/10/2020 at 14:00 "Triton users group meeting"** <https://scicomp.aalto.fi/news/usergroup2020/>`__, come and hear about the future of Triton/ScienceIT/Aalto Scientific Computing, exciting news on new services, new hardware (GPUs!), and anything related to Aalto Scientific Computing. More details coming soon.  
+*21/10/2020* Today day 2 of our online CodeRefinery workshop. Materials are available here https://coderefinery.github.io/2020-10-20-online and if you did not register, you can watch it live at https://www.twitch.tv/coderefinery.
 
 Check `other hands-on trainings coming in October and November </training/>`__. Join our `daily garage </help/garage/>`__ if you have issues to discuss related to computing or data management. If you are into research software, join our `Research Software Hour <https://researchsoftwarehour.github.io/>`__ Twitch show, every thursday at 21:30 (Helsinki time). 
 
 News archive
 ~~~~~~~~~~~~
+
+*20/10/2020* Today day 1 of our online CodeRefinery workshop. Come and learn about version control, jupyter, documentation. Materials are available here https://coderefinery.github.io/2020-10-20-online and if you did not register, you can watch it live at https://www.twitch.tv/coderefinery.
+
+*19/10/2020* Today `**"Triton users group meeting"** <https://scicomp.aalto.fi/news/usergroup2020/>`__, come and hear about the future of Triton/ScienceIT/Aalto Scientific Computing, exciting news on new services, new hardware (GPUs!), and anything related to Aalto Scientific Computing. 
+
+*16/10/2020* Today the fourth an last part of our course on `Data analysis workflows with R and Python <https://scicomp.aalto.fi/training/scip/data-analysis/>`__ . You can watch it on `CodeRefinery Twitch channel <https://www.twitch.tv/coderefinery>`__.
 
 *14/10/2020* Today our course on `Data analysis workflows with R and Python <https://scicomp.aalto.fi/training/scip/data-analysis/>`__ continues. You can watch it on `CodeRefinery Twitch channel <https://www.twitch.tv/coderefinery>`__. Please note that the last part of the course is on Friday 16/10/2020. 
 
