@@ -24,8 +24,10 @@ Benefits to groups:
 * Your RSEs get joint training and share competence within our RSE
   group.
 
-
 The RSE program is a part of Aalto Scientific Computing (Science-IT),
 so is integrated to our training programs and infrastructure
 maintenance.  You don't just get a service, but a connection to a
 community of experts.
+
+If you would like to join, check out the :doc:`implementation plan
+<procedures/implementation>` and/or contact us at scicomp at aalto.fi
