@@ -2,12 +2,14 @@
 News
 ====
 
-*21/10/2020* Today day 2 of our online CodeRefinery workshop. Materials are available here https://coderefinery.github.io/2020-10-20-online and if you did not register, you can watch it live at https://www.twitch.tv/coderefinery.
+*26/10/2020* Tomorrow day 4 of our online CodeRefinery workshop. Materials are available here https://coderefinery.github.io/2020-10-20-online and if you did not register, you can watch it live at https://www.twitch.tv/coderefinery.
 
-Check `other hands-on trainings coming in October and November </training/>`__. Join our `daily garage </help/garage/>`__ if you have issues to discuss related to computing or data management. If you are into research software, join our `Research Software Hour <https://researchsoftwarehour.github.io/>`__ Twitch show, every thursday at 21:30 (Helsinki time). 
+Check `other hands-on trainings coming in November </training/>`__. Join our `daily garage </help/garage/>`__ if you have issues to discuss related to computing or data management. If you are into research software, join our `Research Software Hour <https://researchsoftwarehour.github.io/>`__ Twitch show, every thursday at 21:30 (Helsinki time). 
 
 News archive
 ~~~~~~~~~~~~
+
+*21/10/2020* Today day 2 of our online CodeRefinery workshop. Materials are available here https://coderefinery.github.io/2020-10-20-online and if you did not register, you can watch it live at https://www.twitch.tv/coderefinery.
 
 *20/10/2020* Today day 1 of our online CodeRefinery workshop. Come and learn about version control, jupyter, documentation. Materials are available here https://coderefinery.github.io/2020-10-20-online and if you did not register, you can watch it live at https://www.twitch.tv/coderefinery.
 
