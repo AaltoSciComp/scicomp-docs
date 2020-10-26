@@ -59,7 +59,7 @@ Contact details of the supervisory authority
 | Accessibility monitoring unit
 | website: https://www.saavutettavuusvaatimukset.fi
 | email: saavutettavuus@avi.fi
-| Phone (switchboard): +358 (0)295 016 000
+| Phone: +358 (0)9 47001
 
 Release and update information
 ------------------------------
