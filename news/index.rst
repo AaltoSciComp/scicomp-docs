@@ -2,12 +2,14 @@
 News
 ====
 
-*26/10/2020* Tomorrow day 4 of our online CodeRefinery workshop. Materials are available here https://coderefinery.github.io/2020-10-20-online and if you did not register, you can watch it live at https://www.twitch.tv/coderefinery.
+*29/10/2020* Today at 21:30 Helsinki time, join us for another live episode of  Research Software Hour on https://twitch.tv/RSHour Tonight: git-annex to version control your data and HPC cluster etiquette.
 
 Check `other hands-on trainings coming in November </training/>`__. Join our `daily garage </help/garage/>`__ if you have issues to discuss related to computing or data management. If you are into research software, join our `Research Software Hour <https://researchsoftwarehour.github.io/>`__ Twitch show, every thursday at 21:30 (Helsinki time). 
 
 News archive
 ~~~~~~~~~~~~
+
+*26/10/2020* Tomorrow day 4 of our online CodeRefinery workshop. Materials are available here https://coderefinery.github.io/2020-10-20-online and if you did not register, you can watch it live at https://www.twitch.tv/coderefinery.
 
 *21/10/2020* Today day 2 of our online CodeRefinery workshop. Materials are available here https://coderefinery.github.io/2020-10-20-online and if you did not register, you can watch it live at https://www.twitch.tv/coderefinery.
 
