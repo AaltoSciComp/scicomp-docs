@@ -148,7 +148,6 @@ About
    help/index
    about/index
    README
-   accessibility/index
 
 These docs are open source: all content is licensed under CC-BY 4.0
 and all examples under CC0 (public domain).  Additionally, this is an
