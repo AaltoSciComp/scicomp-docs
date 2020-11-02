@@ -13,13 +13,18 @@ A unit joining and providing funding should first check the
 :doc:`implementation plan <implementation>` and then consider the
 following questions:
 
-- Do you want your monetary share to be reduced to zero (by accept
-  project funds wherever possible) ←→ or maintain some fraction of
-  time for basic services (short term, free-at-point-of-use assistance
-  to strategically improve the quality of your research).
+- Maintain some fraction of time for basic services (short term,
+  free-at-point-of-use assistance to strategically improve the quality
+  of your research) ←→ or prioritize projects that can pay themselves
+  to make the unit's cost as low as possible.
 
 - Support the coolest projects ←→ help those who are struggling the
   most.
+
+- Support efficient use of infrastructure/hardware or existing project
+  ←→ new projects.
+
+- Are there any strategic areas to focus on?
 
 - Contact us for a personalized chat about possibilities.
 
