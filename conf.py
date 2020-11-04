@@ -15,6 +15,7 @@
 import importlib
 import sys
 import os
+on_rtd = os.environ.get('READTHEDOCS') == 'True'
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -38,9 +39,10 @@ extensions = [
 # (nothing other than what you can find in Ubuntu).  So, add these to
 # extensions only if they are importable:
 optional_modules = [
-    'sphinx_gitstamp',
     'sphinx_rtd_theme_ext_color_contrast',
     ]
+if on_rtd or 'GITSTAMP' in os.environ:
+    optional_modules.append('sphinx_gitstamp')
 for mod in optional_modules:
     try:
         importlib.import_module(mod)
@@ -133,7 +135,6 @@ todo_include_todos = True
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 
-on_rtd = os.environ.get('READTHEDOCS') == 'True'
 if on_rtd:
     html_theme = 'default'
     os.system('git fetch --unshallow')
