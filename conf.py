@@ -12,6 +12,7 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
+import importlib
 import sys
 import os
 
@@ -33,20 +34,22 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.mathjax',
 ]
+# I try to make these docs buildable even without any extra dependencies
+# (nothing other than what you can find in Ubuntu).  So, add these to
+# extensions only if they are importable:
+optional_modules = [
+    'sphinx_gitstamp',
+    'sphinx_rtd_theme_ext_color_contrast',
+    ]
+for mod in optional_modules:
+    try:
+        importlib.import_module(mod)
+        extensions.append(mod)
+    except ImportError:
+        print('Module %s is not available'%mod)
+
 # Add timestamps from git
-try:
-    # https://github.com/jdillard/sphinx-gitstamp
-    import sphinx_gitstamp
-    extensions.append('sphinx_gitstamp')
-    gitstamp_fmt = "%d %b %Y"
-except:
-    print("sphinx_gitstamp is not installed, won't use git timestamps.")
-try:
-    # https://github.com/jdillard/sphinx-gitstamp
-    import sphinx_rtd_theme_ext_color_contrast
-    extensions.append('sphinx_rtd_theme_ext_color_contrast')
-except:
-    print("sphinx_rtd_theme_ext_color_contrast is not installed")
+gitstamp_fmt = "%d %b %Y"
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
