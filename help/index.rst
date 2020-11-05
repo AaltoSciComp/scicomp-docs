@@ -26,7 +26,7 @@ If you don't know something, it's OK, just explain the best you can
 and we'll go from there!  You can also chat with us to brainstorm
 about issues in general, which helps to figure out these questions.  A
 much more detailed guide is available from `Sigma2 documentation
-<https://documentation.sigma2.no/help/how_to_write_good_support_requests.html>`__.
+<https://documentation.sigma2.no/getting_help/how_to_write_good_support_requests.html>`__.
 
 We don't need a long story in the first message - we'll ask for more
 later.  Try to cover these points, and we are happy to get your
