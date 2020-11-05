@@ -124,8 +124,8 @@ scientist" salary + overheads.
 Principle: When working for a research project, the RSEs record those
 working hours in Halli to that project. The corresponding portion of the
 salary is then automatically charged to the project. Remaining hours are
-recorded to the Dean's unit (??? project?) and/or the
-guaranteeing departments; details about this will be agreed later.
+recorded to the Dean's unit RSE project, and once a year we split
+these costs and send them to each department.  [Updated 2020-11-05]
 
 (details to be filled in by Finance)
 
