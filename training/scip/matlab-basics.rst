@@ -16,7 +16,7 @@ Teaching will be interactive, “learning by doing”.
 
 **Course webpage**
 
-Check a detailed list of topics and other information at the `Matlab Basics course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/tree/master/AY20192020/MatlabBasics2019#matlab-basics-2019-ay-2019-2020>`__.
+Check a detailed list of topics and other information at the `Matlab Basics course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/-/tree/master/AY20202021%2FMatlabBasics2020#matlab-basics-2020-ay-2020-2021>`__.
 
 **Schedule:**
 
@@ -37,11 +37,11 @@ Check a detailed list of topics and other information at the `Matlab Basics cour
 
 **Course prerequisite requirements and other details:**
 
-*Participants are expected to bring their own laptops with Matlab installed!* For Aalto staff and students it is available at `download.aalto.fi <https://download.aalto.fi/>`__ (Linux/Mac/Windows versions). Check the `Matlab Basics course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/tree/master/AY20192020/MatlabBasics2019#matlab-basics-2019-ay-2019-2020>`__ for other pre-requirements.
+*Participants are expected to bring their own laptops with Matlab installed!* For Aalto staff and students it is available at `download.aalto.fi <https://download.aalto.fi/>`__ (Linux/Mac/Windows versions). Check the `Matlab Basics course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/-/tree/master/AY20202021%2FMatlabBasics2020#matlab-basics-2020-ay-2020-2021>`__ for other pre-requirements.
 
-**Course credits:** if you have an Aalto student number, you can obtain 1 ECTS credit for the course (12h attendance + homeworks).  Check the `Matlab Basics course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/tree/master/AY20192020/MatlabBasics2019#matlab-basics-2019-ay-2019-2020>`__ for a detailed list of requirements for the credit.
+**Course credits:** if you have an Aalto student number, you can obtain 1 ECTS credit for the course (12h attendance + homeworks).  Check the `Matlab Basics course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/-/tree/master/AY20202021%2FMatlabBasics2020#matlab-basics-2020-ay-2020-2021>`__ for a detailed list of requirements for the credit.
 
 **Additional course info at:** enrico.glerean -at- aalto.fi
 
-Additional material (e.g. data files and examples) are published at the  `Matlab Basics course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/tree/master/AY20192020/MatlabBasics2019#matlab-basics-2019-ay-2019-2020>`__
+Additional material (e.g. data files and examples) are published at the  `Matlab Basics course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/-/tree/master/AY20202021%2FMatlabBasics2020#matlab-basics-2020-ay-2020-2021>`__
 
