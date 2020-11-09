@@ -30,7 +30,7 @@ our survey and request to be contacted
 
 .. admonition:: Case study: improve workflow
 
-   A group all works on similar things, but independently since their
+   A group of researchers all works on similar things, but independently since their
    backgrounds have been in science, not software development.  They
    invite the RSE for a quick consultation to help them get set up
    with version control and show a more modular way to structure their
@@ -38,6 +38,16 @@ our survey and request to be contacted
    is the first step to more impact (and open science) from their
    work.
 
+.. admonition:: Case study: sustainability of finished projects
+
+   A project has ended and the main person who managed the code/analysis 
+   pipeline has left to continue their career somewhere else. You wish to 
+   replicate and extend the previous work, but your only starting point is 
+   a folder with hundreds of files and no clear instructions/documentation. 
+   Aalto RSEs can help you re-using and recycling previous code, 
+   document it, and extend it to make it more sustainable to be reused in
+   future projects.
+   
 
 What we do
 ----------
