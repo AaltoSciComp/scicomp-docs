@@ -33,7 +33,8 @@ our survey and request to be contacted
    A group all works on similar things, but independently since their
    backgrounds have been in science, not software development.  They
    invite the RSE for a quick consultation to help them get set up
-   with version control, so they can start collaborating more.  This
+   with version control and show a more modular way to structure their
+   code, so they can start some real collaborations, not just talking.  This
    is the first step to more impact (and open science) from their
    work.
 
