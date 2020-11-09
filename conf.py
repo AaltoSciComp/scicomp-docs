@@ -12,8 +12,10 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
+import importlib
 import sys
 import os
+on_rtd = os.environ.get('READTHEDOCS') == 'True'
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -33,20 +35,23 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.mathjax',
 ]
+# I try to make these docs buildable even without any extra dependencies
+# (nothing other than what you can find in Ubuntu).  So, add these to
+# extensions only if they are importable:
+optional_modules = [
+    'sphinx_rtd_theme_ext_color_contrast',
+    ]
+if on_rtd or 'GITSTAMP' in os.environ:
+    optional_modules.append('sphinx_gitstamp')
+for mod in optional_modules:
+    try:
+        importlib.import_module(mod)
+        extensions.append(mod)
+    except ImportError:
+        print('Module %s is not available'%mod)
+
 # Add timestamps from git
-try:
-    # https://github.com/jdillard/sphinx-gitstamp
-    import sphinx_gitstamp
-    extensions.append('sphinx_gitstamp')
-    gitstamp_fmt = "%d %b %Y"
-except:
-    print("sphinx_gitstamp is not installed, won't use git timestamps.")
-try:
-    # https://github.com/jdillard/sphinx-gitstamp
-    import sphinx_rtd_theme_ext_color_contrast
-    extensions.append('sphinx_rtd_theme_ext_color_contrast')
-except:
-    print("sphinx_rtd_theme_ext_color_contrast is not installed")
+gitstamp_fmt = "%d %b %Y"
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -130,7 +135,6 @@ todo_include_todos = True
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 
-on_rtd = os.environ.get('READTHEDOCS') == 'True'
 if on_rtd:
     html_theme = 'default'
     os.system('git fetch --unshallow')
