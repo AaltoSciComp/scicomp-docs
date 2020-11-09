@@ -7,6 +7,17 @@ the shares of funding).  If a research group would like :doc:`dedicated
 advanced services <researchers>` (see list above), they will directly
 fund this and replace your share.
 
+.. admonition:: Case study: Systematic improvements
+
+   Your department has a lot of people doing little bits of
+   programming everywhere, but everyone is doing things alone. What
+   if they could work together better? By joining the RSE program as
+   a unit, your staff can get up to X hours of free help to understand
+   tools to make their programming/data work better. After a few
+   years, you notice a dramatic cultural shift: there is more
+   collaboration and higher-quality work. Perhaps you already see a
+   change in your KPIs.
+
 Benefits to schools/departments:
 
 * Increase the quality of efficiency of your research.  Your

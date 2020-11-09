@@ -11,6 +11,31 @@ To request a service, contact Aalto Scientific Computing or `answer
 our survey and request to be contacted
 <https://forms.gle/wxnCpCGxdUfGGqfw6>`__ this form.
 
+.. admonition:: Case study: preparation for publication
+
+   A group is about to publish a paper about a method, but their code
+   is a bit messy. Without easy-to-use, (relatively) high-quality
+   code, they know their impact will be minimal.  They invest in a few
+   days of RSE work in order to help adopt best practices and release
+   their method as open source.
+
+.. admonition:: Case study: external grant
+
+   A PI has gotten a large external grant, and as part of that they
+   need some software development expertise.  The time frame is four
+   months, but they can't hire a top-quality person on an academic
+   salary for that short time.  They contact the Aalto RSE group
+   (either before the grant, or while it is running) and use our
+   speciality for four days per week.
+
+.. admonition:: Case study: improve workflow
+
+   A group all works on similar things, but independently since their
+   backgrounds have been in science, not software development.  They
+   invite the RSE for a quick consultation to help them get set up
+   with version control, so they can start collaborating more.  This
+   is the first step to more impact (and open science) from their
+   work.
 
 
 What we do
