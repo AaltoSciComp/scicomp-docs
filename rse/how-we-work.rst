@@ -60,6 +60,9 @@ job helping you.
   scientific background in advance, so
   that they can be browsed.  The more we know in advance, the better
   we can estimate the time required and how to best help you.
+* How do you manage your data?  To map things out, consider `this
+  one-page data management plan table
+  <https://drive.google.com/drive/folders/0BzlGN0F6ew2hc0hGVXVTaGZwQjQ>`__.
 * Final outputs, location, publication.
 * Time frame and schedule flexibility.
 
