@@ -99,6 +99,9 @@ hours correspond roughly to 1 ECTS. Students who wish to get a
 certificate should hand in the special assignment and participate to
 at least 3 of 4 lectures.
 
+Instructions on how to obtain the special assignment can be found at the
+Materials-section.
+
 **Preparation**
 
 Software installation is done via conda. Installation instructions are provided
@@ -189,7 +192,11 @@ Full course material can be found
 Exercises are provided via course's
 `GitHub repository <https://github.com/AaltoSciComp/data-analysis-workflows-course/>`_.
 
-
+Special assignment can be found
+`here <https://github.com/AaltoSciComp/data-analysis-workflows-course/blob/master/special-assignment/special_assignment.ipynb>`_.
+To download it, right-click click 
+`this link <https://raw.githubusercontent.com/AaltoSciComp/data-analysis-workflows-course/master/special-assignment/special_assignment.ipynb>`_ and save the link as a
+file to the course folder.
 
 News and notes
 --------------
