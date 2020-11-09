@@ -195,21 +195,22 @@ software: you'll be using software much longer than you write it.  We
 aim for simple, reliable strategies rather than the fanciest things
 *right now*.
 
-Overheads
-~~~~~~~~~
+..
+  Overheads
+  ~~~~~~~~~
 
-No person can work 100% of the time on a project, some time is needed
-for management and overheads.  Our RSEs as researchers focused on
-software quality, who have other responsibilities to deal with.  On
-the other hand, it is exactly these overheads that allow us to
-continue supporting you after the project is over.  These overheads
-also connect you to the broader Aalto Scientific Computing community.
+  No person can work 100% of the time on a project, some time is needed
+  for management and overheads.  Our RSEs as researchers focused on
+  software quality, who have other responsibilities to deal with.  On
+  the other hand, it is exactly these overheads that allow us to
+  continue supporting you after the project is over.  These overheads
+  also connect you to the broader Aalto Scientific Computing community.
 
-For long-term projects (percent of FTE over months) and medium-term
-projects (days), assume the time includes all of these overheads and
-efficiency is ~75%.
+  For long-term projects (percent of FTE over months) and medium-term
+  projects (days), assume the time includes all of these overheads and
+  efficiency is ~75%.
 
-For short-term projects scheduled by hours, overhead isn't expected.
+  For short-term projects scheduled by hours, overhead isn't expected.
 
 
 
@@ -218,9 +219,10 @@ After the project
 
 We don't want to drop support right after the project (that's why you
 work with us, not an external software developer).  Still, we have
-finite resources and can't do everything for everyone.  You can expect
-us to try to passively keep supporting you for about as long as your
-project lasted.
+finite resources and can't fund work on one project from another, so
+can't do everything for everyone.  You can expect
+us to try to passively keep supporting you for during the "daily
+garage" time as best we can.
 
 If your department or unit provides basic funding (see the
 :doc:`implementation plan <procedures/implementation>`), then long-term service
