@@ -24,11 +24,12 @@ To use it::
     $ ml anaconda3
     $ source activate neuroimaging
 
-A more up-to-date yet under development version of the environment can be activated with::
+A more up-to-date (November 2020) yet under development version of the environment can be activated with::
 
     $ ml purge
-    $ ml anaconda3
-    $ source activate neuroimaging2
+    $ ml anaconda
+    $ conda activate /share/apps2/anaconda/anaconda3/latest/envs/neuroimaging3
+
 
 To see the full list of packages what are installed in the environment, use::
 
