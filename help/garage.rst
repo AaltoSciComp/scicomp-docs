@@ -26,8 +26,10 @@ Notes:
 Online
 ======
 
-Triton, SciComp and CS
-----------------------
+.. ref: scicomp-garage
+
+Triton, SciComp, RSE, and CS
+----------------------------
 
 You can meet us online, every weekday, at 13:00, `online via zoom
 <https://aalto.zoom.us/j/65371910202>`__.  This garage is focused on
