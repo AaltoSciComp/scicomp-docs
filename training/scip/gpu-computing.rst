@@ -15,7 +15,7 @@ Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/sci
 - Tue 1.12, 12-15
 - Thu 3.12, 12-15
 - Tue 8.12, 12-15
-- Thu 10.12, 12-15
+- Mon 14.12, 12-15
 
 **Place:** Yet open, either fully online of in a hybrid way == lecture hall + online. TBA
 
