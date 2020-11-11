@@ -3,7 +3,8 @@ RSE community
 
 Do you like coding, research, and the academic environment, but want
 slightly more emphasis and community around the software side?  Join
-the Aalto RSE community even from your current position.  There are no
+the Aalto RSE community. You can join whatever you current position is,
+you don't need to be hired as a research software engineer. There are no
 requirements, just networking and development.  This is also a
 ":doc:`Triton </triton/index>` powerusers group".
 
