@@ -7,18 +7,8 @@ Oct 2020 / Data analysis workflows with R and Python
 
 .. admonition:: News
 
-   * If joining us, please look below and `at the lesson installation page
-     <https://aaltoscicomp.github.io/data-analysis-workflows-course/installation/>`__
-     for information on installing the lesson.
-
-   * See the Twitch video archive link under "Quick links" below.
-
-   * Day 1: We had some technical problems with the stream and
-     recording, but overall things went OK.  We hope to see you
-     Wednesday.  Send videos to your friends.
-
-   * **Week 2 has been postponed to Wednesday/Friday (not Monday
-     anymore)**, see updated schedule below.
+   * Homework is posted (if you are interested in a credit).  See
+     "Materials" below.
 
 .. admonition:: Quick links
 
@@ -196,7 +186,9 @@ Special assignment can be found
 `here <https://github.com/AaltoSciComp/data-analysis-workflows-course/blob/master/special-assignment/special_assignment.ipynb>`_.
 To download it, right-click click 
 `this link <https://raw.githubusercontent.com/AaltoSciComp/data-analysis-workflows-course/master/special-assignment/special_assignment.ipynb>`_ and save the link as a
-file to the course folder.
+file to the course folder.  The deadline is 4.december.  Please send
+results to the course email address listed above (scip -at- aalto.fi)
+and make sure the answers are clearly findable.
 
 News and notes
 --------------
@@ -217,3 +209,5 @@ Week 40:
 
 Homework
 --------
+
+See "materials" above.
