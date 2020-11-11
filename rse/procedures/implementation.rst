@@ -165,7 +165,7 @@ Risks and ramp-down
 - Risk: difficulty in reaching researchers and explaining what we do
 
   - Mitigation: Science-IT has a long list of researchers who are
-    using researchers inefficiently: they can be contacted
+    using research services inefficiently: they can be contacted
     directly to inform about this service. Helping them and
     producing best practice examples for the future can keep
     several people busy for years.
