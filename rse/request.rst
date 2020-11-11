@@ -22,7 +22,7 @@ Quick Consultations
 -------------------
 
 We recommend you come to our daily :ref:`garage sessions
-<general-garage>` for a short chat.
+<scicomp-garage>` for a short chat.
 
 
 Contact links
