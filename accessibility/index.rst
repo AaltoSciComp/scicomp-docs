@@ -1,5 +1,7 @@
-Accessibility
-=============
+Web accessibility
+=================
+
+This website is partially conformant with the `Web Content Accessibility Guidelines (WCAG) <https://www.w3.org/WAI/standards-guidelines/wcag/>`__ level AA.
 
 This is the accessibility statement for the scicomp.aalto.fi website. The accessibility requirements are based on the Act on the Provision of Digital Services (306/2019).
 
