@@ -22,7 +22,7 @@ Quick Consultations
 -------------------
 
 We recommend you come to our daily :ref:`garage sessions
-<general-garage>` to start a chat.
+<general-garage>` for a short chat.
 
 
 Contact links
@@ -30,8 +30,8 @@ Contact links
 
 Our email is scicomp at aalto.fi.
 
-You submit your initial consultation/request help via Gitlab issues.
-Use these direct links to select the template (for version.aalto.fi,
+You can request an initial consultation or submit a project request via Gitlab issues.
+Use these direct links to select the template (on the version.aalto.fi login page,
 click the "sign in with HAKA" button):
 
 * `LINK: Request a
@@ -40,8 +40,8 @@ click the "sign in with HAKA" button):
   a more involved project that spans days, weeks, or more.
 * You can make the issue "confidential" so that others won't see (but
   it may be shared internal to Aalto for prioritization and
-  reporting - don't submit confidential data), but we suggest it is
-  not confidential so that we can all learn from each other.
+  reporting - don't submit confidential data), but we suggest that you 
+  don't make it confidential so that we can all learn from each other.
 * You can come to our :doc:`daily garage </help/garage>` or contact us
   by email at scicomp at aalto.fi.
 
