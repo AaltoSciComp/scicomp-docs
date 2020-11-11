@@ -26,7 +26,7 @@ Notes:
 Online
 ======
 
-.. ref: scicomp-garage
+.. _scicomp-garage:
 
 Triton, SciComp, RSE, and CS
 ----------------------------
