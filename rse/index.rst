@@ -5,7 +5,7 @@ Our `Research Software Engineer <rse-history_>`_ (RSE) service provides you with
 dedicated specialist to assist you
 with computing, software, and data tasks in your research, for a longer
 period than other staff can.  Funding either comes from departments (for
-basic service) or the project itself.
+basic service) or from a research project.
 
 .. _rse-history: https://www.software.ac.uk/blog/2016-08-17-not-so-brief-history-research-software-engineers-0
 
