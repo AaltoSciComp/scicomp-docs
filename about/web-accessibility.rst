@@ -5,6 +5,12 @@ This website is partially conformant with the `Web Content Accessibility Guideli
 
 This is the accessibility statement for the scicomp.aalto.fi website. The accessibility requirements are based on the Act on the Provision of Digital Services (306/2019).
 
+But as we know from other Aalto web sites, web accessibility doesn't
+mean it's actually useful for any particular purpose.  We strive to
+make this site *actually* usable by everyone, and we :doc:`welcome any
+contributions to help us with that <README>`.
+
+
 Accessibility status of the website
 -----------------------------------
 

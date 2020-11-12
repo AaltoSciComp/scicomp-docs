@@ -5,7 +5,10 @@ About this site
 These docs originally came from the Triton User Guide, but now serves
 as a general Aalto scientific computing guide.  The intention is a
 good central resources for researchers, kept up to date by the whole
-community.
+community.  We can't do this only by ourselves - we invite everyone to
+help us.  Even pointing out unclear parts sets us on the right path.
+You can and should join us.
+
 
 Contributing
 ~~~~~~~~~~~~
