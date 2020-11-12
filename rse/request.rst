@@ -21,8 +21,8 @@ issue tracker links below, or let us know by email.
 Quick Consultations
 -------------------
 
-We recommend you come to our daily :doc:`garage sessions
-</help/garage>` for a short chat.
+We recommend you come to our daily :ref:`garage sessions
+<scicomp-garage>` for a short chat.
 
 
 Contact links

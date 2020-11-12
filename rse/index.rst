@@ -1,19 +1,14 @@
 Research Software Engineers
 ===========================
 
-In 2020, Aalto Scientific Computing (Science-IT) is beginning a Research Software/Data
-Engineer (RSE) program to improve the quality of our scientific
-computing and data science.  "`Research software engineer <rse-history_>`_" is a recent
-term for a longstanding role: someone that works at the interface of
-research and software development, but not fully either.  We think
-this applies equally to data.
+Our `Research Software Engineer <rse-history_>`_ (RSE) service provides you with a
+dedicated specialist to assist you
+with computing, software, and data tasks in your research, for a longer
+period than other staff can.  Funding either comes from departments (for
+basic service) or the project itself.
 
 .. _rse-history: https://www.software.ac.uk/blog/2016-08-17-not-so-brief-history-research-software-engineers-0
 
-The RSE service provides you with a dedicated specialist to assist you
-with computing, software, and data tasks in your research, for a longer
-period than basic staff.  Funding either comes from departments (for
-basic service) or the project itself.
 
 As a **researcher**, the RSE service will allow you to focus on what
 you want, the science, increase your impact by making your
@@ -25,37 +20,30 @@ It's easy to request help, anywhere from an personal consultation, to
 group seminar and getting you on the right path, to work on a
 longer-term project.  Read more below.
 
-.. note::
-
-   If you are in Aalto, please take `our survey
-   <https://forms.gle/wxnCpCGxdUfGGqfw6>`_ to express interest
-   (necessary to secure funding) and/or request a consultation.
-
 .. admonition:: Contact
 
-   Contact us at our :doc:`daily garage </help/garage>` or by email at
-   scicomp at aalto.fi.  See :ref:`requesting RSE <request-rse>` for more.
+   For a quick chat, come to our :ref:`daily garage <scicomp-garage>`,
+   every day online at 13:00 (Tuesdays are RSE focus days).  Or
+   contact us by email at scicomp at aalto.fi.  See
+   :ref:`requesting RSE <request-rse>` for more.
 
-**This program is currently being developed, and information here may
-be updated.**
 
 
-About the program
------------------
+Using our services
+------------------
 
 .. toctree::
    :maxdepth: 1
 
    For researchers, groups, and group leaders <researchers>
    For departments and schools <units>
-   RSE community <community>
-   Become a RSE <become-a-rse>
+
 
 
 .. _request-rse:
 
-For those using our services
-----------------------------
+How to get started
+------------------
 
 **To get started,** first browse :doc:`how we work <how-we-work>` and
 then :doc:`how to make a request <request>`.  When in doubt, come to
@@ -68,14 +56,33 @@ then :doc:`how to make a request <request>`.  When in doubt, come to
    request
 
 
+
+About research software engineers
+---------------------------------
+
+.. toctree::
+   :maxdepth: 1
+
+   RSE community <community>
+   Become a RSE <become-a-rse>
+
+
+
+Checklists
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   checklists/python
+
+
+
 Internal documents
 ------------------
 
-.. warning::
-
-   The RSE program is just starting, and these present an *idea* about
-   the future, not requirement for how things must be.  Suggestions
-   are very welcome.
+We believe in openness, so make our procedures open.  They are subject
+to improvement at any time.
 
 .. toctree::
    :maxdepth: 1
@@ -86,14 +93,6 @@ Internal documents
    procedures/units-info
    procedures/advisory-board
 
-
-Checklists
-----------
-
-.. toctree::
-   :maxdepth: 1
-
-   checklists/python
 
 
 See also
