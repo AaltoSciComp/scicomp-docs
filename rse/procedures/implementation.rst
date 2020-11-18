@@ -131,6 +131,8 @@ these costs and send them to each department.  [Updated 2020-11-05]
 
 
 
+.. _rse-implementation-kpis:
+
 Measurement and KPIs
 --------------------
 

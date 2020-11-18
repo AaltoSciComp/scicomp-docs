@@ -46,3 +46,13 @@ Next meeting
 - What is the threshold for your department to "pay" for service.
 - How can we find customers?
 - How much do we focus on cost recovery, and how much on basic work?
+- What are our KPIs?  See :ref:`rse-implementation-kpis` and
+  :ref:`rse-how-we-work-kpis`.
+
+  - Cost recovery from projects
+  - N ongoing projects and N completed projects
+  - N publications supported.
+  - N open outputs produced (non-publication: datasets, software,
+    etc.)
+  - Survey (of PIs) of benefits after.
+  - Estimated time saved.
