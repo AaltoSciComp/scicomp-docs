@@ -19,6 +19,9 @@ and their funding replaces part of their unit's share.
    collaboration and higher-quality work. Perhaps you already see a
    change in your KPIs.
 
+Benefits
+--------
+
 Benefits to schools/departments:
 
 * Increase the quality of efficiency of your research.  Your
@@ -36,10 +39,15 @@ Benefits to groups:
 * Your RSEs get joint training and share competence within our RSE
   group.
 
-The RSE program is a part of Aalto Scientific Computing (Science-IT),
-so is integrated to our training programs and infrastructure
-maintenance.  You don't just get a service, but a connection to a
+How to join
+-----------
+
+The RSE program is a part of Aalto Science-IT (Aalto Scientific Computing),
+so is integrated to our computing and data management infrastructure
+and training programs.  You don't just get a service, but a connection to a
 community of experts.
+
+
 
 If you would like to join, check out the :doc:`implementation plan
 <procedures/implementation>` and/or contact us at scicomp at aalto.fi
