@@ -23,7 +23,7 @@ Check a detailed list of topics and other information at the `Matlab Basics cour
 - Tue 10.11, 12:00-15:00
 - Wed 11.11, 12:00-15:00
 - Tue 17.11, 12:00-15:00
-- Wed 18.11, 12:00-15:00
+- Thu 19.11, 12:00-15:00 (note the date change as we agreed)
 
 **Place:** Zoom link to be posted to the registered users
 
