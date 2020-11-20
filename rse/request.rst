@@ -25,11 +25,10 @@ We recommend you come to our daily :ref:`garage sessions
 <scicomp-garage>` for a short chat.
 
 
-Contact links
--------------
+Contact
+-------
 
-..
-  Our email is scicomp at aalto.fi.
+Our email is scicomp at aalto.fi.
 
 ..
   You can request an initial consultation or submit a project request via Gitlab issues.
