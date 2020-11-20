@@ -230,6 +230,7 @@ is included, and this has no limits.  However, this is shared among
 everyone in your unit, and focused on strategically support that helps
 many people.
 
+.. _rse-how-we-work-kpis:
 
 Tracking scientific benefits
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
