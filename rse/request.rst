@@ -28,11 +28,13 @@ We recommend you come to our daily :ref:`garage sessions
 Contact links
 -------------
 
-Our email is scicomp at aalto.fi.
+..
+  Our email is scicomp at aalto.fi.
 
-You can request an initial consultation or submit a project request via Gitlab issues.
-Use these direct links to select the template (on the version.aalto.fi login page,
-click the "sign in with HAKA" button):
+..
+  You can request an initial consultation or submit a project request via Gitlab issues.
+  Use these direct links to select the template (on the version.aalto.fi login page,
+  click the "sign in with HAKA" button):
 
 ..
   * `LINK: Request a
@@ -47,9 +49,8 @@ click the "sign in with HAKA" button):
 You can request an initial consultation or submit a project request
 (really, it's not that different, since everything is read by a human)
 
-* Send an email to scicomp at aalto.fi.
-* You can come to our :doc:`daily garage </help/garage>` or contact us
-  by email at scicomp at aalto.fi.
+* You can send an email to scicomp at aalto.fi.
+* You can come to our :doc:`daily garage </help/garage>`.
 * At the bottom of this page are some email templates you can copy to
   make sure you provide the main information we need.
 
