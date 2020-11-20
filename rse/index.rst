@@ -54,6 +54,7 @@ then :doc:`how to make a request <request>`.  When in doubt, come to
 
    how-we-work
    request
+   group-leaders
 
 
 
