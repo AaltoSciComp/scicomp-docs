@@ -44,7 +44,7 @@ Using our services doesn't affect your intellectual property right any
 more than another employee working on the project will.  This is
 service-for-pay, so you get all rights.  However, our RSEs expect to
 be acknowledged according to good scientific practice (see
-:doc:`../how-we-work`).
+:doc:`how-we-work`).
 
 
 
@@ -52,7 +52,7 @@ Funding
 -------
 
 If the project lasts a short time (a few days or less), and you are in
-one of the :doc:`sponsoring units <units-info>`, then the service may
+one of the :doc:`sponsoring units <procedures/units-info>`, then the service may
 be *free* (depending on your unit's policies).
 
 Otherwise, you will be expected to fund the RSEs out of your own
