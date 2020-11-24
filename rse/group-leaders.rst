@@ -64,3 +64,12 @@ researcher funding, so it is compatible with almost all pre-existing grants.
 We will contact you and your department's controller to set the
 budget and get things set up.  (If you are reading this, you are one
 of the pilot cases so we'll figure it out together.)
+
+
+
+New grants
+----------
+
+If you are applying for a new grant, you can directly write Research
+Software Engineering services into your grant (or some similar name
+that sounds good to your reviewers).  See :doc:`/about/for-proposals`.
