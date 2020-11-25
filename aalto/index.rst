@@ -28,3 +28,4 @@ for Research page
    matlab_standalone
    overleaf
    coderefinery-setup
+   zulip
