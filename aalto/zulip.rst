@@ -15,6 +15,10 @@ In order to request a chat instance, please contact `CS-IT <https://wiki.aalto.f
 
 .. note::
 
+    You can test out Zulip at `scicomp.zulip.cs.aalto.fi <https://scicomp.zulip.cs.aalto.fi/>`_. Use the Aalto login. This chat is for testing only.
+
+.. note::
+
     There are also `Rocket.Chat <https://rocket.chat/>`_ instances available, provided by ITS. Rocket.Chat instances can be requested from `Aalto IT <https://it.aalto.fi/>`_
 
 Configuring your organization
