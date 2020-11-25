@@ -24,7 +24,7 @@ Below are listed the most important settings found under *Manage organization* i
 
 .. note::
 
-    Settings that are not mentioned here, you can configure to your liking. However you should still exercise care.
+    Settings that are not mentioned here, you can configure to your liking. However you should still exercise care, since you are responsible for the service and safety of your user's data.  If you would like advice, please ask us.
 
 
 **Organization settings / Video chat provider**
@@ -36,7 +36,7 @@ Below are listed the most important settings found under *Manage organization* i
 
 **Organization permisisons / Invitation settings**
 
-We cannot allow people to register freely using random emails, therefore:
+Do not allow registering with just an email without invitation. Doing so might cause bots and random people to join in your chat. If the chat needs to include external users, make it invite only.
 
 * Are invitations required for joining in the organization 
   
@@ -70,10 +70,10 @@ We cannot allow people to register freely using random emails, therefore:
   * This allows users to register using an email address 
   * If you enable this, make the chat ``invitation only`` as described in 'Invitation settings'
   * We cannot allow random people or bots to register freely  
+  * Unfortunately, there is no option for "Anyone with an Aalto account can register without invitation, but you can invite others with an email address."
 
 
 **Users**
 
 * You can manage users here. 
 * Please be careful with who you assign admins/owners. These roles should be only given to course staff 
-
