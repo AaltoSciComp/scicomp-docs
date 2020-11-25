@@ -5,7 +5,7 @@ Zulip
 Introduction
 ------------
 
-CS-IT can host `Zulip <https://zulipchat.com/>`_ chat instances e.g. for your courses. These chat instances are hosted at ``<chat-name>.zulip.cs.aalto.fi``. Login to the chats uses Aalto credentials (with possible support for extenal users later on).
+CS-IT can host `Zulip <https://zulipchat.com/>`_ chat instances e.g. for your courses. These chat instances are hosted at ``<chat-name>.zulip.cs.aalto.fi``. Login to the chats works with Aalto account. Email registration for external users is also possible via invitations.
 
 In order to request a chat instance, please contact `CS-IT <https://wiki.aalto.fi/display/CSdept/IT/>`_.
 
@@ -15,7 +15,7 @@ In order to request a chat instance, please contact `CS-IT <https://wiki.aalto.f
 
 .. note::
 
-    You can test out Zulip at `scicomp.zulip.cs.aalto.fi <https://scicomp.zulip.cs.aalto.fi/>`_. Use the Aalto login. This chat is for testing only.
+    You can test out Zulip at `testrealm.zulip.cs.aalto.fi <https://testrealm.zulip.cs.aalto.fi/>`_. Use the Aalto login. This chat is for testing only.
 
 .. note::
 
