@@ -2,12 +2,14 @@
 News
 ====
 
-*19/11/2020* Our course on `Matlab Basics </training/scip/matlab-basics/>`__ finishes today. Videos from the course will be uploaded to the `Aalto Scientific Computing YouTube channel <https://www.youtube.com/channel/UCNErdFO1_GzSkDx0bLKWXOA/>`__. See `the course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/-/tree/master/AY20202021/MatlabBasics2020#matlab-basics-2020-ay-2020-2021>`__ for more info. Today at 21:30 Helsinki time, join us for another live episode of  Research Software Hour on https://twitch.tv/RSHour Tonight: containers for research software!
+*26/11/2020* Today at 21:30 Helsinki time, join us for another live episode of  Research Software Hour on https://twitch.tv/RSHour Tonight: code debugging! Past episodes at `Research Software Hour <https://researchsoftwarehour.github.io/>`__ .
 
 Check `other hands-on trainings coming in November </training/>`__. Join our `daily garage </help/garage/>`__ if you have issues to discuss related to computing or data management. If you are into research software, join our `Research Software Hour <https://researchsoftwarehour.github.io/>`__ Twitch show, every thursday at 21:30 (Helsinki time). 
 
 News archive
 ~~~~~~~~~~~~
+
+*19/11/2020* Our course on `Matlab Basics </training/scip/matlab-basics/>`__ finishes today. Videos from the course will be uploaded to the `Aalto Scientific Computing YouTube channel <https://www.youtube.com/channel/UCNErdFO1_GzSkDx0bLKWXOA/>`__. See `the course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/-/tree/master/AY20202021/MatlabBasics2020#matlab-basics-2020-ay-2020-2021>`__ for more info. 
 
 *10/11/2020* Our course on `Matlab Basics </training/scip/matlab-basics/>`__ starts today. See `the course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/-/tree/master/AY20202021/MatlabBasics2020#matlab-basics-2020-ay-2020-2021>`__ for more info.
 
