@@ -50,4 +50,4 @@ community of experts.
 
 
 If you would like to join, check out the :doc:`implementation plan
-<procedures/implementation>` and/or contact us at scicomp at aalto.fi
+<procedures/implementation>` and/or contact us at rse-group at aalto.fi

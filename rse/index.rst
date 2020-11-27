@@ -24,7 +24,8 @@ longer-term project.  Read more below.
 
    For a quick chat, come to our :ref:`daily garage <scicomp-garage>`,
    every day online at 13:00 (Tuesdays are RSE focus days).  Or
-   contact us by email at scicomp at aalto.fi.  See
+   contact us by email at rse-group at aalto.fi, or fill out our
+   `request form <https://selfservice.esupport.aalto.fi/ssc/app#/order/2026/>`__.  See
    :ref:`requesting RSE <request-rse>` for more.
 
 
