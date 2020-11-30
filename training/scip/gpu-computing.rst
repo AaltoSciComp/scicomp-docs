@@ -17,7 +17,7 @@ Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/sci
 - Tue 8.12, 12-15
 - Mon 14.12, 12-15
 
-**Place:** Zoom link TBA to the course registrants
+**Place:** Zoom link TBA to the course registrants by 11:00 on Tue 1.2
 
 **Cost:** Free of charge for FGCI consortium members and Aalto employees, students.
 
