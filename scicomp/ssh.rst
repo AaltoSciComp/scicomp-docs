@@ -154,8 +154,10 @@ This is placed in ``~/.ssh/config``::
         Hostname triton.aalto.fi
 	ProxyJump kosh
 
-Note that the Triton rule uses the name ``kosh`` which is defined in
-the first part of the file.
+Now, you can just do ``ssh triton`` or ``rsync
+triton:/m/cs/scratch/some_file .`` directly, by using the ``triton``
+alias.  Note that the Triton rule uses the name ``kosh`` which is
+defined in the first part of the file.
 
 ..
   The purpose of this document is to describe how to use ssh such that
