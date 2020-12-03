@@ -7,11 +7,15 @@ Introduction
 
 CS-IT can host `Zulip <https://zulipchat.com/>`_ chat instances e.g. for your courses. These chat instances are hosted at ``<chat-name>.zulip.cs.aalto.fi``. Login to the chats works with Aalto account. Email registration for external users is also possible via invitations.
 
-In order to request a chat instance, please contact `CS-IT <https://wiki.aalto.fi/display/CSdept/IT/>`_.
+The chat instances are meant for informal discussion. The chat should not be used for grading and it should not be mandatory for students. Internal or confidential matters should not be discussed on the platform. 
 
 .. note::
 
-    This service is still in beta. If you encounter issues, report them to `CS-IT <https://wiki.aalto.fi/display/CSdept/IT/>`_ or on #zulip-support at `scicomp.zulip.cs.aalto.fi <https://scicomp.zulip.cs.aalto.fi/>`_
+    We are taking in chat instance requests for the 2021 spring semester. In general, the chat instances will be removed after the semester.
+
+.. note::
+
+    This service is still in beta. You might encounter some issues. If you encounter issues, report them to `CS-IT <https://wiki.aalto.fi/display/CSdept/IT/>`_ or on #zulip-support at `scicomp.zulip.cs.aalto.fi <https://scicomp.zulip.cs.aalto.fi/>`_
 
 .. note::
 
@@ -20,6 +24,8 @@ In order to request a chat instance, please contact `CS-IT <https://wiki.aalto.f
 .. note::
 
     There are also `Rocket.Chat <https://rocket.chat/>`_ instances available, provided by ITS. Rocket.Chat instances can be requested from `Aalto IT <https://it.aalto.fi/>`_
+
+In order to request a chat instance, please contact `CS-IT <https://wiki.aalto.fi/display/CSdept/IT/>`_
 
 Configuring your organization
 ------------------------------------
