@@ -4,14 +4,15 @@ Zulip
 
 Introduction
 ------------
+Zulip is an online discussion tool with latex support. It has been used by some Aalto teachers as an external service on individual courses. For Spring 2021, Zulip is provided by Aalto as a pilot solution for all School of Science departments' course needs. The pilot period covers teaching periods 3-5, so summer courses are not included. The pilot refers to a) a fixed-term project with clear lifecycle needs, like in courses which start and end at certain times. After the course has ended, the Zulip instance can be deleted. b) a transitional period between current state and possible production use or change to other solutions, and c) a basic solution with without all the fancy features or user interface. During the pilot users are expected to provide feedback, which will effect on the decision-making for future solutions, and the development of usability.
 
-CS-IT can host `Zulip <https://zulipchat.com/>`_ chat instances e.g. for your courses. These chat instances are hosted at ``<chat-name>.zulip.cs.aalto.fi``. Login to the chats works with Aalto account. Email registration for external users is also possible via invitations.
+CS-IT hosts `Zulip <https://zulipchat.com/>`_ the chat instances for you. These chat instances are hosted at ``<chat-name>.zulip.cs.aalto.fi``. Login to the chats is available with Aalto accounts. Email registration for external users is also possible via invitations.
 
 The chat instances are meant for informal discussion. The chat should not be used for grading and it should not be mandatory for students. Internal or confidential matters should not be discussed on the platform. 
 
 .. note::
 
-    We are taking in chat instance requests for the 2021 spring semester. In general, the chat instances will be removed after the semester.
+    We are taking in chat instance requests for the 2021 spring teaching periods 3-5 only. In general, the chat instances will be removed after the academic year has ended.
 
 .. note::
 
@@ -20,12 +21,6 @@ The chat instances are meant for informal discussion. The chat should not be use
 .. note::
 
     You can test out Zulip at `testrealm.zulip.cs.aalto.fi <https://testrealm.zulip.cs.aalto.fi/>`_. Use the Aalto login. This chat is for testing only.
-
-.. note::
-
-    There are also `Rocket.Chat <https://rocket.chat/>`_ instances available, provided by ITS. Rocket.Chat instances can be requested from `Aalto IT <https://it.aalto.fi/>`_
-
-In order to request a chat instance, please contact `CS-IT <https://wiki.aalto.fi/display/CSdept/IT/>`_
 
 Configuring your organization
 ------------------------------------
