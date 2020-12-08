@@ -8,7 +8,7 @@ Zulip is an online discussion tool with latex support. It has been used by some 
 
 CS-IT hosts `Zulip <https://zulipchat.com/>`_ the chat instances for you. These chat instances are hosted at ``<chat-name>.zulip.cs.aalto.fi``. Login to the chats is available with Aalto accounts. Email registration for external users is also possible via invitations.
 
-The chat instances are meant for informal discussion. The chat should not be used for grading and it should not be mandatory for students. Internal or confidential matters should not be discussed on the platform. 
+Internal or confidential matters should not be discussed on the platform. 
 
 .. note::
 
