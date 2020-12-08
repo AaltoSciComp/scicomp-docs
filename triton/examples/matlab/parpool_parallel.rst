@@ -1,4 +1,4 @@
-Parallel Natlab with parpool
+Parallel Matlab with parpool
 ----------------------------
 
 Often one uses Matlab's parallel pool for parallelization. When
