@@ -2,12 +2,14 @@
 News
 ====
 
-*02/12/2020* This week Research Software Hour on https://twitch.tv/RSHour will happen during the day, straight from the https://nordic-rse.org/ meeting! 13:30 Helsinki time: All you wanted to know about the Rust programming language! Past episodes at `Research Software Hour <https://researchsoftwarehour.github.io/>`__ .
+*10/12/2020* We are updating and consolidating our tutorials and guidelines on https://scicomp.aalto.fi website. There might be temporary broken links, please let us know if you spot anything that does not look as it should. Please note that the next Research Software Hour on https://twitch.tv/RSHour will be on Thursday 17/12 at 21:30 Helsinki time. A special episode about `Advent of Code 2020 <https://adventofcode.com/>`__. Past episodes at `Research Software Hour <https://researchsoftwarehour.github.io/>`__ .
 
 Check `other hands-on trainings coming in November </training/>`__. Join our `daily garage </help/garage/>`__ if you have issues to discuss related to computing or data management. If you are into research software, join our `Research Software Hour <https://researchsoftwarehour.github.io/>`__ Twitch show, *usually* every thursday at 21:30 (Helsinki time)... but not on first week of December. 
 
 News archive
 ~~~~~~~~~~~~
+
+*02/12/2020* This week Research Software Hour on https://twitch.tv/RSHour will happen during the day, straight from the https://nordic-rse.org/ meeting! 13:30 Helsinki time: All you wanted to know about the Rust programming language! Past episodes at `Research Software Hour <https://researchsoftwarehour.github.io/>`__ .
 
 *26/11/2020* Today at 21:30 Helsinki time, join us for another live episode of  Research Software Hour on https://twitch.tv/RSHour Tonight: code debugging! Past episodes at `Research Software Hour <https://researchsoftwarehour.github.io/>`__ .
 
