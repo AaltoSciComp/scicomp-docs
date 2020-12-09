@@ -156,7 +156,8 @@ a batch script is as follows.
 
    #!/bin/bash
    #SBATCH --job-name=pi_estimation
-   #SBATCH --output=pi.out.log --open-mode=append
+   #SBATCH --output=pi.out.log
+   #SBATCH --open-mode=append
    #SBATCH --array=0-4
    #SBATCH --time=01:00:00
    #SBATCH --mem=500
@@ -213,7 +214,8 @@ Also note that the line numbers start at 1, not 0.
 
     #!/bin/bash
     #SBATCH -n 1
-    #SBATCH --output=pi.2.out.log --open-mode=append
+    #SBATCH --output=pi.2.out.log
+    #SBATCH --open-mode=append
     #SBATCH --array=1-4
     #SBATCH --time=01:00:00
     #SBATCH --mem=500
@@ -249,7 +251,8 @@ definitely be worth your while.
 
    #!/bin/bash
    #SBATCH -n 1
-   #SBATCH --output=pi.3.out.log --open-mode=append
+   #SBATCH --output=pi.3.out.log
+   #SBATCH --open-mode=append
    #SBATCH --array=1-5
    #SBATCH --time=01:00:00
    #SBATCH --mem=500

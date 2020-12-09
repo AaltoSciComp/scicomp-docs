@@ -72,7 +72,8 @@ terminated (either because of ``scancel`` or due to time limit).
 
     #!/bin/bash
 
-    #SBATCH --time=12:00:00 --mem-per-cpu=2500                  # time and memory requirements
+    #SBATCH --time=12:00:00
+    #SBATCH --mem-per-cpu=2500                                    # time and memory requirements
 
     mkdir /tmp/$SLURM_JOB_ID                                      # get a directory where you will send all output from your program
     cd /tmp/$SLURM_JOB_ID
@@ -114,7 +115,8 @@ A sample code is below:
 
     #!/bin/bash
 
-    #SBATCH --time=12:00:00 --mem-per-cpu=2000      # time and memory requirements
+    #SBATCH --time=12:00:00
+    #SBATCH --mem-per-cpu=2000                        # time and memory requirements
     mkdir /tmp/$SLURM_JOB_ID                          # get a directory where you will put your data
     cp $WRKDIR/input.tar /tmp/$SLURM_JOB_ID           # copy tarred input files
     cd /tmp/$SLURM_JOB_ID
@@ -122,7 +124,7 @@ A sample code is below:
     trap "rm -rf /tmp/$SLURM_JOB_ID; exit" TERM EXIT  # set the trap: when killed or exits abnormally you clean up your stuff
 
     tar xf input.tar                                  # untar the files
-    srun  input/*                            # do the analysis, or what ever else
+    srun  input/*                                     # do the analysis, or what ever else
     tar cf output.tar output/*                        # tar output
     mv output.tar $WRKDIR/SOMEDIR                     # copy results back
 

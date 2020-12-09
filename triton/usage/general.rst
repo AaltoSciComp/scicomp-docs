@@ -346,7 +346,8 @@ Parallel job
 ::
 
     #!/bin/bash
-    #SBATCH --time=01:00 --mem-per-cpu=500
+    #SBATCH --time=00:01:00
+    #SBATCH --mem-per-cpu=500
     #SBATCH --exclusive
     #SBATCH --constraint=[hsw|ivb|wsm]
     #SBATCH -N 4
