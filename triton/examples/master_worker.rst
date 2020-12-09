@@ -18,7 +18,7 @@ allocation has ended.
 ``hostlist-test.slrm``::
 
     #!/bin/bash
-    #SBATCH -t 00:10:00
+    #SBATCH --time=00:10:00
     #SBATCH --nodes=3
     #SBATCH --ntasks=5
     #SBATCH -o hostlist-test.out

@@ -5,7 +5,7 @@ Python OpenMP example
 ``parallel_Python.slrm``::
 
     #!/bin/bash
-    #SBATCH -t 00:10:00
+    #SBATCH --time=00:10:00
     #SBATCH --cpus-per-task=4
     #SBATCH --mem=2G
     #SBATCH -o parallel_Python.out
