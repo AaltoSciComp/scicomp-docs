@@ -24,10 +24,8 @@ job is
 Batch script for Julia job::
 
     #!/bin/sh
-    #SBATCH -p play
-    #SBATCH -n 1
     #SBATCH --time=00:01:00
-    #SBATCH --mem-per-cpu=1G
+    #SBATCH --mem=1G
     module load julia
     srun julia juliascript.jl
 

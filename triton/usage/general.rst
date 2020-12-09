@@ -106,9 +106,8 @@ Short batch example
 ::
 
     #!/bin/bash
-    #SBATCH -p short
     #SBATCH --time=04:00:00      # 4 hours
-    #SBATCH --mem-per-cpu=1000   # 1G of memory
+    #SBATCH --mem=1000   # 1G of memory
 
     cd $WRKDIR/mydata/
     srun myprog params

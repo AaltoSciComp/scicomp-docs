@@ -1,9 +1,8 @@
 #!/bin/bash -l
-#SBATCH -p short
-#SBATCH -t 00:05:00
-#SBATCH -n 1
+#SBATCH --time=00:05:00
+#SBATCH --ntasks=1
 #SBATCH --mem=100
-#SBATCH -o r_serial.out
+#SBATCH --output=r_serial.out
 
 module load r
 n=3

@@ -1,5 +1,4 @@
 #!/bin/bash -l
-#SBATCH -p short
 #SBATCH -t 00:15:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1

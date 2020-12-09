@@ -32,12 +32,12 @@ batch script
 
 ::
 
-   #!/bin/bash -l
-   #SBATCH -n 8
-   #SBATCH -t 0-6
-   #SBATCH --mem-per-cpu=1500
-   ml vasp/5.4.4
-   mpirun vasp_std
+    #!/bin/bash -l
+    #SBATCH --ntasks=8
+    #SBATCH --time=06:00:00
+    #SBATCH --mem-per-cpu=1500
+    ml vasp/5.4.4
+    mpirun vasp_std
 
 Note that contrary to our usual instructions where we strongly
 recommend to use ``srun`` to launch MPI applications, here we must use
@@ -68,9 +68,8 @@ Example batch script
 ::
 
     #!/bin/bash -l
-    #SBATCH -n 8
-    #SBATCH -p batch
-    #SBATCH -t 0-6
+    #SBATCH --ntasks=8
+    #SBATCH --time=06:00:00
     #SBATCH --mem-per-cpu=1500
     module load vasp/5.4.1-gmvolf-triton-2016a
     srun vasp_std
@@ -105,13 +104,11 @@ contact triton support. Example job script below:
 
 ::
 
-    #!/bin/sh
-    #SBATCH -p batch
-    #SBATCH -N 1
-    #SBATCH -t 0-5 # 5 hours
-    #SBATCH -n 12
+    #!/bin/bash -l
+    #SBATCH --nodes=1
+    #SBATCH --ntasks=12
+    #SBATCH --time=06:00:00
     #SBATCH --mem-per-cpu=2500
-    #SBATCH --constraint=[xeonib|xeon|opteron]
 
     module load vasp/5.3.5
 
@@ -136,13 +133,11 @@ be used, as the Opteron queue is often shorter. An example script below:
 
 ::
 
-    #!/bin/sh
-    #SBATCH -p batch
-    #SBATCH -N 1
-    #SBATCH -t 0-5 # 5 hours
-    #SBATCH -n 12
+    #!/bin/bash -l
+    #SBATCH --nodes=1
+    #SBATCH --ntasks=12
+    #SBATCH --time=06:00:00
     #SBATCH --mem-per-cpu=2500
-    #SBATCH --constraint=[xeon|opteron]
 
     module load vasp/5.3.3
 
@@ -158,13 +153,11 @@ newer above!):
 
 ::
 
-    #!/bin/sh
-    #SBATCH -p batch
-    #SBATCH -N 1
-    #SBATCH -t 1-0 # 1 day
-    #SBATCH -n 12
+    #!/bin/bash -l
+    #SBATCH --nodes=1
+    #SBATCH --ntasks=12
+    #SBATCH --time=1-00:00:00
     #SBATCH --mem-per-cpu=3500
-    #SBATCH --constraint=xeon
 
     module load vasp/5.3.2
 
