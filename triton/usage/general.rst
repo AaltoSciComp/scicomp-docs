@@ -320,7 +320,7 @@ Hybrid MPI/OpenMP example using mvapich2
     #SBATCH --exclusive
     #SBATCH --constraint=[opt|wsm]
     #SBATCH -n 8
-    #SBATCH -c 6
+    #SBATCH --cpus-per-task=6
     #SBATCH -N 4
      
     module load gmvolf/triton-2016a
