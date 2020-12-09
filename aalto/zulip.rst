@@ -12,6 +12,8 @@ Internal or confidential matters should not be discussed on the platform.
 
 .. note::
 
+    Request for the chat instance at https://webropol.com/s/zuliprequest
+    
     We are taking in chat instance requests for the 2021 spring teaching periods 3-5 only. In general, the chat instances will be removed after the academic year has ended.
 
 .. note::
