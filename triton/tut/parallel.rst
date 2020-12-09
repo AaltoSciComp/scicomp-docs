@@ -228,10 +228,10 @@ Running an MPI code in the batch mode:
 .. code-block:: slurm
 
   #!/bin/bash
-  #SBATCH -n 16                # 16 processes
-  #SBATCH --constraint=avx     # run on nodes with AVX instructions
   #SBATCH --time=04:00:00      # takes 4 hours all together
   #SBATCH --mem-per-cpu=2000   # 2GB per process
+  #SBATCH --ntasks=16          # 16 processes
+  #SBATCH --constraint=avx     # run on nodes with AVX instructions
 
   module load openmpi/3.1.4  # NOTE: should be the same as you used to compile the code
   srun ./mpi_prog
@@ -260,11 +260,11 @@ could be written as:
 .. code-block:: slurm
 
   #!/bin/bash
+  #SBATCH --time=04:00:00      # takes 4 hours all together
+  #SBATCH --mem-per-cpu=2000   # 2GB per process
   #SBATCH --nodes=2            # 2 nodes
   #SBATCH --ntasks-per-node=8  # 8 processes per node * 2 nodes = 16 processes in total
   #SBATCH --constraint=avx     # run on nodes with AVX instructions
-  #SBATCH --time=04:00:00      # takes 4 hours all together
-  #SBATCH --mem-per-cpu=2000   # 2GB per process
 
   module load openmpi/3.1.4  # NOTE: should be the same as you used to compile the code
   srun ./mpi_prog

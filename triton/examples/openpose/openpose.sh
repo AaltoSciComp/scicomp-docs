@@ -1,8 +1,7 @@
 #!/bin/bash
 #SBATCH --time=00:10:00
-#SBATCH -n 1
-#SBATCH --gres=gpu:1
 #SBATCH --mem=8G
+#SBATCH --gres=gpu:1
 
 module load singularity-openpose/v1.5.1
 

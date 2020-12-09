@@ -135,7 +135,6 @@ and to generate output in a unique directory.
 ::
 
     #!/bin/bash
-    #SBATCH -n 1
     #SBATCH --time=04:00:00
     #SBATCH --mem-per-cpu=2500
     #SBATCH --array=0-29

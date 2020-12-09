@@ -132,7 +132,6 @@ with ``sbatch script.sh``:
 .. code-block:: slurm
 
     #!/bin/bash
-    #SBATCH -n 1
     #SBATCH --time=04:00:00
     #SBATCH --mem-per-cpu=1G
     #SBATCH --array=0-29
@@ -213,12 +212,11 @@ Also note that the line numbers start at 1, not 0.
 .. code-block:: slurm
 
     #!/bin/bash
-    #SBATCH -n 1
+    #SBATCH --time=01:00:00
+    #SBATCH --mem=500
     #SBATCH --output=pi.2.out.log
     #SBATCH --open-mode=append
     #SBATCH --array=1-4
-    #SBATCH --time=01:00:00
-    #SBATCH --mem=500
 
     n=$SLURM_ARRAY_TASK_ID
     iteration=`sed -n "${n} p" iterations.txt`      # Get n-th line (1-indexed) of the file
@@ -250,12 +248,11 @@ definitely be worth your while.
 .. code-block:: slurm
 
    #!/bin/bash
-   #SBATCH -n 1
+   #SBATCH --time=01:00:00
+   #SBATCH --mem=500
    #SBATCH --output=pi.3.out.log
    #SBATCH --open-mode=append
    #SBATCH --array=1-5
-   #SBATCH --time=01:00:00
-   #SBATCH --mem=500
 
    # Define and create a new directory (and an intermediate one) in your work directory
    DIRECTORY=/scratch/work/${USER}/pi_simulations_results/json_files
