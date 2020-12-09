@@ -136,7 +136,7 @@ time limit.
 matslurm.sh::
 
     #!/bin/bash -l
-    #SBATCH --time=0-00:05:00
+    #SBATCH --time=00:05:00
     #SBATCH --mem=500
     #SBATCH -o job-%a.out
     #SBATCH --array=0-9

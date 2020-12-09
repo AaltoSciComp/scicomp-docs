@@ -11,7 +11,7 @@ Comsol in Triton is best run in Batch-mode. To check which versions of Comsol ar
           #!/bin/bash
 
           # Ask for e.g. 20 compute cores
-          #SBATCH --time=0-10:00
+          #SBATCH --time=10:00:00
           #SBATCH --mem-per-cpu=2G
           #SBATCH -N 1
           #SBATCH --cpus-per-task=20
