@@ -31,7 +31,7 @@ Now you can run VisIT with::
 If you want to run VisIT with multiple CPUs, you should reserve a node with
 ``sinteractive``::
 
-    sinteractive -t 00:30:00 -n 2 -N 1-1
+    sinteractive --time=00:30:00 -n 2 -N 1-1
     singularity_wrapper exec visit -np 2
 
 Do note the flag ``-N 1-1`` that ensures that all of VisITs processes end up

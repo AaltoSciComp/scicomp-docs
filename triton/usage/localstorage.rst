@@ -54,7 +54,7 @@ How to use /tmp when you login interactively
 
 ::
 
-    $ sinteractive -t 1:00:00              # request a node for one hour
+    $ sinteractive --time=1:00:00              # request a node for one hour
     (node)$ mkdir /tmp/$SLURM_JOB_ID       # create a unique directory, here we use
     (node)$ cd /tmp/$SLURM_JOB_ID
     ... do what you wanted ...

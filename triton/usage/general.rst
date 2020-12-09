@@ -83,7 +83,7 @@ Launch 2 hour interactive session
 
 ::
 
-    $ sinteractive -t 2:0
+    $ sinteractive --time=2:0
 
 See also the interactive usage section below for advanced examples.
 
