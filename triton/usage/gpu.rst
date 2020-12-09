@@ -82,7 +82,7 @@ Running a GPU job in serial
 Quick interactive run::
 
     $ module load cuda
-    $ srun -t 00:30:00 --gres=gpu:1 $WRKDIR/my_gpu_binary
+    $ srun --time=00:30:00 --gres=gpu:1 $WRKDIR/my_gpu_binary
 
 Allocating a gpu node for longer interactive session, this will give you
 a shell sessions::

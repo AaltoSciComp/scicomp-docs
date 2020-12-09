@@ -13,7 +13,7 @@ One can run this example with ``srun``::
 
   wget https://raw.githubusercontent.com/AaltoSciComp/scicomp-docs/master/triton/examples/pytorch/pytorch_mnist.py
   module load nvidia-pytorch/20.02-py3
-  srun -t 00:15:00 --gres=gpu:1 singularity_wrapper exec python pytorch_mnist.py
+  srun --time=00:15:00 --gres=gpu:1 singularity_wrapper exec python pytorch_mnist.py
 
 or with ``sbatch`` by submitting
 :download:`pytorch_singularity_mnist.sh</triton/examples/pytorch/pytorch_singularity_mnist.sh>`:
