@@ -58,18 +58,19 @@ model.  Each row should be one (project, day) work report.
 
 * **username** of the RSE
 * **unit** hosting the research (Aalto acronym: SCI, (CS, NBE, PHYS,
-  MS, DIEM), ARTS, BIZ, CHEM, ELEC, ENG)
+  MS, DIEM), ARTS, BIZ, CHEM, ELEC, ENG).  This can be found from
+  Gitlab (inferred from **project-id**).
 * **day** of work (YYYY-MM-DD)
 * **hours** of work on that day.
 * **funding**: ``project`` or ``basic`` funding - who is paying for
   this project?  If ``project``, this implies that it was billed to
   Halli.  If ``basic``, it's assumed that it was billed to the RSE
-  project and accounting will be done at the end of the year.
+  project and accounting will be done at the end of the year.  Note
+  that this can't be gotten straight from Gitlab, since
+  ``project``\ -funded project will usually also have some
+  ``basic``\ -funded consultations in addition.
 * **project-id**: Issue number from Gitlab (optional? - or some other
-  ID?).  Note that, from Gitlab, project issue number can give us the
-  **unit**, but not the **funding** since most likely initial
-  consultations occur before Halli is set up, so can't be billed to
-  that.
+  ID?).
 * **comment**
 
 Things do not have to be exact for every day, but when aggregated over
