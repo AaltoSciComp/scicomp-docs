@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -N 4
+#SBATCH --nodes=4
 
 module load anaconda
 set -x
@@ -7,7 +7,7 @@ set -x
 ipcontroller --ip="*" &
 sleep 5
 # Run the engines in slurm job steps (makes four of them, since we use
-# the -N slurm option)...
+# the --nodes=4 slurm option)...
 srun ipengine --location=$(hostname -f) &
 
 sleep 5

@@ -192,7 +192,7 @@ Parallel matlab in exclusive mode
     export OMP_NUM_THREADS=$(nproc)
 
     module load matlab/r2017b
-    srun -n 1 -c $OMP_NUM_THREADS matlab_multithread -nosplash -r "parallel_Matlab3($OMP_NUM_THREADS) ; exit(0)"
+    matlab_multithread -nosplash -r "parallel_Matlab3($OMP_NUM_THREADS) ; exit(0)"
 
 parallel\_Matlab3.m::
 

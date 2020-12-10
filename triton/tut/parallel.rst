@@ -118,7 +118,8 @@ The basic slurm option that specifies how many CPUs your job requires is
 ``--cpus-per-task=N`` (or ``-c N``). If your memory requirement scales
 with the number of cores, use ``--mem-per-core=M``, if you
 require a fixed amount of memory (per node regardless of number of
-processors), use ``--mem=M``.
+processors), use ``--mem=M``. We recommend starting with ``--mem=M`` if
+you do not know how your problem scales.
 
 .. important::
 
@@ -297,7 +298,7 @@ problem with your requirements.
 Exercises
 ---------
 
-1. Run ``srun -c 4 hostname``, ``srun -n 4 hostname``, and ``srun -N 4
+1. Run ``srun --cpus-per-task=4 hostname``, ``srun --ntasks=4 hostname``, and ``srun --nodes=4
    hostname``.  What's the difference and why?
 
 The following use ``hpc-examples`` from :ref:`the previous exercises <triton-tut-exercise-repo>`:
