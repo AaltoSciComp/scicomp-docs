@@ -118,7 +118,8 @@ The basic slurm option that specifies how many CPUs your job requires is
 ``--cpus-per-task=N`` (or ``-c N``). If your memory requirement scales
 with the number of cores, use ``--mem-per-core=M``, if you
 require a fixed amount of memory (per node regardless of number of
-processors), use ``--mem=M``.
+processors), use ``--mem=M``. We recommend starting with ``--mem=M`` if
+you do not know how your problem scales.
 
 .. important::
 
@@ -228,10 +229,10 @@ Running an MPI code in the batch mode:
 .. code-block:: slurm
 
   #!/bin/bash
-  #SBATCH -n 16                # 16 processes
-  #SBATCH --constraint=avx     # run on nodes with AVX instructions
   #SBATCH --time=04:00:00      # takes 4 hours all together
   #SBATCH --mem-per-cpu=2000   # 2GB per process
+  #SBATCH --ntasks=16          # 16 processes
+  #SBATCH --constraint=avx     # run on nodes with AVX instructions
 
   module load openmpi/3.1.4  # NOTE: should be the same as you used to compile the code
   srun ./mpi_prog
@@ -260,11 +261,11 @@ could be written as:
 .. code-block:: slurm
 
   #!/bin/bash
+  #SBATCH --time=04:00:00      # takes 4 hours all together
+  #SBATCH --mem-per-cpu=2000   # 2GB per process
   #SBATCH --nodes=2            # 2 nodes
   #SBATCH --ntasks-per-node=8  # 8 processes per node * 2 nodes = 16 processes in total
   #SBATCH --constraint=avx     # run on nodes with AVX instructions
-  #SBATCH --time=04:00:00      # takes 4 hours all together
-  #SBATCH --mem-per-cpu=2000   # 2GB per process
 
   module load openmpi/3.1.4  # NOTE: should be the same as you used to compile the code
   srun ./mpi_prog
@@ -297,7 +298,7 @@ problem with your requirements.
 Exercises
 ---------
 
-1. Run ``srun -c 4 hostname``, ``srun -n 4 hostname``, and ``srun -N 4
+1. Run ``srun --cpus-per-task=4 hostname``, ``srun --ntasks=4 hostname``, and ``srun --nodes=4
    hostname``.  What's the difference and why?
 
 The following use ``hpc-examples`` from :ref:`the previous exercises <triton-tut-exercise-repo>`:

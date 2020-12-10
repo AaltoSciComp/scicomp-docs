@@ -83,7 +83,7 @@ Launch 2 hour interactive session
 
 ::
 
-    $ sinteractive -t 2:0
+    $ sinteractive --time=2:0
 
 See also the interactive usage section below for advanced examples.
 
@@ -106,9 +106,8 @@ Short batch example
 ::
 
     #!/bin/bash
-    #SBATCH -p short
     #SBATCH --time=04:00:00      # 4 hours
-    #SBATCH --mem-per-cpu=1000   # 1G of memory
+    #SBATCH --mem=1000   # 1G of memory
 
     cd $WRKDIR/mydata/
     srun myprog params
@@ -136,8 +135,7 @@ and to generate output in a unique directory.
 ::
 
     #!/bin/bash
-    #SBATCH -n 1
-    #SBATCH -t 04:00:00
+    #SBATCH --time=04:00:00
     #SBATCH --mem-per-cpu=2500
     #SBATCH --array=0-29
      
@@ -219,8 +217,8 @@ Small MPI example using mvapich2
 ::
 
     #!/bin/bash
-    #SBATCH -N 1                 # on one node
-    #SBATCH -n 4                 # 4 processes
+    #SBATCH --nodes=1            # on one node
+    #SBATCH --ntasks=4                 # 4 processes
     #SBATCH --time=4:00:00       # 4 hours
     #SBATCH --mem-per-cpu=2000   # 2GB per process
      
@@ -254,8 +252,8 @@ MPI example using Open MPI
     #SBATCH --mem-per-cpu=1500   # 1.5GB of memory per process
     #SBATCH --exclusive          # allocate whole node
     #SBATCH --constraint=hsw     # require Haswell CPUs with 24 cores per node 
-    #SBATCH -N 2                 # on two nodes 
-    #SBATCH -n 48                # 48 processes to run (2 x 24 = 48)
+    #SBATCH --nodes=2                 # on two nodes 
+    #SBATCH --ntasks=48                # 48 processes to run (2 x 24 = 48)
 
      
     module load goolf/triton-2016a    # OpenMPI + GCC + math libs
@@ -265,15 +263,15 @@ MPI example using Open MPI
     ----------------- 12 CPU cores case ---------------------------------------
      
     #SBATCH --constraint=wsm     # require Westemers, 12 cores per node 
-    #SBATCH -N 4                 # on four nodes 
-    #SBATCH -n 48                # 48 processes to run (4 x 12 = 48)
+    #SBATCH --nodes=4                 # on four nodes 
+    #SBATCH --ntasks=48                # 48 processes to run (4 x 12 = 48)
      
      
     ----------------- 20 CPU cores case ---------------------------------------
      
     #SBATCH --constraint=ivb    # require IvyBridges, 20 cores per node 
-    #SBATCH -N 2                 # on two nodes 
-    #SBATCH -n 40                # 40 processes to run (2 x 20 = 40)
+    #SBATCH --nodes=2                 # on two nodes 
+    #SBATCH --ntasks=40                # 40 processes to run (2 x 20 = 40)
 
 Submit a hybrid MPI/OpenMP job
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -320,9 +318,9 @@ Hybrid MPI/OpenMP example using mvapich2
     #SBATCH --mem-per-cpu=2500
     #SBATCH --exclusive
     #SBATCH --constraint=[opt|wsm]
-    #SBATCH -n 8
-    #SBATCH -c 6
-    #SBATCH -N 4
+    #SBATCH --ntasks=8
+    #SBATCH --cpus-per-task=6
+    #SBATCH --nodes=4
      
     module load gmvolf/triton-2016a
     export MV2_ENABLE_AFFINITY=0
@@ -347,15 +345,16 @@ Parallel job
 ::
 
     #!/bin/bash
-    #SBATCH --time=01:00 --mem-per-cpu=500
+    #SBATCH --time=00:01:00
+    #SBATCH --mem-per-cpu=500
     #SBATCH --exclusive
     #SBATCH --constraint=[hsw|ivb|wsm]
-    #SBATCH -N 4
-    srun -N 4 hostname
+    #SBATCH --nodes=4
+    srun hostname
 
-This will print out the 4 allocated hostnames. The "-N 4" ensures that
+This will print out the 4 allocated hostnames. The "---nodes=4" ensures that
 we run a task on all 4 allocated nodes. If we instead want to launch one
-process per allocated CPU, we can instead do "srun -n 48 executable"
+process per allocated CPU, we can instead do "srun --ntasks=48 executable"
 (4\*12=48).
 
 In a case where the program in question uses Master-Worker-paradigm,

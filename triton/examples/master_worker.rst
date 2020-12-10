@@ -18,10 +18,9 @@ allocation has ended.
 ``hostlist-test.slrm``::
 
     #!/bin/bash
-    #SBATCH -t 00:10:00
-    #SBATCH -N 3
-    #SBATCH -n 5
-    #SBATCH -p batch
+    #SBATCH --time=00:10:00
+    #SBATCH --nodes=3
+    #SBATCH --ntasks=5
     #SBATCH -o hostlist-test.out
 
     # An example of a clean_up-routine if the master has to take e.g. ssh connection to start program on workers 

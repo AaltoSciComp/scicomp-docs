@@ -157,8 +157,9 @@ Similarly to the rest of Triton, you can make batch scripts::
 
   #!/bin/bash -l
   #SBATCH -p dgx
+  #SBATCH --time=00:05:00
+  #SBATCH --mem=5G
   #SBATCH --gres=gpu:1
-  #SBATCH --mem=5G --time=5:00
   #SBATCH --export=HOME,USER,TERM,WRKDIR
 
   your shell commands here
@@ -188,8 +189,9 @@ info above and tutorials for more info)::
 
   #!/bin/bash -l
   #SBATCH -p dgx
+  #SBATCH --time=00:05:00
+  #SBATCH --mem=5G
   #SBATCH --gres=gpu:1
-  #SBATCH --mem=5G --time=5:00
   #SBATCH --export=HOME,USER,TERM,WRKDIR
 
   module load nvidia-tensorflow

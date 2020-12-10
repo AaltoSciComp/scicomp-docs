@@ -43,10 +43,8 @@ Running a single core Matlab job is easy through the slurm queue. A
 sample slurm script is provided underneath::
 
     #!/bin/bash -l
-    #SBATCH -p short
-    #SBATCH -t 00:05:00
-    #SBATCH -n 1
-    #SBATCH --mem-per-cpu=100
+    #SBATCH --time=00:05:00
+    #SBATCH --mem=100
     #SBATCH -o serial_Matlab.out
     module load matlab
     n=3
@@ -138,8 +136,8 @@ time limit.
 matslurm.sh::
 
     #!/bin/bash -l
-    #SBATCH --time=0-00:05:00 --mem-per-cpu=500
-    #SBATCH -p debug
+    #SBATCH --time=00:05:00
+    #SBATCH --mem=500
     #SBATCH -o job-%a.out
     #SBATCH --array=0-9
     module load matlab
@@ -187,15 +185,14 @@ Parallel matlab in exclusive mode
 ::
 
     #!/bin/bash -l
-    #SBATCH -p short
-    #SBATCH -t 00:15:00
+    #SBATCH --time=00:15:00
     #SBATCH --exclusive
     #SBATCH -o parallel_Matlab3.out
-    
+
     export OMP_NUM_THREADS=$(nproc)
-    
+
     module load matlab/r2017b
-    srun -n 1 -c $OMP_NUM_THREADS matlab_multithread -nosplash -r "parallel_Matlab3($OMP_NUM_THREADS) ; exit(0)"
+    matlab_multithread -nosplash -r "parallel_Matlab3($OMP_NUM_THREADS) ; exit(0)"
 
 parallel\_Matlab3.m::
 

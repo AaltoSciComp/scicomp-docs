@@ -82,13 +82,13 @@ Running a GPU job in serial
 Quick interactive run::
 
     $ module load cuda
-    $ srun -t 00:30:00 --gres=gpu:1 $WRKDIR/my_gpu_binary
+    $ srun --time=00:30:00 --gres=gpu:1 $WRKDIR/my_gpu_binary
 
 Allocating a gpu node for longer interactive session, this will give you
 a shell sessions::
 
     $ module load cuda
-    $ sinteractive -t 4:00:00 --gres=gpu:1
+    $ sinteractive --time=4:00:00 --gres=gpu:1
     gpuXX$ .... run something
     gpuXX$ exit
 
@@ -151,7 +151,7 @@ installed on those nodes only).
 
 ::
 
-    $ sinteractive -t 1:00:00 --gres=gpu:1    # open a session on a gpu node
+    $ sinteractive --time=1:00:00 --gres=gpu:1    # open a session on a gpu node
     $ module load cuda                        # set CUDA environment
     $ nvcc cuda_code.cu -o cuda_code          # compile your CUDA code
     .. or compile normally any other code with 'make'
@@ -238,7 +238,7 @@ at ``$CUDA_ROOT/samples``. To play with:
 
 ::
 
-    $ sinteractive -t 1:00:00 --gres=gpu:1
+    $ sinteractive --time=1:00:00 --gres=gpu:1
     $ module load cuda
     $ cp -r $CUDA_ROOT/samples $WRKDIR
     $ cd $WRKDIR/samples
