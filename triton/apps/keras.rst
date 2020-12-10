@@ -24,7 +24,7 @@ Example
 
 ::
 
-   srun -p gpu --pty bash
+   srun --gres=gpu:1 --pty bash
    module load anaconda
    python3
    >>> import keras

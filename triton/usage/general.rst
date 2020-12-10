@@ -352,9 +352,9 @@ Parallel job
     #SBATCH --nodes=4
     srun hostname
 
-This will print out the 4 allocated hostnames. The "-N 4" ensures that
+This will print out the 4 allocated hostnames. The "---nodes=4" ensures that
 we run a task on all 4 allocated nodes. If we instead want to launch one
-process per allocated CPU, we can instead do "srun -n 48 executable"
+process per allocated CPU, we can instead do "srun --ntasks=48 executable"
 (4\*12=48).
 
 In a case where the program in question uses Master-Worker-paradigm,
