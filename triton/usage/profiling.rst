@@ -185,6 +185,7 @@ Usage example::
 
     # run the code normally (either interactively with salloc or as usual with sbatch) 
     salloc -p play --ntasks=4 srun mpi_app
+
 If everything works, you will see the mpiP header preceding your program
 stdout, and there will be generated a text report file in your work
 directory. File is small, no worries about quota. Please, consult the
@@ -198,5 +199,4 @@ Scalasca
 ^^^^^^^^
 
 Available through module load scalasca
-
 
