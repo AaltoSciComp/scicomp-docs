@@ -33,7 +33,7 @@ Triton, SciComp, RSE, and CS
 
 .. note::
 
-   During winter holiday time 21.december - 31.january, we do not
+   During winter holiday time 21.december.2020 - 6..january.2021, we do not
    promise to be at any particular garage sessions.  However, there
    will be various support available for important questions.  We
    recommend you first `post an issue to the Triton issue tracker
