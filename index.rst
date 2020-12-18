@@ -147,6 +147,7 @@ About
 
    help/index
    about/index
+   about/web-accessibility
    README
 
 These docs are open source: all content is licensed under CC-BY 4.0
@@ -156,7 +157,6 @@ and all examples under CC0 (public domain).  Additionally, this is an
 links at the top of every page.  Either make Github issues, pull
 requests, or ask for direct commit access.  Be bold: the biggest
 problem is missing information, and mistakes can always be fixed.
-This website is partially conformant with the `Web Content Accessibility Guidelines (WCAG) <https://www.w3.org/WAI/standards-guidelines/wcag/>`__ level AA. `Read more about accessibility of scicomp.aalto.fi <accessibility/index>`__.
 
 
 * :ref:`genindex`
