@@ -31,6 +31,16 @@ Online
 Triton, SciComp, RSE, and CS
 ----------------------------
 
+.. note::
+
+   During winter holiday time 21.december.2020 - 6..january.2021, we do not
+   promise to be at any particular garage sessions.  However, there
+   will be various support available for important questions.  We
+   recommend you first `post an issue to the Triton issue tracker
+   <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`__,
+   say you would like to discuss in garage, and we will organize a
+   time.
+
 You can meet us online, every weekday, at 13:00, `online via zoom
 <https://aalto.zoom.us/j/65371910202>`__.  This garage is focused on
 **Triton/HPC, scientific computing, data, and CS issues with best
