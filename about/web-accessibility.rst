@@ -8,7 +8,7 @@ This is the accessibility statement for the scicomp.aalto.fi website. The access
 But as we know from other Aalto web sites, web accessibility doesn't
 mean it's actually useful for any particular purpose.  We strive to
 make this site *actually* usable by everyone, and we :doc:`welcome any
-contributions to help us with that <README>`.
+contributions to help us with that <../README>`.
 
 
 Accessibility status of the website
