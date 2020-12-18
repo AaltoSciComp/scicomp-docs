@@ -75,7 +75,7 @@ basic consulting service for free.
 
 (for paid services) This project receives dedicated service from the
 Research Software Engineering group, funded as researcher salary from
-this grant.  During this period, on of Aalto research software engineers joins this
+this grant.  During this period, one of the Aalto research software engineers joins this
 project as a researcher, equal to all other project employees.
 
 
