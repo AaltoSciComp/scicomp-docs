@@ -58,24 +58,24 @@ firewalled to university networks.
 Research software engineering services
 --------------------------------------
 
-(this text must especially be tuned to your grant)
+(this text must especially be tuned to your grant, replace the parts in CAPITAL LETTERS)
 
 This grant will make use of the Aalto Research Software Engineer
 program to hire high-quality TOPIC specialists.  This program provides
-PhD-level specialists to work on THINGS, which allows the other staff
-on this project to focus on YYY.  These staff do not need to be
-independently recruited, are available for consultation before and
+PhD-level personnel to work on THINGS, which allows the other staff
+on this project to focus on YYY.  Research software engineers do not need to be
+independently recruited, and are available for consultation also before and
 after the project.  This service is provided by Aalto Scientific
-Computing, which also provides high-performance computing resources.
+Computing, which also provides high-performance computing resources for our project.
 The Research Software Engineering service is integrated into computing
 services as a consistent package.
 
-(for basic service, for now only SCI) This service is available as a
+(for basic service, for now only SCI) The service is available as a
 basic consulting service for free.
 
 (for paid services) This project receives dedicated service from the
 Research Software Engineering group, funded as researcher salary from
-this project.  During this period, the research engineer joins this
+this grant.  During this period, on of Aalto research software engineers joins this
 project as a researcher, equal to all other project employees.
 
 
