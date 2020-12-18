@@ -3,7 +3,7 @@ Help
 
 There are many ways to get help with your scientific computing and
 data needs - in fact, so many you don't know what to use.  This page
-lists who is available to help you, and ways of contacting them.
+lists how to ask for help, for different kinds of needs.
 
 
 Formulate your question
@@ -34,19 +34,16 @@ message.
 
 
 
-Places to ask for help
-----------------------
+Aalto Scientific Computing
+--------------------------
 
-At Aalto, there are many different places to ask for help.
-
-
-Scientific Computing, Triton, and HPC
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-We are focused on all aspects of computing and data, and mostly
-consist of PhD-level researchers.  Our main sub-programs are
+Aalto Scientific Computing (Science-IT) is focused on all aspects of
+computing and data, and mostly
+consist of PhD-level researchers so we can understand what you are
+doing, too.  Our main focus areas are
 **high-performance computing** (:doc:`Triton </triton/index>`),
-**research software help** (:doc:`RSEs </rse/index>`), and **data**.
+**research software** (:doc:`RSEs </rse/index>`), **data**, and
+**training** :doc:`training </training/index>`.
 
 * Problems with Triton, using Triton
 * Help with software on Triton
@@ -58,30 +55,73 @@ consist of PhD-level researchers.  Our main sub-programs are
 * Triton Accounts (by email)
 * Increasing quotas, requesting group storage space (by email)
 
-You can reach us by:
-
-* Searching this website
-* The `Triton issue tracker
-  <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`__,
-  which is where most Triton and scientific computing issues should
-  go, even if not directly Triton related.
-* Weekly :doc:`SciComp Garage sessions </help/garage>`, where you can
-  informally chat.  Especially useful when your question is not yet
-  fully defined.
-* You can chat with us on `Aalto Microsoft Teams <https://teams.microsoft.com/l/team/19%3a688ad82e41aa46d48ad978aea767419c%40thread.tacv2/conversations?groupId=4089981d-a443-493d-ae3e-3df5c63caed6&tenantId=ae1a7724-4041-4462-a6dc-538cb199707e>`__.  The invite code is ``e50tyij``.  This is useful for quick things.
-* There is also an email address (get it from our `internal wiki
-  <https://wiki.aalto.fi/display/Triton/Getting+help>`__).  Use this
-  only for things related to your account, quota, etc. - most other
-  things go to the tracker above.
-
 .. toctree::
    :maxdepth: 1
 
    garage
    community
 
-Department IT
+Website
+~~~~~~~
+
+Search this website for help.  For that matter, also search the
+internet in usual.  This is usually a good place to start, but often
+you need to move on to the next steps.
+
+Issue tracker
 ~~~~~~~~~~~~~
+
+The `Triton issue tracker
+<https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`__,
+which is where most Triton and scientific computing issues should
+go, even if not directly Triton related.  *Log in and search the issue
+tracker for related issues, you may find the solution already*
+
+**If you issue is about Triton, software, or somewhat related, this is
+where it should go.**
+
+Garage
+~~~~~~
+
+Weekly :doc:`SciComp Garage sessions </help/garage>`, where you can
+informally chat.  This is especially useful when your question is not yet
+fully defined, or you think that demonstrating the problem for
+immediate feedback is useful.
+
+Chat
+~~~~
+
+Chat can be a great way to quickly talk with others, share tips, and
+quickly get feedback on if a problem is large or small, you should ask
+or you should figure out yourself, etc.  This is a good place to ask
+both from us and from other researchers, but for longer questions
+we'll direct you to our issue tracker so we won't lose track.
+
+The `SciComp Zulipchat, scicomp.zulip.cs.aalto.fi
+<https://scicomp.zulip.cs.aalto.fi>`__ is where we most often hang
+out.  You can ask triton questions in ``#triton``, general questions
+in ``#general``, research software engineering questions in ``#rse``,
+etc.  The main point of Zulip is **topics**, which allow you to
+name threads and easily find old information.
+
+You can also chat with us on `Aalto Microsoft Teams
+<https://teams.microsoft.com/l/team/19%3a688ad82e41aa46d48ad978aea767419c%40thread.tacv2/conversations?groupId=4089981d-a443-493d-ae3e-3df5c63caed6&tenantId=ae1a7724-4041-4462-a6dc-538cb199707e>`__.
+The invite code is ``e50tyij``.  This is useful for quick things, but 
+
+Email
+~~~~~
+
+* scicomp at aalto.fi.  Use this only for things related to your
+  account (requesting a Triton account), quota, etc. - most other
+  things go to the tracker above.
+
+* rse-group at aalto.fi: Research software engineering service
+  requests.
+
+
+
+Department IT
+-------------
 
 CS, NBE, and PHYS have their own IT groups (among others, but those
 are the Science-IT departments with the most support).  They handle
@@ -92,9 +132,7 @@ Department IT handles:
 * Department data storage spaces
 * Other department-managed tools and services
 
-Reach them by:
-
-* Department-specific email addresses
+Reach them by department-specific email addresses
 
 NBE and PHYS IT use the same email issue tracker (esupport) as Aalto
 IT, so issues can be exchanged no matter which address you send an
@@ -103,6 +141,28 @@ before sending something.
 
 
 
+Community
+---------
+
+In addition to formal support, there is are informal activities, too:
+
+* The weekly :doc:`SciComp Garage </help/garage>`, designed to provide
+  one-on-one help, but we invite anyone to come, hang out in the main
+  room, and network with us.  This is for basic help and brainstorming.
+
+* Subscribe to notifications from the `Triton issue tracker
+  <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`__
+  even if you don't post there.  You will learn a lot.
+
+* Sign up for the `Research software engineers and powerusers mailing
+  list <https://list.aalto.fi/mailman/listinfo/rse>`__ and learn about
+  more events that interest you.  This isn't the place to ask for
+  basic help, but if you hang out here you will learn a *lot*.
+
+
+
+Other groups at Aalto
+---------------------
 
 servicedesk, Aalto IT
 ~~~~~~~~~~~~~~~~~~~~~
@@ -153,23 +213,3 @@ Reach research services by:
 
 * Contacting service email addresses at the link above
 * Contacting school representatives findable at the link above
-
-
-
-Community
----------
-
-In addition to formal support, there is are informal activities, too:
-
-* The weekly :doc:`SciComp Garage </help/garage>`, designed to provide
-  one-on-one help, but we invite anyone to come, hang out in the main
-  room, and network with us.  This is for basic help and brainstorming.
-
-* Subscribe to notifications from the `Triton issue tracker
-  <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`__
-  even if you don't post there.  You will learn a lot.
-
-* Sign up for the `Research software engineers and powerusers mailing
-  list <https://list.aalto.fi/mailman/listinfo/rse>`__ and learn about
-  more events that interest you.  This isn't the place to ask for
-  basic help, but if you hang out here you will learn a *lot*.
