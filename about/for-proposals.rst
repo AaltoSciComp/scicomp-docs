@@ -65,7 +65,7 @@ program to hire high-quality TOPIC specialists.  This program provides
 PhD-level specialists to work on THINGS, which allows the other staff
 on this project to focus on YYY.  These staff do not need to be
 independently recruited, are available for consultation before and
-answer the project.  This service is provided by Aalto Scientific
+after the project.  This service is provided by Aalto Scientific
 Computing, which also provides high-performance computing resources.
 The Research Software Engineering service is integrated into computing
 services as a consistent package.
