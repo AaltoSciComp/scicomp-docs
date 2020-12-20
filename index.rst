@@ -24,8 +24,10 @@ other friends.  :doc:`You can join us </about/join>`.
    aalto/welcomeresearchers
    aalto/welcomestudents
 
-News
-====
+
+
+News and blog
+=============
 .. include:: /news/index.rst
    :start-line: 3
    :end-line: 7
@@ -35,6 +37,11 @@ News
 
    news/index.rst
 
+.. postlist:: 5
+   :sort:
+   :excerpts:
+
+:ref:`Archive <blog-posts>`
 
 The Aalto environment
 =====================

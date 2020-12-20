@@ -34,6 +34,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.ifconfig',
     'sphinx.ext.mathjax',
+    'ablog',
 ]
 # I try to make these docs buildable even without any extra dependencies
 # (nothing other than what you can find in Ubuntu).  So, add these to
@@ -339,6 +340,16 @@ epub_author = 'Aalto Science-IT'
 # -- Own options -------------------------------------------------------
 
 mathjax_path = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+
+# blog
+blog_baseurl = 'https://scicomp.aalto.fi/blog/'
+blog_feed_fulltext = True
+post_date_format = '%Y %b %d'
+blog_feed_length = 50
+html_sidebars = {
+    '**': ['localtoc.html'],
+    }
+
 
 # Following allows custom CSS to be included
 # https://github.com/rtfd/sphinx_rtd_theme/issues/117

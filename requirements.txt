@@ -5,3 +5,4 @@ sphinx_gitstamp
 # For the slurm lexer
 pygments>=2.4
 https://github.com/AaltoSciComp/sphinx_rtd_theme_ext_color_contrast/archive/master.zip
+ablog
