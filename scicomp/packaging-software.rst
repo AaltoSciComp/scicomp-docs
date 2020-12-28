@@ -56,6 +56,18 @@ for example, the exact collection of software you are using to make
 your paper.  This keeps your results reproducible, but is a different
 concept that releasing your *software package*.
 
+You *don't* pin dependencies strictly when someone may indirectly use
+your software in combination with arbitrary other packages.  You
+should have some particular reason for each pin your have, not just
+"something may break in the future".  If the chances of something
+breaking in the future are really that high, you should wonder if you
+should recommend others to use this until that can be taken care of
+(for example, build on a more stable base).
+
+You'll notice that a lot of these topics deal with dependencies.
+`Dependency hell <https://en.wikipedia.org/wiki/Dependency_hell>`__ is
+a real thing, and you should carefully think about them.
+
 
 Be flexible on dependencies
 ---------------------------
