@@ -42,7 +42,7 @@ projects** when needed to keep things organized.INLINE
 +--------------+--------------+--------------+--------------+--------------+--------------+
 | Filesystem   | Path (Linux) | Triton?      | Quota        | Backups?     | Notes        |
 +==============+==============+==============+==============+==============+==============+
-| home         | /u/.../$user | no           | 40 GiB       | yes,         | Used for     |
+| home         | /u/.../$user | no           | 100 GiB      | yes,         | Used for     |
 |              | name/unix    |              |              | $HOME/../.sn | personal and |
 |              |              |              |              | apshot/      | non-research |
 |              |              |              |              |              | files        |
@@ -99,7 +99,7 @@ projects** when needed to keep things organized.INLINE
 | tmpfs        | /run/user/$u | yes          | local memory | No           | Not shared.  |
 |              | id/          |              |              |              |              |
 +--------------+--------------+--------------+--------------+--------------+--------------+
-| webhome      | $HOME/public | no           | 1 GiB        |              | `https://use |
+| webhome      | $HOME/public | no           | 5 GiB        |              | `https://use |
 |              | \_html/      |              |              |              | rs.aalto.fi/ |
 |              |              |              |              |              | ~USER/ <http |
 |              | (/m/webhome/ |              |              |              | s://users.aa |
@@ -149,7 +149,7 @@ Filesystem list
       -  Instead, use project for research files, so they are accessible
          to others after you leave.
 
-   -  Quota 20 GiB.
+   -  Quota 100 GiB.
    -  Backups recoverable by ``$HOME/../.snapshot/`` (on linux
       workstations at least).
    -  SMB mounting: ``smb://home.org.aalto.fi/``
@@ -272,7 +272,7 @@ Filesystem list
       directory.
    -  This is not a real research filesystem, but convenient to note
       here.
-   -  Quota (2015) is 1 GiB. (``/m/webhome/webhome/``)
+   -  Quota (2020) is 5 GiB. (``/m/webhome/webhome/``)
    -  `https://users.aalto.fi/~USER/ <https://users.aalto.fi/~USER/>`__
 
 -  **triton home**: triton's home directories
