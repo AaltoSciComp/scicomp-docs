@@ -81,6 +81,22 @@ build on.  Maybe there's no other choice, but that also means that you
 need to realize that your package isn't as reusable as you might hope.
 
 
+Try to be robust in dependencies
+--------------------------------
+
+Follow the `robustness principle
+<https://en.wikipedia.org/wiki/Robustness_principle>`__ to the extent
+possible: "Be conservative in what you do, be liberal in what you
+accept from others".  Try not to be as resistant as possible to
+dependencies changing, while providing a stable interface for other
+things.  Of course, this is hard, and you need a useful balance.  For
+"resistance to dependencies changing", I interpret this as being
+careful what interfaces I use, and see if I can avoid using things I
+consider likely to change in the future.
+
+Of course, robustness applies to other aspects, too.
+
+
 Have tests
 ----------
 
