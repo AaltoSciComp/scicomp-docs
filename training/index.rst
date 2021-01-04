@@ -26,6 +26,7 @@ and/or Python, Matlab, HTCondor and many others.
    :maxdepth: 1
 
    scip/winter-kickstart
+   scip/intro-linux-aalto-computing
    scip/gpu-computing
    scip/matlab-basics
    scip/data-analysis
