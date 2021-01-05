@@ -55,7 +55,7 @@ YAML, by the way (but we can handle the syntax details).
 
    # The dates above actually aren't used.  These control visibility:
    private: false
-   archived: false
+   archive: false
 
    # Internal use, ignore this.  The date is the version of software
    # you get (your course won't get surprise updates to software after
