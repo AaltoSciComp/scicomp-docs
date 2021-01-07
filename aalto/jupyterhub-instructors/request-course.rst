@@ -22,11 +22,55 @@ You *would* want a course environment if you want to (distribute
 assignments to students via the interface) and/or (collect assignments
 via the interface).
 
+Request template
+----------------
+
+To make things faster and more complete, copy and paste the below in
+your email to us, and edit all of fields (and if anything unclear,
+don't worry: send it and a human will figure it out).  The format is
+YAML, by the way (but we can handle the syntax details).
+
+.. code-block:: yaml
+
+   name: CS-E0000 Course Name (Year)
+   uid: (leave blank, we fill in)
+   gid: (leave blank, we fill in)
+
+   # supervisor = faculty in charge of course
+   # contacts = primary TAs which should also get emails from us.
+   # manager = (optional) has rights to add other TAs via
+   #           domesti.cs.aalto.fi (supervisor is always a manager)
+   supervisor: teacher.in.charge@aalto.fi
+   contact: [teacher.in.charge@aalto.fi, head.ta@aalto.fi]
+   #manager: [can_add.tas@aalto.fi]
+
+   # if true, create a separate data directory
+   datadir: false
+
+   # Important dates.  But not too important, we can always adjust later.
+   public_date:  2020-09-08      # becomes visible to students before course
+   private_date: 2021-01-31      # hidden from students after course
+   archive_date: 2021-09-01      # becomes hidden from instructors
+   delete_date:  2021-09-01      # after this, we ask if it can be deleted
+
+   # The dates above actually aren't used.  These control visibility:
+   private: false
+   archive: false
+
+   # Internal use, ignore this.  The date is the version of software
+   # you get (your course won't get surprise updates to software after
+   # that date).
+   image: [standard, 2020-01-05]
+
+
+
+
 Course environment options
 --------------------------
 
 When requesting a course, please read the following and tell us your
-requirements in the course request email.  If you are using the hub
+requirements in the course request email (using the template above).
+If you are using the hub
 without a specific course item in the selection list, please let us
 know at least 3a, 6, 7, and 8 below.
 
