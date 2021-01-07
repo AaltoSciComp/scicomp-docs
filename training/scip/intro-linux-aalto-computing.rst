@@ -104,7 +104,7 @@ Preparation
 **Software installation:**
 
 * It could be useful to install a SSH client, but we have a backup
-  plan if you don't.  TODO: add links.
+  plan if you don't. `Here some options for installing BASH on your computer <https://coderefinery.github.io/installation/bash/>`__.
 
 * `Zoom <https://coderefinery.github.io/installation/zoom/>`__ (if
   attending via Zoom)
