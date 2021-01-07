@@ -104,8 +104,8 @@ Preparation
 
 * You will need the BASH shell
 
-  * Linux: Open the Terminal application and type: `bash`
-  * MacOS: Open the Terminal application and type: `bash`
+  * Linux: Open the Terminal application and type: ``bash``
+  * MacOS: Open the Terminal application and type: ``bash``
   * Windows:
 
     * If you have an Aalto account, download `PuTTY <https://www.putty.org/>`__
