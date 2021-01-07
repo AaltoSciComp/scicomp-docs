@@ -10,9 +10,9 @@ Aalto for free.  Resources are funded by departments, and distributed
 by a fairshare algorithm: members of departments and schools which
 provide direct funding have a greater share.
 
-Please contact us via the support email address **scicomp** *_at_* **aalto.fi** (not
-personal email) and we will set up your account.  Please tell us your
-department, supervisor, Aalto account, and see the conditions below.
+Please use `the account request form
+<https://selfservice.esupport.aalto.fi/ssc/app#/order/2025/>`__ to
+request the account.
 (For future help, you should probably use our issue tracker: see the
 :doc:`help` page.)
 
