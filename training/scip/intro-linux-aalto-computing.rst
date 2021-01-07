@@ -63,7 +63,7 @@ the course.
 
 **Time, date, place:** (all times EET):
 
-- Friday, 22 January, online
+- Friday, 29 January, online
 
   - Please connect 10 minutes early for icebreakers and introductions
 
