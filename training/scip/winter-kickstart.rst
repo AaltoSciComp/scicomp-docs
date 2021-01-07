@@ -49,14 +49,16 @@ the course.
 **Time, date, location:** Mon-Tue 25-26.january, 12:00-15:00.  Online,
 links sent to participants.
 
-- **Monday, 25 January, 2021**
+- **Monday, 1 February, 2021**
 
   - **12:00 -- 15:00**
+  - Roughly first half of :ref:`the Triton tutorials <tutorials>`
   - Breaks every hour
 
-- **Tuesday, 25 January, 2021**
+- **Tuesday, 2 February, 2021**
 
   - **12:00 -- 15:00**
+  - Roughly second half of :ref:`the Triton tutorials <tutorials>`
   - Breaks every hour
 
 
