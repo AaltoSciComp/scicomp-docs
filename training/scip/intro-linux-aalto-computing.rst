@@ -39,8 +39,7 @@ prepare you to learn more later.
 Prerequisites:
 
 * No prerequisites
-* You should have access to a ``bash`` shell.  This is easy: Linux
-  computers, MacOS computers, Aalto servers, etc.  See instructions below.
+* You should have access to a ``bash`` shell. See instructions below.
 * Aalto or university account useful but not needed
 
 Part of :doc:`Scientific Computing in Practice <index>` lecture series
@@ -103,8 +102,23 @@ Preparation
 
 **Software installation:**
 
-* It could be useful to install a SSH client, but we have a backup
-  plan if you don't. `Here some options for installing BASH on your computer <https://coderefinery.github.io/installation/bash/>`__.
+* You will need the BASH shell
+  * Linux: Open the Terminal application and type: `bash`
+  * MacOS: Open the Terminal application and type: `bash`
+  * Windows:
+    * If you have an Aalto account, download `PuTTY <https://www.putty.org/>`
+      and use it to connect to `kosh.org.aalto.fi` (see this `screenshot
+      <PuTTY.png>`). Use your Aalto username and password to login. After
+      login, type: `bash`
+    * If you have Windows 10 and admin rights, you can install `Ubuntu
+      <https://www.microsoft.com/store/productId/9NBLGGH4MSV6>` through the
+      Microsoft Store. Then, start the Ubuntu application and type: `bash`
+    * If you don't have an Aalto account, and no Windows 10 with admin rights,
+      you can install Git BASH by following `these instructions
+      <https://coderefinery.github.io/installation/bash>`.
+  * If all the above fails, the backup plan is to use BASH through your
+    webbrowser by `clicking here
+    <https://mybinder.org/v2/gh/AaltoSciComp/bash-binder/HEAD?urlpath=terminals%2F1>`.
 
 * `Zoom <https://coderefinery.github.io/installation/zoom/>`__ (if
   attending via Zoom)
