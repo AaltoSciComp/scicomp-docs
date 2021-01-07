@@ -15,4 +15,6 @@ In the directory::
 
 you can find the relase notes, the manual, and some sample data.
 
+We do not recommend using the MNE command line tools, a more modern solution is to use the MNE-python suite. 
+
 
