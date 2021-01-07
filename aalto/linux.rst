@@ -425,7 +425,7 @@ There are two reasons for this.
   # Check disk usage
   du -sh *
 
-The sum should be less than the max quota which is 20GB. If your disk is full then delete something or move it to a local directory, ``/l/``.
+The sum should be less than the max quota which is 100GB (as of 2020). If your disk is full then delete something or move it to a local directory, ``/l/``.
 
 .. rubric:: 2. Something went wrong with your browser profile
 

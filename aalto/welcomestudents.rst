@@ -110,7 +110,7 @@ arrangements.
 Data storage
 ============
 
-Aalto home directories have a 40GB quota, and this is suitable for
+Aalto home directories have a 100GB quota, and this is suitable for
 small use.  Note that files here are lost once you leave Aalto, so
 make sure you back up.
 
