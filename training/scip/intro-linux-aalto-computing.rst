@@ -103,6 +103,7 @@ Preparation
 **Software installation:**
 
 * You will need the BASH shell
+
   * Linux: Open the Terminal application and type: `bash`
   * MacOS: Open the Terminal application and type: `bash`
   * Windows:
