@@ -106,6 +106,7 @@ Preparation
   * Linux: Open the Terminal application and type: `bash`
   * MacOS: Open the Terminal application and type: `bash`
   * Windows:
+
     * If you have an Aalto account, download `PuTTY <https://www.putty.org/>`__
       and use it to connect to ``kosh.org.aalto.fi`` (see this `screenshot
       <PuTTY.png>`__). Use your Aalto username and password to login. After
@@ -116,6 +117,7 @@ Preparation
     * If you don't have an Aalto account, and no Windows 10 with admin rights,
       you can install Git BASH by following `these instructions
       <https://coderefinery.github.io/installation/bash>`__.
+
   * If all the above fails, the backup plan is to use BASH through your
     webbrowser by `clicking here
     <https://mybinder.org/v2/gh/AaltoSciComp/bash-binder/HEAD?urlpath=terminals%2F1>`__.
