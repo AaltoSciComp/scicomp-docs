@@ -109,7 +109,7 @@ Preparation
   * Windows:
 
     * If you have an Aalto account, download `PuTTY <https://www.putty.org/>`__
-      and use it to connect to ``kosh.org.aalto.fi`` (see this `screenshot
+      and use it to connect to ``kosh.aalto.fi`` (see this `screenshot
       <PuTTY.png>`__). Use your Aalto username and password to login. After
       login, type: ``bash``
     * If you have Windows 10 and admin rights, you can install `Ubuntu
