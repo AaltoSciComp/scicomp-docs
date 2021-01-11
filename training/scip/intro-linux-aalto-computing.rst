@@ -11,6 +11,13 @@ suitable as an introduction to any researcher doing somewhat
 computational or data-intensive work now or in the future.  It
 consists of two parts:
 
+* **Aalto computing workflows:** There are so many different computing
+  resources to use, and this hour will introduce you to the different
+  options and what kinds of work each are suited to.  You'll learn how
+  they all interrelate and which can be easily used together.  The
+  focus is what is at Aalto, but the general principles apply to most
+  universities as well.
+
 * **Basic Linux shell:** Shell and command line (on Linux or on other
   operating systems) is the basis of large-scale computing, and
   knowing a little bit will go a long way in your career even if you
@@ -19,13 +26,6 @@ consists of two parts:
   the future.  This is not Aalto specific.  This is a good intro to
   the :doc:`Winter HPC Kickstart <winter-kickstart>` that comes next
   (but still useful on its own).
-
-* **Aalto computing workflows:** There are so many different computing
-  resources to use, and this hour will introduce you to the different
-  options and what kinds of work each are suited to.  You'll learn how
-  they all interrelate and which can be easily used together.  The
-  focus is what is at Aalto, but the general principles apply to most
-  universities as well.
 
 Attending only one part is fine.
 
@@ -67,14 +67,14 @@ the course.
 
   - Please connect 10 minutes early for icebreakers and introductions
 
-  - **12:00--12:45:**  Introduction to Linux shell
-
-  - Q&A
-
-  - **13:00--13:45:**  Workflows at Aalto (and other universities via
+  - **12:00--12:45:**  Workflows at Aalto (and other universities via
     breakout rooms)
 
     - Material: :doc:`/triton/usage/workflows`
+
+  - Q&A
+
+  - **13:00--13:45:**  Introduction to Linux shell
 
   - Q&A
 
@@ -162,6 +162,12 @@ advanced things".
 Material
 --------
 
+- Workflows
+
+  - Material: :doc:`/triton/usage/workflows`
+  - Custom materials for other universities taking part in this
+    training.
+
 - Shell
 
   - Crash course: https://scicomp.aalto.fi/scicomp/shell/ (everything)
@@ -169,12 +175,6 @@ Material
     (minor parts)
   - We will also emphasize how the shell fits in with modern
     science.
-
-- Workflows
-
-  - Material: :doc:`/triton/usage/workflows`
-  - Custom materials for other universities taking part in this
-    training.
 
 
 
