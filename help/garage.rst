@@ -33,23 +33,15 @@ Triton, SciComp, RSE, and CS
 
 .. note::
 
-   During winter holiday time 21.december.2020 - 6..january.2021, we do not
-   promise to be at any particular garage sessions.  However, there
-   will be various support available for important questions.  We
-   recommend you first `post an issue to the Triton issue tracker
-   <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`__,
-   say you would like to discuss in garage, and we will organize a
-   time.
+   We have added some **focus days** (see list below), but you can always
+   visit on any day and ask anything not related to the "focus".
+   
 
 You can meet us online, every weekday, at 13:00, `online via zoom
-<https://aalto.zoom.us/j/65371910202>`__.  This garage is focused on
-**Triton/HPC, scientific computing, data, and CS issues with best
-representation by (CS and Science-IT).**  Imagine this like walking
-into our office to ask for help.
+<https://aalto.zoom.us/j/65371910202>`__.  Imagine this like walking
+into our office to ask for help. If you are not sure whether we can help you, come
+and chat with us anyway and we can figure out a solution together.
 
-* **Thursdays** are Triton focus days.  **Fridays** are CS focus
-  days.  But you can usually find someone to help any day of the week
-  (if not, we'll tell you when to come back).
 
 * This doesn't replace email or the `Triton issue
   tracker
@@ -63,10 +55,31 @@ into our office to ask for help.
   around (and the person you need to talk to may leave).  Please don't
   arrive early since we another meeting then.  Program always ends at
   14:00.
+  
+* We have some **focus days** (see list below) to ask about specific topics 
+  and make sure you find the right person to help you, but you can always
+  visit on any day and ask anything not related to the "focus".
 
 * Join on Zoom via https://aalto.zoom.us/j/65371910202 .  If joining
   by web browser, use Chrome.  Audio doesn't work with Firefox or
   Safari.
+
+
+**Focus days**
+
+We have added some **focus days** (see list below), but you can always visit on any day and ask anything not related to the "focus".
+
+* **Mondays** no special focus, come ask anything.
+* **Tuesdays** are Research Software Engineering focus days: Come ask about
+  issues with your code or software tools you use. We can also help with basic methodological or statistical issues.
+* **Wednesdays** are Data focus days, this is in joint collaboration with the `Aalto Data Agents network <https://www.aalto.fi/en/services/data-agents-and-data-advisor>`__
+  from all Aalto schools. Come ask about research data management, data sharing/reusing/opening, data versioning, 
+  sensitive data, data management plans, legal and ethical issues with research data, workflows for working with big datasets. 
+* **Thursdays** are Triton focus days: Come ask about code parallelization, slurm job submissions, and usage of Triton cluster. 
+* **Fridays** are CS focus days.  
+ 
+
+
 
 
 NBE/PHYS Online
