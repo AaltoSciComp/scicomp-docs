@@ -15,11 +15,11 @@ at ``~/.ipython/profile_*``, so this isn't recommended.  Basically,
 ipyparallel is more designed for one-at-a-time interactive use rather
 than batch scripting (unless you do more work...).
 
-:download:`ipyparallel.slrm
-</triton/examples/python/ipyparallel/ipyparallel.slrm>` is an example
+:download:`ipyparallel.sh
+</triton/examples/python/ipyparallel/ipyparallel.sh>` is an example
 slurm script that sets up ipyparallel.  It assumes that most work is
 done in the engines.  It has inline Python, replace this with ``python
 your_script_name.py``
 
-.. literalinclude:: /triton/examples/python/ipyparallel/ipyparallel.slrm
+.. literalinclude:: /triton/examples/python/ipyparallel/ipyparallel.sh
 

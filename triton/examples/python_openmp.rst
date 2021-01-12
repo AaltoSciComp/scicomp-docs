@@ -2,7 +2,7 @@ Python OpenMP example
 ---------------------
 
 
-``parallel_Python.slrm``::
+``parallel_Python.sh``::
 
     #!/bin/bash
     #SBATCH --time=00:10:00

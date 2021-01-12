@@ -21,9 +21,9 @@ One can run this example with ``srun``::
   srun --cpus-per-task=2 --mem=2G --time=00:15:00 python python_openmp.py
 
 or with ``sbatch`` by submitting
-:download:`python_openmp.slrm<https://raw.githubusercontent.com/AaltoSciComp/hpc-examples/master/python/python_openmp/python_openmp.slrm>`:
+:download:`python_openmp.sh<https://raw.githubusercontent.com/AaltoSciComp/hpc-examples/master/python/python_openmp/python_openmp.sh>`:
 
-.. literalinclude:: /triton/examples/python/python_openmp/python_openmp.slrm
+.. literalinclude:: /triton/examples/python/python_openmp/python_openmp.sh
    :language: slurm
 
 .. important::

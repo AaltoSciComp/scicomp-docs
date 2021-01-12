@@ -45,7 +45,7 @@ sample slurm script is provided below::
     m=2
     srun matlab -nojvm -nosplash -r "serial_Matlab($n,$m) ; exit(0)"
 
-The above script can then be saved as a file (e.g. matlab_test.slrm) and the job can be submitted with ``sbatch matlab_test.slrm``. The actual calculation is done in ``serial_Matlab.m``\ -file
+The above script can then be saved as a file (e.g. matlab_test.sh) and the job can be submitted with ``sbatch matlab_test.sh``. The actual calculation is done in ``serial_Matlab.m``\ -file:
 
 .. code:: matlab
 

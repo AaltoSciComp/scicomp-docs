@@ -56,10 +56,10 @@ folder and to initialize the simulation.::
     decomposePar
     exit
 
-After this one can submit the following slurm :download:`script </triton/examples/openfoam/openfoam.slrm>` with sbatch to solve the problem:
+After this one can submit the following slurm :download:`script </triton/examples/openfoam/openfoam.sh>` with sbatch to solve the problem:
 
-.. literalinclude:: /triton/examples/openfoam/openfoam.slrm
+.. literalinclude:: /triton/examples/openfoam/openfoam.sh
 
-Paraview can be started similarly with this :download:`script </triton/examples/openfoam/paraview.slrm>`:
+Paraview can be started similarly with this :download:`script </triton/examples/openfoam/paraview.sh>`:
 
-.. literalinclude:: /triton/examples/openfoam/paraview.slrm
+.. literalinclude:: /triton/examples/openfoam/paraview.sh

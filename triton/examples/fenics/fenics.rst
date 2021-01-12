@@ -28,13 +28,13 @@ fixes example *demo_poisson.py*. Download it into ``$WRKDIR/fenics`` and run
     patch -d demo -p1 < fenics_matplotlib.patch 
 
 to fix the example. After this one can run the example with the following
-:download:`Slurm script </triton/examples/fenics/fenics.slrm>`:
+:download:`Slurm script </triton/examples/fenics/fenics.sh>`:
 
-.. literalinclude:: /triton/examples/fenics/fenics.slrm
+.. literalinclude:: /triton/examples/fenics/fenics.sh
 
 To submit the script one only needs to run::
 
-    sbatch fenics.slrm
+    sbatch fenics.sh
 
 Resulting image can be checked with e.g.::
 

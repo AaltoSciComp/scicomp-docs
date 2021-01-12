@@ -9,7 +9,7 @@ Running mpi4py.py using only srun:
 
 .. literalinclude:: /triton/examples/python/mpi4py/mpi4py.sh
 
-Example sbatch script :download:`mpi4py.slrm </triton/examples/python/mpi4py/mpi4py.slrm>` when running mpi4py.py through
+Example sbatch script :download:`mpi4py.sh </triton/examples/python/mpi4py/mpi4py.sh>` when running mpi4py.py through
 sbatch:
 
-.. literalinclude:: /triton/examples/python/mpi4py/mpi4py.slrm
+.. literalinclude:: /triton/examples/python/mpi4py/mpi4py.sh

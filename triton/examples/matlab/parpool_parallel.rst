@@ -17,9 +17,9 @@ instead of ``-nojvm``. Example
    the internal parallelization of the operations shut down, or worse, interfering with
    each other. 
     
-:download:`Slurm script </triton/examples/multilang/matlab/parallel.slurm>`:
+:download:`Slurm script </triton/examples/multilang/matlab/parallel.sh>`:
 
-.. literalinclude:: /triton/examples/multilang/matlab/parallel.slurm
+.. literalinclude:: /triton/examples/multilang/matlab/parallel.sh
 
 An example function is provided in 
 :download:`this script </triton/examples/multilang/matlab/parallel.m>`

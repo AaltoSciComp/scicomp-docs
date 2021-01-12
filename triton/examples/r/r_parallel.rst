@@ -1,9 +1,9 @@
 Parallel R example
 ------------------
 
-:download:`r_parallel.slrm </triton/examples/r/r_parallel.slrm>`:
+:download:`r_parallel.sh </triton/examples/r/r_parallel.sh>`:
 
-.. literalinclude:: /triton/examples/r/r_parallel.slrm
+.. literalinclude:: /triton/examples/r/r_parallel.sh
 
 :download:`r_parallel.R </triton/examples/r/r_parallel.R>`:
 
