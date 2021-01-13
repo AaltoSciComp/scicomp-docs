@@ -2,12 +2,14 @@
 News
 ====
 
-*10/12/2020* We are updating and consolidating our tutorials and guidelines on https://scicomp.aalto.fi website. There might be temporary broken links, please let us know if you spot anything that does not look as it should. Please note that the next Research Software Hour on https://twitch.tv/RSHour will be on Thursday 17/12 at 21:30 Helsinki time. A special episode about `Advent of Code 2020 <https://adventofcode.com/>`__. Past episodes at `Research Software Hour <https://researchsoftwarehour.github.io/>`__ .
+*13/01/2021* Save the date: **29 January 2021: Crash course on Data Science workflows at Aalto + Linux terminal basics** in preparation for **1-2 February 2021: Triton Winter Kickstart**. Link to pages and registration coming soon. Course is highly recommended to new Triton HPC users.
 
-Check `other hands-on trainings coming in November </training/>`__. Join our `daily garage </help/garage/>`__ if you have issues to discuss related to computing or data management. If you are into research software, join our `Research Software Hour <https://researchsoftwarehour.github.io/>`__ Twitch show, *usually* every thursday at 21:30 (Helsinki time)... but not on first week of December. 
+We are updating our `hands-on trainings pager </training/>`__ with our courses for Spring 2021. Join our `daily garage </help/garage/>`__ if you have issues to discuss related to computing or data management. If you are into research software, join our `Research Software Hour <https://researchsoftwarehour.github.io/>`__ Twitch show, *usually* every thursday at 21:30 (Helsinki time). 
 
 News archive
 ~~~~~~~~~~~~
+
+*10/12/2020* We are updating and consolidating our tutorials and guidelines on https://scicomp.aalto.fi website. There might be temporary broken links, please let us know if you spot anything that does not look as it should. Please note that the next Research Software Hour on https://twitch.tv/RSHour will be on Thursday 17/12 at 21:30 Helsinki time. A special episode about `Advent of Code 2020 <https://adventofcode.com/>`__.
 
 *02/12/2020* This week Research Software Hour on https://twitch.tv/RSHour will happen during the day, straight from the https://nordic-rse.org/ meeting! 13:30 Helsinki time: All you wanted to know about the Rust programming language! Past episodes at `Research Software Hour <https://researchsoftwarehour.github.io/>`__ .
 
