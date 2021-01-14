@@ -27,11 +27,6 @@ and/or Python, Matlab, HTCondor and many others.
 
    scip/winter-kickstart
    scip/intro-linux-aalto-computing
-   scip/gpu-computing
-   scip/matlab-basics
-   scip/data-analysis
-   scip/python-for-scicomp
-   scip/linux-shell-basics
    scip/index
 
 .. toctree::
@@ -41,12 +36,13 @@ and/or Python, Matlab, HTCondor and many others.
    scicomp-announcements-maillist
 
 
-*Tentative plans: Fall / Winter 2020-21 courses (tentative plan):*
+*Tentative plans:* 
+*Spring / Summer 2021*: Introduction to MPI, Matlab advanced course, 
+Linux Shell Scripting, CodeRefinery. On top of them Summer
+Kickstart in June.
+*Fall / Winter 2021-22 courses (tentative plan):*
 Linux Shell Basics, Python for Scientists, Data analysis with R and
 Python, Matlab Basics, GPU computing, Triton winter kickstart.
-*Spring / Summer 2021*: Introduction to MPI, Matlab continuation
-course, Linux Shell Scripting, CodeRefinery. On top of them Summer
-Kickstart in June.
 
 Anyone can sign up for announcements at the :doc:`SCIP announcement
 mailinglist <scicomp-announcements-maillist>`.
