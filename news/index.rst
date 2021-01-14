@@ -2,9 +2,9 @@
 News
 ====
 
-*13/01/2021* Save the date: **29 January 2021: Crash course on Data Science workflows at Aalto + Linux terminal basics** in preparation for **1-2 February 2021: Triton Winter Kickstart**. Link to pages and registration coming soon. Course is highly recommended to new Triton HPC users.
+*14/01/2021* Save the date: **`29 January 2021: Crash course on Data Science workflows at Aalto + Linux terminal basics <https://scicomp.aalto.fi/training/scip/intro-linux-aalto-computing/>`__** in preparation for **`1-2 February 2021: Triton Winter Kickstart <https://scicomp.aalto.fi/training/scip/winter-kickstart/>`__**. Registration link can be found withing the course pages. Kickstart course is highly recommended to new Triton HPC users.
 
-We are updating our `hands-on trainings pager </training/>`__ with our courses for Spring 2021. Join our `daily garage </help/garage/>`__ if you have issues to discuss related to computing or data management. If you are into research software, join our `Research Software Hour <https://researchsoftwarehour.github.io/>`__ Twitch show, *usually* every thursday at 21:30 (Helsinki time). 
+We are updating our `hands-on trainings pages </training/>`__ with our courses for Spring 2021. Join our `daily garage </help/garage/>`__ if you have issues to discuss related to computing or data management. If you are into research software, join our `Research Software Hour <https://researchsoftwarehour.github.io/>`__ Twitch show, *usually* every thursday at 21:30 (Helsinki time). 
 
 News archive
 ~~~~~~~~~~~~
