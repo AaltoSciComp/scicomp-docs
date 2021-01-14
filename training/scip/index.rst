@@ -9,6 +9,11 @@ Currently active (upcoming) courses have been moved to the
 .. toctree::
    :titlesonly:
 
+   gpu-computing
+   matlab-basics
+   data-analysis
+   python-for-scicomp
+   linux-shell-basics
    summer-kickstart
    May 2020 / CodeRefinery <https://coderefinery.org/workshops/upcoming>
    matlab-advanced
