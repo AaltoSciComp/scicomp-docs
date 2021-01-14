@@ -1,5 +1,5 @@
 ==================================
-Jan 2021 / Triton Winter Kickstart
+Feb 2021 / Triton Winter Kickstart
 ==================================
 
 Winter Kickstart is a two × half day course for researchers to get
