@@ -8,15 +8,22 @@ Jan 2020 / Intro to Linux and Aalto Computing
 
 This course is a general introduction to computing resources at Aalto,
 suitable as an introduction to any researcher doing somewhat
-computational or data-intensive work now or in the future.  It
-consists of two parts:
+computational or data-intensive work now or in the future.
+
+This course is especially suitable to new researchers or students trying to
+understand computational/data analysis options available to them.  It
+won't go into anything too deep, but will provide you with a good
+background for your next steps: you will know what resources are
+available and know the next steps to use them.
+
+It consists of two parts:
 
 * **Aalto computing workflows:** There are so many different computing
   resources to use, and this hour will introduce you to the different
   options and what kinds of work each are suited to.  You'll learn how
   they all interrelate and which can be easily used together.  The
   focus is what is at Aalto, but the general principles apply to most
-  universities as well.
+  universities as well.  This is not just advanced computing.
 
 * **Basic Linux shell:** Shell and command line (on Linux or on other
   operating systems) is the basis of large-scale computing, and
@@ -29,18 +36,13 @@ consists of two parts:
 
 Attending only one part is fine.
 
-This course is especially suitable to new researchers trying to
-understand computational options available to them (including those
-dealing primarily with data).  It will also be a good introduction to
-students who are slowly needing to use more computational power or
-data in their studies.  With that said, it is only an introduction, to
-prepare you to learn more later.
-
 Prerequisites:
 
 * No prerequisites
-* You should have access to a ``bash`` shell. See instructions below.
-* Aalto or university account useful but not needed
+* You should have access to a ``bash`` shell. See instructions below
+  for how we can provide this.
+* Aalto or university account useful but not needed to try things out
+  yourself.
 
 Part of :doc:`Scientific Computing in Practice <index>` lecture series
 at Aalto University.
@@ -102,7 +104,8 @@ Preparation
 
 **Software installation:**
 
-* You will need the BASH shell
+* You will need the BASH shell.  This is the basic of automating
+  almost anything, so is useful to have on your computer.
 
   * Linux: Open the Terminal application and type: ``bash``
   * MacOS: Open the Terminal application and type: ``bash``
@@ -162,7 +165,7 @@ advanced things".
 Material
 --------
 
-- Workflows
+- Computing strategies
 
   - Material: :doc:`/triton/usage/workflows`
   - Custom materials for other universities taking part in this
