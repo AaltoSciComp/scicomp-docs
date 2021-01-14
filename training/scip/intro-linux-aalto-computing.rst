@@ -87,7 +87,10 @@ the course.
   - Q&A
 
 
-**Registration:** Not yet open.  We aim to not require registration
+**Registration:** 
+
+`Please register at this link <https://docs.google.com/forms/d/e/1FAIpQLScuBRlKQ4X-ZVSUhoz8zLYSgAI5xH91Cg9hfkEHrjmerViy0Q/viewform>`__                                                                                                                                                      
+We aim to not require registration
 if you will be only passively watching.  Lurkers welcome.  Priority
 for Finnish academic institutions (FGCI members).
 

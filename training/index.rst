@@ -36,13 +36,16 @@ and/or Python, Matlab, HTCondor and many others.
    scicomp-announcements-maillist
 
 
-*Tentative plans:* 
-*Spring / Summer 2021*: Introduction to MPI, Matlab advanced course, 
+**Upcoming courses**
+
+*Spring / Summer 2021* - Introduction to MPI, Matlab advanced course, 
 Linux Shell Scripting, CodeRefinery. On top of them Summer
 Kickstart in June.
-*Fall / Winter 2021-22 courses (tentative plan):*
+
+*Fall / Winter 2021-22 courses (tentative plan)* -  
 Linux Shell Basics, Python for Scientists, Data analysis with R and
 Python, Matlab Basics, GPU computing, Triton winter kickstart.
+
 
 Anyone can sign up for announcements at the :doc:`SCIP announcement
 mailinglist <scicomp-announcements-maillist>`.

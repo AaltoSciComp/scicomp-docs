@@ -37,16 +37,18 @@ anyone may follow along without registration.  There is a HackMD link
 (collaborative edited notes) which is used for asking questions during
 the course.
 
-**Registration:** To be opened soon
+**Registration:**
+
+`Please register at this link <https://docs.google.com/forms/d/e/1FAIpQLScuBRlKQ4X-ZVSUhoz8zLYSgAI5xH91Cg9hfkEHrjmerViy0Q/viewform>`__
 
 **Instructors, organizers, contact:** For additional info, email scip@aalto.fi
 
-* Enrico Glerean
 * Richard Darst
+* Enrico Glerean
 * Simo Tuomisto
 
 
-**Time, date, location:** Mon-Tue 25-26.january, 12:00-15:00.  Online,
+**Time, date, location:** Mon-Tue 1-2.February, 12:00-15:00.  Online,
 links sent to participants.
 
 - **Monday, 1 February, 2021**
