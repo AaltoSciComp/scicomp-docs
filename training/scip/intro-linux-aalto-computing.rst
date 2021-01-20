@@ -18,31 +18,36 @@ available and know the next steps to use them.
 
 It consists of two parts:
 
-* **Aalto computing workflows:** There are so many different computing
-  resources to use, and this hour will introduce you to the different
+* **Aalto computing strategies:** Your laptop.  The national-level
+  supercomputer.  Everything in between.  There are so many different
+  ways to do your computing, and in this hour will introduce you to
+  the different
   options and what kinds of work each are suited to.  You'll learn how
-  they all interrelate and which can be easily used together.  The
-  focus is what is at Aalto, but the general principles apply to most
-  universities as well.  This is not just advanced computing.
+  they all interrelate and which can be easily used together.  While
+  we use Aalto University systems as an example, the talk is designed
+  to be useful to any university: you will just need to find the
+  equivalent tools at your university.
 
 * **Basic Linux shell:** Shell and command line (on Linux or on other
-  operating systems) is the basis of large-scale computing, and
+  operating systems) is the basis of next-level computing, and
   knowing a little bit will go a long way in your career even if you
   don't use it on a daily basis.  This introduction will make you
   confident enough to take any other computing courses you may need in
-  the future.  This is not Aalto specific.  This is a good intro to
+  the future, and give you the first steps to automating your work and
+  making it reproducible.  This is not Aalto specific.  This is a good intro to
   the :doc:`Winter HPC Kickstart <winter-kickstart>` that comes next
   (but still useful on its own).
 
-Attending only one part is fine.
+Attending individual sessions is fine.
 
 Prerequisites:
 
-* No prerequisites
-* You should have access to a ``bash`` shell. See instructions below
-  for how we can provide this.
-* Aalto or university account useful but not needed to try things out
-  yourself.
+* No prerequisites, you can just watch.
+* For the second part, it is convenient if you have access to a
+  ``bash`` shell. See instructions below for how we can provide this -
+  but just listening is fine too.
+* You can't try out some of our services without an Aalto account, but
+  that won't affect attending this event.
 
 Part of :doc:`Scientific Computing in Practice <index>` lecture series
 at Aalto University.
@@ -51,12 +56,13 @@ at Aalto University.
 Practical information
 ---------------------
 
-This is an online course via Zoom (link sent to registered
-participants).  The course is also streamed via Twitch (the
+This is an online course streamed via Twitch (the
 `CodeRefinery channel <https://www.twitch.tv/coderefinery>`__) so that
-anyone may follow along without registration.  There is a HackMD link
+anyone may follow along without registration.  Registering will get
+you information from the organizers and a Zoom link for further Q&A
+and discussion.  There will also be an anonymous HackMD link
 (collaborative edited notes) which is used for asking questions during
-the course.
+the lectures.
 
 **Instructors and organizers:**
 
@@ -89,9 +95,9 @@ the course.
   - Q&A
 
 
-**Registration:** 
+**Registration:**
 
-`Please register at this link <https://docs.google.com/forms/d/e/1FAIpQLScuBRlKQ4X-ZVSUhoz8zLYSgAI5xH91Cg9hfkEHrjmerViy0Q/viewform>`__                                                                                                                                                      
+`Please register at this link <https://docs.google.com/forms/d/e/1FAIpQLScuBRlKQ4X-ZVSUhoz8zLYSgAI5xH91Cg9hfkEHrjmerViy0Q/viewform>`__
 We aim to not require registration
 if you will be only passively watching.  Lurkers welcome.  Priority
 for Finnish academic institutions (FGCI members).
