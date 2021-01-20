@@ -8,7 +8,9 @@ Jan 2020 / Intro to Linux and Aalto Computing
 
 This course is a general introduction to computing resources at Aalto,
 suitable as an introduction to any researcher doing somewhat
-computational or data-intensive work now or in the future.
+computational or data-intensive work now or in the future.  Aalto
+University is used in examples, but all parts are designed to be
+useful to others as well.
 
 This course is especially suitable to new researchers or students trying to
 understand computational/data analysis options available to them.  It
@@ -18,7 +20,7 @@ available and know the next steps to use them.
 
 It consists of two parts:
 
-* **Aalto computing strategies:** Your laptop.  The national-level
+* **Computing workflows:** Your laptop.  The national-level
   supercomputer.  Everything in between.  There are so many different
   ways to do your computing, and in this hour will introduce you to
   the different
@@ -174,7 +176,7 @@ advanced things".
 Material
 --------
 
-- Computing strategies
+- Computing workflows
 
   - Material: :doc:`/triton/usage/workflows`
   - Custom materials for other universities taking part in this
