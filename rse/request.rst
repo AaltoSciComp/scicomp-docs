@@ -39,7 +39,7 @@ You can request an initial consultation or submit a project request
 
 * You can send an email to rse-group at aalto.fi or use our `request
   form <https://selfservice.esupport.aalto.fi/ssc/app#/order/2026/>`__
-  .  The email can be free-form, the request form guides you to answer
+  ("Research Software Engineer requst").  The email can be free-form, the request form guides you to answer
   some useful questions.
 * You can come to our :doc:`daily garage </help/garage>` and have a
   chat with us.
