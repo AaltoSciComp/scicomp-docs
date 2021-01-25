@@ -40,6 +40,10 @@ extensions = [
 # extensions only if they are importable:
 optional_modules = [
     'sphinx_rtd_theme_ext_color_contrast',
+    'sphinx-copybutton',
+    'sphinx-lesson.directives',
+    'sphinx-tabs',
+    'sphinx-togglebutton',
     ]
 if on_rtd or 'GITSTAMP' in os.environ:
     optional_modules.append('sphinx_gitstamp')
