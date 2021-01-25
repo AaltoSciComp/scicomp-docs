@@ -3,8 +3,8 @@ Requesting a course
 
 
 To get started with a course, please read the below list and describe
-your needs from the relevant items (contact address is at the bottom
-of this page).  Don't worry too much about understanding or answering
+your needs from the relevant items, and contact guru@cs.aalto.fi.
+Don't worry too much about understanding or answering
 everything perfectly, just let us know what you want to accomplish and
 we will guide you to what you need.
 
@@ -26,7 +26,7 @@ Request template
 ----------------
 
 To make things faster and more complete, copy and paste the below in
-your email to us, and edit all of fields (and if anything unclear,
+your email to us (guru@cs.aalto.fi), and edit all of fields (and if anything unclear,
 don't worry: send it and a human will figure it out).  The format is
 YAML, by the way (but we can handle the syntax details).
 
@@ -69,7 +69,7 @@ Course environment options
 --------------------------
 
 When requesting a course, please read the following and tell us your
-requirements in the course request email (using the template above).
+requirements in the course request email, guru@cs.aalto.fi (using the template above).
 If you are using the hub
 without a specific course item in the selection list, please let us
 know at least 3a, 6, 7, and 8 below.
