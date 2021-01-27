@@ -63,7 +63,7 @@ the course.
 **Time, date, location:** Mon-Tue 1-2.February, 12:00-15:00.  Online,
 links sent to participants.
 
-- **Friday, 29 January, 2021**
+- **Friday, 29 January, 2021**  (Zoom only, no Twitch)
 
   - **14:00 -- 14:45**
   - Help connecting to Triton (Aalto), Zoom link by email to
