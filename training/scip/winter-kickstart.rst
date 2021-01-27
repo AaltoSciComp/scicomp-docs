@@ -2,6 +2,13 @@
 Feb 2021 / Triton Winter Kickstart
 ==================================
 
+.. admonition:: Quick Links
+
+   * Watch here (no account needed): https://twitch.tv/coderefinery
+   * Questions here (no account needed): https://hackmd.io/@AaltoSciComp/IntroWinter2021
+   * Zoom: link by email
+   * Lesson materials: :ref:`Triton tutorials <tutorials>`.
+
 Winter Kickstart is a two × half day course for researchers to get
 started with the available computational resources at FGCI (Finnish
 Grid and Cloud Infrastructure, basically HPC, high-performance
@@ -10,7 +17,7 @@ center).  We cover one by one steps on how to get started on the local
 computational clusters, from the very basics: learning by doing with
 lots of examples and hands-on.
 
-This course is good for any researcher who things they may need to
+This course is good for any researcher who thinks they may need to
 scale up to larger resources in the next six months, in any field.
 Even if you don't use computing clusters, you will be better prepared
 to understand how computing works on other systems.  If you are a
@@ -20,7 +27,12 @@ copy/paste examples on how to find, run and monitor your applications,
 and manage your data. In addition to how to optimize your workflow in
 terms of filesystem traffic, memory usage etc.
 
-The course is obligatory for all new Triton users and recommended to all interested in the field.
+The course is obligatory for all new Triton users and recommended to
+all interested in the field.
+
+**If you are not at Aalto University**, you can follow along with the
+course and will probably learn something.  But, many of the examples
+won't directly work on your cluster and you will need to adapt.
 
 Part of :doc:`Scientific Computing in Practice <index>` lecture series
 at Aalto University.
@@ -51,6 +63,12 @@ the course.
 **Time, date, location:** Mon-Tue 1-2.February, 12:00-15:00.  Online,
 links sent to participants.
 
+- **Friday, 29 January, 2021**
+
+  - **14:00 -- 14:45**
+  - Help connecting to Triton (Aalto), Zoom link by email to
+    registered participants
+
 - **Monday, 1 February, 2021**
 
   - **12:00 -- 15:00**
@@ -69,7 +87,8 @@ Preparation
 
 **Software installation**
 
-* SSH client to connect to the cluster (see connecting instructions below)
+* SSH client to connect to the cluster (+ be able to connect, see next
+  point)
 
 **Cluster account and connection verification**
 
