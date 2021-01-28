@@ -168,7 +168,7 @@ better.*
 
    * * Ivan Degtyarenko
 
-     * Science-IT, PHYS-YT
+     * Science-IT, PHYS-IT
 
      * Triton, HPC hardware, HPC OS, teaching
 
@@ -177,6 +177,12 @@ better.*
      * Science-IT, NBE, RES, Aalto ethics committee.
 
      * Triton, Ethics and personal data, data.
+
+   * * `Simppa Äkäslompolo <https://www.aalto.fi/en/people/simppa-akaslompolo>`_
+
+     * Science-IT, PHYS-IT
+
+     * 
 
 
 
