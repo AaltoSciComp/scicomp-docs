@@ -37,9 +37,11 @@ all interested in the field.
 
 **If you are not at Aalto University**, you can follow along with the
 course and will probably learn something.  But, many of the examples
-won't directly work on your cluster and you will need to adapt.
+won't directly work on your cluster and you will need to adapt. Participants
+from University of Helsinki can follow how to connect to their Kale/Ukko2
+cluster by following instructions at: https://wiki.helsinki.fi/display/it4sci/HPC++Winter+KICKSTART+2021
 
-Part of :doc:`Scientific Computing in Practice <index>` lecture series
+This course is part of :doc:`Scientific Computing in Practice <index>` lecture series
 at Aalto University.
 
 
@@ -98,7 +100,7 @@ Preparation
 **Cluster account and connection verification**
 
 * If you do not yet have access to Triton, :doc:`request an account
-  </triton/accounts>` in advance.
+  </triton/accounts>` in advance. 
 * Then, try to :doc:`connect to Triton </triton/tut/connecting>` to be
   ready.
 
