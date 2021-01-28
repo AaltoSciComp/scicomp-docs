@@ -85,22 +85,24 @@ the lectures.
 
   - Please connect 10 minutes early for icebreakers and introductions
 
-  - **12:00--12:45:**  Workflows at Aalto (and other universities via
+  - **12:00--12:45:**  Basics of scientific computing, workflows at Aalto (and other universities via
     breakout rooms)
 
+    - Material: https://hackmd.io/@AaltoSciComp/SciCompIntro
     - Material: :doc:`/triton/usage/workflows`
 
-  - Q&A
+  - Q&A + break
 
   - **13:00--13:45:**  Introduction to Linux shell
 
-  - Q&A
+  - Q&A + break
 
   - [**14:00--14:45:**  Connecting to Triton as part of
     :doc:`winter-kickstart`.]
 
     - [Not technically a part of this course, but a next step from this
       course and integrated here]
+    - Material: :doc:`/triton/tut/connecting`  
 
   - Q&A
 
@@ -186,6 +188,7 @@ Material
 
 - Computing workflows
 
+  - Intro material: https://hackmd.io/@AaltoSciComp/SciCompIntro
   - Material: :doc:`/triton/usage/workflows`
   - Custom materials for other universities taking part in this
     training.
