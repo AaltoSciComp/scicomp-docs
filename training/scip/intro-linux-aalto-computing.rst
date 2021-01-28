@@ -2,9 +2,17 @@
 Jan 2020 / Intro to Linux and Aalto Computing
 =============================================
 
-.. admonition:: To be confirmed
+.. admonition:: Quick links
 
-   Tentative, to be confirmed soon
+   * How to join: Open Twitch (watching), open HackMD (asking
+     questions) in web browsers and position so you can see both.
+     Zoom is only used during exercise sessions.
+
+   * Watch here (no account needed):
+     https://aaltoscicomp.github.io/scip/ (Twitch channel: https://twitch.tv/coderefinery)
+   * Questions here (HackMD, no account needed): https://hackmd.io/@AaltoSciComp/IntroWinter2021
+   * Zoom (optional): link by email
+   * Lesson materials: :ref:`Triton tutorials <tutorials>`.
 
 This course is a general introduction to computing resources at Aalto,
 suitable as an introduction to any researcher doing somewhat

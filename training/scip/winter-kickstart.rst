@@ -4,9 +4,14 @@ Feb 2021 / Triton Winter Kickstart
 
 .. admonition:: Quick Links
 
-   * Watch here (no account needed): https://twitch.tv/coderefinery
-   * Questions here (no account needed): https://hackmd.io/@AaltoSciComp/IntroWinter2021
-   * Zoom: link by email
+   * How to join: Open Twitch (watching), open HackMD (asking
+     questions) in web browsers and position so you can see both.
+     Zoom is only used during exercise sessions.
+
+   * Watch here (no account needed):
+     https://aaltoscicomp.github.io/scip/ (Twitch channel: https://twitch.tv/coderefinery)
+   * Questions here (HackMD, no account needed): https://hackmd.io/@AaltoSciComp/IntroWinter2021
+   * Zoom (optional): link by email
    * Lesson materials: :ref:`Triton tutorials <tutorials>`.
 
 Winter Kickstart is a two × half day course for researchers to get
