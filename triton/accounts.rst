@@ -11,7 +11,8 @@ by a fairshare algorithm: members of departments and schools which
 provide direct funding have a greater share.
 
 Please use `the account request form
-<https://selfservice.esupport.aalto.fi/ssc/app#/order/2025/>`__ to
+<https://selfservice.esupport.aalto.fi/ssc/app#/order/2025/>`__
+("Triton: New user account") to
 request the account.
 (For future help, you should probably use our issue tracker: see the
 :doc:`help` page.)
