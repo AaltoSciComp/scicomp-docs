@@ -27,7 +27,7 @@ If you need simple applications with a graphical interface, try 3 (VDI).
 
 If you use your own laptop/desktop (1, 2), then it's good for getting started but you have to copy your data and code back and forth once you need to scale up.
 
-.. figure:: /images/Aalto_Computing_options.gif
+.. figure:: /images/Aalto_Computing_options.png
    :scale: 60%
    :align: center
    :alt: Computing options at Aalto University
