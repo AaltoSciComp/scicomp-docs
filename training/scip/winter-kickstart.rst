@@ -4,15 +4,20 @@ Feb 2021 / Triton Winter Kickstart
 
 .. admonition:: Quick Links
 
-   * How to join: Open Twitch (watching), open HackMD (asking
-     questions) in web browsers and position so you can see both.
-     Zoom is only used during exercise sessions.
+   * Joining links:
 
-   * Watch here (no account needed):
-     https://aaltoscicomp.github.io/scip/ (Twitch channel: https://twitch.tv/coderefinery)
-   * Questions here (HackMD, no account needed): https://hackmd.io/@AaltoSciComp/IntroWinter2021
-   * Zoom (optional): link by email
-   * Lesson materials: :ref:`Triton tutorials <tutorials>`.
+     * Main stream: https://aaltoscicomp.github.io/scip/ (no account
+       needed).  Make a narrow window on one half of your screen, the
+       other half is for exercises.
+
+     * HackMD for questions:
+       https://hackmd.io/@AaltoSciComp/IntroWinter2021 (ask questions
+       at bottom, answered either there or on-stream)
+
+     * Zoom link for breakout rooms for exercises.
+
+   * Lesson materials: :ref:`Triton tutorials <tutorials>`, see below
+     for details.
 
 Winter Kickstart is a two × half day course for researchers to get
 started with the available computational resources at FGCI (Finnish
@@ -76,17 +81,26 @@ links sent to participants.
   - Help connecting to Triton (Aalto), Zoom link by email to
     registered participants
 
-- **Monday, 1 February, 2021**
+- **Monday, 1 February, 2021** (roughly connecting to serial jobs in
+  the :ref:`tutorials <tutorials>`)
 
-  - **12:00 -- 15:00**
-  - Roughly first half of :ref:`the Triton tutorials <tutorials>`
-  - Breaks every hour
+  - **11:50 -- 15:00**, all times approximate, breaks every hour
+  - :doc:`/triton/tut/intro`
+  - :doc:`/triton/tut/connecting`
+  - :doc:`/triton/tut/applications`
+  - :doc:`/triton/tut/modules`
+  - :doc:`/triton/tut/storage`
+  - :doc:`/triton/tut/interactive`
+  - :doc:`/triton/tut/serial` (likely gets moved to day 3)
 
 - **Tuesday, 2 February, 2021**
 
-  - **12:00 -- 15:00**
-  - Roughly second half of :ref:`the Triton tutorials <tutorials>`
-  - Breaks every hour
+  - **11:50 -- 15:00**, all times approximate, breaks every hour
+  - Likely
+  - :doc:`/triton/tut/array`
+  - :doc:`/triton/tut/gpu`
+  - :doc:`/triton/tut/parallel`
+  - Likely there is time for additions or special requests
 
 
 Preparation
