@@ -144,14 +144,15 @@ Exercise
 Change your shell to bash (Aalto)
 ---------------------------------
 
-*Only needed if you shell isn't already* ``bash``.
+*Only needed if you shell isn't already* ``bash``.  *If* ``echo bash``
+*reports* ``/bin/bash``\ *, then you are already using bash*.
 
 The thing you are interacting with when you type is the **shell** -
 the layer around the operating system.  ``bash`` is the most common
 shell, but the Aalto default shell used to be ``zsh`` (which is more
-powerful in some ways, but harder to teach with).  For new users (if
-you joined Aalto after autumn 2018) you should have bash as the
-default. We recommend that you check and change your shell to bash.
+powerful in some ways, but harder to teach with).  If you joined Aalto
+after autumn 2018, you probably don't need to do anything.
+We recommend that you check and change your shell to bash.
 
 You can determine if your shell is bash by running ``echo $SHELL``.
 Does it say ``/bin/bash``?
