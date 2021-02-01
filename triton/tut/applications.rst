@@ -11,6 +11,11 @@ specifically talk about it some.
 
    Main article: :doc:`../apps/index`
 
+.. admonition:: Local differences
+
+   Almost every site will use modules.  The exact module names, and
+   anything beyond that, will be different.  Containers are becoming
+   more common, but they are less standardized.
 
 Available softwares
 ===================
@@ -55,20 +60,12 @@ Common applications
 .. important::
 
    This is Aalto-specific.  Some of these will work if you ``module
-   load fgci-common`` at other Finnish sites.  This is introduced in
-   the next lesson.
+   load fgci-common`` at other Finnish sites (but not CSC).  This is
+   introduced in the next lesson.
 
-For reference, here are the most common softwares:
+For reference, here is the most common software:
 
-* **Python:** ``module load anaconda`` for the Anaconda distribution
-  of Python 3, including a lot of useful packages.  :doc:`More info
-  <../apps/python>`.
-
-* **R:** ``module load r`` for a basic R package.  :doc:`More info
-  <../apps/r>`.
-
-* **Matlab:** ``module load matlab`` for the latest Matlab version.
-  :doc:`More info <../apps/matlab>`.
+.. include:: ../ref/software.rst
 
 If one of these ``module load`` commands does not work at your site,
 try ``module spider $NAME`` and see if you can find it.  This is
@@ -118,8 +115,9 @@ want others to use, :doc:`make it easy to install and reusable
 Exercises
 =========
 
-If you are not at Aalto, you need to ``module load fgci-common``
-before you can do these.
+If you are at Aalto, everything will work.  Otherwise, if you are in
+Finland (but not at CSC) ``module load fgci-common`` will make our
+modules available on your cluster.
 
 1. Figure out how to use ``tensorflow`` (this is not a software
    problem, but a searching the documentation problem).  Make it work

@@ -23,6 +23,11 @@ Modules
 
 .. include:: modules.rst
 
+Common software
+===============
+
+.. include:: software.rst
+
 Storage
 =======
 
