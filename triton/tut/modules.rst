@@ -2,12 +2,24 @@
 Software modules
 ================
 
+There are hundreds of people using every cluster.  They all have different
+software needs, including conflicting versions required for different
+projects!  How do we handle this without making a mess, or one person
+breaking the cluster for everyone?
+
+This is actually a very hard, but solved within certain parameters,
+problem.  Software installation and management takes up a huge amount
+of our time, but we try to make it easy for our users.  Still, it can
+end up taking a lot of your effort as well.
+
+.. admonition:: Local differences
+
+   Almost every site uses modules, and most use the same Lmod system
+   we use here.  But, the exact module names you can load will be
+   different.
+
 Introduction to modules
 -----------------------
-
-There are hundreds of people using Triton.  They all have different
-software needs, including conflicting versions required!  How do we
-handle this without making a mess?
 
 The answer is the standard "module" system `Lmod <https://lmod.readthedocs.io/en/latest/>`__.
 It allows us to
@@ -65,9 +77,10 @@ Loading modules
 
 Let's dive right into an example and load a module.
 
-.. important::
+.. admonition:: Local differences
 
-   If you are not at Aalto, then you need to run ``module load
+   If you are not at Aalto, but in Finland (but not at CSC),
+   then you need to run ``module load
    fgci-common`` first, before any of the other commands will work
    (and you will need to *keep doing this* for every other tutorial in
    this series).  You have to do this *every time you start a new shell*.
