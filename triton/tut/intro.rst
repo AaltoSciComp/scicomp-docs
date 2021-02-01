@@ -26,6 +26,16 @@ are a cluster: many connected nodes with a scheduling system to divide
 work between them.  The network and some storage is shared, CPUs,
 memory, and other storage is not shared.
 
+.. admonition:: A real Ship of Theseus
+
+   In the Ship of Theseus thought experiment, every piece of a ship is
+   incrementally replaced.  Is it the same ship or not?
+
+   Triton is a literal Ship of Theseus.  Over the ~10 years it has
+   existed, every part has been upgraded and replaced, except possibly
+   some random cables.  Yet, it is still Triton.  Most clusters are
+   recycled after a certain lifetime and replaced with a new one.
+
 On an international scale of universities, the power of Triton is
 relatively high and it has a very diverse range of uses, though `CSC
 has much more <https://research.csc.fi/computing>`__.  Using
