@@ -83,7 +83,7 @@ where it should go.**
 Garage
 ~~~~~~
 
-Weekly :doc:`SciComp Garage sessions </help/garage>`, where you can
+Daily :doc:`SciComp Garage sessions </help/garage>`, where you can
 informally chat.  This is especially useful when your question is not yet
 fully defined, or you think that demonstrating the problem for
 immediate feedback is useful.
@@ -146,7 +146,7 @@ Community
 
 In addition to formal support, there is are informal activities, too:
 
-* The weekly :doc:`SciComp Garage </help/garage>`, designed to provide
+* The daily :doc:`SciComp Garage </help/garage>`, designed to provide
   one-on-one help, but we invite anyone to come, hang out in the main
   room, and network with us.  This is for basic help and brainstorming.
 
