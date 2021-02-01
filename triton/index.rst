@@ -124,6 +124,7 @@ levels as a prerequisite.
 .. toctree::
    :maxdepth: 1
 
+   tut/about-tutorials.rst
    tut/intro.rst
    tut/connecting.rst
    tut/applications.rst

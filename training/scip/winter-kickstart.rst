@@ -85,6 +85,7 @@ links sent to participants.
   the :ref:`tutorials <tutorials>`)
 
   - **11:50 -- 15:00**, all times approximate, breaks every hour
+  - :doc:`/triton/tut/about-tutorials`
   - :doc:`/triton/tut/intro`
   - :doc:`/triton/tut/connecting`
   - :doc:`/triton/tut/applications`
