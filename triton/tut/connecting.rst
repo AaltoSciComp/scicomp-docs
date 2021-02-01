@@ -2,8 +2,19 @@
 Connecting to Triton
 ====================
 
+The traditional way of interacting with a cluster is via a terminal,
+and Secure Shell (``ssh``) is the most common way of doing that, but
+some clusters have other ways of getting a terminal (such as Jupyter
+or virtual desktops).  Still, the command line is the most powerful
+way of doing this.
 
-All access to Triton is via Secure Shell (ssh).
+.. admonition:: Prerequisites
+
+      The :doc:`shell crash course </scicomp/shell>` is a prerequisite
+      to this material (and the tutorial in general).
+
+
+Summary:
 
 You can connect to ``triton.aalto.fi`` via ssh from Aalto and CSC networks.
 Aalto networks include: Wired workstation networks, ``eduroam``, and
@@ -16,6 +27,11 @@ login first to a university server (like ``kosh.aalto.fi`` or
 ``taltta.org.aalto.fi``) and then open a session to
 ``triton.aalto.fi`` - or use the ``-J`` option in modern ssh.
 
+.. important::
+
+   Triton uses Aalto accounts, but your :doc:`account must be
+   activated first <../accounts>`.
+
 .. note::
 
    Are you here for a SciComp KickStart course?  You just need to :doc:`make
@@ -23,16 +39,10 @@ login first to a university server (like ``kosh.aalto.fi`` or
    via ssh (first section here), and you don't need to worry about the
    graphical application parts.  Everything else, we do tomorrow.
 
-.. note::
+.. admonition:: Local differences
 
-   Triton uses Aalto accounts, but your :doc:`account must be
-   activated first <../accounts>`.
-
-.. seealso::
-
-      The :doc:`shell crash course </scicomp/shell>` is a prerequisite
-      to this material.
-
+   The way you connect will be different in every site, but you should
+   be able to get a terminal somehow.
 
 There are different ways of connecting:
 
@@ -199,4 +209,4 @@ For more information, see `the IT help
 What's next?
 ============
 
-The next tutorial is about :doc:`software and modules <modules>`.
+The next tutorial is about :doc:`software availability in general <applications>`.
