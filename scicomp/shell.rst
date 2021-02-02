@@ -152,6 +152,29 @@ push ``TAB``. (erase that then start over) Then type ``p`` and push
 the first few letters of a filename, then push ``TAB``.
 
 
+Variables
+---------
+
+There are two kinds of variables in shell: **environment variables**
+and **shell variables**.  You don't need to worry about the difference
+now.  The ``$NAME`` or ``${NAME}`` syntax is used to is used to access
+the value of a variable.
+
+For example, the environment variable ``HOME`` holds your home
+directory, for me ``/home/rkdarst``.    The command ``echo`` prints
+whatever its arguments are, so ``echo $HOME`` prints my home
+directory.  (Note that the variable is a property of the *shell*, not
+of the *echo* command - this is sometimes important).
+
+To set a variable, use ``NAME=value``.  ``export NAME=value`` sets it
+as an *environment variable* which means that other processes you
+start (from this shell) can use it.
+
+The ``$VARIABLE`` syntax is also often used for examples: in this
+case, it isn't an environment variable, but just something you need to
+substitute yourself when running a command.
+
+
 
 See also
 --------
