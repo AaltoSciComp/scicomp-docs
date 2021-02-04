@@ -2,6 +2,10 @@
 Connecting to Triton
 ====================
 
+.. admonition:: Video
+
+   `Watch this in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=i3m9uHDk9nE&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=7>`__
+
 The traditional way of interacting with a cluster is via a terminal,
 and Secure Shell (``ssh``) is the most common way of doing that, but
 some clusters have other ways of getting a terminal (such as Jupyter

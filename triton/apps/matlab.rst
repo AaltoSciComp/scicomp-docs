@@ -2,6 +2,11 @@
 Matlab
 ======
 
+.. admonition:: Video
+
+   `See an example in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=24NxYtDkw8s&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=22>`__
+
+
 This page will guide you through the serial computing with Matlab at
 Triton cluster.  (Note (2017): We used to have the Matlab Distributed
 Computing Server (MDCS), but because of low use we no longer have a

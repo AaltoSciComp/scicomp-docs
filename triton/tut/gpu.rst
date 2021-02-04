@@ -2,6 +2,9 @@
 GPU computing
 =============
 
+.. admonition:: Video
+
+   `Watch this in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=aoU1-5DjrGc&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=17>`__
 
 
 Introduction

@@ -2,6 +2,10 @@
 Interactive jobs
 ================
 
+.. admonition:: Video
+
+   `Watch this in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=xhX_u2OA89s&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=11>`__
+
 Introduction to Slurm
 =====================
 

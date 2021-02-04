@@ -111,12 +111,13 @@ Overview
 
 Tutorials
 =========
-These are designed to be read in-order by every Triton user when they
+These are designed to be read (or `watched <tutorial-playlist>`__ in-order by every Triton user when they
 get their accounts (except maybe the last ones).  In order to use
 Triton well, in the `Hands-on SciComp roadmap <hosc_>`__ you should
 also know the `Basics (A) <hosc-a_>`__ and `Linux (C) <hosc-c_>`__
 levels as a prerequisite.
 
+.. _tutorial-playlist: https://www.youtube.com/playlist?list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc
 .. _hosc: https://handsonscicomp.readthedocs.io/en/latest/
 .. _hosc-a: https://handsonscicomp.readthedocs.io/en/latest/#a-basics
 .. _hosc-c: https://handsonscicomp.readthedocs.io/en/latest/#c-linux-and-shell

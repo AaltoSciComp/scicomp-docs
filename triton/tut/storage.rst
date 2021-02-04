@@ -2,6 +2,9 @@
 Data storage
 ============
 
+.. admonition:: Video
+
+   `Watch this in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=guZYMgwdP4Q&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=10>`__
 
 In this tutorial, we go over places to store data on Triton and how to
 access it remotely.

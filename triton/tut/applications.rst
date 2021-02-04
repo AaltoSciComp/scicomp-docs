@@ -2,6 +2,10 @@
 Applications
 ============
 
+.. admonition:: Video
+
+   `Watch this in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=_YMO-1dPc1E&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=8>`__
+
 In this tutorial, we talk about the overall process of finding,
 building, and compiling software.  These days, installing and managing
 scientific software is taking more and more time, thus we need to

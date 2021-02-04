@@ -2,6 +2,11 @@
 Python
 ======
 
+.. admonition:: Video
+
+   `See an example in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=Pd1LUyDIOfg&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=20>`__
+
+
 Python is widely used programming language where we have installed all
 basic packages on every node. Yet, python develops quite fast and the
 system provided packages are ofter not complete or getting old.

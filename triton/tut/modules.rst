@@ -2,6 +2,10 @@
 Software modules
 ================
 
+.. admonition:: Video
+
+   `Watch this in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=dOWBGBdqT4g&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=9>`__
+
 There are hundreds of people using every cluster.  They all have different
 software needs, including conflicting versions required for different
 projects!  How do we handle this without making a mess, or one person
