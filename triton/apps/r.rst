@@ -2,6 +2,10 @@
 R
 =
 
+.. admonition:: Video
+
+   `See an example in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=0bRVDpxdAwI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=21>`__
+
 
 R is a language and environment for statistical computing and graphics
 with wide userbase. There exists several packages that are easily

@@ -2,6 +2,10 @@
 Array jobs
 ==========
 
+.. admonition:: Video
+
+   `Watch this in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=jcWoky9b8zI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=16>`__
+
 .. highlight:: console
 
 More often than not, problems involve running similar programs in parallel

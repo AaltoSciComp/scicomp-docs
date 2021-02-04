@@ -2,6 +2,10 @@
 About Science-IT and Triton
 ===========================
 
+.. admonition:: Video
+
+   `Watch this in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=OYgSBI-5bUo&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=6>`__
+
 *This is the first tutorial.  The next is* :doc:`connecting`.
 
 Science-IT is an Aalto infrastructure for scientific computing.  Its

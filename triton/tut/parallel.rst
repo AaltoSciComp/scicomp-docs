@@ -2,6 +2,10 @@
 Parallel computing
 ==================
 
+.. admonition:: Video
+
+   `Watch this in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=z-F25Er_-tw&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=19>`__
+
 Parallel computing is what HPC is really all about: processing things on
 more than one processor at once. By now, you should have read all of the previous
 tutorials.

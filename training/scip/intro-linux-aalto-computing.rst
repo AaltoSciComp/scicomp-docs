@@ -4,6 +4,8 @@ Jan 2020 / Intro to Linux and Aalto Computing
 
 .. admonition:: Quick links
 
+   * All videos available at https://www.youtube.com/playlist?list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc
+
    * How to join: Open Twitch (watching), open HackMD (asking
      questions) in web browsers and position so you can see both.
      Zoom is only used during exercise sessions.

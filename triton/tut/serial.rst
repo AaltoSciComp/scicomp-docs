@@ -2,6 +2,9 @@
 Serial Jobs
 ===========
 
+.. admonition:: Video
+
+   `Watch this in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=I79KLHb-7T0&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=14>`__
 
 Introduction to batch scripts
 =============================

@@ -1,6 +1,12 @@
 About these tutorials
 =====================
 
+.. admonition:: Video
+
+   `Watch this in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=etYG9YhsXKI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=5>`__
+
+   Or see the `full playlist <https://www.youtube.com/playlist?list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc>`__.
+
 Welcome to the Aalto Scientific Computing High-performance computing
 (HPC) tutorials.  These tutorials will get you started with the Triton
 cluster.
