@@ -19,13 +19,15 @@ Yes, many things about software development may not apply to you:
 
   * you sort of know what the target is
   * code is the main result
+  * must be maintainable for the future
 
 * Research code:
 
   * you don't know what the target is
   * code is secondary
 
-But research code still *can't* be an unmaintainable mess...
+But research code *often becomes important in the future*, so not all
+can be an unmaintainable mess...
 
 
 
@@ -61,6 +63,7 @@ to:
 * be changed without too much difficulty
 * be run again once reviews come in
 * ideally, not wasted once you do something new
+* .. and sometimes, becomes important and evolve
 
 Even as a scientist, you need to know the levels of maturity so that
 you can do the right thing *for your situation*.
@@ -75,8 +78,8 @@ This talk's outline:
 
 
 
-What can you do?
-----------------
+What aspects can you improve?
+-----------------------------
 
 Below are many different aspects of scientific computing which you can
 improve.
@@ -104,15 +107,20 @@ Version control is essential to *any* type of collaboration.
 
 Resources:
 
-* https://coderefinery.org/lessons/ (git-intro and git-collaborative)
-
+* `Github <https://github.com>`__, `CodeRefinery Gitlab <https://coderefinery.org/repository/>`__,
+  your institution's equivalent, and many more.
+* CodeRefinery lessons, https://coderefinery.org/lessons/ (git-intro and git-collaborative)
+* Software Carpentry `Git-novice lesson <https://swcarpentry.github.io/git-novice/>`__
 
 
 Modular code
 ------------
 
 Modularity is one of the basic prerequisites to be able to understand,
-maintain, and reuse things.
+maintain, and reuse things - and also hard to get right at the beginning.
+
+Don't worry too much, but always think about how to make things
+reusability.
 
 * L0: bunch of copy-and-paste scripts
 * L1: important code broken out into functions
@@ -121,12 +129,15 @@ maintain, and reuse things.
 
 Resources:
 
-* CodeRefinery: http://cicero.xyz/v3/remark/0.14.0/github.com/coderefinery/modular-code-development/master/talk.md
+* CodeRefinery `Modular Code Development lesson <http://cicero.xyz/v3/remark/0.14.0/github.com/coderefinery/modular-code-development/master/talk.md>`__
 
 
 
 Organized workspaces
 --------------------
+
+You will need to store many files.  Are they organized, so that you
+can find them later, or will you get lost in your own mess?
 
 * L0: no particular organization system
 * L1: different types of data separated (original
@@ -136,6 +147,7 @@ Organized workspaces
 Resources:
 
 * I don't know of good sources for this.
+* But you can find different recommendations for organizational systems
 
 
 
@@ -156,7 +168,7 @@ files and code and automatically generate the outputs.
 
 Resources:
 
-* CodeRefinery: https://coderefinery.github.io/reproducible-research/
+* CodeRefinery `Reproducible Research lesson <https://coderefinery.github.io/reproducible-research/>`__
 
 
 
@@ -175,7 +187,7 @@ Scientific software is notoriously bad at managing its dependencies.
 
 Resources:
 
-* CodeRefinery: https://coderefinery.github.io/reproducible-research/
+* CodeRefinery `Reproducible Research lesson <https://coderefinery.github.io/reproducible-research/>`__
 
 
 
@@ -195,7 +207,7 @@ picture.  There are fancier systems, too.
 
 Resources:
 
-* CodeRefinery: https://coderefinery.github.io/documentation/
+* CodeRefinery `Documentation lesson <https://coderefinery.github.io/documentation/>`__
 
 
 
@@ -215,15 +227,15 @@ didn't break anything".  It's extremely useful for debugging, too.
 * L1: defensive programming (assertions), possibly some test data and
   scripts
 * L2: structured, comprehensive unit/integration/system tests (e.g. ``pytest``)
-* L3: continuous integration testing on *all* commits  (e.g. ``travis-ci.org``)
+* L3: continuous integration testing on *all* commits  (e.g. Github Actions)
 
 If code is easy to test, it is *usually* easy to reuse, too.
 Furthermore, making code testable makes it reusable.
 
 Resources:
 
-* CodeRefinery: https://coderefinery.github.io/testing/
-
+* CodeRefinery `Testing lesson: <https://coderefinery.github.io/testing/>`__
+* `GitHub Actions <https://github.com/features/actions>`__
 
 
 Licensing
@@ -241,7 +253,7 @@ licenses.
 
 Resources:
 
-* CodeRefinery software-licensing: https://coderefinery.org/lessons/
+* CodeRefinery `Software social coding <http://cicero.xyz/v3/remark/0.14.0/github.com/coderefinery/social-coding/master/talk.md>`__
 * https://choosealicense.com/
 
 
@@ -260,8 +272,8 @@ good systems for sharing code.
 
 Resources:
 
-* for Python: https://packaging.python.org/tutorials/packaging-projects/
-
+* Python: `Packaging tutorial <https://packaging.python.org/tutorials/packaging-projects/>`__
+* Similar for any other language you may use
 
 
 Reuse
@@ -270,9 +282,15 @@ Reuse
 Are you aware of what what others have already figured out through
 their great effort?
 
+Choosing the right thing to build off of is not always easy, but you must
+
 * L0: reinvent everything yourself
 * L1: use some existing tools and libraries
 * L2: deep study of existing solutions and tools, reuse them when appropriate
+
+Resources:
+
+* I don't know where to refer you to right now.
 
 
 
@@ -295,6 +313,11 @@ If you don't work together, you will fall behind.
 * L2: collaborative package development
 * L3: code reviews, pair programming, etc.
 * L4: community project welcoming other contributors
+
+Resources:
+
+* Most every `CodeRefinery lesson <https://coderefinery.org/lessons/>`__
+* Plenty more
 
 
 
