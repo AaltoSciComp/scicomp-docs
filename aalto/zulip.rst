@@ -8,7 +8,7 @@ Zulip is an online discussion tool with latex support. It has been used by some 
 
 CS-IT hosts `Zulip <https://zulipchat.com/>`_ the chat instances for you. These chat instances are hosted at ``<chat-name>.zulip.cs.aalto.fi``. Login to the chats is available with Aalto accounts. Email registration for external users is also possible via invitations.
 
-Internal or confidential matters should not be discussed on the platform. 
+Internal or confidential matters should not be discussed on the platform.
 
 .. note::
 
@@ -74,23 +74,23 @@ The exact questions and answers:
 **Organization permisisons / Who can add bots**
 
 * Set to ``Admins`` only
-* Consult `CS-IT <https://wiki.aalto.fi/display/CSdept/IT/>`_ before deploying any bots  
+* Consult `CS-IT <https://wiki.aalto.fi/display/CSdept/IT/>`_ before deploying any bots
 
 
 **Authentication methods**
 
-* AzureAD 
+* AzureAD
 
-  * This is Aalto Login and should be enabled 
+  * This is Aalto Login and should be enabled
 
-* Email 
+* Email
 
-  * This allows users to register using an email address 
-  * We cannot allow random people or bots to register freely  
+  * This allows users to register using an email address
+  * We cannot allow random people or bots to register freely
   * If you enable this, make the chat ``invitation only`` as described in 'Invitation settings' above, for the reason described there.
 
 
 **Users**
 
-* You can manage users here. 
-* Please be careful with who you assign admins/owners. These roles should be only given to course staff 
+* You can manage users here.
+* Please be careful with who you assign admins/owners. These roles should be only given to course staff
