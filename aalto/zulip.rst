@@ -8,7 +8,7 @@ Zulip is an online discussion tool with latex support. It has been used by some 
 
 CS-IT hosts `Zulip <https://zulipchat.com/>`_ the chat instances for you. These chat instances are hosted at ``<chat-name>.zulip.cs.aalto.fi``. Login to the chats is available with Aalto accounts. Email registration for external users is also possible via invitations.
 
-Internal or confidential matters should not be discussed on the platform. 
+Internal or confidential matters should not be discussed on the platform.
 
 .. note::
 
@@ -43,19 +43,31 @@ Below are listed the most important settings found under *Manage organization* i
 
 **Organization permisisons / Invitation settings**
 
-Do not allow registering with just an email without invitation. Doing so might cause bots and random people to join in your chat. If the chat needs to include external users, make it invite only.
+Do not set both "Organizational Premissions→Invitations = not
+required" and "Authentication methods→Email = enabled" at the same
+time.
 
-* Are invitations required for joining in the organization 
-  
-  * If you are allowing external users/email registration (see ‘Authentication methods’) 
+You can allow signup by Aalto account or *any* email.  You can allow
+anyone to signup or make it invitation only.  But you *can not* set
+"Anyone with Aalto account may signup without invitation, but by email
+you must be invited" (Zulip limitation).  So, we have to work around
+this, otherwise bots and random people might join in your chat. If the
+chat needs to include external users, make it invite only.
 
-    * Set to ‘Yes, only admins can send invitations’ 
-  
-  * If you are only allowing Aalto Login (see ‘Authentication methods’) 
+The exact questions and answers:
 
-    * Can be set to ‘No,…’ (Anyone with Aalto account can join) 
+* Are invitations required for joining in the organization?
 
-**Organization permisisons / Who can access user email addressess**
+  * If you are only allowing Aalto Login (see ‘Authentication
+    methods’): Can be set to ``No,…`` (But still, anyone with Aalto
+    account can join)
+
+  * If you are allowing external users/email registration (see
+    ‘Authentication methods’ below): Set to ``Yes, only admins can
+    send invitations``.  (You can invite people via their Aalto email
+    address for Aalto login)
+
+**Organization permisisons / Who can access user email addresses**
 
 * Set this to ``Admins only`` or ``Nobody``
 
@@ -63,24 +75,23 @@ Do not allow registering with just an email without invitation. Doing so might c
 **Organization permisisons / Who can add bots**
 
 * Set to ``Admins`` only
-* Consult `CS-IT <https://wiki.aalto.fi/display/CSdept/IT/>`_ before deploying any bots  
+* Consult `CS-IT <https://wiki.aalto.fi/display/CSdept/IT/>`_ before deploying any bots
 
 
 **Authentication methods**
 
-* AzureAD 
+* AzureAD
 
-  * This is Aalto Login and should be enabled 
+  * This is Aalto Login and should be enabled
 
-* Email 
+* Email
 
-  * This allows users to register using an email address 
-  * If you enable this, make the chat ``invitation only`` as described in 'Invitation settings'
-  * We cannot allow random people or bots to register freely  
-  * Unfortunately, there is no option for "Anyone with an Aalto account can register without invitation, but you can invite others with an email address."
+  * This allows users to register using an email address
+  * We cannot allow random people or bots to register freely
+  * If you enable this, make the chat ``invitation only`` as described in 'Invitation settings' above, for the reason described there.
 
 
 **Users**
 
-* You can manage users here. 
-* Please be careful with who you assign admins/owners. These roles should be only given to course staff 
+* You can manage users here.
+* Please be careful with who you assign admins/owners. These roles should be only given to course staff
