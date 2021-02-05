@@ -66,7 +66,7 @@ The exact questions and answers:
   * If you are only allowing Aalto Login (see ‘Authentication
     methods’): Can be set to ``No,…`` (Anyone with Aalto account can join)
 
-**Organization permisisons / Who can access user email addressess**
+**Organization permisisons / Who can access user email addresses**
 
 * Set this to ``Admins only`` or ``Nobody``
 
