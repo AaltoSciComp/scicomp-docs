@@ -58,13 +58,14 @@ The exact questions and answers:
 
 * Are invitations required for joining in the organization?
 
+  * If you are only allowing Aalto Login (see ‘Authentication
+    methods’): Can be set to ``No,…`` (But still, anyone with Aalto
+    account can join)
+
   * If you are allowing external users/email registration (see
     ‘Authentication methods’ below): Set to ``Yes, only admins can
     send invitations``.  (You can invite people via their Aalto email
     address for Aalto login)
-
-  * If you are only allowing Aalto Login (see ‘Authentication
-    methods’): Can be set to ``No,…`` (Anyone with Aalto account can join)
 
 **Organization permisisons / Who can access user email addresses**
 
