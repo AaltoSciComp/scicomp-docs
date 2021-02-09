@@ -111,7 +111,7 @@ Overview
 
 Tutorials
 =========
-These are designed to be read (or `watched <tutorial-playlist>`__ in-order by every Triton user when they
+These are designed to be read (or `watched <tutorial-playlist>`__) in-order by every Triton user when they
 get their accounts (except maybe the last ones).  In order to use
 Triton well, in the `Hands-on SciComp roadmap <hosc_>`__ you should
 also know the `Basics (A) <hosc-a_>`__ and `Linux (C) <hosc-c_>`__
