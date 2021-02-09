@@ -17,14 +17,11 @@ scratch, so if you ever get a "disk quota exceeded" error, then read on.
 
 .. note::
 
-   To try a quick fix for scratch, you can:
-     ``quotafix -gs --fix /path/to/the/directory``
+   To try a quick fix for scratch, you can: ``quotafix -gs --fix /path/to/the/directory``
 
-   If that fixes something, and problem recurs, then:
-     ``module load teflon``
+   If that fixes something, and problem recurs, then: ``module load teflon``
 
-   To check your home directory usage, run
-      ``du -xh $HOME | sort -h``
+   To check your home directory usage, run: ``du -xh $HOME | sort -h``
 
 How quotas work
 ---------------
