@@ -9,6 +9,8 @@ Currently active (upcoming) courses have been moved to the
 .. toctree::
    :titlesonly:
 
+   winter-kickstart
+   intro-linux-aalto-computing
    gpu-computing
    matlab-basics
    data-analysis
@@ -16,10 +18,9 @@ Currently active (upcoming) courses have been moved to the
    linux-shell-basics
    summer-kickstart
    May 2020 / CodeRefinery <https://coderefinery.org/workshops/upcoming>
-   matlab-advanced
-   shell-scripting
+   shell-scripting_202003
    md-with-lammps
-   mpi-introduction
+   mpi-introduction_202002
    htcondor-introduction
 
 This course list is used to be at `science-it.aalto.fi/scip

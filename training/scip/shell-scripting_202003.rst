@@ -1,5 +1,5 @@
 ==================================
-March 2021 / Linux Shell Scripting
+March 2020 / Linux Shell Scripting
 ==================================
 
 Part of :doc:`Scientific Computing in Practice <index>` lecture series at Aalto University.
@@ -19,7 +19,10 @@ We expect that course participants are familiar with the :doc:`shell basics <lin
 
 **Time, date (all times EET):**
 
-TBA
+- Mon 23.3, 10:00-13:00
+- Wed 25.3, 10:00-13:00
+- Mon 30.3, 10:00-13:00
+- Wed 1.4, 10:00-13:00
 
 **Course material:** will be mostly based on the second part of the :doc:`scicomp.aalto.fi/training/linux-shell-tutorial </training/linux-shell-tutorial>`.
 
@@ -27,7 +30,7 @@ Additional materials and homework assignments at triton.aalto.fi:/scratch/scip/B
 
 **Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
 
-**Registration:** Link not yet available
+**Registration:** `open registration <https://link.webropolsurveys.com/S/3F69E4C9498BAF2D>`__
 
 **Credits:** Credits available for the Aalto students and course certificate can be provided on request for the outsiders. Credits/certificate require full time participation and handling home work/assignments. Full course hours correspond roughly to 1 ECTS.
 

@@ -1,8 +1,6 @@
 ============================
-April 2020 / Matlab Advanced
+March 2021 / Matlab Advanced
 ============================
-
-**THE COURSE IS BEING RE-STRUCTURED TO HAPPEN ONLINE IN MAY. MORE INFO LATER ON THIS PAGE**
 
 Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
 
@@ -20,20 +18,15 @@ Teaching will be interactive, “learning by doing”.
 
 **Schedule:**
 
-**THE COURSE IS BEING RE-STRUCTURED TO HAPPEN ONLINE IN MAY. MORE INFO LATER ON THIS PAGE**
+TBA
 
-- Wed 15/04/2020, 12:00–15:00, Otakaari 1, Y342a: Data loading and dealing with large datasets
-- Fri 17/04/2020, 12:00–15:00, Otakaari 1, Y342a: Advanced programming techniques 
-- Wed 22/04/2020, 12:00–15:00, Otakaari 1, Y342a: Parallelisation (CPUs/GPUs/HPC)
-- Fri 24/04/2020, 12:00–15:00, Otakaari 1, Y342a: Making high quality figures
-
-**Place:** Y342a, Otakaari 1
+**Place:** Online
 
 **Lecturers:** Enrico Glerean, D.Sc., CS/NBE Department, SCI
 
 **Registration:** 
 
-link for registration: https://webropol.com/s/matlabAdv2020
+link for registration not yet available
 
 **Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
 
