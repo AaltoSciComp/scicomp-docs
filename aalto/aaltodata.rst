@@ -126,9 +126,12 @@ everyone in the group has access.
       there are fixed multi-year projects, they can also get a group.
 
 -  Groups are managed by IT staff. To request a group, mail us with
-   the necessary information (see next point).
+   the necessary information (see bottom of page).
 -  Each group has an owner, quota on filesystems, and some other
-   metadata (see below),
+   metadata (see below).
+-  Group membership is per-account, not tied to employment contracts.
+   If you want someone to lose access, you have to explicitly remove
+   them when done.
 -  **To have a group created and storage space allocated**, see below.
 -  **To get added to a group**, see instructions below.
 -  To see your groups: use the ``groups`` command or
