@@ -16,15 +16,15 @@ Enrico Glerean, Dan Häggman, Abraham Zewoudie
 
 - 12.04 12:00-15:00 Basics of Anonymization and working with participants background data
 - 15.04 12:00-15:00 Automating anonymisation for tabular data
-- 19.04 12:00-15:00 Anonymization for complex datasets: Medical images, Speech, Geospatial data
-- 22.04 12:00-15:00 Advanced techniques for working with sensitive data (data synthesis, federated learning and differential privacy, containers)
+- 19.04 12:00-15:00 Anonymization for complex datasets: Faces in pictures and videos, Speech, Geospatial data
+- 22.04 12:00-15:00 Anonymization for medical data; advanced techniques for working with sensitive data (data synthesis, federated learning and differential privacy)
 
 **Course material:** LINK TBA
 
 **Cost:** Free of charge
 
-**Registration:** 
+**Registration:** https://forms.gle/JbC4NB6aPazYtZ7G8
 
-**Credits:** Course certificate and 1 ECTS for those who have a student ID.
+**Credits:** Course certificate and 1 ECTS for those who have a student ID. 
 
 **Additional course info at:** enrico.glerean -at- aalto.fi
