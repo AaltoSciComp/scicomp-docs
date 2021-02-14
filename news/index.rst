@@ -2,12 +2,14 @@
 News
 ====
 
-*14/01/2021* Save the date: `29 January 2021: Crash course on Data Science workflows at Aalto + Linux terminal basics <https://scicomp.aalto.fi/training/scip/intro-linux-aalto-computing/>`__ in preparation for `1-2 February 2021: Triton Winter Kickstart <https://scicomp.aalto.fi/training/scip/winter-kickstart/>`__. Registration link can be found withing the course pages. Kickstart course is highly recommended to new Triton HPC users.
+*15/02/2021* We have a new login node and new software versions on Triton for: abinit, anaconda, cuda, julia, and quantum espresso. `Read more at our issue tracker <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues/956>`__. We recommend following the issue tracker for live updates from us and from our users too!
 
 We are updating our `hands-on trainings pages </training/>`__ with our courses for Spring 2021. Join our `daily garage </help/garage/>`__ if you have issues to discuss related to computing or data management. If you are into research software, join our `Research Software Hour <https://researchsoftwarehour.github.io/>`__ Twitch show, *usually* every thursday at 21:30 (Helsinki time). 
 
 News archive
 ~~~~~~~~~~~~
+
+*14/01/2021* Save the date: `29 January 2021: Crash course on Data Science workflows at Aalto + Linux terminal basics <https://scicomp.aalto.fi/training/scip/intro-linux-aalto-computing/>`__ in preparation for `1-2 February 2021: Triton Winter Kickstart <https://scicomp.aalto.fi/training/scip/winter-kickstart/>`__. Registration link can be found withing the course pages. Kickstart course is highly recommended to new Triton HPC users.
 
 *10/12/2020* We are updating and consolidating our tutorials and guidelines on https://scicomp.aalto.fi website. There might be temporary broken links, please let us know if you spot anything that does not look as it should. Please note that the next Research Software Hour on https://twitch.tv/RSHour will be on Thursday 17/12 at 21:30 Helsinki time. A special episode about `Advent of Code 2020 <https://adventofcode.com/>`__.
 
