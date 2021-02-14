@@ -23,6 +23,7 @@ Currently active (upcoming) courses have been moved to the
   - GPU computing in practice  (December 2020)
 
 
+
 ====
 2021
 ====
