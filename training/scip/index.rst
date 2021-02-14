@@ -5,9 +5,8 @@ SCIP Archive
 Currently active (upcoming) courses have been moved to the
 :doc:`training index <../index>`.  Below is a list of past courses.
 
-====
 2020
-====
+----
 
   - MPI introduction (February 2020)
   - Hands-on Molecular Dynamics with LAMMPS (February 2020)
@@ -24,9 +23,8 @@ Currently active (upcoming) courses have been moved to the
 
 
 
-====
 2021
-====
+----
 
   - Introduction to Data Analysis strategies at Aalto, Linux shell, HPC kickstart 2021  (Jan/Feb 2021, materials, `videos <https://youtube.com/playlist?list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc>`__)
 

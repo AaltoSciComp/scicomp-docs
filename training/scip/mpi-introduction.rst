@@ -1,6 +1,6 @@
-===========================
-Mar 2021 / MPI introduction
-===========================
+=============================
+March 2021 / MPI introduction
+=============================
 
 Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
 

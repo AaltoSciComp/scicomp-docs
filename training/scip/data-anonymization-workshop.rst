@@ -1,6 +1,6 @@
-=======================================
-Aril 2021 / Hands-on Data Anonymization
-=======================================
+========================================
+April 2021 / Hands-on Data Anonymization
+========================================
 
 Part of :doc:`Scientific Computing in Practice <index>` lecture series at Aalto University and Aalto Data Agents RDM training.
 

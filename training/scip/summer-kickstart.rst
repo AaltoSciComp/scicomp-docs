@@ -1,5 +1,5 @@
 ==================================
-Jun 2020 / FGCI Summer Kickstart
+June 2020 / FGCI Summer Kickstart
 ==================================
 
 .. admonition:: News
@@ -76,21 +76,18 @@ University specific information:
 Practical information
 ---------------------
 
-**Time, date:** Mon 8.6, Tue 9.6, Wed 10.6, 12:00-16:00 EEST
+**Time, date:**  *Tentative dates* Mon 7.6, Tue 8.6, Wed 9.6, 12:00-16:00 EEST
 
 **Place:** Online: Zoom link will be sent to registered participants.
 
-**Lecturering by:** Aalto Science IT and CSC people
+**Lecturering by:** Aalto Science IT and CSC
 
-**Registration:** `registration link
-<https://link.webropolsurveys.com/S/B1752A5EBD3BF08F>`__.  Please
-register to get the Zoom link and updates in general.
+**Registration:** Registration link not yet available.
 
 **Cost:** Free of charge for FGCI consortium members including Aalto
 employees and students.
 
-**Additional course info at:** Ivan Degtyarenko, ivan.degtyarenko -at-
-aalto.fi
+**Additional course info at:** scip@aalto.fi
 
 
 
@@ -103,7 +100,7 @@ breaks. You will be given time to try and ask, it’s more like an
 informal help session to get you started with the computing resources.
 
 
-* **Day #1 (Mon 8.jun):**
+* **Day #1 (Mon 7.jun):**
 
   * 11:50-12:00: **Joining time and pre-discussion**, please join 10
     minutes early.
@@ -140,7 +137,7 @@ informal help session to get you started with the computing resources.
     * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART>`__
     * Tampere: `Connecting to Narvi <https://narvi-docs.readthedocs.io/narvi/tut/connecting.html>`__
 
-* **Day #2 (Tue 9.jun):**
+* **Day #2 (Tue 8.jun):**
 
   * Module #2.1 (4h): **Getting started on the cluster** // tutorial
     // SLURM basics, software, and storage.  Workflow, running and
@@ -191,7 +188,7 @@ informal help session to get you started with the computing resources.
 
     * :doc:`/triton/tut/serial`
 
-* **Day #3 (Wed 10.jun):**
+* **Day #3 (Wed 9.jun):**
 
   * Module #3.1 (2h): **Advanced SLURM and cluster usage** // tutorial // Running in
     parallel with MPI and OpenMP, array jobs, running on GPU with

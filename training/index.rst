@@ -27,7 +27,7 @@ and/or Python, Matlab, HTCondor and many others.
 
    scip/mpi-introduction
    scip/shell-scripting
-   Code Refinery workshop Spring 2021 <https://coderefinery.org/workshops/upcoming/>
+   March/AprilCode Refinery workshops Spring 2021 <https://coderefinery.org/workshops/upcoming/>
    scip/data-anonymization-workshop
    scip/software-design
    scip/matlab-advanced
