@@ -19,7 +19,10 @@ We expect that course participants are familiar with the :doc:`shell basics <lin
 
 **Time, date (all times EET):**
 
-TBA
+Mon 22.03, 10:00-13:00
+Wed 24.03, 10:00-13:00
+Mon 29.03, 10:00-13:00
+Wed 31.03, 10:00-13:00
 
 **Course material:** will be mostly based on the second part of the :doc:`scicomp.aalto.fi/training/linux-shell-tutorial </training/linux-shell-tutorial>`.
 
@@ -27,7 +30,7 @@ Additional materials and homework assignments at triton.aalto.fi:/scratch/scip/B
 
 **Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
 
-**Registration:** Link not yet available
+**Registration:** Registration not yet available
 
 **Credits:** Credits available for the Aalto students and course certificate can be provided on request for the outsiders. Credits/certificate require full time participation and handling home work/assignments. Full course hours correspond roughly to 1 ECTS.
 

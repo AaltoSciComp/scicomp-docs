@@ -25,12 +25,13 @@ and/or Python, Matlab, HTCondor and many others.
 .. toctree::
    :maxdepth: 1
 
-   scip/summer-kickstart.rst
-   scip/data-anonymization-workshop
-   Code Refinery workshop Spring 2021 <https://coderefinery.org/workshops/upcoming/>
-   scip/matlab-advanced
-   scip/shell-scripting
    scip/mpi-introduction
+   scip/shell-scripting
+   Code Refinery workshop Spring 2021 <https://coderefinery.org/workshops/upcoming/>
+   scip/data-anonymization-workshop
+   scip/software-design
+   scip/matlab-advanced
+   scip/summer-kickstart
    scip/index
 
 .. toctree::

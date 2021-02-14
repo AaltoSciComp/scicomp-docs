@@ -1,26 +1,30 @@
-============================
-March 2021 / Matlab Advanced
-============================
+==========================
+May 2021 / Matlab Advanced
+==========================
 
 Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
 
-**Audience:** Aalto employees and students.
+**Audience:** Everyone with basic knowledge of Matlab
 
 **About the course:**
 
-MATLAB is a high-level technical computing language and interactive environment for algorithm development, data visualization, data analysis and numerical computation in general.  — The Mathworks Inc.
+MATLAB is a high-level technical computing lan§guage and interactive environment for algorithm development, data visualization, data analysis and numerical computation in general.  — The Mathworks Inc.
 
 Teaching will be interactive, “learning by doing”.
 
 **Course webpage**
 
-`Matlab Advanced course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/tree/master/AY20192020/MatlabAdvanced2020#matlab-advanced-2020-ay-2019-2020>`__
+New webpage is being prepared, older page at: `Matlab Advanced course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/tree/master/AY20192020/MatlabAdvanced2020#matlab-advanced-2020-ay-2019-2020>`__
 
 **Schedule:**
 
-TBA
+Tue 11.05, 12:00-15:00 "Loading and handling very large datasets"
+Wed 12.05, 12:00-15:00 "Advanced programming techniques"
+Tue 18.05, 12:00-15:00 "Parallelisation on CPUs/GPUs/HPC"
+Wed 19.05, 12:00-15:00 "Making high quality figures"
 
-**Place:** Online
+
+**Place:** Online, zoom link will be sent to registered participants
 
 **Lecturers:** Enrico Glerean, D.Sc., CS/NBE Department, SCI
 
