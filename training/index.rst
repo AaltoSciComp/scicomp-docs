@@ -41,11 +41,7 @@ and/or Python, Matlab, HTCondor and many others.
    scicomp-announcements-maillist
 
 
-**Upcoming courses**
-
-*Spring / Summer 2021* - Introduction to MPI, Matlab advanced course, 
-Linux Shell Scripting, CodeRefinery. On top of them Summer
-Kickstart in June.
+**Future courses**
 
 *Fall / Winter 2021-22 courses (tentative plan)* -  
 Linux Shell Basics, Python for Scientists, Data analysis with R and
