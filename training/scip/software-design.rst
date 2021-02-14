@@ -26,7 +26,7 @@ We expect that course participants are familiar with the Python programming lang
 26.04 10:00-14:00 First review sessions (half hour slot per person)
 03.05 10:00-15:00 Second round of review sessions (half hour slots) and recap session from 14:00 to 15:00
 
-**Course material:** All course material can be found in this repository: `https://version.aalto.fi/gitlab/merzs1/cdwassignment <https://version.aalto.fi/gitlab/merzs1/cdwassignment>`.
+**Course material:** All course material can be found in this repository: `https://version.aalto.fi/gitlab/merzs1/cdwassignment <https://version.aalto.fi/gitlab/merzs1/cdwassignment>`__.
 
 **Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
 
