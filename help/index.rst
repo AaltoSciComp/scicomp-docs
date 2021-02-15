@@ -95,7 +95,8 @@ Chat can be a great way to quickly talk with others, share tips, and
 quickly get feedback on if a problem is large or small, something to
 get help with or figure out yourself, etc.  For longer solutions, we will
 direct you to the issue trackers but it rarely hurts to do a real-time
-discussion.
+discussion.  (For real-time video chat with screen sharing, come to
+the garage above).
 
 The `SciComp Zulipchat, scicomp.zulip.cs.aalto.fi
 <https://scicomp.zulip.cs.aalto.fi>`__ is where we most often hang
