@@ -107,7 +107,8 @@ The `SciComp Zulipchat, scicomp.zulip.cs.aalto.fi
 out.  You can ask triton questions in ``#triton``, general questions
 in ``#general``, research software engineering questions in ``#rse``,
 etc.  The main point of Zulip is **topics**, which allow you to
-name threads and easily follow old information.
+name threads and easily follow old information. (:doc:`use zulip in your
+courses </aalto/zulip>`)
 
 You can also chat with us on `Aalto Microsoft Teams
 <https://teams.microsoft.com/l/team/19%3a688ad82e41aa46d48ad978aea767419c%40thread.tacv2/conversations?groupId=4089981d-a443-493d-ae3e-3df5c63caed6&tenantId=ae1a7724-4041-4462-a6dc-538cb199707e>`__.
