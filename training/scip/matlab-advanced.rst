@@ -18,10 +18,17 @@ New webpage is being prepared, older page at: `Matlab Advanced course webpage <h
 
 **Schedule:**
 
-Tue 11.05, 12:00-15:00 "Loading and handling very large datasets"
-Wed 12.05, 12:00-15:00 "Advanced programming techniques"
-Tue 18.05, 12:00-15:00 "Parallelisation on CPUs/GPUs/HPC"
-Wed 19.05, 12:00-15:00 "Making high quality figures"
++-----------+-------------+--------------------------------------------+
+|  Date     |        Time | Event                                      |
++===========+=============+============================================+
+| Tue 11.05 | 12:00-15:00 | Loading and handling very large datasets   |
++-----------+-------------+--------------------------------------------+
+| Wed 12.05 | 12:00-15:00 | Advanced programming techniques            |
++-----------+-------------+--------------------------------------------+
+| Tue 18.05 | 12:00-15:00 | Parallelisation on CPUs/GPUs/HPC           |
++-----------+-------------+--------------------------------------------+
+| Wed 19.05 | 12:00-15:00 | Making high quality figures                |
++-----------+-------------+--------------------------------------------+
 
 
 **Place:** Online, zoom link will be sent to registered participants

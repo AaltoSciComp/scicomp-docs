@@ -22,9 +22,17 @@ We expect that course participants are familiar with the Python programming lang
 
 **Time, date (all times EET):**
 
-19.04 12:00-14:00 Theory session: 12 to 14
-26.04 10:00-14:00 First review sessions (half hour slot per person)
-03.05 10:00-15:00 Second round of review sessions (half hour slots) and recap session from 14:00 to 15:00
++-------+-------------+---------------------------------------------------+
+|  Date |        Time | Event                                             |
++=======+=============+===================================================+
+| 19.04 | 12:00-14:00 | Theory session                                    |
++-------+-------------+---------------------------------------------------+
+| 26.04 | 10:00-14:00 | First review sessions (half hour slot per person) |
++-------+-------------+---------------------------------------------------+
+| 03.05 | 10:00-15:00 | Second round of review sessions (half hour slots) |
++-------+-------------+---------------------------------------------------+
+| 03.05 | 14:00-15:00 | Recap session and closing                         |
++-------+-------------+---------------------------------------------------+
 
 **Course material:** All course material can be found in this repository: `https://version.aalto.fi/gitlab/merzs1/cdwassignment <https://version.aalto.fi/gitlab/merzs1/cdwassignment>`__.
 

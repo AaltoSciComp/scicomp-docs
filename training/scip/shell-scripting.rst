@@ -19,10 +19,17 @@ We expect that course participants are familiar with the :doc:`shell basics <lin
 
 **Time, date (all times EET):**
 
-Mon 22.03, 10:00-13:00
-Wed 24.03, 10:00-13:00
-Mon 29.03, 10:00-13:00
-Wed 31.03, 10:00-13:00
++-----------+-------------+
+| Date      |        Time |
++===========+=============+
+| Mon 22.03 | 10:00-13:00 |
++-----------+-------------+
+| Wed 24.03 | 10:00-13:00 |
++-----------+-------------+
+| Mon 29.03 | 10:00-13:00 |
++-----------+-------------+
+| Wed 31.03 | 10:00-13:00 |
++-----------+-------------+
 
 **Course material:** will be mostly based on the second part of the :doc:`scicomp.aalto.fi/training/linux-shell-tutorial </training/linux-shell-tutorial>`.
 
