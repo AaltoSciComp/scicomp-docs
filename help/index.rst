@@ -92,21 +92,22 @@ Chat
 ~~~~
 
 Chat can be a great way to quickly talk with others, share tips, and
-quickly get feedback on if a problem is large or small, you should ask
-or you should figure out yourself, etc.  This is a good place to ask
-both from us and from other researchers, but for longer questions
-we'll direct you to our issue tracker so we won't lose track.
+quickly get feedback on if a problem is large or small, something to
+get help with or figure out yourself, etc.  For longer solutions, we will
+direct you to the issue trackers but it rarely hurts to do a real-time
+discussion.
 
 The `SciComp Zulipchat, scicomp.zulip.cs.aalto.fi
 <https://scicomp.zulip.cs.aalto.fi>`__ is where we most often hang
 out.  You can ask triton questions in ``#triton``, general questions
 in ``#general``, research software engineering questions in ``#rse``,
 etc.  The main point of Zulip is **topics**, which allow you to
-name threads and easily find old information.
+name threads and easily follow old information.
 
 You can also chat with us on `Aalto Microsoft Teams
 <https://teams.microsoft.com/l/team/19%3a688ad82e41aa46d48ad978aea767419c%40thread.tacv2/conversations?groupId=4089981d-a443-493d-ae3e-3df5c63caed6&tenantId=ae1a7724-4041-4462-a6dc-538cb199707e>`__.
-The invite code is ``e50tyij``.  This is useful for quick things, but 
+The invite code is ``e50tyij``.  We are also findable on various other
+department chats here.
 
 Email
 ~~~~~
