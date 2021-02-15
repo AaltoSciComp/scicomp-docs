@@ -31,11 +31,9 @@ Online
 Triton, SciComp, RSE, and CS
 ----------------------------
 
-.. note::
+.. admonition:: Link
 
-   We have added some **focus days** (see list below), but you can always
-   visit on any day and ask anything not related to the "focus".
-   
+   https://aalto.zoom.us/j/65371910202, every day at 13:00
 
 You can meet us online, every weekday, at 13:00, `online via zoom
 <https://aalto.zoom.us/j/65371910202>`__.  Imagine this like walking

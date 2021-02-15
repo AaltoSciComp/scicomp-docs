@@ -83,6 +83,10 @@ where it should go.**
 Garage
 ~~~~~~
 
+.. admonition:: Link
+
+   https://aalto.zoom.us/j/65371910202, every day at 13:00
+
 Daily :doc:`SciComp Garage sessions </help/garage>`, where you can
 informally chat.  This is especially useful when your question is not yet
 fully defined, or you think that demonstrating the problem for
