@@ -18,7 +18,7 @@ We expect that course participants are familiar with the Python programming lang
 - Susanne Merz, NBE, Aalto University
 - Marijn van Vliet, Science IT, Aalto University
 
-**Place:** Online, common Zoom link for all the sessions `aalto.zoom.us/j/947220751 <https://aalto.zoom.us/j/947220751>`__
+**Place:** Online, common Zoom link for all the sessions (Zoom link will be sent after registration).
 
 **Time, date (all times EET):**
 
