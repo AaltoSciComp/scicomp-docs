@@ -8,7 +8,7 @@ Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/sci
 
 **About the course:**
 
-MATLAB is a high-level technical computing lan§guage and interactive environment for algorithm development, data visualization, data analysis and numerical computation in general.  — The Mathworks Inc.
+MATLAB is a high-level technical computing language and interactive environment for algorithm development, data visualization, data analysis and numerical computation in general.  — The Mathworks Inc.
 
 Teaching will be interactive, “learning by doing”.
 
@@ -45,4 +45,3 @@ The course is done in Y342a which has 30 Linux desktop computers. If you are not
 **Additional course info at:** enrico.glerean -at- aalto.fi
 
 .. Additional material (e.g. data files and examples) are published at the  `Matlab Advanced course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/tree/master/AY20192020/MatlabAdvanced2020#matlab-advanced-2020-ay-2019-2020>`__
-
