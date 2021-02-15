@@ -1,5 +1,5 @@
 ==================================
-June 2020 / FGCI Summer Kickstart
+June 2021 / FGCI Summer Kickstart
 ==================================
 
 .. admonition:: News
