@@ -1,12 +1,10 @@
-============================
-April 2020 / Matlab Advanced
-============================
-
-**THE COURSE IS BEING RE-STRUCTURED TO HAPPEN ONLINE IN MAY. MORE INFO LATER ON THIS PAGE**
+==========================
+May 2021 / Matlab Advanced
+==========================
 
 Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
 
-**Audience:** Aalto employees and students.
+**Audience:** Everyone with basic knowledge of Matlab
 
 **About the course:**
 
@@ -16,24 +14,30 @@ Teaching will be interactive, “learning by doing”.
 
 **Course webpage**
 
-`Matlab Advanced course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/tree/master/AY20192020/MatlabAdvanced2020#matlab-advanced-2020-ay-2019-2020>`__
+New webpage is being prepared, older page at: `Matlab Advanced course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/tree/master/AY20192020/MatlabAdvanced2020#matlab-advanced-2020-ay-2019-2020>`__
 
 **Schedule:**
 
-**THE COURSE IS BEING RE-STRUCTURED TO HAPPEN ONLINE IN MAY. MORE INFO LATER ON THIS PAGE**
++-----------+-------------+--------------------------------------------+
+|  Date     |        Time | Event                                      |
++===========+=============+============================================+
+| Tue 11.05 | 12:00-15:00 | Loading and handling very large datasets   |
++-----------+-------------+--------------------------------------------+
+| Wed 12.05 | 12:00-15:00 | Advanced programming techniques            |
++-----------+-------------+--------------------------------------------+
+| Tue 18.05 | 12:00-15:00 | Parallelisation on CPUs/GPUs/HPC           |
++-----------+-------------+--------------------------------------------+
+| Wed 19.05 | 12:00-15:00 | Making high quality figures                |
++-----------+-------------+--------------------------------------------+
 
-- Wed 15/04/2020, 12:00–15:00, Otakaari 1, Y342a: Data loading and dealing with large datasets
-- Fri 17/04/2020, 12:00–15:00, Otakaari 1, Y342a: Advanced programming techniques 
-- Wed 22/04/2020, 12:00–15:00, Otakaari 1, Y342a: Parallelisation (CPUs/GPUs/HPC)
-- Fri 24/04/2020, 12:00–15:00, Otakaari 1, Y342a: Making high quality figures
 
-**Place:** Y342a, Otakaari 1
+**Place:** Online, zoom link will be sent to registered participants
 
 **Lecturers:** Enrico Glerean, D.Sc., CS/NBE Department, SCI
 
 **Registration:** 
 
-link for registration: https://webropol.com/s/matlabAdv2020
+link for registration not yet available
 
 **Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
 
@@ -48,4 +52,3 @@ The course is done in Y342a which has 30 Linux desktop computers. If you are not
 **Additional course info at:** enrico.glerean -at- aalto.fi
 
 .. Additional material (e.g. data files and examples) are published at the  `Matlab Advanced course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/tree/master/AY20192020/MatlabAdvanced2020#matlab-advanced-2020-ay-2019-2020>`__
-

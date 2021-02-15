@@ -1,6 +1,6 @@
-===========================
-Mar 2021 / MPI introduction
-===========================
+=============================
+March 2021 / MPI introduction
+=============================
 
 Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
 
@@ -14,10 +14,18 @@ The course is focused on practical aspects of parallel programming applied to pr
 
 **Time, date:**
 
-- Tue 9.3, 10:00-13:00
-- Fri 12.3, 10:00-13:00
-- Tue 16.3, 10:00-13:00
-- Fri 19.3, 10:00-13:00
+
++----------+-------------+
+| Date     |        Time |
++==========+=============+
+| Tue 9.3  | 10:00-13:00 |
++----------+-------------+
+| Fri 12.3 | 10:00-13:00 |
++----------+-------------+
+| Tue 16.3 | 10:00-13:00 |
++----------+-------------+
+| Fri 19.3 | 10:00-13:00 |
++----------+-------------+
 
 **Place:** Zoom link provided to registered participants
 

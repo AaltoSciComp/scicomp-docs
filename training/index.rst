@@ -25,8 +25,13 @@ and/or Python, Matlab, HTCondor and many others.
 .. toctree::
    :maxdepth: 1
 
-   scip/winter-kickstart
-   scip/intro-linux-aalto-computing
+   scip/mpi-introduction
+   scip/shell-scripting
+   March/April 2021 / Code Refinery workshops Spring 2021 <https://coderefinery.org/workshops/upcoming/>
+   scip/data-anonymization-workshop
+   scip/software-design
+   scip/matlab-advanced
+   scip/summer-kickstart
    scip/index
 
 .. toctree::
@@ -36,11 +41,7 @@ and/or Python, Matlab, HTCondor and many others.
    scicomp-announcements-maillist
 
 
-**Upcoming courses**
-
-*Spring / Summer 2021* - Introduction to MPI, Matlab advanced course, 
-Linux Shell Scripting, CodeRefinery. On top of them Summer
-Kickstart in June.
+**Future courses**
 
 *Fall / Winter 2021-22 courses (tentative plan)* -  
 Linux Shell Basics, Python for Scientists, Data analysis with R and

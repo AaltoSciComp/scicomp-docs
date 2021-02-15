@@ -1,6 +1,6 @@
-=======================================
-Aril 2021 / Hands-on Data Anonymization
-=======================================
+========================================
+April 2021 / Hands-on Data Anonymization
+========================================
 
 Part of :doc:`Scientific Computing in Practice <index>` lecture series at Aalto University and Aalto Data Agents RDM training.
 
@@ -14,10 +14,18 @@ Enrico Glerean, Dan Häggman, Abraham Zewoudie
 
 **Time, date, place:** the course consists of four online hands-on sessions. Zoom link to be posted to the registered participants list
 
-- 12.04 12:00-15:00 Basics of Anonymization and working with participants background data
-- 15.04 12:00-15:00 Automating anonymisation for tabular data
-- 19.04 12:00-15:00 Anonymization for complex datasets: Faces in pictures and videos, Speech, Geospatial data
-- 22.04 12:00-15:00 Anonymization for medical data; advanced techniques for working with sensitive data (data synthesis, federated learning and differential privacy)
++-------+-------------+--------------------------------------------------------------------------------------------+
+|  Date |        Time | Event                                                                                      |
++=======+=============+============================================================================================+
+| 12.04 | 12:00-15:00 | Basics of Anonymization and working with participants background data                      |
++-------+-------------+--------------------------------------------------------------------------------------------+
+| 15.04 | 12:00-15:00 | Automating anonymisation for tabular data                                                  |
++-------+-------------+--------------------------------------------------------------------------------------------+
+| 19.04 | 12:00-15:00 | Anonymization for complex datasets: Faces in pictures and videos, Speech, Geospatial data  |
++-------+-------------+--------------------------------------------------------------------------------------------+
+| 22.04 | 12:00-15:00 | Anonymization for medical data; advanced techniques for                                    |
+|       |             | working with sensitive data (data synthesis, federated learning and differential privacy)  |
++-------+-------------+--------------------------------------------------------------------------------------------+
 
 **Course material:** LINK TBA
 
