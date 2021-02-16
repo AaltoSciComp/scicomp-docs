@@ -23,16 +23,16 @@ Topics
 ======
 
 * Tue 23.2, 11:00, Ivan Degtyarenko
-** Triton hardware wise: different archs, IPMI, troubleshooting 
+  * Triton hardware wise: different archs, IPMI, troubleshooting 
 * Tue 2.3, 11:00, Ivan Degtyarenko
-** Networking: IB and Ethernet setup
+  * Networking: IB and Ethernet setup
 * WHEN, Mikko Hakala
-** Triton authentication
+  * Triton authentication
 * WHEN, WHO
-** Storage systems: hardware and software behind /scratch and /home, 
+  * Storage systems: hardware and software behind /scratch and /home, 
    manitenance, troubleshooting techniques
 * WHEN, Simo Tuomisto
-** Triton / FCCI software stack: Spack, building software, ...
+  * Triton / FCCI software stack: Spack, building software, ...
 * WHEN, WHO
-** Ansible, provisioning with OpenHPC, stanalone servers
+  * Ansible, provisioning with OpenHPC, stanalone servers
 
