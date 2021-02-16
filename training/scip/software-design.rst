@@ -38,7 +38,7 @@ We expect that course participants are familiar with the Python programming lang
 
 **Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
 
-**Registration:** Link not yet available
+**Registration:** `You can register at this link <https://docs.google.com/forms/d/e/1FAIpQLSeVgGFA2swIIKTO-9AHdOhfZv9DHrq__pbmRJAWyN5LBfDsRw/viewform?usp=sf_link>`__
 
 **Credits:** Credits are available for Aalto students and a course certificate can be provided on request for outsiders. Credits/certificate require full time participation and handling home work/assignments. Full course hours correspond roughly to 1 ECTS.
 
