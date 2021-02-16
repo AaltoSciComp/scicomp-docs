@@ -55,7 +55,8 @@ mailinglist <scicomp-announcements-maillist>`.
 Other interesting courses
 =========================
 
-*Data management, Reproducibility, open science*: please check the `spring calendar for training on data management and open science <https://www.aalto.fi/en/services/rdm-training>__`, organised by the Aalto Data Agents:
+*Data management, Reproducibility, open science*
+Please check the `spring calendar for training on data management and open science <https://www.aalto.fi/en/services/rdm-training>`__, organised by the Aalto Data Agents:
 
   - How to make your research/code reproducible | 2.3.2021 at 2-3.30 PM
   - Introduction to research data management | 11.3.2021 at 10-11 AM
@@ -72,7 +73,10 @@ Other interesting courses
 
 Registration and more details at: https://www.aalto.fi/en/services/rdm-training
 
-*Scientific computing*: please check https://mycourses.aalto.fi/ for other courses at Aalto and https://www.csc.fi/en/training for training courses and events at CSC. Some coming courses:
+
+*Scientific computing*
+Please check https://mycourses.aalto.fi/ for other courses at Aalto and https://www.csc.fi/en/training for training courses and events at CSC. Some coming courses:
+
   - `CS-E4580 Programming Parallel Computers <https://mycourses.aalto.fi/course/view.php?id=28198>`__
   - `CS-E4640 Big Data Platforms D <https://mycourses.aalto.fi/course/view.php?id=28200>`__
 
