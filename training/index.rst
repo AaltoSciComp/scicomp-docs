@@ -68,12 +68,16 @@ Other interesting courses
   - What's new in publishing? | 30.3.2021 at 1-2 PM | Enrollment (Aalto staff) / Enrollment (Aalto students)
   - Let's get this metadata right! Maximise the reuse, findability and citation of your dataset | 21.4.2021 at 1-2 PM
   - Making your software useful | 7.4.2021 at 12-1 PM
+  - `Research ethics for doctoral students <https://mycourses.aalto.fi/course/view.php?id=23138>`__
 
 Registration and more details at: https://www.aalto.fi/en/services/rdm-training
 
 *Scientific computing*: please check https://mycourses.aalto.fi/ for other courses at Aalto and https://www.csc.fi/en/training for training courses and events at CSC. Some coming courses:
   - `CS-E4580 Programming Parallel Computers <https://mycourses.aalto.fi/course/view.php?id=28198>`__
   - `CS-E4640 Big Data Platforms D <https://mycourses.aalto.fi/course/view.php?id=28200>`__
+
+MOOC on scientific computing:
+  - https://www.futurelearn.com/courses/python-in-hpc
 
 
 
