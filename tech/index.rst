@@ -23,20 +23,20 @@ Topics
 ======
 
 * Tue 23.2, 11:00, Ivan Degtyarenko
-  * Triton hardware wise: machine room, different archs,
+  ** Triton hardware wise: machine room, different archs,
      IPMI, hardware troubleshooting 
 * Tue 2.3, 11:00, Ivan Degtyarenko
-  * Networking: IB and Ethernet setup, IB islands
+  ** Networking: IB and Ethernet setup, IB islands
 * WHEN, Mikko ?
-  * Ansible, provisioning with OpenHPC, stanalone servers
+  ** Ansible, provisioning with OpenHPC, stanalone servers
 * WHEN, WHO
-  * Storage systems: hardware and software behind /scratch and /home, 
+  ** Storage systems: hardware and software behind /scratch and /home, 
    manitenance, troubleshooting techniques
 * WHEN, Mikko Hakala
-  * Triton authentication
+  ** Triton authentication
 * WHEN, Simo Tuomisto
-  * Triton / FCCI software stack: Spack, building software, ...
+  ** Triton / FCCI software stack: Spack, building software, ...
 * WHEN, Simppa ?
-  * SLURM setup
+  ** SLURM setup
 * WHEN, Richard ?
-  * Jypiter setup at Aalto and best practices, ...
+  ** Jypiter setup at Aalto and best practices, ...
