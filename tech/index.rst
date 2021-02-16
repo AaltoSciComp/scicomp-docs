@@ -1,13 +1,15 @@
 ========
-ASC Tech
+CAIP
 ========
+
+CAIP == Cluster Administration in Practice
 
 Serie of the technical HPC seminars. Oriented primarily on the Triton team
 and FCCI admins but open for anyone interested.
 
-Share the knowledge and expertise. Informal. Free.
+We share what we have learned.
 
-We tell what we have learned over the years.
+Informal. Free.
 
 Timing
 ======
@@ -18,6 +20,8 @@ Place
 =====
 
 Zoom: TBA
+
+It is not a right but a priveledge to participate.
 
 Topics
 ======
@@ -53,3 +57,7 @@ Topics
 - WHEN, Richard ?
 
   + Jypiter setup at Aalto and best practices, ...
+
+- WHEN, Simo/Mikko ?
+
+  + Cluster monitoring
