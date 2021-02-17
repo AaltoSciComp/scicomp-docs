@@ -129,9 +129,11 @@ everyone in the group has access.
    the necessary information (see bottom of page).
 -  Each group has an owner, quota on filesystems, and some other
    metadata (see below).
--  Group membership is per-account, not tied to employment contracts.
-   If you want someone to lose access, you have to explicitly remove
-   them when done.
+-  Group membership is per-account, not tied to employment contracts
+   or HR group membership.
+   If you want someone to lose access to a group you manage, they have
+   to be explicitly removed by the same method they were added (asking
+   someone or self-service, see bottom of page).
 -  **To have a group created and storage space allocated**, see below.
 -  **To get added to a group**, see instructions below.
 -  To see your groups: use the ``groups`` command or
