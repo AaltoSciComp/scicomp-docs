@@ -98,6 +98,11 @@ Our training map `Hands-on Scientific Computing
 <https://handsonscicomp.readthedocs.io>`__ sorts the skills you need
 by level and category, providing you a strategy to get started.
 
+.. image:: /images/levels.svg
+   :align: center
+   :alt: Level dependencies
+   :scale: 75%
+
 In order to do basic scientific computing, C (Linux and shell) is
 needed.  To use a computer cluster, D (Clusters and HPC) is useful.  E
 (scientific coding) is useful if you are writing your own software.
