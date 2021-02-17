@@ -37,7 +37,7 @@ New webpage is being prepared, older page at: `Matlab Advanced course webpage <h
 
 **Registration:** 
 
-link for registration not yet available
+`Click here for registering to Matlab Advanced 2021 <https://webropol.com/s/matlabAdvanced2021>`__
 
 **Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
 

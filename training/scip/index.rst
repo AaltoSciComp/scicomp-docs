@@ -26,7 +26,7 @@ Currently active (upcoming) courses have been moved to the
 2021
 ----
 
-  - Introduction to Data Analysis strategies at Aalto, Linux shell, HPC kickstart 2021  (Jan/Feb 2021, materials, `videos <https://youtube.com/playlist?list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc>`__)
+  - Introduction to Data Analysis strategies at Aalto, Linux shell, HPC kickstart 2021  (Jan/Feb 2021, :doc:`materials part 1 <intro-linux-aalto-computing>`, :doc:`materials part 2 <winter-kickstart>`, `videos <https://youtube.com/playlist?list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc>`__)
 
 
 This course list is used to be at `science-it.aalto.fi/scip
