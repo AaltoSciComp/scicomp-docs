@@ -1,8 +1,8 @@
 ========
-CAIP
-========
+Behind Triton
+=============
 
-CAIP == Cluster Administration in Practice
+It is about HPC Administration in Practice.
 
 Serie of the technical HPC seminars. Oriented primarily on the Triton team
 and FCCI admins but open for anyone interested.
@@ -26,15 +26,15 @@ It is not a right but a priveledge to participate.
 Topics
 ======
 
-- Tue 23.2, 11:00, Ivan Degtyarenko
+- Wed 3.3, 10:00, Ivan Degtyarenko
 
   + Triton hardware wise: machine room, different archs, IPMI, hardware troubleshooting 
 
-- Tue 2.3, 11:00, Ivan Degtyarenko
+- Wed xx, 10:00, Ivan Degtyarenko
 
   + Networking: IB and Ethernet setup, IB islands
 
-- WHEN, Mikko ?
+- Wed xx, Mikko ?
 
   + Ansible, provisioning with OpenHPC, stanalone servers
 
@@ -45,6 +45,10 @@ Topics
 - WHEN, Mikko Hakala
 
   + Triton authentication
+
+WHEN, Richard Darst
+  
+  + How to build a right documentation, issue tracker to server end users
 
 - WHEN, Simo Tuomisto
 
