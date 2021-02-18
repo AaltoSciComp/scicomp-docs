@@ -1,4 +1,4 @@
-========
+=============
 Behind Triton
 =============
 
@@ -46,7 +46,7 @@ Topics
 
   + Triton authentication
 
-WHEN, Richard Darst
+- WHEN, Richard Darst
   
   + How to build a right documentation, issue tracker to server end users
 
