@@ -11,10 +11,10 @@ we will guide you to what you need.
 Course or not?
 --------------
 
-If all you need is a Python environment to do assignments and
+**If all you need is a Python environment to do assignments and
 projects, you don't need to request anything special - students can
 just use the generic servers for their independent computational
-needs.  Students can upload and download any files they need.  You
+needs.**  Students can upload and download any files they need.  You
 could add data to the "shareddata" location, which is available to any
 user.
 
@@ -72,7 +72,8 @@ When requesting a course, please read the following and tell us your
 requirements in the course request email, guru@cs.aalto.fi (using the template above).
 If you are using the hub
 without a specific course item in the selection list, please let us
-know at least 3a, 6, 7, and 8 below.
+know at least 3a, 6, 7, and 8 below.  You don't need to duplicate
+stuff in the YAML above.
 
 Required metadata is:
 
