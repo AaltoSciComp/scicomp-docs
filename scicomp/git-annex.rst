@@ -35,7 +35,7 @@ distributed system, and thus better for large scale data management.
 
 
 Background
-==========
+----------
 
 You probably know what git is - it tracks versions of files.  The full
 history of every file is kept.  When something is recorded in
@@ -78,7 +78,7 @@ annex drop``, ``git annex sync``, and so on.
 
 
 Basic setup
-===========
+-----------
 
 In this section, you learn how to create a repository that tracks
 large data files and makes them read-only.
@@ -92,3 +92,9 @@ large data files and makes them read-only.
    $ git add small-file.txt
    $ git annex add large-file.dat
 
+
+
+I want all my files unlocked
+----------------------------
+
+- trade-offs
