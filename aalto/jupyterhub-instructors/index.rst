@@ -32,6 +32,10 @@ JupyterHub for instructors
 More info
 ---------
 
+* The `Noteable <https://noteable.edina.ac.uk/>`__ is a commercial
+  service using nbgrader and has some good documentation:
+  https://noteable.edina.ac.uk/documentation/
+
 Contact: CS-IT via the guru alias guru @ cs dot aalto.fi (students,
 contact your course instructors first).
 
