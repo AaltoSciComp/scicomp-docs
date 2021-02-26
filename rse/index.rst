@@ -1,19 +1,28 @@
 Research Software Engineers
 ===========================
 
-Our `Research Software Engineer <rse-history_>`_ (RSE) service provides you with a
-dedicated specialist to assist you
-with computing, software, and data tasks in your research, for a longer
-period than other staff can.  Funding either comes from departments (for
-basic service) or from a research project.
+The Aalto `Research Software Engineers <rse-history_>`_ The Aalto
+Research Software Engineers (RSE) provide specialist support regarding
+software, computing, and data. As research becomes more digital and
+computer-dependent, the prerequisite knowledge grows larger and
+larger, creating a gap between those able to use the tools and those
+who struggle. The RSE program is designed to address this gap. We not
+only provide a service, but also teach researchers so they can be
+confident programmers and users of advanced IT tools, if that is their
+goal.
+
+We consist of experienced researchers who have relied heavily on
+computing technology (programming, computing, data) for our academic
+work, and thus can seamlessly collaborate on research projects. Our
+current mission is to use what we have learned to ensure that everyone
+can succeed in advanced research, regardless of pre-existing skills.
 
 .. _rse-history: https://www.software.ac.uk/blog/2016-08-17-not-so-brief-history-research-software-engineers-0
-
 
 As a **researcher**, the RSE service will allow you to focus on what
 you want, the science, increase your impact by making your
 research outputs more reusable, open, and higher quality.  As a
-department, the RSE service will have an immense impact on our
+department, the RSE service will have an immense impact on your
 internal productivity.
 
 It's easy to request help, anywhere from an personal consultation, to
