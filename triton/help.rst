@@ -26,6 +26,9 @@ questions and you'll get the fastest useful response:
   obstacle.)
 * **What did you do?**  (Be specific enough to be reproducible - copy and
   paste exact commands you run, scripts, inputs, output messages, etc.)
+* **What do you need?**  Do you need a complete solution, pointers to
+  get started, or should we say if it will take too long and we
+  recommend you think of other solutions first?
 
 If you don't know something, it's OK, just do your best and we'll help
 from there!  You can also chat with us to brainstorm about issues in
