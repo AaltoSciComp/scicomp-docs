@@ -5,29 +5,21 @@ The Aalto `Research Software Engineers <rse-history_>`_ The Aalto
 Research Software Engineers (RSE) provide specialist support regarding
 software, computing, and data. As research becomes more digital and
 computer-dependent, the prerequisite knowledge grows larger and
-larger, creating a gap between those able to use the tools and those
-who struggle. The RSE program is designed to address this gap. We not
-only provide a service, but also teach researchers so they can be
-confident programmers and users of advanced IT tools, if that is their
-goal.
+larger, and we exist to help you fill that gap.
 
-We consist of experienced researchers who have relied heavily on
-computing technology (programming, computing, data) for our academic
-work, and thus can seamlessly collaborate on research projects. Our
-current mission is to use what we have learned to ensure that everyone
-can succeed in advanced research, regardless of pre-existing skills.
+Instead of hiring your own intern, postdoc, etc. to struggle with
+certain issues, we can help instead.  We consist of experienced
+researchers who have relied heavily on computing technology
+(programming, computing, data) for our academic work, and thus can
+seamlessly collaborate on research projects.  We can also do
+consultation and training.  You will have more
+impact since your work is more reusable, open, and higher quality.
 
 .. _rse-history: https://www.software.ac.uk/blog/2016-08-17-not-so-brief-history-research-software-engineers-0
 
-As a **researcher**, the RSE service will allow you to focus on what
-you want, the science, increase your impact by making your
-research outputs more reusable, open, and higher quality.  As a
-department, the RSE service will have an immense impact on your
-internal productivity.
-
-It's easy to request help, anywhere from an personal consultation, to
-group seminar and getting you on the right path, to work on a
-longer-term project.  Read more below.
+Departments can join this program and make this service to its
+community as a basic service.  Current member departments are CS, NBE,
+PHYS, and SCI overall.
 
 .. admonition:: Contact
 
