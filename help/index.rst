@@ -21,6 +21,9 @@ solution:
   obstacle.)
 * **What did you do?**  (Be specific enough to be reproducible - copy and
   paste exact commands you run, exact output messages, scripts, inputs, etc.)
+* **What do you need?**  Do you need a complete solution, pointers to
+  get started, or should we say if it will take too long and we
+  recommend you think of other solutions first?
 
 If you don't know something, it's OK, just explain the best you can
 and we'll go from there!  You can also chat with us to brainstorm
