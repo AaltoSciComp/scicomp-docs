@@ -83,7 +83,7 @@ Beyond
 
 Further career development is not a part of the Aalto RSE program
 (yet?), and to be honest it's hard to see an internal advancement in
-academic systems.  But there are many ways people can continue their
+academic systems.  There are many ways people can continue their
 career development, but all of these depend on the organization.  At
 Aalto, these aspects are not yet developed.
 
