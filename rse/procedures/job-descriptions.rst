@@ -83,19 +83,22 @@ Beyond
 
 Further career development is not a part of the Aalto RSE program
 (yet?), and to be honest it's hard to see an internal advancement in
-academic systems.  There are many ways people can continue their
-career development, but all of these depend on the organization.  At
-Aalto, these aspects are not yet developed.
+the current academic system.  Still, there are many ways people can
+continue their career development depending on their career goals, for
+example:
 
-* Tech lead of projects
-* Study new technologies for deployment
+* Tech lead of larger RSE projects
+* Study and develop new technologies for production
 * Management, either of RSE group or other services
 * Applying for grants, leading projects, etc. as a staff scientist
   might do
 * Mentoring or supervising students or other researchers
 
-The last few of these might be horizontal moves outside of our team,
-but still closely connected.
+At Aalto, these aspects are not yet developed, and some of them would
+be horizontal moves outside the RSE team (or collaboration with
+someone outside the team).  At some point, people have to take their
+careers in the direction they want and begin combining various unique
+skills.
 
 
 
