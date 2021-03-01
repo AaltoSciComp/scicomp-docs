@@ -47,9 +47,7 @@ About our services
 How to get started
 ------------------
 
-**To get started,** first browse :doc:`how we work <how-we-work>` and
-then :doc:`how to make a request <request>`.  When in doubt, come to
-:doc:`the SciComp garage </help/garage>` or email scicomp at aalto.fi.
+Contact us as mentioned above, or read here for more details.
 
 .. toctree::
    :maxdepth: 1
