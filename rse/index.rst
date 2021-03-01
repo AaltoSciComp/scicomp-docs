@@ -31,7 +31,7 @@ PHYS, and SCI overall.
 
 
 
-Using our services
+About our services
 ------------------
 
 .. toctree::
@@ -54,8 +54,8 @@ then :doc:`how to make a request <request>`.  When in doubt, come to
 .. toctree::
    :maxdepth: 1
 
-   how-we-work
    request
+   how-we-work
    group-leaders
 
 
