@@ -70,9 +70,11 @@ practices** across various fields.
 
 Pay/job level: like staff scientist, always permanent.
 
-Advancement: A person could have a fulfilling career at this level and
-continue lifelong learning, but like everyone these days, eventually
-they will probably make a move.
+Advancement: A person is a competent, independent scientist/engineer
+at this point, and advancing is not needed for everyone.  Of course,
+lifelong learning always continues.  To be honest, advancing in the
+academic system is difficult, and many people will make a horizontal
+move to another place.
 
 
 
@@ -80,17 +82,20 @@ Beyond
 ------
 
 Further career development is not a part of the Aalto RSE program
-(yet?), and to be honest it's hard to see an internal advancement at
-Aalto.  But at the same time, this isn't a dead-end internal job.  Especially
-at the lower levels it could take the place of, for example, postdoctoral
-positions which are designed for post-degree training.  After this
-job, one will be very qualified for other research scientist/research
-engineer/data scientist type positions.
+(yet?), and to be honest it's hard to see an internal advancement in
+academic systems.  But there are many ways people can continue their
+career development, but all of these depend on the organization.  At
+Aalto, these aspects are not yet developed.
 
-Beyond this, we are researchers at heart, so one could begin working
-with PIs to design and develop research projects directly, apply for
-grants to fund them, and mentor junior researchers working on these
-projects.  This would be a horizontal move outside of our team.
+* Tech lead of projects
+* Study new technologies for deployment
+* Management, either of RSE group or other services
+* Applying for grants, leading projects, etc. as a staff scientist
+  might do
+* Mentoring or supervising students or other researchers
+
+The last few of these might be horizontal moves outside of our team,
+but still closely connected.
 
 
 
