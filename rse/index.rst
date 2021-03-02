@@ -1,8 +1,8 @@
 Research Software Engineers
 ===========================
 
-The Aalto `Research Software Engineers <rse-history_>`_ The Aalto
-Research Software Engineers (RSE) provide specialist support regarding
+The Aalto `Research Software Engineers <rse-history_>`_ (RSEs) provide
+specialist support regarding
 software, computing, and data. As research becomes more digital and
 computer-dependent, the prerequisite knowledge grows larger and
 larger, and we exist to help you fill that gap.
