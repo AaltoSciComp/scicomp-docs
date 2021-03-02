@@ -1,15 +1,9 @@
 How we work
 ===========
 
-.. warning::
-
-   This page is still in draft form and being discussed and
-   developed.  See the note on the parent page.
-
-
 This page is mostly focused on how long-term scheduled projects, which
 are funded by the research groups themselves, work.
-**Long-term tasks** are scheduled by fraction of full-time-equivalent
+**Long-term projects** are scheduled by fraction of full-time-equivalent
 (FTE) over weeks or months.
 
 For short-term code review tasks, come to any of our :doc:`garage
@@ -127,11 +121,19 @@ help design the system.
 Costs and time tracking
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-TODO
+Right now, most service is free for all users within the School of
+Science.
+
+TODO: future updates
 
 
 Funding practicalities
 ~~~~~~~~~~~~~~~~~~~~~~
+
+Right now, most service is free to all users in the School of
+Science.  In the future, longer-term projects can be funded by
+internal invoicing or directly hiring our RSE onto your grant, the
+same as salary of any researcher would work.
 
 TODO: This will be developed as we begin the program.  See above for a
 description.

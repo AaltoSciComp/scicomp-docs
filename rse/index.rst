@@ -1,24 +1,25 @@
 Research Software Engineers
 ===========================
 
-Our `Research Software Engineer <rse-history_>`_ (RSE) service provides you with a
-dedicated specialist to assist you
-with computing, software, and data tasks in your research, for a longer
-period than other staff can.  Funding either comes from departments (for
-basic service) or from a research project.
+The Aalto `Research Software Engineers <rse-history_>`_ (RSEs) provide
+specialist support regarding
+software, computing, and data. As research becomes more digital and
+computer-dependent, the prerequisite knowledge grows larger and
+larger, and we exist to help you fill that gap.
+
+Instead of hiring your own intern, postdoc, etc. to struggle with
+certain issues, we can help instead.  We consist of experienced
+researchers who have relied heavily on computing technology
+(programming, computing, data) for our academic work, and thus can
+seamlessly collaborate on research projects.  We can also do
+consultation and training.  You will have more
+impact since your work is more reusable, open, and higher quality.
 
 .. _rse-history: https://www.software.ac.uk/blog/2016-08-17-not-so-brief-history-research-software-engineers-0
 
-
-As a **researcher**, the RSE service will allow you to focus on what
-you want, the science, increase your impact by making your
-research outputs more reusable, open, and higher quality.  As a
-department, the RSE service will have an immense impact on our
-internal productivity.
-
-It's easy to request help, anywhere from an personal consultation, to
-group seminar and getting you on the right path, to work on a
-longer-term project.  Read more below.
+Departments can join this program and make this service to its
+community as a basic service.  Current member departments are CS, NBE,
+PHYS, and SCI overall.
 
 .. admonition:: Contact
 
@@ -30,7 +31,7 @@ longer-term project.  Read more below.
 
 
 
-Using our services
+About our services
 ------------------
 
 .. toctree::
@@ -46,15 +47,13 @@ Using our services
 How to get started
 ------------------
 
-**To get started,** first browse :doc:`how we work <how-we-work>` and
-then :doc:`how to make a request <request>`.  When in doubt, come to
-:doc:`the SciComp garage </help/garage>` or email scicomp at aalto.fi.
+Contact us as mentioned above, or read here for more details.
 
 .. toctree::
    :maxdepth: 1
 
-   how-we-work
    request
+   how-we-work
    group-leaders
 
 
