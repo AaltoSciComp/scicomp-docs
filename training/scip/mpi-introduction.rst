@@ -35,6 +35,7 @@ The course is focused on practical aspects of parallel programming applied to pr
 
 **Credits (opintopisteet):** Credits available for the Aalto students and course certificate can be provided on request for the outsiders. Since the main focus of the course is learning through experience, the students will be required to perform simulations for homework and hand in result report. Credits/certificate require full time participation and handling assignments. Full course hours correspond roughly to 1 ECTS.
 
-**Other comments:** Participants will be provided with access to Triton for running examples. We will use SSH for Triton connection. One can follow the theoretical part without access to the Triton cluster, but we highly recommend doing the tutorials together.
+**Other comments:** Participants from Aalto university will be provided with access to Triton for running examples. We will use SSH for Triton connection. One can follow the theoretical part without access to the Triton cluster, but we highly recommend doing the tutorials together. If you cannot access the Triton HPC cluster, you need to install in your system an MPI library and a reasonable C compiler (GCC>5.4). All the functions we use should be available in any MPI implementation. 
+
 
 **Additional course info at:** filippo.federici -at- aalto.fi / ivan.degtyarenko -at- aalto.fi
