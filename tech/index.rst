@@ -14,7 +14,7 @@ Informal. Free.
 Timing
 ======
 
-Rough estimate: 30-45 minutes including presentation and questions.
+Rough estimate: ~30 minutes by the main speaker + ~15 minutes questions/discussion, if any.
 
 Place
 =====
