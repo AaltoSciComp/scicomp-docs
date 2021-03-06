@@ -19,7 +19,7 @@ Rough estimate: 30-45 minutes including presentation and questions.
 Place
 =====
 
-Zoom: TBA
+Zoom: check out the invitation, the link is there
 
 It is not a right but a priveledge to participate.
 
