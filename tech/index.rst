@@ -30,7 +30,7 @@ Topics
 
   + Triton hardware wise: machine room, different archs, IPMI, hardware troubleshooting 
 
-- Wed xx, 10:00, Ivan Degtyarenko
+- Fri 12.3, 10:00, Ivan Degtyarenko
 
   + Networking: IB and Ethernet setup, IB islands
 
