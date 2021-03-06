@@ -34,34 +34,36 @@ Topics
 
   + Networking: IB and Ethernet setup, IB islands
 
-- Wed xx, Mikko ?
+- Mikko Hakala
 
   + Ansible, provisioning with OpenHPC, stanalone servers
+
+- Richard Darst
+
+  + User support made easy: different support level by Science IT, docs, issue tracker, garage, etc
+
+- Mikko Hakala
+
+  + Triton authentication
 
 - WHEN, WHO
 
   + Storage systems: hardware and software behind /scratch and /home, manitenance, troubleshooting techniques
 
-- WHEN, Mikko Hakala
-
-  + Triton authentication
-
-- WHEN, Richard Darst
-  
-  + How to build a right documentation, issue tracker to server end users
-
-- WHEN, Simo Tuomisto
+- Simo Tuomisto
 
   + Triton / FCCI software stack: Spack, building software, ...
 
-- WHEN, Simppa ?
+- Simppa Äkäslompolo (?)
 
   + SLURM setup
 
-- WHEN, Richard ?
+- Richard Darst 
 
   + Jypiter setup at Aalto and best practices, ...
 
-- WHEN, Simo/Mikko ?
+- Simo/Mikko ?
 
   + Cluster monitoring
+
+- add more here
