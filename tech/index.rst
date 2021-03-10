@@ -23,6 +23,12 @@ Zoom: check out the invitation, the link is there
 
 It is not a right but a priveledge to participate.
 
+Practicalities
+==============
+
+The next speaker announce the time/date of the seminar. The speaker sends invitation with the Zoom link.
+
+
 Topics
 ======
 
@@ -30,7 +36,7 @@ Topics
 
   + Triton hardware wise: machine room, different archs, IPMI, hardware troubleshooting 
 
-- Fri 12.3, 10:00, Ivan Degtyarenko
+- Fri 12.3, 10:15, Ivan Degtyarenko
 
   + Networking: IB and Ethernet setup, IB islands
 
