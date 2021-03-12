@@ -60,7 +60,7 @@ Under the hood, ``singularity_wrapper`` does this:
 
 
 Short guide to Singularity commands
-~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 These are the "raw" singularity commands.  If you use these, you have
 to configure the images and bind mounts yourself (which is done
@@ -79,7 +79,7 @@ Singularity enables three base commands to user:
 
 
 An example use case with MPI in singularity
-~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The `Serpent code <http://montecarlo.vtt.fi>`_ is a Hybrid MPI/OpenMP particle following code, and can be installed into a container using the definition file `sss2.def <https://version.aalto.fi/gitlab/serpent/singularity/-/blob/master/sss2.def>`_, which creates a container based on Ubuntu v. 20.04. In the `build process <https://version.aalto.fi/gitlab/serpent/singularity/-/blob/master/README.md>`_, Singularity clones the Serpent source code, installs the required compilers and libraries, including the MPI library to the container. Furthermore, datafiles needed by Serpent are included in the container. Finally, a python environment with useful tools are also installed into the container. The Serpent code is compiled and the executable binaries are saved and the source code is removed.
 
