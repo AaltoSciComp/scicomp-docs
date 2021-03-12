@@ -36,17 +36,21 @@ Topics
 
   + Triton hardware wise: machine room, different archs, IPMI, hardware troubleshooting 
 
-- Fri 12.3, 10:15, Ivan Degtyarenko
+- Fri 12.3, 10:15-11:15, Ivan Degtyarenko
 
   + Networking: IB and Ethernet setup, IB islands, troubleshooting
 
-- Mikko Hakala
+- Mon 22.3 14-15, Mikko Hakala
 
   + Ansible, provisioning with OpenHPC, stanalone servers
 
 - Richard Darst
 
   + User support made easy: different support level by Science IT, docs, issue tracker, garage, etc
+
+- Simo Tuomisto
+
+  + Triton / FCCI software stack: Spack, building software, ...
 
 - Mikko Hakala
 
@@ -55,10 +59,6 @@ Topics
 - WHEN, WHO
 
   + Storage systems: hardware and software behind /scratch and /home, manitenance, troubleshooting techniques
-
-- Simo Tuomisto
-
-  + Triton / FCCI software stack: Spack, building software, ...
 
 - Simppa Äkäslompolo (?)
 
