@@ -1,6 +1,6 @@
-=============
-Behind Triton
-=============
+=============================
+FCCI Tech (fka Behind Triton)
+=============================
 
 It is about HPC Administration in Practice.
 
@@ -38,7 +38,7 @@ Topics
 
 - Fri 12.3, 10:15, Ivan Degtyarenko
 
-  + Networking: IB and Ethernet setup, IB islands
+  + Networking: IB and Ethernet setup, IB islands, troubleshooting
 
 - Mikko Hakala
 
