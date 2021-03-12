@@ -33,7 +33,7 @@ questions and you'll get the fastest useful response:
 If you don't know something, it's OK, just do your best and we'll help
 from there!  You can also chat with us to brainstorm about issues in
 general.  A much more detailed guide is available from `Sigma2 documentation
-<https://documentation.sigma2.no/help/how_to_write_good_support_requests.html>`_.
+<https://documentation.sigma2.no/getting_help/how_to_write_good_support_requests.html>`_.
 
 
 The Triton docs
