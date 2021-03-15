@@ -72,4 +72,4 @@ New grants
 
 If you are applying for a new grant, you can directly write Research
 Software Engineering services into your grant (or some similar name
-that sounds good to your reviewers).  See :doc:`/about/for-proposals`.
+that sounds good to your reviewers).  See :doc:`grant-applicants`.
