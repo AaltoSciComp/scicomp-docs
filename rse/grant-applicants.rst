@@ -53,7 +53,7 @@ even more.
 
 Data Management / Open Science are big deals among some funders right
 now, and research engineers are perfect for helping with these things
-because since they focus on the how of the work, not the what.  The
+because they focus on the how of the work, not the what.  The
 RSE service can help in the societal impact sections: your outputs
 will be more ready to be reused by society.  You could, for example,
 promise deliver more types of outputs that aren't exactly novel
@@ -129,10 +129,10 @@ research results have been published."
     for the service purchase based approach).
 
   * Note that "We recommend that they be hired for a period of
-    employment no shorter than the funding period, un-less a shorter
+    employment no shorter than the funding period, unless a shorter
     contract is necessary for special reasons dictated by the
-    imple-mentation of the research plan or action plan (or
-    equivalent). Short-term re-search, studies or other assignments
+    implementation of the research plan or action plan (or
+    equivalent). Short-term research, studies or other assignments
     may also be carried out in the form of outsourced services."  So,
     consider the balance of this and purchased services.
 
