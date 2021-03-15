@@ -15,8 +15,11 @@ For grant applicants
 If you've decided you would like to use the :doc:`research software
 engineer <index>` services in your project for a long period, you
 might want to write it directly into your grant proposals.  First off,
-your research will be better, second it may make your proposal more
-likely to get funded.
+your research will be better because you can you can assign
+porting/optimizing/scaling of codes, data management and open science,
+automation, and so on for the RSEs, while concentrating the main
+project resources on the actual research question.  Second it may make
+your proposal more attractive
 
 
 
@@ -37,10 +40,6 @@ basic group fund.  There are two ways to write this into a project:
 * As a **research salary**, just like other salaries on your project.
   This has fewer limits, but is less flexible (you get one person for
   a designated time period).
-
-Our prices may seem higher than a young researcher assistant, but with
-us you only pay for the actual productive time, and we are multiple
-times more efficient.  We'll also teach your group to work better.
 
 
 
@@ -106,8 +105,8 @@ research results have been published."
   * Flexibility: we will internally invoice in a way compliant with
     Academy guidelines, and can adjust our service based on the time
     period you need.  You don't have to decide the time period in
-    advance (only follow your submitted budget).  Our work will be
-    divided up however is useful to you.
+    advance (only follow your submitted budget), and the best person
+    can always work on each part of the problem.
 
 * As a RSE salary:
 
