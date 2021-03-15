@@ -1,6 +1,10 @@
 ``git-annex`` for data management
 =================================
 
+.. seealso::
+
+   `Video intro to git-annex, from Research Software Hour <https://www.youtube.com/watch?v=NKCBXOfyoyM&list=PLpLblYHCzJAB6blBBa0O2BEYadVZV3JYf>`__.
+
 
 ``git-annex`` is a extension to git which allows you to store large
 files with git, but not in git.  This may seem contradictory, but what
@@ -76,7 +80,6 @@ annex drop``, ``git annex sync``, and so on.
 
 
 
-
 Basic setup
 -----------
 
@@ -87,10 +90,43 @@ large data files and makes them read-only.
 ::
 
    $ git init
-   $ git annex init
+   $ git annex init 'triton cluster'
 
    $ git add small-file.txt
    $ git annex add large-file.dat
+
+
+
+Common case: one computer, lock and track data
+----------------------------------------------
+
+When you have a lot of important data on even one system, git-annex
+can be useful.  It can
+
+* Lock your data, so that someone can't unintentionally change it, and
+  you verify integrity.
+* Track history of metadata (who added it, when, commit message, etc).
+
+Create a repository (above)
+
+
+::
+
+   # create repository
+
+   git annex add large_file
+   git commit
+
+Edit a file more::
+
+  git annex unlock large_file
+  # edit large file
+
+
+
+
+Common case: syncronizing data
+------------------------------
 
 
 
