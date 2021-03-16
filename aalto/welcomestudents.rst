@@ -98,7 +98,7 @@ https://vdi.aalto.fi (`instructions <https://www.aalto.fi/en/services/vdiaaltofi
 This provides Windows and Linux desktops and is
 designed to replace the need for computer classrooms with special
 software installed.  You can access it via a web browser or the VMware
-Horizon client.
+Horizon client. More VDI Windows workstations are also available at http://mfavdi.aalto.fi/ .
 
 The use of :doc:`Triton <../triton/index>` is for research purposes
 and students can't get access unless you are affiliated with a
