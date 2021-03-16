@@ -152,7 +152,7 @@ Accessing you Linux workstation / Triton remotely
 Remote desktop
 ~~~~~~~~~~~~~~
 
-Aalto has remote desktops available at https://vdi.aalto.fi.  This
+Aalto has remote desktops available at https://vdi.aalto.fi and http://mfavdi.aalto.fi/.  This
 works from any network.
 
 There are both Windows and Linux desktops available.  They are
