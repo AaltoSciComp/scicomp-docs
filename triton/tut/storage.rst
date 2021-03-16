@@ -322,8 +322,8 @@ binds together all types of remote access, and learning to use it well
 will help you for a long time.  Learn more about ssh on :doc:`the ssh
 page </scicomp/ssh>`.
 
-For Aalto Linux workstation users: it is recommended that you mount `/scratch/`
-under the local disk `/l/`. You should be able to create the subfolder folder under `/l/` 
+For Aalto Linux workstation users: it is recommended that you mount ``/scratch/``
+under the local disk ``/l/``. You should be able to create the subfolder folder under ``/l/`` 
 and point sshfs to that subfolder as in the example here above.
 
 
