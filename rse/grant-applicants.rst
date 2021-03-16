@@ -18,8 +18,8 @@ might want to write it directly into your grant proposals.  First off,
 your research will be better because you can you can assign
 porting/optimizing/scaling of codes, data management and open science,
 automation, and so on for the RSEs, while concentrating the main
-project resources on the actual research question.  Second it may make
-your proposal more attractive
+project resources on the actual research question.  Second, it may make
+your proposal more attractive.
 
 
 
@@ -28,8 +28,8 @@ How it works
 
 Short-term services are funded by various departments and schools and
 free to projects (part of the "research environment" services).
-Longer term should be funded by projects - either an external grant or
-basic group fund.  There are two ways to write this into a project:
+Longer term service should be funded by projects - either an external grant or
+basic group fund.  There are two ways to write this into a project proposal:
 
 * As a **purchased service**, like usage of different infrastructures.
   This is flexible, but there is a limit of how much you can include
@@ -52,7 +52,7 @@ even more.
 
 Data Management / Open Science are big deals among some funders right
 now, and research engineers are perfect for helping with these things
-because they focus on the how of the work, not the what.  The
+because they are experts in the associated technical challenges.  The
 RSE service can help in the societal impact sections: your outputs
 will be more ready to be reused by society.  You could, for example,
 promise deliver more types of outputs that aren't exactly novel
@@ -60,7 +60,7 @@ science but help society to use your results (e.g. databases,
 interactive visualisations, etc.).
 
 Make sure you mention the general Science-IT infrastructure in the
-"research environment" section, as the basic service provided by
+"research environment" section, i.e., the basic service provided by
 Aalto.  You can copy something from the boilerplate text (first link
 in this section).
 
@@ -88,7 +88,7 @@ research results have been published."
     Aalto does.  Justify the extra purchase as beyond the basics.
 
   * Please see LINK for our general costs, and how many person-months
-    you can get for a given price.  Since estimating amount of effort
+    you can get for a given price.  Since estimating the amount of effort
     needed is difficult, :doc:`contact us <request>` and we can
     help you prepare an estimate.
 
@@ -105,8 +105,8 @@ research results have been published."
   * Flexibility: we will internally invoice in a way compliant with
     Academy guidelines, and can adjust our service based on the time
     period you need.  You don't have to decide the time period in
-    advance (only follow your submitted budget), and the best person
-    can always work on each part of the problem.
+    advance (only follow your submitted budget), and different RSEs
+    can work on different parts of the problem, so you always have the best person for the job.
 
 * As a RSE salary:
 
@@ -118,7 +118,7 @@ research results have been published."
   * Write in a Research Software Engineer as a salary for a set number
     of months.  You may specify a name as N.N., or contact us for a
     name to include.  We do *not* promise any one person at any one
-    time, but we will work with you however is possible.  See LINK for
+    time, but we will work with you as much as possible.  See LINK for
     costs per person.  You can also :doc:`contact us <request>` to
     discuss how much effort you may need.
 
