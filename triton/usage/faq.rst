@@ -842,3 +842,10 @@ most of your space goes with ``du -h $HOME | sort -hr | less``.
 
 This is often the case if you get ``X11 connection rejected because of
 wrong authentication``.
+
+
+Can I use a more up-to-date version of git on triton?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Indeed the default git with Triton OS system (CentOS) is quite old (v 1.8.x).
+To get a more modern git you can run ``module load git`` (version 2.28.0 when this is being written).
