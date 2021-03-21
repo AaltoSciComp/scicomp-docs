@@ -982,9 +982,6 @@ command first.
  # archive current directory content, where new archive name is based on current path and date
  tar czf $(basename $(pwd)).$(date +%Y-%m-%d).tar.gz .
  
- # counting directories and files on the fly
- echo Number of directories $(ls -lA | grep ^d | wc -l) files $(ls -lA | grep ^- | wc -l)
- 
 This is what makes BASH powerful!
 
 Note:  ``$(command || exit 1)`` will not have an effect you expect, command is executed in a
