@@ -970,8 +970,8 @@ command first.
 
 ::
 
- # get the latest modified file to a variable
- newest=$(ls -F1t | grep -v */ | head -1)
+ # 'whoami' alternative
+ echo $(id -un):$(id -gn)@$(hostname -s) 
  
  # save current date to a variable
  today=$(date +%Y-%m-%d)
@@ -1103,8 +1103,8 @@ Aliases
  # shortcut for checking space usage
  alias space='du -hs .[!.]* * | sort -h'
  
- # prints in the compact way login/group
- alias me="echo \"'$(id -un)' '$(id -gn)'\""
+ # prints in the compact way login:group
+ alias me='echo "$(id -un):$(id -gn)"'
  
  # redefine rm
  alias rm='rm -i'
