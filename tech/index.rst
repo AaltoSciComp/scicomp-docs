@@ -2,31 +2,36 @@
 FCCI Tech (fka Behind Triton)
 =============================
 
-It is about HPC Administration in Practice.
+This is a series of talks about HPC infrastructure administration in
+Practice.  It started as our internal kickstart to new members of our
+staff, but the scope is expanded and now others interested in research
+infrastructure is invited, though our orientation is still primarily
+on the Triton team and FCCI admins.  Typical attendee are involved in
+HPC cluster administration or scientific computing support.
 
-Serie of the technical HPC seminars. Oriented primarily on the Triton team
-and FCCI admins but open for anyone interested.
+In the future, this may turn into a more general "research
+engineering" seminar series, once we are done with internal
+explanations.
 
-We share what we have learned.
+We share what our practices are, what we have learned, and informally
+discuss.
 
-Informal. Free.
 
-Timing
-======
-
-Rough estimate: ~30 minutes by the main speaker + ~15 minutes questions/discussion, if any.
-
-Place
-=====
-
-Zoom: check out the invitation, the link is there
-
-It is not a right but a priveledge to participate.
 
 Practicalities
 ==============
 
-The next speaker announce the time/date of the seminar. The speaker sends invitation with the Zoom link.
+Time: The next speaker announce the time/date of the seminar the week
+before. The speaker sends invitation with the Zoom link.
+
+Duration: Rough estimate: ~30 minutes by the main speaker + ~15
+minutes questions/discussion, if any.
+
+Place: Zoom, ask for an invitation but it is usually the :doc:`garage
+link </help/garage>`.
+
+It is not a right but a priveledge to participate.  Free.
+
 
 
 Topics
