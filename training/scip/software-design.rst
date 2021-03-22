@@ -29,7 +29,7 @@ We expect that course participants are familiar with the Python programming lang
 +-------+-------------+---------------------------------------------------+
 | 26.04 | 10:00-14:00 | First review sessions (half hour slot per person) |
 +-------+-------------+---------------------------------------------------+
-| 03.05 | 10:00-15:00 | Second round of review sessions (half hour slots) |
+| 03.05 | 10:00-14:00 | Second round of review sessions (half hour slots) |
 +-------+-------------+---------------------------------------------------+
 | 03.05 | 14:00-15:00 | Recap session and closing                         |
 +-------+-------------+---------------------------------------------------+
