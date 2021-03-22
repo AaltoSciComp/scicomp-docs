@@ -61,16 +61,24 @@ Topics
 
   + Storage systems: hardware and software behind /scratch and /home, manitenance, troubleshooting techniques
 
+- Richard Darst
+
+  + Open and accessible documentation using Sphinx, RST/MyST, and Readthedocs
+
 - Simppa Äkäslompolo (?)
 
   + SLURM setup
 
-- Richard Darst 
+- Richard Darst
 
   + Jypiter setup at Aalto and best practices, ...
 
 - Simo/Mikko ?
 
   + Cluster monitoring
+
+- Richard Darst
+
+  - Online courses and CodeRefinery
 
 - add more here
