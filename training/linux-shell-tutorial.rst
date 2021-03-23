@@ -1417,7 +1417,7 @@ Selected examples file attributes and variables testing:
  # check that directory does not exist before creating one
  [[ -d $dir ]] || mkdir $dir
  
- #
+ # Check if script/function is given an argument
  [[ -z $1 ]] && { echo no argument; exit 1; }
 
 Note that integers have their own construction ``(( expression ))`` (we come back to this),
@@ -1461,7 +1461,7 @@ In addition (old school), double brackets inherit several operands to work with 
  $d=path/to/dir; [[ -d $d && $(ls -A $d) ]] && tar caf ...
  
  # append PATH
- d=path/to/bin; [[ -d $d && ! $(echo $PATH|grep $d) ]] && export PATH=$PATH:$d
+ d=/path/to/bin; [[ -d $d && ! $(echo $PATH|grep $d) ]] && export PATH+=:$d
 
 The matching operator ``=~`` brings more opportunities, because regular expressions come in play.
 Even more: matched strings in parentheses assigned to *${BASH_REMATCH[]}* array elements!
