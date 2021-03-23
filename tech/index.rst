@@ -14,14 +14,14 @@ Informal. Free.
 Timing
 ======
 
-Rough estimate: ~30 minutes by the main speaker + ~15 minutes questions/discussion, if any.
+Rough estimate: ~40 minutes by the main speaker + ~20 minutes questions/discussion, if any.
 
 Place
 =====
 
-Zoom: check out the invitation, the link is there
+Zoom: https://aalto.zoom.us/j/65371910202
 
-It is not a right but a priveledge to participate.
+*It is not a right but a priveledge to participate.*
 
 Practicalities
 ==============
@@ -34,16 +34,18 @@ Topics
 
 - Wed 3.3, 10:00, Ivan Degtyarenko
 
-  + Triton hardware wise: machine room, different archs, IPMI, hardware troubleshooting 
+  + Triton hardware wise: machine room, different archs, IPMI, hardware troubleshooting
+  + [Material includes sensitive data, can be provided on request]
 
 - Fri 12.3, 10:15-11:15, Ivan Degtyarenko
 
   + Networking: IB and Ethernet setup, IB islands, troubleshooting
+  + [Material includes sensitive data, provided on request]
 
 - Mon 22.3 14-15, Mikko Hakala
 
   + Ansible, provisioning with OpenHPC, stanalone servers
-  + Zoom: https://aalto.zoom.us/j/65371910202, Slides: https://docs.google.com/presentation/d/1V7_toaDd4zo-MDU5NNnAjzdRldgzKTwassUjMy9Oj5k/edit?usp=sharing
+  + Slides: https://docs.google.com/presentation/d/1V7_toaDd4zo-MDU5NNnAjzdRldgzKTwassUjMy9Oj5k/edit?usp=sharing
 
 - Mon 29.3 14-15, Richard Darst
 
