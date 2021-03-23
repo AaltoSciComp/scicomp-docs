@@ -1416,6 +1416,9 @@ Selected examples file attributes and variables testing:
 
  # check that directory does not exist before creating one
  [[ -d $dir ]] || mkdir $dir
+ 
+ #
+ [[ -z $1 ]] && { echo no argument; exit 1; }
 
 Note that integers have their own construction ``(( expression ))`` (we come back to this),
 though ``[[ ]]`` will work for them too.  The following are more tests:
@@ -1430,40 +1433,29 @@ though ``[[ ]]`` will work for them too.  The following are more tests:
  - ``!`` negate the result of the evaluation
  - ``()`` group conditional expressions
 
-In addition, double brackets inherit several operands to work with integers mainly:
+::
+
+ # Find out were we are
+ [[ $(pwd) == /some/path ]] ...
+
+ # Check, grouping, booleans as a demo
+ [[ $(hostname -s) == kosh && ($(pwd) == $WORK || $(pwd) == $SCRATCH) ]] ...
+
+ # note that [[ ]] always require spaces before and after brackets (!)
+
+
+In addition (old school), double brackets inherit several operands to work with integers mainly:
 
  - ``-eq``, ``-ne``, ``-lt``, ``-le``, ``-gt``, ``-ge``  equal to, not equal  to,
    less  than, less than or equal to, greater than, or greater than or equal
 
-
-::
-
- # the way to check input arguments, if no input, exit (in functions
- # 'return 1').  Remember, $# is special variable for number of arguments.
- [[ $# -eq 0 ]] && { echo Usage: $0 arguments; exit 1; }
-
- aalto=Aalto hy=HY utu=UTU
- 
- # the result will be true (0), since Aalto sorts before HY
- [[ $aalto < $hy ]]; echo $?
-
- # though with a small modification, the way around is going to be true also
- [[ ! $aalto > $hy ]]; echo $?
-
- # this will return also true, here we compare lengths, Aaaaalto has a longer... name
- [[ ${#aalto} -gt ${#hy} ]]; echo $?
-
- # true, since Aalto in both cases sorted before HY and UTU
- [[ $aalto < $hy && $aalto < $utu ]]; echo $?
-
- # false, since both fail
- [[ ( $aalto < $hy && $aalto > $utu ) || $hy > $utu ]]; echo $?
-
- # note that [[ ]] always require spaces before and after brackets
-
 ::
 
  # Some use cases for [[ ]]
+ 
+ # a popular way to check input arguments, if no input, exit (in functions
+ # 'return 1').  Remember, $# is special variable for number of arguments.
+ [[ $# -eq 0 ]] && { echo Usage: $0 arguments; exit 1; }
  
  # if dir exists and is not empty, then do smth
  $d=path/to/dir; [[ -d $d && $(ls -A $d) ]] && tar caf ...
