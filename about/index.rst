@@ -182,7 +182,13 @@ better.*
 
      * Science-IT, PHYS-IT
 
-     * 
+     *
+     
+   * * Jarno Rantaharju
+
+     * Science-IT
+
+     * Software Development, HPC software and optimization, Benchmarking
 
 
 
