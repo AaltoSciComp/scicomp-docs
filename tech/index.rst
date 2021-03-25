@@ -45,7 +45,6 @@ Topics
 - Mon 22.3 14-15, Mikko Hakala
 
   + Ansible, provisioning with OpenHPC, stanalone servers
-  + Slides: https://docs.google.com/presentation/d/1V7_toaDd4zo-MDU5NNnAjzdRldgzKTwassUjMy9Oj5k/edit?usp=sharing
 
 - Mon 29.3 14-15, Richard Darst
 
