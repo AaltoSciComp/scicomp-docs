@@ -72,7 +72,7 @@ Topics
 
 - Richard Darst
 
-  + Jypiter setup at Aalto and best practices, ...
+  + Jupyter setup at Aalto and best practices, ...
 
 - Simo/Mikko ?
 
