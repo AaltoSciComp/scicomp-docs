@@ -188,7 +188,7 @@ better.*
 
      * Science-IT
 
-     * Software Development, HPC software and optimization, Benchmarking
+     * Software Development, HPC software and optimization, Profiling
 
 
 
