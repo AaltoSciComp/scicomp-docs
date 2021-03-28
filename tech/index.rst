@@ -7,7 +7,7 @@ Practice.  It started as our internal kickstart to new members of our
 staff, but the scope is expanded and now others interested in research
 infrastructure is invited, though our orientation is still primarily
 on the Triton team and FCCI admins.  Typical attendee are involved in
-HPC cluster administration or scientific computing support.
+HPC cluster administration or scientific computing infrastructure.
 
 In the future, this may turn into a more general "research
 engineering" seminar series, once we are done with internal
