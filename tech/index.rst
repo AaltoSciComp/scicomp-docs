@@ -57,7 +57,7 @@ Topics
     docs, issue tracker, garage, etc
   + :doc:`Presentation <user-support>`, `Video <https://youtu.be/P1ttGhPGuN0 >`__
 
-- Simo Tuomisto
+- Fri 9.4 10:15-11:15, Simo Tuomisto
 
   + Triton / FCCI software stack: Spack, building software, ...
 
