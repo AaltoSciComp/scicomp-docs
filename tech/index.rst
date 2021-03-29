@@ -55,7 +55,7 @@ Topics
 
   + User support made easy: different support level by Science IT,
     docs, issue tracker, garage, etc
-  + :doc:`Presentation <user-support>`
+  + :doc:`Presentation <user-support>`, `Video <https://youtu.be/P1ttGhPGuN0 >`__
 
 - Simo Tuomisto
 
