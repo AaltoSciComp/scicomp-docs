@@ -53,7 +53,9 @@ Topics
 
 - Mon 29.3 14-15, Richard Darst
 
-  + User support made easy: different support level by Science IT, docs, issue tracker, garage, etc
+  + User support made easy: different support level by Science IT,
+    docs, issue tracker, garage, etc
+  + :doc:`Presentation <user-support>`
 
 - Simo Tuomisto
 

@@ -13,8 +13,8 @@ common practices, as discussed in CodeRefinery/NordicHPC channels.
 
 Broad contents:
 
-- What does "user support" even mean for
-- How we do user support
+- What does "user support" even mean?
+- AaltoSciComp's lines of user support
 - Strategic risks and considerations
 
 .. figure:: /about/img/scicomp-3-components.png
@@ -35,7 +35,7 @@ About us
   Infrastructure**" so *user support is clearly more important than
   ever*.
 - We are proud of our user support, but it is a multi-faceted
-  approach which requires the right mindset
+  approach which requires the right mindset.
 
 
 
@@ -53,66 +53,66 @@ User support has a bad reputation
 Why?
 
 - Technology is hard
-- We often pick up slack in teaching and other skills
+- Users usually don't give enough information to solve the issue.
+- ... Users don't even know how to give enough information.
+- We often pick up slack when something isn't otherwise taught
 - We are disconnected from the user community
+- User support may be some forced extra thing on top of our "real"
+  job.
 
 
 Types of support
 ~~~~~~~~~~~~~~~~
 
 - How do we even answer questions people may have?  Some issues are
-  system bugs to fix, but when the user needs help we can:
+  system bugs that are *our* action items, but when the user themself
+  needs help we can make some **hierarchy of support strategies**:
 
   a) "read the manual: <link>"
   b) tell them what to do
   c) give them a live demo
   d) pair program working example, you lead
-  e) do the task for them, you do it.
+  e) do the task for them, no need to teach
 
 - Lower letters are faster to answer and traditional support.  Higher
-  letters are much more time-consuming, and approach Research Software
-  Engineering services.
+  letters are much more time-consuming, and approach mentoring or
+  Research Software Engineering services.
 
 
 Why is support hard?
 ~~~~~~~~~~~~~~~~~~~~
 - "Crisis of computing": most users skills are much less than needed.
 - User interfaces are usually bad
-- lots of hidden internal state
+- Lots of hidden internal state
 
-- https://www.librarian.net/stax/4965/how-to-help-someone-use-a-computer-by-phil-agre/
 
 XY problem
 ~~~~~~~~~~
 - People ask for what they think they need (X)
 - They are given X
 - X isn't even a good way of doing what they actually want (Y), but we
-  spend a huge amount of time doing X, when Z→Y is much simpler.
+  spend a huge amount of time doing X, when the right way Z→Y is much
+  simpler.
 - **XY problem** (`wikipedia
   <https://en.wikipedia.org/wiki/XY_problem>`__): people don't ask for
   the end goal, but some intermediate step.
-- **XY solution** (my term): Support person wants to answer X
-  because it's faster and you can close the ticket and move on, even
-  though they get the feeling it's not a good idea.
-
-
-
-Support vs diversity goals
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
+- **XY solution** (my term): Support person wants to answer X because
+  it requires less investigation and you can close the ticket and move
+  on, even though they get the feeling it's not a good idea.
 
 
 Be motivating
 ~~~~~~~~~~~~~
 
+- "How to help someone use a computer" by Phil Agre:
+  https://www.librarian.net/stax/4965/how-to-help-someone-use-a-computer-by-phil-agre/
 - Hanlon's razor: "never attribute to malice that which is adequately
   explained by stupidity"
-- In our case, this is **never attribute to malice that which is
-  adequately explained by having never been told something obvious**
-- Avoid language expressing unhappieness, displeasure, a condescending
-  attitude, expectation that they should have known better, "damage",
-  etc.
+- In our case, this is **never attribute to malice or stupidity that
+  which is adequately explained by having never been told something
+  obvious**
+- Avoid expressing unhappiness, displeasure, a condescending attitude,
+  expectation that they should have known better, "damage", etc.
 - Resist the temptation to blame the user.  If they actually can do
   something that harms others, it's the system's fault.  If they don't
   know something, the UI is bad or society's preparation is not
@@ -123,6 +123,19 @@ Be motivating
 SciComp`s user support tools
 ----------------------------
 
+Our general guidelines
+~~~~~~~~~~~~~~~~~~~~~~
+- "help page", :doc:`scicomp.aalto.fi/help </help/index>`
+
+  - Describes what to do in general, key points to mention when making
+    a request.
+
+  - It links to a longer "how to ask for help"
+
+  - Both can be a bit patronizing to link to during an issue, so we
+    have to be careful.
+
+
 Docs
 ~~~~
 - https://scicomp.aalto.fi (this site)
@@ -132,7 +145,6 @@ Docs
   your docs!
 - Managed by git on Github
 - There will be another talk on specific Sphinx information later.
-
 
 
 Gitlab issue tracker
@@ -183,6 +195,7 @@ Chat
   or not.
 - Uses Aalto-hosted Zulipchat.  Believe us, just don't use Slack.
 
+
 Office drop-in
 ~~~~~~~~~~~~~~
 - Not done in pandemic time, obviously
@@ -191,10 +204,12 @@ Office drop-in
   accept drop-ins anytime we are there.
 - This keeps us closely connected to the community.
 
+
 Personal networks
 ~~~~~~~~~~~~~~~~~
 - Most of us came from the departments we serve now
 - Our existing networks are a good way of contacting us
+
 
 Teaching
 ~~~~~~~~
@@ -226,13 +241,10 @@ Strategic vision of support
 
 Support ↔ teaching ↔ RSE
 ~~~~~~~~~~~~~~~~~~~~~~~~
-* Support: answering questions
+* Support: one-to-one answering questions
 * Teaching: one-to-many improving skills
-* Research Software Engineering: one-to-few "let's do it together".
-
-
-SysAdmin ↔ RSE
-~~~~~~~~~~~~~~
+* Research Software Engineering: one-to-few "I will do it for you" or
+  "Let me get you started"
 
 
 Strategic risks
@@ -240,25 +252,44 @@ Strategic risks
 - The middle layer of science always gets cut first: when funding goes
   down, support will get cut and researchers left more alone.
 - Our load increases, and our funding doesn't
+
   - We become unhappy, support level goes down
   - Emphasis increases on speed of closing tickets
 
 
-
 Strategic benefits of good support
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-These can be used to argue for good funding
+These can be used to argue for good funding of our teams:
 
 - Diversity
 
   - Without good support, "rich get richer" contributes to the
     increasing homogeneity of computational science.
 
+  - Previous talk by Richard Darst:
+
+    - Summary: Computational sciences has a crisis of demographics.
+      We are on the front lines of this battle, and it's up to us 
+    - `Slides <https://docs.google.com/presentation/d/1pVjFnxGzfy0DTPuc1XLQDFg0-44GUWwfSMxe5vVg-Lc/edit>`__
+    - `Video <https://youtu.be/z1VS1wleN-o>`__
+
 - Open science
 
   - Without good user skills, people can't make their computational
     work reproducible or shareable.
+  - We need to claim our place in this problem, rather than let it go
+    to administrative Open Science staff.
 
+
+Exercise: problematic situations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Someone emails you privately about something they have clearly not
+   even tried yet.
+
+2. A new researcher is trying to use Triton to do some machine
+   learning.  They are trying to use Python+Jupyter, but minimal
+   experience managing a Python environment.
 
 
 Conclusions
@@ -266,6 +297,7 @@ Conclusions
 
 Open questions
 
+- What do *you* think?
 - Do we have too many lines of support?
 
 
@@ -285,9 +317,13 @@ See also
   - `how to ask for help <https://coderefinery.zulipchat.com/#narrow/stream/198213-nordichpc/topic/how.20to.20ask.20for.20help/near/230190210>`__
   - `how to provide help <https://coderefinery.zulipchat.com/#narrow/stream/198213-nordichpc/topic/how.20to.20provide.20help/near/231130622>`__
 
+- `How to write good support requests
+  <https://documentation.sigma2.no/getting_help/how_to_write_good_support_requests.html>`__,
+  by Sigma2 (Norway)
 
 
 Credits
 -------
 - Author/editor: Richard Darst
-- Thanks to Radovan Bast and Anne Fouilloux for good discussions.
+- Thanks to Radovan Bast, Anne Fouilloux, and others in the
+  CodeRefinery NordicHPC channel for good discussions.
