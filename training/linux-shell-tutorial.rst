@@ -2193,6 +2193,9 @@ through the input line by line::
    echo "line is $line"    # do something useful with $line
  done
 
+ # To check current $IFS
+ cat -A <<<"$IFS"
+
 Though in general, whatever comes from STDIN can be proceeded as::
 
  # to check that STDIN is not empty
