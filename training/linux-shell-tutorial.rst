@@ -1004,7 +1004,9 @@ Subshell can not modify its parent shell environment, though can give back exit 
 More about redirection, piping and process substitution
 -------------------------------------------------------
 *STDIN*, *STDOUT* and *STDERR*: reserved file descriptors *0*, *1* and *2*. They always there
-whatever process you run.
+whatever process you run. But one can use other file descriptors as well.
+
+*File descriptor* is a number that uniquely identifies an open file.
 
 */dev/null*  file (actually special operating system device) that
 discards all data written to it.
@@ -1050,6 +1052,35 @@ Pipes are following the same rules with respect to standard output/error. In ord
 If ``!``  preceeds the command, the exit status is the logical negation.
 
 **tee** in case you still want output to a terminal and to a file ``command | tee filename``
+
+``exec > output.txt`` or ``exec 2> errors.txt`` executed in the script will send the output to 
+the file, standard output or error output correspondingly. Opening other than standard file
+descriptors: **exec** causes the shell to hold the file descriptor until the shell dies or
+closes it.
+
+::
+
+ # open input_file for reading into the file descriptor 3
+ exec 3< input_file
+ # while open, any command can operate on the descriptor
+ read -n 3 var <&3
+ command <&3
+ # mind the the file offset, one can read a line, or a few chars, if you have read the file
+ # to the end, to reset the offset, run another 'exec 3< ...'
+ # close the descriptor after you are done
+ exec 3>&-
+
+ # similar for writing
+ exec 5> output_file; ... exec 5>&-
+ # or appending 
+ exec 5>> output_file
+ # or writing and reading
+ exec 6<>file; ... exec 6<>&-
+ # or use a name instead of the descriptor numeric value
+ exec {out}>output_file; ... echo something >&$out; ...
+ # redirecting descriptor to another one
+ exec 3>&1
+
 
 But what if you need to pass to another program results of two commands at once? Or if command
 accepts file as an argument but not STDIN?
