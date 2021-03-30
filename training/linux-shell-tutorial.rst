@@ -2293,6 +2293,9 @@ Let us use *cx* script as a demo:
    echo '       -a, gives access to all, like a+x, by default +x'
    echo '       -d <directory/path/bin>, path to the bin directory'
    echo "          can be used in 'cx' to copy a new script there"
+   echo '       -a, gives access to all, like a+x, by default +x'
+   echo '       -d <directory/path/bin>, path to the bin directory'
+   echo "          can be used in 'cx' to copy a new script there"
    echo '       -v, verbose mode for chmod'
    echo '       -h, this help message'
    exit 1
@@ -2375,16 +2378,19 @@ Let us use *cx* script as a demo:
 Here Document, placeholders
 ---------------------------
 
-A here document takes the lines following and sends them to standard
-input.  It's a way to send larger blocks to stdin.
+A 'here document' and 'here string' take the line(s) following and send them to standard
+input. It's a way to send larger blocks to stdin.
 
 ::
 
- command <<SomeLimitString
- Here comes text with $var and even $() substitutions
- and more just text
- which finally ends on a new line with the:
- SomeLimitString
+ # instead of 'echo $STRING | command ...'
+ command <<<$STRING
+
+ # instead of 'cat file | command ...'
+ command <<SomeMagicStopWord
+ The benefit is that one can use $var, $() etc in the text
+ The text ends with the Stop Word on a new line, the word can be any
+ SomeMagicStopWord
 
 Often used for messaging, be it an email or dumping bunch of text to file.::
 
@@ -2765,6 +2771,3 @@ readable by you only)::
      Hostname triton.aalto.fi
      ProxyCommand ssh YOUR_AALTO_LOGIN@kosh.aalto.fi -W %h:%p
 
-Now try::
-
- ssh triton
