@@ -9,19 +9,24 @@ Basic Idea
 ~~~~~~~~~~
 
 The basic idea behind Singularity containers is that software is packaged
-into a container (basically an entire self-contained operating system!)
-that is based on a Docker image that can then be run by the
+into a container (basically an entire self-contained operating system in a file!)
+that can be based on a Docker image that can then be run by the
 user.  This allows hard to install software to be easily packaged and
 used - because you are packaging the entire OS!
 
 During runtime, the root file system ``/`` is changed to the one inside the
 image and file systems are brought into the container through bind
-mounts. This sounds complicated, but in practice this is easy due to
-singularity_wrapper written for Triton.
+mounts. Effectively, the programs in the container are run in an environment mostly
+defined by the container image, but the programs can read and write specific files in Triton.
+Typically, e.g. the home directory comes from Triton.
+
+This sounds complicated, but in practice this is easy due to singularity_wrapper written for Triton.
+You can also run singularity on triton without the wrapper, but you may need to e.g.
+bind ``/scratch`` yourself to access your data.
 
 
-Basic Usage
-~~~~~~~~~~~
+Basic Usage with singularity_wrapper
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 While the image itself is read-only, remember that ``/home``, ``/m``, ``/scratch``
 and ``/l`` etc. are not. If you edit/remove files in these locations within
@@ -31,9 +36,6 @@ the image, that will happen outside the image as well.
 On Triton, you just need to load the proper module.  This will set
 some environment variables and enable the use of
 ``singularity_wrapper``.
-
-singularity_wrapper
-~~~~~~~~~~~~~~~~~~~
 
 ``singularity_wrapper`` is written so that when you load a module written
 for a singularity image, all the important options are already handled
@@ -57,8 +59,8 @@ Under the hood, ``singularity_wrapper`` does this:
 #. Setting working directory within image (if needed)
 
 
-Power usage
-~~~~~~~~~~~
+Short guide to Singularity commands
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 These are the "raw" singularity commands.  If you use these, you have
 to configure the images and bind mounts yourself (which is done
@@ -75,6 +77,21 @@ Singularity enables three base commands to user:
    What this means depends on the image in question. (see ``singularity
    run --help`` for more information on flags etc.)
 
+
+An example use case with MPI in singularity
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The `Serpent code <http://montecarlo.vtt.fi>`_ is a Hybrid MPI/OpenMP particle following code, and can be installed into a container using the definition file `sss2.def <https://version.aalto.fi/gitlab/serpent/singularity/-/blob/master/sss2.def>`_, which creates a container based on Ubuntu v. 20.04. In the `build process <https://version.aalto.fi/gitlab/serpent/singularity/-/blob/master/README.md>`_, Singularity clones the Serpent source code, installs the required compilers and libraries, including the MPI library to the container. Furthermore, datafiles needed by Serpent are included in the container. Finally, a python environment with useful tools are also installed into the container. The Serpent code is compiled and the executable binaries are saved and the source code is removed.
+
+The container can be directly used with the Triton queue system assuming the datafiles are stored in the user home folder. The file `sss2.slurm_cmd <https://version.aalto.fi/gitlab/serpent/singularity/-/blob/master/sss2.slurm_cmd>`_ can be used as an example. If scratch is used, please add ``-B /scratch`` after "exec" in the file.
+
+The key observations to make:
+
+#. ``mpirun`` is called in Triton, which launches multiple Singularity containers (one for each MPI task). Each container directly launches the ```sss2```-executable. Each container can run multiple OpenMP threads of Serpent.
+#. The openMPI library (v. 4.0.3) shipping with Ubuntu 20.04 seems to be compatible with the Triton module ``openmpi/4.0.5``
+#. The Ubuntu MPI library binds all the threads to the same CPU. This is avoided by passing the parameter ``--bind-to none`` to mpirun.
+#. The infiniband is made available by the mpirun parameter ``--mca btl_openib_allow_ib``.
+    
 ..
     Commented until checked through
 
