@@ -139,9 +139,10 @@ address.  You can address your request to a specific person.
    Dept       | Name             | Location
    CS/NBE     | Mikko Hakala     | T-building A243 / Otakaari 3, F354
    CS         | Simo Tuomisto    | T-building A243
-   ELEC       | Tarmo Simonen    | Otakaari 3, F417
+   PHYS       | Simppa Äkäslompolo | Otakaari 1, Y415a
    PHYS       | Ivan Degtyarenko | Otakaari 1, Y415a
    CS/SCI     | Richard Darst    | T-building A243
+   NBE        | Enrico Glerean   | Otakaari 3, F354
 
 
 Science-IT trainings
