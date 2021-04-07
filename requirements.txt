@@ -1,3 +1,4 @@
+docutils!=0.17   # bugfix for docutils 0.17, remove later when sphinx updates
 sphinx
 sphinx_rtd_theme
 sphinx_gitstamp
