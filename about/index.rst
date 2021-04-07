@@ -155,42 +155,45 @@ better.*
 .. list-table::
 
    * *
-
      * Affiliations
-
      * Specialties
 
    * * `Richard Darst <https://people.aalto.fi/richard_darst>`_
-
-     * Science-IT, CS, RES, RDM working group.
-
-     * Data, Triton, teaching
+     * Science-IT, CS-IT, Data Agents, Aalto RSE
+     * Data science, Triton, teaching, usability
 
    * * Ivan Degtyarenko
-
      * Science-IT, PHYS-IT
-
      * Triton, HPC hardware, HPC OS, teaching
 
    * * Enrico Glerean
-
-     * Science-IT, NBE, RES, Aalto ethics committee.
-
+     * Science-IT, NBE, Data Agents, Aalto ethics committee
      * Triton, Ethics and personal data, data.
 
    * * `Simppa Äkäslompolo <https://www.aalto.fi/en/people/simppa-akaslompolo>`_
-
      * Science-IT, PHYS-IT
+     * Triton, HPC OS, parallel software
 
-     *
-     
    * * Jarno Rantaharju
+     * Science-IT, Aalto RSE
+     * Software Development, HPC software and optimization, profiling
 
+   * * Marijn van Vliet
+     * Science-IT, Aalto RSE
+     * Software development, data
+
+   * * Essi Heikkinen
      * Science-IT
+     * natural language processing, teaching, documentation
 
-     * Software Development, HPC software and optimization, Profiling
+   * * Simo Tuomisto
+     * Science-IT, CS-IT
+     * Software Development, HPC software design and optimization, GPU
+       computing
 
-
+   * * Mikko Hakala
+     * Science-IT, CS-IT, NBE-IT
+     * Triton, data storage systems, HPC administration
 
 Scientific outputs
 ------------------
