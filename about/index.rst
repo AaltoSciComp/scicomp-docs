@@ -168,7 +168,7 @@ better.*
 
    * * Enrico Glerean
      * Science-IT, NBE, Data Agents, Aalto ethics committee
-     * Triton, Ethics and personal data, data.
+     * Triton, ethics and personal data, data.
 
    * * `Simppa Äkäslompolo <https://www.aalto.fi/en/people/simppa-akaslompolo>`_
      * Science-IT, PHYS-IT
@@ -180,11 +180,11 @@ better.*
 
    * * Marijn van Vliet
      * Science-IT, Aalto RSE
-     * Software development, data
+     * Software development, data, neuroimaging
 
    * * Essi Heikkinen
      * Science-IT
-     * natural language processing, teaching, documentation
+     * Natural language processing, teaching, documentation
 
    * * Simo Tuomisto
      * Science-IT, CS-IT
