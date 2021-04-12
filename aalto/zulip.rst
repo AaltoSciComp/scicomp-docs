@@ -79,10 +79,11 @@ for Q&A-forum type chats.
 
   - Enter your message and send.
 
-Others can split or join topics if they want.  Don't worry, just ask!
+Others (or you...) can split or join topics if they want by going to
+"edit message".  Don't worry, just ask!
 
 By being organized, you can get both the benefits of quick chat with
-the order of not missing anything.
+the organization of not missing anything.
 
 
 
