@@ -123,7 +123,7 @@ Please note, that each instance of the below process uses a COMSOL licence, so t
 Example files for batch job workflow
 ************************************
 
-Here is an example batch submit script `comsol_matlab_livelink.cmd`::
+Here is an example batch submit script :code:`comsol_matlab_livelink.cmd`::
 
   #!/bin/bash
 
@@ -147,7 +147,7 @@ Here is an example batch submit script `comsol_matlab_livelink.cmd`::
   echo matlab closed
 
 
-The MATLAB process is running the `runner.m` script::
+The MATLAB process is running the :code:`runner.m` script::
 
   disp('Including comsol routines into the path.')
   addpath /share/apps/comsol/5.6/mli/
@@ -164,7 +164,7 @@ The MATLAB process is running the `runner.m` script::
   exit(0);
 
 
-The Model Control Script 'script.m' could be e.g. the following::
+The Model Control Script :code:`script.m` could be e.g. the following::
 
   import com.comsol.model.*;
   import com.comsol.model.util.*;
