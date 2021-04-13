@@ -24,7 +24,6 @@ Basics
 
    .. figure:: zulip/img/zulip-sidebar.png
       :align: center
-      :width: 80%
 
       Sidebar of Zulip, with highlights of the ways to follow
       conversations.  See text for explanations.
