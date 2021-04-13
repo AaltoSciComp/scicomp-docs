@@ -49,7 +49,7 @@ Let's take a look at the following script
 
    #!/bin/bash
    #SBATCH --time=00:05:00
-   #SBATCH --mem-per-cpu=100
+   #SBATCH --mem-per-cpu=100M
    #SBATCH --output=/scratch/work/%u/hello.%j.out
    #SBATCH --partition=debug
 

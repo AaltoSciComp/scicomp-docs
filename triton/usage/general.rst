@@ -107,7 +107,7 @@ Short batch example
 
     #!/bin/bash
     #SBATCH --time=04:00:00      # 4 hours
-    #SBATCH --mem=1000   # 1G of memory
+    #SBATCH --mem=1000M   # 1G of memory
 
     cd $WRKDIR/mydata/
     srun myprog params
@@ -136,7 +136,7 @@ and to generate output in a unique directory.
 
     #!/bin/bash
     #SBATCH --time=04:00:00
-    #SBATCH --mem-per-cpu=2500
+    #SBATCH --mem-per-cpu=2500M
     #SBATCH --array=0-29
      
     cd $SLURM_ARRAY_TASK_ID
@@ -188,7 +188,7 @@ OpenMP example
     #!/bin/bash
     #SBATCH --cpus-per-task=12
     #SBATCH --time=40:00
-    #SBATCH --mem-per-cpu=2000
+    #SBATCH --mem-per-cpu=2000M
     export OMP_PROC_BIND=true
     srun /path/to/openMP_executable
 
@@ -220,7 +220,7 @@ Small MPI example using mvapich2
     #SBATCH --nodes=1            # on one node
     #SBATCH --ntasks=4                 # 4 processes
     #SBATCH --time=4:00:00       # 4 hours
-    #SBATCH --mem-per-cpu=2000   # 2GB per process
+    #SBATCH --mem-per-cpu=2000M   # 2GB per process
      
     module load gmvolf/triton-2016a   # MVAPICH + GCC + math libs modules
     srun /path/to/mpi_program params
@@ -249,7 +249,7 @@ MPI example using Open MPI
 
     #!/bin/bash
     #SBATCH --time=2:00:00       # two hours job
-    #SBATCH --mem-per-cpu=1500   # 1.5GB of memory per process
+    #SBATCH --mem-per-cpu=1500M  # 1.5GB of memory per process
     #SBATCH --exclusive          # allocate whole node
     #SBATCH --constraint=hsw     # require Haswell CPUs with 24 cores per node 
     #SBATCH --nodes=2                 # on two nodes 
@@ -292,7 +292,7 @@ Hybrid MPI/OpenMP example using Open MPI
 
     #!/bin/bash
     #SBATCH --time=30:00
-    #SBATCH --mem-per-cpu=2500
+    #SBATCH --mem-per-cpu=2500M
     #SBATCH --exclusive
     #SBATCH --constraint=hsw    # Haswells only
     #SBATCH --ntasks=8          # -n, number of MPI tasks
@@ -315,7 +315,7 @@ Hybrid MPI/OpenMP example using mvapich2
 
     #!/bin/bash
     #SBATCH --time=30:00
-    #SBATCH --mem-per-cpu=2500
+    #SBATCH --mem-per-cpu=2500M
     #SBATCH --exclusive
     #SBATCH --constraint=[opt|wsm]
     #SBATCH --ntasks=8
@@ -346,7 +346,7 @@ Parallel job
 
     #!/bin/bash
     #SBATCH --time=00:01:00
-    #SBATCH --mem-per-cpu=500
+    #SBATCH --mem-per-cpu=500M
     #SBATCH --exclusive
     #SBATCH --constraint=[hsw|ivb|wsm]
     #SBATCH --nodes=4

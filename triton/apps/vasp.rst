@@ -36,7 +36,7 @@ batch script
     #SBATCH --nodes=1
     #SBATCH --ntasks=8
     #SBATCH --time=06:00:00
-    #SBATCH --mem-per-cpu=1500
+    #SBATCH --mem-per-cpu=1500M
     ml vasp/5.4.4
     mpirun vasp_std
 
@@ -72,7 +72,7 @@ Example batch script
     #SBATCH --nodes=1
     #SBATCH --ntasks=8
     #SBATCH --time=06:00:00
-    #SBATCH --mem-per-cpu=1500
+    #SBATCH --mem-per-cpu=1500M
     module load vasp/5.4.1-gmvolf-triton-2016a
     srun vasp_std
 
@@ -110,7 +110,7 @@ contact triton support. Example job script below:
     #SBATCH --nodes=1
     #SBATCH --ntasks=12
     #SBATCH --time=06:00:00
-    #SBATCH --mem-per-cpu=2500
+    #SBATCH --mem-per-cpu=2500M
 
     module load vasp/5.3.5
 
@@ -139,7 +139,7 @@ be used, as the Opteron queue is often shorter. An example script below:
     #SBATCH --nodes=1
     #SBATCH --ntasks=12
     #SBATCH --time=06:00:00
-    #SBATCH --mem-per-cpu=2500
+    #SBATCH --mem-per-cpu=2500M
 
     module load vasp/5.3.3
 
@@ -159,7 +159,7 @@ newer above!):
     #SBATCH --nodes=1
     #SBATCH --ntasks=12
     #SBATCH --time=1-00:00:00
-    #SBATCH --mem-per-cpu=3500
+    #SBATCH --mem-per-cpu=3500M
 
     module load vasp/5.3.2
 

@@ -35,7 +35,7 @@ To run FHI-aims on Triton a following example batch script can be used:
    #!/bin/bash -l
    #SBATCH --time=01:00:00
    #SBATCH --constraint=avx     # FHI-aims build requires at least AVX instrution set
-   #SBATCH  --mem-per-cpu=2000
+   #SBATCH  --mem-per-cpu=2000M
    #SBATCH --nodes=1
    #SBATCH --ntasks=24
 

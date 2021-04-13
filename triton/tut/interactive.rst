@@ -112,7 +112,7 @@ resources available.
 For this, you just need srun's ``--pty`` option coupled with the shell
 you want::
 
-  srun -p interactive --time=2:00:00 --mem=600 --pty bash
+  srun -p interactive --time=2:00:00 --mem=600M --pty bash
 
 The command prompt will appear when the job starts.
 And you will have a bash shell runnnig on one of the
@@ -148,7 +148,7 @@ process again.
 
 ::
 
-     sinteractive --time=1:00:00 --mem=1000
+     sinteractive --time=1:00:00 --mem=1000M
 
 .. warning::
 

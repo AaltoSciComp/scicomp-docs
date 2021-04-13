@@ -73,7 +73,7 @@ terminated (either because of ``scancel`` or due to time limit).
     #!/bin/bash
 
     #SBATCH --time=12:00:00
-    #SBATCH --mem-per-cpu=2500                                    # time and memory requirements
+    #SBATCH --mem-per-cpu=2500M                                   # time and memory requirements
 
     mkdir /tmp/$SLURM_JOB_ID                                      # get a directory where you will send all output from your program
     cd /tmp/$SLURM_JOB_ID
@@ -116,7 +116,7 @@ A sample code is below:
     #!/bin/bash
 
     #SBATCH --time=12:00:00
-    #SBATCH --mem-per-cpu=2000                        # time and memory requirements
+    #SBATCH --mem-per-cpu=2000M                       # time and memory requirements
     mkdir /tmp/$SLURM_JOB_ID                          # get a directory where you will put your data
     cp $WRKDIR/input.tar /tmp/$SLURM_JOB_ID           # copy tarred input files
     cd /tmp/$SLURM_JOB_ID

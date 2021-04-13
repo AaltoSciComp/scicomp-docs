@@ -165,7 +165,7 @@ Running an OpenMP code::
 
   export OMP_PROC_BIND=TRUE
   module load gcc/9.2.0
-  srun --cpus-per-task=4 --mem=500 --time=00:05:00 hello_omp
+  srun --cpus-per-task=4 --mem=500M --time=00:05:00 hello_omp
 
 The
 :download:`slurm script<https://raw.githubusercontent.com/AaltoSciComp/hpc-examples/master/openmp/hello_omp/hello_omp.slrm>`

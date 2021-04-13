@@ -49,7 +49,7 @@ sample slurm script is provided underneath::
 
     #!/bin/bash -l
     #SBATCH --time=00:05:00
-    #SBATCH --mem=100
+    #SBATCH --mem=100M
     #SBATCH -o serial_Matlab.out
     module load matlab
     n=3
@@ -142,7 +142,7 @@ matslurm.sh::
 
     #!/bin/bash -l
     #SBATCH --time=00:05:00
-    #SBATCH --mem=500
+    #SBATCH --mem=500M
     #SBATCH -o job-%a.out
     #SBATCH --array=0-9
     module load matlab
