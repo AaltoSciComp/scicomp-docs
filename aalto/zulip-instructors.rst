@@ -112,25 +112,17 @@ There is a fine line between a discussion platform and chat, normal
 chat and topic-based chat, and chaos and order.  Here, we give
 suggestions for you, based on what other teachers have learned.
 
+* **Topics** (basically, like subject for a message thread) is the key
+  feature of Zulip.  It is explained more below, but basically keeps
+  things organized.  If you don't want to do that or it doesn't match
+  your flow, you won't like the model.
+
 * Read the :doc:`guidelines for students <zulip>` to see the
-  importance of topics and the two ways to use Zulip.
+  importance of topics and the three ways to use Zulip, and how we
+  typically manage the flood of information in practice.
 
-  * **Recent topics**, to see which *topics* have new information.
-
-  * **All messages**, to see everything that is being posted
-    efficiently.
-
-  * **Per topic (or stream)**, when you click on a topic or stream.
-    Then you narrow down to a particular thread.
-
-  * The first is better to manage a flood of information (see what's
-    new, click on relevant stuff, ignore all the rest).  The second is
-    better when you are caught up and want to make sure you don't miss
-    anything.  The third is good for catching up on something you
-    don't remember.
-
-* Give these guidelines to your students (copy and paste from here is
-  fine).
+* Give these guidelines to your students (copy and paste from the
+  student page).
 
 * Consider *why* you want a course chat.
 
@@ -148,9 +140,9 @@ suggestions for you, based on what other teachers have learned.
     MyCourses?
 
 * Create your channels ("streams") before your students join, and make
-  the important ones default streams, so that everyone will be
-  subscribed (the "join stream" is not obvious once you get to
-  hundreds of people!)
+  the important ones default streams (this is done under "Manage
+  organization"), so that everyone will be subscribed (the "join
+  stream" is not obvious once you get to hundreds of people!)
 
   * If you do create a new default stream later, use the "clone
     subscribers" option to clone from another default stream, so that
@@ -191,3 +183,15 @@ suggestions for you, based on what other teachers have learned.
   * Adding bots, adding custom emojis.
 
   * Seeing email addresses.  Changing their name.
+
+* You can use the ``/poll [TITLE]`` command to make lightweight
+  non-anonymous polls.  For anonymous polls, someone has used a bot
+  called Errbot, but we don't currently know much about that.
+
+
+Things we know are missing (see also the student page):
+
+* More fine-grained permissions for TAs.
+
+* Support for bots and other advanced features (more like permission
+  to recommend them).

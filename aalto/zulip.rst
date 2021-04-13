@@ -11,20 +11,23 @@ It is used as a chat platform for some courses, and allows better
 student and chat privacy.
 
 The primary distinguishing feature of Zulip is **topics**, which
-allows one to make order out of a huge number of messages.
+allows one to make order out of a huge number of messages.  By using
+topics, you can narrow to a certain thread of conversation (while not
+hiding all the older conversations from the main view).
 
 Basics
 ------
 
-There are various ways to follow:
+Once we have the topics, there are various ways to follow:
 
-* **Recent topics**, to see which *topics* have new information.
+* **Recent topics**, to see which topics have new information.
 
 * **All messages**, to see everything that is being posted
   efficiently.
 
-* **Per topic (or stream)**, when you click on a topic or stream name.
-  Then you narrow down to a particular thread.
+* **Per topic (or stream)**, when you click on a topic or stream
+  name or select it from the sidebar.  Then you narrow down to a
+  particular thread and see only those messages in order.
 
 * The first is better to manage a flood of information (see what's
   new, click on relevant stuff, ignore all the rest).  The second is
@@ -35,7 +38,7 @@ There are various ways to follow:
 * What many of us do is to first look at "Recent topics" after we come
   back after a break, see anything important, then scroll to the
   bottom of "All topics" to monitor new things.  If we see something
-  we missed, we narrow to that topic to catch up.
+  we missed, we click on the topic to narrow to it and catch up.
 
 Topics are grouped into **streams** (called this because it is
 completely reasonable to follow everything at once via "All topics").
@@ -102,3 +105,11 @@ We are aware of the following open issues:
 
 - It is annoying to have one chat instance per course (but it seems to
   be).
+
+- There are no mobile Push notifications (since Aalto Security won't
+  let us turn them on).
+
+- Likewise with built-in video calls (via https://meet.jit.si or Zoom)
+
+- Various user interface things.  But Zulip is open-source, so feel
+  free to contribute to the project...
