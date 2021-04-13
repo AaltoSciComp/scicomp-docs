@@ -149,7 +149,8 @@ suggestions for you, based on what other teachers have learned.
     everyone will be subscribed.
 
   * Some common streams you might want are ``#general``,
-    ``#announcements``, ``#questions``.
+    ``#announcements``, ``#questions``.  Some people have one stream
+    per homework, exam, and/or task.
 
 * If you want a Q&A forum, make a stream called ``#questions`` and
   direct students there.
@@ -160,7 +161,7 @@ suggestions for you, based on what other teachers have learned.
   * If students don't make a new topic (or a topic goes off-track),
     edit the message and change the topic (change topic for "this
     message and all later messages").  Then, you keep questions
-    organized, findable.
+    organized, findable, and trackable.
 
   * You can use the "forum bot"
     (https://github.com/AaltoSciComp/zulip-forum-bot).  This is still
@@ -170,6 +171,12 @@ suggestions for you, based on what other teachers have learned.
     identify answered and unanswered questions in the "Recent topics"
     view.  We will add more features as people request.  Please ask
     our help when deploying bots.
+
+  * If you don't want to be answering questions in private message
+    (who does?... it leads to duplicate work), make a clear policy on
+    either reposting the questions publicly yourself (without
+    identification), or directing the students to repost in the public
+    steam themselves.
 
 * If you want to limit students to not be able to do anything, you can
   consider disabling:
@@ -183,6 +190,10 @@ suggestions for you, based on what other teachers have learned.
   * Adding bots, adding custom emojis.
 
   * Seeing email addresses.  Changing their name.
+
+* On the other hand, you might want to "allow message editing" to a
+  much longer period and allow message deleting.  For Q&A these are
+  quite useful to have.
 
 * You can use the ``/poll [TITLE]`` command to make lightweight
   non-anonymous polls.  For anonymous polls, someone has used a bot

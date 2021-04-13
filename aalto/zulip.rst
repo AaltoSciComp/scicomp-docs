@@ -15,6 +15,8 @@ allows one to make order out of a huge number of messages.  By using
 topics, you can narrow to a certain thread of conversation (while not
 hiding all the older conversations from the main view).
 
+
+
 Basics
 ------
 
@@ -87,6 +89,19 @@ Others (or you...) can split or join topics if they want by going to
 
 By being organized, you can get both the benefits of quick chat with
 the organization of not missing anything.
+
+
+
+Other hints
+-----------
+
+- "Mute a stream" (or topic) is useful when you want to stay
+  subscribed but not be notified of messages by default.  You can
+  still find it if you click through the sidebar.
+
+- The desktop and mobile apps can support `multiple organizations
+  <https://api.zulip.com/help/switching-between-organizations>`__.  At
+  least on mobile apps, switching is kind of annoying.
 
 
 
