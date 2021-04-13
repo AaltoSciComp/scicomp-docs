@@ -117,7 +117,7 @@ suggestions for you, based on what other teachers have learned.
   things organized.  If you don't want to do that or it doesn't match
   your flow, you won't like the model.
 
-* Read the :doc:`guidelines for students <zulip>` to see the
+* Read the :doc:`guidelines for students <../zulip>` to see the
   importance of topics and the three ways to use Zulip, and how we
   typically manage the flood of information in practice.
 
