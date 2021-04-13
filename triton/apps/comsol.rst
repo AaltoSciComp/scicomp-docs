@@ -123,7 +123,7 @@ Please note, that each instance of the below process uses a COMSOL licence, so t
 Example files for batch job workflow
 ************************************
 
-Here is an example batch submit script :code:`comsol_matlab_livelink.cmd`::
+Here is an example batch submit script :code:`comsol_matlab_livelink.sh`::
 
   #!/bin/bash
 
@@ -175,7 +175,7 @@ The Model Control Script :code:`script.m` could be e.g. the following::
 
 The job is submitted with::
 
-  $ sbatch comsol_matlab_livelink.cmd
+  $ sbatch comsol_matlab_livelink.sh
 
 ..
   /share/apps/spack/envs/fgci-centos7-generic/software/intel-parallel-studio/cluster.2020.0/ttn75qk/compilers_and_libraries_2020.0.166/linux/mpi/intel64/bin/mpirun
