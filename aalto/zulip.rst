@@ -4,7 +4,7 @@ Zulip
 .. seealso::
 
    Instructors, see the relocated instructor page at
-   :doc:`zulip-instructors`.
+   :doc:`zulip/instructors`.
 
 Zulip is a open-source chat platform, which Aalto hosts as a pilot.
 It is used as a chat platform for some courses, and allows better
@@ -19,6 +19,16 @@ hiding all the older conversations from the main view).
 
 Basics
 ------
+
+.. sidebar:: Main views
+
+   .. figure:: zulip/img/zulip-sidebar.png
+      :align: center
+      :width: 80%
+
+      Sidebar of Zulip, with highlights of the ways to follow
+      conversations.  See text for explanations.
+
 
 Once we have the topics, there are various ways to follow:
 
@@ -43,9 +53,15 @@ Once we have the topics, there are various ways to follow:
   we missed, we click on the topic to narrow to it and catch up.
 
 Topics are grouped into **streams** (called this because it is
-completely reasonable to follow everything at once via "All topics").
+completely reasonable to follow everything at once via "All messages").
 You can select the streams you are part of with the gear icon, above
 the channel list.  It is good to occasionally look at this.
+
+.. figure:: zulip/img/zulip-topics.png
+   :align: center
+
+   Basic view of messages and how to interact with it.  You can click
+   on various places to narrow your view to one conversation or reply.
 
 
 
@@ -61,10 +77,16 @@ for Q&A-forum type chats.
   - If so, click on the topic name.  You will narrow your view to see
     that entire conversation.
 
-- If your question isn't answered yet, but is very similar to an
+- If your question isn't answered yet, but is a follow up to an
   existing topic, click on a message in that topic.  Then, when you
   ask, it will go to that same topic as a follow-up, and anyone else
   can narrow to see the whole history.
+
+  .. figure:: zulip/img/zulip-reply.png
+     :width: 300px
+     :align: right
+
+     Replying to an existing topic.
 
   - Unlike other chats, your message will *not* get lost, and people
     will both see that it is new *and* can see the history of that
@@ -76,7 +98,15 @@ for Q&A-forum type chats.
 
 - If you don't find anything relevant to follow up on, make a new topic.
 
+  .. figure:: zulip/img/zulip-new.png
+     :width: 300px
+     :align: right
+
+     Making a new topic.
+
   - Select the stream you want to post to (whatever fits best).
+
+  - Click "New topic".
 
   - Enter the topic name down below: a few words, like an email
     subject.  For example, ``week 1 question 3``, ``integrals of
@@ -85,7 +115,8 @@ for Q&A-forum type chats.
   - Enter your message and send.
 
 Others (or you...) can split or join topics if they want by going to
-"edit message".  Don't worry, just ask!
+"edit message", so there is no risk of doing something wrong.  Don't
+worry, just ask!
 
 By being organized, you can get both the benefits of quick chat with
 the organization of not missing anything.
@@ -94,6 +125,9 @@ the organization of not missing anything.
 
 Other hints
 -----------
+
+- You can format your messages using `Zulip markdown
+  <https://zulip.com/help/format-your-message-using-markdown>`__.
 
 - "Mute a stream" (or topic) is useful when you want to stay
   subscribed but not be notified of messages by default.  You can
@@ -124,7 +158,7 @@ We are aware of the following open issues:
 - There are no mobile Push notifications (since Aalto Security won't
   let us turn them on).
 
-- Likewise with built-in video calls (via https://meet.jit.si or Zoom)
+- Likewise with built-in video calls (via https://meet.jit.si or Zoom).
 
 - Various user interface things.  But Zulip is open-source, so feel
   free to contribute to the project...
