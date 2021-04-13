@@ -62,6 +62,12 @@ the channel list.  It is good to occasionally look at this.
    Basic view of messages and how to interact with it.  You can click
    on various places to narrow your view to one conversation or reply.
 
+.. figure:: zulip/img/zulip-recenttopics.png
+   :align: center
+
+   Recent topics, another view of recent activity that shows activity
+   per-topic.
+
 
 
 How to ask a question
