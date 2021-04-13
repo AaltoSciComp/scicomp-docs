@@ -1,6 +1,9 @@
 COMSOL Multiphysics
 ~~~~~~~~~~~~~~~~~~~
 
+.. hint:: Join the other COMSOL users in our Zulip :ref:`chat`: Stream "#triton", topic "Comsol user group".
+
+
 To check which versions of Comsol are available, run::
 
           module spider comsol

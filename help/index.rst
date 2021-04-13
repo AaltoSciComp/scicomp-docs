@@ -95,6 +95,8 @@ informally chat.  This is especially useful when your question is not yet
 fully defined, or you think that demonstrating the problem for
 immediate feedback is useful.
 
+.. _chat:
+
 Chat
 ~~~~
 
