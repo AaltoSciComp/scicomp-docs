@@ -53,6 +53,12 @@ YAML, by the way (but we can handle the syntax details).
    archive_date: 2021-09-01      # becomes hidden from instructors
    delete_date:  2021-09-01      # after this, we ask if it can be deleted
 
+   # For the course dates itself (just for our reference, not too important)
+   start_date: 2020-10-01
+   end_date: 2020-12-15
+   course_times: Exercise sessions Tuesday afternoons, Deadlines Fridays at 18
+
+
    # The dates above actually aren't used.  These control visibility:
    private: false
    archive: false
