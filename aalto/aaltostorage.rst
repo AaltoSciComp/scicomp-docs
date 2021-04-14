@@ -235,8 +235,7 @@ Filesystem list
    -  SMB mounting: ``smb://data.triton.aalto.fi/work/$username``.
       (Username may need to be ``AALTO\yourusername``.)
    -  Deleted six months after your account expires.
-   -  Aalto workstations also have ``/work/$deptcode`` 
-      which is not to be confused with this.
+   -  Not to be confused with Aalto work (see below).
 
 -  **local:** local disks for high performance
 
@@ -287,6 +286,7 @@ Filesystem list
 
 * **Aalto work**: Aalto's general storage space
 
+  - ``/work/$deptcode`` on Aalto workstations and servers.
   - Not often used within Science-IT departments: we use project and
     archive above, which are managed by us and practically
     equivalent.  You could request space from here, but expect less
