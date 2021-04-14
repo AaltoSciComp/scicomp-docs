@@ -10,9 +10,9 @@ Zulip is provided by Aalto as a pilot solution for all School of Science
 departments' course needs. The pilot period covers teaching periods 3-5, so
 summer courses are not included. The pilot refers to a) a fixed-term project
 with clear lifecycle needs, like in courses which start and end at certain
-times. After the course has ended, the Zulip instance can be deleted. b) a
+times and after which the Zulip instance can be deleted; b) a
 transitional period between current state and possible production use or change
-to other solutions, and c) a basic solution with without all the fancy features
+to other solutions; and c) a basic solution with without all the fancy features
 or user interface. During the pilot users are expected to provide feedback,
 which will effect on the decision-making for future solutions, and the
 development of usability.
@@ -78,7 +78,7 @@ correctly. Make sure any owners/admins you appoint are aware of these as well.
   * Integration with Aalto Zoom may come later on
 
 
-**Organization permisisons / Invitation settings**
+**Organization permissions / Invitation settings**
 
 Do not set both "Organizational Premissions→Invitations = not
 required" and "Authentication methods→Email = enabled" at the same
@@ -104,12 +104,12 @@ The exact questions and answers:
     send invitations``.  (You can invite people via their Aalto email
     address for Aalto login)
 
-**Organization permisisons / Who can access user email addresses**
+**Organization permissions / Who can access user email addresses**
 
 * Set this to ``Admins only`` or ``Nobody``
 
 
-**Organization permisisons / Who can add bots**
+**Organization permissions / Who can add bots**
 
 * Set to ``Admins`` only
 * Consult `CS-IT <https://wiki.aalto.fi/display/CSdept/IT/>`_ before deploying
