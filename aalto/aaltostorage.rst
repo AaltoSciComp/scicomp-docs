@@ -70,7 +70,7 @@ projects** when needed to keep things organized.INLINE
 |              |              |              |              |              | account.     |
 +--------------+--------------+--------------+--------------+--------------+--------------+
 | work         | /m/$dept/wor | yes          | 200GB        | RAID6, but   | same as      |
-|              | k/$username/ |              | default      | no backups.  | scratch.     |
+| (Triton)     | k/$username/ |              | default      | no backups.  | scratch.     |
 |              |              |              |              |              | Need Triton  |
 |              |              |              |              |              | account.     |
 +--------------+--------------+--------------+--------------+--------------+--------------+
