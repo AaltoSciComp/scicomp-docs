@@ -4,9 +4,26 @@ Zulip for instructors
 
 Introduction
 ------------
-Zulip is an online discussion tool with latex support. It has been used by some Aalto teachers as an external service on individual courses. For Spring 2021, Zulip is provided by Aalto as a pilot solution for all School of Science departments' course needs. The pilot period covers teaching periods 3-5, so summer courses are not included. The pilot refers to a) a fixed-term project with clear lifecycle needs, like in courses which start and end at certain times. After the course has ended, the Zulip instance can be deleted. b) a transitional period between current state and possible production use or change to other solutions, and c) a basic solution with without all the fancy features or user interface. During the pilot users are expected to provide feedback, which will effect on the decision-making for future solutions, and the development of usability.
+Zulip is an online discussion tool with latex support. It has been used by some
+Aalto teachers as an external service on individual courses. For Spring 2021,
+Zulip is provided by Aalto as a pilot solution for all School of Science
+departments' course needs. The pilot period covers teaching periods 3-5, so
+summer courses are not included. The pilot refers to a) a fixed-term project
+with clear lifecycle needs, like in courses which start and end at certain
+times. After the course has ended, the Zulip instance can be deleted. b) a
+transitional period between current state and possible production use or change
+to other solutions, and c) a basic solution with without all the fancy features
+or user interface. During the pilot users are expected to provide feedback,
+which will effect on the decision-making for future solutions, and the
+development of usability.
 
-CS-IT hosts `Zulip <https://zulipchat.com/>`_ the chat instances for you. These chat instances are hosted at ``<chat-name>.zulip.cs.aalto.fi``. Login to the chats is available with Aalto accounts. Email registration for external users is also possible via invitations. After logging in for the first time with an Aalto account, if no matching Zulip account was found, you are prompted to "Register" and create one. Once the Zulip account has been created, it should be linked to your Aalto credentials.
+CS-IT hosts `Zulip <https://zulipchat.com/>`_ the chat instances for you. These
+chat instances are hosted at ``<chat-name>.zulip.cs.aalto.fi``. Login to the
+chats is available with Aalto accounts. Email registration for external users
+is also possible via invitations. After logging in for the first time with an
+Aalto account, if no matching Zulip account was found, you are prompted to
+"Register" and create one. Once the Zulip account has been created, it should
+be linked to your Aalto credentials.
 
 Internal or confidential matters should not be discussed on the platform.
 
@@ -23,22 +40,35 @@ Get started / request Zulip
 
 .. note::
 
-    This service is still in beta. You might encounter some issues. If you encounter issues, report them to `CS-IT <https://wiki.aalto.fi/display/CSdept/IT/>`_ or on #zulip-support at `scicomp.zulip.cs.aalto.fi <https://scicomp.zulip.cs.aalto.fi/>`_
+    This service is still in beta. You might encounter some issues. If you
+    encounter issues, report them to
+    `CS-IT <https://wiki.aalto.fi/display/CSdept/IT/>`_ or on #zulip-support
+    at `scicomp.zulip.cs.aalto.fi <https://scicomp.zulip.cs.aalto.fi/>`_
 
-    You can also give/discuss feedback, complaints or suggestions on #zulip-feedback at `scicomp.zulip.cs.aalto.fi <https://scicomp.zulip.cs.aalto.fi/>`_
+    You can also give/discuss feedback, complaints or suggestions on
+    #zulip-feedback at
+    `scicomp.zulip.cs.aalto.fi <https://scicomp.zulip.cs.aalto.fi/>`_
 
 .. note::
 
-    You can test out Zulip at `testrealm.zulip.cs.aalto.fi <https://testrealm.zulip.cs.aalto.fi/>`_. Use the Aalto login. This chat is for testing only.
+    You can test out Zulip at
+    `testrealm.zulip.cs.aalto.fi <https://testrealm.zulip.cs.aalto.fi/>`_.
+    Use the Aalto login. This chat is for testing only.
 
 Configuring your organization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Below are listed the most important settings found under *Manage organization* in Zulip. There is no easy way for us to enforce these, so it is your responsibility as organization owner or admin to make sure they are set correctly. Make sure any owners/admins you appoint are aware of these as well.
+Below are listed the most important settings found under *Manage organization*
+in Zulip. There is no easy way for us to enforce these, so it is your
+responsibility as organization owner or admin to make sure they are set
+correctly. Make sure any owners/admins you appoint are aware of these as well.
 
 .. note::
 
-    Settings that are not mentioned here, you can configure to your liking. However you should still exercise care, since you are responsible for the service and safety of your user's data.  If you would like advice, please ask us.
+    Settings that are not mentioned here, you can configure to your liking.
+    However you should still exercise care, since you are responsible for the
+    service and safety of your user's data.  If you would like advice, please
+    ask us.
 
 
 **Organization settings / Video chat provider**
@@ -82,7 +112,8 @@ The exact questions and answers:
 **Organization permisisons / Who can add bots**
 
 * Set to ``Admins`` only
-* Consult `CS-IT <https://wiki.aalto.fi/display/CSdept/IT/>`_ before deploying any bots
+* Consult `CS-IT <https://wiki.aalto.fi/display/CSdept/IT/>`_ before deploying
+  any bots
 
 
 **Authentication methods**
@@ -95,13 +126,15 @@ The exact questions and answers:
 
   * This allows users to register using an email address
   * We cannot allow random people or bots to register freely
-  * If you enable this, make the chat ``invitation only`` as described in 'Invitation settings' above, for the reason described there.
+  * If you enable this, make the chat ``invitation only`` as described in
+    'Invitation settings' above, for the reason described there.
 
 
 **Users**
 
 * You can manage users here.
-* Please be careful with who you assign admins/owners. These roles should be only given to course staff
+* Please be careful with who you assign admins/owners. These roles should be
+  only given to course staff
 
 
 
