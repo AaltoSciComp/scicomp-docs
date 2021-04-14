@@ -39,79 +39,78 @@ departments. In general, **project** is for most research data that requires
 good backups. For big data, use **scratch**. Request **separate
 projects** when needed to keep things organized.INLINE
 
-+--------------+--------------+--------------+--------------+--------------+--------------+
-| Filesystem   | Path (Linux) | Triton?      | Quota        | Backups?     | Notes        |
-+==============+==============+==============+==============+==============+==============+
-| home         | /u/.../$user | no           | 100 GiB      | yes,         | Used for     |
-|              | name/unix    |              |              | $HOME/../.sn | personal and |
-|              |              |              |              | apshot/      | non-research |
-|              |              |              |              |              | files        |
-+--------------+--------------+--------------+--------------+--------------+--------------+
-| project      | /m/$dept/proj| some         | per-project, | Yes,         |              |
-|              | ect/$project/|              | up to 100s   | hourly/daily |              |
-|              |              |              | of GiB       | /weekly.     |              |
-|              |              |              |              | (.snapshot)  |              |
-+--------------+--------------+--------------+--------------+--------------+--------------+
-| archive      | /m/$dept/arch| some         | per-project, | Yes,         |              |
-|              | ive/         |              | up to 100s   | hourly/daily |              |
-|              | $project/    |              | of GiB       | weekly.      |              |
-|              |              |              |              | + off-site   |              |
-|              |              |              |              | tape         |              |
-|              |              |              |              | backups.     |              |
-|              |              |              |              | (.snapshot)  |              |
-+--------------+--------------+--------------+--------------+--------------+--------------+
-| scratch      | /m/$dept/scr | yes          | per-project, | RAID6, but   | Don't even   |
-|              | atch/$pro    |              | 2 PiB        | no backups.  | think about  |
-|              | hect/        |              | available    |              | leaving      |
-|              |              |              |              |              | irreplaceabl |
-|              |              |              |              |              | e            |
-|              |              |              |              |              | files here!  |
-|              |              |              |              |              | Need Triton  |
-|              |              |              |              |              | account.     |
-+--------------+--------------+--------------+--------------+--------------+--------------+
-| work         | /m/$dept/wor | yes          | 200GB        | RAID6, but   | same as      |
-| (Triton)     | k/$username/ |              | default      | no backups.  | scratch.     |
-|              |              |              |              |              | Need Triton  |
-|              |              |              |              |              | account.     |
-+--------------+--------------+--------------+--------------+--------------+--------------+
-| local        | /l/$username | yes          | usually a    | No, and      | Directory    |
-|              | /            |              | few 100s GiB | destroyed if | needs to be  |
-|              |              |              | available    | computer     | created and  |
-|              |              |              |              | reinstalled. | permissions  |
-|              |              |              |              |              | should be    |
-|              |              |              |              |              | made         |
-|              |              |              |              |              | reasonable   |
-|              |              |              |              |              | (quite       |
-|              |              |              |              |              | likely       |
-|              |              |              |              |              | 'chmod 700   |
-|              |              |              |              |              | /l/$USER',   |
-|              |              |              |              |              | by default   |
-|              |              |              |              |              | has read     |
-|              |              |              |              |              | access for   |
-|              |              |              |              |              | everyone!)   |
-|              |              |              |              |              |              |
-|              |              |              |              |              | Space usage: |
-|              |              |              |              |              | \`du -sh     |
-|              |              |              |              |              | /l/\`. Not   |
-|              |              |              |              |              | shared among |
-|              |              |              |              |              | computers.   |
-+--------------+--------------+--------------+--------------+--------------+--------------+
-| tmpfs        | /run/user/$u | yes          | local memory | No           | Not shared.  |
-|              | id/          |              |              |              |              |
-+--------------+--------------+--------------+--------------+--------------+--------------+
-| webhome      | $HOME/public | no           | 5 GiB        |              | `https://use |
-|              | \_html/      |              |              |              | rs.aalto.fi/ |
-|              |              |              |              |              | ~USER/ <http |
-|              | (/m/webhome/ |              |              |              | s://users.aa |
-|              | ...)         |              |              |              | lto.fi/~USER |
-|              |              |              |              |              | />`__        |
-+--------------+--------------+--------------+--------------+--------------+--------------+
-| custom       |              |              |              |              | Contact us   |
-| solutions    |              |              |              |              | for special  |
-|              |              |              |              |              | needs, like  |
-|              |              |              |              |              | sensitive    |
-|              |              |              |              |              | data, etc.   |
-+--------------+--------------+--------------+--------------+--------------+--------------+
++--------------+--------------+--------------+--------------+--------------+-------------------+
+| Filesystem   | Path (Linux) | Triton?      | Quota        | Backups?     | Notes             |
++==============+==============+==============+==============+==============+===================+
+| home         | /u/.../$user | no           | 100 GiB      | yes,         | Used for          |
+|              | name/unix    |              |              | $HOME/../.sn | personal and      |
+|              |              |              |              | apshot/      | non-research      |
+|              |              |              |              |              | files             |
++--------------+--------------+--------------+--------------+--------------+-------------------+
+| project      | /m/$dept/proj| some         | per-project, | Yes,         |                   |
+|              | ect/$project/|              | up to 100s   | hourly/daily |                   |
+|              |              |              | of GiB       | /weekly.     |                   |
+|              |              |              |              | (.snapshot)  |                   |
++--------------+--------------+--------------+--------------+--------------+-------------------+
+| archive      | /m/$dept/arch| some         | per-project, | Yes,         |                   |
+|              | ive/         |              | up to 100s   | hourly/daily |                   |
+|              | $project/    |              | of GiB       | weekly.      |                   |
+|              |              |              |              | + off-site   |                   |
+|              |              |              |              | tape         |                   |
+|              |              |              |              | backups.     |                   |
+|              |              |              |              | (.snapshot)  |                   |
++--------------+--------------+--------------+--------------+--------------+-------------------+
+| scratch      | /m/$dept/scr | yes          | per-project, | RAID6, but   | Don't even        |
+|              | atch/$pro    |              | 2 PiB        | no backups.  | think about       |
+|              | hect/        |              | available    |              | leaving           |
+|              |              |              |              |              | irreplaceable     |
+|              |              |              |              |              | files here!       |
+|              |              |              |              |              | Need Triton       |
+|              |              |              |              |              | account.          |
++--------------+--------------+--------------+--------------+--------------+-------------------+
+| work         | /m/$dept/wor | yes          | 200 GB       | RAID6, but   | Same as           |
+| (Triton)     | k/$username/ |              | default      | no backups.  | scratch.          |
+|              |              |              |              |              | Need Triton       |
+|              |              |              |              |              | account.          |
++--------------+--------------+--------------+--------------+--------------+-------------------+
+| local        | /l/$username | yes          | usually a    | No, and      | Directory         |
+|              | /            |              | few 100s GiB | destroyed if | needs to be       |
+|              |              |              | available    | computer     | created and       |
+|              |              |              |              | reinstalled. | permissions       |
+|              |              |              |              |              | should be         |
+|              |              |              |              |              | made              |
+|              |              |              |              |              | reasonable        |
+|              |              |              |              |              | (quite            |
+|              |              |              |              |              | likely            |
+|              |              |              |              |              | 'chmod 700        |
+|              |              |              |              |              | /l/$USER',        |
+|              |              |              |              |              | by default        |
+|              |              |              |              |              | has read          |
+|              |              |              |              |              | access for        |
+|              |              |              |              |              | everyone!)        |
+|              |              |              |              |              |                   |
+|              |              |              |              |              | Space usage:      |
+|              |              |              |              |              | \`du -sh          |
+|              |              |              |              |              | /l/\`. Not        |
+|              |              |              |              |              | shared among      |
+|              |              |              |              |              | computers.        |
++--------------+--------------+--------------+--------------+--------------+-------------------+
+| tmpfs        | /run/user/$u | yes          | local memory | No           | Not shared.       |
+|              | id/          |              |              |              |                   |
++--------------+--------------+--------------+--------------+--------------+-------------------+
+| webhome      | $HOME/public | no           | 5 GiB        |              | `https://use      |
+|              | \_html/      |              |              |              | rs.aalto.fi/      |
+|              |              |              |              |              | ~USER/ <http      |
+|              | (/m/webhome/ |              |              |              | s://users.aa      |
+|              | ...)         |              |              |              | lto.fi/~USER      |
+|              |              |              |              |              | />`__             |
++--------------+--------------+--------------+--------------+--------------+-------------------+
+| custom       |              |              |              |              | Contact us        |
+| solutions    |              |              |              |              | for special       |
+|              |              |              |              |              | needs, like       |
+|              |              |              |              |              | sensitive         |
+|              |              |              |              |              | data, etc.        |
++--------------+--------------+--------------+--------------+--------------+-------------------+
 
 General notes
 ~~~~~~~~~~~~~
@@ -233,9 +232,11 @@ Filesystem list
    -  This is the equivalent of scratch, but per-person. Data is lost
       once you leave.
    -  Accessible on ``magi``/``taltta`` at the same path.
-   - SMB mounting: ``smb://data.triton.aalto.fi/work/$username``.
-     (Username may need to be ``AALTO\yourusername``.)
-   - Deleted six months after your account expires.
+   -  SMB mounting: ``smb://data.triton.aalto.fi/work/$username``.
+      (Username may need to be ``AALTO\yourusername``.)
+   -  Deleted six months after your account expires.
+   -  Aalto workstations also have ``/work/$deptcode`` 
+      which is not to be confused with this.
 
 -  **local:** local disks for high performance
 
