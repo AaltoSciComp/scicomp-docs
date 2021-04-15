@@ -181,7 +181,7 @@ Open issues
 We are aware of the following open issues:
 
 - It is annoying to have one chat instance per course (but it seems to
-  be).
+  be standard in chats these days).
 
 - There are no mobile Push notifications (since Aalto Security won't
   let us turn them on).
