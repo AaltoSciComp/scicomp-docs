@@ -25,7 +25,7 @@ Streams and Topics
 ^^^^^^^^^^^^^^^^^^
 
 In Zulip, discussions are orginized in **Streams**, which are further
-divided into **Topics**
+divided into **Topics**.
 
 Views
 ^^^^^
@@ -49,16 +49,11 @@ you can select:
 * **Different streams and topics**, to narrow down to a specific
   stream or topic.
 
-**All messages** is good to manage a flood of information (see what's
-new, click on relevant stuff, ignore all the rest). **Recemt topics**is
+**Recent topics** is good to manage a flood of information (see what's
+new, click on relevant stuff, ignore all the rest). **All messages** is
 better when you are caught up and want to make sure you don't miss
-anything. **Topics and streams** is good for catching up on something you
-don't remember.
-
-What many of us do is to first look at **Recent topics** after we come
-back after a break, see anything important, then scroll to the
-bottom of **All topics** to monitor new things.  If we see something
-we missed, we click on the topic to narrow to it and catch up.
+anything. **Single topics and streams** is good for catching up on
+something you don't remember.
 
 Of course, everyone has their own ways and workflows so you should
 experiment what works best and which views are useful for you.
@@ -74,7 +69,7 @@ are shown.
    **Message Pane**. This is the basic view of messages.  You can click
    on various places to narrow your view to one conversation or reply.
 
-Selecting visible Topics
+Selecting visible topics
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 Not all streams are visible in the sidebar by default.
