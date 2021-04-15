@@ -24,8 +24,8 @@ Basics
 Streams and Topics
 ^^^^^^^^^^^^^^^^^^
 
-In Zulip, discussions are orginized in **Streams**, which are further
-divided into **Topics**.
+In Zulip, discussions are orginized in **streams**, which are further
+divided into **topics**.
 
 Views
 ^^^^^
@@ -52,7 +52,7 @@ you can select:
 **Recent topics** is good to manage a flood of information (see what's
 new, click on relevant stuff, ignore all the rest). **All messages** is
 better when you are caught up and want to make sure you don't miss
-anything. **Single topics and streams** is good for catching up on
+anything. Viewing **single topics and streams** is good for catching up on
 something you don't remember.
 
 Of course, everyone has their own ways and workflows so you should
