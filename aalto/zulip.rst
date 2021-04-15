@@ -168,6 +168,10 @@ Apps
 There are reasonable applications for most desktop and mobile
 operating systems.  These don't send your data to any other services.
 
+The mobile applications work, but may not be the best for following a
+large number of courses simultaneously.  We can't currently make
+improvements in them.
+
 
 
 Open issues
