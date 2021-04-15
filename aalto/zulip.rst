@@ -6,7 +6,7 @@ Zulip
    Instructors, see the relocated instructor page at
    :doc:`zulip/instructors`.
 
-Zulip is a open-source chat platform, which Aalto hosts as a pilot.
+Zulip is a open-source chat platform, which CS hosts at Aalto as a pilot.
 It is used as a chat platform for some courses, and allows better
 student and chat privacy.
 

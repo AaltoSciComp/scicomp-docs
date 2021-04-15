@@ -6,7 +6,7 @@ Introduction
 ------------
 Zulip is an online discussion tool with latex support. It has been used by some
 Aalto teachers as an external service on individual courses. For Spring 2021,
-Zulip is provided by Aalto as a pilot solution for all School of Science
+Zulip is provided by Aalto CS as a pilot solution for all School of Science
 departments' course needs. The pilot period covers teaching periods 3-5, so
 summer courses are not included. The pilot refers to a) a fixed-term project
 with clear lifecycle needs, like in courses which start and end at certain
