@@ -20,6 +20,16 @@ hiding all the older conversations from the main view).
 Basics
 ------
 
+
+Streams and Topics
+^^^^^^^^^^^^^^^^^^
+
+In Zulip, discussions are orginized in **Streams**, which are further
+divided into **Topics**
+
+Views
+^^^^^
+
 .. sidebar:: Main views
 
    .. figure:: zulip/img/zulip-sidebar.png
@@ -28,39 +38,50 @@ Basics
       Sidebar of Zulip, with highlights of the ways to follow
       conversations.  See text for explanations.
 
-
-Once we have the topics, there are various ways to follow:
-
-* **Recent topics**, to see which topics have new information.
+The left **sidebar** let's you narrow down messages that are displayed,
+you can select:
 
 * **All messages**, to see everything that is being posted
   efficiently.
 
-* **Per topic (or stream)**, when you click on a topic or stream
-  name or select it from the sidebar.  Then you narrow down to a
-  particular thread and see only those messages in order.
+* **Recent topics**, to see which topics have new information.
 
-* The first is better to manage a flood of information (see what's
-  new, click on relevant stuff, ignore all the rest).  The second is
-  better when you are caught up and want to make sure you don't miss
-  anything.  The third is good for catching up on something you
-  don't remember.
+* **Different streams and topics**, to narrow down to a specific
+  stream or topic.
 
-* What many of us do is to first look at "Recent topics" after we come
-  back after a break, see anything important, then scroll to the
-  bottom of "All topics" to monitor new things.  If we see something
-  we missed, we click on the topic to narrow to it and catch up.
+**All messages** is good to manage a flood of information (see what's
+new, click on relevant stuff, ignore all the rest). **Recemt topics**is
+better when you are caught up and want to make sure you don't miss
+anything. **Topics and streams** is good for catching up on something you
+don't remember.
 
-Topics are grouped into **streams** (called this because it is
-completely reasonable to follow everything at once via "All messages").
-You can select the streams you are part of with the gear icon, above
-the channel list.  It is good to occasionally look at this.
+What many of us do is to first look at **Recent topics** after we come
+back after a break, see anything important, then scroll to the
+bottom of **All topics** to monitor new things.  If we see something
+we missed, we click on the topic to narrow to it and catch up.
+
+Of course, everyone has their own ways and workflows so you should
+experiment what works best and which views are useful for you.
+
+Message Pane
+^^^^^^^^^^^^
+In the middle of your screen, you have the **Message Pane**, where the messages
+are shown.
 
 .. figure:: zulip/img/zulip-topics.png
    :align: center
 
-   Basic view of messages and how to interact with it.  You can click
+   **Message Pane**. This is the basic view of messages.  You can click
    on various places to narrow your view to one conversation or reply.
+
+Selecting visible Topics
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Not all streams are visible in the sidebar by default.
+
+Click the gear icon above the channel list in order to see all available streams
+and select which ones you want to participate in. It is good to occasionally look at
+this menu in case new streams are added.
 
 .. figure:: zulip/img/zulip-recenttopics.png
    :align: center
@@ -69,9 +90,11 @@ the channel list.  It is good to occasionally look at this.
    per-topic.
 
 
+Hints on using Zulip efficiently
+--------------------------------
 
 How to ask a question
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 Seems obvious, doesn't it?  You can get the best and fastest answers
 by helping to keep things organized.  These recommendations are mainly
@@ -129,7 +152,7 @@ the organization of not missing anything.
 
 
 Other hints
------------
+^^^^^^^^^^^
 
 - You can format your messages using `Zulip markdown
   <https://zulip.com/help/format-your-message-using-markdown>`__.
