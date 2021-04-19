@@ -34,7 +34,7 @@ We expect that course participants are familiar with the Python programming lang
 | 03.05 | 14:00-15:00 | Recap session and closing                         |
 +-------+-------------+---------------------------------------------------+
 
-**Course material:** All course material can be found in this repository: `https://version.aalto.fi/gitlab/merzs1/cdwassignment <https://version.aalto.fi/gitlab/merzs1/cdwassignment>`__.
+**Course material:** All course material can be found in this repository: `https://github.com/susamerz/CDWAssignment <https://github.com/susamerz/CDWAssignment>`__.
 
 **Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
 
