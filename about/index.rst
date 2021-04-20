@@ -1,5 +1,5 @@
-About Aalto Scientific Computing
-================================
+About
+=====
 
 Computational research is one of the focus areas in Aalto
 University, and **Aalto Scientific Computing** makes that possible.
@@ -217,3 +217,12 @@ Our users come from countless research areas:
 * Data mining
 * Deep learning and artificial intelligence
 * Big data analysis
+
+
+Other
+-----
+
+.. toctree::
+
+   web-accessibility
+   ../README
