@@ -81,7 +81,40 @@ with Academy funding in research projects and research infrastructure
 projects must be made freely available as soon as possible after the
 research results have been published."
 
+* As a RSE salary:
+
+  * "Salaries, fees and indirect employee costs" may be included in
+    Academy projects.  These may go to research software engineers,
+    which to the academy appear equivalent to "normal" researchers.
+    The RSEs *are* researchers.
+
+  * Write in a Research Software Engineer as a salary for a set number
+    of months.  You may specify a name as N.N., or contact us for a
+    name to include.  We do *not* promise any one person at any one
+    time, but we will work with you as much as possible.  See LINK for
+    costs per person.  You can also :doc:`contact us <request>` to
+    discuss how much effort you may need.
+
+  * The RSE and timeframe will be set at the beginning of the grant.
+    It is possible to adjust later, but requires a significant amount
+    of coordination between different services (thus the preference
+    for the service purchase based approach, if it was possible).
+
+  * Note that "We recommend that they be hired for a period of
+    employment no shorter than the funding period, unless a shorter
+    contract is necessary for special reasons dictated by the
+    implementation of the research plan or action plan (or
+    equivalent). Short-term research, studies or other assignments
+    may also be carried out in the form of outsourced services."  So,
+    consider the balance of this and purchased services.
+
 * As a service purchase:
+
+  * .. warning::
+
+      Our latest information indicates that internal billing (this
+      service purchase) is not really possible for Academy grants.
+      You must use "As a RSE salary" above.
 
   * The research site should provide "basic project facilities", which
     Aalto does.  Justify the extra purchase as beyond the basics.
@@ -101,42 +134,20 @@ research results have been published."
     management practices, so that they can be of greatest possible
     benefit to society."
 
-  * Flexibility: we will internally invoice in a way compliant with
-    Academy guidelines, and can adjust our service based on the time
-    period you need.  You don't have to decide the time period in
+  * Flexibility: we could flexibly invoice as needed for your
+    project.  You don't have to decide the time period in
     advance (only follow your submitted budget), and different RSEs
-    can work on different parts of the problem, so you always have the best person for the job.
-
-* As a RSE salary:
-
-  * "Salaries, fees and indirect employee costs" may be included in
-    Academy projects.  These may go to research software engineers,
-    which to the academy appear equivalent to "normal" researchers.
-    The RSEs *are* researchers.
-
-  * Write in a Research Software Engineer as a salary for a set number
-    of months.  You may specify a name as N.N., or contact us for a
-    name to include.  We do *not* promise any one person at any one
-    time, but we will work with you as much as possible.  See LINK for
-    costs per person.  You can also :doc:`contact us <request>` to
-    discuss how much effort you may need.
-
-  * The RSE and timeframe will be set at the beginning of the grant.
-    It is possible to adjust later, but requires a significant amount
-    of coordination between different services (thus the preference
-    for the service purchase based approach).
-
-  * Note that "We recommend that they be hired for a period of
-    employment no shorter than the funding period, unless a shorter
-    contract is necessary for special reasons dictated by the
-    implementation of the research plan or action plan (or
-    equivalent). Short-term research, studies or other assignments
-    may also be carried out in the form of outsourced services."  So,
-    consider the balance of this and purchased services.
+    can work on different parts of the problem, so you always have the
+    best person for the job.
 
 
 
 European Commission grants
 --------------------------
+
+.. warning::
+
+   Internal billing is (for practical purposes) not possible
+   for EC grants.  Use RSE salary as for Academy of Finland.
 
 TODO
