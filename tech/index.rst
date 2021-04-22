@@ -24,15 +24,13 @@ Practicalities
 Time: The next speaker announce the time/date of the seminar the week
 before. The speaker sends invitation with the Zoom link.
 
-Duration: Rough estimate: ~30 minutes by the main speaker + ~15
+Duration: Rough estimate: ~40 minutes by the main speaker + ~20
 minutes questions/discussion, if any.
 
 Place: Zoom, ask for an invitation but it is usually the :doc:`garage
 link </help/garage>`.
 
-It is not a right but a priveledge to participate.  Free.
-
-
+*It is not a right but a priveledge to participate. Free.*
 
 Topics
 ======
