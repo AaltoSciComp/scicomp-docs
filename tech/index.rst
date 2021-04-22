@@ -61,27 +61,31 @@ Topics
 
   + Triton / FCCI software stack: Spack, building software, ...
 
-- Mikko Hakala
+- Fri 30.4 10:15, Richard Darst
+
+  + Jupyter setup at Aalto `jupyter.triton.aalto.fi <https://jupyter.triton.aalto.fi/hub/login>`, best practices.
+
+- Fri 7.5 10:15, Mikko Hakala
 
   + Triton authentication
+
+- Fri 14.5 10:15, Richard Darst
+
+  + Open and accessible documentation using Sphinx, RST/MyST, and Readthedocs: the story behind scicomp.aalto.fi.
+
+- Simo Tuomisto
+
+  + Anaconda setup on Triton
 
 - WHEN, WHO
 
   + Storage systems: hardware and software behind /scratch and /home, manitenance, troubleshooting techniques
 
-- Richard Darst
-
-  + Open and accessible documentation using Sphinx, RST/MyST, and Readthedocs
-
-- Simppa Äkäslompolo (?)
+- Simppa Äkäslompolo (fall 2021)
 
   + SLURM setup
 
-- Richard Darst
-
-  + Jupyter setup at Aalto and best practices, ...
-
-- Simo/Mikko ?
+- Simo/Mikko (fall 2021)
 
   + Cluster monitoring
 
