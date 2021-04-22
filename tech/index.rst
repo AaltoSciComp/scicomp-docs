@@ -61,7 +61,7 @@ Topics
 
 - Fri 30.4 10:15, Richard Darst
 
-  + Jupyter setup at Aalto `jupyter.triton.aalto.fi <https://jupyter.triton.aalto.fi/hub/login>`, best practices.
+  + Jupyter setup at Aalto `jupyter.triton.aalto.fi <https://jupyter.triton.aalto.fi/hub/login>`_, best practices.
 
 - Fri 7.5 10:15, Mikko Hakala
 
