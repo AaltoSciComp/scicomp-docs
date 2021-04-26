@@ -15,6 +15,11 @@ allows one to make order out of a huge number of messages.  By using
 topics, you can narrow to a certain thread of conversation (while not
 hiding all the older conversations from the main view).
 
+.. toctree::
+   :hidden:
+
+   zulip/instructors
+
 
 
 Basics
