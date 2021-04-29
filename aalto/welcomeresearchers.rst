@@ -7,9 +7,13 @@ but it can be quite hard to know of them all.  These pages will provide a
 good overview of IT services for researchers for you (focused on
 computation and data-intensive work, including experimental work).
 
-These aren't generic IT instructions - ITS has an introduction for
-staff somewhere (but apparently not online).  There is also a handy list of
-`research-focused services <itsr_>`_ provided which compliments this.
+.. seealso::
+
+   * These aren't generic IT instructions - ITS has an introduction for
+     staff somewhere (but apparently not online).
+   * `IT Services for Research <itsr_>`_ is the comprehensive list of
+     researcher-oriented IT services available (compared to this which
+     is a starting tutorial)
 
 .. _itsr: https://www.aalto.fi/en/services/it-services-for-research
 
