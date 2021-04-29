@@ -201,6 +201,8 @@ Prerequisities:
 	     :width: 50%
 	     :alt: Figure showing the comsol settings for Cluster Computing.
 
+   In this configuration, `sjjamsa` is replaced with your username.
+
   .. image:: comsol_cluster_computing_1.jpg
 	     :width: 50%
 	     :alt: Figure showing the comsol settings for Cluster Computing within the Job Configurations.
