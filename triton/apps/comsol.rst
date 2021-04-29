@@ -49,7 +49,7 @@ You can test by loading from the Application Libraries the "cluster_setup_valida
 COMSOL requires MPICH2 compatible MPI libraries::
 
   $ module purge
-  $ module load module load comsol/5.6 intel-parallel-studio/cluster.2020.0-intelmpi
+  $ module load comsol/5.6 intel-parallel-studio/cluster.2020.0-intelmpi
 
 
 An example run in a single node

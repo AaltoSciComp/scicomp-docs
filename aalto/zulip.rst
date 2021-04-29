@@ -1,99 +1,196 @@
-========
 Zulip
-========
+=====
 
-Introduction
-------------
-Zulip is an online discussion tool with latex support. It has been used by some Aalto teachers as an external service on individual courses. For Spring 2021, Zulip is provided by Aalto as a pilot solution for all School of Science departments' course needs. The pilot period covers teaching periods 3-5, so summer courses are not included. The pilot refers to a) a fixed-term project with clear lifecycle needs, like in courses which start and end at certain times. After the course has ended, the Zulip instance can be deleted. b) a transitional period between current state and possible production use or change to other solutions, and c) a basic solution with without all the fancy features or user interface. During the pilot users are expected to provide feedback, which will effect on the decision-making for future solutions, and the development of usability.
+.. seealso::
 
-CS-IT hosts `Zulip <https://zulipchat.com/>`_ the chat instances for you. These chat instances are hosted at ``<chat-name>.zulip.cs.aalto.fi``. Login to the chats is available with Aalto accounts. Email registration for external users is also possible via invitations. After logging in for the first time with an Aalto account, if no matching Zulip account was found, you are prompted to "Register" and create one. Once the Zulip account has been created, it should be linked to your Aalto credentials.
+   Instructors, see the relocated instructor page at
+   :doc:`zulip/instructors`.
 
-Internal or confidential matters should not be discussed on the platform.
+Zulip is a open-source chat platform, which CS hosts at Aalto as a pilot.
+It is used as a chat platform for some courses, and allows better
+student and chat privacy.
 
-.. note::
+The primary distinguishing feature of Zulip is **topics**, which
+allows one to make order out of a huge number of messages.  By using
+topics, you can narrow to a certain thread of conversation (while not
+hiding all the older conversations from the main view).
 
-    Request a chat instance at https://webropol.com/s/zuliprequest
+.. toctree::
+   :hidden:
 
-    We are taking in chat instance requests for the 2021 spring teaching periods 3-5 only. In general, the chat instances will be removed after the academic year has ended.
-
-.. note::
-
-    This service is still in beta. You might encounter some issues. If you encounter issues, report them to `CS-IT <https://wiki.aalto.fi/display/CSdept/IT/>`_ or on #zulip-support at `scicomp.zulip.cs.aalto.fi <https://scicomp.zulip.cs.aalto.fi/>`_
-
-    You can also give/discuss feedback, complaints or suggestions on #zulip-feedback at `scicomp.zulip.cs.aalto.fi <https://scicomp.zulip.cs.aalto.fi/>`_
-
-.. note::
-
-    You can test out Zulip at `testrealm.zulip.cs.aalto.fi <https://testrealm.zulip.cs.aalto.fi/>`_. Use the Aalto login. This chat is for testing only.
-
-Configuring your organization
-------------------------------------
-
-Below are listed the most important settings found under *Manage organization* in Zulip. There is no easy way for us to enforce these, so it is your responsibility as organization owner or admin to make sure they are set correctly. Make sure any owners/admins you appoint are aware of these as well.
-
-.. note::
-
-    Settings that are not mentioned here, you can configure to your liking. However you should still exercise care, since you are responsible for the service and safety of your user's data.  If you would like advice, please ask us.
+   zulip/instructors
 
 
-**Organization settings / Video chat provider**
 
-  * Set to ``None``
-  * The default provider (Jitsi) has not been evaluated or approved by Aalto
-  * Integration with Aalto Zoom may come later on
+Basics
+------
 
 
-**Organization permisisons / Invitation settings**
+Streams and Topics
+^^^^^^^^^^^^^^^^^^
 
-Do not set both "Organizational Premissions→Invitations = not
-required" and "Authentication methods→Email = enabled" at the same
-time.
+In Zulip, discussions are orginized in **streams**, which are further
+divided into **topics**.
 
-You can allow signup by Aalto account or *any* email.  You can allow
-anyone to signup or make it invitation only.  But you *can not* set
-"Anyone with Aalto account may signup without invitation, but by email
-you must be invited" (Zulip limitation).  So, we have to work around
-this, otherwise bots and random people might join in your chat. If the
-chat needs to include external users, make it invite only.
+Views
+^^^^^
 
-The exact questions and answers:
+.. sidebar:: Main views
 
-* Are invitations required for joining in the organization?
+   .. figure:: zulip/img/zulip-sidebar.png
+      :align: center
 
-  * If you are only allowing Aalto Login (see ‘Authentication
-    methods’): Can be set to ``No,…`` (But still, anyone with Aalto
-    account can join)
+      Sidebar of Zulip, with highlights of the ways to follow
+      conversations.  See text for explanations.
 
-  * If you are allowing external users/email registration (see
-    ‘Authentication methods’ below): Set to ``Yes, only admins can
-    send invitations``.  (You can invite people via their Aalto email
-    address for Aalto login)
+The left **sidebar** let's you narrow down messages that are displayed,
+you can select:
 
-**Organization permisisons / Who can access user email addresses**
+* **All messages**, to see everything that is being posted
+  efficiently.
 
-* Set this to ``Admins only`` or ``Nobody``
+* **Recent topics**, to see which topics have new information.
+
+* **Different streams and topics**, to narrow down to a specific
+  stream or topic.
+
+**Recent topics** is good to manage a flood of information (see what's
+new, click on relevant stuff, ignore all the rest). **All messages** is
+better when you are caught up and want to make sure you don't miss
+anything. Viewing **single topics and streams** is good for catching up on
+something you don't remember.
+
+Of course, everyone has their own ways and workflows so you should
+experiment what works best and which views are useful for you.
+
+Message Pane
+^^^^^^^^^^^^
+In the middle of your screen, you have the **Message Pane**, where the messages
+are shown.
+
+.. figure:: zulip/img/zulip-topics.png
+   :align: center
+
+   **Message Pane**. This is the basic view of messages.  You can click
+   on various places to narrow your view to one conversation or reply.
+
+Selecting visible topics
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Not all streams are visible in the sidebar by default.
+
+Click the gear icon above the channel list in order to see all available streams
+and select which ones you want to participate in. It is good to occasionally look at
+this menu in case new streams are added.
+
+.. figure:: zulip/img/zulip-recenttopics.png
+   :align: center
+
+   Recent topics, another view of recent activity that shows activity
+   per-topic.
 
 
-**Organization permisisons / Who can add bots**
+Hints on using Zulip efficiently
+--------------------------------
 
-* Set to ``Admins`` only
-* Consult `CS-IT <https://wiki.aalto.fi/display/CSdept/IT/>`_ before deploying any bots
+How to ask a question
+^^^^^^^^^^^^^^^^^^^^^
+
+Seems obvious, doesn't it?  You can get the best and fastest answers
+by helping to keep things organized.  These recommendations are mainly
+for Q&A-forum type chats.
+
+- First, search history to see if it has already been asked.
+
+  - If so, click on the topic name.  You will narrow your view to see
+    that entire conversation.
+
+- If your question isn't answered yet, but is a follow up to an
+  existing topic, click on a message in that topic.  Then, when you
+  ask, it will go to that same topic as a follow-up, and anyone else
+  can narrow to see the whole history.
+
+  .. figure:: zulip/img/zulip-reply.png
+     :width: 300px
+     :align: right
+
+     Replying to an existing topic.
+
+  - Unlike other chats, your message will *not* get lost, and people
+    will both see that it is new *and* can see the history of that
+    thread.
+
+  - Your course can say what the threshold for "new topic" is.  Maybe
+    they would have one topic per question pre-created or something
+    clever like that.
+
+- If you don't find anything relevant to follow up on, make a new topic.
+
+  .. figure:: zulip/img/zulip-new.png
+     :width: 300px
+     :align: right
+
+     Making a new topic.
+
+  - Select the stream you want to post to (whatever fits best).
+
+  - Click "New topic".
+
+  - Enter the topic name down below: a few words, like an email
+    subject.  For example, ``week 1 question 3``, ``integrals of
+    complex functions``, ``exam preparation``.
+
+  - Enter your message and send.
+
+Others (or you...) can split or join topics if they want by going to
+"edit message", so there is no risk of doing something wrong.  Don't
+worry, just ask!
+
+By being organized, you can get both the benefits of quick chat with
+the organization of not missing anything.
 
 
-**Authentication methods**
 
-* AzureAD
+Other hints
+^^^^^^^^^^^
 
-  * This is Aalto Login and should be enabled
+- You can format your messages using `Zulip markdown
+  <https://zulip.com/help/format-your-message-using-markdown>`__.
 
-* Email
+- "Mute a stream" (or topic) is useful when you want to stay
+  subscribed but not be notified of messages by default.  You can
+  still find it if you click through the sidebar.
 
-  * This allows users to register using an email address
-  * We cannot allow random people or bots to register freely
-  * If you enable this, make the chat ``invitation only`` as described in 'Invitation settings' above, for the reason described there.
+- The desktop and mobile apps can support `multiple organizations
+  <https://api.zulip.com/help/switching-between-organizations>`__.  At
+  least on mobile apps, switching is kind of annoying.
 
 
-**Users**
 
-* You can manage users here.
-* Please be careful with who you assign admins/owners. These roles should be only given to course staff
+Apps
+----
+
+There are reasonable applications for most desktop and mobile
+operating systems.  These don't send your data to any other services.
+
+The mobile applications work, but may not be the best for following a
+large number of courses simultaneously.  We can't currently make
+improvements in them.
+
+
+
+Open issues
+-----------
+
+We are aware of the following open issues:
+
+- It is annoying to have one chat instance per course (but it seems to
+  be standard in chats these days).
+
+- There are no mobile Push notifications (since Aalto Security won't
+  let us turn them on).
+
+- Likewise with built-in video calls (via https://meet.jit.si or Zoom).
+
+- Various user interface things.  But Zulip is open-source, so feel
+  free to contribute to the project...

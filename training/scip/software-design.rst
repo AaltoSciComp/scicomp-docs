@@ -29,16 +29,16 @@ We expect that course participants are familiar with the Python programming lang
 +-------+-------------+---------------------------------------------------+
 | 26.04 | 10:00-14:00 | First review sessions (half hour slot per person) |
 +-------+-------------+---------------------------------------------------+
-| 03.05 | 10:00-15:00 | Second round of review sessions (half hour slots) |
+| 03.05 | 10:00-14:00 | Second round of review sessions (half hour slots) |
 +-------+-------------+---------------------------------------------------+
 | 03.05 | 14:00-15:00 | Recap session and closing                         |
 +-------+-------------+---------------------------------------------------+
 
-**Course material:** All course material can be found in this repository: `https://version.aalto.fi/gitlab/merzs1/cdwassignment <https://version.aalto.fi/gitlab/merzs1/cdwassignment>`__.
+**Course material:** All course material can be found in this repository: `https://github.com/susamerz/CDWAssignment <https://github.com/susamerz/CDWAssignment>`__.
 
 **Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
 
-**Registration:** `You can register at this link <https://docs.google.com/forms/d/e/1FAIpQLSeVgGFA2swIIKTO-9AHdOhfZv9DHrq__pbmRJAWyN5LBfDsRw/viewform?usp=sf_link>`__
+**Registration:** currently closed.
 
 **Credits:** Credits are available for Aalto students and a course certificate can be provided on request for outsiders. Credits/certificate require full time participation and handling home work/assignments. Full course hours correspond roughly to 1 ECTS.
 

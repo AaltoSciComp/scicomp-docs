@@ -109,7 +109,9 @@ Resources:
 
 * `Github <https://github.com>`__, `CodeRefinery Gitlab <https://coderefinery.org/repository/>`__,
   your institution's equivalent, and many more.
-* CodeRefinery lessons, https://coderefinery.org/lessons/ (git-intro and git-collaborative)
+* `CodeRefinery <https://coderefinery.org>`__ lessons, `git-intro
+  <https://coderefinery.github.io/git-intro/>`__ and
+  `git-collaborative <https://coderefinery.github.io/github-without-command-line/>`__)
 * Software Carpentry `Git-novice lesson <https://swcarpentry.github.io/git-novice/>`__
 
 
@@ -203,6 +205,7 @@ picture.  There are fancier systems, too.
 * L0: nothing except scattered code comments
 * L1: script-level comments and docstrings explaining overall logic
 * L2: simple README files explaining big picture and main points
+  (`example <https://version.aalto.fi/gitlab/afof/tracing-products/-/tree/master>`__)
 * L3: dedicated documenentation including tutorials, reference, etc.
 
 Resources:
