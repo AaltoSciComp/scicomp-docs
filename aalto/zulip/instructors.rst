@@ -27,7 +27,7 @@ be linked to your Aalto credentials.
 Internal or confidential matters should not be discussed on the platform.
 
 Get started / request Zulip
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------
 
 .. note::
 
@@ -55,7 +55,7 @@ Get started / request Zulip
     Use the Aalto login. This chat is for testing only.
 
 Configuring your organization
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------
 
 Below are listed the most important settings found under *Manage organization*
 in Zulip. There is no easy way for us to enforce these, so it is your
