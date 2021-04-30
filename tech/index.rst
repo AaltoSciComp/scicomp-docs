@@ -63,19 +63,19 @@ Topics
 
   + Jupyter setup at Aalto `jupyter.triton.aalto.fi <https://jupyter.triton.aalto.fi/hub/login>`_, best practices.
 
-- Fri 7.5 10:15, Mikko Hakala
+- Fri 7.5 10:15, Simo Tuomisto
 
-  + Triton authentication
+  + Anaconda setup on Triton
 
 - Fri 14.5 10:15, Richard Darst
 
   + Open and accessible documentation using Sphinx, RST/MyST, and Readthedocs: the story behind scicomp.aalto.fi.
 
-- Simo Tuomisto
+- Iii ii.ii ii:ii, Mikkko Hakala
 
-  + Anaconda setup on Triton
+  + Triton authentication
 
-- WHEN, WHO
+- Iii, ii.ii ii:ii, ???
 
   + Storage systems: hardware and software behind /scratch and /home, manitenance, troubleshooting techniques
 
