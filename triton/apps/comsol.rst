@@ -180,5 +180,33 @@ The job is submitted with::
 
   $ sbatch comsol_matlab_livelink.sh
 
+Cluster computing controlled from your windows workstation
+----------------------------------------------------------
+
+The following example shows a working set of settings to `use triton as a remote computation cluster for COMSOL <https://www.comsol.com/blogs/how-to-run-on-clusters-from-the-comsol-desktop-environment/>`_.
+
+Prerequisities:
+
+ * Store ssh-keys in pagent so that you can connect to triton with putty without entering the password.
+
+ * Save / install `putty executables <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`_ locally, e.g. in Z:\\putty:
+
+   * plink.exe
+
+   * pscp.exe
+
+   * putty.exe
+
+  .. image:: comsol_cluster_computing.jpg
+	     :width: 50%
+	     :alt: Figure showing the comsol settings for Cluster Computing.
+
+   In this configuration, `sjjamsa` is replaced with your username.
+
+  .. image:: comsol_cluster_computing_1.jpg
+	     :width: 50%
+	     :alt: Figure showing the comsol settings for Cluster Computing within the Job Configurations.
+
+  
 ..
   /share/apps/spack/envs/fgci-centos7-generic/software/intel-parallel-studio/cluster.2020.0/ttn75qk/compilers_and_libraries_2020.0.166/linux/mpi/intel64/bin/mpirun
