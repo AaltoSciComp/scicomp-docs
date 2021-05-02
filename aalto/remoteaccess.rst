@@ -134,7 +134,8 @@ Accessing you Linux workstation / Triton remotely
 
 -  Remote access to desktop workstations is available via the university
    staff shell servers ``taltta.aalto.fi`` or department-specific
-   servers ``magi.cs.aalto.fi`` (CS), ``amor.org.aalto.fi`` (NBE).
+   servers ``magi.cs.aalto.fi`` (CS), ``amor.org.aalto.fi`` (NBE), 
+   ``elliptic.aalto.fi``/``illposed.aalto.fi`` (Math).
 -  You need to be the **PrimaryUser** of the desktop in order to ssh to
    it.
 -  Remote access to Triton is available from any Aalto shell server:
