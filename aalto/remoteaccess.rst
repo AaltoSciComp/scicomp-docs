@@ -60,7 +60,7 @@ computers.
 <https://www.aalto.fi/en/services/establishing-a-remote-connection-vpn-to-an-aalto-network>`__.
 This section has some quick reference info.
 
--  Generic: OpenConnect/Cisco AnyConnect protocols. ``vpn.aalto.fi``
+-  Generic: OpenConnect/Cisco AnyConnect protocols. ``vpn.aalto.fi``, ``vpn1.aalto.fi`` or ``vpn2.aalto.fi``
 -  Aalto Linux: Status bar → Network → VPN Connections → Aalto TLS
    VPN.
 -  Aalto mac: Dock → Launchpad → Cisco AnyConnect Secure Mobility
