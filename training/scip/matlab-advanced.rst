@@ -45,7 +45,7 @@ New webpage is being prepared, older page at: `Matlab Advanced course webpage <h
 
 **Course prerequisite requirements and other details:**
 
-The course is done in Y342a which has 30 Linux desktop computers. If you are not familiar with Linux, or if you would rather use your laptop, Matlab is available for Aalto staff and students at `download.aalto.fi <https://download.aalto.fi/>`__ (Linux/Mac/Windows versions). Check the `Matlab Advanced course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/tree/master/AY20192020/MatlabAdvanced2020#matlab-advanced-2020-ay-2019-2020>`__ for other pre-requirements.
+The course is done online, you should use your laptop, Matlab is available for Aalto staff and students at `download.aalto.fi <https://download.aalto.fi/>`__ (Linux/Mac/Windows versions). Check the `Matlab Advanced course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/tree/master/AY20192020/MatlabAdvanced2020#matlab-advanced-2020-ay-2019-2020>`__ for other pre-requirements.
 
 **Course credits:** if you have an Aalto student number, you can obtain 1 ECTS credit for the course (12h attendance + homeworks).  Check the `Matlab Advanced course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/tree/master/AY20192020/MatlabAdvanced2020#matlab-advanced-2020-ay-2019-2020>`__ for a detailed list of requirements for the credit.
 
