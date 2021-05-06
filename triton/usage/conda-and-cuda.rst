@@ -202,6 +202,7 @@ TL;DR
 ::
 
   conda list cudatoolkit
+
 3. Load compiler and CUDA SDK with the same version with
 
 ::
