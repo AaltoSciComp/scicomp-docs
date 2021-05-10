@@ -14,7 +14,7 @@ Teaching will be interactive, “learning by doing”.
 
 **Course webpage**
 
-New webpage is being prepared, older page at: `Matlab Advanced course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/tree/master/AY20192020/MatlabAdvanced2020#matlab-advanced-2020-ay-2019-2020>`__
+`Matlab Advanced 2021 webpage <https://hackmd.io/@eglerean/MatlabAdvanced2021>`__
 
 **Schedule:**
 
@@ -33,7 +33,7 @@ New webpage is being prepared, older page at: `Matlab Advanced course webpage <h
 
 **Place:** Online, zoom link will be sent to registered participants
 
-**Lecturers:** Enrico Glerean, D.Sc., CS/NBE Department, SCI
+**Lecturers:** Enrico Glerean, D.Sc., Aalto Scientific Computing
 
 **Registration:** 
 
@@ -45,10 +45,8 @@ New webpage is being prepared, older page at: `Matlab Advanced course webpage <h
 
 **Course prerequisite requirements and other details:**
 
-The course is done online, you should use your laptop, Matlab is available for Aalto staff and students at `download.aalto.fi <https://download.aalto.fi/>`__ (Linux/Mac/Windows versions). Check the `Matlab Advanced course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/tree/master/AY20192020/MatlabAdvanced2020#matlab-advanced-2020-ay-2019-2020>`__ for other pre-requirements.
+The course is done online, you should use your laptop, Matlab is available for Aalto staff and students at `download.aalto.fi <https://download.aalto.fi/>`__ (Linux/Mac/Windows versions). 
 
 **Course credits:** if you have an Aalto student number, you can obtain 1 ECTS credit for the course (12h attendance + homeworks).  Check the `Matlab Advanced course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/tree/master/AY20192020/MatlabAdvanced2020#matlab-advanced-2020-ay-2019-2020>`__ for a detailed list of requirements for the credit.
 
 **Additional course info at:** enrico.glerean -at- aalto.fi
-
-.. Additional material (e.g. data files and examples) are published at the  `Matlab Advanced course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/tree/master/AY20192020/MatlabAdvanced2020#matlab-advanced-2020-ay-2019-2020>`__
