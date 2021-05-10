@@ -2,12 +2,18 @@
 News
 ====
 
-*15/02/2021* We have a new login node and new software versions on Triton for: abinit, anaconda, cuda, julia, and quantum espresso. `Read more at our issue tracker <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues/956>`__. We recommend following the issue tracker for live updates from us and from our users too!
+*10/05/2021* CodeRefinirey online workshop starts today. Tune in for git intro part 1. If you did not register, you can watch via Twitch: https://www.twitch.tv/coderefinery
 
 We are updating our `hands-on trainings pages </training/>`__ with our courses for Spring 2021. Join our `daily garage </help/garage/>`__ if you have issues to discuss related to computing or data management. If you are into research software, join our `Research Software Hour <https://researchsoftwarehour.github.io/>`__ Twitch show, *usually* every thursday at 21:30 (Helsinki time). 
 
 News archive
 ~~~~~~~~~~~~
+
+*01/04/2021* April fools' ... NOT: no jokes but instead a reminder that we have new courses starting in April "Hands on Data Anonymization" and "Software Design for Scientific Computing". More info and registration links at https://scicomp.aalto.fi/training/
+ 
+*19/03/2021* Linux Shell Scripting starts next week! There is still time to register at: https://scicomp.aalto.fi/training/scip/shell-scripting/
+
+*15/02/2021* We have a new login node and new software versions on Triton for: abinit, anaconda, cuda, julia, and quantum espresso. `Read more at our issue tracker <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues/956>`__. We recommend following the issue tracker for live updates from us and from our users too!
 
 *14/01/2021* Save the date: `29 January 2021: Crash course on Data Science workflows at Aalto + Linux terminal basics <https://scicomp.aalto.fi/training/scip/intro-linux-aalto-computing/>`__ in preparation for `1-2 February 2021: Triton Winter Kickstart <https://scicomp.aalto.fi/training/scip/winter-kickstart/>`__. Registration link can be found withing the course pages. Kickstart course is highly recommended to new Triton HPC users.
 
