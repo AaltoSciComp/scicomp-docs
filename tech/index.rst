@@ -73,7 +73,7 @@ Topics
 
 - Tue, 18.5 12:00, Andreas Muller (HPE) 
 
-  + Storage systems: ClusterStor hardware and software behind Triton's /scratch. Manitenance, troubleshooting.
+  + Storage systems: ClusterStor hardware and software behind Triton's new /scratch. Manitenance, troubleshooting.
 
 - Mikko Hakala (fall 2021)
 
