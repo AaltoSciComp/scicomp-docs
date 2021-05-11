@@ -71,13 +71,13 @@ Topics
 
   + Open and accessible documentation using Sphinx, RST/MyST, and Readthedocs: the story behind scicomp.aalto.fi.
 
-- Iii ii.ii ii:ii, Mikkko Hakala
+- Tue, 18.5 12:00, Andreas Muller (HPE) 
+
+  + Storage systems: ClusterStor hardware and software behind Triton's /scratch. Manitenance, troubleshooting.
+
+- Mikko Hakala (fall 2021)
 
   + Triton authentication
-
-- Iii, ii.ii ii:ii, ???
-
-  + Storage systems: hardware and software behind /scratch and /home, manitenance, troubleshooting techniques
 
 - Simppa Äkäslompolo (fall 2021)
 
