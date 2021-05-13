@@ -69,7 +69,9 @@ Topics
 
 - Fri 14.5 10:15, Richard Darst
 
-  + Open and accessible documentation using Sphinx, RST/MyST, and Readthedocs: the story behind scicomp.aalto.fi.
+  + Open and accessible documentation using Sphinx, RST/MyST, and
+    Readthedocs: the story behind scicomp.aalto.fi.
+  * :doc:`Presentation <sphinx-docs>`.
 
 - Tue, 18.5 12:00, Andreas Muller (HPE) 
 
