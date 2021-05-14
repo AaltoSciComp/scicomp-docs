@@ -198,6 +198,17 @@ Github Action checks
 
 
 
+ReadTheDocs
+~~~~~~~~~~~
+
+* https://readthedocs.org provides a management interface for the docs
+* There is a joint aalto-scicomp account to manage it
+* Demo if time, but pretty much self-explanatory
+* Occasionally a build fails for no reason an I need to go wipe and
+  rebuild.
+
+
+
 Little-known features
 ---------------------
 
