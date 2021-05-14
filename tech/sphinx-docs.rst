@@ -135,7 +135,7 @@ ReStructured Text syntax
 
 * Why ReST?  Not a thin mapping on HTML like Markdownn
 * Markdown is syntantic substitution, ReST is semantic meaning.
-* `MyST <https://myst-parser.readthedocs.io/>` is now a reasonable
+* `MyST <https://myst-parser.readthedocs.io/>`__ is now a reasonable
   alternative, but it is closer to a different ReST syntax than Markdown.
 * See syntax quickstart at https://scicomp.aalto.fi/README/
 * https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
@@ -160,8 +160,12 @@ Most surprising ReST points:
 Github Action checks
 ~~~~~~~~~~~~~~~~~~~~
 
-* `make clean check` will warn on errors
+* ``make clean check`` will warn on errors
 * Github provides error tracking for pushes and pull requests (demo?).
+* Example failure:
+
+  * Code view: https://github.com/AaltoSciComp/scicomp-docs/commit/5f43ae628e3a60b1e5d3c1845f04a2c518520b7f
+  * Actions view: https://github.com/AaltoSciComp/scicomp-docs/runs/2579364572
 
 
 
