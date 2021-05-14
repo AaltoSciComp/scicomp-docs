@@ -26,14 +26,16 @@ scicomp.aalto.fi
 
 Properties of good documentation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Organized
-- Easy to use
+- Organized, easy to use
 - Versioned
 - Anyone can contribute
-- Shareable
-- Reuseable
-- Open-source
-- git?
+- Shareable, reuseable, licensed
+- No lock-in, can migrate later
+- Plain text so 50 years of text processing development (``grep``,
+  ``sed``), etc all work.
+- Not standalone, can integrate with other materials
+  (e.g. ``literalinclude``).
+- git? (naturally comes out of the above)
 
 
 
@@ -251,6 +253,14 @@ Substitution extension
 
 
 
+sphinx-gitstamp
+~~~~~~~~~~~~~~~
+* Bottom of every page lists date that exact page was actually
+  modified.
+* https://pypi.org/project/sphinx-gitstamp/
+
+
+
 Open questions
 --------------
 
@@ -276,6 +286,12 @@ Sharing with other sites
 
 
 
+Others at Aalto can use scicomp.aalto.fi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Should we encourage others to join our project here?
+
+
 Testable docs
 ~~~~~~~~~~~~~
 
@@ -287,9 +303,20 @@ Testable docs
 
 
 
+Integrated HPC-examples
+~~~~~~~~~~~~~~~~~~~~~~~
+* We have two example locations:
+
+  * https://scicomp.aalto.fi/triton/examples/
+  * https://github.com/AaltoSciComp/hpc-examples/
+
+* The second (hpc-examples) could be included as a submodule to reduce
+  duplication, and users can also clone it during courses.
+
+
+
 Don't use ReadTheDocs anymore?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 * Github Pages or other hosting sites would work instead of
   ReadTheDocs now.
 
@@ -297,11 +324,20 @@ Don't use ReadTheDocs anymore?
 
 How can we keep things up to date?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-* Requires continuous work
+* Requires continuous work, like any docs.
+* What should the threshold be for removing old material?
 * The `sphinx-dust extension
   <https://pypi.org/project/sphinx-dust/>`__ to remind us to look at
   pages?
+* We clearly need to think about this more.
+
+
+
+Visitor stats
+~~~~~~~~~~~~~
+* ReadTheDocs provides limited stats based on web server logs
+* rkdarst is against detailed web tracking
+* Can we find a way to get both?
 
 
 
