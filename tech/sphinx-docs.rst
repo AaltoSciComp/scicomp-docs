@@ -21,7 +21,7 @@ scicomp.aalto.fi
 - Rather highly ranked in search engines.
 - Converted from wiki.aalto.fi (Triton) using
   ``meta/confluence2html.py`` and then pandoc to convert HTML→ReST.
-
+- CC-BY license agreed at that time
 
 
 Properties of good documentation
@@ -44,7 +44,7 @@ The basic documentation stack
 
 - Git repository
 - Hosted on Github
-- Documentation written in ReStructured Text or Markdownn
+- Documentation written in ReStructured Text or Markdown
 - Built with Sphinx
 
   - With various extensions
@@ -154,7 +154,7 @@ Sphinx
 ReStructured Text syntax
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-* Why ReST?  Not a thin mapping on HTML like Markdownn
+* Why ReST?  Not a thin mapping on HTML like Markdown
 * Markdown is syntantic substitution, ReST is semantic meaning.
 * `MyST <https://myst-parser.readthedocs.io/>`__ is now a reasonable
   alternative, but it is closer to a different ReST syntax than Markdown.
@@ -217,9 +217,7 @@ We could use Markdown or Jupyter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Via `MyST-parser <https://myst-parser.readthedocs.io/>`__ or
   `MyST-nb <https://myst-nb.readthedocs.io/>`__ for Jupyter.
-
 * They all work together in the same site.
-
 * ReST is really nicer for this than showing directives into
   Commonmark.
 
@@ -306,7 +304,8 @@ Others at Aalto can use scicomp.aalto.fi
 Testable docs
 ~~~~~~~~~~~~~
 
-- Our dream would be to make examples in a testable form, where
+- Our dream would be to make examples in a testable form, where one
+  can automatically run them all and find errors.
 - For example, this `python-openmp example
   <https://github.com/AaltoSciComp/scicomp-docs/tree/master/triton/examples/python/python_openmp>`__
   includes everything needed to submit and run the file.
