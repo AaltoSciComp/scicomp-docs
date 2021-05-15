@@ -1061,7 +1061,7 @@ closes it.
 ::
 
  # open input_file for reading into the file descriptor 3
- exec 3< input_file
+ exec 3< $input_file
  # while open, any command can operate on the descriptor
  read -n 3 var <&3
  command <&3
@@ -1071,16 +1071,18 @@ closes it.
  exec 3>&-
 
  # similar for writing
- exec 5> output_file; ... exec 5>&-
- # or appending 
- exec 5>> output_file
+ exec 5> $output_file; command > &5; ...; exec 5>&-
+ # or appending (keep in mind that you use >> only to open the file)
+ exec 5>> $output_file; command > &5; ...; exec 5>&-
  # or writing and reading
- exec 6<>file; ... exec 6<>&-
+ exec 6<>$file; ... exec 6<>&-
  # or use a name instead of the descriptor numeric value
- exec {out}>output_file; ... echo something >&$out; ...
+ exec {out}>$output_file; ... echo something >&$out; ...
  # redirecting descriptor to another one
  exec 3>&1
 
+Opening a FD instead of using a file name multiple times may save you some IO. *Hint:* to monitor the
+file operations (system calls) one may employ **strace -f -c -e trace=write,openat your_script**.
 
 But what if you need to pass to another program results of two commands at once? Or if command
 accepts file as an argument but not STDIN?
