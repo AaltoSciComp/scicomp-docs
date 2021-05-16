@@ -1,11 +1,16 @@
 Technical documentation with Sphinx
 ===================================
 
+.. seealso::
+
+   `Video recording of this talk <https://www.youtube.com/watch?v=X6OzCSiS_VU&list=PLZLVmS9rf3nN1Rj-TAqFEzFM22Y1kJmvn>`__
+
 This talk explains how one can use `Sphinx
 <https://www.sphinx-project.org>`__ for technical documentation, in
 particular this very site scicomp.aalto.fi.  The focus is to make an
 overview for contributing to this site (or similar ones), but it will
 also provide a strong basis for creating such a site yourself.
+
 
 
 Basics
