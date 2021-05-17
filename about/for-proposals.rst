@@ -55,6 +55,22 @@ firewalled to university networks.
 
 
 
+Research environment: research software engineers
+-------------------------------------------------
+
+The Aalto Research Software Engineer (RSE) team provides a specialized
+advice and service in research software, data, and computing so that
+any researcher can accomplish the best science without being held back
+by technological problems.  Typical tasks including implementing a
+method bettor or faster than could otherwise be done, or ensuring that
+results are as open and reusable as possible so that the full impact
+of the work can be realized.  RSE staff are professional researchers
+with years of experience in computational sciences, and work
+seamlessly with the rest of the Science-IT team.  For the School of
+Science, basic services is included as part of overheads, or
+longer-term services can be funded from specific research projects.
+
+
 Research software engineering services
 --------------------------------------
 
