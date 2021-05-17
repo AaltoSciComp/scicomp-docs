@@ -8,11 +8,12 @@ computer-dependent, the prerequisite knowledge grows larger and
 larger, and we exist to help you fill that gap.
 
 For example, we can do
- * Custom software development or modification
- * Scaling up to larger computing systems, code optimization, workflow automation
- * Preparing a code for release, or cleaning up old code that needs to be re-used
- * Transforming a code from an individual project to a collaborative project (or group training on this topic)
- * Data services (optimizing I/O, data versioning, databases, data sharing, and opening)
+
+* Custom software development or modification
+* Scaling up to larger computing systems, code optimization, workflow automation
+* Preparing a code for release, or cleaning up old code that needs to be re-used
+* Transforming a code from an individual project to a collaborative project (or group training on this topic)
+* Data services (optimizing I/O, data versioning, databases, data sharing, and opening)
 
 Instead of hiring your own intern, postdoc, etc. to struggle with
 certain issues, we can help instead.  We consist of experienced
