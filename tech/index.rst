@@ -75,6 +75,10 @@ Topics
 
   + Storage systems: ClusterStor hardware and software behind Triton's new /scratch. Manitenance, troubleshooting.
 
+- Fri 28.5 10:15, Jarno Rantaharju and Marijn van Vliet
+
+  + RSE program: spring 2021 summary. Impact we have made so far.
+
 - Mikko Hakala (fall 2021)
 
   + Triton authentication
