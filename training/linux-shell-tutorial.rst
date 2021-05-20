@@ -1065,7 +1065,7 @@ closes it.
  # while open, any command can operate on the descriptor
  read -n 3 var <&3
  command <&3
- # mind the the file offset, one can read a line, or a few chars, if you have read the file
+ # mind the file offset, one can read a line, or a few chars, if you have read the file
  # to the end, to reset the offset, run another 'exec 3< ...'
  # close the descriptor after you are done
  exec 3>&-
