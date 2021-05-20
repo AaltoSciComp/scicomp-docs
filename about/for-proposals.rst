@@ -14,9 +14,9 @@ Focus on Triton
 Computing and modelling are strategic areas of Aalto University. To
 support research in these scopes the university is committed to
 provide proper hardware resources and supporting personnel on long
-term basis. Currently we provide a system with about 5200 computing
-cores. The System also contains 27 servers with 2-8 NVIDIA cards for
-GPU computing and over 2 PB of fast storage capacity suitable for Big
+term basis. Currently we provide a system with about 10000 computing
+cores. The System also contains 150 NVIDIA cards for
+GPU computing and over 5 PB of fast storage capacity suitable for Big
 Data needs. All parts are connected with a fast Infiniband network to
 support parallel computing and fast data access. To keep the resources
 competitive we annually upgrade the system based on the needs of
@@ -40,7 +40,7 @@ Computing and data are strategic areas in Aalto University.
 The university provides data management and computing solutions
 throughtout the data lifecycle.  The university provides free storage
 to researchers of essentially unlimited size, provided that the data
-is managed well.  Data storage includes 2PB of high-performance Lustre
+is managed well.  Data storage includes 5PB of high-performance Lustre
 filesystem space connected directly to a computing cluster for
 efficient and secure analysis, and 1PB of reliable, backed-up storage
 space for longer-term storage.  Expert staff, both technical and
