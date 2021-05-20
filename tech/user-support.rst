@@ -1,6 +1,11 @@
 User support
 ============
 
+.. seealso::
+
+   `Video recording of this talk <https://www.youtube.com/watch?v=P1ttGhPGuN0&list=PLZLVmS9rf3nN1Rj-TAqFEzFM22Y1kJmvn>`__
+
+
 As infrastructure providers, we are often thrust into a user support
 role (as well as a teaching role).  We should look at this as a good
 thing: support of top-level science requires an intimate connection to
