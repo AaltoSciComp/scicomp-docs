@@ -26,7 +26,9 @@ Part of the :doc:`Scientific Computing in Practice
 
 **Audience:** All FGCI consortium members looking for the HPC crash
 course. This is specifically designed for our summer workers who are just 
-starting their internship.
+starting their internship, but anyone who is doing computing or data-focused
+work can get something from this course.  Anyone is welcome to listen along
+and learn from some experts.
 
 **About the course:**
 
