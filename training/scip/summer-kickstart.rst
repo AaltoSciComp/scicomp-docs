@@ -6,29 +6,36 @@ June 2021 / Intro to Scientific Computing (FGCI HPC Summer Kickstart)
 
    Before the workshop:
 
-   * See the :ref:`prerequisites <kickstart-2021-prereq>` below.
+   * Registration is open: https://forms.gle/yNFLYt676kKorF3X7
 
-   * Request a HPC account (see university-specific instructions in
-     prerequisites).
+   * The exact schedule is still being developed, please let us know
+     any special requests.
 
-   * Verify you can connect to your cluster (but if you can't, we will
-     also do this together on the first day).
+   * Other institutions which would like to join our effort are
+     welcome to contact us, you can use our livestream and run your
+     own breakout rooms.
+
+   * View the prerequisites below.
 
    **Check back here for other updates that don't get their own
-   email**. 
-
-   This workshop will be streamed at https://twitch.tv/coderefinery.
+   email**.
 
 
 
 Part of the :doc:`Scientific Computing in Practice
 </training/scip/index>` lecture series at Aalto University.
 
-**Audience:** All FGCI consortium members looking for the HPC crash
-course. This is specifically designed for our summer workers who are just 
+**Audience:** All researchers looking for a start to scientific
+computing.  We go over the various options and tools that everyone
+needs to know about, and then go in-depth about using a remote
+computational cluster (though these skills will be useful to
+everyone).  This is specifically designed for our summer workers who are just
 starting their internship, but anyone who is doing computing or data-focused
 work can get something from this course.  Anyone is welcome to listen along
 and learn from some experts.
+
+Most examples use Aalto University resources, but everyone can learn
+something and we are careful to explain local vs general practices.
 
 **About the course:**
 
@@ -36,23 +43,19 @@ Summer Kickstart is a three day courses for researchers to get started
 with the available computational resources at FGCI (Finnish Grid and
 Cloud Infrastructure, basically HPC, high-performance computing, at
 universities) and CSC (the Finnish national computing center).  On the
-day one we start with the basic HPC intro, and some basic intro to 
+day one we start with the basic HPC intro, and some basic intro to
 Linux command line and Git version control, for those who are not yet familiar
 with these tools.
 
 On days two and three we cover one by one steps on how to get started on
 the local computational clusters: learning by doing with lots of
-examples and hands-on exercises.  
+examples and hands-on exercises.
 
 By the end of the course you get the hints, ready solutions and
 copy/paste examples on how to find, run and monitor your applications,
 and manage your data. In addition to how to optimize your workflow in
 terms of filesystem traffic, memory usage etc.
 
-While the material is based on previous years Aalto
-courses, most of material will be common for all the participants and 
-in addition we organize break-out rooms for different sites (= sort of parallel
-sessions) when needed.  
 
 University specific information:
 
@@ -146,6 +149,8 @@ resources.  All times are EEST (Helsinki) time.
 
     This day will go over all practical aspects of using the cluster
 
+    * 11:50: Joining time/icebreaker
+
     * :doc:`/triton/tut/connecting`
 
       * Every site will have its own ways of connecting.  The basic
@@ -184,6 +189,8 @@ resources.  All times are EEST (Helsinki) time.
     * :doc:`/triton/tut/serial`
 
 * **Day #3 (Wed 9.jun):** Advanced cluster use
+
+    * 11:50: Joining time/icebreaker
 
     * :doc:`/triton/tut/array`
 
