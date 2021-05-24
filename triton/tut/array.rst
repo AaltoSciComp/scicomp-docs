@@ -75,7 +75,7 @@ as you wish. Let's name it ``hello.sh`` and write it as follows.
    #SBATCH --output=/scratch/work/%u/task_number_%A_%a.out
    #SBATCH --array=0-15
    #SBATCH --time=00:15:00
-   #SBATCH --mem=200
+   #SBATCH --mem=200M
    # You may put the commands below:
 
    # Job step
@@ -163,7 +163,7 @@ a batch script is as follows.
    #SBATCH --open-mode=append
    #SBATCH --array=0-4
    #SBATCH --time=01:00:00
-   #SBATCH --mem=500
+   #SBATCH --mem=500M
    # Note that all jobs will write to the same file.  This makes less
    # files, but will be hard to tell the outputs apart.
 
@@ -217,7 +217,7 @@ Also note that the line numbers start at 1, not 0.
 
     #!/bin/bash
     #SBATCH --time=01:00:00
-    #SBATCH --mem=500
+    #SBATCH --mem=500M
     #SBATCH --output=pi.2.out.log
     #SBATCH --open-mode=append
     #SBATCH --array=1-4
@@ -253,7 +253,7 @@ definitely be worth your while.
 
    #!/bin/bash
    #SBATCH --time=01:00:00
-   #SBATCH --mem=500
+   #SBATCH --mem=500M
    #SBATCH --output=pi.3.out.log
    #SBATCH --open-mode=append
    #SBATCH --array=1-5
