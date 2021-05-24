@@ -12,7 +12,7 @@ June 2021 / Intro to Scientific Computing (FGCI HPC Summer Kickstart)
      prerequisites).
 
    * Verify you can connect to your cluster (but if you can't, we will
-   also do this together on the first day).
+     also do this together on the first day).
 
    **Check back here for other updates that don't get their own
    email**. 
