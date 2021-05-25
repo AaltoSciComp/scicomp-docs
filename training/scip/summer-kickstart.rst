@@ -63,7 +63,7 @@ University specific information:
   recommended to all interested in scientific computing in general.
   :doc:`Basic reference information is at the Triton page </triton/index>`
 
-* `University of Helsinki <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART>`__
+* `University of Helsinki <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART+2021>`__
 
 * Tampere: this course is recommended for all new Narvi users and also all
   interested in HPC. Most things should work with simply replacing triton 
@@ -142,7 +142,7 @@ resources.  All times are EEST (Helsinki) time.
     * Aalto: :doc:`Connecting to Triton tutorial
       </triton/tut/connecting>` – if you can ssh to Triton and run
       ``hostname``, you are ready for tomorrow.
-    * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART>`__
+    * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART+2021>`__
     * Tampere: `Connecting to Narvi <https://narvi-docs.readthedocs.io/narvi/tut/connecting.html>`__
 
 * **Day #2 (Tue 8.jun):** Basic use of a cluster
@@ -158,7 +158,7 @@ resources.  All times are EEST (Helsinki) time.
 	a different hostname and possibly different initial steps
 	(jump hosts).
       * Aalto: (same)
-      * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART>`__
+      * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART+2021>`__
       * Tampere: `Connecting to Narvi
 	<https://narvi-docs.readthedocs.io/narvi/tut/connecting.html>`__.
 	Note, that you will need SSH keys.
@@ -172,7 +172,7 @@ resources.  All times are EEST (Helsinki) time.
     * :doc:`/triton/tut/storage`
 
       * Aalto: (same)
-      * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART>`__
+      * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART+2021>`__
       * Tampere: `Narvi storage <https://narvi-docs.readthedocs.io/narvi/tut/storage.html>`__
       * This topic is *very* site-specific.  The general principles
 	will apply everywhere, but the exact paths/servers will vary.
@@ -205,7 +205,7 @@ resources.  All times are EEST (Helsinki) time.
     * :doc:`/triton/tut/gpu`
 
       * Aalto: (same as above)
-      * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART>`__
+      * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART+2021>`__
       * Tampere: `Narvi GPU computing differences
 	<https://narvi-docs.readthedocs.io/narvi/tut/gpu.html>`__
       * At other sites, you may need to use ``-p gpu`` in addition to ``--gres=gpu``.
@@ -225,7 +225,7 @@ cluster or Triton for running examples.
 
   * Aalto: if you do not yet have access to Triton, :doc:`request an
     account </triton/accounts>` in advance.
-  * Helsinki: `Account notes at the bottom of this page <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART>`__
+  * Helsinki: `Account notes at the bottom of this page <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART+2021>`__
   * Tampere: your cluster will require ssh keys to connect.
   * Others: Aalto will provide you with a guest Triton account, check
     back for more information.
@@ -247,7 +247,7 @@ cluster or Triton for running examples.
   we can't keep up.
 
   * Aalto: :doc:`connecting to Triton </triton/tut/connecting>`
-  * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART>`__
+  * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART+2021>`__
   * Tampere: `Connecting to Narvi <https://narvi-docs.readthedocs.io/narvi/tut/connecting.html>`__
 
 
