@@ -82,8 +82,8 @@ resources to our cluster and storage environments, with dedicated
 access for the purchaser.
 
 Our team is mainly known for providing the :doc:`Triton cluster </triton/index>`, a mid-range
-HPC cluster with several thousand CPUs, 2PB storage capacity,
-Infiniband network, and many GPUs for deep learning and artificial
+HPC cluster with  ~10000 CPUs, 5PB storage capacity,
+Infiniband network, and ~150 NVIDIA GPUs for deep learning and artificial
 intelligence research.  We provide a :doc:`Jupyter Notebook </triton/apps/jupyter>` based interface
 to enable light computing with less initial knowledge required to make
 our services easily accessible to everyone.  Our team also works with
