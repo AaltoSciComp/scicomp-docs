@@ -71,7 +71,7 @@ Topics
 
   + Open and accessible documentation using Sphinx, RST/MyST, and
     Readthedocs: the story behind scicomp.aalto.fi.
-  * :doc:`Presentation <sphinx-docs>`, `Video <https://youtu.be/X6OzCSiS_VU>`__
+  + :doc:`Presentation <sphinx-docs>`, `Video <https://youtu.be/X6OzCSiS_VU>`__
 
 - Tue, 18.5 12:00, Andreas Muller (HPE) 
 

@@ -197,13 +197,13 @@ Prerequisities:
 
    * putty.exe
 
-  .. image:: comsol_cluster_computing.jpg
+   .. image:: comsol_cluster_computing.jpg
 	     :width: 50%
 	     :alt: Figure showing the comsol settings for Cluster Computing.
 
-   In this configuration, `sjjamsa` is replaced with your username.
+   In this configuration, ``sjjamsa`` is replaced with your username.
 
-  .. image:: comsol_cluster_computing_1.jpg
+   .. image:: comsol_cluster_computing_1.jpg
 	     :width: 50%
 	     :alt: Figure showing the comsol settings for Cluster Computing within the Job Configurations.
 
