@@ -229,6 +229,22 @@ resources.  All times are EEST (Helsinki) time.
 
     * 16:00: End
 
+* **Follow-up suggestions:**  While not an official part of this
+  course, we suggest these videos (co-produced by our staff) as a
+  follow-up perspective:
+
+  * `Cluster Etiquette (in Research Software Hour)
+    <https://www.youtube.com/watch?v=NIW9mqDwnJE&list=PLpLblYHCzJAB6blBBa0O2BEYadVZV3JYf>`__:
+    The Summer Kickstart teaches what you *can* do from this course,
+    but what *should* you do to be a good user.
+  * `How to tame the cluster (in Research Software Hour)
+    <https://www.youtube.com/watch?v=5HN9-MW7Tw8&list=PLpLblYHCzJAB6blBBa0O2BEYadVZV3JYf>`__.
+    This mostly repeats the contents of this course, with a bit more
+    discussion, and working one example from start to parallel.
+
+
+
+
 .. _kickstart-2021-prereq:
 
 Prerequisites
