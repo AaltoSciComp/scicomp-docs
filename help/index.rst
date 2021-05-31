@@ -63,6 +63,7 @@ doing, too.  Our main focus areas are
 
    garage
    community
+   user-groups
 
 Website
 ~~~~~~~
