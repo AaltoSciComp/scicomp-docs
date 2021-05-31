@@ -112,32 +112,40 @@ resources.  All times are EEST (Helsinki) time.
 * **Day #1 (Mon 7.jun):** Basics and background
 
   * 11:50: **Joining time and pre-discussion**, please join 10
-    minutes early.
+    minutes early.  (Richard Darst, Enrico Glerean)
 
-  * 12:00: **Welcome, general introduction**
+  * 12:00: **Welcome, general introduction** Ivan Degtyarenko
 
-  * 12:15 **Summary and discussion about the videos "Basic linux shell
+    * General intro to the course (Enrico Glerean and all)
+    * **HPC crash course: what is behind the
+      front-end** HPC fundamentals: terminology,
+      architectures, interconnects, infrastructure behind, as well as
+      MPI vs shared memory.  Continued on day 3. (Ivan Degtyarenko,
+      Simppa Äkäslompolo) `Slides (.pdf)
+      <https://users.aalto.fi/degtyai1/SCiP2020_kick.HPC_crash_course.2020-06-06.pdf>`__
+
+  * 12:35 **Summary and discussion about the videos "Basic linux shell
     scripting" and "Scientific computing workflows"** (see videos in
-    preparatory material above)
+    preparatory material above) (Richard Darst, Enrico Glerean)
 
   * 12:45: Break
 
-  * 13:00: **HPC crash course: what is behind the
-    front-end** // lecture // HPC fundamentals: terminology,
-    architectures, interconnects, infrastructure behind, as well as
-    MPI vs shared memory // Ivan Degtyarenko // `Slides (.pdf) <https://users.aalto.fi/degtyai1/SCiP2020_kick.HPC_crash_course.2020-06-06.pdf>`__
+  * 13:00: **Currently available resources at CSC** CSC is the Finnish
+    center for scientific computing, and also has many resources for
+    research.  (Jussi Enkovaara, CSC).
 
   * 13:45: Break
 
   * 14:00: **Git intro**: why you need version control for any
-    scientific work and how to get started.
+    scientific work and how to get started. (TBA, Jarno Rantaharju)
 
   * 14:45: Break
 
-  * 15:00: **Future outlook of scientific computing and this course.**
+  * 15:00: **Your future career in scientific computing (and this
+    course).** (Enrico Glerean, TBA)
 
-  * 15:15: **Connecting to the cluster** // tutorial //
-    Get connected in preparation for day 2 // Enrico Glerean
+  * 15:15: **Connecting to the cluster**, hands-on.
+    Get connected in preparation for day 2 (Enrico Glerean)
 
     * Aalto: :doc:`Connecting to Triton tutorial
       </triton/tut/connecting>` – if you can ssh to Triton and run
@@ -145,13 +153,14 @@ resources.  All times are EEST (Helsinki) time.
     * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART+2021>`__
     * Tampere: `Connecting to Narvi <https://narvi-docs.readthedocs.io/narvi/tut/connecting.html>`__
 
-* **Day #2 (Tue 8.jun):** Basic use of a cluster
+* **Day #2 (Tue 8.jun):** Basic use of a cluster (Richard Darst, Simo
+  Tuomisto)
 
     This day will go over all practical aspects of using the cluster
 
     * 11:50: Joining time/icebreaker
 
-    * :doc:`/triton/tut/connecting`
+    * 12:00: :doc:`/triton/tut/connecting`
 
       * Every site will have its own ways of connecting.  The basic
 	lessons of ``ssh`` is the same for everyone, but it will have
@@ -188,11 +197,17 @@ resources.  All times are EEST (Helsinki) time.
 
     * :doc:`/triton/tut/serial`
 
-* **Day #3 (Wed 9.jun):** Advanced cluster use
+    * 16:00: End
+
+* **Day #3 (Wed 9.jun):** Advanced cluster use (Simo Tuomisto, Richard
+  Darst)
 
     * 11:50: Joining time/icebreaker
 
-    * :doc:`/triton/tut/array`
+    * 12:00: :doc:`/triton/tut/array`
+
+      Array jobs allow you to quickly run many jobs, and are the
+      simplest unit of advanced computing.  We will go over them in detail.
 
     * :doc:`/triton/tut/modules`
 
@@ -212,6 +227,7 @@ resources.  All times are EEST (Helsinki) time.
 
     * :doc:`/triton/tut/parallel`
 
+    * 16:00: End
 
 .. _kickstart-2021-prereq:
 
