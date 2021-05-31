@@ -53,7 +53,7 @@ Topics
 
   + User support made easy: different support level by Science IT,
     docs, issue tracker, garage, etc
-  + :doc:`Presentation <user-support>`, `Video <https://youtu.be/P1ttGhPGuN0>`__
+  + :doc:`Presentation <user-support>`, `Video <https://youtu.be/P1ttGhPGuN0&list=PLZLVmS9rf3nN1Rj-TAqFEzFM22Y1kJmvn>`__
 
 - Fri 9.4 10:15-11:15, Simo Tuomisto
 
@@ -71,15 +71,16 @@ Topics
 
   + Open and accessible documentation using Sphinx, RST/MyST, and
     Readthedocs: the story behind scicomp.aalto.fi.
-  + :doc:`Presentation <sphinx-docs>`, `Video <https://youtu.be/X6OzCSiS_VU>`__
+  + :doc:`Presentation <sphinx-docs>`, `Video <https://youtu.be/X6OzCSiS_VU&list=PLZLVmS9rf3nN1Rj-TAqFEzFM22Y1kJmvn>`__
 
 - Tue, 18.5 12:00, Andreas Muller (HPE) 
 
   + Storage systems: ClusterStor hardware and software behind Triton's new /scratch. Manitenance, troubleshooting.
 
-- Fri 28.5 10:15, Jarno Rantaharju and Marijn van Vliet
+- Fri 28.5 10:15, Jarno Rantaharju, Marijn van Vliet, and Richard Darst
 
   + RSE program: spring 2021 summary. Impact we have made so far.
+  + `Presentation <https://docs.google.com/presentation/d/1Ti4TvjAilnElk9ITBZVsMnR0g7pfgPg8t5HHe2YOQs4>`__, `Video <https://youtu.be/rvuwLSKLaJI&list=PLZLVmS9rf3nN1Rj-TAqFEzFM22Y1kJmvn>`__
 
 - Mikko Hakala (fall 2021)
 
