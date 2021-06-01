@@ -76,17 +76,35 @@ Practical information
 
 **Time, date:**  Mon 7.6, Tue 8.6, Wed 9.6, 11:50-16:00 EEST
 
-**Place:** Online: Zoom link will be sent to registered participants,
-anyone may join for free via livestream at https://twitch.tv/coderefinery
+**Place:** Online, see below
 
 **Lecturering by:** Aalto Scientific Computing (Science-IT) and others
 
 **Registration:** https://forms.gle/yNFLYt676kKorF3X7
 
 **Cost:** Free of charge for FGCI consortium members including Aalto
-employees and students.
+employees and students.  Livestream is free to everyone.
 
 **Additional course info at:** scip@aalto.fi
+
+
+
+How to attend
+-------------
+
+This is an online hybrid of MOOC and interactive:
+
+* **Livestream**: anyone may watch at https://twitch.tv/coderefinery,
+  no registration needed!
+
+* **Zoom**: if you register, you will be able to attend a Zoom meeting
+  that includes interactive breakout rooms and hands-on help.  We
+  watch the livestream for the main material.
+
+* **HackMD**: instead of chat, this is used for Q&A.  See the
+  `CodeRefinery HackMD manual
+  <https://coderefinery.github.io/manuals/hackmd-mechanics/>`__ for
+  how this works.
 
 
 
@@ -317,11 +335,3 @@ How to attend this course:
   * The final document (excluding personal data and questions about
     individual circumstances) will be published as the notes at the
     end.
-
-
-Streaming
----------
-
-This workshop will be streamed, so that anyone can follow along at the
-`CodeRefinery Twitch stream, https://www.twitch.tv/coderefinery
-<https://www.twitch.tv/coderefinery>`__.
