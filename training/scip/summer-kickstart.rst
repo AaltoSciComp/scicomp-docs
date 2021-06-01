@@ -93,7 +93,7 @@ employees and students.
 Schedule
 --------
 
-**Schedule**: The daily schedule will be adjusted based on the
+The daily schedule will be adjusted based on the
 audience; below is the tentative plan.  There will be frequent
 breaks. You will be given time to try and ask, it’s more like an
 informal help session to get you started with the computing
@@ -114,7 +114,7 @@ resources.  All times are EEST (Helsinki) time.
   * 11:50: **Joining time and pre-discussion**, please join 10
     minutes early.  (Richard Darst, Enrico Glerean)
 
-  * 12:00: **Welcome, general introduction** Ivan Degtyarenko
+  * 12:00: **Welcome, general introduction**
 
     * General intro to the course (Enrico Glerean and all)
     * **HPC crash course: what is behind the
@@ -137,7 +137,9 @@ resources.  All times are EEST (Helsinki) time.
   * 13:45: Break
 
   * 14:00: **Git intro**: why you need version control for any
-    scientific work and how to get started. (TBA, Jarno Rantaharju)
+    scientific work and how to get started.  We don't go in depth into
+    theory, but talk about the simplest usage by yourself. (Richard
+    Darst, Jarno Rantaharju)
 
   * 14:45: Break
 
