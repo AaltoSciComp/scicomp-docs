@@ -7,7 +7,7 @@ software, computing, and data. As research becomes more digital and
 computer-dependent, the prerequisite knowledge grows larger and
 larger, and we exist to help you fill that gap.
 
-For example, we can do
+For example, we can do:
 
 * Custom software development or modification
 * Scaling up to larger computing systems, code optimization, workflow automation
