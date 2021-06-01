@@ -108,6 +108,10 @@ to improvement at any time.
 See also
 --------
 
+* The `Nvidia AI Tech Center <https://fcai.fi/nvaitc>`__ provides
+  *free* RSE services for research projects for Finnish Center for AI
+  members (includes Aalto).
+
 Related programs from Aalto Scientific Computing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
