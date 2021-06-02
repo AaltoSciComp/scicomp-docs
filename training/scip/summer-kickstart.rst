@@ -253,6 +253,14 @@ resources.  All times are EEST (Helsinki) time.
   course, we suggest these videos (co-produced by our staff) as a
   follow-up perspective:
 
+  * Attend a `CodeRefinery workshop <https://coderefinery.org>`__,
+    which teaches more useful tools for scientific software
+    development.
+
+  * Look at `Hands-on Scientific Computing
+    <https://handsonscicomp.readthedocs.io>`__ for an online course to
+    either browse or take for credits.
+
   * `Cluster Etiquette (in Research Software Hour)
     <https://www.youtube.com/watch?v=NIW9mqDwnJE&list=PLpLblYHCzJAB6blBBa0O2BEYadVZV3JYf>`__:
     The Summer Kickstart teaches what you *can* do from this course,
