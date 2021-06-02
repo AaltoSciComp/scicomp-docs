@@ -2,6 +2,20 @@
 Scicomp garage
 ==============
 
+.. admonition:: Summer News!
+
+   During the summer we have reduced support. 
+   * From 21/June until 8/August the garage is available only on request. 
+   
+   * Please note that there will be no garage on 3, 7, 8, 9 June.
+   
+   * The best is to contact us in advance by opening an issue in the issue tracker: https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues 
+   
+   * For quick things (e.g. "is it just me or is everything down?") join our chat http://scicomp.zulip.cs.aalto.fi/ 
+
+   **Check back here for other updates**.
+
+
 If you need more help than the issue trackers, this is the place to
 be.  It's not just Triton, but all aspects of scientific computing.
 
@@ -33,7 +47,7 @@ Triton, SciComp, RSE, and CS
 
 .. admonition:: Link
 
-   https://aalto.zoom.us/j/65371910202, every day at 13:00
+   https://aalto.zoom.us/j/65371910202, every day at 13:00 **(NOTE: available only on request from 21/June until 8/August)**
 
 You can meet us online, every weekday, at 13:00, `online via zoom
 <https://aalto.zoom.us/j/65371910202>`__.  Imagine this like walking
