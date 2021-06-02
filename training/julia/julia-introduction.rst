@@ -11,8 +11,6 @@ The course takes place over two days, August 10 and 11 from 9:00 to 13:00.
 On the first day we introduce the Julia language itself and on the second day
 we go in some more detail into performance, types and the Julia package ecosystem.
 
-**Instruction to teachers**: TBA
-
 **Materials**: Links and instructions TBA
 
 **Place:** Online, zoom link will be sent to registered participants
