@@ -139,7 +139,7 @@ resources.  All times are EEST (Helsinki) time.
       architectures, interconnects, infrastructure behind, as well as
       MPI vs shared memory.  Continued on day 3. (Ivan Degtyarenko,
       Simppa Äkäslompolo) `Slides (.pdf)
-      <https://users.aalto.fi/degtyai1/SCiP2020_kick.HPC_crash_course.2020-06-06.pdf>`__
+      <https://users.aalto.fi/degtyai1/SCiP2021_kick.HPC_crash_course.2021-06-04.pdf>`__
 
   * 12:40 **Summary and discussion about the videos "Basic linux shell
     scripting" and "Scientific computing workflows"** (see videos in
