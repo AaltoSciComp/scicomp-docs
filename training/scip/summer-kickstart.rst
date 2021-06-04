@@ -134,13 +134,13 @@ resources.  All times are EEST (Helsinki) time.
 
   * 12:00: **Welcome, general introduction** (Enrico Glerean and all)
 
-  * 12:10 **HPC crash course: what is behind the front-end**
+  * 12:10: **HPC crash course: what is behind the front-end**
       HPC fundamentals: terminology, architectures, interconnects,
       infrastructure behind, as well as MPI vs shared memory.
       Continued on day 3. (Ivan Degtyarenko, Simppa Äkäslompolo)
       `Slides (.pdf) <https://users.aalto.fi/degtyai1/SCiP2021_kick.HPC_crash_course.2021-06-04.pdf>`__
 
-  * 12:40 **Summary and discussion about the videos "Basic linux shell
+  * 12:40: **Summary and discussion about the videos "Basic linux shell
     scripting" and "Scientific computing workflows"** (see videos in
     preparatory material above) (Richard Darst, Enrico Glerean)
 
