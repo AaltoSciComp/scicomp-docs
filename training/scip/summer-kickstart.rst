@@ -216,6 +216,8 @@ resources.  All times are EEST (Helsinki) time.
 
     * :doc:`/triton/tut/serial`
 
+    * Monitoring
+
     * 16:00: End
 
 * **Day #3 (Wed 9.jun):** Advanced cluster use (Simo Tuomisto, Richard
