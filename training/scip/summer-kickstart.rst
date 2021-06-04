@@ -132,21 +132,20 @@ resources.  All times are EEST (Helsinki) time.
   * 11:50: **Joining time and pre-discussion**, please join 10
     minutes early.  (Richard Darst, Enrico Glerean)
 
-  * 12:00: **Welcome, general introduction**
+  * 12:00: **Welcome, general introduction** (Enrico Glerean and all)
 
-    * General intro to the course (Enrico Glerean and all)
-    * **HPC crash course: what is behind the
+  * 12:10 **HPC crash course: what is behind the
       front-end** HPC fundamentals: terminology,
       architectures, interconnects, infrastructure behind, as well as
       MPI vs shared memory.  Continued on day 3. (Ivan Degtyarenko,
       Simppa Äkäslompolo) `Slides (.pdf)
       <https://users.aalto.fi/degtyai1/SCiP2020_kick.HPC_crash_course.2020-06-06.pdf>`__
 
-  * 12:35 **Summary and discussion about the videos "Basic linux shell
+  * 12:40 **Summary and discussion about the videos "Basic linux shell
     scripting" and "Scientific computing workflows"** (see videos in
     preparatory material above) (Richard Darst, Enrico Glerean)
 
-  * 12:45: Break
+  * 12:50: Break
 
   * 13:00: **Currently available resources at CSC** CSC is the Finnish
     center for scientific computing, and also has many resources for
@@ -235,9 +234,7 @@ resources.  All times are EEST (Helsinki) time.
 	able to make the Aalto modules available.  Other specifics,
 	such as ``matlab``, won't directly work.
 
-    * **Parallel computing theory**
-
-    * :doc:`/triton/tut/gpu`
+    * :doc:`/triton/tut/gpu` (Simo Tuomisto)
 
       * Aalto: (same as above)
       * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART+2021>`__
@@ -245,7 +242,10 @@ resources.  All times are EEST (Helsinki) time.
 	<https://narvi-docs.readthedocs.io/narvi/tut/gpu.html>`__
       * At other sites, you may need to use ``-p gpu`` in addition to ``--gres=gpu``.
 
-    * :doc:`/triton/tut/parallel`
+    * :doc:`/triton/tut/parallel` (Simo Tuomisto)
+
+    * **Parallel computing programming** (Ivan Degtyarenko, Simo
+      Tuomisto)
 
     * 16:00: End
 
