@@ -1,24 +1,19 @@
 SciComp community
 =================
 
-Let's face it: we learn more from each other than from classes.  How
-can we learn from each other if we don't have a community?  Join the
-Aalto SciComp community to make the most of your time here.
+Let's face it: we learn more from each other than from classes.  There
+is a major problem with inequality in computational sciences, a large
+part is related to how we learn these tools.  Join the Aalto
+Scientific Computing community to help you and others be the best
+scientist you can be.  You can
 
-Aalto Scientific Computing hosts many different channels to get
-involved.  Through it, you can:
+* Network with others within a supportive mentoring community.
 
-* Network with others.
-
-* Share knowledge among ourselves (maybe have relevant training,
-  too).  We can't be experts in everything, so if users can help each
-  other, everyone benefits.
+* Share knowledge among ourselves, avoid wasting time on things where
+  someone knows the answer.
 
 * Take part in developing our services - basically, be a voice of the
   users.
-
-* More directly help the community by, for example, :doc:`directly updating
-  this site </README>`, helping to develop services, or teaching with us.
 
 
 
