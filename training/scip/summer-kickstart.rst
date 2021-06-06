@@ -143,7 +143,7 @@ resources.  All times are EEST (Helsinki) time.
 
   * 12:40: **Summary and discussion about the videos "Basic linux shell
     scripting" and "Scientific computing workflows"** (see videos in
-    preparatory material above) (Richard Darst, Enrico Glerean)
+    preparatory material above) (:doc:`Notes <summer-kickstart/video-summary>`) (Richard Darst, Enrico Glerean)
 
   * 12:50: Break
 
