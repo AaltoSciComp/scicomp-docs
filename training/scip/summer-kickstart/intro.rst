@@ -1,4 +1,4 @@
-.. orphan::
+:orphan:
 
 ..
    This is the initial intro of the kickstart course
