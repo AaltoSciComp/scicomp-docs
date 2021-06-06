@@ -132,7 +132,7 @@ resources.  All times are EEST (Helsinki) time.
   * 11:50: **Joining time and pre-discussion**, please join 10
     minutes early.  (Richard Darst, Enrico Glerean)
 
-  * 12:00: **Welcome, general introduction** (Enrico Glerean and all)
+  * 12:00: **Welcome, general introduction** :doc:`Notes <summer-kickstart/intro>` (Enrico Glerean and all)
 
   * 12:10: **HPC crash course: what is behind the front-end** HPC fundamentals:
     terminology, architectures, interconnects, infrastructure behind, as well as
