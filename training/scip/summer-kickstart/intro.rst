@@ -17,13 +17,16 @@ Course contents
 
 * Day 1
 
-  * General big-picture stuff
-  * Some practical skills and stuff
+  * General big-picture stuff about high-performance computing
+  * Some practical skills
+  * Mostly lectures and demos
+  * Quite generic
 
 * Days 2 and 3
 
-  * Using the cluster
-  * Lessons will also be useful before you need a cluster.
+  * Using a computer cluster
+  * Aalto's cluster as an example, but applicable to others.
+  * Much more hands-on
 
 
 Who is attending?
@@ -33,21 +36,17 @@ Who is attending?
 * Our demos based on Aalto University
 
   * May need adapting to other sites
+  * We will carefully explain about how things change in other sites.
 
 
 Who are we?
 ~~~~~~~~~~~
 
 * Aalto Scientific Computing: https://scicomp.aalto.fi/about/
-* In collaborations with other universities
-* And in collaboration with CSC
+* In collaborations with other universities (Finnish Computing
+  Competence Infrastructure)
+* And one talk in collaboration with CSC
 
-
-Not everything will be perfect
-------------------------------
-
-- We have more material than we can cover: we adjust to the audience.
-- Our material is constantly being improved
 
 
 
@@ -63,19 +62,17 @@ once.  We can reach hundreds.
 
 We have an interesting strategy:
 
-- "TV production", broadcast via livestream.
+- Livestream broadcast, like a TV production.
 - Anyone can watch.
+- There are pauses for exercises, you can work (alone or in groups).
 - If you want, be in Zoom and switch there for exercise sessions.
 
 There are many parts of the workshop:
 
 - Talking and demos (livestream)
 - Type-along (livesteam)
-- Exercises (Zoom)
+- Exercises (Zoom or alone or your own groups)
 - Breaks, at least 10 minutes/hour
-
-There is a **lot** of material, and everyone will take a slightly
-different path.  This is OK!
 
 
 Chat and communication
@@ -142,34 +139,52 @@ Arranging your screen is surprisingly difficult!
    Screen layout with screenshare on one side and learner on other side
 
 
+
+There is more than one way to take this course
+----------------------------------------------
+
+- We have more material than we can cover
+
+  - We adjust to the audience
+  - Some is advanced, we leave it for self-study
+
+- Not everyone needs to take the same path
+
+  - Some may prefer to watch and self-study later
+  - Some may be active in all the exercises
+  - Some may leave it on in the background to see what they might
+    learn.
+
+- Our material is constantly being improved
+
+  - This is more like a guided overview of our actual tutorials than a
+    standalone course.
+  - You can help us improve.
+
+
+
 Care for the community
 ----------------------
 
 Be respectful and helpful
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-It is actually hard to teach and mentor for tech like this.  We need
-everyone to take part in this process.
+It is actually hard to teach and mentor for tech like this.  The
+course is much more than "only" instructors..
 
 We leave you with four pieces of advice for now:
 
 - **Everyone here is at different levels, and that's expected.**
   Everyone will be learning different things, and everyone will focus
   on different topics.  Passive learning is OK.
-- ***Everyone* here is both a teacher and a learner.**  Be careful
-  that your help is at the right level, considering the above.
+- **Everyone is both a teacher and a learner.**  If not now, after the
+  course when you are helping others.
 - **Take time to check in.** For example, ask "how's it going? is
   everyone getting what they need?", in breakout rooms.
-- **When something isn't going right, *speak (or HackMD) up quickly***.
+- **When something isn't going right, speak (or HackMD) up quickly**.
   We want to help, even if the answer is "let's discuss later".
 
 
-Instructors and helpers aren't perfect
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- No one knows everything.
-- Seeing things go wrong and get fixed is part of the pedagogy.
-- Please be nice to those who make this course possible.
 
 
 Final notes
@@ -179,7 +194,8 @@ Recording
 ~~~~~~~~~
 
 - The course is recorded and will be put on YouTube
-- But because of the livestream thing, you *can't* be there.
+- But because of the livestream thing, you *can't* be recorded
+  yourself.
 - All outputs are CC-BY.
 
 
@@ -197,7 +213,5 @@ Join us!
 
 We are staff at Aalto but welcome others to join us in allowing
 everyone to do scientific computing.
-
-- Chat
 
 More on this later.
