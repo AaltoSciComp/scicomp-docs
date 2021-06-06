@@ -147,7 +147,8 @@ resources.  All times are EEST (Helsinki) time.
 
   * 13:00: **Currently available resources at CSC** CSC is the Finnish
     center for scientific computing, and also has many resources for
-    research.  (Jussi Enkovaara, CSC).
+    research. `Slides <https://kannu.csc.fi/s/3K8q93XSwtSgHEa>`__
+    (Jussi Enkovaara, CSC).
 
   * 13:45: Break
 
