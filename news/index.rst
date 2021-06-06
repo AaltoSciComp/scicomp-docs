@@ -2,12 +2,14 @@
 News
 ====
 
-*10/05/2021* CodeRefinirey online workshop starts today. Tune in for git intro part 1. If you did not register, you can watch via Twitch: https://www.twitch.tv/coderefinery
+*7-9/06/2021* New Triton user? Join our course on how to use Triton and HPC https://scicomp.aalto.fi/training/scip/summer-kickstart/
 
-We are updating our `hands-on trainings pages </training/>`__ with our courses for Spring 2021. Join our `daily garage </help/garage/>`__ if you have issues to discuss related to computing or data management. If you are into research software, join our `Research Software Hour <https://researchsoftwarehour.github.io/>`__ Twitch show, *usually* every thursday at 21:30 (Helsinki time). 
+Please note that during the summer our `daily garage </help/garage/>`__ has a slightly different schedule. Furthermore, if you are into research software, join our `Research Software Hour <https://researchsoftwarehour.github.io/>`__ Twitch show, *usually* every thursday at 21:30 (Helsinki time). 
 
 News archive
 ~~~~~~~~~~~~
+
+*10/05/2021* CodeRefinirey online workshop starts today. Tune in for git intro part 1. If you did not register, you can watch via Twitch: https://www.twitch.tv/coderefinery
 
 *01/04/2021* April fools' ... NOT: no jokes but instead a reminder that we have new courses starting in April "Hands on Data Anonymization" and "Software Design for Scientific Computing". More info and registration links at https://scicomp.aalto.fi/training/
  
