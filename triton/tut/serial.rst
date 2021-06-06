@@ -83,7 +83,7 @@ the ``sbatch`` command::
 When the job enters the queue successfully, the response that the job has been submitted
 is printed in your terminal, along with the *jobid* assigned to the job.
 
-You can check the status of you jobs using ``slurm q``::
+You can check the status of you jobs using ``slurm q``/``slurm queue``::
 
    $ slurm q
    JOBID              PARTITION NAME                  TIME       START_TIME    STATE NODELIST(REASON)
@@ -127,11 +127,12 @@ to fine-tune your requested resources.
    have each job take at least 30 minutes, if possible.
    The reason behind this is that there is a big amount of startup, accounting, and scheduling overhead.
 
-Monitoring your jobs
+Monitoring your jobs 
 ====================
 
 Once you submit your jobs, it goes into a queue. The two most useful commands to see
-the status of your jobs with are ``slurm q`` and ``slurm h`` (You've seen both in use).
+the status of your jobs with are ``slurm q``/``slurm queue`` and
+``slurm h``/``slurm history`` (You've seen both in use).
 
 For example, command ``scontrol show -d jobid <jobid>`` provides you detailed information
 on a running job. Information such as where *stderr* and *stdout* will be redirected to. These information

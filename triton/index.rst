@@ -45,6 +45,7 @@ Quick contents and links
 	 * :doc:`tut/serial`
          * :doc:`tut/array`
          * :doc:`tut/dependency`
+	 * :doc:`tut/monitoring`
 	 * :doc:`tut/gpu`
 	 * :doc:`tut/parallel`
 
@@ -133,6 +134,7 @@ levels as a prerequisite.
    tut/storage.rst
    Interactive jobs: running your first command <tut/interactive>
    Serial jobs: running in the queue <tut/serial>
+   tut/monitoring.rst
    tut/array.rst
    tut/gpu.rst
    tut/parallel.rst
