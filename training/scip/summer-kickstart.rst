@@ -132,12 +132,12 @@ resources.  All times are EEST (Helsinki) time.
   * 11:50: **Joining time and pre-discussion**, please join 10
     minutes early.  (Richard Darst, Enrico Glerean)
 
-  * 12:00: **Welcome, general introduction** :doc:`Notes <summer-kickstart/intro>` (Enrico Glerean and all)
+  * 12:00: **Welcome, general introduction** (:doc:`Notes <summer-kickstart/intro>`) (Enrico Glerean and all)
 
   * 12:10: **HPC crash course: what is behind the front-end** HPC fundamentals:
     terminology, architectures, interconnects, infrastructure behind, as well as
     MPI vs shared memory. Continued on day 3. (Ivan Degtyarenko, Simppa Äkäslompolo)
-    `Slides (.pdf) <https://users.aalto.fi/degtyai1/SCiP2021_kick.HPC_crash_course.2021-06-04.pdf>`__
+    (`Slides (.pdf) <https://users.aalto.fi/degtyai1/SCiP2021_kick.HPC_crash_course.2021-06-04.pdf>`__)
 
   * 12:40: **Summary and discussion about the videos "Basic linux shell
     scripting" and "Scientific computing workflows"** (see videos in
@@ -147,7 +147,7 @@ resources.  All times are EEST (Helsinki) time.
 
   * 13:00: **Currently available resources at CSC** CSC is the Finnish
     center for scientific computing, and also has many resources for
-    research. `Slides <https://kannu.csc.fi/s/3K8q93XSwtSgHEa>`__
+    research. (`Slides <https://kannu.csc.fi/s/3K8q93XSwtSgHEa>`__)
     (Jussi Enkovaara, CSC).
 
   * 13:45: Break
