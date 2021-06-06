@@ -7,7 +7,7 @@ June 2021 / Intro to Scientific Computing (FGCI HPC Summer Kickstart)
    * Watch at https://twitch.tv/coderefinery
 
    * The livestream is `archived on Twitch for 14 days
-     <https://www.twitch.tv/coderefinery/videos>`.  Videos will be
+     <https://www.twitch.tv/coderefinery/videos>`__.  Videos will be
      posted on `this playlist
      <https://www.youtube.com/playlist?list=PLZLVmS9rf3nPFw29oKUj6w1QdsTCECS1S>`__
      once they are ready.
