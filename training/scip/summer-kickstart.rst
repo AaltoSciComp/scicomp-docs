@@ -162,7 +162,7 @@ resources.  All times are EEST (Helsinki) time.
   * 14:45: Break
 
   * 15:00: **Your future career in scientific computing (and this
-    course).** (Enrico Glerean, TBA)
+    course).** (:doc:`Notes <summer-kickstart/future>`) (Enrico Glerean, TBA)
 
   * 15:15: **Connecting to the cluster**, hands-on.
     Get connected in preparation for day 2 (Enrico Glerean)
