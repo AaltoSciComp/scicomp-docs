@@ -192,13 +192,17 @@ resources.  All times are EEST (Helsinki) time.
 	<https://narvi-docs.readthedocs.io/narvi/tut/connecting.html>`__.
 	Note, that you will need SSH keys.
 
-    * :doc:`/triton/tut/applications`
+    * 12:30: :doc:`/triton/tut/applications`
 
       * Each site will be quite different here, so don't worry about
 	making the exercises work outside of Aalto, but think and
 	prepare for what comes next (where we'll explain the differences).
 
-    * :doc:`/triton/tut/storage`
+    * 12:50: Break
+
+    * 13:00: :doc:`/triton/tut/modules`
+
+    * 13:20: :doc:`/triton/tut/storage`
 
       * Aalto: (same)
       * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART+2021>`__
@@ -206,7 +210,18 @@ resources.  All times are EEST (Helsinki) time.
       * This topic is *very* site-specific.  The general principles
 	will apply everywhere, but the exact paths/servers will vary.
 
-    * :doc:`/triton/tut/interactive`
+    * 13:50: Break
+
+    * 14:00: Short talk: `Radovan Bast <https://bast.fr/>`__ (UiT The Arctic University of Norway): `Asking for help with supercomputers <https://cicero.xyz/v3/remark/0.14.0/github.com/bast/help-with-supercomputers/main/talk.md/#1>`__ 
+
+      * How should you write support requests so that you get quick 
+        (and useful!) answers? Radovan, one of the founders of 
+        `CodeRefinery <https://coderefinery.org/>`__, will talk about how we can all improve 
+        the dialogue between supercomputer user community and support staff 
+        so that we always remain respectful and try to learn and solve problems together.
+       
+
+    * 14:35: :doc:`/triton/tut/interactive`
 
       * The basic Slurm concepts are the same across all clusters (at
 	least all those that use Slurm, but that is everyone in
@@ -215,9 +230,9 @@ resources.  All times are EEST (Helsinki) time.
 	list nodes at your site with ``sinfo -N``.  How these work
 	will vary depending on your site - definitely read up on this.
 
-    * :doc:`/triton/tut/serial`
+    * 14:50: Break
 
-    * Monitoring
+    * 15:00 Continuing with interactive slurm jobs and exercises
 
     * 16:00: End
 
@@ -226,7 +241,11 @@ resources.  All times are EEST (Helsinki) time.
 
     * 11:50: Joining time/icebreaker
 
-    * 12:00: :doc:`/triton/tut/array`
+    * 12:00 :doc:`/triton/tut/serial`
+
+    * :doc:`/triton/tut/monitoring`
+
+    * :doc:`/triton/tut/array`
 
       Array jobs allow you to quickly run many jobs, and are the
       simplest unit of advanced computing.  We will go over them in detail.
@@ -251,6 +270,7 @@ resources.  All times are EEST (Helsinki) time.
       Tuomisto)
 
     * 16:00: End
+
 
 * **Follow-up suggestions:**  While not an official part of this
   course, we suggest these videos (co-produced by our staff) as a
