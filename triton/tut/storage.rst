@@ -200,9 +200,9 @@ permission denied, try ``kinit``.
 vdi.aalto.fi
 ~~~~~~~~~~~~
 
-`vdi.aalto.fi <https://vdi.aalto.fi>`__ has scratch mounted at the
-standard paths ``/m/{cs,nbe}/{scratch,work}/``.  Actually,
-*everyone's* work directories can be accessed from ``/m/cs/work/``.
+`vdi.aalto.fi <https://vdi.aalto.fi>`__ has scratch mounted at ``/m/triton/scratch/``.
+Your work folder can be access at ``/m/triton/scratch/work/USERNAME``. For SCI departments the
+standard paths you have on your workstations are also working ``/m/{cs,nbe}/{scratch,work}/``.  
 
 Shell servers
 ~~~~~~~~~~~~~
@@ -294,8 +294,8 @@ here anyway.  It doesn't provide easy ways to upload/download files.
 vdi.aalto.fi (described under :doc:`connecting`) has Triton
 directories mounted (see below).
 
-Note: *everyone's* work directories can be accessed via
-``/m/cs/work/``, not just CS.
+Note: work directories can be accessed via
+``/m/triton/scratch/work/``.
 
 
 Remote mounting using sshfs
@@ -401,7 +401,7 @@ Exercises
 
 **Data storage locations:**
 
-1. Look at the list of data storage locations above.  Also look at the
+1. (Optional) Look at the list of data storage locations above.  Also look at the
    :doc:`/aalto/aaltostorage`.  Which do you
    think are suitable for your work?  Do you need to share with
    others?  Ask your group what they use and if you can use that, too.
@@ -414,8 +414,8 @@ Exercises
 **Remote access:**
 
 2. Mount your work directory by SMB - and alternatively sftp or sshfs - and transfer a file to Triton.
-   Note that you must be on ``eduroam``, the ``aalto`` *with Aalto
-   laptop*, or connected to the Aalto VPN.
+   Note that you must be connected to the Aalto VPN (from outside campus), or on ``eduroam``, the ``aalto`` *with Aalto
+   laptop* (from campus).
 
 3. (Advanced) If you have a Linux on Mac computer, study the ``rsync``
    manual page and try to transfer a file.
