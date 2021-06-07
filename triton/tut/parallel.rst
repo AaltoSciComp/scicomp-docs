@@ -295,22 +295,7 @@ reduces communication overhead between workers.
 Monitoring performance
 ----------------------
 
-You can use the ``seff`` program (with a jobid) to list what percent
-of available processors and memory you used.  If your processor usage
-is far below 100%, your code may not be working correctly in a parallel
-environment. If your memory usage is far below 100%, you might have a
-problem with your requirements.
-
-.. important::
-
-   When making job reservations it is important to distinguish
-   between requirements for the whole job (such as ``--mem``) and
-   requirements for **each individual task/cpu** (such as ``--mem-per-cpu``).
-   E.g. requesting ``--mem-per-cpu=2G`` with ``--ntasks=2`` and ``--cpus-per-task=4``
-   will create a total memory reservation of
-   (2 tasks)*(4 cpus / task)*(2GB / cpu)=16GB.
-
-
+.. include:: ../examples/monitoring/seff.rst
 
 Exercises
 ---------

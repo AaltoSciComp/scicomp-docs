@@ -83,7 +83,7 @@ the ``sbatch`` command::
 When the job enters the queue successfully, the response that the job has been submitted
 is printed in your terminal, along with the *jobid* assigned to the job.
 
-You can check the status of you jobs using ``slurm q``::
+You can check the status of you jobs using ``slurm q``/``slurm queue``::
 
    $ slurm q
    JOBID              PARTITION NAME                  TIME       START_TIME    STATE NODELIST(REASON)
@@ -131,19 +131,11 @@ Monitoring your jobs
 ====================
 
 Once you submit your jobs, it goes into a queue. The two most useful commands to see
-the status of your jobs with are ``slurm q`` and ``slurm h`` (You've seen both in use).
+the status of your jobs with are ``slurm q``/``slurm queue`` and
+``slurm h``/``slurm history``.
 
-For example, command ``scontrol show -d jobid <jobid>`` provides you detailed information
-on a running job. Information such as where *stderr* and *stdout* will be redirected to. These information
-can be particularly beneficial for troubleshooting.
-
-Another example could be the command ``sacct --format=jobid,elapsed,ncpus,ntasks,state,MaxRss``
-which will show information as indicated in the ``--format`` option (jobid, the elapsed time,
-number of occupied CPUs, etc.). You can specify any field of interest to be shown using ``--format``.
-
-You can see more commands below.
-
-.. include:: ../ref/slurm_status.rst
+More information is in the
+:doc:`monitoring tutorial<../tut/monitoring>`.
 
 Partitions
 ==========
@@ -186,6 +178,7 @@ debug partition (Slurm usually runs short jobs on the debug partition).
 
 Full reference
 ==============
+
 .. include:: ../ref/slurm.rst
 
 .. seealso::
@@ -227,5 +220,5 @@ Exercises
 What's next?
 ============
 
-Running multiple instances of a ``sbatch`` script is easier with
-:doc:`array jobs<../tut/array>`.
+There are various tools one can use to do
+:doc:`job monitoring<../tut/monitoring>`.
