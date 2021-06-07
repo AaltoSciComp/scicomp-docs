@@ -9,7 +9,7 @@ Applications
 In this tutorial, we talk about the overall process of finding,
 building, and compiling software.  These days, installing and managing
 scientific software is taking more and more time, thus we need to
-specifically talk about it some.
+specifically talk about it.
 
 .. seealso::
 
@@ -21,8 +21,8 @@ specifically talk about it some.
    anything beyond that, will be different.  Containers are becoming
    more common, but they are less standardized.
 
-Available softwares
-===================
+How to find the software you need
+=================================
 
 You can find what softwares we have available in different ways:
 
@@ -39,27 +39,31 @@ You can find what softwares we have available in different ways:
   <https://version.aalto.fi/gitlab/AaltoScienceIT/triton>`__ to see if
   there are previous issues about it - not everything is always
   updated.
+* Ask other users in the :doc:`Zulip chat`. We hope that we can facilitate user
+  group meetings and discussion among users of similar software suites.
+* Ask us admins in `garage </help/garage>`.
 
+Throughout this process, try to remember these things:
 
+1. Scientific software, like scientific process itself, is collaborative.
+   Work on sharing and seeking knowledge among other users. They might have
+   the answer you need.
+2. Interesting problems draw people together independently. If you're working
+   on a certain type of a problem, it is quite likely that some other
+   researcher is working on a similar problem. You might not be alone with
+   your problem.
+3. Try to form connections between users of similar software. The same software
+   that you use can be used by a researcher in completely different field. Many
+   software suites e.g. statistical modelling, machine learning, is common to
+   many other fields. If you cannot find similar users within your field, look
+   across fields.
+4. If you find something useful or interesting, share it. If you do not know
+   who to share it with, share it with us in SciComp. When we hear of a tool,
+   a method, a success story or a problem encountered by one of our users, we
+   often try to share it among other researchers.
 
-Modules
-=======
-
-You can learn about modules on the :doc:`Software modules <modules>` tutorial.
-But generally, ``module`` is a command that allows you to get and remove
-access to other software - because not everything can be available at once.
-The :doc:`Software modules <modules>` tutorial teaches how to
-load modules using the command ``module load $NAME``, etc.
-
-Not all of the software we have available is documented.  You can
-``module spider $NAME`` to try to see if you can find a module
-that way.  Note that this is *partially* case sensitive so it can
-be hard to find things - you might need to look through ``module
-avail`` too, to find all the available modules.
-
-
-Common applications
-^^^^^^^^^^^^^^^^^^^
+Common applications are available as modules
+============================================
 
 .. important::
 
@@ -67,13 +71,18 @@ Common applications
    load fgci-common`` at other Finnish sites (but not CSC).  This is
    introduced in the next lesson.
 
-For reference, here is the most common software:
+Here is a sample of our most commonly used software:
 
 .. include:: ../ref/software.rst
 
 If one of these ``module load`` commands does not work at your site,
-try ``module spider $NAME`` and see if you can find it.  This is
+try ``module spider $NAME`` and see if you can find it.  More information
+on these commands will be 
 actually covered under the upcoming :doc:`modules <modules>` tutorial.
+
+We try to install commonly used software for all of our users, so that
+everyone can benefit from them. If you cannot find what you're looking for,
+do let us know.
 
 Singularity containers
 ======================
@@ -82,17 +91,16 @@ Singularity containers
 
    Main article: :doc:`../usage/singularity`
 
-Some softwares have become so complicated that they just can't be installed,
-and for that we use containers.  A software container is basically a
-complete self-contained operating system environment.  Another
-advantage of containers is that they make it easy to move installed
-software from system to system, so that you can have the same
-environment everywhere.
+Some software packages are either very complicated to install or they
+have been designed with certain operating systems in mind. For these
+kinds of software we often use containers. A software container is basically a
+complete self-contained operating system environment. Another advantage of
+containers is that they make it easy to move installed software from system
+to system, so that you can have the same environment everywhere.
 
-You can read about singularity containers :doc:`here <../usage/singularity>`.
-If you load a module that uses singularity, nothing will happen at first.
-You execute your software using ``singularity_wrapper exec``,
-or use ``singularity_wrapper shell`` to get a shell in there.
+If your program is usually deployed using Docker or it is hard to maintain,
+do read our documentation on Singularity containers and contact us for
+more information.
 
 We also provide :doc:`some containers built by NVIDIA <../apps/nvidiacontainers>`.
 These containers are from NVIDIA's NGC-repository and meant for GPU
@@ -125,29 +133,18 @@ modules available on your cluster.
 
 1. Figure out how to use ``tensorflow`` (this is not a software
    problem, but a searching the documentation problem).  Make it work
-   enough to do ``python`` and ``import tensorflow`` -- though you
-   will get an error which you will learn to solve in a later lesson.
+   enough to do ``python`` and ``import tensorflow``.
 
-2. Figure out how to load the module for NVIDIA's tensorflow container.
-   Using ``singularity_wrapper``, run ``python -V`` and obtain python version.
-   Compare that to the python version on the login node.
-   Try ``singularity_wrapper shell`` too and use ``cat`` to check the
-   operating system version stored in ``/etc/issue``: ``cat
-   /etc/issue``.  Verify that this is different from what is outside
-   the container.
-
-3. Find the Applications page link above, and check the list for ways
+2. Find the Applications page link above, and check the list for ways
    to find out if we already have your software installed.  See if we have
    what you need, using any of the strategies on that list.
 
-4. (optional) From the Applications page, find the Spack package list
+3. (optional) From the Applications page, find the Spack package list
    (warning: it's a very long page and takes a while to load).  Does
    it have anything useful to you?
 
-5. (optional) Discuss among your group what software you need, if it's
+4. (optional) Discuss among your group what software you need, if it's
    available, and how you might get it.
-
-
 
 What's next?
 ============

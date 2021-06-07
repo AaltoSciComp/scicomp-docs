@@ -1,10 +1,10 @@
-Julia language on triton
-========================
+Julia
+=====
 
 The `Julia programming language <https://julialang.org/>`__ is a
 high-level, high-performance dynamic programming language for technical
 computing, in the same space as e.g. MATLAB, Scientific Python, or R.
-For more details, see the web page https://julialang.org/ .
+For more details, see their `web page <https://julialang.org/>`__.
 
 Interactive usage
 -----------------
@@ -18,14 +18,14 @@ release is loaded::
 Batch usage
 -----------
 
-Running Julia scripts as batch jobs is also possible. An example batch
-job is
+Running Julia scripts as batch jobs is also possible. An example batch script
+is provided below::
 
-Batch script for Julia job::
-
-    #!/bin/sh
+    #!/bin/bash
     #SBATCH --time=00:01:00
     #SBATCH --mem=1G
+
+    export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK:-1}
     module load julia
     srun julia juliascript.jl
 
@@ -33,11 +33,14 @@ Number of threads to use
 ------------------------
 
 By default Julia uses up to 16 threads for linear algebra (BLAS)
-computations. However, the julia module on triton sets the environment
-variable OMP\_NUM\_THREADS to 1, so only a single thread is used. If you
-wish to use more threads than that (e.g. you have launched a batch job
-with multiple threads per task with the "#SBATCH --cpus-per-task=N" option), you can
-set the OMP\_NUM\_THREADS environment variable to some other value, or
-alternatively inside julia you can use the blas\_set\_num\_threads()
-function.
+computations. In most cases, this number will be larger than the amount
+of CPUs reserved for the job. Thus when running Julia jobs it is a good idea
+to set the number of parallelization threads to be equal to the number of
+threads reserved for the job with ``--cpus-per-task``. Otherwise, the
+performance of your program might be poor. This can be done by adding the
+following line to your slurm-script::
+
+  export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK:-1}
+
+Alternatively, you can use the ``blas_set_num_threads()``-function in Julia.
 
