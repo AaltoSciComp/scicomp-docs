@@ -24,8 +24,8 @@ There are various tools available for each of these steps.
 
 .. highlight:: console
 
-Monitoring jobs after they has been submitted
-=============================================
+Monitoring job queue state after it has been submitted
+======================================================
 
 The command ``slurm q``/``slurm queue`` can be used to monitor the status
 of your jobs in the queue. An example output is given below::
@@ -62,8 +62,13 @@ use it directly to get more information on the job's status. See
 `squeue's documentation <https://slurm.schedmd.com/squeue.html>`_ for more
 information.
 
-Monitoring job during their runtime
-===================================
+There are other commands to ``slurm`` that you can use to monitor the
+cluster status, job history etc.. A list of examples is given below:
+
+.. include:: ../ref/slurm_status.rst
+
+Monitoring job while it is running
+==================================
 
 As the most common way of using HPC resources is to run non-interactive
 jobs, it is usually a good idea to make certain that the program that will be
@@ -109,8 +114,8 @@ When creating monitoring output it is usually best to write it in a
 human-readable format and human-readable quantities. This makes it easy to see
 the state of the program.
 
-Checking job history
-====================
+Checking job history after it has finished
+==========================================
 
 The command ``slurm h``/``slurm history`` can be used to check the history
 of your jobs. Example output is given below::
@@ -155,60 +160,37 @@ which will show information as indicated in the ``--format`` option (jobid,
 elapsed time, number of reserved CPUs, etc.). You can specify any field of
 interest to be shown using ``--format``.
 
-Monitoring efficient use of GPUs
+
+Monitoring job's CPU and RAM usage efficiency after it has finished
+===================================================================
+
+.. include:: ../examples/monitoring/seff.rst
+
+
+Monitoring job's GPU utilization
 ================================
 
-When running a GPU job, you should check that the GPU is being fully
-utilized. Additionally, for the sake of troubleshooting and ensuring
-that GPU is executing your code, not GPUs, you can run an interactive job::
-
-   $ sinteractive ==gres=gpu:1 ==time=1:00:00 ==mem=1G -c 3
-
-When assigned a node in the GPU partition, you can ``ssh`` to the node
-and run ``nvidia-smi``. You can find your process by e.g. using ``htop``
-and inspect the ``GPU-Util`` column. It should be close to 100%.
-
-
-Once the job has finished, you can use ``slurm history`` to obtain the
-``jobID`` and run::
-
-   $ sacct -j <jobID> -o comment -p
-
-This also shows the GPU utilization.
-
-.. note::
-
-   There are factors to be considered regarding efficient use of GPUs.
-   For instance, is your code itself efficient enough? Are you using the
-   framework pipelines in the intended fashion? Is it only using GPU
-   for a small portion of the entire task?  `Amdahl's law
-   <https://en.wikipedia.org/wiki/Amdahl's_law>`__ of parallelization
-   speedup is relevant here.
-
-Monitoring CPUs
-~~~~~~~~~~~~~~~
-
-If the GPU utilization of your jobs are low, you can do
-the ``seff <jobID>`` command and see if the CPU utilization is 100%.
-This could mean that the GPUs are not able to supply data fast enough.
-
-Please keep in mind that when using a GPU, you need to also
-request enough CPUs to supply the data to the process.
-So, you can increase the number of CPUs you request so that
-enough data is provided for the GPU. However, you shouldn't request
-too many: There wouldn't be enough CPUs for everyone to use the GPUs,
-and they would go to waste (For the K80 nodes, we have only 1.5 CPUs per
-GPU, but on all others we have 4-6 CPUs/GPU).
-
+.. include:: ../examples/monitoring/gpu.rst
 
 Exercises
 =========
 
-1. Run ``nvidia-smi`` on a GPU node with ``srun``. Use ``slurm history``
-   to check which GPU node you ended up on. Try setting a constraint
-   to force a different GPU architecture.
+1. On one window, start an ``sinteractive`` job. On another, use
+   ``slurm queue`` to see what is the status of the job.
+2. Create a simple batch script to run the Pi calculation script ``pi.py``
+   used in :ref:`the previous exercises <triton-tut-exercise-repo>`.
+   Create multiple job steps (separate ``srun``
+   lines), each of which runs ``pi.py`` with a greater
+   number of tries.  How does this appear in ``slurm history``?
+3. Run same ``python pi.py`` in the interactive session. Close the
+   interactive session. Use ``slurm history`` to get the job id for the
+   interactive session and the serial job done in exercise 2. Use ``seff``
+   to check the respective CPU utilizations for the interactive session and
+   the serial job.
 
 
 What's next?
 ============
 
+Running multiple instances of a ``sbatch`` script is easier with
+:doc:`array jobs<../tut/array>`.

@@ -143,47 +143,7 @@ Examples
 Monitoring efficient use of GPUs
 --------------------------------
 
-When running a GPU job, you should check that the GPU is being fully
-utilized. Additionally, for the sake of troubleshooting and ensuring
-that GPU is executing your code, not GPUs, you can run an interactive job::
-
-   $ sinteractive --gres=gpu:1 --time=1:00:00 --mem=1G -c 3
-
-When assigned a node in the GPU partition, you can ``ssh`` to the node
-and run ``nvidia-smi``. You can find your process by e.g. using ``htop``
-and inspect the ``GPU-Util`` column. It should be close to 100%.
-
-
-Once the job has finished, you can use ``slurm history`` to obtain the
-``jobID`` and run::
-
-   $ sacct -j <jobID> -o comment -p
-
-This also shows the GPU utilization.
-
-.. note::
-
-   There are factors to be considered regarding efficient use of GPUs.
-   For instance, is your code itself efficient enough? Are you using the
-   framework pipelines in the intended fashion? Is it only using GPU
-   for a small portion of the entire task?  `Amdahl's law
-   <https://en.wikipedia.org/wiki/Amdahl's_law>`__ of parallelization
-   speedup is relevant here.
-
-Monitoring CPUs
-~~~~~~~~~~~~~~~
-
-If the GPU utilization of your jobs are low, you can do
-the ``seff <jobID>`` command and see if the CPU utilization is 100%.
-This could mean that the GPUs are not able to supply data fast enough.
-
-Please keep in mind that when using a GPU, you need to also
-request enough CPUs to supply the data to the process.
-So, you can increase the number of CPUs you request so that
-enough data is provided for the GPU. However, you shouldn't request
-too many: There wouldn't be enough CPUs for everyone to use the GPUs,
-and they would go to waste (For the K80 nodes, we have only 1.5 CPUs per
-GPU, but on all others we have 4-6 CPUs/GPU).
+.. include:: ../examples/monitoring/gpu.rst
 
 Input/output
 ~~~~~~~~~~~~
@@ -210,8 +170,6 @@ copied to nodes ramdisk ``/dev/shm`` or temporary disk ``/tmp``.
 
 If your data is too big to fit in the disk, we recommend that you
 contact us for efficient data handling models.
-
-
 
 Available GPUs and architectures
 --------------------------------

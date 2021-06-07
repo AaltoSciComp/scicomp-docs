@@ -127,7 +127,7 @@ to fine-tune your requested resources.
    have each job take at least 30 minutes, if possible.
    The reason behind this is that there is a big amount of startup, accounting, and scheduling overhead.
 
-Monitoring your jobs 
+Monitoring your jobs
 ====================
 
 Once you submit your jobs, it goes into a queue. The two most useful commands to see
