@@ -182,6 +182,7 @@ Exercises
    Create multiple job steps (separate ``srun``
    lines), each of which runs ``pi.py`` with a greater
    number of tries.  How does this appear in ``slurm history``?
+   This is the same exercise as in the serial jobs-tutorial.
 3. Run same ``python pi.py`` in the interactive session. Close the
    interactive session. Use ``slurm history`` to get the job id for the
    interactive session and the serial job done in exercise 2. Use ``seff``
