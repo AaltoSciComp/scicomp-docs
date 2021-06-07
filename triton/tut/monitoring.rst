@@ -119,6 +119,7 @@ Checking job history after it has finished
 
 The command ``slurm h``/``slurm history`` can be used to check the history
 of your jobs. Example output is given below::
+
   $ slurm h
   JobID         JobName              Start            ReqMem  MaxRSS TotalCPUTime    WallTime Tasks CPU Ns Exit State Nodes
   60984785      _interactive         06-06 20:41:31    500Mc       -    00:01.739    00:07:36  none   1 1   0:0 CANC  pe6
