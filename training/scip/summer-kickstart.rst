@@ -243,7 +243,7 @@ resources.  All times are EEST (Helsinki) time.
 
     * 12:00 :doc:`/triton/tut/serial`
 
-    * Monitoring
+    * :doc:`/triton/tut/monitoring`
 
     * :doc:`/triton/tut/array`
 
