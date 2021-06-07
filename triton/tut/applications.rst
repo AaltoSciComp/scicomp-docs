@@ -134,6 +134,18 @@ modules available on your cluster.
 3. (optional) Discuss among your group what software you need, if it's
    available, and how you might get it.
 
+4. (optional) Figure out how to use ``tensorflow`` (this is not a software
+   problem, but a searching the documentation problem).  Make it work
+   enough to do ``python`` and ``import tensorflow`` -- though you
+   will get an error which you will learn to solve in a later lesson.
+
+5. (optional) Figure out how to load the module for NVIDIA's tensorflow container.
+   Using ``singularity_wrapper``, run ``python -V`` and obtain python version.
+   Compare that to the python version on the login node.
+   Try ``singularity_wrapper shell`` too and use ``cat`` to check the
+   operating system version stored in ``/etc/issue``: ``cat
+   /etc/issue``.  Verify that this is different from what is outside
+   the container.
 
 
 What's next?
