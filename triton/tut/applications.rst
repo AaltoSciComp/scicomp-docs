@@ -123,28 +123,15 @@ If you are at Aalto, everything will work.  Otherwise, if you are in
 Finland (but not at CSC) ``module load fgci-common`` will make our
 modules available on your cluster.
 
-1. Figure out how to use ``tensorflow`` (this is not a software
-   problem, but a searching the documentation problem).  Make it work
-   enough to do ``python`` and ``import tensorflow`` -- though you
-   will get an error which you will learn to solve in a later lesson.
-
-2. Figure out how to load the module for NVIDIA's tensorflow container.
-   Using ``singularity_wrapper``, run ``python -V`` and obtain python version.
-   Compare that to the python version on the login node.
-   Try ``singularity_wrapper shell`` too and use ``cat`` to check the
-   operating system version stored in ``/etc/issue``: ``cat
-   /etc/issue``.  Verify that this is different from what is outside
-   the container.
-
-3. Find the Applications page link above, and check the list for ways
+1. (optional) Find the Applications page link above, and check the list for ways
    to find out if we already have your software installed.  See if we have
    what you need, using any of the strategies on that list.
 
-4. (optional) From the Applications page, find the Spack package list
+2. (optional) From the Applications page, find the Spack package list
    (warning: it's a very long page and takes a while to load).  Does
    it have anything useful to you?
 
-5. (optional) Discuss among your group what software you need, if it's
+3. (optional) Discuss among your group what software you need, if it's
    available, and how you might get it.
 
 
