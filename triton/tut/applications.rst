@@ -39,7 +39,7 @@ You can find what softwares we have available in different ways:
   <https://version.aalto.fi/gitlab/AaltoScienceIT/triton>`__ to see if
   there are previous issues about it - not everything is always
   updated.
-* Ask other users in the :doc:`Zulip chat`. We hope that we can facilitate user
+* Ask other users in the :ref:`Zulip chat <chat>`. We hope that we can facilitate user
   group meetings and discussion among users of similar software suites.
 * Ask us admins in `garage </help/garage>`.
 
