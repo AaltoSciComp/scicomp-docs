@@ -212,7 +212,7 @@ resources.  All times are EEST (Helsinki) time.
 
     * 13:50: Break
 
-    * 14:00: Short talk: `Radovan Bast <https://bast.fr/> (UiT The Arctic University of Norway)`__: `Asking for help with supercomputers <https://cicero.xyz/v3/remark/0.14.0/github.com/bast/help-with-supercomputers/main/talk.md/#1>`__ 
+    * 14:00: Short talk: `Radovan Bast <https://bast.fr/>`__ (UiT The Arctic University of Norway): `Asking for help with supercomputers <https://cicero.xyz/v3/remark/0.14.0/github.com/bast/help-with-supercomputers/main/talk.md/#1>`__ 
 
       * How should you write support requests so that you get quick 
       (and useful!) answers? Radovan, one of the founders of 
