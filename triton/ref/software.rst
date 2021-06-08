@@ -7,3 +7,6 @@
 
 * **Matlab:** ``module load matlab`` for the latest Matlab version.
   :doc:`More info <../apps/matlab>`.
+
+* **Julia:** ``module load julia`` for the latest Julia version.
+  :doc:`More info <../apps/julia>`.
