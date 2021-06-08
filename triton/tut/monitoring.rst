@@ -27,8 +27,8 @@ There are various tools available for each of these steps.
 Monitoring job queue state after it has been submitted
 ======================================================
 
-The command ``slurm q``/``slurm queue`` can be used to monitor the status
-of your jobs in the queue. An example output is given below::
+The command ``slurm q``/``slurm queue`` (or ``squeue -u $USER``) can be used
+to monitor the status of your jobs in the queue. An example output is given below::
 
   $ slurm q
   JOBID              PARTITION NAME                  TIME       START_TIME    STATE NODELIST(REASON)
@@ -49,7 +49,8 @@ Here the output are as follows:
 
 
 When submitting a job one often wants to see if job starts successfully.
-This can be made easier by running ``slurm w q``/``slurm watch queue``.
+This can be made easier by running ``slurm w q``/``slurm watch queue``
+or (``watch -n 15 squeue -u $USER``).
 This opens a watcher that prints the output of ``slurm queue`` every 15
 seconds. This watcher can be closed with ``<CTRL> + C``. Do remember to
 close the watcher when you're not watching the output interactively.
@@ -176,19 +177,35 @@ Monitoring job's GPU utilization
 Exercises
 =========
 
-1. On one window, start an ``sinteractive`` job. On another, use
-   ``slurm queue`` to see what is the status of the job.
-2. Create a simple batch script to run the Pi calculation script ``pi.py``
-   used in :ref:`the previous exercises <triton-tut-exercise-repo>`.
-   Create multiple job steps (separate ``srun``
-   lines), each of which runs ``pi.py`` with a greater
-   number of tries.  How does this appear in ``slurm history``?
-   This is the same exercise as in the serial jobs-tutorial.
-3. Run same ``python pi.py`` in the interactive session. Close the
-   interactive session. Use ``slurm history`` to get the job id for the
-   interactive session and the serial job done in exercise 2. Use ``seff``
-   to check the respective CPU utilizations for the interactive session and
-   the serial job.
+.. include:: ../ref/examples-repo.rst
+
+1. In folder ``slurm/pi.py`` there is a pi estimation algorithm that uses
+   Monte Carlo methods to get an estimate of its value. You can call the script
+   with ``python pi.py <n>``, where ``<n>`` is the number of iterations to be
+   done by the algorithm.
+
+     a. Create a slurm script that runs the algorithm with 100000000 (:math:`10^8`)
+        iterations. Submit it to the queue and use ``slurm queue``,
+        ``slurm history`` and ``seff`` to monitor the job's performance.
+     b. Add multiple job steps (separate ``srun`` lines), each of which runs
+        the algorithm ``pi.py`` with increasing number of iterations (from range
+        100 - 10000000 (:math:`10^7`). How does this appear in
+        ``slurm history``?
+     c. Use ``seff`` to check performance of individual job steps. Can you
+        explain why the CPU utilization numbers change between steps?
+
+2. The script ``pi.py`` has been written so that it can be run using multiple
+   threads. Run the script with multiple threads and :math:`10^8` iterations
+   with::
+
+     srun --cpus-per-task=2 python pi.py --threads=2 100000000
+
+   After you have run the script, do the following:
+
+    a. Use ``slurm history`` to check the ``TotalCPUTime`` and ``WallTime``.
+       Compare them to the timings for the single CPU run with :math:`10^8`
+       iterations.
+    b. Use ``seff`` to check CPU performance of the job.
 
 
 What's next?

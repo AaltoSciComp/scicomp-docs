@@ -19,6 +19,9 @@ correctly. If your memory usage is far below 100% or above 100%, you might
 have a problem with your RAM requirements. You should set the RAM limit to
 be a bit above the RAM that you have utilized.
 
+You can also monitor individual job steps by calling ``seff`` with the syntax
+``seff <jobid>.<job step>``.
+
 .. important::
 
    When making job reservations it is important to distinguish
