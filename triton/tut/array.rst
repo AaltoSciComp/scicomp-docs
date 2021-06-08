@@ -8,12 +8,15 @@ Array jobs
 
 .. highlight:: console
 
-More often than not, problems involve running similar programs in parallel
-where there is no dependency or communication among the processes.
-Their results are thus combined as the final output, e.g. Monte Carlo simulations.
+More often than not, scientific problems involve running a single program again
+and again with different datasets or parameters.
 
-In Slurm context, *job arrays* are the way to run several instances of a
-single-threaded program, known as the *embarrassingly parallel* paradigm.
+When there is no dependency or communication among the individual program runs,
+these individual runs can be run in parallel on separate Slurm jobs. This kind
+of parallelism is called **embarassingly parallel**.
+
+Slurm has a structure called **job array**, which enables users to easily submit
+and run several instances of the same Slurm script independently in the queue.
 
 
 
@@ -65,52 +68,49 @@ task which could be used for handling input/output files to each task.
 Your first array job
 ====================
 
-Let's see a job array in action. Create a file with your favorite editor and name it
-as you wish. Let's name it ``hello.sh`` and write it as follows.
+Let's see a job array in action. Lets create a file called
+:download:`array_example.sh </triton/examples/array/array_example.sh>`
+and write it as follows.
 
-.. code-block:: slurm
+.. literalinclude:: /triton/examples/array/array_example.sh
+   :language: slurm
 
-   #!/bin/bash
-   #SBATCH --job-name=slurm_env_var
-   #SBATCH --output=/scratch/work/%u/task_number_%A_%a.out
-   #SBATCH --array=0-15
-   #SBATCH --time=00:15:00
-   #SBATCH --mem=200M
-   # You may put the commands below:
+Submitting the job script to Slurm with ``sbatch array_example.sh``, you will get the message::
 
-   # Job step
-   srun echo "I am array task number" $SLURM_ARRAY_TASK_ID
+  $ Submitted batch job 60997836
 
-Submitting the job script to Slurm with ``sbatch hello.sh``, you will get the message::
+The job id in the message is that of the "master" job. This is common for all of
+the jobs in the array. In addition, each individual job is given an array task
+id.
 
-  $ Submitted batch job 52608925
-
-The jobid in the message is that of the "master" job - which is also used in the
-batch script using ``%A`` for the output files (with the slurm ``--output`` option). To create unique output files for
-each task in the job array, ``%a`` is used that is filled in with the array task ID.
+As now we're submitting multiple jobs simultaneously, each job needs an
+individual output file or the outputs will overwrite each other. By default,
+Slurm will write the outputs to files named
+``slurm-${SLURM_ARRAY_JOB_ID}_${SLURM_ARRAY_TASK_ID}.out``. This can be overwritten using the
+``--output=<filename>``-parameter, when you can use wildcard ``%A`` for the
+job id and ``%a`` for the array task id.
 
 Once the jobs are completed, the output files will be created in your work directory,
 with the help ``%u`` to determine your user name::
 
-   $ ls $WRKDIR
-   task_number_52608925_12.out  task_number_52608925_3.out   task_number_52608925_8.out  task_number_52608925_9.out
-   task_number_52608925_0.out   task_number_52608925_13.out  task_number_52608925_4.out
-   task_number_52608925_1.out   task_number_52608925_14.out  task_number_52608925_5.out
-   task_number_52608925_10.out  task_number_52608925_15.out  task_number_52608925_6.out
-   task_number_52608925_11.out  task_number_52608925_2.out   task_number_52608925_7.out
+   $ ls
+   array_example_60997836_0.out   array_example_60997836_12.out  array_example_60997836_15.out  array_example_60997836_3.out  array_example_60997836_6.out  array_example_60997836_9.out
+   array_example_60997836_10.out  array_example_60997836_13.out  array_example_60997836_1.out   array_example_60997836_4.out  array_example_60997836_7.out  array_example.sh
+   array_example_60997836_11.out  array_example_60997836_14.out  array_example_60997836_2.out   array_example_60997836_5.out  array_example_60997836_8.out
 
 You can ``cat`` one of the files to see the output of each task::
 
-   $ cat task_number_52608925_5.out
-   I am array task number 5
+   $ cat array_example_60997836_11.out
+   I am array task number 11
 
 .. important::
 
-   If your current directory is your home directory, please remember to direct
-   your results to your work directory. You can keep your scripts/source codes
-   in you home directory since it is backed up daily and should keep your calculations
-   and analyses on your work directory.
+   The array indices do not need to be sequential. For example, if after
+   running an array job you find out that tasks 2 and 5 failed, you can
+   relaunch just those jobs with ``--array=2,5``.
 
+   You can even simply pass the ``--array`` option as a command-line argument to
+   ``sbatch``.
 
 
 More examples
@@ -123,25 +123,22 @@ use cases and how to utilize the ``$SLURM_ARRAY_TASK_ID`` environment variable.
 Reading input files
 -------------------
 
-In many cases, you would like to process several data files, that is, pass different
-input files to your code to be processed. This can be achieved by using
-``$SLURM_ARRAY_TASK_ID`` envinronment variable.
+In many cases, you would like to process several data files. That is, pass
+different input files to your code to be processed. This can be achieved by
+using ``$SLURM_ARRAY_TASK_ID`` environment variable.
 
-You could utilize to process several data files. In this case,
-In the example below, the is used to change to
-the right directory, make the application read the correct input file,
-and to generate output in a unique directory. This script is submitted
-with ``sbatch script.sh``:
+In the example below, the array job gives the program different input files,
+based on the value of the ``$SLURM_ARRAY_TASK_ID``:
 
 .. code-block:: slurm
 
     #!/bin/bash
-    #SBATCH --time=04:00:00
-    #SBATCH --mem-per-cpu=1G
+    #SBATCH --time=01:00:00
+    #SBATCH --mem=1G
     #SBATCH --array=0-29
 
     # Each array task runs the same program, but with a different input file.
-    # e.g. srun ./my_application -input input_data_$SLURM_ARRAY_TASK_ID
+    # e.g. srun ./my_application -input input_data_${SLURM_ARRAY_TASK_ID}
 
 Hardcoding arguments in the batch script
 ----------------------------------------
@@ -149,43 +146,26 @@ Hardcoding arguments in the batch script
 One way to pass arguments to your code is by hardcoding them in the batch script
 you want to submit to Slurm.
 
-Assume you would like to run the Pi estimation code for 5 different seed values, each
+Assume you would like to run the pi estimation code for 5 different seed values, each
 for 2.5 million iterations. You could assign a seed value to each task in you job array
 and save each output to a file. Having calculated all estimations, you could take the
-average of all the Pi values to arrive at a more accurate estimate. An example of such
-a batch script is as follows.
+average of all the pi values to arrive at a more accurate estimate. An example of such
+a batch script
+:download:`pi_array_hardcoded.sh </triton/examples/array/pi_array_hardcoded.sh>`
+is as follows.
 
-.. code-block:: slurm
+.. literalinclude:: /triton/examples/array/pi_array_hardcoded.sh
+   :language: slurm
 
-   #!/bin/bash
-   #SBATCH --job-name=pi_estimation
-   #SBATCH --output=pi.out.log
-   #SBATCH --open-mode=append
-   #SBATCH --array=0-4
-   #SBATCH --time=01:00:00
-   #SBATCH --mem=500M
-   # Note that all jobs will write to the same file.  This makes less
-   # files, but will be hard to tell the outputs apart.
+Save the script and submit it to Slurm::
 
-   case $SLURM_ARRAY_TASK_ID in
+   $ sbatch pi_array_hardcoded.sh
+   Submitted batch job 60997871
 
-       0)  SEED=123 ;;
-       1)  SEED=38  ;;
-       2)  SEED=22  ;;
-       3)  SEED=60  ;;
-       4)  SEED=432 ;;
-   esac
-
-   srun python ~/hpc-examples/slurm/pi.py 2500000 --seed=$SEED > pi_$SEED.json
-
-Save the script as e.g. ``run_pi.sh`` and submit to Slurm::
-
-   $ sbatch run_pi.sh
-   Submitted batch job 52655434
-
-Once finished, 5 files will be created in your current directory each containing the
-Pi estimation; total number of iterations (sum of iteration per task);
-and total number of successes)::
+Once finished, 5 Slurm output files and 5 application output files will
+be created in your current directory each containing the pi estimation;
+total number of iterations (sum of iteration per task); and total number
+of successes)::
 
    $ cat pi_22.json
    {"successes": 1963163, "pi_estimate": 3.1410608, "iterations": 2500000}
@@ -209,75 +189,45 @@ and have all the values written to it, e.g.::
 You can modify the previous script to have it read the ``iterations.txt``
 one line at a time and pass it on to ``pi.py``. Here, ``sed`` is used
 to get each line. Alternatively you can use any other command-line
-utility in its stead, e.g. ``awk``. Do not worry if you don't know
-how ``sed`` works - Google search and ``man sed`` always help.
-Also note that the line numbers start at 1, not 0.
+utility, e.g. ``awk``. Do not worry if you don't know how ``sed`` works
+- Google search and ``man sed`` always help. Also note that the line numbers
+start at 1, not 0.
 
-.. code-block:: slurm
+The script
+:download:`pi_array_parameter.sh </triton/examples/array/pi_array_parameter.sh>`
+looks like this:
 
-    #!/bin/bash
-    #SBATCH --time=01:00:00
-    #SBATCH --mem=500M
-    #SBATCH --output=pi.2.out.log
-    #SBATCH --open-mode=append
-    #SBATCH --array=1-4
-
-    n=$SLURM_ARRAY_TASK_ID
-    iteration=`sed -n "${n} p" iterations.txt`      # Get n-th line (1-indexed) of the file
-    srun python ~/hpc-examples/slurm/pi.py ${iteration} > pi_iter_${n}.json
+.. literalinclude:: /triton/examples/array/pi_array_parameter.sh
+   :language: slurm
 
 You can additionally do this procedure in a more complex way, e.g. read in multiple
 arguments from a csv file, etc.
 
 (Advanced) Grouping runs together in bigger chunks
 --------------------------------------------------
-If your jobs are many and too short (a few minutes),
-using array jobs may induce too much overhead in scheduling.
-Or you may simply have too many runs and creating too many array
-jobs again is not recommended.
+
+If you have lots of jobs that are short (a few minutes),
+using array jobs may induce too much overhead in scheduling and you will
+create huge number of output files. In these kinds of cases you might want
+to combine multiple program runs into a single array job.
 
 .. important::
 
    A good target time for the array jobs would be approximately 30 minutes,
    so please try to combine your tasks so that each job would at least take this long.
 
-The workaround is exploiting shell's capabilities. For example,
-assume you want to run the Pi script with 50 different seed values.
-You could define a chunk size of 10 and 5 array jobs. Even with as
-little as 5 array jobs, you can run 50 simulations.
+Easy workaround for this is to create a for-loop in your Slurm script.
+For example, if you want to run the pi script with 50 different seed values
+you could run them in chunks of 10 and run a total of 5 array jobs. This
+the amount of array jobs we need by a factor of 10!
 
-This method demands for more knowledge of shell scripting which will
-definitely be worth your while.
+This method demands more knowledge of shell scripting, but the end result is a
+fairly simple slurm script
+:download:`pi_array_parameter.sh </triton/examples/array/pi_array_grouped.sh>`
+that does what we need.
 
-.. code-block:: slurm
-
-   #!/bin/bash
-   #SBATCH --time=01:00:00
-   #SBATCH --mem=500M
-   #SBATCH --output=pi.3.out.log
-   #SBATCH --open-mode=append
-   #SBATCH --array=1-5
-
-   # Define and create a new directory (and an intermediate one) in your work directory
-   DIRECTORY=/scratch/work/${USER}/pi_simulations_results/json_files
-   mkdir -p ${DIRECTORY}
-
-   CHUNKSIZE=100
-   n=$SLURM_ARRAY_TASK_ID
-   indexes=`seq $((n*CHUNKSIZE)) $(((n + 1)*CHUNKSIZE - 1))`
-
-   for i in $indexes
-   do
-       srun python ~/hpc-examples/slurm/pi.py 1500000 --seed=$i > ${DIRECTORY}/pi_$i.json
-   done
-
-.. important::
-
-   The array indices need not be sequential, e.g. if you discover that
-   after the array job is finished, the job task id's 2 and 5
-   failed, you can relaunch just those jobs with ``--array=2,5``.
-   To do this, you can simply pass the ``--array`` option
-   as a command-line argument to ``sbatch``.
+.. literalinclude:: /triton/examples/array/pi_array_grouped.sh
+   :language: slurm
 
 
 
