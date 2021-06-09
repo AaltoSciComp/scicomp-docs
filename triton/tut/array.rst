@@ -234,25 +234,25 @@ that does what we need.
 Exercises
 =========
 
-1. Using the ``pi.py`` example from the :ref:`interactive tutorial
-   exercises <triton-tut-exercise-repo>`, create a job array that calculates a combination
-   of different iterations and seed values, and save them all to
-   different files.  Look at the outputs and see how you would combine
-   them together.  Advanced: average them all to arrive
-   at a more accurate Pi.
+.. include:: ../ref/examples-repo.rst
 
-2. Make an array job that runs ``memory-hog.py`` from
-   :ref:`interactive tutorial exercises <triton-tut-exercise-repo>`
-   with five different values of memory (5M, 50M, 100M,
-   200M, 500M) using one of the techniques above - this is the memory that the
-   memory-hog script requests, **not** the requested from Slurm
-   (each job in an array requests the same memory).
+1. Make an array job that runs ``slurm/memory-hog.py``
+   with five different values of memory (50M, 100M, 500M,
+   1000M, 5000M) using one of the techniques above - this is the memory that the
+   memory-hog script requests, **not** the is requested from Slurm.
+   Request 250M of memory for the array job. See if some of the jobs fail.
 
-3. Make a job array which runs every other index, e.g. the array can be
-   indexed as 1, 3, 5...(``sbatch`` manual page can be of help)
-
-4. Think about your typical work.  How could you split your stuff into
+2. Think about your typical work.  How could you split your stuff into
    trivial pieces that can be run with array jobs?
+
+3. (Advanced) Make a job array which runs every other index, e.g. the array can
+   be indexed as 1, 3, 5... (
+   `sbatch manual page <https://slurm.schedmd.com/sbatch.html>`__
+   can be of help)
+
+4. (Advanced) Create a job array that uses the ``slurm/pi.py`` to calculate a combination
+   of different iterations and seed values and save them all to
+   different files.
 
 
 What's next?
