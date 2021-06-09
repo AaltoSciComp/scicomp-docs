@@ -73,15 +73,13 @@ since ``|`` is the shell pipe)
 Available machine learning frameworks
 -------------------------------------
 
-We support the following machine learning frameworks out of the box:
+We support many common machine learning frameworks out of the box:
 
 * :doc:`Tensorflow <../apps/tensorflow>`:
-  ``module load anaconda/2020-02-tf2``.
+  ``module load anaconda``.
   See the Tensorflow page for info on older versions.
-* Keras: ``module load anaconda/2020-02-tf2``
-* PyTorch:``module load anaconda/2020-02-tf2``
-* :doc:`Detectron <../apps/detectron>`: via :doc:`singularity images <../usage/singularity>`
-* CNTK: via :doc:`singularity images <../usage/singularity>`
+* Keras: ``module load anaconda``
+* PyTorch:``module load anaconda``
 
 Please note that most of the pre-installed softwares have CUDA already present.
 Thus you **do not need to load CUDA** as a seperate module when loading these.
@@ -136,9 +134,6 @@ Examples
 
 .. include:: ../examples/pytorch/pytorch_mnist.rst
 
-.. include:: ../examples/cntk/cntk_mnist.rst
-
-
 
 Monitoring efficient use of GPUs
 --------------------------------
@@ -179,30 +174,31 @@ Available GPUs and architectures
 Exercises
 ---------
 
+.. include:: ../ref/examples-repo.rst
+
 1. Run ``nvidia-smi`` on a GPU node with ``srun``. Use ``slurm history``
    to check which GPU node you ended up on. Try setting a constraint
    to force a different GPU architecture.
 
-2. Use ``hpc-examples/gpu/pi.cu`` from :ref:`the previous exercises <triton-tut-exercise-repo>`.
-   Compile it using ``cuda`` module and ``nvcc``. Run it. Does it say zero?
-   Try running it with a GPU and see what happens.
+2. Load ``cuda`` and ``gcc`` (version less than 9) modules and
+   compile the ``gpu/pi.cu`` example using ``nvcc``.
+   Run it. Does it say zero? Try running it with a GPU and see what happens.
 
 3. Run one of the samples given above. Try using ``sbatch`` as well.
 
-4. Modify CTNK sample slurm script in a way that it copies datasets to
-   an unique folder in ``/dev/shm`` or ``$TMPDIR`` before running the
-   Python code. Modify CNTK sample so that it loads data from the new
-   location.
+4. (Advanced) The PyTorch example will try to load datasets from a folder
+   called ``data`` in a local folder. Modify the Slurm script so that
+   the script:
+     a. Creates an unique folder in ``/dev/shm`` or ``$TMPDIR`` before running the
+        Python code.
+     b. Moves to this folder when job is running.
+     c. Runs the PyTorch-example from this location. Verify that the
+        datasets are stored in the local disk.
 
    HINT: Check out ``mktemp --help``,
    :ref:`command output substitutions <linux-training-substitute-command-output>`-section
    from our Linux shell tutorial and the API page for Python's
    `os.environ <https://docs.python.org/3/library/os.html#os.environ>`_.
-
-   Solution to ex. 4:
-   :download:`cntk_mnist_ex4.py</triton/examples/cntk/cntk_mnist_ex4.py>`
-   :download:`cntk_mnist_ex4.sh</triton/examples/cntk/cntk_mnist_ex4.sh>`.
-
 
 
 What's next?
