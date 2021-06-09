@@ -7,6 +7,11 @@ the key and can *always* be sure you are connecting to the same server
 from then on.  To be smarter, you can actually verify the keys the
 first time you connect - thus, they are provided below.
 
+You can verify SSH key fingerprints with a command like::
+
+  ssh-keygen -l -E sha256 -f <(ssh-keyscan triton.aalto.fi 2>/dev/null)
+  
+
 Here are the SSH key fingerprints for Triton::
 
   256 SHA256:04Wt813WFsYjZ7KiAyo3u6RiGBelq1R19oJd2GXIAho no comment (ECDSA)
