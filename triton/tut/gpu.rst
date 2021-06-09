@@ -189,11 +189,12 @@ Exercises
 4. (Advanced) The PyTorch example will try to load datasets from a folder
    called ``data`` in a local folder. Modify the Slurm script so that
    the script:
-     a. Creates an unique folder in ``/dev/shm`` or ``$TMPDIR`` before running the
-        Python code.
-     b. Moves to this folder when job is running.
-     c. Runs the PyTorch-example from this location. Verify that the
-        datasets are stored in the local disk.
+
+   a. Creates an unique folder in ``/dev/shm`` or ``$TMPDIR`` before running the
+      Python code.
+   b. Moves to this folder when job is running.
+   c. Runs the PyTorch-example from this location. Verify that the
+      datasets are stored in the local disk.
 
    HINT: Check out ``mktemp --help``,
    :ref:`command output substitutions <linux-training-substitute-command-output>`-section
