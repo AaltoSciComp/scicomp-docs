@@ -50,8 +50,7 @@ Let's take a look at the following script
    #!/bin/bash
    #SBATCH --time=00:05:00
    #SBATCH --mem-per-cpu=100M
-   #SBATCH --output=/scratch/work/%u/hello.%j.out
-   #SBATCH --partition=debug
+   #SBATCH --output=hello.out
 
    srun echo "Hello $USER! You are on node $HOSTNAME"
 
@@ -83,15 +82,19 @@ the ``sbatch`` command::
 When the job enters the queue successfully, the response that the job has been submitted
 is printed in your terminal, along with the *jobid* assigned to the job.
 
-You can check the status of you jobs using ``slurm q``/``slurm queue``::
+You can check the status of you jobs using ``slurm q``/``slurm queue`` (or
+``squeue -u $USER``)::
 
    $ slurm q
    JOBID              PARTITION NAME                  TIME       START_TIME    STATE NODELIST(REASON)
    52428672           debug     hello.sh              0:00              N/A  PENDING (None)
 
 Once the job is completed successfully, the state changes to *COMPLETED* and the
-output is then saved to ``hello.%j.out`` in your work
-directory ("%j" is replaced by the jobid and "%u" by your username).
+output is then saved to ``hello.out`` in the current directory. You can also
+wildcards like ``%u`` for your username and ``%j`` for the jobid in the output
+file name. See the
+`documentation of sbatch <https://slurm.schedmd.com/sbatch.html>`__ for a full
+list of available wildcards.
 
 Setting resource parameters
 ===========================
@@ -132,10 +135,16 @@ Monitoring your jobs
 
 Once you submit your jobs, it goes into a queue. The two most useful commands to see
 the status of your jobs with are ``slurm q``/``slurm queue`` and
-``slurm h``/``slurm history``.
+``slurm h``/``slurm history`` (or ``squeue -u $USER`` and ``sacct -u $USER``).
 
 More information is in the
 :doc:`monitoring tutorial<../tut/monitoring>`.
+
+Cancelling your jobs
+====================
+
+You can cancel jobs with ``scancel <jobid>``. To obtain job id, use the
+monitoring commands.
 
 Partitions
 ==========
@@ -144,23 +153,15 @@ A **slurm partition** is a set of computing nodes dedicated to a specific purpos
 Examples include partitions assigned to debugging("debug" partition),
 batch processing("batch" partition), GPUs("gpu" partition), etc.
 
-Command ``sinfo`` lists the available partitions. Let's see the first 4 partitions listed
-for the sake of brevity::
+Command ``sinfo -s`` lists a summary of the available partitions. For the sake
+of brevity, let's see the first 4 partitions::
 
-   $ sinfo | head -n 5
-   PARTITION     AVAIL  TIMELIMIT  NODES  STATE NODELIST
-   interactive      up 1-00:00:00      2   drng pe[1-2]
-   jupyter-long     up 10-00:00:0      2   drng pe[1-2]
-   jupyter-short    up 1-00:00:00      2   drng pe[1-2]
-   grid             up 3-00:00:00      1  drain pe76
-
-You can specify a partition to be listed by ``sinfo``::
-
-   $ sinfo --partition=debug
-   PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
-   debug        up    1:00:00      1 drain* wsm1
-   debug        up    1:00:00      1  drain pe3
-   debug        up    1:00:00      1   idle pe83
+  $ sinfo -s | head -n 5
+  PARTITION     AVAIL  TIMELIMIT   NODES(A/I/O/T)  NODELIST
+  interactive      up 1-00:00:00          4/0/0/4  pe[4-7]
+  jupyter-long     up 10-00:00:0          4/0/0/4  pe[4-7]
+  jupyter-short    up 1-00:00:00          4/0/0/4  pe[4-7]
+  grid             up 3-00:00:00       29/18/1/48  pe[9-48,74-81]
 
 Take a look at the manpage using ``man sinfo`` for more details.
 
@@ -190,26 +191,33 @@ Full reference
 Exercises
 =========
 
+.. include:: ../ref/examples-repo.rst
+
 1. Submit a batch job that just runs ``hostname``.
 
    a. Set time to 1 hour and 15 minutes, memory to 500MB.
    b. Change the job's name and output file.
-   c. Monitor the job with ``slurm watch queue``.
-   d. Check the output.  Does it match ``slurm history``?
+   c. Check the output.  Does the printed hostname
+      match the one given by ``slurm history``/``sacct -u $USER``?
 
-2. Create a simple batch script to run the Pi calculation script ``pi.py``
-   used in :ref:`the previous exercises <triton-tut-exercise-repo>`.
-   Create multiple job steps (separate ``srun``
-   lines), each of which runs ``pi.py`` with a greater
-   number of tries.  How does this appear in ``slurm history``?  When
-   would you use extra ``srun`` commands, and when not?
+2. Create a batch script which does nothing (or some pointless
+   operation for a while), for example ``sleep 300``. Check the queue to see
+   when it starts running.  Then, cancel the job.  What output is produced?
 
-3. Create a batch script which does nothing (or some pointless
-   operation for a while), for example ``sleep 300`` (waits for 300
-   seconds) in the ``debug`` partition.  Check the queue to see when
-   it starts running.  Then, cancel the job.  What output is produced?
+3. Create a slurm script that runs the following program::
 
-4. What happens if you submit a batch script with ``bash`` instead of
+     for i in $(seq 30); do
+       date
+       sleep 10
+     done
+
+   a. Submit the job to the queue.
+   b. Log out from Triton. Log back in and use
+      ``slurm queue``/``squeue -u $USER`` to check the job status.
+   c. Use ``cat name_of_outputfile`` to check at the output periodically.
+   d. Cancel the job once you're finished.
+
+4. (Advanced) What happens if you submit a batch script with ``bash`` instead of
    ``sbatch``?  Does it appear to run?  Does it use all the Slurm
    options?
 
