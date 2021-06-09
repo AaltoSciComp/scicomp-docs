@@ -300,10 +300,10 @@ Monitoring performance
 Exercises
 ---------
 
+.. include:: ../ref/examples-repo.rst
+
 1. Run ``srun --cpus-per-task=4 hostname``, ``srun --ntasks=4 hostname``, and ``srun --nodes=4
    hostname``.  What's the difference and why?
-
-The following use ``hpc-examples`` from :ref:`the previous exercises <triton-tut-exercise-repo>`:
 
 2. Find the files ``hpc-examples/openmp/hello_omp/hello_omp.c`` and
    ``hpc-examples/hello_omp/hello_omp.slrm`` that have a short example of OpenMP.
