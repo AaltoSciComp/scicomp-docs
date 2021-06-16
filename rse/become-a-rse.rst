@@ -48,6 +48,28 @@ with notices on various other channels including Aalto scientific
 computing mailing lists.
 
 
+
+What you do
+-----------
+
+At least at Aalto, you will:
+
+* Provide software development and consulting as a service, depending
+  on demand from research groups.
+* Provide one-on-one research support from a software, programming,
+  Linux, data, and infrastructure perspective: short-term projects
+  helping researchers with specific tasks, so that the researchers
+  gain competence to work independently.
+* As needed and desired, teach and provide other research support.
+* A typical cycle involves evaluating potential client researchers,
+  meeting, formulating a work plan, co-working to develop a solution,
+  teaching and mentoring for skill development, and follow-up.
+
+All will be done as part of a team to round out skills and continuous
+internal knowledge-sharing.
+
+
+
 Skillset
 --------
 
@@ -63,7 +85,7 @@ you do so mostly independently but with the help of a great team?*
 
 
 General tech skills
--------------------
+~~~~~~~~~~~~~~~~~~~
 Our broad background on which we build:
 
 * Basic mandatory skills include Linux, shell scripting, some
@@ -101,7 +123,7 @@ Our broad background on which we build:
 
 
 Teaching and mentoring skills
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 You won't be just preforming technical tasks.  As part of being a RSE,
 you need to help others to be self-sufficient as well.  This requires
 teaching and mentoring skills.
@@ -116,7 +138,7 @@ teaching and mentoring skills.
 
 
 Specific examples
------------------
+~~~~~~~~~~~~~~~~~
 This is a selection of advanced skills which are useful (remember,
 this is what you might learn, not what you already know):
 
@@ -143,7 +165,7 @@ this is what you might learn, not what you already know):
 
 
 Open science and data
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 As a RSE, you should also serve as an advocate for open science,
 reproducible research, and data management.
 
@@ -156,9 +178,13 @@ reproducible research, and data management.
 Training resources
 ------------------
 
+These resources may be interesting to support your career as an RSE:
+
 * `Hands-on scientific computing <hosc_>`_
 * `Software Carpentry <swc_>`_
 * `CodeRefinery <cr_>`_
+* `Nordic-RSE <https://nordic-rse.org>`__
+* The `Society of Research Software Engineering <https://society-rse.org/>`__
 * :ref:`HPC and Triton <tutorials>`
 
 .. _hosc: https://handsonscicomp.readthedocs.io/
