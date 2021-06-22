@@ -219,7 +219,9 @@ should apply to both JupyterHub and ``sjupyter``):
   installations (if anyone knows something otherwise, let us know).
   Just load two modules: ``module load julia``, ``module
   load jupyterhub/live``, and then install the kernel ``julia`` and
-  ``Pkg.add("IJulia")`` and it will install locally for you.
+  ``Pkg.add("IJulia")`` (and if it doesn't enable, then ``using
+  IJulia`` and ``installkernel("julia")`` to force re-installation)
+  and it will install locally for you.
 * We do not yet have a kernel management policy.  Kernels may be added
   or removed over time.  We would like to keep them synced with the
   most common Triton modules, but it will take some time to get this
