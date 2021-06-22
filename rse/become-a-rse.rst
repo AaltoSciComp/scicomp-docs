@@ -3,7 +3,7 @@ For RSE candidates and community
 
 This page is designed to guide people into the interesting world of
 research software engineering: providing a view into the types of
-skills that are useful to research groups at Aalto.  It also provide
+skills that are useful to research groups at Aalto.  It also provides
 links to training material which our RSEs should learn after
 starting (so don't be intimidated by what you see on here!).
 
@@ -52,7 +52,7 @@ Skillset
 --------
 
 Below, we have a large list of the types of technologies which are valued
-our researchers and useful to our RSEs.  **No one person is expected to
+by our researchers and useful to our RSEs.  **No one person is expected to
 know everything, but we
 will hire a variety of people to cover many of the things you see
 here.**
@@ -92,7 +92,7 @@ Our broad background on which we build:
   explain complex subjects in an accessible way.
 * Commitment to diversity and equality of researchers among many
   different backgrounds.
-* Good knowledge of English.  Finnish advantageous but not required,
+* Good knowledge of English.  Finnish is advantageous but not required,
   our internal working language is English.
 
 .. _swc: https://software-carpentry.org/lessons/
@@ -121,7 +121,7 @@ This is a selection of advanced skills which are useful (remember,
 this is what you might learn, not what you already know):
 
 * Advanced experience of debugging/profiling/developing Linux tools,
-  incl Git, Intel and GNU compiler suits and corresponding tools.
+  including Git, Intel and GNU compiler suits and corresponding tools.
 * Software building tools like Make, CMake and alike.
 * Advanced knowledge of parallel programming models, experience of
   parallel programming (OpenMP, MPI).
@@ -129,7 +129,7 @@ this is what you might learn, not what you already know):
   experience of porting software to GPUs.
 * Profiling and optimization - both of low-level languages and
   high-level.
-* Knowledge of scientific software and packages incl Matlab,
+* Knowledge of scientific software and packages including Matlab,
   Mathematica, Python libs, others is beneficial.
 * Experimental data collection, LabView, etc.
 * Workflow automation, shell scripting, porting from single machines
