@@ -1,6 +1,10 @@
 For RSE candidates and community
 ================================
 
+.. seealso::
+
+   In July-August 2021 we are hiring: `job advertisement <https://aalto.wd3.myworkdayjobs.com/aalto/job/Otaniemi-Espoo-Finland/Research-software-engineer_R31680>`__.
+
 This page is designed to guide people into the interesting world of
 research software engineering: providing a view into the types of
 skills that are useful to research groups at Aalto.  It also provides
@@ -67,6 +71,12 @@ At least at Aalto, you will:
 
 All will be done as part of a team to round out skills and continuous
 internal knowledge-sharing.
+
+You may also be interested in these presentations on the topic of
+"what we do":
+
+* `Video: Aalto RSE status report, May 2021 <https://www.youtube.com/watch?v=rvuwLSKLaJI>`__
+* `Video: Support services vs diversity <https://www.youtube.com/watch?v=z1VS1wleN-o>`__
 
 
 
