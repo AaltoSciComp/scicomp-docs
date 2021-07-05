@@ -215,13 +215,6 @@ should apply to both JupyterHub and ``sjupyter``):
 * R (a default R environment you can get by ``module load r-triton``.
   ("R (safe)" is similar but tries to block some local user configuration
   which sometimes breaks things, see FAQ for more hints.)
-* Julia: currently doesn't seem to play nicely with global
-  installations (if anyone knows something otherwise, let us know).
-  Just load two modules: ``module load julia``, ``module
-  load jupyterhub/live``, and then install the kernel ``julia`` and
-  ``Pkg.add("IJulia")`` (and if it doesn't enable, then ``using
-  IJulia`` and ``installkernel("julia")`` to force re-installation)
-  and it will install locally for you.
 * We do not yet have a kernel management policy.  Kernels may be added
   or removed over time.  We would like to keep them synced with the
   most common Triton modules, but it will take some time to get this
@@ -232,7 +225,12 @@ requests for software in these so that it is automatically available.
 
 Installing kernels from virtualenvs or Anaconda environments
 ------------------------------------------------------------
-You can do this::
+
+You have to have the package ``ipykernel`` installed in the
+environment: Add it to your requirements/environment, or activate the
+environment and do ``pip install ipykernel``.
+
+For conda environments, you can do::
 
   module load jupyterhub/live
   envkernel conda --user --name INTERNAL_NAME --display-name="My conda" /path/to/conda_env
@@ -240,11 +238,7 @@ You can do this::
 Or for Python virtualenvs::
 
   module load jupyterhub/live
-  envkernel virtualenv --user --name INTERNAL_NAME --display-name="My virtualenv" /path/to/conda_env
-
-You have to have the package ``ipykernel`` installed in the
-environment: activate the environment and do ``pip install
-ipykernel``.
+  envkernel virtualenv --user --name INTERNAL_NAME --display-name="My virtualenv" /path/to/virtualenv
 
 Installing a different R module as a kernel
 -------------------------------------------
@@ -267,11 +261,12 @@ modules you need::
 Install your own kernels from other Python modules
 --------------------------------------------------
 
-This works if the module has Python installed and working.  This has
+This works if the module provides the command ``python`` and
+``ipykernel`` is installed.  This has
 to be done once in any Triton shell::
 
   module load jupyterhub/live
-  envkernel lmod --user --name INTERNAL_NAME --display-name="Singularity my kernel" MODULE_NAME
+  envkernel lmod --user --name INTERNAL_NAME --display-name="Python from my module" MODULE_NAME
   module purge
 
 Install your own kernels from Singularity image
@@ -286,6 +281,31 @@ be done once in any Triton shell::
   module load jupyterhub/live
   envkernel singularity --user --name KERNEL_NAME --display-name="Singularity my kernel" SIMG_IMAGE
   module purge
+
+As with the above, the image has to provide a ``python`` command and
+have ``ipykernel`` installed (assuming you want to use Python, other
+kernels have different requirements).
+
+Julia
+-----
+
+Julia: currently doesn't seem to play nicely with global
+installations (so we can't install it for you, if anyone knows
+something otherwise, let us know).
+Roughly, these steps should work to install the kernel yourself::
+
+  module load julia
+  module load jupyterhub/live
+  julia
+
+  julia> Pkg.add("IJulia")
+
+If this doesn't work, it may think it is already installed.  Force
+it with this::
+
+  julia> using IJulia
+  julia> installkernel("julia")
+
 
 
 Install your own non-Python kernels
