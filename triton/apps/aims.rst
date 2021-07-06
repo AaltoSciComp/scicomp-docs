@@ -27,9 +27,12 @@ stamp.
 
 Notes:
 
-- `module spider fhi` will show various versions available.
+- ``module spider fhi`` will show various versions available.
 - The clean Intel version is fastest, but the OpenMPI module is more
   stable (info as of 2021-07).
+- FHI-aims is compiled without any Intel parallel libraries since in rare
+  cases, like really big systems, they can result in spurious
+  segfaults.
 - Search the Triton issue tracker for some more debugging about this.
 
 
@@ -47,6 +50,7 @@ To run FHI-aims on Triton a following example batch script can be used:
    #SBATCH --nodes=1
    #SBATCH --ntasks=24
 
+   ulimit -s unlimited
    export OMP_NUM_THREADS=1
    module load FHI-aims/latest-intel-2020.0
    srun aims.YYMMDD.scalapack.mpi.x
