@@ -25,6 +25,14 @@ result in spurious segfaults. The binaries are available in
 ``aims.YYMMDD.scalapack.mpi.x`` where ``YYMMDD`` indicates the version
 stamp.
 
+Notes:
+
+- `module spider fhi` will show various versions available.
+- The clean Intel version is fastest, but the OpenMPI module is more
+  stable (info as of 2021-07).
+- Search the Triton issue tracker for some more debugging about this.
+
+
 Running FHI-aims on Triton
 ==========================
 
