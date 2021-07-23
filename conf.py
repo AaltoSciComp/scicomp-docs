@@ -73,7 +73,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Aalto scientific computing'
-copyright = u'2020, Aalto Science-IT'
+copyright = u'2021, Aalto Science-IT'
 author = u'Aalto Science-IT'
 
 # The version info for the project you're documenting, acts as replacement for
