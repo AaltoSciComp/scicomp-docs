@@ -293,6 +293,20 @@ This should be discussed early in the project.
 
 
 
+Acknowledging us
+----------------
+
+You can acknowledge us as "Aalto Research Software Engineering
+service" or "Aalto RSE".  In papers/presentations, please acknowledge
+us if we significantly contribute to your work.
+
+When talking with/presenting to your colleagues, please do talk about
+our services and its benefits.  Our link is
+https://scicomp.aalto.fi/rse/ .  Word of mouth is the best way to
+ensure our funding to continue to serve you.
+
+
+
 See also
 --------
 
