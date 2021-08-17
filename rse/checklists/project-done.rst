@@ -16,10 +16,18 @@ Discuss with the researchers:
 Internal tasks:
 
 * Issue tracker:
+
   * ``/summary`` should contain a several sentence summary focused on the
     benefit to the community (this is used for final reports, etc)
-  * Confirm other metadata is correct ``/contact``, ``/supervisor`` contains
-    people who may get emails about the project later (and shouldn't
-    contain people who may be surprised about automated survey emails)
+  * Confirm other metadata is correct
+
+    * ``/contact``, ``/supervisor`` contains
+      people who may get emails about the project later (and shouldn't
+      contain people who may be surprised about automated survey
+      emails)
+    * ``/timesaved``
+    * Outputs ``/projects``, ``/publications``, ``/software``,
+      `/datasets``, ``/outputs``
+
 * Add it to the next meeting agenda, give report about what we learned
   from it
