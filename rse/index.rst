@@ -14,13 +14,17 @@ software, computing, and data. As research becomes more digital and
 computer-dependent, the prerequisite knowledge grows larger and
 larger, and we exist to help you fill that gap.
 
-For example, we can do:
+For anything related to **custom software development, computational
+research, data management, workflow automation, scaling-up,
+collaborative work, reproducible research, optimization,
+high-performance computing, and more**, we can:
 
-* Custom software development or modification
-* Scaling up to larger computing systems, code optimization, workflow automation
-* Preparing a code for release, or cleaning up old code that needs to be re-used
-* Transforming a code from an individual project to a collaborative project (or group training on this topic)
-* Data services (optimizing I/O, data versioning, databases, data sharing, and opening)
+* **Do it for you:** You need some custom technical
+  software/solution.  We do it for you, you get straight to your work.
+* **Do it with you:** We co-work with your group, teaching while we go
+  along.
+* **Make it reusable:** You already have something, but it doesn't
+  work for others.
 
 Instead of hiring your own intern, postdoc, etc. to struggle with
 certain issues, we can help instead.  We consist of experienced
@@ -28,13 +32,16 @@ researchers who have relied heavily on computing technology
 (programming, computing, data) for our academic work, and thus can
 seamlessly collaborate on research projects.  We can also do
 consultation and training.  You will have more
-impact since your work is more reusable, open, and higher quality.
+impact since your work is more reusable, open, and higher quality.  We
+can work on existing projects or you can write us directly into your
+grant applications.
 
 .. _rse-history: https://www.software.ac.uk/blog/2016-08-17-not-so-brief-history-research-software-engineers-0
 
-Departments can join this program and make this service to its
-community as a basic service.  Current member departments are CS, NBE,
-PHYS, and SCI overall.
+This service is free for staff of member departments.  Departments can
+join this program and make this service to its community as a standard
+service.  Current member departments are CS, NBE, PHYS, and SCI
+overall.
 
 .. admonition:: Contact
 
