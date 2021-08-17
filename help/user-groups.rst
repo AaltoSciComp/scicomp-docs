@@ -37,3 +37,16 @@ make a larger change than just solving their own problems.
 * Discuss how the infrastructure needs to be adapted to the actual use
   cases.
 * Provide a network for informal support within research groups.
+
+
+Preparing for a user group
+--------------------------
+
+* We will create a Triton issue about it and use that for
+  communication.  Subscribe (= turn on notifications or comment) to
+  the issue to get emails about it.
+
+* Please submit some examples to the issue tracker, for example either
+  things which already work (discuss + document) or things that don't
+  yet (we will work together to improve + document).  This will form
+  the main part of the meeting.  **We need examples!**
