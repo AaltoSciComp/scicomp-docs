@@ -27,7 +27,7 @@ Internal tasks:
       emails)
     * ``/timesaved``
     * Outputs ``/projects``, ``/publications``, ``/software``,
-      `/datasets``, ``/outputs``
+      ``/datasets``, ``/outputs``
 
 * Add it to the next meeting agenda, give report about what we learned
   from it
