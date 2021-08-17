@@ -92,6 +92,26 @@ To avoid having to type the decryption password, the *private key* it needs to b
 Once the password is added, you can ssh into Triton as normal but will immediately be connected without any further prompts. If you are unsure whether a ``ssh-agent`` process is running on your machine, ``ps -C ssh-agent`` will tell you if there is. To start a new agent, use ``eval $(ssh-agent)``.
 
 
+ProxyJump
+=========
+
+Often, you can't connect directly to your target computer: you need to
+go through some other firewall host.  This is often done with two
+separate ``ssh`` commands, but can be done with only one with the
+``-J`` (ProxyJump) option::
+
+  ssh -J FIREWALL.aalto.fi triton.aalto.fi
+
+Both of these can take more options, for example if you need to
+specify your username you might need to do it twice::
+
+  ssh -J username@FIREWALL.aalto.fi username@triton.aalto.fi
+
+Read more details at
+https://www.redhat.com/sysadmin/ssh-proxy-bastion-proxyjump, including
+putting this in your configuration file (or see below).
+
+
 Config file: don't type so many options
 =======================================
 
