@@ -92,7 +92,10 @@ Checklists
    :maxdepth: 1
 
    checklists/python
+   checklists/project-done
+
    JOSS checklist (external) <https://joss.readthedocs.io/en/latest/review_checklist.html>
+
 
 
 Internal documents
