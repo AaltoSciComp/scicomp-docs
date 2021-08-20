@@ -63,14 +63,14 @@ need more knowledge to use Triton than most people learn in academic
 courses.
 
 Science-IT has created a (still under development) `modular
-training plan <https://handsonscicomp.readthedocs.io>`__, which
+training plan <https://hands-on.coderefinery.org>`__, which
 divides useful knowledge into levels.  In order to use Triton well, you need to be somewhat
 proficient at Linux usage (C level).  In order to do parallel work,
 you need to be good at the D-level and also somewhat proficient at the
 HPC level (E-level).  This tutorial and user guide covers the D-level,
 but it is up to you to reach the C-level first.
 
-See our `training program and plan <https://handsonscicomp.readthedocs.io>`__ for
+See our `training program and plan <https://hands-on.coderefinery.org>`__ for
 suggested material for self-study and lessons.  We offer routine
 training, see our :doc:`Scientific Computing in Practice lecture series
 </training/scip/index>` page for info.

@@ -197,4 +197,4 @@ These resources may be interesting to support your career as an RSE:
 * The `Society of Research Software Engineering <https://society-rse.org/>`__
 * :ref:`HPC and Triton <tutorials>`
 
-.. _hosc: https://handsonscicomp.readthedocs.io/
+.. _hosc: https://hands-on.coderefinery.org/

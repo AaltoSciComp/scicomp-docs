@@ -28,7 +28,7 @@ A few prerequisites:
 -  You should have enough background to use Triton well, including
    Linux skills.  Read
    `hands-on scientific computing
-   <https://handsonscicomp.readthedocs.io/en/latest/>`__, and you
+   <https://hands-on.coderefinery.org/>`__, and you
    should know A ("Basics"), C ("Linux"), and D ("HPC") well.  Also
    see the :ref:`Triton tutorials <tutorials>`.
 

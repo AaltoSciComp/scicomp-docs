@@ -119,9 +119,9 @@ also know the `Basics (A) <hosc-a_>`__ and `Linux (C) <hosc-c_>`__
 levels as a prerequisite.
 
 .. _tutorial-playlist: https://www.youtube.com/playlist?list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc
-.. _hosc: https://handsonscicomp.readthedocs.io/en/latest/
-.. _hosc-a: https://handsonscicomp.readthedocs.io/en/latest/#a-basics
-.. _hosc-c: https://handsonscicomp.readthedocs.io/en/latest/#c-linux-and-shell
+.. _hosc: https://hands-on.coderefinery.org/
+.. _hosc-a: https://hands-on.coderefinery.org/#a-basics
+.. _hosc-c: https://hands-on.coderefinery.org/#c-linux-and-shell
 
 .. toctree::
    :maxdepth: 1
