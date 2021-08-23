@@ -59,7 +59,7 @@ There are lots of other courses to take.
   * "Web show" on assorted topics related to scientific computing
   * Informal and unplanned
 
-* Hands-on Scientific Computing: https://handsonscicomp.readthedocs.io
+* Hands-on Scientific Computing: https://hands-on.coderefinery.org
 
   * Online course (more like a roadmap) of the most important untaught
     skills.

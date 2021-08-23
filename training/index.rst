@@ -96,7 +96,7 @@ There is a lot to learn, and it all depends on each other.  How do you
 get started?
 
 Our training map `Hands-on Scientific Computing
-<https://handsonscicomp.readthedocs.io>`__ sorts the skills you need
+<https://hands-on.coderefinery.org>`__ sorts the skills you need
 by level and category, providing you a strategy to get started.
 
 .. image:: /images/levels.svg

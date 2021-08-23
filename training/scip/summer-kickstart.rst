@@ -281,7 +281,7 @@ resources.  All times are EEST (Helsinki) time.
     development.
 
   * Look at `Hands-on Scientific Computing
-    <https://handsonscicomp.readthedocs.io>`__ for an online course to
+    <https://hands-on.coderefinery.org>`__ for an online course to
     either browse or take for credits.
 
   * `Cluster Etiquette (in Research Software Hour)

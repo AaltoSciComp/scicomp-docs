@@ -205,7 +205,7 @@ Credits
 - We don't assign credits for attending this course - we can't track
   attendance.
 - Use what you learn here in the online course Hands-on Scientific
-  Computing (https://handsonscicomp.readthedocs.io) to get credits.
+  Computing (https://hands-on.coderefinery.org) to get credits.
 
 
 Join us!
