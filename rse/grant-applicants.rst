@@ -5,7 +5,7 @@ For grant applicants
 
    Grant applicants, if you are planning to use Aalto Research Software Engineers service, feel free to contact us at rse-group at aalto.fi, or fill out our `request form <https://selfservice.esupport.aalto.fi/ssc/app#/order/2026/>`__.
 
-   This page is currently (2020-03) a draft for feedback.  Please send
+   This page is currently (2021-08) a draft for feedback.  Please send
    corrections to the person that send this page to you, or rse-group
    at aalto.fi
 
