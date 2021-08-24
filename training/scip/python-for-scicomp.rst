@@ -36,18 +36,22 @@ the course.  The `actual material is here
 * Richard Darst, Aalto Scientific Computing **(organizer)**
 
 **Time, date, place:** the course consists of four online hands-on
-sessions 3h each.  All times EEST, and program is tentative:
+sessions 3h each.  All times EEST (`convert 10:00 to your timezone
+<https://arewemeetingyet.com/Helsinki/2021-10-25/10:00>`__), and
+program is tentative:
 
-- ??? **Installation help session**
-- Mon 25.sep, 10:00-13:00 (Jupyter, numpy, matplotlib)
-- Tue 26.sep, 10:00-13:00 (scripts, packaging)
-- Wed 27.sep, 10:00-13:00 (scipy, pandas)
-- Thu 28.sep, 10:00-13:00 (library ecosystem, dependencies, Binder)
+- (week before) **Installation help session**
+- Mon 25.oct, 10:00-13:00 (Jupyter, numpy, matplotlib)
+- Tue 26.oct, 10:00-13:00 (scripts, packaging)
+- Wed 27.oct, 10:00-13:00 (scipy, pandas)
+- Thu 28.oct, 10:00-13:00 (library ecosystem, dependencies, Binder)
 - **Please connect to all sessions 10 minutes early**: icebreakers and
   intro already starts then.
 
 **Registration:** To be announced.  While the stream is available for
-everyone, if you register you can get HackMD access for asking questions.
+everyone, if you register you can get HackMD access for asking
+questions and will support our funding by contributing to our
+attendance statistics.
 
 **Credits:** Certificates are not provided for this course.
 
