@@ -1,25 +1,13 @@
 ===========================================
-Sept 2020 / Python for Scientific Computing
+Oct 2021 / Python for Scientific Computing
 ===========================================
 
 .. admonition:: Important info
 
-   * `Live stream <https://www.twitch.tv/coderefinery>`__
-   * `Installation instructions
-     <https://aaltoscicomp.github.io/python-for-scicomp/installation/>`__
-   * `Course material
-     <https://aaltoscicomp.github.io/python-for-scicomp/>`__
-   * `Twitch recordings of videos
-     <https://www.twitch.tv/coderefinery/videos>`__ (unprocessed, and
-     last only 14 days)
-   * YouTube archive of videos (coming soon, if you want to help us
-     produce these get in contact with us)
-   * Registration is full, but you can still follow the stream (see
-     below).  We aim for the stream to be as good as the main course,
-     so don't worry.
+   * Registration will open soon.
 
 Part of :doc:`Scientific Computing in Practice <index>` lecture series
-at Aalto University.
+at Aalto University, in partnership with `CodeRefinery <https://coderefinery.org>`__.
 
 This is a medium-advanced course in Python tools such as NumPy, SciPy,
 Matplotlib, and Pandas.  It is suitable for people who have a basic
@@ -36,8 +24,7 @@ include basic programming in Python.
 Practical information
 ---------------------
 
-This is an online course via Zoom (link sent to registered
-participants).  The course is also streamed via Twitch (the
+This is an online course streamed via Twitch (the
 `CodeRefinery channel <https://www.twitch.tv/coderefinery>`__) so that
 anyone may follow along without registration.  There is a HackMD link
 (collaborative edited notes) which is used for asking questions during
@@ -46,37 +33,25 @@ the course.  The `actual material is here
 
 **Instructors and organizers:**
 
-* Anne Claire Fouilloux, University of Oslo Department of Geosciences
-* Naoe Tatara, University of Oslo Libraries **(local organizer)**
-* Radovan Bast, University of Tromsø
 * Richard Darst, Aalto Scientific Computing **(organizer)**
-* Samantha Wittke, Finnish Geospatial Research Institute & Aalto University
-* Thor Wikfeldt, EuroCC National Competence Center Sweden, Uppsala University
 
 **Time, date, place:** the course consists of four online hands-on
-sessions 3h each:
+sessions 3h each.  All times EEST, and program is tentative:
 
-- Fri 11.sep, 15:30-16:30 **Installation help session**
-- Mon 14.sep, 10:00-13:00 (Jupyter, numpy, matplotlib)
-- Wed 16.sep, 10:00-13:00 (scripts, packaging)
-- Mon 21.sep, 10:00-13:00 (scipy, pandas)
-- Wed 23.sep, 10:00-13:00 (library ecosystem, dependencies, Binder)
+- ??? **Installation help session**
+- Mon 25.sep, 10:00-13:00 (Jupyter, numpy, matplotlib)
+- Tue 26.sep, 10:00-13:00 (scripts, packaging)
+- Wed 27.sep, 10:00-13:00 (scipy, pandas)
+- Thu 28.sep, 10:00-13:00 (library ecosystem, dependencies, Binder)
 - **Please connect to all sessions 10 minutes early**: icebreakers and
   intro already starts then.
 
-**Registration:** This is on online workshop: we currently plan for
-registrations via Zoom up to our capicity (for lectures+exercises,
-priority for Aalto→Finland→Nordics), or Twitch (lectures, for anyone).
-(Registration is now full, check back here for stream info.)
-
-You may register as a **team**, and your team will be kept together
-during exercise sessions within a breakout room.  If you come together
-with your friends or research group, you will be able to learn a lot
-more.  Even more so if you bring a helper with your group.
+**Registration:** To be announced.  While the stream is available for
+everyone, if you register you can get HackMD access for asking questions.
 
 **Credits:** Certificates are not provided for this course.
 
-**Additional course info at:** richard.darst -at- aalto.fi
+**Additional course info at:** scip -at- aalto.fi
 
 
 
@@ -151,17 +126,3 @@ Material
 
 News and notes
 --------------
-
-Week 37:
-
-* Please see the installation instructions (link above).  You need to
-  install anaconda *before* the first day, or else you will quickly
-  fall behind.  This class is so large that we won't be able to do
-  help you catch up.  You should also **verify your installation**
-  (this is part of the installation instructions).  On the Friday
-  before, we have an installation help session - you can join there
-  for help.
-
-* Please remember to join the meeting 10 minutes early.  Our
-  icebreakers and introductions already start then.  If you are on
-  time, you are late!

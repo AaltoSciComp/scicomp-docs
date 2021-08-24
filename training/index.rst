@@ -33,6 +33,7 @@ and/or Python, Matlab, HTCondor and many others.
    scip/matlab-advanced
    scip/summer-kickstart
    julia/julia-introduction
+   scip/python-for-scicomp
    scip/index
 
 .. toctree::
