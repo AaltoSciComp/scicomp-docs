@@ -10,7 +10,7 @@ As you have noticed we have expanded our aims, from a Triton/HPC-focused mindset
 
 **Time:** 14:00 - 15:00
 
-**Where:** https://aalto.zoom.us/j/65371910202
+**Where:** https://aalto.zoom.us/j/61322268370
 
 **Agenda:**
  - Who we are

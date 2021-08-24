@@ -34,10 +34,11 @@ Triton, SciComp, RSE, and CS
 
 .. admonition:: Link
 
-   https://aalto.zoom.us/j/65371910202, every day at 13:00
+   https://aalto.zoom.us/j/61322268370, every day at 13:00 (**2021-08:
+   new link**)
 
 You can meet us online, every weekday, at 13:00, `online via zoom
-<https://aalto.zoom.us/j/65371910202>`__.  Imagine this like walking
+<https://aalto.zoom.us/j/61322268370>`__.  Imagine this like walking
 into our office to ask for help. If you are not sure whether we can help you, come
 and chat with us anyway and we can figure out a solution together.
 
@@ -59,7 +60,7 @@ and chat with us anyway and we can figure out a solution together.
   and make sure you find the right person to help you, but you can always
   visit on any day and ask anything not related to the "focus".
 
-* Join on Zoom via https://aalto.zoom.us/j/65371910202 .  If joining
+* Join on Zoom via https://aalto.zoom.us/j/61322268370 .  If joining
   by web browser, use Chrome.  Audio doesn't work with Firefox or
   Safari.
 

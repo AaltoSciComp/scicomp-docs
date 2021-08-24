@@ -89,7 +89,7 @@ Garage
 
 .. admonition:: Link
 
-   https://aalto.zoom.us/j/65371910202, every day at 13:00
+   https://aalto.zoom.us/j/61322268370, every day at 13:00
 
 Daily :doc:`SciComp Garage sessions </help/garage>`, where you can
 informally chat.  This is especially useful when your question is not yet
