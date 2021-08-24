@@ -77,8 +77,6 @@ We have added some **focus days** (see list below), but you can always visit on 
   sensitive data, data management plans, legal and ethical issues with research data, workflows for working with big datasets. 
 * **Thursdays** are Triton focus days: Come ask about code parallelization, slurm job submissions, and usage of Triton cluster. 
 * **Fridays** are CS focus days.  
- 
-
 
 
 
@@ -92,17 +90,26 @@ This garage happens on Zoom every Monday and Wednesday from 11:00 to 12:00. The 
 
 
 
+Others
+------
+
+Aalto IT services runs something similar `for some other schools and
+departments
+<https://www.aalto.fi/en/news/new-service-for-researchers-it-support-via-zoom>`__.
+
+
 In person
 =========
 
-General garage (CS Building)
-----------------------------
-
 **In-person garages suspended for the time being for the
 obvious reason.  The online garage above is more frequent and even
-better.**
+better, because you can reach more people and we can share screen
+directly.**
 
 ..
+  General garage (CS Building)
+  ----------------------------
+
   -  Days: Every Thursday, 13-14
   -  Time: 13-14, we may leave after 30 minutes if there is no one (this
      rarely happens).
@@ -129,16 +136,16 @@ better.**
 
 
 
-NBE garage, F-building
-----------------------
+  NBE garage, F-building
+  ----------------------
 
-NBE garage used to happen in person every first
-wednesday of the month, room F336 13:00. NBE garage covers also
-issues related to working with **personal data, research ethics, best
-practices in biomedical research**.
+  NBE garage used to happen in person every first
+  wednesday of the month, room F336 13:00. NBE garage covers also
+  issues related to working with **personal data, research ethics, best
+  practices in biomedical research**.
 
-**Due to the current situation NBE garage
-happens online at the same time of the Aalto Sci Comp garage (see above).**
+  **Due to the current situation NBE garage
+  happens online at the same time of the Aalto Sci Comp garage (see above).**
 
 ..
   .. csv-table::
@@ -154,4 +161,5 @@ happens online at the same time of the Aalto Sci Comp garage (see above).**
 Past events
 ===========
 
-Scicomp Garage has existed since Spring 2017.
+Scicomp Garage has existed since Spring 2017.  It has been online
+since March 2020, and daily since summer 2020.
