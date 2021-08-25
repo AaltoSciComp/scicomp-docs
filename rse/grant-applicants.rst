@@ -5,20 +5,20 @@ For grant applicants
 
    Grant applicants, if you are planning to use Aalto Research Software Engineers service, feel free to contact us at rse-group at aalto.fi, or fill out our `request form <https://selfservice.esupport.aalto.fi/ssc/app#/order/2026/>`__.
 
-   This page is currently (2021-08) a draft for feedback.  Please send
-   corrections to the person that send this page to you, or rse-group
-   at aalto.fi
-
+   This page is currently (2021-08) our best understanding of what is
+   possible.  However, we are still exploring what works and doesn't,
+   so contact us early so we can work out bugs together.  Please send
+   corrections to us.
 
 
 If you've decided you would like to use the :doc:`research software
 engineer <index>` services in your project for a long period, you
-might want to write it directly into your grant proposals.  First off,
+might want to write it directly into your grant proposals.  If written
+correctly, this can increase your competitiveness:
 your research will be better because you can you can assign
 porting/optimizing/scaling of codes, data management and open science,
 automation, and so on for the RSEs, while concentrating the main
-project resources on the actual research question.  Second, it may make
-your proposal more attractive.
+project resources on the actual research question.
 
 
 
@@ -26,19 +26,17 @@ How it works
 ------------
 
 Short-term services are funded by various departments and schools and
-free to projects (part of the "research environment" services).
+free to the users (part of the "research environment" services).
 Longer term service should be funded by projects - either an external grant or
-basic group fund.  There are two ways to write this into a project proposal:
+basic funds.  There are two ways to write this into a project proposal:
 
 * As a **purchased service**, like usage of different infrastructures.
-  This is flexible, but there is a limit of how much you can include
-  in a grant.  Note that indirect costs and overheads by the research
-  site are not included, so these prices appear higher to
-  cover that.
+  This is flexible, but not compatible with some funders.  It should
+  work will with internal, basic funding.
 
 * As a **research salary**, just like other salaries on your project.
-  This has fewer limits, but is less flexible (you get one person for
-  a designated time period).
+  This has fewer limits, but is less flexible because we need to go
+  through HR and financial planning.
 
 
 
@@ -79,20 +77,25 @@ Interesting terms from the Academy: it urges research data and methods
 to be freely available.  6.2.2: "Research data and material produced
 with Academy funding in research projects and research infrastructure
 projects must be made freely available as soon as possible after the
-research results have been published."
+research results have been published."  We are experts in exactly
+this.
 
 * As a RSE salary:
 
+  * Contact us and we will connect you with our controllers to work
+    out costs.
+
   * "Salaries, fees and indirect employee costs" may be included in
     Academy projects.  These may go to research software engineers,
-    which to the academy appear equivalent to "normal" researchers.
+    which to the academy appear equivalent to "normal researchers".
     The RSEs *are* researchers.
 
   * Write in a Research Software Engineer as a salary for a set number
     of months.  You may specify a name as N.N., or contact us for a
-    name to include.  We do *not* promise any one person at any one
-    time, but we will work with you as much as possible.  See LINK for
-    costs per person.  You can also :doc:`contact us <request>` to
+    name to include.  We do *not* promise any one person,
+    but we will work with you as much as possible.  Contact us for
+    costs per person and we will put you in touch with our
+    controllers.  You can also :doc:`contact us <request>` to
     discuss how much effort you may need.
 
   * The RSE and timeframe will be set at the beginning of the grant.
@@ -106,7 +109,7 @@ research results have been published."
     implementation of the research plan or action plan (or
     equivalent). Short-term research, studies or other assignments
     may also be carried out in the form of outsourced services."  So,
-    consider the balance of this and purchased services.
+    consider this in justifying the research plan.
 
 * As a service purchase:
 
@@ -116,13 +119,14 @@ research results have been published."
       service purchase) is not really possible for Academy grants.
       You must use "As a RSE salary" above.
 
+  * Please contact us for general costs, and how many person-months
+    you can get for a given price (it is roughly on "Staff Scientist"
+    level).  Since estimating the amount of effort
+    needed is difficult, :doc:`contact us <request>` and we can
+    help you prepare with the help of our controllers.
+
   * The research site should provide "basic project facilities", which
     Aalto does.  Justify the extra purchase as beyond the basics.
-
-  * Please see LINK for our general costs, and how many person-months
-    you can get for a given price.  Since estimating the amount of effort
-    needed is difficult, :doc:`contact us <request>` and we can
-    help you prepare an estimate.
 
   * Maximum amount: We recommend you include no more than XXXXX as a
     service purchase.  Please see LINK (login required) for our
@@ -145,9 +149,6 @@ research results have been published."
 European Commission grants
 --------------------------
 
-.. warning::
-
-   Internal billing is (for practical purposes) not possible
-   for EC grants.  Use RSE salary as for Academy of Finland.
-
-TODO
+Internal billing is (for practical purposes) not possible
+for EC grants.  Use the "RSE salary" as described for the Academy
+of Finland above.
