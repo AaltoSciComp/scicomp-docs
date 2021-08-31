@@ -10,7 +10,7 @@ For RSE candidates and community
      following the `Society-RSE job vacancies
      <https://society-rse.org/careers/vacancies/>`__ form.
    * If you are inside of Aalto, join the :doc:`RSE community mailing list
-     <community>`__ (mailing list).  This will get announcements of
+     <community>` (mailing list).  This will get announcements of
      both our jobs, events, and other research groups looking to hire
      a RSE skillset.
 
