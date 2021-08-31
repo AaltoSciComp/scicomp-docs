@@ -10,7 +10,7 @@ Part of :doc:`Scientific Computing in Practice <index>` lecture series at Aalto 
 
 
 **Lecturers:** 
-Enrico Glerean, Dan Häggman, Abraham Zewoudie
+Enrico Glerean, Dan Häggman
 
 **Time, date, place:** the course consists of four online hands-on sessions. Zoom link to be posted to the registered participants list
 
