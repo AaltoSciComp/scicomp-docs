@@ -1,13 +1,6 @@
 Research Software Engineers
 ===========================
 
-.. seealso::
-
-   In July-August 2021 we are hiring: `job advertisement
-   <https://aalto.wd3.myworkdayjobs.com/aalto/job/Otaniemi-Espoo-Finland/Research-software-engineer_R31680>`__
-   and :doc:`more info <become-a-rse>`.
-
-
 The Aalto `Research Software Engineers <rse-history_>`_ (RSEs) provide
 specialist support regarding
 software, computing, and data. As research becomes more digital and

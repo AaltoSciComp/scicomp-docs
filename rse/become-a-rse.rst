@@ -3,7 +3,16 @@ For RSE candidates and community
 
 .. seealso::
 
-   In July-August 2021 we are hiring: `job advertisement <https://aalto.wd3.myworkdayjobs.com/aalto/job/Otaniemi-Espoo-Finland/Research-software-engineer_R31680>`__.
+   We occasionally hire people.  To get notified (of this and other
+   similar jobs):
+
+   * If you are looking for jobs inside and outside of Aalto, consider
+     following the `Society-RSE job vacancies
+     <https://society-rse.org/careers/vacancies/>`__ form.
+   * If you are inside of Aalto, join the :doc:`RSE community mailing list
+     <community>` (mailing list).  This will get announcements of
+     both our jobs, events, and other research groups looking to hire
+     a RSE skillset.
 
 This page is designed to guide people into the interesting world of
 research software engineering: providing a view into the types of
