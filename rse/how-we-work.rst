@@ -130,8 +130,9 @@ TODO: future updates
 Funding practicalities
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Right now, most service is free to all users in the School of
-Science.  In the future, longer-term projects can be funded by
+Right now, most service is free to all researchers in member
+departments.  (Member departments can be seen on our :doc:`front page
+<index>`.)  Longer-term projects can be funded by
 internal invoicing or directly hiring our RSE onto your grant, the
 same as salary of any researcher would work.
 

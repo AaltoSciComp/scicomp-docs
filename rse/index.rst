@@ -31,10 +31,10 @@ grant applications.
 
 .. _rse-history: https://www.software.ac.uk/blog/2016-08-17-not-so-brief-history-research-software-engineers-0
 
-This service is free for staff of member departments.  Departments can
-join this program and make this service to its community as a standard
-service.  Current member departments are CS, NBE, PHYS, and SCI
-overall.
+This service is free for everyone at Aalto thanks to a pilot grant
+from Aalto IT Services.  Member schools/departments have more time
+allocated and are currently CS, NBE, PHYS, and SCI overall (and others
+may join).
 
 .. admonition:: Contact
 

@@ -5,7 +5,7 @@ Our pilot is funded by departments and schools, and members of these
 units can receive the basic services free of charge (in accordance to
 the shares of funding). In addition to the basic service, researchers
 can request :doc:`dedicated advanced services <researchers>` (see list
-above). Advanced services are funded directly by the research group 
+above). Advanced services are funded directly by the research group
 and their funding replaces part of their unit's share.
 
 .. admonition:: Case study: Systematic improvements
