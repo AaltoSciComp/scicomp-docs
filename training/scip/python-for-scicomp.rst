@@ -1,13 +1,13 @@
-========================================================
+==========================================================
 Oct 25th - Oct 28th 2021 / Python for Scientific Computing
-========================================================
+==========================================================
 
 .. admonition:: Important info
 
    * Registration will open soon.
 
 Part of :doc:`Scientific Computing in Practice <index>` lecture series
-at Aalto University, in partnership with `CodeRefinery <https://coderefinery.org>`
+at Aalto University, in partnership with `CodeRefinery <https://coderefinery.org>`__
 and `Norwegian Research Infrastructure Services (NRIS) <https://www.sigma2.no/nris>`__.
 
 This is a medium-advanced course in Python tools such as NumPy, SciPy,
