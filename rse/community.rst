@@ -24,7 +24,11 @@ make a community of these people.  By taking part, you can:
   this site </README>`, helping to develop services, or teaching with us.
 
 To join the community, see the :doc:`general SciComp community page
-</help/community>`.  Also, you should take part in the `Nordic-RSE
+</help/community>`.  You may want to join the `Aalto RSE community
+mailing list <https://list.aalto.fi/mailman/listinfo/rse>`__, which is
+a general-purpose list which anyone may post to, including possibly
+internal job advertisements or other random discussion.  Also, you
+should take part in the `Nordic-RSE
 Finland chats <https://nordic-rse.org/communities/finland/>`__ - there
 is a strong Aalto presence there, and we use that as our Aalto chat
 time, too.

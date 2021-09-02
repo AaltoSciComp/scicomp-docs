@@ -54,7 +54,8 @@ Mailing lists
   here <https://list.aalto.fi/mailman/listinfo/scicomp-announcements>`__.
 * Join `our Research Software Engineer mailing list
   <https://list.aalto.fi/mailman/listinfo/rse>`__ for information on
-  research software related topics and the RSE community at Aalto.
+  research software related topics and the RSE community at Aalto,
+  possibly including discussion and internal job advertisements.
 
 
 
