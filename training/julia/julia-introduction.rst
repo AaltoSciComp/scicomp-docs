@@ -1,5 +1,5 @@
 ===================================
-August 2021 / Introduction to Julia
+October 2021 / Introduction to Julia
 ===================================
 
 
