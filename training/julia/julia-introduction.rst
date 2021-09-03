@@ -7,9 +7,7 @@ Course basics
 =============
 An introduction to the Julia programing language by Science IT at Aalto University.
 
-The course takes place over two days, August 10 and 11 from 9:00 to 13:00.
-On the first day we introduce the Julia language itself and on the second day
-we go in some more detail into performance, types and the Julia package ecosystem.
+The course takes place over two days, October 10 and 11 from 9:00 to 14:00.
 
 **Before the course** Please follow the installation instructions on the
 `course page <https://github.com/AaltoRSE/julia-introduction#installing-julia>`__
@@ -17,6 +15,7 @@ we go in some more detail into performance, types and the Julia package ecosyste
 **Materials**: The materials can be found
 on the course `GitHub page <https://github.com/AaltoRSE/julia-introduction>`__.
 Instructions for using the Jupyter notebooks can also be found there.
+
 
 **Place:** Online, zoom link will be sent to registered participants
 
