@@ -1,13 +1,13 @@
-===================================
+====================================
 October 2021 / Introduction to Julia
-===================================
+====================================
 
 
 Course basics
 =============
-An introduction to the Julia programing language by Science IT at Aalto University.
+An introduction to the Julia programming language by Science IT at Aalto University.
 
-The course takes place over two days, October 10 and 11 from 9:00 to 14:00.
+The course takes place over two days, October 4 and 5 from 9:00 to 14:00.
 
 **Before the course** Please follow the installation instructions on the
 `course page <https://github.com/AaltoRSE/julia-introduction#installing-julia>`__
