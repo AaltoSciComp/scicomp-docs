@@ -143,6 +143,8 @@ Other links
   process of being formed (Aalto SciComp and the RSE program is a
   member).
 
+* `Our page on aalto.fi <https://www.aalto.fi/en/services/research-software-engineers>`__.
+
 * `History of the RSEs concept <https://www.software.ac.uk/blog/2016-08-17-not-so-brief-history-research-software-engineers-0>`__
 
 * `Who is a RSE? <https://rse.ac.uk/who/>`__
