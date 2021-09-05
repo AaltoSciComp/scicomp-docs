@@ -29,8 +29,11 @@ build a course, you need to be prepared to do your own scripting and
 connections using the terminal.
 
 
-You may find the book `Teaching and Learning with Jupyter
-<https://jupyter4edu.github.io/jupyter-edu-book/>`__ helpful.
+You may find the `Noteable documentation
+<https://noteable.edina.ac.uk/documentation/>`__ (serves as a nbgrader
+user guide) and book `Teaching and Learning with Jupyter
+<https://jupyter4edu.github.io/jupyter-edu-book/>`__ (broad, less
+useful) helpful.
 
 Currently we support Python the most, but there are `other language
 kernels available for Jupyter
