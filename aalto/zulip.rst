@@ -12,8 +12,8 @@ student and chat privacy.
 
 The primary distinguishing feature of Zulip is **topics**, which
 allows one to make order out of a huge number of messages.  By using
-topics, you can narrow to a certain thread of conversation (while not
-hiding all the older conversations from the main view).
+topics, you can narrow to a certain thread of conversation while not
+losing sight of the overall flow of messages.
 
 .. toctree::
    :hidden:
@@ -160,6 +160,10 @@ Other hints
 - "Mute a stream" (or topic) is useful when you want to stay
   subscribed but not be notified of messages by default.  You can
   still find it if you click through the sidebar.
+
+- You can also request notifications for everything in a certain
+  stream.  This could be good for announcement streams, or your
+  particular projects.
 
 - The desktop and mobile apps can support `multiple organizations
   <https://api.zulip.com/help/switching-between-organizations>`__.  At

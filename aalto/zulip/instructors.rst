@@ -133,8 +133,10 @@ The exact questions and answers:
 
 * You can manage users here.
 * Please be careful with who you assign admins/owners. These roles should be
-  only given to course staff
-
+  only given to course staff.
+* The "moderator" role can has extra permissions assigned, such as
+  managing streams and renaming topics.  This could be good for course
+  staff/TAs.
 
 
 Practical hints
@@ -182,10 +184,21 @@ suggestions for you, based on what other teachers have learned.
 
   * Some common streams you might want are ``#general``,
     ``#announcements``, ``#questions``.  Some people have one stream
-    per homework, exam, and/or task.
+    per homework, exam, theme, and/or task.
 
-* If you want a Q&A forum, make a stream called ``#questions`` and
-  direct students there.
+  * The main point of streams is to be able to independently filter,
+    mute, and subscribe to notifications.  For example, it might be
+    useful to view all questions about one homework in order, or
+    request email notifications from the ``#announcements`` stream.
+
+* You can create user groups (teams) with a certain name.  The group
+  can be ``@``-mentioned together, or added to a stream.
+
+* If you want a Q&A forum, make a stream called ``#questions``, or
+  smaller streams for specific topics, and direct students there.
+
+  * Note: there is default support for "resolving a topic" with a
+    check mark that is coming in the next Zulip version.
 
   * Remind students to make a *new topic* for each new question.  This
     enables good follow-up via "Recent topics"
