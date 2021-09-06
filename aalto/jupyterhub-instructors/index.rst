@@ -7,9 +7,16 @@ JupyterHub for instructors
    Teaching <../jupyterhub>`.  For research purposes, see :doc:`Triton
    JupyterHub </triton/apps/jupyter>`.
 
-   nbgrader documentation is at https://nbgrader.readthedocs.io/, and
-   is necessary reading to understand how to use it.  It is not
-   duplicated here.
+Nbgrader documentation is at https://nbgrader.readthedocs.io/, and
+is necessary reading to understand how to use it.  However, the
+Noteable service documentation
+(https://noteable.edina.ac.uk/documentation/) is generally much
+better, and most of it is applicable to here as well.  The
+information included in these is not duplicated here, and is
+*required* in order to use jupyter.cs.
+
+Below, you mostly find documentation specific to jupyter.cs and
+important notes you do not find other places.
 
 
 .. toctree::
