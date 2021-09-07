@@ -28,4 +28,4 @@ Instructions for using the Jupyter notebooks can also be found there.
 
 
 Based on
- - "`Introduction to Julia <https://github.com/csc-training/julia-introduction>`__" by CSC
+ - Materials based on "`Introduction to Julia <https://github.com/csc-training/julia-introduction>`__" by CSC
