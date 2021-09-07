@@ -23,9 +23,9 @@ Instructions for using the Jupyter notebooks can also be found there.
 
 **Registration:**
 
-`Please register at this link <https://docs.google.com/forms/d/e/1FAIpQLSdGfGAwR4VljcoHe8695O5tf2KNZ87wGdA-w6PS6yDmLCVIHQ/viewform?usp=sf_link>`__
+`Please register at this link <https://docs.google.com/forms/d/e/1FAIpQLScSJIjvAaNn8VCgw5-77mZYwEEG5RCKZDBn4Qa9QINuwdF-Ww/viewform?usp=sf_link>`__
 
 
 
 Based on
- - "`Introduction to Julia <https://github.com/csc-training/julia-introduction>`__" by CSC
+ - Materials based on "`Introduction to Julia <https://github.com/csc-training/julia-introduction>`__" by CSC
