@@ -27,6 +27,15 @@ a directory in your working directory.
    ln -sT $WRKDIR/matlab-config ~/.matlab
    quotafix -gs --fix $WRKDIR/matlab-config
 
+
+In order to avoid some issues matlab is by default run as a singlethread 
+instance on the cluster. to use matlab internal multithreading you have
+to call ``matlab_multithread`` instead of ``matlab``.
+If you use multithreaded matlab, and particularily workers keep in mind, 
+that matlab uses your home folder as storage for the worker files, so 
+if you run multiple jobs you have to keep the worker folders seperate 
+(see below). 
+
 Interactive usage
 -----------------
 
@@ -206,6 +215,7 @@ parallel\_Matlab3.m::
             try
                     % Initialize the parallel pool
                     c=parcluster();
+                    % Ensure that workers don't overlap with other jobs on the cluster
                     t=tempname()
                     mkdir(t)
                     c.JobStorageLocation=t;
@@ -283,3 +293,4 @@ unexpected files like ``pathdef.m`` in there?  Remove them.
 Also, check your home quota.  Often ``.matlab`` gets large and fills up
 your home directory.  Check the answer at the very top of the page,
 under "Matlab Configuration".
+
