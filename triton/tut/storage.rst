@@ -262,13 +262,10 @@ On different operating systems:
 
 * Linux (Ubuntu for example): File manager (Nautilus) → File →
   Connect to server.  Use the ``smb://`` URLs above.
-* Windows: In the file manager, go to Computer (in menu bar on top, at
-  least in Windows 10) → Map Network Drive) and "Map Network Drive".
-  In Windows 10 → "This PC" → right click → "Add Network Location".
-  (Note that this is different from right-click "Add network location"
-  which just makes a folder link and has had some problems in the past.)
-  Use the URLs above but replace ``smb://`` with ``\\`` and ``/`` with
-  ``\``.  For example, ``\\data.triton.aalto.fi\scratch\``.
+* Windows 10: In the "File Explorer", go to "This PC" → "Computer"
+  menu at the top → "Map Network Drive".  Use the URLs above but
+  replace ``smb://`` with ``\\`` and ``/`` with ``\``.  For example,
+  ``\\data.triton.aalto.fi\scratch\``.
 * Mac: Finder → Go → Connect to Server.  Use the ``smb://`` URLs above.
 * From Aalto managed computers, you can use ``lgw01.triton.aalto.fi``
   instead of ``data.triton.aalto.fi`` and it might auto-login.
