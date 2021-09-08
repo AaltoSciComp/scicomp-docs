@@ -2,12 +2,16 @@
 News
 ====
 
-*7-9/06/2021* New Triton user? Join our course on how to use Triton and HPC https://scicomp.aalto.fi/training/scip/summer-kickstart/
+*8/09/2021* `Research Software Hour <https://researchsoftwarehour.github.io/>`__ Twitch show is back at a different time. Join us today at 15:00 to talk about "Computers for research 101: The essential course that everyone skipped".
 
-Please note that during the summer our `daily garage </help/garage/>`__ has a slightly different schedule. Furthermore, if you are into research software, join our `Research Software Hour <https://researchsoftwarehour.github.io/>`__ Twitch show, *usually* every thursday at 21:30 (Helsinki time). 
+Join our `daily zoom garage </help/garage/>`__ for any scientific computing related issue (not just Triton!) or to just chat and feel part of the community.  
 
 News archive
 ~~~~~~~~~~~~
+
+*9/8/2021* We are back from the summer break. Our  `zoom garage </help/garage/>`__schedule is back to normal (every day at 13:00).
+
+*7-9/06/2021* New Triton user? Join our course on how to use Triton and HPC https://scicomp.aalto.fi/training/scip/summer-kickstart/
 
 *10/05/2021* CodeRefinirey online workshop starts today. Tune in for git intro part 1. If you did not register, you can watch via Twitch: https://www.twitch.tv/coderefinery
 
