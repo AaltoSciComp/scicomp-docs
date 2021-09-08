@@ -28,6 +28,7 @@ important notes you do not find other places.
    request-course
    course-data
    nbgrader
+   testing-a-course
    nbgrader-hints
    autograding
    public-copy
