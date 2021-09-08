@@ -9,7 +9,7 @@ Join our `daily zoom garage </help/garage/>`__ for any scientific computing rela
 News archive
 ~~~~~~~~~~~~
 
-*9/8/2021* We are back from the summer break. Our  `zoom garage </help/garage/>`__schedule is back to normal (every day at 13:00).
+*9/8/2021* We are back from the summer break. Our  `zoom garage </help/garage/>`__ schedule is back to normal (every day at 13:00).
 
 *7-9/06/2021* New Triton user? Join our course on how to use Triton and HPC https://scicomp.aalto.fi/training/scip/summer-kickstart/
 
