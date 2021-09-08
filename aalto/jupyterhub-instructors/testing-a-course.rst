@@ -11,9 +11,16 @@ Test as an instructor
 
 As an instructor, you can release assignments, then go to the student
 view, fetch, do, submit, etc.  This is the same experience as students
-would get, and there is not really much more to test other than this.
-You can and TAs (or TAs you add just for this purpose) can test this
-way.
+would get, and really is the full experience (there is not much else
+to test).
+You and your TAs can test this way - and of course you can add others
+just for the purpose of testing it this way.
+
+Of course, you can add TAs just for the purpose of testing it like
+this, and this would be recommended (as long as nothing is secret is
+the course directory at the time you are doing these tests - remember
+to remove them later).  You can do this yourself using the group
+management service we send you (domesti.cs).
 
 An instructor also has an option in the server list to spawn as a
 student.  This hides the ``/course`` directory and makes the
@@ -27,15 +34,18 @@ Send assignments yourself
 
 Before all this fancy Jupyter interface, nbgrader was very simple:
 send assignments around manually.  For example, they would post
-assignments on the course webpage, people would submit, and they would
-be unpacked to the right format.  This is still probably the best way
-to test things out.
+assignments on the course website, people would submit via the course
+site, and they would be downloaded and unpacked into the right places
+in the course directory.  This is still probably the best way to test
+things out.
 
-* To send an assignment to someone: download and send from
-  ``/course/release/$assignment_id/$name.ipynb``.
-* Send (e.g. email, posting somewhere) to someone.  They send it back
-  to you when done.  They can do it on their own computer, or upload
-  to jupyter.cs to do it.
+Steps:
+
+* To send an assignment to someone: download the generated release
+  version from ``/course/release/$assignment_id/$name.ipynb`` .
+* Send (e.g. email) to someone.  They send it back to you when done.
+  They can do the assignment on their own computer, or upload to
+  jupyter.cs to do it (the "general use" server works fine).
 * To receive the assignment, put it back in the course dir as
   ``/course/submitted/$STUDENT_NAME/$assignment_id/$name.ipynb``.
   ``$STUDENT_NAME`` is invented by you, but the others should match.
@@ -43,24 +53,28 @@ to test things out.
 That is all: now you can autograde and all, completely normally.
 *This is all that the web interface does anyway*.
 
-When you are done testing, you can delete these ``$STUDENT_NAME``\ s.
-There is also some command to delete them from the database, or more
-likely you might remove the whole ``gradebook.db`` to make sure you
-start fresh.
+When you are done testing, you can delete these ``$STUDENT_NAME``
+directories.  There is also some command to delete them from the
+database if you want, or more likely you might remove the whole
+``gradebook.db`` to make sure you start fresh.
+
+The shell access (and other data access, see
+:doc:`system-environment`) makes it easy to manage these files, copy
+them in and out, and so on.
 
 
 
 Add student testers while in private mode
 -----------------------------------------
 
-Your course can be private, and we can add students who can launch it
-(as students, not as instructors).
+While your course is still in private mode, you can add dedicated
+student testers.
 
+- While this works, we don't recommend it unless you really need a lot
+  of testers.  It is manual work to set up, and manual work to
+  remove.  And likely we are going to forget to clean it up later.
 - Send us a list of Aalto emails or usernames to add.
-- This is manual work, we don't recommend doing this.  Plus, we are
-  eventually going to forget that we added these special students,
-  they will maintain access even after the course, and whe knows what
-  else.
+- Just like above, you may need to clean up these test students.
 
 
 
