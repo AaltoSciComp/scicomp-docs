@@ -31,8 +31,8 @@ much).
 
 
 
-Send assignments yourself
--------------------------
+Send assignments to testers yourself
+------------------------------------
 
 Before all this fancy Jupyter interface, nbgrader was very simple:
 send assignments around manually.  For example, they would post
@@ -70,22 +70,13 @@ Add student testers while in private mode
 -----------------------------------------
 
 While your course is still in private mode, you can add dedicated
-student testers.
+student testers.  This might be useful before the course becomes public.
 
 - While this works, we don't recommend it unless you really need a lot
   of testers.  It is manual work to set up, and manual work to
   remove.  And likely we are going to forget to clean it up later.
-- Send us a list of Aalto emails or usernames to add.
 - Just like above, you may need to clean up these test students.
-
-
-
-Nbgrader on your own computer
------------------------------
-
-You can always install nbgrader yourself, on your own computer, to
-test out how it works.  Probably this is not for everyone, but is
-effective to test things out.
+- Send us a list of Aalto emails or usernames to add.
 
 
 
@@ -98,4 +89,14 @@ be a lot of work for us (and some for you, when you need to transfer
 files over - but if you use git that part won't be that bad).
 
 In general, we don't do this - one of the above options should work
-for you.
+for you.  Even if you do this, you likely have to combine with some of
+the above tasks (requesting us to add students while in private mode).
+
+
+
+Nbgrader on your own computer
+-----------------------------
+
+You can always install nbgrader yourself, on your own computer, to
+test out how it works.  Probably this is not for everyone, but is
+effective to test things out.
