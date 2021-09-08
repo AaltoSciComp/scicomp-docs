@@ -9,12 +9,14 @@ There are different options.
 Test as an instructor
 ---------------------
 
+The instructor functions don't overlap with the student functions: you
+don't need some special way to test the student experience.
+
 As an instructor, you can release assignments, then go to the student
 view, fetch, do, submit, etc.  This is the same experience as students
 would get, and really is the full experience (there is not much else
-to test).
-You and your TAs can test this way - and of course you can add others
-just for the purpose of testing it this way.
+to test).  You and your TAs can test this way - and of course you can
+add others just for the purpose of testing it this way.
 
 Of course, you can add TAs just for the purpose of testing it like
 this, and this would be recommended (as long as nothing is secret is
