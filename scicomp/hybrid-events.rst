@@ -9,8 +9,8 @@ type of event.
 
 
 
-General considerations
-----------------------
+Why hybrid?
+-----------
 
 * Why do you want hybrid, as opposed to online or in-person?  If you
   can't clarify the purpose to yourself, it may be hard to put on a
@@ -38,9 +38,10 @@ General considerations
   you, answer basic questions, etc.  This person should be able to
   interrupt you immediately for pressing questions.
 - Audio is the most important part and will most often go wrong.  Make
-  sure you use microphones well, don't count on room mics, do an audio
-  check before, ask audience if it is good and make sure they tell you
-  early if things get worse.
+  sure you use microphones well, don't count on wide-area room mics,
+  do an audio check days before and immediately before, ask audience
+  if it is good, and make sure they tell you immediately if problems
+  develop.early if things get worse.
 
 Feedback and interaction
 ~~~~~~~~~~~~~~~~~~~~~~~~
