@@ -30,7 +30,7 @@ quotas (by project) by default, so there is nothing special you should
 need to do.
 
 If you want to look deeper, check the project ID with ``lfs
-project -d {path}` and quotas with ``lfs quota -hp {project_id}``.
+project -d {path}`` and quotas with ``lfs quota -hp {project_id}``.
 
 Unlike the previous situation, there should be much fewer possible
 quota problems.
