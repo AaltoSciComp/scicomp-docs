@@ -36,7 +36,7 @@ General considerations
 - Audio is the most important part and will most often go wrong.  Make
   sure you use microphones well, don't count on room mics, do an audio
   check before, ask audience if it is good and make sure they tell you
-  early if things get worse
+  early if things get worse.
 
 Feedback and interaction
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -79,11 +79,17 @@ There are different types of feedback tools:
 
 
 
-Tech: zoom
+Tech: Zoom
 ----------
 
 Zoom, and other meeting software, have many of the features that can
-be used for an easy, self-service hybrid event.
+be used for an easy, self-service hybrid event.  We assume you know
+how to use Zoom (or equivalent) by yourself for an online meeting, and
+here we describe the changes for hybrid events.
+
+The advantage of using normal meeting software is that you don't need
+to learn a new tool and it is perfectly reasonable to do everything
+self-service.
 
 - Classrooms set up for hybrid work have camera inputs hooked up to
   the room cameras.  There is a separate control panel for switching
