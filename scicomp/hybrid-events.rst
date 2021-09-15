@@ -3,7 +3,9 @@ Hybrid events
 
 This page is our recommendations/ideas for hybrid events (in-person
 plus online components).  It may be out of place on scicomp.aalto.fi,
-but it's the best place we have to put them right now.
+but it's the best place we have to put them right now.  Unlike other
+recommendations, this page is not just for teaching but applies to any
+type of event.
 
 
 
@@ -15,12 +17,14 @@ General considerations
   successful event.
 
   * In-person gives better chances to talk in small groups and among
-    your friends, both during and after the event.
+    your friends, both during and after the event.  (Is your in-person
+    event disadvantaging introverts or less well connected people?)
   * Online allows anyone to participate with a lower threshold.  If
     you do it right, you could allow anyone in the world to take part.
 
-As a side note, try to take full advantage of small groups in online
-events by having personal chats
+As a side note, for massive events, participants can get a full
+experience by having their own group chat to discuss the topics,
+separate from the event chats.
 
 
 General considerations
@@ -45,21 +49,29 @@ One of the biggest advantage of online events is the combination of
 multiple communication channels, so that it is not just extroverts
 asking questions.
 
-- Have a clear way to get feedback (like presomo).  Make sure that the
-  current presenter can always see it, a good recommendation is a
-  separate computer with it large font next to your presentation
-  computer.  To encourage people to use this, it is best to also
-  screenshare/project it, so that the audience can see that it is in
-  active use.
+- Have a clear way to get feedback (like presomo).  Make it very
+  explicit how this works.  Have some icebreaker polls/questions.
 - Require in-person audience to ask questions via the feedback tool,
-  not via voice.  Distributing microphones will be too much work, also
-  voice questions bias towards extroverts, and you will be able to
-  better order your answers.  Text questions also allow other people
-  to answer and give help at the same time.
+  not via voice.  Distributing microphones is a lot of work and will
+  often be forgotten, and also voice questions bias towards
+  extroverts, and you will be able to better order your answers.  Text
+  questions also allow other people to answer and give help at the
+  same time.  If a question becomes a discussion, you could distribute
+  microphones.
 - When feedback and questions are done well, they can be published
   along with the talk (make sure you announce this in advance).
   Especially the "document-based" method below is very good for this,
   since it can be fixed up after the course.
+- Make sure that the current presenter can always see the questions.
+  A good recommendation is a separate computer with it large font next
+  to your presentation computer.
+- To encourage people to use this, it is best to also
+  screenshare/project it, so that the audience can see that it is in
+  active use.  This takes some screen space, but can be well worth it
+  if it increases interaction.
+- If the text communication tool is the same as the rest of what the
+  event uses, and has good treading support, then you get even more
+  synergies.
 
 There are different types of feedback tools:
 
@@ -104,6 +116,42 @@ self-service.
   material in advance allows online (and in-person) people to use
   multiple channels at the same time, if it suits them.
 
+Zoom audio in a classroom
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+As described above, audio is one of the most important considerations.
+In principle it is easy, but there are many details to consider.
+
+
+* The first is your goals: we have three categories, (presenter),
+  (in-person audience), (online audience).  Which of them should hear
+  each other?
+* The main thing is to prevent audio feedback.  To solve this, it is
+  important to have one machine as the audio master in the room (it
+  has both the microphone and speakers connected to it).  This also
+  prevents the presenter from having their audio go back into the room
+  via the online meeting.
+* **Presenter → online** can be done with microphones connected to a
+  computer, for example the classroom computer connected to the
+  microphones or a bluetooth microphone.
+* **In-person audience → online**, in practice, needs to be done by
+  passing around microphones.  An wide-area microphone might work, or
+  might not.
+* **Online → in-person** is a bit more interesting.  You can connect
+  the audio computer to the speakers in the room (or external
+  speakers).  You will need to position the speakers to avoid feedback
+  into the microphones as much as possible, and adjust all the
+  different volumes.
+* To adjust for different sound levels of the different groups, you
+  might need someone continually monitor and go adjusting the volumes
+  of the various microphones separately.
+
+Overall, you could say that voice communications is the main point of
+in-person meetings.  But it is also the hardest to scale to a large
+audience.  Consider if you can get text feedback and interaction
+working well, and then perhaps you could skip audio - and perhaps the
+entire effort of a hybrid event?
+
 
 
 Tech: dedicated A/V setup
@@ -112,7 +160,7 @@ Tech: dedicated A/V setup
 We have put on an event with a dedicated A/V setup, with external
 microphones, etc.  In the end, it also used Zoom to broadcast to the
 world, so was quite similar to the above.  Perhaps this recommendation
-is obsolete?
+is obsolete and one should just use the above as a starting point?
 
 TODO: more info
 
