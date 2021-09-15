@@ -23,8 +23,8 @@ scratch, so if you ever get a "disk quota exceeded" error, then read on.
 
    To check your home directory usage, run: ``du -xh $HOME | sort -h``
 
-How quotas work
----------------
+Lustre (scratch/work) quotas
+----------------------------
 
 .. note::
 
