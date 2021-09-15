@@ -19,7 +19,9 @@ Lustre (scratch/work) quotas
 .. note::
 
    Before 2021-09-15, quotas worked differently, and used group IDs
-   rather than project IDs.
+   rather than project IDs.  There were many things that could go
+   wrong and give you "disk quota exceeded" even though there appeared
+   to be enough space.
 
 There are both quotas for users and projects
 (/m/$dept/scratch/$project).  We use project IDs for this (see
