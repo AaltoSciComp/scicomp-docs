@@ -7,6 +7,7 @@ Scientific computing tips
 
    encryption
    git
+   hybrid-events
    jupyter-pitfalls
    nbscript
    packaging-software
