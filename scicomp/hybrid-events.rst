@@ -184,3 +184,16 @@ detailed description.
 
 See also
 --------
+
+Aalto University links:
+
+- Rooms with lecture capture built-in (or filter by "Lecture capture"
+  in booking system):
+  https://wiki.aalto.fi/display/OPIT/Lecture+capture+spaces
+- Hybrid teaching recommendations (not really focused on technology,
+  but how to engage):
+  https://wiki.aalto.fi/display/OPIT/Hybrid+teaching+in+Aalto+University
+- Another lecture Zoom-capture idea (Uses a smartphone and a bluetooth
+  microphone, simple but may miss some communication channels. This could
+  be combined with the above.):
+  https://wiki.aalto.fi/display/OPIT/Zoom#expand-Case1Onlineandinpersonlecturesimultaneously
