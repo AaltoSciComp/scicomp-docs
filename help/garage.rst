@@ -15,9 +15,31 @@ Come if you want to:
 -  Network with others who are doing similar work and learn something
    new
 
+What kind of issues can we help on:
+
+- Code and Software:
+	- Issues with your code or software tools you use (e.g. debugging, setting up software, linking libraries)
+	- Code parallelization
+	- Code versioning, git, testing
+
+- Data Management:
+	- Data management plans, data sharing
+	- Handling of sensitive data and general legal and ethical (to some extent) questions about research data
+	- Workflows for big dataset
+	- Data versioning
+	
+- Triton cluster:
+	- Slurm job submissions
+	- Cluster usage
+	- Script setup
+	- Module management / Library loading
+	
+- General:
+	- Basic methodological or statistical issues 
+
 Notes:
 
-* All garages are open to all people (but see the specialities).
+* All garages are open to all people.
 
 * You don't have to have a specific question, you can come by just to
   chat, listen, or figure out if you should have a question.
@@ -67,7 +89,7 @@ and chat with us anyway and we can figure out a solution together.
 
 **Focus days**
 
-We have added some **focus days** (see list below), but you can always visit on any day and ask anything not related to the "focus".
+We have added some **focus days** (see list below), but you can always visit on any day and ask anything not related to the "focus". But even if today is not your focus day: Better come along and ask your question now. Chances are good someone will know an answer.
 
 * **Mondays** no special focus, come ask anything.
 * **Tuesdays** are Research Software Engineering focus days: Come ask about
