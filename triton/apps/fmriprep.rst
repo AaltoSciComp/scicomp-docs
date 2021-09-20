@@ -1,7 +1,7 @@
 FMRIprep
 ~~~~~~~~
 
-**September 2021**: Note that the previous module we had installed (fmriprep 20.2.0) has been FLAGGED by the developers. Please do not use `module load singularity-fmriprep/latest`.
+**September 2021**: Note that the previous module we had installed (fmriprep 20.2.0) has been FLAGGED by the developers. Please do not use ``module load singularity-fmriprep/latest``.
 
 ::
 
