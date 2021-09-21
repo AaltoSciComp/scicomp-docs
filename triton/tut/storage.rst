@@ -299,6 +299,8 @@ Easiest is to set up your ssh config (``.ssh/config``) on your machine as follow
         Hostname triton.aalto.fi
         ProxyJump kosh    
 
+
+Instead of ``kosh``, you can also use ``taltta`` or any other shell server (see :doc:`Remote Access <../../aalto/remoteaccess/#linux-shell-servers>`) as a proxy to jump the firewall.
 You can now open a graphic file manager that supports the sftp protocol (e.g. Files on Aalto Linux), and open:
 
 ``sftp://triton_via_kosh``
