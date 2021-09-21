@@ -285,16 +285,16 @@ Remote mounting using SFTP (Linux and Mac)
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can use sftp and one of the shell servers to mount triton directly to your machine.
-Easiest is to set up your ssh config (.ssh/config) on your machine as follows (replace username by your username):
+Easiest is to set up your ssh config (.ssh/config) on your machine as follows (replace USERNAME by your username):
 
 ::
 
     Host kosh
-        User username
+        User USERNAME
         Hostname kosh.aalto.fi
     	
     Host triton_via_kosh	
-        User username
+        User USERNAME
         Hostname triton.aalto.fi
         ProxyJump kosh    
 
@@ -311,7 +311,7 @@ which will direct you to the root folder of triton. To access scratch use:
 
 And to access your home folder use:
 
-``sftp://triton_via_kosh/home/username``
+``sftp://triton_via_kosh/home/USERNAME``
 
 
 
