@@ -287,6 +287,7 @@ Remote mounting using SFTP (Linux and Mac)
 You can use sftp and one of the shell servers to mount triton directly to your machine.
 Easiest is to set up your ssh config (.ssh/config) on your machine as follows (replace username by your username):
 
+::
     Host kosh
 	User username
 	Hostname kosh.aalto.fi
