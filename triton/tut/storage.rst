@@ -288,14 +288,15 @@ You can use sftp and one of the shell servers to mount triton directly to your m
 Easiest is to set up your ssh config (.ssh/config) on your machine as follows (replace username by your username):
 
 ::
+
     Host kosh
-	User username
-	Hostname kosh.aalto.fi
+        User username
+        Hostname kosh.aalto.fi
     	
     Host triton_via_kosh	
-    	User username
-    	Hostname triton.aalto.fi
-    	ProxyJump kosh    
+        User username
+        Hostname triton.aalto.fi
+        ProxyJump kosh    
 
 You can now open a graphic file manager that supports the sftp protocol (e.g. `Files` on Aalto Linux), and open:
 
