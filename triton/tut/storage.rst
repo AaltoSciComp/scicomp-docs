@@ -281,8 +281,9 @@ directly or ``AALTO\username``.
    section) to make your work as smooth as possible (or use
    vdi.aalto.fi, see below.
 
+
 Remote mounting using SFTP (Linux and Mac)
-~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can use sftp and one of the shell servers to mount triton directly to your machine.
 Easiest is to set up your ssh config (``.ssh/config``) on your machine as follows (replace ``USERNAME`` by your username):
