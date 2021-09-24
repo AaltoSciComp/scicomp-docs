@@ -36,12 +36,34 @@ General considerations
 - Related to the above (possibly the same person), have someone to
   help interface with the audience and relay questions from them to
   you, answer basic questions, etc.  This person should be able to
-  interrupt you immediately for pressing questions.
+  interrupt you immediately for pressing questions.  For the largest
+  events, have two: one person answering questions directly, one
+  selecting and queuing questions for the speakers.
 - Audio is the most important part and will most often go wrong.  Make
   sure you use microphones well, don't count on wide-area room mics,
   do an audio check days before and immediately before, ask audience
   if it is good, and make sure they tell you immediately if problems
   develop.early if things get worse.
+- Consider activities for during breaks for the people online.  Yes,
+  you need to be slow to give people a chance to go get their coffee,
+  but also can you do something during breaks.  Are there some ways to
+  facilitate online↔in-person networking during breaks?
+- The meeting begins well before the scheduled time for random
+  discussion, and ends well after scheduled time for post-meeting
+  discussion.  Don't end the online discussion right after the meeting
+  (this is an important lesson even for online meetings!).
+- For the reasons above, you need more staff than a single-faceted
+  event.  For each of registration, entertaining people during breaks,
+  etc, you will need someone to do the same thing for the online
+  people, and usually it would be better if you have someone focusing
+  on each audience (at the same time working together to bring the
+  them together).
+- What about after the event.  If you have streamed it, you could also
+  record it.  Can you do this while maintaining privacy of all
+  participants, so that this information is not lost and reuseable
+  later?  What follow-up communication and so on can you do?  Start
+  thinking of this early.
+
 
 Feedback and interaction
 ~~~~~~~~~~~~~~~~~~~~~~~~
