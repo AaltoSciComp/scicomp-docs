@@ -30,7 +30,7 @@ along with the CodeRefinery instructions.
 
 
 Linux
-=====
+-----
 
 You need to be primary user in order to install your own packages.
 Ask your IT support to make you if you aren't already.  You can check
@@ -66,7 +66,7 @@ won't work since you aren't root, but you can make an alias in
 Docker: you can't easily do this on the Aalto laptops, but it is optional.
 
 Mac
-===
+---
 
 You also need to be primary user to install software.
 
@@ -83,7 +83,7 @@ Jupyter: use it via Anaconda, no need to install.
 
 
 Windows
-=======
+-------
 
 You should request a workstation-admin account ("``wa account``"),
 then you can install everything.  Note: these instructions are not
