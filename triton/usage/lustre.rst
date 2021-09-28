@@ -85,12 +85,6 @@ To reset back to the default settings, run
 
     lfs setstripe -d path/to/directory
 
-Monitoring Lustre usage
-~~~~~~~~~~~~~~~~~~~~~~~
-
-You can monitor your jobs' Lustre usage with our
-:doc:`jobstats-utility </triton/usage/jobstats>`.
-
 Lustre: common recommendations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
