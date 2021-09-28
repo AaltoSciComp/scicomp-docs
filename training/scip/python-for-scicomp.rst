@@ -4,7 +4,7 @@ Oct 25th - Oct 28th 2021 / Python for Scientific Computing
 
 .. admonition:: Important info
 
-   * Registration will open soon.
+   * `Click here to register <https://forms.gle/BwRdDuMrKNVKpug3A>`__.
 
 Part of :doc:`Scientific Computing in Practice <index>` lecture series
 at Aalto University, in partnership with `CodeRefinery <https://coderefinery.org>`__
@@ -49,7 +49,7 @@ program is tentative:
 - **Please connect to all sessions 10 minutes early**: icebreakers and
   intro already starts then.
 
-**Registration:** To be announced.  While the stream is available for
+**Registration:** `Click here to register <https://forms.gle/BwRdDuMrKNVKpug3A>`__.  While the stream is available for
 everyone, if you register you can get HackMD access for asking
 questions and will support our funding by contributing to our
 attendance statistics.
