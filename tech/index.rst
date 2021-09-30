@@ -82,6 +82,10 @@ Topics
   + RSE program: spring 2021 summary. Impact we have made so far.
   + `Presentation <https://docs.google.com/presentation/d/1Ti4TvjAilnElk9ITBZVsMnR0g7pfgPg8t5HHe2YOQs4>`__, `Video <https://youtu.be/rvuwLSKLaJI&list=PLZLVmS9rf3nN1Rj-TAqFEzFM22Y1kJmvn>`__
 
+- Fri 8.10 10:15, Introduction to a Kubernetes deployment, Richard Darst
+
+  + What is Kubernetes and how to make a simple Kubernetes deployment
+
 - Mikko Hakala (fall 2021)
 
   + Triton authentication
