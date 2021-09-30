@@ -135,6 +135,21 @@ self-service.
   computer to share screen, and use the room computer to share the
   camera view + sound.  You can tell any other presenters to do the
   same.
+- Consider how you screenshare if it should be a two-way meeting
+  (online audience should be visible to local audience):
+
+  - Zoom in "Dual monitor mode" (find under general settings) actually
+    produces two windows, one with the {current speaker or screenshare} and
+    one with the gallery.  If you have two monitors in the room, this
+    makes a great experience: the entire gallery is visible and if
+    someone uses zoom "raise hand", it is apparent to everyone.
+  - If you do the above, the current speaker can present from their
+    desk via screenshare.  This may be easier than transferring to the
+    presentation computer.
+  - Remember to share the collaborative notes, agenda, and/or chat by
+    default, so that people are motivated to use that instead of
+    speaking over each other.
+
 - Remember the benefits of being online.  Providing slides and
   material in advance allows online (and in-person) people to use
   multiple channels at the same time, if it suits them.
