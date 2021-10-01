@@ -2,8 +2,8 @@
 FCCI Tech (fka Behind Triton)
 =============================
 
-This is a series of talks about HPC infrastructure administration in
-Practice.  It started as our internal kickstart to new members of our
+This is a series of talks about scientific computing support and HPC infrastructure administration in
+practice.  It started as our internal kickstart to new members of our
 staff, but the scope is expanded and now others interested in research
 infrastructure is invited, though our orientation is still primarily
 on the Triton team and FCCI admins.  Typical attendee are involved in
@@ -21,66 +21,76 @@ discuss.
 Practicalities
 ==============
 
-Time: The next speaker announce the time/date of the seminar the week
+**Time:** The next speaker announce the time/date of the seminar the week
 before. The speaker sends invitation with the Zoom link.
 
-Duration: Rough estimate: ~40 minutes by the main speaker + ~20
+**Duration:** Rough estimate: ~40 minutes by the main speaker + ~20
 minutes questions/discussion, if any.
 
-Place: Zoom, ask for an invitation but it is usually the :doc:`garage
+**Location:** Zoom, ask for an invitation but it is usually the :doc:`garage
 link </help/garage>`.
 
+**Recordings:** You can view a playlist of *some* videos `on youtube
+<https://www.youtube.com/playlist?list=PLZLVmS9rf3nN1Rj-TAqFEzFM22Y1kJmvn>`__
+(and a few more are available to our team internally).
+
 *It is not a right but a priveledge to participate. Free.*
+
+
 
 Topics
 ======
 
-- Wed 3.3, 10:00, Ivan Degtyarenko
+- Wed 3.3, 10:00, **Triton hardware**, Ivan Degtyarenko
 
   + Triton hardware wise: machine room, different archs, IPMI, hardware troubleshooting
   + [Material includes sensitive data, can be provided on request]
 
-- Fri 12.3, 10:15-11:15, Ivan Degtyarenko
+- Fri 12.3, 10:15-11:15, **Triton networking**, Ivan Degtyarenko
 
   + Networking: IB and Ethernet setup, IB islands, troubleshooting
   + [Material includes sensitive data, provided on request]
 
-- Mon 22.3 14-15, Mikko Hakala
+- Mon 22.3 14-15, **Ansible for FCCI**, Mikko Hakala
 
   + Ansible, provisioning with OpenHPC, stanalone servers
 
-- Mon 29.3 14-15, Richard Darst
+- Mon 29.3 14-15, **User support in Aalto Scientific Computing**, Richard Darst
 
   + User support made easy: different support level by Science IT,
     docs, issue tracker, garage, etc
   + :doc:`Presentation <user-support>`, `Video <https://youtu.be/P1ttGhPGuN0&list=PLZLVmS9rf3nN1Rj-TAqFEzFM22Y1kJmvn>`__
 
-- Fri 9.4 10:15-11:15, Simo Tuomisto
+- Fri 9.4 10:15-11:15, **Triton software stack**, Simo Tuomisto
 
   + Triton / FCCI software stack: Spack, building software, ...
 
-- Fri 30.4 10:15, Richard Darst
+- Fri 30.4 10:15, **Jupyter at Aalto**, Richard Darst
 
   + Jupyter setup at Aalto `jupyter.triton.aalto.fi <https://jupyter.triton.aalto.fi/hub/login>`_, best practices.
 
-- Fri 7.5 10:15, Simo Tuomisto
+- Fri 7.5 10:15, **Anaconda on Triton**, Simo Tuomisto
 
   + Anaconda setup on Triton
 
-- Fri 14.5 10:15, Richard Darst
+- Fri 14.5 10:15, **Sphinx documentation**, Richard Darst
 
   + Open and accessible documentation using Sphinx, RST/MyST, and
     Readthedocs: the story behind scicomp.aalto.fi.
   + :doc:`Presentation <sphinx-docs>`, `Video <https://youtu.be/X6OzCSiS_VU&list=PLZLVmS9rf3nN1Rj-TAqFEzFM22Y1kJmvn>`__
 
-- Tue, 18.5 12:00, Andreas Muller (HPE) 
+- Tue, 18.5 12:00, **ClusterStor**, Andreas Muller (HPE)
 
   + Storage systems: ClusterStor hardware and software behind Triton's new /scratch. Manitenance, troubleshooting.
 
-- Fri 28.5 10:15, Jarno Rantaharju, Marijn van Vliet, and Richard Darst
+- Fri 28.5 10:15, **RSE service status update**, Jarno Rantaharju, Marijn van Vliet, and Richard Darst
 
   + RSE program: spring 2021 summary. Impact we have made so far.
   + `Presentation <https://docs.google.com/presentation/d/1Ti4TvjAilnElk9ITBZVsMnR0g7pfgPg8t5HHe2YOQs4>`__, `Video <https://youtu.be/rvuwLSKLaJI&list=PLZLVmS9rf3nN1Rj-TAqFEzFM22Y1kJmvn>`__
+
+- Fri 8.10 10:15, **Introduction to a Kubernetes deployment**, Richard Darst
+
+  + What is Kubernetes and how to make a simple Kubernetes deployment
 
 - Mikko Hakala (fall 2021)
 
