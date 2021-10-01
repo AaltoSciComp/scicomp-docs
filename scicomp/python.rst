@@ -111,6 +111,12 @@ conda instead.
 Conda environments
 ~~~~~~~~~~~~~~~~~~
 
+.. seealso::
+
+   Watch a `Research Software Hour episode on conda
+   <https://www.youtube.com/watch?v=ddCde5Nu2qo&list=PLpLblYHCzJAB6blBBa0O2BEYadVZV3JYf>`__
+   for an introduction + demo.
+
 A conda environment lets you install all your own packages. For
 instructions how to create, activate and deactivate conda envrionments
 see http://conda.pydata.org/docs/using/envs.html .
