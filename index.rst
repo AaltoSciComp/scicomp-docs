@@ -3,20 +3,22 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-==========================
-Aalto Scientific Computing
-==========================
+==================================================
+Welcome to the Pages of Aalto Scientific Computing
+==================================================
 
-This site contains documentation about scientific and data-intensive computing
-at Aalto and beyond.  It is targeted towards Aalto researchers, but
-has some useful information for everyone.  The data management section
-is useful even to non-computational researchers.
+We are here to offer Aalto users support with scientific programming 
+questions, usage of the triton cluster and data management.
+For these topics we have created several `Tutorials</triton/#Tutorials>`__ offer a daily support 
+`Garage</help/garage/>`__ and provide `Training courses</Training/>`__ throught the year. 
+
 
 :doc:`Aalto Scientific Computing
 </about/index>` maintains these pages with the :doc:`help of the Aalto community <README>`.
 [`twitter <https://twitter.com/SciCompAalto>`__]  We consist of
-Science-IT (HPC, the Triton cluster), certain department ITs, and
+Science-IT (HPC, the Triton cluster and RSEs), certain department ITs, and
 other friends.  :doc:`You can join us </about/join>`.
+Along with general Welcome guide:
 
 .. toctree::
    :maxdepth: 1
@@ -24,6 +26,13 @@ other friends.  :doc:`You can join us </about/join>`.
    aalto/welcomeresearchers
    aalto/welcomestudents
 
+we have created a quick-guide to set up your system, access and use triton
+
+.. toctree::
+   :maxdepth: 1
+   
+   triton/quickstart
+   
 News
 ====
 .. include:: /news/index.rst
