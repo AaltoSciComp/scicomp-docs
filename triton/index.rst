@@ -32,6 +32,8 @@ Quick contents and links
 	   <https://docs.csc.fi/support/support-howto/>`_
 
        * :doc:`Quick Reference <ref/index>`
+       
+.. _triton_tutorial_link:
 
        * Tutorials (start here)
 

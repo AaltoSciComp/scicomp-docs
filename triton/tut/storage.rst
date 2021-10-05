@@ -232,7 +232,7 @@ directories at ``/m/cs/scratch/$project/``.  The department shell
 server is ``magi.cs.aalto.fi`` and has these available.
 
 
-
+.. _remote_access_to_data:
 Remote access
 -------------
 
