@@ -392,6 +392,7 @@ With all modern OS it is also possible to just open your OS file manager (e.g. N
 
 If you are connecting from remote and cannot use the VPN, you can connect instead to department machines like kosh.aalto.fi, amor.org.aalto.fi (for NBE). The port is 22. *Note:* If you do not see your shared folder, you need to manually specify the full path (i.e. the folder is there, just not yet visible).
 
+.. _rsync_data_transfer:
 
 Using rsync
 ~~~~~~~~~~~

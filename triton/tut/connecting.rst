@@ -108,20 +108,21 @@ install an X server (XQuartz).
 
 Windows
 -------
+If you are running Win10 with a recent update you should be able to follow
+the same instructions as the linux/mac installation. The only difference is
+that your config file and .ssh folder are in ``C:\Users\username\.ssh``, so 
+anytime a tutorial refers to ``~/.ssh`` use ``C:\Users\username\.ssh`` instead.
+to start the CLI on a windows machine run the cmd command (start -> run -> cmd).
 
-You need to install a ssh client yourself:  `PuTTY <https://www.chiark.greenend.org.uk/~sgtatham/putty/>`__ is
-the standard one.  If you want to run graphical programs, you need an X server on
-Windows: see this
+If this doesn't work, you need to  install a ssh client yourself:  
+`PuTTY <https://www.chiark.greenend.org.uk/~sgtatham/putty/>`__ is the standard one.
+
+In both instances, if you want to run graphical programs, you need an X server on
+Windows: see this 
 `link <http://www.geo.mtu.edu/geoschem/docs/putty_install.html>`__ for
 some hints.  (Side note: putty dot org is an advertisement site trying to
 get you to install something else.)
 
-You should configure this with the hostname, username, and save the
-settings so that you can connect quickly.
-
-If you are outside the Aalto networks, you need to first connect to
-``kosh.aalto.fi`` or some other server, and then use the Linux
-instructions to connect to Triton.
 
 Advanced options
 ----------------
