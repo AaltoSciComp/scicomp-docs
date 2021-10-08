@@ -28,16 +28,14 @@ each year (using the system below)
 Internal time tracking
 ----------------------
 
+(This section is for our RSEs)
+
 In addition to the financial tracking above, it seems we have to keep
 a separate tracking of what projects we work on because not every
 project is reportable via Halli.
 
 Right now we propose that time tracking is done through Gitlab, within
 the issue opened for each "project".
-
-## Time tracking
-
-(This section is for our RSEs)
 
 * Be aware that it takes some time to get up to speed with a project.
   This should be considered when making the initial estimate, during
@@ -54,6 +52,8 @@ the issue opened for each "project".
   overhead work times are managed separately.
 
 Gitlab commands:
+~~~~~~~~~~~~~~~~
+
 * Use these within the issue as a comment, to control the time
   allocation.
 * ``TIME-RECORD`` has the form ``XXmoYYwZZdUUhVVm`` for ``XX`` month, ``YY`` 
@@ -69,20 +69,22 @@ Gitlab commands:
 * ``/timesaved TIME-RECORD [YYYY-MM-DD]`` - estimate total researcher time 
   saved, this is important for us to see how efficient we are.
 
-## Project management and results:
+Project management and results:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Most projects should have a few details associated with them, like contact 
 details of the requesting researcher and potentially also their supervisor.
 
 Gitlab commands for project details:
+
 * ``/contacts EMAIL[, EMAIL [...]]`` - who we usually communicate with, 
   note that these people will get update emails, when the project is updated.
-* ``/supervisor EMAIL[, EMAIL [...]]`` - PI(s) responsible for research (not
-   usually contacted)
+* ``/supervisor EMAIL[, EMAIL [...]]`` - PI(s) responsible for research (not 
+  usually contacted)
 * ``/summary TEXT`` - text to be added to the summary bullet points of this
   project. Takes the whole note as text, but should be a single sentence.
-
-
+  
+  
 For an overview of our work we try to keep track on what kind of results are 
 supported by it. For this we keep a record of associated publications either
 in the form of papers, software or datasets. It is also interesting to see 
@@ -91,11 +93,12 @@ those, this number can easily increase at a later point if software we
 produced or systems we set in place are used by more people. 
 
 Gitlab commands for project outcomes:
-* ``/projects INT`` - number of researcher projects supported by this RSE project
-* ``/publications INT`` - number of publications supported by this RSE project
-* ``/software INT`` - number of software packages supported by this RSE project
-* ``/datasets INT`` - datasets supported by this RSE project
-* ``/outputs INT`` - number of open science outputs produced other than the categories above
+
+* ``/projects INT`` - number of researcher projects supported by this RSE project  
+* ``/publications INT`` - number of publications supported by this RSE project  
+* ``/software INT`` - number of software packages supported by this RSE project  
+* ``/datasets INT`` - datasets supported by this RSE project  
+* ``/outputs INT`` - number of open science outputs produced other than the categories above  
 
 
 
