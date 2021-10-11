@@ -4,7 +4,7 @@ Oct 25th - Oct 28th 2021 / Python for Scientific Computing
 
 .. admonition:: Important info
 
-   * `Click here to register <https://forms.gle/BwRdDuMrKNVKpug3A>`__. If you are from Norway, `please register here <https://skjemaker.app.uib.no/view.php?id=11270960>`__. If you are from Sweden, `please register here <https://docs.google.com/forms/d/e/1FAIpQLSdte5EQYJonddYPDtby6D6YKtJ38oEyQ6lgkBUkJGHl4MS1Qg/viewform?usp=pp_url>`__.
+   * `Click here to register <https://forms.gle/8ez7eEjv3pty2DWh9>`__. If you are from Norway, `please register here <https://skjemaker.app.uib.no/view.php?id=11270960>`__. If you are from Sweden, `please register here <https://docs.google.com/forms/d/e/1FAIpQLSdte5EQYJonddYPDtby6D6YKtJ38oEyQ6lgkBUkJGHl4MS1Qg/viewform?usp=pp_url>`__.
 
 Part of :doc:`Scientific Computing in Practice <index>` lecture series
 at Aalto University, in partnership with `CodeRefinery <https://coderefinery.org>`__
@@ -52,7 +52,7 @@ program is tentative:
 - **Please connect to all sessions 10 minutes early**: icebreakers and
   intro already starts then.
 
-**Registration:** `Click here to register <https://forms.gle/BwRdDuMrKNVKpug3A>`__.
+**Registration:** `Click here to register <https://forms.gle/8ez7eEjv3pty2DWh9>`__.
 If you are from Norway, `please register here <https://skjemaker.app.uib.no/view.php?id=11270960>`__.
 If you are from Sweden, `please register here <https://docs.google.com/forms/d/e/1FAIpQLSdte5EQYJonddYPDtby6D6YKtJ38oEyQ6lgkBUkJGHl4MS1Qg/viewform?usp=pp_url>`__.
 While the stream is available for everyone, if you register
