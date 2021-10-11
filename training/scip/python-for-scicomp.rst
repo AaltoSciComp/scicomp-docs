@@ -4,7 +4,7 @@ Oct 25th - Oct 28th 2021 / Python for Scientific Computing
 
 .. admonition:: Important info
 
-   * `Click here to register <https://forms.gle/BwRdDuMrKNVKpug3A>`__. If you are from Norway, `please register here <https://skjemaker.app.uib.no/view.php?id=11270960>`__. If you are from Sweden, `please register here <https://docs.google.com/forms/d/e/1FAIpQLSdte5EQYJonddYPDtby6D6YKtJ38oEyQ6lgkBUkJGHl4MS1Qg/viewform?usp=pp_url>`__. 
+   * `Click here to register <https://forms.gle/BwRdDuMrKNVKpug3A>`__. If you are from Norway, `please register here <https://skjemaker.app.uib.no/view.php?id=11270960>`__. If you are from Sweden, `please register here <https://docs.google.com/forms/d/e/1FAIpQLSdte5EQYJonddYPDtby6D6YKtJ38oEyQ6lgkBUkJGHl4MS1Qg/viewform?usp=pp_url>`__.
 
 Part of :doc:`Scientific Computing in Practice <index>` lecture series
 at Aalto University, in partnership with `CodeRefinery <https://coderefinery.org>`__
@@ -29,12 +29,15 @@ This is an online course streamed via Twitch (the
 `CodeRefinery channel <https://www.twitch.tv/coderefinery>`__) so that
 anyone may follow along without registration.  There is a HackMD link
 (collaborative edited notes) which is used for asking questions during
-the course.  The `actual material is here
+the course.  If you would like to attend for to get live help and do
+exercises, you may register via one of the links below (this is highly
+recommended!).  The `actual material is here
 <https://aaltoscicomp.github.io/python-for-scicomp/>`__.
 
 **Instructors and organizers:**
 
 * Richard Darst, Aalto Scientific Computing **(organizer)**
+* ... and many more.
 
 **Time, date, place:** the course consists of four online hands-on
 sessions 3h each.  All times EEST (`convert 10:00 to your timezone
@@ -49,11 +52,11 @@ program is tentative:
 - **Please connect to all sessions 10 minutes early**: icebreakers and
   intro already starts then.
 
-**Registration:** `Click here to register <https://forms.gle/BwRdDuMrKNVKpug3A>`__. 
+**Registration:** `Click here to register <https://forms.gle/BwRdDuMrKNVKpug3A>`__.
 If you are from Norway, `please register here <https://skjemaker.app.uib.no/view.php?id=11270960>`__.
 If you are from Sweden, `please register here <https://docs.google.com/forms/d/e/1FAIpQLSdte5EQYJonddYPDtby6D6YKtJ38oEyQ6lgkBUkJGHl4MS1Qg/viewform?usp=pp_url>`__.
-While the stream is available for everyone, if you register 
-you can get HackMD access for asking questions and will support 
+While the stream is available for everyone, if you register
+you can get HackMD access for asking questions and will support
 our funding by contributing to our attendance statistics.
 
 **Credits:** Certificates are not provided for this course.
@@ -71,13 +74,10 @@ Preparation
 **Preparation:** Online workshops can be a productive format, but it
 takes some effort to get ready.  Browse these resources:
 
-* `Attending an online workshop
-  <https://coderefinery.github.io/manuals/how-to-attend-online/>`__,
-  good to read in detail (ignore the CodeRefinery-specific parts).
+* `Attending a livestream workshop
+  <https://coderefinery.github.io/manuals/how-to-attend-stream/>`__,
+  good to read in detail.
 * `How to use HackMD to take answer questions and hold discussions <https://coderefinery.github.io/manuals/hackmd-mechanics/>`__.
-* `The Zoom mechanics we will use
-  <https://coderefinery.github.io/manuals/zoom-mechanics/>`__, might
-  be useful to browse.
 * It is useful to `watch <https://youtu.be/56p6xX0aToI>`__ or `read
   <https://scicomp.aalto.fi/scicomp/shell/>`__ the Linux shell crash
   course, since these basic command line concepts are always useful.
@@ -92,7 +92,8 @@ Software installation:
     this course without any local installations.  Perhaps not
     everything, but it will be OK for most people.
 
-* `Zoom <https://coderefinery.github.io/installation/zoom/>`__.
+* `Zoom <https://coderefinery.github.io/installation/zoom/>`__, if you
+  are registered for one of the exercise sessions.
 
 
 
