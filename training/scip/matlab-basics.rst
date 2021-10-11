@@ -1,5 +1,5 @@
 ========================
-Nov 2020 / Matlab Basics
+Nov 2021 / Matlab Basics
 ========================
 
 Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
@@ -16,7 +16,7 @@ Teaching will be interactive, “learning by doing”.
 
 **Course webpage**
 
-Check a detailed list of topics and other information at the `Matlab Basics course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/-/tree/master/AY20202021/MatlabBasics2020#matlab-basics-2020-ay-2020-2021>`__.
+Page under construction. Last year's `Matlab Basics course webpage <https://version.aalto.fi/gitlab/eglerean/matlabcourse/-/tree/master/AY20202021/MatlabBasics2020#matlab-basics-2020-ay-2020-2021>`__.
 
 **Schedule:**
 
