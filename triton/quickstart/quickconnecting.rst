@@ -42,8 +42,8 @@ Connecting via ssh
       have a look at the following pages:  
       
       * :doc:`Shell crash course </scicomp/shell>`  
-      * :doc:`Configuration and use of ``ssh``<../scicomp/ssh>`  
-      * :doc:`SSH fingerprints <usage/ssh-fingerprints>` 
+      * :doc:`Configuration and use of ``ssh``</scicomp/ssh>`  
+      * :doc:`SSH fingerprints <../usage/ssh-fingerprints>` 
 
 Setting up ssh for passwordfree access
 --------------------------------------
@@ -79,26 +79,28 @@ For this purpose you have to connect to the respective servers and add your publ
 the ``authorized_keys`` file in the servers ``.ssh/`` folder.
 
 ::
-# Connect and log in to kosh
-ssh kosh
-# Open the authorized_keys file and copy your public key.
-nano .ssh/authorized_keys
-# Copy your public key into this file
-# to save the file press ctrl + x and the confirm with y
-# afterwards exit from kosh
-exit
+
+    # Connect and log in to kosh
+    ssh kosh
+    # Open the authorized_keys file and copy your public key.
+    nano .ssh/authorized_keys
+    # Copy your public key into this file
+    # to save the file press ctrl + x and the confirm with y
+    # afterwards exit from kosh
+    exit
 
 Now you do the same for triton by using our defined proxy jump over kosh.
 
 ::
-# Connect and log in to kosh
-ssh triton_via_kosh
-# Open the authorized_keys file and copy your public key.
-nano .ssh/authorized_keys
-# Copy your public key into this file
-# to save the file press ctrl + x and the confirm with y
-# afterwards exit from triton
-exit
+
+    # Connect and log in to kosh
+    ssh triton_via_kosh
+    # Open the authorized_keys file and copy your public key.
+    nano .ssh/authorized_keys
+    # Copy your public key into this file
+    # to save the file press ctrl + x and the confirm with y
+    # afterwards exit from triton
+    exit
 
 
 Now, to connect to triton you can simply type:
