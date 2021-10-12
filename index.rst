@@ -29,11 +29,9 @@ Along with general Welcome guide,
 we have created a quick-guide to set up your system, access and use triton
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
-   triton/quickstart/quickconnecting.rst   
-   triton/quickstart/quickdata.rst
-
+   triton/quickstart/index
    
 News
 ====
