@@ -110,6 +110,14 @@ Overview
 
 .. _tutorials:
 
+Reference and Examples
+======================
+.. toctree::
+   :maxdepth: 1
+
+   ref/index
+   examples/index
+
 Tutorials
 =========
 These are designed to be read (or `watched <tutorial-playlist_>`__) in-order by every Triton user when they
@@ -162,12 +170,3 @@ See our :doc:`general information <apps/index>` and the full list below:
 
    apps/index
    apps/*
-
-
-Reference and Examples
-======================
-.. toctree::
-   :maxdepth: 1
-
-   ref/index
-   examples/index
