@@ -108,7 +108,14 @@ Overview
    usagepolicy.rst
    acknowledgingtriton.rst
 
-.. _tutorials:
+
+Quick reference
+===============
+.. toctree::
+   :maxdepth: 1
+
+   ref/index
+
 
 Tutorials
 =========
@@ -140,16 +147,9 @@ levels as a prerequisite.
    tut/parallel.rst
    tut/dependency.rst
 
-Detailed instructions
-=====================
-.. toctree::
-   :maxdepth: 1
-   :glob:
-
-   usage/*
-
 .. _application-list:
 .. _apps:
+
 
 Applications
 ============
@@ -164,10 +164,21 @@ See our :doc:`general information <apps/index>` and the full list below:
    apps/*
 
 
-Reference and Examples
-======================
+Examples
+========
+
 .. toctree::
    :maxdepth: 1
 
-   ref/index
    examples/index
+
+.. _tutorials:
+
+
+Detailed instructions
+=====================
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   usage/*
