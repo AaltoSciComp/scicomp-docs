@@ -113,4 +113,12 @@ Topics
 
   - Online courses and CodeRefinery
 
+- Science-IT data management: policies and procedures
+
+- Science-IT data management: storage systems and tech setup
+
+- History and structure of FCCI
+
+- Security
+
 - add more here
