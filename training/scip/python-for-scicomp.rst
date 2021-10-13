@@ -4,7 +4,16 @@ Oct 25th - Oct 28th 2021 / Python for Scientific Computing
 
 .. admonition:: Important info
 
-   * `Click here to register <https://forms.gle/8ez7eEjv3pty2DWh9>`__. If you are from Norway, `please register here <https://skjemaker.app.uib.no/view.php?id=11270960>`__. If you are from Sweden, `please register here <https://docs.google.com/forms/d/e/1FAIpQLSdte5EQYJonddYPDtby6D6YKtJ38oEyQ6lgkBUkJGHl4MS1Qg/viewform?usp=pp_url>`__.
+   * If you are from Finland, `click here to register <https://forms.gle/8ez7eEjv3pty2DWh9>`__. If you are from Norway, `please register here <https://skjemaker.app.uib.no/view.php?id=11270960>`__. If you are from Sweden, `please register here <https://docs.google.com/forms/d/e/1FAIpQLSdte5EQYJonddYPDtby6D6YKtJ38oEyQ6lgkBUkJGHl4MS1Qg/viewform?usp=pp_url>`__.
+   * If you are not from any of these, or you respective country's
+     registration is full, you may still watch for free, without
+     registration, at https://twitch.tv/coderefinery.  Or, `register on
+     the Finland form <https://forms.gle/8ez7eEjv3pty2DWh9>`__ as "I will only follow the stream via Twitch.tv
+     and do the exercises by myself" to get email updates.
+   * If you want to host your own Zoom exercises sessions making use
+     of our livestream, you may contact us (`CodeRefinery chat
+     <https://coderefinery.zulipchat.com>`__ or scip -at- aalto.fi) to
+     coordinate.
 
 Part of :doc:`Scientific Computing in Practice <index>` lecture series
 at Aalto University, in partnership with `CodeRefinery <https://coderefinery.org>`__
