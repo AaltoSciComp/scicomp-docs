@@ -36,7 +36,8 @@ Practical information
 
 This is an online course streamed via Twitch (the
 `CodeRefinery channel <https://www.twitch.tv/coderefinery>`__) so that
-anyone may follow along without registration.  There is a HackMD link
+anyone may follow along without registration. You do *not* need a
+Twitch account.  There is a HackMD link
 (collaborative edited notes) which is used for asking questions during
 the course.  If you would like to attend for to get live help and do
 exercises, you may register via one of the links below (this is highly
