@@ -5,10 +5,10 @@ Installing and running an X-Server on Windows
 This tutorial explains how to install an X-Server on Windows. We will use the VcXsrv, a free X-server for this purpose.
 
 Steps:
-* 1. Download the Installer from :ref:`here<https://sourceforge.net/projects/vcxsrv/files/latest/download>`_
+* 1. Download the Installer from `here <https://sourceforge.net/projects/vcxsrv/files/latest/download>`_
 * 2. Run the installer.
-   * Select ``Full`` under Installation Options and click ``Next``
-   * Select a target folder
+  * Select ``Full`` under Installation Options and click ``Next``
+  * Select a target folder
 
 To Run the Server:
 * Open the ``XLaunch`` program (most likely on your desktop)
