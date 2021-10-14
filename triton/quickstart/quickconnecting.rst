@@ -7,7 +7,7 @@ This page is essentially a condensed version of those sites, that will only give
 how to quickly set up your machine and the most important details. For more in-depth information
 please have a look at the linked pages for each section
 
-There are three suggested ways to connect to triton, as detailed in the table below.
+There are three suggested ways to connect to Triton, as detailed in the table below.
 With more info found at :doc:` the connecting Tutorial<tut/connecting>`
 
 .. list-table::
@@ -48,7 +48,7 @@ Connecting via ssh
 Setting up ssh for passwordfree access
 --------------------------------------
 
-The following guide shows you how to set up the ssh system to allow you to connect to triton from either outside of 
+The following guide shows you how to set up the ssh system to allow you to connect to Triton from either outside of 
 the aalto network or from within using an ssh key instead of your password. In the following 
 guide ``USERNAME`` refers to your Aalto user name and ``~/.ssh`` refers to your ssh config folder. 
 (On Windows, you can use `GIT-bash <https://gitforwindows.org/>`__, which will allow
@@ -74,7 +74,7 @@ remote access server (see :doc:`Remote Access <../aalto/remoteaccess>`)
         Hostname triton
         ProxyJump kosh    
 
-Next, you have to add your public key to the authorized keys of both kosh and triton. 
+Next, you have to add your public key to the authorized keys of both kosh and Triton. 
 For this purpose you have to connect to the respective servers and add your public key to 
 the ``authorized_keys`` file in the servers ``.ssh/`` folder.
 
@@ -89,7 +89,7 @@ the ``authorized_keys`` file in the servers ``.ssh/`` folder.
     # afterwards exit from kosh
     exit
 
-Now you do the same for triton by using our defined proxy jump over kosh.
+Now you do the same for Triton by using our defined proxy jump over kosh.
 
 ::
 
@@ -99,11 +99,11 @@ Now you do the same for triton by using our defined proxy jump over kosh.
     nano .ssh/authorized_keys
     # Copy your public key into this file
     # to save the file press ctrl + x and the confirm with y
-    # afterwards exit from triton
+    # afterwards exit from Triton
     exit
 
 
-Now, to connect to triton you can simply type:
+Now, to connect to Triton you can simply type:
 
 ::
 

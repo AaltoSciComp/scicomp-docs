@@ -1,5 +1,5 @@
 =======================
-Triton Quickstart Guide
+Triton quickstart guide
 =======================
 
 This is a quickstart guide to the Triton cluster. 
