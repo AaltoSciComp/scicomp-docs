@@ -99,7 +99,15 @@ a large tarball:
      # a folder use the following command
      tar -cvf mytarball.tar folder
 
-copy them over to the node where your code is executed and extract them there within the slurm script. 
+copy them over to the node where your code is executed and extract them there within the slurm script or your code. 
+::
+
+   # copy it over
+   cp mytarball.tar /tmp
+   # and extract it locally
+   tar -xf /tmp/mytarball.tar
+
+
 If each input file is only used once, it's more efficient to load the tarball directly from the network drive
 IF it fits into memory, load it into memory, if not, try to use a streaming input and have the required files 
 in the tar-ball in the required order. 

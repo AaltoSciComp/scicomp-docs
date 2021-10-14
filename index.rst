@@ -18,7 +18,7 @@ For these topics we have created several :ref:`Tutorials<triton_tutorial_link>` 
 [`twitter <https://twitter.com/SciCompAalto>`__]  We consist of
 Science-IT (HPC, the Triton cluster and RSEs), certain department ITs, and
 other friends.  :doc:`You can join us </about/join>`.
-Along with general Welcome guide,
+Along with a general Welcome guide,
 
 .. toctree::
    :maxdepth: 1
@@ -26,12 +26,9 @@ Along with general Welcome guide,
    aalto/welcomeresearchers
    aalto/welcomestudents
 
-we have created a quick-guide to set up your system, access and use triton
+we have created a quick-start guide to set up your system, access and use triton. 
 
-.. toctree::
-   :maxdepth: 2
-
-   triton/quickstart/index
+* `Triton Quickstart<triton/quickstart/index>`
    
 News
 ====
