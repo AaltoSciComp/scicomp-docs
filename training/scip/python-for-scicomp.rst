@@ -14,6 +14,7 @@ Oct 25th - Oct 28th 2021 / Python for Scientific Computing
      of our livestream, you may contact us (`CodeRefinery chat
      <https://coderefinery.zulipchat.com>`__ or scip -at- aalto.fi) to
      coordinate.
+   * Course material: https://aaltoscicomp.github.io/python-for-scicomp/
 
 Part of :doc:`Scientific Computing in Practice <index>` lecture series
 at Aalto University, in partnership with `CodeRefinery <https://coderefinery.org>`__
