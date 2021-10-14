@@ -111,13 +111,14 @@ Overview
    acknowledgingtriton.rst
 
 
-Quick reference
-===============
+Quick start guide and reference
+===============================
 .. toctree::
    :maxdepth: 1
-
+   
+   quickstart/index
    ref/index
-
+   
 
 Tutorials
 =========
