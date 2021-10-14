@@ -56,7 +56,7 @@ you to use linux style abbreviations. The actual folder is normally located unde
 ``C:\Users\currentuser\.ssh``, where currentuser is the name of the user).
 First, create the file ``config`` in the ``~/.ssh`` folder with the following content, or add 
 the following lines to it if it already exists. Instead of ``kosh`` you can also use any other 
-remote access server (see :doc:`Remote Access <../aalto/remoteaccess>`)
+remote access server (see :doc:`Remote Access </aalto/remoteaccess>`)
 
 ::
 
