@@ -1,6 +1,6 @@
-==============================
-Sept 2020 / Linux Shell Basics
-==============================
+==================================
+November 2021 / Linux Shell Basics
+==================================
 
 Part of :doc:`Scientific Computing in Practice <index>` lecture series at Aalto University.
 
@@ -16,9 +16,11 @@ There is an advaced part of this course given later in the spring. There on we g
 
 **Time, date, place:** the course consists of three online hands-on sessions
 
-- Mon 7.9 klo 12:00-15:00 // Zoom link to be posted to the registered participants list
-- Wed 9.9 klo 12:00-15:00
-- Fri 11.9 klo 12:00-15:00
+- Mon 8.11 klo 12:00-15:00 // Zoom link to be posted to the registered participants list
+- Wed 10.11 klo 12:00-15:00
+- Fri 12.11 klo 12:00-15:00
+
+*Please note that we are considering the possibility of "hybrid" teaching (online and on-site), you can specify your preference during registration.* 
 
 **Course material:** will be mostly based on the first part of `scicomp.aalto.fi/training/linux-shell-tutorial <https://scicomp.aalto.fi/training/linux-shell-tutorial.html>`__.
 
@@ -26,7 +28,7 @@ Additional materials and homework assignments at triton.aalto.fi:/scratch/scip/B
 
 **Cost:** Free of charge for FCCI consortium members including Aalto employees and students.
 
-**Registration:** `Webropole form for the registration <https://link.webropolsurveys.com/S/D54967EB85EBA5E7>`__
+**Registration:** `Please register here <https://forms.gle/EmoGVMHB7hYCcHRR8>`__
 
 **Credits:** Course certificate can be provided on request, though no official ECTS.
 

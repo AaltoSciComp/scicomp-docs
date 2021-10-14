@@ -58,6 +58,6 @@ project will have most of these things.
   * Module structure
   * setup.py
   * requirements.txt
-  * PiPI release
+  * PyPI release
   * conda-forge
   * Zenodo

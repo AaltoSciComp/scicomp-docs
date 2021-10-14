@@ -13,7 +13,7 @@ The course takes place over two days, October 4 and 5 from 9:00 to 14:00.
 **Audience** Researchers and students who need to use Julia. We assume you know some at least one programming language. Specifically, you should
 be familiar with functions, for-loops and if statements. If you are completely new to programming, but would like to attend the course, you can read through
 for example the `Carpentries Incubator Julia course <https://carpentries-incubator.github.io/julia-novice/>`_ sections 1 - 7.
- 
+
 **Before the course** Please follow the installation instructions on the
 `course page <https://github.com/AaltoRSE/julia-introduction#installing-julia>`__
 
@@ -24,7 +24,9 @@ Instructions for using the Jupyter notebooks can also be found there.
 
 **Place:** Online, zoom link will be sent to registered participants
 
-**Lecturers:** Jarno Rantaharju, Research Software Engineer, Aalto Scientific Computing
+**Lecturers:**
+ - Jarno Rantaharju, Research Software Engineer, Aalto Scientific Computing
+ - Luca Ferranti, PhD student and Julia developer, University of Vaasa
 
 **Registration:**
 

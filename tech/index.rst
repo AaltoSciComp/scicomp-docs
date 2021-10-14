@@ -90,7 +90,12 @@ Topics
 
 - Fri 8.10 10:15, **Introduction to a Kubernetes deployment**, Richard Darst
 
-  + What is Kubernetes and how to make a simple Kubernetes deployment
+  + What is kubernetes and when is it useful?
+  + Different types of Kubernetes objects and how you learn about them
+  + Walk through how you would deploy a service into kubernetes - live demo
+  + Q&A
+  + `Session notes <https://hackmd.io/@AaltoSciComp/SyAgcmTQF>`__,
+    `Video <https://www.youtube.com/watch?v=CXOPwtJ7qDI&list=PLZLVmS9rf3nN1Rj-TAqFEzFM22Y1kJmvn>`__.
 
 - Mikko Hakala (fall 2021)
 

@@ -54,6 +54,27 @@ Get started / request Zulip
     `testrealm.zulip.cs.aalto.fi <https://testrealm.zulip.cs.aalto.fi/>`_.
     Use the Aalto login. This chat is for testing only.
 
+.. _first-steps:
+
+After you have received the chat instance
+-----------------------------------------
+
+Within few days of requesting an instance, you should have gotten details for your chat instance in email. After this you
+
+- Can login to the chat instance *<chat-instance>.zulip.cs.aalto.fi* with your Aalto account
+- Should already have the **owner** role assigned.
+- Can configure the chat instance from **(cog wheel in the top-right corner) -> Manage organization**
+
+  - Please carefully read the `Configuration<configuration>` section before making changes
+
+- Can appoint more admins/owners (e.g. TAs)
+
+  #. Ask them to login first
+  #. Change their role from **Manage organization -> Users**
+
+
+.. _configuration:
+
 Configuring your organization
 -----------------------------
 

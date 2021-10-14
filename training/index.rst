@@ -25,15 +25,9 @@ and/or Python, Matlab, HTCondor and many others.
 .. toctree::
    :maxdepth: 1
 
-   scip/mpi-introduction
-   scip/shell-scripting
-   March/April 2021 / Code Refinery workshops Spring 2021 <https://coderefinery.org/workshops/upcoming/>
-   scip/data-anonymization-workshop
-   scip/software-design
-   scip/matlab-advanced
-   scip/summer-kickstart
-   julia/julia-introduction
    scip/python-for-scicomp
+   scip/linux-shell-basics
+   scip/matlab-basics
    scip/index
 
 .. toctree::
@@ -46,9 +40,9 @@ and/or Python, Matlab, HTCondor and many others.
 
 
 **Future courses**
-*Fall / Winter 2021-22 courses (tentative plan)* -  
-Linux Shell Basics, Python for Scientists, Data analysis with R and
-Python, Matlab Basics, GPU computing, Triton winter kickstart.
+*Winter-Spring 2022 courses (tentative plan)* -  
+Next year will start with "Introduction to HPC" (aka "Triton winter kickstart"), Data analysis with R and
+Python, introduction to MPI, Code Refinery workshop, Matlab advanced, and few more.
 
 
 Anyone can sign up for announcements at the :doc:`SCIP announcement
@@ -59,22 +53,22 @@ Other interesting courses
 
 *Data management, Reproducibility, open science*
 
-Please check the `spring calendar for training on data management and open science <https://www.aalto.fi/en/services/rdm-training>`__, organised by the Aalto Data Agents:
+Please check the `fall calendar for training on data management and open science <https://www.aalto.fi/en/services/training-in-research-data-management-and-open-science#1-autumn-2021>`__, organised by the Aalto Data Agents:
 
-  - How to make your research/code reproducible | 2.3.2021 at 2-3.30 PM
-  - Introduction to research data management | 11.3.2021 at 10-11 AM
-  - How to store research data | 18.3.2021 at 10-11 AM
-  - Handling of personal data | 25.3.2021 at 10-11.30 AM
-  - Working with restricted datasets | 15.4.2021 at 10-11
-  - Responsible conduct of research, questionable research practices... and possible cures | 28.4.2021 at 10-11 AM
-  - How to share research data through a repository: A Zenodo example | 15.3.2021 at 1-2 PM 
-  - The Open Data Directive and research data licensing |  22.3.2021 at 1-2 PM
-  - What's new in publishing? | 30.3.2021 at 1-2 PM | Enrollment (Aalto staff) / Enrollment (Aalto students)
-  - Let's get this metadata right! Maximise the reuse, findability and citation of your dataset | 21.4.2021 at 1-2 PM
-  - Making your software useful | 7.4.2021 at 12-1 PM
+  - Introduction to Research Data Management | Oct 5 2021 at 1–2 PM
+  - Introduction to Github | Oct 6 2021 at 3–4 PM
+  - Data Management Plans: a How-to | Oct 7 2021 at 1–2 PM
+  - Handling of Personal Data | Oct 12 2021 at 1–2.30 PM 
+  - How to Share Research Data Through a Data Repository: A Zenodo Example | Oct 14 2021 at 10–11.30 AM 
+  - Working with Restricted Datasets | Oct 26 2021 at 12–1.30 PM 
+  - Basics of Data Anonymisation | Nov 2 2021 at 1–2 PM 
+  - How to Store Research Data | Nov 4 2021 at 1–2 PM 
+  - How to Make Your Research/Code Reproducible and Reusable | Nov 10 2021 at 1–2.30 PM
+  - Current Trends in Academic Publishing: Plan S and Overlay Journals  | Nov 17 2021 at 1–2.30 PM
+  - Legal Aspects of Research Data | Nov 18 2021 at 1–2 PM
   - `Research ethics for doctoral students <https://mycourses.aalto.fi/course/view.php?id=23138>`__
 
-Registration and more details at: https://www.aalto.fi/en/services/rdm-training
+Registration and more details at: https://www.aalto.fi/en/services/training-in-research-data-management-and-open-science#1-autumn-2021
 
 
 *Scientific computing*
@@ -119,7 +113,7 @@ You can browse the material we have developed for our courses by following the l
    :maxdepth: 1
 
    linux-shell-tutorial
-   python-scicomp/index
+   Python for Scientific Computing <https://aaltoscicomp.github.io/python-for-scicomp/>
    Data analysis workflows in Python and R <https://aaltoscicomp.github.io/data-analysis-workflows-course/>
 
 
