@@ -171,6 +171,7 @@ Examples
    :maxdepth: 1
 
    examples/index
+   hpc-examples/README
 
 .. _tutorials:
 
