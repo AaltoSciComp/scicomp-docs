@@ -56,10 +56,10 @@ sessions 3h each.  All times EEST (`convert 10:00 to your timezone
 program is tentative:
 
 - (week before) **Installation help session**
-- Mon 25.oct, 10:00-13:00 (Jupyter, numpy, matplotlib)
-- Tue 26.oct, 10:00-13:00 (scripts, packaging)
-- Wed 27.oct, 10:00-13:00 (scipy, pandas)
-- Thu 28.oct, 10:00-13:00 (library ecosystem, dependencies, Binder)
+- Mon 25.oct, 10:00-13:00 (Jupyter, numpy, pandas...)
+- Tue 26.oct, 10:00-13:00 (...pandas, matplotlib, data formats, scripts...)
+- Wed 27.oct, 10:00-13:00 (...scripts, scipy, library ecosystem, parallel)
+- Thu 28.oct, 10:00-13:00 (dependency management, binder, packaging)
 - **Please connect to all sessions 10 minutes early**: icebreakers and
   intro already starts then.
 
