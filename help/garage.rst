@@ -18,24 +18,28 @@ Come if you want to:
 What kind of issues can we help with:
 
 - Code and Software:
-	- Issues with your code or software tools you use (e.g. debugging, setting up software, linking libraries)
-	- Code parallelization
-	- Code versioning, git, testing
+
+  - Issues with your code or software tools you use (e.g. debugging, setting up software, linking libraries)
+  - Code parallelization
+  - Code versioning, git, testing
 
 - Data Management:
-	- Data management plans, data sharing
-	- Handling of sensitive data and general legal and ethical (to some extent) questions about research data
-	- Workflows for big datasets
-	- Data versioning
-	
+
+  - Data management plans, data sharing
+  - Handling of sensitive data and general legal and ethical (to some extent) questions about research data
+  - Workflows for big datasets
+  - Data versioning
+
 - Triton cluster:
-	- Slurm job submissions
-	- Cluster usage
-	- Script setup
-	- Module management / Library loading
-	
+
+  - Slurm job submissions
+  - Cluster usage
+  - Script setup
+  - Module management / Library loading
+
 - General:
-	- Basic methodological or statistical issues 
+
+  - Basic methodological or statistical issues
 
 Notes:
 
