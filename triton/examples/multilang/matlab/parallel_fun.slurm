@@ -6,4 +6,4 @@
 
 module load matlab
 
-srun matlab_multithread -nodisplay -r inlanguage_parallel
+srun matlab_multithread -nodisplay -r parallel_fun
