@@ -52,14 +52,16 @@ recommended!).  The `actual material is here
 
 **Time, date, place:** the course consists of four online hands-on
 sessions 3h each.  All times EEST (`convert 10:00 to your timezone
-<https://arewemeetingyet.com/Helsinki/2021-10-25/10:00>`__), and
-program is tentative:
+<https://arewemeetingyet.com/Helsinki/2021-10-25/10:00>`__).
+**Schedule is tentative**, listed is earliest start times for those
+joining for a single course, reality may be 10-20 minutes later.
 
-- (week before) **Installation help session**
-- Mon 25.oct, 10:00-13:00 (Jupyter, numpy, pandas...)
-- Tue 26.oct, 10:00-13:00 (...pandas, matplotlib, data formats, scripts...)
-- Wed 27.oct, 10:00-13:00 (...scripts, scipy, library ecosystem, parallel)
-- Thu 28.oct, 10:00-13:00 (dependency management, binder, packaging)
+- (week before) **Installation help sessions** (for sites that offer
+  them)
+- Mon 25.oct, 10:00-13:00 (Intro, 10:15 Jupyter, 10:50 numpy, 12:00 pandas...)
+- Tue 26.oct, 10:00-13:00 (...pandas, 10:20 matplotlib, 12:00 data formats)
+- Wed 27.oct, 10:00-13:00 (scripts, 11:00 scipy, 11:20 library ecosystem, 12:00 parallel...)
+- Thu 28.oct, 10:00-13:00 (...parallel, 10:00 dependency management, 11:00 binder, 11:50 packaging, 12:50 Outro)
 - **Please connect to all sessions 10 minutes early**: icebreakers and
   intro already starts then.
 
