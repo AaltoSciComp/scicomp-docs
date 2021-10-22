@@ -53,8 +53,8 @@ recommended!).  The `actual material is here
 **Time, date, place:** the course consists of four online hands-on
 sessions 3h each.  All times EEST (`convert 10:00 to your timezone
 <https://arewemeetingyet.com/Helsinki/2021-10-25/10:00>`__).
-**Schedule is tentative**, listed is earliest start times for those
-joining for a single course, reality may be 10-20 minutes later.
+**Schedule is tentative**, times are when to join a single
+lesson to not be late, reality may be 10-20 minutes later.
 
 - (week before) **Installation help sessions** (for sites that offer
   them)
