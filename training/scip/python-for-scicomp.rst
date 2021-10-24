@@ -2,19 +2,37 @@
 Oct 25th - Oct 28th 2021 / Python for Scientific Computing
 ==========================================================
 
+.. warning::
+
+   **Timezones!** Times in this page in the Europe/Helsinki timezone.
+   **In Central Europe, the course starts at 9:00!**
+
 .. admonition:: Important info
 
-   * If you are from Finland, `click here to register <https://forms.gle/8ez7eEjv3pty2DWh9>`__. If you are from Norway, `please register here <https://skjemaker.app.uib.no/view.php?id=11270960>`__ (full, register for announcements). If you are from Sweden, `please register here <https://docs.google.com/forms/d/e/1FAIpQLSdte5EQYJonddYPDtby6D6YKtJ38oEyQ6lgkBUkJGHl4MS1Qg/viewform?usp=pp_url>`__ (full, register for announcements).
-   * If you are not from any of these, or you respective country's
-     registration is full, you may still watch for free, without
-     registration, at https://twitch.tv/coderefinery.  Or, `register on
-     the Finland form <https://forms.gle/8ez7eEjv3pty2DWh9>`__ as "I will only follow the stream via Twitch.tv
-     and do the exercises by myself" to get email updates.
+   * Course material:
+     https://aaltoscicomp.github.io/python-for-scicomp/
+   * During the event:
+
+     * Open the livestream https://twitch.tv/coderefinery .  Watch
+       this, this is the main "home base".
+     * If you registered, open the HackMD notes link (this is used to
+       ask questions)
+     * If you registered for exercise sessions, open that Zoom
+       session.  This is optional, you are told when you can go here
+       for help.
+
+   * Getting updates / Register
+
+     * You can, `register here <https://forms.gle/8ez7eEjv3pty2DWh9>`__
+       to get emails about the course, but it's not necessary to
+       attend (non-Finland only get updates from the stream)
+     * For more live updates, follow `Coderefine
+       <https://twitter.com/coderefine>`__ (not -ry) twitter.
+
    * If you want to host your own Zoom exercises sessions making use
      of our livestream, you may contact us (`CodeRefinery chat
      <https://coderefinery.zulipchat.com>`__ or scip -at- aalto.fi) to
      coordinate.
-   * Course material: https://aaltoscicomp.github.io/python-for-scicomp/
 
 Part of :doc:`Scientific Computing in Practice <index>` lecture series
 at Aalto University, in partnership with `CodeRefinery <https://coderefinery.org>`__
