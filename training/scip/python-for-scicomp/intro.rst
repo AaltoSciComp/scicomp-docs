@@ -91,7 +91,7 @@ There are many parts of the workshop:
 
 
 Chat and communication
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 - Please don't use the chat for questions: who can keep track?
 
@@ -170,17 +170,44 @@ When do you switch between sessions?
   you have it (livestream is quiet)
 - **After exercise sessions** you will hear the livestream become
   active again, and know it is time to come back.
-
 - We will be explicit at every step of the way.
 
 
 
+What can go wrong?
+~~~~~~~~~~~~~~~~~~
 
-Care for the community
-----------------------
+* **The lessons are too simple:** the later lessons will become more
+  interesting.
+* **The lessons are too advanced:** watch passively and learn, you
+  will learn a different way.
+* **Instructors make a mistake:** this is by design!  You learn by
+  seeing things not work.  We try to let some mistakes in so you can
+  see them.
+* **HackMD stops responding:** We have so many people we *expect*
+  HackMD to lag - this is an experiment.  Wait some and it hopefully
+  will pass.  We try to keep it short for this (move old text to
+  another HackMD).  Please stay in "view mode" when not editing.  We
+  have a backup planned.
+* **The stream dies:** something has happened to the director's
+  computer.  Stick around, it will resume soon.
+* **The internet dies:** This happened in a previous course (Fastly
+  CDN problems).  Wait around, we see what happens.  Remember, we have
+  videos no matter what.
+
+
+
+Videos
+~~~~~~
+
+* You miss a day or want to review?  No problem.
+* Videos are available on Twitch for 14 days
+* ... and YouTube after we process them (0-1 days)
+
+
 
 Be respectful and helpful
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 It is actually hard to teach and mentor for tech like this.  The
 course is much more than "only" instructors..
@@ -203,36 +230,21 @@ We leave you with four pieces of advice for now:
 Final notes
 -----------
 
-Recording
-~~~~~~~~~
 
-- The course is recorded and will be put on YouTube.
-- But because of the livestream thing, you *can't* be recorded
-  yourself.
-- All outputs are CC-BY.
-
-
-Credits
-~~~~~~~
+Credit points
+~~~~~~~~~~~~~
 
 - We don't assign credits for attending this course - we can't track
   attendance.
 
 
 
-About CodeRefinery
-~~~~~~~~~~~~~~~~~~
+Keep in touch if you want
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- https://coderefinery.org
 - Our chat https://coderefinery.zulipchat.com/ (stream
   #python-for-scicomp), in case you want to chat with us.
-
-
-
-Join us!
-~~~~~~~~
-
-We are staff at Aalto but welcome others to join us in allowing
-everyone to do scientific computing.
-
-More on this later.
+- Twitter: #pythonSC21, @coderefine (not -ry)
+- Consider attending a "real" CodeRefinery workshop, with more
+  practical skills about the development side of things:
+  https://coderefinery.org
