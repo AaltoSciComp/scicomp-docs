@@ -5,7 +5,9 @@ Oct 25th - Oct 28th 2021 / Python for Scientific Computing
 .. warning::
 
    **Timezones!** Times in this page in the Europe/Helsinki timezone.
-   **In Central Europe, the course starts at 9:00!**
+   **In Central Europe, the course starts at 8:50!** (`convert 9:50
+   *Helsinki to your timezone
+   *<https://arewemeetingyet.com/Helsinki/2021-10-25/9:50>`__)
 
 .. admonition:: Important info
 
@@ -69,8 +71,8 @@ recommended!).  The `actual material is here
 * ... and many more.
 
 **Time, date, place:** the course consists of four online hands-on
-sessions 3h each.  All times EEST (`convert 10:00 to your timezone
-<https://arewemeetingyet.com/Helsinki/2021-10-25/10:00>`__).
+sessions 3h each.  All times EEST (`convert 9:50 to your timezone
+<https://arewemeetingyet.com/Helsinki/2021-10-25/9:50>`__).
 **Schedule is tentative**, we may run earlier or later.  Join 10-20
 minutes early if attending a single lesson.
 
