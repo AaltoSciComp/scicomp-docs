@@ -158,12 +158,17 @@ There is so much information!  What should we look?
   - Only look at the bottom.
   - Come back and read detailed answers later, not during.
 
+- Zoom or your own exercise group (during the exercises, optional).
+
 - Lesson webpage (as needed, direct links in HackMD)
 
 
 
-When do you switch between sessions?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+When do you switch between the stream/exercise Zoom?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you have registered and are from a participating institution, you
+have a Zoom link for exercise sessions.  This is optional.
 
 - **During main lectures,** you look at the livestream + follow along.
 - **During exercise sessions,** you will be told to switch to Zoom if
@@ -230,7 +235,6 @@ We leave you with four pieces of advice for now:
 Final notes
 -----------
 
-
 Credit points
 ~~~~~~~~~~~~~
 
@@ -239,12 +243,22 @@ Credit points
 
 
 
-Keep in touch if you want
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Keep in touch if you want (and volunteer)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+- We would he happy to have help with our activities
 - Our chat https://coderefinery.zulipchat.com/ (stream
   #python-for-scicomp), in case you want to chat with us.
-- Twitter: #pythonSC21, @coderefine (not -ry)
+- Twitter: #pythonSC21, `@coderefine
+  <https://twitter.com/coderefine>`__ (not -ry) and `SciCompAalto
+  <https://twitter.com/SciCompAalto>`__
+
+
+
+Other workshops
+~~~~~~~~~~~~~~~
+
 - Consider attending a "real" CodeRefinery workshop, with more
   practical skills about the development side of things:
   https://coderefinery.org
+- Sign up for the CodeRefinery newsletter
