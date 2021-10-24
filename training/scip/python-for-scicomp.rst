@@ -76,12 +76,37 @@ minutes early if attending a single lesson.
 
 - (week before) **Installation help sessions** (for sites that offer
   them)
-- Mon 25.oct, 10:00-13:00 (Intro, 10:15 Jupyter, 11:00 numpy, 12:10 pandas...)
-- Tue 26.oct, 10:00-13:00 (...pandas, 10:30 matplotlib, 12:10 data formats)
-- Wed 27.oct, 10:00-13:00 (scripts, 11:10 scipy, 11:30 library ecosystem, 12:10 parallel...)
-- Thu 28.oct, 10:00-13:00 (...parallel, 10:00 dependency management, 11:10 binder, 11:50 packaging, 12:50 Outro)
 - **Please connect to all sessions 10 minutes early**: icebreakers and
   intro already starts then.
+- Mon 25.oct, 10:00-13:00
+
+  - :doc:`Intro <python-for-scicomp/intro>`
+  - 10:15 Jupyter
+  - 11:00 numpy
+  - 12:10 pandas...
+
+- Tue 26.oct, 10:00-13:00
+
+  - pandas continued
+  - 10:30 matplotlib
+  - 12:10 data formats
+
+- Wed 27.oct, 10:00-13:00
+
+  - scripts
+  - 11:10 scipy
+  - 11:30 library ecosystem
+  - 12:10 parallel...
+
+- Thu 28.oct, 10:00-13:00
+
+  - ...parallel continued(?)
+  - 10:00 dependency management
+  - 11:10 binder
+  - 11:50 packaging
+  - 12:30 ???
+  - 12:50 Outro
+
 
 **Registration:** If you are from Finland `please register here <https://forms.gle/8ez7eEjv3pty2DWh9>`__.
 If you are from Norway, `please register here <https://skjemaker.app.uib.no/view.php?id=11270960>`__.
