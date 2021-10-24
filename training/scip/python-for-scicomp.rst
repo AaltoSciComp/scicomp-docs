@@ -11,7 +11,8 @@ Oct 25th - Oct 28th 2021 / Python for Scientific Computing
 
 .. admonition:: Important info
 
-   * Course material:
+   * Livestream (join here): https://twitch.tv/coderefinery
+   * Course material (to follow along:
      https://aaltoscicomp.github.io/python-for-scicomp/
    * During the event:
 
@@ -27,7 +28,7 @@ Oct 25th - Oct 28th 2021 / Python for Scientific Computing
 
      * You can, `register here <https://forms.gle/8ez7eEjv3pty2DWh9>`__
        to get emails about the course, but it's not necessary to
-       attend (non-Finland only get updates from the stream)
+       attend (non-Finland only gets general updates)
      * For more live updates, follow `Coderefine
        <https://twitter.com/coderefine>`__ (not -ry) twitter.
 
@@ -35,6 +36,11 @@ Oct 25th - Oct 28th 2021 / Python for Scientific Computing
      of our livestream, you may contact us (`CodeRefinery chat
      <https://coderefinery.zulipchat.com>`__ or scip -at- aalto.fi) to
      coordinate.
+
+   * Videos will be at `Twitch for 14 days immediately
+     <https://www.twitch.tv/coderefinery/videos>`__ and the `YouTube
+     playlist eventually
+     <https://www.youtube.com/playlist?list=PLZLVmS9rf3nOS7bHNmbcDoyTnMYaz_TJW>`__
 
 Part of :doc:`Scientific Computing in Practice <index>` lecture series
 at Aalto University, in partnership with `CodeRefinery <https://coderefinery.org>`__
