@@ -6,8 +6,8 @@ Oct 25th - Oct 28th 2021 / Python for Scientific Computing
 
    **Timezones!** Times in this page in the Europe/Helsinki timezone.
    **In Central Europe, the course starts at 8:50!** (`convert 9:50
-   *Helsinki to your timezone
-   *<https://arewemeetingyet.com/Helsinki/2021-10-25/9:50>`__)
+   Helsinki to your timezone
+   <https://arewemeetingyet.com/Helsinki/2021-10-25/9:50>`__)
 
 .. admonition:: Important info
 
