@@ -73,7 +73,11 @@ recommended!).  The `actual material is here
 
 **Instructors and organizers:**
 
-* Richard Darst, Aalto Scientific Computing **(organizer)**
+* Radovan Bast (UiT, Norway) (instructor, helper)
+* Richard Darst (Aalto Scientific Computing) (organizer, instructor, director)
+* Johan Hellsvik (KTH, Sweden) (instructor)
+* Jarno Rantaharju (Aalto Scientific Computing) (instructor, helper)
+* Marijn van Vliet (Aalto) (instructor, helper)
 * ... and many more.
 
 **Time, date, place:** the course consists of four online hands-on
