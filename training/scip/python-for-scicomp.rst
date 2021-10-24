@@ -21,7 +21,7 @@ Oct 25th - Oct 28th 2021 / Python for Scientific Computing
        session.  This is optional, you are told when you can go here
        for help.
 
-   * Getting updates
+   * Getting updates / Register
 
      * You can, `register here <https://forms.gle/8ez7eEjv3pty2DWh9>`__
        to get emails about the course, but it's not necessary to
