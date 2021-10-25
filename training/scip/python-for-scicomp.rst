@@ -93,29 +93,29 @@ minutes early if attending a single lesson.
 - Mon 25.oct, 10:00-13:00
 
   - :doc:`Intro <python-for-scicomp/intro>`
-  - 10:15 Jupyter
-  - 11:00 numpy
-  - 12:10 pandas...
+  - 10:15 `Jupyter <https://aaltoscicomp.github.io/python-for-scicomp/jupyter/>`__
+  - 11:00 `numpy <https://aaltoscicomp.github.io/python-for-scicomp/numpy/>`__
+  - 12:10 `pandas <https://aaltoscicomp.github.io/python-for-scicomp/pandas/>`__...
 
 - Tue 26.oct, 10:00-13:00
 
-  - pandas continued
-  - 10:30 matplotlib
-  - 12:10 data formats
+  - ... `pandas continued <https://aaltoscicomp.github.io/python-for-scicomp/pandas/>`__
+  - 10:30 `matplotlib <https://aaltoscicomp.github.io/python-for-scicomp/data-visualization/>`__
+  - 12:10 `data formats <https://aaltoscicomp.github.io/python-for-scicomp/data-formats/>`__
 
 - Wed 27.oct, 10:00-13:00
 
-  - scripts
-  - 11:10 scipy
-  - 11:30 library ecosystem
-  - 12:10 parallel...
+  - `scripts <https://aaltoscicomp.github.io/python-for-scicomp/scripts/>`__
+  - 11:10 `scipy <https://aaltoscicomp.github.io/python-for-scicomp/scipy/>`__
+  - 11:30 `library ecosystem <https://aaltoscicomp.github.io/python-for-scicomp/libraries/>`__
+  - 12:10 `parallel <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__...
 
 - Thu 28.oct, 10:00-13:00
 
-  - ...parallel continued(?)
-  - 10:00 dependency management
-  - 11:10 binder
-  - 11:50 packaging
+  - ... `parallel <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__ continued(?)
+  - 10:00 `dependency management <https://aaltoscicomp.github.io/python-for-scicomp/dependencies/>`__
+  - 11:10 `binder <https://aaltoscicomp.github.io/python-for-scicomp/binder/>`__
+  - 11:50 `packaging <https://aaltoscicomp.github.io/python-for-scicomp/packaging/>`__
   - 12:30 ???
   - 12:50 Outro
 
