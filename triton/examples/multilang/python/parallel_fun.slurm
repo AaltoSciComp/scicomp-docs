@@ -5,5 +5,5 @@
 #SBATCH --output=ParallelOut
 
 module load anaconda # use the normal anaconda environment for python
-srun python parallel.py
+srun python parallel_fun.py
 

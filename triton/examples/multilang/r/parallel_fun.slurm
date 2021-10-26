@@ -12,4 +12,4 @@ export OMP_NUM_THREADS=1
 module load r
 
 # Run your R script
-srun Rscript parallel.R
+srun Rscript parallel_fun.R
