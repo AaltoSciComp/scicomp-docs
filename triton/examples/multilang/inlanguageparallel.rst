@@ -13,6 +13,21 @@ the libraries, packages or toolboxes you use offer this option.
 After this, we will show you simple ways to use general in language parallelization options
 and point you to the relevant documentation for your language.
 
+.. tabs::
+
+  .. group-tab:: python
+  
+     .. include:: /triton/apps/importantnotes/python.rst
+    
+  .. group-tab:: R
+     
+     .. include:: ../../apps/importantnotes/r.rst
+        
+  .. group-tab:: MATLAB
+  
+     .. include:: /triton/apps/importantnotes/matlab.rst
+    
+
 Using existing parallelisation
 ==============================
 
@@ -20,14 +35,38 @@ To allow code to access multiple cores, we need the ``-c`` or ``--cpus_per_task`
 in slurm. 
 A typical slurm script for code that is parallelized looks as follows:
 
-input_in_language_parallel_slurmscript
+.. tabs::
+
+  .. group-tab:: python
+  
+     .. literalinclude:: python/parallel_fun.slurm
+    
+  .. group-tab:: R
+  
+     .. literalinclude:: r/parallel_fun.slurm
+        
+  .. group-tab:: MATLAB
+  
+     .. literalinclude:: matlab/parallel_fun.slurm
+  
 
 To make use of this code, you need to provide the respective functions with the relevant information.
 
-input_important_language_info
+.. tabs::
 
-input_in_language_parallel_code
+  .. group-tab:: python
+  
+    .. literalinclude:: python/parallel_fun.py
+       :language: python
+       
+  .. group-tab:: R
+    .. literalinclude:: r/parallel_fun.R
+       :language: R  
+    
+  .. group-tab:: MATLAB
 
+    .. literalinclude:: matlab/parallel_fun.m
+       :language: MATLAB
 
 Now your code can run on the specified number of cores, speeding up the individual computation.
 
@@ -48,7 +87,23 @@ matrix again.
 
 The code looks as follows:
 
-input_parallelize_code_original
+.. tabs::
+       
+  .. group-tab:: python
+  
+    .. literalinclude:: python/nonparallel.py
+       :language: python
+       
+  .. group-tab:: R
+  
+    .. literalinclude:: r/nonparallel.R
+       :language: R
+
+  .. group-tab:: MATLAB
+  
+      .. literalinclude:: matlab/nonparallel.m
+         :language: MATLAB
+
 
 We can easily parallelize the following comparatively expensive steps:
 1. The first matrix inversions
@@ -56,12 +111,37 @@ We can easily parallelize the following comparatively expensive steps:
 
 Lets start with the required slurm script. Here, we will request 4 cpus, along with 500Mb of memory:
 
-input_parallelize_code_slurm
+.. tabs::
+
+  .. group-tab:: python
+  
+    .. literalinclude:: python/parallel.slurm
+
+  .. group-tab:: R
+  
+    .. literalinclude:: r/parallel.slurm
+       
+  .. group-tab:: MATLAB
+  
+    .. literalinclude:: matlab/parallel.slurm
+
+
 
 Then, we need to modify this code to run in parallel.
 
-input_important_language_info_own_code
+.. tabs::
 
-input_parallelize_code_parallel
-
-
+  .. group-tab:: python
+  
+    .. literalinclude:: python/parallel.py
+       :language: python
+       
+  .. group-tab:: R
+  
+    .. literalinclude:: r/parallel.R
+       :language: R
+       
+  .. group-tab:: MATLAB
+  
+    .. literalinclude:: matlab/parallel.m
+       :language: MATLAB
