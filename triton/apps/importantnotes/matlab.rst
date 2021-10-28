@@ -1,15 +1,9 @@
 .. admonition:: Important notes
           
-   Matlab tends to use as many cores as it can get, and often ignores limitations imposed by the assigned resources. 
-   This causes unnecessary load on the scheduler and slows down computation. Therefore, by default matlab is run in 
-   singlethreaded mode on the cluster. To use multiple cores you have to run matlab using the ``matlab_multithread``
-   executable. There are two more issues: 
-   
-   1. When running multiple parallel jobs, MATLAB worker files can overlap and 
-   2. MATLAB cannot determine the correct number of allocated cores.
-   
-   To address the former, you need to specify the worker location ( the ``JobStorageLocation`` field of the parallel cluster)
-   to a location unique to the job::
+   There is an issue, when running multiple jobs using MATLAB workers in a parpool. 
+   When running multiple parallel jobs, MATLAB worker files can overlap which can, best case, 
+   lead to job(s) failing, and worst case cause wrong data to be used in a job.     
+   To address this, you need to specify the worker location ( the ``JobStorageLocation`` field of the parallel cluster) to a location unique to the job::
    
      % Initialize the parallel pool
      c=parcluster();
@@ -32,5 +26,3 @@
      parpool(c,num_workers); 
    
    :download:`Here</triton/examples/multilang/matlab/initParPool.m>` we provide a small script, that does all those steps for you.
-  
-
