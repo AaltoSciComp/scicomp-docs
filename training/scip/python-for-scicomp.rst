@@ -117,8 +117,8 @@ minutes early if attending a single lesson.
   - 10:00 `dependency management <https://aaltoscicomp.github.io/python-for-scicomp/dependencies/>`__
   - 11:10 `binder <https://aaltoscicomp.github.io/python-for-scicomp/binder/>`__
   - 11:50 `packaging <https://aaltoscicomp.github.io/python-for-scicomp/packaging/>`__
-  - 12:30 ???
-  - 12:50 Outro
+  - 12:30 panel discussion or buffer time?
+  - 12:50 :doc:`Outro <python-for-scicomp/outro>`
 
 
 **Registration:** If you are from Finland `please register here <https://forms.gle/8ez7eEjv3pty2DWh9>`__.
