@@ -9,7 +9,7 @@
 export OMP_NUM_THREADS=1
 
 # Load the version of R you want to use
-module load r
+module load r/4.0.3-python3
 
 # Run your R script
 srun Rscript parallel_fun.R
