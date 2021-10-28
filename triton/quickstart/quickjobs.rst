@@ -47,7 +47,7 @@ To run this kind of job, you need a small script where you set parameters for th
 Using a script to set the parameters has the advantage that it is easier to modify and reuse than adding the 
 A basic script (e.g. in the file ``BatchScript.slurm``) for a slurm batch job could look as follows:  
 
-::
+.. code:: slurm
 
     #!/bin/bash
     #SBATCH --time=04:00:00
@@ -75,28 +75,3 @@ for the 2018b release of MATLAB). For further details please have a look at the 
 
 There are plenty more parameters that you can set for the slurm scheduler as well (for a detailed list can be found `here <https://slurm.schedmd.com/pdfs/summary.pdf>`__),
 but we are not going to discuss them in detail here, since they are likely not necessary for your first job.
-
-
-Parallelization
-===============
-
-This Quick-start guide will not show you how to parallelize your code. If you want help with this you can have a look at the :doc:`Parallelisation tutorial<../tut/parallel>`,
-or come to the :doc:`SciComp Garage</help/garage/>`. 
-However, if you know that libraries you use do make use of parallel processing and can benefit from multiple CPUs, you can add the following line to your slurm batch script:  
-::
-
-    #!/bin/bash
-    #SBATCH --time=04:00:00
-    #SBATCH --mem=2G
-    #SBATCH --output=ScriptOutput.log
-    #SBATCH -c 2
-    
-    module load anaconda
-    srun python /path/to/script.py
-
-The line ``#SBATCH -c 2`` tells the scheduler how many CPUs you request. Please don't use this, if you are not sure, that your code will actually use multiple nodes (if in doubt, come to the garage and ask us).
-
-
-
-
-

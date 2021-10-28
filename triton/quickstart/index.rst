@@ -11,4 +11,6 @@ Each indivdual Guide will link to additional resources with more extensive infor
    quickconnecting
    quickdata
    quickjobs
+   ../examples/multilang/inlanguageparallel.rst
+   ../examples/multilang/batchJobs.rst   
 
