@@ -119,6 +119,7 @@ minutes early if attending a single lesson.
   - 11:50 `packaging <https://aaltoscicomp.github.io/python-for-scicomp/packaging/>`__
   - 12:30 panel discussion or buffer time?
   - 12:50 :doc:`Outro <python-for-scicomp/outro>`
+  - 13:00 After-party/discussion in zoom (watch chat/HackMD for link)
 
 
 **Registration:** If you are from Finland `please register here <https://forms.gle/8ez7eEjv3pty2DWh9>`__.
