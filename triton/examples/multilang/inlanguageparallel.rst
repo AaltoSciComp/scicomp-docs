@@ -40,15 +40,18 @@ A typical slurm script for code that is parallelized looks as follows:
   .. group-tab:: python
   
      .. literalinclude:: python/parallel_fun.slurm
-    
+       :language: slurm
+           
   .. group-tab:: R
   
      .. literalinclude:: r/parallel_fun.slurm
-        
+       :language: slurm
+               
   .. group-tab:: MATLAB
   
      .. literalinclude:: matlab/parallel_fun.slurm
-  
+       :language: slurm
+         
 
 To make use of this code, you need to provide the respective functions with the relevant information.
 
@@ -60,6 +63,7 @@ To make use of this code, you need to provide the respective functions with the 
        :language: python
        
   .. group-tab:: R
+  
     .. literalinclude:: r/parallel_fun.R
        :language: R  
     
@@ -116,15 +120,18 @@ Lets start with the required slurm script. Here, we will request 4 cpus, along w
   .. group-tab:: python
   
     .. literalinclude:: python/parallel.slurm
-
+       :language: slurm
+       
   .. group-tab:: R
   
     .. literalinclude:: r/parallel.slurm
-       
+       :language: slurm
+              
   .. group-tab:: MATLAB
   
     .. literalinclude:: matlab/parallel.slurm
-
+       :language: slurm
+       
 
 
 Then, we need to modify this code to run in parallel.
