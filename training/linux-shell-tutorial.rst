@@ -2,6 +2,13 @@
 Linux shell tutorial
 ====================
 
+.. warning::
+
+   This has moved to
+   https://aaltoscicomp.github.io/linux-shell-scripting/, this
+   material is left here for a short transition time and then
+   redirected to there.
+
 
 Course basics
 =============
