@@ -1,6 +1,6 @@
-========================
-Nov 2021 / Matlab Basics
-========================
+=============================
+November 2021 / Matlab Basics
+=============================
 
 Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
 
@@ -28,7 +28,7 @@ Page under construction. Last year's `Matlab Basics course webpage <https://vers
 
 **Lecturers:** Enrico Glerean, D.Sc., NBE Department, SCI
 
-**Registration:** Registrations not yet open
+**Registration:** `Please click here to register <https://forms.gle/G6BxAYCwfxKQursHA>`__.
 
 **Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
 
