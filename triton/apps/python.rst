@@ -1,6 +1,7 @@
 ======
 Python
 ======
+.. _Python Help:
 
 .. admonition:: Video
 
