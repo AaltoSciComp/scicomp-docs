@@ -30,3 +30,14 @@
 .wy-side-nav-search > a img.logo, .wy-side-nav-search .wy-dropdown > a img.logo {
     max-width: 70%;
 }
+
+details summary {
+    font-size: large;
+    font-weight: bold;
+    margin-bottom:12px
+}
+
+details {
+    margin-bottom:20px
+}
+
