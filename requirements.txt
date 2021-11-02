@@ -1,4 +1,4 @@
-docutils!=0.17   # bugfix for docutils 0.17, remove later when sphinx updates
+docutils<0.17   # bugfix for docutils 0.17, remove later when sphinx updates
 jupyter_core<4.9.0        # remove after 4.9.0 https://github.com/jupyter/jupyter_core/pull/247
 sphinx
 sphinx_rtd_theme
@@ -11,3 +11,4 @@ sphinx-copybutton
 sphinx-lesson
 sphinx-tabs
 sphinx-togglebutton
+sphinx_toolbox

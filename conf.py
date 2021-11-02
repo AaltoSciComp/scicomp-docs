@@ -34,6 +34,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.ifconfig',
     'sphinx.ext.mathjax',
+    'sphinx_toolbox.collapse',
 ]
 # I try to make these docs buildable even without any extra dependencies
 # (nothing other than what you can find in Ubuntu).  So, add these to
@@ -43,7 +44,7 @@ optional_modules = [
     'sphinx_copybutton',
     'sphinx_lesson.directives',
     'sphinx_tabs.tabs',
-    'sphinx_togglebutton',
+    'sphinx_togglebutton',    
     ]
 if on_rtd or 'GITSTAMP' in os.environ:
     optional_modules.append('sphinx_gitstamp')
