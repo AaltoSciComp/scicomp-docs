@@ -79,6 +79,18 @@ only difference is that they have nvidia kernel modules for Tesla cards.
 Running a GPU job in serial
 ---------------------------
 
+.. admonition:: Important note
+ 
+   Update 2021-09: We recommond that you do **not** use ``srun`` within the job script
+   for GPU jobs, since something has changed in the recent Slurm.  We are working
+   on a permanent recommendation/solution.
+
+   When running a job using GPUs on the queue, be aware that you need to re-specify 
+   `` --gres=gpu:N`` in your function call if you run it via ``srun``. Otherwise the 
+   gpu will not be available for the run, since it was not reserved for the execution 
+   of the child-job.
+   
+   
 Quick interactive run::
 
     $ module load cuda
