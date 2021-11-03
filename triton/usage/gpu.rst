@@ -81,7 +81,7 @@ Running a GPU job in serial
 
 .. admonition:: Important note
  
-   Update 2021-09: We recommond that you do **not** use `srun` within the job script
+   Update 2021-09: We recommond that you do **not** use ``srun`` within the job script
    for GPU jobs, since something has changed in the recent Slurm.  We are working
    on a permanent recommendation/solution.
 
