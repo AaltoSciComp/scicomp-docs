@@ -147,6 +147,13 @@ versions):
 Conda environments
 ~~~~~~~~~~~~~~~~~~
 
+.. seealso::
+
+   Watch a `Research Software Hour episode on conda
+   <https://www.youtube.com/watch?v=ddCde5Nu2qo&list=PLpLblYHCzJAB6blBBa0O2BEYadVZV3JYf>`__
+   for an introduction + demo.
+
+
 If you encounter a situation where you need to create your own environment,
 we recommend that you use conda environments. When you create your own
 environment the packages from the base environment (default environment
