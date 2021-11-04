@@ -18,6 +18,7 @@ high-performance computing, and more**, we can:
   along.
 * **Make it reusable:** You already have something, but it doesn't
   work for others.
+* **Plan your ambitions:** 
 
 Instead of hiring your own intern, postdoc, etc. to struggle with
 certain issues, we can help instead.  We consist of experienced

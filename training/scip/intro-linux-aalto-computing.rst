@@ -198,7 +198,7 @@ Material
 - Shell
 
   - Crash course: https://scicomp.aalto.fi/scicomp/shell/ (everything)
-  - Shell in-depth tutorial: :doc:`/training/linux-shell-tutorial`
+  - Shell in-depth tutorial: https://aaltoscicomp.github.io/linux-shell/
     (minor parts)
   - We will also emphasize how the shell fits in with modern
     science.

@@ -197,7 +197,8 @@ Exercises
       datasets are stored in the local disk.
 
    HINT: Check out ``mktemp --help``,
-   :ref:`command output substitutions <linux-training-substitute-command-output>`-section
+   `command output substitutions
+   <https://aaltoscicomp.github.io/linux-shell/quoting-substitution-aliases/#substitute-a-command-output>`__ section
    from our Linux shell tutorial and the API page for Python's
    `os.environ <https://docs.python.org/3/library/os.html#os.environ>`_.
 
