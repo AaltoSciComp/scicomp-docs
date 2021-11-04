@@ -24,7 +24,7 @@ Zoom: link to be posted to the registered participants list
 - Wed 10.11 klo 12:00-15:00
 - Fri 12.11 klo 12:00-15:00
 
-**Course material:** will be mostly based on the first part of `aaltoscicomp.github.io/linux-shell-scripting/the-shell/ <https://aaltoscicomp.github.io/linux-shell-scripting/the-shell/>`__.
+**Course material:** will be mostly based on the first part of `aaltoscicomp.github.io/linux-shell <https://aaltoscicomp.github.io/linux-shell/>`__.
 
 **Cost:** Free of charge for FCCI consortium members including Aalto employees and students.
 
