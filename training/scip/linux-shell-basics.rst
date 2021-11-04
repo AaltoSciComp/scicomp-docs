@@ -14,13 +14,15 @@ There is an advaced part of this course given later in the spring. There on we g
 
 **Lecturer:** Ivan Degtyarenko, D. Sc., Science IT / Department of Applied Physics, Aalto University
 
-**Time, date, place:** the course consists of three online hands-on sessions
+**Time, date, place:** the course consists of three hands-on sessions, both Zoom link and on-site
 
-- Mon 8.11 klo 12:00-15:00 // Zoom link to be posted to the registered participants list
+On-site: Otakaari 1 (main building), U135a U7 PWC
+
+Zoom: link to be posted to the registered participants list
+
+- Mon 8.11 klo 12:00-15:00
 - Wed 10.11 klo 12:00-15:00
 - Fri 12.11 klo 12:00-15:00
-
-*Please note that we are considering the possibility of "hybrid" teaching (online and on-site), you can specify your preference during registration.* 
 
 **Course material:** will be mostly based on the first part of `scicomp.aalto.fi/training/linux-shell-tutorial <https://scicomp.aalto.fi/training/linux-shell-tutorial.html>`__.
 
