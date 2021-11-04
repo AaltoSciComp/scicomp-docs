@@ -32,6 +32,6 @@ Zoom: link to be posted to the registered participants list
 
 **Credits:** Course certificate can be provided on request, though no official ECTS.
 
-**Other comments:** During the tutorials we’ll use a Linux terminal, means that either you have a Linux/Mac computer at your place or a Windows PC with the SSH client installed for accessing any of Linux server (kosh/lyta etc at Aalto). We will touch the SSH connection issue on the first session.
+**Other comments:** During the tutorials we’ll use a terminal with a BASH shell, means that either you have a Linux/Mac computer at your place or a Windows PC with the `Git BASH <https://gitforwindows.org/>`__, or VDI to a Linux, or SSH client installed for accessing any of Linux server (kosh/lyta etc at Aalto, we will touch the SSH connection issue on the first session).
 
 **Additional course info at:** ivan.degtyarenko -at- aalto.fi
