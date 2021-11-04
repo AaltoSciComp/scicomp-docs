@@ -28,7 +28,7 @@ Currently active (upcoming) courses have been moved to the
 
   - Introduction to Data Analysis strategies at Aalto, Linux shell, HPC kickstart 2021  (Jan/Feb 2021, :doc:`materials part 1 <intro-linux-aalto-computing>`, :doc:`materials part 2 <winter-kickstart>`, `videos <https://youtube.com/playlist?list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc>`__)
   - Introduction to MPI (March 2021)
-  - Linux Shell Scripting (March 2021, `materials <https://scicomp.aalto.fi/training/linux-shell-tutorial/>`__)
+  - Linux Shell Scripting (March 2021, `materials <https://aaltoscicomp.github.io/linux-shell/>`__)
   - Hands-on data anonymization  (April 2021, videos: `day1 <https://www.youtube.com/watch?v=kJGTLSLiuhI>`__, `day2 <https://www.youtube.com/watch?v=za8SYXX1wco>`__, `day3 <https://www.youtube.com/watch?v=oyToSTB1Jrc>`__, `dat4 <https://www.youtube.com/watch?v=9TE9nUjI8F0>`__)
   - Code Refinery workshop  (May 2021, `materials <https://coderefinery.github.io/2021-05-10-workshop/>`__, `videos <https://www.youtube.com/playlist?list=PLpLblYHCzJACm0Nz8ZxmdC6F8UuSYwWGQ>`__)
   - Software design for scientific computing (April 2021, `materials <https://github.com/susamerz/CDWAssignment>`__)

@@ -112,7 +112,7 @@ You can browse the material we have developed for our courses by following the l
 .. toctree::
    :maxdepth: 1
 
-   linux-shell-tutorial
+   Linux shell <https://aaltoscicomp.github.io/linux-shell/>
    Python for Scientific Computing <https://aaltoscicomp.github.io/python-for-scicomp/>
    Data analysis workflows in Python and R <https://aaltoscicomp.github.io/data-analysis-workflows-course/>
 

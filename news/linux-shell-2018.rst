@@ -23,7 +23,7 @@ advanced scripts.
 Applied Physics, Aalto University
 
 
-**Course material**: :doc:`../training/linux-shell-tutorial`.
+**Course material**: https://aaltoscicomp.github.io/linux-shell/.
 Additional materials and homework assignments will be found at
 ``triton.aalto.fi:/scratch/scip/BASH``.
 

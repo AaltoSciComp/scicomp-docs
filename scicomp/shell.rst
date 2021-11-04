@@ -6,7 +6,7 @@ Linux shell crash course
 
    This is a kickstart for the Linux shell, to teach the minimum amount
    needed for any scientific computing course.  For more, see the
-   :doc:`linux shell course </training/linux-shell-tutorial>` or the
+   `linux shell course <https://aaltoscicomp.github.io/linux-shell/>`__ or the
    references below.
 
    This is :doc:`basic B-level </training/index>`: no prerequisites.
@@ -181,7 +181,7 @@ substitute yourself when running a command.
 See also
 --------
 
-* The :doc:`linux shell course </training/linux-shell-tutorial>` has
+* The `linux shell course <https://aaltoscicomp.github.io/linux-shell/>`__ has
   *much* more detail.
 * Software Carpentry has a `basic shell course
   <http://swcarpentry.github.io/shell-novice/>`__.  Sections one to 3
@@ -190,6 +190,6 @@ See also
 **Exercise:** for some fun, look at the manual pages for ``cat``,
 ``head``, ``tail``, ``grep``.
 
-**Exercise (advanced):** read the :doc:`Linux shell course
-</training/linux-shell-tutorial>` and understand what "pipes" and
+**Exercise (advanced):** read the `Linux shell course
+<https://aaltoscicomp.github.io/linux-shell/>`__ and understand what "pipes" and
 "piping" are.
