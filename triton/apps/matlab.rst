@@ -10,8 +10,8 @@ Matlab
 This page will explain how to run Matlab jobs on triton, and introduce 
 important details about Matlab on triton.
 (Note: We used to have the Matlab Distributed Computing Server (MDCS),
- but because of low use we no longer have a license.  You can still
- run in parallel on one node, with up to 40 cores.)
+but because of low use we no longer have a license.  You can still
+run in parallel on one node, with up to 40 cores.)
 
 .. include:: importantnotes/matlab.rst
 
@@ -86,7 +86,7 @@ The most common way to utilize Matlab is to write a single .M-file that
 can be used to run tasks as a non-interactive batch job. These jobs are
 then submitted as independent tasks and when the heavy part is done, the
 results are collected for analysis. For these kinds of jobs the Slurm
-array jobs is the best choice; :ref:`For more information on array jobs see
+array jobs is the best choice; :doc:`For more information on array jobs see
 Array jobs in the Triton user guide</triton/tut/serial>`.
 
 Here is an example of testing multiple mutation rates for a genetic algorithm.
@@ -95,7 +95,7 @@ First, the matlab code.
 .. literalinclude:: /triton/examples/multilang/matlab/serial.m
    :language: MATLAB
 
-We run this code with the following slurm script using `sbatch`
+We run this code with the following slurm script using ``sbatch``
 
 .. literalinclude:: /triton/examples/multilang/matlab/serial.slurm
    :language: slurm
