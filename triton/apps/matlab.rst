@@ -7,41 +7,21 @@ Matlab
    `See an example in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=24NxYtDkw8s&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=22>`__
 
 
-This page will guide you through the serial computing with Matlab at
-Triton cluster.  (Note (2017): We used to have the Matlab Distributed
-Computing Server (MDCS), but because of low use we no longer have a
-license.  You can still run in parallel on one node, up to 20-28 cores
-depending on how new.)
+This page will explain how to run Matlab jobs on triton, and introduce 
+important details about Matlab on triton.
+(Note: We used to have the Matlab Distributed Computing Server (MDCS),
+ but because of low use we no longer have a license.  You can still
+ run in parallel on one node, with up to 40 cores.)
 
-Matlab configuration
---------------------
-
-Matlab writes session data, compiled code and additional toolboxes to
-``~/.matlab``. This can quicky fill up your ``$HOME`` quota. To fix this
-we recommend that you replace the folder with a symlink that points to
-a directory in your working directory.
-
-::
-
-   rsync -lrt ~/.matlab/ $WRKDIR/matlab-config/ && rm -r ~/.matlab
-   ln -sT $WRKDIR/matlab-config ~/.matlab
-   quotafix -gs --fix $WRKDIR/matlab-config
-
-
-In order to avoid some issues matlab is by default run as a singlethread 
-instance on the cluster. to use matlab internal multithreading you have
-to call ``matlab_multithread`` instead of ``matlab``.
-If you use multithreaded matlab, and particularily workers keep in mind, 
-that matlab uses your home folder as storage for the worker files, so 
-if you run multiple jobs you have to keep the worker folders seperate 
-(see below). 
+.. include:: importantnotes/matlab.rst
 
 Interactive usage
 -----------------
 
-Interactive usage is currently available via the sinteractive tool. Do
-not use the cluster front-end for doing heavy task. Only meant for
-submitting jobs/compiling. Using MDCS for sending jobs is ok.
+Interactive usage is currently available via the ``sinteractive`` tool. Do
+not use the cluster front-end for this, but connect to a node with ``sinteractive``
+The login node is only meant for submitting jobs/compiling. 
+To run an interactive session with a user interface run the following commands from a terminal.
 
 ::
 
@@ -53,8 +33,8 @@ submitting jobs/compiling. Using MDCS for sending jobs is ok.
 Simple serial script
 --------------------
 
-Running a single core Matlab job is easy through the slurm queue. A
-sample slurm script is provided underneath::
+Running a simple Matlab job is easy through the slurm queue. A
+sample slurm script is provided below::
 
     #!/bin/bash -l
     #SBATCH --time=00:05:00
@@ -65,7 +45,9 @@ sample slurm script is provided underneath::
     m=2
     srun matlab -nojvm -nosplash -r "serial_Matlab($n,$m) ; exit(0)"
 
-The above script can then be saved as a file (e.g. matlab_test.slrm) and the job can be submitted with ``sbatch matlab_test.slrm``. The actual calculation is done in ``serial_Matlab.m``\ -file::
+The above script can then be saved as a file (e.g. matlab_test.slrm) and the job can be submitted with ``sbatch matlab_test.slrm``. The actual calculation is done in ``serial_Matlab.m``\ -file
+
+.. code:: matlab
 
     function C = serial_Matlab(n,m)
             try
@@ -87,7 +69,7 @@ Remember to *always* set exit into your slurm script so that the program quits
 once the function ``serial_Matlab`` has finished. Using a
 try-catch-statement will allow your job to finish in case of any error
 within the program.  If you don't do this, Matlab will drop into
-interactive mode and do nothing while your cluster time wastes. 
+interactive mode and do nothing while your job wastes time. 
 
 NOTE: Starting from version r2019a the launch options  ``-r ...; exit(0)`` can be easily 
 replaced with the ``-batch`` option which automatically exits matlab at the end of the command that is passed 
@@ -97,86 +79,33 @@ So the last command from the slurm script above for Matlab r2019a will look like
     srun matlab -nojvm -nosplash -batch "serial_Matlab($n,$m);"
 
 
-Multiple serial batchjobs
+Running Matlab Array jobs
 -------------------------
 
 The most common way to utilize Matlab is to write a single .M-file that
 can be used to run tasks as a non-interactive batch job. These jobs are
 then submitted as independent tasks and when the heavy part is done, the
 results are collected for analysis. For these kinds of jobs the Slurm
-array jobs is the best choice; For more information on array jobs see
-Array jobs in the Triton user guide.
+array jobs is the best choice; :ref:`For more information on array jobs see
+Array jobs in the Triton user guide</triton/tut/serial>`.
 
-Below you will find an example how-to prepare and run such type of jobs.
+Here is an example of testing multiple mutation rates for a genetic algorithm.
+First, the matlab code.
 
-**run.m file doing the actual calculation task**
+.. literalinclude:: /triton/examples/multilang/matlab/serial.m
+   :language: MATLAB
 
-The file below calculates Sin-function in the interval 0-2\*PI and
-stores the results into a file. The interval is divided into blocks that
-are distributed over the nodes. ::
+We run this code with the following slurm script using `sbatch`
 
-    function run(blockIndex,pointsPerBlock,totalBlocks)
-    % blockindex runs from 0..totalblocks-1
-    % range 0..2pi
-    length=2*pi;
-    % values to setup even spacing between given range 
-    % and splitting the spacings to even number of points per block
-    totalPoints=pointsPerBlock*totalBlocks;
-    step=length/(totalPoints-1);
-    start=blockIndex*pointsPerBlock*step;  
-    % do some calculations, store the resulst so arrays A and B
-    for index=0:pointsPerBlock-1
-      i=index+1;
-      x=start+index*step;
-      y=sin(x);
-      A(i)=x;
-      B(i)=y;
-    end
-    % save the results based on the blockIndex to a file
-    filename=strcat('output-',int2str(blockIndex));
-    save( filename, 'A', 'B', 'blockIndex');
-    % display message to output (log) that we have reached this far.
-    disp(sprintf('SUCCESS blockIndex %d',blockIndex));
-    % exit as this is a batch-job
-    exit;
-
-**Submission of 10 independent tasks**
-
-Below the **run.m** is executed as an array job with 10 array tasks,
-which will execute independently, potentially in parallel if there are
-enough idle resources. Note that it is using play partition with 5min
-time limit.
-
-matslurm.sh::
-
-    #!/bin/bash -l
-    #SBATCH --time=00:05:00
-    #SBATCH --mem=500M
-    #SBATCH -o job-%a.out
-    #SBATCH --array=0-9
-    module load matlab
-    matlab -nojvm -r "run($SLURM_ARRAY_TASK_ID,100,10); quit"
-
-Submit the job with "sbatch matslurm.sh" (or whatever you called the
-batch job script above).
+.. literalinclude:: /triton/examples/multilang/matlab/serial.slurm
+   :language: slurm
 
 **Collecting the results**
 
-Finally a wrapper script to read in the .mat files and plots you tha
-Sin-function calculated in parallel with 10 tasks.::
+Finally a wrapper script to read in the .mat files and plots the resulting values
 
-    function collectResults(numberOfBlocks) 
-       X=[]; 
-       Y=[];
-       for index=0:numberOfBlocks-1
-          % read the output from the jobs
-          filename = strcat( 'output-', int2str( index ) );
-          load( filename );
-          % catenate results to a single arrays
-          X=cat(2,X,A);
-          Y=cat(2,Y,B); 
-       end 
-       plot(X,Y,'b+:')
+.. literalinclude:: /triton/examples/multilang/matlab/collectResults.m
+   :language: MATLAB
 
 
 Seeding the random number generator
