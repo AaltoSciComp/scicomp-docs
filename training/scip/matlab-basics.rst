@@ -26,7 +26,7 @@ Page under construction. Last year's `Matlab Basics course webpage <https://vers
 
 **Place:** Zoom link to be posted to the registered users. We are considering the possibility of organizing this course in hybrid format (online and onsite).
 
-**Lecturers:** Enrico Glerean, D.Sc., NBE Department, SCI
+**Lecturers:** Enrico Glerean, D.Sc., NBE Department, SCI;  Thomas Pfau, PhD, SCI
 
 **Registration:** `Please click here to register <https://forms.gle/G6BxAYCwfxKQursHA>`__.
 
