@@ -97,9 +97,9 @@ Topics 2021
   + `Session notes <https://hackmd.io/@AaltoSciComp/SyAgcmTQF>`__,
     `Video <https://www.youtube.com/watch?v=CXOPwtJ7qDI&list=PLZLVmS9rf3nN1Rj-TAqFEzFM22Y1kJmvn>`__.
 
-- Fri 19.11 10:15, **jupyter.cs** Richard Darst
+- Fri 19.11 10:00, **jupyter.cs** Richard Darst
 
-- Fri 26.11, **Triton authentication** Mikko Hakala
+- Fri 26.11 10:15, **Triton authentication** Mikko Hakala
 
 - Simppa Äkäslompolo (fall 2021)
 
