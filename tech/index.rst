@@ -97,9 +97,9 @@ Topics
   + `Session notes <https://hackmd.io/@AaltoSciComp/SyAgcmTQF>`__,
     `Video <https://www.youtube.com/watch?v=CXOPwtJ7qDI&list=PLZLVmS9rf3nN1Rj-TAqFEzFM22Y1kJmvn>`__.
 
-- Mikko Hakala (fall 2021)
+- Fri 19.11 10:15, **jupyter.cs** Richard Darst
 
-  + Triton authentication
+- Fri 26.11, **Triton authentication** Mikko Hakala
 
 - Simppa Äkäslompolo (fall 2021)
 
