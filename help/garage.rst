@@ -109,11 +109,9 @@ We have added some **focus days** (see list below), but you can always visit on 
 NBE/PHYS Online
 ---------------
 
-This garage combines NBE, PHYS, and ITS (Aalto IT Services) staff,
-both from the computational and non-computational sides.
+PHYS, NBE, and ITS (Aalto IT Services) staff, are part of the Garage sessions every Monday and Wednesday.
 
-This garage happens on Zoom every Monday and Wednesday from 11:00 to 12:00. The link is sent to department personnel lists.
-
+Regular reminders are sent to the department personnel lists.
 
 
 Others
