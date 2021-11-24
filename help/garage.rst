@@ -90,26 +90,27 @@ and chat with us anyway and we can figure out a solution together.
   Safari.
 
 
-**Focus days**
+NBE/PHYS
+--------
+
+PHYS, NBE, and ITS (Aalto IT Services) staff are part of the Garage sessions every Monday and Wednesday. 
+Regular reminders are sent to the department personnel lists.
+
+
+
+Focus days
+----------
 
 We have added some **focus days** (see list below), but you can always visit on any day and ask anything not related to the "focus". But even if today is not the focus day for your question: Better come along and ask your question now. Chances are good someone will know an answer.
 
-* **Mondays** are NBE&PHYS focus days.
+* **Mondays** are NBE/PHYS focus days.
 * **Tuesdays** are Research Software Engineering focus days: Come ask about
   issues with your code or software tools you use. We can also help with basic methodological or statistical issues.
-* **Wednesdays** NBE&PHYS and Data focus days. Data days is in joint collaboration with the `Aalto Data Agents network <https://www.aalto.fi/en/services/data-agents-and-data-advisor>`__
+* **Wednesdays** NBE/PHYS and Data focus days. Data days is in joint collaboration with the `Aalto Data Agents network <https://www.aalto.fi/en/services/data-agents-and-data-advisor>`__
   from all Aalto schools. Come ask about research data management, data sharing/reusing/opening, data versioning, 
   sensitive data, data management plans, legal and ethical issues with research data, workflows for working with big datasets. 
 * **Thursdays** are Triton focus days: Come ask about code parallelization, slurm job submissions, and usage of Triton cluster. 
 * **Fridays** are CS focus days.  
-
-
-
-NBE/PHYS Online
----------------
-
-PHYS, NBE, and ITS (Aalto IT Services) staff are part of the Garage sessions every Monday and Wednesday. 
-Regular reminders are sent to the department personnel lists.
 
 
 Others
