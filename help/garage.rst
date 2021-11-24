@@ -60,8 +60,7 @@ Triton, SciComp, RSE, and CS
 
 .. admonition:: Link
 
-   https://aalto.zoom.us/j/61322268370, every day at 13:00 (**2021-08:
-   new link**)
+   https://aalto.zoom.us/j/61322268370, every day at 13:00
 
 You can meet us online, every weekday, at 13:00, `online via zoom
 <https://aalto.zoom.us/j/61322268370>`__.  Imagine this like walking
@@ -79,7 +78,7 @@ and chat with us anyway and we can figure out a solution together.
 
 * Arrive between 13:00 - 13:15.  We leave at 13:15 if there is no one
   around (and the person you need to talk to may leave).  Please don't
-  arrive early since we another meeting then.  Program always ends at
+  arrive early since we have another meeting then.  Program always ends at
   14:00.
   
 * We have some **focus days** (see list below) to ask about specific topics 
@@ -95,10 +94,10 @@ and chat with us anyway and we can figure out a solution together.
 
 We have added some **focus days** (see list below), but you can always visit on any day and ask anything not related to the "focus". But even if today is not the focus day for your question: Better come along and ask your question now. Chances are good someone will know an answer.
 
-* **Mondays** no special focus, come ask anything.
+* **Mondays** are NBE&PHYS focus days.
 * **Tuesdays** are Research Software Engineering focus days: Come ask about
   issues with your code or software tools you use. We can also help with basic methodological or statistical issues.
-* **Wednesdays** are Data focus days, this is in joint collaboration with the `Aalto Data Agents network <https://www.aalto.fi/en/services/data-agents-and-data-advisor>`__
+* **Wednesdays** NBE&PHYS and Data focus days. Data days is in joint collaboration with the `Aalto Data Agents network <https://www.aalto.fi/en/services/data-agents-and-data-advisor>`__
   from all Aalto schools. Come ask about research data management, data sharing/reusing/opening, data versioning, 
   sensitive data, data management plans, legal and ethical issues with research data, workflows for working with big datasets. 
 * **Thursdays** are Triton focus days: Come ask about code parallelization, slurm job submissions, and usage of Triton cluster. 
