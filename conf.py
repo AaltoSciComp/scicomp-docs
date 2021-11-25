@@ -45,6 +45,7 @@ optional_modules = [
     'sphinx_lesson.directives',
     'sphinx_tabs.tabs',
     'sphinx_togglebutton',
+    'sphinx_ext_substitution',
     ]
 if on_rtd or 'GITSTAMP' in os.environ:
     optional_modules.append('sphinx_gitstamp')
@@ -76,6 +77,9 @@ master_doc = 'index'
 project = u'Aalto scientific computing'
 copyright = u'2021, Aalto Science-IT'
 author = u'Aalto Science-IT'
+
+# Substitutions
+substitute_path = ['substitutions/']
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

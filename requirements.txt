@@ -12,3 +12,4 @@ sphinx-lesson
 sphinx-tabs
 sphinx-togglebutton
 sphinx_toolbox
+sphinx_ext_substitution

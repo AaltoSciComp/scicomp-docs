@@ -1,0 +1,4 @@
+# Substitutions for modules
+
+sw-module-anaconda: "``anaconda``"
+sw-module-anaconda2: "``module load anaconda``"
