@@ -56,11 +56,11 @@ YAML, by the way (but we can handle the syntax details).
    # For the course dates itself (just for our reference, not too important)
    start_date: 2020-10-01
    end_date: 2020-12-15
-   course_times: Exercise sessions Tuesday afternoons, Deadlines Fridays at 18
+   course_times: EXAMPLE, fill in: Exercise sessions Tuesday afternoons, Deadlines Fridays at 18
 
 
    # The dates above actually aren't used.  These control visibility:
-   private: false
+   private: true
    archive: false
 
    # Internal use, ignore this.  The date is the version of software
