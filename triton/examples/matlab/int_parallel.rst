@@ -10,7 +10,7 @@ and using the ``matlab_multithread`` to start the interpreter.
    :language: slurm
    
 An example function is provided in 
-:download:`this script <//triton/examples/multilang/matlab/parallel_fun.slurm>`
+:download:`this script </triton/examples/multilang/matlab/parallel_fun.slurm>`
 
 .. literalinclude:: /triton/examples/multilang/matlab/parallel_fun.slurm
   :language: matlab
