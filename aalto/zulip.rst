@@ -157,6 +157,13 @@ Other hints
 - You can format your messages using `Zulip markdown
   <https://zulip.com/help/format-your-message-using-markdown>`__.
 
+- Are you annoyed by having to enter a topic every time you send a
+  message?  Remember, when replying you don't need to.  But otherwise,
+  it's a trade-off: keep it organized or be less searchable.  Most of
+  users are clear that keeping organized is worth the searchability.
+  But don't worry too much: if you happen to get things wrong, others
+  can re-organize topics afterwards.
+
 - "Mute a stream" (or topic) is useful when you want to stay
   subscribed but not be notified of messages by default.  You can
   still find it if you click through the sidebar.
