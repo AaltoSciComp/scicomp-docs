@@ -20,8 +20,14 @@ numberOfVariables = 6;
 
 output = [4,-2,3.5,5,-11,-4.7] * x'
 
+save(['MutationJob' getenv('i') '.mat'], 'output');
+
+exit(0)
+
 function fit = fitness(x)
     output = [4,-2,3.5,5,-11,-4.7] * x';
     fit = abs(output - 44);
 end
+
+
 
