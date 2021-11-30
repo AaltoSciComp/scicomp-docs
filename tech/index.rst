@@ -101,6 +101,13 @@ Topics 2021
 
 - Fri 26.11 10:15, **Triton authentication** Mikko Hakala
 
+- Fri 10.12 10:15, **Nvidia experince of running an HPC cluster** Janne Blomqvist
+
+  * NVidia cluster overview
+  * What we are doing wrong at Aalto as comparing to Nvidia best practices
+
+- XX xx.xx xx:xx, **NetApp at Aalto Master Class**, Pekka Alaruikka / Mika Kontiala
+
 - Simppa Äkäslompolo (fall 2021)
 
   + SLURM setup
