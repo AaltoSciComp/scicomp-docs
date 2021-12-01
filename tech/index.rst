@@ -101,6 +101,13 @@ Topics 2021
 
 - Fri 26.11 10:15, **Triton authentication** Mikko Hakala
 
+- Fri 3.12 10:15, **NetApp at Aalto: department admins guide** Pekka Alaruikka / Mika Kontiala
+
+  + NetApp setup at Aalto
+  + what department admins may and may not of TeamWork
+  + Practicalities: volumes, exports, qtrees, quotas, settings, permissions etc
+  + (if time left) about backups on the TeamWork, troubleshooting, getting help, etc
+
 - Fri 10.12 10:15, **Nvidia experince of running an HPC cluster** Janne Blomqvist
 
   * NVidia cluster overview
