@@ -113,8 +113,6 @@ Topics 2021
   * NVidia cluster overview
   * What we are doing wrong at Aalto as comparing to Nvidia best practices
 
-- XX xx.xx xx:xx, **NetApp at Aalto Master Class**, Pekka Alaruikka / Mika Kontiala
-
 - Simppa Äkäslompolo (fall 2021)
 
   + SLURM setup
