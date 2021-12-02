@@ -160,6 +160,13 @@ The exact questions and answers:
   staff/TAs.
 
 
+**Other settings, up to you**
+
+* You allow messages to be edited longer using Settings → Organization
+  Settings.  It is often useful to set this to a longer period.
+
+
+
 Practical hints
 ---------------
 
@@ -215,6 +222,10 @@ suggestions for you, based on what other teachers have learned.
 * You can create user groups (teams) with a certain name.  The group
   can be ``@``-mentioned together, or added to a stream.
 
+* Moderators (and others) can organize other people's messages by
+  topic.  Edit the message to do this, including other people's.
+  Hotkey is ``e``.
+
 * If you want a Q&A forum, make a stream called ``#questions``, or
   smaller streams for specific topics, and direct students there.
 
@@ -266,9 +277,37 @@ suggestions for you, based on what other teachers have learned.
   called Errbot, but we don't currently know much about that.
 
 
-Things we know are missing (see also the student page):
 
-* More fine-grained permissions for TAs.
+FAQ
+---
+
+* Is there an easier way than subscribing students manually when
+  streams are created?  Yes, you should never be doing that manually.
+  See above for cloning membership of a stream from another.
+
+* Isn't it too much work to have to give a topic to every message?
+  Well, you don't have to when replying.  And this is sort of a
+  natural trade-off needed to keep things organized and searchable:
+  you have to think before you send.  Most people consider this a
+  worthy trade-off.  Note that you can change the topic of messages
+  after the fact, just talk and organize later as needed.
+
+
+
+Extra requested features
+------------------------
+
+(see also the student page)
+
+* Anonymous polls (a pull request exists with this feature)
+
+* Anonymous discussion
+
+* More fine-grained permissions for TAs.  DONE: moderator role now exists.
 
 * Support for bots and other advanced features (more like permission
-  to recommend them).
+  to recommend them, bot support works very well already).
+
+* Pinned topics (pull request exists, high-priority issue, #19483).
+
+* Long-term invitations (upcoming, high-priority issue, #20337)
