@@ -113,6 +113,15 @@ Topics 2021
   * NVidia cluster overview
   * What we are doing wrong at Aalto as comparing to Nvidia best practices
 
+- Fri 17.12 10:00, **CodeRefinery teaching strategy** Richard Darst
+
+  * The role of teaching in CodeRefinery and Aalto Scientific Computing
+  * Tools and strategies we use to successfully teach online: HackMD,
+    streaming, helpers, teams, co-teaching, and more.
+  * Future outlook and goals
+  * Preview video: https://www.youtube.com/watch?v=WjmttAniZX8
+
+
 - Simppa Äkäslompolo (fall 2021)
 
   + SLURM setup
