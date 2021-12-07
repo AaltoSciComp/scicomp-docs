@@ -97,21 +97,22 @@ Topics 2021
   + `Session notes <https://hackmd.io/@AaltoSciComp/SyAgcmTQF>`__,
     `Video <https://www.youtube.com/watch?v=CXOPwtJ7qDI&list=PLZLVmS9rf3nN1Rj-TAqFEzFM22Y1kJmvn>`__.
 
-- Fri 19.11 10:00, **jupyter.cs** Richard Darst
+- Fri 19.11 10:00, **jupyter.cs**, Richard Darst
 
-- Fri 26.11 10:15, **Triton authentication** Mikko Hakala
+- Fri 26.11 10:15, **Triton authentication**, Mikko Hakala
 
-- Fri 3.12 10:15, **NetApp at Aalto: department admins guide** Pekka Alaruikka / Mika Kontiala
+- Fri 3.12 10:15, **NetApp at Aalto: department admins guide**, Pekka Alaruikka / Mika Kontiala
 
   + NetApp setup at Aalto
   + what department admins may and may not of TeamWork
   + Practicalities: volumes, exports, qtrees, quotas, settings, permissions etc
   + (if time left) about backups on the TeamWork, troubleshooting, getting help, etc
 
-- Fri 10.12 10:15, **Nvidia experince of running an HPC cluster** Janne Blomqvist
+- Fri 10.12 10:15, **High Performance Clusters at NVIDIA**, Janne Blomqvist
 
-  * NVidia cluster overview
-  * What we are doing wrong at Aalto as comparing to Nvidia best practices
+  * NVIDIA cluster setup overview
+  * Best practices of the HPC cluster maintenance
+  * What we are doing wrong at FCCI as comparing to NVIDIA
 
 - Fri 17.12 10:00, **CodeRefinery teaching strategy** Richard Darst
 
