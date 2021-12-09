@@ -17,12 +17,17 @@ is useful even to non-computational researchers.
 [`twitter <https://twitter.com/SciCompAalto>`__]  We consist of
 Science-IT (HPC, the Triton cluster), certain department ITs, and
 other friends.  :doc:`You can join us </about/join>`.
+Along with a general Welcome guide,
 
 .. toctree::
    :maxdepth: 1
 
    aalto/welcomeresearchers
    aalto/welcomestudents
+
+we have created a quick-start guide to set up your system, access and use triton. 
+
+* `Triton Quickstart<triton/quickstart/index>`
 
 News
 ====
