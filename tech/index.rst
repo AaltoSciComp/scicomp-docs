@@ -122,6 +122,9 @@ Topics 2021
   * Future outlook and goals
   * Preview video: https://www.youtube.com/watch?v=WjmttAniZX8
 
+- Fri 17.12 12:00, **Open onDemand experience** by Esko Järnfors et all (CSC)
+
+  * NOTE: the second talk on the same Fri 17.12
 
 - Simppa Äkäslompolo (fall 2021)
 
