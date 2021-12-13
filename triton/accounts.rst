@@ -48,6 +48,8 @@ Accounts are for:
 You know that you have Triton access if you are in the ``triton-users``
 group at Aalto: ``groups`` shows this on Aalto linux machines.
 
+
+
 Your department/unit
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -56,6 +58,8 @@ When you get an account, you get added to a unit's group, which is
 updated.  Check ``sshare -U`` or ``sshare`` and if it's wrong, let us
 know (the units are first on the line).  (These are currently by
 department, so changes are not that frequent)
+
+
 
 Password change and other issues
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -68,20 +72,34 @@ If you are in doubts, in case of any account related issue your
 primary point of contact is your local support team member via the
 support email address. Do not post such issues on the tracker.
 
+
+
 Account deactivation / remove from mailing list
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Your account currently lasts as long as your Aalto account does. If
-you want to end your account early, contact your local support via the
-scicomp email address. This way, you will also be unsubscribed
-from the triton-users maillist (the mailing list is required for
-everyone who has an account).
+Your account lasts as long as your Aalto account does, and
+the triton-users mailing list is directly tied to Triton account.
+You will also be
+unsubscribed from the mailing list (they go together, you can't just
+be removed from the mailing list).
+
+If you want to deactivate your account, send an email to the scicomp
+email address (scicomp -at- aalto.fi).  You can save time by saying
+something like the following in your message (otherwise we will reply
+to confirm, if you have any special requests or need help, ask us): "I
+realize that I will lose access to Triton, I have made plans for any
+important data data and I realize that any home and work directory
+data will eventually be deleted".
 
 Before you leave, please clean up your home/work/scratch directories
 data. Consider who should have your data after you are done: does your
 group still need access to it?. You won't have access to the files
 after your account is deactivated. Note that scratch/work directory
 data are unrecoverable after deleting, which will happen eventually.
+If data is stored in a group directory (/scratch/$dept/$groupname), it
+won't be deleted and will stay managed by the group owner.
+
+
 
 Terms of use/privacy policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
