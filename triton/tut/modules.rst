@@ -16,6 +16,17 @@ problem.  Software installation and management takes up a huge amount
 of our time, but we try to make it easy for our users.  Still, it can
 end up taking a lot of your effort as well.
 
+.. admonition:: Generic instructions
+
+   * We use the standard `Lmod module system
+     <https://lmod.readthedocs.io/>`__, which makes more software
+     available by adjusting environment variables like ``PATH``
+   * Search modules: ``module spider SEARCH_TERM``
+   * Load modules: ``module load MODULE_NAME``
+   * Unload modules: ``module unload MODULE_NAME``
+   * List currently loaded modules: ``module list``
+   * Reset modules to empty: ``module purge``
+
 .. admonition:: Local differences
 
    Almost every site uses modules, and most use the same Lmod system

@@ -6,6 +6,15 @@ GPU computing
 
    `Watch this in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=aoU1-5DjrGc&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=17>`__
 
+.. admonition:: Generic instructions
+
+   * Request a GPU with ``--gres=gpu:1``
+   * Don't use ``srun`` in your batch script, something is wrong right
+     now with Slurm.
+   * If you use Python, generally don't load your own CUDA module
+     unless you know you need this, install what you need through
+     anaconda.
+   * Monitor GPU performance with ``sacct -j <jobID> -o comment -p``.
 
 Introduction
 ------------

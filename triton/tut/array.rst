@@ -6,6 +6,15 @@ Array jobs
 
    `Watch this in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=jcWoky9b8zI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=16>`__
 
+.. admonition:: Generic instructions
+
+   * Arrays allow you to submit jobs and it runs many times with a
+     different ``$SLURM_ARRAY_TASK_ID`` environment variable.
+   * Submit with the ``--array=`` Slurm argument, give array indexes
+     like ``--array=1-10,12-15``.
+   * There are different templates to use below, you can adapt this to
+     your task.
+
 .. highlight:: console
 
 More often than not, scientific problems involve running a single program again
