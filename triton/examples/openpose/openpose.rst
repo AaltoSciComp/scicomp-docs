@@ -21,7 +21,7 @@ One can run this example with ``srun``::
 
   wget https://raw.githubusercontent.com/AaltoSciComp/scicomp-docs/master/triton/examples/openpose/openpose.sh
   module load singularity-openpose
-  sbatch openpose.slrm
+  sbatch openpose.sh
 
 Example :download:`sbatch script </triton/examples/openpose/openpose.sh>` is
 shown below.

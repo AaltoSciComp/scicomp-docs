@@ -15,7 +15,7 @@ Spark or other programs that initialize a cluster using SSH and then
 forking a process, these forked processes must be killed after job
 allocation has ended.
 
-``hostlist-test.slrm``::
+``hostlist-test.sh``::
 
     #!/bin/bash
     #SBATCH --time=00:10:00

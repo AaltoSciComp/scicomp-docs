@@ -1,9 +1,9 @@
 R OpenMP Example
 ----------------
 
-:download:`r_openmp.slrm </triton/examples/r/r_openmp.slrm>`:
+:download:`r_openmp.sh </triton/examples/r/r_openmp.sh>`:
 
-.. literalinclude:: /triton/examples/r/r_openmp.slrm
+.. literalinclude:: /triton/examples/r/r_openmp.sh
 
 The benchmark script is available
 `here <https://r.research.att.com/benchmarks/R-benchmark-25.R>`__

@@ -14,13 +14,13 @@ Usage
 This example shows how you can launch Detectron on a gpu node. To run example
 given in 
 `Detectron repository <https://github.com/facebookresearch/Detectron/blob/master/GETTING_STARTED.md>`_
-one can use the following :download:`Slurm script </triton/examples/detectron/detectron.slrm>`:
+one can use the following :download:`Slurm script </triton/examples/detectron/detectron.sh>`:
 
-.. literalinclude:: /triton/examples/detectron/detectron.slrm
+.. literalinclude:: /triton/examples/detectron/detectron.sh
 
 Now example can by run on GPU node with::
 
-    sbatch detectron.slrm
+    sbatch detectron.sh
 
 
 In typical usage one does not want to download models for each run. To use 
@@ -49,12 +49,12 @@ stored models one needs to:
     ---
     >   WEIGHTS: https://s3-us-west-2.amazonaws.com/detectron/ImageNetPretrained/MSRA/R-101.pkl
 
-5. Edit :download:`Slurm script </triton/examples/detectron/detectron2.slrm>` to
+5. Edit :download:`Slurm script </triton/examples/detectron/detectron2.sh>` to
    point to downloaded weigths and models:
 
-.. literalinclude:: /triton/examples/detectron/detectron2.slrm
+.. literalinclude:: /triton/examples/detectron/detectron2.sh
 
 6. Submit job::
 
-    sbatch detectron.slrm
+    sbatch detectron.sh
 
