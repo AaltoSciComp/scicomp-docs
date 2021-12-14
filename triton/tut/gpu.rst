@@ -83,8 +83,7 @@ We support many common machine learning frameworks out of the box:
 
 Please note that most of the pre-installed softwares have CUDA already present.
 Thus you **do not need to load CUDA** as a seperate module when loading these.
-See the :ref:`application list <application-list>` or :doc:`GPU
-computing reference <../usage/gpu>` for more details.
+See the :ref:`application list <application-list>` for more details.
 
 
 
@@ -201,15 +200,3 @@ Exercises
    <https://aaltoscicomp.github.io/linux-shell/quoting-substitution-aliases/#substitute-a-command-output>`__ section
    from our Linux shell tutorial and the API page for Python's
    `os.environ <https://docs.python.org/3/library/os.html#os.environ>`_.
-
-
-What's next?
-------------
-
-You can see the main article, :doc:`../usage/gpu`, for more
-detailed information regarding GPU computing,
-including examples of different machine learning frameworks.
-
-This guide assumes you are using pre-existing GPU programs.  If you
-need to write your own, that's a whole other story, and you can find
-some hints on the reference page.

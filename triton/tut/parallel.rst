@@ -318,16 +318,3 @@ Exercises
    ``hpc-examples/mpi/hello_mpi/hello_mpi.slrm`` that
    have a short example of MPI.
    Compile and run it - a slurm script is included.
-
-
-
-Next steps
-----------
-
-See the next pages:
-
-* You can check the :doc:`../usage/general` page for the reference
-  information on running jobs.  This contains the general reference
-  information.
-
-* :doc:`../usage/mpilibs`

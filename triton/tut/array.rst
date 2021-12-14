@@ -265,7 +265,4 @@ What's next?
 
    Please check the `quick reference <../ref/index>` when needed.
 
-   If you need more detailed information about running on Triton, see the main page
-   `Running programs on Triton <../usage/general>`.
-
 The next tutorial is about :doc:`GPU computing <gpu>`.
