@@ -18,7 +18,7 @@ which will effect on the decision-making for future solutions, and the
 development of usability.
 
 CS-IT hosts `Zulip <https://zulipchat.com/>`_ the chat instances for you. These
-chat instances are hosted at ``<chat-name>.zulip.cs.aalto.fi``. Login to the
+chat instances are hosted at ``<chat-name>.zulip.aalto.fi`` (or older instances at ``<chat-name>.zulip.cs.aalto.fi``). Login to the
 chats is available with Aalto accounts. Email registration for external users
 is also possible via invitations. After logging in for the first time with an
 Aalto account, if no matching Zulip account was found, you are prompted to
