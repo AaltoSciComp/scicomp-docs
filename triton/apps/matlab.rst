@@ -97,7 +97,7 @@ First, the matlab code.
 
 We run this code with the following slurm script using ``sbatch``
 
-.. literalinclude:: /triton/examples/multilang/matlab/serial.slurm
+.. literalinclude:: /triton/examples/multilang/matlab/serial.sh
    :language: slurm
 
 **Collecting the results**
