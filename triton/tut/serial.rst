@@ -104,8 +104,8 @@ that resources are requested through job parameters such as ``--mem``, ``--time`
 
 .. seealso::
 
-   See :doc:`interactive jobs <interactive>`, the :doc:`reference
-   page <../ref/index>` or the :doc:`details page
+   See :doc:`interactive jobs <interactive>` or the :doc:`reference
+   page <../ref/index>`.
 
 Please keep in mind that these parameters are hard values. If, for example, you request 5 GB of memory
 and your job uses substantially more, Slurm will kill your job.
