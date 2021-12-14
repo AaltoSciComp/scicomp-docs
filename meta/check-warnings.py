@@ -25,6 +25,8 @@ errors = [
      "Title underline too short",
      "Title overline too short",
      "both interpreted text role prefix and reference suffix",
+     "not found or reading it failed",
+     "download file not readable",
     ]
 
 ignores = [
