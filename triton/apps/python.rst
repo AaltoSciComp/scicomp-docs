@@ -76,16 +76,6 @@ projects.
 Install your own packages easily
 --------------------------------
 
-Installing your own packages with ``pip install`` won't work, since it
-tries to install globally for all users. Instead, you should do this
-(add ``--user``) to install the package in your home directory
-(``~/.local/lib/pythonN.N/``)::
-
-  pip install --user $package_name
-
-This is quick and effective best used for leaf packages without many
-dependencies and if you don't switch Python modules often.
-
 .. warning:: ``pip install --user`` can result in incompatibilities
 
    If you do this, then the module will be shared among all
@@ -103,6 +93,16 @@ dependencies and if you don't switch Python modules often.
       rm -r ~/.local/lib/python*.*/
 
    and reinstall everything *after* loading the environment you want.
+
+Installing your own packages with ``pip install`` won't work, since it
+tries to install globally for all users. Instead, you should do this
+(add ``--user``) to install the package in your home directory
+(``~/.local/lib/pythonN.N/``)::
+
+  pip install --user $package_name
+
+This is quick and effective best used for leaf packages without many
+dependencies and if you don't switch Python modules often.
 
 .. note:: Example of dangers of ``pip install --user``
 
