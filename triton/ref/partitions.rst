@@ -8,8 +8,8 @@
    batch      | 16 nodes   | 2.66 - 12  | 32-256     | 12, 20,24  | 5d         | **primary partition**, all serial & parallel jobs
    short      | 8 nodes    | 4 - 12     | 48-256     | 12, 20,24  | 4h         | short serial & parallel jobs, +96 dedicated CPU cores
    hugemem    | 1 node     | 43         | 1024       | 24         | 3d         | huge memory jobs, 1 node only
-   gpu        | 1 node, 2-8GPUs   | 2 - 10     | 24-128     | 12         | 5d         | :doc:`GPU computing <../usage/gpu>`
-   gpushort   | 4 nodes, 2-8 GPUs  | 2 - 10     | 24-128     | 12         | 4h         | :doc:`GPU computing <../usage/gpu>`
+   gpu        | 1 node, 2-8GPUs   | 2 - 10     | 24-128     | 12         | 5d         |  Long gpu jobs
+   gpushort   | 4 nodes, 2-8 GPUs  | 2 - 10     | 24-128     | 12         | 4h         | Short GPU jobs
    interactive| 2 nodes    | 5          | 128        | 24         | 1d         | for ``sinteractive`` command, longer interactive work
 
 Use ``slurm partitions`` to see more details.

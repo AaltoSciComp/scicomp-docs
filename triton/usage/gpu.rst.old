@@ -19,9 +19,6 @@ Hardware breakdown
 
 
 * Note: Tesla K80 cards are in essence two GK210 GPUs on a single chip
-* Note: V100 cards are part of DGX machines, which were purchased by
-  several groups and are currently special access only.  They are also a
-  different operating system, please see :doc:`dgx`.
 
 Detail info about cards available at
 https://en.wikipedia.org/wiki/Nvidia_Tesla and for general info about

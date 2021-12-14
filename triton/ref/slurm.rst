@@ -9,7 +9,7 @@
    ``sinteractive``       | Submit job, wait, provide shell on node for interactive playing (X forwarding works, default partition interactive).  Exit shell when done. (see options below)
    ``srun --pty bash``    | (advanced) Another way to run interactive jobs, no X forwarding but simpler.  Exit shell when done.
    ``scancel`` *<jobid>*  | Cancel a job in queue
-   ``salloc``             | (advanced) Allocate resources from frontend node.  Use ``srun`` to run using those resources, ``exit`` to close shell when done. Read :doc:`the description <../usage/general>`! (see options below)
+   ``salloc``             | (advanced) Allocate resources from frontend node.  Use ``srun`` to run using those resources, ``exit`` to close shell when done (see options below)
    ``scontrol``           | View/modify job and slurm configuration
 
 

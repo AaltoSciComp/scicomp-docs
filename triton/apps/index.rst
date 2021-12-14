@@ -21,12 +21,6 @@ If you have difficulty, it's usually a good idea to search the issue
 tracker anyway, in order to learn from the experience of others.
 
 
-
-Compilers
----------
-See :doc:`../usage/toolchains`.
-
-
 Modules
 -------
 See :doc:`../tut/modules`.  Modules are the standard way of loading
