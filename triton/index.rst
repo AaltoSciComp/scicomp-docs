@@ -49,11 +49,6 @@ Quick contents and links
 	 * :doc:`tut/gpu`
 	 * :doc:`tut/parallel`
 
-       * Cluster usage details
-
-	 * Parallel jobs (coming, for now see :doc:`usage/general`)
-	 * :doc:`usage/gpu`
-
        * :ref:`Applications <apps>`
 
        For full contents, see below.
