@@ -66,17 +66,17 @@ In our case however, we would like to directly use it within the script we run. 
        
   .. group-tab:: python
   
-    .. literalinclude:: python/serial.slurm
+    .. literalinclude:: python/serial.sh
        :language: slurm
        
   .. group-tab:: R
   
-    .. literalinclude:: r/serial.slurm
+    .. literalinclude:: r/serial.sh
        :language: slurm
 
   .. group-tab:: MATLAB
   
-      .. literalinclude:: matlab/serial.slurm
+      .. literalinclude:: matlab/serial.sh
          :language: slurm
 
 
@@ -124,19 +124,19 @@ First, we need to introduce a for loop in he slurm script that runs the job a nu
        
   .. group-tab:: python
   
-    .. literalinclude:: python/serial_grouped.slurm
+    .. literalinclude:: python/serial_grouped.sh
        :language: slurm
        :emphasize-lines: 10-22
               
   .. group-tab:: R
   
-    .. literalinclude:: r/serial_grouped.slurm
+    .. literalinclude:: r/serial_grouped.sh
        :language: slurm
        :emphasize-lines: 10-22       
 
   .. group-tab:: MATLAB
   
-    .. literalinclude:: matlab/serial_grouped.slurm
+    .. literalinclude:: matlab/serial_grouped.sh
        :language: slurm
        :emphasize-lines: 10-22         
 
