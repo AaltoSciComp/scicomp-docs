@@ -109,8 +109,8 @@ copy them over to the node where your code is executed and extract them there wi
 
 
 If each input file is only used once, it's more efficient to load the tarball directly from the network drive
-IF it fits into memory, load it into memory, if not, try to use a streaming input and have the required files 
-in the tar-ball in the required order. 
+If it fits into memory, load it into memory, if not, try to use a sequentially reading input method and have the
+required files in the tar-ball in the required order. 
 For more information on storage and data usage on Triton have a look at these documents:
 
    * :doc:`Small files<../usage/smallfiles>`
