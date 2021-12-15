@@ -1,6 +1,16 @@
 #!/usr/bin/env python3
 """Reprocess Sphinx errors into github actions compatible syntax
 
+... also fails CI on errors.
+
+We could get the effect we need with sphinx-build -W (all warnings to errors)
+if we could ignore one particular warning.  But the ignore machinery isn't
+fine-grained enough to exclude only that error.
+
+There are several other gh-actions "error matchers", but they can't ignore
+certain errors (in our case, there are many orphan documents so 'document
+isno't included in any toctree) is common in our docs.
+
 Syntax guide:
   https://help.github.com/en/actions/reference/development-tools-for-github-actions
 
@@ -25,6 +35,8 @@ errors = [
      "Title underline too short",
      "Title overline too short",
      "both interpreted text role prefix and reference suffix",
+     "not found or reading it failed",
+     "download file not readable",
     ]
 
 ignores = [
