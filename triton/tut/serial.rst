@@ -22,7 +22,7 @@ Serial Jobs
 	module load anaconda
 	python my_script.py
 
-   * See the :doc:`quick reference <../ref/>` for more.
+   * See the :doc:`quick reference <../ref/index>` for more.
 
 
 Introduction to batch scripts

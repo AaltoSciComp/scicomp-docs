@@ -9,7 +9,7 @@ Interactive jobs
 .. admonition:: Generic instructions
 
    * We use the standard (and dominant) Slurm batch queuing system.
-   * See the :doc:`quick reference <../ref/>` for the reference you
+   * See the :doc:`quick reference <../ref/index>` for the reference you
      need if you know Slurm or batch systems.
    * For interactive testing, you can add ``srun [SLURM OPTIONS] COMMAND
      ...`` before any COMMAND to run it in Slurm.
