@@ -11,5 +11,7 @@
    ``module help`` *NAME*       | details on a module
    ``module unload`` *NAME*     | unload a module
    ``module save`` *ALIAS*      | save module collection to this alias (saved in ``~/.lmod.d/``)
+   ``module savelist``          | list all saved collections
+   ``module describe`` *ALIAS*  | details on a collection
    ``module restore`` *ALIAS*   | load saved module collection (faster than loading individually)
    ``module purge``             | unload all loaded modules (faster than unloading individually)
