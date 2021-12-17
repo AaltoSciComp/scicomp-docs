@@ -120,7 +120,8 @@ Topics 2021
   * Tools and strategies we use to successfully teach online: HackMD,
     streaming, helpers, teams, co-teaching, and more.
   * Future outlook and goals
-  * Preview video: https://www.youtube.com/watch?v=WjmttAniZX8
+  * `Video <https://youtu.be/S9Jor12Cxdc>`__, `Materials <https://hackmd.io/KRqQirJ_Rn2SHcE-t1iAUg?view>`__
+  * `Demo of our online teaching strategies <https://www.youtube.com/watch?v=WjmttAniZX8>`__
 
 - Fri 17.12 12:00, **Open onDemand experience** by Esko Järnfors et all (CSC)
 
