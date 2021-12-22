@@ -1,6 +1,9 @@
 .. list-table::
    :header-rows: 1
 
+   * * Method
+     * Description
+
    * * ssh
      * Standard way of connecting.  Hostname is ``triton.aalto.fi``,
        for Linux/Mac ``ssh triton.aalto.fi``.
