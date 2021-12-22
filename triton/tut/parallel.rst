@@ -10,6 +10,22 @@ Parallel computing is what HPC is really all about: processing things on
 more than one processor at once. By now, you should have read all of the previous
 tutorials.
 
+.. admonition:: Generic instructions
+
+   * You need to figure out what parallelization paradigm your program
+     uses, otherwise you won't know which options to use.
+
+     * Embarrassingly parallel: use array jobs.
+     * Multithreaded (OpenMP) or multiple tasks (like Python's
+       multiprocessing): ``--cpus-per-task=N``, ``--mem-per-core=M``
+       (if memory scales per CPU)
+     * MPI: compile to link with our Slurm and MPI libraries,
+       ``--ntasks=N``, always use ``srun`` to launch your job.
+       ``module load`` a MPI version for both compiling and running.
+
+   * You must always monitor jobs to make sure they are using all the
+     resources you request (``seff JOBID``).
+
 .. highlight:: bash
 
 

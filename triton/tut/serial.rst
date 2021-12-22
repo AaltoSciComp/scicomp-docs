@@ -6,6 +6,25 @@ Serial Jobs
 
    `Watch this in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=I79KLHb-7T0&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=14>`__
 
+.. admonition:: Generic instructions
+
+   * Batch scripts let you run work non-interactively, which is
+     important for scaling.
+
+   * Example batch script:
+
+     .. code:: slurm
+
+	#!/bin/bash -l
+	#SBATCH --time=01:00:00
+	#SBATCH --mem-per-cpu=1G
+
+	module load anaconda
+	python my_script.py
+
+   * See the :doc:`quick reference <../ref/index>` for more.
+
+
 Introduction to batch scripts
 =============================
 

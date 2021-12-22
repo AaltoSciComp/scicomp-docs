@@ -15,6 +15,12 @@ specifically talk about it.
 
    Main article: :doc:`../apps/index`
 
+.. admonition:: Generic instructions
+
+   * There are many ways to get software on Triton: we use the
+     standard module system, have Singularity containers, and you can
+     install your own.
+
 .. admonition:: Local differences
 
    Almost every site will use modules.  The exact module names, and

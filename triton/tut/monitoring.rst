@@ -2,6 +2,18 @@
 Monitoring job progress and job efficiency
 ==========================================
 
+.. admonition:: Generic instructions
+
+   * You must always monitor jobs to make sure they are using all the
+     resources you request.
+   * Test scaling: double resources, if it doesn't run almost twice as
+     fast, it's not worth it.
+   * ``slurm queue`` shows waiting and running jobs (this is a custom command)
+   * ``slurm history`` shows completed jobs (also custom command)
+   * ``seff JOBID`` shows efficiency and performance of a single jobs
+   * GPU efficiency: A job's ``comment`` field shows GPU performance info
+     (custom setup), ``sacct -j JOBID -o comment -p`` shows this.
+
 Introduction
 ============
 

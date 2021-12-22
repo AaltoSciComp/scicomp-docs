@@ -18,6 +18,27 @@ This page roughly has three parts:
 - Where are they available (mounted) on Aalto computers?
 - How can you access them remotely?
 
+.. admonition:: Generic instructions
+
+   * We are a standard Linux filesystem
+
+     * ``$HOME`` = ``/home/$USER``: 10GB, backed up, not made larger
+     * Scratch is large but not backed up:
+
+       * ``$WRKDIR`` = ``/scratch/work/$USER``: Personal work directory
+       * ``/scratch/DEPARTMENT/NAME/``: Group-based shared directories
+         (recommended for most work, group leaders can request them)
+
+     * ``/tmp``: temporary directory, pre-user mounted in jobs and
+       automatically cleaned up.
+     * ``/l/``: local persistent storage on some group servers
+     * ``$XDG_RUNTIME_DIR``: ramfs on login node
+
+   * Data is also available from other places in Aalto, such as
+     desktop workstations, shell servers, and vdi.aalto.fi.  See below.
+
+   * Remote access available via ssh and SMB mounting on your own
+     computer (within Aalto networks)
 
 
 Basics

@@ -6,6 +6,17 @@ Interactive jobs
 
    `Watch this in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=xhX_u2OA89s&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=11>`__
 
+.. admonition:: Generic instructions
+
+   * We use the standard (and dominant) Slurm batch queuing system.
+   * See the :doc:`quick reference <../ref/index>` for the reference you
+     need if you know Slurm or batch systems.
+   * For interactive testing, you can add ``srun [SLURM OPTIONS] COMMAND
+     ...`` before any COMMAND to run it in Slurm.
+   * ``sinteractive`` or ``srun --pty bash`` will get you shells in a
+     job environment.
+
+
 Introduction to Slurm
 =====================
 

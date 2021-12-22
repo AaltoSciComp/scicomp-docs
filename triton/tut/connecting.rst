@@ -18,18 +18,15 @@ way of doing this.
       to this material (and the tutorial in general).
 
 
-Summary:
+.. admonition:: Generic instructions
 
-You can connect to ``triton.aalto.fi`` via ssh from Aalto and CSC networks.
-Aalto networks include: Wired workstation networks, ``eduroam``, and
-the ``aalto`` wireless network *only if you are using an Aalto managed
-laptop* (otherwise ``aalto`` is like ``aalto open``).  If you connect
-to the Aalto VPN, you will be on the Aalto networks.
-
-For SSHing to Triton from outside of your department or CSC, please
-login first to a university server (like ``kosh.aalto.fi`` or
-``taltta.org.aalto.fi``) and then open a session to
-``triton.aalto.fi`` - or use the ``-J`` option in modern ssh.
+   * You can connect to Triton via ssh
+   * Host name is ``triton.aalto.fi``
+   * Connections available from the Aalto networks (VPN, most wired,
+     internal servers, ``eduroam``, ``aalto`` *only* if using an
+     Aalto-managed laptop, but *not* ``aalto open``),
+   * VPN is best but ``kosh.aalto.fi`` is a good ssh jump host from
+     outside (note the ``-J`` :doc:`ssh option </scicomp/ssh>`.
 
 .. important::
 
