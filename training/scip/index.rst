@@ -35,7 +35,9 @@ Currently active (upcoming) courses have been moved to the
   - Matlab Advanced (May 2021, `materials <https://hackmd.io/@eglerean/MatlabAdvanced2021>`__)
   - Intro to Scientific Computing (June 2021)
   - Introduction to Julia (August 2021 & October 2021, `materials <https://github.com/AaltoRSE/julia-introduction>`__)
-
+  - Python for Scientific Computing (October 2021, `materials <https://aaltoscicomp.github.io/python-for-scicomp/>`__, `videos <https://www.youtube.com/playlist?list=PLZLVmS9rf3nOS7bHNmbcDoyTnMYaz_TJW>`__)
+  - Linux Shell Basics (November 2021, `materials <https://aaltoscicomp.github.io/linux-shell/>`__)
+  - Matlab Basics (November 2021, `materials <https://version.aalto.fi/gitlab/eglerean/matlabcourse/-/tree/master/AY20212022/MatlabBasics2021>`__)
 
 
 
