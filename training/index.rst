@@ -25,9 +25,8 @@ and/or Python, Matlab, HTCondor and many others.
 .. toctree::
    :maxdepth: 1
 
-   scip/python-for-scicomp
-   scip/linux-shell-basics
-   scip/matlab-basics
+   scip/intro-linux-aalto-computing
+   scip/winter-kickstart
    scip/index
 
 .. toctree::
