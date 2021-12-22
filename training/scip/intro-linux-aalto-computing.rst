@@ -1,6 +1,12 @@
 =============================================
-Jan 2020 / Intro to Linux and Aalto Computing
+Jan 2022 / Intro to Linux and Aalto Computing
 =============================================
+
+.. important:: Updating for 2022
+
+   This course is being updated for January 2022, but you can see the
+   basic model below from last year.  You can register at
+   https://link.webropol.com/s/introHPCJan2022 .
 
 .. admonition:: Quick links
 
@@ -83,7 +89,7 @@ the lectures.
 
 **Time, date, place:** (all times EET):
 
-- Friday, 29 January, online
+- Friday, 14 January, online
 
   - Please connect 10 minutes early for icebreakers and introductions
 
