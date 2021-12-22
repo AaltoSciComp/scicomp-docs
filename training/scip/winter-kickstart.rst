@@ -41,10 +41,14 @@ The course is obligatory for all new Triton users and recommended to
 all interested in the field.
 
 **If you are not at Aalto University**, you can follow along with the
-course and will probably learn something.  But, many of the examples
-won't directly work on your cluster and you will need to adapt. Participants
-from University of Helsinki can follow how to connect to their Kale/Ukko2
-cluster by following instructions at: https://wiki.helsinki.fi/display/it4sci/HPC++Winter+KICKSTART+2021
+course and will learn many things anyway.  But, many of the examples
+won't directly work on your cluster and you will need to adapt (we
+will mention these things when relevant and also create a guide for
+other sites to guide their users).  We know of these other reference guides:
+
+- Participants from University of Helsinki can follow how to connect
+  to their Kale/Ukko2 cluster by following instructions at:
+  https://wiki.helsinki.fi/display/it4sci/HPC++Winter+KICKSTART+2021
 
 This course is part of :doc:`Scientific Computing in Practice <index>` lecture series
 at Aalto University.
