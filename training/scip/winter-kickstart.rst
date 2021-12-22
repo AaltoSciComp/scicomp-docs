@@ -4,7 +4,7 @@ Jan 2022 / Triton Winter Kickstart
 
 .. admonition:: Page being updated
 
-   * This page is currently being updated. To register for the January 2022 sessions please visit https://link.webropol.com/s/introHPCJan2022
+   * This page is currently being updated for January 2022 (below you can see the program from 2021, which will be the model for 2022). To register for the January 2022 sessions please visit https://link.webropol.com/s/introHPCJan2022
 
 
 .. admonition:: Quick Links
