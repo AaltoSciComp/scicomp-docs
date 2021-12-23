@@ -6,14 +6,16 @@ Creating a graphical job on triton
 
     Before submitting a job:
     Optimally, through tests, have a rough idea, how long your job takes, how much memory it needs and how much CPU(s)/GPU(s) it needs.
+
     Required Reading:
+
     - :doc:`Submitting jobs on triton<quickjobs>`
 
     Required Setup:
 
     - :doc:`Setting up your System to connect to triton according to the :doc:`connection guide<quickconnecting>`
     - Your script and any data need to be on triton (follow e.g. the :doc:`data transfer quick-start guide<quickdata>`)
-    - Specific to Windows: Install an X-Server
+    - Specific to Windows: Install an XServer
 
 First off, in general, using graphical user interfaces to programming languages (e.g. graphical Matlab, or RStudio)
 is not recommended, since there is no real advantage to submitting a job to the cluster.

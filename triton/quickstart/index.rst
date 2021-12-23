@@ -3,7 +3,7 @@ Triton quickstart guide
 =======================
 
 This is a quickstart guide to the Triton cluster.
-Each individual Guide will link to additional resources with more extensive information.
+Each individual guide will link to additional resources with more extensive information.
 
 .. toctree::
    :maxdepth: 1

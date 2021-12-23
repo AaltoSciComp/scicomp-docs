@@ -4,11 +4,11 @@ Connecting to Triton
 
 Most of the information on this page is also available on other tutorial sites.
 This page is essentially a condensed version of those sites, that will only give you a recipe
-how to quickly set up your machine and the most important details. For more in-depth information
-please have a look at the linked pages for each section
+how to quickly set up your machine and the most important details. For more in-depth information,
+please have a look at the linked pages for each section.
 
-There are three suggested ways to connect to Triton, as detailed in the table below.
-With more info found at :doc:`the connecting Tutorial<tut/connecting>`
+There are three suggested ways to connect to Triton, as detailed in the table below,
+with more info found at :doc:`the connecting tutorial<tut/connecting>`.
 
 .. list-table::
     :header-rows: 1
@@ -42,14 +42,14 @@ Connecting via ssh
       have a look at the following pages:
 
       * :doc:`Shell crash course </scicomp/shell>`
-      * :doc:`Configuration and use of ``ssh``</scicomp/ssh>`
+      * :doc:`Configuration and use of ssh </scicomp/ssh>`
       * :doc:`SSH fingerprints <../usage/ssh-fingerprints>`
 
-Setting up ssh for passwordfree access
+Setting up ssh for passwordless access
 --------------------------------------
 
 The following guide shows you how to set up the ssh system to allow you to connect to Triton from either outside of
-the aalto network or from within using an ssh key instead of your password. In the following
+the Aalto network or from within using an ssh key instead of your password. In the following
 guide ``USERNAME`` refers to your Aalto user name and ``~/.ssh`` refers to your ssh config folder.
 (On Windows, you can use `GIT-bash <https://gitforwindows.org/>`__, which will allow
 you to use linux style abbreviations. The actual folder is normally located under
