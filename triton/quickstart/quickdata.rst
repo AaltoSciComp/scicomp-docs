@@ -6,7 +6,7 @@ This section gives an best practices data usage, access and transfer to and from
 
 .. admonition:: Prerequisites
 
-      For data transfer, we assume that you have set up your system according to the 
+      For data transfer, we assume that you have set up your system according to the
       instructions in the :doc:`Quick guide<quickconnecting>`
 
 Locations and quotas
@@ -20,7 +20,7 @@ Access to data and data transfer
 .. admonition:: Prerequisites
 
       On Windows systems, this guide assumes that you use `GIT-bash <https://gitforwindows.org/>`__,
-      and have ``rsync`` installed according to :doc:`this guide<../tut/rsynconwindows>` 
+      and have ``rsync`` installed according to :doc:`this guide<../tut/rsynconwindows>`
 
 Download data to Triton
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -29,17 +29,17 @@ To download a dataset directly to Triton, if it is available somewhere
 online at a URL, you can use ``wget``
 
 ::
-	
+
 	wget https://url.to.som/file/on/a/server
 
 
 If the data requires a login you can use:
 
 ::
-	
+
 	wget --user username --ask-password https://url.to.som/file/on/a/server
-	
-	
+
+
 Downloading directly to Triton allows you to avoid the unnecessary network traffic and time required to first download it to your machine
 and then transferring it over to Triton.
 
@@ -54,7 +54,7 @@ This can be done by comparing the md5 checksum (or others using e.g. ``sha256sum
 The resulting checksum has to be identical to the one listed online. If it is not, your data is most likely corrupted and should not be used.
 
 For very large datasets (>100GB) you should check, whether they are already on Triton. The folder for these kinds of datasets is located at:
-``/scratch/shareddata/dldata``, and if not, please contact the admins to have it added there. This avoids the same dataset being downloaded multiple 
+``/scratch/shareddata/dldata``, and if not, please contact the admins to have it added there. This avoids the same dataset being downloaded multiple
 times.
 
 
@@ -70,8 +70,8 @@ From inside the Aalto network (or VPN), you can also mount the Triton file syste
   * work: ``smb://data.triton.aalto.fi/work/$username/``.
 
 More details can be found :ref:`here <remote_access_to_data>`.
-	
-For larger files, or folders with multiple files and if the data is already on your machine, we suggest using rsync, 
+
+For larger files, or folders with multiple files and if the data is already on your machine, we suggest using rsync,
 
 ::
 
@@ -87,7 +87,7 @@ For more details on rsync have a look :ref:`here <rsync_data_transfer>`.
 Best practices with data
 ------------------------
 
-I/O can be a limiting factor when using the cluster. The probably most important factor 
+I/O can be a limiting factor when using the cluster. The probably most important factor
 limiting I/O speed on Triton is file-sizes. The smaller the files the more inefficient their transfer.
 When you run a job on Triton and need to access many small files, we recommend to first pack them into
 a large tarball:
@@ -100,7 +100,7 @@ a large tarball:
      # a folder use the following command
      tar -cvf mytarball.tar folder
 
-copy them over to the node where your code is executed and extract them there within the slurm script or your code. 
+copy them over to the node where your code is executed and extract them there within the slurm script or your code.
 ::
 
    # copy it over
@@ -111,12 +111,10 @@ copy them over to the node where your code is executed and extract them there wi
 
 If each input file is only used once, it's more efficient to load the tarball directly from the network drive
 If it fits into memory, load it into memory, if not, try to use a sequentially reading input method and have the
-required files in the tar-ball in the required order. 
+required files in the tar-ball in the required order.
 For more information on storage and data usage on Triton have a look at these documents:
 
    * :doc:`Small files<../usage/smallfiles>`
    * :doc:`Storage: Local Drives<../usage/localstorage>`
    * :doc:`Storage: Lustre<../usage/lustre>`
    * :doc:`Data Storage<../tut/storage/>`
-
-

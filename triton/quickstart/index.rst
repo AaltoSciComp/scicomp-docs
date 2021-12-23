@@ -2,7 +2,7 @@
 Triton quickstart guide
 =======================
 
-This is a quickstart guide to the Triton cluster. 
+This is a quickstart guide to the Triton cluster.
 Each indivdual Guide will link to additional resources with more extensive information.
 
 .. toctree::
@@ -14,5 +14,4 @@ Each indivdual Guide will link to additional resources with more extensive infor
    quickjobs
    quickjobsgraphic
    ../examples/multilang/inlanguageparallel.rst
-   ../examples/multilang/batchjobs.rst   
-
+   ../examples/multilang/batchjobs.rst

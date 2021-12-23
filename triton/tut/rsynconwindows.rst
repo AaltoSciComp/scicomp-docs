@@ -5,7 +5,7 @@ Installing rsync on Windows
 .. admonition:: Prerequisites
 
 	You need to have `GIT-bash <https://gitforwindows.org/>`__ installed on your system
-	
+
 
 This guide gives you a recipe how to install rsync on a windows machine using git-bash
 
@@ -16,7 +16,5 @@ This guide gives you a recipe how to install rsync on a windows machine using gi
 3. Run the installation script as follows:
 
 ::
-  
-  ./installRsync
-  
 
+  ./installRsync
