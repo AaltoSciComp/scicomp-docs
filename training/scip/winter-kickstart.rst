@@ -1,6 +1,11 @@
 ==================================
-Feb 2021 / Triton Winter Kickstart
+Jan 2022 / Triton Winter Kickstart
 ==================================
+
+.. admonition:: Page being updated
+
+   * This page is currently being updated for January 2022 (below you can see the program from 2021, which will be the model for 2022). To register for the January 2022 sessions please visit https://link.webropol.com/s/introHPCJan2022
+
 
 .. admonition:: Quick Links
 
@@ -41,10 +46,14 @@ The course is obligatory for all new Triton users and recommended to
 all interested in the field.
 
 **If you are not at Aalto University**, you can follow along with the
-course and will probably learn something.  But, many of the examples
-won't directly work on your cluster and you will need to adapt. Participants
-from University of Helsinki can follow how to connect to their Kale/Ukko2
-cluster by following instructions at: https://wiki.helsinki.fi/display/it4sci/HPC++Winter+KICKSTART+2021
+course and will learn many things anyway.  But, many of the examples
+won't directly work on your cluster and you will need to adapt (we
+will mention these things when relevant and also create a guide for
+other sites to guide their users).  We know of these other reference guides:
+
+- Participants from University of Helsinki can follow how to connect
+  to their Kale/Ukko2 cluster by following instructions at:
+  https://wiki.helsinki.fi/display/it4sci/HPC++Winter+KICKSTART+2021
 
 This course is part of :doc:`Scientific Computing in Practice <index>` lecture series
 at Aalto University.
@@ -63,7 +72,7 @@ the course.
 
 **Registration:**
 
-`Please register at this link <https://docs.google.com/forms/d/e/1FAIpQLScuBRlKQ4X-ZVSUhoz8zLYSgAI5xH91Cg9hfkEHrjmerViy0Q/viewform>`__
+`Please register at this link <https://link.webropol.com/s/introHPCJan2022>`__
 
 **Instructors, organizers, contact:** For additional info, email scip@aalto.fi
 
@@ -72,16 +81,16 @@ the course.
 * Simo Tuomisto
 
 
-**Time, date, location:** Mon-Tue 1-2.February, 12:00-15:00.  Online,
+**Time, date, location:** Mon-Tue 17-18.January, 12:00-15:00.  Online,
 links sent to participants.
 
-- **Friday, 29 January, 2021**  (Zoom only, no Twitch)
+- **Friday, 14 January, 2022**  (Zoom only, no Twitch)
 
   - **14:00 -- 14:45**
   - Help connecting to Triton (Aalto), Zoom link by email to
     registered participants
 
-- **Monday, 1 February, 2021** (roughly connecting to serial jobs in
+- **Monday, 17 January, 2022** (roughly connecting to serial jobs in
   the :ref:`tutorials <tutorials>`)
 
   - **11:50 -- 15:00**, all times approximate, breaks every hour
@@ -94,7 +103,7 @@ links sent to participants.
   - :doc:`/triton/tut/interactive`
   - :doc:`/triton/tut/serial` (likely gets moved to day 3)
 
-- **Tuesday, 2 February, 2021**
+- **Tuesday, 18 January, 2022**
 
   - **11:50 -- 15:00**, all times approximate, breaks every hour
   - Likely

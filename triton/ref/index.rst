@@ -18,6 +18,13 @@ In this page, you have all important reference information
    hardware.rst
    hardware_dist.rst
 
+Quick reference guide for the Triton cluster at Aalto University.
+
+Connecting
+==========
+
+.. include:: connecting.rst
+
 Modules
 =======
 

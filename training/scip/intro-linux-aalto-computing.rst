@@ -4,9 +4,7 @@ Jan 2022 / Intro to Linux and Aalto Computing
 
 .. important:: Updating for 2022
 
-   This course is being updated for January 2022, but you can see the
-   basic model below from last year.  You can register at
-   https://link.webropol.com/s/introHPCJan2022 .
+   * This page is currently being updated for 2022, but you can see the basic model below from last year which will be reused with changes. To register for the January 2022 sessions please visit https://link.webropol.com/s/introHPCJan2022
 
 .. admonition:: Quick links
 
@@ -89,7 +87,7 @@ the lectures.
 
 **Time, date, place:** (all times EET):
 
-- Friday, 14 January, online
+- Friday, 14 January 2022, online
 
   - Please connect 10 minutes early for icebreakers and introductions
 
@@ -117,10 +115,10 @@ the lectures.
 
 **Registration:**
 
-`Please register at this link <https://docs.google.com/forms/d/e/1FAIpQLScuBRlKQ4X-ZVSUhoz8zLYSgAI5xH91Cg9hfkEHrjmerViy0Q/viewform>`__
+`Please register at this link <https://link.webropol.com/s/introHPCJan2022>`__
 We aim to not require registration
 if you will be only passively watching.  Lurkers welcome.  Priority
-for Finnish academic institutions (FGCI members).
+for Finnish academic institutions (FCCI members).
 
 **Credits:** Certificates are not provided for this course.
 
