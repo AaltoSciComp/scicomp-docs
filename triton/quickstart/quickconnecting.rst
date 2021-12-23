@@ -8,7 +8,7 @@ how to quickly set up your machine and the most important details. For more in-d
 please have a look at the linked pages for each section
 
 There are three suggested ways to connect to Triton, as detailed in the table below.
-With more info found at :doc:` the connecting Tutorial<tut/connecting>`
+With more info found at :doc:`the connecting Tutorial<tut/connecting>`
 
 .. list-table::
     :header-rows: 1
