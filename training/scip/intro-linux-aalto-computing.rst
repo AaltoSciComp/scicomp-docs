@@ -2,11 +2,9 @@
 Jan 2022 / Intro to Linux and Aalto Computing
 =============================================
 
-.. admonition:: Page being updated
+.. important:: Updating for 2022
 
-   * This page is currently being updated. To register for the January 2022 sessions please visit https://link.webropol.com/s/introHPCJan2022
-
-
+   * This page is currently being updated for 2022, but you can see the basic model below from last year which will be reused with changes. To register for the January 2022 sessions please visit https://link.webropol.com/s/introHPCJan2022
 
 .. admonition:: Quick links
 
