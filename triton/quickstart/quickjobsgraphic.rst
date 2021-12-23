@@ -18,7 +18,7 @@ Creating a graphical job on triton
 First off, in general, using graphical user interfaces to programming languages (e.g. graphical Matlab, or RStudio)
 is not recommended, since there is no real advantage to submitting a job to the cluster.
 
-However, there are instances where you might need large amount of ressources e.g. to visualize data which is indeed intended use.
+However, there are instances where you might need large amount of resources e.g. to visualize data which is indeed intended use.
 There are two things you need to do to run a graphical program on the cluster:
 
 - Start X-forwarding (``ssh -X host`` or ``ssh -Y host``)

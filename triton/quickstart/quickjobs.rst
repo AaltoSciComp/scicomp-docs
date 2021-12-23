@@ -21,12 +21,12 @@ Types of jobs:
 ==============
 
 
-Triton uses the Slurm scheduling system, to allocate ressources, like computer nodes, memory on the nodes, GPUs etc,
+Triton uses the Slurm scheduling system, to allocate resources, like computer nodes, memory on the nodes, GPUs etc,
 to the submitted jobs. For more details on Slurm, have a look `here <https://slurm.schedmd.com/>`_.
 In this quickstart guide, we will only introduce the most important parameters, and skip over a lot of details.
 There are multiple different types of jobs available on Triton. Here we focus on the most commonly used ones.
 
-- Interactive jobs (commonly to test things or run graphical platforms with cluster ressources)
+- Interactive jobs (commonly to test things or run graphical platforms with cluster resources)
 - Batch jobs (normal jobs submitted to the cluster without direct user input)
 
 to run an interactive connect to Triton and job simply run
