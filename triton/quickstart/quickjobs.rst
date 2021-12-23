@@ -9,12 +9,12 @@ Submitting jobs on Triton
     Required Reading:
     
     - :doc:`Use Policy<../usagepolicy>`
-    - :doc:`Acknowleding Triton<../acknowledgingtriton>`
+    - :doc:`Acknowledging Triton<../acknowledgingtriton>`
     - :doc:`Loading Applications and libraries<../tut/applications>`
     
     Required Setup:
     
-    - :doc:`Setting up your System to connect to Triton according to the :doc:`connection guide<quickconnecting>`
+    - Setting up your System to connect to Triton according to the :doc:`connection guide<quickconnecting>`
     - Your script and any data need to be on Triton (follow e.g. the :doc:`data transfer quick-start guide<quickdata>`
 
 Types of jobs:
