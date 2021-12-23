@@ -25,7 +25,8 @@ Access to data and data transfer
 Download data to Triton
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-To download a dataset directly to Triton you can use ``wget``
+To download a dataset directly to Triton, if it is available somewhere
+online at a URL, you can use ``wget``
 
 ::
 	
@@ -42,9 +43,9 @@ If the data requires a login you can use:
 Downloading directly to Triton allows you to avoid the unnecessary network traffic and time required to first download it to your machine
 and then transferring it over to Triton.
 
-If you need to download a larger (>10GB) dataset to Triton from the internet please veryfy that the download acctually succeeded properly.
+If you need to download a larger (>10GB) dataset to Triton from the internet please verify that the download actually succeeded properly.
 
-This can be done by comparing the md5 checksum, commonly provided by hosts along with the downloadable data. After downloadingsimply run:
+This can be done by comparing the md5 checksum (or others using e.g. ``sha256sum`` and so on), commonly provided by hosts along with the downloadable data. After downloading simply run:
 
 ::
 
@@ -63,7 +64,7 @@ Copy data to and from Triton
 The folders available on Triton are listed above. To copy small amounts of data to and from Triton from outside the Aalto network,
 you can either use scp or on linux/mac mount the file-system using sftp (e.g. ``sftp://triton_via_kosh``).
 
-From inside the Aalto network, you can also mount the Triton file system via smb:
+From inside the Aalto network (or VPN), you can also mount the Triton file system via smb:
 
   * scratch: ``smb://data.triton.aalto.fi/scratch/``.
   * work: ``smb://data.triton.aalto.fi/work/$username/``.
