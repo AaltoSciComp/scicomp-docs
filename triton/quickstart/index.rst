@@ -9,8 +9,10 @@ Each indivdual Guide will link to additional resources with more extensive infor
    :maxdepth: 1
 
    quickconnecting
+   installxonwindows
    quickdata
    quickjobs
+   quickjobsgraphic
    ../examples/multilang/inlanguageparallel.rst
    ../examples/multilang/batchjobs.rst   
 
