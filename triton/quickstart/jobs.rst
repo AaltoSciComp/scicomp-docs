@@ -12,8 +12,8 @@ Submitting jobs on Triton
 
     Required Setup:
 
-    - Setting up your System to connect to Triton according to the :doc:`connection guide<quickconnecting>`
-    - Your script and any data need to be on Triton (follow e.g. the :doc:`data transfer quick-start guide<quickdata>`)
+    - Setting up your System to connect to Triton according to the :doc:`connection guide <connecting>`
+    - Your script and any data need to be on Triton (follow e.g. the :doc:`data transfer quick-start guide <data>`)
 
 Types of jobs:
 ==============

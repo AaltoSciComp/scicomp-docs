@@ -7,7 +7,7 @@ This section gives an best practices data usage, access and transfer to and from
 .. admonition:: Prerequisites
 
       For data transfer, we assume that you have set up your system according to the
-      instructions in the :doc:`quick guide<quickconnecting>`
+      instructions in the :doc:`quick guide <connecting>`
 
 Locations and quotas
 --------------------

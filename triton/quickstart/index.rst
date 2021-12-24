@@ -8,11 +8,11 @@ Each individual guide will link to additional resources with more extensive info
 .. toctree::
    :maxdepth: 1
 
-   quickconnecting
+   connecting
    installxonwindows
-   quickdata
-   quickjobs
-   quickjobsgraphic
+   data
+   jobs
+   jobsgraphic
 
 As for using various programming languages to run on Triton, one can
 see the following examples:

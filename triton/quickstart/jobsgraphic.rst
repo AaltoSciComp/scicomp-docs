@@ -9,12 +9,12 @@ Creating a graphical job on triton
 
     Required Reading:
 
-    - :doc:`Submitting jobs on triton<quickjobs>`
+    - :doc:`Submitting jobs on triton <jobs>`
 
     Required Setup:
 
-    - :doc:`Setting up your System to connect to triton according to the :doc:`connection guide<quickconnecting>`
-    - Your script and any data need to be on triton (follow e.g. the :doc:`data transfer quick-start guide<quickdata>`)
+    - :doc:`Setting up your System to connect to triton according to the :doc:`connection guide <connecting>`
+    - Your script and any data need to be on triton (follow e.g. the :doc:`data transfer quick-start guide <data>`)
     - Specific to Windows: Install an XServer
 
 First off, in general, using graphical user interfaces to programming languages (e.g. graphical Matlab, or RStudio)
