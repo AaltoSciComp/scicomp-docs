@@ -20,7 +20,7 @@ Access to data and data transfer
 .. admonition:: Prerequisites
 
       On Windows systems, this guide assumes that you use `GIT-bash <https://gitforwindows.org/>`__,
-      and have ``rsync`` installed according to :doc:`this guide<../tut/rsynconwindows>`
+      and have ``rsync`` installed according to :doc:`this guide </scicomp/rsynconwindows>`
 
 Download data to Triton
 ~~~~~~~~~~~~~~~~~~~~~~~

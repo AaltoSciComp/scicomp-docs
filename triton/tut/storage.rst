@@ -399,9 +399,9 @@ Using rsync
 ~~~~~~~~~~~
 
 .. admonition:: Prerequisites
-   
-   To install rsync on windos please refer to :doc:`this guide<../tut/rsynconwindows>` 
-   
+
+   To install rsync on windos please refer to :doc:`this guide </scicomp/rsynconwindows>`
+
 
 Rsync is similar to sftp, but is smarter at restarting files.  Use rsync
 for large file transfers.  ``rsync`` actually uses the ssh protocol so
