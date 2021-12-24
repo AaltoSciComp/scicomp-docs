@@ -13,5 +13,9 @@ Each individual guide will link to additional resources with more extensive info
    quickdata
    quickjobs
    quickjobsgraphic
-   ../examples/multilang/inlanguageparallel.rst
-   ../examples/multilang/batchjobs.rst
+
+As for using various programming languages to run on Triton, one can
+see the following examples:
+
+* :doc:`../examples/multilang/inlanguageparallel`
+* :doc:`../examples/multilang/batchjobs`
