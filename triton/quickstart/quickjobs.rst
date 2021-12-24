@@ -4,9 +4,7 @@ Submitting jobs on Triton
 
 .. admonition:: Prerequisites
 
-    Optimally, before submitting a job:
-     do enough tests and have a rough idea, how long your job takes, how much memory it needs and how much CPU(s)/GPU(s) it needs.
-    Required Reading:
+    Optimally, before submitting a job: do enough tests and have a rough idea, how long your job takes, how much memory it needs and how much CPU(s)/GPU(s) it needs. Required Reading:
 
     - :doc:`Use Policy<../usagepolicy>`
     - :doc:`Acknowledging Triton<../acknowledgingtriton>`
