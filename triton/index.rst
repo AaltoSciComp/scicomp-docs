@@ -115,6 +115,7 @@ Quick reference
    :maxdepth: 1
 
    ref/index
+   quickstart/index
 
 
 Tutorials
