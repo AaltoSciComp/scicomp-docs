@@ -10,24 +10,7 @@ please have a look at the linked pages for each section.
 There are three suggested ways to connect to Triton, as detailed in the table below,
 with more info found at :doc:`the connecting tutorial <../tut/connecting>`.
 
-.. list-table::
-    :header-rows: 1
-
-    * * Method
-      * About
-      * From where?
-    * * ssh
-      * Works everywhere, from everywhere.  Firewalls may make things
-	hard sometimes.
-      * Aalto networks only, otherwise ssh to kosh and then Triton
-    * * https://jupyter.triton.aalto.fi
-      * Jupyter interface, but provides shell access via web browser.
-      * Whole internet
-    * * https://vdi.aalto.fi
-      * Virtual desktop, from there you have to ``ssh`` to Triton
-	anyway but gets you past firewalls and can run graphical
-	programs via SSH.
-      * Whole internet
+.. include:: ../ref/connecting.rst
 
 
 Connecting via ssh
