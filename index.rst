@@ -81,7 +81,10 @@ Triton
 ======
 Triton is the Aalto high performance computing cluster.  It is your
 go-to resources for anything that exceeds your desktop computer's
-capacity.
+capacity.  To get started, you could check out the :ref:`tutorials
+<tutorials>` (going through all the principles) or :doc:`quickstart
+guide </triton/quickstart/index>` (if you pretty much know the
+basics).
 
 .. toctree::
    :maxdepth: 2
