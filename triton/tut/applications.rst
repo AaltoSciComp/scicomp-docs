@@ -11,15 +11,21 @@ building, and compiling software.  These days, installing and managing
 scientific software is taking more and more time, thus we need to
 specifically talk about it.
 
-.. seealso::
-
-   Main article: :doc:`../apps/index`
-
-.. admonition:: Generic instructions
+.. admonition:: Cheatsheet
 
    * There are many ways to get software on Triton: we use the
      standard module system, have Singularity containers, and you can
      install your own.
+   * :doc:`Modules <modules>` allow you to activate a lot of software.
+   * :doc:`Singularity containers <../usage/singularity>` allow you to
+     run other hard-to-install software.
+   * Ask us to install software if you need it.  You can also install
+     software yourself, but you need to update instructions to do a
+     user install (as opposed to admin install).
+
+.. seealso::
+
+   Main article: :doc:`../apps/index`
 
 .. admonition:: Local differences
 
@@ -28,7 +34,7 @@ specifically talk about it.
    more common, but they are less standardized.
 
 How to find the software you need
-=================================
+---------------------------------
 
 You can find what softwares we have available in different ways:
 
@@ -69,7 +75,7 @@ Throughout this process, try to remember these things:
    often try to share it among other researchers.
 
 Common applications are available as modules
-============================================
+--------------------------------------------
 
 .. important::
 
@@ -91,7 +97,7 @@ everyone can benefit from them. If you cannot find what you're looking for,
 do let us know.
 
 Singularity containers
-======================
+----------------------
 
 .. seealso::
 
@@ -113,7 +119,7 @@ These containers are from NVIDIA's NGC-repository and meant for GPU
 computations.
 
 Requesting new software
-=======================
+-----------------------
 
 We aim to install a good base of software for our users - but it's not
 possible to keep up with all requests.  If you need something, submit
@@ -123,7 +129,7 @@ See the main :doc:`Applications <../apps/index>` page for more information.
 
 
 A plea: make your software reusable!
-====================================
+------------------------------------
 
 Five years from now, when you are releasing your own software that you
 want others to use, :doc:`make it easy to install and reusable
@@ -131,28 +137,36 @@ want others to use, :doc:`make it easy to install and reusable
 
 
 Exercises
-=========
+---------
 
 If you are at Aalto, everything will work.  Otherwise, if you are in
 Finland (but not at CSC) ``module load fgci-common`` will make our
 modules available on your cluster.
 
-1. Figure out how to use ``tensorflow`` (this is not a software
-   problem, but a searching the documentation problem).  Make it work
-   enough to do ``python`` and ``import tensorflow``.
+.. exercise:: Applications-1: Tensorflow
 
-2. Find the Applications page link above, and check the list for ways
+   Figure out how to use ``tensorflow`` (this is not a software
+   problem, but an "assignment zero" searching the documentation problem).  Make it work
+   enough to run ``python`` and ``import tensorflow``.
+
+.. exercise:: Applications-2: Check your needs
+
+   Find the Applications page link above, and check the list for ways
    to find out if we already have your software installed.  See if we have
    what you need, using any of the strategies on that list.
 
-3. (optional) From the Applications page, find the Spack package list
+.. exercise:: (optional) Applications-3: Spack package list
+
+   From the Applications page, find the Spack package list
    (warning: it's a very long page and takes a while to load).  Does
    it have anything useful to you?
 
-4. (optional) Discuss among your group what software you need, if it's
-   available, and how you might get it.
+.. exercise:: (optional) Applications-4: Your group's needs
+
+   Discuss among your group what software you need, if it's available,
+   and how you might get it.  Can they tell you how to get started?
 
 What's next?
-============
+------------
 
 The next tutorial covers :doc:`software modules <modules>` in more detail.
