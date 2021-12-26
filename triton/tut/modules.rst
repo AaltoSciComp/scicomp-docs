@@ -16,22 +16,20 @@ problem.  Software installation and management takes up a huge amount
 of our time, but we try to make it easy for our users.  Still, it can
 end up taking a lot of your effort as well.
 
-.. admonition:: Generic instructions
+.. admonition:: Cheatsheet
 
    * We use the standard `Lmod module system
      <https://lmod.readthedocs.io/>`__, which makes more software
      available by adjusting environment variables like ``PATH``
-   * Search modules: ``module spider SEARCH_TERM``
-   * Load modules: ``module load MODULE_NAME``
-   * Unload modules: ``module unload MODULE_NAME``
-   * List currently loaded modules: ``module list``
-   * Reset modules to empty: ``module purge``
+   * See the :doc:`../ref/index` for a ``module`` command cheatsheet.
 
 .. admonition:: Local differences
 
    Almost every site uses modules, and most use the same Lmod system
    we use here.  But, the exact module names you can load will be
    different.
+
+
 
 Introduction to modules
 -----------------------
@@ -86,6 +84,8 @@ so that when you type ``gcc`` it runs the program from
 ``/share/apps/spack/envs/fgci-centos7-generic/software/gcc/9.2.0/dnrscms/bin/gcc``.
 This is almost magic: we can have many versions of any software installed,
 and everyone can pick what they want, with no conflicts.
+
+
 
 Loading modules
 ---------------
@@ -150,6 +150,7 @@ un-explainable bugs - it may be best to explicitly load what you
 need.
 
 
+
 Type-along: Where is Matlab?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -189,6 +190,7 @@ It never hurts to double check the version and in fact is recommended. So let's 
   $ module list
   Currently Loaded Modules:
     1) matlab/r2019b
+
 
 
 Type-along: Where is R?
@@ -234,6 +236,7 @@ The last loaded module clearly shows that the version of the R loaded is ``r/3.4
 To load the latest version of R, use the *fullName* of the module::
 
   $ module load r/3.6.1-python3
+
 
 
 Module versions
@@ -320,10 +323,13 @@ you can be sure you have the same previous environment.
   re-organize things (it will prompt you to rebuild your collection
   and you simply save it again).
 
+
+
 Full reference
 --------------
 
 .. include:: ../ref/modules.rst
+
 
 
 Final notes
@@ -350,34 +356,74 @@ Some modules are provided by Aalto Science-IT, some by CSC.  You could
 even `make your own user modules
 <https://lmod.readthedocs.io/en/latest/020_advanced.html>`__.
 
+
+
 Exercises
 ---------
 
 Before each exercise, run ``module purge`` to clear all modules.
 
-1. ``module avail`` and check what you see.  Find a software that has
+Then, if you are in the FCCI (Finnish universities) but not at Aalto,
+run ``module load fgci-common`` before the exercises to make the Aalto
+modules available.
+
+.. exercise:: Modules-1: Basics
+
+   ``module avail`` and check what you see.  Find a software that has
    many different versions available.
    Load the oldest version.
 
-2. ``PATH`` is an environment variable that shows from where programs
-   are run.  See it's current value using ``echo $PATH``.  Then, load
-   a  module such as ``py-gpaw``.  List what
-   it loaded.  Check the value of ``PATH`` again.  Why is there so
-   much stuff?
+.. exercise:: Modules-2: Modules and PATH
 
-3. (Advanced) Same as number 2, but use ``env | sort >
+   ``PATH`` is an environment variable that shows from where programs
+   are run.  See it's current value using ``echo $PATH``.
+
+   ``type`` is a command line tool (a shell builtin, so your shell may
+   not support it, but ``bash`` and ``zsh`` do) which tells you the
+   full path of what will be run for a given command name - basically
+   it looks up the command in ``PATH``
+
+   * Run ``echo $PATH`` and ``type python``.
+   * ``module load anaconda``
+   * Re-run ``echo $PATH`` and ``type python``.  How does it change?
+
+.. exercise:: Modules-3: Complex module and PATH
+
+   Check the value of ``$PATH``.  Then, load the module ``py-gpaw``.
+   List what it loaded.  Check the value of ``PATH`` again.  Why is
+   there so much stuff?  Can you find a module command that explains
+   it?
+
+.. exercise:: (advanced) Modules-4: Modules and PATH
+
+   Same as number 2, but use ``env | sort >
    filename`` to store environment variables, then swap to
    ``py-gpaw/1.3.0-openmpi-scalapack-python3``.
    Do the same, and compare the two outputs using ``diff``.
 
-4. Load a module with many dependencies, such as
+.. exercise:: Modules-5: Modules and dependencies
+
+   Load a module with many dependencies, such as
    ``r-ggplot2`` and save it as a collection.  Compare the time
    needed to load the module and the collection.  (Does ``time``
    not work?  Change your shell to bash, see the previous tutorial)
 
-5. (Advanced) Load ``openfoam-org/7-openmpi-metis``.
+.. exercise:: (advanced) Modules-6: Module contents
+
+   Load ``openfoam-org/7-openmpi-metis``.
    Use ``which`` to find where executable ``blockMesh`` is
    coming from and then use ``ldd`` to find out what libraries it uses.
+
+
+
+See also
+--------
+
+* Lmod documentation https://lmod.readthedocs.io/en/latest/
+
+  * The "User documentation" https://lmod.readthedocs.io/en/latest/010_user.html
+
+
 
 What's next?
 ------------
