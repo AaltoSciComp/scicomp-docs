@@ -41,6 +41,7 @@ Quick contents and links
 	 * :doc:`tut/applications`
 	 * :doc:`tut/modules`
 	 * :doc:`tut/storage`
+	 * :doc:`tut/remotedata`
 	 * :doc:`tut/interactive`
 	 * :doc:`tut/serial`
          * :doc:`tut/array`
@@ -135,6 +136,7 @@ levels as a prerequisite.
    tut/applications.rst
    tut/modules.rst
    tut/storage.rst
+   tut/remotedata
    Interactive jobs: running your first command <tut/interactive>
    Serial jobs: running in the queue <tut/serial>
    tut/monitoring.rst

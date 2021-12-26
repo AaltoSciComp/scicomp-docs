@@ -10,13 +10,10 @@ In this tutorial, we go over places to store data on Triton and how to
 access it remotely.
 
 Optimizing data storage isn't very glamorous, but is an important
-part of high-performance computing.
-
-This page roughly has three parts:
+part of high-performance computing.  Here, we roughly consider:
 
 - What storage locations are available?
-- Where are they available (mounted) on Aalto computers?
-- How can you access them remotely?
+- How do you choose between them?
 
 .. admonition:: Generic instructions
 
@@ -34,11 +31,8 @@ This page roughly has three parts:
      * ``/l/``: local persistent storage on some group servers
      * ``$XDG_RUNTIME_DIR``: ramfs on login node
 
-   * Data is also available from other places in Aalto, such as
-     desktop workstations, shell servers, and vdi.aalto.fi.  See below.
-
-   * Remote access available via ssh and SMB mounting on your own
-     computer (within Aalto networks)
+   * See :doc:`remotedata` for how to transfer and access the data
+     from other computers.
 
 
 Basics
@@ -202,262 +196,6 @@ page for a solution.
 
 
 
-Data availability throughout Aalto
-----------------------------------
-
-Data is the basis of almost everything we do, and accessing it
-seamlessly throughout Aalto is a great benefit.  Various other Aalto
-systems have the data available.  However, this varies per department:
-each department can manage its data as it likes.  So, we can't make
-general promises about what is available where.
-
-
-Linux shell server mounts require a valid Kerberos ticket (usually
-generated when you log in). On long sessions these might expire, and
-you have to renew them with ``kinit`` to keep going.  If you get a
-permission denied, try ``kinit``.
-
-
-vdi.aalto.fi
-~~~~~~~~~~~~
-
-`vdi.aalto.fi <https://vdi.aalto.fi>`__ has scratch mounted at ``/m/triton/scratch/``.
-Your work folder can be access at ``/m/triton/scratch/work/USERNAME``. For SCI departments the
-standard paths you have on your workstations are also working ``/m/{cs,nbe}/{scratch,work}/``.  
-
-Shell servers
-~~~~~~~~~~~~~
-
-Departments have various shell servers, see below.  There isn't a
-generally available shell server anymore.
-
-NBE
-~~~
-
-On workstations, work directories are available at ``/m/nbe/work`` and group scratch
-directories at ``/m/nbe/scratch/$project/``, including the shell
-server ``amor.org.aalto.fi``.
-
-PHYS
-~~~~
-
-Directories available on demand through SSHFS. See the `Data
-transferring <https://wiki.aalto.fi/display/TFYintra/Data+transferring>`__ page
-at PHYS wiki.
-
-CS
-~~
-
-On workstations, work directories are available at ``/m/cs/work/``, and group scratch
-directories at ``/m/cs/scratch/$project/``.  The department shell
-server is ``magi.cs.aalto.fi`` and has these available.
-
-
-.. _remote_access_to_data:
-
-Remote access
--------------
-
-There are many ways to access Triton data remotely.  These days, we
-recommending figuring out how to **mount** the data remotely, so that
-it appears as local data but is accessed over the network.  This saves
-copying data back and forth and is better for data security, but is
-slower and less reliable than local data.
-
-Remote mounting using SMB
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-By far, remote mounting of files is the easiest method to transfer files.  If you are
-not on the Aalto networks (wired, ``eduroam``, or ``aalto`` with
-Aalto-managed laptop), connect to the :doc:`Aalto VPN
-</aalto/remoteaccess>` first.  Note that
-this is automatically done on some department workstations (see
-below) - if not, request it!
-
-The scratch filesystem can be remote mounted using SMB inside secure
-Aalto networks at the URLs
-
-* scratch: ``smb://data.triton.aalto.fi/scratch/``.
-* work: ``smb://data.triton.aalto.fi/work/$username/``.
-
-On different operating systems:
-
-* Linux (Ubuntu for example): File manager (Nautilus) → File →
-  Connect to server.  Use the ``smb://`` URLs above.
-* Windows 10: In the "File Explorer", go to "This PC" → "Computer"
-  menu at the top → "Map Network Drive".  Use the URLs above but
-  replace ``smb://`` with ``\\`` and ``/`` with ``\``.  For example,
-  ``\\data.triton.aalto.fi\scratch\``.
-* Mac: Finder → Go → Connect to Server.  Use the ``smb://`` URLs above.
-* From Aalto managed computers, you can use ``lgw01.triton.aalto.fi``
-  instead of ``data.triton.aalto.fi`` and it might auto-login.
-
-Depending on your OS, you may need to use either your username
-directly or ``AALTO\username``.
-
-.. warning::
-
-   In the future, you will only be able to do this from Aalto managed
-   computers.  This remote mounting will really help your work, so we
-   recommend you to request an Aalto managed computer (citing this
-   section) to make your work as smooth as possible (or use
-   vdi.aalto.fi, see below.
-
-
-Remote mounting using SFTP (Linux and Mac)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-You can use sftp and one of the shell servers to mount triton directly to your machine.
-Easiest is to set up your ssh config (``.ssh/config``) on your machine as follows (replace ``USERNAME`` by your username):
-
-::
-
-    Host kosh
-        User USERNAME
-        Hostname kosh.aalto.fi
-    	
-    Host triton_via_kosh	
-        User USERNAME
-        Hostname triton.aalto.fi
-        ProxyJump kosh    
-
-
-Instead of ``kosh``, you can also use ``taltta`` or any other shell server (see :doc:`Remote Access <../../aalto/remoteaccess>`) as a proxy to jump the firewall.
-You can now open a graphic file manager that supports the sftp protocol (e.g. Files on Aalto Linux), and open:
-
-``sftp://triton_via_kosh``
-
-
-which will direct you to the root folder of triton. To access scratch use:
-
-
-``sftp://triton_via_kosh/scratch``
-
-
-And to access your home folder use:
-
-``sftp://triton_via_kosh/home/USERNAME``
-
-
-
-
-Via `vdi.aalto.fi <https://vdi.aalto.fi>`__
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This is more like remote working, not remote access, but is useful
-here anyway.  It doesn't provide easy ways to upload/download files.
-
-vdi.aalto.fi (described under :doc:`connecting`) has Triton
-directories mounted (see below).
-
-Note: work directories can be accessed via
-``/m/triton/scratch/work/``.
-
-
-Remote mounting using sshfs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``sshfs`` is a neat program that lets you mount remote filesystems via
-ssh only.  It is well-supported in Linux, and somewhat on other
-operating systems.  Its true advantage is that you can mount any
-remote ssh server - it doesn't have to be set up specially for SMB or
-any other type of mounting.  On Ubuntu, you can mount by "File → Connect to
-server" and using ``sftp://triton.aalto.fi/scratch/work/USERNAME``.
-This also works from any shell server with data (see previous section).
-
-The below uses command line programs to do the same, and makes the
-``triton_work`` on your local computer access all files in
-``/scratch/work/USERNAME``.  Can be done with other folders.::
-
-    mkdir triton_work
-    sshfs USERNAME@triton.aalto.fi:/scratch/work/USERNAME triton_work
-
-Note that ``ssh`` binds together many ways of accessing Triton, with a
-similar syntax and options.  ``ssh`` is a very important program and
-binds together all types of remote access, and learning to use it well
-will help you for a long time.  Learn more about ssh on :doc:`the ssh
-page </scicomp/ssh>`.
-
-For Aalto Linux workstation users: it is recommended that you mount ``/scratch/``
-under the local disk ``/l/``. You should be able to create the subfolder folder under ``/l/`` 
-and point sshfs to that subfolder as in the example here above.
-
-
-Using sftp
-~~~~~~~~~~
-
-The *SFTP* protocol uses ssh to transfer files.  On Linux and Mac, the
-``sftp`` command line program are the must fundamental way to do this,
-and are available everywhere.
-
-A more user-friendly way of doing this (with a nice GUI) is the
-`Filezilla program <https://filezilla-project.org/>`__. Make sure you are using
-`Aalto VPN <https://www.aalto.fi/en/services/establishing-a-remote-connection-vpn-to-an-aalto-network>`__, then
-you can put triton.aalto.fi as SFTP server with port 22.
-
-Below is an example of the "raw" SFTP usage::
-
-    # Copying from HOME to local PC
-    user@pc123 $ sftp user12@triton.aalto.fi:filename
-    Connected to triton.aalto.fi.
-    Fetching /home/user12/filename to filename
-    # copying to HOME
-    user@pc123 $ sftp -b - user12@triton <<< 'put testCluster.m'
-    sftp> put foo
-    # copying to WRKDIR
-    user@pc123 $ sftp -b - user12@triton:/scratch/work/USERNAME/ <<< 'put testCluster.m'
-    ...
-
-With all modern OS it is also possible to just open your OS file manager (e.g. Nautilus on Linux) and just put as address in the bar::
-
-    sftp://triton.aalto.fi
-
-If you are connecting from remote and cannot use the VPN, you can connect instead to department machines like kosh.aalto.fi, amor.org.aalto.fi (for NBE). The port is 22. *Note:* If you do not see your shared folder, you need to manually specify the full path (i.e. the folder is there, just not yet visible).
-
-.. _rsync_data_transfer:
-
-Using rsync
-~~~~~~~~~~~
-
-.. admonition:: Prerequisites
-
-   To install rsync on windos please refer to :doc:`this guide </scicomp/rsynconwindows>`
-
-
-Rsync is similar to sftp, but is smarter at restarting files.  Use rsync
-for large file transfers.  ``rsync`` actually uses the ssh protocol so
-you can ``rsync`` from anywhere you can ``ssh`` from. ``rsync`` is installed
-by default on Linux and Mac terminals. On Windows machines we recommend using `GIT-bash <https://gitforwindows.org/>`__.
-
-While there are better places on the internet to read about rsync, it is good
-to try it out to sychronise a local folder on your triton's scratch. Sometimes
-the issue with copying files is related to group permissions. This command takes
-care of permissions and makes sure that all your local files are identical (= same
-MD5 fingerprint) to your remote files::
-
-    rsync -avzc -e "ssh" --chmod=g+s,g+rw --group=GROUPNAME PATHTOLOCALFOLDER USERNAME@triton.aalto.fi:/scratch/DEPT/PROJECTNAME/REMOTEFOLDER/
-
-Replace the bits in CAPS with your own case. Briefly, ``-a`` tries to preserve all attributes of the file, ``-v`` increases verbosity to see what rsync is doing, ``-z`` uses compression, ``-c`` skips files that have identical MD5 checksum, ``-e`` specifies to use ssh (not necessary but needed for the commands coming after), ``--chmod`` sets the group permissions to shared (as common practice on scratch project folders), and ``--group`` sets the groupname to the group you belong to (note that GROUPNAME == PROJECTNAME on our scratch filesystem).
-
-If you want to just check that your local files are different from the remote ones, you can run rsync in "dry run" so that you only see what the command would do, without actually doing anything.::
-
-    rsync --dry-run -avzc ...
-
-Sometimes you want to copy only certain files. E.g. go through all folders, consider only files ending with ``py``::
-
-    rsync -avzc --include '*/' --include '*.py' --exclude '*' ...
-
-Sometimes you want to copy only files under a certain size (e.g. 100MB)::
-
-   rsync -avzc --max-size=100m ...
-
-Rsync does NOT delete files by default, i.e. if you delete a file from the local folder, the remote file will not be deleted automatically, unless you specify the ``--delete`` option.
-
-Please note that when working with files containing code or simple text, git is a better option to synchronise your local folder with your remote one, because not only it will keep the two folders in sycn, but you will also gain version controlling so that you can revert to previous version of your code, or txt/csv files.
-
-
-
-
 Exercises
 ---------
 
@@ -473,15 +211,6 @@ Exercises
    Many of the following exercises don't work out of the box on other
    sites (depends on local files).
 
-**Remote access:**
-
-2. Mount your work directory by SMB - and alternatively sftp or sshfs - and transfer a file to Triton.
-   Note that you must be connected to the Aalto VPN (from outside campus), or on ``eduroam``, the ``aalto`` *with Aalto
-   laptop* (from campus).
-
-3. (Advanced) If you have a Linux on Mac computer, study the ``rsync``
-   manual page and try to transfer a file.
-
 
 **About filesystem performance:**
 
@@ -489,16 +218,16 @@ Exercises
 number of times the operating system has to do something.  It can be
 used as a rudimentary way to see how much I/O load there is.
 
-4. Use ``strace -c`` to compare the number of system calls in ``ls``,
+2. Use ``strace -c`` to compare the number of system calls in ``ls``,
    ``ls -l``, ``ls --no-color``, and ``ls --color``.  You can use the directory
    ``/scratch/scip/lustre_2017/many-files/`` as a place with many
    files in it.  How many system calls per file were there for each
    option?
 
-5. Using ``strace -c``, compare the times of ``find`` and ``lfs find``
+3. Using ``strace -c``, compare the times of ``find`` and ``lfs find``
    on the directory mentioned above.  Why is it different?
 
-6. (Advanced, requires slurm knowledge from future tutorials)  You
+4. (Advanced, requires slurm knowledge from future tutorials)  You
    will find some sample files in ``/scratch/scip/hpc-examples/io``.
    Create a temporary directory and...
 
@@ -520,7 +249,7 @@ used as a rudimentary way to see how much I/O load there is.
 
 **Misc:**
 
-7. What do all of the following have in common?
+5. What do all of the following have in common?
 
    a) A job is submitted but fails with no output or messages.
 
@@ -541,7 +270,6 @@ used as a rudimentary way to see how much I/O load there is.
 
 
 
-
 What's next?
 ------------
 
@@ -553,4 +281,4 @@ What's next?
    * :doc:`../usage/smallfiles`
    * If you are doing heavy I/O: :doc:`../usage/storage`
 
-The next tutorial is about :doc:`interactive jobs <interactive>`.
+The next tutorial is about :doc:`remote data access <remotedata>`.
