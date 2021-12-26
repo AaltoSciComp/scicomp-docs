@@ -44,7 +44,7 @@ optional_modules = [
     'sphinx_copybutton',
     'sphinx_lesson.directives',
     'sphinx_tabs.tabs',
-    'sphinx_togglebutton',    
+    'sphinx_togglebutton',
     ]
 if on_rtd or 'GITSTAMP' in os.environ:
     optional_modules.append('sphinx_gitstamp')
