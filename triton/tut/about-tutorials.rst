@@ -27,43 +27,29 @@ that.  Programming your own HPC software is out of our scope.
 Not at Aalto?
 -------------
 
+.. toctree::
+   :hidden:
+
+   required-cluster-setup
+
 These tutorials use Aalto's cluster as an example, but they are
-designed to be as general as possible.  You can probably follow along
-and learn useful topics here anyway, but you will have.  We recommend
-you review the basics of your cluster's documentation first, then read
-this.  You will have to translate somethings to your own specifics,
-but hopefully our examples can inspire you to understand your own docs
-better.
+designed to be useful to a wide audience: most clusters operate on the
+same principles with local configuration or practices needed.  This
+course/these tutorials, along with a :doc:`quick reference similar to
+ours <../ref/index>`, will be a great start to your career.  (People
+running a cluster can check out our :doc:`hint sheet
+<required-cluster-setup>` to see what differences you may need to explain.)
 
-These tutorials will be quite useful if you have:
-
-- A cluster using Slurm as the batch system
-- You can get a shell on that server
-- The ``git`` installed
-- Python 2 or 3 installed as ``python``
-
-Unfortunately, not all clusters are standardized (though probably they
-should be slightly more than they are).  Things that may be different
-(we'll try to point these out where relevant):
+We will point out things that may be different, but you need to
+consult your own reference to see how to do it:
 
 - The way you connect to the cluster, including remote access methods.
 - Exact names of batch partitions.
 - The ``slurm`` utility probably isn't installed, ``seff`` may not be there.
 - Module names for software.
-- You probably don't have our singularity stuff installed.
+- You probably don't have our Singularity container stuff installed.
 - Parallel and GPU stuff is probably different.
 
-
-
-Runing another cluster?
------------------------
-
-If you run your own cluster, create a quick reference such as
-:doc:`/triton/ref/index` so that others following tutorials such as
-this can quickly translate to your own cluster's specifics.
-
-Don't you think clusters should be more interoperable?  It's something
-we are thinking about.
 
 
 What's next?
