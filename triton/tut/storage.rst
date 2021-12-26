@@ -6,16 +6,18 @@ Data storage
 
    `Watch this in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=guZYMgwdP4Q&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=10>`__
 
+These days, computing is as much (or more) about data than the actual
+computing power.  And data is more than number of petabytes: it is so
+easy to get it unorganized, or stored in such a way that it slows down
+the computation.
+
 In this tutorial, we go over places to store data on Triton and how to
-access it remotely.
+choose between them.  The
+:doc:`next tutorial <remotedata>` tells how to access it remotely.
 
-Optimizing data storage isn't very glamorous, but is an important
-part of high-performance computing.  Here, we roughly consider:
+.. admonition:: Cheatsheet
 
-- What storage locations are available?
-- How do you choose between them?
-
-.. admonition:: Generic instructions
+   * See the :doc:`../ref/index`
 
    * We are a standard Linux filesystem
 
@@ -170,7 +172,9 @@ Quotas
 ------
 
 All directories under ``/scratch`` (as well as ``/home``) have quotas. Two
-quotas are set per-filesystem: disk space and file number.
+quotas are set per-filesystem: disk space and file number.  Quotas
+exist not because we need to limit space, but because we need to make
+people think before using large amounts of space.  Ask us if you need more.
 
 Disk quota and current usage are printed with the command ``quota``.
 'space' is for the disk space and 'files' for the total number of files
@@ -199,57 +203,27 @@ page for a solution.
 Exercises
 ---------
 
+Most of these exercises will be specific to your local site.  Use this
+time to review your local guides to see how they are adapted to your site.
+
 **Data storage locations:**
 
-1. (Optional) Look at the list of data storage locations above.  Also look at the
+.. exercise:: Storage-1: Review data storage locations
+
+   (Optional) Look at the list of data storage locations above.  Also look at the
    :doc:`/aalto/aaltostorage`.  Which do you
    think are suitable for your work?  Do you need to share with
-   others?  Ask your group what they use and if you can use that, too.
+   others?
 
-.. note::
+.. exercise:: Storage-2: Your group's data storage locations
 
-   Many of the following exercises don't work out of the box on other
-   sites (depends on local files).
-
-
-**About filesystem performance:**
-
-``strace`` is a command which tracks **system calls**, basically the
-number of times the operating system has to do something.  It can be
-used as a rudimentary way to see how much I/O load there is.
-
-2. Use ``strace -c`` to compare the number of system calls in ``ls``,
-   ``ls -l``, ``ls --no-color``, and ``ls --color``.  You can use the directory
-   ``/scratch/scip/lustre_2017/many-files/`` as a place with many
-   files in it.  How many system calls per file were there for each
-   option?
-
-3. Using ``strace -c``, compare the times of ``find`` and ``lfs find``
-   on the directory mentioned above.  Why is it different?
-
-4. (Advanced, requires slurm knowledge from future tutorials)  You
-   will find some sample files in ``/scratch/scip/hpc-examples/io``.
-   Create a temporary directory and...
-
-   a) Run ``create_iodata.sh`` to make some data files in ``data/``
-
-   b) Compare the IO operations of ``find`` and ``lfs find`` on this
-      directory.
-
-   c) use the ``iotest.sh`` script to do some basic analysis.  How
-      long does it take?  Submit it as a slurm batch job.
-
-   d) Modify the iotest.sh script to copy the ``data/`` directory to
-      local storage, do the operations, then remove the data.  Compare
-      to previous strategy.
-
-   e) Use ``tar`` to compress the data while it is on lustre.  Unpack
-      this tar archive to local storage, do the operations, then
-      remove.  Compare to previous strategies.
+   Ask your group what they use and if you can use that, too.
 
 **Misc:**
 
-5. What do all of the following have in common?
+.. exercise:: Storage-3: Common errors
+
+   What do all of the following have in common?
 
    a) A job is submitted but fails with no output or messages.
 
@@ -267,6 +241,51 @@ used as a rudimentary way to see how much I/O load there is.
       to delete and re-download or re-create this file.``
 
    g) I can't install my own Python/R/etc libraries.
+
+**About filesystem performance:**
+
+``strace`` is a command which tracks **system calls**, basically the
+number of times the operating system has to do something.  It can be
+used as a rudimentary way to see how much I/O load there is.
+
+.. exercise:: Storage-4: strace and I/O operations
+
+   Use ``strace -c`` to compare the number of system calls in ``ls``,
+   ``ls -l``, ``ls --no-color``, and ``ls --color`` on a directory
+   with many files.  You can use the directory
+   ``/scratch/scip/lustre_2017/many-files/`` as a place with many
+   files in it.  How many system calls per file were there for each
+   option?
+
+.. exercise:: Storage-5: strace and time
+
+   Using ``strace -c``, compare the times of ``find`` and ``lfs find``
+   on the directory mentioned above.  Why is it different?
+
+.. exercise:: (advanced) Storage-6: Benchmarking
+
+   (this exercise requires slurm knowledge from future tutorials and
+   also other slurm knowledge).
+
+   Clone the https://github.com/AaltoSciComp/hpc-examples/ git
+   repository to your personal work directory.  Change to the ``io``
+   directory.  Create a temporary directory and...
+
+   a) Run ``create_iodata.sh`` to make some data files in ``data/``
+
+   b) Compare the IO operations of ``find`` and ``lfs find`` on this
+      directory.
+
+   c) use the ``iotest.sh`` script to do some basic analysis.  How
+      long does it take?  Submit it as a slurm batch job.
+
+   d) Modify the iotest.sh script to copy the ``data/`` directory to
+      local storage, do the operations, then remove the data.  Compare
+      to previous strategy.
+
+   e) Use ``tar`` to compress the data while it is on lustre.  Unpack
+      this tar archive to local storage, do the operations, then
+      remove.  Compare to previous strategies.
 
 
 
