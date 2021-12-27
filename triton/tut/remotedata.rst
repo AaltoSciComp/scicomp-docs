@@ -14,7 +14,7 @@ be a frustrating experience if you haven't got everything running
 smoothly.  In this tutorial, we'll explain some of the main methods.
 
 
-.. admonition:: Generic instructions
+.. admonition:: Cheatsheet
 
    * Data is also available from other places in Aalto, such as
      desktop workstations in some departments, shell servers, and
@@ -71,7 +71,9 @@ permission denied, try ``kinit``.
 Virtual desktop interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`vdi.aalto.fi <https://vdi.aalto.fi>`__ has scratch mounted at ``/m/triton/scratch/``.
+VDI, `vdi.aalto.fi <https://vdi.aalto.fi>`__, is a Linux workstation
+accessible via your web browser, and useful for a lot of work.  It is
+not Triton, but has scratch mounted at ``/m/triton/scratch/``.
 Your work folder can be access at ``/m/triton/scratch/work/USERNAME``. For SCI departments the
 standard paths you have on your workstations are also working ``/m/{cs,nbe}/{scratch,work}/``.
 
@@ -299,11 +301,15 @@ Please note that when working with files containing code or simple text, git is 
 Exercises
 ---------
 
-1. Mount your work directory by SMB - and alternatively sftp or sshfs - and transfer a file to Triton.
+.. exercise:: RemoteData-1: Mounting your work directory
+
+   Mount your work directory by SMB - and alternatively sftp or sshfs - and transfer a file to Triton.
    Note that you must be connected to the Aalto VPN (from outside campus), or on ``eduroam``, the ``aalto`` *with Aalto
    laptop* (from campus).
 
-2. (Advanced) If you have a Linux on Mac computer, study the ``rsync``
+.. exercise:: (advanced) RemoteData-2: rsync
+
+   If you have a Linux on Mac computer, study the ``rsync``
    manual page and try to transfer a file.
 
 
