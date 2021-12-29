@@ -6,36 +6,37 @@ Interactive jobs
 
    `Watch this in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=xhX_u2OA89s&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=11>`__
 
-.. admonition:: Generic instructions
+.. admonition:: Cheatsheet
 
-   * We use the standard (and dominant) Slurm batch queuing system.
+   * We use the standard (and dominant) Slurm batch queuing system,
+     all standard commands will work.
    * See the :doc:`quick reference <../ref/index>` for the reference you
-     need if you know Slurm or batch systems.
-   * For interactive testing, you can add ``srun [SLURM OPTIONS] COMMAND
-     ...`` before any COMMAND to run it in Slurm.
-   * ``sinteractive`` or ``srun --pty bash`` will get you shells in a
-     job environment.
+     need if you know Slurm or batch systems already.
+   * Interactive jobs allow you to quickly test code (before scaling
+     up) or getting more resources for manual analysis.
+   * To run a single command interactively
+
+     * ``srun [SLURM OPTIONS] COMMAND ...`` to run before any COMMAND
+       to run it in Slurm
+
+   * To get an interactive shell
+
+     * ``srun [SLURM OPTIONS] --pty bash`` (general Slurm)
+     * ``sinteractive`` (Triton specific)
 
 
 Introduction to Slurm
-=====================
+---------------------
 
 Triton is a large system that combines many different individual
 computer nodes. Hundreds of people are using Triton simultaneously.
 Thus resources (CPU time, memory, etc.) need to be shared among everyone.
 
 This resource sharing is done by a software called a job scheduler or
-workload manager. Triton's workload manager is **slurm**.
+workload manager, and Triton's workload manager is **Slurm** (which is
+also the dominant in the world one these days).
 Triton users submit jobs which are then scheduled and allocated
 resources by the workload manager.
-
-There are two ways you can submit your jobs to slurm queue system:
-either interactively using ``srun`` or by submitting a script
-using ``sbatch``.
-
-This tutorial walks you through running your jobs interactively.
-And in the next tutorial we will go through the more common and
-advanced way of submitting jobs, batch scripts.
 
 .. admonition:: An analogy: the HPC Diner
 
@@ -61,8 +62,30 @@ advanced way of submitting jobs, batch scripts.
 .. highlight:: console
 
 
-Your first interactive job
-==========================
+
+Why interactive jobs?
+---------------------
+
+There are two ways you can submit your jobs to Slurm queue system:
+either interactively using ``srun`` or by submitting a script
+using ``sbatch``.  This tutorial walks you through running your jobs
+interactively, and :doc:`the next tutorial on serial jobs <serial>`
+will go through serial jobs.
+
+Some people say "the cluster is for batch computing", but really it is
+to help you get your work done.  **Interactive jobs let you:**
+
+* Run a single job in the Slurm environment to test parameters and
+  make sure it works (which is easier than constantly modifying batch
+  scripts).
+
+* Get a large amount of resources for some manual data analysis.
+
+
+
+Interactive jobs
+----------------
+
 
 Let's say you want to run the following command::
 
@@ -72,16 +95,18 @@ You can submit this program to Triton using ``srun``. All input/output still goe
 (but note that graphical applications don't work this way - see
 below)::
 
-    $ srun --mem=100M --time=1:00:00 python3 -c 'import os; print("hi from", os.uname().nodename)'
+    $ srun --mem=100M --time=0:10:00 python3 -c 'import os; print("hi from", os.uname().nodename)'
     srun: job 52204499 queued and waiting for resources
 
 Here, we are asking for 100 Megabytes of memory (``--mem=100M``) for a
-duration of an hour (``--time=1:00:00``).
+duration of ten minutes (``--time=0:10:00``) (See the :doc:`quick
+reference <../ref/index>` or below for more options).
 While your job - with **jobid** 52204499 - is waiting to be allocated resources, your shell
-effectively become non-interactive.
+blocks while it is waiting to continue.
 
-You can open a new shell on triton and run the command ``slurm q`` to see all the jobs
-you have submitted to the queue::
+You can open a new shell (ssh again) on triton and run the command
+``squeue -u $USER`` or ``slurm q`` to see all the jobs
+you currently have waiting in queue::
 
   $ slurm q
   JOBID              PARTITION NAME                  TIME       START_TIME    STATE NODELIST(REASON)
@@ -89,37 +114,35 @@ you have submitted to the queue::
 
 You can see information such as the state, which partition the requested node reside in, etc.
 
-.. note::
-
-  The fact that we had to open another shell can be impractical
-  if you need to run other jobs or just simply use the current shell.
-  Additionally, if your shell quits while waiting (your internet may disconnect),
-  the process cancels and you have to run the ``srun`` command again.
-
 Once resources are allocated to your job, you see the name of the machine
 in the Triton cluster your program ran on, output to your terminal::
 
   srun: job 52204499 has been allocated resources
   hi from ivb17.int.triton.aalto.fi
 
-.. note::
+.. admonition:: Disadvantages
 
    Interactive jobs are useful for debugging purposes, to test your setup
    and configurations before you put your tasks in a batch script for later execution.
-   Or if you need graphical applications - such as Matlab, RStudio, etc.
-   Additionally, if your task is small and not worth writing a batch script for,
-   interactive job is the way to go.
+
+   The major disadvantages include:
+
+   - It blocks your shell until it finishes
+   - If your connection to Triton gets interrupted, you lose the job
+     and its output.
+
    Keep in mind that you shouldn't open 20 shells to run 20 ``srun`` jobs at once.
    Please have a look at the :doc:`next tutorial about serial jobs <serial>`.
 
 
+
 Interactive shell
-=================
+-----------------
 
 What if you want an actual shell to do things interactively?
 Put more precisely, you want access to a node in the cluster
-through an interactive bash shell that has all of the requested
-resources available.
+through an interactive bash shell, with many resources available, that
+will let you run commands such as Python and let do some basic work.
 For this, you just need srun's ``--pty`` option coupled with the shell
 you want::
 
@@ -129,35 +152,32 @@ The command prompt will appear when the job starts.
 And you will have a bash shell runnnig on one of the
 computation nodes with at least 600 Megabytes of memory,
 for a duration of 2 hours, where you can run your programs in.
+The option ``-p interactive`` requests a node in the interactive
+**partition** (group of nodes) which is dedicated to interactive usage
+(more on this later).
 
 .. warning::
 
   Remember to exit the shell when you are done!
   The shell will be running if you don't and
   it will count towards your usage.
-  This effectively means your priority will degrade
+  This wastes resources and effectively means your priority will degrade
   in the future.
-
-The option ``-p interactive`` requests a node in the interactive
-**partition** which is dedicated to interactive usage (more on this
-later).  A partition is a group of nodes you can run on, with set
-limits.
 
 .. note::
 
   you can use ``sinfo`` to see information such as the available partitions,
   number of nodes in each, their time limits, etc.
 
+
+
 Interactive shell with graphics
-===============================
+-------------------------------
 
 ``sinteractive`` is very similar to ``srun``, but more clever and thus
-allows you to do X forwarding. It starts a screen session on the node,
-then sshes to there and connects to the screen.
-You can also ssh to this node again and connect to the
-process again.
-
-::
+allows you to do X forwarding. It starts a `screen session
+<https://en.wikipedia.org/wiki/GNU_Screen>`__ on the node,
+then sshes to there and connects to the shell::
 
      sinteractive --time=1:00:00 --mem=1000M
 
@@ -165,36 +185,43 @@ process again.
 
   Just like with ``srun --pty bash``, remember to exit the shell.
   Since there is a separate screen session running, just closing the terminal isn't enough.
-  Exit all shells in the screen session on the node (C-d or ``exit``), or cancel
-  the process.
+  Exit all shells in the screen session on the node (C-d or ``exit``) or cancel
+  the job.
 
-.. note::
+.. admonition:: Use remote desktop if off campus
 
   If you are off-campus, you might want to use https://vdi.aalto.fi as a
-  virtual desktop to connect to Triton to run graphical programs.
-  Otherwise, programs may run very slowly.
+  virtual desktop to connect to Triton to run graphical programs: ssh
+  from there to Triton with ``ssh -XY``.  Graphical programs run very
+  slowly when sent across the general Internet.
+
+
 
 Monitoring your usage
-=====================
+---------------------
 
 When your jobs enter the queue, you need to be able to get
 information on how much time, memory, etc. your jobs are using
 in order to know what requirements to ask for.
 
-The command ``slurm history`` gives you information such as the actual memory used by your recent jobs, total CPU time, etc.
-You will learn more about these commands later on.
+The command ``slurm history`` (or ``sacct --long | less``) gives you
+information such as the actual memory used by your recent jobs, total
+CPU time, etc.  You will learn more about these commands later on.
 
-As shown in a previous example, the command ``slurm queue`` will tell you the currently running processes,
+As shown in a previous example, the command ``slurm queue`` (or
+``squeue -u $USER``) will tell you the currently running processes,
 which is a good way to make sure you have stopped everything.
 
 .. note::
 
   Generally, estimating the amount of time or memory you need comes down to
-  monitoring you slurm history and utilizing command-line tools such as
+  monitoring you Slurm history and utilizing command-line tools such as
   ``time`` on a few of your jobs and averaging. This is basically a trial and error process.
 
+
+
 Setting resource parameters
-===========================
+---------------------------
 
 Slurm comes with a multitude of parameters which you can specify to
 ensure you will be allocated enough memory, CPU cores, time, etc.
@@ -225,11 +252,13 @@ It's best to use smaller values when submitting interactive jobs, and more for b
 .. _triton-tut-exercise-repo:
 
 Exercises
-=========
+---------
 
 .. include:: ../ref/examples-repo.rst
 
-1. The program ``hpc-examples/slurm/memory-hog.py``
+.. exercise:: Interactive-1: Basic Slurm options
+
+   The program ``hpc-examples/slurm/memory-hog.py``
    uses up a lot of memory to do nothing.  Let's play with it.
    It's run as follows:
    ``python hpc-examples/slurm/memory-hog.py 50M``, where the
@@ -252,7 +281,9 @@ Exercises
       ``python hpc-examples/slurm/memory-hog.py 50M --sleep=60`` -
       keep it available.
 
-2. The program ``hpc-examples/slurm/pi.py``
+.. exercise:: Interactive-2: Time scaling
+
+   The program ``hpc-examples/slurm/pi.py``
    calculates pi using a simple stochastic algorithm.  The program takes
    one positional argument: the number of trials.
 
@@ -278,16 +309,20 @@ Exercises
       how much time each process used?  What's the relation between
       TotalCPUTime and WallTime?
 
-3. Check out some of these commands: ``sinfo``, ``sinfo -N``, ``squeue``.  Run
+.. exercise:: Interactive-3: Info commands
+
+   Check out some of these commands: ``sinfo``, ``sinfo -N``, ``squeue``.  Run
    ``slurm job <jobid>`` on some running job - does anything
    look interesting?
 
-4. Run ``scontrol show node csl1``  What is this?  (``csl1`` is the
+.. exercise:: Interactive-4: Showing node information
+
+   Run ``scontrol show node csl1``  What is this?  (``csl1`` is the
    name of a node on Triton - if you are not on Triton, look at the
    ``sinfo -N`` command and try one of those names).
 
 What's next?
-============
+------------
 
 In the next tutorial on `serial batch jobs <serial>`, you will learn how to put the above-mentioned
 commands in a script, namely a batch script (a.k.a submission script)
