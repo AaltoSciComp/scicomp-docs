@@ -2,20 +2,22 @@
 Monitoring job progress and job efficiency
 ==========================================
 
-.. admonition:: Generic instructions
+.. admonition:: Cheatsheet
 
    * You must always monitor jobs to make sure they are using all the
      resources you request.
    * Test scaling: double resources, if it doesn't run almost twice as
      fast, it's not worth it.
+   * ``seff JOBID`` shows efficiency and performance of a single jobs
    * ``slurm queue`` shows waiting and running jobs (this is a custom command)
    * ``slurm history`` shows completed jobs (also custom command)
-   * ``seff JOBID`` shows efficiency and performance of a single jobs
    * GPU efficiency: A job's ``comment`` field shows GPU performance info
      (custom setup), ``sacct -j JOBID -o comment -p`` shows this.
 
+
+
 Introduction
-============
+------------
 
 When running jobs, one usually wants to do monitoring at various
 different stages:
@@ -36,8 +38,10 @@ There are various tools available for each of these steps.
 
 .. highlight:: console
 
+
+
 Monitoring job queue state after it has been submitted
-======================================================
+------------------------------------------------------
 
 The command ``slurm q``/``slurm queue`` (or ``squeue -u $USER``) can be used
 to monitor the status of your jobs in the queue. An example output is given below::
@@ -78,18 +82,24 @@ information.
 There are other commands to ``slurm`` that you can use to monitor the
 cluster status, job history etc.. A list of examples is given below:
 
-.. include:: ../ref/slurm_status.rst
+.. admonition:: Slurm status info reference
 
-Monitoring job while it is running
-==================================
+   .. include:: ../ref/slurm_status.rst
+
+
+
+Monitoring a job while it is running
+------------------------------------
 
 As the most common way of using HPC resources is to run non-interactive
 jobs, it is usually a good idea to make certain that the program that will be
 run will produce some output that can be used to monitor the jobs' progress.
 
-Typical way of monitoring the progress is to add print-statements that produce
+The typical way of monitoring the progress is to add print-statements that produce
 output to the standard output. This output is then redirected to the Slurm
-output file where it can be read by the user.
+output file (``-o FILE``, default ``slurm-JOBID.log``) where it can be
+read by the user.  This file is updated while the job is running, but after some
+delay (every few KB written) because of buffering.
 
 It is important to differentiate between different types of output:
 
@@ -127,8 +137,10 @@ When creating monitoring output it is usually best to write it in a
 human-readable format and human-readable quantities. This makes it easy to see
 the state of the program.
 
+
+
 Checking job history after it has finished
-==========================================
+------------------------------------------
 
 The command ``slurm h``/``slurm history`` can be used to check the history
 of your jobs. Example output is given below::
@@ -175,23 +187,29 @@ elapsed time, number of reserved CPUs, etc.). You can specify any field of
 interest to be shown using ``--format``.
 
 
-Monitoring job's CPU and RAM usage efficiency after it has finished
-===================================================================
+
+Monitoring a job's CPU and RAM usage efficiency after it has finished
+---------------------------------------------------------------------
 
 .. include:: ../examples/monitoring/seff.rst
 
 
-Monitoring job's GPU utilization
-================================
+
+Monitoring a job's GPU utilization
+----------------------------------
 
 .. include:: ../examples/monitoring/gpu.rst
 
+
+
 Exercises
-=========
+---------
 
 .. include:: ../ref/examples-repo.rst
 
-1. In folder ``slurm/pi.py`` there is a pi estimation algorithm that uses
+.. exercise:: Monitoring-1: Basic monitoring example
+
+   In folder ``slurm/pi.py`` there is a pi estimation algorithm that uses
    Monte Carlo methods to get an estimate of its value. You can call the script
    with ``python pi.py <n>``, where ``<n>`` is the number of iterations to be
    done by the algorithm.
@@ -206,7 +224,9 @@ Exercises
      c. Use ``seff`` to check performance of individual job steps. Can you
         explain why the CPU utilization numbers change between steps?
 
-2. The script ``pi.py`` has been written so that it can be run using multiple
+.. exercise:: Monitoring-2: Multiple thread
+
+   The script ``pi.py`` has been written so that it can be run using multiple
    threads. Run the script with multiple threads and :math:`10^8` iterations
    with::
 
@@ -220,8 +240,9 @@ Exercises
     b. Use ``seff`` to check CPU performance of the job.
 
 
+
 What's next?
-============
+------------
 
 Running multiple instances of a ``sbatch`` script is easier with
 :doc:`array jobs<../tut/array>`.
