@@ -51,6 +51,11 @@ Job submission
 
 .. include:: slurm_status.rst
 
+Slurm examples
+==============
+
+.. include:: slurm_examples.rst
+
 Toolchains
 ==========
 .. include:: toolchains.rst
