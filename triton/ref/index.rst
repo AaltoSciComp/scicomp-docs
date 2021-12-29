@@ -67,3 +67,8 @@ GPUs
 ====
 
 .. include:: gpu.rst
+
+Command line
+============
+
+.. include:: commandline.rst

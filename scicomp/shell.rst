@@ -178,6 +178,13 @@ substitute yourself when running a command.
 
 
 
+Quick reference
+---------------
+
+.. admonition:: Cheatsheet
+
+   .. include:: /triton/ref/commandline.rst
+
 See also
 --------
 
