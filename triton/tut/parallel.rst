@@ -10,12 +10,12 @@ Parallel computing is what HPC is really all about: processing things on
 more than one processor at once. By now, you should have read all of the previous
 tutorials.
 
-.. admonition:: Generic instructions
+.. admonition:: Cheatsheet
 
    * You need to figure out what parallelization paradigm your program
      uses, otherwise you won't know which options to use.
 
-     * Embarrassingly parallel: use array jobs.
+     * Embarrassingly parallel: use :doc:`array jobs <array>`.
      * Multithreaded (OpenMP) or multiple tasks (like Python's
        multiprocessing): ``--cpus-per-task=N``, ``--mem-per-core=M``
        (if memory scales per CPU)
@@ -23,7 +23,7 @@ tutorials.
        ``--ntasks=N``, always use ``srun`` to launch your job.
        ``module load`` a MPI version for both compiling and running.
 
-   * You must always monitor jobs to make sure they are using all the
+   * You must always :doc:`monitor jobs <monitoring>` to make sure they are using all the
      resources you request (``seff JOBID``).
 
 .. highlight:: bash
@@ -42,6 +42,7 @@ it is important to understand different models of parallel execution.
 
 The two main models are:
 
+* (Embarrassingly parallel - :doc:`array jobs <array>`.)
 * Shared memory (or multithreaded/multiprocess) programs run multiple
   independent workers on the same machine. As the name suggests, all of
   the computer's memory has to be accessible to all of the processes.
@@ -74,8 +75,8 @@ people are using shared memory models.
 
 .. important::
 
-   Normal serial code can't just be run in parallel without
-   modifications. As a user it is your responsibility to
+   **Normal serial code can't just be run in parallel without
+   modifications.** As a user it is your responsibility to
    understand what parallel model implementation your code has, if any.
 
    When deciding whether using parallel programming is worth
@@ -107,6 +108,15 @@ people are using shared memory models.
 
 
 
+Embarrassingly parallel: array jobs
+-----------------------------------
+
+The :doc:`array jobs <array>` we have already discussed.  Don't forget
+that this is one of the most common ways to parallelize!  A large
+amount of work these days is "array jobs" + "shared memory for these jobs"
+
+
+
 Shared memory: OpenMP/multithreaded/multiprocess
 ------------------------------------------------
 
@@ -120,7 +130,7 @@ launch both subprocesses and threads. Slurm reservations for both methods
 behave similarly.
 
 Depending on a program, you might have multiple processes (Matlab parallel
-pool, R parallel-library, Python multiprocessing) or have multiple threads
+pool, R parallel-library, Python `multiprocessing <https://docs.python.org/library/multiprocessing.html>`__) or have multiple threads
 (OpenMP threads of BLAS libraries that R/numpy use).
 
 .. warning::
@@ -318,19 +328,27 @@ Exercises
 
 .. include:: ../ref/examples-repo.rst
 
-1. Run ``srun --cpus-per-task=4 hostname``, ``srun --ntasks=4 hostname``, and ``srun --nodes=4
+.. exercise:: Parallel-1: Explore and understand basic Slurm options
+
+   Run ``srun --cpus-per-task=4 hostname``, ``srun --ntasks=4 hostname``, and ``srun --nodes=4
    hostname``.  What's the difference and why?
 
-2. Find the files ``hpc-examples/openmp/hello_omp/hello_omp.c`` and
+.. exercise:: Parallel-2: OpenMP with Python
+
+   Find the files ``hpc-examples/openmp/hello_omp/hello_omp.c`` and
    ``hpc-examples/hello_omp/hello_omp.sh`` that have a short example of OpenMP.
    Compile and run it - a slurm script is included.
 
-3. Find the files in ``hpc-examples/python/python_openmp``. Try running the
+.. exercise:: Parallel-3: OpenMP
+
+   Find the files in ``hpc-examples/python/python_openmp``. Try running the
    example with a few different ``--constraint=X`` and ``--cpus-per-task=C``.
    In your opinion, what architecture / cpu number combination would provide the
    best efficiency? Use ``seff`` to verify.
 
-4. Find the files ``hpc-examples/mpi/hello_mpi/hello_mpi.c`` and
+.. exercise:: Parallel-4: MPI
+
+   Find the files ``hpc-examples/mpi/hello_mpi/hello_mpi.c`` and
    ``hpc-examples/mpi/hello_mpi/hello_mpi.sh`` that
    have a short example of MPI.
    Compile and run it - a slurm script is included.
