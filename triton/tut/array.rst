@@ -16,6 +16,8 @@ Array jobs
      which array index it is.
    * There are different templates to use below, which you can adapt
      to your task.
+   * If you aren't fully sure of how to scale up, contact us
+     :doc:`Research Software Engineers </rse/index>` early.
 
 .. highlight:: console
 
@@ -73,7 +75,8 @@ task which could be used for handling input/output files to each task.
    inadvertently cause a lot of filesystem load as there will be
    hundreds of thousands of file calls.
 
-   If you're unsure how your job will behave, ask admins for help.
+   If you're unsure how your job will behave, ask us :doc:`Research
+   Software Engineers </rse/index>` for help for help.
 
 
 
@@ -284,14 +287,22 @@ Exercises
    different files.
 
 
+See also
+--------
+
+* If you aren't fully sure of how to scale up, contact us
+  :doc:`Research Software Engineers </rse/index>` early.  We are great
+  at making these types of workflows.
+
+* For more information, you can see the
+  `CSC guide on array jobs <https://docs.csc.fi/computing/running/array-jobs/>`_
+
+* Please check the `quick reference <../ref/index>` when needed.
+
+
+
 What's next?
 ------------
 
-.. seealso::
-
-   For more information, you can see the
-   `CSC guide on array jobs <https://docs.csc.fi/computing/running/array-jobs/>`_
-
-   Please check the `quick reference <../ref/index>` when needed.
 
 The next tutorial is about :doc:`GPU computing <gpu>`.

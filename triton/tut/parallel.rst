@@ -25,6 +25,9 @@ tutorials.
 
    * You must always :doc:`monitor jobs <monitoring>` to make sure they are using all the
      resources you request (``seff JOBID``).
+   * If you aren't fully sure of how to scale up, contact us
+     :doc:`Research Software Engineers </rse/index>` early.
+
 
 .. highlight:: bash
 
@@ -352,3 +355,29 @@ Exercises
    ``hpc-examples/mpi/hello_mpi/hello_mpi.sh`` that
    have a short example of MPI.
    Compile and run it - a slurm script is included.
+
+
+
+See also
+--------
+
+* The :doc:`Research Software Engineers </rse/index>` can help in all
+  aspects of parallel computing - we'd recommend anyone getting to
+  this point set up a consultation to make sure your work is as
+  efficient as it can be.
+
+
+
+What's next?
+------------
+
+You have now seen the basics - but applying these in practice is still
+a difficult challenge!  There is plenty to figure out while combining
+your own software, the Linux environment, and Slurm.
+
+Your time is the most valuable thing you have.  If you aren't fully
+sure of how to use the tools, it is much better to ask that struggle
+forever.  Contact us the :doc:`Research Software Engineers
+</rse/index>` early - for example in our :doc:`daily garage
+</help/garage>`, and we can help you get set up well.  Then, you can
+continue your learning while your projects are progressing.

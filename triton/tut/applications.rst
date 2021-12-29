@@ -53,7 +53,7 @@ You can find what softwares we have available in different ways:
   updated.
 * Ask other users in the :ref:`Zulip chat <chat>`. We hope that we can facilitate user
   group meetings and discussion among users of similar software suites.
-* Ask us admins in `garage </help/garage>`.
+* Ask us admins/Research Software Engineers in `garage </help/garage>`.
 
 Throughout this process, try to remember these things:
 
@@ -126,6 +126,18 @@ possible to keep up with all requests.  If you need something, submit
 a request to our :ref:`issue tracker <issuetracker>`, but be aware
 that despite best efforts, we can't do everything.
 See the main :doc:`Applications <../apps/index>` page for more information.
+
+
+
+Writing software
+----------------
+
+Not everyone has to, but many people either write there own software
+or writ scripts to automate the running and analysis.  Yet, these
+skills are often not developed as well as they should be.  Contact the
+:doc:`Research Software Engineers </rse/index>` (part of Science-IT)
+for help here - basic service is free.
+
 
 
 A plea: make your software reusable!

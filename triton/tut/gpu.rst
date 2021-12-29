@@ -18,6 +18,8 @@ GPU computing
    * Select a certain type of GPU with e.g. ``--constraint='kepler'``
      (see :doc:`the quick reference for names <../ref/index>`).
    * Monitor GPU performance with ``sacct -j <jobID> -o comment -p``.
+   * If you aren't fully sure of how to scale up, contact us
+     :doc:`Research Software Engineers </rse/index>` early.
 
 
 
@@ -229,6 +231,13 @@ Exercises
    from our Linux shell tutorial and the API page for Python's
    `os.environ <https://docs.python.org/3/library/os.html#os.environ>`_.
 
+
+
+See also
+--------
+
+* If you aren't fully sure of how to scale up, contact us
+  :doc:`Research Software Engineers </rse/index>` early.
 
 
 What's next?
