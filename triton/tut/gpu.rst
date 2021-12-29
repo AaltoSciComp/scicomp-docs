@@ -6,15 +6,20 @@ GPU computing
 
    `Watch this in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=aoU1-5DjrGc&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=17>`__
 
-.. admonition:: Generic instructions
+.. admonition:: Cheatsheet
 
-   * Request a GPU with ``--gres=gpu:1``
+   * Request a GPU with the Slurm option ``--gres=gpu:1`` (some
+     clusters need ``-p gpu`` or similar)
    * Do not use ``srun`` in your batch script, there's a bug that
      prevents job step's access to the GPU.
    * If you use Python, generally don't load your own CUDA module
-     unless you know you need this, install what you need through
-     anaconda.
+     unless you know you need this.  Instead, install what you need
+     through anaconda.
+   * Select a certain type of GPU with e.g. ``--constraint='kepler'``
+     (see :doc:`the quick reference for names <../ref/index>`).
    * Monitor GPU performance with ``sacct -j <jobID> -o comment -p``.
+
+
 
 Introduction
 ------------
@@ -135,12 +140,14 @@ in the current directory:
 
 
 
+
 Examples
 ---------
 
 .. include:: ../examples/tensorflow/tensorflow_mnist.rst
 
 .. include:: ../examples/pytorch/pytorch_mnist.rst
+
 
 
 Monitoring efficient use of GPUs
@@ -174,27 +181,39 @@ copied to nodes ramdisk ``/dev/shm`` or temporary disk ``/tmp``.
 If your data is too big to fit in the disk, we recommend that you
 contact us for efficient data handling models.
 
+
+
 Available GPUs and architectures
 --------------------------------
 
 .. include:: ../ref/gpu.rst
+
+
 
 Exercises
 ---------
 
 .. include:: ../ref/examples-repo.rst
 
-1. Run ``nvidia-smi`` on a GPU node with ``srun``. Use ``slurm history``
+.. exercise:: GPU-1: Test nvidia-smi
+
+   Run ``nvidia-smi`` on a GPU node with ``srun``. Use ``slurm history``
    to check which GPU node you ended up on. Try setting a constraint
    to force a different GPU architecture.
 
-2. Load ``cuda`` and ``gcc`` (version less than 9) modules and
+.. exercise:: GPU-2: Running a script
+
+   Run one of the samples given above. Try using ``sbatch`` as well.
+
+.. exercise:: GPU-3: Test compiling CUDA
+
+   Load ``cuda`` and ``gcc`` (version less than 9) modules and
    compile the ``gpu/pi.cu`` example using ``nvcc``.
    Run it. Does it say zero? Try running it with a GPU and see what happens.
 
-3. Run one of the samples given above. Try using ``sbatch`` as well.
+.. exercise:: (advanced) GPU-4: Local job files
 
-4. (Advanced) The PyTorch example will try to load datasets from a folder
+   (Advanced) The PyTorch example will try to load datasets from a folder
    called ``data`` in a local folder. Modify the Slurm script so that
    the script:
 
@@ -209,3 +228,10 @@ Exercises
    <https://aaltoscicomp.github.io/linux-shell/quoting-substitution-aliases/#substitute-a-command-output>`__ section
    from our Linux shell tutorial and the API page for Python's
    `os.environ <https://docs.python.org/3/library/os.html#os.environ>`_.
+
+
+
+What's next?
+------------
+
+We go on to :doc:`parallel`.
