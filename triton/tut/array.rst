@@ -6,14 +6,16 @@ Array jobs
 
    `Watch this in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=jcWoky9b8zI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=16>`__
 
-.. admonition:: Generic instructions
+.. admonition:: Cheatsheet
 
-   * Arrays allow you to submit jobs and it runs many times with a
-     different ``$SLURM_ARRAY_TASK_ID`` environment variable.
+   * Arrays allow you to submit jobs and it runs many times with the
+     same Slurm parameters.
    * Submit with the ``--array=`` Slurm argument, give array indexes
      like ``--array=1-10,12-15``.
-   * There are different templates to use below, you can adapt this to
-     your task.
+   * The ``$SLURM_ARRAY_TASK_ID`` environment variable tells a job
+     which array index it is.
+   * There are different templates to use below, which you can adapt
+     to your task.
 
 .. highlight:: console
 
@@ -30,7 +32,7 @@ and run several instances of the same Slurm script independently in the queue.
 
 
 Introduction
-============
+------------
 
 Array jobs allow you to parallelize your computations. They are used when you need
 to run the same job many times with only slight changes among the jobs. For example,
@@ -38,7 +40,7 @@ you need to run 1000 jobs each with a different seed value for the random number
 Or perhaps you need to apply the same computation to a collection of data sets.
 These can be done by submitting a single array job.
 
-Slurm job array is a collection of jobs that are to be executed with identical
+A Slurm job array is a collection of jobs that are to be executed with identical
 parameters. This means that there is one single batch script that is to be run
 as many times as indicated by the ``--array`` directive, e.g.::
 
@@ -46,14 +48,15 @@ as many times as indicated by the ``--array`` directive, e.g.::
 
 creates an array of 5 jobs (tasks) with index values 0, 1, 2, 3, 4.
 
-The array tasks are copies of the "master" batch script that are automatically submitted
+The array tasks are copies of the submitted batch script that are automatically submitted
 to Slurm. Slurm provides a unique environment variable ``SLURM_ARRAY_TASK_ID`` to each
 task which could be used for handling input/output files to each task.
 
-.. note::
+.. admonition:: ``--array`` via the command line
 
-   You can alternatively pass the ``--array`` option as a command-line argument to
-   ``sbatch``.
+   You can also pass the ``--array`` option as a command-line argument to
+   ``sbatch``.  This can be great for controlling things without
+   editing the script file.
 
 .. important::
 
@@ -75,7 +78,7 @@ task which could be used for handling input/output files to each task.
 
 
 Your first array job
-====================
+--------------------
 
 Let's see a job array in action. Lets create a file called
 :download:`array_example.sh </triton/examples/array/array_example.sh>`
@@ -88,7 +91,7 @@ Submitting the job script to Slurm with ``sbatch array_example.sh``, you will ge
 
   $ Submitted batch job 60997836
 
-The job id in the message is that of the "master" job. This is common for all of
+The job id in the message is that of the primary array job. This is common for all of
 the jobs in the array. In addition, each individual job is given an array task
 id.
 
@@ -123,14 +126,22 @@ You can ``cat`` one of the files to see the output of each task::
 
 
 More examples
-=============
+-------------
 
 The following examples give you an idea on how to use job arrays for different
-use cases and how to utilize the ``$SLURM_ARRAY_TASK_ID`` environment variable.
+use cases and how to utilize the ``$SLURM_ARRAY_TASK_ID`` environment
+variable.  In general,
+
+* You need some map of numbers to configuration.  This might be files
+  on the filesystem, a hardcoded mapping in your code, or some
+  configuration file.
+* You generally want the mapping to not get lost.  Be careful about
+  running some jobs, changing the mapping, and running more: you might
+  end up with a mess!
 
 
 Reading input files
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 In many cases, you would like to process several data files. That is, pass
 different input files to your code to be processed. This can be achieved by
@@ -150,7 +161,7 @@ based on the value of the ``$SLURM_ARRAY_TASK_ID``:
     # e.g. srun ./my_application -input input_data_${SLURM_ARRAY_TASK_ID}
 
 Hardcoding arguments in the batch script
-----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 One way to pass arguments to your code is by hardcoding them in the batch script
 you want to submit to Slurm.
@@ -180,7 +191,7 @@ of successes)::
    {"successes": 1963163, "pi_estimate": 3.1410608, "iterations": 2500000}
 
 Reading parameters from one file
---------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Another way to pass arguments to your code via script is to save the arguments
 to a file and have your script read the arguments from it.
@@ -213,7 +224,7 @@ You can additionally do this procedure in a more complex way, e.g. read in multi
 arguments from a csv file, etc.
 
 (Advanced) Grouping runs together in bigger chunks
---------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you have lots of jobs that are short (a few minutes),
 using array jobs may induce too much overhead in scheduling and you will
@@ -231,7 +242,7 @@ you could run them in chunks of 10 and run a total of 5 array jobs. This
 the amount of array jobs we need by a factor of 10!
 
 This method demands more knowledge of shell scripting, but the end result is a
-fairly simple slurm script
+fairly simple Slurm script
 :download:`pi_array_parameter.sh </triton/examples/array/pi_array_grouped.sh>`
 that does what we need.
 
@@ -241,31 +252,40 @@ that does what we need.
 
 
 Exercises
-=========
+---------
 
 .. include:: ../ref/examples-repo.rst
 
-1. Make an array job that runs ``slurm/memory-hog.py``
+.. exercise:: Array-1: Basic array job
+
+   Make an array job that runs ``slurm/memory-hog.py``
    with five different values of memory (50M, 100M, 500M,
    1000M, 5000M) using one of the techniques above - this is the memory that the
    memory-hog script requests, **not** the is requested from Slurm.
    Request 250M of memory for the array job. See if some of the jobs fail.
 
-2. Think about your typical work.  How could you split your stuff into
-   trivial pieces that can be run with array jobs?
+.. exercise:: Array-2: Reflect on array jobs in your work
 
-3. (Advanced) Make a job array which runs every other index, e.g. the array can
+   Think about your typical work.  How could you split your stuff into
+   trivial pieces that can be run with array jobs?  When can you make
+   individual jobs smaller, but run more of them as array jobs?
+
+.. exercise:: (Advanced) Array-3: Array jobs with advanced index selector
+
+   Make a job array which runs every other index, e.g. the array can
    be indexed as 1, 3, 5... (
    `sbatch manual page <https://slurm.schedmd.com/sbatch.html>`__
    can be of help)
 
-4. (Advanced) Create a job array that uses the ``slurm/pi.py`` to calculate a combination
+.. exercise:: (Advanced) Array-4: Array jobs and different random seeds
+
+   Create a job array that uses the ``slurm/pi.py`` to calculate a combination
    of different iterations and seed values and save them all to
    different files.
 
 
 What's next?
-============
+------------
 
 .. seealso::
 
