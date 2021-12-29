@@ -40,6 +40,11 @@ Storage
 
 .. include:: storage.rst
 
+Remote data access
+==================
+
+.. include:: remotedata.rst
+
 Partitions
 ==========
 
