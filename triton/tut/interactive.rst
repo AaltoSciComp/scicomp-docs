@@ -321,6 +321,15 @@ Exercises
    name of a node on Triton - if you are not on Triton, look at the
    ``sinfo -N`` command and try one of those names).
 
+.. exercise:: Interactive-5: Why not script ``srun``
+
+   Some people are clever and use shell scripting to run ``srun`` many
+   times in a loop (using ``&`` to background it so that they all run
+   at the same time).  Can you list some advantages and disadvantages
+   to this?
+
+
+
 What's next?
 ------------
 
