@@ -33,6 +33,8 @@ Quick contents and links
 
        * :doc:`Quick Reference <ref/index>`
 
+       * :doc:`Troubleshooting <troubleshooting>`
+
        * Tutorials (start here)
 
 	 * :doc:`accounts`

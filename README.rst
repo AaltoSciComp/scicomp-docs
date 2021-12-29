@@ -42,6 +42,9 @@ Contributing gives agreement to use content under the licenses (CC-BY
 Requirements and building
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
+*Recommended*: Create new ``conda`` environment with ``conda create -n envname``. E.g ``conda create -n scicomp-docs -c conda-forge python pip``.  Switch to environment with ``conda activate envname`` and run ``python -m pip install -r requirements.txt``. 
+
+
 To build the docs, run ``make html``.  You can run ``make clean
 check`` to build it and report only the errors that would cause a
 failure.
@@ -51,7 +54,12 @@ dependencies to do basic tests is ``sphinx`` and ``sphinx_rtd_theme``
 (debian packages: ``python-sphinx`` and ``python-sphinx-rtd-theme``).
 
 HTML output is in ``_build/html/index.html``, and other output formats
-are available as well.
+are available as well. 
+
+.. To view built HTML output:
+.. - Linux ``xdg-open _build/html/index.html`` 
+.. - macOSX ``open _build/html/index.html``
+.. - Windows ``start _build/html/index.html``
 
 
 Editing

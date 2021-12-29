@@ -71,7 +71,9 @@ Let's take a look at the following script
    #SBATCH --mem-per-cpu=100M
    #SBATCH --output=hello.out
 
-   srun echo "Hello $USER! You are on node $HOSTNAME"
+   srun echo "Hello $USER! You are on node $HOSTNAME. The time is $(date). "
+
+.. date added to check if submitting multiple times gives different outputs.
 
 Let's name it ``hello.sh`` (create a file using your editor of choice, e.g. ``nano``;
 write the script above and save it)
@@ -172,14 +174,29 @@ Examples include partitions assigned to debugging("debug" partition),
 batch processing("batch" partition), GPUs("gpu" partition), etc.
 
 Command ``sinfo -s`` lists a summary of the available partitions. For the sake
-of brevity, let's see the first 4 partitions::
+of brevity, let's see the first 4 partitions
 
-  $ sinfo -s | head -n 5
-  PARTITION     AVAIL  TIMELIMIT   NODES(A/I/O/T)  NODELIST
-  interactive      up 1-00:00:00          4/0/0/4  pe[4-7]
-  jupyter-long     up 10-00:00:0          4/0/0/4  pe[4-7]
-  jupyter-short    up 1-00:00:00          4/0/0/4  pe[4-7]
-  grid             up 3-00:00:00       29/18/1/48  pe[9-48,74-81]
+.. tabs::
+
+   .. code-tab:: bash Aalto
+
+           $ sinfo -s | head -n 5
+           PARTITION     AVAIL  TIMELIMIT   NODES(A/I/O/T)  NODELIST
+           interactive      up 1-00:00:00          4/0/0/4  pe[4-7]
+           jupyter-long     up 10-00:00:0          4/0/0/4  pe[4-7]
+           jupyter-short    up 1-00:00:00          4/0/0/4  pe[4-7]
+           grid             up 3-00:00:00       29/18/1/48  pe[9-48,74-81]
+
+   .. code-tab:: bash Helsinki
+
+         $ sinfo -s | head -n 5
+         PARTITION AVAIL  TIMELIMIT   NODES(A/I/O/T)  NODELIST
+         short        up 1-00:00:00        31/4/7/42  kac[02-19],kam01,kas[01-23]
+         medium       up 7-00:00:00        24/0/2/26  kac[02-08],kas[05-23]
+         long         up 14-00:00:0        13/0/1/14  kas[01-04,14-23]
+         test*        up      10:00          0/0/1/1  kag01
+
+  
 
 Take a look at the manpage using ``man sinfo`` for more details.
 

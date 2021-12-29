@@ -37,6 +37,8 @@ This tutorial walks you through running your jobs interactively.
 And in the next tutorial we will go through the more common and
 advanced way of submitting jobs, batch scripts.
 
+If you have any issues running the commands below (and in future) check out the :doc:`troubleshooting <../troubleshooting>` page!
+
 .. admonition:: An analogy: the HPC Diner
 
    You're eating out at the HPC Diner.  What happens when you arrive?
@@ -55,7 +57,7 @@ advanced way of submitting jobs, batch scripts.
      longer for their table, as a balancing mechanic.
 
    Thanks to `HPC Carpentry
-   <https://hpc-carpentry.github.io/hpc-intro/13-scheduler/index.html>`__
+   <https://carpentries-incubator.github.io/hpc-intro/13-scheduler/index.html>`__
    / `Sabry Razick <https://github.com/Sabryr>`__ for the idea.
 
 .. highlight:: console
@@ -66,19 +68,32 @@ Your first interactive job
 
 Let's say you want to run the following command::
 
-    $ python3 -c 'import os; print("hi from", os.uname().nodename)'
+$ python3 -c 'import os; print("hi from", os.uname().nodename)'
 
-You can submit this program to Triton using ``srun``. All input/output still goes to your terminal
+
+You can submit this program to Triton using ``srun`` (remember to ``module load fgci-common`` and ``module load anaconda`` for python3). All input/output still goes to your terminal
 (but note that graphical applications don't work this way - see
-below)::
+below)
 
-    $ srun --mem=100M --time=1:00:00 python3 -c 'import os; print("hi from", os.uname().nodename)'
-    srun: job 52204499 queued and waiting for resources
+.. tabs::
+
+   .. code-tab:: bash Aalto
+
+         $ srun --mem=100M --time=1:00:00 python3 -c 'import os; print("hi from", os.uname().nodename)'
+        srun: job 52204499 queued and waiting for resources
+
+   .. code-tab:: bash Helsinki
+
+         $ srun --mem=100M --time=0:10:00 --partition=short python3 -c 'import os; print("hi from", os.uname().nodename)'
+        srun: job 52204499 queued and waiting for resources
+    
 
 Here, we are asking for 100 Megabytes of memory (``--mem=100M``) for a
 duration of an hour (``--time=1:00:00``).
 While your job - with **jobid** 52204499 - is waiting to be allocated resources, your shell
 effectively become non-interactive.
+
+**Note!** Some clusters such as kale at Helsinki won't allow a time of 1 hour (``--time=1:00:00``) so for this example it can be run with ``--time=0:10:00``. 
 
 You can open a new shell on triton and run the command ``slurm q`` to see all the jobs
 you have submitted to the queue::
@@ -97,11 +112,18 @@ You can see information such as the state, which partition the requested node re
   the process cancels and you have to run the ``srun`` command again.
 
 Once resources are allocated to your job, you see the name of the machine
-in the Triton cluster your program ran on, output to your terminal::
+in the Triton cluster your program ran on, output to your terminal
 
-  srun: job 52204499 has been allocated resources
-  hi from ivb17.int.triton.aalto.fi
+.. tabs::
 
+   .. code-tab:: bash Aalto
+
+           $ srun: job 52204499 has been allocated resources
+           hi from ivb17.int.triton.aalto.fi
+   .. code-tab:: bash Helsinki
+
+         $ srun: job 6098020 has been allocated resources
+         hi from kac07
 .. note::
 
    Interactive jobs are useful for debugging purposes, to test your setup
@@ -121,9 +143,17 @@ Put more precisely, you want access to a node in the cluster
 through an interactive bash shell that has all of the requested
 resources available.
 For this, you just need srun's ``--pty`` option coupled with the shell
-you want::
+you want
 
-  srun -p interactive --time=2:00:00 --mem=600M --pty bash
+.. tabs::
+
+   .. code-tab:: bash Aalto
+
+           $ srun -p interactive --time=2:00:00 --mem=600M --pty bash
+
+   .. code-tab:: bash Helsinki
+
+         $ srun -p test --time=00:10:00 --mem=100M --pty bash
 
 The command prompt will appear when the job starts.
 And you will have a bash shell runnnig on one of the
@@ -173,6 +203,10 @@ process again.
   If you are off-campus, you might want to use https://vdi.aalto.fi as a
   virtual desktop to connect to Triton to run graphical programs.
   Otherwise, programs may run very slowly.
+
+.. note::
+
+  Helsinki ``sinteractive`` does not currently work on kale. 
 
 Monitoring your usage
 =====================

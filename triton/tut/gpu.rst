@@ -119,10 +119,39 @@ in the current directory:
    #SBATCH --cpus-per-task=1
    #SBATCH --gres=gpu:1
    #SBATCH --output=helloworld.out
+   #SBATCH --partition=gpu
 
    module load cuda
    nvcc helloworld.cu -o helloworld
    ./helloworld
+
+Using the :download:`helloworld.cu</triton/examples/gpu/helloworld.cu>`. 
+
+.. code-block:: slurm
+
+   #include "stdio.h"
+
+   __global__ void cuda_hello(int* a){
+           // blockIdx has values between 0 and 4
+           printf("Hello World from GPU a[%d]=%d \n", blockIdx.x, a[blockIdx.x]);
+   }
+
+   int main(void) {
+           int* d_a;
+
+           // Allocates an array of 5 integers
+           cudaMalloc(&d_a, 5*sizeof(int));
+
+           // Runs 5 instances of kernel cuda_hello in parallel
+           cuda_hello<<<5, 1>>>(d_a); 
+
+           // This is needed for the printf in the kernel to display
+           cudaDeviceSynchronize();
+
+           printf("Hello from outside GPU\n");
+           return 0;
+   }
+
 
 .. note::
 
@@ -131,7 +160,9 @@ in the current directory:
    program on a node without a GPU.  This especially happens if you try
    to test GPU code on the login node, and happens (for example) even if
    you try to import the GPU ``tensorflow`` module in Python on the login
-   node.
+   node. 
+
+   You may also need to use ``module load CUDA``. The ``gpu`` partition will be cluster specific and can also be used as a command line argument. 
 
 
 

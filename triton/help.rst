@@ -9,6 +9,9 @@ tracker <issuetracker>`.
 Whatever you do, these `guidelines for making good support requests
 <https://research.csc.fi/support-request-howto>`__ are very useful.
 
+You can also see the `troubleshooting
+<troubleshooting>` page for solutions to common problems. 
+
 .. seealso::
 
    Are you just looking for a Triton account?  See :doc:`accounts`.
@@ -174,4 +177,3 @@ it to us/attach it to the bug report.
 If you use Python, add the ``-p`` option, matlab should use ``-m``,
 and graphical programs should use ``-x`` (these options have to go
 *before* the command you execute).
-

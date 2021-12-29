@@ -170,8 +170,10 @@ resources.  All times are EEST (Helsinki) time.
     * Aalto: :doc:`Connecting to Triton tutorial
       </triton/tut/connecting>` – if you can ssh to Triton and run
       ``hostname``, you are ready for tomorrow.
-    * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART+2021>`__
+    * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART+2021>`__. To get started try ``ssh kale.grid.helsinki.fi``. You need to be on the UH network either through VPN (Activate HY-VPN 1 on Cubbli machine) or connected through ethernet on campus. **Note:** You can also connect via one of the universities `VDI <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART+2021>`__ (Virtual desktop infrastructure). For example on your personal machine ``ssh username@pangolin.it.helsinki.fi`` then ``ssh kale.grid.helsinki.fi``
     * Tampere: `Connecting to Narvi <https://narvi-docs.readthedocs.io/narvi/tut/connecting.html>`__
+    * For information on using ``ssh`` go :doc:`here
+      </scicomp/ssh>`
 
 * **Day #2 (Tue 8.jun):** Basic use of a cluster (Richard Darst, Simo
   Tuomisto)

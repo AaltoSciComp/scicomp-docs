@@ -257,6 +257,12 @@ Running the program with srun (for testing)::
 
   srun --time=00:05:00 --mem-per-cpu=200M --ntasks=4 ./hello_mpi
 
+Download the code with::
+
+  wget https://raw.githubusercontent.com/AaltoSciComp/hpc-examples/master/mpi/hello_mpi/hello_mpi.c
+  
+  wget https://raw.githubusercontent.com/AaltoSciComp/hpc-examples/master/mpi/hello_mpi_fortran/hello_mpi_fortran.f90
+
 Running an MPI code in the batch mode:
 
 .. code-block:: slurm
