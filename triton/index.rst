@@ -127,6 +127,8 @@ levels as a prerequisite.
 .. _hosc-a: https://hands-on.coderefinery.org/#a-basics
 .. _hosc-c: https://hands-on.coderefinery.org/#c-linux-and-shell
 
+Getting set up:
+
 .. toctree::
    :maxdepth: 1
 
@@ -137,6 +139,12 @@ levels as a prerequisite.
    tut/modules.rst
    tut/storage.rst
    tut/remotedata
+
+Actually running things:
+
+.. toctree::
+   :maxdepth: 1
+
    Interactive jobs: running your first command <tut/interactive>
    Serial jobs: running in the queue <tut/serial>
    tut/monitoring.rst
