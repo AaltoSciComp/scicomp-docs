@@ -33,6 +33,8 @@ specifically talk about it.
    anything beyond that, will be different.  Containers are becoming
    more common, but they are less standardized.
 
+
+
 How to find the software you need
 ---------------------------------
 
@@ -74,6 +76,8 @@ Throughout this process, try to remember these things:
    a method, a success story or a problem encountered by one of our users, we
    often try to share it among other researchers.
 
+
+
 Common applications are available as modules
 --------------------------------------------
 
@@ -96,6 +100,8 @@ We try to install commonly used software for all of our users, so that
 everyone can benefit from them. If you cannot find what you're looking for,
 do let us know.
 
+
+
 Singularity containers
 ----------------------
 
@@ -117,6 +123,8 @@ more information.
 We also provide :doc:`some containers built by NVIDIA <../apps/nvidiacontainers>`.
 These containers are from NVIDIA's NGC-repository and meant for GPU
 computations.
+
+
 
 Requesting new software
 -----------------------
@@ -146,6 +154,7 @@ A plea: make your software reusable!
 Five years from now, when you are releasing your own software that you
 want others to use, :doc:`make it easy to install and reusable
 </scicomp/packaging-software>`.
+
 
 
 Exercises
