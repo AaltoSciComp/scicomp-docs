@@ -6,12 +6,12 @@ Serial Jobs
 
    `Watch this in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=I79KLHb-7T0&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=14>`__
 
-.. admonition:: Generic instructions
+.. admonition:: Cheatsheet
 
    * Batch scripts let you run work non-interactively, which is
      important for scaling.
 
-   * Example batch script:
+   * Example batch script, submit with ``sbatch the_script.sh``:
 
      .. code:: slurm
 
@@ -22,11 +22,12 @@ Serial Jobs
 	module load anaconda
 	python my_script.py
 
-   * See the :doc:`quick reference <../ref/index>` for more.
+   * See the :doc:`quick reference <../ref/index>` for complete list
+     of options.
 
 
 Introduction to batch scripts
-=============================
+-----------------------------
 
 You learned, in the :doc:`interactive jobs <interactive>`,
 how all Triton users must do their computation by submitting jobs
@@ -55,7 +56,7 @@ you will learn how to bundle them in your job scripts.
 .. highlight:: console
 
 Your first job script
-=====================
+---------------------
 
 A job script is simply a shell script (Bash). And so the first line
 in the script should be the `shebang <https://en.wikipedia.org/wiki/Shebang_(Unix)>`_ directive (``#!``) followed by the
@@ -115,8 +116,10 @@ file name. See the
 `documentation of sbatch <https://slurm.schedmd.com/sbatch.html>`__ for a full
 list of available wildcards.
 
+
+
 Setting resource parameters
-===========================
+---------------------------
 
 In both the above example and the tutorial on :doc:`interactive jobs <interactive>`, you learned
 that resources are requested through job parameters such as ``--mem``, ``--time``, etc.
@@ -129,7 +132,7 @@ that resources are requested through job parameters such as ``--mem``, ``--time`
 Please keep in mind that these parameters are hard values. If, for example, you request 5 GB of memory
 and your job uses substantially more, Slurm will kill your job.
 
-.. note::
+.. admonition:: Grace periods
 
    Actually, there is a little bit of grace period in killing jobs
    (about an hour), and you can go over memory a little bit.  But, if
@@ -148,8 +151,10 @@ to fine-tune your requested resources.
    have each job take at least 30 minutes, if possible.
    The reason behind this is that there is a big amount of startup, accounting, and scheduling overhead.
 
+
+
 Monitoring your jobs
-====================
+--------------------
 
 Once you submit your jobs, it goes into a queue. The two most useful commands to see
 the status of your jobs with are ``slurm q``/``slurm queue`` and
@@ -158,14 +163,18 @@ the status of your jobs with are ``slurm q``/``slurm queue`` and
 More information is in the
 :doc:`monitoring tutorial<../tut/monitoring>`.
 
+
+
 Cancelling your jobs
-====================
+--------------------
 
 You can cancel jobs with ``scancel <jobid>``. To obtain job id, use the
 monitoring commands.
 
+
+
 Partitions
-==========
+----------
 
 A **slurm partition** is a set of computing nodes dedicated to a specific purpose.
 Examples include partitions assigned to debugging("debug" partition),
@@ -195,32 +204,44 @@ debug partition (Slurm usually runs short jobs on the debug partition).
    You can see the partitions in the :doc:`quick
    reference<../ref/index>`.
 
+
+
 Full reference
-==============
+--------------
 
-.. include:: ../ref/slurm.rst
+The `reference page <../ref/index>` contains it all, or expand it below.
 
-.. seealso::
+.. admonition:: Slurm quick ref
+   :class: toggle
 
-   The `reference page <../ref/index>` lists many useful commands.
+   .. include:: ../ref/slurm.rst
+
+
+
 
 Exercises
-=========
+---------
 
 .. include:: ../ref/examples-repo.rst
 
-1. Submit a batch job that just runs ``hostname``.
+.. exercise:: Serial-1: Basic batch job
+
+   Submit a batch job that just runs ``hostname``.
 
    a. Set time to 1 hour and 15 minutes, memory to 500MB.
    b. Change the job's name and output file.
    c. Check the output.  Does the printed hostname
       match the one given by ``slurm history``/``sacct -u $USER``?
 
-2. Create a batch script which does nothing (or some pointless
+.. exercise:: Serial-2: Submitting and cancelling a job
+
+   Create a batch script which does nothing (or some pointless
    operation for a while), for example ``sleep 300``. Check the queue to see
    when it starts running.  Then, cancel the job.  What output is produced?
 
-3. Create a slurm script that runs the following program::
+.. exercise:: Serial-3: Checking output
+
+   Create a slurm script that runs the following program::
 
      for i in $(seq 30); do
        date
@@ -233,11 +254,15 @@ Exercises
    c. Use ``cat name_of_outputfile`` to check at the output periodically.
    d. Cancel the job once you're finished.
 
-4. (Advanced) What happens if you submit a batch script with ``bash`` instead of
+.. exercise:: (advanced) Serial-4: Why you use ``sbatch``, not ``bash``.
+
+   (Advanced) What happens if you submit a batch script with ``bash`` instead of
    ``sbatch``?  Does it appear to run?  Does it use all the Slurm
    options?
 
-5. (Advanced) Create a batch script that runs in another language
+.. exercise:: (advanced) Serial-5: Interpreters other than bash
+
+   (Advanced) Create a batch script that runs in another language
    using a different ``#!`` line.
    Does it run?  What are some of the advantages and problems here?
 
