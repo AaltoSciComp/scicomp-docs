@@ -55,6 +55,10 @@
    Write standard output of ``COMMAND`` to ``FILE``.  ``<`` does the
    opposite, read input from a file.
 
+``type COMMAND`` or ``which COMMAND``
+   Show exactly what will be run, for a given command (e.g. ``type
+   python3``).
+
 ``man COMMAND-NAME``
    Browse on-line help for a command.  ``q`` will exit, ``/`` will
    search (it uses ``less`` as its pager by default).
