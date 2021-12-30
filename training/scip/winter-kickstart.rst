@@ -9,34 +9,22 @@ Jan 2022 / Triton Winter Kickstart
 
 .. admonition:: Quick Links
 
-   * Joining links:
-
-     * Main stream: https://aaltoscicomp.github.io/scip/ (no account
-       needed).  Make a narrow window on one half of your screen, the
-       other half is for exercises.
-
-     * HackMD for questions:
-       https://hackmd.io/@AaltoSciComp/IntroWinter2021 (ask questions
-       at bottom, answered either there or on-stream)
-
-     * Zoom link for breakout rooms for exercises.
-
    * Lesson materials: :ref:`Triton tutorials <tutorials>`, see below
      for details.
 
 Winter Kickstart is a two × half day course for researchers to get
-started with the available computational resources at FGCI (Finnish
-Grid and Cloud Infrastructure, basically HPC, high-performance
-computing, at universities) and CSC (the Finnish national computing
-center).  We cover one by one steps on how to get started on the local
-computational clusters, from the very basics: learning by doing with
-lots of examples and hands-on.
+started with high-performance computing (HPC) clusters.  We will take
+you from being a new user to being competent to run your code at a
+larger scale than you could before.  (However, we don't cover
+application-specific matters beyond some Python/R/Matlab basics or
+focus on the high-performance part: but this is an easy next step
+after this course).
 
 This course is good for any researcher who thinks they may need to
 scale up to larger resources in the next six months, in any field.
 Even if you don't use computing clusters, you will be better prepared
 to understand how computing works on other systems.  If you are a
-student, you will invest in your skills.  By the end of the course you
+student, this is an investment in your skills.  By the end of the course you
 get the hints, ready solutions and
 copy/paste examples on how to find, run and monitor your applications,
 and manage your data. In addition to how to optimize your workflow in
@@ -45,88 +33,131 @@ terms of filesystem traffic, memory usage etc.
 The course is obligatory for all new Triton users and recommended to
 all interested in the field.
 
-**If you are not at Aalto University**, you can follow along with the
-course and will learn many things anyway.  But, many of the examples
-won't directly work on your cluster and you will need to adapt (we
-will mention these things when relevant and also create a guide for
-other sites to guide their users).  We know of these other reference guides:
-
-- Participants from University of Helsinki can follow how to connect
-  to their Kale/Ukko2 cluster by following instructions at:
-  https://wiki.helsinki.fi/display/it4sci/HPC++Winter+KICKSTART+2021
-
 This course is part of :doc:`Scientific Computing in Practice <index>` lecture series
 at Aalto University.
 
 
 
-Practical information
----------------------
+Other universities
+------------------
 
-This is an online course via Zoom (link sent to registered
-participants).  The course is also streamed via Twitch (the
-`CodeRefinery channel <https://www.twitch.tv/coderefinery>`__) so that
-anyone may follow along without registration.  There is a HackMD link
-(collaborative edited notes) which is used for asking questions during
-the course.
+This course is hosted at Aalto University but put on in cooperation
+with many other universities.  Anyone (even not at a partner site)
+could get something out of this course.
 
-**Registration:**
+**If you are not at Aalto University**, you can follow along with the
+course and will learn many things anyway.  The course is designed to
+be as useful to people outside of Aalto, but many of the examples
+won't directly work on your cluster and you will need to adapt (we
+will mention these points where we know of them).  Known sites hosting:
 
-`Please register at this link <https://link.webropol.com/s/introHPCJan2022>`__
+* FCCI (Finland): may register via the Aalto form.
+* Participants from University of Helsinki can follow how to connect
+  to their Kale/Ukko2 cluster by following `their own instructions
+  <https://wiki.helsinki.fi/display/it4sci/HPC++Winter+KICKSTART+2021>`__.
 
-**Instructors, organizers, contact:** For additional info, email scip@aalto.fi
+If you want to get your site listed here and/or help out, contact us
+via the `CodeRefinery chat
+<https://coderefinery.github.io/manuals/chat/>`__ (#workshops stream).
+Our :doc:`hints for other sites' support staff
+</triton/tut/required-cluster-setup>` are available.
 
-* Richard Darst
-* Enrico Glerean
-* Simo Tuomisto
 
 
-**Time, date, location:** Mon-Tue 17-18.January, 12:00-15:00.  Online,
-links sent to participants.
+Schedule
+--------
 
-- **Friday, 14 January, 2022**  (Zoom only, no Twitch)
+**All times are EET (Europe/Helsinki time)!**
 
-  - **14:00 -- 14:45**
+Mon-Tue 17-18.January, 12:00-16:00.
+
+- **Friday, 14 January, 2022**
+
+  - We strongly suggest also attending the
+    :doc:`getting-started-with-scientific-computing` course, this is
+    the bigger-picture introduction.
+  - **15:00 -- 15:45**
   - Help connecting to Triton (Aalto), Zoom link by email to
     registered participants
 
 - **Monday, 17 January, 2022** (roughly connecting to serial jobs in
   the :ref:`tutorials <tutorials>`)
 
-  - **11:50 -- 15:00**, all times approximate, breaks every hour
+  - **11:50 -- 16:00**, all times approximate, breaks every hour
   - :doc:`/triton/tut/about-tutorials`
   - :doc:`/triton/tut/intro`
+  - Real example 1: Large-scale computing with array jobs
+  - Real example 2: Large-scale parallel computing
   - :doc:`/triton/tut/connecting`
-  - :doc:`/triton/tut/applications`
-  - :doc:`/triton/tut/modules`
   - :doc:`/triton/tut/storage`
+  - :doc:`/triton/tut/remotedata`
   - :doc:`/triton/tut/interactive`
   - :doc:`/triton/tut/serial` (likely gets moved to day 3)
+  - :doc:`/triton/tut/monitoring` (likely gets moved to day 3)
 
 - **Tuesday, 18 January, 2022**
 
-  - **11:50 -- 15:00**, all times approximate, breaks every hour
+  - **11:50 -- 16:00**, all times approximate, breaks every hour
   - Likely
+  - :doc:`/triton/tut/applications`
+  - :doc:`/triton/tut/modules`
   - :doc:`/triton/tut/array`
   - :doc:`/triton/tut/gpu`
   - :doc:`/triton/tut/parallel`
   - Likely there is time for additions or special requests
 
 
-Preparation
------------
+
+Practical information
+---------------------
+
+The course is also streamed via Twitch (the `CodeRefinery channel <https://www.twitch.tv/coderefinery>`__) so that
+anyone may follow along without registration.  There are also Zoom
+breakout rooms/help sessions for those at partner universities.  There is a HackMD link
+(collaborative edited notes) which is used for asking questions during
+the course.
+
+**Registration:** `Please register at this link <https://link.webropol.com/s/introHPCJan2022>`__
+
+**Instructors, organizers, contact:** For additional info, email scip@aalto.fi
+
+* Richard Darst
+* Enrico Glerean
+* Simo Tuomisto
+* ... and you?
+
+
+Preparation / prerequisites
+---------------------------
 
 **Software installation**
 
 * SSH client to connect to the cluster (+ be able to connect, see next
   point)
+* `Zoom <https://coderefinery.github.io/installation/zoom/>`__ (if
+  attending breakout rooms)
 
-**Cluster account and connection verification**
 
-* If you do not yet have access to Triton, :doc:`request an account
-  </triton/accounts>` in advance. 
-* Then, try to :doc:`connect to Triton </triton/tut/connecting>` to be
-  ready.
+**Cluster account and connection verification:**
+
+* Access to your computer cluster.
+
+  * Aalto: if you do not yet have access to Triton, :doc:`request an account
+    </triton/accounts>` in advance.
+
+* Then, connect and get it working
+
+  * Aalto (and possibly useful to others): try to :doc:`connect to
+    Triton </triton/tut/connecting>` to be ready.
+
+
+**Background knowledge:** "A HPC cluster is easy to use if you know
+the Linux command line well".  A lot of this course is actually about
+getting comfortable with Linux so that you can use the cluster well.
+The :doc:`sibling course <getting-started-with-scientific-computing>`
+offered at the same time and the :doc:`Linux shell crash course
+</scicomp/shell>` (`video <https://youtu.be/56p6xX0aToI>`__) will get
+you ready.
 
 
 **Mental preparation:** Online workshops can be a productive format, but it
@@ -139,9 +170,6 @@ takes some effort to get ready.  Browse these resources:
 * `The Zoom mechanics we will use
   <https://coderefinery.github.io/manuals/zoom-mechanics/>`__, might
   be useful to browse.
-* It is useful to `watch <https://youtu.be/56p6xX0aToI>`__ or `read
-  <https://scicomp.aalto.fi/scicomp/shell/>`__ the Linux shell crash
-  course, to already become familiar with the content of the course.
 
 
 
@@ -164,12 +192,4 @@ advanced things".
 Material
 --------
 
-* Material is linked within the schedule, but roughly covers the
-  :ref:`Triton tutorials <tutorials>`.
-
-
-
-News and notes
---------------
-
-None yet
+See the schedule

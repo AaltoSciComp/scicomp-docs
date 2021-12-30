@@ -45,6 +45,47 @@ at Aalto University.
 
 
 
+Schedule
+--------
+
+**All times EET, that is Europe/Helsinki time!**
+
+- Friday, 14 January 2022, online
+
+  - **11:50--12:00** Connecting time and icebreakers
+
+  - **12:00--12:25:**  Laptops to `Lumi <https://www.lumi-supercomputer.eu/>`__: A tour of your
+    scientific computing career, from your laptop to the largest
+    computers in the world.
+
+  - **12:25--12:50**: Scientific Computing workflows at Aalto
+
+    - Material: https://hackmd.io/@AaltoSciComp/SciCompIntro
+    - Material: :doc:`/triton/usage/workflows`
+
+  - Q&A + break
+
+  - **13:00--13:25:**  TBD
+  - **13:25--13:50:**  TBD
+
+  - Q&A + break
+
+  - **13:00--13:25:**  TBD
+  - **13:25--13:50:**  Q&A/panel discussion: scientific computing tools
+
+  - Q&A + break
+
+  - [**15:00--15:45:**  Connecting to a HPC cluster as part of
+    :doc:`winter-kickstart`.]
+
+    - [Not technically a part of this course, but this is a "help
+      time" to get prepared for the next course.
+    - 15:00--15:20?: Livestream introduction to connecting
+    - 15:??--??: Individual help time in Zoom
+    - Material: :doc:`/triton/tut/connecting` ]
+
+
+
 Varying topics
 --------------
 
@@ -53,13 +94,8 @@ you review these topics we have covered in previous courses (which we
 won't cover again during this course).  You can ask questions on these
 during these sessions:
 
-* Linux shell crash course `video <https://www.youtube.com/watch?v=ESXLbtaxpdI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=3>`__
+* Linux shell crash course: :doc:`reading </scicomp/shell>`, `video <https://www.youtube.com/watch?v=ESXLbtaxpdI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=3>`__
 * Git crash course `video <https://www.youtube.com/watch?v=r9AT7MqmLrU&list=PLZLVmS9rf3nPFw29oKUj6w1QdsTCECS1S&index=6>`__
-
-
-Prerequisites
--------------
-* No prerequisites, you can just watch.
 
 
 
@@ -78,39 +114,7 @@ the lectures.
 
 * Richard Darst
 * Enrico Glerean
-
-**Time, date, place:** (all times EET): (Note schedule is subject to change)
-
-- Friday, 14 January 2022, online
-
-  - **11:50--12:00** Connecting time and icebreakers
-
-  - **12:00--12:25:**  Laptops to `Lumi <https://www.lumi-supercomputer.eu/>`__: A tour of your
-    scientific computing career, from your laptop to the largest
-    computers in the world.
-
-  - **12:25--12:50**: Scientific Computing workflows at Aalto
-
-    - Material: https://hackmd.io/@AaltoSciComp/SciCompIntro
-    - Material: :doc:`/triton/usage/workflows`
-
-  - Q&A + break
-
-  - **13:00--13:25:**  TBD
-  - **13:25--13:50:**  Q&A/panel discussion: scientific computing tools
-
-  - Q&A + break
-
-  - [**14:00--14:45:**  Connecting to a HPC cluster as part of
-    :doc:`winter-kickstart`.]
-
-    - [Not technically a part of this course, but this is a "help
-      time" to get prepared for the next course.
-    - 14:00--14:20?: Livestream introduction to ssh
-    - 14:??--??: Individual help time in Zoom
-    - Material: :doc:`/triton/tut/connecting` ]
-
-
+* ... and you?
 
 **Registration:**
 
@@ -131,13 +135,19 @@ members):
 
 
 
-Preparation
------------
+Preparation / prerequisites
+---------------------------
 
 **Software installation:**
 
 * `Zoom <https://coderefinery.github.io/installation/zoom/>`__ (if
-  attending via Zoom)
+  attending breakout rooms)
+
+
+**Background knowledge:** Just come with what you know, there is
+something for everyone.  It might be good to look at the "varying
+topics" material, especially the shell crash course one.
+
 
 **Mental preparation:** Online workshops can be a productive format, but it
 takes some effort to get ready.  Browse these resources:
@@ -146,9 +156,6 @@ takes some effort to get ready.  Browse these resources:
   <https://coderefinery.github.io/manuals/how-to-attend-stream/>`__,
   good to read in detail (ignore the CodeRefinery-specific parts).
 * `How to use HackMD to take answer questions and hold discussions <https://coderefinery.github.io/manuals/hackmd-mechanics/>`__.
-* It is useful to `watch <https://youtu.be/56p6xX0aToI>`__ or `read
-  <https://scicomp.aalto.fi/scicomp/shell/>`__ the Linux shell crash
-  course, to already become familiar with the content of the course.
 * `The Zoom mechanics we will use
   <https://coderefinery.github.io/manuals/zoom-mechanics/>`__, might
   be useful to browse.
@@ -174,6 +181,8 @@ advanced things".
 
 Material
 --------
+
+See the schedule
 
 - Computing workflows
 
