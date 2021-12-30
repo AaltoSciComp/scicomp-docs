@@ -1,6 +1,5 @@
-=============================================
-Jan 2022 / Intro to Linux and Aalto Computing
-=============================================
+Jan 2022 / Getting started with scientific computing
+====================================================
 
 .. important:: Updating for 2022
 
@@ -8,31 +7,24 @@ Jan 2022 / Intro to Linux and Aalto Computing
 
 .. admonition:: Quick links
 
-   * All videos available at https://www.youtube.com/playlist?list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc
+   (none yet)
 
-   * How to join: Open Twitch (watching), open HackMD (asking
-     questions) in web browsers and position so you can see both.
-     Zoom is only used during exercise sessions.
-
-   * Watch here (no account needed):
-     https://aaltoscicomp.github.io/scip/ (Twitch channel: https://twitch.tv/coderefinery)
-   * Questions here (HackMD, no account needed): https://hackmd.io/@AaltoSciComp/IntroWinter2021
-   * Zoom (optional): link by email
-   * Lesson materials: :ref:`Triton tutorials <tutorials>`.
-
-This course is a general introduction to computing resources at Aalto,
-suitable as an introduction to any researcher doing somewhat
-computational or data-intensive work now or in the future.  Aalto
-University is used in examples, but all parts are designed to be
-useful to others as well.
+This course is a general introduction to computational researchers.
+The point is to serve as a guide to your career: a map to the types of
+resources that are available, so that you can be prepared when you
+need more in the future.  There will also be topics related to using
+these resources.  Aalto University is used in some examples, but all
+parts are designed to be useful to everyone else as well.
 
 This course is especially suitable to new researchers or students trying to
 understand computational/data analysis options available to them.  It
 won't go into anything too deep, but will provide you with a good
 background for your next steps: you will know what resources are
-available and know the next steps to use them.
+available and know the next steps to use them.  The follow-up course,
+to use computer clusters, is :doc:`winter-kickstart`, and happens the
+next week.
 
-It consists of two parts:
+It consists of:
 
 * **Computing workflows:** Your laptop.  The national-level
   supercomputer.  Everything in between.  There are so many different
@@ -44,29 +36,31 @@ It consists of two parts:
   to be useful to any university: you will just need to find the
   equivalent tools at your university.
 
-* **Basic Linux shell:** Shell and command line (on Linux or on other
-  operating systems) is the basis of next-level computing, and
-  knowing a little bit will go a long way in your career even if you
-  don't use it on a daily basis.  This introduction will make you
-  confident enough to take any other computing courses you may need in
-  the future, and give you the first steps to automating your work and
-  making it reproducible.  This is not Aalto specific.  This is a good intro to
-  the :doc:`Winter HPC Kickstart <winter-kickstart>` that comes next
-  (but still useful on its own).
+* (to be decided)
 
 Attending individual sessions is fine.
 
-Prerequisites:
-
-* No prerequisites, you can just watch.
-* For the second part, it is convenient if you have access to a
-  ``bash`` shell. See instructions below for how we can provide this -
-  but just listening is fine too.
-* You can't try out some of our services without an Aalto account, but
-  that won't affect attending this event.
-
 Part of :doc:`Scientific Computing in Practice <index>` lecture series
 at Aalto University.
+
+
+
+Varying topics
+--------------
+
+Each year, this course is offered with varying topics.  We recommend
+you review these topics we have covered in previous courses (which we
+won't cover again during this course).  You can ask questions on these
+during these sessions:
+
+* Linux shell crash course `video <https://www.youtube.com/watch?v=ESXLbtaxpdI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=3>`__
+* Git crash course `video <https://www.youtube.com/watch?v=r9AT7MqmLrU&list=PLZLVmS9rf3nPFw29oKUj6w1QdsTCECS1S&index=6>`__
+
+
+Prerequisites
+-------------
+* No prerequisites, you can just watch.
+
 
 
 Practical information
@@ -85,40 +79,51 @@ the lectures.
 * Richard Darst
 * Enrico Glerean
 
-**Time, date, place:** (all times EET):
+**Time, date, place:** (all times EET): (Note schedule is subject to change)
 
 - Friday, 14 January 2022, online
 
-  - Please connect 10 minutes early for icebreakers and introductions
+  - **11:50--12:00** Connecting time and icebreakers
 
-  - **12:00--12:45:**  Basics of scientific computing, workflows at Aalto (and other universities via
-    breakout rooms)
+  - **12:00--12:25:**  Laptops to `Lumi <https://www.lumi-supercomputer.eu/>`__: A tour of your
+    scientific computing career, from your laptop to the largest
+    computers in the world.
+
+  - **12:25--12:50**: Scientific Computing workflows at Aalto
 
     - Material: https://hackmd.io/@AaltoSciComp/SciCompIntro
     - Material: :doc:`/triton/usage/workflows`
 
   - Q&A + break
 
-  - **13:00--13:45:**  Introduction to Linux shell
+  - **13:00--13:25:**  TBD
+  - **13:25--13:50:**  Q&A/panel discussion: scientific computing tools
 
   - Q&A + break
 
-  - [**14:00--14:45:**  Connecting to Triton as part of
+  - [**14:00--14:45:**  Connecting to a HPC cluster as part of
     :doc:`winter-kickstart`.]
 
-    - [Not technically a part of this course, but a next step from this
-      course and integrated here]
-    - Material: :doc:`/triton/tut/connecting`  
+    - [Not technically a part of this course, but this is a "help
+      time" to get prepared for the next course.
+    - 14:00--14:20?: Livestream introduction to ssh
+    - 14:??--??: Individual help time in Zoom
+    - Material: :doc:`/triton/tut/connecting` ]
 
-  - Q&A
 
 
 **Registration:**
 
 `Please register at this link <https://link.webropol.com/s/introHPCJan2022>`__
-We aim to not require registration
-if you will be only passively watching.  Lurkers welcome.  Priority
-for Finnish academic institutions (FCCI members).
+Registration is not required to just watch online, lurkers welcome.
+Registration will get you ("*" indicates priority for Finnish acedemic
+members):
+
+- Email reminders and summaries each day.
+- The HackMD link, so that you can ask questions (this is very
+  important for interactivity!)(*)
+- Zoom links for the per-university breakout rooms (*)
+
 
 **Credits:** Certificates are not provided for this course.
 
@@ -131,28 +136,6 @@ Preparation
 
 **Software installation:**
 
-* You will need the BASH shell.  This is the basic of automating
-  almost anything, so is useful to have on your computer.
-
-  * Linux: Open the Terminal application and type: ``bash``
-  * MacOS: Open the Terminal application and type: ``bash``
-  * Windows:
-
-    * If you have an Aalto account, download `PuTTY <https://www.putty.org/>`__
-      and use it to connect to ``kosh.aalto.fi`` (see this `screenshot
-      <PuTTY.png>`__). Use your Aalto username and password to login. After
-      login, type: ``bash``
-    * If you have Windows 10 and admin rights, you can install `Ubuntu
-      <https://www.microsoft.com/store/productId/9NBLGGH4MSV6>`__ through the
-      Microsoft Store. Then, start the Ubuntu application and type: ``bash``
-    * If you don't have an Aalto account, and no Windows 10 with admin rights,
-      you can install Git BASH by following `these instructions
-      <https://coderefinery.github.io/installation/bash>`__.
-
-  * If all the above fails, the backup plan is to use BASH through your
-    webbrowser by `clicking here
-    <https://mybinder.org/v2/gh/AaltoSciComp/bash-binder/HEAD?urlpath=terminals%2F1>`__.
-
 * `Zoom <https://coderefinery.github.io/installation/zoom/>`__ (if
   attending via Zoom)
 
@@ -160,15 +143,15 @@ Preparation
 takes some effort to get ready.  Browse these resources:
 
 * `Attending an online workshop
-  <https://coderefinery.github.io/manuals/how-to-attend-online/>`__,
+  <https://coderefinery.github.io/manuals/how-to-attend-stream/>`__,
   good to read in detail (ignore the CodeRefinery-specific parts).
 * `How to use HackMD to take answer questions and hold discussions <https://coderefinery.github.io/manuals/hackmd-mechanics/>`__.
-* `The Zoom mechanics we will use
-  <https://coderefinery.github.io/manuals/zoom-mechanics/>`__, might
-  be useful to browse.
 * It is useful to `watch <https://youtu.be/56p6xX0aToI>`__ or `read
   <https://scicomp.aalto.fi/scicomp/shell/>`__ the Linux shell crash
   course, to already become familiar with the content of the course.
+* `The Zoom mechanics we will use
+  <https://coderefinery.github.io/manuals/zoom-mechanics/>`__, might
+  be useful to browse.
 
 
 
@@ -206,10 +189,3 @@ Material
     (minor parts)
   - We will also emphasize how the shell fits in with modern
     science.
-
-
-
-News and notes
---------------
-
-None yet
