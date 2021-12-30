@@ -26,16 +26,19 @@ Our philosophy for clusters is:
 .. highlight:: bash
 
 
+
 General
 -------
 
-These tutorials will be quite useful for clusters with:
+These tutorials/our course will be quite easy to use for users of a
+cluster which have:
 
 - Slurm as the batch system
 - You can get a shell (likely via ssh)
 - ``git`` installed without needing to load a module
 - Python 2 or 3 (any version) installed as ``python`` without needing
-  to load a module
+  to load a module.
+
 
 
 Quick reference
@@ -43,7 +46,10 @@ Quick reference
 
 If you run your own cluster, create a quick reference such as
 :doc:`/triton/ref/index` so that others following tutorials such as
-ours can quickly translate to your own cluster's specifics.
+ours can quickly translate to your own cluster's specifics. (Our hope
+is that all the possible local configuration is on there, so that you
+can translate it to your site, and that is sufficient to run).
+
 
 
 Connecting
@@ -51,6 +57,7 @@ Connecting
 
 Connection should be possible via ssh.  You probably want a
 cheatsheet and installation help before our course.
+
 
 
 Slurm
@@ -74,6 +81,7 @@ We use this ``slurm_tool`` wrapper, but we don't require it (but it
 might be useful for your users): https://github.com/jabl/slurm_tool
 
 
+
 Applications
 ------------
 
@@ -86,6 +94,7 @@ access).
 our examples run on both) without loading a module.  Many of our basic
 examples use this to run simple programs to demonstrate various
 cluster features without getting deeper into software.
+
 
 
 Data storage
