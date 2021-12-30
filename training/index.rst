@@ -25,7 +25,7 @@ and/or Python, Matlab, HTCondor and many others.
 .. toctree::
    :maxdepth: 1
 
-   scip/intro-linux-aalto-computing
+   scip/getting-started-with-scientific-computing
    scip/winter-kickstart
    scip/index
 

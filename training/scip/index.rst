@@ -26,7 +26,7 @@ Currently active (upcoming) courses have been moved to the
 2021
 ----
 
-  - Introduction to Data Analysis strategies at Aalto, Linux shell, HPC kickstart 2021  (Jan/Feb 2021, :doc:`materials part 1 <intro-linux-aalto-computing>`, :doc:`materials part 2 <winter-kickstart>`, `videos <https://youtube.com/playlist?list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc>`__)
+  - Introduction to Data Analysis strategies at Aalto, Linux shell, HPC kickstart 2021  (Jan/Feb 2021, :doc:`materials part 1 <getting-started-with-scientific-computing>`, :doc:`materials part 2 <winter-kickstart>`, `videos <https://youtube.com/playlist?list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc>`__)
   - Introduction to MPI (March 2021)
   - Linux Shell Scripting (March 2021, `materials <https://aaltoscicomp.github.io/linux-shell/>`__)
   - Hands-on data anonymization  (April 2021, videos: `day1 <https://www.youtube.com/watch?v=kJGTLSLiuhI>`__, `day2 <https://www.youtube.com/watch?v=za8SYXX1wco>`__, `day3 <https://www.youtube.com/watch?v=oyToSTB1Jrc>`__, `dat4 <https://www.youtube.com/watch?v=9TE9nUjI8F0>`__)
