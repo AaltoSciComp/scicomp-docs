@@ -22,8 +22,11 @@ for this series of tutorials).
      Aalto-managed laptop, but *not* ``aalto open``),
    * VPN is best but ``kosh.aalto.fi`` is a good ssh jump host from
      outside (note the ``-J`` :doc:`ssh option </scicomp/ssh>`.
+   * https://vdi.aalto.fi (ssh to Triton from there) and
+     https://jupyter.triton.aalto.fi (start a terminal) provide
+     alternatives.
 
-.. note::
+.. admonition:: Kickstart course preparation
 
    Are you here for a SciComp KickStart course?  You just need to :doc:`make
    sure you have an account <../accounts>` and then be able to connect
@@ -118,7 +121,7 @@ worth making yourself comfortable with this.
 
       If you are outside the Aalto networks, you need to first connect to
       ``kosh.aalto.fi`` or some other server, and then use the Linux
-      instructions to connect to Triton.
+      instructions to connect to Triton (``ssh triton.aalto.fi``)
 
 When connecting, you can :doc:`verify the ssh key fingerprints
 <../usage/ssh-fingerprints>` which will ensure security.
@@ -174,11 +177,14 @@ forget is that it has a full-featured terminal and console included.
 Go to https://jupyter.triton.aalto.fi (not **.cs.**\ aalto.fi) and log
 in.  Select "Slurm 5 day, 2G" and start.
 
-To start a terminal, click File→New→Terminal - you do anything you
-need to do from here, same as ``ssh``.  If you need to edit text
+To start a terminal, click File→New→Terminal - this is the shell you
+need.  If you need to edit text
 files, you can also do that through JupyterLab (note: change to the
 right directory *before* creating a new file!).
 
+Warning: the JupyterHub shell runs on a compute node, not a login
+node.  Some software is missing so some things don't work.  Try ``ssh
+triton.aalto.fi`` from the Jupyter shell to connect to the login node.
 To learn more about Jupyterlab, you need to read up elsewhere, there
 are plenty of tutorials.
 

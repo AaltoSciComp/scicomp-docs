@@ -11,6 +11,13 @@ building, and compiling software.  These days, installing and managing
 scientific software is taking more and more time, thus we need to
 specifically talk about it.
 
+Clusters, being a shared systems, has more complicated software
+requirements.  In this tutorial, you will learn how to use
+existing software.  Be aware that installing your own is possible (and
+people do it all the time), but does require some attention to
+details.  Either way, you will need to know the basics of software on
+Linux.
+
 .. admonition:: Cheatsheet
 
    * There are many ways to get software on Triton: we use the

@@ -1,6 +1,5 @@
-===========================
-About Science-IT and Triton
-===========================
+About clusters and your work
+============================
 
 .. admonition:: Video
 
@@ -18,7 +17,7 @@ You are now at the first step of the Triton tutorial.
 
 
 About Triton
-============
+------------
 
 Triton is a mid-sized heterogeneous computational Linux cluster.  This
 means that we are not at a massive scale (though we are, after CSC,
@@ -32,7 +31,7 @@ memory, and other storage is not shared.
 
 .. admonition:: A real Ship of Theseus
 
-   In the Ship of Theseus thought experiment, every piece of a ship is
+   In the `Ship of Theseus <>`__ thought experiment, every piece of a ship is
    incrementally replaced.  Is it the same ship or not?
 
    Triton is a literal Ship of Theseus.  Over the ~10 years it has
@@ -50,8 +49,8 @@ scripting, managing software, managing data, and so on.  Triton is a
 good system to use for learning.
 
 
-Getting skills
-==============
+Building your skills
+--------------------
 
 .. seealso::
 
@@ -62,7 +61,7 @@ However, research is not a consumer product, and the fact is that you
 need more knowledge to use Triton than most people learn in academic
 courses.
 
-Science-IT has created a (still under development) `modular
+We have created a `modular
 training plan <https://hands-on.coderefinery.org>`__, which
 divides useful knowledge into levels.  In order to use Triton well, you need to be somewhat
 proficient at Linux usage (C level).  In order to do parallel work,
@@ -78,11 +77,18 @@ training, see our :doc:`Scientific Computing in Practice lecture series
 
 
 Getting help
-============
+------------
 
 .. seealso::
 
    Main article: :doc:`../help`
+
+First off, realize **it is hard to do everything alone** - with the
+diversity of types of computational research and researchers, it's not
+even true that everyone *should* know everything.  If you would like
+to focus on your science and have someone else focus on the
+computational part, see our :doc:`Research Software Engineer
+</rse/index>` service.  It's also available for expert consultations.
 
 There are many ways to get help.  Most daily questions should go to
 our :ref:`issue tracker <issuetracker>` (`direct link <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`__), which is hosted on
@@ -90,37 +96,23 @@ our :ref:`issue tracker <issuetracker>` (`direct link <https://version.aalto.fi/
 This is especially important because many people end up asking the
 same questions, and in order to scale everyone needs to work together.
 
-Please, don't send us personal email, because not everyone is here all
-the time and you may end up asking someone other than the best
-person.  Personal email is also very likely to get lost.  By the same
-token, we have a :ref:`service email address
-<scicomp-address>`, but this should only be used for account
-matters.  If it affects others (software, usage problems, etc), use
-the issue tracker, otherwise we will point you there and spend lots of
-time answering the same questions over and over.
+We have daily :doc:`"SciComp garage" </help/garage>` sessions
+where we provide help in person. Similarly, we have :doc:`chat
+</help/chat>` that can be used to ask quick questions.
 
 Also, always search this scicomp docs site and old issues in the issue
 tracker.
 
-We have weekly :doc:`"SciComp garage" </help/garage>` sessions
-where we provide help in person.
+Please, don't send us personal email, because it won't be tracked and
+might go to the wrong person or someone without time right now.
+Personal email is also very likely to get lost.  For email contact, we
+have a :ref:`service email address
+<scicomp-address>`, but this should only be used for account
+matters.  If it affects others (software, usage problems, etc), use
+the issue tracker, otherwise we will point you there.
 
-However, the most important thing is to be able to continually develop
-your skills to help yourself and your colleagues.  See the previous
-section for our solution for this.
-
-
-Software
-========
-
-Triton, being a shared system, has more complicated software
-requirements.  In an upcoming tutorial, you will learn how to use
-existing software.  Be aware that installing your own is possible (and
-people do it all the time), but does require some attention to
-details.  Either way, you will need to know the basics of software on
-Linux.
 
 
 What's next?
-============
-The next tutorial is :doc:`connecting`.
+------------
+The next tutorial is :doc:`connecting to the cluster <connecting>`.
