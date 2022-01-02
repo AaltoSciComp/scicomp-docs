@@ -45,6 +45,24 @@
    find feature, or quickly searching for output.  Can also use
    standard input instead of ``FILE``.
 
+``du [-ash] [DIR]``
+   Print disk usage of a directory. ``-h`` means "human readable" (MB,
+   GB, etc), ``-s`` means "only of DIR, not all subdirectories also".
+   ``-a`` means "all files, not only directories".
+   A common pattern is ``du -h DIR | sort -h`` to print all
+   directories and their sizes, sorted by size.
+
+``stat``
+   Show detailed information on a file's properties.
+
+``find [DIR]``
+   find can do almost anything, but that means it's really hard to use
+   it well.  Let's be practical: with only a directory argument, it
+   prints all files and directories recursively, which might be useful
+   itself.  Many of us do ``find DIR | grep NAME`` to grep for the
+   name we want (even though this isn't the "right way", there are
+   find options which do this same thing more efficiently).
+
 ``|`` (pipe): ``COMMAND1 | COMMAND2``
    The output of ``COMMAND1`` is sent to the input of ``COMMAND2``.
    Useful for combining simple commands together into complex
