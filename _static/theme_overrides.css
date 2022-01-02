@@ -41,3 +41,7 @@ details {
     margin-bottom:20px
 }
 
+/* Allow literals in tables to wrap. */
+.rst-content table code.literal {
+    white-space: unset;
+}
