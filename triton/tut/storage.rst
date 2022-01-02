@@ -252,7 +252,7 @@ used as a rudimentary way to see how much I/O load there is.
 
    Use ``strace -c`` to compare the number of system calls in ``ls``,
    ``ls -l``, ``ls --no-color``, and ``ls --color`` on a directory
-   with many files.  You can use the directory
+   with many files.  On Triton, you can use the directory
    ``/scratch/scip/lustre_2017/many-files/`` as a place with many
    files in it.  How many system calls per file were there for each
    option?

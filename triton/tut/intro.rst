@@ -74,6 +74,9 @@ suggested material for self-study and lessons.  We offer routine
 training, see our :doc:`Scientific Computing in Practice lecture series
 </training/scip/index>` page for info.
 
+**You can't learn everything you need all at once.  Instead,
+continually learn and know when to ask for help.**
+
 
 
 Getting help

@@ -206,10 +206,10 @@ The below uses command line programs to do the same, and makes the
     mkdir triton_work
     sshfs USERNAME@triton.aalto.fi:/scratch/work/USERNAME triton_work
 
-Note that ``ssh`` binds together many ways of accessing Triton, with a
-similar syntax and options.  ``ssh`` is a very important program and
-binds together all types of remote access, and learning to use it well
-will help you for a long time.  Learn more about ssh on :doc:`the ssh
+Note that ``ssh`` binds together many ways of accessing Triton (and
+other servers), with a
+similar syntax and options.  Learning to use it well is a great
+investment in your future.  Learn more about ssh on :doc:`the ssh
 page </scicomp/ssh>`.
 
 For Aalto Linux workstation users: it is recommended that you mount ``/scratch/``
@@ -309,7 +309,7 @@ Exercises
 
 .. exercise:: (advanced) RemoteData-2: rsync
 
-   If you have a Linux on Mac computer, study the ``rsync``
+   If you have a Linux or Mac computer, study the ``rsync``
    manual page and try to transfer a file.
 
 
