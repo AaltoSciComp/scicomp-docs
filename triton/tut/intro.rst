@@ -31,7 +31,9 @@ memory, and other storage is not shared.
 
 .. admonition:: A real Ship of Theseus
 
-   In the `Ship of Theseus <>`__ thought experiment, every piece of a ship is
+   In the `Ship of Theseus
+   <https://en.wikipedia.org/wiki/Ship_of_Theseus>`__ thought
+   experiment, every piece of a ship is
    incrementally replaced.  Is it the same ship or not?
 
    Triton is a literal Ship of Theseus.  Over the ~10 years it has
@@ -100,8 +102,8 @@ This is especially important because many people end up asking the
 same questions, and in order to scale everyone needs to work together.
 
 We have daily :doc:`"SciComp garage" </help/garage>` sessions
-where we provide help in person. Similarly, we have :doc:`chat
-</help/chat>` that can be used to ask quick questions.
+where we provide help in person. Similarly, we have :ref:`chat
+<chat>` that can be used to ask quick questions.
 
 Also, always search this scicomp docs site and old issues in the issue
 tracker.
