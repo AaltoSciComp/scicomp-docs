@@ -266,6 +266,19 @@ Exercises
    using a different ``#!`` line.
    Does it run?  What are some of the advantages and problems here?
 
+.. exercise:: (advanced) Serial-6: Job environment variables.
+
+   Either make a ``sbatch`` script that runs the command ``env | sort``, or
+   use ``srun env | sort``.  The ``env`` utility prints all
+   environment variables, and ``sort`` sorts it (and ``|`` connects
+   the output of ``env`` to the input of ``sort``.)
+
+   This will show all of the environment variables that are set in the
+   job.  Note the ones that start with ``SLURM_``.  Notice how they
+   reflect the job parameters.  You can use these in your jobs if
+   needed (for example, a job that will adapt to the number of
+   allocated CPUs).
+
 What's next?
 ============
 
