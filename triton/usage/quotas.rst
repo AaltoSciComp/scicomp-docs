@@ -20,6 +20,10 @@ files, see `the page on small files <smallfiles>`.
      you find out where space is being used.  ``$HOME`` can be
      replaced with any other directory (or left off for the current
      directory).  Use ``du -a`` to list all files, not only directories.
+
+     * ``du -h --max-depth=1 $HOME | sort -h``: Similar, but only list
+       down to ``--max-depth`` levels.
+
    * ``rm`` removes a single file, ``rm -r`` removes a whole directory
      tree.  **Warning: on scratch and Linux in general (unless backed
      up), there is no recovery from this!!** Think twice before you
