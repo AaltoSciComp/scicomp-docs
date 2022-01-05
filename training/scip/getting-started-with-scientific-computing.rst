@@ -52,37 +52,54 @@ Schedule
 
 - Friday, 14 January 2022, online
 
-  - **11:50--12:00** Connecting time and icebreakers
+  - **11:50--12:00** Connecting time, introductions, icebreakers
 
-  - **12:00--12:25:**  Laptops to `Lumi <https://www.lumi-supercomputer.eu/>`__: A tour of your
-    scientific computing career, from your laptop to the largest
-    computers in the world.
+  - **12:00--12:25:** Laptops to `Lumi
+    <https://www.lumi-supercomputer.eu/>`__
 
-  - **12:25--12:50**: Scientific Computing workflows at Aalto
+    A tour of your scientific computing career, from your laptop to
+    the largest computers in the world.  A high-level overview talk
+    especially good for new researchers.
+
+  - **12:25--12:50:** Scientific Computing workflows at Aalto.
+
+    The types of services available at Aalto and many other
+    universities, a summary of what you might actually use in the next
+    six months.
 
     - Material: https://hackmd.io/@AaltoSciComp/SciCompIntro
     - Material: :doc:`/triton/usage/workflows`
+    - Breakout rooms for other sites (as available).
 
-  - Q&A + break
+  - Break (+ Q&A)
 
-  - **13:00--13:25:**  TBD
-  - **13:25--13:50:**  TBD
+  - **13:00--13:25:**  How to ask for help
 
-  - Q&A + break
+    It's dangerous to go alone, take us!  Don't waste time struggling,
+    there are plenty of people here for you.
 
-  - **13:00--13:25:**  TBD
-  - **13:25--13:50:**  Q&A/panel discussion: scientific computing tools
+  - **13:25--13:50:**  A tour of scientific computing skills and
+    tools.
 
-  - Q&A + break
+    There are so many tools available for computing.  We'll describe
+    some of most important things and give you links to your next
+    steps.
 
-  - [**15:00--15:45:**  Connecting to a HPC cluster as part of
-    :doc:`winter-kickstart`.]
+  - Break (+ Q&A)
 
-    - [Not technically a part of this course, but this is a "help
-      time" to get prepared for the next course.
+  - **13:00--13:50:**  Q&A/panel discussion (on any topic).
+
+  - Break (+ Q&A)
+
+  - **15:00--15:45:**  Connecting to a HPC cluster as part of
+    :doc:`winter-kickstart`.
+
+    - Required if you are attending the Triton/HPC tutorials the
+      following days.
     - 15:00--15:20?: Livestream introduction to connecting
-    - 15:??--??: Individual help time in Zoom
-    - Material: :doc:`/triton/tut/connecting` ]
+    - 15:??--??: Individual help time in Zoom (links sent to
+      registered participants)
+    - Material: :doc:`/triton/tut/connecting`
 
 
 

@@ -71,14 +71,13 @@ Schedule
 
 Mon-Tue 17-18.January, 12:00-16:00.
 
-- **Friday, 14 January, 2022**
+- **Friday, 14 January, 2022 (mandatory if new Triton user)**
 
-  - We strongly suggest also attending the
-    :doc:`getting-started-with-scientific-computing` course, this is
-    the bigger-picture introduction.
-  - **15:00 -- 15:45**
-  - Help connecting to Triton (Aalto), Zoom link by email to
-    registered participants
+  - **11:50-14:00** We strongly suggest also
+    attending the :doc:`getting-started-with-scientific-computing`
+    course.  This is a bigger-picture introduction.
+  - **14:00 -- 14:45 (especially important)** Help connecting to
+    Triton (Aalto), Zoom link by email to registered participants.
 
 - **Monday, 17 January, 2022** (roughly connecting to serial jobs in
   the :ref:`tutorials <tutorials>`)
@@ -88,12 +87,11 @@ Mon-Tue 17-18.January, 12:00-16:00.
   - :doc:`/triton/tut/intro`
   - Real example 1: Large-scale computing with array jobs
   - Real example 2: Large-scale parallel computing
-  - :doc:`/triton/tut/connecting`
+  - :doc:`/triton/tut/interactive`
+  - :doc:`/triton/tut/serial`
+  - :doc:`/triton/tut/monitoring`
   - :doc:`/triton/tut/storage`
   - :doc:`/triton/tut/remotedata`
-  - :doc:`/triton/tut/interactive`
-  - :doc:`/triton/tut/serial` (likely gets moved to day 3)
-  - :doc:`/triton/tut/monitoring` (likely gets moved to day 3)
 
 - **Tuesday, 18 January, 2022**
 
@@ -148,16 +146,19 @@ Preparation / prerequisites
 * Then, connect and get it working
 
   * Aalto (and possibly useful to others): try to :doc:`connect to
-    Triton </triton/tut/connecting>` to be ready.
+    Triton </triton/tut/connecting>` to be ready.  Come to the Friday
+    session for help connecting (required).
 
 
 **Background knowledge:** "A HPC cluster is easy to use if you know
 the Linux command line well".  A lot of this course is actually about
 getting comfortable with Linux so that you can use the cluster well.
-The :doc:`sibling course <getting-started-with-scientific-computing>`
-offered at the same time and the :doc:`Linux shell crash course
-</scicomp/shell>` (`video <https://youtu.be/56p6xX0aToI>`__) will get
-you ready.
+
+* The :doc:`getting-started-with-scientific-computing` course provides
+  good background, and is strongly recommended if you have not used
+  Triton before.
+* The :doc:`Linux shell crash course </scicomp/shell>` (`video
+  <https://youtu.be/56p6xX0aToI>`__).
 
 
 **Mental preparation:** Online workshops can be a productive format, but it
