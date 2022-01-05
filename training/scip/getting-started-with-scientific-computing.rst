@@ -52,16 +52,16 @@ Schedule
 
 - Friday, 14 January 2022, online
 
-  - **11:50--12:00** Connecting time, introductions, icebreakers
+  - **11:50--12:00: Connecting time, introductions, icebreakers**
 
-  - **12:00--12:25:** Laptops to `Lumi
+  - **12:00--12:25: Laptops to** `Lumi
     <https://www.lumi-supercomputer.eu/>`__
 
     A tour of your scientific computing career, from your laptop to
     the largest computers in the world.  A high-level overview talk
     especially good for new researchers.
 
-  - **12:25--12:50:** Scientific Computing workflows at Aalto.
+  - **12:25--12:50: Scientific Computing workflows at Aalto**
 
     The types of services available at Aalto and many other
     universities, a summary of what you might actually use in the next
@@ -71,28 +71,22 @@ Schedule
     - Material: :doc:`/triton/usage/workflows`
     - Breakout rooms for other sites (as available).
 
-  - Break (+ Q&A)
-
-  - **13:00--13:25:**  How to ask for help
+  - **13:00--13:25: When and how to ask for help**
 
     It's dangerous to go alone, take us!  Don't waste time struggling,
     there are plenty of people here for you.
 
-  - **13:25--13:50:**  A tour of scientific computing skills and
-    tools.
+  - **13:25--13:50: A tour of scientific computing skills and
+    tools**
 
     There are so many tools available for computing.  We'll describe
     some of most important things and give you links to your next
     steps.
 
-  - Break (+ Q&A)
+  - **13:00--13:50: Q&A/panel discussion (on any topic)**
 
-  - **13:00--13:50:**  Q&A/panel discussion (on any topic).
-
-  - Break (+ Q&A)
-
-  - **15:00--15:45:**  Connecting to a HPC cluster as part of
-    :doc:`winter-kickstart`.
+  - **15:00--15:45: Connecting to a HPC cluster as part of**
+    :doc:`winter-kickstart`
 
     - Required if you are attending the Triton/HPC tutorials the
       following days.
