@@ -72,7 +72,7 @@ Schedule
 
 Mon-Tue 17-18.January, 12:00-16:00.
 
-- **Friday, 14 January, 2022 (mandatory if new Triton user)**
+- **Thu, 2 February 2022 (mandatory if new Triton user)**
 
   - **11:50-14:00** We strongly suggest also
     attending the :doc:`getting-started-with-scientific-computing`
@@ -80,7 +80,7 @@ Mon-Tue 17-18.January, 12:00-16:00.
   - **14:00 -- 14:45 (especially important)** Help connecting to
     Triton (Aalto), Zoom link by email to registered participants.
 
-- **Monday, 17 January, 2022** (roughly connecting to serial jobs in
+- **Wed, 3 February 2022** (roughly connecting to serial jobs in
   the :ref:`tutorials <tutorials>`)
 
   - **11:50 -- 16:00**, all times approximate, breaks every hour
@@ -94,7 +94,7 @@ Mon-Tue 17-18.January, 12:00-16:00.
   - :doc:`/triton/tut/storage`
   - :doc:`/triton/tut/remotedata`
 
-- **Tuesday, 18 January, 2022**
+- **Fri, 4 February 2022**
 
   - **11:50 -- 16:00**, all times approximate, breaks every hour
   - Likely
@@ -147,8 +147,8 @@ Preparation / prerequisites
 * Then, connect and get it working
 
   * Aalto (and possibly useful to others): try to :doc:`connect to
-    Triton </triton/tut/connecting>` to be ready.  Come to the Friday
-    session for help connecting (required).
+    Triton </triton/tut/connecting>` to be ready.  Come to the
+    Wednesday session for help connecting (required).
 
 
 **Background knowledge:** "A HPC cluster is easy to use if you know

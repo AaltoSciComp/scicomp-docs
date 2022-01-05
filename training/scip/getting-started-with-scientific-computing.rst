@@ -50,7 +50,7 @@ Schedule
 
 **All times EET, that is Europe/Helsinki time!**
 
-- Friday, 14 January 2022, online
+- **Wed, 2 February 2022**
 
   - **11:50--12:00: Connecting time, introductions, icebreakers**
 
