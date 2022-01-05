@@ -9,6 +9,7 @@ Jan 2022 / Triton Winter Kickstart
 
 .. admonition:: Quick Links
 
+   * Day 1 course page: :doc:`getting-started-with-scientific-computing`
    * Lesson materials: :ref:`Triton tutorials <tutorials>`, see below
      for details.
 

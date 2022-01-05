@@ -7,7 +7,7 @@ Jan 2022 / Getting started with scientific computing
 
 .. admonition:: Quick links
 
-   (none yet)
+   * Day 2-3 course page: :doc:`winter-kickstart`
 
 This course is a general introduction to computational researchers.
 The point is to serve as a guide to your career: a map to the types of
