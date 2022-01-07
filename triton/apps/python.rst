@@ -15,30 +15,28 @@ system provided packages are ofter not complete or getting old.
 Python distributions
 --------------------
 
-+----------------------+-------------------------------+------------------------+
-|                      | Python to use                 | How to install own     |
-|                      |                               | packages               |
-+======================+===============================+========================+
-| I don't really care, | Anaconda                      |                        |
-| I just want recent   | ``module load anaconda``      |                        |
-| stuff and to not     |                               |                        |
-| worry.               |                               |                        |
-+----------------------+-------------------------------+------------------------+
-| Simple programs with | Anaconda                      | ``pip install --user`` |
-| common packages, not | ``module load anaconda``      |                        |
-| switching between    |                               |                        |
-| Pythons often        |                               |                        |
-+----------------------+-------------------------------+------------------------+
-| Your own conda       | Miniconda                     | conda environment +    |
-| environment          | ``module load miniconda``     | conda                  |
-|                      |                               |                        |
-|                      |                               |                        |
-+----------------------+-------------------------------+------------------------+
-| Your own virtual     | Module virtualenv             | virtualenv + pip +     |
-| environment          | ``module load py-virtualenv`` | setuptools             |
-|                      |                               |                        |
-|                      |                               |                        |
-+----------------------+-------------------------------+------------------------+
+.. list-table::
+   :header-rows: 1
+
+   * *
+     * Python to use
+     * How to install own packages
+
+   * * I don't really care, I just want recent stuff and to not worry.
+     * Anaconda: ``module load`` :sub:`(sw-module-anaconda) *anaconda*`
+
+   * * Simple programs with common packages, not switching between
+       Pythons often
+     * Anaconda: ``module load anaconda``
+     * ``pip install --user``
+
+   * * Your own conda environment
+     * Miniconda: ``module load miniconda``
+     * conda environment + conda
+
+   * * Your own virtual environment
+     * Module virtualenv ``module load py-virtualenv``
+     * virtualenv + pip + setuptools
 
 The main version of modern Python is 3. Support for old Python 2 ended at the
 end of 2019. There are also different distributions: The "regular" CPython,
