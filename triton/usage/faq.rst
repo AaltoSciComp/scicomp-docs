@@ -87,6 +87,15 @@ Job status and submission
        
       srun --time=1:00:00 ...
 
+
+.. collapse:: ``srun: error: Unable to allocate resources: Requested node configuration is not available``
+
+   You have requested some Slurm options which do not include any
+   nodes (for example, asking for a GPU with ``--gres=gpu`` and a
+   partition without GPUs).  Figure out what the problem is and adjust
+   your Slurm options.
+
+
 .. collapse:: ``srun: Required node not available (down, drained or reserved)``
 
    This error usually occurs when a requested node is down, drained or reserved which can happen if the cluster is undergoing some work - and might happen if there are very few default nodes that Slurm chooses from. If this error occurs then the shell will usually hang after the job has been submitted if the job is still waiting for allocation. To find which nodes are available for us to run jobs we can use ``sinfo`` and under the ``STATE`` column you will see for each partition the states of the nodes.
