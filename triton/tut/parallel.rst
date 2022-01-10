@@ -245,7 +245,12 @@ Running a typical MPI program
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following use ``hpc-examples`` from
-:ref:`the previous exercises <triton-tut-exercise-repo>`.
+:ref:`the previous exercises <triton-tut-exercise-repo>`.  Get the
+code::
+
+  git clone https://github.com/AaltoSciComp/hpc-examples/
+  cd hpc-examples/hello_mpi/          # C
+  cd hpc-examples/hello_mpi_fortran/  # fortran
 
 Loading module::
 

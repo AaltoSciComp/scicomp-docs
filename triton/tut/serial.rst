@@ -72,7 +72,7 @@ Let's take a look at the following script
    #SBATCH --mem-per-cpu=100M
    #SBATCH --output=hello.out
 
-   srun echo "Hello $USER! You are on node $HOSTNAME"
+   srun echo "Hello $USER! You are on node $HOSTNAME.  The time is $(date)."
 
 Let's name it ``hello.sh`` (create a file using your editor of choice, e.g. ``nano``;
 write the script above and save it)
