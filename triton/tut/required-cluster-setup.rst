@@ -12,7 +12,9 @@ reference <../ref/index>`.
 This course is designed to be a gentle introduction to scaling up from
 a local workflow to running on a cluster.  It is not especially
 focused on the *high performance* part but instead the basics and
-running existing things on a cluster.
+running existing things on a cluster.  And just to make it clear: our
+main lesson isn't just following our tutorials, but teaching someone
+how to figure things out on other clusters, too.
 
 Our philosophy for clusters is:
 
