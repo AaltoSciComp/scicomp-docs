@@ -1,8 +1,15 @@
+General notes
+   The command line has many small programs that when connected, allow
+   you to do many things.  Only a little bit of this is shown here.
+
+   Programs are generally silent if everything worked, and only print
+   an error if something goes wrong.
+
 ``ls [DIR]``
-   List current directory (or DIR)
+   List current directory (or DIR if given).
 
 ``pwd``
-   Print current directory
+   Print current directory.
 
 ``cd DIR``
    Change directory.  ``..`` is parent directory, ``/`` is root, ``/``
@@ -16,24 +23,25 @@
    Make a new directory.
 
 ``cat FILE``
-   Print entire contents of file to standard output (the terminal)
+   Print entire contents of file to standard output (the terminal).
 
 ``less FILE``
-   Less is a "pager", and lets you scroll through a file.  ``q`` to
-   quit.
+   Less is a "pager", and lets you scroll through a file
+   (up/down/pageup/pagedown).  ``q`` to quit, ``/`` to search.
 
 ``mv SOURCE DEST``
    Move (=rename) a file.  ``mv SOURCE1 SOURCE2 DEST-DIRECTORY/``
-   copies to directory.
+   copies multiple files to a directory.
 
 ``cp SOURCE DEST``
    Copy a file.  The ``DEST-DIRECTORY/`` syntax of ``mv`` works as
    well.
 
 ``rm FILE ...``
-   Remove a file.  Note, from the command line there is no recovery!
-   Always pause and check before running this command.  Add ``-r`` to
-   remove whole directories recursively.
+   Remove a file.  Note, from the command line there is no recovery, so
+   always pause and check before running this command!  The ``-i``
+   option will make it confirm before removing each file.  Add ``-r``
+   to remove whole directories recursively.
 
 ``head [FILE]``
    Print the first 10 (or N lines with ``-n N``) of a file.  Can take
@@ -46,7 +54,8 @@
    standard input instead of ``FILE``.
 
 ``du [-ash] [DIR]``
-   Print disk usage of a directory. ``-h`` means "human readable" (MB,
+   Print disk usage of a directory. Default is KiB, rounded up to
+   block sizes (1 or 4 KiB), ``-h`` means "human readable" (MB,
    GB, etc), ``-s`` means "only of DIR, not all subdirectories also".
    ``-a`` means "all files, not only directories".
    A common pattern is ``du -h DIR | sort -h`` to print all
