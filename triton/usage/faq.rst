@@ -88,35 +88,8 @@ Job status and submission
       srun --time=1:00:00 ...
 
 
-.. collapse::  Why are my jobs in state "launch failed requeued held"
 
-  Slurm is configured such that if a job fails due to some outside reason
-  (e.g. the node where it's running fails rather than the job itself
-  crashing due to a bug in the job) the job is requeued in a held state.
-  If you're sure that everything is ok again you can release the job for
-  scheduling with "scontrol release JOBID". If you don't want this
-  behavior (i.e. you'd prefer that such failed jobs would just disappear)
-  then you can prevent the requeuing with
-
-  ::
-
-      #SBATCH --no-requeue
-
-.. collapse::  How can I find out the remaining runtime of my job/allocation
-
-  You can find out the remaining time of any job that is running with
-
-  ::
-
-      squeue -h -j  -o %L
-
-  Inside a job script or *sinteractive* session you can use the
-  environment variable SLURM\_JOB\_ID to refer to the current job ID.
-
-  .. _FAQ_Accounts:
-
-
-
+.. _FAQ_Accounts:
 
 Accounts and Access to triton
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -310,23 +283,6 @@ Storage, file transfer and quota
   Most likely your Kerberos ticket has expired. If you log in with a
   password or use 'kinit', you can get an another ticket. See page on
   `data storage <../tut/storage>` for more information.
-
-
-.. collapse::  How can I print my text file to a local department printer?
-
-  We don't have local department printers configured anywhere on Triton.
-  But one can use SSH magic to send a file or command output to a remote
-  printer. Run from your local workstation, insert the target printer
-  name:
-
-  ::
-
-      ... printing text file
-      $ ssh user@triton.aalto.fi "cat file.txt" | enscript -P printer_name
-      ... printing a PostScript file
-      $ ssh user@triton.aalto.fi "cat file.ps" | lp -d printer_name -
-      ... printing a man page
-      $ ssh user@triton.aalto.fi "man -t sbatch" | lp -d printer_name -
 
 .. collapse::  How can I copy Triton files from outside of Aalto?
 
