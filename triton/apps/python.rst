@@ -24,6 +24,7 @@ Python distributions
 
    * * I don't really care, I just want recent stuff and to not worry.
      * Anaconda: ``module load`` :sub:`(sw-module-anaconda) *anaconda*`
+     *
 
    * * Simple programs with common packages, not switching between
        Pythons often
