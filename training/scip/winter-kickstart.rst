@@ -1,10 +1,10 @@
 ==================================
-Jan 2022 / Triton Winter Kickstart
+Feb 2022 / Triton Winter Kickstart
 ==================================
 
 .. admonition:: Page being updated
 
-   * This page is currently being updated for January 2022 (below you can see the program from 2021, which will be the model for 2022). To register for the January 2022 sessions please visit https://link.webropol.com/s/introHPCJan2022
+   * This page is currently being updated (below you can see the program from 2021, which will be the model for 2022). To register for the February 2022 sessions please visit https://link.webropol.com/s/introHPCJan2022
 
 
 .. admonition:: Quick Links
@@ -70,9 +70,9 @@ Schedule
 
 **All times are EET (Europe/Helsinki time)!**
 
-Mon-Tue 17-18.January, 12:00-16:00.
+THU-FRI 3-4.February, 12:00-16:00.
 
-- **Thu, 2 February 2022 (mandatory if new Triton user)**
+- **Wed, 2 February 2022 (mandatory if new Triton user)**
 
   - **11:50-14:00** We strongly suggest also
     attending the :doc:`getting-started-with-scientific-computing`
@@ -80,7 +80,7 @@ Mon-Tue 17-18.January, 12:00-16:00.
   - **14:00 -- 14:45 (especially important)** Help connecting to
     Triton (Aalto), Zoom link by email to registered participants.
 
-- **Wed, 3 February 2022** (roughly connecting to serial jobs in
+- **Thu, 3 February 2022** (roughly connecting to serial jobs in
   the :ref:`tutorials <tutorials>`)
 
   - **11:50 -- 16:00**, all times approximate, breaks every hour
