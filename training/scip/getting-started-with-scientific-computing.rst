@@ -83,7 +83,7 @@ Schedule
     some of most important things and give you links to your next
     steps.
 
-  - **13:00--13:50: Q&A/panel discussion (on any topic)**
+  - **14:00--14:50: Q&A/panel discussion (on any topic)**
 
   - **15:00--15:45: Connecting to a HPC cluster as part of**
     :doc:`winter-kickstart`
