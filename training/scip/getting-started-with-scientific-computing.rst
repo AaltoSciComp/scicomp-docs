@@ -1,9 +1,9 @@
-Jan 2022 / Getting started with scientific computing
+Feb 2022 / Getting started with scientific computing
 ====================================================
 
 .. important:: Updating for 2022
 
-   * This page is currently being updated for 2022, but you can see the basic model below from last year which will be reused with changes. To register for the January 2022 sessions please visit https://link.webropol.com/s/introHPCJan2022
+   * This page is currently being updated for 2022, but you can see the basic model below from last year which will be reused with changes. To register for the February 2022 sessions please visit https://link.webropol.com/s/introHPCJan2022
 
 .. admonition:: Quick links
 
@@ -22,7 +22,7 @@ won't go into anything too deep, but will provide you with a good
 background for your next steps: you will know what resources are
 available and know the next steps to use them.  The follow-up course,
 to use computer clusters, is :doc:`winter-kickstart`, and happens the
-next week.
+following days.
 
 It consists of:
 
@@ -125,6 +125,7 @@ the lectures.
 
 * Richard Darst
 * Enrico Glerean
+* Simo Tuomisto
 * ... and you?
 
 **Registration:**
