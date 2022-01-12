@@ -40,7 +40,7 @@ Gitlabs.  With Aalto Gitlab, you can:
 The `Aalto instructions can be found here <version-inst_>`_, and
 general `gitlab help here <gitlabhelp_>`_.
 
-.. _version-inst: https://version.aalto.fi/docs/aalto_version_quickstart_guide.pdf
+.. _version-inst: https://www.aalto.fi/en/services/aalto-version-quick-guide
 .. _gitlabhelp: https://version.aalto.fi/gitlab/help
 
 All support is provided by Aalto ITS. Since all data is stored within
