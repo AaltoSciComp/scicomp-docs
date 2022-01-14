@@ -54,12 +54,18 @@ Schedule
 
   - **11:50--12:00: Connecting time, introductions, icebreakers**
 
-  - **12:00--12:25: Laptops to** `Lumi
-    <https://www.lumi-supercomputer.eu/>`__
+  - **12:00--12:25: Me and HPC or: How I learned to stop worrying
+    and love the computing.**
 
-    A tour of your scientific computing career, from your laptop to
-    the largest computers in the world.  A high-level overview talk
-    especially good for new researchers.
+    Are you at the start of your scientific computing journey?
+
+    Would you like to hear tips and tricks from someone who knows
+    what they are doing, but still remembers what it was like to
+    be a newbie?
+
+    In this talk a we will get a personal views of high-performance
+    computing from a final year PhD student and one of our staff
+    scientists.
 
   - **12:25--12:50: Scientific Computing workflows at Aalto**
 

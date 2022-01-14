@@ -93,13 +93,13 @@ THU-FRI 3-4.February, 12:00-16:00.
   - :doc:`/triton/tut/monitoring`
   - :doc:`/triton/tut/storage`
   - :doc:`/triton/tut/remotedata`
+  - :doc:`/triton/tut/applications`
+  - :doc:`/triton/tut/modules`
 
 - **Fri, 4 February 2022**
 
   - **11:50 -- 16:00**, all times approximate, breaks every hour
   - Likely
-  - :doc:`/triton/tut/applications`
-  - :doc:`/triton/tut/modules`
   - :doc:`/triton/tut/array`
   - :doc:`/triton/tut/gpu`
   - :doc:`/triton/tut/parallel`
