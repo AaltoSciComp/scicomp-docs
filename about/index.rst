@@ -195,6 +195,20 @@ better.*
      * Science-IT, CS-IT, NBE-IT
      * Triton, data storage systems, HPC administration
 
+FCCI Tech
+---------
+
+FCCI Tech is a seminar serious about how scientific computing/research
+computing groups run.  We present the things we have learned and how
+we run internally.  This is targeted towards other academic technical
+specialists, but anyone is welcome to attend and learn.
+
+.. toctree::
+   :maxdepth: 1
+
+   /tech/index
+
+
 Scientific outputs
 ------------------
 
