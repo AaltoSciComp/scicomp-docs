@@ -2,12 +2,14 @@
 News
 ====
 
-*8/09/2021* `Research Software Hour <https://researchsoftwarehour.github.io/>`__ Twitch show is back at a different time. Join us today at 15:00 to talk about "Computers for research 101: The essential course that everyone skipped".
+*17/01/2022* Join us for our next Twitch.tv courses dedicated to the basics of scientific computing and HPC: `2/Feb/2022 Intro to Scientific Computing <https://scicomp.aalto.fi/training/scip/getting-started-with-scientific-computing/>`_ and `3-4/Feb/2022 Intro to High Performance Computing <https://scicomp.aalto.fi/training/scip/winter-kickstart/>`_. The course is open to anyone with an internet connection. For day 2+3 you need access to an HPC cluster. If you are at Aalto please `apply for access to the triton cluster <https://scicomp.aalto.fi/triton/accounts/>`_, otherwise check what is available at your institution. You can also watch without doing the practical parts, but we recommend registering anyway so you will be able to ask questions on HackMD. 
 
 Join our `daily zoom garage </help/garage/>`__ for any scientific computing related issue (not just Triton!) or to just chat and feel part of the community.  
 
 News archive
 ~~~~~~~~~~~~
+
+*8/09/2021* `Research Software Hour <https://researchsoftwarehour.github.io/>`__ Twitch show is back at a different time. Join us today at 15:00 to talk about "Computers for research 101: The essential course that everyone skipped".
 
 *9/8/2021* We are back from the summer break. Our  `zoom garage </help/garage/>`__ schedule is back to normal (every day at 13:00).
 
