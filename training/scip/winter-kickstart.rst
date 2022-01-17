@@ -95,10 +95,17 @@ THU-FRI 3-4.February, 12:00-16:00.
 - **Fri, 4 February 2022**
 
   - **11:50 -- 16:00**, all times approximate, breaks every hour
-  - Likely
   - :doc:`/triton/tut/array`
   - :doc:`/triton/tut/gpu`
   - :doc:`/triton/tut/parallel`
+  - ~ 14:30 **Laptops to Lumi**, by CSC
+
+    You now know of basics of using a computing cluster.  What if you
+    need more than what a university can provide?  CSC (and other
+    national computing centers) have even more resources, and this is
+    a tour of them.
+
+  - ~15:00 Real examples of a few common programming languages/frameworks
   - Likely there is time for additions or special requests
 
 
