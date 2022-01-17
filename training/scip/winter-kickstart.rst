@@ -77,7 +77,7 @@ THU-FRI 3-4.February, 12:00-16:00.
   - **11:50-14:00** We strongly suggest also
     attending the :doc:`getting-started-with-scientific-computing`
     course.  This is a bigger-picture introduction.
-  - **14:00 -- 14:45 (especially important)** Help connecting to
+  - **15:00 -- 15:45 (especially important)** Help connecting to
     Triton (Aalto), Zoom link by email to registered participants.
 
 - **Thu, 3 February 2022** (roughly connecting to serial jobs in
