@@ -11,37 +11,37 @@ Feb 2022 / Getting started with scientific computing
 
 This course is a general introduction to computational researchers.
 The point is to serve as a guide to your career: a map to the types of
-resources that are available, so that you can be prepared when you
+resources that are available and skills you may need in your career,
+so that you can be prepared when you
 need more in the future.  There will also be topics related to using
 these resources.  Aalto University is used in some examples, but all
-parts are designed to be useful to everyone else as well.
+parts are designed to be useful no matter where you are now.
 
 This course is especially suitable to new researchers or students trying to
 understand computational/data analysis options available to them.  It
 won't go into anything too deep, but will provide you with a good
 background for your next steps: you will know what resources are
-available and know the next steps to use them.  The follow-up course,
-to use computer clusters, is :doc:`winter-kickstart`, and happens the
-following days.
-
-It consists of:
-
-* **Computing workflows:** Your laptop.  The national-level
-  supercomputer.  Everything in between.  There are so many different
-  ways to do your computing, and in this hour will introduce you to
-  the different
-  options and what kinds of work each are suited to.  You'll learn how
-  they all interrelate and which can be easily used together.  While
-  we use Aalto University systems as an example, the talk is designed
-  to be useful to any university: you will just need to find the
-  equivalent tools at your university.
-
-* (to be decided)
+available and know the next steps to use them.  The sibling course,
+to use computer clusters, is :doc:`winter-kickstart`, and happens
+together with this course.
 
 Attending individual sessions is fine.
 
 Part of :doc:`Scientific Computing in Practice <index>` lecture series
 at Aalto University.
+
+
+
+Other universities
+------------------
+
+This course is hosted at Aalto University but put on in cooperation
+with many other universities. Anyone (even not at a partner site)
+could get something out of this course.  **For the most part, this day's
+events are not specific to any particular site and you can easily
+adapt the lessons to wherever you may be now.**  If you want to help on
+behalf of your site, contact us via the `CodeRefinery chat
+<https://coderefinery.github.io/manuals/chat/>`__ (#workshops stream).
 
 
 
