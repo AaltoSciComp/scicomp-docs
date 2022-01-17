@@ -1,13 +1,10 @@
 Feb 2022 / Getting started with scientific computing
 ====================================================
 
-.. important:: Updating for 2022
-
-   * This page is currently being updated for 2022, but you can see the basic model below from last year which will be reused with changes. To register for the February 2022 sessions please visit https://link.webropol.com/s/introHPCJan2022
-
 .. admonition:: Quick links
 
-   * Day 2-3 course page: :doc:`winter-kickstart`
+   * To register for the February 2022 sessions please visit https://link.webropol.com/s/introHPCJan2022
+   * Continuation course for days 2-3: :doc:`winter-kickstart`
 
 This course is a general introduction to computational researchers.
 The point is to serve as a guide to your career: a map to the types of

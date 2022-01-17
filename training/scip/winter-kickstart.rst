@@ -2,13 +2,9 @@
 Feb 2022 / Triton Winter Kickstart
 ==================================
 
-.. admonition:: Page being updated
-
-   * This page is currently being updated (below you can see the program from 2021, which will be the model for 2022). To register for the February 2022 sessions please visit https://link.webropol.com/s/introHPCJan2022
-
-
 .. admonition:: Quick Links
 
+   * To register for the February 2022 sessions please visit https://link.webropol.com/s/introHPCJan2022
    * Day 1 course page: :doc:`getting-started-with-scientific-computing`
    * Lesson materials: :ref:`Triton tutorials <tutorials>`, see below
      for details.
