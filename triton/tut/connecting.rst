@@ -174,8 +174,9 @@ Connecting via Open onDemand
 
 OOD (Open onDemand) is a web-based user interface to Triton
 and a number of applications that utilize grafical user interface.
+:doc:`Read more about it on Triton <../usage/ood>`.
 
-Go to https://ood.triton.aalto.fi, login with your Aalto account. 
+Go to https://ood.triton.aalto.fi, login with your Aalto account.
 
 
 Connecting via JupyterHub
