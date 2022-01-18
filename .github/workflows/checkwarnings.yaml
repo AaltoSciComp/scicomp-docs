@@ -32,4 +32,4 @@ jobs:
           cat warnings.txt
       - name: Check warnings
         run: |
-          python meta/check-warnings.py --fail warnings.txt
+          python _meta/check-warnings.py --fail warnings.txt

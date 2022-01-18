@@ -25,7 +25,7 @@ scicomp.aalto.fi
   computing.
 - Rather highly ranked in search engines.
 - Converted from wiki.aalto.fi (Triton) using
-  ``meta/confluence2html.py`` and then pandoc to convert HTML→ReST.
+  ``_meta/confluence2html.py`` and then pandoc to convert HTML→ReST.
 - CC-BY license agreed at that time
 
 
