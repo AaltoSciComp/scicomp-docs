@@ -71,7 +71,7 @@ for line in open(args.input):
 
     # warning by default, things in list above become errors
     level = 'warning'
-    if any(w.lower() in msg.lower() for w in errors):
+    if any(w.lower() in msg.lower() for w in errors) or args.warnings_fail:
         level = 'error'
         NERRORS += 1
 

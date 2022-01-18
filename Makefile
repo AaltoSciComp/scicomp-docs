@@ -15,7 +15,7 @@ default: html
 
 check:
 	make html SPHINXOPTS="-w warnings.txt $(SPHINXOPTS)"
-	python meta/check-warnings.py --fail warnings.txt
+	python _meta/check-warnings.py --fail warnings.txt
 	@echo
 	@echo "OK: no errors"
 
