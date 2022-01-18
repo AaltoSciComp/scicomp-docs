@@ -167,6 +167,16 @@ with what you learn on the :doc:`remotedata` page!::
    It may take 15 minutes to update, and you will need to log in again.
 
 
+Connecting via Open onDemand
+--------------------------------
+
+[BETA yet / Under Construction]
+
+OOD (Open onDemand) is a web-based user interface to Triton
+and a number of applications that utilize grafical user interface.
+
+Go to https://ood.triton.aalto.fi, login with your Aalto account. 
+
 
 Connecting via JupyterHub
 -------------------------
