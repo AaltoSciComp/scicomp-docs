@@ -45,6 +45,7 @@ ignores = [
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--fail', action='store_true')
+parser.add_argument('--warnings-fail', action='store_true')
 parser.add_argument('input')
 args = parser.parse_args()
 
