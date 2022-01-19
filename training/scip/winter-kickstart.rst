@@ -1,6 +1,6 @@
-==================================
-Feb 2022 / Triton Winter Kickstart
-==================================
+=================================================
+Feb 2022 / Introduction to HPC (Winter Kickstart)
+=================================================
 
 .. admonition:: Quick Links
 
@@ -27,8 +27,8 @@ copy/paste examples on how to find, run and monitor your applications,
 and manage your data. In addition to how to optimize your workflow in
 terms of filesystem traffic, memory usage etc.
 
-The course is obligatory for all new Triton users and recommended to
-all interested in the field.
+If you are at Aalto University: the course is obligatory for all new 
+Triton users and recommended to all interested in the field.
 
 This course is part of :doc:`Scientific Computing in Practice <index>` lecture series
 at Aalto University.
@@ -52,6 +52,9 @@ will mention these points where we know of them).  Known sites hosting:
 * Participants from University of Helsinki can follow how to connect
   to their Kale/Ukko2 cluster by following `their own instructions
   <https://wiki.helsinki.fi/display/it4sci/HPC++Winter+KICKSTART+2021>`__.
+* Participants from University of Oulu: please follow instructions on 
+  `how to access the Carpo2 computing cluster <https://ict.oulu.fi/17120/?page&lang=en>`_.
+  
 
 If you want to get your site listed here and/or help out, contact us
 via the `CodeRefinery chat
