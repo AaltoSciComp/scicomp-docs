@@ -74,10 +74,12 @@ Schedule
     - Material: :doc:`/triton/usage/workflows`
     - Breakout rooms for other sites (as available).
 
-  - **13:00--13:25: When and how to ask for help**
+  - **13:00--13:25: When and how to ask for help** (Radovan Bast, UiT, Norway)
 
     It's dangerous to go alone, take us!  Don't waste time struggling,
     there are plenty of people here for you.
+
+    - Slides: https://cicero.xyz/v3/remark/0.14.0/github.com/bast/help-with-supercomputers/main/talk.md/
 
   - **13:25--13:50: A tour of scientific computing skills and
     tools**
