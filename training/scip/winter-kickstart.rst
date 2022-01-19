@@ -79,7 +79,7 @@ THU-FRI 3-4.February, 12:00-16:00.
 
 - **Thu, 3 February 2022**
 
-  All times approximate, breaks every hour
+  All times approximate, breaks every hour.
 
   - **11:50 -- 12:30:** What can you do with a computational cluster?:
 
@@ -103,13 +103,13 @@ THU-FRI 3-4.February, 12:00-16:00.
 
 - **Fri, 4 February 2022**
 
-  All times approximate, breaks every hour
+  All times approximate, breaks every hour.
 
   - **11:50 -- 13:00:** Simple parallelization with array jobs:
 
     - :doc:`/triton/tut/array`
 
-  - **13:00 -- 14:00:** Using more than one CPU at a same time:
+  - **13:00 -- 14:00:** Using more than one CPU at the same time:
 
     - :doc:`/triton/tut/parallel`
 
@@ -120,7 +120,7 @@ THU-FRI 3-4.February, 12:00-16:00.
       national computing centers) have even more resources, and this is
       a tour of them.
 
-  - **14:40 -- 15:30:** Running jobs that utilize GPU hardware:
+  - **14:40 -- 15:30:** Running jobs that can utilize GPU hardware:
 
     - :doc:`/triton/tut/gpu`
 
