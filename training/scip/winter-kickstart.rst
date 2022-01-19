@@ -52,9 +52,13 @@ will mention these points where we know of them).  Known sites hosting:
 * Participants from University of Helsinki can follow how to connect
   to their Kale/Ukko2 cluster by following `their own instructions
   <https://wiki.helsinki.fi/display/it4sci/HPC++Winter+KICKSTART+2021>`__.
-* Participants from University of Oulu: please follow instructions on 
-  `how to access the Carpo2 computing cluster <https://ict.oulu.fi/17120/?page&lang=en>`_.
-  
+* Participants from University of Oulu: please follow instructions on
+  `how to access the Carpo2 computing cluster <https://ict.oulu.fi/17120/?page&lang=en>`__.
+* `CSC <https://csc.fi>`__ (Finland): Participants with `CSC user
+  account <https://docs.csc.fi/accounts/>`__ can try examples also in
+  CSC supercomputers, see the `overview of CSC supercomputers
+  <https://docs.csc.fi/computing/overview/>`__ for details on
+  connecting, etc.
 
 If you want to get your site listed here and/or help out, contact us
 via the `CodeRefinery chat
@@ -116,12 +120,12 @@ THU-FRI 3-4.February, 12:00-16:00.
 
     - :doc:`/triton/tut/parallel`
 
-  - **14:00 -- 14:30: Laptops to Lumi**, by CSC
+  - **14:00 -- 14:30: Laptops to Lumi**, Jussi Enkovaara, CSC
 
-    - You now know of basics of using a computing cluster.  What if you
-      need more than what a university can provide?  CSC (and other
-      national computing centers) have even more resources, and this is
-      a tour of them.
+    You now know of basics of using a computing cluster.  What if you
+    need more than what a university can provide?  CSC (and other
+    national computing centers) have even more resources, and this is
+    a tour of them.
 
   - **14:40 -- 15:30: Running jobs that can utilize GPU hardware**
 
@@ -146,6 +150,7 @@ the course.
 * Richard Darst
 * Enrico Glerean
 * Simo Tuomisto
+* Jussi Enkovaara
 * ... and you?
 
 
