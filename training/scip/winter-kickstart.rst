@@ -120,12 +120,12 @@ THU-FRI 3-4.February, 12:00-16:00.
 
     - :doc:`/triton/tut/parallel`
 
-  - **14:00 -- 14:30: Laptops to Lumi**, by CSC
+  - **14:00 -- 14:30: Laptops to Lumi**, Jussi Enkovaara, CSC
 
-    - You now know of basics of using a computing cluster.  What if you
-      need more than what a university can provide?  CSC (and other
-      national computing centers) have even more resources, and this is
-      a tour of them.
+    You now know of basics of using a computing cluster.  What if you
+    need more than what a university can provide?  CSC (and other
+    national computing centers) have even more resources, and this is
+    a tour of them.
 
   - **14:40 -- 15:30: Running jobs that can utilize GPU hardware**
 
@@ -150,6 +150,7 @@ the course.
 * Richard Darst
 * Enrico Glerean
 * Simo Tuomisto
+* Jussi Enkovaara
 * ... and you?
 
 
