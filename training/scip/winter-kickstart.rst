@@ -84,46 +84,46 @@ THU-FRI 3-4.February, 12:00-16:00.
 
   All times approximate, breaks every hour.
 
-  - **11:50 -- 12:30:** What can you do with a computational cluster?:
+  - **11:50 -- 12:30: What can you do with a computational cluster?**
 
     - :doc:`/triton/tut/intro`
     - Real example 1: Large-scale computing with array jobs
     - Real example 2: Large-scale parallel computing
 
-  - **12:30 -- 15:00:** Running your first jobs in the queue:
+  - **12:30 -- 15:00: Running your first jobs in the queue**
 
     - :doc:`/triton/tut/interactive`
     - :doc:`/triton/tut/serial`
     - :doc:`/triton/tut/monitoring`
 
-  - **15:00 -- 15:30:** Other things you should know about the HPC environment:
+  - **15:00 -- 15:30: Other things you should know about the HPC environment**
 
     - :doc:`/triton/tut/modules`
     - :doc:`/triton/tut/storage`
     - :doc:`/triton/tut/remotedata`
 
-  - **15:30 -- 16:00:** Questions to presenters
+  - **15:30 -- 16:00: Questions to presenters**
 
 - **Fri, 4 February 2022**
 
   All times approximate, breaks every hour.
 
-  - **11:50 -- 13:00:** Simple parallelization with array jobs:
+  - **11:50 -- 13:00: Simple parallelization with array jobs**
 
     - :doc:`/triton/tut/array`
 
-  - **13:00 -- 14:00:** Using more than one CPU at the same time:
+  - **13:00 -- 14:00: Using more than one CPU at the same time**
 
     - :doc:`/triton/tut/parallel`
 
-  - **14:00 -- 14:30:** CSC presents: **Laptops to Lumi**
+  - **14:00 -- 14:30: Laptops to Lumi**, by CSC
 
     - You now know of basics of using a computing cluster.  What if you
       need more than what a university can provide?  CSC (and other
       national computing centers) have even more resources, and this is
       a tour of them.
 
-  - **14:40 -- 15:30:** Running jobs that can utilize GPU hardware:
+  - **14:40 -- 15:30: Running jobs that can utilize GPU hardware**
 
     - :doc:`/triton/tut/gpu`
 
