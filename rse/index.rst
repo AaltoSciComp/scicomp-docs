@@ -97,6 +97,8 @@ Checklists
 
    JOSS checklist (external) <https://joss.readthedocs.io/en/latest/review_checklist.html>
 
+Other pages on this site: :doc:`/scicomp/packaging-software`
+
 
 
 Internal documents
@@ -116,6 +118,7 @@ to improvement at any time.
 
    Video: Aalto RSE status report, May 2021 <https://www.youtube.com/watch?v=rvuwLSKLaJI>
    Video: Support services vs diversity <https://www.youtube.com/watch?v=z1VS1wleN-o>
+
 
 
 See also
