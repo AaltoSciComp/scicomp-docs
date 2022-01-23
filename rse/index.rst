@@ -113,6 +113,7 @@ to improvement at any time.
    procedures/job-descriptions
    procedures/units-info
    procedures/advisory-board
+   procedures/templates
 
    Video: Aalto RSE status report, May 2021 <https://www.youtube.com/watch?v=rvuwLSKLaJI>
    Video: Support services vs diversity <https://www.youtube.com/watch?v=z1VS1wleN-o>
