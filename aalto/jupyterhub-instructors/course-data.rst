@@ -24,8 +24,9 @@ directory, you find a README file with some more instructions.  All
 datasets should have a minimum README (copy the template) which makes
 it minimally usable for others.
 
-In both cases, you need to ``chmod -R a+rX`` the data directory so
-that the data becomes readable to students.
+**In both cases, you need to** ``chmod -R a+rX`` **the data directory 
+whenever new files or directories are added so that the data becomes
+readable to students.**
 
 Note: after you are added to relevant group to access the data, it
 make take up to 12 hours for your account information to be updated
