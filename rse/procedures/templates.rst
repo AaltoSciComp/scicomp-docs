@@ -46,20 +46,21 @@ Follow-ups
 Feedback
 --------
 
-.. collapse:: Feedback requests.
+.. collapse:: Feedback requests
 
    Hi,
 
    Some time ago, we helped you with ________________.  Now that some
    time has passed, we would like to know if you had any feedback on
-   the project.  This is very important to us to ensure the
+   our support.  This is very important to us to ensure the
    continuation of this service, so please take a minute or two to
-   quickly answer!  A quick reply to this is sufficient.
+   quickly answer!  A few numbers in reply to this message is
+   sufficient.
 
    First off, we wonder how much time (mental effort) do you think our
    work has saved you?  We know this can be hard to estimate, but any
-   kind of rough prediction of "X fewer days/hours to plan, implement,
-   and debug what we have done".
+   kind of rough prediction of "I avoided spending X days/hours to
+   plan, implement, or debug what we would have done otherwise".
 
    Then, what about these research outputs: how many have we
    contributed to?
