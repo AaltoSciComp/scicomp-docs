@@ -164,11 +164,18 @@ We nowadays recommend that you use the ``miniconda``-module for installing these
 environments. Miniconda is basically a minimal Anaconda installation that can be used to
 create your own environments.
 
-Do note that these environments can be quite big and if you have multiple
-environments installed you can run into quota issues in your ``/home``. If
-you encounter such issues do contact us. In the past we recommended installing
-conda environments under ``$WRKDIR``, but this can cause file system problems
-when launching array jobs and is thus no longer recommended.
+By default conda tries to install packages into your home folder, which can
+result in running out of quota. To fix this, you should run the following commands once::
+
+  module load miniconda
+
+  mkdir $WRKDIR/conda_pkgs
+  mkdir $WRKDIR/conda_envs
+
+  conda config --append pkgs_dirs ~/.conda/pkgs
+  conda config --append envs_dirs ~/.conda/envs
+  conda config --prepend pkgs_dirs $WRKDIR/conda_pkgs
+  conda config --prepend envs_dirs $WRKDIR/conda_envs
 
 **virtualenv** does not work with Anaconda, use ``conda`` instead.
 
