@@ -42,6 +42,45 @@ Contacting researchers
 Follow-ups
 ----------
 
+.. collapse:: Basic project information template
+
+   ::
+
+      /contact
+      /supervisor
+
+      Department/group:
+
+
+      Urgency (also set due date):
+
+
+      Basic description:
+
+
+      Current team:
+
+
+      Tech tools:
+
+
+      Scientific tools/domain knowledge:
+
+
+      Time estimate:
+
+
+
+      Links to existing docs:
+      - ...
+
+
+
+      /summary
+
+      /estimate
+
+
 
 Feedback
 --------
@@ -50,7 +89,8 @@ Feedback
 
    Hi,
 
-   Some time ago, we helped you with ________________.  Now that some
+   Some time ago, we helped you with ________________ as part of our
+   Research Software Engineer service.  Now that some
    time has passed, we would like to know if you had any feedback on
    our support.  This is very important to us to ensure the
    continuation of this service, so please take a minute or two to
@@ -58,15 +98,12 @@ Feedback
    sufficient.
 
    First off, we wonder how much time (mental effort) do you think our
-   work has saved you?  We know this can be hard to estimate, but any
+   work has saved you?  (We know this can be hard to estimate, but any
    kind of rough prediction of "I avoided spending X days/hours to
-   plan, implement, or debug what we would have done otherwise".
+   plan, implement, or debug what we would have done otherwise".)
 
    Then, what about these research outputs: how many have we
-   contributed to?
-   - Articles/papers
-   - Datasets
-   - Software projects released
-   - Projects supported
+   contributed to?: Articles/papers, datasets, software projects
+   released, projects supported in general, etc.
 
    Do you have any other comments on our service?
