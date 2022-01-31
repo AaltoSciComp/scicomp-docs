@@ -50,8 +50,8 @@ will mention these points where we know of them).  Known sites hosting:
 
 * FCCI (Finland): may register via the Aalto form.
 * Participants from University of Helsinki can follow how to connect
-  to their Kale/Ukko2 cluster by following `their own instructions
-  <https://wiki.helsinki.fi/display/it4sci/HPC++Winter+KICKSTART+2021>`__.
+  to their Kale/Turso cluster by following `their own instructions
+  <https://wiki.helsinki.fi/pages/viewpage.action?pageId=408323613>`__.
 * Participants from University of Oulu: please follow instructions on
   `how to access the Carpo2 computing cluster <https://ict.oulu.fi/17120/?page&lang=en>`__.
 * `CSC <https://csc.fi>`__ (Finland): Participants with `CSC user
