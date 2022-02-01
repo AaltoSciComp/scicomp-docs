@@ -16,14 +16,13 @@ eventually move towards shell access (even if that shell is via Open
 OnDemand).
 
 
-
 How to use
 ----------
 
-http://ood.triton.aalto.fi .  Log in with Aalto account.  You first
-get to the dashboard view, that provides file transfer and other
+http://ood.triton.aalto.fi . Uses common Aalto login (SSO session). You
+first get to the dashboard view, that provides a number of interacive
+applications, Triton login node shell access, file transfer and other
 services.
-
 
 
 Applications
@@ -36,11 +35,15 @@ We have these applications available and supported:
 
 * Jupyter
 * RStudio
+* Matlab
+* Spyder
+* Code Server
 * ...
+
+Choose partition 'interactive' and a correct account.
 
 
 Current issues
 --------------
 
-* Authentication will be updated.
 * Apps will be adjusted.
