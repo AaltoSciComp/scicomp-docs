@@ -88,6 +88,8 @@ Schedule
     some of most important things and give you links to your next
     steps.
 
+    - Material: https://hackmd.io/@AaltoSciComp/ToolsOfScientificComputing
+
   - **14:00--14:50: Q&A/panel discussion (on any topic)**
 
   - **15:00--15:45: Connecting to a HPC cluster as part of**
