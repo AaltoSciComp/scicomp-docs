@@ -8,6 +8,8 @@ Feb 2022 / Introduction to HPC (Winter Kickstart)
    * Day 1 course page: :doc:`getting-started-with-scientific-computing`
    * Lesson materials: :ref:`Triton tutorials <tutorials>`, see below
      for details.
+   * Twitch has videos for 14 days: https://www.twitch.tv/coderefinery/videos
+   * Youtube playlist (updated each evening): https://youtube.com/playlist?list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V
 
 Winter Kickstart is a two × half day course for researchers to get
 started with high-performance computing (HPC) clusters.  We will take

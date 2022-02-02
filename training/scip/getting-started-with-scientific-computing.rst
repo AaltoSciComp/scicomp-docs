@@ -5,6 +5,8 @@ Feb 2022 / Getting started with scientific computing
 
    * To register for the February 2022 sessions please visit https://link.webropol.com/s/introHPCJan2022
    * Continuation course for days 2-3: :doc:`winter-kickstart`
+   * Twitch has videos for 14 days: https://www.twitch.tv/coderefinery/videos
+   * Youtube playlist (updated each evening): https://youtube.com/playlist?list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V
 
 This course is a general introduction to computational researchers.
 The point is to serve as a guide to your career: a map to the types of
