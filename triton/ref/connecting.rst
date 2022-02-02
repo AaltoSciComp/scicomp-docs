@@ -27,3 +27,8 @@
      * https://jupyter.triton.aalto.fi provides the Jupyter interface
        directly on Triton (including command line).
      * Whole internet
+
+   * * Open OnDemand
+     * https://ood.triton.aalto.fi, Web-based interface to the
+       cluster.  Includes shell access and data transfer.
+     * VPN and Aalto networks
