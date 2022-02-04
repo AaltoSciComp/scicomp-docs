@@ -27,7 +27,7 @@ The course is focused on practical aspects of parallel programming applied to pr
 | Fri 18.3 | 10:00-13:00 |
 +----------+-------------+
 
-**Place:** Zoom link provided to registered participants
+**Place:** We are trying to arrange this as hybird workshop. Join us in Otaniemi or via streaming link provided to registered participant.
 
 **Cost:** Free of charge for FGCI consortium members and Aalto employees, students.
 
