@@ -127,7 +127,7 @@ THU-FRI 3-4.February, 12:00-16:00.
     You now know of basics of using a computing cluster.  What if you
     need more than what a university can provide?  CSC (and other
     national computing centers) have even more resources, and this is
-    a tour of them. `Slides here <https://scicomp.aalto.fi/training/scip/CSC-services_022022.pdf>`__.
+    a tour of them. `Slides here <https://github.com/AaltoSciComp/scicomp-docs/raw/master/training/scip/CSC-services_022022.pdf>`__.
 
   - **14:40 -- 15:30: Running jobs that can utilize GPU hardware**
 
