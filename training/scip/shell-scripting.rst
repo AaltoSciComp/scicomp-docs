@@ -1,5 +1,5 @@
 ==================================
-March 2021 / Linux Shell Scripting
+March 2022 / Linux Shell Scripting
 ==================================
 
 Part of :doc:`Scientific Computing in Practice <index>` lecture series at Aalto University.
@@ -15,20 +15,20 @@ We expect that course participants are familiar with the :doc:`shell basics <lin
 
 **Lecturer:** Ivan Degtyarenko, D. Sc., Science IT / Department of Applied Physics, Aalto University
 
-**Place:** Online, common Zoom link for all the sessions `aalto.zoom.us/j/947220751 <https://aalto.zoom.us/j/947220751>`__
+**Place:** Online and possibly also in a physical space in Otaniemi at Aalto. Register for receiving link to streaming and other infos if the workshop is also in a physical space.
 
 **Time, date (all times EET):**
 
 +-----------+-------------+
 | Date      |        Time |
 +===========+=============+
-| Mon 22.03 | 10:00-13:00 |
+| Mon 21.03 | 10:00-13:00 |
 +-----------+-------------+
-| Wed 24.03 | 10:00-13:00 |
+| Fri 25.03 | 10:00-13:00 |
 +-----------+-------------+
-| Mon 29.03 | 10:00-13:00 |
+| Mon 28.03 | 10:00-13:00 |
 +-----------+-------------+
-| Wed 31.03 | 10:00-13:00 |
+| Fri 01.04 | 10:00-13:00 |
 +-----------+-------------+
 
 **Course material:** will be mostly based on the second part of the
@@ -36,12 +36,10 @@ We expect that course participants are familiar with the :doc:`shell basics <lin
 
 Additional materials and homework assignments at triton.aalto.fi:/scratch/scip/BASH (will be made available for others)
 
-**Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
-
-**Registration:** `You can register at this link <https://docs.google.com/forms/d/e/1FAIpQLScDVs78SjzmjxzMAQewEvrwNCElH2ZiYU0vKT0dxBvAYHCaOw/viewform?usp=sf_link>`__
+**Registration:** `You can register at this link <https://forms.gle/42eZ6iCtFqVerG6b9>`__
 
 **Credits:** Credits available for the Aalto students and course certificate can be provided on request for the outsiders. Credits/certificate require full time participation and handling home work/assignments. Full course hours correspond roughly to 1 ECTS.
 
 **Setup instructions:** For the online course we expect you to have Zoom client installed on your local workstation/laptop. Then we expect you to have access to Linux-like shell terminal. `You can check BASH installation instructions for various operating systems at this link <https://scicomp.aalto.fi/training/scip/intro-linux-aalto-computing/#preparation>`__. If needed participants can be provided with access to the Triton HPC cluster for running examples.
 
-**Additional course info at:** ivan.degtyarenko -at- aalto.fi
+**Additional course info at:** scip -at- aalto.fi

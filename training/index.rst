@@ -28,6 +28,7 @@ and/or Python, Matlab, HTCondor and many others.
    scip/getting-started-with-scientific-computing
    scip/winter-kickstart
    scip/mpi-introduction
+   scip/shell-scripting
    scip/index
 
 .. toctree::
@@ -40,9 +41,9 @@ and/or Python, Matlab, HTCondor and many others.
 
 
 **Future courses**
-*Winter-Spring 2022 courses (tentative plan)* -  
-Next year will start with "Introduction to HPC" (aka "Triton winter kickstart"), Data analysis with R and
-Python, introduction to MPI, Code Refinery workshop, Matlab advanced, and few more.
+*Winter-Spring 2022 courses* -  
+We are publishing our courses here, such as "Introduction to HPC" (aka "Triton winter kickstart"), Data analysis with R and
+Python, introduction to MPI, Code Refinery workshop, Matlab advanced, and few more. Check this page for updates.
 
 
 Anyone can sign up for announcements at the :doc:`SCIP announcement
