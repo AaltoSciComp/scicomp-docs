@@ -29,6 +29,7 @@ and/or Python, Matlab, HTCondor and many others.
    scip/winter-kickstart
    scip/mpi-introduction
    scip/shell-scripting
+   March 2022 / Code Refinery workshops Spring 2022 <https://coderefinery.org/workshops/upcoming/>
    scip/index
 
 .. toctree::
