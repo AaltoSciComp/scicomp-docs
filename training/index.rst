@@ -27,6 +27,7 @@ and/or Python, Matlab, HTCondor and many others.
 
    scip/getting-started-with-scientific-computing
    scip/winter-kickstart
+   scip/mpi-introduction.rst
    scip/index
 
 .. toctree::

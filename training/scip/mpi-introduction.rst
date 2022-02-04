@@ -1,5 +1,5 @@
 =============================
-March 2021 / MPI introduction
+March 2022 / MPI introduction
 =============================
 
 Part of `Scientific Computing in Practice <https://scicomp.aalto.fi/training/scip/index.html>`__ lecture series at Aalto University.
@@ -18,20 +18,20 @@ The course is focused on practical aspects of parallel programming applied to pr
 +----------+-------------+
 | Date     |        Time |
 +==========+=============+
-| Tue 9.3  | 10:00-13:00 |
+| Tue 8.3  | 10:00-13:00 |
 +----------+-------------+
-| Fri 12.3 | 10:00-13:00 |
+| Fri 11.3 | 10:00-13:00 |
 +----------+-------------+
-| Tue 16.3 | 10:00-13:00 |
+| Tue 15.3 | 10:00-13:00 |
 +----------+-------------+
-| Fri 19.3 | 10:00-13:00 |
+| Fri 18.3 | 10:00-13:00 |
 +----------+-------------+
 
 **Place:** Zoom link provided to registered participants
 
 **Cost:** Free of charge for FGCI consortium members and Aalto employees, students.
 
-**Registration:** `Click here to register <https://forms.gle/owWCkrk4okHrwg3E7>`__
+**Registration:** `Click here to register <https://forms.gle/NW6RmHLDLEvgjahy7>`__
 
 **Credits (opintopisteet):** Credits available for the Aalto students and course certificate can be provided on request for the outsiders. Since the main focus of the course is learning through experience, the students will be required to perform simulations for homework and hand in result report. Credits/certificate require full time participation and handling assignments. Full course hours correspond roughly to 1 ECTS.
 
