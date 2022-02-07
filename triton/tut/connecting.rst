@@ -168,19 +168,29 @@ with what you learn on the :doc:`remotedata` page!::
 
 
 Connecting via Open onDemand
---------------------------------
+----------------------------
 
-[BETA yet / Under Construction]
+.. seealso::
 
-OOD (Open onDemand) is a web-based user interface to Triton
-and a number of applications that utilize grafical user interface.
-:doc:`Read more about it on Triton <../usage/ood>`.
+   :doc:`../usage/ood`
 
-Go to https://ood.triton.aalto.fi, login with your Aalto account.
+[BETA / Under development]
+
+OOD (Open onDemand) is a web-based user interface to Triton, including
+shell access, and data transfer, and a number of other applications
+that utilize graphical user interfaces. Read more from :doc:`its guide
+<../usage/ood>`.
+
+It is only available from Aalto networks and VPN.  Go to
+https://ood.triton.aalto.fi and login with your Aalto account.
 
 
 Connecting via JupyterHub
 -------------------------
+
+.. seealso::
+
+   :doc:`../apps/jupyter`
 
 Jupyter is a web-based way of doing computing.  But what some people
 forget is that it has a full-featured terminal and console included.

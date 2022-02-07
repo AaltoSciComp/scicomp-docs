@@ -16,13 +16,29 @@ eventually move towards shell access (even if that shell is via Open
 OnDemand).
 
 
+Connecting
+----------
+
+Address: http://ood.triton.aalto.fi .  Log in with the usual Aalto
+login.  Connections only from Aalto
+networks or VPN.  A pre-existing :doc:`Triton account <../accounts>`
+is needed.
+
+
+
 How to use
 ----------
 
-http://ood.triton.aalto.fi . Uses common Aalto login (SSO session). You
-first get to the dashboard view, that provides a number of interacive
-applications, Triton login node shell access, file transfer and other
-services.
+The first view is a dashboard that provides an interface to a number
+of applications:
+
+* Shell: Top bar → Clusters → Triton shell access.  Or via the file
+  manager.
+* Files: Top bar → Files → choose your directory.  You can upload and
+  download files this way.
+* Other applications via the main page or Top bar → Interactive Apps →
+  (choose).
+
 
 
 Applications
