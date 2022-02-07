@@ -4,7 +4,9 @@ Applications
 
 .. admonition:: Video
 
-   `Watch this in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=_YMO-1dPc1E&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=8>`__
+   Watch this in our courses: `2021
+   June <https://www.youtube.com/watch?v=t1aViYuUu-Q&list=PLZLVmS9rf3nPFw29oKUj6w1QdsTCECS1S&index=11>`__,
+   `2021 January <https://www.youtube.com/watch?v=_YMO-1dPc1E&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=8>`__
 
 In this tutorial, we talk about the overall process of finding,
 building, and compiling software.  These days, installing and managing

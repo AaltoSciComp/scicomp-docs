@@ -6,7 +6,10 @@ Remote access to data
 
 .. admonition:: Video
 
-   `Watch this in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=guZYMgwdP4Q&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=10>`__
+   Watch this in our courses: `2022 February
+   <https://www.youtube.com/watch?v=raRQvKLTHpg&list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V&index=18>`__,
+   `2021 January
+   <https://www.youtube.com/watch?v=guZYMgwdP4Q&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=10>`__
 
 The cluster is just one part of your research: most people are
 constantly transferring data back and forth.  Unfortunately, this can

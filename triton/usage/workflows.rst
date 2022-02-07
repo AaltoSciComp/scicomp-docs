@@ -9,10 +9,12 @@ Remote workflows at Aalto
    this page).  This page explains the options, including other
    systems.
 
+.. admonition:: Video
 
-.. note::
+   Watch this in `video form (winter 2022 kickstart) <https://www.youtube.com/watch?v=Oz37XAzWFhk&list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V&index=4>`__
 
-   How can you work from home?  For that matter, how can you work on more than your desktop/laptop while at work?  There are many options which trade off between graphical interfaces and more power.  Read more for details.
+
+How can you work from home?  For that matter, how can you work on more than your desktop/laptop while at work?  There are many options which trade off between graphical interfaces and more power.  Read more for details.
 
 You have most likely created your own workflow to analyse data at Aalto and most likely you are using a dedicated desktop workstation in Otaniemi. However, with increased mobility of working conditions and recent global events that recommend tele-working, you might be asking yourself: "how do I stop using my workstation at the dept, and get analysis/figures/papers done from home?".
 
