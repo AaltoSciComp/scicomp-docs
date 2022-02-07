@@ -83,6 +83,7 @@ There are other commands to ``slurm`` that you can use to monitor the
 cluster status, job history etc.. A list of examples is given below:
 
 .. admonition:: Slurm status info reference
+   :class: toggle
 
    .. include:: ../ref/slurm_status.rst
 
