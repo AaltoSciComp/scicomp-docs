@@ -7,7 +7,7 @@ Introduction
 Zulip is an online discussion tool with latex support. It has been used by some
 Aalto teachers as an external service on individual courses. For spring and summer 2021,
 Zulip was provided by Aalto CS as a pilot solution for all School of Science
-departments' course needs. For the autumn 2021, the pilot at SCI continues and is widened in small scale also for other schools. 
+departments' course needs. For the autumn 2021 and spring 2022, the pilot at SCI continues and is widened in small scale also for other schools. 
 The pilot refers to a) a fixed-term project
 with clear lifecycle needs, like in courses which start and end at certain
 times and after which the Zulip instance can be deleted; b) a
@@ -34,7 +34,7 @@ Get started / request Zulip
 
     Request a chat instance at https://webropol.com/s/zuliprequest
 
-    We are taking in chat instance requests for 2021 autumn courses. Note that the chat
+    We are taking in chat instance requests for 2022 spring courses. Note that the chat
     instances will be removed after the course has ended.
 
 .. note::
