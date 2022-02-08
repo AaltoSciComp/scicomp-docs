@@ -97,7 +97,7 @@ Checklists
 
    JOSS checklist (external) <https://joss.readthedocs.io/en/latest/review_checklist.html>
 
-Other pages on this site: :doc:`/scicomp/packaging-software`
+Other pages on this site: :doc:`/scicomp/packaging-software`, :doc:`/scicomp/zen-of-scicomp`
 
 
 
