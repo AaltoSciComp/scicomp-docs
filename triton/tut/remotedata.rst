@@ -126,7 +126,7 @@ not on the Aalto networks (wired, ``eduroam``, or ``aalto`` with
 Aalto-managed laptop), connect to the :doc:`Aalto VPN
 </aalto/remoteaccess>` first.  Note that
 this is automatically done on some department workstations (see
-below) - if not, request it!
+above) - if not, request it!
 
 The scratch filesystem can be remote mounted using SMB inside secure
 Aalto networks at the URLs
