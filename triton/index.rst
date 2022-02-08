@@ -38,7 +38,7 @@ Triton well, in the `Hands-on SciComp roadmap <hosc_>`__ you should
 also know the `Basics (A) <hosc-a_>`__ and `Linux (C) <hosc-c_>`__
 levels as a prerequisite.
 
-.. _tutorial-playlist: https://www.youtube.com/playlist?list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc
+.. _tutorial-playlist: https://www.youtube.com/playlist?list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V
 .. _hosc: https://hands-on.coderefinery.org/
 .. _hosc-a: https://hands-on.coderefinery.org/#a-basics
 .. _hosc-c: https://hands-on.coderefinery.org/#c-linux-and-shell

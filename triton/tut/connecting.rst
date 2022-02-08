@@ -4,7 +4,14 @@ Connecting to Triton
 
 .. admonition:: Video
 
-   `Watch this in the Winter Kickstart 2021 course <https://www.youtube.com/watch?v=i3m9uHDk9nE&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=7>`__
+   Watch this in our courses: `2022 February
+   <https://www.youtube.com/watch?v=aug_gFV_cYI&list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V&index=7>`__,
+   `2021 June 1/2
+   <https://www.youtube.com/watch?v=v4ICiWDxVHw&list=PLZLVmS9rf3nPFw29oKUj6w1QdsTCECS1S&index=8>`__,
+   `2021 June 2/2
+   <https://www.youtube.com/watch?v=A3LafWWxaj4&list=PLZLVmS9rf3nPFw29oKUj6w1QdsTCECS1S&index=10>`__,
+   `2021 January
+   <https://www.youtube.com/watch?v=i3m9uHDk9nE&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=7>`__
 
 The traditional way of interacting with a cluster is via a terminal,
 and Secure Shell (``ssh``) is the most common way of doing that.  The
