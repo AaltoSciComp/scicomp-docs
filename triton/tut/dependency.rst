@@ -38,11 +38,17 @@ variable, and using the stored value when submitting job B. Like::
 Exercises
 =========
 
-1. Look at ``man sbatch`` and investigate the ``--dependency`` parameter.
+.. exercise:: Dependencies-1: read the docs
 
-2. Create a chain of jobs A -> B -> C each depending on the successful
+   Look at ``man sbatch`` and investigate the ``--dependency`` parameter.
+
+.. exercise:: Dependencies-2: Chain of jobs
+
+   Create a chain of jobs A -> B -> C each depending on the successful
    completion of the previous job.  In each job run e.g. ``sleep 60``
    to give you time to investigate the status of the queue.
 
-3. Continuing from the previous exercise, what happens if at the end
+.. exercise:: Dependencies-3: First job fails
+
+   Continuing from the previous exercise, what happens if at the end
    of the job A script you put ``exit 1``. What does it mean?
