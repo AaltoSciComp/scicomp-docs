@@ -103,7 +103,7 @@ the shell servers):
 - **Archive** directories: ``smb://tw-cs.org.aalto.fi/archive/$name/``
   (``$name``\ =project name)
 - **Scratch directories**, see :doc:`Triton storage
-  <../triton/tut/storage>`.
+  <../triton/tut/remotedata>`.
 - ``smb://work.org.aalto.fi`` for **Aalto work** directories (different
   than Triton ``work``).
 
