@@ -105,3 +105,4 @@ For more information on storage and data usage on Triton have a look at these do
    * :doc:`Storage: Local Drives<../usage/localstorage>`
    * :doc:`Storage: Lustre<../usage/lustre>`
    * :doc:`Data Storage<../tut/storage/>`
+   * :doc:`Remote data access<../tut/remotedata>`

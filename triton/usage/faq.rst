@@ -297,7 +297,7 @@ Storage, file transfer and quota
 
   Most likely your Kerberos ticket has expired. If you log in with a
   password or use 'kinit', you can get an another ticket. See page on
-  `data storage <../tut/storage>` for more information.
+  :doc:`data storage <../tut/storage>` and :doc:`remote data <../tut/remotedata>` for more information.
 
 .. collapse::  How can I copy Triton files from outside of Aalto?
 

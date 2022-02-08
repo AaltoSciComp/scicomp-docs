@@ -8,6 +8,7 @@ Storage
    These pages are also related and include solutions to common
    storage problems:
 
+   * :doc:`../tut/remotedata`
    * :doc:`../usage/lustre`
    * :doc:`../usage/localstorage`
    * :doc:`../usage/quotas`

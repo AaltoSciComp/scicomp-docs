@@ -21,7 +21,8 @@ Jupyter
      Triton, and thus Science-IT must be acknowledged in publications).
    * :doc:`The accounts page <../accounts>`, in order to request a
      Triton account.
-   * Possibly the :doc:`storage page <../tut/storage>` to learn about
+   * Possibly the :doc:`storage page <../tut/storage>` and
+     :doc:`remote data access page <../tut/remotedata>` to learn about
      the places to store data and how to transfer data.
    * The JupyterHub section of this page (below).
 
