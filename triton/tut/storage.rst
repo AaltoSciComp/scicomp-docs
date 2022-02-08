@@ -200,6 +200,14 @@ page for a solution.
 
 
 
+Remote access
+-------------
+
+The next tutorial, :doc`remotedata`, covers accessing the data from
+your own computer.
+
+
+
 Exercises
 ---------
 
