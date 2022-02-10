@@ -299,6 +299,16 @@ Rsync does NOT delete files by default, i.e. if you delete a file from the local
 
 Please note that when working with files containing code or simple text, git is a better option to synchronise your local folder with your remote one, because not only it will keep the two folders in sycn, but you will also gain version controlling so that you can revert to previous version of your code, or txt/csv files.
 
+Version control
+~~~~~~~~~~~~~~~
+
+Don't forget that you can use version control (git, etc.) for your
+code and other small files.  This way, you transfer to/from Triton via
+a version control server (Aalto Gitlab, Github, etc).  Often, one
+would develop locally (committing often of course), pull on Triton, do
+whatever some minor development directly on Triton to make it work
+there, then push back to the server.
+
 
 
 Exercises
