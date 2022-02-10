@@ -15,6 +15,7 @@ The cluster is just one part of your research: most people are
 constantly transferring data back and forth.  Unfortunately, this can
 be a frustrating experience if you haven't got everything running
 smoothly.  In this tutorial, we'll explain some of the main methods.
+See the main :doc:`storage <storage>` tutorial first.
 
 
 .. admonition:: Cheatsheet
