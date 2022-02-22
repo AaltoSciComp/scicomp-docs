@@ -25,11 +25,12 @@ and/or Python, Matlab, HTCondor and many others.
 .. toctree::
    :maxdepth: 1
 
-   scip/getting-started-with-scientific-computing
-   scip/winter-kickstart
    scip/mpi-introduction
    scip/shell-scripting
    March 2022 / Code Refinery workshops Spring 2022 <https://coderefinery.org/workshops/upcoming/>
+   scip/data-anonymization-workshop-2022
+   April 2022 / Debugging with Python, Matlab, and C/C++ <https://forms.gle/tT89so7V65wPd3sW9>
+   scip/software-design-2022
    scip/index
 
 .. toctree::
@@ -43,8 +44,7 @@ and/or Python, Matlab, HTCondor and many others.
 
 **Future courses**
 *Winter-Spring 2022 courses* -  
-We are publishing our courses here, such as "Introduction to HPC" (aka "Triton winter kickstart"), Data analysis with R and
-Python, introduction to MPI, Code Refinery workshop, Matlab advanced, and few more. Check this page for updates.
+We are always adding interesting courses. Please check this page once in a while.
 
 
 Anyone can sign up for announcements at the :doc:`SCIP announcement
