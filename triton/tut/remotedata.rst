@@ -135,29 +135,29 @@ Aalto networks at the URLs
 .. tabs::
 
   .. group-tab:: Windows
-    
+
     * scratch: ``\\data.triton.aalto.fi\scratch\``.
     * work: ``\\data.triton.aalto.fi\work\%username%\``.
-    
-      To access these folders:  To do the mounting, Windows Explorer → Computer → Map network drive →
-      select a free letter.
-      
+
+    To access these folders:  To do the mounting, Windows Explorer → Computer → Map network drive →
+    select a free letter.
+
   .. group-tab:: Mac
-    
+
     * scratch: ``smb://data.triton.aalto.fi/scratch/``.
     * work: ``smb://data.triton.aalto.fi/work/$username/``.
-      
-      To access these folders: Finder → Go menu item → Connect to server → use the URLs
-      above.
-      
+
+    To access these folders: Finder → Go menu item → Connect to server → use the URLs
+    above.
+
   .. group-tab:: Linux
-    
+
     * scratch: ``smb://data.triton.aalto.fi/scratch/``.
     * work: ``smb://data.triton.aalto.fi/work/$username/``.
-      
-      To access these folders: Files → Left sidebar → Connect to server → use the URLs above.
-      For other Linuxes, you can probably figure it out.  (It varies
-      depending on operating system, look around in the finder)
+
+    To access these folders: Files → Left sidebar → Connect to server → use the URLs above.
+    For other Linuxes, you can probably figure it out.  (It varies
+    depending on operating system, look around in the finder)
 
 
 From Aalto managed computers, you can use ``lgw01.triton.aalto.fi`` instead of ``data.triton.aalto.fi`` and it might auto-login.
@@ -182,13 +182,13 @@ Easiest is to set up your ssh config (``.ssh/config``) on your machine as follow
 ::
 
     Host kosh
-        User USERNAME
-        Hostname kosh.aalto.fi
-    	
-    Host triton_via_kosh	
-        User USERNAME
-        Hostname triton.aalto.fi
-        ProxyJump kosh    
+	User USERNAME
+	Hostname kosh.aalto.fi
+
+    Host triton_via_kosh
+	User USERNAME
+	Hostname triton.aalto.fi
+	ProxyJump kosh
 
 
 Instead of ``kosh``, you can also use ``taltta`` or any other shell server (see :doc:`Remote Access <../../aalto/remoteaccess>`) as a proxy to jump the firewall.
@@ -232,7 +232,7 @@ investment in your future.  Learn more about ssh on :doc:`the ssh
 page </scicomp/ssh>`.
 
 For Aalto Linux workstation users: it is recommended that you mount ``/scratch/``
-under the local disk ``/l/``. You should be able to create the subfolder folder under ``/l/`` 
+under the local disk ``/l/``. You should be able to create the subfolder folder under ``/l/``
 and point sshfs to that subfolder as in the example here above.
 
 

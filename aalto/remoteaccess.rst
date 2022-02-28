@@ -17,8 +17,8 @@ Linux shell servers
       command first if project directories are not accessible)
 
    - NBE: ``amor.org.aalto.fi``, same as above.
-   
-   - Math: ``elliptic.aalto.fi``, ``illposed.aalto.fi``, 
+
+   - Math: ``elliptic.aalto.fi``, ``illposed.aalto.fi``,
      same as above (but no project, archive and scratch directories)
 
 -  `Aalto servers <https://www.aalto.fi/en/services/linux-shell-servers-at-aalto>`__
@@ -97,7 +97,7 @@ the shell servers):
 .. tabs::
 
   .. group-tab:: Windows
-    
+
     - In all cases, username=aalto username, domain=AALTO,
       password=Aalto password.
     - For NBE/PHYS, replace ``tw-cs`` with ``tw-nbe`` or ``tw-phys``.
@@ -110,12 +110,12 @@ the shell servers):
       <../triton/tut/remotedata>`.
     - ``\\work.org.aalto.fi\`` for **Aalto work** directories (different
       than Triton ``work``).
-    
-      To access these folders:  To do the mounting, Windows Explorer → Computer → Map network drive →
-      select a free letter.  
-      
+
+    To access these folders:  To do the mounting, Windows Explorer → Computer → Map network drive →
+    select a free letter.
+
   .. group-tab:: Mac
-    
+
     - In all cases, username=aalto username, domain=AALTO,
       password=Aalto password.
     - For NBE/PHYS, replace ``tw-cs`` with ``tw-nbe`` or ``tw-phys``.
@@ -128,12 +128,12 @@ the shell servers):
       <../triton/tut/remotedata>`.
     - ``smb://work.org.aalto.fi`` for **Aalto work** directories (different
       than Triton ``work``).
-      
-      To access these folders: Finder → Go menu item → Connect to server → use the URLs
-      above.
-      
+
+    To access these folders: Finder → Go menu item → Connect to server → use the URLs
+    above.
+
   .. group-tab:: Linux
-    
+
     - In all cases, username=aalto username, domain=AALTO,
       password=Aalto password.
     - For NBE/PHYS, replace ``tw-cs`` with ``tw-nbe`` or ``tw-phys``.
@@ -146,10 +146,10 @@ the shell servers):
       <../triton/tut/remotedata>`.
     - ``smb://work.org.aalto.fi`` for **Aalto work** directories (different
       than Triton ``work``).
-      
-      To access these folders: Files → Left sidebar → Connect to server → use the URLs above.
-      For other Linuxes, you can probably figure it out.  (It varies
-      depending on operating system, look around in the finder)
+
+    To access these folders: Files → Left sidebar → Connect to server → use the URLs above.
+    For other Linuxes, you can probably figure it out.  (It varies
+    depending on operating system, look around in the finder)
 
 .. warning:: Must use VPN or Aalto network.
 
@@ -162,7 +162,7 @@ Accessing you Linux workstation / Triton remotely
 
 -  Remote access to desktop workstations is available via the university
    staff shell servers ``taltta.aalto.fi`` or department-specific
-   servers ``magi.cs.aalto.fi`` (CS), ``amor.org.aalto.fi`` (NBE), 
+   servers ``magi.cs.aalto.fi`` (CS), ``amor.org.aalto.fi`` (NBE),
    ``elliptic.aalto.fi``/``illposed.aalto.fi`` (Math).
 -  You need to be the **PrimaryUser** of the desktop in order to ssh to
    it.
@@ -187,4 +187,3 @@ works from any network.
 There are both Windows and Linux desktops available.  They are
 arranged as virtual machines with the normal desktop installations, so
 have access to all the important filesystems and all ``/m/{dept}/...``.
-
