@@ -75,7 +75,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Aalto scientific computing'
-copyright = u'2021, Aalto Science-IT'
+copyright = u'2022, Aalto Science-IT'
 author = u'Aalto Science-IT'
 
 # Substitutions
