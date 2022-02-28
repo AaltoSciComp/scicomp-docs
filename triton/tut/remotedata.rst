@@ -132,20 +132,35 @@ above) - if not, request it!
 The scratch filesystem can be remote mounted using SMB inside secure
 Aalto networks at the URLs
 
-* scratch: ``smb://data.triton.aalto.fi/scratch/``.
-* work: ``smb://data.triton.aalto.fi/work/$username/``.
+.. tabs::
 
-On different operating systems:
+  .. group-tab:: Windows
+    
+    * scratch: ``\\data.triton.aalto.fi\scratch\``.
+    * work: ``\\data.triton.aalto.fi\work\%username%\``.
+    
+      To access these folders:  To do the mounting, Windows Explorer → Computer → Map network drive →
+      select a free letter.
+      
+  .. group-tab:: Mac
+    
+    * scratch: ``smb://data.triton.aalto.fi/scratch/``.
+    * work: ``smb://data.triton.aalto.fi/work/$username/``.
+      
+      To access these folders: Finder → Go menu item → Connect to server → use the URLs
+      above.
+      
+  .. group-tab:: Linux
+    
+    * scratch: ``smb://data.triton.aalto.fi/scratch/``.
+    * work: ``smb://data.triton.aalto.fi/work/$username/``.
+      
+      To access these folders: Files → Left sidebar → Connect to server → use the URLs above.
+      For other Linuxes, you can probably figure it out.  (It varies
+      depending on operating system, look around in the finder)
 
-* Linux (Ubuntu for example): File manager (Nautilus) → File →
-  Connect to server.  Use the ``smb://`` URLs above.
-* Windows 10: In the "File Explorer", go to "This PC" → "Computer"
-  menu at the top → "Map Network Drive".  Use the URLs above but
-  replace ``smb://`` with ``\\`` and ``/`` with ``\``.  For example,
-  ``\\data.triton.aalto.fi\scratch\``.
-* Mac: Finder → Go → Connect to Server.  Use the ``smb://`` URLs above.
-* From Aalto managed computers, you can use ``lgw01.triton.aalto.fi``
-  instead of ``data.triton.aalto.fi`` and it might auto-login.
+
+From Aalto managed computers, you can use ``lgw01.triton.aalto.fi`` instead of ``data.triton.aalto.fi`` and it might auto-login.
 
 Depending on your OS, you may need to use either your username
 directly or ``AALTO\username``.

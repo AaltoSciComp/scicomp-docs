@@ -94,34 +94,62 @@ SMB. To use this well, you want to get the VPN set up first like
 mentioned above. (You can also access these filesystems via ssh through
 the shell servers):
 
-- In all cases, username=aalto username, domain=AALTO,
-  password=Aalto password.
-- For NBE/PHYS, replace ``tw-cs`` with ``tw-nbe`` or ``tw-phys``.
-- **Home** directories: ``smb://home.org.aalto.fi/``
-- **Project** directories: ``smb://tw-cs.org.aalto.fi/project/$name/``
-  (``$name``\ =project name)
-- **Archive** directories: ``smb://tw-cs.org.aalto.fi/archive/$name/``
-  (``$name``\ =project name)
-- **Scratch directories**, see :doc:`Triton storage
-  <../triton/tut/remotedata>`.
-- ``smb://work.org.aalto.fi`` for **Aalto work** directories (different
-  than Triton ``work``).
+.. tabs::
 
-Depending on your OS, you may need to use either your username
-directly or ``AALTO\username``
-
-On **Ubuntu**: Files → Left sidebar → Connect to server → use the URLs above.
-For other Linuxes, you can probably figure it out.  (It varies
-depending on operating system, look around in the finder)
-
-On **Mac** laptops: Finder → Go menu item → Connect to server → use the URLs
-above.
-
-On **Windows** laptops:  To do the mounting, Windows Explorer → Computer → Map network drive →
-select a free letter.  ``smb://`` becomes ``\\`` (without the ``smb:``), and ``/`` becomes
-``\``.  For example, a full URL could be
-``\\tw-cs.org.aalto.fi\project\mygroup``.  You can also just enter
-it into the file manager bar.
+  .. group-tab:: Windows
+    
+    - In all cases, username=aalto username, domain=AALTO,
+      password=Aalto password.
+    - For NBE/PHYS, replace ``tw-cs`` with ``tw-nbe`` or ``tw-phys``.
+    - **Home** directories: ``\\home.org.aalto.fi\``
+    - **Project** directories: ``\\tw-cs.org.aalto.fi\project\$name\``
+      (``$name``\ =project name)
+    - **Archive** directories: ``\\tw-cs.org.aalto.fi\archive\$name\``
+      (``$name``\ =project name)
+    - **Scratch directories**, see :doc:`Triton storage
+      <../triton/tut/remotedata>`.
+    - ``\\work.org.aalto.fi\`` for **Aalto work** directories (different
+      than Triton ``work``).
+    
+      To access these folders:  To do the mounting, Windows Explorer → Computer → Map network drive →
+      select a free letter.  
+      
+  .. group-tab:: Mac
+    
+    - In all cases, username=aalto username, domain=AALTO,
+      password=Aalto password.
+    - For NBE/PHYS, replace ``tw-cs`` with ``tw-nbe`` or ``tw-phys``.
+    - **Home** directories: ``smb://home.org.aalto.fi/``
+    - **Project** directories: ``smb://tw-cs.org.aalto.fi/project/$name/``
+      (``$name``\ =project name)
+    - **Archive** directories: ``smb://tw-cs.org.aalto.fi/archive/$name/``
+      (``$name``\ =project name)
+    - **Scratch directories**, see :doc:`Triton storage
+      <../triton/tut/remotedata>`.
+    - ``smb://work.org.aalto.fi`` for **Aalto work** directories (different
+      than Triton ``work``).
+      
+      To access these folders: Finder → Go menu item → Connect to server → use the URLs
+      above.
+      
+  .. group-tab:: Linux
+    
+    - In all cases, username=aalto username, domain=AALTO,
+      password=Aalto password.
+    - For NBE/PHYS, replace ``tw-cs`` with ``tw-nbe`` or ``tw-phys``.
+    - **Home** directories: ``smb://home.org.aalto.fi/``
+    - **Project** directories: ``smb://tw-cs.org.aalto.fi/project/$name/``
+      (``$name``\ =project name)
+    - **Archive** directories: ``smb://tw-cs.org.aalto.fi/archive/$name/``
+      (``$name``\ =project name)
+    - **Scratch directories**, see :doc:`Triton storage
+      <../triton/tut/remotedata>`.
+    - ``smb://work.org.aalto.fi`` for **Aalto work** directories (different
+      than Triton ``work``).
+      
+      To access these folders: Files → Left sidebar → Connect to server → use the URLs above.
+      For other Linuxes, you can probably figure it out.  (It varies
+      depending on operating system, look around in the finder)
 
 .. warning:: Must use VPN or Aalto network.
 
