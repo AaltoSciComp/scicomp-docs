@@ -159,8 +159,8 @@ Aalto networks at the URLs
       For other Linuxes, you can probably figure it out.  (It varies
       depending on operating system, look around in the finder)
 
-    From Aalto managed computers, you can use lgw01.triton.aalto.fi instead of data.triton.aalto.fi and it might auto-login.
 
+From Aalto managed computers, you can use ``lgw01.triton.aalto.fi`` instead of ``data.triton.aalto.fi`` and it might auto-login.
 
 Depending on your OS, you may need to use either your username
 directly or ``AALTO\username``.
