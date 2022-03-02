@@ -28,11 +28,11 @@ We expect that course participants are familiar with the Python programming lang
 +=======+=============+===================================================+
 | 25.04 | 12:00-14:00 | Theory session                                    |
 +-------+-------------+---------------------------------------------------+
-| 26.04 | 10:00-14:00 | First review sessions (half hour slot per person) |
+| 03.05 | 10:00-14:00 | First review sessions (half hour slot per person) |
 +-------+-------------+---------------------------------------------------+
-| 03.05 | 10:00-14:00 | Second round of review sessions (half hour slots) |
+| 09.05 | 10:00-14:00 | Second round of review sessions (half hour slots) |
 +-------+-------------+---------------------------------------------------+
-| 03.05 | 14:00-15:00 | Recap session and closing                         |
+| 09.05 | 14:00-15:00 | Recap session and closing                         |
 +-------+-------------+---------------------------------------------------+
 
 **Course material:** All course material can be found in this repository: `https://github.com/susamerz/CDWAssignment <https://github.com/susamerz/CDWAssignment>`__.
