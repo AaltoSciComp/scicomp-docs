@@ -27,17 +27,18 @@ Currently active (upcoming) courses have been moved to the
 ----
 
   - Introduction to Data Analysis strategies at Aalto, Linux shell, HPC kickstart 2021  (Jan/Feb 2021, :doc:`materials part 1 <getting-started-with-scientific-computing>`, :doc:`materials part 2 <winter-kickstart>`, `videos <https://youtube.com/playlist?list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc>`__)
-  - Introduction to MPI (March 2021)
-  - Linux Shell Scripting (March 2021, `materials <https://aaltoscicomp.github.io/linux-shell/>`__)
-  - Hands-on data anonymization  (April 2021, videos: `day1 <https://www.youtube.com/watch?v=kJGTLSLiuhI>`__, `day2 <https://www.youtube.com/watch?v=za8SYXX1wco>`__, `day3 <https://www.youtube.com/watch?v=oyToSTB1Jrc>`__, `dat4 <https://www.youtube.com/watch?v=9TE9nUjI8F0>`__)
+  - :doc:`Introduction to MPI <mpi-introduction>` (March 2021)
+  - :doc:`Linux Shell Scripting <shell-scripting>` (March 2021, `materials <https://aaltoscicomp.github.io/linux-shell/>`__)
+  - :doc:`Hands-on data anonymization <data-anonymization-workshop>`  (April 2021, videos: `day1 <https://www.youtube.com/watch?v=kJGTLSLiuhI>`__, `day2 <https://www.youtube.com/watch?v=za8SYXX1wco>`__, `day3 <https://www.youtube.com/watch?v=oyToSTB1Jrc>`__, `dat4 <https://www.youtube.com/watch?v=9TE9nUjI8F0>`__)
   - Code Refinery workshop  (May 2021, `materials <https://coderefinery.github.io/2021-05-10-workshop/>`__, `videos <https://www.youtube.com/playlist?list=PLpLblYHCzJACm0Nz8ZxmdC6F8UuSYwWGQ>`__)
-  - Software design for scientific computing (April 2021, `materials <https://github.com/susamerz/CDWAssignment>`__)
-  - Matlab Advanced (May 2021, `materials <https://hackmd.io/@eglerean/MatlabAdvanced2021>`__)
-  - Intro to Scientific Computing (June 2021)
+  - :doc:`Software design for scientific computing <software-design>` (April 2021, `materials <https://github.com/susamerz/CDWAssignment>`__)
+  - :doc:`Matlab Advanced <matlab-advanced>` (May 2021, `materials <https://hackmd.io/@eglerean/MatlabAdvanced2021>`__)
+  - Intro to Scientific Computing :doc:`part1
+    <getting-started-with-scientific-computing>`, :doc:`part2 <summer-kickstart>` (June 2021)
   - Introduction to Julia (August 2021 & October 2021, `materials <https://github.com/AaltoRSE/julia-introduction>`__)
-  - Python for Scientific Computing (October 2021, `materials <https://aaltoscicomp.github.io/python-for-scicomp/>`__, `videos <https://www.youtube.com/playlist?list=PLZLVmS9rf3nOS7bHNmbcDoyTnMYaz_TJW>`__)
-  - Linux Shell Basics (November 2021, `materials <https://aaltoscicomp.github.io/linux-shell/>`__)
-  - Matlab Basics (November 2021, `materials <https://version.aalto.fi/gitlab/eglerean/matlabcourse/-/tree/master/AY20212022/MatlabBasics2021>`__)
+  - :doc:`Python for Scientific Computing <python-for-scicomp>` (October 2021, `materials <https://aaltoscicomp.github.io/python-for-scicomp/>`__, `videos <https://www.youtube.com/playlist?list=PLZLVmS9rf3nOS7bHNmbcDoyTnMYaz_TJW>`__)
+  - :doc:`Linux Shell Basics <linux-shell-basics>` (November 2021, `materials <https://aaltoscicomp.github.io/linux-shell/>`__)
+  - :doc:`Matlab Basics <matlab-basics>` (November 2021, `materials <https://version.aalto.fi/gitlab/eglerean/matlabcourse/-/tree/master/AY20212022/MatlabBasics2021>`__)
 
 
 
