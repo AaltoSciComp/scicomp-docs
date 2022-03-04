@@ -169,13 +169,13 @@ result in running out of quota. To fix this, you should run the following comman
 
   module load miniconda
 
-  mkdir $WRKDIR/conda_pkgs
-  mkdir $WRKDIR/conda_envs
+  mkdir $WRKDIR/.conda_pkgs
+  mkdir $WRKDIR/.conda_envs
 
   conda config --append pkgs_dirs ~/.conda/pkgs
   conda config --append envs_dirs ~/.conda/envs
-  conda config --prepend pkgs_dirs $WRKDIR/conda_pkgs
-  conda config --prepend envs_dirs $WRKDIR/conda_envs
+  conda config --prepend pkgs_dirs $WRKDIR/.conda_pkgs
+  conda config --prepend envs_dirs $WRKDIR/.conda_envs
 
 **virtualenv** does not work with Anaconda, use ``conda`` instead.
 
