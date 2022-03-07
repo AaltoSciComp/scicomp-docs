@@ -50,7 +50,7 @@ You can change directly to your notebook directory by using ``cd
 /m/jhnas/jupyter/${HOME%/unix}``.
 
 **You can link it to your home directory so that it's easily
-available**.  In a terminal, run ``/m/jhnas/u/makedir.sh`` and you
+available**.  In a terminal, run ``/m/jhnas/jupyter/u/makedir.sh`` and you
 will automatically get a link from ``~/jupyter`` in your home
 directory to your user data.
 
