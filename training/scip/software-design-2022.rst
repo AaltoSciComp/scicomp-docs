@@ -9,9 +9,9 @@ in Python. For this course we also warmly invite those who already know everythi
 
 **About the course:** Getting the desired end result is an important first step in writing your analysis script or program. But it is just the beginning of the journey to truly great software. In this course we set you on a path to thinking about the *design* of your code: how to make it obvious what the code does, that it is correct, efficient and elegant. As programmers, we are on this journey for our entire career. For example, we assume you know *how* to write a function in Python. In this course, we aim to teach you *which* function you should write.
 
-We will present some design guidelines and discuss them together. Then, we will all implement a simple, but not trivial, data analysis pipeline from the neuroimaging domain. Next, we will review each-others code based on the design guidelines and note things that were designed well and things that could be improved. Finally, we will re-work our code based on the feedback we received and things we learned from reading other people's code. Hopefully, you will end up with a pearl of great code that can serve as inspiration for the code you'll write from here on after.
+We will present some design guidelines and discuss them together. Then, we will all implement a simple, but not trivial, data analysis pipeline. Next, we will review each-others code based on the design guidelines and note things that were designed well and things that could be improved. Finally, we will extend the goals of the analysis pipeline and re-work our code based on the feedback we received and things we learned from reading other people's code. Hopefully, you will end up with a pearl of great code that can serve as inspiration for the code you'll write from here on after.
 
-We expect that course participants are familiar with the Python programming language, along with the basic packages for scientific computing (NumPy/SciPy/Matplotlib/Pandas). To test your knowledge of these basics (and point you to relevant documentation to fill in any gaps), we have designed the `Gizmo challenge <https://github.com/wmvanvliet/gizmo>`_.
+We expect that course participants are familiar with the Python programming language, along with its basic packages. To test your knowledge of these basics (and point you to relevant documentation to fill in any gaps), we have designed the `Gizmo challenge <https://github.com/wmvanvliet/gizmo>`_.
 
 **Lecturers:**
 
@@ -41,9 +41,9 @@ We expect that course participants are familiar with the Python programming lang
 
 **Registration:** Coming soon
 
-**Credits:** Credits are available for Aalto students and a course certificate can be provided on request for outsiders. Credits/certificate require full time participation and handling home work/assignments. Full course hours correspond roughly to 1 ECTS.
+**Credits:** Credits are available for Aalto students and a course certificate can be provided on request for outsiders. Credits/certificate require full time participation and handling home work/assignments. Full course hours correspond roughly to 2 ECTS.
 
 **Setup instructions:** To access the online course you need to have access to Zoom, either through the Zoom client or through a browser. 
-To follow and participate in the workshop, we expect you to also have access to a Python installation with the basic scientific software stack (NumPy/SciPy/Matplotlib/Pandas, see `https://www.scipy.org <https://www.scipy.org>`_). We recommend an anaconda installation. You can refer to https://coderefinery.github.io/installation/python/ for installation instructions, ignoring the CodeRefinery specific parts. You will also need a working and configured git installation. Instructions at https://coderefinery.github.io/installation/git/.
+To follow and participate in the workshop, we expect you to also have access to a Python installation. While it will be possible to complete the exercises with only the basic pythons setup, we recommend an anaconda installation for ease of use. You can refer to https://coderefinery.github.io/installation/python/ for installation instructions, ignoring the CodeRefinery specific parts. You will also need a working and configured git installation. Instructions at https://coderefinery.github.io/installation/git/.
 
-**Additional course info at:** susanne.merz -at- aalto.fi or marijn.vanvliet -at- aalto.fi
+**Additional course info at:** susanne.merz -at- aalto.fi, marijn.vanvliet -at- aalto.fi or thomas.pfau -at- aalto.fi
