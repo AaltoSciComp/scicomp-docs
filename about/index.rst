@@ -180,7 +180,7 @@ better.*
 
    * * Thomas Pfau
      * Science-IT, Aalto RSE
-     * Software development, 
+     * Software development, Matlab, Linear/mixed integer programming, Constraint based metabolic modelling
 
    * * Simo Tuomisto
      * Science-IT, CS-IT
