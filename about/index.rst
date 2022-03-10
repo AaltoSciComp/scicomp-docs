@@ -178,13 +178,9 @@ better.*
      * Science-IT, Aalto RSE
      * Software Development, HPC software and optimization, profiling
 
-   * * Marijn van Vliet
+   * * Thomas Pfau
      * Science-IT, Aalto RSE
-     * Software development, data, neuroimaging
-
-   * * Essi Heikkinen
-     * Science-IT
-     * Natural language processing, teaching, documentation
+     * Software development, 
 
    * * Simo Tuomisto
      * Science-IT, CS-IT
