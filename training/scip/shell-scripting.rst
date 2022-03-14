@@ -15,20 +15,20 @@ We expect that course participants are familiar with the :doc:`shell basics <lin
 
 **Lecturer:** Ivan Degtyarenko, D. Sc., Science IT / Department of Applied Physics, Aalto University
 
-**Place:** Online and possibly also in a physical space in Otaniemi at Aalto. Register for receiving link to streaming and other infos if the workshop is also in a physical space.
+**Place:** Online and in-person at Room U135a (U7) Otaniemi (in-person only if there are enough participants). Please register for receiving the link to streaming and other infos for in-person sessions. 
 
 **Time, date (all times EET):**
 
 +-----------+-------------+
 | Date      |        Time |
 +===========+=============+
-| Mon 21.03 | 10:00-13:00 |
+| Mon 21.03 | 12:00-15:00 |
 +-----------+-------------+
-| Fri 25.03 | 10:00-13:00 |
+| Fri 25.03 | 12:00-15:00 |
 +-----------+-------------+
-| Mon 28.03 | 10:00-13:00 |
+| Mon 28.03 | 12:00-15:00 |
 +-----------+-------------+
-| Fri 01.04 | 10:00-13:00 |
+| Fri 01.04 | 12:00-15:00 |
 +-----------+-------------+
 
 **Course material:** will be mostly based on the second part of the
