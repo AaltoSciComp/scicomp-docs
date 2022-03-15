@@ -10,11 +10,12 @@ to us.
 
 .. warning::
 
-   These are starting points, not something that should
-   be included as-is.  The texts need to somehow be combined and
-   tailored to your particular proposal - contact Aalto Research
-   Services (pre-award) for advice on proposals, or whoever the right
-   person is for the services themselves.
+   These are starting points, not something that should be included
+   as-is.  The texts need to somehow be combined and tailored to your
+   particular proposal - contact `Aalto Research Services (pre-award)
+   <https://www.aalto.fi/en/services/research-and-innovation-services#3-school-teams-helping-researchers>`__
+   for advice on proposals, or whoever the right person is for the
+   services themselves.
 
 
 
@@ -118,3 +119,11 @@ Acknowledgement for papers
 Remember you need to in your papers if you use it.  See the
 :doc:`acknowledging Triton page </triton/acknowledgingtriton>` for
 instructions on how to do that and some boilerplate text
+
+
+
+See also
+--------
+
+* `Aalto research services school teams
+  <https://www.aalto.fi/en/services/research-and-innovation-services#3-school-teams-helping-researchers>`__
