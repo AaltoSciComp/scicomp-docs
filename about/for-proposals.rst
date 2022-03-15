@@ -8,6 +8,17 @@ suitable for different purposes.
 If you create your own texts and would like to share them, send them
 to us.
 
+.. warning::
+
+   These are starting points, not something that should be included
+   as-is.  The texts need to somehow be combined and tailored to your
+   particular proposal - contact `Aalto Research Services (pre-award)
+   <https://www.aalto.fi/en/services/research-and-innovation-services#3-school-teams-helping-researchers>`__
+   for advice on proposals, or whoever the right person is for the
+   services themselves.
+
+
+
 Focus on Triton
 ---------------
 
@@ -30,6 +41,7 @@ we provide much preconfigured software and hands on support to make
 the usage for researchers as effective as possible. On the personnel
 side we have five permanent Ph.D. level staff to keep the system
 running and providing teaching and consultation for researchers.
+
 
 
 Focus on data
@@ -71,10 +83,15 @@ Science, basic services is included as part of overheads, or
 longer-term services can be funded from specific research projects.
 
 
+
 Research software engineering services
 --------------------------------------
 
-(this text must especially be tuned to your grant, replace the parts in CAPITAL LETTERS)
+.. seealso::
+
+   :doc:`/rse/grant-applicants`
+
+(this text must be tuned to your grant, replace the parts in CAPITAL LETTERS)
 
 This grant will make use of the Aalto Research Software Engineer
 program to hire high-quality TOPIC specialists.  This program provides
@@ -102,3 +119,11 @@ Acknowledgement for papers
 Remember you need to in your papers if you use it.  See the
 :doc:`acknowledging Triton page </triton/acknowledgingtriton>` for
 instructions on how to do that and some boilerplate text
+
+
+
+See also
+--------
+
+* `Aalto research services school teams
+  <https://www.aalto.fi/en/services/research-and-innovation-services#3-school-teams-helping-researchers>`__
