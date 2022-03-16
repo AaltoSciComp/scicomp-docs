@@ -10,12 +10,12 @@ to us.
 
 .. warning::
 
-   These are starting points, not something that should be included
-   as-is.  The texts need to somehow be combined and tailored to your
-   particular proposal - contact `Aalto Research Services (pre-award)
-   <https://www.aalto.fi/en/services/research-and-innovation-services#3-school-teams-helping-researchers>`__
-   for advice on proposals, or whoever the right person is for the
-   services themselves.
+   These texts are starting points, not something that should be
+   included as-is. The texts need to be adapted and tailored to fit
+   your particular proposal - if you need help with proposal writing
+   you can contact the Grant Writer or Research Liaison Officer of
+   your School for advice (`contact information is available here
+   <https://www.aalto.fi/en/services/research-and-innovation-services#3-school-teams-helping-researchers>`__).
 
 
 
