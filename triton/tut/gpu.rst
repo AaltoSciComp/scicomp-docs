@@ -21,6 +21,8 @@ GPU computing
    * Select a certain type of GPU with e.g. ``--constraint='kepler'``
      (see :doc:`the quick reference for names <../ref/index>`).
    * Monitor GPU performance with ``sacct -j <jobID> -o comment -p``.
+   * For development, run jobs of 4 hours or less, and they can run
+     quickly in the ``gpushort`` queue.
    * If you aren't fully sure of how to scale up, contact us
      :doc:`Research Software Engineers </rse/index>` early.
 
@@ -86,6 +88,13 @@ using the ``--constraint`` option.  For example, to restrict to Kepler
 generation (K80s), use ``--constraint='kepler'`` or only Pascal or Volta
 generations with ``--constraint='pascal|volta'`` (Remember to use the quotes
 since ``|`` is the shell pipe)
+
+There is a ``gpushort`` partition with a time limit of 4 hours that
+often has space (like with other partitions, this is automatically
+selected for short jobs).  As of early 2022, it has four Tesla P100
+cards in it (view with ``slurm partitions | grep gpushort``).  If you
+are doing testing and development and these GPUs meet your needs, you
+may be able to test much faster here.
 
 
 
