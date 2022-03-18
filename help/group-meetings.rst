@@ -7,10 +7,9 @@ others want to join, let us know).
 We would like to meet with each research group once a year.  This
 isn't to advertise stuff to you, but to hear what you all need but
 can't get, so that we can help you with that.  A group meeting
-consists of your group plus a few members from technical services
-(Science-IT, CS-IT, etc.)  which are relevant for your group, and we
-here from you to guide our work.  Hopefully, we can immediately solve
-some of your major problems.
+consists of your group plus other technical services staff
+(Science-IT, CS-IT, etc.) which are relevant for your group's work.
+Hopefully, we can immediately solve some of your major problems.
 
 
 
