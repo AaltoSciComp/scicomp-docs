@@ -19,6 +19,24 @@ cry" <https://www.youtube.com/watch?v=NSemlYagjIU>`__.
 
 
 
+Application or library
+----------------------
+
+* **Application:** Runs alone, does not need to be combined with other
+  software.  Note that if your application is expected to be installed
+  in a environment that is shared with other software, it is more like
+  a library.  Note that this is how most scientific software is
+  installed!
+
+* **Library:** Runs embedded and connected with other software that is
+  not under your control.  You can't expect everything else to use the
+  exact versions of software that you need.
+
+The dependency related topics below mostly apply to libraries - but as
+the note says, in practice they affect many applications, too.
+
+
+
 Use the proper tools
 --------------------
 
