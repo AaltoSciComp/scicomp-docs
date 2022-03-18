@@ -52,7 +52,38 @@ Topics
     * :doc:`/rse/index`
 
 * Latest changes or improvements (short)
+* Stories from the field: how do *you* do your work?
 * Feedback: How do you do your work now?  What works well?  What
   doesn't work well?  What do you need in the future?  **Tell us all
   your complaints**, because we can't work on the right things without
   them. (long)
+
+
+
+Discussion starters
+-------------------
+
+* Cloud vs shared workstations vs personal workstations vs laptops
+* Where you store and share data
+* Support channels
+* Scientific computing, software needs
+* GPUs
+* Software installation
+* Containers for difficult to run software (docker, singularity, etc)
+* Cloud computing (CS + Openstack at CSC)
+* WWW servers
+* Open Science / Open Data / Open Access
+* Software development: (tools, best practices, collaboration)
+* :doc:`RSE service </rse/index>`
+* Data-driven research: need more support?
+* How to more closely support teaching/research
+* Jupyter Notebooks, A+
+* CSC services
+* Email
+
+
+
+See also
+--------
+
+* :doc:`/aalto/welcomeresearchers`
