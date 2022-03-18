@@ -41,16 +41,15 @@ Topics
   * Computers and devices
   * Computing: local servers, :doc:`Triton </triton/index>`, `CSC
     <https://docs.csc.fi>`__, etc.  What do you usually use?
-  * Data storage: Department storage (project, archive), Triton
-    (scratch), cloud, any other needs?  What do you usually use?
-  * Cloud services
+  * Data
   * Close specialist support teams
 
     * Department
     * :doc:`Science-IT </about/science-it>`
     * :doc:`/rse/index`
+    * Aalto IT Services
 
-* Latest changes or improvements (short)
+* News: Latest changes or improvements (short)
 * Stories from the field: how do *you* do your work?
 * Feedback: How do you do your work now?  What works well?  What
   doesn't work well?  What do you need in the future?  **Tell us all
@@ -62,23 +61,51 @@ Topics
 Discussion starters
 -------------------
 
-* Cloud vs shared workstations vs personal workstations vs laptops
-* Where you store and share data
-* Support channels
-* Scientific computing, software needs
-* GPUs
-* Software installation
-* Containers for difficult to run software (docker, singularity, etc)
-* Cloud computing (CS + Openstack at CSC)
-* WWW servers
+* Data
+
+  * Where you store and share data
+  * Data-driven research: need more support?
+  * Department (project, archive), Triton (scratch), cloud, any other
+    needs?
+  * Management: collection, storage, transfer, archive, sharing.
+  * What do you usually use?
+
+* Computing
+
+  * Cloud vs shared workstations vs personal workstations vs laptops
+  * Desktops, laptops
+  * Scientific computing, software needs
+  * GPUs
+  * Software installation
+  * Containers for difficult to run software (docker, singularity, etc)
+  * Open OnDemand
+  * Virtual machines
+  * Cloud computing (CS, Openstack at CSC, Azure)
+
+* Support
+
+  * Support channels
+  * Software development: (tools, best practices, collaboration)
+  * :doc:`RSE service </rse/index>`
+  * How to more closely support teaching/research
+
+* General services
+
+  * WWW servers
+  * Jupyter Notebooks, A+
+  * CSC services
+  * Email
+
 * Open Science / Open Data / Open Access
-* Software development: (tools, best practices, collaboration)
-* :doc:`RSE service </rse/index>`
-* Data-driven research: need more support?
-* How to more closely support teaching/research
-* Jupyter Notebooks, A+
-* CSC services
-* Email
+* Usability, accessibility, etc.
+* Teaching
+
+
+
+News, 2022
+----------
+
+* (to be added)
 
 
 
