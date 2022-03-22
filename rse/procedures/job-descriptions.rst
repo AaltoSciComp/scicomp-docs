@@ -81,17 +81,31 @@ move to another place.
 Beyond
 ------
 
-Further career development is not a part of the Aalto RSE program
+At this point, you are not exactly developing RSE skills but
+leadership skills.  This is surely adjusted to each person
+individually, but two possible layers include:
+
+* RSE leader responsible for a department, school, or research area.
+* RSE group leader responsible for university-wide leadership.
+
+
+
+Other internal/parallel advancement
+-----------------------------------
+
+Other career development is not a part of the Aalto RSE program
 (yet?), and to be honest it's hard to see an internal advancement in
-the current academic system.  Still, there are many ways people can
+the current academic system (by the time you get to the top of our
+team, you are already at the top).  Still, there are many ways people can
 continue their career development depending on their career goals, for
 example:
 
-* Tech lead of larger RSE projects
-* Study and develop new technologies for production
+* Tech lead of larger RSE projects (few projects require this)
+* Study and develop new technologies for production (perhaps a
+  parallel move to an IT team)
 * Management, either of RSE group or other services
 * Applying for grants, leading projects, etc. as a staff scientist
-  might do
+  might do (this would be outside the RSE service team)
 * Mentoring or supervising students or other researchers
 
 At Aalto, these aspects are not yet developed, and some of them would
