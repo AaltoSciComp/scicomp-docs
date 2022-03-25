@@ -296,7 +296,7 @@ resources.  All times are EEST (Helsinki) time.
 
 
 
-.. _kickstart-prereq:
+.. _kickstart-2021-prereq:
 
 Prerequisites
 -------------
