@@ -1,5 +1,5 @@
-Periodic group meetings
-=======================
+Group meetings
+==============
 
 This page applies to these departments so far: **CS, NBE, PHYS** (if
 others want to join, let us know).
@@ -9,7 +9,9 @@ isn't to advertise stuff to you, but to hear what you all need but
 can't get, so that we can help you with that.  A group meeting
 consists of your group plus other technical services staff
 (Science-IT, CS-IT, etc.) which are relevant for your group's work.
-Hopefully, we can immediately solve some of your major problems.
+Hopefully, we can immediately solve some of your major problems.  Your
+group will come away better able to use the best possible services,
+and we will come away knowing what to focus on in the next year.
 
 
 
@@ -58,6 +60,16 @@ Topics
 
 
 
+News / topical items, 2022
+--------------------------
+
+* GPUs: limited numbers, future procurement, using more efficiently.
+* :doc:`RSE service </rse/index>`, where and how to use.
+* Have you seen our latest :doc:`teaching </training/index>`.
+
+
+
+
 Discussion starters
 -------------------
 
@@ -100,12 +112,6 @@ Discussion starters
 * Usability, accessibility, etc.
 * Teaching
 
-
-
-News, 2022
-----------
-
-* (to be added)
 
 
 
