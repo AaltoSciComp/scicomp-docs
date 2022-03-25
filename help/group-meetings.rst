@@ -38,7 +38,23 @@ the typical workflows of the group.
 Who we are, what we do
 ----------------------
 
-See :doc:`/aalto/welcomeresearchers`
+We are **Technical services** (in particular ones focused on
+computing).  See the rest of scicomp.aalto.fi for the types of things
+we support.  :doc:`/aalto/welcomeresearchers` tells our most important
+services for you (+ the most important ones by others at Aalto).
+
+Also at Aalto, you also have these other major service units which are
+relevant to you (this meeting isn't mainly about them, but we have
+inside knowledge of IT Services so can help there):
+
+* IT Services (ITS): General mass-consumption IT services for all Aalto.
+* Research services: applying for grants, administrating, legal, etc.
+* Learning services: teaching
+* Communication services
+* Finance
+* HR
+
+
 
 Topics
 ------
@@ -85,6 +101,7 @@ Discussion starters
     needs?
   * Management: collection, storage, transfer, archive, sharing.
   * What do you usually use?
+  * Sensitive data: support and storage locations
 
 * Computing
 
@@ -93,14 +110,25 @@ Discussion starters
   * Scientific computing
   * GPUs
   * Containers for difficult to run software (docker, singularity, etc)
-  * Other interfaces: Jupyter, Open OnDemand
   * Virtual machines
-  * Cloud computing (CS, Openstack at CSC, Azure)
+  * CSC (supercomputers, cloud, data, collaboration between
+    universities in Finland)
+
+* Usability and accessibility (user interfaces)
+
+  * Remote access
+  * Virtual desktops, VDI
+  * Jupyter
+  * Other (Open OnDemand, ...)
+  * Usability and accessibility in general in the modern world
 
 * Teaching
 
+  * Learning Services
+  * Online solutions on cloud platforms (local solutions, VMs, Azure)
   * jupyter.cs
   * A+
+  * Chat: Zulip, Teams, Slack, ...
 
 * Software
 
@@ -117,13 +145,12 @@ Discussion starters
 * General services
 
   * WWW servers
-  * Jupyter Notebooks, A+
   * CSC services
   * Email
   * Printing
+  * Technical procurement
 
 * Open Science / Open Data / Open Access
-* Usability, accessibility, etc.
 
 
 
