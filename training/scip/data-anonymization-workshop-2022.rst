@@ -14,15 +14,26 @@ Enrico Glerean
 
 **Time, date, place:** the course consists of four online hands-on sessions. Zoom link to be posted to the registered participants list
 
-+-------+-------------+--------------------------------------------------------------------------------------------+
-|  Date |        Time | Event                                                                                      |
-+=======+=============+============================================================================================+
-| 04.04 | 12:00-15:00 | Basics of Anonymization and working with participants background data                      |
-+-------+-------------+--------------------------------------------------------------------------------------------+
-| 06.04 | 12:00-15:00 | Automating anonymisation for tabular data                                                  |
-+-------+-------------+--------------------------------------------------------------------------------------------+
-| Optional/if enough people are interested | to be defined | Anonymization for complex datasets: Faces in pictures and videos, Speech, Geospatial data, medical data. Advanced techniques for working with sensitive data (data synthesis, federated learning and differential privacy)  |
-+-------+-------------+--------------------------------------------------------------------------------------------+
+.. list-table::
+   :header-rows: 1
+
+   * * Date
+     * Time
+     * Event
+   * * 04.04
+     * 12:00-15:00
+     * Basics of Anonymization and working with participants
+       background data
+   * * 06.04
+     * 12:00-15:00
+     * Automating anonymisation for tabular data
+   * * Optional/if enough people are interested
+     * to be defined
+     * Anonymization for complex datasets: Faces in pictures and
+       videos, Speech, Geospatial data, medical data. Advanced
+       techniques for working with sensitive data (data synthesis,
+       federated learning and differential privacy)
+
 
 **Course material:** Link will be sent to participants before the workshop
 
