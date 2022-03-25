@@ -1,4 +1,3 @@
-=====================
 Welcome, researchers!
 =====================
 
@@ -18,8 +17,9 @@ computation and data-intensive work, including experimental work).
 .. _itsr: https://www.aalto.fi/en/services/it-services-for-research
 
 
-Aalto service units
-===================
+
+Aalto services
+--------------
 
 Understanding all the Aalto services can be quite confusing.  Here are
 some of the key players:
@@ -39,15 +39,23 @@ some of the key players:
   related to scientific computing.
   :doc:`This site (scicomp.aalto.fi) <../index>` is the main home,
   read more about us on the :doc:`about page</about/index>`.
+
+  * :doc:`Aalto Research Software Engineers </rse/index>` provide
+    specialized services in computation, data, and software.  If you
+    ever think "I can't do X because we don't have the skills" or "I
+    wish we could be more efficient", realize you aren't alone and
+    open a request with us.  Our projects last days to months, longer
+    than typical support staff's projects.
+
 * **Aalto IT Services (ITS)**: Provides central IT infrastructure.
-  They have a "Services for Research" group, but it is less
-  specialized than Science-IT. ITS may be the first place to
-  contact if not in the School of Science.  Their infrastructure is
+  They have a "IT Services for Research" group, but it is less
+  specialized than Science-IT. ITS is the first place to contact for
+  non-specialized services or people outside SCI..  Their infrastructure is
   used in all schools including SCI, and the base on which everyone
   builds.  Their instructions are on `aalto.fi
   <its_instr_>`_, but most importantly the already-mentioned
   `IT Services for Research <itsr_>`_ page.  Contact via `servicedesk
-  <https://it.aalto.fi/contact>`__.
+  <its_contact_>`__.
 * **Aalto Research Services**: Administrative-type support.
   Provides support for grantwriting, innovation and commercialization,
   sponsored projects, legal services for research, and research
@@ -63,44 +71,34 @@ some of the key players:
 .. _nbe-it: https://wiki.aalto.fi/display/NBE/IT+Information
 .. _phys-it: https://wiki.aalto.fi/display/TFYintra/PHYS+IT
 .. _math-it: https://wiki.aalto.fi/display/mathintra/Computer+Instructions
+.. _its_contact: https://www.aalto.fi/en/services/it-service-desk-contact-information-and-service-hours
 
-Also, currently Aalto has information scattered on websites
+The major sources of information are:
 everywhere:
 
-* `aalto.fi <http://aalto.fi>`__ is the normal homepage, but doesn't
-  have much practical information for researchers.  As of late 2018,
-  information from inside and into is supposed to move here.  The new
-  site is well known for being hard to use (sorry, we can't do
-  anything about that).  This site is "not designed to have a logical
-  structure and instead, you are expected to search for information"
-  (actual quote).  Some pages get more information if you log in, and
-  there is no indication of which ones.  In general, unless you know
-  what you are looking for, don't expect to find anything here without
-  extensive work.
-* `inside.aalto.fi <https://inside.aalto.fi>`__ is the *former* typical
-  "official" staff documentation area, but now gone since 2019 with
-  all information moved to aalto.fi.  It wasn't in search engines, but
-  once you found a page it wasn't easy to find other information.
-* `into.aalto.fi <https://into.aalto.fi>`__ is the student official
-  information.  It used to contain a lot of duplicate information to
-  inside but was public, so people would end up there.
+* `aalto.fi <http://aalto.fi>`__ is the normal homepage, but the joke
+  is it's hard to find anything and hard to use.  This site is "not
+  designed to have a logical structure and instead, you are expected
+  to search for information" (actual quote).  Some pages have more
+  information appear if you log in, and there is no indication of
+  which ones.  In general, unless you know what you are looking for,
+  don't expect to find anything here without extensive work.
 * `wiki.aalto.fi <https://wiki.aalto.fi>`__ is obviously the Aalto
   wiki space.  Anyone can make a space here, and many departments'
   internal sites are here.  Searching can randomly find useful
-  information.  Most sites aren't publically searchable.
-* :doc:`scicomp.aalto.fi <../index>` is where you are now.  Scicomp
-  was started by the Science-IT team from the Triton (HPC cluster)
-  documentation, and scicomp is slowly taking over from our
-  departments'
-  research IT instructions.  Now it is our general guidance to
-  researchers and the best place to find information on research and
-  scientific computing - as opposed to general "staff computing" you
-  find other places.
+  information, but it is not a primary information source anymore.
+  Most sites aren't publically searchable.
+* :doc:`scicomp.aalto.fi <../index>` is where you are now.  It has a
+  lot of information related to scientific computing and data.  We try
+  to not duplicate what is on aalto.fi, but sometimes we elaborate or
+  make things more findable.  This might be the best place to find
+  information on specialized research and scientific computing - as
+  opposed to general "staff computing" you find other places.
 
 
 
-End-user systems
-================
+Computers, devices, and end-user systems
+----------------------------------------
 Aalto provides computers to it's employees, obviously. Wherther it is
 an Aalto wide managed system or standalone depends on your department
 policies.  If it's standalone, you are on your
@@ -120,28 +118,28 @@ instructions and pointers to the main instructions for :doc:`mac
 Managed laptops are usable in and out of the Aalto networks.
 
 On both managed desktops and laptops you can become a "primary user"
-which allows you to install needed software that is found from the 
+which allows you to install needed software that is found from the
 official repositories. Additionally, in some cases, Workstation
-Administrator (wa.) account can be given which close to normal
+Administrator (``wa``) account can be given which close to normal
 root/Administrator account with some limitations. The "primary user"
 is widely accepted and recommended by Aalto ITS to all users while
-wa. accounts are regulated by the department policies or Aalto ITS.
+``wa`` accounts are regulated by the department policies or Aalto ITS.
+
 
 
 Computing
-=========
+---------
 
-Having a valid Aalto account you have two primary options: workstations and Triton.  The
-Aalto workstations have basic scientific software installed.  From the
-workstations, you can use the :doc:`HTCondor <../aalto/htcondor>`
-distributed computing framework.
+With a valid Aalto account, you have two primary options: workstations
+and Triton.  The
+Aalto workstations have basic scientific software installed.
 
 Most demanding computing at Aalto is performed on :doc:`Triton
 <../triton/index>`, the
 Aalto high performance computing cluster.  It is a fairly standard
 medium-sized cluster, and
 it's main advantage is the close integration into the Aalto
-environment: it shares Aalto accounts, its data storage (2PB) is
+environment: it shares Aalto accounts, its data storage (5PB) is
 also available on workstations, and has local support.  If
 you need dedicated resources, you can purchase them and they can be
 managed by Science IT team as part of Triton so that you get dedicated resources
@@ -149,7 +147,8 @@ and can easily scale to the full power of Triton.  Triton is part of
 the Finnish Grid and Cloud Infrastructure.  Triton is the largest
 publically known computing cluster in Finland after the CSC clusters.
 Triton provides a web-based interface via :doc:`JupyterHub
-<../triton/apps/jupyter>`.  To get started with Triton, :doc:`request
+<../triton/apps/jupyter>` and :doc:`Open OnDemand </triton/usage/ood>`.
+To get started with Triton, :doc:`request
 access </triton/accounts>`, check the :ref:`tutorials <tutorials>`
 sequence (or :doc:`quickstart guide </triton/quickstart/index>` if you
 know the basics), and you'll learn all you need.
@@ -165,13 +164,14 @@ clusters in Finland.
 
 
 Data
-====
+----
 
 Data management isn't just storage: if data is just put somewhere, you
 get a massive mess and data isn't usable in even 5 years.  Funders now
 require "data management plans".  Thus data management is not just a
 *hot* topic, it's an *important* one.  We have a :doc:`whole section
-on data <../data/index>`, and also there are higher level `guides from
+on data <../data/index>` (not maintained much anymore), and also there
+are higher level `guides from
 Aalto <aaltordm_>`_.  If you just want to get something done, you
 should start with our :doc:`Aalto-specific guideline for Science-IT
 data storage <aaltodata>` (used in CS, NBE, PHYS) - if you follow our
@@ -194,7 +194,7 @@ quota.  You can read about the :doc:`storage locations available
 <../aalto/aaltostorage>` and :doc:`storage service policy
 <../data/datapolicy>`.
 
-Triton has 2PB of non-backed up data storage on the high-performance
+Triton has 5PB of non-backed up data storage on the high-performance
 Lustre filesystem.  This is used for large active computation
 purposes.  The Triton nodes have an incredible bandwidth to this and
 it is very fast and parallel.  This is mounted by default at
@@ -238,8 +238,10 @@ Aalto, this data will disappear!
 .. _dropbox: https://it.aalto.fi/instructions/aalto-dropbox-quick-guide
 .. _onedrive: https://it.aalto.fi/instructions/onedrive-quick-guide
 
+
+
 Software
-========
+--------
 
 Triton and :doc:`Aalto Linux workstations <../aalto/linux>` come with
 a lot of scientific software installed, with in the :doc:`Lmod system
@@ -281,7 +283,7 @@ is exported to Triton.
 
 
 Starting a project
-==================
+------------------
 Each time you start a project, it's worth putting a few minutes into
 planning so that you create a good base (and don't end up with chaos
 in a few years).  We don't mean some grant, we mean a line of work
@@ -312,21 +314,27 @@ with a common theme, data, etc.
     locations, e.g. scratch, project, archive.  Quotas can always be
     increased later.
 
+- If you need specialized support in computing, data, or software,
+  request a consultation with :doc:`Aalto Research Software Engineers
+  </rse/index>`.
+
 
 
 Training
-========
+--------
 
 Of course you want to get straight to research.  However, we come from
 a wide range of backgrounds and we've noticed that missing basic
 skills (computer as a tool) can be a research bottleneck.  We have
-constructed a :doc:`multi-level training plan <../training/index>` so
-that you can find the right courses for your needs.  These courses are
+constructed a `multi-level training plan, Hands-on Scientific Computing <https://hands-on.coderefinery.org>`__ so
+that you can find the right courses for your needs.  We have :doc:`extensive
+internal training </training/index>` about practical matters not
+covered in academic courses.  These courses are
 selected by researchers for researchers, so we make sure that
 everything is relevant to you.
 
 Check our :doc:`upcoming training page
-<../training/scip/index>` for a list of upcoming courses.
+<../training/index>` for a list of upcoming courses.
 If you do anything computational or code-based at all, you should
 consider the twice-yearly `CodeRefinery <https://coderefinery.org/>`__
 workshops (announced on our page).  If you have a Triton account or do
@@ -338,7 +346,7 @@ say it is "required" if you have a Triton account).
 
 
 Other notes
-===========
+-----------
 
 Remember to keep the `IT Services for Research page close <itsr_>`_
 close at hand!
@@ -352,7 +360,7 @@ will get much further.
 
 There are some good `cheatsheets
 <https://aaltoscicomp.github.io/cheatsheets/>`__ which our team
-maintains.  They are somewhat sepcialized, but useful in the right
+maintains.  They are somewhat specialized, but useful in the right
 places.
 
 It can be hard to find your way around Aalto, the official campus maps
