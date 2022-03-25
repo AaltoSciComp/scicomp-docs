@@ -35,6 +35,11 @@ the typical workflows of the group.
 
 
 
+Who we are, what we do
+----------------------
+
+See :doc:`/aalto/welcomeresearchers`
+
 Topics
 ------
 
@@ -69,7 +74,6 @@ News / topical items, 2022
 
 
 
-
 Discussion starters
 -------------------
 
@@ -86,13 +90,22 @@ Discussion starters
 
   * Cloud vs shared workstations vs personal workstations vs laptops
   * Desktops, laptops
-  * Scientific computing, software needs
+  * Scientific computing
   * GPUs
-  * Software installation
   * Containers for difficult to run software (docker, singularity, etc)
-  * Open OnDemand
+  * Other interfaces: Jupyter, Open OnDemand
   * Virtual machines
   * Cloud computing (CS, Openstack at CSC, Azure)
+
+* Teaching
+
+  * jupyter.cs
+  * A+
+
+* Software
+
+  * Installation problems
+  * Reusing old software
 
 * Support
 
@@ -107,11 +120,10 @@ Discussion starters
   * Jupyter Notebooks, A+
   * CSC services
   * Email
+  * Printing
 
 * Open Science / Open Data / Open Access
 * Usability, accessibility, etc.
-* Teaching
-
 
 
 
