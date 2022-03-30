@@ -223,7 +223,7 @@ resources.  All times are EEST (Helsinki) time.
 
     * 16:00: End
 
-* **Day #3 (Wed 9.jun):** Advanced cluster use (Simo Tuomisto, Richard
+* **Day #3 (Thu 9.jun):** Advanced cluster use (Simo Tuomisto, Richard
   Darst)
 
     * 11:50: Joining time/icebreaker
