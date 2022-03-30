@@ -160,7 +160,7 @@ resources.  All times are EEST (Helsinki) time.
     * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART+2021>`__
     * Tampere: `Connecting to Narvi <https://narvi-docs.readthedocs.io/narvi/tut/connecting.html>`__
 
-* **Day #2 (Tue 8.jun):** Basic use of a cluster (Richard Darst, Simo
+* **Day #2 (Wed 8.jun):** Basic use of a cluster (Richard Darst, Simo
   Tuomisto)
 
     This day will go over all practical aspects of using the cluster
