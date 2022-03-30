@@ -116,7 +116,7 @@ resources.  All times are EEST (Helsinki) time.
     <https://www.youtube.com/watch?v=ExFbc5EikU0>`__
 
 
-* **Day #1 (Mon 7.jun):** Basics and background
+* **Day #1 (Tue 7.jun):** Basics and background
 
   * 11:50: **Joining time and pre-discussion**, please join 10
     minutes early.  (Richard Darst, Enrico Glerean)
