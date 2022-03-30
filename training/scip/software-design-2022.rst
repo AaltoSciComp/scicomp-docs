@@ -37,9 +37,9 @@ We expect that course participants are familiar with the Python programming lang
 
 **Course material:** All course material can be found in this repository: `https://github.com/susamerz/CDWAssignment <https://github.com/susamerz/CDWAssignment>`__.
 
-**Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
+**Cost:** Free of charge. Please note that we will need to limit the number of participants for this course, priority will be given to researchers from Aalto University.
 
-**Registration:** Coming soon
+**Registration:** You can register here https://forms.gle/GcbZpdfMPKuk5hME9
 
 **Credits:** Credits are available for Aalto students and a course certificate can be provided on request for outsiders. Credits/certificate require full time participation and handling home work/assignments. Full course hours correspond roughly to 2 ECTS.
 
