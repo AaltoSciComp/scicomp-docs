@@ -117,43 +117,47 @@ resources.  All times are EEST (Helsinki) time.
   * `Scientific computing workflows
     <https://www.youtube.com/watch?v=ExFbc5EikU0>`__
 
+.. warning::
+
+   This is last year's schedule.  It will be updated for this year,
+   but the overall times and plan are correct.
 
 * **Day #1 (Tue 7.jun):** Basics and background
 
-  * 11:50: **Joining time and pre-discussion**, please join 10
+  * **11:50: Joining time and pre-discussion**, please join 10
     minutes early.  (Richard Darst, Enrico Glerean)
 
-  * 12:00: **Welcome, general introduction** (:doc:`Notes <summer-kickstart/intro>`) (Enrico Glerean and all)
+  * **12:00: Welcome, general introduction** (:doc:`Notes <summer-kickstart/intro>`) (Enrico Glerean and all)
 
-  * 12:10: **HPC crash course: what is behind the front-end** HPC fundamentals:
+  * **12:10: HPC crash course: what is behind the front-end** HPC fundamentals:
     terminology, architectures, interconnects, infrastructure behind, as well as
     MPI vs shared memory. Continued on day 3. (Ivan Degtyarenko, Simppa Äkäslompolo)
     (`Slides (.pdf) <https://users.aalto.fi/degtyai1/SCiP2021_kick.HPC_crash_course.2021-06-04.pdf>`__)
 
-  * 12:40: **Summary and discussion about the videos "Basic linux shell
+  * **12:40: Summary and discussion about the videos "Basic linux shell
     scripting" and "Scientific computing workflows"** (see videos in
     preparatory material above) (:doc:`Notes <summer-kickstart/video-summary>`) (Richard Darst, Enrico Glerean)
 
   * 12:50: Break
 
-  * 13:00: **Currently available resources at CSC** CSC is the Finnish
+  * **13:00: Currently available resources at CSC** CSC is the Finnish
     center for scientific computing, and also has many resources for
     research. (`Slides <https://kannu.csc.fi/s/3K8q93XSwtSgHEa>`__)
     (Jussi Enkovaara, CSC).
 
   * 13:45: Break
 
-  * 14:00: **Git intro**: why you need version control for any
+  * **14:00: Git intro**: why you need version control for any
     scientific work and how to get started.  We don't go in depth into
     theory, but talk about the simplest usage by yourself. (Richard
     Darst, Jarno Rantaharju)
 
   * 14:45: Break
 
-  * 15:00: **Your future career in scientific computing (and this
+  * **15:00: Your future career in scientific computing (and this
     course).** (:doc:`Notes <summer-kickstart/future>`) (Enrico Glerean, TBA)
 
-  * 15:15: **Connecting to the cluster**, hands-on.
+  * **15:15: Connecting to the cluster**, hands-on.
     Get connected in preparation for day 2 (Enrico Glerean)
 
     * Aalto: :doc:`Connecting to Triton tutorial
@@ -167,7 +171,7 @@ resources.  All times are EEST (Helsinki) time.
 
     This day will go over all practical aspects of using the cluster
 
-    * 11:50: Joining time/icebreaker
+    * **11:50: Joining time/icebreaker**
 
     * 12:00: :doc:`/triton/tut/connecting`
 
@@ -208,7 +212,6 @@ resources.  All times are EEST (Helsinki) time.
         `CodeRefinery <https://coderefinery.org/>`__, will talk about how we can all improve 
         the dialogue between supercomputer user community and support staff 
         so that we always remain respectful and try to learn and solve problems together.
-       
 
     * 14:35: :doc:`/triton/tut/interactive`
 
