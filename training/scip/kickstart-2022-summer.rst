@@ -1,13 +1,13 @@
 =====================================================================
-June 2022 / Intro to Scientific Computing (FGCI HPC Summer Kickstart)
+June 2022 / Intro to Scientific Computing /  HPC Summer Kickstart
 =====================================================================
 
 .. warning::
 
    This courses schedule is still under development, below you see the
-   template from last year.  The dates will be 7-9 June 2022 (T-Th).
-   If you have requests for the schedule or would like to offer a talk
-   as part of this course, please get in touch with us.
+   template from last year.  The dates will be 7, 8-9 June 2022 (T,
+   Th-F).  If you have requests for the schedule or would like to
+   offer a talk as part of this course, please get in touch with us.
 
 
 
@@ -162,7 +162,7 @@ resources.  All times are EEST (Helsinki) time.
     * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART+2021>`__
     * Tampere: `Connecting to Narvi <https://narvi-docs.readthedocs.io/narvi/tut/connecting.html>`__
 
-* **Day #2 (Wed 8.jun):** Basic use of a cluster (Richard Darst, Simo
+* **Day #2 (Thu 9.jun):** Basic use of a cluster (Richard Darst, Simo
   Tuomisto)
 
     This day will go over all practical aspects of using the cluster
@@ -225,7 +225,7 @@ resources.  All times are EEST (Helsinki) time.
 
     * 16:00: End
 
-* **Day #3 (Thu 9.jun):** Advanced cluster use (Simo Tuomisto, Richard
+* **Day #3 (Fri 10.jun):** Advanced cluster use (Simo Tuomisto, Richard
   Darst)
 
     * 11:50: Joining time/icebreaker
