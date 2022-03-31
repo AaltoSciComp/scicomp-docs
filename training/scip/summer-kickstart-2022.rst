@@ -4,8 +4,10 @@ June 2022 / Intro to Scientific Computing (FGCI HPC Summer Kickstart)
 
 .. warning::
 
-   This page is still under construction. The dates for June 2022 introduction to HPC
-   will be Tue 6, Wed 7, Thu 8 June 2022. Below you can read last year's page.
+   This courses schedule is still under development, below you see the
+   template from last year.  The dates will be 7-9 June 2022 (T-Th).
+   If you have requests for the schedule or would like to offer a talk
+   as part of this course, please get in touch with us.
 
 
 
