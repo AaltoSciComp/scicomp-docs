@@ -31,7 +31,7 @@ and/or Python, Matlab, HTCondor and many others.
    scip/debugging-2022
    scip/software-design-2022
    scip/matlab-advanced-2022
-   scip/summer-kickstart-2022
+   scip/kickstart-2022-summer
    scip/index
 
 .. toctree::
