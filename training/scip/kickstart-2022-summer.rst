@@ -9,69 +9,79 @@ June 2022 / Intro to Scientific Computing /  HPC Summer Kickstart
    Th-F).  If you have requests for the schedule or would like to
    offer a talk as part of this course, please get in touch with us.
 
+Kickstart is a three × half day course for researchers to get
+started with high-performance computing (HPC) clusters.
+**The first day serves as a guide to your career:** a map to the types of
+resources that are available and skills you may need in your career,
+so that you can be prepared when you
+need more in the future.  This part is especially suitable to new researchers or students trying to
+understand computational/data analysis options available to them.  It
+won't go into anything too deep, but will provide you with a good
+background for your next steps: you will know what resources are
+available and know the next steps to use them.
 
-
-
-
-Part of the :doc:`Scientific Computing in Practice
-</training/scip/index>` lecture series at Aalto University.
-
-**Audience:** All researchers looking for a start to scientific
-computing.  We go over the various options and tools that everyone
-needs to know about, and then go in-depth about using a remote
-computational cluster (though these skills will be useful to
-everyone).  This is specifically designed for our summer workers who are just
-starting their internship, but anyone who is doing computing or data-focused
-work can get something from this course.  Anyone is welcome to listen along
-and learn from some experts.
-
-Most examples use Aalto University resources, but everyone can learn
-something and we are careful to explain local vs general practices.
-
-**About the course:**
-
-Summer Kickstart is a three day courses for researchers to get started
-with the available computational resources at FGCI (Finnish Grid and
-Cloud Infrastructure, basically HPC, high-performance computing, at
-universities) and CSC (the Finnish national computing center).  On the
-day one we start with the basic HPC intro, and some basic intro to
-Linux command line and Git version control, for those who are not yet familiar
-with these tools.
-
-On days two and three we cover one by one steps on how to get started on
-the local computational clusters: learning by doing with lots of
-examples and hands-on exercises.
-
-By the end of the course you get the hints, ready solutions and
+**The second and third days take
+you from being a new user to being competent to run your code at a
+larger scale than you could before.**
+This part is good for any researcher who thinks they may need to
+scale up to larger resources in the next six months, in any field.
+Even if you don't use computing clusters, you will be better prepared
+to understand how computing works on other systems.  If you are a
+student, this is an investment in your skills.  By the end of the course you
+get the hints, ready solutions and
 copy/paste examples on how to find, run and monitor your applications,
-and manage your data. In addition to how to optimize your workflow in
-terms of filesystem traffic, memory usage etc.
+and manage your data.
+
+If you are at Aalto University: the course is obligatory for all new
+Triton users and recommended to all interested in the field.
+
+This course is part of :doc:`Scientific Computing in Practice <index>` lecture series
+at Aalto University, supported by many others outside Aalto, and offered to others as part of `CodeRefinery <https://coderefinery.org>`__
 
 
-University specific information:
 
-* Aalto: this course is obligatory for all new Triton users and
-  recommended to all interested in scientific computing in general.
-  :doc:`Basic reference information is at the Triton page </triton/index>`
+Other universities
+------------------
 
-* `University of Helsinki <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART+2021>`__
 
+**If you are not at Aalto University**, you can follow along with the
+course and will learn many things anyway.  The course is designed to
+be as useful to people outside of Aalto, but many of the examples
+won't directly work on your cluster and you will need to adapt (we
+give hints about this).  Known sites partnering with this course:
+
+* Others in Finland: may register via the Aalto form.
+* Participants from University of Helsinki can follow how to connect
+  to their Kale/Turso cluster by following `their own instructions
+  <https://wiki.helsinki.fi/pages/viewpage.action?pageId=408323613>`__.
+* Participants from University of Oulu: please follow instructions on
+  `how to access the Carpo2 computing cluster <https://ict.oulu.fi/17120/?page&lang=en>`__.
 * Tampere: this course is recommended for all new Narvi users and also all
-  interested in HPC. Most things should work with simply replacing triton 
-  -> narvi. Some differences in configuration are listed in 
-  `Narvi differences <https://narvi-docs.readthedocs.io/narvi/kickstart-diffs.html>`__
+  interested in HPC. Most things should work with simply replacing triton
+  -> narvi. Some differences in configuration are listed in
+  `Narvi differences <https://narvi-docs.readthedocs.io/narvi/kickstart-diffs.html>`__* `CSC <https://csc.fi>`__ (Finland): Participants with `CSC user
+  account <https://docs.csc.fi/accounts/>`__ can try examples also in
+  CSC supercomputers, see the `overview of CSC supercomputers
+  <https://docs.csc.fi/computing/overview/>`__ for details on
+  connecting, etc.
+
+If you want to get your site listed here and/or help out, contact us
+via the `CodeRefinery chat
+<https://coderefinery.github.io/manuals/chat/>`__ (#workshops stream).
+Our :doc:`hints for other sites' support staff
+</triton/tut/required-cluster-setup>` are available.
 
 
 Practical information
 ---------------------
 
-**Time, date:**  Tue 7.6, Wed 8.6, Thu 9.6, 11:50-16:00 EEST
+**Time, date:**  Tue, Thu, Fri 7 and 9-10 June. 11:50-16:00 EEST
 
 **Place:** Online, see below
 
-**Lecturering by:** Aalto Scientific Computing (Science-IT) and others
+**Lecturering by:** Aalto Scientific Computing and others
 
-**Registration:** Not yet open
+**Registration:** Not yet open.  Attending individual sessions is fine.
 
 **Cost:** Free of charge for FGCI consortium members including Aalto
 employees and students.  Livestream is free to everyone.
@@ -86,7 +96,7 @@ How to attend
 This is an online hybrid of MOOC and interactive:
 
 * **Livestream**: anyone may watch at https://twitch.tv/coderefinery,
-  no registration needed!
+  no registration needed!  This is the primary way to watch all sessions.
 
 * **Zoom**: if you register, you will be able to attend a Zoom meeting
   that includes interactive breakout rooms and hands-on help.  We
@@ -102,20 +112,14 @@ This is an online hybrid of MOOC and interactive:
 Schedule
 --------
 
+**All times are EET (Europe/Helsinki time)!**
+
 The daily schedule will be adjusted based on the
 audience; below is the tentative plan.  There will be frequent
 breaks. You will be given time to try and ask, it’s more like an
 informal help session to get you started with the computing
 resources.  All times are EEST (Helsinki) time.
 
-* **Preparatory material**.  Each year the first day has varying
-  topics presented.  We don't repeat these every year, but we strongly
-  recommend that you watch these videos yourself as preparation:
-
-  * `Basic Linux shell and scripting
-    <https://www.youtube.com/watch?v=ESXLbtaxpdI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=3>`__
-  * `Scientific computing workflows
-    <https://www.youtube.com/watch?v=ExFbc5EikU0>`__
 
 .. warning::
 
@@ -147,10 +151,7 @@ resources.  All times are EEST (Helsinki) time.
 
   * 13:45: Break
 
-  * **14:00: Git intro**: why you need version control for any
-    scientific work and how to get started.  We don't go in depth into
-    theory, but talk about the simplest usage by yourself. (Richard
-    Darst, Jarno Rantaharju)
+  * **14:00: Special topic #1**
 
   * 14:45: Break
 
@@ -160,108 +161,54 @@ resources.  All times are EEST (Helsinki) time.
   * **15:15: Connecting to the cluster**, hands-on.
     Get connected in preparation for day 2 (Enrico Glerean)
 
-    * Aalto: :doc:`Connecting to Triton tutorial
-      </triton/tut/connecting>` – if you can ssh to Triton and run
-      ``hostname``, you are ready for tomorrow.
-    * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART+2021>`__
-    * Tampere: `Connecting to Narvi <https://narvi-docs.readthedocs.io/narvi/tut/connecting.html>`__
-
 * **Day #2 (Thu 9.jun):** Basic use of a cluster (Richard Darst, Simo
   Tuomisto)
 
-    This day will go over all practical aspects of using the cluster
+  - **11:50 -- 12:30: What can you do with a computational cluster?**
 
-    * **11:50: Joining time/icebreaker**
+    - :doc:`/triton/tut/intro`
+    - Real example 1: Large-scale computing with array jobs
+    - Real example 2: Large-scale parallel computing
 
-    * 12:00: :doc:`/triton/tut/connecting`
+  - **12:30 -- 15:00: Running your first jobs in the queue**
 
-      * Every site will have its own ways of connecting.  The basic
-	lessons of ``ssh`` is the same for everyone, but it will have
-	a different hostname and possibly different initial steps
-	(jump hosts).
-      * Aalto: (same)
-      * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART+2021>`__
-      * Tampere: `Connecting to Narvi
-	<https://narvi-docs.readthedocs.io/narvi/tut/connecting.html>`__.
-	Note, that you will need SSH keys.
+    - :doc:`/triton/tut/interactive`
+    - :doc:`/triton/tut/serial`
+    - :doc:`/triton/tut/monitoring`
 
-    * 12:30: :doc:`/triton/tut/applications`
+  - **15:00 -- 15:30: Other things you should know about the HPC environment**
 
-      * Each site will be quite different here, so don't worry about
-	making the exercises work outside of Aalto, but think and
-	prepare for what comes next (where we'll explain the differences).
+    - :doc:`/triton/tut/modules`
+    - :doc:`/triton/tut/storage`
+    - :doc:`/triton/tut/remotedata`
 
-    * 12:50: Break
-
-    * 13:00: :doc:`/triton/tut/modules`
-
-    * 13:20: :doc:`/triton/tut/storage`
-
-      * Aalto: (same)
-      * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART+2021>`__
-      * Tampere: `Narvi storage <https://narvi-docs.readthedocs.io/narvi/tut/storage.html>`__
-      * This topic is *very* site-specific.  The general principles
-	will apply everywhere, but the exact paths/servers will vary.
-
-    * 13:50: Break
-
-    * 14:00: Short talk: `Radovan Bast <https://bast.fr/>`__ (UiT The Arctic University of Norway): `Asking for help with supercomputers <https://cicero.xyz/v3/remark/0.14.0/github.com/bast/help-with-supercomputers/main/talk.md/#1>`__ 
-
-      * How should you write support requests so that you get quick 
-        (and useful!) answers? Radovan, one of the founders of 
-        `CodeRefinery <https://coderefinery.org/>`__, will talk about how we can all improve 
-        the dialogue between supercomputer user community and support staff 
-        so that we always remain respectful and try to learn and solve problems together.
-
-    * 14:35: :doc:`/triton/tut/interactive`
-
-      * The basic Slurm concepts are the same across all clusters (at
-	least all those that use Slurm, but that is everyone in
-	Finland).  However, partition names may be different.  You can
-	list partitions at your site using ``sinfo -O partition`` and
-	list nodes at your site with ``sinfo -N``.  How these work
-	will vary depending on your site - definitely read up on this.
-
-    * 14:50: Break
-
-    * 15:00 Continuing with interactive slurm jobs and exercises
-
-    * 16:00: End
+  - **15:30 -- 16:00: Questions to presenters**
 
 * **Day #3 (Fri 10.jun):** Advanced cluster use (Simo Tuomisto, Richard
   Darst)
 
-    * 11:50: Joining time/icebreaker
+  - 11:50: Joining time/icebreaker
 
-    * 12:00 :doc:`/triton/tut/serial`
+  - **11:50 -- 13:00: Simple parallelization with array jobs**
 
-    * :doc:`/triton/tut/monitoring`
+    - :doc:`/triton/tut/array`
 
-    * :doc:`/triton/tut/array`
+  - **13:00 -- 14:00: Using more than one CPU at the same time**
 
-      Array jobs allow you to quickly run many jobs, and are the
-      simplest unit of advanced computing.  We will go over them in detail.
+    - :doc:`/triton/tut/parallel`
 
-    * :doc:`/triton/tut/modules`
+  - **14:00 -- 14:30: Laptops to Lumi**, Jussi Enkovaara, CSC
 
-      * In other sites, you should ``module load fgci-common`` to be
-	able to make the Aalto modules available.  Other specifics,
-	such as ``matlab``, won't directly work.
+    You now know of basics of using a computing cluster.  What if you
+    need more than what a university can provide?  CSC (and other
+    national computing centers) have even more resources, and this is
+    a tour of them. `Slides here <https://github.com/AaltoSciComp/scicomp-docs/raw/master/training/scip/CSC-services_022022.pdf>`__.
 
-    * :doc:`/triton/tut/gpu` (Simo Tuomisto)
+  - **14:40 -- 15:30: Running jobs that can utilize GPU hardware**
 
-      * Aalto: (same as above)
-      * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART+2021>`__
-      * Tampere: `Narvi GPU computing differences
-	<https://narvi-docs.readthedocs.io/narvi/tut/gpu.html>`__
-      * At other sites, you may need to use ``-p gpu`` in addition to ``--gres=gpu``.
+    - :doc:`/triton/tut/gpu`
 
-    * :doc:`/triton/tut/parallel` (Simo Tuomisto)
-
-    * **Parallel computing programming** (Ivan Degtyarenko, Simo
-      Tuomisto)
-
-    * 16:00: End
+  - **15:30 -- 16:00:** Questions to presenters
 
 
 * **Follow-up suggestions:**  While not an official part of this
@@ -288,75 +235,87 @@ resources.  All times are EEST (Helsinki) time.
 
 
 
+Preparation
+-----------
+
+Each year the first day has varying
+topics presented.  We don't repeat these every year, but we strongly
+recommend that you watch these videos yourself as preparation:
+
+  * `Basic Linux shell and scripting
+    <https://www.youtube.com/watch?v=ESXLbtaxpdI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=3>`__
+  * `Scientific computing workflows
+    <https://www.youtube.com/watch?v=ExFbc5EikU0>`__
+
+
+
+
 .. _kickstart-2021-prereq:
 
 Prerequisites
 -------------
 
-Participants will be provided with either access to their university's
-cluster or Triton for running examples.
 
-* You should have an account on your university's HPC cluster:
+**Software installation**
 
-  * Aalto: if you do not yet have access to Triton, :doc:`request an
-    account </triton/accounts>` in advance.
-  * Helsinki: `Account notes at the bottom of this page <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART+2021>`__
-  * Tampere: your cluster will require ssh keys to connect.
-  * Others: Aalto will provide you with a guest Triton account, check
-    back for more information.
-
-* Participants are expected to have a SSH client installed (for
-  options, see :doc:`the Triton connecting tutorial for examples
-  </triton/tut/connecting>`).
-
-* You should install Zoom.  `Hints on installation
-  <https://coderefinery.github.io/installation/zoom/>`__.
-
-* If you aren't familiar with the Linux shell, :doc:`read the crash
-  course </scicomp/shell>`, `watch the video
-  <https://youtu.be/56p6xX0aToI>`__, or watch the relevant preparatory
-  video linked as part of the schedule.
-
-* Try to get connected to your cluster in advance.  We have some time
-  scheduled for this, but you *need* to also try in advance, or else
-  we can't keep up.
-
-  * Aalto: :doc:`connecting to Triton </triton/tut/connecting>`
-  * Helsinki: `general information <https://wiki.helsinki.fi/display/it4sci/HPC+SUMMER+KICKSTART+2021>`__
-  * Tampere: `Connecting to Narvi <https://narvi-docs.readthedocs.io/narvi/tut/connecting.html>`__
+* SSH client to connect to the cluster (+ be able to connect, see next
+  point)
+* `Zoom <https://coderefinery.github.io/installation/zoom/>`__ (if
+  attending breakout rooms)
 
 
-Other preparation
------------------
+**Cluster account and connection verification:**
 
-How to attend this course:
+* Access to your computer cluster.
 
-* Take this seriously.  There is a lot of material and hands-on
-  exercises.  Don't overbook your time, don't skip hands-on parts, and
-  come prepared.
+  * Aalto: if you do not yet have access to Triton, :doc:`request an account
+    </triton/accounts>` in advance.
 
-* Anyone may watch via Livestream, https://twitch.tv/coderefinery .
-  Register anyway to get emails.
+* Then, connect and get it working
 
-* You will be given a Zoom link to join.  Join each session 10 minutes
-  early.
+  * Aalto (and possibly useful to others): try to :doc:`connect to
+    Triton </triton/tut/connecting>` to be ready.  Come to the
+    Wednesday session for help connecting (required).
 
-* Join with a name of "(University) First Last", e.g. "(Aalto) Richard
-  Darst".  This will help us to put people into university-specific
-  breakout rooms.
 
-* There will be a <HackMD.io> document sent to all participants.  This
-  is for communication an asking questions. `Read more about how this
-  works here <https://coderefinery.github.io/manuals/hackmd-mechanics/>`__
+**Background knowledge:** "A HPC cluster is easy to use if you know
+the Linux command line well".  A lot of this course is actually about
+getting comfortable with Linux so that you can use the cluster well.
 
-  * Always write new questions or comments at the bottom of the
-    document.
+* The :doc:`Linux shell crash course </scicomp/shell>` (`video
+  <https://youtu.be/56p6xX0aToI>`__).
 
-  * Moderators will follow the developments, and answer questions and
-    comments.  You may get several answers from different
-    perspectives, even.  Our focus is the bottom, but we will scan the
-    whole document and keep it organized.
 
-  * The final document (excluding personal data and questions about
-    individual circumstances) will be published as the notes at the
-    end.
+**Mental preparation:** Online workshops can be a productive format, but it
+takes some effort to get ready.  Browse these resources:
+
+* `Attending an online workshop
+  <https://coderefinery.github.io/manuals/how-to-attend-online/>`__,
+  good to read in detail (ignore the CodeRefinery-specific parts).
+* `How to use HackMD to take answer questions and hold discussions <https://coderefinery.github.io/manuals/hackmd-mechanics/>`__.
+* `The Zoom mechanics we will use
+  <https://coderefinery.github.io/manuals/zoom-mechanics/>`__, might
+  be useful to browse.
+
+
+
+Community standards
+-------------------
+
+We hope to make a good learning environment for everyone, and expect
+everyone to do their part for this.  If there is anything we can do to
+support that, let us know.
+
+If there is anything wrong, *tell us right away* - if you need to
+contact us privately, you can message the host on Zoom or
+:doc:`contact us outside the course </help/index>`.  This could be as
+simple as "speak louder / text on screen is unreadable / go slower" or
+as complex as "someone is distracting our group by discussing too
+advanced things".
+
+
+
+Material
+--------
+
+See the schedule
