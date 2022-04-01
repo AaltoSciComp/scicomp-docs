@@ -128,38 +128,51 @@ resources.  All times are EEST (Helsinki) time.
 
 * **Day #1 (Tue 7.jun):** Basics and background
 
-  * **11:50: Joining time and pre-discussion**, please join 10
-    minutes early.  (Richard Darst, Enrico Glerean)
+  - **12:00--12:25: Me and HPC or: How I learned to stop worrying
+    and love the computing.**
 
-  * **12:00: Welcome, general introduction** (:doc:`Notes <summer-kickstart/intro>`) (Enrico Glerean and all)
+    Are you at the start of your scientific computing journey?
 
-  * **12:10: HPC crash course: what is behind the front-end** HPC fundamentals:
-    terminology, architectures, interconnects, infrastructure behind, as well as
-    MPI vs shared memory. Continued on day 3. (Ivan Degtyarenko, Simppa Äkäslompolo)
-    (`Slides (.pdf) <https://users.aalto.fi/degtyai1/SCiP2021_kick.HPC_crash_course.2021-06-04.pdf>`__)
+    Would you like to hear tips and tricks from someone who knows
+    what they are doing, but still remembers what it was like to
+    be a newbie?
 
-  * **12:40: Summary and discussion about the videos "Basic linux shell
-    scripting" and "Scientific computing workflows"** (see videos in
-    preparatory material above) (:doc:`Notes <summer-kickstart/video-summary>`) (Richard Darst, Enrico Glerean)
+    In this talk a we will get a personal views of high-performance
+    computing from a final year PhD student and one of our staff
+    scientists.
 
-  * 12:50: Break
+  - **12:25--12:50: Scientific Computing workflows at Aalto**
 
-  * **13:00: Currently available resources at CSC** CSC is the Finnish
-    center for scientific computing, and also has many resources for
-    research. (`Slides <https://kannu.csc.fi/s/3K8q93XSwtSgHEa>`__)
-    (Jussi Enkovaara, CSC).
+    The types of services available at Aalto and many other
+    universities, a summary of what you might actually use in the next
+    six months.
 
-  * 13:45: Break
+    - Material: https://hackmd.io/@AaltoSciComp/SciCompIntro
+    - Material: :doc:`/triton/usage/workflows`
+    - Breakout rooms for other sites (as available).
 
-  * **14:00: Special topic #1**
+  - **13:00--13:25: What is HPC?  An analogy with cooking**
 
-  * 14:45: Break
+  - **13:25--13:50: A tour of scientific computing skills and
+    tools**
 
-  * **15:00: Your future career in scientific computing (and this
-    course).** (:doc:`Notes <summer-kickstart/future>`) (Enrico Glerean, TBA)
+    There are so many tools available for computing.  We'll describe
+    some of most important things and give you links to your next
+    steps.
 
-  * **15:15: Connecting to the cluster**, hands-on.
-    Get connected in preparation for day 2 (Enrico Glerean)
+    - Material: https://hackmd.io/@AaltoSciComp/ToolsOfScientificComputing
+
+  - **14:00--14:50: Special topic #2**
+
+  - **15:00--15:45: Connecting to a HPC cluster as part of**
+    :doc:`winter-kickstart`
+
+    - Required if you are attending the Triton/HPC tutorials the
+      following days.
+    - 15:00--15:20?: Livestream introduction to connecting
+    - 15:??--??: Individual help time in Zoom (links sent to
+      registered participants)
+    - Material: :doc:`/triton/tut/connecting`
 
 * **Day #2 (Thu 9.jun):** Basic use of a cluster (Richard Darst, Simo
   Tuomisto)
@@ -197,7 +210,7 @@ resources.  All times are EEST (Helsinki) time.
 
     - :doc:`/triton/tut/parallel`
 
-  - **14:00 -- 14:30: Laptops to Lumi**, Jussi Enkovaara, CSC
+  - **14:00 -- 14:30: Laptops to Lumi**
 
     You now know of basics of using a computing cluster.  What if you
     need more than what a university can provide?  CSC (and other
@@ -211,29 +224,6 @@ resources.  All times are EEST (Helsinki) time.
   - **15:30 -- 16:00:** Questions to presenters
 
 
-* **Follow-up suggestions:**  While not an official part of this
-  course, we suggest these videos (co-produced by our staff) as a
-  follow-up perspective:
-
-  * Attend a `CodeRefinery workshop <https://coderefinery.org>`__,
-    which teaches more useful tools for scientific software
-    development.
-
-  * Look at `Hands-on Scientific Computing
-    <https://hands-on.coderefinery.org>`__ for an online course to
-    either browse or take for credits.
-
-  * `Cluster Etiquette (in Research Software Hour)
-    <https://www.youtube.com/watch?v=NIW9mqDwnJE&list=PLpLblYHCzJAB6blBBa0O2BEYadVZV3JYf>`__:
-    The Summer Kickstart teaches what you *can* do from this course,
-    but what *should* you do to be a good user.
-  * `How to tame the cluster (in Research Software Hour)
-    <https://www.youtube.com/watch?v=5HN9-MW7Tw8&list=PLpLblYHCzJAB6blBBa0O2BEYadVZV3JYf>`__.
-    This mostly repeats the contents of this course, with a bit more
-    discussion, and working one example from start to parallel.
-
-
-
 
 Preparation
 -----------
@@ -242,15 +232,13 @@ Each year the first day has varying
 topics presented.  We don't repeat these every year, but we strongly
 recommend that you watch these videos yourself as preparation:
 
-  * `Basic Linux shell and scripting
-    <https://www.youtube.com/watch?v=ESXLbtaxpdI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=3>`__
-  * `Scientific computing workflows
-    <https://www.youtube.com/watch?v=ExFbc5EikU0>`__
+* `Basic Linux shell and scripting
+  <https://www.youtube.com/watch?v=ESXLbtaxpdI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=3>`_
+* `Scientific computing workflows
+  <https://www.youtube.com/watch?v=ExFbc5EikU0>`__
+* `When and how to ask for help <https://www.youtube.com/watch?v=5fgXXz3fzdM>`__
+* Git intro
 
-
-
-
-.. _kickstart-2021-prereq:
 
 Prerequisites
 -------------
@@ -296,6 +284,29 @@ takes some effort to get ready.  Browse these resources:
 * `The Zoom mechanics we will use
   <https://coderefinery.github.io/manuals/zoom-mechanics/>`__, might
   be useful to browse.
+
+
+
+Follow-up courses
+-----------------
+
+While not an official part of this course, we suggest these videos
+(co-produced by our staff) as a follow-up perspective:
+
+* Attend a `CodeRefinery workshop <https://coderefinery.org>`__,
+  which teaches more useful tools for scientific software
+  development.
+* Look at `Hands-on Scientific Computing
+  <https://hands-on.coderefinery.org>`__ for an online course to
+  either browse or take for credits.
+* `Cluster Etiquette (in Research Software Hour)
+  <https://www.youtube.com/watch?v=NIW9mqDwnJE&list=PLpLblYHCzJAB6blBBa0O2BEYadVZV3JYf>`__:
+  The Summer Kickstart teaches what you *can* do from this course,
+  but what *should* you do to be a good user.
+* `How to tame the cluster (in Research Software Hour)
+  <https://www.youtube.com/watch?v=5HN9-MW7Tw8&list=PLpLblYHCzJAB6blBBa0O2BEYadVZV3JYf>`__.
+  This mostly repeats the contents of this course, with a bit more
+  discussion, and working one example from start to parallel.
 
 
 
