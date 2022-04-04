@@ -13,10 +13,9 @@ June 2022 / Intro to Scientific Computing /  HPC Summer Kickstart
 
      - If you have an idea for a talk you offer/request,
        `get in touch <https://coderefinery.org/manuals/chat/>`__
-     - If you would like to support others to take this course via a
-       `local breakout room
-       <https://coderefinery.org/manuals/local-breakout-rooms/>`__,
-       read that page and `get in touch
+     - If you would like to organize a `local breakout room
+       <https://coderefinery.org/manuals/local-breakout-rooms/>`__ at
+       your own institution, read that page and `get in touch
        <https://coderefinery.org/manuals/chat/>`__ if we can help you.
        (you can read about :doc:`what is needed to be able to follow
        our examples on your cluster
