@@ -15,11 +15,11 @@ June 2022 / Intro to Scientific Computing /  HPC Summer Kickstart
        `get in touch <https://coderefinery.org/manuals/chat/>`__
      - If you would like to organize a `local breakout room
        <https://coderefinery.org/manuals/local-breakout-rooms/>`__ at
-       your own institution, read that page and `get in touch
-       <https://coderefinery.org/manuals/chat/>`__ if we can help you.
-       (you can read about :doc:`what is needed to be able to follow
-       our examples on your cluster
-       </triton/tut/required-cluster-setup>`.
+       your own institution, read that page and get in touch (`chat
+       best <https://coderefinery.org/manuals/chat/>`__) if we can
+       help you.  (You can read about :doc:`what is needed to be able
+       to follow our examples on your cluster
+       </triton/tut/required-cluster-setup>`.)
 
 
 Kickstart is a three × half day course for researchers to get
