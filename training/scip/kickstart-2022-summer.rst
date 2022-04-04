@@ -36,21 +36,21 @@ If you are at Aalto University: the course is obligatory for all new
 Triton users and recommended to all interested in the field.
 
 This course is part of :doc:`Scientific Computing in Practice <index>` lecture series
-at Aalto University, supported by many others outside Aalto, and offered to others as part of `CodeRefinery <https://coderefinery.org>`__
+at Aalto University, supported by many others outside Aalto, and offered to others as part of `CodeRefinery <https://coderefinery.org>`__.
 
 
 
 Other universities
 ------------------
 
-
 **If you are not at Aalto University**, you can follow along with the
 course and will learn many things anyway.  The course is designed to
-be as useful to people outside of Aalto, but many of the examples
-won't directly work on your cluster and you will need to adapt (we
-give hints about this).  Known sites partnering with this course:
+be as useful to people outside of Aalto, but some of the examples
+won't directly work on your cluster (most will, anyway we will give
+hints about adapting).  Known sites partnering with this course:
 
-* Others in Finland: may register via the Aalto form.
+* Regardless of where you are from, you may register using the
+  registration form below to get emails about the course.
 * Participants from University of Helsinki can follow how to connect
   to their Kale/Turso cluster by following `their own instructions
   <https://wiki.helsinki.fi/pages/viewpage.action?pageId=408323613>`__.
@@ -59,7 +59,9 @@ give hints about this).  Known sites partnering with this course:
 * Tampere: this course is recommended for all new Narvi users and also all
   interested in HPC. Most things should work with simply replacing triton
   -> narvi. Some differences in configuration are listed in
-  `Narvi differences <https://narvi-docs.readthedocs.io/narvi/kickstart-diffs.html>`__* `CSC <https://csc.fi>`__ (Finland): Participants with `CSC user
+  `Narvi differences
+  <https://narvi-docs.readthedocs.io/narvi/kickstart-diffs.html>`__*
+* `CSC <https://csc.fi>`__ (Finland): Participants with `CSC user
   account <https://docs.csc.fi/accounts/>`__ can try examples also in
   CSC supercomputers, see the `overview of CSC supercomputers
   <https://docs.csc.fi/computing/overview/>`__ for details on
@@ -72,14 +74,20 @@ Our :doc:`hints for other sites' support staff
 </triton/tut/required-cluster-setup>` are available.
 
 
+
 Practical information
 ---------------------
 
-**Time, date:**  Tue, Thu, Fri 7 and 9-10 June. 11:50-16:00 EEST
+This is an online hybrid of MOOC and interactive: everyone may attend
+the **livestream** at https://twitch.tv/coderefinery, no registration
+needed!  This is the primary way to watch all sessions.  **Zoom** is
+used for exercise sessions of partner audiences, and **HackMD** is
+used for a continuous Q&A session.
 
-**Place:** Online, see below
+**Time, date:**  7 and 9-10 June (Tue, Thu-Fri). 11:50-16:00 EEST
 
-**Lecturering by:** Aalto Scientific Computing and others
+**Place:** Online via public livestream, Zoom exercise sessions for
+partners.
 
 **Registration:** Not yet open.  Attending individual sessions is fine.
 
@@ -90,38 +98,18 @@ employees and students.  Livestream is free to everyone.
 
 
 
-How to attend
--------------
-
-This is an online hybrid of MOOC and interactive:
-
-* **Livestream**: anyone may watch at https://twitch.tv/coderefinery,
-  no registration needed!  This is the primary way to watch all sessions.
-
-* **Zoom**: if you register, you will be able to attend a Zoom meeting
-  that includes interactive breakout rooms and hands-on help.  We
-  watch the livestream for the main material.
-
-* **HackMD**: instead of chat, this is used for Q&A.  See the
-  `CodeRefinery HackMD manual
-  <https://coderefinery.github.io/manuals/hackmd-mechanics/>`__ for
-  how this works.
-
-
-
 Schedule
 --------
 
-**All times are EET (Europe/Helsinki time)!**
+**All times are EEST (Europe/Helsinki time)!**
 
-The daily schedule will be adjusted based on the
-audience; below is the tentative plan.  There will be frequent
-breaks. You will be given time to try and ask, it’s more like an
-informal help session to get you started with the computing
-resources.  All times are EEST (Helsinki) time.
+The daily schedule will be adjusted based on the audience's questions.
+There will be frequent breaks and continuous questions time going on,
+this is the mass equivalent of an informal help session to get you
+started with the computing resources.
 
 
-.. warning::
+.. admonition:: Subject to change
 
    This is last year's schedule.  It will be updated for this year,
    but the overall times and plan are correct.
@@ -162,7 +150,7 @@ resources.  All times are EEST (Helsinki) time.
 
     - Material: https://hackmd.io/@AaltoSciComp/ToolsOfScientificComputing
 
-  - **14:00--14:50: Special topic #2**
+  - **14:00--14:50: Special topic #2/#3**
 
   - **15:00--15:45: Connecting to a HPC cluster as part of**
     :doc:`winter-kickstart`
@@ -233,16 +221,27 @@ topics presented.  We don't repeat these every year, but we strongly
 recommend that you watch these videos yourself as preparation:
 
 * `Basic Linux shell and scripting
-  <https://www.youtube.com/watch?v=ESXLbtaxpdI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=3>`_
-* `Scientific computing workflows
-  <https://www.youtube.com/watch?v=ExFbc5EikU0>`__
-* `When and how to ask for help <https://www.youtube.com/watch?v=5fgXXz3fzdM>`__
-* Git intro
+  <https://www.youtube.com/watch?v=ESXLbtaxpdI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=3>`__
+  (important) (or read/watch the shorter :doc:`crash course
+  </scicomp/shell>` / `video <https://youtu.be/56p6xX0aToI>`__)
+* `When and how to ask for help
+  <https://www.youtube.com/watch?v=5fgXXz3fzdM>`__ (very useful)
+* `Git intro
+  <https://www.youtube.com/watch?v=r9AT7MqmLrU&list=PLZLVmS9rf3nOaNzGrzPwLtkvFLu35kVF4&index=5>`__ (useful)
+
+**How to attend:** Online workshops can be a productive format, but it
+takes some effort to get ready.  Browse these resources:
+
+* `Attending a livestream workshop
+  <https://coderefinery.github.io/manuals/how-to-attend-stream/>`__,
+  good to read in detail (ignore the CodeRefinery-specific parts).
+* `How to use HackMD to take answer questions and hold discussions <https://coderefinery.github.io/manuals/hackmd-mechanics/>`__.
 
 
-Prerequisites
--------------
 
+
+Technical prerequisites
+-----------------------
 
 **Software installation**
 
@@ -264,26 +263,6 @@ Prerequisites
   * Aalto (and possibly useful to others): try to :doc:`connect to
     Triton </triton/tut/connecting>` to be ready.  Come to the
     Wednesday session for help connecting (required).
-
-
-**Background knowledge:** "A HPC cluster is easy to use if you know
-the Linux command line well".  A lot of this course is actually about
-getting comfortable with Linux so that you can use the cluster well.
-
-* The :doc:`Linux shell crash course </scicomp/shell>` (`video
-  <https://youtu.be/56p6xX0aToI>`__).
-
-
-**Mental preparation:** Online workshops can be a productive format, but it
-takes some effort to get ready.  Browse these resources:
-
-* `Attending an online workshop
-  <https://coderefinery.github.io/manuals/how-to-attend-online/>`__,
-  good to read in detail (ignore the CodeRefinery-specific parts).
-* `How to use HackMD to take answer questions and hold discussions <https://coderefinery.github.io/manuals/hackmd-mechanics/>`__.
-* `The Zoom mechanics we will use
-  <https://coderefinery.github.io/manuals/zoom-mechanics/>`__, might
-  be useful to browse.
 
 
 
