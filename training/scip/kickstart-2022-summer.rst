@@ -2,12 +2,26 @@
 June 2022 / Intro to Scientific Computing /  HPC Summer Kickstart
 =====================================================================
 
-.. warning::
+.. admonition:: Quick Reference
 
-   This courses schedule is still under development, below you see the
-   template from last year.  The dates will be 7, 8-9 June 2022 (T,
-   Th-F).  If you have requests for the schedule or would like to
-   offer a talk as part of this course, please get in touch with us.
+   - Date: 7, 9-10 June 2022, 11:50-16:00 EEST (Helsinki time).
+   - A registration form is not yet available.
+   - This courses schedule is still under development, and will remain
+     so right until the course.  The schedule below is a sample
+     inspired by last year (it will be better this year).
+   - Get involved!
+
+     - If you have an idea for a talk you offer/request,
+       `get in touch <https://coderefinery.org/manuals/chat/>`__
+     - If you would like to support others to take this course via a
+       `local breakout room
+       <https://coderefinery.org/manuals/local-breakout-rooms/>`__,
+       read that page and `get in touch
+       <https://coderefinery.org/manuals/chat/>`__ if we can help you.
+       (you can read about :doc:`what is needed to be able to follow
+       our examples on your cluster
+       </triton/tut/required-cluster-setup>`.
+
 
 Kickstart is a three × half day course for researchers to get
 started with high-performance computing (HPC) clusters.
