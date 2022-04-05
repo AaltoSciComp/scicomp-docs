@@ -35,7 +35,7 @@ Webpage is still under construction. You can check last year page at `Matlab Adv
 
 **Lecturers:** Enrico Glerean, D.Sc., Aalto Scientific Computing
 
-**Registration:** Not yet open
+**Registration:** Please register at https://link.webropol.com/s/matlabA2022
 
 **Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
 
