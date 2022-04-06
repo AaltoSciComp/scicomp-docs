@@ -38,7 +38,7 @@ deleted.  This series has existed since 2016.
   - :doc:`Linux Shell Scripting <shell-scripting>` (March 2021, `materials <https://aaltoscicomp.github.io/linux-shell/>`__)
   - :doc:`Hands-on data anonymization <data-anonymization-workshop>`  (April 2021, videos: `day1 <https://www.youtube.com/watch?v=kJGTLSLiuhI>`__, `day2 <https://www.youtube.com/watch?v=za8SYXX1wco>`__, `day3 <https://www.youtube.com/watch?v=oyToSTB1Jrc>`__, `dat4 <https://www.youtube.com/watch?v=9TE9nUjI8F0>`__)
   - `Code Refinery workshop <https://coderefinery.github.io/2021-05-10-workshop/>`__  (May 2021, `materials <https://coderefinery.github.io/2021-05-10-workshop/>`__, `videos <https://www.youtube.com/playlist?list=PLpLblYHCzJACm0Nz8ZxmdC6F8UuSYwWGQ>`__)
-  - :doc:`Software design for scientific computing <software-design>` (April 2021, `materials <https://github.com/susamerz/CDWAssignment>`__)
+  - :doc:`Software design for scientific computing <software-design-2021>` (April 2021, `materials <https://github.com/susamerz/CDWAssignment>`__)
   - :doc:`Matlab Advanced <matlab-advanced>` (May 2021, `materials <https://hackmd.io/@eglerean/MatlabAdvanced2021>`__)
   - Intro to Scientific Computing :doc:`part1
     <getting-started-with-scientific-computing>`, :doc:`part2 <summer-kickstart-2021>` (June 2021)
