@@ -7,6 +7,7 @@ Scientific computing tips
 
    encryption
    git
+   git-annex
    hybrid-events
    jupyter-pitfalls
    nbscript
