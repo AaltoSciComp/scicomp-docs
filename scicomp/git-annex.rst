@@ -6,7 +6,7 @@ Git-annex for data management
    `Video intro to git-annex, from Research Software Hour <https://www.youtube.com/watch?v=NKCBXOfyoyM&list=PLpLblYHCzJAB6blBBa0O2BEYadVZV3JYf>`__.
 
 
-[git-annex](https://git-annex.branchable.com/) is a extension to git
+`git-annex <https://git-annex.branchable.com/>`__ is a extension to git
 which allows you to manage large files with git, without checking
 their contents in git.  This may seem contradictory, but it
 basically creates a key-value store for large files, whose metadata is
@@ -214,7 +214,7 @@ to somehow define what goes where.  And this should be done
 declaratively.  One of the most basic declarations in the minimum
 number of copies allowed **numcopies**.  Git-annex won't let you drop
 a file from a repository without being very sure that this many copies
-exist in other repositiories.  This setting is synced through the
+exist in other repositories.  This setting is synced through the
 entire repository network::
 
   $ git annex numcopies N
