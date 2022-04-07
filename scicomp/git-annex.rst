@@ -289,6 +289,9 @@ See also
 
 - **dvc**: The level 1/2 use case is practically copied from
   git-annex.  It seems to have a lot less flexibility on high-level
-  data management, client-side encryption.  Most importantly (to the
-  author of this page) it has default-on analytics sent to remote
-  servers, which makes its ethics questionable.
+  data management, client-side encryption. The main point of dvc seems
+  to be track commands that have been run and their inputs/output to
+  make those commands reproducible, which is completely different from
+  git-annex.  Most importantly (to the author of this page) it has
+  default-on analytics sent to remote servers, which makes its ethics
+  questionable.
