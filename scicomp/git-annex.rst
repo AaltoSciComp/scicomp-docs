@@ -1,5 +1,5 @@
-``git-annex`` for data management
-=================================
+Git-annex for data management
+=============================
 
 .. seealso::
 
