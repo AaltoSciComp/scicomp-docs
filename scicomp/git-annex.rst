@@ -6,36 +6,51 @@
    `Video intro to git-annex, from Research Software Hour <https://www.youtube.com/watch?v=NKCBXOfyoyM&list=PLpLblYHCzJAB6blBBa0O2BEYadVZV3JYf>`__.
 
 
-``git-annex`` is a extension to git which allows you to store large
-files with git, but not in git.  This may seem contradictory, but what
-it basically creates a key-value store to store large objects, where
-the metadata (filenames, checksums, etc) is stored in the repository
-and there is a way to distribute the files between repositories.
+[git-annex](https://git-annex.branchable.com/) is a extension to git
+which allows you to manage large files with git, without checking
+their contents in git.  This may seem contradictory, but it
+basically creates a key-value store for large files, whose metadata is
+stored in git and contents distributed using other management commands.
 
-This page will describe only a very limited set of features of
-git-annex.  In particular, it assumes and will let you:
+This page describes only a very limited set of features of git-annex
+and how to use them.  In particular, it tries to break git-annex into
+three "simple" types of tasks.  Git-annex can do almost anything
+related to data management, but that is also its weakness (it doesn't
+"do one thing and do it simply").  By breaking the possibilities down,
+we can hopefully make it manageable.  The three layers are:
 
-- Store a number of files in git-annex, making them read-only (in a
-  way that is much harder to accidentally break) and providing you
-  checksumming for integrity checking.
+- **Level 1: Track metadata in git and lock file contents local-only:**
+  Even on a single computer, one can rigorously track data files to
+  record who produced the data, the history, and the hash of the
+  content, even without recording the contents into git.  On top of
+  this, files can be very safely **locked** to prevent accidental
+  modification of primary copies of the data.  (commands such as ``git
+  annex add``)
 
-- Do partial checkouts of data on other systems.
+- **Level 2: Transfer and synchronize file content between
+  repositories:** Once the metadata is tracked and the git repository
+  is shared, you might want to move the content between repositories.
+  You can easily do this ``git annex get``, ``git annenx copy
+  [--to|--from]``.  You can put any file anywhere and metadata is
+  always synced.
 
-- Allow you to back up certain files to another system by ssh.  There
-  will be support to ensure you have enough copies of the files on
-  secure systems.
+- **Level 3: Manage synchronization across many repositories:** Once
+  you have more than two (or even more than one) repository, keeping
+  track of locations of all files is hard.  Git-annex solves this as
+  well: you can define what content should be in each location and
+  data is automatically distributed.  So, for example, you can insist
+  on all data is always stored in your object storage, all active data
+  is also on the cluster, and user environments have whatever is
+  requested.  Git-annex is very focused on never losing data, it can
+  ensure that one locked copy is always present in some repository.
+  (commands such as ``git annex wanted``, ``git annex numcopies``,
+  ``git annex sync --content``)
 
-- Back up files to a third-party system, such as CSC's archival
-  systems, using special protocols (like S3 or iRODS) with client-side
-  encryption.  This allows secure storage of data anywhere.
+The biggest problems are that it can do everything, which makes
+documentation quite dense, and the documentation is not that great.
 
+.. highlight:: shell-session
 
-**git-annex vs git LFS**  These two git extensions are often
-compared.  git LFS is created by GitHub, and operates on a centralized
-model: there is one server, all data goes there.  This introduces a
-single point of failure, requires a special server capable of holding
-all data, and loses distributed features.  git-annex is a true
-distributed system, and thus better for large scale data management.
 
 
 Background
@@ -48,7 +63,6 @@ that and the metadata is distributed using regular git.  So, all
 clones *know about* all files, but don't necessarily have all data.
 Using ``git annex get``, one can get the raw data from another repo
 and make it available locally.
-
 
 For example, this is a ``ls -l`` of a real git repository which has a
 ``small-file.txt`` and a ``large-file.dat``.  You see that the small
@@ -75,62 +89,206 @@ used unless you request... but give you the idea of what you can do)::
   XX__ large-file.dat
 
 The basic commands to distribute data are ``git annex get``, ``git
-annex drop``, ``git annex sync``, and so on.
-
+annex drop``, ``git annex sync``, and so on.  The basic principles of
+git-annex are data integrity and security: it will try very hard to
+prevent you from losing the only copy of any data.
 
 
 
 Basic setup
 -----------
 
-In this section, you learn how to create a repository that tracks
-large data files and makes them read-only.
-
-
-::
+After you have a git repository, you run ``git annex init`` to set up
+the git-annex metadata.  This is run once in each repository in the
+git-annex network::
 
    $ git init
-   $ git annex init 'triton cluster'
+   $ git annex init 'triton cluster'   # give a name to the current repo
+
+
+
+Level 1: locally locking and tracking data
+------------------------------------------
+
+You can add small files like normal using git (full content in git),
+and large files with ``git annex add``, which replaces the file with a
+symlink to its *locked* content::
 
    $ git add small-file.txt
    $ git annex add large-file.dat
+   $ git commit           # metadata: commit message, author, etc.
+
+Now, your content is safe: it is a symlink to somewhere in
+``.git/annex/objects`` and it is almost impossible for you to
+accidentally lose the data.  If you do want to modify a file, first
+run ``git annex unlock``, and then commit it again when done.  The
+original content is saved until you clean it up (unless you configure
+otherwise).
+
+Structured metadata (arbitrary key/value pairs) can be assigned to any
+files.  Files can be filtered and transferred based on this metadata.
+Structured metadata helps us manage data much better once we get to
+level 3.
+
+So now, with little work, we have a normal git repository that
+provides a history (metadata) to other data files, keeps them safe,
+and can be used like a normal repository.
+
+Relevant commands:
+
+* ``git annex init``
+* ``git annex add``
+* ``git annex unannex``
+* ``git annex unlock``
+* ``git annex lock``
+* ``git annex metadata``
+* ``git annex info``
 
 
 
-Common case: one computer, lock and track data
-----------------------------------------------
+Level 2: moving data
+--------------------
 
-When you have a lot of important data on even one system, git-annex
-can be useful.  It can
+Data in one place isn't enough, so let's do more.  Just like git
+remotes, **git-annex remotes** allow moving data around in a
+*decentralized* manner.
 
-* Lock your data, so that someone can't unintentionally change it, and
-  you verify integrity.
-* Track history of metadata (who added it, when, commit message, etc).
+- Regular git remotes work, if the git-annex shell tools are
+  installed.
+- Git-annex **special remotes**, which essentially serve as key-value
+  stores.  Options include `S3, cloud drives, rsync, and many, many
+  more <https://git-annex.branchable.com/special_remotes/>`__.
 
-Create a repository (above)
+Regular git remotes are set up with ``git annex init`` on the remote
+side.  Special remotes are created with ``git annex initremote``.
+Every remote has a unique name and UUID to manage data locations.
+
+Once the remotes are set up, you can move data around::
+
+  $ git annex get data/input1.dat                # get data from any available source
+  $ git annex copy --to=archive data/input2.dat
+
+You can remove data from a repo, but git-annex will actively connect
+to other remotes to verify that other copies of the file exist before
+dropping it::
+
+  $ git annex drop data/scratch1.txt
+
+Special remotes can be created like such::
+
+  $ git annex initremote NAME type=S3 encryption=shared host=a3s.fi
+
+And enabled in other git repositories to contribute to the network::
+
+  $ git annex enableremote NAME
+
+Note that special remotes are always client-side encrypted (and also
+chunked to deal with huge files on all remotes)
+
+Relevant commands:
+
+* ``git annex get``
+* ``git annex drop``
+* ``git annex move``
+* ``git annex copy``
+* ``git annex list``
+* ``git annex find``
+* ``git annex initremote``
+* ``git annex enableremote``
 
 
-::
 
-   # create repository
+Level 3: syncronizing data
+--------------------------
 
-   git annex add large_file
-   git commit
+Moving data is great, but when data becomes Big, manually managing it
+doesn't work.  Git-annex *really* shines here.  The most basic command
+is ``sync --content``, which will distribute all data everywhere
+reachable (including regular git-tracked files).  Without
+``--content``, it syncs only metadata and regular commits::
 
-Edit a file more::
+  $ git annex sync --content
 
-  git annex unlock large_file
-  # edit large file
+But, all data everywhere doesn't scale to complex situations: we need
+to somehow define what goes where.  And this should be done
+declaratively.  One of the most basic declarations in the minimum
+number of copies allowed **numcopies**.  Git-annex won't let you drop
+a file from a repository without being very sure that this many copies
+exist in other repositiories.  This setting is synced through the
+entire repository network::
+
+  $ git annex numcopies N
+
+The next level is `preferred content
+<https://git-annex.branchable.com/preferred_content/>`__, which
+specifies what files a given repository wants.  ``git annex sync
+--content`` will use these expressions to determine what to send
+where::
+
+   $ git annex wanted . 'include=*.mp3 and (not largerthan=100mb) and exclude=old/*'
+   $ git annex wanted archive 'anything'
+   $ git annex wanted cluster 'present or copies=1'
+
+Repository groups and `standard groups
+<https://git-annex.branchable.com/preferred_content/standard_groups/>`__
+allow you to more easily define rules (the standard groups list lets
+you see the power of these expressions).  Various built-in background
+processes can automatically watch for new files and synchronize the
+contents around.  Repository transfer costs can allow git-annex to
+fetch data from a nearby source, rather than a further one.
+Client-side encryption can allow you to use any available storage with
+confidence.
+
+Relevant commands:
+
+* ``git annex sync [--content]``
+* ``git annex numcopies``
+* ``git annex trust``
+* ``git annex untrust``
+* ``git annex group``
+* ``git annex wanted``
+* ``git annex groupwanted``
+* ``git annex required``
+* ``git annex unused``
+* ``git annex schedule``
+* ``git annex watch``
 
 
 
 
-Common case: syncronizing data
-------------------------------
+..
+   assumes and will let you:
+
+  - Store a number of files in git-annex, making them read-only (in a
+    way that is much harder to accidentally break) and providing you
+    checksumming for integrity checking.
+
+  - Do partial checkouts of data on other systems.
+
+  - Allow you to back up certain files to another system by ssh.  There
+    will be support to ensure you have enough copies of the files on
+    secure systems.
+
+  - Back up files to a third-party system, such as CSC's archival
+    systems, using special protocols (like S3 or iRODS) with client-side
+    encryption.  This allows secure storage of data anywhere.
 
 
 
-I want all my files unlocked
-----------------------------
+See also
+--------
 
-- trade-offs
+- `Video intro to git-annex, from Research Software Hour <https://www.youtube.com/watch?v=NKCBXOfyoyM&list=PLpLblYHCzJAB6blBBa0O2BEYadVZV3JYf>`__.
+
+- **git LFS**  These two git extensions are often
+  compared.  git LFS is created by GitHub, and operates on a centralized
+  model: there is one server, all data goes there.  This introduces a
+  single point of failure, requires a special server capable of holding
+  all data, and loses distributed features.  git-annex is a true
+  distributed system, and thus better for large scale data management.
+
+- **dvc**: The level 1/2 use case is practically copied from
+  git-annex.  It seems to have a lot less flexibility on high-level
+  data management, client-side encryption.  Most importantly (to the
+  author of this page) it has default-on analytics sent to remote
+  servers, which makes its ethics questionable.
