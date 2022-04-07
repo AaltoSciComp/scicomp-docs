@@ -180,7 +180,7 @@ This is placed in ``~/.ssh/config``::
 Now, you can just do ``ssh triton`` or ``rsync
 triton:/m/cs/scratch/some_file .`` directly, by using the ``triton``
 alias.  Note that the Triton rule uses the name ``kosh`` which is
-defined in the first part of the file. The `IdentityFile` parameter is 
+defined in the first part of the file. The ``IdentityFile`` parameter is 
 necessary only if you have a none default key name (like the one indicated).
 
 ..
