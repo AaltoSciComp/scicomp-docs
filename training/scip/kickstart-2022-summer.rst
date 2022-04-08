@@ -73,7 +73,7 @@ hints about adapting).  Known sites partnering with this course:
   interested in HPC. Most things should work with simply replacing triton
   -> narvi. Some differences in configuration are listed in
   `Narvi differences
-  <https://narvi-docs.readthedocs.io/narvi/kickstart-diffs.html>`__*
+  <https://narvi-docs.readthedocs.io/narvi/kickstart-diffs.html>`__
 * `CSC <https://csc.fi>`__ (Finland): Participants with `CSC user
   account <https://docs.csc.fi/accounts/>`__ can try examples also in
   CSC supercomputers, see the `overview of CSC supercomputers
