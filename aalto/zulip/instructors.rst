@@ -203,8 +203,8 @@ suggestions for you, based on what other teachers have learned.
 
 * Create your channels ("streams") before your students join, and make
   the important ones default streams (this is done under "Manage
-  organization"), so that everyone will be subscribed (the "join
-  stream" is not obvious once you get to hundreds of people!)
+  organization"), so that everyone will be subscribed (since peolpe
+  will always forget to join streams).
 
   * If you do create a new default stream later, use the "clone
     subscribers" option to clone from another default stream, so that
@@ -229,8 +229,7 @@ suggestions for you, based on what other teachers have learned.
 * If you want a Q&A forum, make a stream called ``#questions``, or
   smaller streams for specific topics, and direct students there.
 
-  * Note: there is default support for "resolving a topic" with a
-    check mark that is coming in the next Zulip version.
+  * You can click the check mark by a topic to mark it as resolved.
 
   * Remind students to make a *new topic* for each new question.  This
     enables good follow-up via "Recent topics"
@@ -239,15 +238,6 @@ suggestions for you, based on what other teachers have learned.
     edit the message and change the topic (change topic for "this
     message and all later messages").  Then, you keep questions
     organized, findable, and trackable.
-
-  * You can use the "forum bot"
-    (https://github.com/AaltoSciComp/zulip-forum-bot).  This is still
-    a work in progress we have, but the basic idea is that you react
-    to a message with ``check_mark`` (✔), and then the topic gets
-    renamed to include "✔" at the beginning, so you can clearly
-    identify answered and unanswered questions in the "Recent topics"
-    view.  We will add more features as people request.  Please ask
-    our help when deploying bots.
 
   * If you don't want to be answering questions in private message
     (who does?... it leads to duplicate work), make a clear policy on
