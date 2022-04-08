@@ -91,7 +91,8 @@ used unless you request... but give you the idea of what you can do)::
 The basic commands to distribute data are ``git annex get``, ``git
 annex drop``, ``git annex sync``, and so on.  The basic principles of
 git-annex are data integrity and security: it will try very hard to
-prevent you from losing the only copy of any data.
+prevent you from using git/git-annex commands to lose the only copy of
+any data.
 
 
 
@@ -123,12 +124,20 @@ Now, your content is safe: it is a symlink to somewhere in
 accidentally lose the data.  If you do want to modify a file, first
 run ``git annex unlock``, and then commit it again when done.  The
 original content is saved until you clean it up (unless you configure
-otherwise).
+otherwise).  The **largefiles** settings will determine the behavior
+of ``git add``, you can set which files should always be committed to
+the annex (instead of git).
+
+At this point, ``git push|pull`` will only move metadata around (the
+commit message and link to ``.git/objects/AA/BB/HHHHHHHH``, with the
+hash ``HHHHH`` a unique hash of the file contents).  This is what is
+stored in the primary git history itself.
 
 Structured metadata (arbitrary key/value pairs) can be assigned to any
-files.  Files can be filtered and transferred based on this metadata.
-Structured metadata helps us manage data much better once we get to
-level 3.
+files with ``git annex metadata`` (and can be automatically generated
+when files are first added, such as the date of addition).  Files can
+be filtered and transferred based on this metadata.  Structured
+metadata helps us manage data much better once we get to level 3.
 
 So now, with little work, we have a normal git repository that
 provides a history (metadata) to other data files, keeps them safe,
@@ -143,6 +152,7 @@ Relevant commands:
 * ``git annex lock``
 * ``git annex metadata``
 * ``git annex info``
+* Configuration ``annex.largefiles``
 
 
 
@@ -174,16 +184,23 @@ dropping it::
 
   $ git annex drop data/scratch1.txt
 
+These commands more around data in ``.git/annex/objects/`` and update
+tracking information on the special ``git-annex`` branch so that
+git-annex knows which remotes have which files - very important to
+avoid a giant mess!
+
 Special remotes can be created like such::
 
   $ git annex initremote NAME type=S3 encryption=shared host=a3s.fi
 
-And enabled in other git repositories to contribute to the network::
+And enabled in other git repositories to make more links within the
+repository network::
 
   $ git annex enableremote NAME
 
-Note that special remotes are always client-side encrypted (and also
-chunked to deal with huge files on all remotes)
+Note that special remotes are client-side encrypted unless you set
+``encryption=none``, and also chunked to deal with huge files even on
+remotes which do not support them.
 
 Relevant commands:
 
@@ -203,9 +220,10 @@ Level 3: syncronizing data
 
 Moving data is great, but when data becomes Big, manually managing it
 doesn't work.  Git-annex *really* shines here.  The most basic command
-is ``sync --content``, which will distribute all data everywhere
-reachable (including regular git-tracked files).  Without
-``--content``, it syncs only metadata and regular commits::
+is ``sync --content``, which will automatically commit anything new
+(to git or the annex depending on the largefiles rules) and distribute
+all data everywhere reachable (including regular git-tracked files).
+Without ``--content``, it syncs only metadata and regular commits::
 
   $ git annex sync --content
 
@@ -233,11 +251,12 @@ Repository groups and `standard groups
 <https://git-annex.branchable.com/preferred_content/standard_groups/>`__
 allow you to more easily define rules (the standard groups list lets
 you see the power of these expressions).  Various built-in background
-processes can automatically watch for new files and synchronize the
-contents around.  Repository transfer costs can allow git-annex to
-fetch data from a nearby source, rather than a further one.
-Client-side encryption can allow you to use any available storage with
-confidence.
+processes can automatically watch for new files and run ``git annex
+sync --content`` automatically for you, which can make your data
+management a fully automatic process.  Repository transfer costs can
+allow git-annex to fetch data from a nearby source, rather than a
+further one.  Client-side encryption can allow you to use any
+available storage with confidence.
 
 Relevant commands:
 
