@@ -605,3 +605,11 @@ Other issues
   ::
 
       $ scontrol show node cn[01-12]
+
+
+.. collapse:: Can't run graphical applications on nodes and "Warning: untrusted X11 forwarding setup failed: xauth key data not generated"
+
+   Check your ``.bashrc`` and other startup files.  Some modules bring
+   in so many dependencies that it can interfere with standard
+   operating system functions: in this case, SSH setting up X11
+   forwarding for graphical applications.
