@@ -165,11 +165,10 @@ started with the computing resources.
 
   - **14:00--14:50: Special topic #2/#3**
 
-  - **15:00--15:45: Connecting to a HPC cluster as part of**
-    :doc:`winter-kickstart`
+  - **15:00--15:45: Connecting to a HPC cluster**
 
     - Required if you are attending the Triton/HPC tutorials the
-      following days.
+      following days, otherwise the day is done.
     - 15:00--15:20?: Livestream introduction to connecting
     - 15:??--??: Individual help time in Zoom (links sent to
       registered participants)
