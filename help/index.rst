@@ -12,6 +12,46 @@ lists how to ask for help, for different kinds of needs.
    <https://www.youtube.com/watch?v=5fgXXz3fzdM&list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V&index=4>`__
    (`slides <https://cicero.xyz/v3/remark/0.14.0/github.com/bast/help-with-supercomputers/main/talk.md/>`__)
 
+.. list-table::
+   :header-rows: 1
+
+   * * I don't know my exact question, or even if I should have a
+       question
+     * Well-defined task and end goal
+     * Significant or open-ended problem solving
+     * Issues with your own Triton account
+     * General needs at Aalto University, not related to SciComp
+   * * :ref:`SciComp garage <garage>` to discuss, *or ...*
+     * Search :doc:`scicomp.aalto.fi </index>` or the :ref:`Issue
+       tracker <issuetracker>` for answers, *then ...*
+     * Open an issue
+       at the :ref:`issue tracker <issuetracker>` so we can keep track,
+       *and possibly ...*
+     * scicomp@aalto.fi email (account issues only, not general
+       questions), *then if urgent ...*
+     * servicedesk@aalto.fi for IT issues, *or ...*
+   * * :ref:`SciComp chat <chat>` brainstorming
+     * :ref:`SciComp chat <chat>` question (small questions), *or ...*
+     * Drop by :ref:`SciComp garage <garage>` to discuss details, *or ...*
+     * :ref:`SciComp Garage <garage>`, *then if needed ...*
+     * researchdata@aalto.fi for research data related topics.
+   * *
+     * :ref:`SciComp issue tracker <issuetracker>` (big questions),
+       *and/or/then, if needed ...*
+     * We'll create a :doc:`Research Software Engineer project on the topic
+       </rse/index>` (you could also start here)
+     * :ref:`SciComp chat <chat>` (e.g. "is Triton down for others?")
+     *
+   * *
+     * :ref:`SciComp Garage <garage>` co-working
+     *
+     *
+     *
+
+Don't forget that you can and should discuss among your research
+group, too!
+
+
 
 Formulate your question
 -----------------------
@@ -79,6 +119,8 @@ Website
 Search this website for help.  For that matter, also search the
 internet in usual.  This is usually a good place to start, but often
 you need to move on to the next steps.
+
+.. _issuetracker:
 
 Issue tracker
 ~~~~~~~~~~~~~
