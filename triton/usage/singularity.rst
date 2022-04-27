@@ -137,8 +137,17 @@ with plenty of space first)::
   $ singularity build IMAGE_OUTPUT.sif docker://GROUP/IMAGE_NAME:VERSION
 
 This will store the Docker layers in ``$HOME/.singularity/cache/``,
-which will use your home quota and may need to be cleaned up eventually.
+which can result in running out of quota in your home folder.
+In a situation like this, you can then clean the cache with::
 
+  singularity cache clean
+
+You can also use another folder for your singularity cache by setting
+the ``SINGULARITY_CACHEDIR``-variable. For example, you can set it to
+a subfolder of your ``WRKDIR`` with::
+
+  export SINGULARITY_CACHEDIR=$WRKDIR/singularity_cache
+  mkdir $SINGULARITY_CACHEDIR
 
 Create your own image
 ~~~~~~~~~~~~~~~~~~~~~
