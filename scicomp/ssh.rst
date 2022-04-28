@@ -115,7 +115,7 @@ In order to use your key-pair to login to Triton, you first need to securely cop
    
    The following command works, if you are within the Aalto network or if you are connected via vpn. If you log in from outside Aalto, 
    you first need to set up the key for the login server (e.g. kosh). This can be done by replacing ``login_name@triton.aalto.fi`` by  ``login_name@kosh.aalto.fi`` in the following command.
-   If you connect from outside aalto it is usefule to first set up the config file :ref:`as described below<example_config_for_ssh>`. 
+   If you connect from outside aalto it is useful to first set up the config file :ref:`as described below <example_config_for_ssh>`. 
    Once this is done run the following command once with ``kosh`` instead of ``triton.aalto.fi`` followed by the same command with ``triton_via_kosh`` instead of ``triton.aalto.fi`` to 
    transfer your public keys to both the firewall server kosh and triton.
 
