@@ -14,36 +14,58 @@ lists how to ask for help, for different kinds of needs.
 
 .. list-table::
    :header-rows: 1
+   :class: table-heading-centered table-align-top scicomp-table-dense
 
    * * I don't know my exact question, or even if I should have a
        question
      * Well-defined task and end goal
      * Significant or open-ended problem solving
+     *
      * Issues with your own Triton account
      * General needs at Aalto University, not related to SciComp
-   * * :ref:`SciComp garage <garage>` to discuss, *or ...*
+   * * :ref:`SciComp garage <garage>` to discuss,
+
+       *or ...*
      * Search :doc:`scicomp.aalto.fi </index>` or the :ref:`Issue
-       tracker <issuetracker>` for answers, *then ...*
+       tracker <issuetracker>` for answers,
+
+       *then ...*
      * Open an issue
        at the :ref:`issue tracker <issuetracker>` so we can keep track,
+
        *and possibly ...*
+     *
      * scicomp@aalto.fi email (account issues only, not general
-       questions), *then if urgent ...*
-     * servicedesk@aalto.fi for IT issues, *or ...*
+       questions),
+
+       *then if urgent ...*
+     * servicedesk@aalto.fi for IT issues,
+
+       *or ...*
    * * :ref:`SciComp chat <chat>` brainstorming
-     * :ref:`SciComp chat <chat>` question (small questions), *or ...*
-     * Drop by :ref:`SciComp garage <garage>` to discuss details, *or ...*
-     * :ref:`SciComp Garage <garage>`, *then if needed ...*
+     * :ref:`SciComp chat <chat>` question (small questions),
+
+       *or ...*
+     * Drop by :ref:`SciComp garage <garage>` to discuss details,
+
+       *or ...*
+     *
+     * :ref:`SciComp Garage <garage>`,
+
+       *then if needed ...*
      * researchdata@aalto.fi for research data related topics.
    * *
-     * :ref:`SciComp issue tracker <issuetracker>` (big questions),
+     * :ref:`SciComp issue tracker <issuetracker>` post (big questions),
+
        *and/or/then, if needed ...*
      * We'll create a :doc:`Research Software Engineer project on the topic
        </rse/index>` (you could also start here)
+     *
      * :ref:`SciComp chat <chat>` (e.g. "is Triton down for others?")
      *
    * *
      * :ref:`SciComp Garage <garage>` co-working
+     *
      *
      *
      *
