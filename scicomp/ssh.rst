@@ -167,17 +167,21 @@ This is placed in ``~/.ssh/config``::
     Host kosh
         User LOGIN_NAME
         Hostname kosh.aalto.fi
+        IdentityFile id_rsa_triton
 
     # Triton, via kosh
     Host triton
         User LOGIN_NAME
         Hostname triton.aalto.fi
-	ProxyJump kosh
+        ProxyJump kosh
+        IdentityFile id_rsa_triton
+
 
 Now, you can just do ``ssh triton`` or ``rsync
 triton:/m/cs/scratch/some_file .`` directly, by using the ``triton``
 alias.  Note that the Triton rule uses the name ``kosh`` which is
-defined in the first part of the file.
+defined in the first part of the file. The ``IdentityFile`` parameter is 
+necessary only if you have a non-default key name (like the one indicated).
 
 ..
   The purpose of this document is to describe how to use ssh such that
