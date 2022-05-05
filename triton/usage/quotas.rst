@@ -23,6 +23,8 @@ files, see `the page on small files <smallfiles>`.
 
      * ``du -h --max-depth=1 $HOME | sort -h``: Similar, but only list
        down to ``--max-depth`` levels.
+     * ``du --inodes --max-depth=1 $HOME | sort -n``: Similar, but list
+       the number of files in the directories.
 
    * ``rm`` removes a single file, ``rm -r`` removes a whole directory
      tree.  **Warning: on scratch and Linux in general (unless backed
