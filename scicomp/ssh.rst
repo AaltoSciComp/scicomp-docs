@@ -41,10 +41,27 @@ Known servers
 
 You will not receive an authenticity prompt upon first login if the server's *public key* can be found in a list of known hosts. To check whether a server, *Kosh* for example, is known
 
-::
+.. tabs::
 
-    ssh-keygen -f /etc/ssh/ssh_known_hosts -F kosh.aalto.fi
-    ssh-keygen -f ~/.ssh/known_hosts -F kosh.aalto.fi
+  .. group-tab:: Windows
+          
+     ::
+      
+         ssh-keygen -f %USERPROFILE%\.ssh\known_hosts -F kosh.aalto.fi
+        
+  .. group-tab:: Linux
+     
+     ::
+      
+         ssh-keygen -f ~/.ssh/known_hosts -F kosh.aalto.fi
+
+        
+  .. group-tab:: Mac
+  
+     ::
+      
+         ssh-keygen -f ~/.ssh/known_hosts -F kosh.aalto.fi
+
 
 
 SSH keys: better than just passwords
@@ -64,9 +81,28 @@ While there are many options for the key generation program ``ssh-keygen``, here
 
 Here are our recommended input options for key generation.
 
-::
+.. tabs::
 
-    ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_triton -C "triton key for ${USER}"
+  .. group-tab:: Windows
+    
+     ::
+      
+         ssh-keygen -t rsa -b 4096 -f %USERPROFILE%\.ssh\id_rsa_triton -C "triton key for %USERNAME%"     
+         
+          
+  .. group-tab:: Linux
+     
+     ::
+      
+         ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_triton -C "triton key for ${USER}"
+
+        
+  .. group-tab:: Mac
+  
+     ::
+      
+         ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_triton -C "triton key for ${USER}"
+
 
 After running this command in the terminal, you will be prompted to enter a password. **PLEASE** use a strong unique password. Upon confirming the password, you will be presented with the key fingerprint as both a SHA256 hex string as well as randomart image. Your new key pair should be found in the hidden ``~/.ssh`` directory. If you wish to use keys for other servers, you should generate **new** key pairs and use **different** passwords.
 
@@ -75,9 +111,38 @@ Copy public key to server
 
 In order to use your key-pair to login to Triton, you first need to securely copy the desired *public key* to the machine with ``ssh-copy-id``. The script will also add the key to the ``~/.ssh/authorized_keys`` file on the server. You will be prompted to enter your Aalto password to initiate the secure copy of the file to Triton.
 
-::
+.. note:: Connecting from outside of the aalto network
+   
+   The following command works, if you are within the Aalto network or if you are connected via vpn. If you log in from outside Aalto, 
+   you first need to set up the key for the login server (e.g. kosh). This can be done by replacing ``login_name@triton.aalto.fi`` by  ``login_name@kosh.aalto.fi`` in the following command.
+   If you connect from outside aalto it is useful to first set up the config file :ref:`as described below <example_config_for_ssh>`. 
+   Once this is done run the following command once with ``kosh`` instead of ``triton.aalto.fi`` followed by the same command with ``triton_via_kosh`` instead of ``triton.aalto.fi`` to 
+   transfer your public keys to both the firewall server kosh and triton.
 
-    ssh-copy-id -i ~/.ssh/id_rsa_triton.pub login_name@triton.aalto.fi
+
+.. tabs::
+
+  .. group-tab:: Windows
+          
+     ::
+     
+         type %USERPROFILE%\.ssh\id_rsa_triton.pub | ssh login_name@triton.aalto.fi "cat >> .ssh/authorized_keys"      
+       
+	        
+  .. group-tab:: Linux
+     
+     ::
+      
+         ssh-copy-id -i ~/.ssh/id_rsa_triton.pub login_name@triton.aalto.fi
+        
+  .. group-tab:: Mac
+  
+     ::
+      
+         ssh-copy-id -i ~/.ssh/id_rsa_triton.pub login_name@triton.aalto.fi
+    
+
+    
 
 
 Login with SSH key
@@ -85,11 +150,40 @@ Login with SSH key
 
 To avoid having to type the decryption password, the *private key* it needs to be added to the ``ssh-agent`` with the command
 
-::
+.. tabs::
 
-    ssh-add ~/.ssh/id_rsa_triton
+  .. group-tab:: Windows
+        
+    	 You will need administrative permissions to be able to start a ssh-agent on your machine that can store and handle passwords. 
+    	     
+         1. Open *Services* from the start menu
 
-Once the password is added, you can ssh into Triton as normal but will immediately be connected without any further prompts. If you are unsure whether a ``ssh-agent`` process is running on your machine, ``ps -C ssh-agent`` will tell you if there is. To start a new agent, use ``eval $(ssh-agent)``.
+         2. Scroll down to *OpenSSH Authentication Agent* > *double click*
+
+         3. Change the *Startup type* to *Automatic (Delayed Start)*,
+            or anything that is not *Disabled*
+    
+         4. ``ssh-add %USERPROFILE%\.ssh\id_rsa_triton``
+         
+     
+    
+  .. group-tab:: Linux
+     
+     ::
+     
+         ssh-add ~/.ssh/id_rsa_triton
+        
+     If you are unsure whether a ``ssh-agent`` process is running on your machine, ``ps -C ssh-agent`` will tell you if there is. To start a new agent, use ``eval $(ssh-agent)``.
+     
+  .. group-tab:: Mac
+  
+     ::
+     
+         ssh-add --apple-use-keychain ~/.ssh/id_rsa_triton
+    
+     If you are unsure whether a ``ssh-agent`` process is running on your machine, ``ps -C ssh-agent`` will tell you if there is. To start a new agent, use ``eval $(ssh-agent)``.
+
+Once the password is added, you can ssh into Triton as normal but will immediately be connected without any further prompts. 
 
 
 ProxyJump
@@ -117,10 +211,28 @@ Config file: don't type so many options
 
 Remembering the full settings list for the server you are working on each time you log in can be tedious. A ssh ``config`` file allows you to store your preferred settings and map them to much simpler login commands. To create a new user-restricted ``config`` file
 
-::
+.. tabs::
 
-    touch ~/.ssh/config && chmod 600 ~/.ssh/config
+  .. group-tab:: Windows
+    
+     :: 
+     
+         copy NUL %USERPROFILE%\.ssh\config         
+    
+  .. group-tab:: Linux
+     
+    ::
+      
+         touch ~/.ssh/config && chmod 600 ~/.ssh/config
+        
+  .. group-tab:: Mac
+  
+     ::
+      
+         touch ~/.ssh/config && chmod 600 ~/.ssh/config
 
+
+Open the created file to edit it as indicated below.
 
 For a new configuration, you need specify in ``config`` at minimum the
 
@@ -155,13 +267,15 @@ There are optional ssh settings that may be useful for your work, such as::
         # Connect through another server (eg Kosh) if not connected directly to Aalto network
         ProxyJump LOGIN_NAME@kosh.aalto.fi
         # Specify which ssh private key is used for login identification
-        IdentityFile ~/.ssh/id_rsa_triton
+        IdentityFile id_rsa_triton
 
+
+.. _example_config_for_ssh:
 
 Full sample config file
 -----------------------
 
-This is placed in ``~/.ssh/config``::
+The following code is placed in the config file created above (i.e. ``~/.ssh/config`` on mac/linux or ``%USERPROFILE%.ssh/config`` on windows) ::
 
     # general login server
     Host kosh
@@ -170,7 +284,7 @@ This is placed in ``~/.ssh/config``::
         IdentityFile id_rsa_triton
 
     # Triton, via kosh
-    Host triton
+    Host triton_via_kosh
         User LOGIN_NAME
         Hostname triton.aalto.fi
         ProxyJump kosh
