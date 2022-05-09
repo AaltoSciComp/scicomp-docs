@@ -267,7 +267,7 @@ There are optional ssh settings that may be useful for your work, such as::
         # Connect through another server (eg Kosh) if not connected directly to Aalto network
         ProxyJump LOGIN_NAME@kosh.aalto.fi
         # Specify which ssh private key is used for login identification
-        IdentityFile ~/.ssh/id_rsa_triton
+        IdentityFile id_rsa_triton
 
 
 .. _example_config_for_ssh:
@@ -281,23 +281,21 @@ The following code is placed in the config file created above (i.e. ``~/.ssh/con
     Host kosh
         User LOGIN_NAME
         Hostname kosh.aalto.fi
-	IdentityFile ~/.ssh/id_rsa_triton
+        IdentityFile id_rsa_triton
+
     # Triton, via kosh
     Host triton_via_kosh
         User LOGIN_NAME
         Hostname triton.aalto.fi
-	ProxyJump kosh
-	IdentityFile ~/.ssh/id_rsa_triton
-    # Triton, direct from aalto network or via vpn
-    Host triton
-        User LOGIN_NAME
-        Hostname triton.aalto.fi
-	IdentityFile ~/.ssh/id_rsa_triton
-	
+        ProxyJump kosh
+        IdentityFile id_rsa_triton
+
+
 Now, you can just do ``ssh triton`` or ``rsync
 triton:/m/cs/scratch/some_file .`` directly, by using the ``triton``
-alias.  Note that the triton_via_kosh rule uses the name ``kosh`` which is
-defined in the first part of the file.
+alias.  Note that the Triton rule uses the name ``kosh`` which is
+defined in the first part of the file. The ``IdentityFile`` parameter is 
+necessary only if you have a non-default key name (like the one indicated).
 
 ..
   The purpose of this document is to describe how to use ssh such that
