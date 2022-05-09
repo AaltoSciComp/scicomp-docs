@@ -27,8 +27,8 @@ VASP 5.4.4
 ==========
 
 The binaries are compiled with the Intel compiler suite and the MKL
-library, the used toolchain module is ``intel/2019a``. Example
-batch script
+library, the used toolchain module is ``intel-parallel-studio/cluster.2020.0-intelmpi``.
+Example batch script
 
 ::
 
@@ -37,13 +37,9 @@ batch script
     #SBATCH --ntasks=8
     #SBATCH --time=06:00:00
     #SBATCH --mem-per-cpu=1500M
-    ml vasp/5.4.4
-    mpirun vasp_std
-
-Note that contrary to our usual instructions where we strongly
-recommend to use ``srun`` to launch MPI applications, here we must use
-``mpirun`` as the ``srun`` launcher does not work when using Intel
-MPI.
+    module load vasp/5.4.4
+    export I_MPI_PMI_LIBRARY=/usr/lib64/libpmi.so
+    srun vasp_std
 
 
 Potentials
