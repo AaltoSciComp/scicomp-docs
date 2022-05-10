@@ -43,7 +43,7 @@ What kind of issues can we help with:
 
 Notes:
 
-* All garages are open to all people.
+* All garages are open to all researchers working in Aalto.
 
 * You don't have to have a specific question, you can come by just to
   chat, listen, or figure out if you should have a question.
