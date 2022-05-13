@@ -4,7 +4,7 @@ SSH
 
 This walk-through presumes that the user
 
-- is working on a Linux machine or Mac
+- is working on a Linux machine, a mac or a windows machine with openssh installed (default on recent Windows 10+ versions)
 - has ``OpenSSH`` installed: ``ssh -V`` in the terminal to check
 - has an account on the server of interest
 - is connected to the Aalto network
