@@ -99,12 +99,6 @@ Aalto campus area has a specific research environment for 5G connectivity, that 
 On the campus area connectivity is ensured via a 100 Gbit/s fault-tolerant internet connection, 1 – 10 Gbit/s connections to workstations and servers, and extensive wireless coverage. Secure connectivity outside Aalto-campus is also possible by various technologies, e.g. VPN.  
 
 
-Focus on IT solution for remote and hybrid work  
------------------------------------------------
-
-Aalto University provides IT solutions for remote and hybrid working. Secure digital workspaces for remote working are created through virtual and remote desktop infra and cloud tools, as well as online support and secure use of one’s own devices and applications. Aalto campus has specially designed (class)rooms with integrated and automated audiovisual technologies in support of hybrid meetings and teaching.  
-
-
 Research environment: research software engineers
 -------------------------------------------------
 
@@ -150,8 +144,8 @@ this grant.  During this period, one of the Aalto research software engineers jo
 project as a researcher, equal to all other project employees.
 
 
-Other computing solutions
-=========================
+Other computing and IT solutions
+================================
 
 Please note that the boilerplate texts for the computing solutions listed below are not 
 about the Aalto Triton HPC cluster. Please familiarize with the `Aalto cloud computing services <https://www.aalto.fi/en/services/cloud-computing>`__ and `CSC services <https://research.csc.fi/service-catalog>`__ before you include them in your grant application. Please also refer to their terms
@@ -173,6 +167,11 @@ Aalto researchers have access to services from the Finnish IT Center for Science
 
 CSC’s data center in Kajaani, Finland houses the pan-European pre-exascale supercomputer `LUMI <https://www.lumi-supercomputer.eu/>`__. This is one of the most eco-efficient data centers in the world. LUMI is using 100% hydro powered energy. The waste heat of LUMI will produce 20 percent of the district heat of the area and reduce the city’s annual carbon footprint by 12,400 tons. Further info at https://www.lumi-supercomputer.eu/sustainable-future/.  
 
+
+Focus on IT solution for remote and hybrid work  
+-----------------------------------------------
+
+Aalto University provides IT solutions for remote and hybrid working. Secure digital workspaces for remote working are created through virtual and remote desktop infra and cloud tools, as well as online support and secure use of one’s own devices and applications. Aalto campus has specially designed (class)rooms with integrated and automated audiovisual technologies in support of hybrid meetings and teaching. 
 
 
 See also
