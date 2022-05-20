@@ -214,11 +214,12 @@ you do so mostly independently but with the help of a great team?*
 
 
 
-.. admonition:: More detailed list of what we do
+.. admonition:: More detailed list of relevant skills
    :class: dropdown
 
-   This was an old long list of relevant skills.  This is inspiration,
-   not a list of things you must know.
+   This was an older long list of relevant skills.  This is
+   inspiration, not a list of things you must know.  No one knows all
+   of these when they start off.
 
    General tech skills: Our broad background on which we build:
 
