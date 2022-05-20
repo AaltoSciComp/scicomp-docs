@@ -15,6 +15,8 @@ For RSE candidates and community
      <community>` (mailing list).  This will get announcements of
      both our jobs, events, and other research groups looking to hire
      a RSE skillset.
+   * If you are in Nordics/Baltics/etc, consider joining `Nordic-RSE
+     <https://nordic-rse.org>`__ or participating in its events.
 
 This page guides people into the interesting world of
 research software engineering: providing a view to what this career is
