@@ -5,7 +5,7 @@ June 2022 / Intro to Scientific Computing /  HPC Summer Kickstart
 .. admonition:: Quick Reference
 
    - Date: 7, 9-10 June 2022, 11:50-16:00 EEST (Helsinki time).
-   - A registration form is not yet available.
+   - Please register here: https://link.webropol.com/s/scicompintrosummer2022.
    - This courses schedule is still under development, and will remain
      so right until the course.  The schedule below is a sample
      inspired by last year (it will be better this year).
@@ -102,7 +102,7 @@ used for a continuous Q&A session.
 **Place:** Online via public livestream, Zoom exercise sessions for
 partners.
 
-**Registration:** Not yet open.  Attending individual sessions is fine.
+**Registration:** Please register at this link https://link.webropol.com/s/scicompintrosummer2022. Attending individual sessions is fine.
 
 **Cost:** Free of charge for FGCI consortium members including Aalto
 employees and students.  Livestream is free to everyone.
