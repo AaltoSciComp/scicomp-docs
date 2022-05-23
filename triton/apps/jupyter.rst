@@ -259,6 +259,35 @@ modules you need::
   # Use envkernel to re-write, loading the R modules.
   envkernel lmod --user --kernel-template=NAME --name=NAME r-irkernel/1.1-python3
 
+
+Installing a different R version as a kernel
+-------------------------------------------
+
+You will need to create your own conda environment with all packages that are necessary
+to deploy the environment as a kernel.
+
+  # Load jupyterhub/live, and miniconda before creating your environment
+  module load miniconda
+
+Create your conda environment, selecting a NAME for the environment.:
+
+  # his will use the latest R version on conda-forge. If you need a specific version you can specify it
+  # as r-essentials=X.X.X, where X.X.X is your required R version number
+  conda env create -n NAME -c conda-forge r-essentials r-irkernel 
+
+The next steps are the same as building a Kernel, except for activating the environment instead of 
+loading the r-irkernel module, since this module depends on the R version.
+
+  # Use Rscript to install jupyter kernel, you need the environment for this.
+  source activate NAME
+  Rscript -e "library(IRkernel); IRkernel::installspec(name='NAME', displayname='R 3.6.1')"
+  conda deactivate NAME
+
+  # Use envkernel to add the kernel to your jupyter-hub
+  module load jupyterhub/live
+  envkernel lmod --user --kernel-template=NAME --name=NAME r-irkernel/1.1-python3
+
+
 Install your own kernels from other Python modules
 --------------------------------------------------
 
