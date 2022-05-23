@@ -277,7 +277,7 @@ is to use the existing R installations on Triton.
            # Load jupyterhub/live, and miniconda before creating your environment
            module load miniconda
 
-        Create your conda environment, selecting a `NAME` for the environment.::
+        Create your conda environment, selecting a ``NAME`` for the environment.::
 
            # his will use the latest R version on conda-forge. If you need a specific version you can specify it
            # as r-essentials=X.X.X, where X.X.X is your required R version number
@@ -285,7 +285,7 @@ is to use the existing R installations on Triton.
 
         The next steps are the same as building a Kernel, except for activating the environment instead of 
         loading the r-irkernel module, since this module depends on the R version.
-        the `displayname` will be what will be displayed on jupyter ::
+        the ``displayname`` will be what will be displayed on jupyter ::
         
           # Use Rscript to install jupyter kernel, you need the environment for this.
           module load jupyterhub/live
@@ -312,10 +312,10 @@ is to use the existing R installations on Triton.
          install.packages('IRkernel') 
          # exit R again
 
-       Create the installation specs using Rscript and IRKernel. Select a `NAME` for the environment specification
+       Create the installation specs using Rscript and IRKernel. Select a ``NAME`` for the environment specification
        that can be used to install it. The
-       Next install the jupyter kernel. Here you need to select the `NAME` given before. 
-       The NAME is what is will be referred to for installation, while DISPLAYNAME will be displayed in jupyter::
+       Next install the jupyter kernel. Here you need to select the ``NAME`` given before. 
+       The NAME is what is will be referred to for installation, while ``DISPLAYNAME`` will be displayed in jupyter::
 
          # Use Rscript to install jupyter kernel, you need the environment for this.
          module load jupyterhub/live
