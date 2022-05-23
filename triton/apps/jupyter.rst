@@ -261,7 +261,7 @@ modules you need::
 
 
 Installing a different R version as a kernel
--------------------------------------------
+--------------------------------------------
 
 There are two ways to install a different R version kernel for jupyter. One relies on you building your own conda environment. 
 The disadvantage is that you will need to create a kernel, the advantage is that you can add additional packages. The other option
