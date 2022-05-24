@@ -274,20 +274,22 @@ is to use the existing R installations on Triton.
         You will need to create your own conda environment with all packages that are necessary
         to deploy the environment as a kernel.::
 
-           # Load jupyterhub/live, and miniconda before creating your environment
+           # Load and miniconda before creating your environment - this provides mamba that is used to create your environment
            module load miniconda
 
         Create your conda environment, selecting a ``NAME`` for the environment.::
 
-           # his will use the latest R version on conda-forge. If you need a specific version you can specify it
+           # This will use the latest R version on conda-forge. If you need a specific version you can specify it
            # as r-essentials=X.X.X, where X.X.X is your required R version number
            mamba create -n NAME -c conda-forge r-essentials r-irkernel 
+           # If Mamba doesn't work you can also replace it with conda, but usually mamba is a lot faster
 
         The next steps are the same as building a Kernel, except for activating the environment instead of 
         loading the r-irkernel module, since this module depends on the R version.
         the ``displayname`` will be what will be displayed on jupyter ::
         
           # Use Rscript to install jupyter kernel, you need the environment for this.
+          # You need the jupyterhub/live module to point R at the right place for jupyter
           module load jupyterhub/live
           source activate NAME
           Rscript -e "library(IRkernel); IRkernel::installspec(name='NAME', displayname='YOUR R Version')"
@@ -302,13 +304,14 @@ is to use the existing R installations on Triton.
        to deploy the environment as a kernel.::
 
          module spider r
-         module load r/the_version_you_want
+         # Select one of the displayed R versions and load it with the following line
+         module load r/THE_VERSION_YOU_WANT
 
        Start R and install the IRkernel package. ::
 
          # start R
          R
-         # In R install the IRkernel package
+         # In R install the IRkernel package (to your home directory)
          install.packages('IRkernel') 
          # exit R again
 
@@ -317,12 +320,12 @@ is to use the existing R installations on Triton.
        Next install the jupyter kernel. Here you need to select the ``NAME`` given before. 
        The NAME is what is will be referred to for installation, while ``DISPLAYNAME`` will be displayed in jupyter::
 
-         # Use Rscript to install jupyter kernel, you need the environment for this.
+         # Use Rscript to install the jupyter kernel. The jupyterhub/live module is required to point R at the right place for jupyter
          module load jupyterhub/live
          Rscript -e "library(IRkernel); IRkernel::installspec(name='NAME', displayname='DISPLAYNAME')"
          # For R versions before 4, you need to install the kernel. After version 4 IRkernel automatically installs it.
          envkernel lmod --user --kernel-template=NAME --name=IMAGENAME YOURRMODULE
-         # YOURRMODULE could e.g. be r/3.6.3-python3
+         # YOURRMODULE should match the module you loaded above (THE_VERSION_YOU_WANT above)
 
 .. note:: Installing R packages for jupyter
 
