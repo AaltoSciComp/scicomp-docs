@@ -206,8 +206,10 @@ killing things unnecessarily.
 
 Software and kernels
 ====================
-We have various kernels automatically installed (these instructions
-should apply to both JupyterHub and ``sjupyter``):
+A **Jupyter Kernel** is the runtime which actually executes the code
+in the notebook (and it is separate from JupyterHub/Jupyter
+itself). We have various kernels automatically installed (these
+instructions should apply to both JupyterHub and ``sjupyter``):
 
 * Python (2 and 3 via some recent anaconda modules + a few
   more Python modules.)
@@ -223,6 +225,27 @@ should apply to both JupyterHub and ``sjupyter``):
 
 Since these are the normal Triton modules, you can submit installation
 requests for software in these so that it is automatically available.
+
+.. admonition:: What's a kernel?  Where are they?
+   :class: dropdown
+
+   As stated at the start of this section, the kernel is what actually
+   runs the code.  An example of a kernel command line is ``'python -m
+   ipykernel_launcher -f{connection_file}``.  What ``python`` starts?:
+   that depends on the environment or adding an absolute path.
+
+   You can list your installed kernels with ``jupyter kernelspec
+   list`` (to ensure the list is the same as jupyter.triton sees,
+   ``module load jupyterhub/live first``).  Look in these directories,
+   at ``kernel.json``, to see just what it does.
+
+   The program `envkernel <https://github.com/NordicHPC/envkernel>`__
+   can serve as a wrapper to a) modify kernel.json files and b) adjust
+   the environment (e.g. loading modules) at runtime, which can be
+   hard to fully emulate by statically defining environment variables
+   in kernel.json.
+
+
 
 Installing kernels from virtualenvs or Anaconda environments
 ------------------------------------------------------------
