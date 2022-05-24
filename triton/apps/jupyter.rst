@@ -289,7 +289,8 @@ is to use the existing R installations on Triton.
         the ``displayname`` will be what will be displayed on jupyter ::
         
           # Use Rscript to install jupyter kernel, you need the environment for this.
-          # You need the jupyterhub/live module to point R at the right place for jupyter
+          # You need the Python `jupyter` command so R can know the right place to
+          # install the kernel (provided by jupyterhub/live)
           module load jupyterhub/live
           source activate NAME
           Rscript -e "library(IRkernel); IRkernel::installspec(name='NAME', displayname='YOUR R Version')"
