@@ -30,7 +30,7 @@ cores. The System also contains 150 NVIDIA cards for
 GPU computing and over 5 PB of fast storage capacity suitable for Big
 Data needs. All parts are connected with a fast Infiniband network to
 support parallel computing and fast data access. To keep the resources
-competitive Aalto Science IT annually upgrades the system based on the needs of
+competitive Aalto Science-IT annually upgrades the system based on the needs of
 researchers.
 
 All resources are integrated with the national resources allowing easy
@@ -39,7 +39,7 @@ e.g. University dedicated OpenStack based cloud resources and access
 to thousands of servers via the national computing grid. Furthermore
 Aalto Science-IT provides much preconfigured software and hands on support to make
 the usage for researchers as effective as possible. On the personnel
-side Science-IT has five permanent Ph.D. level staff to keep the system
+side Science-IT has six permanent Ph.D. level staff to keep the system
 running and providing teaching and consultation for researchers.
 
 
@@ -145,7 +145,7 @@ project as a researcher, equal to all other project employees.
 
 
 Other computing and IT solutions
-================================
+--------------------------------
 
 Please note that the boilerplate texts for the computing solutions listed below are not 
 about the Aalto Triton HPC cluster. Please familiarize with the `Aalto cloud computing services <https://www.aalto.fi/en/services/cloud-computing>`__ and `CSC services <https://research.csc.fi/service-catalog>`__ before you include them in your grant application. Please also refer to their terms
@@ -153,7 +153,7 @@ of service and pricing if you need to mention these in your  application.
 
 
 Focus on cloud computing  
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Aalto University has agreements with major public cloud services (e.g. Microsoft Azure, Google Cloud Platform (coming summer 2022) and Amazon Web Services (coming end of 2022)), and the platforms have been integrated into the Aalto digital environment in a secure and well-governed manner. The cloud provides scalable, collaborative, and integrated computing tooling with software for rapid iteration on data using for example machine learning or access to ready-made AI API’s for [YOUR TOPIC / IMAGE DETECTION / TEXT ANALYSES].   
 
@@ -161,7 +161,7 @@ Aalto has private and secure network connectivity between on-premises environmen
 
 
 Focus on CSC 
-------------
+~~~~~~~~~~~~
 
 Aalto researchers have access to services from the Finnish IT Center for Science (CSC), a government owned center which provides internationally high-quality ICT expert services. These services include multiple use-case specific components – such as containers, databases, HPC and machine-learning utilities - for storing and processing data. The CSC and Aalto services are connected through a high-speed Funet network (Finnish University and Research Network). The CSC coordinates the Finnish Grid and Cloud Infrastructure and has the largest known clusters in Finland.   
 
@@ -169,7 +169,7 @@ CSC’s data center in Kajaani, Finland houses the pan-European pre-exascale sup
 
 
 Focus on IT solution for remote and hybrid work  
------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Aalto University provides IT solutions for remote and hybrid working. Secure digital workspaces for remote working are created through virtual and remote desktop infra and cloud tools, as well as online support and secure use of one’s own devices and applications. Aalto campus has specially designed (class)rooms with integrated and automated audiovisual technologies in support of hybrid meetings and teaching. 
 
