@@ -129,41 +129,40 @@ started with the computing resources.
 
 * **Day #1 (Tue 7.jun):** Basics and background
 
-  - **12:00--12:25: Me and HPC or: How I learned to stop worrying
-    and love the computing.**
+  - **12:00--12:25: From data storage to your science**
 
-    Are you at the start of your scientific computing journey?
+    Data is how most computational work starts, whether it is
+    externally collected, simulation code, or generated.  We discuss
+    how data storage choices lead to computational workflows.
 
-    Would you like to hear tips and tricks from someone who knows
-    what they are doing, but still remembers what it was like to
-    be a newbie?
+  - **12:25--12:50: What is parallel computing?  An analogy with
+    cooking**
 
-    In this talk a we will get a personal views of high-performance
-    computing from a final year PhD student and one of our staff
-    scientists.
+    In workshops such as this, you will hear lots about parallel
+    computing and how you need it, but rarely get a understandable
+    introduction to how they relate and which are right for you.
+    Here, we give a understandable metaphor with preparing large
+    meals.
 
-  - **12:25--12:50: Scientific Computing workflows at Aalto**
+  - **13:00--13:50: Example of a full workflows**
 
-    The types of services available at Aalto and many other
-    universities, a summary of what you might actually use in the next
-    six months.
+    Yeah, we are telling you all the pieces, but how do people
+    *actually* fit them all together?  We invite some people to
+    demonstrate their full workflow of how they think about their science.
 
-    - Material: https://hackmd.io/@AaltoSciComp/SciCompIntro
-    - Material: :doc:`/triton/usage/workflows`
-    - Breakout rooms for other sites (as available).
+  - **14:00--14:25: Environments in Python and R (or: how you actually
+    install stuff on a cluster)**
 
-  - **13:00--13:25: What is HPC?  An analogy with cooking**
+    Software installation is one of the questions we most often get.
+    Usually, on clusters, this happens via *environments*, which
+    allows you to install specific software per-project.  We'll give a
+    demonstration of how these work in Python and R.
 
-  - **13:25--13:50: A tour of scientific computing skills and
-    tools**
+  - **14:25--14:50: Behind the scenes: the humans of scientific computing**
 
-    There are so many tools available for computing.  We'll describe
-    some of most important things and give you links to your next
-    steps.
-
-    - Material: https://hackmd.io/@AaltoSciComp/ToolsOfScientificComputing
-
-  - **14:00--14:50: Special topic #2/#3**
+    Who are we that provide these services.  What makes it such a
+    fascinating career?  Learn about what goes on behind the scenes
+    and how you could join us.
 
   - **15:00--15:45: Connecting to a HPC cluster**
 
@@ -228,9 +227,9 @@ started with the computing resources.
 Preparation
 -----------
 
-Each year the first day has varying
-topics presented.  We don't repeat these every year, but we strongly
-recommend that you watch these videos yourself as preparation:
+Each year the first day has varying topics presented.  We don't repeat
+these every year, but we strongly recommend that you watch some of
+these videos yourself as preparation:
 
 * `Basic Linux shell and scripting
   <https://www.youtube.com/watch?v=ESXLbtaxpdI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=3>`__
@@ -240,6 +239,14 @@ recommend that you watch these videos yourself as preparation:
   <https://www.youtube.com/watch?v=5fgXXz3fzdM>`__ (very useful)
 * `Git intro
   <https://www.youtube.com/watch?v=r9AT7MqmLrU&list=PLZLVmS9rf3nOaNzGrzPwLtkvFLu35kVF4&index=5>`__ (useful)
+* Scientific Computing workflows at Aalto - concepts apply to other
+  sites, too (optional): `lecture notes
+  <https://hackmd.io/@AaltoSciComp/SciCompIntro>`__ and `video
+  <https://www.youtube.com/watch?v=Oz37XAzWFhk>`__, :doc:`reference
+  material </triton/usage/workflows>`.
+* Tools of scientific computing (optional): `lecture notes
+  <https://hackmd.io/@AaltoSciComp/ToolsOfScientificComputing>`__ and
+  `video <https://www.youtube.com/watch?v=kXYfxXEb0Go>`__
 
 **How to attend:** Online workshops can be a productive format, but it
 takes some effort to get ready.  Browse these resources:
