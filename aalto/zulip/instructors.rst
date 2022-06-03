@@ -32,10 +32,9 @@ Get started / request Zulip
 
 .. note::
 
-    Request a chat instance at https://webropol.com/s/zuliprequest
-
-    We are taking in chat instance requests for 2022 spring courses. Note that the chat
-    instances will be removed after the course has ended.
+    During 2022 summer, we are changing the support system and the
+    request form is closed for the time being.  Contact us if you need
+    something created in the meantime and we'll see what we can do.
 
 .. note::
 
