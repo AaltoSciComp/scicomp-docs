@@ -200,20 +200,18 @@ started with the computing resources.
     - :doc:`/triton/tut/storage`
     - :doc:`/triton/tut/remotedata`
 
-  - **15:30 -- 16:00: Questions to presenters**
+  - **15:30 -- 16:00: Q&A**
 
 * **Day #3 (Fri 10.jun):** Advanced cluster use *(Simo Tuomisto, Richard
   Darst)*
 
   - 11:50: Joining time/icebreaker
 
-  - **11:50 -- 13:00: Simple parallelization with array jobs**
+  - **11:50 -- 13:00: Simple parallelization with array jobs:**
+    :doc:`/triton/tut/array`
 
-    - :doc:`/triton/tut/array`
-
-  - **13:00 -- 14:00: Using more than one CPU at the same time**
-
-    - :doc:`/triton/tut/parallel`
+  - **13:00 -- 14:00: Using more than one CPU at the same time:**
+    :doc:`/triton/tut/parallel`
 
   - **14:00 -- 14:30: Laptops to Lumi**
 
@@ -222,11 +220,9 @@ started with the computing resources.
     national computing centers) have even more resources, and this is
     a tour of them. `Slides here <https://github.com/AaltoSciComp/scicomp-docs/raw/master/training/scip/CSC-services_022022.pdf>`__.
 
-  - **14:40 -- 15:30: Running jobs that can utilize GPU hardware**
+  - **14:40 -- 15:30: Running jobs that can utilize GPU hardware:** :doc:`/triton/tut/gpu`
 
-    - :doc:`/triton/tut/gpu`
-
-  - **15:30 -- 16:00:** Questions to presenters
+  - **15:30 -- 16:00: Q&A**
 
 
 
