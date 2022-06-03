@@ -128,14 +128,17 @@ started with the computing resources.
 
 * **Day #1 (Tue 7.jun):** Basics and background
 
-  - **12:00--12:25: From data storage to your science**
+  * **12:00--12:25: From data storage to your science** *Enrico
+    Glerean and Simo Tuomisto*
 
     Data is how most computational work starts, whether it is
-    externally collected, simulation code, or generated.  We discuss
-    how data storage choices lead to computational workflows.
+    externally collected, simulation code, or generated.  And these
+    days, you can work on data even remotely, and these workflows
+    aren't obvious.  We discuss how data storage choices lead to
+    computational workflows.
 
-  - **12:25--12:50: What is parallel computing?  An analogy with
-    cooking**
+  * **12:25--12:50: What is parallel computing?  An analogy with
+    cooking** *Enrico Glerean and Thomas Pfau*
 
     In workshops such as this, you will hear lots about parallel
     computing and how you need it, but rarely get a understandable
@@ -143,27 +146,31 @@ started with the computing resources.
     Here, we give a understandable metaphor with preparing large
     meals.
 
-  - **13:00--13:50: Example of a full workflows**
-
-    Yeah, we are telling you all the pieces, but how do people
-    *actually* fit them all together?  We invite some people to
-    demonstrate their full workflow of how they think about their science.
-
-  - **14:00--14:25: Environments in Python and R (or: how you actually
-    install stuff on a cluster)**
-
-    Software installation is one of the questions we most often get.
-    Usually, on clusters, this happens via *environments*, which
-    allows you to install specific software per-project.  We'll give a
-    demonstration of how these work in Python and R.
-
-  - **14:25--14:50: Behind the scenes: the humans of scientific computing**
+  * **13:00--13:25: Behind the scenes: the humans of scientific
+    computing** *Richard Darst and ???*
 
     Who are we that provide these services.  What makes it such a
     fascinating career?  Learn about what goes on behind the scenes
     and how you could join us.
 
-  - **15:00--15:45: Connecting to a HPC cluster**
+  * **13:25--13:50: How you actually install software on the cluster:
+    an example case (Conda and Python)** *Simo Tuomisto and ???*
+
+    Software installation is one of the questions we most often get.
+    Usually, on clusters, this happens via *environments*, which
+    allows you to install specific software per-project.  We'll give a
+    demonstration of how these work in Python.
+
+  - **14:00--14:50: Secure Shell (ssh) tips and tricks** *Thomas Pfau
+    and Enrico Glerean*
+
+    Yeah, we are telling you all the pieces, but how do people
+    *actually* fit them all together?  We invite some people to
+    demonstrate their full workflow of how they think about their
+    science. Materials: :doc:`/scicomp/ssh`
+
+  - **15:00--15:45: Connecting to a HPC cluster** *Thomas Pfau and
+    Simo Tuomisto*
 
     - Required if you are attending the Triton/HPC tutorials the
       following days, otherwise the day is done.
@@ -172,8 +179,8 @@ started with the computing resources.
       registered participants)
     - Material: :doc:`/triton/tut/connecting`
 
-* **Day #2 (Thu 9.jun):** Basic use of a cluster (Richard Darst, Simo
-  Tuomisto)
+* **Day #2 (Thu 9.jun):** Basic use of a cluster *(Richard Darst, Simo
+  Tuomisto)*
 
   - **11:50 -- 12:30: What can you do with a computational cluster?**
 
@@ -195,8 +202,8 @@ started with the computing resources.
 
   - **15:30 -- 16:00: Questions to presenters**
 
-* **Day #3 (Fri 10.jun):** Advanced cluster use (Simo Tuomisto, Richard
-  Darst)
+* **Day #3 (Fri 10.jun):** Advanced cluster use *(Simo Tuomisto, Richard
+  Darst)*
 
   - 11:50: Joining time/icebreaker
 
