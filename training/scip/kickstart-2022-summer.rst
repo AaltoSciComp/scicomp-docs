@@ -226,26 +226,13 @@ started with the computing resources.
 Preparation
 -----------
 
-Each year the first day has varying topics presented.  We don't repeat
-these every year, but we strongly recommend that you watch some of
-these videos yourself as preparation:
+We strongly recommend you are familiar with the Linux command line.
+Browsing the following material is sufficient:
 
 * `Basic Linux shell and scripting
   <https://www.youtube.com/watch?v=ESXLbtaxpdI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=3>`__
   (important) (or read/watch the shorter :doc:`crash course
   </scicomp/shell>` / `video <https://youtu.be/56p6xX0aToI>`__)
-* `When and how to ask for help
-  <https://www.youtube.com/watch?v=5fgXXz3fzdM>`__ (very useful)
-* `Git intro
-  <https://www.youtube.com/watch?v=r9AT7MqmLrU&list=PLZLVmS9rf3nOaNzGrzPwLtkvFLu35kVF4&index=5>`__ (useful)
-* Scientific Computing workflows at Aalto - concepts apply to other
-  sites, too (optional): `lecture notes
-  <https://hackmd.io/@AaltoSciComp/SciCompIntro>`__ and `video
-  <https://www.youtube.com/watch?v=Oz37XAzWFhk>`__, :doc:`reference
-  material </triton/usage/workflows>`.
-* Tools of scientific computing (optional): `lecture notes
-  <https://hackmd.io/@AaltoSciComp/ToolsOfScientificComputing>`__ and
-  `video <https://www.youtube.com/watch?v=kXYfxXEb0Go>`__
 
 **How to attend:** Online workshops can be a productive format, but it
 takes some effort to get ready.  Browse these resources:
@@ -284,8 +271,30 @@ Technical prerequisites
 
 
 
-Follow-up courses
------------------
+Next steps / follow-up courses
+------------------------------
+
+Each year the first day has varying topics presented.  We don't repeat
+these every year, but we strongly recommend that you watch some of
+these videos yourself as preparation.
+
+Very strongly recommended:
+
+* `When and how to ask for help
+  <https://www.youtube.com/watch?v=5fgXXz3fzdM>`__ (very useful)
+* `Git intro
+  <https://www.youtube.com/watch?v=r9AT7MqmLrU&list=PLZLVmS9rf3nOaNzGrzPwLtkvFLu35kVF4&index=5>`__ (useful)
+
+Other useful material in previous versions of this course:
+
+* Scientific Computing workflows at Aalto - concepts apply to other
+  sites, too (optional): `lecture notes
+  <https://hackmd.io/@AaltoSciComp/SciCompIntro>`__ and `video
+  <https://www.youtube.com/watch?v=Oz37XAzWFhk>`__, :doc:`reference
+  material </triton/usage/workflows>`.
+* Tools of scientific computing (optional): `lecture notes
+  <https://hackmd.io/@AaltoSciComp/ToolsOfScientificComputing>`__ and
+  `video <https://www.youtube.com/watch?v=kXYfxXEb0Go>`__
 
 While not an official part of this course, we suggest these videos
 (co-produced by our staff) as a follow-up perspective:
