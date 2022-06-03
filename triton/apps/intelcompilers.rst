@@ -19,31 +19,32 @@ Basic usage
 Choosing a GCC for Intel compilers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Intel uses many tools from the GNU suite and thus requires a GCC for compilation.
-Thus it is recommended to load a GCC with
+Intel uses many tools from the GCC suite and thus it is recommended to
+load a ``gcc``-module with it:
 
 .. code-block:: bash
 
-  module load gcc/8.4.0 intel-oneapi-compilers/2021.3.0
+  module load gcc/8.4.0 intel-oneapi-compilers/2021.4.0
 
-See :ref:`GCC page <triton/apps/gcc>` for more information on available GCC compilers.
+See :doc:`GCC page </triton/apps/gcc>` for more information on available GCC compilers.
 
 .. include:: ../examples/c/hello-world/hello_icc.rst
 
 Current installations
 ---------------------
 
-Besides system compiler on login node, there are various GCC versions installed as modules.
+There are various Intel compiler versions installed as modules.
 
 .. csv-table::
    :delim: |
    :header-rows: 1
 
-   GCC version | Module
-   4.8.5       | none (on login node only)
-   8.4.0       | gcc/8.4.0
-   9.3.0       | gcc/9.3.0
-   11.2.0      | gcc/11.2.0
+   Intel compiler version | Module
+   2021.2.0               | intel-oneapi-compilers/2021.2.0
+   2021.3.0               | intel-oneapi-compilers/2021.3.0
+   2021.4.0               | intel-oneapi-compilers/2021.4.0
+
+If you need a different version of these compilers, please send a request through the :ref:`issue tracker <issuetracker>`.
 
 Old installations
 -----------------
@@ -54,9 +55,10 @@ These installations will work, but they are not actively updated.
    :delim: |
    :header-rows: 1
 
-   GCC version                  | Module
-   6.5.0                        | gcc/6.5.0
-   9.2.0                        | gcc/9.2.0
-   9.2.0 with (CUDA offloading) | gcc/9.2.0-cuda-nvptx
+   Intel compiler version                        | Module
+   2019.3 with Intel MPI                         | intel-parallel-studio/cluster.2019.3-intelmpi
+   2019.3                                        | intel-parallel-studio/cluster.2019.3
+   2020.0 with Intel MPI                         | intel-parallel-studio/cluster.2020.0-intelmpi
+   2020.0                                        | intel-parallel-studio/cluster.2020.0
 
 Other old installations are not recommended.

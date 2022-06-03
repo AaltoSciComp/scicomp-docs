@@ -15,7 +15,7 @@ First, let's load up Intel compilers and a GCC module that ``icc`` will use in t
 
 .. code-block:: bash
 
-  module load gcc/8.4.0 intel-oneapi-compilers/2021.3.0
+  module load gcc/8.4.0 intel-oneapi-compilers/2021.4.0
 
 Now let's compile the code:
 

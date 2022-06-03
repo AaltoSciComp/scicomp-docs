@@ -29,6 +29,9 @@ Besides system compiler on login node, there are various GCC versions installed 
    9.3.0       | gcc/9.3.0
    11.2.0      | gcc/11.2.0
 
+If you need a different version of GCC, please send a request through the :ref:`issue tracker <issuetracker>`.
+
+
 Old installations
 -----------------
 
