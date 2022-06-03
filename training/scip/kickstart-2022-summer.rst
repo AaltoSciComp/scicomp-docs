@@ -6,9 +6,8 @@ June 2022 / Intro to Scientific Computing /  HPC Summer Kickstart
 
    - Date: 7, 9-10 June 2022, 11:50-16:00 EEST (Helsinki time).
    - Please register here: https://link.webropol.com/s/scicompintrosummer2022.
-   - This courses schedule is still under development, and will remain
-     so right until the course.  The schedule below is a sample
-     inspired by last year (it will be better this year).
+   - This courses schedule is mostly known, but still may be updated
+     based on interest and practical matters.
    - Get involved!
 
      - If you have an idea for a talk you offer/request,
@@ -124,8 +123,8 @@ started with the computing resources.
 
 .. admonition:: Subject to change
 
-   This is last year's schedule.  It will be updated for this year,
-   but the overall times and plan are correct.
+   Schedule may still have minor updates, please check back for
+   the latest.
 
 * **Day #1 (Tue 7.jun):** Basics and background
 
