@@ -164,10 +164,12 @@ started with the computing resources.
   - **14:00--14:50: Secure Shell (ssh) tips and tricks** *Thomas Pfau
     and Enrico Glerean*
 
-    Yeah, we are telling you all the pieces, but how do people
-    *actually* fit them all together?  We invite some people to
-    demonstrate their full workflow of how they think about their
-    science. Materials: :doc:`/scicomp/ssh`
+    Remembering server address... Another login? Another password prompt? 
+    Again? Wouldn't it be nice to just have a key instead of a keycode that
+    you need to type in? Here, we will show you how to set up your computer
+    to easily connect to the server(s) you need. And we will explain the 
+    process from keys to config.
+    Materials: :doc:`/scicomp/ssh`
 
   - **15:00--15:45: Connecting to a HPC cluster** *Thomas Pfau and
     Simo Tuomisto*
