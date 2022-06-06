@@ -1,0 +1,6 @@
+name: pytorch-env
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - pytorch=*=*cuda*

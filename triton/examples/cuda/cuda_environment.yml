@@ -1,0 +1,5 @@
+name: cuda-env
+channels:
+  - conda-forge
+dependencies:
+  - cudatoolkit
