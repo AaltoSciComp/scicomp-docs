@@ -128,7 +128,12 @@ started with the computing resources.
 
 * **Day #1 (Tue 7.jun):** Basics and background
 
-  * **12:00--12:25: From data storage to your science** *Enrico
+  * 11:50--12:00: Connecting time, basics, and icebreaker
+
+  * **12:00-12:10 Introduction, about the course** *Richard Darst and
+    other staff*
+
+  * **12:10--12:25: From data storage to your science** *Enrico
     Glerean and Simo Tuomisto*
 
     Data is how most computational work starts, whether it is
@@ -182,47 +187,55 @@ started with the computing resources.
 * **Day #2 (Thu 9.jun):** Basic use of a cluster *(Richard Darst, Simo
   Tuomisto)*
 
-  - **11:50 -- 12:30: What can you do with a computational cluster?**
+  - 11:50--12:00: Connecting time and icebreaker
+
+  - **12:00--12:05: Introduction to days 2-3**
 
     - :doc:`/triton/tut/intro`
+
+  - **12:05--12:30: What can you do with a computational cluster?**
+
+    Several real examples of how people use the cluster (what you can
+    do at the end of the course).
+
     - Real example 1: Large-scale computing with array jobs
     - Real example 2: Large-scale parallel computing
 
-  - **12:30 -- 15:00: Running your first jobs in the queue**
+  - **12:30--15:00: Running your first jobs in the queue**
 
     - :doc:`/triton/tut/interactive`
     - :doc:`/triton/tut/serial`
     - :doc:`/triton/tut/monitoring`
 
-  - **15:00 -- 15:30: Other things you should know about the HPC environment**
+  - **15:00--15:30: Other things you should know about the HPC environment**
 
     - :doc:`/triton/tut/modules`
     - :doc:`/triton/tut/storage`
     - :doc:`/triton/tut/remotedata`
 
-  - **15:30 -- 16:00: Q&A**
+  - **15:30--16:00: Q&A**
 
 * **Day #3 (Fri 10.jun):** Advanced cluster use *(Simo Tuomisto, Richard
   Darst)*
 
   - 11:50: Joining time/icebreaker
 
-  - **11:50 -- 13:00: Simple parallelization with array jobs:**
+  - **11:50--13:00: Simple parallelization with array jobs:**
     :doc:`/triton/tut/array`
 
-  - **13:00 -- 14:00: Using more than one CPU at the same time:**
+  - **13:00--14:00: Using more than one CPU at the same time:**
     :doc:`/triton/tut/parallel`
 
-  - **14:00 -- 14:30: Laptops to Lumi**
+  - **14:00--14:30: Laptops to Lumi**
 
     You now know of basics of using a computing cluster.  What if you
     need more than what a university can provide?  CSC (and other
     national computing centers) have even more resources, and this is
     a tour of them. `Slides here <https://github.com/AaltoSciComp/scicomp-docs/raw/master/training/scip/CSC-services_022022.pdf>`__.
 
-  - **14:40 -- 15:30: Running jobs that can utilize GPU hardware:** :doc:`/triton/tut/gpu`
+  - **14:40--15:30: Running jobs that can utilize GPU hardware:** :doc:`/triton/tut/gpu`
 
-  - **15:30 -- 16:00: Q&A**
+  - **15:30--16:00: Q&A**
 
 
 
