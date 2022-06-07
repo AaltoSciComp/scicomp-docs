@@ -1,0 +1,5 @@
+name: tensorflow-env
+channels:
+  - conda-forge
+dependencies:
+  - tensorflow=*=*cuda*

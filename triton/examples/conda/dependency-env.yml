@@ -1,0 +1,8 @@
+name: dependency-env
+channels:
+  - conda-forge
+dependencies:
+  - numpy>=1.10.*
+  - pip
+  - pip:
+    - scipy
