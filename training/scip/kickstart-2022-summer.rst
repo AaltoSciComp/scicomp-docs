@@ -5,20 +5,16 @@ June 2022 / Intro to Scientific Computing /  HPC Summer Kickstart
 .. admonition:: Quick Reference
 
    - Date: 7, 9-10 June 2022, 11:50-16:00 EEST (Helsinki time).
+   - Join via Twitch: https://twitch.tv/coderefinery
+   - HackMD (parallel chat) for registered participants
    - Please register here: https://link.webropol.com/s/scicompintrosummer2022.
-   - This courses schedule is mostly known, but still may be updated
+   - This courses schedule is below but still may be updated
      based on interest and practical matters.
-   - Get involved!
-
-     - If you have an idea for a talk you offer/request,
-       `get in touch <https://coderefinery.org/manuals/chat/>`__
-     - If you would like to organize a `local breakout room
-       <https://coderefinery.org/manuals/local-breakout-rooms/>`__ at
-       your own institution, read that page and get in touch (`chat
-       best <https://coderefinery.org/manuals/chat/>`__) if we can
-       help you.  (You can read about :doc:`what is needed to be able
-       to follow our examples on your cluster
-       </triton/tut/required-cluster-setup>`.)
+   - Recordings at `Twitch
+     <https://www.twitch.tv/coderefinery/videos>`__ for 14 days and
+     this `YouTube playlist
+     <https://www.youtube.com/playlist?list=PLZLVmS9rf3nOmS1XIWTB0Iu7Amvf79r-f>`__
+     soon.
 
 
 Kickstart is a three × half day course for researchers to get
@@ -128,7 +124,12 @@ started with the computing resources.
 
 * **Day #1 (Tue 7.jun):** Basics and background
 
-  * **12:00--12:25: From data storage to your science** *Enrico
+  * 11:50--12:00: Connecting time, basics, and icebreaker
+
+  * **12:00--12:10 Introduction, about the course** *Richard Darst and
+    other staff* Materials: :doc:`../../training/kickstart/intro`
+
+  * **12:10--12:25: From data storage to your science** *Enrico
     Glerean and Simo Tuomisto*
 
     Data is how most computational work starts, whether it is
@@ -168,7 +169,8 @@ started with the computing resources.
     Again? Wouldn't it be nice to just have a key instead of a keycode that
     you need to type in? Here, we will show you how to set up your computer
     to easily connect to the server(s) you need. And we will explain the 
-    process from keys to config.
+    process from keys to config.  While useful, this part is skippable if 
+    you are able to connect to Triton (next section).
     Materials: :doc:`/scicomp/ssh`
 
   - **15:00--15:45: Connecting to a HPC cluster** *Thomas Pfau and
@@ -181,50 +183,64 @@ started with the computing resources.
       registered participants)
     - Material: :doc:`/triton/tut/connecting`
 
+  - Preparation for day 2:
+
+    Remember to read/watch the "shell crash course" (see "Preparation"
+    below) if you are not yet confident with the command line.  This
+    will be useful for tomorrow.
+
 * **Day #2 (Thu 9.jun):** Basic use of a cluster *(Richard Darst, Simo
   Tuomisto)*
 
-  - **11:50 -- 12:30: What can you do with a computational cluster?**
+  - 11:50--12:00: Connecting time and icebreaker
+
+  - **12:00--12:05: Introduction to days 2-3**
 
     - :doc:`/triton/tut/intro`
+
+  - **12:05--12:30: What can you do with a computational cluster?**
+
+    Several real examples of how people use the cluster (what you can
+    do at the end of the course).
+
     - Real example 1: Large-scale computing with array jobs
     - Real example 2: Large-scale parallel computing
 
-  - **12:30 -- 15:00: Running your first jobs in the queue**
+  - **12:30--15:00: Running your first jobs in the queue**
 
     - :doc:`/triton/tut/interactive`
     - :doc:`/triton/tut/serial`
     - :doc:`/triton/tut/monitoring`
 
-  - **15:00 -- 15:30: Other things you should know about the HPC environment**
+  - **15:00--15:30: Other things you should know about the HPC environment**
 
     - :doc:`/triton/tut/modules`
     - :doc:`/triton/tut/storage`
     - :doc:`/triton/tut/remotedata`
 
-  - **15:30 -- 16:00: Q&A**
+  - **15:30--16:00: Q&A**
 
 * **Day #3 (Fri 10.jun):** Advanced cluster use *(Simo Tuomisto, Richard
   Darst)*
 
   - 11:50: Joining time/icebreaker
 
-  - **11:50 -- 13:00: Simple parallelization with array jobs:**
+  - **11:50--13:00: Simple parallelization with array jobs:**
     :doc:`/triton/tut/array`
 
-  - **13:00 -- 14:00: Using more than one CPU at the same time:**
+  - **13:00--14:00: Using more than one CPU at the same time:**
     :doc:`/triton/tut/parallel`
 
-  - **14:00 -- 14:30: Laptops to Lumi**
+  - **14:00--14:30: Laptops to Lumi**
 
     You now know of basics of using a computing cluster.  What if you
     need more than what a university can provide?  CSC (and other
     national computing centers) have even more resources, and this is
     a tour of them. `Slides here <https://github.com/AaltoSciComp/scicomp-docs/raw/master/training/scip/CSC-services_022022.pdf>`__.
 
-  - **14:40 -- 15:30: Running jobs that can utilize GPU hardware:** :doc:`/triton/tut/gpu`
+  - **14:40--15:30: Running jobs that can utilize GPU hardware:** :doc:`/triton/tut/gpu`
 
-  - **15:30 -- 16:00: Q&A**
+  - **15:30--16:00: Q&A**
 
 
 
