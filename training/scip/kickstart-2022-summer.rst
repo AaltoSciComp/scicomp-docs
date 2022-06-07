@@ -127,7 +127,7 @@ started with the computing resources.
   * 11:50--12:00: Connecting time, basics, and icebreaker
 
   * **12:00--12:10 Introduction, about the course** *Richard Darst and
-    other staff*
+    other staff* Materials: :doc:`../../training/kickstart/intro`
 
   * **12:10--12:25: From data storage to your science** *Enrico
     Glerean and Simo Tuomisto*
