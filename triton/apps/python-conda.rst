@@ -97,7 +97,7 @@ Some of the most popular channels are:
 
 One can have multiple channels defined like in the following example:
 
-.. literalinclude:: /triton/examples/pytorch/pytorch_environment.yml
+.. literalinclude:: /triton/examples/pytorch/pytorch-env.yml
 
 
 Setting package dependencies
