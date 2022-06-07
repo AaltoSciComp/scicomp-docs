@@ -146,7 +146,7 @@ started with the computing resources.
     computing and how you need it, but rarely get a understandable
     introduction to how they relate and which are right for you.
     Here, we give a understandable metaphor with preparing large
-    meals.  `Slides https://docs.google.com/presentation/d/e/2PACX-1vQLTzWkRy7Du3jjPJ6Y9BqKczU_JcSTEL6XsndrNJ7ylzi4RWeEy8lhfWZQu_lpwbAKroh51qqLoPFG/pub`__
+    meals.  `Slides <https://docs.google.com/presentation/d/e/2PACX-1vQLTzWkRy7Du3jjPJ6Y9BqKczU_JcSTEL6XsndrNJ7ylzi4RWeEy8lhfWZQu_lpwbAKroh51qqLoPFG/pub>`__
 
   * **13:00--13:25: Behind the scenes: the humans of scientific
     computing** *Richard Darst and ???*
