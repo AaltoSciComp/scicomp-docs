@@ -136,7 +136,8 @@ started with the computing resources.
     externally collected, simulation code, or generated.  And these
     days, you can work on data even remotely, and these workflows
     aren't obvious.  We discuss how data storage choices lead to
-    computational workflows.
+    computational workflows. Materials: `SciComp Intro
+    <https://hackmd.io/@AaltoSciComp/SciCompIntro>`__
 
   * **12:25--12:50: What is parallel computing?  An analogy with
     cooking** *Enrico Glerean and Thomas Pfau*
@@ -145,7 +146,7 @@ started with the computing resources.
     computing and how you need it, but rarely get a understandable
     introduction to how they relate and which are right for you.
     Here, we give a understandable metaphor with preparing large
-    meals.
+    meals.  `Slides https://docs.google.com/presentation/d/e/2PACX-1vQLTzWkRy7Du3jjPJ6Y9BqKczU_JcSTEL6XsndrNJ7ylzi4RWeEy8lhfWZQu_lpwbAKroh51qqLoPFG/pub`__
 
   * **13:00--13:25: Behind the scenes: the humans of scientific
     computing** *Richard Darst and ???*
@@ -160,7 +161,8 @@ started with the computing resources.
     Software installation is one of the questions we most often get.
     Usually, on clusters, this happens via *environments*, which
     allows you to install specific software per-project.  We'll give a
-    demonstration of how these work in Python.
+    demonstration of how these work in Python. Materials for demo:
+    :doc:`/triton/apps/python-conda`
 
   - **14:00--14:50: Secure Shell (ssh) tips and tricks** *Thomas Pfau
     and Enrico Glerean*
