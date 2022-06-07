@@ -4,6 +4,13 @@ June 2022 / Intro to Scientific Computing /  HPC Summer Kickstart
 
 .. admonition:: Quick Reference
 
+   - Day 1 summary
+
+     - We covered a bunch of high-level topics for new researchers,
+       see the playlist.
+     - For day 2 (Thursday), make sure you can connect to the
+       cluster - see the schedule for details.
+
    - Date: 7, 9-10 June 2022, 11:50-16:00 EEST (Helsinki time).
    - Join via Twitch: https://twitch.tv/coderefinery
    - HackMD (parallel chat) for registered participants
