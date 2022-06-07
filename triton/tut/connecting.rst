@@ -79,14 +79,14 @@ worth making yourself comfortable with this.
 
         ssh triton.aalto.fi
         # OR, if your username is different:
-        ssh username@triton.aalto.fi
+        ssh USERNAME@triton.aalto.fi
 
       If you are from outside the Aalto networks, use the ProxyJump option
       in modern OpenSSH::
 
           ssh -J kosh.aalto.fi triton.aalto.fi
           # OR, if your username is different:
-          ssh -J username@kosh.aalto.fi username@triton.aalto.fi
+          ssh -J USERNAME@kosh.aalto.fi USERNAME@triton.aalto.fi
 
           # If you do not have the -J option:
           ssh kosh.aalto.fi
@@ -150,7 +150,7 @@ with what you learn on the :doc:`remotedata` page!::
    Host triton_via_kosh
 	User USERNAME
 	Hostname triton
-	ProxyJump username@kosh.aalto.fi
+	ProxyJump USERNAME@kosh.aalto.fi
 
 
 
