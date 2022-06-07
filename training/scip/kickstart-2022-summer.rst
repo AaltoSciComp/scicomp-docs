@@ -130,7 +130,7 @@ started with the computing resources.
 
   * 11:50--12:00: Connecting time, basics, and icebreaker
 
-  * **12:00-12:10 Introduction, about the course** *Richard Darst and
+  * **12:00--12:10 Introduction, about the course** *Richard Darst and
     other staff*
 
   * **12:10--12:25: From data storage to your science** *Enrico
@@ -169,10 +169,11 @@ started with the computing resources.
   - **14:00--14:50: Secure Shell (ssh) tips and tricks** *Thomas Pfau
     and Enrico Glerean*
 
-    Yeah, we are telling you all the pieces, but how do people
-    *actually* fit them all together?  We invite some people to
-    demonstrate their full workflow of how they think about their
-    science. Materials: :doc:`/scicomp/ssh`
+    We use ssh to connect to Triton, among other things.  We will go
+    over some intermediate tips and tricks that can make your use of
+    Triton much more comfortable.  While useful, this part is
+    skippable if you are able to connect to Triton (next
+    section). Materials: :doc:`/scicomp/ssh`
 
   - **15:00--15:45: Connecting to a HPC cluster** *Thomas Pfau and
     Simo Tuomisto*
@@ -183,6 +184,12 @@ started with the computing resources.
     - 15:??--??: Individual help time in Zoom (links sent to
       registered participants)
     - Material: :doc:`/triton/tut/connecting`
+
+  - Preparation for day 2:
+
+    Remember to read/watch the "shell crash course" (see "Preparation"
+    below) if you are not yet confident with the command line.  This
+    will be useful for tomorrow.
 
 * **Day #2 (Thu 9.jun):** Basic use of a cluster *(Richard Darst, Simo
   Tuomisto)*
