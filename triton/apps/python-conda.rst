@@ -165,7 +165,7 @@ Installing new packages into an environment
 
 Installing new packages into an existing environment can be done with
 ``conda install``-command. The following command would install ``matplotlib``
-into an environment.
+from ``conda-forge`` into an environment.
 
 .. code-block:: bash
 
@@ -210,8 +210,8 @@ We can check the contents of the configuration file with:
   cat $CONDA_PREFIX/.condarc
 
 
-Making environment building faster with mamba
----------------------------------------------
+Doing everything faster with mamba
+**********************************
 
 `mamba <https://github.com/mamba-org/mamba>`_ is a drop-in replacement
 for conda that does environment building and solving much faster than conda.
@@ -221,6 +221,12 @@ To use it, you either need to install ``mamba``-package from
 
 If you have ``mamba``, you can just switch from using ``conda``-command
 to using ``mamba`` and it should work in the same way, but faster.
+
+For example, one could create an environment with:
+
+.. code-block:: bash
+
+  mamba env create --file environment.yml
 
 
 Motivation for using conda
@@ -254,9 +260,10 @@ Conda tries to solve these problems with the following ways:
 
 1. Conda creates **environments** where packages are installed. Each
    environment can be activated separately.
-2. Conda installs library **dependencies** to the environment with the Python packages.
-3. Conda uses a solver engine to figure out whether packages are compatible with
-   each other.
+2. Conda installs library **dependencies** to the environment with the Python
+   packages.
+3. Conda uses a **solver engine** to figure out whether packages are compatible
+   with each other.
 
 Conda also caches installed packages so doing copies of similar environments
 does not use additional space.
@@ -407,6 +414,9 @@ The output looks something like this::
     - python_abi 3.9.* *_cp39
     - tensorflow-base 2.8.1 cuda112py39he716a45_0
     - tensorflow-estimator 2.8.1 cuda112py39hd320b7a_0
+
+Packages with underscores are meta-packages that should not be added to conda
+environments.
 
 Here we can see more info on the package, including its dependencies.
 
