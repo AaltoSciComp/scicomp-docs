@@ -165,11 +165,13 @@ started with the computing resources.
   - **14:00--14:50: Secure Shell (ssh) tips and tricks** *Thomas Pfau
     and Enrico Glerean*
 
-    We use ssh to connect to Triton, among other things.  We will go
-    over some intermediate tips and tricks that can make your use of
-    Triton much more comfortable.  While useful, this part is
-    skippable if you are able to connect to Triton (next
-    section). Materials: :doc:`/scicomp/ssh`
+    Remembering server address... Another login? Another password prompt? 
+    Again? Wouldn't it be nice to just have a key instead of a keycode that
+    you need to type in? Here, we will show you how to set up your computer
+    to easily connect to the server(s) you need. And we will explain the 
+    process from keys to config.  While useful, this part is skippable if 
+    you are able to connect to Triton (next section).
+    Materials: :doc:`/scicomp/ssh`
 
   - **15:00--15:45: Connecting to a HPC cluster** *Thomas Pfau and
     Simo Tuomisto*
