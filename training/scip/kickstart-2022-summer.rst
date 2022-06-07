@@ -5,20 +5,16 @@ June 2022 / Intro to Scientific Computing /  HPC Summer Kickstart
 .. admonition:: Quick Reference
 
    - Date: 7, 9-10 June 2022, 11:50-16:00 EEST (Helsinki time).
+   - Join via Twitch: https://twitch.tv/coderefinery
+   - HackMD (parallel chat) for registered participants
    - Please register here: https://link.webropol.com/s/scicompintrosummer2022.
-   - This courses schedule is mostly known, but still may be updated
+   - This courses schedule is below but still may be updated
      based on interest and practical matters.
-   - Get involved!
-
-     - If you have an idea for a talk you offer/request,
-       `get in touch <https://coderefinery.org/manuals/chat/>`__
-     - If you would like to organize a `local breakout room
-       <https://coderefinery.org/manuals/local-breakout-rooms/>`__ at
-       your own institution, read that page and get in touch (`chat
-       best <https://coderefinery.org/manuals/chat/>`__) if we can
-       help you.  (You can read about :doc:`what is needed to be able
-       to follow our examples on your cluster
-       </triton/tut/required-cluster-setup>`.)
+   - Recordings at `Twitch
+     <https://www.twitch.tv/coderefinery/videos>`__ for 14 days and
+     this `YouTube playlist
+     <https://www.youtube.com/playlist?list=PLZLVmS9rf3nOmS1XIWTB0Iu7Amvf79r-f>`__
+     soon.
 
 
 Kickstart is a three × half day course for researchers to get
