@@ -21,7 +21,7 @@ You can get conda by loading the ``miniconda``-module:
   module load miniconda
 
 By default Conda stores installed packages and environments in your home
-directory. However, as home directory has a lower quota, it is a good idea
+directory. However, as your home directory has a lower quota, it is a good idea
 to tell conda to install packages and environments into your work directory:
 
 .. code-block:: bash
@@ -43,17 +43,9 @@ Creating a simple environment with conda
 One can install environments from the command line itself, but a better idea
 is to write an ``environment.yml``-file that describes the environment.
 
-Below we have a simple ``environment.yml``:
+Below we have a simple :download:`environment.yml </triton/examples/conda/environment.yml>`:
 
-.. code-block:: yaml
-
-  name: conda-example
-  channels:
-    - conda-forge
-  dependencies:
-    - blas * mkl
-    - numpy
-    - pandas
+.. literalinclude:: /triton/examples/conda/environment.yml
 
 Now we can use the ``conda``-command to create the environment:
 
@@ -103,27 +95,24 @@ Some of the most popular channels are:
 - ``pytorch``: Official channel for `PyTorch <https://pytorch.org/>`_, a
   popular machine learning framework.
 
+One can have multiple channels defined like in the following example:
+
+.. literalinclude:: /triton/examples/pytorch/pytorch_environment.yml
+
+
 Setting package dependencies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Packages in ``environment.yml`` can have version constraints and wildcards.
-One can also specify pip packages to install after conda-packages have been
-installed.
+Packages in ``environment.yml`` can have version constraints and version
+wildcards. One can also specify pip packages to install after conda-packages
+have been installed.
 
-For example, the following would install a numpy with version higher or equal
-than 1.10 and scipy via pip:
+For example, the following 
+:download:`dependency-env.yml </triton/examples/conda/dependency-env.yml>`
+would install a numpy with version higher or equal
+than 1.10 using conda and scipy via pip:
 
-.. code-block:: yaml
-
-  name: dependency-example
-  channels:
-    - conda-forge
-  dependencies:
-    - numpy>=1.10.*
-    - pip
-    - pip:
-      - scipy
-
+.. literalinclude:: /triton/examples/conda/dependency-env.yml
 
 Listing packages in an environment
 ----------------------------------
@@ -181,11 +170,12 @@ removal and reinstallation of multiple packages. Adding the
 giving explicitly the channels to use, one can make certain that the new
 packages come from the same source.
 
-If installation of a package causes lots of changes to an environment,
-it might be a better option to create a new environment with the new
+It is usually a better option to create a new environment with the new
 package set as an additional dependency in the ``environment.yml``.
+This keeps the environment reproducible.
 
-Adding default channels for an environment can also make installing packages
+If you intend on installing packages to existing environment, adding
+default channels for the environment can also make installing packages
 easier.
 
 
@@ -288,38 +278,40 @@ as cuDNN. However, one should choose the version of the CUDA toolkit based on
 what the software requires.
 
 If the package is installed from a conda channel such as ``conda-forge``,
-conda will automatically retreive the correct version of CUDA toolkit.
+conda will **automatically retreive the correct version of CUDA toolkit**.
 
 If the code requires manual compilation with CUDA, one should check the
 advanced documentation on
 :doc:`Compiling CUDA code while using conda environments¶ </triton/usage/conda-and-cuda>`.
 
-In other cases one can use an environment file like this:
+In other cases one can use an environment file like this
+:download:`cuda-env.yml </triton/examples/cuda/cuda-env.yml>`:
 
-.. literalinclude:: /triton/examples/cuda/cuda_environment.yml
+.. literalinclude:: /triton/examples/cuda/cuda-env.yml
 
 
 Creating an environment with GPU enabled Tensorflow
 ---------------------------------------------------
 
 One can create an environment with GPU enabled Tensorflow using an
-environment like this:
+environment like this
+:download:`tensorflow-env.yml </triton/examples/tensorflow/tensorflow-env.yml>`:
 
-.. literalinclude:: /triton/examples/tensorflow/tensorflow_environment.yml
+.. literalinclude:: /triton/examples/tensorflow/tensorflow-env.yml
 
 Here we install tensorflow from ``conda-forge``-channel with an additional
 requirement that the build version of the ``tensorflow``-package must contain
-a reference to a cuda toolkit.
+a reference to a CUDA toolkit.
 
 
 Creating an environment with GPU enabled PyTorch
 ------------------------------------------------
 
 One can create an environment with GPU enabled PyTorch using an
-environment like this:
+environment like this
+:download:`pytorch-env.yml </triton/examples/pytorch/pytorch-env.yml>`:
 
-
-.. literalinclude:: /triton/examples/pytorch/pytorch_environment.yml
+.. literalinclude:: /triton/examples/pytorch/pytorch-env.yml
 
 Here we install pytorch from ``pytorch``-channel with an additional
 requirement that the build version of the ``pytorch``-package must contain
@@ -330,24 +322,17 @@ are installed from ``conda-forge``-channel.
 Installing numpy with Intel MKL enabled BLAS
 --------------------------------------------
 
-Numpy and other mathematical libaries utilize BLAS
+`NumPy <https://numpy.org/>`_ and other mathematical libaries utilize BLAS
 (Basic Linear Algebra Subprograms) implementation for speeding up many
 operations. Intel provides their own fast BLAS implementation in
 Intel MKL (Math Kernel Library). When using Intel CPUs, this library
 can give a significant performance boost to mathematical calculations.
 
 One can install this library as the default BLAS by specifying
-``blas * mkl`` as a requirement in the dependencies:
+``blas * mkl`` as a requirement in the dependencies like in this
+:download:`mkl-env.yml </triton/examples/conda/mkl-env.yml>`:
 
-.. code-block:: yaml
-
-  name: conda-example
-  channels:
-    - conda-forge
-  dependencies:
-    - blas * mkl
-    - numpy
-    - pandas
+.. literalinclude:: /triton/examples/conda/mkl-env.yml
 
 
 Advanced usage
@@ -416,7 +401,7 @@ The output looks something like this::
     - tensorflow-estimator 2.8.1 cuda112py39hd320b7a_0
 
 Packages with underscores are meta-packages that should not be added to conda
-environments.
+environment specifications. They will be solved by conda automatically.
 
 Here we can see more info on the package, including its dependencies.
 

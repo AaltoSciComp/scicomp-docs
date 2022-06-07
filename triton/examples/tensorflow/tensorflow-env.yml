@@ -2,4 +2,4 @@ name: tensorflow-env
 channels:
   - conda-forge
 dependencies:
-  - tensorflow=*=cu*
+  - tensorflow=*=*cuda*

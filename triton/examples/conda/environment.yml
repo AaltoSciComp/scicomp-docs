@@ -1,0 +1,6 @@
+name: conda-example
+channels:
+  - conda-forge
+dependencies:
+  - numpy
+  - pandas
