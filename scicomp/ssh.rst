@@ -28,7 +28,7 @@ For Triton, you will be prompted to affirm that you wish to *ssh* into this serv
     ECDSA key fingerprint is SHA256:04Wt813WFsYjZ7KiAyo3u6RiGBelq1R19oJd2GXIAho.
     Are you sure you want to continue connecting (yes/no)?
 
-Compare the key fingerprint you get to the one for the machine at this **link**, and if they do not match, please contact SciComp IT **immediately**. If they do match, type ``yes`` and press enter. You will receive a notice
+Compare the key fingerprint you get to the one for the machine at this :doc:`/triton/usage/ssh-fingerprints`, and if they do not match, please contact SciComp IT **immediately**. If they do match, type ``yes`` and press enter. You will receive a notice
 
 ::
 
