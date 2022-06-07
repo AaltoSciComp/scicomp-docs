@@ -161,7 +161,7 @@ To avoid having to type the decryption password, the *private key* it needs to b
          2. Scroll down to *OpenSSH Authentication Agent* > *double click*
 
          3. Change the *Startup type* to *Automatic (Delayed Start)*,
-            or anything that is not *Disabled*
+            or anything that is not *Disabled* and also start the service manually if it is not yet running
     
          4. ``ssh-add %USERPROFILE%\.ssh\id_rsa_triton``
          
@@ -267,7 +267,7 @@ There are optional ssh settings that may be useful for your work, such as::
         # Connect through another server (eg Kosh) if not connected directly to Aalto network
         ProxyJump LOGIN_NAME@kosh.aalto.fi
         # Specify which ssh private key is used for login identification
-        IdentityFile id_rsa_triton
+        IdentityFile ~/.ssh/id_rsa_triton
 
 
 .. _example_config_for_ssh:
@@ -281,14 +281,14 @@ The following code is placed in the config file created above (i.e. ``~/.ssh/con
     Host kosh
         User LOGIN_NAME
         Hostname kosh.aalto.fi
-        IdentityFile id_rsa_triton
+        IdentityFile ~/.ssh/id_rsa_triton
 
     # Triton, via kosh
     Host triton_via_kosh
         User LOGIN_NAME
         Hostname triton.aalto.fi
         ProxyJump kosh
-        IdentityFile id_rsa_triton
+        IdentityFile ~/.ssh/id_rsa_triton
 
 
 Now, you can just do ``ssh triton`` or ``rsync
