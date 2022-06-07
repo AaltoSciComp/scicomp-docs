@@ -261,7 +261,8 @@ Exercises
 .. exercise:: (advanced but recommended) Connecting-4: SSH configuration
 
    If you use Linux/MacOS/WSL, set up a ``.ssh/config`` file as shown
-   above.  Customize it to suit your case.
+   above.  Customize it to suit your case. (see above and
+   :doc:`/scicomp/ssh` for more info)
 
 .. exercise:: (advanced, to fill time) Connecting-5: shell crash
               course
