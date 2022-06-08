@@ -52,6 +52,13 @@ worth trying to work together and learn from each other - your group
 is the expert in it's work, after all.
 
 
+Daily garage
+~~~~~~~~~~~~
+
+Come by one of the online :doc:`Scientific computing garages
+<../help/garage>` any day at 13:00.  It's the best place to get
+problems solved fast - chat with us and see.
+
 .. _issuetracker:
 
 Issue tracker
@@ -97,6 +104,15 @@ not by email.  Email is primarily for accounts related queries.
 
 __ https://wiki.aalto.fi/display/Triton/Getting+help
 
+Research Software Engineers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Sometimes, a problem goes beyond "Triton support" and becomes
+"Research support".  Our :doc:`Research Software Engineers
+</rse/index>` are perfect for these kinds of problems: they can
+program with you, set up your workflow, or even handle all the
+technical problems for you.
+
 Users' mailing list
 ~~~~~~~~~~~~~~~~~~~
 
@@ -108,19 +124,6 @@ try the tracker.
 If you do not receive list emails, you'd better check out with your
 local Triton admin that you are on the list. Otherwise you miss all the
 announcements including critical ones about maintenance breaks.
-
-In person
-~~~~~~~~~
-
-Come by one of the :doc:`Scientific computing garages
-<../help/garage>` any week.  It's the best place to get problems
-solved fast.
-
-You can also come and talk to us face-to-face, but of course we have to
-be in-office.  This is especially useful when there is an open-ended
-question where we have to discuss what is the best solution.  We may
-then ask you to open a ticket once there is an answer, so that we can
-track the progress and not forget.
 
 Triton support team
 ~~~~~~~~~~~~~~~~~~~
