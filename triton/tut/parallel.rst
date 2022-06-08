@@ -310,7 +310,7 @@ In many cases you might require more than one node during your job's runtime.
 
 When this is the case, it is usually recommended to split the number of
 workers somewhat evenly among the nodes. To do this, one can use
-``-N N``/``--nodes=N`` and ``--ntasks-per-node=n``. For example, the previous example
+``-N N``/``--nodes=N`` and ``--ntasks-per-node=N``. For example, the previous example
 could be written as:
 
 .. code-block:: slurm

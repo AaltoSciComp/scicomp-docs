@@ -272,7 +272,7 @@ with the **echo** command, e.g. ``echo $PATH``.
 When you load a module in a shell, the module command changes the current shell's environment variables,
 and the environment variables are passed on to all the child processes.
 
-You can explore more with ``module show $NAME``.
+You can explore more with ``module show NAME``.
 
 
 
@@ -282,9 +282,9 @@ Making a module collection
 There is a basic dependency/conflict system to handle module dependency.
 Each time you load a module, it resolves all the dependencies. This
 can result in long loading times or be annoying to do each time you
-log in to the system. However, there is a solution: 
-``module save $collection_name`` and ``module restore
-$collection_name``
+log in to the system. However, there is a solution:
+``module save COLLECTION_NAME`` and ``module restore
+COLLECTION_NAME``
 
 Let's see how to do this in an example.
 
@@ -302,8 +302,8 @@ You could run this each time you want to compile/run your code::
   $ module list           # 15 modules
 
 Let's say this environment works for you. Now you can save it with
-``module save my-env``.  Then ``module purge`` to
-unload everything.  Now, do ``module restore my-env``::
+``module save MY-ENV-NAME``.  Then ``module purge`` to
+unload everything.  Now, do ``module restore MY-ENV-NAME``::
 
   $ module save my-env
   $ module purge
