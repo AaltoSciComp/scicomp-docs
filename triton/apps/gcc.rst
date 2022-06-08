@@ -17,7 +17,8 @@ Basic usage
 Available installations
 -----------------------
 
-Besides system compiler on login node, there are various GCC versions installed as modules.
+System compiler is installed only on the login node.
+Other versions of GCC are installed as modules.
 
 .. csv-table::
    :delim: |

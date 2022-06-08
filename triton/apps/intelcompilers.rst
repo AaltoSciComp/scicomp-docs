@@ -10,7 +10,7 @@ their
 `oneAPI-program <https://www.intel.com/content/www/us/en/developer/tools/oneapi/overview.html>`_.
 This change has had an effect on many module names.
 
-In Triton we have various versions of Intel compiler suite installed, but only
+In Triton we have various versions of the Intel compiler suite installed, but only
 some of them are actively supported.
 
 Basic usage
