@@ -101,7 +101,7 @@ Here is a sample of our most commonly used software:
 .. include:: ../ref/software.rst
 
 If one of these ``module load`` commands does not work at your site,
-try ``module spider $NAME`` and see if you can find it.  More information
+try ``module spider NAME`` and see if you can find it.  More information
 on these commands will be 
 actually covered under the upcoming :doc:`modules <modules>` tutorial.
 

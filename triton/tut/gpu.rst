@@ -20,7 +20,7 @@ GPU computing
      through anaconda.
    * Select a certain type of GPU with e.g. ``--constraint='kepler'``
      (see :doc:`the quick reference for names <../ref/index>`).
-   * Monitor GPU performance with ``sacct -j <jobID> -o comment -p``.
+   * Monitor GPU performance with ``sacct -j JOBID -o comment -p``.
    * For development, run jobs of 4 hours or less, and they can run
      quickly in the ``gpushort`` queue.
    * If you aren't fully sure of how to scale up, contact us
@@ -74,8 +74,8 @@ requested as follows. :
 
    #SBATCH --gres=gpu:1
 
-You can request as many GPUs as you'd like using ``#SBATCH --gres=gpu:<n>``
-wherein ``n`` denotes the number of the requested GPUs.
+You can request as many GPUs as you'd like using ``#SBATCH --gres=gpu:N``
+wherein ``N`` denotes the number of the requested GPUs.
 
 .. note::
 

@@ -168,7 +168,7 @@ More information is in the
 Cancelling your jobs
 --------------------
 
-You can cancel jobs with ``scancel <jobid>``. To obtain job id, use the
+You can cancel jobs with ``scancel JOBID``. To obtain job id, use the
 monitoring commands.
 
 

@@ -16,7 +16,7 @@ possible.
 Basic example
 =============
 
-Dependencies are specified with the ``--dependency=<dependency list>``
+Dependencies are specified with the ``--dependency=DEPENDENCY_LIST``
 option. E.g. ``--dependency=afterok:123:124`` means that the job can
 only start after job ID's 123 and 124 have both completed
 successfully.

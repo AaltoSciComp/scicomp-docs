@@ -8,7 +8,7 @@ and inspect the ``GPU-Util`` column. It should be close to 100%.
 Once the job has finished, you can use ``slurm history`` to obtain the
 ``jobID`` and run::
 
-   $ sacct -j <jobID> -o comment -p
+   $ sacct -j JOBID -o comment -p
 
 This also shows the GPU utilization.
 
@@ -22,7 +22,7 @@ This also shows the GPU utilization.
    speedup is relevant here.
 
 If the GPU utilization of your job is low, you should check whether
-its CPU utilization is close to 100% with ``seff <jobid>``. This can
+its CPU utilization is close to 100% with ``seff JOBID``. This can
 indicate that the CPUs are trying to keep the GPU occupied with calculations,
 but the lack of CPU performance will cause a bottleneck on the GPU
 utilization.

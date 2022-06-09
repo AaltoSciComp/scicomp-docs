@@ -107,7 +107,7 @@ As now we're submitting multiple jobs simultaneously, each job needs an
 individual output file or the outputs will overwrite each other. By default,
 Slurm will write the outputs to files named
 ``slurm-${SLURM_ARRAY_JOB_ID}_${SLURM_ARRAY_TASK_ID}.out``. This can be overwritten using the
-``--output=<filename>``-parameter, when you can use wildcard ``%A`` for the
+``--output=FILENAME``-parameter, when you can use wildcard ``%A`` for the
 job id and ``%a`` for the array task id.
 
 Once the jobs are completed, the output files will be created in your work directory,
