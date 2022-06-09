@@ -42,7 +42,7 @@ There are various tools available for each of these steps.
    Please ensure you have read :doc:`interactive` and :doc:`serial`
    before you proceed with this tutorial.
 
-.. highlight:: console
+.. highlight:: shell-session
 
 
 

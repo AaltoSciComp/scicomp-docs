@@ -59,7 +59,7 @@ resources by the workload manager.
    <https://carpentries-incubator.github.io/hpc-intro/13-scheduler/index.html>`__
    / `Sabry Razick <https://github.com/Sabryr>`__ for the idea.
 
-.. highlight:: console
+.. highlight:: shell-session
 
 
 

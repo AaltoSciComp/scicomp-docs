@@ -53,7 +53,7 @@ you will learn how to bundle them in your job scripts.
    <interactive>` tutorial to learn the basics
    of Slurm.
 
-.. highlight:: console
+.. highlight:: shell-session
 
 Your first job script
 ---------------------
