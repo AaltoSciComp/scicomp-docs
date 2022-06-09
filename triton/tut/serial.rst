@@ -251,7 +251,10 @@ Exercises
    a. Submit the job to the queue.
    b. Log out from Triton. Log back in and use
       ``slurm queue``/``squeue -u $USER`` to check the job status.
-   c. Use ``cat name_of_outputfile`` to check at the output periodically.
+   c. Use ``cat NAME_OF_OUTPUTFILE`` to check at the output
+      periodically.  You can use ``tail -f NAME_OF_OUTPUTFILE`` to
+      view the progress in real time as new lines are added (Control-C
+      to cancel)
    d. Cancel the job once you're finished.
 
 .. exercise:: (advanced) Serial-4: Why you use ``sbatch``, not ``bash``.
