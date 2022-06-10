@@ -18,7 +18,7 @@ Monitoring job progress and job efficiency
    * ``slurm queue`` shows waiting and running jobs (this is a custom command)
    * ``slurm history`` shows completed jobs (also custom command)
    * GPU efficiency: A job's ``comment`` field shows GPU performance info
-     (custom setup), ``sacct -j JOBID -o comment -p`` shows this.
+     (custom setup at Aalto), ``sacct -j JOBID -o comment -p`` shows this.
 
 
 
@@ -42,7 +42,7 @@ There are various tools available for each of these steps.
    Please ensure you have read :doc:`interactive` and :doc:`serial`
    before you proceed with this tutorial.
 
-.. highlight:: console
+.. highlight:: shell-session
 
 
 
@@ -78,7 +78,7 @@ seconds. This watcher can be closed with ``<CTRL> + C``. Do remember to
 close the watcher when you're not watching the output interactively.
 
 To see all of the information that Slurm sees, one can use the command
-``scontrol show -d jobid <jobid>``.
+``scontrol show -d jobid JOBID``.
 
 The ``slurm queue`` is a wrapper built around ``squeue``-command. One can also
 use it directly to get more information on the job's status. See
@@ -188,7 +188,7 @@ can also use it directly to get more information on the job's status. See
 information.
 
 For example, command
-``sacct --format=jobid,elapsed,ncpus,ntasks,state,MaxRss --jobs=<jobid>``
+``sacct --format=jobid,elapsed,ncpus,ntasks,state,MaxRss --jobs=JOBID``
 which will show information as indicated in the ``--format`` option (jobid,
 elapsed time, number of reserved CPUs, etc.). You can specify any field of
 interest to be shown using ``--format``.
@@ -218,7 +218,7 @@ Exercises
 
    In folder ``slurm/pi.py`` there is a pi estimation algorithm that uses
    Monte Carlo methods to get an estimate of its value. You can call the script
-   with ``python pi.py <n>``, where ``<n>`` is the number of iterations to be
+   with ``python pi.py N``, where ``N`` is the number of iterations to be
    done by the algorithm.
 
      a. Create a slurm script that runs the algorithm with 100000000 (:math:`10^8`)

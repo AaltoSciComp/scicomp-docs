@@ -1,4 +1,4 @@
-You can use ``seff <jobid>`` to see what percent of available CPUs and RAM was
+You can use ``seff JOBID`` to see what percent of available CPUs and RAM was
 utilized. Example output is given below::
 
   $ seff 60985042
@@ -20,7 +20,7 @@ have a problem with your RAM requirements. You should set the RAM limit to
 be a bit above the RAM that you have utilized.
 
 You can also monitor individual job steps by calling ``seff`` with the syntax
-``seff <jobid>.<job step>``.
+``seff JOBID.JOBSTEP``.
 
 .. important::
 

@@ -91,7 +91,7 @@ NBE
 ~~~
 
 On workstations, work directories are available at ``/m/nbe/work`` and group scratch
-directories at ``/m/nbe/scratch/$project/``, including the shell
+directories at ``/m/nbe/scratch/PROJECT/``, including the shell
 server ``amor.org.aalto.fi``.
 
 PHYS
@@ -105,7 +105,7 @@ CS
 ~~
 
 On workstations, work directories are available at ``/m/cs/work/``, and group scratch
-directories at ``/m/cs/scratch/$project/``.  The department shell
+directories at ``/m/cs/scratch/PROJECT/``.  The department shell
 server is ``magi.cs.aalto.fi`` and has these available.
 
 
@@ -145,7 +145,7 @@ Aalto networks at the URLs
   .. group-tab:: Mac
 
     * scratch: ``smb://data.triton.aalto.fi/scratch/``.
-    * work: ``smb://data.triton.aalto.fi/work/$username/``.
+    * work: ``smb://data.triton.aalto.fi/work/USERNAME/``.
 
     To access these folders: Finder → Go menu item → Connect to server → use the URLs
     above.
@@ -153,7 +153,7 @@ Aalto networks at the URLs
   .. group-tab:: Linux
 
     * scratch: ``smb://data.triton.aalto.fi/scratch/``.
-    * work: ``smb://data.triton.aalto.fi/work/$username/``.
+    * work: ``smb://data.triton.aalto.fi/work/USERNAME/``.
 
     To access these folders: Files → Left sidebar → Connect to server → use the URLs above.
     For other Linuxes, you can probably figure it out.  (It varies

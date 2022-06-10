@@ -59,7 +59,7 @@ resources by the workload manager.
    <https://carpentries-incubator.github.io/hpc-intro/13-scheduler/index.html>`__
    / `Sabry Razick <https://github.com/Sabryr>`__ for the idea.
 
-.. highlight:: console
+.. highlight:: shell-session
 
 
 
@@ -295,10 +295,10 @@ Exercises
       seconds: ``time python hpc-examples/slurm/pi.py
       500``, then 5000, then 50000, and so on.
 
-   b) Add ``srun`` in front (``srun python ...``).  Use the ``seff <jobid>``
+   b) Add ``srun`` in front (``srun python ...``).  Use the ``seff JOBID``
       command to see how much time the program took to run.
       (If you'd like to use the ``time`` command, you can run
-      ``srun --mem=<m> --time=<t> time python hpc-examples/slurm/pi.py <iters>``)
+      ``srun --mem=MEM --time=TIME time python hpc-examples/slurm/pi.py ITERS``)
 
    c) Tell srun to use five CPUs (``-c 5``).  Does it go any faster?
 
@@ -312,7 +312,7 @@ Exercises
 .. exercise:: Interactive-3: Info commands
 
    Check out some of these commands: ``sinfo``, ``sinfo -N``, ``squeue``.  Run
-   ``slurm job <jobid>`` on some running job - does anything
+   ``slurm job JOBID`` on some running job - does anything
    look interesting?
 
 .. exercise:: Interactive-4: Showing node information

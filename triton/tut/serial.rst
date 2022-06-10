@@ -53,7 +53,7 @@ you will learn how to bundle them in your job scripts.
    <interactive>` tutorial to learn the basics
    of Slurm.
 
-.. highlight:: console
+.. highlight:: shell-session
 
 Your first job script
 ---------------------
@@ -168,7 +168,7 @@ More information is in the
 Cancelling your jobs
 --------------------
 
-You can cancel jobs with ``scancel <jobid>``. To obtain job id, use the
+You can cancel jobs with ``scancel JOBID``. To obtain job id, use the
 monitoring commands.
 
 
@@ -251,7 +251,10 @@ Exercises
    a. Submit the job to the queue.
    b. Log out from Triton. Log back in and use
       ``slurm queue``/``squeue -u $USER`` to check the job status.
-   c. Use ``cat name_of_outputfile`` to check at the output periodically.
+   c. Use ``cat NAME_OF_OUTPUTFILE`` to check at the output
+      periodically.  You can use ``tail -f NAME_OF_OUTPUTFILE`` to
+      view the progress in real time as new lines are added (Control-C
+      to cancel)
    d. Cancel the job once you're finished.
 
 .. exercise:: (advanced) Serial-4: Why you use ``sbatch``, not ``bash``.
