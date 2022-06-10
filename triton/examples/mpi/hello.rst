@@ -15,7 +15,7 @@ Compiling the code:
 
   .. group-tab:: C
 
-    C code is compiled with `mpicc`:
+    C code is compiled with ``mpicc``:
 
     .. code-block:: bash
 
@@ -24,7 +24,7 @@ Compiling the code:
 
   .. group-tab:: Fortran
 
-    Fortran code is compiled with `mpifort`:
+    Fortran code is compiled with ``mpifort``:
 
     .. code-block:: bash
 
