@@ -49,7 +49,9 @@ These can be done by submitting a single array job.
 
 A Slurm job array is a collection of jobs that are to be executed with identical
 parameters. This means that there is one single batch script that is to be run
-as many times as indicated by the ``--array`` directive, e.g.::
+as many times as indicated by the ``--array`` directive, e.g.:
+
+.. code-block:: slurm
 
   #SBATCH --array=0-4
 
@@ -97,7 +99,7 @@ and write it as follows.
 
 Submitting the job script to Slurm with ``sbatch array_example.sh``, you will get the message::
 
-  $ Submitted batch job 60997836
+  Submitted batch job 60997836
 
 The job id in the message is that of the primary array job. This is common for all of
 the jobs in the array. In addition, each individual job is given an array task
