@@ -16,7 +16,7 @@ The full code for the example is in
 One can run this example with ``srun``::
 
   wget https://raw.githubusercontent.com/AaltoSciComp/hpc-examples/master/python/python_openmp/python_openmp.py
-  module load anaconda
+  module load anaconda/2022-01
   export OMP_PROC_BIND=true
   srun --cpus-per-task=2 --mem=2G --time=00:15:00 python python_openmp.py
 

@@ -36,7 +36,6 @@ tutorials.
 .. highlight:: bash
 
 
-
 Parallel programming models
 ---------------------------
 
@@ -191,13 +190,13 @@ from HPC examples repository.
 Simple code compiling::
 
   wget https://raw.githubusercontent.com/AaltoSciComp/hpc-examples/master/openmp/hello_omp/hello_omp.c
-  module load gcc/9.2.0
+  module load gcc/8.4.0
   gcc -fopenmp -O2 -g hello_omp.c -o hello_omp
 
 Running an OpenMP code::
 
   export OMP_PROC_BIND=TRUE
-  module load gcc/9.2.0
+  module load gcc/8.4.0
   srun --cpus-per-task=4 --mem=500M --time=00:05:00 hello_omp
 
 The
@@ -214,94 +213,26 @@ you should load the same compiler that you used for compiling the code.
 .. include:: /triton/examples/python/python_openmp/python_openmp.rst
 
 
+.. _parallel-mpi:
+
 Message passing programs: MPI
 -----------------------------
 
 For compiling/running an MPI job one has to pick up one of the MPI library
 suites. There are various different MPI libraries that all implement the
-MPI standard. We recommend that you use either:
+MPI standard. We recommend that you use our OpenMPI installation
+(``openmpi/4.0.5``). For information on other installed versions, see the
+:doc:`MPI applications-page<../apps/mpi>`.
 
-  - OpenMPI (e.g. ``openmpi/3.1.4``)
-  - Intel's MPI (e.g. ``intel-parallel-studio/cluster.2020.0-intelmpi``)
-
-Some libraries/programs might have already existing requirement for a certain
-MPI version. If so, use that version or ask for administrators to create
-a version of the library with dependency on the MPI version you require.
-
-.. warning::
-
-   Different versions of MPI are not compatible with each other. Each
-   version of MPI will create code that will run correctly with only
-   that version of MPI. Thus if you create code with a certain version,
-   you will need to load the same version of the library when you are
-   running the code.
-
-   Also, the MPI libraries are usually linked to slurm and network
-   drivers. Thus, when slurm or driver versions are updated, some
-   older versions of MPI might break. If you're still using said
-   versions, let us know. If you're just starting a new project, it
-   is recommended to use our recommended MPI libraries.
+.. include:: /triton/ref/mpi-warning.rst
 
 For basic use of MPI programs, you will need to use the
 ``-n N``/``--ntasks=N``-option to specify the number of MPI workers.
 
-Running a typical MPI program
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Compiling and running an MPI Hello world-program
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The following use ``hpc-examples`` from
-:ref:`the previous exercises <triton-tut-exercise-repo>`.  Get the
-code::
-
-  git clone https://github.com/AaltoSciComp/hpc-examples/
-  cd hpc-examples/hello_mpi/          # C
-  cd hpc-examples/hello_mpi_fortran/  # fortran
-
-Loading module::
-
-  # GCC + OpenMPI
-  module load gcc/9.2.0      # GCC
-  module load openmpi/3.1.4  # OpenMPI
-
-  # Intel compilers + Intel's MPI
-  module load intel-parallel-studio/cluster.2019.3-intelmpi
-
-Compiling the code (depending on module and language)::
-
-  # OpenMPI
-  mpicc    -O2 -g hello_mpi.c -o hello_mpi # C code
-  mpifort  -O2 -g hello_mpi_fortran.f90 -o hello_mpi_fortran # Fortran code
-
-  # Intel MPI
-  mpiicc   -O2 -g hello_mpi.c -o hello_mpi # C code
-  mpiifort -O2 -g hello_mpi_fortran.f90 -o hello_mpi_fortran # Fortran code
-
-Running the program with srun (for testing)::
-
-  srun --time=00:05:00 --mem-per-cpu=200M --ntasks=4 ./hello_mpi
-
-Running an MPI code in the batch mode:
-
-.. code-block:: slurm
-
-  #!/bin/bash
-  #SBATCH --time=00:05:00      # takes 5 minutes all together
-  #SBATCH --mem-per-cpu=200M   # 200MB per process
-  #SBATCH --ntasks=4           # 4 processes
-  #SBATCH --constraint=avx     # set constraint for processor architecture
-
-  module load openmpi/3.1.4  # NOTE: should be the same as you used to compile the code
-  srun ./hello_mpi
-
-Triton has multiple architectures around (12, 20, 24, 40 CPU cores per node),
-even though SLURM optimizes resources usage and allocate CPUs within one node,
-which gives better performance for the app, it still makes sense to put
-constraints explicitly.
-
-.. important::
-
-   It is important to use ``srun`` when you launch your program.
-   This allows for the MPI libraries to obtain task placement information
-   (nodes, number of tasks per node etc.) from the slurm queue.
+.. include:: /triton/examples/mpi/hello.rst
 
 Spreading MPI workers evenly
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -309,9 +240,9 @@ Spreading MPI workers evenly
 In many cases you might require more than one node during your job's runtime.
 
 When this is the case, it is usually recommended to split the number of
-workers somewhat evenly among the nodes. To do this, one can use
-``-N N``/``--nodes=N`` and ``--ntasks-per-node=n``. For example, the previous example
-could be written as:
+workers evenly among the nodes. To do this, one can use
+``-N N``/``--nodes=N`` and ``--ntasks-per-node=n``. For example, you could
+distribute the previously requested four tasks to two nodes with:
 
 .. code-block:: slurm
 
@@ -322,13 +253,50 @@ could be written as:
   #SBATCH --ntasks-per-node=2  # 2 processes per node * 2 nodes = 4 processes in total
   #SBATCH --constraint=avx     # set constraint for processor architecture
 
-  module load openmpi/3.1.4  # NOTE: should be the same as you used to compile the code
+  module load openmpi/4.0.5  # NOTE: should be the same as you used to compile the code
   srun ./hello_mpi
 
+
 This way the number of workers is distributed more evenly, which in turn
-reduces communication overhead between workers.
+reduces communication overhead between workers. The total number of tasks is
+``--nodes`` times the ``--ntasks-per-node``.
 
 
+Setting a constraint for a specific CPU architecture
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The number of CPUs/tasks one can specify for a single parallel job depends
+usually on the underlying algorithm. In many codes, such as many
+finite-difference codes, the workers are set in a grid-like structure. The user
+of said codes has then a choice of choosing the dimensions of the simulation
+grid aka. how many workers are in x-, y-, and z-dimensions.
+
+For best perfomance one should reserve half or full nodes when possible. In
+heterogeneous clusters this can be a bit more complicated as different CPUs
+can have different numbers of cores.
+
+In Triton CPU partitions there are machines with 24, 28 and 40 CPUs. See the
+list of :ref:`available nodes<hardware-list>` for more information.
+
+However, one can make the reservations easier by specifying a CPU architecture
+with ``--constraint=ARCHITECTURE``. This tells Slurm to look for nodes that
+satisfy a specific feature. To list available features, one can use
+``slurm features``.
+
+For example, one could limit the code to the Haswell-architecture with the
+following script:
+
+.. code-block:: slurm
+
+  #!/bin/bash
+  #SBATCH --time=00:05:00      # takes 5 minutes all together
+  #SBATCH --mem-per-cpu=200M   # 200MB per process
+  #SBATCH --nodes=1            # 1 node
+  #SBATCH --ntasks-per-node=24 # 24 processes as that is the number in the machine
+  #SBATCH --constraint=hsw     # set constraint for processor architecture
+
+  module load openmpi/4.0.5  # NOTE: should be the same as you used to compile the code
+  srun ./hello_mpi
 
 Monitoring performance
 ----------------------
