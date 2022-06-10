@@ -161,5 +161,11 @@ Other links
 
 * `RSE international <https://researchsoftware.org/>`_.
 
-* Note the bottom section on page 105(print)/106(PDF) of the `2018
-  Research, Art, and Impact assessment <https://www.aalto.fi/sites/g/files/flghsv161/files/2019-03/rai_2018_report_s.pdf>`_.
+* Why do we exist?
+
+  * Note the bottom section on page 105(print)/106(PDF) of the `2018
+    Research, Art, and Impact assessment <https://www.aalto.fi/sites/g/files/flghsv161/files/2019-03/rai_2018_report_s.pdf>`_.
+
+  * Point three of `Vision for Nordic Open Science Data Collaboration
+    <https://neic.no/news/2022/05/31/neic2022-conference-statement/>`__,
+  by the Nordic e-Infrastructure Collaboration.
