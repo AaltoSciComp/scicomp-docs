@@ -246,7 +246,7 @@ started with the computing resources.
     You now know of basics of using a computing cluster.  What if you
     need more than what a university can provide?  CSC (and other
     national computing centers) have even more resources, and this is
-    a tour of them. `Slides here <https://github.com/AaltoSciComp/scicomp-docs/raw/master/training/scip/CSC-services_022022.pdf>`__.
+    a tour of them. `Slides here <https://github.com/AaltoSciComp/scicomp-docs/raw/master/training/scip/CSC-services_062022.pdf>`__.
 
   - **14:40--15:30: Running jobs that can utilize GPU hardware:** :doc:`/triton/tut/gpu`
 
