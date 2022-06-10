@@ -74,7 +74,7 @@ to compile the Hello world!-example by setting ``OMPI_MPICC``- and
 
   .. group-tab:: C
 
-    Intel C compiler is `icc`:
+    Intel C compiler is ``icc``:
 
     .. code-block:: bash
 
@@ -88,7 +88,7 @@ to compile the Hello world!-example by setting ``OMPI_MPICC``- and
 
   .. group-tab:: Fortran
 
-    Intel Fortran compiler is `ifort`:
+    Intel Fortran compiler is ``ifort``:
 
     .. code-block:: bash
 
