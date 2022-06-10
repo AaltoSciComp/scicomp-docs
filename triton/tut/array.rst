@@ -281,9 +281,8 @@ Exercises
 .. exercise:: (Advanced) Array-3: Array jobs with advanced index selector
 
    Make a job array which runs every other index, e.g. the array can
-   be indexed as 1, 3, 5... (
-   `sbatch manual page <https://slurm.schedmd.com/sbatch.html>`__
-   can be of help)
+   be indexed as 1, 3, 5... (the `sbatch manual page
+   <https://slurm.schedmd.com/sbatch.html>`__ can be of help)
 
 .. exercise:: (Advanced) Array-4: Array jobs and different random seeds
 
