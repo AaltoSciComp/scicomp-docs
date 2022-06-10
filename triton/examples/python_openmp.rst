@@ -10,7 +10,7 @@ Python OpenMP example
     #SBATCH --mem=2G
     #SBATCH -o parallel_Python.out
 
-    module load anaconda
+    module load anaconda/2022-01
 
     export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
     srun -c $SLURM_CPUS_PER_TASK python parallel_Python.py
