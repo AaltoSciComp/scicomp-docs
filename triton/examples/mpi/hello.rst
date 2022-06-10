@@ -45,15 +45,9 @@ program with a slurm script:
   #SBATCH --time=00:05:00      # takes 5 minutes all together
   #SBATCH --mem-per-cpu=200M   # 200MB per process
   #SBATCH --ntasks=4           # 4 processes
-  #SBATCH --constraint=avx     # set constraint for processor architecture
 
   module load openmpi/4.0.5  # NOTE: should be the same as you used to compile the code
   srun ./hello_mpi
-
-Triton has multiple architectures around (12, 20, 24, 40 CPU cores per node),
-even though SLURM optimizes resources usage and allocate CPUs within one node,
-which gives better performance for the app, it still makes sense to put
-constraints explicitly.
 
 .. important::
 
