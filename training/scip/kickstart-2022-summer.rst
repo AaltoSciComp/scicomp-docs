@@ -4,6 +4,18 @@ June 2022 / Intro to Scientific Computing /  HPC Summer Kickstart
 
 .. admonition:: Quick Reference
 
+   - **Thank you for attending the course!**  Do you wonder what to do
+     next?
+
+     - Check the "preparation" and "follow-up" sections below, browse
+       whatever content you have missed that might be useful to you.
+     - Know that we at Aalto (and other places) are here for you, and
+       you can drop by and ask further questions.
+     - The `Hands-on Scientific Computing
+       <https://hands-on.coderefinery.org/>`__ course (if you are in
+       Finland) can give you credits for topics including what we
+       learned here.
+
    - Day 1 summary: We covered a bunch of high-level topics for new
      researchers, see the playlist.  For day 2 (Thursday), make sure
      you can connect to the cluster - see the schedule for details.
@@ -12,10 +24,12 @@ June 2022 / Intro to Scientific Computing /  HPC Summer Kickstart
      solutions to the exercises.  No extra preparation needed for
      tomorrow, but the hands-on work gets more involved and
      interesting.
+   - Day 3 summary: we looked at different ways to make computation
+     faster by parallelizing it, not at the level of writing new
+     parallel code but using parallel code.  We heard from CSC.
    - Date: 7, 9-10 June 2022, 11:50-16:00 EEST (Helsinki time).
    - Join via Twitch: https://twitch.tv/coderefinery
-   - HackMD (parallel chat) for registered participants
-   - Please register here: https://link.webropol.com/s/scicompintrosummer2022.
+   - ~~Please register here: https://link.webropol.com/s/scicompintrosummer2022.~~
    - This courses schedule is below but still may be updated
      based on interest and practical matters.
    - Recordings at `Twitch
@@ -23,6 +37,7 @@ June 2022 / Intro to Scientific Computing /  HPC Summer Kickstart
      this `YouTube playlist
      <https://www.youtube.com/playlist?list=PLZLVmS9rf3nOmS1XIWTB0Iu7Amvf79r-f>`__
      soon.
+   - All HackMD Q&A is archived here: https://hackmd.io/@AaltoSciComp/ArchiveIntroSummer2022
 
 
 Kickstart is a three × half day course for researchers to get
@@ -304,6 +319,9 @@ Technical prerequisites
 
 Next steps / follow-up courses
 ------------------------------
+
+Keep the :doc:`Triton quick reference </triton/ref/index>` close (or
+equivalent for your cluster).
 
 Each year the first day has varying topics presented.  We don't repeat
 these every year, but we strongly recommend that you watch some of
