@@ -34,7 +34,7 @@ some of the key players:
   be used throughout the entire university, but support is organized from
   the departments which fund them.
   The core Science-IT departments are CS, NBE, and
-  PHYS.  Science-IT runs a weekly :doc:`SciComp garage
+  PHYS.  Science-IT runs a daily :doc:`SciComp garage
   <../help/garage>`, where we provide hands on support for anything
   related to scientific computing.
   :doc:`This site (scicomp.aalto.fi) <../index>` is the main home,
