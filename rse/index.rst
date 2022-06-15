@@ -168,4 +168,4 @@ Other links
 
   * Point three of `Vision for Nordic Open Science Data Collaboration
     <https://neic.no/news/2022/05/31/neic2022-conference-statement/>`__,
-  by the Nordic e-Infrastructure Collaboration.
+    by the Nordic e-Infrastructure Collaboration 2022 program committee.
