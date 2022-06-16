@@ -2,6 +2,18 @@
 Scicomp garage
 ==============
 
+.. admonition:: Summer schedule for the garage
+   :class: important
+
+   We will try to continue Garage during the summer, but there are
+   many staff vacations during the high summer.
+
+   - We aren't cancelling garage but not promising to be there every
+     day.
+   - You can drop by and give it a try.  Open an :ref:`issue
+     <issue-tracker>` if something is urgent and we'll tell you what
+     to do (garage day or asynchronous help).
+
 
 If you need more help than the issue trackers, this is the place to
 be.  It's not just Triton, but all aspects of scientific computing.
@@ -62,6 +74,11 @@ Triton, SciComp, RSE, and CS
 .. admonition:: Link
 
    https://aalto.zoom.us/j/61322268370, every day at 13:00
+
+.. admonition:: Summer schedule for the garage
+   :class: important
+
+   See summer schedule at the top of this page.
 
 You can meet us online, every weekday, at 13:00, `online via zoom
 <https://aalto.zoom.us/j/61322268370>`__.  Imagine this like walking
