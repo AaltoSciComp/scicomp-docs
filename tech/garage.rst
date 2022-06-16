@@ -1,5 +1,5 @@
-Garage help sessions
-====================
+Garage help sessions: how it works (internal)
+=============================================
 
 Since 2017, we have had weekly office hours called "garage".  Since
 2020, they have been onile and revolutionized our work.  The garage
