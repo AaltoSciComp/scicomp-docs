@@ -6,13 +6,14 @@ Scicomp garage
    :class: important
 
    We will try to continue Garage during the summer, but there are
-   many staff vacations during the high summer.
+   many staff vacations during July.
 
-   - We aren't cancelling garage but not promising to be there every
-     day.
-   - You can drop by and give it a try.  Open an :ref:`issue
-     <issue-tracker>` if something is urgent and we'll tell you what
-     to do (garage day or asynchronous help).
+   - We aren't canceling garage but not promising to be there every
+     day.  Our support on certain topics may be limited.
+   - You can drop by and see if someone is there.  Open an :ref:`issue
+     <issuetracker>` if something is urgent or important and we'll
+     tell you what to do (for example, a garage day to attend or
+     asynchronous help).
 
 
 If you need more help than the issue trackers, this is the place to
