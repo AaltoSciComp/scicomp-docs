@@ -2,57 +2,42 @@
 Spyder
 ======
 
-:supportlevel: C
-:pagelastupdated: 2014
-
 Spyder is the Scientific PYthon Development
 EnviRonment:\ https://www.spyder-ide.org/
 
-This guide shows you how to set this up with different version of Qt4
-and python compared to the default version provided by operating system.
-Virtual environment makes this encapsulated from the rest of the
-environment and thus you can install different versions of python
-packages and also make the environment more portable.
+On triton there are two modules that provide Spyder:
+- The basic anaconda module:  ``module load anaconda`` or
+- The neuroimaging environment module: ``module load neuroimaging``
 
-Load pre-set environment modules
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+By loading either module you will get access to Spyder.
 
-::
+Using Spyder on Triton
+~~~~~~~~~~~~~~~~~~~~~~
 
-    module load triton/python/2.7.6
-    module load qt/4.8.6
+To use spyder on triton, you will need an xserver on your local machine 
+(in order to display the spyder GUI) e.g. `VcXsrv <https://sourceforge.net/projects/vcxsrv/>`_.
+You will further need to connect to triton with X-Forwarding:  
+``ssh -X triton.aalto.fi``
 
-Setup you virtualenv
-~~~~~~~~~~~~~~~~~~~~
+Finally, load the module you want to use Spyder from (see above) and run ``spyder``
 
-::
+Use a different environment for Spyder
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    mkdir -p /local/mhhakala/virtualenv && cd /local/mhhakala/virtualenv
-    virtualenv spyder_env
-    source spyder_env/bin/activate
+If you want to use python packages which are not part of the module you use spyder from,
+it is strongly to suggested to create a virtual environment (e.g. :doc:`e.g. Conda environments <python-conda>`).
+Set up the environment with all packages you want to use. After that, the following steps will make spyder use the environment:
 
-Install SIP + PyQt to the virtualenv
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. Activate your environment
+2. Run `python -c "import sys; print(sys.executable)` to get the path to the python interpreter in your environment
+3. Deactivate the environment
+4. Start Spyder
+5. In spyder Navigate to "Tools -> Preferences" and select "Python interpreter".
+   Under "Use the following Python Interpreter" enter the path from step 2
 
-::
+That will make Spyder use the created python environment.
 
-    # note, that we now have the virtualenv spyder_env activated
-    # SIP/PyQt4 do not install with pip, so download first to some location
-    tar zxf sip-4.16.7.tar.gz
-    cd sip-4.16.7
-    python configure.py
-    make && make install
 
-    tar zxf PyQt-x11-gpl-4.10.4.tar.gz
-    cd PyQt-x11-gpl-4.10.4
-    python configure.py
-    make
-    make install
 
-Install spyder to the virtualenv
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-::
 
-    # still under activated spyder_env
-    pip install spyder
