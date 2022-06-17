@@ -144,17 +144,15 @@ you need to move on to the next steps.
 
 .. _issuetracker:
 
-Issue tracker
-~~~~~~~~~~~~~
+Triton Issue tracker
+~~~~~~~~~~~~~~~~~~~~
 
 The `Triton issue tracker
 <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`__,
-which is where most Triton and scientific computing issues should
-go, even if not directly Triton related.  *Log in and search the issue
+which is where all Triton issues should go.  *Log in and search the issue
 tracker for related issues, you may find the solution already*
 
-**If you issue is about Triton, software, or somewhat related, this is
-where it should go.**
+**If you issue is about or related to Triton this is where it should go.**
 
 Garage
 ~~~~~~
