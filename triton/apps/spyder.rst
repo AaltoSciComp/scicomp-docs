@@ -29,7 +29,7 @@ it is strongly to suggested to create a virtual environment (e.g. :doc:`e.g. Con
 Set up the environment with all packages you want to use. After that, the following steps will make spyder use the environment:
 
 1. Activate your environment
-2. Run `python -c "import sys; print(sys.executable)` to get the path to the python interpreter in your environment
+2. Run ``python -c "import sys; print(sys.executable)`` to get the path to the python interpreter in your environment
 3. Deactivate the environment
 4. Start Spyder
 5. In spyder Navigate to "Tools -> Preferences" and select "Python interpreter".
