@@ -193,6 +193,15 @@ You can also chat with us on `Aalto Microsoft Teams
 The invite code is ``e50tyij``.  We are also findable on various other
 department chats here.
 
+Research Software Engineer service
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Sometimes, a problem goes beyond "Triton support" and becomes
+"scientific computing support".  Our :doc:`Research Software Engineers
+</rse/index>` are perfect for these kinds of problems: they can
+program with you, set up your workflow, or even handle all the
+technical problems for you.
+
 Email
 ~~~~~
 
