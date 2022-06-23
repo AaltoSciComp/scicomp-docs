@@ -153,7 +153,7 @@ Create your own image
 ~~~~~~~~~~~~~~~~~~~~~
 
 See the `Singularity docs on this
-<https://sylabs.io/guides/latest/user-guide/quick_start.html#build-images-from-scratch>`__.
+<https://docs.sylabs.io/guides/latest/user-guide/quick_start.html#build-images-from-scratch>`__.
 You create a Singularity definition file ``NAME.def``, and then::
 
   $ singularity build IMAGE_OUTPUT.sif NAME.def
@@ -268,8 +268,8 @@ Examples
 See also
 --------
 
-* Singularity documentation: https://sylabs.io/docs
-* Singularity docs on building a container: https://sylabs.io/guides/latest/user-guide/build_a_container.html
+* Singularity documentation: https://docs.sylabs.io/
+* Singularity docs on building a container: https://docs.sylabs.io/guides/latest/user-guide/build_a_container.html
 * Singularity documentation from Sigma2 (Norway):
   https://documentation.sigma2.no/software/containers.html
 
