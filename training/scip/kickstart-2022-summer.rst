@@ -4,6 +4,9 @@ June 2022 / Intro to Scientific Computing /  HPC Summer Kickstart
 
 .. admonition:: Quick Reference
 
+   - Recordings are at this `YouTube playlist
+     <https://www.youtube.com/playlist?list=PLZLVmS9rf3nOmS1XIWTB0Iu7Amvf79r-f>`__.
+   - All HackMD Q&A is archived here: https://hackmd.io/@AaltoSciComp/ArchiveIntroSummer2022
    - **Thank you for attending the course!**  Do you wonder what to do
      next?
 
@@ -29,15 +32,6 @@ June 2022 / Intro to Scientific Computing /  HPC Summer Kickstart
      parallel code but using parallel code.  We heard from CSC.
    - Date: 7, 9-10 June 2022, 11:50-16:00 EEST (Helsinki time).
    - Join via Twitch: https://twitch.tv/coderefinery
-   - ~~Please register here: https://link.webropol.com/s/scicompintrosummer2022.~~
-   - This courses schedule is below but still may be updated
-     based on interest and practical matters.
-   - Recordings at `Twitch
-     <https://www.twitch.tv/coderefinery/videos>`__ for 14 days and
-     this `YouTube playlist
-     <https://www.youtube.com/playlist?list=PLZLVmS9rf3nOmS1XIWTB0Iu7Amvf79r-f>`__
-     soon.
-   - All HackMD Q&A is archived here: https://hackmd.io/@AaltoSciComp/ArchiveIntroSummer2022
 
 
 Kickstart is a three × half day course for researchers to get
