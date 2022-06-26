@@ -10,16 +10,15 @@ Useful information
 
 * Your account data is not actually stored in this system, but is handled under the generic `IT Services
   privacy notice
-  <https://www.aalto.fi/en/aalto-university/it-services-privacy-notice>`__
-  (at
+  <https://www.aalto.fi/en/aalto-university/it-services-privacy-notice>`__.
 * Your user data is controlled by yourself, and is handled under the
   generic `IT Services privacy notice
   <https://www.aalto.fi/en/aalto-university/it-services-privacy-notice>`__
-  (at least as much as it applies to your user data)
+  (at least as much as it applies to your user data).
 * Data submitted as part of courses is covered under the `Privacy
   notice for students
   <https://into.aalto.fi/display/contact/Privacy+notice>`__ or
-  whatever privacy notice your instructor uses.
+  whatever privacy notice your course uses.
 
 The Aalto JupyterHub for Teaching is a service for light computation
 including teaching purposes.  It facilitates releasing, collecting,
