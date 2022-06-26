@@ -1,4 +1,3 @@
-==========
 JupyterHub
 ==========
 
@@ -19,7 +18,7 @@ computing.
 
 
 Basic usage
-===========
+-----------
 
 Log in with any valid Aalto account.  Our environment may be used for light
 computing and programming by anyone.
@@ -64,7 +63,7 @@ terminal - this is a great place to learn something new.
 
 
 Terms of use
-============
+------------
 
 This service must be used according to the general IT usage policy of
 Aalto university (including no unlawful purposes).  It should only be
@@ -81,7 +80,7 @@ computing, see :doc:`../triton/index`.
 
 
 Courses and assignments
-=======================
+-----------------------
 
 Some courses may use the `nbgrader
 <https://nbgrader.readthedocs.io/en/stable/>`__ system to give and
@@ -118,7 +117,7 @@ sometimes.
 
 
 Instructors
-===========
+-----------
 
 .. toctree::
    :hidden:
@@ -132,7 +131,7 @@ students, or using nbgrader to release and collect assignments.
 
 
 Privacy notice
-==============
+--------------
 
 This system is managed by Aalto CS-IT.  We do not store separate
 accounts or user data beyond a minimal database of usernames and
@@ -166,7 +165,7 @@ instructors is the responsibility of you and the instructors.
 
 
 FAQ and bugs
-============
+------------
 
 * **I started the wrong environment and can't get back to the course
   selection list.**  In JupyterLab, use the menu bar, "Hub->Control
@@ -282,7 +281,7 @@ FAQ and bugs
 
 
 More info
-=========
+---------
 
 Students, your first point of contact for course-related matters and
 bugs with JuptyerHub should be your instructors, not us.  They will
