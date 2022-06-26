@@ -131,7 +131,7 @@ This service may be either used as general light computing for your
 students, or using nbgrader to release and collect assignments.
 
 
-Privacy policy
+Privacy notice
 ==============
 
 This system is managed by Aalto CS-IT.  We do not store separate
@@ -149,7 +149,7 @@ use the ``feedback/`` directory to return assignments to you.
 The use of your own data and submission of data to your course
 instructors is the responsibility of you and the instructors.
 
-See :doc:`the separate privacy policy document <jupyterhub-privacy>`
+See :doc:`the separate privacy policy document <jupyterhub/privacy-notice>`
 for longer, less useful information.
 
 

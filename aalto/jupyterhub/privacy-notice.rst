@@ -1,13 +1,12 @@
-=========================
-Jupyterhub privacy notice
+jupyter.cs privacy notice
 =========================
 
 .. seealso::
 
-   The :doc:`main JupyterHub for Teaching page <jupyterhub>`.
+   The :doc:`main JupyterHub for Teaching page <../jupyterhub>`.
 
 Useful information
-==================
+------------------
 
 The Aalto JupyterHub for Teaching is a service for light computation
 including teaching purposes.  It facilitates releasing, collecting,
@@ -48,7 +47,7 @@ for any purpose.
 
 
 Less useful information
-=======================
+-----------------------
 
 The controller of the administrative metadata is Aalto University
 Computer Science IT, which can be reached at guru at cs dot aalto.fi
