@@ -149,9 +149,20 @@ use the ``feedback/`` directory to return assignments to you.
 The use of your own data and submission of data to your course
 instructors is the responsibility of you and the instructors.
 
-See :doc:`the separate privacy policy document <jupyterhub/privacy-notice>`
-for longer, less useful information.
-
+* See :doc:`the separate privacy policy document <jupyterhub/privacy-notice>`
+  for longer, less useful information.
+* Your account data is not actually stored in this system, but is handled under the generic `IT Services
+  privacy notice
+  <https://www.aalto.fi/en/aalto-university/it-services-privacy-notice>`__
+  (at
+* Your user data is controlled by yourself, and is handled under the
+  generic `IT Services privacy notice
+  <https://www.aalto.fi/en/aalto-university/it-services-privacy-notice>`__
+  (at least as much as it applies to your user data)
+* Data submitted as part of courses is covered under the `Privacy
+  notice for students
+  <https://into.aalto.fi/display/contact/Privacy+notice>`__ or
+  whatever privacy notice your instructor uses.
 
 
 FAQ and bugs
