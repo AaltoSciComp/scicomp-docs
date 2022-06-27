@@ -133,34 +133,20 @@ students, or using nbgrader to release and collect assignments.
 Privacy notice
 --------------
 
-This system is managed by Aalto CS-IT.  We do not store separate
-accounts or user data beyond a minimal database of usernames and
-technical logs of notebooks which are periodically removed (this is
-separate from your data).  Your actual data is yours only and you are
-responsible for it.  We do not access your data, but when necessary
-for the operation of the system, but we use and may look at file
-metadata such as permissions, timestamp, filename (``stat filename``).
-Your ``/notebooks`` directory may be deleted once it has been
-inactive for one year, and at the latest once your Aalto home
-directory is removed (after your account expires).  Some courses will
-use the ``feedback/`` directory to return assignments to you.
+**Summary:** This system is managed by Aalto CS-IT.  We do not store
+separate accounts or user data beyond a minimal database of usernames
+and technical logs of notebooks which are periodically removed (this
+is separate from your data).  The actual data (your data, course data)
+is controlled by you and the course instructor respectively.  We do
+not access data, but when necessary for the operation of the system,
+but we may see file metadata (``stat FILENAME``) such as permissions,
+size, timestamp and filename.  Your personal data may be deleted once
+it has been inactive for one year, and at the latest once your Aalto
+home directory is removed (after your Aalto account expires).  Course
+data is controlled by course instructors.
 
-The use of your own data and submission of data to your course
-instructors is the responsibility of you and the instructors.
-
-* See :doc:`the separate privacy policy document <jupyterhub/privacy-notice>`
-  for longer, less useful information.
-* Your account data is not actually stored in this system, but is handled under the generic `IT Services
-  privacy notice
-  <https://www.aalto.fi/en/aalto-university/it-services-privacy-notice>`__.
-* Your user data is controlled by yourself, and is handled under the
-  generic `IT Services privacy notice
-  <https://www.aalto.fi/en/aalto-university/it-services-privacy-notice>`__
-  (at least as much as it applies to your user data).
-* Data submitted as part of courses is covered under the `Privacy
-  notice for students
-  <https://into.aalto.fi/display/contact/Privacy+notice>`__ or
-  whatever privacy notice your course uses.
+See :doc:`the separate privacy policy document <jupyterhub/privacy-notice>`
+for more details.
 
 
 FAQ and bugs
