@@ -1,5 +1,10 @@
-Garage help sessions: how it works (internal)
-=============================================
+"Garage" concept for user support
+=================================
+
+.. seealso::
+
+   Our garage description page for users: :doc:`/help/garage`.  (This
+   is an internal description page)
 
 Since 2017, we have had weekly office hours called "garage".  Since
 2020, they have been onile and revolutionized our work.  The garage
@@ -14,9 +19,6 @@ gives us:
   general provide the spontaneous interaction that everyone claims is
   missing from remote work.
 
-.. seealso::
-
-   Our garage description page for users: :doc:`/help/garage`
 
 
 
