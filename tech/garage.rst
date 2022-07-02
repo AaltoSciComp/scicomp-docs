@@ -7,7 +7,7 @@
    is an internal description page)
 
 Since 2017, we have had weekly office hours called "garage".  Since
-2020, they have been onile and revolutionized our work.  The garage
+2020, they have been online and revolutionized our work.  The garage
 gives us:
 
 - A standard way to help users interactively, without the burden of
@@ -21,17 +21,16 @@ gives us:
 
 
 
-
 rkdarst's principles of remote work
 -----------------------------------
 
 Garage helps with at least two of rkdarst's principles of remote work,
 and part of a third:
 
+- No private messages
 - Don't schedule meetings (use standard meeting locations and talk
   spontaneously)
 - Work in public
-- No private messages
 
 
 
@@ -64,6 +63,40 @@ How it works: support session
   say "Let's talk in garage" rather than try to debug by asynchronous
   chat.  Since garage is so frequent, this feels good.
 - You can read our "support flowchat" from :doc:`/help/index`.
+
+
+
+Technical setup
+~~~~~~~~~~~~~~~
+
+- There is one recurring Zoom meeting
+- Meeting schedule = "recurring at no fixed time" option.
+- Everyone on our team is a co-host (must be in same Zoom
+  organization)
+- The first co-host to join becomes the meeting host.
+- Any co-host can open breakout rooms or assign customers to breakout
+  rooms.  But for the most part we tell users where to go and they go
+  themselves.
+- Normally, first person to need breakout rooms opens an excess
+  number, such as 10, and selects "allow participates to choose", click
+  "open", and takes no further management action.
+- Some people may initially use chat to ask their question (the
+  dispatcher can also send these initial questions by chat).  This is
+  especially good as a second conversation while one problem is being
+  discussed.
+- Zoom trolls have never been a problem, even though the link is
+  public.  One hypothesis is that by not listing specific dates on the
+  webpage, it is not a findable target by someone looking for "where
+  to troll now?".
+
+
+Typical procedures
+~~~~~~~~~~~~~~~~~~
+- Usually one person is the effective "dispatcher": they make sure
+  that everyone is greeted, take a basic description of each problem.
+  They make sure that people are handled, call in the best supporter,
+  etc.  (after a team gets enough experience, this doesn't need as
+  much coordination).
 
 
 
@@ -131,30 +164,6 @@ How it works: general common space
 
 
 
-Technical setup
----------------
-
-- There is one recurring Zoom meeting
-- No fixed schedule (Zoom "scheduled times" have no significance to
-  when you can be in a meeting, if you are scheduling every meeting
-  you have, I ask "why?").  Nowadays, there is also a "recurring at
-  no fixed time" options
-- Everyone on our team is a co-host (must be in same Zoom
-  organization)
-- The first co-host to join becomes the meeting host
-- Any co-host can open breakout rooms or assign customers to breakout
-  rooms.  But for the most part we tell users where to go and they go
-  themselves.
-- Normally, first person to need breakout rooms opens an excess
-  number, such as 10, and selects "allow participates to choose", click
-  "open", and takes no further management action.
-- Zoom trolls have never been a problem, even though the link is
-  public.  One hypothesis is that by not listing specific dates on the
-  webpage, it is not a findable target by someone looking for "where
-  to troll now?".
-
-
-
 Problems with in-person office hours / garage
 ---------------------------------------------
 
@@ -194,6 +203,8 @@ Open questions
 
 - What is the largest size team for which this works?  What happens
   when we go over that?
+- What's the best frequency?  *We really think that every day works
+  best for something within a team.*
 - Mixing different teams in general: how different of teams can use
   the same garage/standard meeting room.
 - If multiple teams have separate garages, should they be at the same
