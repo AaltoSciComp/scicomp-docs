@@ -32,20 +32,17 @@ Get started / request Zulip
 
 .. note::
 
-    During 2022 summer, we are changing the support system and the
-    request form is closed for the time being.  Contact us if you need
-    something created in the meantime and we'll see what we can do.
+   From the academic year 2022-2023, Zulip will be available for all Aalto courses. From July 21th onwards, chat realms can be
+   requested using the new form at `https://zulip.aalto.fi/requests/ <https://zulip.aalto.fi/requests/>`_.
 
 .. note::
 
-    This service is still in beta. You might encounter some issues. If you
-    encounter issues, report them to
+    If you encounter issues, report them to
     `CS-IT <https://wiki.aalto.fi/display/CSdept/IT/>`_ or on #zulip-support
     at `scicomp.zulip.cs.aalto.fi <https://scicomp.zulip.cs.aalto.fi/>`_
 
     You can also give/discuss feedback, complaints or suggestions on
-    #zulip-feedback at
-    `scicomp.zulip.cs.aalto.fi <https://scicomp.zulip.cs.aalto.fi/>`_
+    #zulip-feedback at `scicomp.zulip.cs.aalto.fi <https://scicomp.zulip.cs.aalto.fi/>`_
 
 .. note::
 
