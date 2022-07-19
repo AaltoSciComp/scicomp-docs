@@ -250,16 +250,23 @@ requests for software in these so that it is automatically available.
 Installing kernels from virtualenvs or Anaconda environments
 ------------------------------------------------------------
 
+If you want to use Jupyter with your own packages, you can do that.
+First, make a conda environment / virtual environment on Triton and
+install the software you need in it (see :ref:`conda` or
+:ref:`virtualenv`).  This environment can be used for other things,
+such as your own development outside of Jupyter.
+
 You have to have the package ``ipykernel`` installed in the
 environment: Add it to your requirements/environment, or activate the
 environment and do ``pip install ipykernel``.
 
-For conda environments, you can do::
+Then, you need to make the environment visible inside of Jupyter.
+**For conda environments**, you can do::
 
   module load jupyterhub/live
   envkernel conda --user --name INTERNAL_NAME --display-name="My conda" /path/to/conda_env
 
-Or for Python virtualenvs::
+Or for **Python virtualenvs**::
 
   module load jupyterhub/live
   envkernel virtualenv --user --name INTERNAL_NAME --display-name="My virtualenv" /path/to/virtualenv
