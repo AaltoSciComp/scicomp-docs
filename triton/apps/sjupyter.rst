@@ -44,11 +44,10 @@ extension and SSH Proxy.
   connect to the notebook.
 
   * If you are in Aalto networks: ``ssh -D 8123
-    username@triton.aalto.fi``.
+    USERNAME@triton.aalto.fi``.
   * If you are not in Aalto networks, you need to do an extra hop
     through another Aalto server: ``ssh -D 8123
-    username@triton.aalto.fi -o ProxyCommand='ssh
-    username@kosh.aalto.fi -W %h:%p'``.
+    -J USERNAME@kosh.aalto.fi USERNAME@triton.aalto.fi``.
 
 Now, when you go to any address matching ``*.int.triton.aalto.fi*``,
 you will *automatically* connect to the right place on Triton.  You
@@ -78,5 +77,3 @@ notebook idle, no one else can use them.  Thus, try to use the
 
 To run on the login node, run ``sjupyter --local``.  This is good for
 small testing and so on, which doesn't use too much CPU or memory.
-
-
