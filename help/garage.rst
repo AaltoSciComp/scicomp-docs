@@ -5,7 +5,8 @@ Scicomp garage
 .. admonition:: Summer schedule for the garage
    :class: important
 
-   **News:** Monday 20 June 2022: no garage, summer Science-IT event.
+   **News:** Friday, 22 July 2022: no garage.  (total stats: two days
+   without garage in summer 2022).
 
    We will try to continue Garage during the summer, but there are
    many staff vacations during July.
