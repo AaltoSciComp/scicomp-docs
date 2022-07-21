@@ -30,6 +30,9 @@ Overview
    acknowledgingtriton.rst
 
 
+
+.. _tutorials:
+
 Tutorials
 =========
 These are designed to be read (or `watched <tutorial-playlist_>`__) in-order by every Triton user when they
@@ -94,7 +97,6 @@ Examples
 
    examples/index
 
-.. _tutorials:
 
 
 Detailed instructions
