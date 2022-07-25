@@ -246,6 +246,7 @@ requests for software in these so that it is automatically available.
    in kernel.json.
 
 
+.. _triton-jupyter-virtualenv-conda-kernels:
 
 Installing kernels from virtualenvs or Anaconda environments
 ------------------------------------------------------------

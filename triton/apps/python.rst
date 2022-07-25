@@ -264,6 +264,13 @@ works on other systems easily so it's good to know about.
 
 .. _python-ipyparallel:
 
+Anaconda/virtualenvironments in Jupyter
+---------------------------------------
+
+If you make a conda environment / virtual environment, you can use it
+from Triton's JupyterHub (or your own Jupyter).  See
+:ref:`triton-jupyter-virtualenv-conda-kernels`.
+
 IPython Parallel
 ----------------
 
