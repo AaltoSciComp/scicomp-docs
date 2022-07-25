@@ -5,9 +5,6 @@ About these tutorials
 
    Watch this in our courses: `2021 January <https://www.youtube.com/watch?v=etYG9YhsXKI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=5>`__.
 
-   The "Shell crash course" is a useful prerequisite.  You can watch a
-   `short version (20 min) <https://youtu.be/56p6xX0aToI>`__ or `longer version (1 hour) <https://www.youtube.com/watch?v=ESXLbtaxpdI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=3&t=1402s>`__.
-
    Or see the `full playlist (2022 winter)
    <https://www.youtube.com/playlist?list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V>`__
    (`2021 summer
@@ -26,6 +23,25 @@ for simple jobs: getting more stuff done at once, not a few very big
 tasks.  Doing the big tasks are a more specialized topic, which this
 will introduce you to and you will be able to use other software for
 that.  Programming your own HPC software is out of our scope.
+
+
+
+Prerequisites
+-------------
+
+These are useful before starting, but obviously you can take things in
+any order you want.  Some people will already know these things, and
+some people would rather come back to these later.
+
+* The "Shell crash course".  You can :doc:`read it (10-20 min)
+  </scicomp/shell>`, watch a `short version (20 min)
+  <https://youtu.be/56p6xX0aToI>`__ or `longer version (1 hour)
+  <https://www.youtube.com/watch?v=ESXLbtaxpdI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=3&t=1402s>`__.
+  The shorter options are fine.
+
+* Open the :doc:`../ref/index` - you don't need to know what is on it
+  (that is what these tutorials cover), but having it open now and
+  during your work will help you a lot.
 
 
 
