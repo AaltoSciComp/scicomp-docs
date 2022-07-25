@@ -250,6 +250,13 @@ time to review your local guides to see how they are adapted to your site.
 
    g) I can't install my own Python/R/etc libraries.
 
+   .. solution::
+
+      All of these can be caused by exceeding the quota.
+
+      (don't worry, "can't log in" doesn't apply to basic ssh login,
+      so you can always still fix it yourself)
+
 **About filesystem performance:**
 
 ``strace`` is a command which tracks **system calls**, basically the
