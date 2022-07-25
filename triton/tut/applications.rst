@@ -173,11 +173,18 @@ If you are at Aalto, everything will work.  Otherwise, if you are in
 Finland (but not at CSC) ``module load fgci-common`` will make our
 modules available on your cluster.
 
-.. exercise:: Applications-1: Tensorflow
+.. exercise:: Applications-1: Find Tensorflow documentation
 
-   Figure out how to use ``tensorflow`` (this is not a software
-   problem, but an "assignment zero" searching the documentation problem).  Make it work
-   enough to run ``python`` and ``import tensorflow``.
+   This is an exercise in finding out how to use a new program on
+   Triton.  The goal is not to actually use tensorflow, but practice
+   searching for information on it.
+
+   Figure out how to use ``tensorflow``:  What is the documentation
+   page on scicomp.aalto.fi?  Can you see any issues where others have
+   asked for special support?
+
+   If you want to use Python, see if you can import it.  For example,
+   try to run ``python`` and then in Python run ``import tensorflow``.
 
 .. exercise:: Applications-2: Check your needs
 
