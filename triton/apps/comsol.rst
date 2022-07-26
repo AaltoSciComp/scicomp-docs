@@ -89,7 +89,7 @@ First set up the cluster preferences, as described above.
 Start by loading the correct modules in triton (COMSOL requires MPICH2 compatible MPI libraries). Then open the graphical user interface to comsol on the login node and open your model. ::
 
   $ module purge
-  $ module load module load comsol/5.6 intel-parallel-studio/cluster.2020.0-intelmpi
+  $ module load comsol/5.6 intel-parallel-studio/cluster.2020.0-intelmpi
   $ comsol
 
 Add a "Cluster Sweep" node to your study and a "Cluster Computing" node into your "Job Configurations" (You may need to first enable them in the "Show more options". Check the various options. You can try solving a small test case from the graphical user interface. You should see COMSOL submitting jobs to the SLURM queue. 
