@@ -142,7 +142,7 @@ Search this website for help.  For that matter, also search the
 internet in usual.  This is usually a good place to start, but often
 you need to move on to the next steps.
 
-.. _issuetracker:
+.. _issuetracker-general:
 
 Triton Issue tracker
 ~~~~~~~~~~~~~~~~~~~~
