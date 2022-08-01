@@ -1,13 +1,21 @@
-"Garage" concept for user support
-=================================
+Online work and support
+=======================
 
 .. seealso::
 
    Our garage description page for users: :doc:`/help/garage`.  (This
    is an internal description page)
 
+Since 2020, Aalto Scientific Computing has worked online.  Since we
+are a distributed team supporting users in many locations, this has
+improved our work in numerous ways.  Online work gives us:
+
+- A way to interact regardless of physical distribution close to users.
+- Higher-quality, continuous interaction (including better onboarding).
+- Better work-life balance and adaptability to different lifestyles.
+
 Since 2017, we have had weekly office hours called "garage".  Since
-2020, they have been online and revolutionized our work.  The garage
+2020, they have been online and revolutionized our support.  The garage
 gives us:
 
 - A standard way to help users interactively, without the burden of
@@ -24,8 +32,8 @@ gives us:
 rkdarst's principles of remote work
 -----------------------------------
 
-Garage helps with at least two of rkdarst's principles of remote work,
-and part of a third:
+The online garage helps with at least two of rkdarst's principles of
+remote work, and part of a third:
 
 - No private messages
 - Don't schedule meetings (use standard meeting locations and talk
@@ -34,8 +42,8 @@ and part of a third:
 
 
 
-How it works: support session
------------------------------
+How it works: "garage" support session
+--------------------------------------
 
 - We have an announced time: **13:00, every workday**.
 - Users and staff join the meeting during the scheduled time
