@@ -35,10 +35,10 @@ rkdarst's principles of remote work
 The online garage helps with at least two of rkdarst's principles of
 remote work, and part of a third:
 
-- No private messages
+- No private messages (allow others to know what you are doing)
 - Don't schedule meetings (use standard meeting locations and talk
   spontaneously)
-- Work in public
+- Work in public (make it possible for others to join you)
 
 
 
@@ -103,8 +103,8 @@ Typical procedures
 - Usually one person is the effective "dispatcher": they make sure
   that everyone is greeted, take a basic description of each problem.
   They make sure that people are handled, call in the best supporter,
-  etc.  (after a team gets enough experience, this doesn't need as
-  much coordination).
+  etc.  (after a team gets enough experience, this role becomes
+  implicit).
 
 
 
@@ -131,13 +131,13 @@ How it works: internal meetings
     way.
 
 - This isn't just for users - other staff teams can come talk to us
-  during this time.
+  during this time.  Basically, it replaces a lot of the overhead with
+  any meeting with us.
 
-- (A bit off topic, but) online-default meetings is great for
-  work-life balance of people, especially those with families.
+- Online-default meetings is great for work-life balance of people,
+  especially those with families.
 
-- (A bit off topic, but) meetings are managed with a Google Docs
-  agenda.
+- Meetings are managed with a Google Docs agenda.
 
   - Each week, a new heading is made, and it collects topics
     for the next meeting.  There is no running through a list of ongoing
@@ -149,8 +149,9 @@ How it works: internal meetings
     the agenda, so meetings scale better.  People can write
     information already in advance of the meeting, to focus the
     meeting on discussion and not sharing information.
-  - It is only one running document.  Attendees can easily scroll down
-    to refer to past weeks.
+  - It is only one running document (not a new one each week).  New
+    weeks are added to the top (since top loads first).  Attendees can
+    easily scroll down to refer to past weeks.
   - This strategy has revolutionized our meetings.  Other meetings
     have much more of a "this meeting should have been an email"
     feeling after this.
@@ -162,7 +163,8 @@ How it works: general common space
 
 - If two people are text-chatting and need to talk in person, there is
   zero overhead.  One simply asks "Zoom now?", the other confirms, and
-  they know exactly where to go.
+  they know exactly where to go.  Or the answer might be "Garage
+  tomorrow?"
 - This space is also is used for random coffee breaks, etc, which are
   usually spontaneously announced.
 - In theory, especially when we are onboarding people, this can be a
