@@ -2,21 +2,14 @@
 Scicomp garage
 ==============
 
-.. admonition:: Summer schedule for the garage
+.. admonition:: Link
+
+   https://aalto.zoom.us/j/61322268370, every day at 13:00
+
+.. admonition:: Planned disruptions
    :class: important
 
-   **News:** Friday, 22 July 2022: no garage.  (total stats: two days
-   without garage in summer 2022).
-
-   We will try to continue Garage during the summer, but there are
-   many staff vacations during July.
-
-   - We aren't canceling garage but not promising to be there every
-     day.  Our support on certain topics may be limited.
-   - You can drop by and see if someone is there.  Open an :ref:`issue
-     <issuetracker>` if something is urgent or important and we'll
-     tell you what to do (for example, a garage day to attend or
-     asynchronous help).
+   There are no current planned disruptions in the daily garage.
 
 
 If you need more help than the issue trackers, this is the place to
