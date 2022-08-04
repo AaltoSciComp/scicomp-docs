@@ -59,9 +59,6 @@ Notes:
 
 
 
-Online
-======
-
 .. _garage:
 .. _scicomp-garage:
 
@@ -70,17 +67,12 @@ Triton, SciComp, RSE, and CS
 
 .. admonition:: Link
 
-   https://aalto.zoom.us/j/61322268370, every day at 13:00
-
-.. admonition:: Summer schedule for the garage
-   :class: important
-
-   See summer schedule at the top of this page.
+   https://aalto.zoom.us/j/61322268370, every workday at 13:00
 
 You can meet us online, every weekday, at 13:00, `online via zoom
 <https://aalto.zoom.us/j/61322268370>`__.  Imagine this like walking
-into our office to ask for help. If you are not sure whether we can help you, come
-and chat with us anyway and we can figure out a solution together.
+into our office to ask for help. Even if you are not sure whether we can help you, come
+and chat with us anyway and we can figure it out.
 
 
 * This doesn't replace email or the `Triton issue
@@ -91,41 +83,38 @@ and chat with us anyway and we can figure out a solution together.
   garage and we will help you decide.  Many people make an issue, then
   come to garage to discuss.
 
-* Arrive between 13:00 - 13:15.  We leave at 13:15 if there is no one
-  around (and the person you need to talk to may leave).  Please don't
-  arrive early since we have another meeting then.  Program always ends at
-  14:00.
-  
-* We have some **focus days** (see list below) to ask about specific topics 
-  and make sure you find the right person to help you, but you can always
-  visit on any day and ask anything not related to the "focus".
+* Try to arrive between 13:00 - 13:15.  We may leave early if there is
+  no one around.  Please don't arrive early since we have other
+  meeting then.
 
-* Join on Zoom via https://aalto.zoom.us/j/61322268370 .  If joining
-  by web browser, use Chrome.  Audio doesn't work with Firefox or
-  Safari.
+* We have some **special days** (see list below) to ask about specific
+  topics, but in reality we can answer any question any day.
+
+* Join on Zoom via https://aalto.zoom.us/j/61322268370 .
+
 
 
 NBE/PHYS
 --------
 
-PHYS, NBE, and ITS (Aalto IT Services) staff are part of the Garage sessions every Monday and Wednesday. 
+PHYS, NBE, and ITS (Aalto IT Services) staff are part of the Garage sessions every **Monday and Wednesday**.
 Regular reminders are sent to the department personnel lists.
 
 
 
-Focus days
-----------
+Special days
+------------
 
-We have added some **focus days** (see list below), but you can always visit on any day and ask anything not related to the "focus". But even if today is not the focus day for your question: Better come along and ask your question now. Chances are good someone will know an answer.
+Some days are special, and have extra staff about certain topics.  But
+you can always visit on any day and ask any question, and we can
+usually give a good answer.
 
-* **Mondays** are NBE/PHYS focus days.
-* **Tuesdays** are Research Software Engineering focus days: Come ask about
-  issues with your code or software tools you use. We can also help with basic methodological or statistical issues.
-* **Wednesdays** NBE/PHYS and Data focus days. Data days is in joint collaboration with the `Aalto Data Agents network <https://www.aalto.fi/en/services/data-agents-and-data-advisor>`__
-  from all Aalto schools. Come ask about research data management, data sharing/reusing/opening, data versioning, 
-  sensitive data, data management plans, legal and ethical issues with research data, workflows for working with big datasets. 
-* **Thursdays** are Triton focus days: Come ask about code parallelization, slurm job submissions, and usage of Triton cluster. 
-* **Fridays** are CS focus days.  
+* **Mondays** also have NBE/PHYS IT present.
+* **Tuesdays**
+* **Wednesdays** also have NBE/PHYS IT present.
+* **Thursdays**
+* **Fridays** also have CS IT present (at the beginning).
+
 
 
 Others
@@ -136,13 +125,13 @@ departments
 <https://www.aalto.fi/en/news/new-service-for-researchers-it-support-via-zoom>`__.
 
 
-In person
-=========
 
-**In-person garages suspended for the time being for the
-obvious reason.  The online garage above is more frequent and even
-better, because you can reach more people and we can share screen
-directly.**
+In person
+---------
+
+In-person garages haven't been held since early 2020 for the obvious
+reason.  The online garage above is more frequent and you are more
+likely to meet the very best person for your topic.
 
 ..
   General garage (CS Building)
@@ -197,7 +186,7 @@ directly.**
 
 
 Past events
-===========
+-----------
 
 Scicomp Garage has existed since Spring 2017.  It has been online
 since March 2020, and daily since summer 2020.
