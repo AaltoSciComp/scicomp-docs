@@ -1,58 +1,46 @@
 Tensorflow
 ==========
 
-:supportlevel: A
-:pagelastupdated: 2020-05-15
-:maintainer:
+:pagelastupdated: 2022-08-08
 
 .. highlight:: bash
 
 Tensorflow is a commonly used Python package for deep learning.
 
 Basic usage
------------
+***********
 
 First, check the tutorials up to and including :doc:`../tut/gpu`.
 
 If you plan on using NVIDIA's containers to run your model, please check
 the page about :doc:`nvidiacontainers`.
 
-The basic way to use is via the Python in the ``anaconda`` module.
-The versions with ``-tf2`` (the default ones) have Tensorflow 2
-installed.  If you use ``module spider anaconda``, you can see a
-``-tf1`` version available.
+We provide a module for gpu enabled tensorflow 2.6  which can be loaded by 
+``module load tensorflow``. If you need a newer tensorflow version, 
+we suggest you install it via your own conda environment (see the instructions below).
 
-.. warning:: Older versions of Tensorflow were CPU-only or GPU-only
+Installing via conda
+********************
 
-   With older versions of tensorflow (<1.15.0), you have to decide at
-   *install time* if you want a version that runs on CPUs or GPUs. This
-   means that we can't install it for everyone and expect it to work
-   everywhere - you have to load something different if you want it to
-   run on login node/regular nodes (probably for testing) or GPU nodes.
-   The old ``-cpu`` and ``-gpu`` versions in the ``anaconda2``- and
-   ``anaconda3``-modules denoted this.
+Have a look `here </triton/apps/pyhon-conda.rst`_ for details on how to install 
+conda environments.
+While tensorflow GPU versions are no longer incompatible with systems where no 
+GPU is present they commonly come with a slightly slower performance on CPUs 
+compared to versions that are CPU optimized. Tensorflow addressed this issue by 
+being clever and installing a version optimized to the machine it is installed 
+on. This leads to an issue on clusters, where commonly the login node does not 
+have a CUDA enabled GPU installed. Therefore, is necessary to explicitly override 
+this selection mechanism as detailed `here <https://conda-forge.org/blog/posts/2021-11-03-tensorflow-gpu/#installation>`_
+, or to explicitly select a cuda enabled version of tensorflow in the environment
+file as explained below.
 
-   From tensorflow versions >= 1.15.0, they solved this problem (thankfully)
+.. include:: /triton/examples/tensorflow/tensorflow_with_conda.rst
 
-Don't load any additional CUDA modules, anaconda includes everything.
-
-If you use GPUs, you need ``--constraint='kepler|pascal|volta'`` in
-order to select a GPU new enough to run tensorflow.  (Note that as we
-get newer cards, this will need further updating).
+Examples:
+*********
 
 .. include:: ../examples/tensorflow/tensorflow_mnist.rst
 
 .. include:: ../examples/tensorflow/tensorflow_singularity_mnist.rst
 
-Common problems
----------------
 
-* **ImportError: libcuda.so.1: cannot open shared object file: No such
-  file or directory**. Older versions of GPU tensorflow can only be imported
-  on GPU nodes (even though you'd think that you can import it and just not
-  use the GPUs).  So you can only run this code in the GPU queue. Solution
-  for this is to use the newer ``anaconda``-modules.
-
-* Random CUDA errors: don't load any other CUDA modules, only
-  ``anaconda``.  Anaconda includes the necessary libraries in compatible
-  versions.
