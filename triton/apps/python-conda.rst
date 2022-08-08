@@ -290,33 +290,9 @@ In other cases one can use an environment file like this
 .. literalinclude:: /triton/examples/cuda/cuda-env.yml
 
 
-Creating an environment with GPU enabled Tensorflow
----------------------------------------------------
+.. include:: /triton/examples/tensorflow/tensorflow_with_conda.rst
 
-One can create an environment with GPU enabled Tensorflow using an
-environment like this
-:download:`tensorflow-env.yml </triton/examples/tensorflow/tensorflow-env.yml>`:
-
-.. literalinclude:: /triton/examples/tensorflow/tensorflow-env.yml
-
-Here we install tensorflow from ``conda-forge``-channel with an additional
-requirement that the build version of the ``tensorflow``-package must contain
-a reference to a CUDA toolkit.
-
-
-Creating an environment with GPU enabled PyTorch
-------------------------------------------------
-
-One can create an environment with GPU enabled PyTorch using an
-environment like this
-:download:`pytorch-env.yml </triton/examples/pytorch/pytorch-env.yml>`:
-
-.. literalinclude:: /triton/examples/pytorch/pytorch-env.yml
-
-Here we install pytorch from ``pytorch``-channel with an additional
-requirement that the build version of the ``pytorch``-package must contain
-a reference to a cuda toolkit. Additional packages required by pytorch
-are installed from ``conda-forge``-channel.
+.. include:: /triton/examples/pytorch/pytorch_with_conda.rst
 
 
 Installing numpy with Intel MKL enabled BLAS
