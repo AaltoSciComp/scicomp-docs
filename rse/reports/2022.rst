@@ -1,0 +1,208 @@
+2022 Aalto RSE report
+=====================
+
+..
+  What people want to know:
+  - Is it successful?
+  - What is the funding?
+  - What is the future?
+
+.. admonition:: Summary
+
+   * The Research Software Engineering service allows researchers to
+     take on more ambitious projects and existing projects to be much
+     faster and higher quality.
+   * There is no shortage of RSE projects, we could get more if we did
+     more outreach (which we don't since we would then be
+     over-capacity).
+   * We finish most projects too quickly to make project funding worth
+     the effort, but there is a steady stream of longer-term project
+     proposals which offer funding.
+   * We ask for
+
+     * Help in finding the researchers and projects who can most
+       benefit by this service.
+     * We could probably connect to societal impact better.
+
+
+
+Plenty of projects and still expanding
+--------------------------------------
+
+.. admonition:: Summary
+
+   * About 100 projects in a bit less than two years.
+   * Countless "garage projects": short help sessions to keep work
+     flowing smoothly.
+   * Perhaps 5× return on time spent (time we spent vs time
+     researchers save).
+   * We have gotten pilot funding to expand beyond SCI and there is
+     active interest here.
+
+History of Aalto RSE
+~~~~~~~~~~~~~~~~~~~~
+
+- December 2018: Idea ("Computational support scholar" postdoc-type
+  position)
+- December 2019: initial funding from SCI
+- October 2020: first hires (permanent)
+- Now: three permanent full time staff, continuous stream of
+  projects.
+
+Current staff and jobs
+~~~~~~~~~~~~~~~~~~~~~~
+
+We are part of Science-IT:
+
+- Three full-time RSEs
+- Two other staff with funding from specific projects
+- One staff leading
+- Three other staff fit "we are all RSEs anyway"
+
+Types of projects
+~~~~~~~~~~~~~~~~~
+
+- **No shortage of projects, also not yet over our limit.**
+
+  - **We don't advertise too much, since that would take us over our
+    limit.**
+
+  - Thus, there is definitely capacity to expand.
+
+Projects fit into two main categories:
+
+- **RSE projects**, take hours to months, in our issue tracker,
+  long-term support.
+
+  - The "classic work" of an RSE.
+
+- **Garage projects** are small questions that come up in the "daily
+  garage"
+
+  - Garage is our daily support method, answering small questions.
+
+Project stats
+~~~~~~~~~~~~~
+
+* 101 researcher projects in ~ 1.75 years.
+* **Overall "researcher time saved" is generally 5× "RSE time spent"**
+  (self-reports from customers)
+
+.. figure:: 2022-projects-time-by-department.png
+
+   Time spent by department.  Not all time is recorded.  Figure
+   includes only full-time RSE time spent.  Note that we have other
+   funding sources that allow us to work outside of SCI, and that
+   Science-IT receives general funding to serve the whole university.
+
+.. figure:: 2022-projects-time-needed-by-task.png
+
+   Time estimate (past and present) by type of tasks of all recorded
+   projects, including future projects, leads, and canceled ideas.
+   Projects have multiple tasks/benefits and all time is included in
+   *all tasks* in this figure.  **Values should only be used as a
+   relative comparison.**
+
+Garage stats
+~~~~~~~~~~~~
+
+- From October 2020 -- August 2022, about 500 visitors logged (about
+  half of visits are recorded).
+- Average visit from 30-60 minutes of support.
+- Most are answering tech/software questions to help research, and
+  teach people to be self-sufficient.
+
+.. figure:: 2022-garage-customers-departments.png
+
+   Garage customers by department, 2020-2022.  Note that old garage
+   data is extremely sparse, so this is more of a current estimate.
+
+.. figure:: 2022-garage-customers.png
+
+   Garage customers by title.  We only recently began collecting this
+   data, so it is very incomplete but roughly representative.  We only
+   support researchers and staff, students not doing research are
+   directed to student resources.
+
+
+
+Future funding status
+---------------------
+
+.. admonition:: Summary
+
+   * Current level of basic funding should continue, future expansion
+     via dedicated project funding.
+   * We have trouble accepting payments from projects.
+
+     * Most projects are too small to make a payment worth the
+       administrative effort. (< 1 month, which Finance proposed as a
+       limit of worth it).
+     * Microtransactions for payment aren't a good idea anyway.
+     * A fair number of projects (~10-20) have written months of work
+       into submitted grants, funded us, or offered funding.
+
+Financial transaction difficulty
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Original plan: try to get most funding from grants.
+- Finance (for very good reasons) doesn't want to do small
+  transactions - minimum 1 month.
+- Academy/EU rules don't allow easy invoicing, so must pay salary
+  directly.
+
+Current project funding policy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Each research group gets ~1 month of free RSE time, funded from
+  basic funding.
+- After that, a group is expected to provide project funding.
+- We finish most projects in less than a month, though.
+
+Future funding plan
+~~~~~~~~~~~~~~~~~~~
+
+- ~2 FTE of basic funding seems reasonable (could be increased)
+- Expansion beyond that via project funding (with SCI funding as
+  buffer between these periods)
+
+
+Funding from other schools
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- IT Services has provided pilot funding to expand to other schools.
+- We expect future (funded) expansion to other schools.
+
+
+
+Future hopes
+------------
+
+Wanted: Better outreach and impact
+----------------------------------
+
+* There is no shortage of projects, and advertising more will surely
+  fill us up.
+* Yet there are some things we can improve in the future.
+
+Reach those who need it the most
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Many people find us by word of mouth
+* Do we get the customers who need us most?
+
+Connect to societal impact measures
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Open science, reusable software, published data are more important
+  now.  We have time to do this right.
+* Example: web interfaces for algorithms and data.
+* Is it used in reportables as much as it could be?
+
+Expansion to other schools
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* We expect this service to expand to other schools and universities
+  in the future.
+* This will allow a broader knowledge base from which any individual
+  project can draw.
