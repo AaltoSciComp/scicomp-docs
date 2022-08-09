@@ -439,7 +439,45 @@ for an example of a kernel that loads a module first.
 ..
   This one-liner might help: ``( echo "  \"env\": {" ; for x in LD_LIBRARY_PATH LIBRARY_PATH MANPATH PATH PKG_CONFIG_PATH ; do echo "    \"$x\": \"${!x}\"", ; done ; echo "  }" ) >> ~/.local/share/jupyter/kernels/ir/kernel.json`` + then edit the JSON to make it valid.
 
+From Jupyter notebooks to running on the queue
+==============================================
 
+While jupyter is great to interactively run code, it can become 
+a problem if you need to run multiple parameter sets through a jupyter
+notebook or you need a specific resource which is not available
+for jupyter. The latter might be because the resource is sparse enough
+that having an open jupyter session that finished a part and is waiting
+for the user to start the next is idly blocking the resource. 
+At this point you will likely want to move your code to pure python and 
+run it via the queue.
+
+Here are the steps necessary to do so:
+
+1. Log into Triton via ssh ( Tutorials can be found :doc:`here </triton/quickstart/connecting/>` and :doc:`here </triton/tut/connecting/>` ).
+2. In the resulting terminal session, load the jupyterhub module to have jupyter available ( ``module load jupyterhub`` )
+3. Navigate to the folder where your jupyter notebooks are located. You can see the path by moving your mouse over the files tab on jupyterlab.
+4. Convert the notebook(s) you want to run on the cluster ( ``jupyter nbconvert yoourNotebook.ipynb --to python``). 
+
+   * If you need to run your code for multiple different parameters, modify the python code to allow input parameter parsing 
+     (e.g. using `argparse <https://docs.python.org/3/howto/argparse.html>`__, or `docopt <https://github.com/docopt/>`__ )
+     You should include both input and output arguments as you want to save files to different result folders or have them have indicative filenames. 
+     There are two main reasons for this approach: A) it makes your code more maintainable, since you don't need to modify 
+     the code when changing parameters and B) you are less likely to use the wrong version of your code (and thus getting the wrong results).
+5. (Optional) Set up a conda environment. This is mainly necessary if you have multiple conda or pip installable packages that are 
+   required for your job and which are not part of the normal anaconda module. Try it via ``module load anaconda``. 
+   You can't install into the anaconda environment provided by the anaconda module and you should NOT use  ``pip install --user`` as it will bite you later (and can cause difficult to debug problems).
+   If you need to set up your own environment follow :doc:`this guide </triton/apps/python-conda/>`
+6. Set up a slurm batch script in a file e.g. ``mySlurmScript.sh``. You can do this either with ``nano mySlurmScript.sh`` 
+   (to save the file press ``ctrl+x``, type ``y`` to save the file and press ``Enter`` to accept the file name), or you can mount
+   the triton file system, for guide have a look `here </triton/quickstart/data/>` and `here </triton/tut/remotedata/>`).
+   Depending on your OS, it might be difficult to mount home and it is anyways best practice to use ``/scratch/work/<username>`` for your code.
+   :download:`Here </triton/examples/python/simple_python_gpu.sh>` is an example:
+   .. literalinclude:: /triton/examples/python/simple_python_gpu.sh
+   This is a minimalistic example. If you have parameter sets that you want to use have a look at :doc:`array jobs here </triton/tut/array/>`)
+
+7. Submit your batch script to the queue : ``sbatch mySlurmScript.sh``
+   This call will print a message like: ``Submitted batch job <jobid>``
+   You can use e.g. ``slurm q`` to see your current jobs and their status in the queue, or monitor your jobs as described :doc:`here </triton/tut/monitoring/>`.
 
 
 Git integration
