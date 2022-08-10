@@ -142,6 +142,10 @@ Future funding status
      * A fair number of projects (~10-20) have written months of work
        into submitted grants, funded us, or offered funding.
 
+   * To make project funding really work well, we need a
+     high-level-management thinking about this type of funding.
+
+
 Financial transaction difficulty
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -178,8 +182,16 @@ Funding from other schools
 Future hopes
 ------------
 
+.. admonition:: Summary
+
+   I recommend you read the points, but the summary is that that we
+   think the next few years can focus on refining the type of impact
+   we have: we reach the cases where our impact is obvious, but what
+   about all the other cases?  We should transform how research is
+   done and how it is consumed.
+
 Wanted: Better outreach and impact
-----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * There is no shortage of projects, and advertising more will surely
   fill us up.
