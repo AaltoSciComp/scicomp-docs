@@ -131,8 +131,13 @@ Future funding status
 
 .. admonition:: Summary
 
-   * Current level of basic funding should continue, future expansion
-     via dedicated project funding.
+   * Current level of basic funding should continue, with future
+     expansion via dedicated project funding.
+
+   * Our plan is that each group gets ~ 1 month of RSE time as a basic
+     service.  Then, we expect a group to provide funding for
+     additional work.
+
    * We have trouble accepting payments from projects.
 
      * Most projects are too small to make a payment worth the
