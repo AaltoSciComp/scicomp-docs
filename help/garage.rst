@@ -9,6 +9,10 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
+   We won't be available on Wednesday, 17 August due to an internal
+   development day.
+
+..
    There are no current planned disruptions in the daily garage.
 
 
