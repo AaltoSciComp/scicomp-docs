@@ -239,6 +239,9 @@ requests for software in these so that it is automatically available.
    ``module load jupyterhub/live first``).  Look in these directories,
    at ``kernel.json``, to see just what it does.
 
+   You can remove kernels by removing their directory or ``jupyter
+   kernelspec remove``.
+
    The program `envkernel <https://github.com/NordicHPC/envkernel>`__
    can serve as a wrapper to a) modify kernel.json files and b) adjust
    the environment (e.g. loading modules) at runtime, which can be
