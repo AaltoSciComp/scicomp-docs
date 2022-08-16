@@ -10,34 +10,38 @@
 .. admonition:: Summary
 
    * The Research Software Engineering service allows researchers to
-     take on more ambitious projects and existing projects to be much
-     faster and higher quality.
+     take on more ambitious computational projects, and for existing
+     projects to be much faster and higher quality.
+   * **About 100 projects in a bit less than two years.**
+   * **Perhaps 5× return on time spent (time we spent vs time
+     researchers save).**
    * There is no shortage of RSE projects, we could get more if we did
-     more outreach (which we don't since we would then be
+     more outreach (which we don't focus on, since we would then be
      over-capacity).
-   * We finish most projects too quickly to make project funding worth
-     the effort, but there is a steady stream of longer-term project
-     proposals which offer funding.
+   * We haven't been able to receive project funding, due to financial
+     difficulties (grant rules make this difficult).
+   * **Our proposal is that groups receive ~1 month of free service,
+     paid with department/school funding.  After that, they should
+     find their own funding.**
+
+     * Most projects take well under one month, though, so we still
+       focus on basic funding.
+     * However, there is a steady stream of longer-term project
+       proposals which offer funding.
+
    * We ask for
 
+     * Continued basic funding at the current levels.
      * Help in finding the researchers and projects who can most
-       benefit by this service.
-     * We could probably connect to societal impact better.
+       benefit by this service - should a small amount of RSE time be
+       written into every grant?
+     * Recommendations for other schools/departments to join us.
 
 
 
-Plenty of projects and still expanding
---------------------------------------
+Current status of Aalto RSE
+---------------------------
 
-.. admonition:: Summary
-
-   * About 100 projects in a bit less than two years.
-   * Countless "garage projects": short help sessions to keep work
-     flowing smoothly.
-   * Perhaps 5× return on time spent (time we spent vs time
-     researchers save).
-   * We have gotten pilot funding to expand beyond SCI and there is
-     active interest here.
 
 History of Aalto RSE
 ~~~~~~~~~~~~~~~~~~~~
@@ -49,6 +53,7 @@ History of Aalto RSE
 - Now: three permanent full time staff, continuous stream of
   projects.
 
+
 Current staff and jobs
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -58,6 +63,7 @@ We are part of Science-IT:
 - Two other staff with funding from specific projects
 - One staff leading
 - Three other staff fit "we are all RSEs anyway"
+
 
 Types of projects
 ~~~~~~~~~~~~~~~~~
@@ -81,6 +87,7 @@ Projects fit into two main categories:
 
   - Garage is our daily support method, answering small questions.
 
+
 Project stats
 ~~~~~~~~~~~~~
 
@@ -102,6 +109,7 @@ Project stats
    Projects have multiple tasks/benefits and all time is included in
    *all tasks* in this figure.  **Values should only be used as a
    relative comparison.**
+
 
 Garage stats
 ~~~~~~~~~~~~
@@ -126,100 +134,71 @@ Garage stats
 
 
 
-Future funding status
----------------------
-
-.. admonition:: Summary
-
-   * Current level of basic funding should continue, with future
-     expansion via dedicated project funding.
-
-   * Our plan is that each group gets ~ 1 month of RSE time as a basic
-     service.  Then, we expect a group to provide funding for
-     additional work.
-
-   * We have trouble accepting payments from projects.
-
-     * Most projects are too small to make a payment worth the
-       administrative effort. (< 1 month, which Finance proposed as a
-       limit of worth it).
-     * Microtransactions for payment aren't a good idea anyway.
-     * A fair number of projects (~10-20) have written months of work
-       into submitted grants, funded us, or offered funding.
-
-   * To make project funding really work well, we need a
-     high-level-management thinking about this type of funding.
-
+Current and future funding
+--------------------------
 
 Financial transaction difficulty
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Original plan: try to get most funding from grants.
-- Finance (for very good reasons) doesn't want to do small
-  transactions - minimum 1 month.
-- Academy/EU rules don't allow easy invoicing, so must pay salary
-  directly.
+- **Finance (for very good reasons) doesn't want to do small
+  transactions - minimum 1 month.  Thus, we haven't been able to
+  accept much project funding.**
 
-Current project funding policy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  - Academy/EU rules don't allow easy internal invoicing, so must pay
+    salary directly.  This makes more overheads.
 
-- Each research group gets ~1 month of free RSE time, funded from
-  basic funding.
-- After that, a group is expected to provide project funding.
-- We finish most projects in less than a month, though.
+- **We need high-level management leadership on this topic.**
+
+
+Our current project funding policy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- **Each research group gets ~1 month of free RSE time sponsored by
+  basic funding.**
+- **After that, a group is expected to provide their own funding for
+  future RSE projects.**
+- However, we finish most projects in less than a month.
+
 
 Future funding plan
 ~~~~~~~~~~~~~~~~~~~
 
-- ~2 FTE of basic funding seems reasonable (could be increased)
-- Expansion beyond that via project funding (with SCI funding as
-  buffer between these periods)
+- **We should maintain at least ~2 FTE of basic funding for the near
+  future.**
+
+  - Any increases would be used well, though.
+
+- Future hires could be made when project funding is enough to justify
+  costs (SCI funding as buffer between project periods)
+- A fair number of projects (~10-20) have written months of work
+  into submitted grants, funded us, or offered funding.
+- More basic funding from other departments?
+
+  - IT Services has provided pilot funding (3 months) to expand to
+    other schools, and has been a success.
 
 
-Funding from other schools
-~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- IT Services has provided pilot funding to expand to other schools.
-- We expect future (funded) expansion to other schools.
-
-
-
-Future hopes
+Future plans
 ------------
-
-.. admonition:: Summary
-
-   I recommend you read the points, but the summary is that that we
-   think the next few years can focus on refining the type of impact
-   we have: we reach the cases where our impact is obvious, but what
-   about all the other cases?  We should transform how research is
-   done and how it is consumed.
 
 Wanted: Better outreach and impact
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * There is no shortage of projects, and advertising more will surely
   fill us up.
-* Yet there are some things we can improve in the future.
+* **But, we can still increase the impact of the projects we select.
+  Can you help point the most important projects to us?**
+* Especially societal impact (public use of data and algorithms) could
+  give us many more projects.
 
-Reach those who need it the most
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-* Many people find us by word of mouth
-* Do we get the customers who need us most?
-
-Connect to societal impact measures
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-* Open science, reusable software, published data are more important
-  now.  We have time to do this right.
-* Example: web interfaces for algorithms and data.
-* Is it used in reportables as much as it could be?
 
 Expansion to other schools
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * We expect this service to expand to other schools and universities
-  in the future.
+  in the future (bringing their own funding).
 * This will allow a broader knowledge base from which any individual
   project can draw.
+* **Please recommend to other leadership to join us.**
