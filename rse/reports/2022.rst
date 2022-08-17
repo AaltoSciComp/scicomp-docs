@@ -33,8 +33,9 @@
 
      * Continued basic funding at the current levels.
      * Help in finding the researchers and projects who can most
-       benefit by this service - should a small amount of RSE time be
-       written into every grant?
+       benefit by this service - can our results better be reported as
+       Open Science/societal impact stories - should a small amount of
+       RSE time be written into every grant?
      * Recommendations for other schools/departments to join us.
 
 
@@ -59,16 +60,17 @@ Current staff and jobs
 
 We are part of Science-IT:
 
-- Three full-time RSEs
-- Two other staff with funding from specific projects
-- One staff leading
-- Three other staff fit "we are all RSEs anyway"
+- Three full-time RSEs (the only ones funded by this service)
+- One staff leading the RSE group + working as a RSE
+- Two other staff with RSE funding from specific projects
+- Three other staff focused on infrastructure support, but "we are all
+  RSEs anyway"
 
 
 Types of projects
 ~~~~~~~~~~~~~~~~~
 
-- **No shortage of projects, also not yet over our limit.**
+- **No shortage of projects, also not yet over our capacity.**
 
   - **We don't advertise too much, since that would take us over our
     limit.**
@@ -77,15 +79,17 @@ Types of projects
 
 Projects fit into two main categories:
 
-- **RSE projects**, take hours to months, in our issue tracker,
-  long-term support.
+- **RSE projects**, take days to months, recorded in our issue
+  tracker, includes long-term support.
 
   - The "classic work" of an RSE.
 
-- **Garage projects** are small questions that come up in the "daily
-  garage"
+- **Garage help** are small questions that come up in the "daily
+  garage" and answered immediately.
 
   - Garage is our daily support method, answering small questions.
+  - Garage transforms research from "trial and error" to "professional
+    quality".
 
 
 Project stats
@@ -97,7 +101,7 @@ Project stats
 
 .. figure:: 2022-projects-time-by-department.png
 
-   Time spent by department.  Not all time is recorded.  Figure
+   Time spent by department, 2020-2022.  Not all time is recorded.  Figure
    includes only full-time RSE time spent.  Note that we have other
    funding sources that allow us to work outside of SCI, and that
    Science-IT receives general funding to serve the whole university.
@@ -105,7 +109,7 @@ Project stats
 .. figure:: 2022-projects-time-needed-by-task.png
 
    Time estimate (past and present) by type of tasks of all recorded
-   projects, including future projects, leads, and canceled ideas.
+   projects, including future projects, leads, and canceled ideas, 2020-2022.
    Projects have multiple tasks/benefits and all time is included in
    *all tasks* in this figure.  **Values should only be used as a
    relative comparison.**
@@ -119,18 +123,21 @@ Garage stats
 - Average visit from 30-60 minutes of support.
 - Most are answering tech/software questions to help research, and
   teach people to be self-sufficient.
+* We also estimate **overall "researcher time saved" is 5× "RSE time spent"**
+  (self-reports from customers)
 
 .. figure:: 2022-garage-customers-departments.png
 
-   Garage customers by department, 2020-2022.  Note that old garage
-   data is extremely sparse, so this is more of a current estimate.
+   Garage customers by department, 2020-2022, small sample of data.
+   Note that old garage data is extremely sparse, so this is more of a
+   current estimate.
 
 .. figure:: 2022-garage-customers.png
 
-   Garage customers by title.  We only recently began collecting this
-   data, so it is very incomplete but roughly representative.  We only
-   support researchers and staff, students not doing research are
-   directed to student resources.
+   Garage customers by title, small sample of data.  We only recently
+   began collecting this data, so it is very incomplete but roughly
+   representative.  We only support researchers and staff, students
+   not doing research are directed to student resources.
 
 
 
@@ -148,7 +155,7 @@ Financial transaction difficulty
   - Academy/EU rules don't allow easy internal invoicing, so must pay
     salary directly.  This makes more overheads.
 
-- **We need high-level management leadership on this topic.**
+- **We need high-level leadership support on this topic.**
 
 
 Our current project funding policy
@@ -165,7 +172,7 @@ Future funding plan
 ~~~~~~~~~~~~~~~~~~~
 
 - **We should maintain at least ~2 FTE of basic funding for the near
-  future.**
+  future** for our current number of customers (≈ SCI).
 
   - Any increases would be used well, though.
 
@@ -201,4 +208,4 @@ Expansion to other schools
   in the future (bringing their own funding).
 * This will allow a broader knowledge base from which any individual
   project can draw.
-* **Please recommend to other leadership to join us.**
+* **Please recommend to other leaders to join us in the RSE concept.**
