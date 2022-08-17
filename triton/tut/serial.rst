@@ -6,10 +6,11 @@ Serial Jobs
 
    Watch this in our courses: `2022 February <https://www.youtube.com/watch?v=AJgWuKDSOFY&list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V&index=13>`__, `2021 January <https://www.youtube.com/watch?v=I79KLHb-7T0&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=14>`__
 
-.. admonition:: Cheatsheet
+.. admonition:: Abstract
 
    * Batch scripts let you run work non-interactively, which is
-     important for scaling.
+     important for scaling.  You create a **batch script**, which runs
+     in the background.  You come back later and see the results.
 
    * Example batch script, submit with ``sbatch the_script.sh``:
 
@@ -24,6 +25,13 @@ Serial Jobs
 
    * See the :doc:`quick reference <../ref/index>` for complete list
      of options.
+
+
+Prerequisites
+-------------
+
+* :doc:`prerequisites`
+* :doc:`connecting`
 
 
 Introduction to batch scripts

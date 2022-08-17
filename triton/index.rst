@@ -53,6 +53,7 @@ Getting set up:
 
    tut/about-tutorials.rst
    tut/intro.rst
+   tut/prerequisites.rst
    tut/connecting.rst
    tut/applications.rst
    tut/modules.rst
