@@ -15,7 +15,7 @@ In this tutorial, we go over places to store data on Triton and how to
 choose between them.  The
 :doc:`next tutorial <remotedata>` tells how to access it remotely.
 
-.. admonition:: Cheatsheet
+.. admonition:: Abstract
 
    * See the :doc:`../ref/index`
 

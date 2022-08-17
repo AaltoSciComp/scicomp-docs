@@ -18,7 +18,7 @@ smoothly.  In this tutorial, we'll explain some of the main methods.
 See the main :doc:`storage <storage>` tutorial first.
 
 
-.. admonition:: Cheatsheet
+.. admonition:: Abstract
 
    * Data is also available from other places in Aalto, such as
      desktop workstations in some departments, shell servers, and

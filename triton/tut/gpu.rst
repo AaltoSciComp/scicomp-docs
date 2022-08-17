@@ -9,7 +9,7 @@ GPU computing
    `2021 January
    <https://www.youtube.com/watch?v=aoU1-5DjrGc&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=17>`__
 
-.. admonition:: Cheatsheet
+.. admonition:: Abstract
 
    * Request a GPU with the Slurm option ``--gres=gpu:1`` (some
      clusters need ``-p gpu`` or similar)

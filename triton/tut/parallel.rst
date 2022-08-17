@@ -14,7 +14,7 @@ Parallel computing is what HPC is really all about: processing things on
 more than one processor at once. By now, you should have read all of the previous
 tutorials.
 
-.. admonition:: Cheatsheet
+.. admonition:: Abstract
 
    * You need to figure out what parallelization paradigm your program
      uses, otherwise you won't know which options to use.

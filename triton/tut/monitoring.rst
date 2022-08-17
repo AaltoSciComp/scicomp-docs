@@ -8,7 +8,7 @@ Monitoring job progress and job efficiency
    <https://www.youtube.com/watch?v=rksu_mJdvGA&list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V&index=14>`__,
    `2022 February (short) <https://www.youtube.com/watch?v=rksu_mJdvGA&list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V&index=14>`__.
 
-.. admonition:: Cheatsheet
+.. admonition:: Abstract
 
    * You must always monitor jobs to make sure they are using all the
      resources you request.

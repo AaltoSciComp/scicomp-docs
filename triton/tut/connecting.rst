@@ -20,7 +20,7 @@ crash course </scicomp/shell>` (which can be considered a prerequisite
 for this series of tutorials).
 
 
-.. admonition:: Cheatsheet
+.. admonition:: Abstract
 
    * You can connect to Triton via ssh
    * Host name is ``triton.aalto.fi``

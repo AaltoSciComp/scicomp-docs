@@ -11,7 +11,7 @@ Array jobs
    `2021 January
    <https://www.youtube.com/watch?v=jcWoky9b8zI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=16>`__
 
-.. admonition:: Cheatsheet
+.. admonition:: Abstract
 
    * Arrays allow you to submit jobs and it runs many times with the
      same Slurm parameters.

@@ -20,7 +20,7 @@ people do it all the time), but does require some attention to
 details.  Either way, you will need to know the basics of software on
 Linux.
 
-.. admonition:: Cheatsheet
+.. admonition:: Abstract
 
    * There are many ways to get software on Triton: we use the
      standard module system, have Singularity containers, and you can

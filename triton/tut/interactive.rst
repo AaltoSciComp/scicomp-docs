@@ -6,7 +6,7 @@ Interactive jobs
 
    Watch this in our courses: `2022 February <https://www.youtube.com/watch?v=nguLuKJ1gm0&list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V&index=12>`__, `2021 January <https://www.youtube.com/watch?v=xhX_u2OA89s&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=11>`__
 
-.. admonition:: Cheatsheet
+.. admonition:: Abstract
 
    * We use the standard (and dominant) Slurm batch queuing system,
      all standard commands will work.

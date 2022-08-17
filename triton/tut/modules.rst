@@ -16,7 +16,7 @@ problem.  Software installation and management takes up a huge amount
 of our time, but we try to make it easy for our users.  Still, it can
 end up taking a lot of your effort as well.
 
-.. admonition:: Cheatsheet
+.. admonition:: Abstract
 
    * We use the standard `Lmod module system
      <https://lmod.readthedocs.io/>`__, which makes more software
