@@ -123,7 +123,7 @@ Garage stats
 - Average visit from 30-60 minutes of support.
 - Most are answering tech/software questions to help research, and
   teach people to be self-sufficient.
-* We also estimate **overall "researcher time saved" is 5× "RSE time spent"**
+- We also estimate **overall "researcher time saved" is 5× "RSE time spent"**
   (self-reports from customers)
 
 .. figure:: 2022-garage-customers-departments.png
