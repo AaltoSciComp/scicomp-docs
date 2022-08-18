@@ -61,6 +61,9 @@ Follow-ups
       Current team:
 
 
+      Each team does:
+
+
       Tech tools:
 
 
@@ -68,7 +71,6 @@ Follow-ups
 
 
       Time estimate:
-
 
 
       Links to existing docs:
