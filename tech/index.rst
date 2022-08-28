@@ -1,4 +1,3 @@
-=============================
 FCCI Tech (fka Behind Triton)
 =============================
 
@@ -23,7 +22,7 @@ discuss.
 
 
 Practicalities
-==============
+--------------
 
 **Time:** The next speaker announce the time/date of the seminar the week
 before. The speaker sends invitation with the Zoom link.
@@ -43,7 +42,7 @@ link </help/garage>`.
 
 
 Topics 2021
-===========
+-----------
 
 - Wed 3.3, 10:00, **Triton hardware**, Ivan Degtyarenko
 
@@ -131,21 +130,19 @@ Topics 2021
 
   * NOTE: the second talk on the same Fri 17.12
 
-- Simppa Äkäslompolo (fall 2021)
+- (fall 2021) SLURM setup, Simppa Äkäslompolo
 
-  + SLURM setup
+- (fall 2021) Cluster monitoring, Simo/Mikko
 
-- Simo/Mikko (fall 2021)
+- Online courses and CodeRefinery, Richard Darst
 
-  + Cluster monitoring
+- Online work and support, Richard Darst
 
-- Richard Darst
+  - :doc:`online-work-and-support`
 
-  - Online courses and CodeRefinery
+- Respectfully and efficiently handling user support requests, Richard Darst
 
-- Respectfully and efficiently handling user support requests
-
-  -:doc:`user-support-responses`
+  - :doc:`user-support-responses`
 
 - Science-IT data management: policies and procedures
 
