@@ -11,10 +11,13 @@ Unsorted notes:
 
 - one person takes the lead in communication
 - Start by talking with people about the big picture
+
   - their position
   - past work
   - what they expect to get out of the support
+
 - many questions are actually about:
+
   - the environment setup
 
 
@@ -28,16 +31,18 @@ to frame any response.
 
 
 - Understand the level that the requestor is at and the level they
-  need to be at
-- An answer far below their level is demeaning
-- An answer far above their level is demotivating
+  need to be at.  (this is usually not apparent at first)
+- An answer far below their level is demeaning.
+- An answer far above their level is demotivating.
 - It can be hard to know the level to answer, so multiple levels of
   answer are useful: one general paragraph, then one more detailed
-  paragraph properly connected.
+  paragraph properly connected.  This also helps people advance up
+  their level of confidence, but needs more writing.
 - Aalto SciComps's `Bloom's taxonomy of scientific computing skills
   <https://docs.google.com/document/d/1WW00hohZG0Lc2Ga1wSoSzE_ijLSLwX8JlE0ryKnSIgU/edit>`__
   may help to guide your thoughts in evaluating this.
-
+- Discuss: Is it better to assume at too low a level or too high?  How
+  can we find the right level to answer at?
 
 
 General guidelines
@@ -50,6 +55,9 @@ General guidelines
     rather than few.
   * Verbosity is a sign of engagement, which makes the customer feel
     respected no matter if the verbosity is useful to them or not.
+  * Be especially cautious about answers that are just a link to the
+    documentation - unless they are specifically asking for that.
+    Even then, try putting it in context.
 
 * **Service gesture**: something more than people expect (beyond the
   minimum that they asked).  (example: try harder to find someone who
@@ -106,6 +114,24 @@ Accept that you can't do everything
 - Make this decision explicit, not implicit.
 - An implicit decision here means it is made based on internal biases.
 - Better to discuss among the team to make sure it is consistent.
+- Document what you do know and learn while working, even if you don't
+  have the full answer yet.
+
+  - Yes, this can be a rather hard thing to do: we don't want to give
+    a partial or possibly wrong answer.
+  - On the other hand, being silent for days or weeks until you have
+    the proper answer really doesn't help anyone.  With the rate of
+    research, they have probably even gone on to something else!
+  - Consider if you should keep the requestor in the loop (generally
+    yes, probably good, but qualify if something is still in progress
+    and may not work).
+  - This also helps any future staff who may pick up after you.  So,
+    even if you don't document to the requestor, document internally.
+
+- Try to avoid long silences before any replies, for example if you
+  don't even know who can answer.  This can be especially hard without
+  a front desk or if you think "just a bit more and we'll know
+  something".
 
 
 
@@ -144,18 +170,48 @@ Dealing with mis-directed issues
 
 
 
+Communication strategies
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Communicate with respect.  Informal is probably OK, but know your
+  audience.
+- Sarcasm is usually bad (but we should have already know it's bad
+  online).  Even if you think the person reading now will get it, what
+  about all the people in the future who might read and rely on the
+  same answer?
+
+
+
 In-person support
 ~~~~~~~~~~~~~~~~~
+
+- When you learn something, do you want to create an issue about it so
+  that the knowledge can be used later?
 
 
 
 Ticketing system support
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
+- Ticketing systems
+- Is your ticket system public (e.g. Gitlab internal to organization,
+  but not private to your team) or private (requestors only see their
+  own tickets).
+- Document your intermediate progress at least as comments in the
+  tickets - if it's not appropriate to send to the user, too.  (see
+  above about silence)
+- You want separate issues in separate tickets.  Often times, users
+  will ask multiple things at once.  You'll have to figure out what to
+  do about it, but you should probably clearly say "more emails is
+  better, don't worry about sending us three emails all at the same
+  time if they are different things".
 
 
 Private email support
 ~~~~~~~~~~~~~~~~~~~~~
+
+- Do you forward it to a ticket system?  Information in private email
+  always gets lost.
 
 
 
@@ -169,6 +225,8 @@ How do you answer things such as?:
 - Not enough information
 - Possibly
 - Mis-directed
+- Something requestor should be able to do themselves?
+
 
 
 Examples
