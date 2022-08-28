@@ -16,6 +16,10 @@ explanations.
 We share what our practices are, what we have learned, and informally
 discuss.
 
+.. seealso::
+
+   :doc:`user-support`
+
 
 
 Practicalities
@@ -138,6 +142,10 @@ Topics 2021
 - Richard Darst
 
   - Online courses and CodeRefinery
+
+- Respectfully and efficiently handling user support requests
+
+  -:doc:`user-support-responses`
 
 - Science-IT data management: policies and procedures
 

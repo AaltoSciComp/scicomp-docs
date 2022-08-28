@@ -1,11 +1,16 @@
 How to actually respond to user support requests?
--------------------------------------------------
+=================================================
 
 I've been asked before, "how do you actually respond to customer
 support requests?".  There are some obvious answers (be polite, try to
 answer, etc), but are there any specific references for research
 computing / scientific computing support staff?  This page collects my
 ideas after having done it formally and informally for years.
+
+This page is specifically about making responses respectfully and with
+compassion for the requestors.  It's not designed to be a big-picture
+how-to of user support - there are plenty of other resources about
+that.
 
 Unsorted notes:
 
@@ -23,7 +28,7 @@ Unsorted notes:
 
 
 Levels of competence
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 Customers have all levels of existing competences and needs.  The more
 you understand of this, the better you can assist - and it is needed
@@ -46,7 +51,7 @@ to frame any response.
 
 
 General guidelines
-~~~~~~~~~~~~~~~~~~
+------------------
 
 * Think about what the underlying need is (X, not the Y)
 * Be verbose (or at least not short).
@@ -66,7 +71,7 @@ General guidelines
 
 
 Know your audience
-~~~~~~~~~~~~~~~~~~
+------------------
 
 - The more you know about the very work of the person, the faster and
   better you can answer questions.
@@ -76,7 +81,7 @@ Know your audience
 
 
 Consider at what level someone needs support
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------------
 
 * Do they need single answers to a question?
 * Are they very lost and need to work with someone to implement it?
@@ -92,7 +97,7 @@ Consider at what level someone needs support
 
 
 XY problem
-~~~~~~~~~~
+----------
 
 - Don't assume that what someone asks for is what they really need -
   you need to read between the lines.
@@ -109,7 +114,7 @@ XY problem
 
 
 Accept that you can't do everything
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------
 
 - Make this decision explicit, not implicit.
 - An implicit decision here means it is made based on internal biases.
@@ -136,7 +141,7 @@ Accept that you can't do everything
 
 
 Giving bad news
-~~~~~~~~~~~~~~~
+---------------
 
 Sometimes you have to say "no"
 
@@ -151,7 +156,7 @@ Sometimes you have to say "no"
 
 
 Dealing with mis-directed issues
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------
 
 * It can be frustrating when someone asks the wrong place
 * If you need to be nicer than just saying "no", since you have
@@ -171,7 +176,7 @@ Dealing with mis-directed issues
 
 
 Communication strategies
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 - Communicate with respect.  Informal is probably OK, but know your
   audience.
@@ -182,21 +187,39 @@ Communication strategies
 
 
 
-In-person support
-~~~~~~~~~~~~~~~~~
+In-person or synchronous support
+--------------------------------
 
+- See the `How to help someone use a computer
+  <https://www.librarian.net/stax/4965/how-to-help-someone-use-a-computer-by-phil-agre/>`__
+  for many ideas that are relevant to in-person support (and more).
 - When you learn something, do you want to create an issue about it so
   that the knowledge can be used later?
+- Try to avoid simply taking over their computer and doing something.
+  On the other hand, dictating something key-by-key can be equally
+  frustrating.  Try to let the user do as much as possible and clearly
+  explain why you do some things yourself.
+
+  - Does saying "I don't know, so it's hard for me to tell you what to
+    do.  But I can try to figure it out while you watch - is that
+    good?"
+
+  - Online support allows screen-sharing and remote control, which
+    allows you to type but the other person to still feel like they
+    are an important part of the process since they can see
+    everything.
 
 
 
 Ticketing system support
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
-- Ticketing systems
 - Is your ticket system public (e.g. Gitlab internal to organization,
   but not private to your team) or private (requestors only see their
-  own tickets).
+  own tickets).  You should answer respectfully anyway, but this does
+  matter somehow.  The more people who can see it, the more careful
+  you should be, but also the more long-term benefit your answers
+  have.
 - Document your intermediate progress at least as comments in the
   tickets - if it's not appropriate to send to the user, too.  (see
   above about silence)
@@ -206,21 +229,27 @@ Ticketing system support
   better, don't worry about sending us three emails all at the same
   time if they are different things".
 
+  - Can you separate issues yourself, instead of replying "please send
+    this again"
+
+
 
 Private email support
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 - Do you forward it to a ticket system?  Information in private email
   always gets lost.
+- If you reply with only "please re-send this", that can sound like
+  you don't want the issue in the first place.  What do you do?
 
 
 
 Plan for problem situations
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------
 
 Exercises:
 
-How do you answer things such as?:
+How do you answer things such as the following?  Write draft responses:
 
 - Not enough information
 - Possibly
@@ -230,13 +259,13 @@ How do you answer things such as?:
 
 
 Examples
-~~~~~~~~
+--------
 
 (examples to be inserted here)
 
 
 See also
-~~~~~~~~
+--------
 
 - `How to help someone use a computer, by Phil Agre
   <https://www.librarian.net/stax/4965/how-to-help-someone-use-a-computer-by-phil-agre/>`__
