@@ -215,6 +215,14 @@ Our users come from countless research areas:
 * Big data analysis
 
 
+Seminar series
+--------------
+
+We have an occasional seminar series, open to all, on how we run our
+group, :doc:`FCCI Tech </tech/index>`.  Our archive may be interesting
+to other scientific computing teams.
+
+
 Other
 -----
 
