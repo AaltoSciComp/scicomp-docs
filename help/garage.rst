@@ -9,11 +9,16 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   We won't be available on Wednesday, 17 August due to an internal
-   development day.
+   * 1-2.september (Th-F), there may be lower capacity due to internal
+     workshop.
+   * 20-22,27-29.september (T-Th, T-Th): lower capacity due to a
+     `CodeRefinery workshop
+     <https://coderefinery.github.io/2022-09-20-workshop/>`__
+     (consider coming to in-person help session for that, details
+     updated later).
 
 ..
-   There are no current planned disruptions in the daily garage.
+   * There are no current planned disruptions in the daily garage.
 
 
 If you need more help than the issue trackers, this is the place to
