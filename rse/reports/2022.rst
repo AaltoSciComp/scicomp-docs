@@ -14,7 +14,7 @@
      projects to be much faster and higher quality.
    * **About 100 projects in a bit less than two years.**
    * **Perhaps 5× return on time spent (time we spent vs time
-     researchers save).**
+     researchers saved).**
    * There is no shortage of RSE projects, we could get more if we did
      more outreach (which we don't focus on, since we would then be
      over-capacity).
