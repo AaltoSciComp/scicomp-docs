@@ -124,11 +124,12 @@ like this::
 
 ----
 
-Inline `link <https://www.python.org>`_, or
+Inline `link <https://www.python.org>`__, or
 anonymous__, or
 separate_, or
 `different text <separate_>`_ links.
-Trailing underscores indicate links.
+Trailing underscores indicate links.  Note there should be two
+underscores for the raw links.
 
 __ https://www.python.org
 
@@ -148,16 +149,14 @@ __ https://www.python.org
 
 ----
 
-Linking to the web.  If possible use a permanent reference (next
+Linking internally.  If possible use a permanent reference (next
 section), but you can also refer to specific files by name.  Note,
 that for internal links there are no trailing underscores::
 
-  :doc:`../tut/interactive.rst`  (recommended)
-  `../tut/interactive.rst`       (short, no warning if link breaks)
+  :doc:`../tut/interactive.rst`
 
   With different text:
-  :doc:`Text <../tut/interactive.rst>`  (recommended)
-  `Text <../tut/interactive.rst>`       (short, no warning if link breaks)
+  :doc:`Text <../tut/interactive.rst>`
 
 
 ----
