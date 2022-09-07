@@ -18,8 +18,12 @@
    * There is no shortage of RSE projects, we could get more if we did
      more outreach (which we don't focus on, since we would then be
      over-capacity).
-   * We haven't been able to receive project funding, due to financial
-     difficulties (grant rules make this difficult).
+   * We haven't been able to receive much project funding, due to financial
+     difficulties (grant rules make this difficult, we complete most
+     projects so fast that the transaction would be too small).
+   * We have gotten other long-term support: FCAI has supported a
+     dedicated RSE, IT Services has provided funding to extend beyond
+     SCI.
    * **Our proposal is that groups receive ~1 month of free service,
      paid with department/school funding.  After that, they should
      find their own funding.**
@@ -189,6 +193,17 @@ Future funding plan
 
 Future plans
 ------------
+
+Planned long-term funding
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* The Finnish Center for AI has committed 4-5 years of full-time RSE
+  funding, this was used to hire a third RSE.
+* We are currently (September) in planning to get more IT Services
+  funding to secure the service beyond SCI.  We will need to carefully
+  check how this affects our staffing levels.
+* These type of strategic investments seem to practical and scaleable.
+
 
 Wanted: Better outreach and impact
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
