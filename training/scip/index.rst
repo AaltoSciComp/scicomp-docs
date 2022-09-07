@@ -53,4 +53,10 @@ deleted.  This series has existed since 2016.
 
 - :doc:`getting-started-with-scientific-computing` and
   :doc:`winter-kickstart`.
-
+- :doc:`shell-scripting`
+- `March 2022 / Code Refinery workshops Spring 2022 <https://coderefinery.org/workshops/upcoming/>`__
+- :doc:`data-anonymization-workshop-2022`
+- :doc:`debugging-2022`
+- :doc:`software-design-2022`
+- :doc:`matlab-advanced-2022`
+- :doc:`kickstart-2022-summer`
