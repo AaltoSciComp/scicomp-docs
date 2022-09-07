@@ -32,6 +32,7 @@ and/or Python, Matlab, HTCondor and many others.
    scip/software-design-2022
    scip/matlab-advanced-2022
    scip/kickstart-2022-summer
+   scip/python-for-scicomp-2022
    scip/index
 
 .. toctree::
