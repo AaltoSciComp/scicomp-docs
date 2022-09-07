@@ -22,7 +22,7 @@ we suggest you install it via your own conda environment (see the instructions b
 Installing via conda
 ********************
 
-Have a look `here </triton/apps/pyhon-conda.rst`_ for details on how to install 
+Have a look :doc:`here </triton/apps/python-conda>` for details on how to install 
 conda environments.
 While tensorflow GPU versions are no longer incompatible with systems where no 
 GPU is present they commonly come with a slightly slower performance on CPUs 
@@ -30,7 +30,7 @@ compared to versions that are CPU optimized. Tensorflow addressed this issue by
 being clever and installing a version optimized to the machine it is installed 
 on. This leads to an issue on clusters, where commonly the login node does not 
 have a CUDA enabled GPU installed. Therefore, is necessary to explicitly override 
-this selection mechanism as detailed `here <https://conda-forge.org/blog/posts/2021-11-03-tensorflow-gpu/#installation>`_
+this selection mechanism as detailed `here <https://conda-forge.org/blog/posts/2021-11-03-tensorflow-gpu/#installation>`__
 , or to explicitly select a cuda enabled version of tensorflow in the environment
 file as explained below.
 

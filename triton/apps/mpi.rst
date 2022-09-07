@@ -99,5 +99,3 @@ to compile the Hello world!-example by setting ``OMPI_MPICC``- and
       export OMPI_MPIFC=ifort  # Overwrite the Fortran compiler
 
       mpicc    -O2 -g hello_mpi.c -o hello_mpi
-
-  .. group-tab:: 
