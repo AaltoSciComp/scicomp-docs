@@ -43,7 +43,7 @@ deleted.  This series has existed since 2016.
   - Intro to Scientific Computing :doc:`part1
     <getting-started-with-scientific-computing>`, :doc:`part2 <summer-kickstart-2021>` (June 2021)
   - Introduction to Julia (August 2021 & October 2021, `materials <https://github.com/AaltoRSE/julia-introduction>`__)
-  - :doc:`Python for Scientific Computing <python-for-scicomp>` (October 2021, `materials <https://aaltoscicomp.github.io/python-for-scicomp/>`__, `videos <https://www.youtube.com/playlist?list=PLZLVmS9rf3nOS7bHNmbcDoyTnMYaz_TJW>`__)
+  - :doc:`Python for Scientific Computing <python-for-scicomp-2021>` (October 2021, `materials <https://aaltoscicomp.github.io/python-for-scicomp/>`__, `videos <https://www.youtube.com/playlist?list=PLZLVmS9rf3nOS7bHNmbcDoyTnMYaz_TJW>`__)
   - :doc:`Linux Shell Basics <linux-shell-basics>` (November 2021, `materials <https://aaltoscicomp.github.io/linux-shell/>`__)
   - :doc:`Matlab Basics <matlab-basics>` (November 2021, `materials <https://version.aalto.fi/gitlab/eglerean/matlabcourse/-/tree/master/AY20212022/MatlabBasics2021>`__)
 

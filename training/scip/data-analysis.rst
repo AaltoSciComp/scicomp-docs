@@ -27,7 +27,7 @@ necessarily know what are the best practices for data analysis.
 The course material is available in both R and Python, but this
 is not a course on the basics of scientific programming. If you wish to
 prep up your scientific programming skills, we recommend taking
-our :doc:`../scip/python-for-scicomp`-course.
+our :doc:`../scip/python-for-scicomp-2021`-course.
 
 **About the course:** We provide a practical introduction and advice
 for data analysis in R and Python. We will learn how you should organize
