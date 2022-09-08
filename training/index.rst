@@ -25,13 +25,7 @@ and/or Python, Matlab, HTCondor and many others.
 .. toctree::
    :maxdepth: 1
 
-   scip/shell-scripting
-   March 2022 / Code Refinery workshops Spring 2022 <https://coderefinery.org/workshops/upcoming/>
-   scip/data-anonymization-workshop-2022
-   scip/debugging-2022
-   scip/software-design-2022
-   scip/matlab-advanced-2022
-   scip/kickstart-2022-summer
+   September 2022 / CodeRefinery workshop <https://coderefinery.github.io/2022-09-20-workshop/>
    scip/index
 
 .. toctree::
