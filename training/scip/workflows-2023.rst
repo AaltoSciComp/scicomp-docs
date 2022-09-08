@@ -1,7 +1,7 @@
 Workflows
 =========
 
-In our :doc:`summer HPC kickstart <summer-kickstart-2022>` courses, we
+In our :doc:`summer HPC kickstart <kickstart-2022-summer>` courses, we
 show the basic principles of using a cluster and other computing
 tools.  Yet there is still a long way from basic usage to the powerful
 workflows that people use in their science.  This course is designed
