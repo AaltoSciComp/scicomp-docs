@@ -16,16 +16,21 @@ practical scientific computing related topics. Lectures are open for
 the entire Aalto community as well as our partners at FGCI
 consortium.
 
-
 Examples of topics covered at different lectures: HPC crash course,
 Triton kickstarts, Linux Shell, Parallel programming models: MPI and
 OpenMP, GPU computing, Python for scientists, Data analysis with R
 and/or Python, Matlab, HTCondor and many others.
 
+If you are interested in a re-run of our past courses or if you want 
+to suggest a new course, `please take this survey <https://link.webropol.com/s/scipod>`__.
+
+
 .. toctree::
    :maxdepth: 1
 
    September 2022 / CodeRefinery workshop <https://coderefinery.github.io/2022-09-20-workshop/>
+   scip/python-for-scicomp-2022
+   Take the survey! Request a re-run of past courses / new courses <https://link.webropol.com/s/scipod>
    scip/index
 
 .. toctree::
@@ -38,8 +43,9 @@ and/or Python, Matlab, HTCondor and many others.
 
 
 **Future courses**
-*Winter-Spring 2022 courses* -  
-We are always adding interesting courses. Please check this page once in a while.
+*Fall-Winter 2022 courses* -  
+We are always adding interesting courses. Please check this page once in a while. If you are interested in a re-run of our past courses or if you want
+to suggest a new course, `please take this survey <https://link.webropol.com/s/scipod>`__.
 
 
 Anyone can sign up for announcements at the :doc:`SCIP announcement
@@ -54,24 +60,6 @@ Other interesting courses
 Other relevant courses by Aalto Open Science team:
 https://www.aalto.fi/en/services/training-in-research-data-management-and-open-science
 
-  - Introduction to Research Data Management | March 2, 2022, at 1–2.30 PM (EET) 
-  - How Should Open Software Be Licensed? | March 8, 2022, at 2–3 PM (EET)
-  - Data Management Plans: a How-to | March 10, 2022, at 1–2 PM (EET)
-  - Handling of Personal Data | March 16, 2022, at 1–2.30 PM (EET)
-  - How to Store Research Data | March 17, 2022, at 1–2 PM (EET)
-  - How to Share Research Data Through a Data Repository: A Zenodo Example | March 22, 2022, at 1–2.30 PM (EET)
-  - Working with Restricted Datasets | March 24, 2022, at 1–2 PM (EET)
-  - How to Store Sensitive Research Data | March 30, 2022, at 1–2 PM (EET)
-  - Hands-on Data Anonymisation, part I & II | April 4 & 6, 2022, at 11.50 AM–15.00 PM (EET)
-  - How to Make Your Research and Code Reproducible and Reusable | April 7, 2022, at 1–2.30 PM (EET)
-  - Responsible conduct of research, questionable research practices... and possible cures | April 28, 2022, at 1–2 PM (EET)
-  - Current Trends in Academic Publishing: Publishing in Horizon Europe projects and the emerging Overlay Publishing concept | May 3, 2022, at 1–2.30 PM (EET)
-  - Legal Aspects of Research Data | May 5, 2022, at 11.30 AM–12.30 PM (EET)
-  - Introduction to the world of Finnish Registry Data | May 10, 2022, at 1–2 PM (EET)
-  - Study Pre-Registration and Registered Reports | May 12, 2022, at 1–2 PM (EET)
-  - `Research ethics for doctoral students <https://mycourses.aalto.fi/course/view.php?id=23138>`__
-
-Registration and more details at: https://www.aalto.fi/en/services/training-in-research-data-management-and-open-science
 
 
 *Other courses on scientific computing and data management*
@@ -84,6 +72,7 @@ Please check https://mycourses.aalto.fi/ for other courses at Aalto and https://
   - `CSC Summer School in HPC | 26 June - 5 July <https://ssl.eventilla.com/summerschool?_ga=2.9798770.670651147.1648629079-1832641415.1608195080&_gl=1*rhjnmy*_ga*MTgzMjY0MTQxNS4xNjA4MTk1MDgw*_ga_8VVQ0NECSX*MTY0ODYyOTA3NS4yLjEuMTY0ODYyOTI0Mi4w>`__
   - `CS-E4580 Programming Parallel Computers April-May 2022 <https://mycourses.aalto.fi/course/view.php?id=32411>`__
   - `CS-E4640 Big Data Platforms D <https://mycourses.aalto.fi/course/view.php?id=32901>`__
+  - `Research ethics for doctoral students <https://mycourses.aalto.fi/course/view.php?id=23138>`__
 
 MOOC on scientific computing:
 
