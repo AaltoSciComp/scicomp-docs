@@ -2,12 +2,14 @@
 News
 ====
 
-*9/06/2022* Join us today on `Twitch.tv <https://www.twitch.tv/coderefinery>`_ at 12:00 EEST for our `Intro to Scientific Computing and HPC <https://scicomp.aalto.fi/training/scip/kickstart-2022-summer/>`_. The course is open to anyone with an internet connection. If you want to do the hands-on exercises with us, you need access to an HPC cluster. If you are at Aalto please `apply for access to the triton cluster <https://scicomp.aalto.fi/triton/accounts/>`_, otherwise check what is available at your institution. You can also watch without doing the practical parts, but we recommend registering anyway so you will be able to ask questions on HackMD. 
+*12/09/2022* September 2022, it is another academic year! We have CodeRefinery starting in one week: if you write code for research, then this is the workshop for you! Come and learn about git, jupyter, conda, reproducibility and much more. `Click here for CodeRefinery Fall 2022 registration and info page <https://coderefinery.github.io/2022-09-20-workshop/>`__. Please also visit our `training webpages </training/>`__ to check other upcoming courses or request a re-run of past hands-on courses. 
 
 Join our `daily zoom garage </help/garage/>`__ for any scientific computing related issue (not just Triton!) or to just chat and feel part of the community.  
 
 News archive
 ~~~~~~~~~~~~
+
+*9/06/2022* Join us today on `Twitch.tv <https://www.twitch.tv/coderefinery>`_ at 12:00 EEST for our `Intro to Scientific Computing and HPC <https://scicomp.aalto.fi/training/scip/kickstart-2022-summer/>`_. The course is open to anyone with an internet connection. If you want to do the hands-on exercises with us, you need access to an HPC cluster. If you are at Aalto please `apply for access to the triton cluster <https://scicomp.aalto.fi/triton/accounts/>`_, otherwise check what is available at your institution. You can also watch without doing the practical parts, but we recommend registering anyway so you will be able to ask questions on HackMD. 
 
 *17/01/2022* Join us for our next Twitch.tv courses dedicated to the basics of scientific computing and HPC: `2/Feb/2022 Intro to Scientific Computing <https://scicomp.aalto.fi/training/scip/getting-started-with-scientific-computing/>`_ and `3-4/Feb/2022 Intro to High Performance Computing <https://scicomp.aalto.fi/training/scip/winter-kickstart/>`_. The course is open to anyone with an internet connection. For day 2+3 you need access to an HPC cluster. If you are at Aalto please `apply for access to the triton cluster <https://scicomp.aalto.fi/triton/accounts/>`_, otherwise check what is available at your institution. You can also watch without doing the practical parts, but we recommend registering anyway so you will be able to ask questions on HackMD. 
 
