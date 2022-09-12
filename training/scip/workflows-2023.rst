@@ -10,4 +10,4 @@ actually do their science with computers.
 
 This course is expected in February 2023 but dates and exact topics
 are not yet.  If you are interested in helping out or you have
-requests for topics, please :doc:`get in touch <help>`.
+requests for topics, please :doc:`get in touch </help/index>`.
