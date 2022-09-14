@@ -94,7 +94,7 @@ and chat with us anyway and we can figure it out.
 
 * Try to arrive between 13:00 - 13:15.  We may leave early if there is
   no one around.  Please don't arrive early since we have other
-  meeting then.
+  meetings then.
 
 * We have some **special days** (see list below) to ask about specific
   topics, but in reality we can answer any question any day.
