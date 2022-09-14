@@ -109,7 +109,8 @@ Internal documents
 ------------------
 
 We believe in openness, so make our procedures open.  They are subject
-to improvement at any time.
+to improvement at any time.  Also see the :doc:`FCCI Tech
+</tech/index>` seminar series for how our broader team works internally.
 
 .. toctree::
    :maxdepth: 1
