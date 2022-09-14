@@ -114,12 +114,12 @@ to improvement at any time.
 .. toctree::
    :maxdepth: 1
 
+   procedures/templates
    procedures/time-tracking
    procedures/implementation
    procedures/job-descriptions
    procedures/units-info
    procedures/advisory-board
-   procedures/templates
    reports/2022
 
 
