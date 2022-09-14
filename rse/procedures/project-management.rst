@@ -1,5 +1,5 @@
-Time tracking
-=============
+Project management
+==================
 
 .. note::
 

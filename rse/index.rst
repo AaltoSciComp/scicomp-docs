@@ -116,7 +116,7 @@ to improvement at any time.  Also see the :doc:`FCCI Tech
    :maxdepth: 1
 
    procedures/templates
-   procedures/time-tracking
+   procedures/project-management
    procedures/implementation
    procedures/job-descriptions
    procedures/units-info
