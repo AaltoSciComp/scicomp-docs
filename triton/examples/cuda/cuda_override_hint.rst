@@ -14,13 +14,8 @@ message similar to:
   
 In this instance it might be necessary to override the CUDA settings used by 
 conda/mamba. 
-To do this, prefix your environment creation command with:
-
-.. code-block:: bash
-
-   CONDA_OVERRIDE_CUDA="11.2"
-
-as in:
+To do this, prefix your environment creation command with ``CONDA_OVERRIDE_CUDA=CUDAVERSION``, 
+where CUDAVERSION is the Cuda toolkit version you intend to use as in:
 
 .. code-block:: bash
 
