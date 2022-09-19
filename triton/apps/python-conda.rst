@@ -265,6 +265,7 @@ reproducible.
 Creating more complex environments
 **********************************
 
+.. include:: /triton/examples/cuda/cuda_override_hint.rst
 
 Creating an environment with CUDA toolkit
 -----------------------------------------
@@ -288,6 +289,7 @@ In other cases one can use an environment file like this
 :download:`cuda-env.yml </triton/examples/cuda/cuda-env.yml>`:
 
 .. literalinclude:: /triton/examples/cuda/cuda-env.yml
+
 
 
 .. include:: /triton/examples/tensorflow/tensorflow_with_conda.rst
