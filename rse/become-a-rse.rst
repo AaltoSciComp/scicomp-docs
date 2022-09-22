@@ -99,7 +99,9 @@ important, too.
 To develop these skills, try:
 
 - Get at least minimally comfortable with the command line.
-- Use version control the best method possible for your project.
+- Use version control (at the right level for your project).  Can you
+  make your project a bit more professional and level up your version
+  control?
 - Add a command line interface to a code.
 - Make a modular, reusable code.
 - Add automated tests, continuous integration.
@@ -107,6 +109,8 @@ To develop these skills, try:
   have experience in both high and low level languages?
 - Automate your workflow to make it reproducible.
 - Use the best data storage methods possible.
+- Make a merge request / pull request to a project you want to
+  contribute to.
 - `CodeRefinery workshops <https://coderefinery.org>`__ cover most of
   what you need.
 
