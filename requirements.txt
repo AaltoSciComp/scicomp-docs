@@ -1,12 +1,12 @@
-docutils<0.17   # bugfix for docutils 0.17, remove later when sphinx updates
-jupyter_core<4.9.0        # remove after 4.9.0 https://github.com/jupyter/jupyter_core/pull/247
-sphinx>2
+docutils
+jupyter_core
+sphinx!=5.2.0.post0    # remove on next release
 sphinx_rtd_theme>0.5
 sphinx_gitstamp
 #recommonmark
 # For the slurm lexer
 pygments>=2.4
-https://github.com/AaltoSciComp/sphinx_rtd_theme_ext_color_contrast/archive/master.zip
+sphinx_rtd_theme_ext_color_contrast
 sphinx-copybutton
 sphinx-lesson
 sphinx-tabs
