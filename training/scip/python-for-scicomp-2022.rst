@@ -84,6 +84,7 @@ recommended!).  The `actual material is here
 * Jarno Rantaharju (Aalto Scientific Computing) (instructor, helper)
 * Marijn van Vliet (Aalto) (instructor, helper)
 * Sabry Razick (University of Oslo + NRIS) (instructor) 
+* Thor Wikfeldt (ENCCS, RISE) (instructor, helper)
 * ... and many more.
 
 **Time, date, place:** the course consists of four online hands-on
@@ -109,7 +110,7 @@ minutes early if attending a single lesson.
   - 10:30 `matplotlib <https://aaltoscicomp.github.io/python-for-scicomp/data-visualization/>`__
   - 12:10 `data formats <https://aaltoscicomp.github.io/python-for-scicomp/data-formats/>`__
 
-- Wed 24.nov, 10:00-13:00
+- Thu 24.nov, 10:00-13:00
 
   - `scripts <https://aaltoscicomp.github.io/python-for-scicomp/scripts/>`__
   - 11:10 `scipy <https://aaltoscicomp.github.io/python-for-scicomp/scipy/>`__
