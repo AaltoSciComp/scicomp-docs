@@ -11,6 +11,8 @@ and R packages.
 Quick usage guide
 *****************
 
+.. _conda-first-time-setup:
+
 First time setup
 ----------------
 

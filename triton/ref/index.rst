@@ -99,6 +99,15 @@ See also: :doc:`../tut/gpu`.
 
 .. include:: gpu.rst
 
+Conda
+=====
+
+See also: :doc:`../apps/python-conda`
+
+.. include:: conda.rst
+
+
+
 Command line
 ============
 
