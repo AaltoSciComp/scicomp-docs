@@ -144,3 +144,23 @@ copied and pasted to another notebook file (metadata lost, autograding
 fails), or b) cells are split (metadata duplicated, nbgrader halts
 then).  You should ask students to copy the whole notebook file around
 when needed.
+
+The environment variable ``NBGRADER_VALIDATING`` can be used to tell
+if the code is being run in the autograding context.
+
+A notebook shouldn't do extensive external operations when
+autograding, such as downloading data.  For that matter, it should try
+to minimize these when running on JupyterHub, too (a course with 1000
+students doesn't need every student to download data separately -
+that's a recipe to get us blocked).  You can try these kind of
+conditionals to handle these cases:
+
+.. code-block:: python
+
+   # Setup for if on aalto jupyterhub or if we are autograding
+   if 'AALTO_JUPYTERHUB' in os.environ or 'NBGRADER_VALIDATING' in os.environ:
+       data_home = '/coursedata/scikit_learn_data/'
+       # Make sure that it doesn't try to write new data here,
+       # students won't be able to
+   else:
+      data_home = None        # use default for a personal computer

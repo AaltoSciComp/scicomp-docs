@@ -127,6 +127,9 @@ Instructions/hints
 - A notebook can tell if it is in the hub environment if the
   ``AALTO_JUPYTERHUB`` environment variable is set.
 
+- A notebook can tell if it is being autograded by checking if
+  ``NBGRADER_VALIDATING`` is set.
+
 - You can install an identical version of nbgrader as we have using::
 
     pip install git+https://github.com/AaltoSciComp/nbgrader@live
