@@ -28,7 +28,6 @@ to suggest a new course, `please take this survey <https://link.webropol.com/s/s
 .. toctree::
    :maxdepth: 1
 
-   September 2022 / CodeRefinery workshop <https://coderefinery.github.io/2022-09-20-workshop/>
    scip/python-for-scicomp-2022
    scip/workflows-2023
    Take the survey! Request a re-run of past courses / new courses <https://link.webropol.com/s/scipod>

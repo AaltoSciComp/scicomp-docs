@@ -46,6 +46,7 @@ deleted.  This series has existed since 2016.
   - :doc:`Python for Scientific Computing <python-for-scicomp-2021>` (October 2021, `materials <https://aaltoscicomp.github.io/python-for-scicomp/>`__, `videos <https://www.youtube.com/playlist?list=PLZLVmS9rf3nOS7bHNmbcDoyTnMYaz_TJW>`__)
   - :doc:`Linux Shell Basics <linux-shell-basics>` (November 2021, `materials <https://aaltoscicomp.github.io/linux-shell/>`__)
   - :doc:`Matlab Basics <matlab-basics>` (November 2021, `materials <https://version.aalto.fi/gitlab/eglerean/matlabcourse/-/tree/master/AY20212022/MatlabBasics2021>`__)
+  - `CodeRefinery workshop <https://coderefinery.github.io/2022-09-20-workshop/>`__ (September 2022)
 
 
 2022
