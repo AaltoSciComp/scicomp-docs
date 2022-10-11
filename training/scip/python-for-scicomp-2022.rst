@@ -73,18 +73,15 @@ but certain partners provide extra benefits for their own audience:
 * Finnish universities: Aalto services available for you (see above)
 * **Your organization** - contact us to get listed here!
 
-
 **Staff and partner organizations:**
 
 * :doc:`Aalto Scientific Computing </index>`
 * Radovan Bast (UiT, Norway) (instructor, helper)
-* Richard Darst (Aalto Scientific Computing) (organizer, instructor, director)
-* Johan Hellsvik (KTH, Sweden) (instructor)
-* Jarno Rantaharju (Aalto Scientific Computing) (instructor, helper)
+* Richard Darst (Aalto) (instructor coordinator, director)
+* Enrico Glerean (Aalto) (registration coordinator)
 * Marijn van Vliet (Aalto) (instructor, helper)
-* Sabry Razick (University of Oslo + NRIS) (instructor)
 * Thor Wikfeldt (ENCCS, RISE) (instructor, helper)
-* ... and many more.
+* ... and many more to be added later (last year was about 10-15).
 
 
 Practical information
