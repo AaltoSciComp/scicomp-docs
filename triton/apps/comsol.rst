@@ -187,7 +187,7 @@ The following example shows a working set of settings to `use triton as a remote
 
 Prerequisities:
 
- * Store ssh-keys in pagent so that you can connect to triton with putty without entering the password.
+ * Store `ssh-keys <https://devops.ionos.com/tutorials/use-ssh-keys-with-putty-on-windows/>`_ in pagent so that you can connect to triton with putty without entering the password.
 
  * Save / install `putty executables <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`_ locally, e.g. in Z:\\putty:
 
