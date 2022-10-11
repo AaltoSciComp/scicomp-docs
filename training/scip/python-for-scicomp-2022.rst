@@ -2,13 +2,6 @@
 Nov 22nd - Nov 25th 2022 / Python for Scientific Computing
 ==========================================================
 
-.. warning::
-
-   **Timezones!** Times in this page in the Europe/Helsinki timezone.
-   **In Central Europe, the course starts at 8:50!** (`convert 9:50
-   Helsinki to your timezone
-   <https://arewemeetingyet.com/Helsinki/2022-11-22/9:50>`__)
-
 .. admonition:: Register
 
    * Register
@@ -31,9 +24,9 @@ Nov 22nd - Nov 25th 2022 / Python for Scientific Computing
        this, this is the main "home base".
      * If you registered, open the HackMD notes link (this is used to
        ask questions).
-     * If you registered for exercise sessions, open that Zoom
-       session.  This is optional, you are told when you can go here
-       for help.
+     * Optional: If you registered for exercise sessions, open that Zoom
+       session.  This is only active during exercise sessions, you
+       will get instructions.
 
    * If you want to host your own Zoom exercises sessions making use
      of our livestream, you may contact us (`CodeRefinery chat
@@ -44,20 +37,27 @@ Nov 22nd - Nov 25th 2022 / Python for Scientific Computing
      <https://www.twitch.tv/coderefinery/videos>`__ and YouTube the
      same day as the course.
 
+
+.. warning::
+
+   **Timezones!** Times in this page in the Europe/Helsinki timezone.
+   **In Central Europe, the course starts at 8:50!** (`convert 9:50
+   Helsinki to your timezone
+   <https://arewemeetingyet.com/Helsinki/2022-11-22/9:50>`__)
+
+
 This is a medium-advanced course in Python tools such as NumPy, SciPy,
 Matplotlib, and Pandas.  It is suitable for people who know basic
 Python and want to know some internals and important libraries for
 science.  Read the `learner personas
 <https://aaltoscicomp.github.io/python-for-scicomp/#learner-personas>`__
-to see if the course is right for you
-
-`Prerequisites
+to see if the course is right for you.  `Prerequisites
 <https://aaltoscicomp.github.io/python-for-scicomp/#prerequisites>`__
 include basic programming in Python.
 
 Part of :doc:`Scientific Computing in Practice <index>` lecture series
-at Aalto University, in partnership with `CodeRefinery <https://coderefinery.org>`__
-and `Norwegian Research Infrastructure Services (NRIS) <https://www.sigma2.no/nris>`__.
+at Aalto University, in partnership with `CodeRefinery
+<https://coderefinery.org>`__.
 
 
 
@@ -76,6 +76,7 @@ but certain partners provide extra benefits for their own audience:
 
 **Instructors and organizers:**
 
+* :doc:`Aalto Scientific Computing </index>`
 * Radovan Bast (UiT, Norway) (instructor, helper)
 * Richard Darst (Aalto Scientific Computing) (organizer, instructor, director)
 * Johan Hellsvik (KTH, Sweden) (instructor)
