@@ -1,4 +1,3 @@
-========
 Training
 ========
 
@@ -9,7 +8,7 @@ these skills.  The focus is practical,
 hands-on courses for scientists, not theoretical academic courses.
 
 Scientific Computing in Practice
-================================
+--------------------------------
 
 SCIP is a lecture series at Aalto University which covers hands-on,
 practical scientific computing related topics. Lectures are open for
@@ -52,7 +51,7 @@ Anyone can sign up for announcements at the :doc:`SCIP announcement
 mailinglist <scicomp-announcements-maillist>`.
 
 Other interesting courses
-=========================
+-------------------------
 
 *Data management, Reproducibility, open science*
 
@@ -81,7 +80,7 @@ MOOC on scientific computing:
 
 
 Skills map
-==========
+----------
 
 There is a lot to learn, and it all depends on each other.  How do you
 get started?
@@ -100,8 +99,8 @@ needed.  To use a computer cluster, D (Clusters and HPC) is useful.  E
 (scientific coding) is useful if you are writing your own software.
 
 
-Our courses
-===========
+Our most important courses
+--------------------------
 
 You can browse the material we have developed for our courses by following the links below.
 
@@ -111,19 +110,3 @@ You can browse the material we have developed for our courses by following the l
    Linux shell <https://aaltoscicomp.github.io/linux-shell/>
    Python for Scientific Computing <https://aaltoscicomp.github.io/python-for-scicomp/>
    Data analysis workflows in Python and R <https://aaltoscicomp.github.io/data-analysis-workflows-course/>
-
-
-
-Recommended programming courses
-===============================
-
-Need to learn programming?  We will include some recommended
-online programming courses here.
-
-..
-  Recommended programming courses.  what's current bleeding edge?
-
-  Python
-  R
-  Matlab
-  shell
