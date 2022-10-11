@@ -74,7 +74,7 @@ but certain partners provide extra benefits for their own audience:
 * **Your organization** - contact us to get listed here!
 
 
-**Instructors and organizers:**
+**Staff and partner organizations:**
 
 * :doc:`Aalto Scientific Computing </index>`
 * Radovan Bast (UiT, Norway) (instructor, helper)
