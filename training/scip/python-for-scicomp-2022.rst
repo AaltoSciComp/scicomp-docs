@@ -4,63 +4,86 @@ Nov 22nd - Nov 25th 2022 / Python for Scientific Computing
 
 .. warning::
 
-   We are still updating some of the information contained at this page.
-   However, you can already `register here <https://forms.gle/wsg3uZv4j7vbA2dG8>`__.
-
-.. warning::
-
    **Timezones!** Times in this page in the Europe/Helsinki timezone.
    **In Central Europe, the course starts at 8:50!** (`convert 9:50
    Helsinki to your timezone
    <https://arewemeetingyet.com/Helsinki/2022-11-22/9:50>`__)
 
+.. admonition:: Register
+
+   * Register
+
+     * You can `register here <https://forms.gle/wsg3uZv4j7vbA2dG8>`__
+       to get emails about the course, but it's not necessary to
+       attend.
+     * For more live updates, follow `Coderefine Twitter
+       <https://twitter.com/coderefine>`__ (not -ry).
+
+
 .. admonition:: Important info
 
    * Livestream (join here): https://twitch.tv/coderefinery
-   * Course material (to follow along:
+   * Course material:
      https://aaltoscicomp.github.io/python-for-scicomp/
    * During the event:
 
      * Open the livestream https://twitch.tv/coderefinery .  Watch
        this, this is the main "home base".
      * If you registered, open the HackMD notes link (this is used to
-       ask questions)
+       ask questions).
      * If you registered for exercise sessions, open that Zoom
        session.  This is optional, you are told when you can go here
        for help.
 
-   * Getting updates / Register
-
-     * You can, `register here <https://forms.gle/wsg3uZv4j7vbA2dG8>`__
-       to get emails about the course, but it's not necessary to
-       attend (non-Finland only gets general updates)
-     * For more live updates, follow `Coderefine
-       <https://twitter.com/coderefine>`__ (not -ry) twitter.
-
    * If you want to host your own Zoom exercises sessions making use
      of our livestream, you may contact us (`CodeRefinery chat
      <https://coderefinery.zulipchat.com>`__ or scip -at- aalto.fi) to
-     coordinate.
+     coordinate - we can help!
 
-   * Videos will be at `Twitch for 14 days immediately
-     <https://www.twitch.tv/coderefinery/videos>`__ and the `YouTube
-     playlist eventually
-     <https://www.youtube.com/playlist?list=PLZLVmS9rf3nOS7bHNmbcDoyTnMYaz_TJW>`__
-
-Part of :doc:`Scientific Computing in Practice <index>` lecture series
-at Aalto University, in partnership with `CodeRefinery <https://coderefinery.org>`__
-and `Norwegian Research Infrastructure Services (NRIS) <https://www.sigma2.no/nris>`__.
+   * Videos will be at `Twitch for 7 days immediately
+     <https://www.twitch.tv/coderefinery/videos>`__ and YouTube the
+     same day as the course.
 
 This is a medium-advanced course in Python tools such as NumPy, SciPy,
-Matplotlib, and Pandas.  It is suitable for people who have a basic
-understanding of basic Python and want to know some internals and
-important libraries for science.  Read the `learner personas <https://aaltoscicomp.github.io/python-for-scicomp/#learner-personas>`__ to
-see if the course is right for you
+Matplotlib, and Pandas.  It is suitable for people who know basic
+Python and want to know some internals and important libraries for
+science.  Read the `learner personas
+<https://aaltoscicomp.github.io/python-for-scicomp/#learner-personas>`__
+to see if the course is right for you
 
 `Prerequisites
 <https://aaltoscicomp.github.io/python-for-scicomp/#prerequisites>`__
 include basic programming in Python.
 
+Part of :doc:`Scientific Computing in Practice <index>` lecture series
+at Aalto University, in partnership with `CodeRefinery <https://coderefinery.org>`__
+and `Norwegian Research Infrastructure Services (NRIS) <https://www.sigma2.no/nris>`__.
+
+
+
+Partners
+--------
+
+This course is hosted by Aalto Scientific Computing (Aalto University,
+Finland) and CodeRefinery.  Our livestream is free for all to watch,
+but certain partners provide extra benefits for their own audience:
+
+* Aalto University: in-person exercise session, dedicated Zoom,
+  :ref:`installation help <garage>`.
+* Finnish universities: Aalto services available for you (see above)
+* **Your organization** - contact us to get listed here!
+
+
+**Instructors and organizers:**
+
+* Radovan Bast (UiT, Norway) (instructor, helper)
+* Richard Darst (Aalto Scientific Computing) (organizer, instructor, director)
+* Johan Hellsvik (KTH, Sweden) (instructor)
+* Jarno Rantaharju (Aalto Scientific Computing) (instructor, helper)
+* Marijn van Vliet (Aalto) (instructor, helper)
+* Sabry Razick (University of Oslo + NRIS) (instructor)
+* Thor Wikfeldt (ENCCS, RISE) (instructor, helper)
+* ... and many more.
 
 
 Practical information
@@ -71,27 +94,18 @@ This is an online course streamed via Twitch (the
 anyone may follow along without registration. You do *not* need a
 Twitch account.  There is a HackMD link
 (collaborative edited notes) which is used for asking questions during
-the course.  If you would like to attend for to get live help and do
-exercises, you may register via one of the links below (this is highly
-recommended!).  The `actual material is here
+the course.  Certain partners have extra registration possibilities
+(in-person exercise rooms, Zoom for support).  The `actual material is here
 <https://aaltoscicomp.github.io/python-for-scicomp/>`__.
 
-**Instructors and organizers:**
 
-* Radovan Bast (UiT, Norway) (instructor, helper)
-* Richard Darst (Aalto Scientific Computing) (organizer, instructor, director)
-* Johan Hellsvik (KTH, Sweden) (instructor)
-* Jarno Rantaharju (Aalto Scientific Computing) (instructor, helper)
-* Marijn van Vliet (Aalto) (instructor, helper)
-* Sabry Razick (University of Oslo + NRIS) (instructor) 
-* Thor Wikfeldt (ENCCS, RISE) (instructor, helper)
-* ... and many more.
-
-**Time, date, place:** the course consists of four online hands-on
+Schedule
+--------
+The course consists of four online hands-on
 sessions 3h each.  All times EEST (`convert 9:50 to your timezone
-<https://arewemeetingyet.com/Helsinki/2021-11-22/9:50>`__).
-**Schedule is tentative**, we may run earlier or later.  Join 10-20
-minutes early if attending a single lesson.
+<https://arewemeetingyet.com/Helsinki/2022-11-22/9:50>`__).
+**The schedule is tentative**, we may run earlier or later, so join early
+if attending a single lesson.
 
 - (week before) **Installation help sessions** (for sites that offer
   them)
@@ -145,18 +159,8 @@ Preparation
 `Prerequisites include basic programming in Python
 <https://aaltoscicomp.github.io/python-for-scicomp/#prerequisites>`__.
 
-**Preparation:** Online workshops can be a productive format, but it
-takes some effort to get ready.  Browse these resources:
 
-* `Attending a livestream workshop
-  <https://coderefinery.github.io/manuals/how-to-attend-stream/>`__,
-  good to read in detail.
-* `How to use HackMD to take answer questions and hold discussions <https://coderefinery.github.io/manuals/hackmd-mechanics/>`__.
-* It is useful to `watch <https://youtu.be/56p6xX0aToI>`__ or `read
-  <https://scicomp.aalto.fi/scicomp/shell/>`__ the Linux shell crash
-  course, since these basic command line concepts are always useful.
-
-Software installation:
+**Software installation:**
 
 * See the `installation page of the course material
   <https://aaltoscicomp.github.io/python-for-scicomp/installation/>`__.
@@ -168,6 +172,18 @@ Software installation:
 
 * `Zoom <https://coderefinery.github.io/installation/zoom/>`__, if you
   are registered for one of the exercise sessions.
+
+
+**Mental preparation:** Online workshops can be a productive format, but it
+takes some effort to get ready.  Browse these resources:
+
+* `Attending a livestream workshop
+  <https://coderefinery.github.io/manuals/how-to-attend-stream/>`__,
+  good to read in detail.
+* `How to use HackMD to take answer questions and hold discussions <https://coderefinery.github.io/manuals/hackmd-mechanics/>`__.
+* It is useful to `watch <https://youtu.be/56p6xX0aToI>`__ or `read
+  <https://scicomp.aalto.fi/scicomp/shell/>`__ the Linux shell crash
+  course, since these basic command line concepts are always useful.
 
 
 
@@ -207,8 +223,23 @@ harmful learning environment.
 Material
 --------
 
-* https://aaltoscicomp.github.io/python-for-scicomp/ (currently being updated)
+* https://aaltoscicomp.github.io/python-for-scicomp/
 
 
-News and notes
---------------
+
+Contact
+-------
+
+* Registration inquiries: scip -at- aalto.fi
+* Other organizations who want to join as a partner: scip -at-
+  aalto.fi
+* Chat with us on `CodeRefinery chat
+  <https://coderefinery.zulipchat.com>`__ (anyone) or :ref:`Aalto
+  University scicomp chat <chat>`
+
+
+See also
+--------
+
+* https://coderefinery.org
+* https://scicomp.aalto.fi/training/
