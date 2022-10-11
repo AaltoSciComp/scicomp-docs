@@ -1,6 +1,5 @@
-============
-SCIP Archive
-============
+Course archive
+==============
 
 Currently active (upcoming) courses have been moved to the
 :doc:`training index <../index>`.  Below is a list of past courses.
