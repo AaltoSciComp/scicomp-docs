@@ -68,6 +68,21 @@ Continue MDCS setup from `Matlab Distributed Computing
 Server <LINK/Matlab%20Distributed%20Computing%20Server>`__.
 
 
+Stand-alone license activation on Aalto Linux laptops
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To install Matlab and activate a stand-alone license on your Aalto Linux computer:
+
+- Install Matlab using the command: ``pkcon install matlab``
+- Run ``/opt/matlab2022a/bin/activate_matlab.sh`` (replacing 2022a by whatever version you are using)
+- Select "Activate automatically using the Internet" and press Next.
+- Select the license saying "individual" and press Next.
+- Enter your Aalto user name as the login name and press Next.
+- Press Confirm.
+
+Without a stand-alone license, you can only run Matlab if you have an internet connection to the Aalto network, or whatever internet connection and an Aalto VPN connection. With the stand-alone license, you can run Matlab even without an internet connection.
+
+
 FAQ
 ~~~
 
