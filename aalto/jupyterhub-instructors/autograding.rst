@@ -167,3 +167,34 @@ You can try these kind of conditionals to handle these cases:
        # students won't be able to
    else:
       data_home = None        # use default for a personal computer
+
+
+
+Warnings to give to students
+----------------------------
+
+* Don't copy and paste cells within a notebook.  This will mess up the
+  tracking metadata and prevent autograding from working.
+
+* Be cautious about things such as copying the whole notebook to Colab
+  to work on it.  This has sometimes resulted in removing all notebook
+  metadata, making autograding impossible.
+
+
+
+FAQ
+---
+
+* This error message::
+
+     [ERROR] One or more notebooks in the assignment use an old version
+         of the nbgrader metadata format. Please **back up your class files
+         directory** and then update the metadata using:
+
+         nbgrader update .
+
+  * There are various ways this can happen: perhaps the most common is
+    a student duplicates a cell.  There is no solution other than
+    manually fixing the notebook, or grading it yourself.  (The error
+    message is confusing and doesn't make sense, a wide variety of
+    internal problems can cause the same error).
