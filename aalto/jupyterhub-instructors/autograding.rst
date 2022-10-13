@@ -123,7 +123,8 @@ with instructor code before and after.  This ensures that students do
 the "big picture": loading, preprocessing, and finalization -
 important skills for the future.  Instead, they learn to fill in
 blanks and no more, no less.  So, in this way autograding is a
-trade-off: more grade able, less realistic.
+trade-off: more grade-able, less realistic about the full cycle of
+work.
 
 Within your tests, use variable names that won't have a conflict (for
 example, a random suffix like ``testval_randomstring36456165`` instead of
@@ -134,8 +135,8 @@ Expect students to do everything wrong, and fail in weird ways.  Your
 tests need to be *robust*.
 
 Consider if your assignment is more open-ended, or there is one
-specific way to solve it.  If it's more open-ended, consider if you
-think you'll be able to make it autogradeable.
+specific way to solve it.  If it's more open-ended, consider if it is
+even realistic to make it autogradeable.
 
 nbgrader relies on metadata in order to do the autograding.  In order
 for this to work, the cell metadata needs to be intact.  Normally, you
@@ -143,7 +144,8 @@ can't even see it for a cell, but it can be affected if: a) cells are
 copied and pasted to another notebook file (metadata lost, autograding
 fails), or b) cells are split (metadata duplicated, nbgrader halts
 then).  You should ask students to copy the whole notebook file around
-when needed.
+when needed.  You should also ask the students to generally avoid
+doing anything weird with the notebook files.
 
 The environment variable ``NBGRADER_VALIDATING`` can be used to tell
 if the code is being run in the autograding context.
@@ -152,8 +154,9 @@ A notebook shouldn't do extensive external operations when
 autograding, such as downloading data.  For that matter, it should try
 to minimize these when running on JupyterHub, too (a course with 1000
 students doesn't need every student to download data separately -
-that's a recipe to get us blocked).  You can try these kind of
-conditionals to handle these cases:
+that's a recipe to get us blocked).  Request a ``/coursedata/``
+directory and you can put any type of data there for students to use.
+You can try these kind of conditionals to handle these cases:
 
 .. code-block:: python
 
