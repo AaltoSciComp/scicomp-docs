@@ -71,6 +71,7 @@ but certain partners provide extra benefits for their own audience:
 * Aalto University: in-person exercise session, dedicated Zoom,
   :ref:`installation help <garage>`.
 * Finnish universities: Aalto services available for you (see above)
+* `ENCCS <https://enccs.se/>`__: Dedicated Zoom with expert helpers for participants from Sweden - `register here <https://enccs.se/events/2022-11-python-for-scientific-computing/>`__.
 * **Your organization** - contact us to get listed here!
 
 **Staff and partner organizations:**
