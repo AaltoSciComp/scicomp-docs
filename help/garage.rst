@@ -107,7 +107,8 @@ Special days
 
 Some days are special, and have extra staff about certain topics.  But
 you can always visit on any day and ask any question, and we can
-usually give a good answer.
+usually give a good answer (especially about Triton, HPC, computing,
+software, and data).
 
 * **Mondays** also have NBE/PHYS IT present.
 * **Tuesdays**
