@@ -172,3 +172,17 @@ FAQ
   actually not running, it will give you the option to restart it
   again.  If there are still network problems, you'll see an error
   message saying that.
+
+
+- **Gurobi** Gurobi has license issues, and it's not clear if it can
+  even be distributed by us.  So far, we only support open software.
+
+  But, courses have used gurobi before.  They had students install
+  themselves, in the anaconda environment, and somehow told it what
+  the Aalto license server was.  For examaple, using the magic of "!"
+  shell commands embedded in notebooks, it was something like this,
+  which would automatically install gurobi for students and set the
+  license file information.::
+
+     !conda install -c gurobi gurobi
+     !echo [license_file_information] > ~/.[license_file_path]
