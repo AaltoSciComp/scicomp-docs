@@ -46,6 +46,7 @@ optional_modules = [
     'sphinx_tabs.tabs',
     'sphinx_togglebutton',
     'sphinx_ext_substitution',
+    'sphinx_plausible',
     ]
 if on_rtd or 'GITSTAMP' in os.environ:
     optional_modules.append('sphinx_gitstamp')
@@ -55,6 +56,9 @@ for mod in optional_modules:
         extensions.append(mod)
     except ImportError:
         print('Module %s is not available'%mod)
+
+plausible_enabled = on_rtd
+plausible_domain = 'scicomp.aalto.fi'
 
 # Add timestamps from git
 gitstamp_fmt = "%d %b %Y"
