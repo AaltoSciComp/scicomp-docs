@@ -2,12 +2,18 @@
 News
 ====
 
-*12/09/2022* September 2022, it is another academic year! We have CodeRefinery starting in one week: if you write code for research, then this is the workshop for you! Come and learn about git, jupyter, conda, reproducibility and much more. `Click here for CodeRefinery Fall 2022 registration and info page <https://coderefinery.github.io/2022-09-20-workshop/>`__. Please also visit our `training webpages </training/>`__ to check other upcoming courses or request a re-run of past hands-on courses. 
+*21/10/2022* **Upgrade of the triton login node:** After running out of memory several times on our login node, we upgraded the memory from previously 128Gb to 256Gb. This is hopefully sufficient for most compilation and development work happening on the node. Any computation or memory intensive job should still be run on the compute nodes, but this upgrade provides us with a more robust system.
+
+**Upcoming Courses**
+
+From 22nd till 25th of November we will be running our popular `*Python for Scientific Computing* </training/scip/python-for-scicomp-2022/>`__ course again. The registration is open and can be accessed `here <https://docs.google.com/forms/d/e/1FAIpQLSfqBu3ByiuYmVcSouH4OQ-BeqlMRBA8bTzt2SY1KITR8rQHlA/viewform>`__. Please also visit our `training webpages </training/>`__ to check other upcoming courses or request a re-run of past hands-on courses. 
 
 Join our `daily zoom garage </help/garage/>`__ for any scientific computing related issue (not just Triton!) or to just chat and feel part of the community.  
 
 News archive
 ~~~~~~~~~~~~
+
+*12/09/2022* September 2022, it is another academic year! We have CodeRefinery starting in one week: if you write code for research, then this is the workshop for you! Come and learn about git, jupyter, conda, reproducibility and much more. `Click here for CodeRefinery Fall 2022 registration and info page <https://coderefinery.github.io/2022-09-20-workshop/>`__. 
 
 *9/06/2022* Join us today on `Twitch.tv <https://www.twitch.tv/coderefinery>`_ at 12:00 EEST for our `Intro to Scientific Computing and HPC <https://scicomp.aalto.fi/training/scip/kickstart-2022-summer/>`_. The course is open to anyone with an internet connection. If you want to do the hands-on exercises with us, you need access to an HPC cluster. If you are at Aalto please `apply for access to the triton cluster <https://scicomp.aalto.fi/triton/accounts/>`_, otherwise check what is available at your institution. You can also watch without doing the practical parts, but we recommend registering anyway so you will be able to ask questions on HackMD. 
 
