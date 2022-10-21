@@ -65,13 +65,12 @@ https://www.aalto.fi/en/services/training-in-research-data-management-and-open-s
 
 Please check https://mycourses.aalto.fi/ for other courses at Aalto and https://www.csc.fi/en/training for training courses and events at CSC. Some coming courses:
 
-  - `CSC Sensitive Data Services for research | May 5, 2022 <https://ssl.eventilla.com/event/M0XpP?_ga=2.120057039.670651147.1648629079-1832641415.1608195080&_gl=1*19151b8*_ga*MTgzMjY0MTQxNS4xNjA4MTk1MDgw*_ga_8VVQ0NECSX*MTY0ODYyOTA3NS4yLjEuMTY0ODYyOTA3OS4w>`__
-  - `Deep Learning and GPU Programming | May 10-13 <https://ssl.eventilla.com/event/pEr5O?_ga=2.122760396.670651147.1648629079-1832641415.1608195080&_gl=1*ft1xfy*_ga*MTgzMjY0MTQxNS4xNjA4MTk1MDgw*_ga_8VVQ0NECSX*MTY0ODYyOTA3NS4yLjEuMTY0ODYyOTA3OS4w>`__
-  - `CSC´s generic services for storing, sharing and publishing data | May 18 <https://ssl.eventilla.com/event/pEAl3?_ga=2.122760396.670651147.1648629079-1832641415.1608195080&_gl=1*ft1xfy*_ga*MTgzMjY0MTQxNS4xNjA4MTk1MDgw*_ga_8VVQ0NECSX*MTY0ODYyOTA3NS4yLjEuMTY0ODYyOTA3OS4w>`__
-  - `CSC Summer School in HPC | 26 June - 5 July <https://ssl.eventilla.com/summerschool?_ga=2.9798770.670651147.1648629079-1832641415.1608195080&_gl=1*rhjnmy*_ga*MTgzMjY0MTQxNS4xNjA4MTk1MDgw*_ga_8VVQ0NECSX*MTY0ODYyOTA3NS4yLjEuMTY0ODYyOTI0Mi4w>`__
-  - `CS-E4580 Programming Parallel Computers April-May 2022 <https://mycourses.aalto.fi/course/view.php?id=32411>`__
-  - `CS-E4640 Big Data Platforms D <https://mycourses.aalto.fi/course/view.php?id=32901>`__
-  - `Research ethics for doctoral students <https://mycourses.aalto.fi/course/view.php?id=23138>`__
+  - `Practical machine learning with spatial data | November 7-9 2022 <https://ssl.eventilla.com/event/VDK2b?_gl=1*1wzlnpv*_ga*MTE0MjM5MjE4LjE2NjM2NzA5MzY.*_ga_8VVQ0NECSX*MTY2NjMzMDc3MS4yLjEuMTY2NjMzMDg5NC4wLjAuMA..&_ga=2.42333223.301630530.1666330772-114239218.1663670936>`__
+  - `HYBRID: Practical Deep Learning | November 24-25 `<https://ssl.eventilla.com/event/aqew6?_gl=1*y7pzgu*_ga*MTE0MjM5MjE4LjE2NjM2NzA5MzY.*_ga_8VVQ0NECSX*MTY2NjMzMDc3MS4yLjEuMTY2NjMzMDg5NC4wLjAuMA..&_ga=2.35672738.301630530.1666330772-114239218.1663670936>`__
+  - `High-throughput computing and workflows workshop/hackathon | December 13-14, 2022 <https://ssl.eventilla.com/workflowsworkshop?_gl=1*y7pzgu*_ga*MTE0MjM5MjE4LjE2NjM2NzA5MzY.*_ga_8VVQ0NECSX*MTY2NjMzMDc3MS4yLjEuMTY2NjMzMDg5NC4wLjAuMA..&_ga=2.35672738.301630530.1666330772-114239218.1663670936>`__
+  - `Bioinformatic Analysis with Containers | January 24-25 2023 <https://ssl.eventilla.com/bioinformaticanalysis?_gl=1*y7pzgu*_ga*MTE0MjM5MjE4LjE2NjM2NzA5MzY.*_ga_8VVQ0NECSX*MTY2NjMzMDc3MS4yLjEuMTY2NjMzMDg5NC4wLjAuMA..&_ga=2.35672738.301630530.1666330772-114239218.1663670936>`__
+  - `CS-E4640 Big Data Platforms D January-April 2023 <https://mycourses.aalto.fi/course/view.php?id=36674>`__
+  - `CS-E4580 Programming Parallel Computers April-June 2023 <https://mycourses.aalto.fi/course/view.php?id=36690>`__
 
 MOOC on scientific computing:
 
