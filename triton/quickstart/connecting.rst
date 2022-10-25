@@ -13,6 +13,13 @@ with more info found at :doc:`the connecting tutorial <../tut/connecting>`.
 .. include:: ../ref/connecting.rst
 
 
+Get an account
+==============
+
+First, you need to :doc:`get an account <../accounts>`.
+
+
+
 Connecting via ssh
 ==================
 
