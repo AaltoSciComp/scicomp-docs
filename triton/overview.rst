@@ -1,6 +1,6 @@
-================
-Cluster overview
-================
+==========================
+Cluster technical overview
+==========================
 
 Shared resource
 ===============
