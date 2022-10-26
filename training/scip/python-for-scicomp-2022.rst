@@ -8,7 +8,8 @@ Nov 22nd - Nov 25th 2022 / Python for Scientific Computing
 
      * You can `register here <https://forms.gle/wsg3uZv4j7vbA2dG8>`__
        to get emails about the course, but it's not necessary to
-       attend.
+       attend.  **The course is open to everyone in the world**, with
+       some partners providing special services (see below).
      * For more live updates, follow `Coderefine Twitter
        <https://twitter.com/coderefine>`__ (not -ry).
 
@@ -65,14 +66,20 @@ Partners
 --------
 
 This course is hosted by Aalto Scientific Computing (Aalto University,
-Finland) and CodeRefinery.  Our livestream is free for all to watch,
+Finland) and CodeRefinery.  **Our livestream and registration is free
+for all to watch** in the spirit of open science and education,
 but certain partners provide extra benefits for their own audience:
 
 * Aalto University: in-person exercise session, dedicated Zoom,
-  :ref:`installation help <garage>`.
-* Finnish universities: Aalto services available for you (see above)
-* `ENCCS <https://enccs.se/>`__: Dedicated Zoom with expert helpers for participants from Sweden - `register here <https://enccs.se/events/2022-11-python-for-scientific-computing/>`__.
+  :ref:`installation help <garage>`.  `General registration
+       <https://forms.gle/wsg3uZv4j7vbA2dG8>`__.
+* Finnish universities: Aalto services available for you (see above).
+       `General registration <https://forms.gle/wsg3uZv4j7vbA2dG8>`__.
+* `ENCCS <https://enccs.se/>`__: Dedicated Zoom with expert helpers
+  for participants from Sweden - `register here
+  <https://enccs.se/events/2022-11-python-for-scientific-computing/>`__.
 * **Your organization** - contact us to get listed here!
+* Others: General registration link below.
 
 **Staff and partner organizations:**
 
@@ -83,6 +90,7 @@ but certain partners provide extra benefits for their own audience:
 * Marijn van Vliet (Aalto) (instructor, helper)
 * Thor Wikfeldt (ENCCS, RISE) (instructor, helper)
 * ... and many more to be added later (last year was about 10-15).
+
 
 
 Practical information
@@ -96,6 +104,17 @@ Twitch account.  There is a HackMD link
 the course.  Certain partners have extra registration possibilities
 (in-person exercise rooms, Zoom for support).  The `actual material is here
 <https://aaltoscicomp.github.io/python-for-scicomp/>`__.
+
+**General registration (but check partner registration above):**
+`Please register here <https://forms.gle/wsg3uZv4j7vbA2dG8>`__.  While
+the stream is available even without providing personal data, if you
+register you may get HackMD access for asking questions and will
+support our funding by contributing to our attendance statistics.
+
+**Credits:** Certificates are not provided for this course.
+
+**Additional course info at:** scip -at- aalto.fi
+
 
 
 Schedule
@@ -139,16 +158,6 @@ if attending a single lesson.
   - 12:30 panel discussion or buffer time?
   - 12:50 :doc:`Outro <python-for-scicomp/outro>`
   - 13:00 After-party/discussion in zoom (watch chat/HackMD for link)
-
-
-**Registration:**  `Please register here <https://forms.gle/wsg3uZv4j7vbA2dG8>`__.
-While the stream is available for everyone, if you register
-you can get HackMD access for asking questions and will support
-our funding by contributing to our attendance statistics.
-
-**Credits:** Certificates are not provided for this course.
-
-**Additional course info at:** scip -at- aalto.fi
 
 
 
