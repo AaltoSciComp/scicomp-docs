@@ -40,14 +40,14 @@ our survey and request to be contacted
 
 .. admonition:: Case study: sustainability of finished projects
 
-   A project has ended and the main person who managed the code/analysis 
-   pipeline has left to continue their career somewhere else. You wish to 
-   replicate and extend the previous work, but your only starting point is 
-   a folder with hundreds of files and no clear instructions/documentation. 
-   Aalto RSEs can help you re-using and recycling previous code, 
+   A project has ended and the main person who managed the code/analysis
+   pipeline has left to continue their career somewhere else. You wish to
+   replicate and extend the previous work, but your only starting point is
+   a folder with hundreds of files and no clear instructions/documentation.
+   Aalto RSEs can help you re-using and recycling previous code,
    document it, and extend it to make it more sustainable to be reused in
    future projects.
-   
+
 
 What we do
 ----------
