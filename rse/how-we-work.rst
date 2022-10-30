@@ -1,5 +1,5 @@
-How we work
-===========
+For researchers with a project
+==============================
 
 This page is mostly focused on how long-term scheduled projects, which
 are funded by the research groups themselves, work.
@@ -9,6 +9,8 @@ are funded by the research groups themselves, work.
 For short-term code review tasks, come to any of our :doc:`garage
 sessions </help/garage>` and we will immediately take a look.
 
+
+
 Types of service
 ----------------
 
@@ -16,22 +18,17 @@ Types of service
   scheduled in terms of FTE percentage over months.  This is often
   directly as salary from some grant, as a researcher would be.
 
-* **Medium-term** service deal with jobs scheduled in days.  For
-  simplicity, these are often fee-for-service paid internally from
-  basic funding.  Depending on your unit, they may also be free (paid
-  by unit basic funding).  *This is not worked out yet - check back
-  for details*
+* **Medium-term** service deal with jobs scheduled in days.  This is
+  mostly funded by basic funding from the member units.
 
-* **Short-term** could be a code review at one of our :doc:`garages
-  </help/garage>` or a few hours of work.  This is generally free
-  (paid by unit basic funding).
+* **Short-term** usually consists of support at one of our
+  :doc:`garages </help/garage>` or a few hours of work.  This is
+  generally free (paid by unit basic funding).
+
 
 
 Beginning
 ---------
-
-Check if it is a type of task that we can do: best to ask us (TODO:
-improve this description later)
 
 To actually make a request for support, see :doc:`request`.
 
@@ -59,7 +56,6 @@ job helping you.
   <https://drive.google.com/drive/folders/0BzlGN0F6ew2hc0hGVXVTaGZwQjQ>`__.
 * Final outputs, location, publication.
 * Time frame and schedule flexibility.
-
 
 
 What we can accomplish
@@ -101,7 +97,6 @@ needs.  Together, we will think about these questions:
     specialists (RSEs or similar - us?).
 
 
-
 Scheduling and planning
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -118,31 +113,16 @@ plenty of buffer into projects to accomplish the mandatory tasks.
 Our exact scheduling system is not yet decided: if you start now, you
 help design the system.
 
+
 Costs and time tracking
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Right now, most service is free for all users within the School of
-Science.
+We track the time we spend and record it to your project.
 
-TODO: future updates
-
-
-Funding practicalities
-~~~~~~~~~~~~~~~~~~~~~~
-
-Right now, most service is free to all researchers in member
-departments.  (Member departments can be seen on our :doc:`front page
-<index>`.)  Longer-term projects can be funded by
-internal invoicing or directly hiring our RSE onto your grant, the
-same as salary of any researcher would work.
-
-TODO: This will be developed as we begin the program.  See above for a
-description.
 
 
 Getting started
 ---------------
-
 
 Version control
 ~~~~~~~~~~~~~~~
