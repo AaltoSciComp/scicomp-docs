@@ -39,6 +39,9 @@ Benefits to schools/departments:
   higher level than basic IT (see :doc:`/help/garage`).
 * Help with data management, open science, FAIR data - be more
   competitive for funding and help get value out of your unit's data.
+* You will be able to set priorities for your funding, for example do
+  you focus on a certain strategy, wide variety of projects,
+  high-impact project, etc.
 
 Benefits to groups:
 

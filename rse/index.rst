@@ -33,10 +33,10 @@ grant applications.
 
 .. _rse-history: https://www.software.ac.uk/blog/2016-08-17-not-so-brief-history-research-software-engineers-0
 
-This service is free for everyone at Aalto thanks to a pilot grant
-from Aalto IT Services.  Member schools/departments have more time
-allocated and are currently CS, NBE, PHYS, and SCI overall (and others
-may join).
+**Service availability:** Garage support is available to everyone.
+Our current funding for longer projects is from the School of Science,
+so that is our focus.  For more information, see
+:doc:`procedures/units-info`.
 
 .. admonition:: Contact
 

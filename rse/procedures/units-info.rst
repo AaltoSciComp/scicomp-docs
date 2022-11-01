@@ -4,52 +4,41 @@ Unit information
 This page describes the Aalto units which are supporting the RSE
 program and what their priorities are.
 
+The service is currently (late 2022) mainly funded by the School of
+Science, so our focus must be there.  In early 2022, this service was free
+for everyone at Aalto thanks to a pilot grant from Aalto IT Services.
+This was successful and we are waiting for the next phase in 2022.
 
-
-General questions
------------------
-
-A unit joining and providing funding should first check the
-:doc:`implementation plan <implementation>` and then consider the
-following questions:
-
-- Maintain some fraction of time for basic services (short term,
-  free-at-point-of-use assistance to strategically improve the quality
-  of your research) ←→ or prioritize projects that can pay themselves
-  to make the unit's cost as low as possible.
-
-- Support the coolest projects ←→ help those who are struggling the
-  most.
-
-- Support efficient use of infrastructure/hardware or existing project
-  ←→ new projects.
-
-- Are there any strategic areas to focus on?
-
-- Contact us for a personalized chat about possibilities.
-
-
-
-Units
------
-
-The following units are currently supporting the RSE program, so only
-these units may receive the "basic service" (short term help, free to
-the user).  Others *may* be able to purchase our services using their
-own project funding, depending on how much time we have available.
+See :doc:`../units` if you would like to join the RSE service as a
+department or school.
 
 
 SCI
-~~~
+---
+Supporting all community.
 
 
 CS
-~~
+--
+Supporting all community.
 
 
 NBE
-~~~
+---
+Supporting all community.
 
 
 PHYS
-~~~~
+----
+Supporting all community.
+
+
+Rest of Aalto
+-------------
+In early 2022, we had a pilot project from IT Services to provide this
+service to all of Aalto.  It was successful and we are waiting for the
+next steps, but as of late 2022, we can't focus on non-SCI projects.
+Go ahead and drop by and we can add you to our queue.
+
+If you project has its own funding, we *can* support it.  And the
+:doc:`/help/garage` support is always available.
