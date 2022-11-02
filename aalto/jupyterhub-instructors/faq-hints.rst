@@ -186,3 +186,43 @@ FAQ
 
      !conda install -c gurobi gurobi
      !echo [license_file_information] > ~/.[license_file_path]
+
+- **I have already released an assignment, and now I need to update it
+  and release it again.  Some students have already fetched it.**
+  This works easily if students haven't fetched it yet, if they have
+  it requires some manual work from them.
+
+  What you need to do: (make sure the old version is git-committed),
+  edit the source/ directory version, un-release the assignment,
+  generate it again, release the assignment again.  You might need to
+  force it to fetch the assignment again, if it has already been
+  fetched. (verify, TODO: let me know how you do this)
+
+  On the student side: After an assignment is fetched, it won't present
+  the option to fetch it again (that would lose their work).  Instead,
+  they need to move the fetched version to somewhere else, then
+  re-fetch.  You can send the following instructions to your students:
+
+     I have updated an assignment, and you will need to re-fetch it.  You
+     work won't be lost, but you will need to merge it into the new
+     versions.
+
+     * First, make sure you save everything and close the notebooks.
+     * Open a terminal in Jupyter
+     * Run the following commands to change to the course assignment
+       directory and move the assignment to a new place (``-old``
+       suffix on the directory name):
+
+       .. code-block:: console
+
+	  $ cd /notebooks/COURSE/
+	  $ mv ASSIGMENT_ID ASSIGNMENT_ID-old
+
+     * In the assignment list, it should now offer you to re-fetch the
+       assignment.
+     * You can now open both the new old old versions (but to open the
+       old version, you need to navigate to
+       ``/notebooks/COURSE/ASSIGNMENT_ID-old`` yourself to see it).
+     * If you have already submitted the assignment, submit again.
+       The old assignment is still submitted, but our fetching should
+       get the new one.
