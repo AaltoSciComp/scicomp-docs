@@ -49,6 +49,22 @@ important notes you do not find other places.
    faq-hints
 
 
+
+Contact
+-------
+CS-IT. (students, always contact your course instructors first.)
+
+* Chat via :ref:`scicomp chat <chat>`,
+  https://scicomp.zulip.cs.aalto.fi, stream ``#jupyter.cs`` for quick
+  questions (don't send personal data here).
+* Issues needing action (new courses, autograding, software
+  installation, etc) via the CS IT email alias guru @ cs dot aalto.fi
+* Realtime support via :ref:`garage` every day at 13:00 (good for
+  screensharing to show a problem, you can prepare us by mentioning
+  your issue in the chat first).
+
+
+
 .. _jupyterhub-instructors-more-info:
 
 More info
@@ -57,8 +73,4 @@ More info
 * The `Noteable <https://noteable.edina.ac.uk/>`__ is a commercial
   service using nbgrader and has some good documentation:
   https://noteable.edina.ac.uk/documentation/
-
-Contact: CS-IT via the guru alias guru @ cs dot aalto.fi (students,
-contact your course instructors first).
-
-For source code and reporting issues, see the main jupyterhub page.
+* For source code and reporting issues, see the main jupyterhub page.
