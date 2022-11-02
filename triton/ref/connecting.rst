@@ -11,7 +11,8 @@
 
        >Linux/Mac: ``ssh USERNAME@triton.aalto.fi``
 
-       >Windows: PuTTY (install yourself) or WSL+Linux/mac command.
+       >Windows: WSL+Linux/mac command or use Powershell, 
+       	which works very similar to linux shell.
 
      * Connections only from VPN and Aalto networks.
        ``kosh.aalto.fi`` is a good proxy host if you are not there:
