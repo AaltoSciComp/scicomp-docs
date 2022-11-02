@@ -111,6 +111,13 @@ worth making yourself comfortable with this.
       computer (e.g. if it is university managed).  Ask your IT
       support well in advance for help!
 
+   .. tab:: Windows with PowerShell
+
+      If you can't use WSL, you can also use the powershell. 
+      In this case follow the Linux instructions. 
+      If you want to set up ssh keys there are a few differences but overall it is
+      the same procedure.
+
    .. tab:: Windows with PuTTY
 
       If you can't use WSL, then you can install a separate terminal
@@ -137,11 +144,11 @@ See the :doc:`advanced ssh information </scicomp/ssh>` to learn how
 to log in without a password, automatically save your username
 and more. It really will save you time.
 
-If you use OpenSSH (Linux/MacOS/WSL instructions above), the
-``.ssh/config`` file is valuable to set up to make connecting more
-seamless, with this you can run ``ssh triton_via_kosh`` instead of
-using the ``-J`` option - and this same ``triton_via_kosh`` will work
-with what you learn on the :doc:`remotedata` page!::
+If you use OpenSSH (Linux/MacOS/WSL or Windows Powershell instructions above), the
+``.ssh/config`` file (on windows the ``.ssh` folder is commonly under ``C:\Users\YourUsername``)
+is valuable to set up to make connecting more seamless, with this you can run 
+``ssh triton_via_kosh`` instead of using the ``-J`` option - and this same 
+``triton_via_kosh`` will work with what you learn on the :doc:`remotedata` page!::
 
    Host triton
 	User USERNAME
@@ -151,7 +158,6 @@ with what you learn on the :doc:`remotedata` page!::
 	User USERNAME
 	Hostname triton
 	ProxyJump USERNAME@kosh.aalto.fi
-
 
 
 .. admonition:: Aalto: Change your shell to bash
