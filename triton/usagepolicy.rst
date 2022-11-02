@@ -1,6 +1,35 @@
 Usage policies and legal
 ========================
 
+Triton intended use cases
+-------------------------
+
+Triton accounts should be used for scientific research (anything
+sponsored by a research PI that is aligned with Aalto's mission),
+including employed researchers, masters, PhD theses, and others in a
+department staff database. In practice, anyone with a researcher,
+employee (not TAs), or visitor job title gets an account made
+immediately after they accept the terms of use. For others, we ask
+their research supervisor for confirmation before making an account.
+
+If you have an account, exploring computing to learn new skills or
+test out new is OK if it doesn't use large amounts of resources.  We
+don't mind other employees using it for lightweight computing tasks or
+experimentation, but we can help you find the best place if it gets
+large.
+
+Common exceptions:
+
+* Undergraduate students doing projects which can't be considered
+  research should use resources for students.
+* Courses should generally not recommend Triton as a resource. Certain
+  courses with a special reason (e.g. HPC courses) may use it after
+  special agreement between the instructor and Triton staff.
+* Student projects which are research projects with a research PI may
+  use Triton.
+
+
+
 Acceptable Use Policy and Terms of Service
 ------------------------------------------
 
