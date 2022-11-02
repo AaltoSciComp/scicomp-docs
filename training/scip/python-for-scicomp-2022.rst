@@ -133,7 +133,10 @@ if attending a single lesson.
 
   - :doc:`Intro <python-for-scicomp/intro>`
   - 10:15 `Jupyter <https://aaltoscicomp.github.io/python-for-scicomp/jupyter/>`__
-  - 11:00 `numpy <https://aaltoscicomp.github.io/python-for-scicomp/numpy/>`__
+  - 11:00 Advanced NumPy (new lesson for this year, please browse the
+    `basic numpy lesson material here
+    <https://aaltoscicomp.github.io/python-for-scicomp/numpy/>`__
+    yourself as a prerequisite).
   - 12:10 `pandas <https://aaltoscicomp.github.io/python-for-scicomp/pandas/>`__...
 
 - Wed 23.nov, 10:00-13:00
@@ -145,8 +148,8 @@ if attending a single lesson.
 - Thu 24.nov, 10:00-13:00
 
   - `scripts <https://aaltoscicomp.github.io/python-for-scicomp/scripts/>`__
-  - 11:10 `scipy <https://aaltoscicomp.github.io/python-for-scicomp/scipy/>`__
-  - 11:30 `library ecosystem <https://aaltoscicomp.github.io/python-for-scicomp/libraries/>`__
+  - ??:?? Scraping data from Web APIs
+  - ??:?? `library ecosystem <https://aaltoscicomp.github.io/python-for-scicomp/libraries/>`__
   - 12:10 `parallel <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__...
 
 - Fri 25.nov, 10:00-13:00
