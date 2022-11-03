@@ -19,10 +19,10 @@ request the account.
 
 A few prerequisites:
 
--  You must have valid Aalto account
--  You must accept :doc:`Triton usage
-   policies <usagepolicy>`, including the data and privacy
+-  You must :doc:`check the intended use cases and agree with the Triton
+   usage policies <usagepolicy>`, including the data and privacy
    policies.
+-  You must have valid Aalto account.
 -  Also tell us your department/school in your account creation
    request.
 -  You should have enough background to use Triton well, including
@@ -32,10 +32,17 @@ A few prerequisites:
    should know A ("Basics"), C ("Linux"), and D ("HPC") well.  Also
    see the :ref:`Triton tutorials <tutorials>`.
 
-Accounts are for:
+Accounts are for (:doc:`see details <usagepolicy>`):
 
 - Researchers (as in, affiliated with a research PI in any way).
   Please tell us who your supervisor is in your account request.
+
+  - If you are a student doing a course project which is essentially
+    research project (you are basically joining the research group),
+    you may use Triton for that project.  You should be clear about
+    this in your request, put your *research* supervisor (not course
+    instructor) as supervisor, and we'll verify.
+
 - Students coming to one of our :doc:`Scientific Computing in Practice
   courses </training/scip/index>` which uses Triton.  You will be specifically
   told if this is the case
