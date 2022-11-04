@@ -75,7 +75,7 @@ but certain partners provide extra benefits for their own audience:
   <https://forms.gle/wsg3uZv4j7vbA2dG8>`__.
 * Finnish universities: Aalto services available for you (see above).
   `General registration <https://forms.gle/wsg3uZv4j7vbA2dG8>`__.
-* `ENCCS <https://enccs.se/>`__: Dedicated Zoom with expert helpers
+* `ENCCS <https://enccs.se/>`__ and `SNIC <https://www.snic.se/>`__: Dedicated Zoom with expert helpers
   for participants from Sweden - `register here
   <https://enccs.se/events/2022-11-python-for-scientific-computing/>`__.
 * **Your organization** - contact us to get listed here!
@@ -89,6 +89,8 @@ but certain partners provide extra benefits for their own audience:
 * Enrico Glerean (Aalto) (registration coordinator)
 * Marijn van Vliet (Aalto) (instructor, helper)
 * Thor Wikfeldt (ENCCS, RISE) (instructor, helper)
+* Diana Iusan (UPPMAX, SNIC) (instructor, helper)
+* Johan Hellsvik (PDC, SNIC) (instructor, helper)
 * ... and many more to be added later (last year was about 10-15).
 
 
