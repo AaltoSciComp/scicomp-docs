@@ -12,6 +12,7 @@ Nov 22nd - Nov 25th 2022 / Python for Scientific Computing
        some partners providing special services (see below).
      * For more live updates, follow `Coderefine Twitter
        <https://twitter.com/coderefine>`__ (not -ry).
+     * 7/11: We have added the possibility to get 1 ECTS credit.
 
 
 .. admonition:: Important info
@@ -113,7 +114,31 @@ the stream is available even without providing personal data, if you
 register you may get HackMD access for asking questions and will
 support our funding by contributing to our attendance statistics.
 
-**Credits:** Certificates are not provided for this course.
+**Credits:** It is possible to obtain a certificate from the course with 
+a little extra work. The certificate is equivalent to 1 ECTS and your study 
+supervisor will be able to register it as a credit in your university study 
+credit system. Please make sure that your supervisor/study program accepts it.
+
+Learners with a valid Aalto student number will automatically get the credit 
+registered in Aalto systems. 
+
+To obtain a certificate/credit, we expect you to follow the 4 days of the course 
+and provide us with at least the following 5 documents via email 
+(1 text document, 4 or more python scripts).
+
+- For each of the 4 days, write a short paragraph (learning diary) to highlight 
+  your personal reflections about what you have found useful, which topic inspired 
+  you to go deeper, and more in general what you liked and what could be improved.
+- For each of the 4 days: take one code example and make sure you can run it locally. 
+  Modify it a bit according to what inspires you: adding more comments, testing the 
+  code with different inputs, expanding it with something related to your field of 
+  research. There is no right or wrong way of doing this, but please submit a 
+  python script that we are eventually able to run and test on our local computers.
+
+These 5 (or more) documents should be sent before 31/December/2022 23:59CET to enrico.glerean@aalto.fi. 
+If the evaluation criteria are met for each of the 5 (or more) documents, you will receive 
+a certificate by mid January 2023. Please note that we do not track course attendance. 
+
 
 **Additional course info at:** scip -at- aalto.fi
 
