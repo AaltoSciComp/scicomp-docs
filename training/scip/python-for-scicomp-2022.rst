@@ -137,8 +137,8 @@ and provide us with at least the following 5 documents via email
 
 These 5 (or more) documents should be sent before 31/December/2022 23:59CET to enrico.glerean@aalto.fi. 
 If the evaluation criteria are met for each of the 5 (or more) documents, you will receive 
-a certificate by mid January 2023. Please note that we do not track course attendance. 
-
+a certificate by mid January 2023. Please note that we do not track course attendance and if you missed one
+session, recordings will be available on Twitch immediately after the streaming ends.
 
 **Additional course info at:** scip -at- aalto.fi
 
