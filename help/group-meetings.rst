@@ -87,6 +87,7 @@ News / topical items, 2022
 * GPUs: limited numbers, future procurement, using more efficiently.
 * :doc:`RSE service </rse/index>`, where and how to use.
 * Have you seen our latest :doc:`teaching </training/index>`.
+* :doc:`Daily SciComp garage <garage>`
 
 
 
@@ -95,7 +96,7 @@ Discussion starters
 
 * Data
 
-  * Where you store and share data
+  * :doc:`Where you store and share data </aalto/aaltostorage>`
   * Data-driven research: need more support?
   * Department (project, archive), Triton (scratch), cloud, any other
     needs?
@@ -116,19 +117,19 @@ Discussion starters
 
 * Usability and accessibility (user interfaces)
 
-  * Remote access
+  * :doc:`Remote access </aalto/remoteaccess>`
   * Virtual desktops, VDI
-  * Jupyter
-  * Other (Open OnDemand, ...)
+  * Jupyter (:doc:`jupyter.triton </triton/apps/jupyter`>)
+  * Other (:doc:`Open OnDemand </triton/apps/ood>`, ...)
   * Usability and accessibility in general in the modern world
 
 * Teaching
 
   * Learning Services
   * Online solutions on cloud platforms (local solutions, VMs, Azure)
-  * jupyter.cs
-  * A+
-  * Chat: Zulip, Teams, Slack, ...
+  * :doc:`jupyter.cs </aalto/jupyterhub>`
+  * `A+ <https://wiki.aalto.fi/pages/viewpage.action?pageId=159755451>`__
+  * Chat: :doc:`Zulip </aalto/zulip>`, Teams, Slack, ...
 
 * Software
 
@@ -138,6 +139,9 @@ Discussion starters
 * Support
 
   * Support channels
+  * :doc:`Daily SciComp garage <garage>` - every workday, 13:00,
+    online.
+  * Chat
   * Software development: (tools, best practices, collaboration)
   * :doc:`RSE service </rse/index>`
   * How to more closely support teaching/research
