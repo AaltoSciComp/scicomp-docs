@@ -119,8 +119,8 @@ Discussion starters
 
   * :doc:`Remote access </aalto/remoteaccess>`
   * Virtual desktops, VDI
-  * Jupyter (:doc:`jupyter.triton </triton/apps/jupyter`>)
-  * Other (:doc:`Open OnDemand </triton/apps/ood>`, ...)
+  * Jupyter (:doc:`jupyter.triton </triton/apps/jupyter>`>)
+  * Other (:doc:`Open OnDemand </triton/usage/ood>`, ...)
   * Usability and accessibility in general in the modern world
 
 * Teaching
