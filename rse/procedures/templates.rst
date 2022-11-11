@@ -52,25 +52,31 @@ Follow-ups
       Department/group:
 
 
-      Urgency (also set due date):
-
-
       Basic description:
+      - .
 
 
       Current team:
+      - .
 
 
       Each team does:
+      - .
 
 
       Tech tools:
+      - .
 
 
       Scientific tools/domain knowledge:
+      - .
 
 
-      Time estimate:
+      Schedule
+      - Time estimate:
+      - Any deadlines?:
+      - Expected time, likelyhood of going over:
+      - What happens if it goes over time?  Backeup plans?:
 
 
       Links to existing docs:
