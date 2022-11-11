@@ -113,10 +113,10 @@ worth making yourself comfortable with this.
 
    .. tab:: Windows with PowerShell
 
-      If you can't use WSL, you can also use the powershell. 
-      In this case follow the Linux instructions. 
-      If you want to set up ssh keys there are a few differences but overall it is
-      the same procedure.
+      If you can't use WSL, you can also use PowerShell.  Start
+      the "Windows PowerShell" program.  Then, follow the Linux
+      instructions.  If you want to set up ssh keys there are a few
+      differences but overall it is the same procedure.
 
    .. tab:: Windows with PuTTY
 
