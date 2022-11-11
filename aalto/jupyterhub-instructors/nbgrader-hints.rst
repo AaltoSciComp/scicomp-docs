@@ -76,7 +76,8 @@ Known problems
 
 * The built-in feedback functionality doesn't work if you modify the
   submitted notebooks (for example, to make them run).  nbgrader
-  upstream limitation.
+  upstream limitation.  Contact us and we can run a script that will
+  release the feedback to your students.
 
 
 
