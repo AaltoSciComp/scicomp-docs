@@ -5,6 +5,10 @@ As a new group leader, how can you make the most of your future
 group's computational work, so that it becomes an investment rather
 than a liability?  This is currently focused on software.
 
+If you are actively writing research software yourself, perhaps
+directly check out :doc:`zen-of-scicomp` instead of this for the more
+practical side.
+
 
 
 Why plan in advance?
