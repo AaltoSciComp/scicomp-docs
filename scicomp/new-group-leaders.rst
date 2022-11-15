@@ -153,6 +153,8 @@ Software in research
 Software: tools
 ---------------
 
+We give a lightning overview.
+
 Version control
 ~~~~~~~~~~~~~~~
 * Tracks changes
@@ -172,26 +174,41 @@ Version control
 
 * Most common these days: :doc:`git </scicomp/git>`
 
+Suggestion: Everyone must learn the basics of a version control
+system, a few people more advanced features, and you shuld know where
+to get help.
+
 Github, Gitlab, etc.
 ~~~~~~~~~~~~~~~~~~~~
 * **Version control platforms**
 * Online hosting platforms for git (others available)
 * Very useful to keep stuff organized
 * Makes a lot of stuff below possible.
+* Individual projects and **organizations** with members - for your
+  group.
+
+Suggestion: Make one Github organization for your group, and one
+internal Gitlab organization hosted at your university.  Encourage
+this, not personal repositories.
 
 Issue tracking
 ~~~~~~~~~~~~~~
 * Version control platforms provide **issue trackers**
 * Important bugs, improvements, etc. can be closely tracked.
 
+Suggestion: use issues for your most important projects
+
 Change proposals (aka "pull requests")
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Feature of version control platforms like Github or Gitlab
 * People should work together, but maybe not everyone should be able to
   modify everything, right?
-* Contributors (your group or otherwise) can contribute without risk
+* Contributors (your group or outside) can contribute without risk
   of messing things up.
 * For this to work you *need to actually review, improve, and accept them*
+
+Suggestion: use pull requests for more important projects which should
+not be broken.
 
 Testing
 ~~~~~~~
@@ -201,6 +218,9 @@ Testing
   automatically verify functionality.
 * You write tests, and then anytime you make a change later, the tests
   verify it still works.
+
+Suggestion: Add at least minimal software testing to your most
+important projects.
 
 Publication and release
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -216,15 +236,14 @@ Publication and release
 * Do all work expecting that it might be made open someday.  Separate
   public and secret information into different repositories.
 
+Suggestion: starting with public Github is enough.
+
+
 
 Working together on code
 ------------------------
 
-Things that can go wrong if people work together:
-
-* One person changes something and it breaks for everyone
-
-  * Version control and testing help with this.
+Group discussion: What can go wrong when people work together?
 
 
 
