@@ -47,6 +47,7 @@ optional_modules = [
     'sphinx_togglebutton',
     'sphinx_ext_substitution',
     'sphinx_plausible',
+    'sphinxext.opengraph',
     ]
 if on_rtd or 'GITSTAMP' in os.environ:
     optional_modules.append('sphinx_gitstamp')
@@ -59,6 +60,10 @@ for mod in optional_modules:
 
 plausible_enabled = on_rtd
 plausible_domain = 'scicomp.aalto.fi'
+
+ogp_site_url = "https://scicomp.aalto.fi/"
+ogp_site_name = "Aalto Scientific Computing Docs"
+
 
 # Add timestamps from git
 gitstamp_fmt = "%d %b %Y"
