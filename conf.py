@@ -380,5 +380,5 @@ def setup(app):
         app.add_javascript("redirect-to-https.js")
         app.add_javascript("https://users.aalto.fi/~darstr1/minipres-stable.js")
 
-if on_rtd:
-    os.system("pip freeze")
+#if on_rtd:
+#    os.system("pip freeze")
