@@ -29,7 +29,7 @@ At a group level, these often happen to semi-computational groups:
 
 At an individual level:
 
-* Time wasted with mistakes
+* Time wasted with bugs
 * Time wasted when one can't repeat analysis for reviews
 * Desire to hide or not share code because it's "messy", which
   promotes the above cycle continuing.  And less Open Science.
@@ -47,14 +47,15 @@ connected by supervisor, or a team that works together?
   - Do these presentations comment only on the final results?
   - Or do you discuss and praise good practices for getting those
     results?
+  - Are some meetings spent on skill development?
 
 - Or on the other end, are you co-developing the same project?
 - Are you a team, or a bunch of independent contractors?
 
 
 
-Planning vs making the plan
----------------------------
+Planning vs writing a plan
+--------------------------
      Plans are useless, planning is indispensable *- Dwight Eisenhower*
 
 * Different grants request you make a **data management plan** and
@@ -96,9 +97,12 @@ practices to get the best value out of it.
 - This, and other important tools are covered in `CodeRefinery
   <https://coderefinery.org>`__
 - Consider attending a CodeRefinery as a team
+- If you use lots of computing: :doc:`Aalto Introduction to Scientific
+  Computing </training/scip/kickstart-2022-summer>`
 - At least one interested person per group should become more of a
   specialist, so that they can mentor and support others.  Hire
   someone interested?
+- Train early, before getting started with bad practices that can't be changed.
 
 But there is also informal learning, **mentoring**:
 
@@ -112,7 +116,8 @@ But there is also informal learning, **mentoring**:
 
   - Set up group to work together
   - Time and motivation for self-learning
-  - Encourage a internal specialist who can mentor for you.
+  - Encourage a internal specialist who can mentor for you ("Research
+    software engineer").
 
 
 
