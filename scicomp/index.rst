@@ -11,6 +11,7 @@ Scientific computing tips
    hybrid-events
    jupyter-pitfalls
    nbscript
+   new-group-leaders
    packaging-software
    python
    shell
