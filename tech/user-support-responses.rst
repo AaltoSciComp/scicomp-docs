@@ -50,6 +50,32 @@ to frame any response.
   can we find the right level to answer at?
 
 
+
+XY problem
+----------
+
+**XY problem: someone asks about their attempted solution (Y) and not
+their root problem (X)**.  If a supporter focuses on the Y and not the
+X can cause very inefficient answers.
+
+Examples: "How do I turn on the stove?" vs "I am trying to make tea,
+how do I turn on the stove" which allows the answer to point out that
+the asker is trying to us an electric kettle on the stove.
+
+- Don't assume that what someone asks for is what they really need -
+  you need to read between the lines.
+- This isn't their fault, maybe they don't know what they need.
+- Possible mitigations:
+
+  - When replying, state your assumptions in your response so that they
+    can correct you if they notice it wrong (if this is relevant).
+  - Also consider stating several other possibilities briefly, and
+    when they would be relevant.  For example: "Do XXX to install the
+    software.  But do you know that you can also load it via the YYY
+    module?"
+
+
+
 General guidelines
 ------------------
 
@@ -96,23 +122,6 @@ Consider at what level someone needs support
 
 
 
-XY problem
-----------
-
-- Don't assume that what someone asks for is what they really need -
-  you need to read between the lines.
-- This isn't their fault, maybe they don't know what they need.
-- Possible mitigations:
-
-  - When replying, state your assumptions in your response so that they
-    can correct you if they notice it wrong (if this is relevant).
-  - Also consider stating several other possibilities briefly, and
-    when they would be relevant.  For example: "Do XXX to install the
-    software.  But do you know that you can also load it via the YYY
-    module?"
-
-
-
 Accept that you can't do everything
 -----------------------------------
 
@@ -152,6 +161,23 @@ Sometimes you have to say "no"
 - State why it's not possible, in more or less words.
 - Can you turn this into an X-Y answer - find what they really need,
   that you (or someone) can do?
+
+
+
+If you don't know the answer
+----------------------------
+
+Our audience does all kinds of advanced work, so often we don't know
+the answer - or don't know it right away.
+
+* Ask to see what they actually do, all error messages, etc.  Ask to
+  share screen.  This can help you to see some problems, and makes
+  most problems easy.
+* Request the basic information to "work on it yourself for a bit to
+  save time", this gives you enough time to study solutions.
+* Related to the above, take the time to make things reproducible.
+  This is needed for you to begin working, but also seeing the basic
+  steps will help to understand the background.
 
 
 
