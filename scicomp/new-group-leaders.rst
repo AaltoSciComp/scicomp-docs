@@ -3,7 +3,7 @@ New group leaders: what to know about computational research
 
 As a new group leader, how can you make the most of your future
 group's computational work, so that it becomes an investment rather
-than a liability?
+than a liability?  This is currently focused on software.
 
 
 
