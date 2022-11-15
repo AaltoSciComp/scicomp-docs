@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg8"
+   viewBox="0 0 300.25 303.31"
+   version="1.1"
+   sodipodi:docname="logo-hexagons-02-compact-background.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata
+     id="metadata38">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>asc_logo_nimbussans</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1127"
+     inkscape:window-height="692"
+     id="namedview36"
+     showgrid="false"
+     inkscape:zoom="0.77808184"
+     inkscape:cx="233.24727"
+     inkscape:cy="83.697382"
+     inkscape:window-x="1778"
+     inkscape:window-y="920"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg8" />
+  <defs
+     id="defs4">
+    <style
+       id="style2">.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:11.34;stroke-width:5.67px;}</style>
+  </defs>
+  <title
+     id="title6">asc_logo_nimbussans</title>
+  <path
+     sodipodi:type="star"
+     style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:3.54149294;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+     id="path851"
+     sodipodi:sides="6"
+     sodipodi:cx="148.25789"
+     sodipodi:cy="171.79121"
+     sodipodi:r1="172.23756"
+     sodipodi:r2="149.16211"
+     sodipodi:arg1="1.5707963"
+     sodipodi:arg2="2.0943951"
+     inkscape:flatsided="true"
+     inkscape:rounded="0"
+     inkscape:randomized="0"
+     d="M 148.25789,344.02878 -0.90421488,257.91 -0.9042195,85.672436 148.25788,-0.4463501 297.41999,85.672428 297.42,257.90999 Z"
+     transform="matrix(1.0672695,0,0,1.0671567,-8.1061228,-11.673146)" />
+  <g
+     id="g3961">
+    <path
+       id="path3935"
+       class="cls-1"
+       d="M155.62,9.21,82,51.73"
+       transform="translate(-5.49 -6.38)" />
+    <path
+       id="path3943"
+       class="cls-1"
+       d="M155.62,9.21l73.65,42.52"
+       transform="translate(-5.49 -6.38)" />
+    <path
+       id="path3945"
+       class="cls-1"
+       d="M155.62,179.29l73.65-42.52"
+       transform="translate(-5.49 -6.38)" />
+    <path
+       id="path3947"
+       class="cls-1"
+       d="M229.27,51.73v85"
+       transform="translate(-5.49 -6.38)" />
+    <path
+       id="path3949"
+       class="cls-1"
+       d="M155.62,179.29,82,136.77"
+       transform="translate(-5.49 -6.38)" />
+    <path
+       id="path3951"
+       class="cls-1"
+       d="M82,51.73v85"
+       transform="translate(-5.49 -6.38)" />
+  </g>
+  <path
+     d="M142.85,117.19,138,132.6H119.28l26.79-76.7h21.51L192,132.6H172.41l-4.14-15.41ZM156.42,73l-9.31,30h17.36Z"
+     transform="translate(-5.49 -6.38)"
+     id="path15" />
+  <g
+     id="g3975">
+    <path
+       id="path3963"
+       class="cls-1"
+       d="M82,136.77,8.33,179.29"
+       transform="translate(-5.49 -6.38)" />
+    <path
+       id="path3965"
+       class="cls-1"
+       d="M82,136.77l73.65,42.52"
+       transform="translate(-5.49 -6.38)" />
+    <path
+       id="path3967"
+       class="cls-1"
+       d="M82,306.85l73.65-42.52"
+       transform="translate(-5.49 -6.38)" />
+    <path
+       id="path3969"
+       class="cls-1"
+       d="M155.62,179.29v85"
+       transform="translate(-5.49 -6.38)" />
+    <path
+       id="path3971"
+       class="cls-1"
+       d="M82,306.85,8.33,264.33"
+       transform="translate(-5.49 -6.38)" />
+    <path
+       id="path3973"
+       class="cls-1"
+       d="M8.33,179.29v85"
+       transform="translate(-5.49 -6.38)" />
+  </g>
+  <path
+     d="M96,207.49v-1.26c0-6.33-5.17-10.12-13.8-10.12-8,0-13.11,3-13.11,7.82,0,3.22,2.3,5.4,7,6.55l15.52,3.57C108,218,114.4,224.28,114.4,236.24c0,16-12.07,25.65-32.08,25.65-20.7,0-32.66-9.89-32.78-27H66.79c.35,8.74,5.29,12.65,15.76,12.65,8.85,0,14.26-3.33,14.26-8.74,0-3.68-2.76-6.32-8.28-7.7l-13.92-3.45c-8.16-2-13.22-4.14-16.67-7.13-3.8-3.34-6.1-8.86-6.1-15.07,0-14.83,11.5-23.69,30.82-23.69,12.77,0,21.62,3.91,26.45,11.62,2.3,3.68,3.45,7.59,4.14,14.14Z"
+     transform="translate(-5.49 -6.38)"
+     id="path24" />
+  <g
+     id="g3989">
+    <path
+       id="path3977"
+       class="cls-1"
+       d="M229.27,136.77l-73.65,42.52"
+       transform="translate(-5.49 -6.38)" />
+    <path
+       id="path3979"
+       class="cls-1"
+       d="M229.27,136.77l73.64,42.52"
+       transform="translate(-5.49 -6.38)" />
+    <path
+       id="path3981"
+       class="cls-1"
+       d="M229.27,306.85l73.64-42.52"
+       transform="translate(-5.49 -6.38)" />
+    <path
+       id="path3983"
+       class="cls-1"
+       d="M302.91,179.29v85"
+       transform="translate(-5.49 -6.38)" />
+    <path
+       id="path3985"
+       class="cls-1"
+       d="M229.27,306.85l-73.65-42.52"
+       transform="translate(-5.49 -6.38)" />
+    <path
+       id="path3987"
+       class="cls-1"
+       d="M155.62,179.29v85"
+       transform="translate(-5.49 -6.38)" />
+  </g>
+  <path
+     d="M246.34,208c-1.72-7.36-7.36-11.61-15.52-11.61-12.65,0-19.9,9.31-19.9,25.41s7.25,25.53,19.44,25.53c9,0,14.14-4.37,16.21-13.57h18.29c-2.07,17.37-15.07,28.18-34,28.18-22.66,0-37.15-15.64-37.15-40.14s14.26-40,37-40c18.52,0,31.17,9.89,33.24,26.22Z"
+     transform="translate(-5.49 -6.38)"
+     id="path33" />
+</svg>
