@@ -14,3 +14,4 @@ sphinx-togglebutton
 sphinx_toolbox
 sphinx_ext_substitution
 https://github.com/rkdarst/sphinx-plausible/archive/main.zip
+https://github.com/rkdarst/sphinxext-opengraph/archive/live.zip
