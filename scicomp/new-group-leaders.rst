@@ -52,6 +52,9 @@ connected by supervisor, or a team that works together?
 - Or on the other end, are you co-developing the same project?
 - Are you a team, or a bunch of independent contractors?
 
+Suggestion: don't be too results oriented in your group activities.
+Make sure you value the process with both your time and mental energy.
+
 
 
 Planning vs writing a plan
@@ -63,8 +66,9 @@ Planning vs writing a plan
 * If you making a plan just for a grant, I think that's the wrong
   idea.  You want everything you do to *go beyond single projects.*
 
-My suggestion: make a "practical plan" for important aspects, in your
-group's documentation area.  Update it as needed.
+Suggestion: make a "practical plan" for important aspects, in your
+group's documentation area.  Keep it lightweight but useful.  Update
+it as needed.
 
 
 
@@ -85,24 +89,24 @@ and keeping things consistent and usable over time.
 - Can you make everything open.  e.g. your group website contains this
   reference information, so it also serves as an advertisement?
 
+Suggestion: make sure you keep your group's internal operating
+information organized - however makes sense for you.
+
 
 
 Skill development
 -----------------
 
 Many people learn basic programming.  Far fewer people learn best
-practices to get the best value out of it.
+practices *beyond* programming:
 
-- Every researcher should know a minimum of some version control
-- This, and other important tools are covered in `CodeRefinery
-  <https://coderefinery.org>`__
+- This, especially version control, is covered very well in the
+  `CodeRefinery workshop <https://coderefinery.org>`__, twice a year.
 - Consider attending a CodeRefinery as a team
 - If you use lots of computing: :doc:`Aalto Introduction to Scientific
-  Computing </training/scip/kickstart-2022-summer>`
-- At least one interested person per group should become more of a
-  specialist, so that they can mentor and support others.  Hire
-  someone interested?
-- Train early, before getting started with bad practices that can't be changed.
+  Computing and HPC </training/scip/kickstart-2022-summer>`
+- Train early, before getting started with bad practices that can't be
+  changed.
 
 But there is also informal learning, **mentoring**:
 
@@ -118,6 +122,10 @@ But there is also informal learning, **mentoring**:
   - Time and motivation for self-learning
   - Encourage a internal specialist who can mentor for you ("Research
     software engineer").
+
+Suggestion: ensure computational people in your group attend
+CodeRefinery.  Try to find one person to get extra experience to
+mentor others.
 
 
 
@@ -136,24 +144,23 @@ Why talk so much about teaching and mentoring, rather than practices?
 Software in research
 --------------------
 
-* Software allows you to do far more than one can alone.
-* If made well, it is transforms research.
+* Software allows you to do far more than one can alone and transform research.
+* ... but can also be one of the most complex tasks you do.
 
-  * ... but can also be one of the most complex tasks you do.
-
-* Who develops it?
+* What kind do you use?
 
   * You can and will use software developed by others
-  * Many groups develop their own internally: either shared or
-    everyone individually
+  * Many groups develop their own internally.
   * If you make something good, you may want to release it so that
     others can use it - and cite you.
+
 
 
 Software: tools
 ---------------
 
-We give a lightning overview.
+We give a lightning overview.  Come to `CodeRefinery
+<https://coderefinery.org>`__ for the full story.
 
 Version control
 ~~~~~~~~~~~~~~~
@@ -222,6 +229,23 @@ Testing
 Suggestion: Add at least minimal software testing to your most
 important projects.
 
+Documentation
+~~~~~~~~~~~~~
+* Documentation makes reusability.
+* Minimum is Readme files in each repository.
+* Big projects can have dedicated documentation.
+
+Licensing
+~~~~~~~~~
+* Reuse gets you citations
+* Reuse requires a license - or else significant reuse will be minimal.
+* You will often need to check your local policies on making something
+  open source.
+
+Suggestion: decide on a license as early as possible - us only
+open-source licenses unless there is special reason.  You don't have
+to actually open right away.
+
 Publication and release
 ~~~~~~~~~~~~~~~~~~~~~~~
 * If you invest in your software, you probably want to share it
@@ -236,7 +260,8 @@ Publication and release
 * Do all work expecting that it might be made open someday.  Separate
   public and secret information into different repositories.
 
-Suggestion: starting with public Github is enough.
+Suggestion: starting with public Github is enough, and think about
+more when you need it.
 
 
 
@@ -247,8 +272,13 @@ Group discussion: What can go wrong when people work together?
 
 
 
+Other computational topics
+--------------------------
+
+... not exactly software, but still relevant to this discussion.
+
 Data storage
-------------
+~~~~~~~~~~~~
 
 - Discourage single-user storage spaces (laptop, home directories)
 - Use common shared spaces instead
@@ -267,7 +297,7 @@ Aalto Scientific Computing strategy:
 
 
 Data storage locations at Aalto University
-------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Own devices
 
   * Danger, no backups!  Personal devices are considered insecure.
@@ -285,6 +315,8 @@ Data storage locations at Aalto University
   * Very large, fast, direct cluster access, but not backed up.
   * 10s-100s of TB.
 
+* CSC data storage resources
+
 * Public data repositories
 
   * For open data
@@ -292,7 +324,7 @@ Data storage locations at Aalto University
 
 
 Computing
----------
+~~~~~~~~~
 
 There are a range of computing options: (easy to use, small) ⋄ (harder
 to use, large)
@@ -322,6 +354,8 @@ Some possibilities, if you are at Aalto:
 
 * At Aalto: :doc:`Research Software Engineer consulting service </rse/index>`
 * At Aalto: `Data Agents <https://www.aalto.fi/en/services/data-agents>`__
+
+Suggestion: come to a RSE consultation and chat at least once.
 
 
 
@@ -361,4 +395,6 @@ Checklist
 See also
 --------
 
-(nothing here yet)
+* :doc:`zen-of-scicomp` - different levels of different aspects you
+  can slowly improve.  Emphasizes that you don't have to be perfect
+  when you first start.
