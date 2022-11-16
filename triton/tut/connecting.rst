@@ -145,7 +145,7 @@ to log in without a password, automatically save your username
 and more. It really will save you time.
 
 If you use OpenSSH (Linux/MacOS/WSL or Windows Powershell instructions above), the
-``.ssh/config`` file (on windows the ``.ssh` folder is commonly under ``C:\Users\YourUsername``)
+``.ssh/config`` file (on windows the ``.ssh`` folder is commonly under ``C:\Users\YourUsername``)
 is valuable to set up to make connecting more seamless, with this you can run 
 ``ssh triton_via_kosh`` instead of using the ``-J`` option - and this same 
 ``triton_via_kosh`` will work with what you learn on the :doc:`remotedata` page!::
