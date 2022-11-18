@@ -60,6 +60,7 @@ for mod in optional_modules:
 
 plausible_enabled = on_rtd
 plausible_domain = 'scicomp.aalto.fi'
+plausible_script = 'https://plausible.cs.aalto.fi/js/plausible.js'
 
 ogp_site_url = "https://scicomp.aalto.fi/"
 ogp_site_name = "Aalto Scientific Computing Docs"
