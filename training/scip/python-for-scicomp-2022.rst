@@ -147,7 +147,7 @@ session, recordings will be available on Twitch immediately after the streaming 
 Schedule
 --------
 The course consists of four online hands-on
-sessions 3h each.  All times EEST (`convert 9:50 to your timezone
+sessions 3h each.  All times EET (`convert 9:50 to your timezone
 <https://arewemeetingyet.com/Helsinki/2022-11-22/9:50>`__).
 **The schedule is tentative**, we may run earlier or later, so join early
 if attending a single lesson.
