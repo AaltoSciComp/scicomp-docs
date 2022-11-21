@@ -130,9 +130,9 @@ credit system. Please make sure that your supervisor/study program accepts it.
 Learners with a valid Aalto student number will automatically get the credit
 registered in Aalto systems.
 
-To obtain a certificate/credit, we expect you to follow the 4 days of the course
-and provide us with at least the following 5 documents via email
-(1 text document, 4 or more python scripts).
+To obtain a certificate/credit, we expect you to have registered to the course by 22/11/2022, 
+follow the 4 sessions and provide us with at least the following 5 documents via email
+(1 text document, 4 or more python scripts). 
 
 - For each of the 4 days, write a short paragraph (learning diary) to highlight
   your personal reflections about what you have found useful, which topic inspired
