@@ -265,6 +265,14 @@ louder / text on screen is unreadable" or someone is creating a
 harmful learning environment.
 
 
+Code of Conduct
+---------------
+We are committed to creating a friendly and respectful place for learning, teaching, 
+and contributing. You can read our `Code of Conduct here <https://coderefinery.org/about/code-of-conduct/>`__.
+If you need to report any violation of the code of conduct, you can email the organisers at scip _at_ aalto.fi,
+alternatively you can also use `this web form <https://indico.neic.no/event/183/surveys/47>`__. 
+
+
 
 Material
 --------
