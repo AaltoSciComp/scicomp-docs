@@ -402,6 +402,19 @@ Command line interface
   recommendations given at the last section at :doc:`Data storage on the Lustre
   file system <lustre>`
 
+.. collapse::  When ssh:ing, I get some LC_ALL error all the time
+
+  This happens because your computer is sending the "locale"
+  information (language, number format, etc) to the other computer
+  (Triton), but Triton doesn't know the one on your computer.  You can
+  unset/adjust all the ``LC_*`` and/or ``LOCALE`` environment
+  variables, or in your ``.ssh/config``, try setting the following in
+  your Triton section (see :doc:`/scicomp/ssh` for info on how this
+  works, you need more than you see here)::
+
+     Host triton
+         SendEnv LC_ALL=C
+
 
 
 
