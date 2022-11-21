@@ -164,30 +164,30 @@ if attending a single lesson.
   them)
 - **Please connect to all sessions 10 minutes early**: icebreakers and
   intro already starts then.
-- Tue 22.nov, 10:00-13:00
+- Tue 22.nov, 9:50-13:00
 
-  - :doc:`Intro <python-for-scicomp/intro>`
+  - 10:00 :doc:`Intro <python-for-scicomp/intro>`
   - 10:15 `Jupyter <https://aaltoscicomp.github.io/python-for-scicomp/jupyter/>`__
-  - 11:00 Advanced NumPy (new lesson for this year, please browse the
+  - 11:00 `Advanced NumPy <https://aaltoscicomp.github.io/python-for-scicomp/numpy-advanced/>`__ (new lesson for this year, please browse the
     `basic numpy lesson material here
     <https://aaltoscicomp.github.io/python-for-scicomp/numpy/>`__
     yourself as a prerequisite).
   - 12:10 `pandas <https://aaltoscicomp.github.io/python-for-scicomp/pandas/>`__...
 
-- Wed 23.nov, 10:00-13:00
+- Wed 23.nov, 9:50-13:00
 
-  - ... `pandas continued <https://aaltoscicomp.github.io/python-for-scicomp/pandas/>`__
+  - 10:00 `pandas continued <https://aaltoscicomp.github.io/python-for-scicomp/pandas/>`__
   - 10:30 `matplotlib <https://aaltoscicomp.github.io/python-for-scicomp/data-visualization/>`__
   - 12:10 `data formats <https://aaltoscicomp.github.io/python-for-scicomp/data-formats/>`__
 
-- Thu 24.nov, 10:00-13:00
+- Thu 24.nov, 9:50-13:00
 
-  - `scripts <https://aaltoscicomp.github.io/python-for-scicomp/scripts/>`__
-  - ??:?? Scraping data from Web APIs
-  - ??:?? `library ecosystem <https://aaltoscicomp.github.io/python-for-scicomp/libraries/>`__
+  - 10:00 `scripts <https://aaltoscicomp.github.io/python-for-scicomp/scripts/>`__
+  - 11:00 `library ecosystem <https://aaltoscicomp.github.io/python-for-scicomp/libraries/>`__
+  - 11:20 `web APIs <https://aaltoscicomp.github.io/python-for-scicomp/web-apis/>`__
   - 12:10 `parallel <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__...
 
-- Fri 25.nov, 10:00-13:00
+- Fri 25.nov, 9:50-13:00
 
   - ... `parallel <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__ continued(?)
   - 10:00 `dependency management <https://aaltoscicomp.github.io/python-for-scicomp/dependencies/>`__
