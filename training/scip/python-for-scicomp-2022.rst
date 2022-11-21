@@ -73,10 +73,9 @@ Finland) and CodeRefinery.  **Our livestream and registration is free
 for all to watch** in the spirit of open science and education,
 but certain partners provide extra benefits for their own audience:
 
-* Aalto University: in-person exercise session, dedicated Zoom,
-  :ref:`installation help <garage>`.  `General registration
+* Aalto University: in-person exercise session, dedicated Zoom.  `General registration
   <https://forms.gle/wsg3uZv4j7vbA2dG8>`__.
-* Finnish universities: Aalto services available for you (see above).
+* Finnish and other Nordic universities: Aalto services available for you (see above).
   `General registration <https://forms.gle/wsg3uZv4j7vbA2dG8>`__.
 * `ENCCS <https://enccs.se/>`__ and `SNIC <https://www.snic.se/>`__: Dedicated Zoom with expert helpers
   for participants from Sweden - `register here
