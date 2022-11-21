@@ -36,8 +36,10 @@ Nov 22nd - Nov 25th 2022 / Python for Scientific Computing
      coordinate - we can help!
 
    * Videos will be at `Twitch for 7 days immediately
-     <https://www.twitch.tv/coderefinery/videos>`__ and YouTube the
-     same day as the course.
+     <https://www.twitch.tv/coderefinery/videos>`__ and `this YouTube
+     playlist
+     <https://www.youtube.com/playlist?list=PLZLVmS9rf3nOm3xkYuInBWPUvS93sAUlk>`__
+     later the same day.
 
 
 .. warning::
