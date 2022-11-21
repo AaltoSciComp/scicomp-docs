@@ -9,6 +9,11 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
+   * We will be quite busy 22-25 November 2022 with
+     :doc:`/training/scip/python-for-scicomp-2022` so may have limited
+     capacity (but most likely, someone should still be there).
+
+..
    * There are no current planned disruptions in the daily garage.
 
 
