@@ -56,7 +56,7 @@ Who are we?
 * Aalto Scientific Computing: https://scicomp.aalto.fi/about/
 * In collaborations with CodeRefinery partners, in particular in
   Sweden and Norway: https://coderefinery.org
-* Eight different instructors, about as many other helpers, too.
+* Ten different instructors, about as many other helpers, too.
 
 
 
@@ -142,7 +142,9 @@ Arranging your screen is surprisingly difficult!
 
 .. figure:: https://coderefinery.github.io/manuals/_images/layout--learner-livestream-sidebyside-onebrowser.png
 
-   Screen layout with livestream on one side and learner on other side.
+   Screen layout with livestream on one side and learner workspace on
+   other side.  You might have two browsers open, Jupyter and
+   the course material.
 
 
 
@@ -206,16 +208,18 @@ Videos
 ~~~~~~
 
 * You miss a day or want to review?  No problem.
-* Videos are available on Twitch for 14 days
-* ... and YouTube after we process them (0-1 days)
+* Videos are available on Twitch for 7 days
+* ... and YouTube after we process them (by midnight)
 
 
 
 Be respectful and helpful
 -------------------------
 
+Being respectful is a condition of interaction.
+
 It is actually hard to teach and mentor for tech like this.  The
-course is much more than "only" instructors..
+course is much more than "only" instructors.
 
 We leave you with four pieces of advice for now:
 
@@ -238,8 +242,7 @@ Final notes
 Credit points
 ~~~~~~~~~~~~~
 
-- We don't assign credits for attending this course - we can't track
-  attendance.
+- See the course webpage for information.
 
 
 
@@ -249,9 +252,11 @@ Keep in touch if you want (and volunteer)
 - We would he happy to have help with our activities
 - Our chat https://coderefinery.zulipchat.com/ (stream
   #python-for-scicomp), in case you want to chat with us.
-- Twitter: #pythonSC21, `@coderefine
+- Social Media: Mastodon `@coderefinery@fosstodon.org
+  <https://fosstodon.org/@coderefinery>`__ (preferred),
+  Twitter `@coderefine
   <https://twitter.com/coderefine>`__ (not -ry) and `SciCompAalto
-  <https://twitter.com/SciCompAalto>`__
+  <https://twitter.com/SciCompAalto>`__, #PythonForSciComp
 
 
 
@@ -260,5 +265,5 @@ Other workshops
 
 - Consider attending a "real" CodeRefinery workshop, with more
   practical skills about the development side of things:
-  https://coderefinery.org
-- Sign up for the CodeRefinery newsletter
+  https://coderefinery.org (next one in 2023 March)
+- Sign up for the CodeRefinery newsletter to get announcements.
