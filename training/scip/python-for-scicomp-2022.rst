@@ -10,7 +10,7 @@ Nov 22nd - Nov 25th 2022 / Python for Scientific Computing
        to get emails about the course, but it's not necessary to
        attend.  **The course is open to everyone in the world**, with
        some partners providing special services (see below).
-     * For more live updates, follow `Coderefine Mastodon
+     * For more live updates, follow `Coderefinery Mastodon
        <https://fosstodon.org/@coderefinery>`__ (more updates) or
        `CodeRefine (not -ry) Twitter
        <https://twitter.com/coderefine/>`__ (possibly fewer updates).
