@@ -11,7 +11,7 @@ Nov 22nd - Nov 25th 2022 / Python for Scientific Computing
 
    * Register
 
-     * You can `register here <https://forms.gle/wsg3uZv4j7vbA2dG8>`__
+     * You can `register here <https://link.webropolsurveys.com/EP/14BCB2E717A0CDA5>`__
        to get emails about the course, but it's not necessary to
        attend.  **The course is open to everyone in the world**, with
        some partners providing special services (see below).
@@ -81,9 +81,9 @@ for all to watch** in the spirit of open science and education,
 but certain partners provide extra benefits for their own audience:
 
 * Aalto University: in-person exercise session, dedicated Zoom.  `General registration
-  <https://forms.gle/wsg3uZv4j7vbA2dG8>`__.
+  <https://link.webropolsurveys.com/EP/14BCB2E717A0CDA5>`__.
 * Finnish and other Nordic universities: Aalto services available for you (see above).
-  `General registration <https://forms.gle/wsg3uZv4j7vbA2dG8>`__.
+  `General registration <https://link.webropolsurveys.com/EP/14BCB2E717A0CDA5>`__.
 * `ENCCS <https://enccs.se/>`__ and `SNIC <https://www.snic.se/>`__: Dedicated Zoom with expert helpers
   for participants from Sweden - `register here
   <https://enccs.se/events/2022-11-python-for-scientific-computing/>`__.
@@ -117,7 +117,7 @@ the course.  Certain partners have extra registration possibilities
 <https://aaltoscicomp.github.io/python-for-scicomp/>`__.
 
 **General registration (but check partner registration above):**
-`Please register here <https://forms.gle/wsg3uZv4j7vbA2dG8>`__.  While
+`Please register here <https://link.webropolsurveys.com/EP/14BCB2E717A0CDA5>`__.  While
 the stream is available even without providing personal data, if you
 register you may get HackMD access for asking questions and will
 support our funding by contributing to our attendance statistics.
