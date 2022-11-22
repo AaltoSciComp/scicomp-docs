@@ -163,3 +163,6 @@ problem is missing information, and mistakes can always be fixed.
 * :ref:`genindex`
 * :ref:`search`
 
+.. raw:: html
+
+   <a rel="me" hidden href="https://fosstodon.org/@SciCompAalto">Mastodon</a>
