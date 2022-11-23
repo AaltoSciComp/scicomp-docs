@@ -122,7 +122,12 @@ the stream is available even without providing personal data, if you
 register you may get HackMD access for asking questions and will
 support our funding by contributing to our attendance statistics.
 
-**Credits:** It is possible to obtain a certificate from the course with
+
+
+Credits
+------- 
+
+It is possible to obtain a certificate from the course with
 a little extra work. The certificate is equivalent to 1 ECTS and your study
 supervisor will be able to register it as a credit in your university study
 credit system. Please make sure that your supervisor/study program accepts it.
@@ -130,18 +135,19 @@ credit system. Please make sure that your supervisor/study program accepts it.
 Learners with a valid Aalto student number will automatically get the credit
 registered in Aalto systems.
 
-To obtain a certificate/credit, we expect you to have registered to the course by 22/11/2022, 
+To obtain a certificate/credit, we expect you to have registered to the course by 25/11/2022, 
 follow the 4 sessions and provide us with at least the following 5 documents via email
-(1 text document, 4 or more python scripts). 
+(1 text document, 4 or more python scripts/notebooks). 
 
-- For each of the 4 days, write a short paragraph (learning diary) to highlight
+- **1 text document** (PDF or txt or anything for text): For each of the 4 days, write a short paragraph (learning diary) to highlight
   your personal reflections about what you have found useful, which topic inspired
   you to go deeper, and more in general what you liked and what could be improved.
-- For each of the 4 days: take one code example and make sure you can run it locally.
+- **4 (or more) .py scripts/notebooks**: For each of the 4 days take one code example from the 
+  course materials and make sure you can run it locally as a ".py" script or as a jupyter notebook.
   Modify it a bit according to what inspires you: adding more comments, testing the
   code with different inputs, expanding it with something related to your field of
   research. There is no right or wrong way of doing this, but please submit a
-  python script that we are eventually able to run and test on our local computers.
+  python script/notebook that we are eventually able to run and test on our local computers.
 
 These 5 (or more) documents should be sent before 31/December/2022 23:59CET to enrico.glerean@aalto.fi.
 If the evaluation criteria are met for each of the 5 (or more) documents, you will receive
