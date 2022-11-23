@@ -24,6 +24,9 @@ Nov 22nd - Nov 25th 2022 / Python for Scientific Computing
 
    * **News**
 
+     * Day 2: We did the lessons seen on the schedule.  There is no
+       special preparation for tomorrow.
+
      * Day 1: we covered what was on the schedule (jupyter, pandas,
        matplotlib).  For day 2 preparation, try to fix any
        installation issues from day 1, go over the `basic Numpy
