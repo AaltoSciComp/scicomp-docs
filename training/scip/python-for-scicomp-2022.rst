@@ -7,22 +7,7 @@
 Nov 22nd - Nov 25th 2022 / Python for Scientific Computing
 ==========================================================
 
-.. admonition:: Register
-
-   * Register
-
-     * You can `register here <https://link.webropolsurveys.com/EP/14BCB2E717A0CDA5>`__
-       to get emails about the course, but it's not necessary to
-       attend.  **The course is open to everyone in the world**, with
-       some partners providing special services (see below).
-     * For more live updates, follow `Coderefinery Mastodon
-       <https://fosstodon.org/@coderefinery>`__ (more updates) or
-       `CodeRefine (not -ry) Twitter
-       <https://twitter.com/coderefine/>`__ (possibly fewer updates).
-     * 7/11: We have added the possibility to get 1 ECTS credit.
-
-
-.. admonition:: Important info
+.. admonition:: News and Important info
 
    * Livestream (join here): https://twitch.tv/coderefinery
    * Course material:
@@ -37,10 +22,26 @@ Nov 22nd - Nov 25th 2022 / Python for Scientific Computing
        session.  This is only active during exercise sessions, you
        will get instructions.
 
-   * If you want to host your own Zoom exercises sessions making use
-     of our livestream, you may contact us (`CodeRefinery chat
-     <https://coderefinery.zulipchat.com>`__ or scip -at- aalto.fi) to
-     coordinate - we can help!
+   * **News**
+
+     * Day 1: we covered what was on the schedule (jupyter, pandas,
+       matplotlib).  For day 2 preparation, try to fix any
+       installation issues from day 1, go over the `basic Numpy
+       lesson <https://aaltoscicomp.github.io/python-for-scicomp/numpy/>`__
+       if the advanced was too complex, and optionally `read more
+       about Tidy Data <http://vita.had.co.nz/papers/tidy-data.pdf>`__.
+
+     * 7/11: We have added the possibility to get 1 ECTS credit.
+
+   * For more live updates, follow `Coderefinery Mastodon
+     <https://fosstodon.org/@coderefinery>`__ (more updates) or
+     `CodeRefine (not -ry) Twitter
+     <https://twitter.com/coderefine/>`__ (fewer updates).
+
+   * `Register here <https://link.webropolsurveys.com/EP/14BCB2E717A0CDA5>`__
+      to get emails about the course, but it's not necessary to
+      attend.  **The course is open to everyone in the world**, with
+      some partners providing special services (see below).
 
    * Videos will be at `Twitch for 7 days immediately
      <https://www.twitch.tv/coderefinery/videos>`__ and `this YouTube
