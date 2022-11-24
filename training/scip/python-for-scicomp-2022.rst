@@ -42,9 +42,9 @@ Nov 22nd - Nov 25th 2022 / Python for Scientific Computing
      <https://twitter.com/coderefine/>`__ (fewer updates).
 
    * `Register here <https://link.webropolsurveys.com/EP/14BCB2E717A0CDA5>`__
-      to get emails about the course, but it's not necessary to
-      attend.  **The course is open to everyone in the world**, with
-      some partners providing special services (see below).
+     to get emails about the course, but it's not necessary to
+     attend.  **The course is open to everyone in the world**, with
+     some partners providing special services (see below).
 
    * Videos will be at `Twitch for 7 days immediately
      <https://www.twitch.tv/coderefinery/videos>`__ and `this YouTube
