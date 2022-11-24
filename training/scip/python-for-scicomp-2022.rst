@@ -24,6 +24,12 @@ Nov 22nd - Nov 25th 2022 / Python for Scientific Computing
 
    * **News**
 
+     * Day 3: Today was good, we went over the things as listed on the
+       schedule.  Tomorrow we switch focuses to the use and reuse of
+       software, not the programming itself.  This is still extremely
+       useful and quite important for your future career, so even if
+       days 1-3 were too simple *or* advanced, day 4 is for you!
+
      * Day 2: We did the lessons seen on the schedule.  There is no
        special preparation for tomorrow.
 
