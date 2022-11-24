@@ -14,7 +14,7 @@ is useful even to non-computational researchers.
 
 :doc:`Aalto Scientific Computing
 </about/index>` maintains these pages with the :doc:`help of the Aalto community <README>`.
-[`twitter <https://twitter.com/SciCompAalto>`__]  We consist of
+[`Mastodon <https://fosstodon.org/@SciCompAalto>`__, `twitter <https://twitter.com/SciCompAalto>`__]  We consist of
 Science-IT (HPC, the Triton cluster), certain department ITs, and
 other friends.  :doc:`You can join us </about/join>`.
 
