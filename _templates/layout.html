@@ -1,0 +1,10 @@
+{%- extends "!layout.html" %}
+
+{% block navigation %}
+
+{{ super() }}
+
+Mastodon:
+<iframe allowfullscreen sandbox="allow-top-navigation allow-scripts" width="100%" height="500" src="https://www.mastofeed.com/apiv2/feed?userurl=https%3A%2F%2Ffosstodon.org%2Fusers%2FSciCompAalto&theme=dark&size=75&header=false&replies=true&boosts=true"></iframe>
+
+{% endblock %}
