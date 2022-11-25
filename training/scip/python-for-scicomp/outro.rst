@@ -9,7 +9,7 @@ Python for Scientific Computing outro
 
 Credits
 -------
-:dco:`See the website <../python-for-scicomp-2022>`__
+:doc:`See the website <../python-for-scicomp-2022>`
 
 
 About CodeRefinery and Aalto SciComp
@@ -27,7 +27,7 @@ Future events
 * :doc:`Workflows course <../workflows-2023>` - February 2022
 * High-performance data analysis with Python - May 2023
 * :doc:`Scientific Computing / HPC Kickstart <../kickstart-2022-summer>` - June 2023 sometime
-  
+
 Subscribe to the CodeRefinery newsletter for announcements about all
 of these: https://coderefinery.org
 
