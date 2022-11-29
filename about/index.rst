@@ -228,5 +228,6 @@ Other
 
 .. toctree::
 
+   sustainability
    web-accessibility
    ../README
