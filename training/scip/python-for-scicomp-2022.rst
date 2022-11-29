@@ -103,15 +103,22 @@ but certain partners provide extra benefits for their own audience:
 **Staff and partner organizations:**
 
 * :doc:`Aalto Scientific Computing </index>`
-* Radovan Bast (UiT, Norway) (instructor, helper)
-* Richard Darst (Aalto) (instructor coordinator, director)
-* Enrico Glerean (Aalto) (registration coordinator)
-* Marijn van Vliet (Aalto) (instructor, helper)
-* Thor Wikfeldt (ENCCS, RISE) (instructor, helper)
-* Diana Iusan (UPPMAX, SNIC) (instructor, helper)
-* Johan Hellsvik (PDC, SNIC) (instructor, helper)
-* ... and many more to be added later (last year was about 10-15).
+* `CodeRefinery <https://coderefinery.org/>`__
+* `ENCCS <https://enccs.se/>`__  
+* `SNIC <https://www.snic.se/>`__
+* Richard Darst (ASC, Aalto University) (instructor, instructor coordinator, director)
+* Enrico Glerean (ASC, Aalto University) (registration coordinator, communication, helper)
+* Johan Hellsvik (PDC, SNIC, KTH) (instructor, helper)
+* Diana Iusan (`UPPMAX <https://www.uppmax.uu.se/>`__, SNIC, Uppsala University) (instructor, helper, Swedish participants' coordinator)
+* Thomas Pfau (ASC, Aalto University) (instructor, helper)
+* Jarno Rantaharju (ASC, Aalto University) (instructor, helper)
+* Teemu Ruokolainen (ASC, Aalto University) (instructor, helper)
+* Sabry Razick (University of Oslo) (instructor, helper)
+* Simo Tuomisto (ASC, Aalto University) (instructor, helper)
+* Marijn van Vliet (NBE, Aalto University) (instructor, helper)
+* Thor Wikfeldt (ENCCS, RISE) (instructor, helper, Swedish participants' coordinator)
 
+...and many `contributors to the learning materials on Github <https://github.com/AaltoSciComp/python-for-scicomp/graphs/contributors>`__.
 
 
 Practical information
