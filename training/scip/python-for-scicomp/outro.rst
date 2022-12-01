@@ -12,6 +12,7 @@ Credits
 :doc:`See the website <../python-for-scicomp-2022>`
 
 
+
 About CodeRefinery and Aalto SciComp
 ------------------------------------
 * CodeRefinery is a Nordic e-Infrastructure Collaboration-sponsored
@@ -30,6 +31,7 @@ Future events
 
 Subscribe to the CodeRefinery newsletter for announcements about all
 of these: https://coderefinery.org
+
 
 
 How to stay in touch
@@ -63,9 +65,10 @@ How can we work together
 
   * Become a partner, do all of the above systematically and for a
     long-term period.
-  * we want CodeRefinery to become a partnership and maybe incorporate
+  * We want CodeRefinery to become a partnership and maybe incorporate
     as a non-profit.
   * All of the above.
+
 
 
 Follow-up
