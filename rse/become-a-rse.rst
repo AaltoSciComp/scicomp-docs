@@ -16,7 +16,10 @@ For RSE candidates and community
      both our jobs, events, and other research groups looking to hire
      a RSE skillset.
    * If you are in Nordics/Baltics/etc, consider joining `Nordic-RSE
-     <https://nordic-rse.org>`__ or participating in its events.
+     <https://nordic-rse.org>`__ or `CodeRefinery
+     <https://coderefinery.org>`__ and participating in their events.
+     We are active in these organizations and this is a good way to
+     learn how they work.
 
 This page guides people into the interesting world of
 research software engineering: providing a view to what this career is
@@ -156,6 +159,8 @@ try:
 - `Motivation and demotivation
   <https://teachtogether.tech/#s:motivation>`__, a chapter in Teaching
   Tech Together.
+- Check out and get involved in being an exercise leader/co-instructor
+  at `CodeRefinery <https://coderefinery.org>`__.
 
 
 
