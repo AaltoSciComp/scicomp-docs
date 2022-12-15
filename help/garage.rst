@@ -4,7 +4,7 @@ Scicomp garage
 
 .. admonition:: Link
 
-   https://aalto.zoom.us/j/61322268370, every day at 13:00
+   https://aalto.zoom.us/j/61322268370, every workday at 13:00
 
 .. admonition:: Planned disruptions
    :class: important
@@ -83,7 +83,7 @@ Triton, SciComp, RSE, and CS
 
    https://aalto.zoom.us/j/61322268370, every workday at 13:00
 
-You can meet us online, every weekday, at 13:00, `online via zoom
+You can meet us online, every workday, at 13:00, `online via zoom
 <https://aalto.zoom.us/j/61322268370>`__.  Imagine this like walking
 into our office to ask for help. Even if you are not sure whether we can help you, come
 and chat with us anyway and we can figure it out.
