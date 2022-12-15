@@ -9,9 +9,17 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * We will be quite busy 22-25 November 2022 with
-     :doc:`/training/scip/python-for-scicomp-2022` so may have limited
-     capacity (but most likely, someone should still be there).
+   * Limited availability during winter break:
+
+       * :ref:`Chat support <chat>` is available almost all the time
+	 and good for quick questions.  The :ref:`issue tracker
+	 <issuetracker>` is good for trackable issues that need to be
+	 handled.  See :doc:`/help/index`
+       * 22-23 (Th-F) December: probably garage, less support
+       * Probably no garage 26-30 (M-F) December (note that 26 December is a
+         public holiday).
+       * 2-5 (M-Th) January: probably some garage but no guarantees
+	 early in the week.  Note that Friday is a public holiday.
 
 ..
    * There are no current planned disruptions in the daily garage.
