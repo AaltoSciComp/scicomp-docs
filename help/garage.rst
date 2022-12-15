@@ -19,7 +19,7 @@ Scicomp garage
        * Probably no garage 26-30 (M-F) December (note that 26 December is a
          public holiday).
        * 2-5 (M-Th) January: probably some garage but no guarantees
-	 early in the week.  Note that Friday
+	 early in the week.  Note that Friday is a public holiday.
 
 ..
    * There are no current planned disruptions in the daily garage.
