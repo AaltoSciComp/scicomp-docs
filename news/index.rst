@@ -2,6 +2,8 @@
 News
 ====
 
+*15/12/2022* `Follow us on Mastodon <https://fosstodon.org/@SciCompAalto>`__.
+
 *21/10/2022* **Upgrade of the triton login node:** After running out of memory several times on our login node, we upgraded the memory from previously 128Gb to 256Gb. This is hopefully sufficient for most compilation and development work happening on the node. Any computation or memory intensive job should still be run on the compute nodes, but this upgrade provides us with a more robust system.
 
 **Upcoming Courses**
