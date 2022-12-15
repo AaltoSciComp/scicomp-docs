@@ -135,7 +135,7 @@ lost.  The easiest and recommended way of doing this is by opening
 data and publishing it on a reputable worldwide archive once it is
 time.  For the most part, the university wants to avoid creating its
 own internal permanent archives, because they will end up requiring
-large effort to maintain.  It's better to use the publically-funded
+large effort to maintain.  It's better to use the publicly-funded
 and managed worldwide services.
 
 
