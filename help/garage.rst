@@ -11,14 +11,15 @@ Scicomp garage
 
    * Limited availability during winter break:
 
-       * :ref:`Chat support <chat>` is available almost all the time
-	 and good for quick questions.  The :ref:`issue tracker
-	 <issuetracker>` is good for trackable issues that need to be
-	 handled.  See :doc:`/help/index`
-       * 22-23 (Th-F) December: probably garage, less support
-       * Probably no garage 26-30 (M-F) December (note that 26 December is a
-         public holiday).
-       * 2-5 (M-Th) January: probably some garage but no guarantees
+       * Async support: :ref:`Chat support <chat>` will be watched
+	 occassionally and is good for quick questions.  The
+	 :ref:`issue tracker <issuetracker>` is good for trackable
+	 issues that need to not be forgotten.  See :doc:`/help/index`
+	 for more.
+       * December 22-23 (Th-F): probably garage, but less support.
+       * December 26-30 (M-F): Probably no garage (note that 26
+         December is a public holiday).
+       * January 2-5 (M-Th): probably some garage but no guarantees
 	 early in the week.  Note that Friday is a public holiday.
 
 ..
