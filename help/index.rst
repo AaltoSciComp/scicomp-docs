@@ -290,7 +290,7 @@ Research services
 
 Aalto `Research Services
 <https://www.aalto.fi/en/service-entities/research-and-innovation-services>`__
-function more as project administative services rather than close
+function more as project administrative services rather than close
 research support.  However, they provide important information for:
 
 * Data management plans for funding applications

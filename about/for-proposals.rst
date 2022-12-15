@@ -61,7 +61,7 @@ Focus on data
 Computing and data are strategic areas in Aalto University.
 
 The university provides data management and computing solutions
-throughtout the data lifecycle.  The university provides free storage
+throughout the data lifecycle.  The university provides free storage
 to researchers of essentially unlimited size, provided that the data
 is managed well.  Data storage includes 5PB of high-performance 
 non-backed-up Lustre filesystem space connected directly to the Triton computing 

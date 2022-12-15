@@ -103,7 +103,7 @@ is some more advice:
   nice form.
 
   * If you don't like the idea of a web form, the `templates seem to be
-    available publically <dmptuuli_templates_>`_, too.  These seem to
+    available publicly <dmptuuli_templates_>`_, too.  These seem to
     have roughly the info as the DMPTuuli web forms.
 
 .. _aalto_rdm_plans: https://www.aalto.fi/en/services/data-management-plan-dmp
@@ -148,7 +148,7 @@ make a plan that contains everything *you* need to know personally.:
 * For storage, organization, confidentiality, etc, you can say you
   will follow the Science-IT data management policy.  This isn't
   requirements for you, but the default services we offer for data
-  storage (designed to keep data safe and secure, and uuushareable).  It
+  storage (designed to keep data safe and secure, and shareable).  It
   also sounds good to say.  (see the :doc:`outline <../aalto/aaltodata>`)
 
 
