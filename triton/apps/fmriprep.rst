@@ -29,9 +29,8 @@ If you want to parallelyze things you can write a script that cycles through eac
 POST-processing
 ===============
 
-Fmriprep does the minimal preprocessing. There is no smoothing, no temporal filtering and in general you need to regress out the estimated confounds. They can be regressed before further analysis (e.g. functional connectivity, intersubject correlation), or they can be included as part of a general linear model The most simple way is then to decide which columns of the "confounds.tsv" matrix you want to use as confounds and use NIlearn image_clean https://nilearn.github.io/dev/modules/generated/nilearn.image.clean_img.html
+Fmriprep does the minimal preprocessing. There is no smoothing, no temporal filtering and in general you need to regress out the estimated confounds. They can be regressed before further analysis (e.g. functional connectivity, intersubject correlation), or they can be included as part of a general linear model (it is always the best to have them as close as possible to the model if this is what you are doing). If you plan to regress the confoudns without being part of a general linear model, the most simple way is then to decide which columns of the "confounds.tsv" matrix you want to use as confounds and use NIlearn image_clean https://nilearn.github.io/dev/modules/generated/nilearn.image.clean_img.html 
  
-
 
 
 There are also tools for post-processing such as:
