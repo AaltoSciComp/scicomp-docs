@@ -12,7 +12,8 @@ Aalto University has a site-wide floating license for Gurobi.
 .. admonition:: Important notes
    
    As of writing of this Guide, Aalto only has a valid license for Gurobi 9.X and older.
-   Therefore Gurobi 10 cannot be run on triton. 
+   Therefore Gurobi 10 cannot be run on triton unless you bring
+   your own license.
 
 Gurobi with Python
 ------------------
@@ -27,7 +28,7 @@ Gurobi with Python
 
 .. admonition:: License Files for older Anaconda modules
    
-   Older anaconda modules might not have the GRB_LICENSE_FILE environment variable set 
+   Older anaconda modules on Triton might not have the GRB_LICENSE_FILE environment variable set 
    properly, so you might need to point to it manually. To do so, you need to create a 
    ``gurobi.lic`` file in your home folder. The file should contain the following single line:
     
