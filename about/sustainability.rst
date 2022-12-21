@@ -87,5 +87,4 @@ Triton is physically located at CSC colocation facilities with other servers sup
 Impact of Triton hardware purchases
 -----------------------------------
 
-Unlike many clusters, Triton does not build a new cluster every few years.  Triton is continually upgraded, and old hardware is only discarded after it is actually obsolete (which usually comes due to excessive energy consumption relative to newer hardware).  This allows us to minimize the entire lifecycle impact of our cluster (and incidentally, makes it a metaphorical Ship of Theseus).
-
+Unlike many clusters, Triton does not build a new cluster every few years.  Triton is continually upgraded, and old hardware is only discarded after it is actually obsolete (which usually comes due to excessive energy consumption relative to newer hardware).  This allows us to adjust the e-waste/power consumption tradeoff dynamically, depending on the circumstances.  We try to minimize the entire lifecycle impact of our cluster.  Yes, Triton is a metaphorical Ship of Theseus.
