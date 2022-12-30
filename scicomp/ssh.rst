@@ -67,7 +67,7 @@ You will not receive an authenticity prompt upon first login if the server's *pu
 SSH keys: better than just passwords
 ====================================
 
-By default, you will need to type your password each time you wish to ssh into Triton, which can be tiresome, particularly if you regularly have multiple sessions open simultaneously. A more secure (and faster) way to authenticate yourself is to use a *shh key pair* and encrypt the this with a strong password. `xkcd <https://www.xkcd.com/936/>`__ has good and amusing recommendations on the subject of passwords. This authentication method will allow you to log into multiple ssh sessions while only needing to enter your password once, saving you time and keystrokes.
+By default, you will need to type your password each time you wish to ssh into Triton, which can be tiresome, particularly if you regularly have multiple sessions open simultaneously. A more secure (and faster) way to authenticate yourself is to use a *SSH key pair* and encrypt the this with a strong password. `xkcd <https://www.xkcd.com/936/>`__ has good and amusing recommendations on the subject of passwords. This authentication method will allow you to log into multiple ssh sessions while only needing to enter your password once, saving you time and keystrokes.
 
 Generate an SSH key
 -------------------
@@ -148,7 +148,7 @@ In order to use your key-pair to login to Triton, you first need to securely cop
 Login with SSH key
 -------------------
 
-To avoid having to type the decryption password, the *private key* it needs to be added to the ``ssh-agent`` with the command
+To avoid having to type the decryption password, the *private key* needs to be added to the ``ssh-agent`` with the command
 
 .. tabs::
 
