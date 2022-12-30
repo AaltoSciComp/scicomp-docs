@@ -148,7 +148,7 @@ In order to use your key-pair to login to Triton, you first need to securely cop
 Login with SSH key
 -------------------
 
-To avoid having to type the decryption password, the *private key* it needs to be added to the ``ssh-agent`` with the command
+To avoid having to type the decryption password, the *private key* needs to be added to the ``ssh-agent`` with the command
 
 .. tabs::
 
