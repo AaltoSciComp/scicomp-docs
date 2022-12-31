@@ -3,6 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+:og:description: Documentation about scientific and data-intensive computing at Aalto and beyond. Targeted towards Aalto researchers, but has some useful information for everyone.
+
+.. meta::
+   :keywords: Aalto Scientific Computing, Aalto SciComp, ASC, High-performance computing, HPC, Scientific computing, scicomp, research software, Aalto Research Software Engineers, AaltoRSE, RSE, RSEng
+
+
 ==========================
 Aalto Scientific Computing
 ==========================
@@ -13,8 +19,8 @@ has some useful information for everyone.  The data management section
 is useful even to non-computational researchers.
 
 :doc:`Aalto Scientific Computing
-</about/index>` maintains these pages with the :doc:`help of the Aalto community <README>`.
-[`Mastodon <https://fosstodon.org/@SciCompAalto>`__, `twitter <https://twitter.com/SciCompAalto>`__]  We consist of
+</about/index>` (ASC) maintains these pages with the :doc:`help of the Aalto community <README>`.
+[`Mastodon <https://fosstodon.org/@SciCompAalto>`__, `Twitter <https://twitter.com/SciCompAalto>`__]  We consist of
 Science-IT (HPC, the Triton cluster), certain department ITs, and
 other friends.  :doc:`You can join us </about/join>`.
 
@@ -97,11 +103,11 @@ Cheatsheets: `Triton <ch-triton_>`_
 
 
 
-Aalto Research Software Engineering
-===================================
+Aalto Research Software Engineers
+=================================
 
 Skills to do science are different than skills to write good research
-code.  The Aalto Research Software Engineering group provides support
+code.  The Aalto Research Software Engineers (Aalto RSE) provide support
 and mentoring to those using computing and data.
 
 .. toctree::

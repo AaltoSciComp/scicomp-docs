@@ -63,7 +63,7 @@ plausible_domain = 'scicomp.aalto.fi'
 plausible_script = 'https://plausible.cs.aalto.fi/js/plausible.js'
 
 ogp_site_url = "https://scicomp.aalto.fi/"
-ogp_site_name = "Aalto Scientific Computing Docs"
+ogp_site_name = "Aalto Scientific Computing"
 ogp_image = "_static/logo-hexagons-02-compact-background.svg"
 ogp_image_alt = "ASC hexagon logo"
 ogp_custom_meta_tags = ['<meta property="twitter:creator" content="@SciCompAalto" />']
@@ -87,8 +87,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Aalto scientific computing'
 copyright = u'2022, Aalto Science-IT'
+project = u'Aalto Scientific Computing'
 author = u'Aalto Science-IT'
 
 # Substitutions
@@ -191,7 +191,7 @@ html_context = {'display_github': True,
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
 #html_title = None
-html_title = 'Aalto scientific computing'
+html_title = 'Aalto Scientific Computing (ASC)'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
