@@ -64,8 +64,8 @@ plausible_script = 'https://plausible.cs.aalto.fi/js/plausible.js'
 
 ogp_site_url = "https://scicomp.aalto.fi/"
 ogp_site_name = "Aalto Scientific Computing"
-ogp_image = "_static/logo-hexagons-02-compact-background.svg"
-ogp_image_alt = "ASC hexagon logo"
+ogp_image = "_static/asc-socialshare-02.png"
+ogp_image_alt = "ASC hexagon logo; Aalto Scientific Computing; Data, Software, Computing, HPC, and Training."
 ogp_custom_meta_tags = ['<meta property="twitter:creator" content="@SciCompAalto" />']
 
 
