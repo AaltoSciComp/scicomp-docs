@@ -87,8 +87,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-copyright = u'2022, Aalto Science-IT'
 project = u'Aalto Scientific Computing'
+copyright = u'2023, Aalto Science-IT and contributors'
 author = u'Aalto Science-IT'
 
 # Substitutions
