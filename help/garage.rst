@@ -9,18 +9,9 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * Limited availability during winter break:
-
-       * Async support: :ref:`Chat support <chat>` will be watched
-	 occassionally and is good for quick questions.  The
-	 :ref:`issue tracker <issuetracker>` is good for trackable
-	 issues that need to not be forgotten.  See :doc:`/help/index`
-	 for more.
-       * December 22-23 (Th-F): probably garage, but less support.
-       * December 26-30 (M-F): Probably no garage (note that 26
-         December is a public holiday).
-       * January 2-5 (M-Th): probably some garage but no guarantees
-	 early in the week.  Note that Friday is a public holiday.
+   * We are back from holidays and operating normally (enough of us,
+     at least).
+   * Note that Friday is still a public holiday.
 
 ..
    * There are no current planned disruptions in the daily garage.
