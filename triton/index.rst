@@ -1,3 +1,6 @@
+.. meta::
+   :keywords: Triton cluster, HPC, Aalto HPC, HPC tutorials
+
 ==============
 Triton cluster
 ==============

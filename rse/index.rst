@@ -1,3 +1,7 @@
+.. meta::
+   :keywords: Aalto Research Software Engineers, AaltoRSE, Aalto RSE, research software, RSE, RSEng
+
+
 Research Software Engineers
 ===========================
 

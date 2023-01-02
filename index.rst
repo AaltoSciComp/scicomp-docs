@@ -13,16 +13,9 @@
 Aalto Scientific Computing
 ==========================
 
-This site contains documentation about scientific and data-intensive computing
-at Aalto and beyond.  It is targeted towards Aalto researchers, but
-has some useful information for everyone.  The data management section
-is useful even to non-computational researchers.
-
-:doc:`Aalto Scientific Computing
-</about/index>` (ASC) maintains these pages with the :doc:`help of the Aalto community <README>`.
-[`Mastodon <https://fosstodon.org/@SciCompAalto>`__, `Twitter <https://twitter.com/SciCompAalto>`__]  We consist of
-Science-IT (HPC, the Triton cluster), certain department ITs, and
-other friends.  :doc:`You can join us </about/join>`.
+This site contains documentation about scientific and data-intensive
+computing at Aalto University and beyond.  It is targeted towards
+Aalto researchers, but has some useful information for everyone.
 
 .. toctree::
    :maxdepth: 1
@@ -107,8 +100,9 @@ Aalto Research Software Engineers
 =================================
 
 Skills to do science are different than skills to write good research
-code.  The Aalto Research Software Engineers (Aalto RSE) provide support
-and mentoring to those using computing and data.
+code.  The Aalto Research Software Engineers (AaltoRSE) provide
+support and mentoring to those using computing and data so that
+everyone can do the best possible work.
 
 .. toctree::
    :maxdepth: 2
@@ -118,8 +112,10 @@ and mentoring to those using computing and data.
 
 Scientific computing
 ====================
+
 In this section, you find general (not Aalto specific) scientific
-computing resources.
+computing resources.  We encourage other sites to use and contribute
+to this information.
 
 .. toctree::
    :maxdepth: 2
@@ -147,17 +143,45 @@ for researchers and grouped by level of skill needed.
 
 
 
-About
-========
+Help
+====
+
+Don't go alone, we are there!  There is all kinds of "folk knowledge"
+to efficiently use the tools of scientific computing, and we would
+like to learn that.  In particular, our community is welcome to come
+to our :doc:`SciComp garage <help/garage>` even for small random chats
+about your work, but there are :doc:`plenty of other ways to ask for
+help <help/index>`, too.
 
 .. toctree::
    :maxdepth: 2
    :titlesonly:
 
    help/index
+
+
+
+About us
+========
+
+Aalto Scientific Computing isn't a :abbr:`HPC (High Performance
+Computing)` center - we provide HPC services, but our goal is to
+support scientific computing no matter what resources you need.
+Computing is hard, and we know that support is even more important
+than the infrastructure.  If you are a unit at Aalto University,
+:doc:`you can join us </about/join>`.  [`Mastodon
+<https://fosstodon.org/@SciCompAalto>`__, `Twitter
+<https://twitter.com/SciCompAalto>`__]
+
+.. toctree::
+   :maxdepth: 2
+   :titlesonly:
+
    about/index
 
-These docs are open source: all content is licensed under CC-BY 4.0
+:doc:`Aalto Scientific Computing </about/index>` (ASC) maintains these
+pages with the :doc:`help of the Aalto community <README>`.
+This site is open source: all content is licensed under CC-BY 4.0
 and all examples under CC0 (public domain).  Additionally, this is an
 *open project* and we *strongly* encourage anyone to :doc:`contribute
 <README>`.  For information, see the :doc:`README` and the Github
