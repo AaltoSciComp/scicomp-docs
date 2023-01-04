@@ -4,9 +4,17 @@
 
 {{ super() }}
 
-<div class="mastodon-sidebar" style="width: 300px; padding-left: 10px; padding-right: 10px; margin-top: 1em;">
+<div class="mastodon-sidebar">
   <!--Mastodon:-->
-  <div class="mastodon-header" style="text-align: center; font-size: 110%"><a style="color: #d9d9d9" href="https://fosstodon.org/@SciCompAalto">@SciCompAalto@fosstodon.org</a></div>
-  <iframe allowfullscreen sandbox="allow-top-navigation allow-scripts" width="100%" height="400" src="https://www.mastofeed.com/apiv2/feed?userurl=https%3A%2F%2Ffosstodon.org%2Fusers%2FSciCompAalto&theme=dark&size=75&header=false&replies=true&boosts=true"></iframe>
+  <div class="mastodon-header"><a href="https://fosstodon.org/@SciCompAalto">@SciCompAalto@fosstodon.org</a></div>
+  <!-- mastofeed.com -->
+  <!--<iframe allowfullscreen sandbox="allow-top-navigation allow-scripts" width="100%" height="400" src="https://www.mastofeed.com/apiv2/feed?userurl=https%3A%2F%2Ffosstodon.org%2Fusers%2FSciCompAalto&theme=dark&size=75&header=false&replies=true&boosts=true"></iframe>-->
+
+  <!-- https://sampsyo.github.io/emfed/ -->
+  <a class="mastodon-feed"
+     href="https://fosstodon.org/@SciCompAalto"
+     data-toot-limit="5"
+     data-toot-account-id="109384276838437366" <!-- Leave off and detected -->
+     >follow us on Mastodon</a>
 </div>
 {% endblock %}

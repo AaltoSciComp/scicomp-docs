@@ -164,11 +164,14 @@ todo_include_todos = True
 
 html_css_files = [
     "theme_overrides.css",
+    "https://cdn.jsdelivr.net/gh/sampsyo/emfed@1/toots.css",
+    "mastodon-sidebar.css",
 ]
 
 html_js_files = [
     "redirect-to-https.js",
     "https://users.aalto.fi/~darstr1/minipres-stable.js",
+    ("https://esm.sh/emfed", {"type": "module"}),
 ]
 
 if on_rtd:
@@ -375,6 +378,7 @@ epub_author = 'Aalto Science-IT'
 # -- Own options -------------------------------------------------------
 
 mathjax_path = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+
 
 
 # Debugging:

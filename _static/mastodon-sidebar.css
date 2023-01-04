@@ -1,0 +1,59 @@
+/* Element | file:///u/04/darstr1/unix/git/scicomp-docs/_build/html/index.html */
+
+.mastodon-sidebar {
+  color: lightgray;
+
+  width: 300px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 1em;
+  border-top: 2px solid aliceblue;
+  padding-top: 1ex;
+}
+
+.mastodon-sidebar .mastodon-header {
+    padding-bottom: 1ex;
+}
+
+.mastodon-sidebar .mastodon-header a {
+    text-align: center;
+    font-size: 110%;
+    color: #d9d9d9;
+}
+
+.mastodon-sidebar .toots {
+  height: 400px;
+  overflow: scroll;
+}
+
+.mastodon-sidebar .toot {
+  color: aliceblue;
+}
+
+.mastodon-sidebar .toot .body p {
+  font-size: 80%;
+  line-height: unset;
+}
+
+.mastodon-sidebar .toot .permalink {
+  color: aliceblue;
+  font-size: 60%;
+  margin-top: -2ex;
+}
+
+.mastodon-sidebar .toot .username {  /* color: #999; */
+  color: aliceblue;
+}
+
+.mastodon-sidebar .toots .toot .user {
+  /* display: flex; */
+  /* color: inherit; */
+  color: aliceblue;
+}
+
+.mastodon-sidebar .toots .toot .boost {
+  color: aliceblue;
+  font-size: 75%;
+}
+
+
