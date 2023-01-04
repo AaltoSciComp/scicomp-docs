@@ -162,6 +162,15 @@ todo_include_todos = True
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 
+html_css_files = [
+    "theme_overrides.css",
+]
+
+html_js_files = [
+    "redirect-to-https.js",
+    "https://users.aalto.fi/~darstr1/minipres-stable.js",
+]
+
 if on_rtd:
     html_theme = 'default'
     os.system('git fetch --unshallow')
@@ -367,22 +376,7 @@ epub_author = 'Aalto Science-IT'
 
 mathjax_path = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
 
-# Following allows custom CSS to be included
-# https://github.com/rtfd/sphinx_rtd_theme/issues/117
-def setup(app):
-    #app.add_javascript("custom.js")
-    #if on_rtd:
-    #    app.add_javascript(mathjax_path)
-    # sphinx 4.0: must be renamed to add_css_file and add_js_file.
-    import sphinx
-    if sphinx.version_info[0] >= 3:
-        app.add_css_file("theme_overrides.css")
-        app.add_js_file("redirect-to-https.js")
-        app.add_js_file("https://users.aalto.fi/~darstr1/minipres-stable.js")
-    else:
-        app.add_stylesheet("theme_overrides.css")
-        app.add_javascript("redirect-to-https.js")
-        app.add_javascript("https://users.aalto.fi/~darstr1/minipres-stable.js")
 
+# Debugging:
 #if on_rtd:
 #    os.system("pip freeze")
