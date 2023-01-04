@@ -27,6 +27,38 @@ Unsorted notes:
 
 
 
+Why care about how you respond?
+-------------------------------
+
+An example:
+
+When interviewing people once, we started our interview with
+to-the-point factual information and questions.  Our tone of voice was
+"bureaucratic", to say the least.  Our interviewees responded in kind:
+with little enthusiasm and we could wonder if they even wanted the
+job.
+
+We realized something had to change.  Our next interviewees were
+greeted with enthusiasm and excitement about the job.  The
+interviewees responded likewise, and we could more easily see how
+someone could perform.
+
+Why is this important?  Basically, *we* feed our users how they will
+respond.  Is computing a chore they hate?  Is it something that's
+fascinating, even if not their main goal?  Do they see working with us
+as the highlight of their day or a last-resort?  **We need to set the
+right tone with our interactions**.  This is true in all of:
+
+- Our answers
+- Our requests for follow-up information
+- Outreach about our services
+
+See also: `Observer-expectancy effect
+<https://en.wikipedia.org/wiki/Observer-expectancy_effect>`__ and
+`Clever Hans <https://en.wikipedia.org/wiki/Clever_Hans>`__.
+
+
+
 Levels of competence
 --------------------
 
