@@ -1,5 +1,5 @@
 Creating an environment with GPU enabled Tensorflow
----------------------------------------------------
+***************************************************
 
 To create an environment with GPU enabled Tensorflow you can use an
 environment file like this

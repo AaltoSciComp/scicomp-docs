@@ -109,7 +109,7 @@ Packages in ``environment.yml`` can have version constraints and version
 wildcards. One can also specify pip packages to install after conda-packages
 have been installed.
 
-For example, the following 
+For example, the following
 :download:`dependency-env.yml </triton/examples/conda/dependency-env.yml>`
 would install a numpy with version higher or equal
 than 1.10 using conda and scipy via pip:
@@ -264,16 +264,11 @@ One can also use the environment files to make the installation procedure more
 reproducible.
 
 
-Creating more complex environments
-**********************************
-
-.. include:: /triton/examples/cuda/cuda_override_hint.rst
-
 Creating an environment with CUDA toolkit
------------------------------------------
+*****************************************
 
 NVIDIA's `CUDA-toolkit <https://developer.nvidia.com/cuda-toolkit>`_ is
-critical for working with NVIDIA's GPUs. Many Python frameworks that work on
+needed for working with NVIDIA's GPUs. Many Python frameworks that work on
 GPUs need to have a supported CUDA toolkit installed.
 
 Conda is often used to provide the CUDA toolkit and additional libraries such
@@ -292,15 +287,28 @@ In other cases one can use an environment file like this
 
 .. literalinclude:: /triton/examples/cuda/cuda-env.yml
 
+.. _cuda_hint:
+
+.. include:: /triton/examples/cuda/cuda_override_hint.rst
 
 
 .. include:: /triton/examples/tensorflow/tensorflow_with_conda.rst
 
+If you encounter errors related to CUDA while creating the
+environment, do note :ref:`this hint <cuda_hint>` on overriding
+CUDA during installation.
+
+
 .. include:: /triton/examples/pytorch/pytorch_with_conda.rst
+
+If you encounter errors related to CUDA while creating the
+environment, do note :ref:`this hint <cuda_hint>` on overriding
+CUDA during installation.
+
 
 
 Installing numpy with Intel MKL enabled BLAS
---------------------------------------------
+********************************************
 
 `NumPy <https://numpy.org/>`_ and other mathematical libaries utilize BLAS
 (Basic Linear Algebra Subprograms) implementation for speeding up many
@@ -314,9 +322,9 @@ One can install this library as the default BLAS by specifying
 
 .. literalinclude:: /triton/examples/conda/mkl-env.yml
 
-
 Advanced usage
 **************
+
 
 Finding available packages
 --------------------------
@@ -373,7 +381,7 @@ The output looks something like this::
   url         : https://conda.anaconda.org/conda-forge/linux-64/tensorflow-2.8.1-cuda112py39h01bd6f0_0.tar.bz2
   md5         : 35716504c8ce6f685ae66a1d9b084fc7
   timestamp   : 2022-05-21 09:09:53 UTC
-  dependencies: 
+  dependencies:
     - __cuda
     - python >=3.9,<3.10.0a0
     - python_abi 3.9.* *_cp39
@@ -394,10 +402,10 @@ see the dependencies:
 
 Output looks something like this::
 
-   Name                     Version Build                 Channel             
+   Name                     Version Build                 Channel
   ─────────────────────────────────────────────────────────────────────────────
    tensorflow               2.8.1   cuda112py39h01bd6f0_0 conda-forge/linux-64
-   __cuda >>> NOT FOUND <<<                                                   
+   __cuda >>> NOT FOUND <<<
    python                   3.9.9   h62f1059_0_cpython    conda-forge/linux-64
    python_abi               3.9     2_cp39                conda-forge/linux-64
    tensorflow-base          2.8.1   cuda112py39he716a45_0 conda-forge/linux-64
@@ -405,7 +413,7 @@ Output looks something like this::
 
 One can also print the full dependency list with
 ``mamba repoquery depends --tree``. This will produce a really long output.
-  
+
 .. code-block:: bash
 
   mamba repoquery depends --channel conda-forge tensorflow=2.8.1=cuda112py39h01bd6f0_0

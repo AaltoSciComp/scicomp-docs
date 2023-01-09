@@ -62,8 +62,7 @@ dependencies in there.
 Quickstart
 ----------
 
-Use ``module load anaconda`` (or ``module load anaconda2`` for Python 2) to get a
-modern Python.
+Use ``module load anaconda`` to get our Python installation.
 
 If you have simple needs, use :ref:`pip install --user
 <pip-install-user>` to install packages.  For complex needs, use
