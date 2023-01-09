@@ -355,14 +355,7 @@ users try this every now and then).
 Examples
 --------
 
-Running Python with internal parallelization (OpenMP)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-A simple parallel Python script using OpenMP. Both anaconda modules and
-optimized Python modules support OpenMP, but optimized versions are
-faster.
-
-.. include:: ../examples/python_openmp.rst
+.. include:: ../examples/python/python_openmp/python_openmp.rst
 
 
 Running MPI parallelized Python with mpi4py
