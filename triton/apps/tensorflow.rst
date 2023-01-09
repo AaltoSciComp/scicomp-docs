@@ -1,7 +1,7 @@
 Tensorflow
 ==========
 
-:pagelastupdated: 2022-08-08
+:pagelastupdated: 2022-01-09
 
 .. highlight:: bash
 
@@ -11,13 +11,6 @@ Basic usage
 ***********
 
 First, check the tutorials up to and including :doc:`../tut/gpu`.
-
-If you plan on using NVIDIA's containers to run your model, please check
-the page about :doc:`nvidiacontainers`.
-
-We provide a module for gpu enabled tensorflow 2.6  which can be loaded by 
-``module load tensorflow``. If you need a newer tensorflow version, 
-we suggest you install it via your own conda environment (see the instructions below).
 
 Installing via conda
 ********************
