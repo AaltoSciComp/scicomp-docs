@@ -43,16 +43,18 @@ Components of RSE skills
 ------------------------
 
 1. **Research practices:** Research is its own special thing, with
-   special ways of working.  Research experience helps you connect to
-   our target audience and know what works and doesn't.
+   special ways of working (this includes data management and open
+   science).  Research experience helps you connect to our target
+   audience and know what works and doesn't.
 
-2. **Programming and software development:**  While we also need
-   specialties in data and scientific computing, the programming and
-   general development and project management practices are important.
+2. **Programming and software development:** Programming and general
+   development and project management practices are important - but we
+   must keep in mind the relatively small-scale nature of our
+   projects.  Basics are useful, enterprise-grade usually isn't.
 
 3. **Open-source/open-project knowledge:** We emphasize making
-   research results reusable, and open source practices are a key to
-   that.
+   research results reusable, and open source practices are a key way
+   to do that.
 
 A person coming from a research background will be probably be good at (1) but
 likely need to improve more in (2).  Someone coming from an industry
@@ -87,6 +89,7 @@ try:
   <tutorials>`.
 
 
+
 Software development
 --------------------
 
@@ -116,6 +119,10 @@ To develop these skills, try:
   contribute to.
 - `CodeRefinery workshops <https://coderefinery.org>`__ cover most of
   what you need.
+- Look at the :doc:`Zen of Scientific Computing
+  </scicomp/zen-of-scicomp>` for other ways to advance some projects
+  up those levels.
+
 
 
 Open source / open project knowledge
