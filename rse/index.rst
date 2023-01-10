@@ -38,8 +38,8 @@ grant applications.
 .. _rse-history: https://www.software.ac.uk/blog/2016-08-17-not-so-brief-history-research-software-engineers-0
 
 **Service availability:** Garage support is available to everyone.
-Our current funding for longer projects is from the School of Science,
-so that is our focus.  For more information, see
+Longer project work is also available to everyone at Aalto thanks to
+grants from Aalto IT Services.  For more information, see
 :doc:`procedures/units-info`.
 
 .. admonition:: Contact
