@@ -122,6 +122,7 @@ to improvement at any time.  Also see the :doc:`FCCI Tech
 
    procedures/templates
    procedures/project-management
+   procedures/prioritization
    procedures/implementation
    procedures/job-descriptions
    procedures/units-info

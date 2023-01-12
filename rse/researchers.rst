@@ -147,7 +147,7 @@ How to contact us and request help
 
 To request a service, see :ref:`the request area <request-rse>`.
 
-Requests are prioritized according to:
+Requests are :doc:`prioritized <procedures/prioritization>` according to:
 
 * Strategic benefit
 * Long-term impact to research (for example, improved skills)
