@@ -101,7 +101,7 @@ Checklists
    :maxdepth: 1
 
    checklists/python
-   Matlab project reproduciblity <https://rse.shef.ac.uk/blog/2022-05-05-concise-guide-to-reproducible-matlab/>
+   Matlab project reproduciblity (external) <https://rse.shef.ac.uk/blog/2022-05-05-concise-guide-to-reproducible-matlab/>
    checklists/project-done
 
    JOSS checklist (external) <https://joss.readthedocs.io/en/latest/review_checklist.html>

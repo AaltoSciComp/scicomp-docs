@@ -1,5 +1,5 @@
-For researchers with a project
-==============================
+Starting a project with us
+==========================
 
 This page is mostly focused on how long-term scheduled projects, which
 are funded by the research groups themselves, work.
