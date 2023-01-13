@@ -78,6 +78,17 @@ they hired later.
 
 
 
+Debugging and Parallelisation
+-----------------------------
+A researcher had a huge dataset to run an analysis on. Sequential 
+analysis would have been infeasible and they wanted to run it in 
+parallel. They tried to implement it themselves but got stuck, so 
+they came to garage, where an RSE was able to help them to modify 
+their code allowing them to parallelize a lot of the work and perform
+the analysis. The resulting work got published in `Fuel <https://www.sciencedirect.com/science/article/pii/S0016236122038133>`__
+
+
+
 Introduction to Julia course
 ----------------------------
 
