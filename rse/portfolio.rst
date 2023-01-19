@@ -5,8 +5,8 @@ This page lists examples of projects which we have done.
 
 
 
-Software publishing
--------------------
+Software publishing (M)
+-----------------------
 
 A CS doctoral researcher's paper had code released along with it -
 with seven PDF pages of installation instructions, five pages of
@@ -18,7 +18,8 @@ Aalto RSE helped to transform this analysis into a standard R package
 which could be installed using standard tools, and run using a
 Snakemake, a workflow automation tool.  Other researchers - including
 future researchers in the same group - could reuse the tool for their
-science.
+science.  Time spent: 3 week.  Benefit: One paper's results become
+reusable (both internally and externally).
 
 
 
@@ -35,7 +36,10 @@ Aalto RSE worked with the researcher to do a complete and quick
 ethical review and build the platform.  Unlike a hired software
 developer, our staff already knows the research methods and can work
 much faster - and stays around providing years of support with the
-post-processing whenever it is needed.
+post-processing whenever it is needed. [Source code on
+Github](https://github.com/digitraceslab/corona_study).  Time spent:
+~1 month.  Benefits: one study and multiple papers that could not
+otherwise exist.
 
 
 
@@ -49,12 +53,13 @@ and we discussed options - by working with us, the path could be
 greatly simplified to a static site.  We found a suitable open-source
 starting point, adjusted it to work for the needed purpose, and
 provided it to them for future work by the next day.  The researcher
-has been able to carry on with the project independently.
+has been able to carry on with the project independently.  Time spent:
+0.5 day, time saved: 4 days + simpler implementation.
 
 
 
-Finnish Center for Artificial Intelligence
-------------------------------------------
+Finnish Center for Artificial Intelligence (dedicated)
+------------------------------------------------------
 
 The Finnish Center for AI (FCAI) aims for its research to have an
 impact in the world, and to do that, its software must be reusable.
@@ -66,8 +71,8 @@ hire could do themselves.
 
 
 
-Business Finland project
-------------------------
+Business Finland project (M)
+----------------------------
 
 A research group had gotten Business Finland funds to develop an idea
 into a product, but were still working within Aalto.  They needed
@@ -78,19 +83,19 @@ they hired later.
 
 
 
-Debugging and Parallelisation
------------------------------
-A researcher had a huge dataset to run an analysis on. Sequential 
-analysis would have been infeasible and they wanted to run it in 
-parallel. They tried to implement it themselves but got stuck, so 
-they came to garage, where an RSE was able to help them to modify 
+Debugging and Parallelisation (S)
+---------------------------------
+A researcher had a huge dataset to run an analysis on. Sequential
+analysis would have been infeasible and they wanted to run it in
+parallel. They tried to implement it themselves but got stuck, so
+they came to garage, where an RSE was able to help them to modify
 their code allowing them to parallelize a lot of the work and perform
 the analysis. The resulting work got published in `Fuel <https://www.sciencedirect.com/science/article/pii/S0016236122038133>`__
 
 
 
-Introduction to Julia course
-----------------------------
+Introduction to Julia course (M)
+--------------------------------
 
 Julia is a relatively new programming language that has found many
 users in certain fields.  A professor taught an undergraduate course
@@ -100,12 +105,14 @@ them.  Aalto RSE find an open-source course prepared by CSC (Finland's
 national scientific computing center), improved it to handle the
 things needed by the undergraduate course, and successfully taught it
 on-demand.  All course material is open source, so that others may
-also use it.
+also use it.  Time spent: ~1 month.  Benefit: Course given twice,
+undergraduate course made better, open material produced, internal
+Julia expertise
 
 
 
-Releasing a open-source Github-based book
------------------------------------------
+Releasing a open-source Github-based book (S)
+---------------------------------------------
 
 A researcher had prepared the start of an open-source book, and needed
 help and advice in releasing it as an open project.  Aalto RSE helped
@@ -115,12 +122,13 @@ the book on every change.  This allowed the book to both be fully
 open-source and to accept contributions from others.  Aalto RSE also
 used its connections to Research Services to discuss the intellectual
 property aspects and how it might affect the possibility for future
-publication.
+publication. Time spent: <1 day. Benefit: Open book and community
+project.
 
 
 
-Releasing a microscope control code
------------------------------------
+Releasing a microscope control code (M)
+---------------------------------------
 
 A researcher had created a code in Python to control a physical
 measurement device.  This code could be useful to others, but had to
