@@ -188,8 +188,8 @@ courses </aalto/zulip>`)
 
 You can also chat with us on `Aalto Microsoft Teams
 <https://teams.microsoft.com/l/team/19%3a688ad82e41aa46d48ad978aea767419c%40thread.tacv2/conversations?groupId=4089981d-a443-493d-ae3e-3df5c63caed6&tenantId=ae1a7724-4041-4462-a6dc-538cb199707e>`__.
-The invite code is ``e50tyij``.  We are also findable on various other
-department chats here.
+The invite code is ``e50tyij``.  Our staff also hang out on other
+department chats.
 
 Research Software Engineer service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -198,7 +198,8 @@ Sometimes, a problem goes beyond "Triton support" and becomes
 "scientific computing support".  Our :doc:`Research Software Engineers
 </rse/index>` are perfect for these kinds of problems: they can
 program with you, set up your workflow, or even handle all the
-technical problems for you.
+technical problems for you.  Contact via the other contact methods on
+this page, especially via the garage.
 
 Email
 ~~~~~
@@ -291,17 +292,21 @@ Research services
 Aalto `Research Services
 <https://www.aalto.fi/en/service-entities/research-and-innovation-services>`__
 function more as project administrative services rather than close
-research support.  However, they provide important information for:
+research support.  They provide important help for:
 
-* Data management plans for funding applications
+* Data management plans for funding applications, other
+  openscience-level data-related questions, and Open Science (contact
+  researchdata@aalto.fi)
 * Legal or ethical advice, making contracts and NDAs.
 * Library services
 * Applying for funding and administering it.
 
 In many cases, you can chat with Aalto Scientific Computing and we can
-give some initial practical advice.
+give some initial practical advice and direct you to the right
+Research Services resources.
 
 Reach research services by:
 
 * Contacting service email addresses at the link above
 * Contacting school representatives findable at the link above
+* researchdata@aalto.fi for data-related things
