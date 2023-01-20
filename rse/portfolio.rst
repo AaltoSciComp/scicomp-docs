@@ -18,7 +18,7 @@ Aalto RSE helped to transform this analysis into a standard R package
 which could be installed using standard tools, and run using a
 Snakemake, a workflow automation tool.  Other researchers - including
 future researchers in the same group - could reuse the tool for their
-science.  Time spent: 3 week.  Benefit: One paper's results become
+science.  Time spent: 3 weeks.  Benefit: One paper's results become
 reusable (both internally and externally).
 
 
@@ -127,7 +127,7 @@ project.
 
 
 
-Releasing a microscope control code (M)
+Releasing a microscope control code (S)
 ---------------------------------------
 
 A researcher had created a code in Python to control a physical
