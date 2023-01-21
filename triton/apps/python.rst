@@ -62,8 +62,7 @@ dependencies in there.
 Quickstart
 ----------
 
-Use ``module load anaconda`` (or ``module load anaconda2`` for Python 2) to get a
-modern Python.
+Use ``module load anaconda`` to get our Python installation.
 
 If you have simple needs, use :ref:`pip install --user
 <pip-install-user>` to install packages.  For complex needs, use
@@ -356,14 +355,7 @@ users try this every now and then).
 Examples
 --------
 
-Running Python with internal parallelization (OpenMP)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-A simple parallel Python script using OpenMP. Both anaconda modules and
-optimized Python modules support OpenMP, but optimized versions are
-faster.
-
-.. include:: ../examples/python_openmp.rst
+.. include:: ../examples/python/python_openmp/python_openmp.rst
 
 
 Running MPI parallelized Python with mpi4py
