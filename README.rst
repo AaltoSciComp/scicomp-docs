@@ -194,3 +194,20 @@ Notes, warnings, etc.
   .. warning::
 
     This is a warning
+
+---
+
+Indexing:
+
+::
+
+   .. index:: commit; amend
+
+   .. index::
+      commit
+      commit; message
+      pair: commit; amend
+
+   :index:`commit`
+
+   :index:`loop variables <pair: commit; amend>`
