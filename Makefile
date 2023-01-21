@@ -30,12 +30,6 @@ help:
 %: Makefile
 	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-
-
-
-# Science-IT make:
-DEPLOYHOST=fixme
-science-it-deploy: html latexpdfja epub
-	#rsync _build/html/ $(DEPLOYHOST)
-	#rsync _build/latex/AaltoScicomp.pdf $(DEPLOYHOST)
-	#rsync _build/epub/AaltoScicomp.epub $(DEPLOYHOST)
+# Make a list of files by last modification date
+find-old:
+	git ls-files -z | xargs -0 -n1 -I{} -- git --no-pager log -1 --date=format:'%Y-%m-%d' --format='%ad  {}' -- {}
