@@ -7,6 +7,7 @@
 <!-- Request improvements to this page -->
 <div class="report-improvement" style="width: 300px; padding-left: 10px; padding-right: 10px; padding-top: 1ex; margin-top: 1ex; border-top: 2px solid aliceblue; text-align: center; color: #d9d9d9; font-size: 90%">
 <a style="color: #d9d9d9;" title="This will open a Github issue (Github account required).  We recommend this public issue tracker so that everyone can take part in the improvements - don't worry, even small improvements are welcome." href="https://github.com/AaltoSciComp/scicomp-docs/issues/new?title=page {{pagename}}: [insert topic of improvement here]&body=[What is confusing, what to improve, etc.  It's OK to say the problem and we figure out the solution.]">Report a problem with this page</a>
+<a href="https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode or "blob" }}/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ page_source_suffix }}" class="fa" style="color: #d9d9d9;" title="Source on GitHub">(Edit)</a>
 </div>
 
 <!-- Mastodon -->

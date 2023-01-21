@@ -24,6 +24,8 @@ on_rtd = os.environ.get('READTHEDOCS') == 'True'
 
 # -- General configuration ------------------------------------------------
 
+html_context = { }
+
 # If your documentation needs a minimal Sphinx version, state it here.
 #needs_sphinx = '1.0'
 
@@ -70,7 +72,11 @@ ogp_custom_meta_tags = ['<meta property="twitter:creator" content="@SciCompAalto
 
 
 # Add timestamps from git
-gitstamp_fmt = "%d %b %Y"
+gitstamp_fmt = "%Y %b %d"
+# dates earlier than this are highlighted in red in the theme.  Only
+# years supported so far due to %b time format.  Can be overwritten by
+# `:gitstamp_warn_date` in page metadata.
+html_context['gitstamp_warn'] = '2022'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -188,11 +194,12 @@ html_theme_options = {
     #'navigation_depth': 3,
     #'canonical_url': 'https://scicomp.aalto.fi/'
     }
-html_context = {'display_github': True,
-                'github_user': 'AaltoSciComp',
-                'github_repo': 'scicomp-docs',
-                'github_version': 'master/',
-               }
+html_context.update(
+    {'display_github': True,
+     'github_user': 'AaltoSciComp',
+     'github_repo': 'scicomp-docs',
+     'github_version': 'master/',
+    })
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []

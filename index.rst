@@ -4,6 +4,7 @@
    contain the root `toctree` directive.
 
 :og:description: Documentation about scientific and data-intensive computing at Aalto and beyond. Targeted towards Aalto researchers, but has some useful information for everyone.
+:gitstamp_ignore:
 
 .. meta::
    :keywords: Aalto Scientific Computing, Aalto SciComp, ASC, High-performance computing, HPC, Scientific computing, scicomp, research software, Aalto Research Software Engineers, AaltoRSE, RSE, RSEng
