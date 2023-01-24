@@ -1,3 +1,5 @@
+:gitstamp_ignore:
+
 ======================
 Triton quick reference
 ======================

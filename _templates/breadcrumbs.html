@@ -1,0 +1,14 @@
+{%- extends "!breadcrumbs.html" %}
+
+{% block breadcrumbs_aside %}
+<li class="wy-breadcrumbs-aside">
+  {%- if gitstamp and not 'gitstamp_ignore' in (meta or {}) %}
+     {%- if gitstamp < (meta['gitstamp_warn'] or gitstamp_warn) %}
+      <span class="last-updated">Last updated <abbr class="last-updated-date last-updated-old abbr" style="color: darkred" title="This page is not necessarily wrong but you might want to be careful about it - contact us if you see problems (link in the sidebar).">{{ gitstamp }}</abbr></span>
+     {% else %}
+      <span class="last-updated">Last updated <span class="last-updated-date">{{ gitstamp }}</span></span>
+     {% endif %}
+     (<a href="https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/commits/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ page_source_suffix }}" class="fa history" title="GitHub file history">History</a>)
+  {%- endif %}
+
+{% endblock %}
