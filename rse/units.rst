@@ -37,6 +37,7 @@ Benefits to schools/departments:
   the best possible tools and support.
 * Provide hands-on technical research services to your community at a
   higher level than basic IT (see :doc:`/help/garage`).
+* More societal impact, for example ChatGPT-type preview interfaces.
 * Help with data management, open science, FAIR data - be more
   competitive for funding and help get value out of your unit's data.
 * You will be able to set priorities for your funding, for example do
