@@ -50,6 +50,7 @@ optional_modules = [
     'sphinx_ext_substitution',
     'sphinx_plausible',
     'sphinxext.opengraph',
+    'sphinx_minipres',
     ]
 if on_rtd or 'GITSTAMP' in os.environ:
     optional_modules.append('sphinx_gitstamp')
@@ -174,7 +175,6 @@ html_css_files = [
 
 html_js_files = [
     "redirect-to-https.js",
-    "https://users.aalto.fi/~darstr1/minipres-stable.js",
 ]
 
 if on_rtd:
