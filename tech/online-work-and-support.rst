@@ -219,6 +219,11 @@ Open questions
   the same garage/standard meeting room.
 - If multiple teams have separate garages, should they be at the same
   time or different?  Combined?  (does it get too big?)
+
+  - Is it even possible for one person to have multiple garages they
+    need to keep in their mind - or is it a "one-per-person" kind of
+    thing?
+
 - How many garages can someone attend before it becomes "too much".
 - Is there a better tech than Zoom?  In 2022, it works much better
   than early 2021, and at least people can join via browser.
