@@ -9,11 +9,6 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * We are back from holidays and operating normally (enough of us,
-     at least).
-   * Note that Friday is still a public holiday.
-
-..
    * There are no current planned disruptions in the daily garage.
 
 
