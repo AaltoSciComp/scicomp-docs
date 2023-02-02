@@ -12,12 +12,13 @@
 
    .. code-block:: bash
    
-     conda config --show env_dirs
+     conda config --show env_dirs     
      conda config --show pkgs_dirs
      
-   Delete the directories that are listed under ``/home/<username>`` and ``/scratch/``. 
+   Delete the directories that are listed and start with ``/home/<username>`` (this could e.g. be ``/home/<username>/.conda/envs``)
+   and ``/scratch/`` ( e.g. ``/scratch/work/<userame>/conda_envs``). 
    This will clean up all packages and environments you have installed. 
-
+   
    Next, clean up your ``.bashrc``, ``.zshrc``, ``.kshrc`` and ``.cshrc`` (or all of those that exist).
    Open these files in an editor (e.g. ``nano bashrc``) and search for the line ``# >>> conda initialize >>>``
    delete everything between this line and the line ``# <<< conda initialize <<<``. These lines automatically
