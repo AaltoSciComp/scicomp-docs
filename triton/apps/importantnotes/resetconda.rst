@@ -2,7 +2,7 @@
    :class: toggle
 
    Sometimes it is necessary to reset your Conda configuration. So here are instructions on how to wipe all
-   of your conda settings. To be able to do so first load the miniconda environment 
+   of your conda settings and existing environments. To be able to do so first load the miniconda environment 
 
    .. code-block:: bash
    
