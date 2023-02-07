@@ -5,6 +5,9 @@ Git-annex for data management
 
    `Video intro to git-annex, from Research Software Hour <https://www.youtube.com/watch?v=NKCBXOfyoyM&list=PLpLblYHCzJAB6blBBa0O2BEYadVZV3JYf>`__.
 
+   `DataLad <https://datalad.org/>`__ is a researcher/research data
+   management focused frontend to git-annex.  You might want to start
+   here instead (and then you get everything below).
 
 `git-annex <https://git-annex.branchable.com/>`__ is a extension to git
 which allows you to manage large files with git, without checking
@@ -371,6 +374,9 @@ See also
 --------
 
 - `Video intro to git-annex, from Research Software Hour <https://www.youtube.com/watch?v=NKCBXOfyoyM&list=PLpLblYHCzJAB6blBBa0O2BEYadVZV3JYf>`__.
+
+- `DataLad <https://www.datalad.org/>`__ is a data-management focused
+  interface for git-annex.  This might be a better place to start.
 
 - **git LFS**  These two git extensions are often
   compared.  git LFS is created by GitHub, and operates on a centralized
