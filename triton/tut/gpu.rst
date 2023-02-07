@@ -13,8 +13,6 @@ GPU computing
 
    * Request a GPU with the Slurm option ``--gres=gpu:1`` (some
      clusters need ``-p gpu`` or similar)
-   * Do not use ``srun`` in your batch script, there's a bug that
-     prevents job step's access to the GPU.
    * If you use Python, generally don't load your own CUDA module
      unless you know you need this.  Instead, install what you need
      through anaconda.
