@@ -1,19 +1,17 @@
+LAMMPS
 ======
-Lammps
-======
 
-:supportlevel: C
-:pagelastupdated: 2014
+:pagelastupdated: 2023-02-08
 
 
-`http://lammps.sandia.gov/ <http://lammps.sandia.gov/doc/Section_start.html#start_5>`__
+`LAMMPS <https://docs.lammps.org/Manual.html>`_ is a classical molecular dynamics
+simulation code with a focus on materials modeling.
 
-Building LAMMPS as a library
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: /triton/examples/lammps/build/build_basic.rst
 
-::
+.. include:: /triton/examples/lammps/build/build_most.rst
 
-    cd src
-    # default g++ compilation with system g++
-    module load openmpi/1.8.1-gcc
-    make -f Makefile.lib serial
+Examples
+********
+
+.. include:: ../examples/lammps/indent/lammps_indent.rst
