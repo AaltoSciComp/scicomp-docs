@@ -44,6 +44,20 @@ Internal (RSE group) tasks
     * Outputs ``/projects``, ``/publications``, ``/software``,
       ``/datasets``, ``/outputs``
 
+* Get an interesting picture or screenshot for use in future material.
+
+  * Not needed if there are overriding confidentiality
+    considerations.  The picture should never include personal data or
+    data coming from a research subject (unless it's already open).
+  * Add to ``triton:/scratch/scicomp/aaltoscicomp-marketing.git``
+    (``pictures/rse/``).
+  * Include a readme with citation, confirmation
+    of what usage permissions there are, and a one-sentence general
+    description suitable for presentations.
+  * Examples; screenshot of website, screenshot of code that looks
+    interesting, screenshot of repository page, picture of hardware
+    device used, etc.
+
 * Add it to the next meeting agenda.  We will collaboratively do an
   analysis to find lessons learned:
 
