@@ -8,6 +8,9 @@ JupyterHub
    JupyterHub for research is documented at
    :doc:`../triton/apps/jupyter`.
 
+.. note::
+    `JupyterLab <https://jupyterlab.readthedocs.io/en/stable/>`__ interface
+    is now available and is the default option for new course servers.
 
 https://jupyter.cs.aalto.fi is a JupyterHub installation for teaching
 and light usage.  Anyone at Aalto may use this for generic light
@@ -84,7 +87,7 @@ Courses and assignments
 
 Some courses may use the `nbgrader
 <https://nbgrader.readthedocs.io/en/stable/>`__ system to give and
-grade assignments.  These courses have special entries in the list.
+grade assignments. These courses have special entries in the list.
 If you are a student in such a course, you will have a special
 environment for that course.  Your instructor may customize the
 environment, or it may one of our generic environments.
@@ -96,7 +99,9 @@ when starting your notebook server).  You can fetch assignments to
 work on them - they are then copied to your personal ``/notebooks``
 directory.  You can edit the assignments there - fill out the
 solutions and validate them.  Once you are done, you can submit them
-from the same assignment list.
+from the same assignment list. `Here <jupyterhub/nbgrader-jupyterlab>` is a
+short tutorial that walks through this process using the new
+JupyterLab interface.
 
 A course may give you access to a ``/coursedata`` folder with any
 course-specific data.

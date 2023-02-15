@@ -5,7 +5,7 @@ Doing Assignments in JupyterLab
 
     This is a tutorial for courses that distribute and collect
     their assignments on `JupyterHub <https://jupyter.cs.aalto.fi>`__.
-    Feel free to use it for your other courses as well, but
+    Feel free to use JupyterHub for your other courses as well, but
     note that you won't be able to collect and submit your
     assignments this way.
 

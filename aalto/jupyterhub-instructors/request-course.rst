@@ -1,6 +1,11 @@
 Requesting a course
 ===================
 
+.. note::
+    `JupyterLab <https://jupyterlab.readthedocs.io/en/stable/>`__ interface
+    is now available and is the default option for new course servers.
+    If you'd still like to use the Jupyter Notebook interface for your
+    course, let us know.
 
 To get started with a course, please read the below list and describe
 your needs from the relevant items, and contact guru@cs.aalto.fi.

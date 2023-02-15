@@ -1,6 +1,13 @@
 jupyter.cs news
 ===============
 
+Spring 2023
+-----------
+
+* JupyterLab is now available and is the default
+  for new course servers. If you'd like to continue
+  using Jupyter Notebook for your courses, let us know
+  when requesting.
 
 Summer/Autumn 2020
 ------------------
