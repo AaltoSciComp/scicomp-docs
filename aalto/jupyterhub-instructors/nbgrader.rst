@@ -10,7 +10,9 @@ upstream documentation*
 
 Currently you should read the upstream `nbgrader documentation
 <https://nbgrader.readthedocs.io/en/stable/>`__, which we don't
-repeat.  We have some custom Aalto modifications (also submitted
+repeat. You might also find the Noteable services' `nbgrader documentation
+<https://noteable.edina.ac.uk/documentation/>`__ useful.
+We have some custom Aalto modifications (also submitted
 upstream) which are:
 
 How to use nbgrader
