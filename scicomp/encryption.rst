@@ -170,7 +170,7 @@ General warnings
    key/password.
 -  The strength of your encryption also depends on the strength of your
    password (there is the reason it is often called a "passphrase" - a
-   phrase is more secure than a standard password). Choose it carefuly.
+   phrase is more secure than a standard password). Choose it carefully.
 
 Advanced / to do
 ----------------
