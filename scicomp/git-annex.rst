@@ -215,8 +215,8 @@ Relevant commands:
 
 
 
-Level 3: syncronizing data
---------------------------
+Level 3: synchronizing data
+---------------------------
 
 Moving data is great, but when data becomes Big, manually managing it
 doesn't work.  Git-annex *really* shines here.  The most basic command

@@ -201,6 +201,9 @@ available in Ubuntu. Note that these are shell functions that alter
 environment variables, so this needs to be repeated in each new shell
 (or automated in login).
 
+**Note**: The modules are only available on Aalto desktop machines,
+not on laptops.
+
 -  See the :doc:`Triton module docs <../triton/tut/modules>` docs for
    details.
 -  ``module load triton-modules`` will make most Triton software

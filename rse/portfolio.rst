@@ -146,3 +146,20 @@ to find teaching assistants capable of giving the exercises a
 deep-enough check - in addition to confirming they follow best
 practices on the cluster.  Aalto RSE will play an important role in
 this course by bridging the technology with the teaching.
+
+
+
+Aalto Gitlab improvements (M)
+-----------------------------
+
+Aalto University's Gitlab needed some scripting for management tasks.
+While not exactly in our scope, we were the logical team to take a
+look (as opposed to hiring outside consultants, especially since we
+could better fit in with an incremental development schedule and
+longer-term support).  We talked with the system owners, refined the
+tasks, understood GitLab documentation, created the necessary scripts
+and improvements, handed them off to the sysadmins for production, and
+helped to understand tasks which should be done at another level.
+Time spent: 1 week.  Benefit: improved service for Aalto University,
+significant cost savings.  This type of project would be available for
+other internal service teams, assuming availability.

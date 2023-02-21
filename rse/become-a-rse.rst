@@ -7,7 +7,10 @@ For RSE candidates and community
    similar jobs):
 
    * From time to time, job advertisements are posted on the `Aalto
-     University job portal <https://www.aalto.fi/en/open-positions>`__.
+     University job portal
+     <https://www.aalto.fi/en/open-positions/>`__.  If you are
+     considering Aalto, CSC also quite often has `jobs open
+     <https://csc.fi/en/web/guest/careers>`__.
    * If you are looking for jobs inside and outside of Aalto, consider
      following the `Society-RSE job vacancies
      <https://society-rse.org/careers/vacancies/>`__ form.

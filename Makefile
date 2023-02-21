@@ -32,4 +32,4 @@ help:
 
 # Make a list of files by last modification date
 find-old:
-	git ls-files -z | xargs -0 -n1 -I{} -- git --no-pager log -1 --date=format:'%Y-%m-%d' --format='%ad  {}' -- {}
+	@git ls-files -z | xargs -0 -n1 -I{} -- git --no-pager log -1 --date=format:'%s,%Y-%m-%d' --format='%ad,  {}' -- {}
