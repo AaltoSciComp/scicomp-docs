@@ -60,3 +60,24 @@ click on "view feedback" to open this folder immediately.
 |
 Each notebook in the assignment will have a corresponding feedback file,
 where you can see how your responses were graded along with comments left by the grader.
+
+Tips and Good to Knows
+----------------------
+* Don't forget to submit your assignment. Without you submitting it, your instructor
+  will not have any access to your work.
+
+* **Don't duplicate cells**. Copy and pasting cells might lead to your work being ignored.
+  It is safe to copy-paste the contents of the cell, but the cell itself should be added
+  anew (using the plus button on the toolbar or 'b').
+
+* Validate is nothing special, it is basically equivalent to restarting the kernel
+  and running all cells.
+
+* **Google Colab warning**: In the past, users have reported issues with using Google Colab
+  for their assignments. **Uploading your assignment notebooks to Colab might create problems.**
+  While it was working the last time we checked (Feb 2023), Colab can overwrite the metadata of
+  your notebook and break nbgrader functionality. If you want to use Colab safely, you should
+  copy-paste your code back to the notebook in JupyterHub instead of uploading the Colab-edited
+  notebook.
+
+
