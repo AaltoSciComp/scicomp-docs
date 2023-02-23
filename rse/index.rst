@@ -12,7 +12,8 @@ computer-dependent, the prerequisite knowledge grows larger and
 larger, and we exist to help you fill that gap.
 
 For anything related to **custom software development, computational
-research, data management, workflow automation, scaling-up,
+research, data management, workflow automation, scaling-up, deployment
+of public previews,
 collaborative work, reproducible research, optimization,
 high-performance computing, and more**, we can:
 
