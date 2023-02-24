@@ -9,6 +9,9 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
+   * 7.march.2023: possibly not available (internal development day)
+
+..
    * There are no current planned disruptions in the daily garage.
 
 
