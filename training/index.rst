@@ -27,7 +27,7 @@ to suggest a new course, `please take this survey <https://link.webropol.com/s/s
 .. toctree::
    :maxdepth: 1
 
-   scip/python-for-scicomp-2022
+   Coderefinery Workshop Spring 2023 (21-23 and 28-30. March) <https://coderefinery.github.io/2023-03-21-workshop/>
    scip/workflows-2023
    Take the survey! Request a re-run of past courses / new courses <https://link.webropol.com/s/scipod>
    scip/index
@@ -42,7 +42,7 @@ to suggest a new course, `please take this survey <https://link.webropol.com/s/s
 
 
 **Future courses**
-*Fall-Winter 2022 courses* -  
+*Spring-Summer 2023 courses* -  
 We are always adding interesting courses. Please check this page once in a while. If you are interested in a re-run of our past courses or if you want
 to suggest a new course, `please take this survey <https://link.webropol.com/s/scipod>`__.
 
@@ -65,12 +65,9 @@ https://www.aalto.fi/en/services/training-in-research-data-management-and-open-s
 
 Please check https://mycourses.aalto.fi/ for other courses at Aalto and https://www.csc.fi/en/training for training courses and events at CSC. Some coming courses:
 
-  - `Practical machine learning with spatial data | November 7-9 2022 <https://ssl.eventilla.com/event/VDK2b?_gl=1*1wzlnpv*_ga*MTE0MjM5MjE4LjE2NjM2NzA5MzY.*_ga_8VVQ0NECSX*MTY2NjMzMDc3MS4yLjEuMTY2NjMzMDg5NC4wLjAuMA..&_ga=2.42333223.301630530.1666330772-114239218.1663670936>`__
-  - `HYBRID: Practical Deep Learning | November 24-25 `<https://ssl.eventilla.com/event/aqew6?_gl=1*y7pzgu*_ga*MTE0MjM5MjE4LjE2NjM2NzA5MzY.*_ga_8VVQ0NECSX*MTY2NjMzMDc3MS4yLjEuMTY2NjMzMDg5NC4wLjAuMA..&_ga=2.35672738.301630530.1666330772-114239218.1663670936>`__
-  - `High-throughput computing and workflows workshop/hackathon | December 13-14, 2022 <https://ssl.eventilla.com/workflowsworkshop?_gl=1*y7pzgu*_ga*MTE0MjM5MjE4LjE2NjM2NzA5MzY.*_ga_8VVQ0NECSX*MTY2NjMzMDc3MS4yLjEuMTY2NjMzMDg5NC4wLjAuMA..&_ga=2.35672738.301630530.1666330772-114239218.1663670936>`__
-  - `Bioinformatic Analysis with Containers | January 24-25 2023 <https://ssl.eventilla.com/bioinformaticanalysis?_gl=1*y7pzgu*_ga*MTE0MjM5MjE4LjE2NjM2NzA5MzY.*_ga_8VVQ0NECSX*MTY2NjMzMDc3MS4yLjEuMTY2NjMzMDg5NC4wLjAuMA..&_ga=2.35672738.301630530.1666330772-114239218.1663670936>`__
-  - `CS-E4640 Big Data Platforms D January-April 2023 <https://mycourses.aalto.fi/course/view.php?id=36674>`__
-  - `CS-E4580 Programming Parallel Computers April-June 2023 <https://mycourses.aalto.fi/course/view.php?id=36690>`__
+  - `COMSOL Multiphysics training | March 24, 2023 <https://www.comsol.com/events/special/open-comsol-multiphysics-training-110311>`__
+  - `Matlab + Python hands-on workshop | March 17, 2023 <https://www.aalto.fi/en/events/matlab-python-interoperability-hands-on-workshop>`__
+  - `The CSC Summer School in High-Performance Computing 2023 | June 27 - July 6, 2023 <https://ssl.eventilla.com/summerschool2023>`__
 
 MOOC on scientific computing:
 
