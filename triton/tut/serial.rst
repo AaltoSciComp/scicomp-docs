@@ -18,7 +18,8 @@ Serial Jobs
 
 	#!/bin/bash -l
 	#SBATCH --time=01:00:00
-	#SBATCH --mem-per-cpu=1G
+	#SBATCH --cpus-per-task=2
+	#SBATCH --mem=4G
 
 	module load anaconda
 	python my_script.py
