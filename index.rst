@@ -123,9 +123,9 @@ to this information.
 
    scicomp/index
 
-Cheatsheets: `git for normal people <ch-gfnp_>`_, `Gitlab (produced by Gitlab, with Aalto link) <ch-gitlab_>`_
+Cheatsheets: `git the way you need it <ch-gfnp_>`_, `Gitlab (produced by Gitlab, with Aalto link) <ch-gitlab_>`_
 
-.. _ch-gfnp: https://aaltoscicomp.github.io/cheatsheets/git-for-normal-people-cheatsheet_1.0.pdf
+.. _ch-gfnp: https://aaltoscicomp.github.io/cheatsheets/git-the-way-you-need-it.pdf
 .. _ch-gitlab: https://aaltoscicomp.github.io/cheatsheets/git-cheatsheet.pdf
 
 
