@@ -30,5 +30,5 @@
    After this close the current connection to triton and reconnect in a new session. 
 
    Now you should have a system that doesn't have any remains off conda, so you can now follow the initial steps as detailed 
-   `here <conda-first-time-setup>`.
+   :ref:`here <conda-first-time-setup>`.
 
