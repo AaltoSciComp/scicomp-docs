@@ -29,6 +29,6 @@
    Finally delete the file ``.condarc`` from your home folder ( ``rm ~/.condarc``) to reset your conda configuration.
    After this close the current connection to triton and reconnect in a new session. 
 
-   Now you should have a system that doesn't have any remains off conda, so you can now follow the initial steps as detailed 
+   Now you should have a system that doesn't have any remains of conda, so you can now follow the initial steps as detailed 
    :ref:`here <conda-first-time-setup>`.
 
