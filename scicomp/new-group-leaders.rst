@@ -56,8 +56,10 @@ connected by supervisor, or a team that works together?
 - Or on the other end, are you co-developing the same project?
 - Are you a team, or a bunch of independent contractors?
 
-Suggestion: don't be too results oriented in your group activities.
-Make sure you value the process with both your time and mental energy.
+.. admonition:: Suggestions
+
+   Don't be too results oriented in your group activities.
+   Make sure you value the process with both your time and mental energy.
 
 
 
@@ -70,9 +72,11 @@ Planning vs writing a plan
 * If you making a plan just for a grant, I think that's the wrong
   idea.  You want everything you do to *go beyond single projects.*
 
-Suggestion: make a "practical plan" for important aspects, in your
-group's documentation area.  Keep it lightweight but useful.  Update
-it as needed.
+.. admonition:: Suggestions
+
+   Make a "practical plan" for important aspects, in your
+   group's documentation area.  Keep it lightweight but useful.  Update
+   it as needed.
 
 
 
@@ -93,8 +97,10 @@ and keeping things consistent and usable over time.
 - Can you make everything open.  e.g. your group website contains this
   reference information, so it also serves as an advertisement?
 
-Suggestion: make sure you keep your group's internal operating
-information organized - however makes sense for you.
+.. admonition:: Suggestions
+
+   Suggestion: make sure you keep your group's internal operating
+   information organized - however makes sense for you.
 
 
 
@@ -127,9 +133,11 @@ But there is also informal learning, **mentoring**:
   - Encourage a internal specialist who can mentor for you ("Research
     software engineer").
 
-Suggestion: ensure computational people in your group attend
-CodeRefinery.  Try to find one person to get extra experience to
-mentor others.
+.. admonition:: Suggestions
+
+   Ensure computational people in your group attend
+   CodeRefinery.  Try to find one person to get extra experience to
+   mentor others.
 
 
 
@@ -185,9 +193,11 @@ Version control
 
 * Most common these days: :doc:`git </scicomp/git>`
 
-Suggestion: Everyone must learn the basics of a version control
-system, a few people more advanced features, and you shuld know where
-to get help.
+.. admonition:: Suggestions
+
+   Everyone must learn the basics of a version control
+   system, a few people more advanced features, and you shuld know where
+   to get help.
 
 Github, Gitlab, etc.
 ~~~~~~~~~~~~~~~~~~~~
@@ -198,16 +208,20 @@ Github, Gitlab, etc.
 * Individual projects and **organizations** with members - for your
   group.
 
-Suggestion: Make one Github organization for your group, and one
-internal Gitlab organization hosted at your university.  Encourage
-this, not personal repositories.
+.. admonition:: Suggestions
+
+   Make one Github organization for your group, and one
+   internal Gitlab organization hosted at your university.  Encourage
+   this, not personal repositories.
 
 Issue tracking
 ~~~~~~~~~~~~~~
 * Version control platforms provide **issue trackers**
 * Important bugs, improvements, etc. can be closely tracked.
 
-Suggestion: use issues for your most important projects
+.. admonition:: Suggestions
+
+   Use issues for your most important projects
 
 Change proposals (aka "pull requests")
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -218,8 +232,10 @@ Change proposals (aka "pull requests")
   of messing things up.
 * For this to work you *need to actually review, improve, and accept them*
 
-Suggestion: use pull requests for more important projects which should
-not be broken.
+.. admonition:: Suggestions
+
+   Use pull requests for more important projects which should
+   not be broken.
 
 Testing
 ~~~~~~~
@@ -230,8 +246,10 @@ Testing
 * You write tests, and then anytime you make a change later, the tests
   verify it still works.
 
-Suggestion: Add at least minimal software testing to your most
-important projects.
+.. admonition:: Suggestions
+
+   Add at least minimal software testing to your most
+   important projects.
 
 Documentation
 ~~~~~~~~~~~~~
@@ -246,9 +264,11 @@ Licensing
 * You will often need to check your local policies on making something
   open source.
 
-Suggestion: decide on a license as early as possible - us only
-open-source licenses unless there is special reason.  You don't have
-to actually open right away.
+.. admonition:: Suggestions
+
+   Decide on a license as early as possible - us only
+   open-source licenses unless there is special reason.  You don't have
+   to actually open right away.
 
 Publication and release
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -264,8 +284,10 @@ Publication and release
 * Do all work expecting that it might be made open someday.  Separate
   public and secret information into different repositories.
 
-Suggestion: starting with public Github is enough, and think about
-more when you need it.
+.. admonition:: Suggestions
+
+   starting with public Github is enough, and think about
+   more when you need it.
 
 
 
@@ -366,20 +388,20 @@ Suggestion: come to a RSE consultation and chat at least once.
 Summary: dos and don'ts
 -----------------------
 
-You are not allowed to
+.. admonition:: You are not allowed to
 
-- Not use version control
-- Not push to online repository
-- Have critical data or material only on an own computer.
-- Make something so chaotic that you can't organize it later
-- Go alone
+   - Not use version control
+   - Not push to online repository
+   - Have critical data or material only on an own computer.
+   - Make something so chaotic that you can't organize it later
+   - Go alone
 
-But you don't have to
+.. admonition:: ... but you don't have to
 
-- Start every code perfectly
-- Do everything perfectly
-- ... as long as you can improve it later, if needed.
-- Know everything yourself.
+   - Start every code perfectly
+   - Do everything perfectly
+   - ... as long as you can improve it later, if needed.
+   - Know everything yourself.
 
 
 
