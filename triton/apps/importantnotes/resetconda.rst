@@ -26,7 +26,7 @@
    delete everything between this line and the line ``# <<< conda initialize <<<``. These lines automatically
    initilize conda upon login which can cause a lot of trouble on a cluster.
 
-   Finally delete the file ``.condarc`` from your home folder ( ``~/.condarc``) to reset your conda configuration.
+   Finally delete the file ``.condarc`` from your home folder ( ``rm ~/.condarc``) to reset your conda configuration.
    After this close the current connection to triton and reconnect in a new session. 
 
    Now you should have a system that doesn't have any remains off conda, so you can now follow the initial steps as detailed 
