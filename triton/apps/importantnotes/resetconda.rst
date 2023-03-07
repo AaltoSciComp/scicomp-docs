@@ -15,8 +15,10 @@
      conda config --show env_dirs     
      conda config --show pkgs_dirs
      
-   Delete the directories that are listed and start with ``/home/<username>`` (this could e.g. be ``/home/<username>/.conda/envs``)
-   and ``/scratch/`` ( e.g. ``/scratch/work/<userame>/conda_envs``). 
+   Delete the directories that are listed and start with ``/home/USERNAME`` (this could e.g. be ``/home/<username>/.conda/envs``)
+   and ``/scratch/`` ( e.g. ``/scratch/work/USERNAME/conda_envs``). You would delete
+   these with ``rm -r DIRNAME``, but be careful you use the right paths because there
+   is no going back.
    This will clean up all packages and environments you have installed. 
    
    Next, clean up your ``.bashrc``, ``.zshrc``, ``.kshrc`` and ``.cshrc`` (or all of those that exist).
