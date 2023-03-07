@@ -11,6 +11,17 @@ practical side.
 
 
 
+About you
+---------
+
+* Are you planning a research group which partly uses computing
+* Is your computing not your main thing (not what you want to focus
+  on/not what you studied)?
+* Do you want your new hires to use best practices, even if you can't
+  mentor them yourself?
+* Do you want your research to be reproducible and open?
+
+
 Why plan in advance?
 --------------------
 
@@ -58,8 +69,9 @@ connected by supervisor, or a team that works together?
 
 .. admonition:: Suggestions
 
-   Don't be too results oriented in your group activities.
-   Make sure you value the process with both your time and mental energy.
+   * Don't be only  results oriented in your group activities.  Make
+     sure you value the process with both your time and mental
+     energy.
 
 
 
@@ -74,14 +86,17 @@ Planning vs writing a plan
 
 .. admonition:: Suggestions
 
-   Make a "practical plan" for important aspects, in your
-   group's documentation area.  Keep it lightweight but useful.  Update
-   it as needed.
+   * Make a "practical plan" for important aspects, in your
+     group's documentation area: "here is where you find our data",
+     "here is where we share code", etc.  Keep it lightweight but
+     useful.
+   * Designate it as part of onboarding.
+   * Update it as needed.
 
 
 
-Group documentation
--------------------
+Group documentation, "group wiki"
+---------------------------------
 A single place for reference on groups practices helps with onboarding
 and keeping things consistent and usable over time.
 
@@ -99,8 +114,11 @@ and keeping things consistent and usable over time.
 
 .. admonition:: Suggestions
 
-   Suggestion: make sure you keep your group's internal operating
-   information organized - however makes sense for you.
+   * If in doubt, make a group wiki
+   * Use it to keep your group's internal operating information
+     organized - however makes sense for you.
+   * When you hear of someone doing something new, ask: "did you
+     update this in our wiki?"
 
 
 
@@ -135,9 +153,10 @@ But there is also informal learning, **mentoring**:
 
 .. admonition:: Suggestions
 
-   Ensure computational people in your group attend
-   CodeRefinery.  Try to find one person to get extra experience to
-   mentor others.
+   * Everyone in your group attends a `CodeRefinery workshop
+     <https://coderefinery.org>`__
+   * At least one group member is developed into a computational
+     specialist and supports others.
 
 
 
@@ -195,9 +214,10 @@ Version control
 
 .. admonition:: Suggestions
 
-   Everyone must learn the basics of a version control
-   system, a few people more advanced features, and you shuld know where
-   to get help.
+   * Everyone must learn the basics of a version control system
+     (CodeRefinery week 1 does this).
+   * Find a source of advanced support (your specialist group member
+     or some other university service)
 
 Github, Gitlab, etc.
 ~~~~~~~~~~~~~~~~~~~~
@@ -210,9 +230,9 @@ Github, Gitlab, etc.
 
 .. admonition:: Suggestions
 
-   Make one Github organization for your group, and one
-   internal Gitlab organization hosted at your university.  Encourage
-   this, not personal repositories.
+   * Make one public Github/Gitlab organization for your group
+   * Make one internal Gitlab organization hosted at your university.
+   * Strongly discourage personal repositories for common code.
 
 Issue tracking
 ~~~~~~~~~~~~~~
@@ -221,7 +241,7 @@ Issue tracking
 
 .. admonition:: Suggestions
 
-   Use issues for your most important projects
+   * Use issues for your most important common projects
 
 Change proposals (aka "pull requests")
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -234,8 +254,9 @@ Change proposals (aka "pull requests")
 
 .. admonition:: Suggestions
 
-   Use pull requests for more important projects which should
-   not be broken.
+   * Decide which projects are important enough for a more formal
+     change process.
+   * Use pull requests for these projects which should not be broken.
 
 Testing
 ~~~~~~~
@@ -248,14 +269,22 @@ Testing
 
 .. admonition:: Suggestions
 
-   Add at least minimal software testing to your most
-   important projects.
+   * Each moderately important project has some test data and can
+     automatically run something
+   * More important projects: add in as many tests as practical
 
 Documentation
 ~~~~~~~~~~~~~
 * Documentation makes reusability.
 * Minimum is Readme files in each repository.
 * Big projects can have dedicated documentation.
+
+.. admonition:: Suggestions
+
+   * Every projects gets a README file.  As supervisor, read these
+     README files and confirm what it contains.
+   * Dedicated, in-repository documentation for large projects (for
+     example `Sphinx <https://www.sphinx-doc.org/en/master/>`)
 
 Licensing
 ~~~~~~~~~
@@ -266,9 +295,10 @@ Licensing
 
 .. admonition:: Suggestions
 
-   Decide on a license as early as possible - us only
-   open-source licenses unless there is special reason.  You don't have
-   to actually open right away.
+   * Decide (with stakeholders) on a license as early as possible -
+     use only open-source licenses unless there is special reason.
+     You don't have to actually open right away.
+   * Try to focus on using similarly licensed things.
 
 Publication and release
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -286,9 +316,9 @@ Publication and release
 
 .. admonition:: Suggestions
 
-   starting with public Github is enough, and think about
-   more when you need it.
-
+   * Public on GitHub/GitLab as soon as possible
+   * Next level is releases on package indexes
+   * You can make software papers later (when relevant)
 
 
 Working together on code
@@ -320,6 +350,14 @@ Aalto Scientific Computing strategy:
 - All mass storage provided in shared group directories.
 - Request as many as your want - each one has a unique access control.
 - Access and data can be passed on as the group evolves.
+
+.. admonition:: Suggestions
+
+   * Have a plan.  People know where central storage is and at least
+     one copy must be there.
+   * Request central network drive storage if possible.
+   * Ask your group members: "Where is your data?  Is the data
+     documented?"
 
 
 Data storage locations at Aalto University
@@ -378,10 +416,17 @@ It's dangerous to go alone.  Take us!
 
 Some possibilities, if you are at Aalto:
 
+* At Aalto: :doc:`Daily Scientific Computing garage </help/garage>`
 * At Aalto: :doc:`Research Software Engineer consulting service </rse/index>`
 * At Aalto: `Data Agents <https://www.aalto.fi/en/services/data-agents>`__
 
-Suggestion: come to a RSE consultation and chat at least once.
+
+.. admonition:: Suggestions
+
+   * Ensure your group members come to garage if they have questions
+     you can't answer.
+   * Come to a RSE consultation and chat at least once when getting
+     your group started.
 
 
 
