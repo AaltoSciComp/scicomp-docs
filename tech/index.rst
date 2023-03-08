@@ -37,7 +37,7 @@ link </help/garage>`.
 <https://www.youtube.com/playlist?list=PLZLVmS9rf3nN1Rj-TAqFEzFM22Y1kJmvn>`__
 (and a few more are available to our team internally).
 
-*It is not a right but a priveledge to participate. Free.*
+*It is not a right but a privilege to participate. Free.*
 
 
 
@@ -56,7 +56,7 @@ Topics 2021
 
 - Mon 22.3 14-15, **Ansible for FCCI**, Mikko Hakala
 
-  + Ansible, provisioning with OpenHPC, stanalone servers
+  + Ansible, provisioning with OpenHPC, standalone servers
 
 - Mon 29.3 14-15, **User support in Aalto Scientific Computing**, Richard Darst
 
@@ -84,7 +84,7 @@ Topics 2021
 
 - Tue, 18.5 12:00, **ClusterStor**, Andreas Muller (HPE)
 
-  + Storage systems: ClusterStor hardware and software behind Triton's new /scratch. Manitenance, troubleshooting.
+  + Storage systems: ClusterStor hardware and software behind Triton's new /scratch. Maintenance, troubleshooting.
 
 - Fri 28.5 10:15, **RSE service status update**, Jarno Rantaharju, Marijn van Vliet, and Richard Darst
 

@@ -6,6 +6,13 @@ Zulip
    Instructors, see the relocated instructor page at
    :doc:`zulip/instructors`.
 
+.. admonition:: Aalto Scicomp Zulip - researcher and staff discussion
+
+   If you are a researcher looking for the ASC chat for help and
+   support, see :ref:`the chat help section` or log in directly at
+   https://scicomp.zulip.cs.aalto.fi .
+
+
 Zulip is a open-source chat platform, which CS hosts at Aalto as a pilot.
 It is used as a chat platform for some courses, and allows better
 student and chat privacy.

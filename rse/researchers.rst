@@ -48,6 +48,14 @@ our survey and request to be contacted
    document it, and extend it to make it more sustainable to be reused in
    future projects.
 
+.. admonition:: Case study: outreach and impact
+
+   ChatGPT wasn't in the news just because it was good - it's because
+   it had an excellent interface for the public to test it.
+   Developing and running these services requires a different set of
+   skills than research, and Aalto RSEs can help to make and deploy
+   these services.
+
 
 What we do
 ----------

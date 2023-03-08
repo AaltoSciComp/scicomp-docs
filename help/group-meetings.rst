@@ -94,6 +94,14 @@ News / topical items, 2022
 Discussion starters
 -------------------
 
+.. figure:: /images/hierarchy-of-researchers-needs.png
+   :width: 100%
+
+   The types of research service needs you may have, sorted into
+   different levels of concern.  `Source
+   <https://docs.google.com/presentation/d/1wA9kJsOg7pOs1P0g7Qtj2p3-Q_kIj0AbEVGsyIulMBQ/>`__
+
+
 * Data
 
   * :doc:`Where you store and share data </aalto/aaltostorage>`

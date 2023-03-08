@@ -168,7 +168,7 @@ based on the value of the ``$SLURM_ARRAY_TASK_ID``:
     #SBATCH --array=0-29
 
     # Each array task runs the same program, but with a different input file.
-    # e.g. srun ./my_application -input input_data_${SLURM_ARRAY_TASK_ID}
+    srun ./my_application -input input_data_${SLURM_ARRAY_TASK_ID}
 
 Hardcoding arguments in the batch script
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

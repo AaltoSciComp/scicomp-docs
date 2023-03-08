@@ -61,7 +61,7 @@ The basic documentation stack
 Demo: making a change
 ---------------------
 
-I want to add the Journal of Open Sourec Software (JOSS) review
+I want to add the Journal of Open Source Software (JOSS) review
 checklist
 (https://joss.readthedocs.io/en/latest/review_checklist.html) to the
 RSE checklists section (https://scicomp.aalto.fi/rse/#checklists).
@@ -160,7 +160,7 @@ ReStructured Text syntax
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Why ReST?  Not a thin mapping on HTML like Markdown
-* Markdown is syntantic substitution, ReST is semantic meaning.
+* Markdown is syntactic substitution, ReST is semantic meaning.
 * `MyST <https://myst-parser.readthedocs.io/>`__ is now a reasonable
   alternative, but it is closer to a different ReST syntax than Markdown.
 * See syntax quickstart at https://scicomp.aalto.fi/README/

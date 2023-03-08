@@ -137,6 +137,11 @@ How it works: internal meetings
 - Online-default meetings is great for work-life balance of people,
   especially those with families.
 
+- Chat or other asynchronous text-based communication is a requirement
+  for inclusive meetings. It allows anyone to contribute ideas without
+  waiting for a pause, and more than makes up for any online
+  awkwardness.  (The "meeting agenda" below can also serve this purpose).
+
 - Meetings are managed with a Google Docs agenda.
 
   - Each week, a new heading is made, and it collects topics
@@ -149,12 +154,28 @@ How it works: internal meetings
     the agenda, so meetings scale better.  People can write
     information already in advance of the meeting, to focus the
     meeting on discussion and not sharing information.
+  - Everyone should have the agenda open themselves so they can see,
+    scroll, and contribute - a meeting is no longer just voice talking!
+
+    - The meeting agenda can also serve as chat - if someone wants to
+      say something but can't find a time to use voice, they right it
+      there directly as a point.
+    - If you want, you can expect everyone to write down their most
+      important points and summaries of their points directly in the
+      agenda - themselves (instead of delegating that to a designated
+      note-taker).  This is more fair, allows everyone to write their
+      notes in their own words, emphasize their most important points
+      (unimportant points not written), and gives others a time to
+      talk.
+
   - It is only one running document (not a new one each week).  New
     weeks are added to the top (since top loads first).  Attendees can
     easily scroll down to refer to past weeks.
   - This strategy has revolutionized our meetings.  Other meetings
     have much more of a "this meeting should have been an email"
-    feeling after this.
+    feeling after this. (In no small part because the "this should
+    have been an email" parts get written and read by everyone, with
+    only a short mention if that's all it needs).
 
 
 

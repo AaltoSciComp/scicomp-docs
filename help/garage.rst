@@ -57,6 +57,8 @@ Notes:
 * You don't have to have a specific question, you can come by just to
   chat, listen, or figure out if you should have a question.
 
+* You can also :ref:`chat with us <chat>` any other time (no promises
+  on reply time, though).
 
 
 .. _garage:

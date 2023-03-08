@@ -209,6 +209,19 @@ result in running out of quota. To fix this, you should run the following comman
        # Deactivate the environment
        source deactivate
 
+-  To activate an environment from a Slurm script::
+
+      #!/bin/bash
+      #SBATCH --time=00:05:00
+      #SBATCH --cpus_per_task=1
+      #SBATCH --mem=1G
+
+      source activate ENV_NAME
+      
+      srun echo "This step is ran inside the activated conda environment!"
+
+      source deactivate
+      
 -  Worst case, you have incompatibility problems. Remove everything,
    including the stuff installed with ``pip install --user``. If you've
    mixed your personal stuff in with this, then you will have to
@@ -228,8 +241,6 @@ A few notes about conda environments:
 -  Often the same goes for other python based modules. We have setup
    many modules that do use anaconda as a backend. So, if you know what
    you are doing this might work.
--  If you need to activate an environment from a Slurm script,
-   remember to do ``source activate`` and not ``conda activate``.
 
 .. include:: /triton/ref/condaactivate.rst
 

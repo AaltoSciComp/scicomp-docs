@@ -37,6 +37,16 @@ stats = pandas.read_csv(getattr(args, 'plausible-pages'),
         'name': source_to_url,
     },
     )
+# Aggregate by name.  bounce_rate and time_on_page needto be weighted
+# averages, which we can do by weighting them before aggeregating and
+# then un-weighting after.
+stats['bounce_rate'] *= stats['visitors']
+stats['time_on_page'] *= stats['pageviews']
+stats = stats.groupby('name').agg(sum)
+stats['bounce_rate'] //= stats['visitors']
+stats['time_on_page'] //= stats['pageviews']
+stats = stats.convert_dtypes()
+
 dates = pandas.read_csv(getattr(args, 'page-dates'),
     header=None,
     index_col='page',
