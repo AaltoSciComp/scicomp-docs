@@ -1,6 +1,15 @@
 jupyter.cs news
 ===============
 
+Spring 2023
+-----------
+
+* JupyterLab is now available and is the default
+  for new course servers. If you'd like to continue
+  using Jupyter Notebook for your courses, let us know
+  when requesting a new course.  JupyterLab now supports
+  everything nbgrader needs, though the user interface is
+  slightly different.
 
 Summer/Autumn 2020
 ------------------

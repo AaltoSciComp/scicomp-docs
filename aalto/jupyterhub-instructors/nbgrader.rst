@@ -1,6 +1,11 @@
 Nbgrader basics
 ===============
 
+.. note::
+    We have prepared a tutorial for students on how to
+    fetch/submit assignments: :doc:`../jupyterhub/nbgrader-jupyterlab`.
+    Feel free to share it with them/link to it in MyCourses pages.
+
 "nbgrader is a tool that facilitates creating and grading assignments
 in the Jupyter notebook. It allows instructors to easily create
 notebook-based assignments that include both coding exercises and
