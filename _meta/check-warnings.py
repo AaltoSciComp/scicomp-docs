@@ -37,6 +37,8 @@ errors = [
      "both interpreted text role prefix and reference suffix",
      "not found or reading it failed",
      "download file not readable",
+     "image file not readable",
+     "file not readable",
     ]
 
 ignores = [
