@@ -1,11 +1,37 @@
-======
-Python
-======
+=====================
+Python on Aalto Linux
+=====================
 
 The scientific python ecosystem is also available on Aalto Linux workstations,
 including the anaconda (Python 3) and anaconda2 (Python 2) modules providing
 the Anaconda python distribution. For a more indepth description see the
 generic `python page under scientific computing docs </scicomp/python>`.
+
+
+
+Anaconda on Aalto Linux
+=======================
+
+You can mostly use Python like normal - see :doc:`/scicomp/python`.
+
+To create your own anaconda environments, first load the Anaconda module:
+
+.. code-block:: console
+
+   $ module load anaconda
+
+then you get the ``conda`` command.  If you get an error such as::
+
+  NotWritableError: The current user does not have write permissions to a required path.
+  path: /m/work/modules/automatic/anaconda/envs/aalto-ubuntu1804-generic/software/anaconda/2020-04-tf2/1b2b24f2/pkgs/cache/18414ddb.json
+
+Try the following to solve it (this prevents conda from trying to
+store its downloaded files in the shared directory):
+
+.. code-block:: console
+
+   $ conda config --prepend pkgs_dirs ~/.conda/pkgs
+
 
 
 The "neuroimaging" environment
