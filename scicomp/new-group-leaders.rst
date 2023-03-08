@@ -284,7 +284,7 @@ Documentation
    * Every projects gets a README file.  As supervisor, read these
      README files and confirm what it contains.
    * Dedicated, in-repository documentation for large projects (for
-     example `Sphinx <https://www.sphinx-doc.org/en/master/>`)
+     example `Sphinx <https://www.sphinx-doc.org/en/master/>`__)
 
 Licensing
 ~~~~~~~~~
