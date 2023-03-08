@@ -3,14 +3,14 @@ Building a version of LAMMPS with most packages
 
 Many packages in LAMMPS need other external libraries such as BLAS and FFTW
 libraries. These extra libraries can be given to LAMMPS via flags mentioned
-in `this documentation <https://docs.lammps.org/Build_settings.html>`_, but in
+in `this documentation <https://docs.lammps.org/Build_settings.html>`__, but in
 most cases loading the appropriate modules from the module system is enough for
 CMake to find the libraries.
 
 To include extra packages in the build one can either use flags mentioned
-in `this documentation <https://docs.lammps.org/Build_package.html>`_ or one
+in `this documentation <https://docs.lammps.org/Build_package.html>`__ or one
 can use developer maintained
-`CMake presets <https://docs.lammps.org/Build_package.html#cmake-presets-for-installing-many-packages>`_
+`CMake presets <https://docs.lammps.org/Build_package.html#cmake-presets-for-installing-many-packages>`__
 for installing a collection of packages.
 
 Below is an example that installs LAMMPS with "most packages"-collection enabled:

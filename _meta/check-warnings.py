@@ -39,6 +39,7 @@ errors = [
      "download file not readable",
      "image file not readable",
      "file not readable",
+     "undefined label"
     ]
 
 ignores = [
