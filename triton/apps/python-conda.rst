@@ -1,5 +1,5 @@
 ==============================
-Python environments with Conda
+Environments with Conda
 ==============================
 
 Conda is a popular package manager that is especially
@@ -63,6 +63,8 @@ Once the environment is installed, you can activate it with:
   source activate conda-example
 
 .. include:: /triton/ref/condaactivate.rst
+
+.. include:: /triton/apps/importantnotes/resetconda.rst 
 
 Understanding the environment file
 ----------------------------------
