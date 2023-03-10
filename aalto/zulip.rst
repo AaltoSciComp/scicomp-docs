@@ -9,7 +9,7 @@ Zulip
 .. admonition:: Aalto Scicomp Zulip - researcher and staff discussion
 
    If you are a researcher looking for the ASC chat for help and
-   support, see :ref:`the chat help section <help>` or log in directly at
+   support, see :ref:`the chat help section <chat>` or log in directly at
    https://scicomp.zulip.cs.aalto.fi .
 
 
