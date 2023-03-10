@@ -47,7 +47,7 @@ we can hopefully make it manageable.  The three layers are:
   ``git annex sync --content``)
 
 The biggest problems are that it can do everything, which makes
-documentation quite dense, and the documentation is not that great.
+documentation quite dense, and the documentation can be hard to navigate.
 
 .. highlight:: shell-session
 
@@ -93,6 +93,24 @@ annex drop``, ``git annex sync``, and so on.  The basic principles of
 git-annex are data integrity and security: it will try very hard to
 prevent you from using git/git-annex commands to lose the only copy of
 any data.
+
+
+
+Navigating the documentation
+----------------------------
+
+The main git-annex site is https://git-annex.branchable.com/ .  There
+are many special topics articles here, but the main reference page is
+the `manual page <https://git-annex.branchable.com/git-annex/>`__,
+which can be a good starting point if you roughly know what you are
+looking for (and a lot of information is only here).  It links to
+manual pages on every other sub-command and their descriptions.  It
+also lists all configuration options, which are very important to
+refer to.
+
+Other pages (linked from the main page) can describe broader use cases
+or introductions to concepts, but you often need to refer to the
+command manuals anyway.
 
 
 
@@ -145,14 +163,29 @@ and can be used like a normal repository.
 
 Relevant commands:
 
-* ``git annex init``
-* ``git annex add``
-* ``git annex unannex``
-* ``git annex unlock``
-* ``git annex lock``
-* ``git annex metadata``
-* ``git annex info``
-* Configuration ``annex.largefiles``
+* `git annex init
+  <https://git-annex.branchable.com/git-annex-init/>`__: activate
+  existing git repo for git-annex.
+* `git annex add
+  <https://git-annex.branchable.com/git-annex-add/>`__: add file to
+  the annex, possibly depending on various rules
+* `git annex unannex
+  <https://git-annex.branchable.com/git-annex-unannex/>`__: opposite
+  of ``git annex add``
+* `git annex unlock
+  <https://git-annex.branchable.com/git-annex-unlock/>`__: unlock an
+  annexed file, so that it's a normal file and can be edited.
+* `git annex lock
+  <https://git-annex.branchable.com/git-annex-lock/>`__: opposite of
+  ``git annex lock``
+* `git annex metadata
+  <https://git-annex.branchable.com/git-annex-metadata/>`__: show or
+  set per-file metadata
+* `git annex info
+  <https://git-annex.branchable.com/git-annex-info/>`__: info on
+  various things
+* Configuration ``annex.largefiles`` - rules for what should be
+  automatically annexed
 
 
 
@@ -204,14 +237,29 @@ remotes which do not support them.
 
 Relevant commands:
 
-* ``git annex get``
-* ``git annex drop``
-* ``git annex move``
-* ``git annex copy``
-* ``git annex list``
-* ``git annex find``
-* ``git annex initremote``
-* ``git annex enableremote``
+* `git annex get
+  <https://git-annex.branchable.com/git-annex-get/>`__: use available
+  knowledge to get a copy of files from remotes.
+* `git annex drop
+  <https://git-annex.branchable.com/git-annex-drop/>`__: delete a file
+  from current repo.  By default, make sure other copies exist before
+  doing this.
+* `git annex move
+  <https://git-annex.branchable.com/git-annex-move/>`__: move file contents
+* `git annex copy
+  <https://git-annex.branchable.com/git-annex-copy/>`__: copy file contents
+* `git annex list
+  <https://git-annex.branchable.com/git-annex-list/>`__: list of files
+  including where contents are stored
+* `git annex find
+  <https://git-annex.branchable.com/git-annex-find/>`__: list files
+  matching pattern
+* `git annex initremote
+  <https://git-annex.branchable.com/git-annex-initremote/>`__:
+  initialize a special remote (info will be synced)
+* `git annex enableremote
+  <https://git-annex.branchable.com/git-annex-enableremote/>`__: use
+  synced info to prepare an existing special remote for use.
 
 
 
@@ -260,17 +308,42 @@ available storage with confidence.
 
 Relevant commands:
 
-* ``git annex sync [--content]``
-* ``git annex numcopies``
-* ``git annex trust``
-* ``git annex untrust``
-* ``git annex group``
-* ``git annex wanted``
-* ``git annex groupwanted``
-* ``git annex required``
-* ``git annex unused``
-* ``git annex schedule``
-* ``git annex watch``
+* `git annex sync [-\ -content]
+  <https://git-annex.branchable.com/git-annex-sync/>`__: automatically
+  commit/move data around based on the rules defined below
+* `git annex numcopies
+  <https://git-annex.branchable.com/git-annex-numcopies/>`__: set
+  default number of copies for every annexed file (minimum redundancy level)
+* `git annex trust
+  <https://git-annex.branchable.com/git-annex-trust/>`__: mark a repo
+  as being trusted (it won't lose data so you don't have to verify
+  contents before deleting locally)
+* `git annex untrust
+  <https://git-annex.branchable.com/git-annex-untrust/>`__: opposite
+  of ``git annex trust``
+* `git annex wanted
+  <https://git-annex.branchable.com/git-annex-wanted/>`__: set files
+  which will be automatically synced to a repo.
+* `git annex group
+  <https://git-annex.branchable.com/git-annex-group/>`__: set a repo
+  as part of a group
+* `git annex groupwanted
+  <https://git-annex.branchable.com/git-annex-groupwanted/>`__: same
+  as ``git annex wanted`` but for groups
+* `git annex required
+  <https://git-annex.branchable.com/git-annex-required/>`__: similar
+  to ``git annex wanted`` but prevents you from dropping the content
+  unless you force it
+* `git annex unused
+  <https://git-annex.branchable.com/git-annex-unused/>`__: find older
+  versions of files which are no longer referred to in the current
+  version and can be dropped
+* `git annex schedule
+  <https://git-annex.branchable.com/git-annex-schedule/>`__: manage
+  background processes that ``git annex sync``
+* `git annex watch
+  <https://git-annex.branchable.com/git-annex-watch/>`__: monitor
+  current repo for changes and ``git annex sync`` when they happen
 
 
 
