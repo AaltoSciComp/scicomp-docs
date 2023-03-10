@@ -102,11 +102,12 @@ Checklists
 .. toctree::
    :maxdepth: 1
 
-   checklists/python
-   Matlab project reproduciblity (external) <https://rse.shef.ac.uk/blog/2022-05-05-concise-guide-to-reproducible-matlab/>
    checklists/project-done
-
+   checklists/python
    JOSS checklist (external) <https://joss.readthedocs.io/en/latest/review_checklist.html>
+   pyOpenSci guides (external) <https://www.pyopensci.org/python-package-guide/>
+   rOpenSci guide (external) <https://devguide.ropensci.org/building.html>
+   Matlab project reproduciblity (external) <https://rse.shef.ac.uk/blog/2022-05-05-concise-guide-to-reproducible-matlab/>
 
 Other pages on this site: :doc:`/scicomp/packaging-software`, :doc:`/scicomp/zen-of-scicomp`
 
