@@ -67,6 +67,11 @@ Please check https://mycourses.aalto.fi/ for other courses at Aalto and https://
 
   - `COMSOL Multiphysics training | March 24, 2023 <https://www.comsol.com/events/special/open-comsol-multiphysics-training-110311>`__
   - `Matlab + Python hands-on workshop | March 17, 2023 <https://www.aalto.fi/en/events/matlab-python-interoperability-hands-on-workshop>`__
+  - `CSC Rahti Cloud containers advanced course | April 10, 2023 <https://ssl.eventilla.com/event/GGAOz>`__
+  - `CSC Computing Environment | April 12-14, 2023 <https://ssl.eventilla.com/computingenvironment-2023-april>`__
+  - `CSC Make the most of the Allas storage service | April 18, 2023 <https://ssl.eventilla.com/event/2kodV>`__
+  - `CSC Practical Deep Learning | May 3-5, 2023 <https://ssl.eventilla.com/event/8aPek>`__
+  - `CSC Containers in Supercomputing Environment | June 6-8, 2023 <https://ssl.eventilla.com/containers-in-supercomputing-environment>`__
   - `The CSC Summer School in High-Performance Computing 2023 | June 27 - July 6, 2023 <https://ssl.eventilla.com/summerschool2023>`__
 
 MOOC on scientific computing:
