@@ -13,7 +13,7 @@ Creating a graphical job on triton
 
     Required Setup:
 
-    - :doc:`Setting up your System to connect to triton according to the :doc:`connection guide <connecting>`
+    - Setting up your system to connect to Triton according to the :doc:`connection guide <connecting>`
     - Your script and any data need to be on triton (follow e.g. the :doc:`data transfer quick-start guide <data>`)
     - Specific to Windows: Install an XServer
 
