@@ -8,7 +8,7 @@ June 2023 / Intro to Scientific Computing /  HPC Summer Kickstart
    updated closer to time.  The dates are confirmed to be 6-8 June
    2023 (T-Th).  The schedule will be updated based on what we decide
    to focus on this year - if you have special topic requests, please
-   let us know.
+   let us know.  `Registration <https://link.webropol.com/ep/scicomphpc2023>`__.
 
 
 Kickstart is a three × half day course for researchers to get
@@ -92,8 +92,9 @@ used for a continuous Q&A session.
 partners, and probably in-person discussion/practice rooms at some
 campus.
 
-**Registration:** Please register at this link [TODO]. Attending
- individual sessions is fine.
+**Registration:** Please register at this link:
+https://link.webropol.com/ep/scicomphpc2023 . Attending
+individual sessions is fine.
 
 **Cost:** Free of charge for FGCI consortium members including Aalto
 employees and students.  Livestream is free to everyone.
