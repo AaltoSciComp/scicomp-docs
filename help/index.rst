@@ -310,3 +310,9 @@ Reach research services by:
 * Contacting service email addresses at the link above
 * Contacting school representatives findable at the link above
 * researchdata@aalto.fi for data-related things
+
+
+
+.. raw:: html
+
+   <a rel="me" hidden href="https://fosstodon.org/@SciCompAalto">Mastodon</a>
