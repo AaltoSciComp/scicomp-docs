@@ -162,7 +162,7 @@ better.*
      * Science-IT, CS-IT, Data Agents, Aalto RSE
      * Data science, Triton, teaching, usability
 
-   * * Ivan Degtyarenko
+   * * Ivan Tervanto
      * Science-IT, PHYS-IT
      * Triton, HPC hardware, HPC OS, teaching
 
