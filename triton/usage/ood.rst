@@ -1,6 +1,9 @@
 Open OnDemand
 =============
 
+.. _ood:
+
+
 .. warning::
 
    Triton OOD is under development and is available as a preview/for
