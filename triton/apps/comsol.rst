@@ -139,7 +139,8 @@ Start by loading the correct modules in triton (COMSOL requires MPICH2 compatibl
   $ module load comsol/6.1 intel-parallel-studio/cluster.2020.0-intelmpi
   $ comsol
 
-Add a "Cluster Sweep" node to your study and a "Cluster Computing" node into your "Job Configurations" (You may need to first enable them in the "Show more options". Check the various options. You can try solving a small test case from the graphical user interface. You should see COMSOL submitting jobs to the SLURM queue. 
+Add a "Cluster Sweep" node to your study and a "Cluster Computing" node into your "Job Configurations" (You may need to first enable them in the "Show more options". Check the various options. You can try solving a small test case from the graphical user interface. You should see COMSOL submitting jobs to the SLURM queue. You can download an  :download:`example file <ringing_plate_cluster_sweep.mph>`.
+ 
 
 For a larger run, COMSOL can then submit the jobs with comsol but without the GUI::
 
