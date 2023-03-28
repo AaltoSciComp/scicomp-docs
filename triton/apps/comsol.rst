@@ -57,7 +57,7 @@ Best practices of using COMSOL Graphical User Interface in Triton
       ::
    
 	comsol
-  
+
 
 	
 Prerequsities of running COMSOL in Triton
@@ -99,6 +99,32 @@ COMSOL requires MPICH2 compatible MPI libraries::
   $ module load comsol/6.1 intel-parallel-studio/cluster.2020.0-intelmpi
 
 
+A dictionary of COMSOL HPC lexicon
+----------------------------------
+
+The knowledge base article `Running COMSOL® in parallel on clusters <https://www.comsol.com/support/knowledgebase/1001>`_ explains the following meanings COMSOL uses:
+
+
+.. list-table:: COMSOL HPC lexicon
+   :widths: 25 25 25
+   :header-rows: 1
+
+   * - COMSOL
+     - SLURM & MPI
+     - 
+   * - node
+     - task
+     - A process, software concept
+   * - host
+     - node
+     - A single computer
+   * - core
+     - cpu   
+     - A single CPU-core
+
+However, COMSOL does not seem to be using the terms in a 100% consistent way. E.g. sometimes in the SLURM context COMSOL may use node in the SLURM meaning.
+
+  
 An example run in a single node
 -------------------------------
 
