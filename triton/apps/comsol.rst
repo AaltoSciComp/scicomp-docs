@@ -121,7 +121,8 @@ The knowledge base article `Running COMSOL® in parallel on clusters <https://ww
    * - core
      - cpu   
      - A single CPU-core
-       
+
+However, COMSOL does not seem to be using the terms in a 100% consistent way. E.g. sometimes in the SLURM context COMSOL may use node in the SLURM meaning.
 
   
 An example run in a single node
