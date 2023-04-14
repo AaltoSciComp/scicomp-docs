@@ -14,6 +14,7 @@ for Research page
    linux
    mac
    windows
+   cslinux
    aaltostorage
    aaltodata
    datapolicy
