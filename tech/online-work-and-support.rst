@@ -245,12 +245,26 @@ Open questions
     need to keep in their mind - or is it a "one-per-person" kind of
     thing?
 
-- How many garages can someone attend before it becomes "too much".
+- How many garages can someone attend (as staff) before it becomes
+  "too much".
 - Is there a better tech than Zoom?  In 2022, it works much better
   than early 2021, and at least people can join via browser.
 - When people start working in-office again, how does this continue?
   (People have started, and Garage seems to be a permanent culture
   shift.  But it helps that our offices are distributed around).
+
+Proposal:
+
+- Flip it around: don't look it as a "how to scale garage to more
+  staff".  **Scale communities to the size that can be supported by a
+  garage,** then make more communities as needed, each with their own
+  support infrastructure.
+- So garages contain 5-15 supporters, and the communities perhaps
+  several hundreds.  The communities can overlap/be virtual inside of
+  organization units.
+- The support staff within the garages network between communities on
+  the support/tool side, so that they are aware of the broader
+  environment and can direct the members to other garages as needed.
 
 
 
