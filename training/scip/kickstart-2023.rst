@@ -301,7 +301,7 @@ Next steps / follow-up courses
 
 Keep the :doc:`Triton quick reference </triton/ref/index>` close (or
 equivalent for your cluster), or print `this cheatsheet
-<https://aaltoscicomp.github.io/cheatsheets/triton-cheatsheet.pdf>`
+<https://aaltoscicomp.github.io/cheatsheets/triton-cheatsheet.pdf>`__
 if that's your thing.
 
 Each year the first day has varying topics presented.  We don't repeat

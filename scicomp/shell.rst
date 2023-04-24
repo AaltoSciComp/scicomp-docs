@@ -136,7 +136,7 @@ help** directly: for example ``cp --help``.
 Manual pages can be long, some are easy
 to read, some are impossible.  **tldr.sh** is a project that collects
 simplified usage examples, see `the tldr.sh interactive web viewer
-<https://tldr.inbrowser.app/>`
+<https://tldr.inbrowser.app/>`__.
 
 
 
