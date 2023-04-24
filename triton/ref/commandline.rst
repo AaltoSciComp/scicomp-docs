@@ -48,6 +48,9 @@ General notes
    input from standard input instead of ``FILE``.  ``tail`` is similar
    but the end of the file.
 
+``tail [FILE]``
+   See above.
+
 ``grep PATTERN [FILE]``
    Print lines matching a pattern in a file, suitable as a primitive
    find feature, or quickly searching for output.  Can also use
@@ -79,8 +82,14 @@ General notes
    <https://en.wikipedia.org/wiki/Unix_philosophy>`__.
 
 ``>`` (output redirection): ``COMMAND > FILE``
-   Write standard output of ``COMMAND`` to ``FILE``.  ``<`` does the
-   opposite, read input from a file.
+   Write standard output of ``COMMAND`` to ``FILE``.  Any existing
+   content is lost.
+
+``>>`` (appending output redirection): ``COMMAND >> FILE``
+   Like above, but doesn't lose content: it appends.
+
+``<`` (input redirection): ``COMMAND < FILE``
+   Opposite of ``>``, input to ``COMMAND`` comes from ``FILE``.
 
 ``type COMMAND`` or ``which COMMAND``
    Show exactly what will be run, for a given command (e.g. ``type
