@@ -117,6 +117,12 @@ also uncertain, but we hope that you can find time to work with us
 once we start, since otherwise we may move on and requeue your
 project.
 
+If we schedule a project but lose contact with you (no responses to
+our messages), we'll assume you are busy with other things and may
+re-add the project to the queue, and we'll need to find a new time in
+the schedule.  Please let us know if you don't have time, we
+understand the busyness of research.
+
 A project doesn't have to be done "all at once" but can be interleaved
 with your own work schedule.
 
