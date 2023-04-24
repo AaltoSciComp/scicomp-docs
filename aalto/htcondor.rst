@@ -8,6 +8,12 @@ HTCondor
        HTCondor <http://science-it.aalto.fi/scip>`__
     -  HTCondor official manuals: https://research.cs.wisc.edu/htcondor/manual/
 
+.. important::
+
+   HTCondor is no longer in active use at Aalto.  This page serves as
+   historical reference information that may be useful for others.
+
+
 Introduction
 ------------
 
