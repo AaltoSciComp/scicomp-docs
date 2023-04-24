@@ -21,7 +21,10 @@ In this page, you have all important reference information
    hardware_dist.rst
 
 Quick reference guide for the Triton cluster at Aalto University, but
-also useful for many other Slurm clusters.
+also useful for many other Slurm clusters.  See also this `printable
+Triton cheatsheet
+<https://aaltoscicomp.github.io/cheatsheets/triton-cheatsheet.pdf>`__,
+as well as `other cheatsheets <https://aaltoscicomp.github.io/cheatsheets/>`__.
 
 Connecting
 ==========
