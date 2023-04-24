@@ -44,8 +44,13 @@ automatically - which is the point of scientific computing.
 
 You type a **command**, which may include **arguments**.  Output gets
 shown to the screen.  Spaces separate commands and arguments.
-Example: ``cp -i file1.txt file2.txt``.  *cp* is the command, *-i* is
-an option, *file1.txt* and *file2.txt* are arguments.
+Example: ``cp -i file1.txt file2.txt``.  ``cp`` is the command, ``-i`` is
+an option, and ``file1.txt`` and ``file2.txt`` are arguments.  The
+meaning of each option and argument is completely determined by the
+program itself.
+
+There are some conventions for options.  For example, ``--help`` or
+``-h`` usually prints some help.
 
 Files are represented by **filenames**, like ``file.txt``.
 **Directories** are separated by ``/``, for example ``mydir/file.txt``
@@ -119,13 +124,21 @@ Online manuals for any command
 ------------------------------
 
 ``man`` is an **on-line manual**, type ``man ls`` to get help on the
-``ls`` command.  The same works for almost any program.  Some are easy
-to read, some are impossible.  In general you look for what you need,
-not read everything.  Use ``q`` to quit or ``/`` to search (``n`` and
-``N`` to search again forward and backwards).
+``ls`` command.  The same works for almost any program.  In general you look for what you need,
+not read everything.  The program that views the manual pages is (by
+default) ``less`` which was described above: Use ``q`` to quit or
+``/`` to search (``n`` and ``N`` to search again forward and
+backwards).
 
 ``--help`` or ``-h`` is a standard argument that **prints a short
-help** directly.
+help** directly: for example ``cp --help``.
+
+Manual pages can be long, some are easy
+to read, some are impossible.  **tldr.sh** is a project that collects
+simplified usage examples, see `the tldr.sh interactive web viewer
+<https://tldr.inbrowser.app/>`
+
+
 
 **Exercise:** briefly look at the manual pages and ``--help`` output
 for the commands we have learned thus far.  How can you make ``rm``
@@ -194,9 +207,13 @@ See also
   <http://swcarpentry.github.io/shell-novice/>`__.  Sections one to 3
   are details of what is above (the rest is about shell scripting).
 
-**Exercise:** for some fun, look at the manual pages for ``cat``,
-``head``, ``tail``, ``grep``.
+.. exercise:: Explore manual pages
 
-**Exercise (advanced):** read the `Linux shell course
-<https://aaltoscicomp.github.io/linux-shell/>`__ and understand what "pipes" and
-"piping" are.
+   For some fun, look at the manual pages for ``cat``,
+   ``head``, ``tail``, ``grep``.
+
+.. exercise:: Linux shell course (advanced)
+
+   Read the `Linux shell course
+   <https://aaltoscicomp.github.io/linux-shell/>`__ and understand
+   what "pipes" and piping" are.
