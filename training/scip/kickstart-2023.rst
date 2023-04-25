@@ -43,6 +43,35 @@ at Aalto University, supported by many others outside Aalto, and offered to othe
 
 
 
+Practical information
+---------------------
+
+This is a **livestream course with distributed in-person exercise and
+support**. Everyone may attend
+the **livestream** at https://twitch.tv/coderefinery, no registration
+needed, and this is the primary way to watch all sessions.  Aalto has
+an **in-person exercise and support session** (location TBA), as do
+some other partners, and a **collaborative document** is
+used for a continuous Q&A session.
+
+**Time, date:**  6 -- 8 June (Tue--Thu). 11:50-16:00 EEST
+
+**Place:** Online via public livestream, Zoom exercise sessions for
+partners, and probably in-person discussion/practice rooms at some
+campus.
+
+**Registration:** Please register at this link:
+https://link.webropol.com/ep/scicomphpc2023 . It's OK to attend
+only individual sessions is fine.
+
+**Cost:** Livestream is free to everyone.  Aalto in-person is free of 
+charge for FGCI consortium members including Aalto employees and
+students.
+
+**Additional course info at:** scip@aalto.fi
+
+
+
 Other universities
 ------------------
 
@@ -76,35 +105,6 @@ via the `CodeRefinery chat
 We have :doc:`docs for other sites' staff
 </triton/tut/required-cluster-setup>` to know what might be different
 between our course and your cluster.
-
-
-
-Practical information
----------------------
-
-This is a **livestream course with distributed in-person exercise and
-support**. Everyone may attend
-the **livestream** at https://twitch.tv/coderefinery, no registration
-needed, and this is the primary way to watch all sessions.  Aalto has
-an **in-person exercise and support session** (location TBA), as do
-some other partners, and a **collaborative document** is
-used for a continuous Q&A session.
-
-**Time, date:**  6 -- 8 June (Tue--Thu). 11:50-16:00 EEST
-
-**Place:** Online via public livestream, Zoom exercise sessions for
-partners, and probably in-person discussion/practice rooms at some
-campus.
-
-**Registration:** Please register at this link:
-https://link.webropol.com/ep/scicomphpc2023 . It's OK to attend
-only individual sessions is fine.
-
-**Cost:** Livestream is free to everyone.  Aalto in-person is free of 
-charge for FGCI consortium members including Aalto employees and
-students.
-
-**Additional course info at:** scip@aalto.fi
 
 
 
