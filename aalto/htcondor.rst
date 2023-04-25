@@ -1,3 +1,5 @@
+:nosearch:
+
 ========
 HTCondor
 ========
@@ -12,7 +14,6 @@ HTCondor
 
    HTCondor is no longer in active use at Aalto.  This page serves as
    historical reference information that may be useful for others.
-
 
 Introduction
 ------------
