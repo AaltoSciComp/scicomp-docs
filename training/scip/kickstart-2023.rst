@@ -150,34 +150,37 @@ started with the computing resources.
     Here, we give a understandable metaphor with preparing large
     meals.  `Slides <https://docs.google.com/presentation/d/e/2PACX-1vQLTzWkRy7Du3jjPJ6Y9BqKczU_JcSTEL6XsndrNJ7ylzi4RWeEy8lhfWZQu_lpwbAKroh51qqLoPFG/pub>`__
 
-  * **13:00--13:25: Behind the scenes: the humans of scientific
+  * **13:00--13:25: How big is my calculation?  Measuring your
+    needs.** *Simo Tuomisto and Thomas Pfau*
+
+    People often wonder how many resources their job needs, either on
+    their own computer or on the cluster.  When should you move to a
+    cluster?  How many resources to request?  We'll go over how we
+    think about these problems.
+
+  * **13:25--13:50: Behind the scenes: the humans of scientific
     computing** *Richard Darst and ???*
 
-    Who are we that provide these services.  What makes it such a
+    Who are we that provide these services?  What makes it such a
     fascinating career?  Learn about what goes on behind the scenes
     and how you could join us.
 
-  * **13:25--13:50: How you actually install software on the cluster:
-    an example case (Conda and Python)** *Simo Tuomisto and ???*
+  * **14:00--14:25: Files and directories: just how is data
+    organized?** *Richard Darst and Teemu Ruokolainen*
 
-    Software installation is one of the questions we most often get.
-    Usually, on clusters, this happens via *environments*, which
-    allows you to install specific software per-project.  We'll give a
-    demonstration of how these work in Python. Materials for demo:
-    :doc:`/triton/apps/python-conda`
+    Navigating many files stored on large computers has tripped many
+    people in the past - we will go over the Zen of Data
+    Storage. Large-scale data analysis can't be done without organized
+    files and knowing how stuff is stored, so let's start with the
+    basics.
 
-  - **14:00--14:50: Secure Shell (ssh) tips and tricks** *Thomas Pfau
-    and Enrico Glerean*
+  - **14:25--14:50: What can you do with a computational cluster?**
 
-    Remembering server address... Another login? Another password prompt? 
-    Again? Wouldn't it be nice to just have a key instead of a keycode that
-    you need to type in? Here, we will show you how to set up your computer
-    to easily connect to the server(s) you need. And we will explain the 
-    process from keys to config.  While useful, this part is skippable if 
-    you are able to connect to Triton (next section).
-    Materials: :doc:`/scicomp/ssh`
+    Several real examples of how people use the cluster (what you can
+    do at the end of the course): 1) Large-scale computing with array
+    jobs, 2) Large-scale parallel computing
 
-  - **15:00--15:45: Connecting to a HPC cluster** *Thomas Pfau and
+  * **15:00--15:45: Connecting to a HPC cluster** *Thomas Pfau and
     Simo Tuomisto*
 
     - Required if you are attending the Triton/HPC tutorials the
@@ -187,7 +190,7 @@ started with the computing resources.
       registered participants)
     - Material: :doc:`/triton/tut/connecting`
 
-  - Preparation for day 2:
+  * Preparation for day 2:
 
     Remember to read/watch the "shell crash course" (see "Preparation"
     below) if you are not yet confident with the command line.  This
@@ -202,13 +205,11 @@ started with the computing resources.
 
     - :doc:`/triton/tut/intro`
 
-  - **12:05--12:30: What can you do with a computational cluster?**
+  - **12:05--12:30** Structure of a cluster
 
-    Several real examples of how people use the cluster (what you can
-    do at the end of the course).
-
-    - Real example 1: Large-scale computing with array jobs
-    - Real example 2: Large-scale parallel computing
+    What is the cluster?  What are the pieces?  Why do we teach
+    everything like we do?  Let's zoom in our the HPC-side of our map
+    and get an overview.
 
   - **12:30--15:00: Running your first jobs in the queue**
 
