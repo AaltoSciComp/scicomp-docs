@@ -21,7 +21,6 @@ for Research page
    jupyterhub
    remotejupyter
    paniikki
-   htcondor
    git
    python
    opensource

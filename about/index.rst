@@ -87,10 +87,9 @@ Infiniband network, and ~150 NVIDIA GPUs for deep learning and artificial
 intelligence research.  We provide a :doc:`Jupyter Notebook </triton/apps/jupyter>` based interface
 to enable light computing with less initial knowledge required to make
 our services easily accessible to everyone.  Our team also works with
-the CS, NBE, and PHYS departments to provide :doc:`HTCondor
-</aalto/htcondor>` (high throughput
-computing), data storage, and a seamless computational research
-experience.  We maintain http://scicomp.aalto.fi, the central hub for
+the CS, NBE, and PHYS departments to provide data storage and a seamless
+computational research experience.
+We maintain http://scicomp.aalto.fi, the central hub for
 scientific computing instructions and have a continuous :doc:`training
 program </training/index>`, :doc:`Scientific Computing in Practice </news/index>`.
 
