@@ -26,12 +26,20 @@ Triton cheatsheet
 <https://aaltoscicomp.github.io/cheatsheets/triton-cheatsheet.pdf>`__,
 as well as `other cheatsheets <https://aaltoscicomp.github.io/cheatsheets/>`__.
 
+
+
+.. _ref-connecting:
+
 Connecting
 ==========
 
 See also: :doc:`../tut/connecting`.
 
 .. include:: connecting.rst
+
+
+
+.. _ref-modules:
 
 Modules
 =======
@@ -40,12 +48,20 @@ See also: :doc:`../tut/modules`.
 
 .. include:: modules.rst
 
+
+
+.. _ref-common-software:
+
 Common software
 ===============
 
 See also: :doc:`../tut/applications`.
 
 .. include:: software.rst
+
+
+
+.. _ref-storage:
 
 Storage
 =======
@@ -54,6 +70,10 @@ See also: :doc:`../tut/storage`
 
 .. include:: storage.rst
 
+
+
+.. _ref-remote-data:
+
 Remote data access
 ==================
 
@@ -61,10 +81,18 @@ See also: :doc:`../tut/remotedata`.
 
 .. include:: remotedata.rst
 
+
+
+.. _ref-partitions:
+
 Partitions
 ==========
 
 .. include:: partitions.rst
+
+
+
+.. _ref-job-submission:
 
 Job submission
 ==============
@@ -75,6 +103,10 @@ See also: :doc:`../tut/serial`, :doc:`../tut/array`,
 
 .. include:: slurm_status.rst
 
+
+
+.. _ref-slurm-examples:
+
 Slurm examples
 ==============
 
@@ -82,11 +114,19 @@ See also: :doc:`../tut/serial`, :doc:`../tut/array`.
 
 .. include:: slurm_examples.rst
 
+
+
+.. _ref-toolchains:
+
 Toolchains
 ==========
 .. include:: toolchains.rst
 
 .. _hardware-list:
+
+
+
+.. _ref-hardware:
 
 Hardware
 ========
@@ -97,12 +137,20 @@ See also: :doc:`../overview`.
 
 .. include:: hardware_dist.rst
 
+
+
+.. _ref-gpus:
+
 GPUs
 ====
 
 See also: :doc:`../tut/gpu`.
 
 .. include:: gpu.rst
+
+
+
+.. _ref-conda:
 
 Conda
 =====
@@ -112,6 +160,8 @@ See also: :doc:`../apps/python-conda`
 .. include:: conda.rst
 
 
+
+.. _ref-command-line:
 
 Command line
 ============
