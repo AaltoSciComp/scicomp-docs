@@ -381,6 +381,8 @@ See also
 
 - `DataLad <https://www.datalad.org/>`__ is a data-management focused
   interface for git-annex.  This might be a better place to start.
+  DataLad also handles submodules (useful for very large numbers of
+  files) and running workflows and saving the metadata.
 
 - **git LFS**  These two git extensions are often
   compared.  git LFS is created by GitHub, and operates on a centralized
