@@ -162,51 +162,6 @@ parallel\_Matlab3.m::
             end
     end
 
-Hints for Condor users
-----------------------
-
-The above example also works (even nicer way) for condor.
-
-**A wrapper script to execute matlab on the department workstation.**
-
-::
-
-    #!/bin/bash -l
-    # a wrapper to run Matlab with condor
-    block=$1
-    pointsPerBlock=10
-    totalBlocks=10
-    matlab -nojvm -r "run($block,$pointsPerBlock,$totalBlocks)"
-
-**Condor submission script**
-
-Condor actually contains ArrayJob functionality that makes the task
-easier. ::
-
-    ## Condor submit description (script) file for my_program.exe.
-    ## 1. Specify the [path and] name for the executable file...
-    Executable = run.sh
-    ## 2. Specify Condor execution environment.
-    Universe = vanilla
-    notify   = Error
-    ## 3. Specify remote execution machines running Linux (required)...
-    Requirements = ((OpSys == "Linux") || (OpSysName == "Ubuntu"))
-    ## 4. Define input files and arguments
-    #Input = stdin.txt.$(Process)
-    Arguments = $(Process)
-    ## 5. Define output/error/log files
-    Output = log/stdout.$(Process).txt
-    Error  = log/stderr.$(Process).txt
-    Log    = log/log.$(Process).txt
-    ## 6. Tell Condor which files need to be transferred and when.
-    Transfer_input_files = run.m
-    Transfer_output_files = output-$(Process).mat
-    Transfer_executable = true
-    Should_transfer_files = YES
-    When_to_transfer_output = ON_EXIT
-    ## 7. Add 10 copies of the job to the queue
-    Queue 10
-
 
 FAQ / troubleshooting
 ---------------------

@@ -18,7 +18,7 @@ consortium.
 Examples of topics covered at different lectures: HPC crash course,
 Triton kickstarts, Linux Shell, Parallel programming models: MPI and
 OpenMP, GPU computing, Python for scientists, Data analysis with R
-and/or Python, Matlab, HTCondor and many others.
+and/or Python, Matlab and many others.
 
 If you are interested in a re-run of our past courses or if you want 
 to suggest a new course, `please take this survey <https://link.webropol.com/s/scipod>`__.
