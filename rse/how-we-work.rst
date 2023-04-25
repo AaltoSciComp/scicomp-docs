@@ -102,16 +102,30 @@ Scheduling and planning
 
 RSEs will be assigned based on discussion between the researchers,
 RSEs, and Aalto Scientific Computing (the RSE group).  Your agreement is
-with the RSE group, so your RSEs may change (even though we'll try to
-avoid this).
+with the RSE group, so your RSEs may change if there is a need (even
+though we'll try to avoid this).
 
-We can never promise specific results in a specific time: we always
-agree based on a certain amount of time.  As you can expect, projects
-can sometimes take far longer than expected, so we try to budget
-plenty of buffer into projects to accomplish the mandatory tasks.
+We will work with you to give a good view of how long we take
+something will take and any risks (as in, what if it turns out to not
+be possible?)  We can't promise specific results in a specific time
+(no one can), but we do try to give the best estimates we can.  This
+planning includes any buffer and backup plans.
 
-Our exact scheduling system is not yet decided: if you start now, you
-help design the system.
+It may take some time to fit your project into our schedule (of course
+this also depends on the urgency.)  We realizes that your schedule is
+also uncertain, but we hope that you can find time to work with us
+once we start, since otherwise we may move on and requeue your
+project.
+
+If we schedule a project but lose contact with you (no responses to
+our messages), we'll assume you are busy with other things and may
+re-add the project to the queue, and we'll need to find a new time in
+the schedule.  Please let us know if you don't have time, we
+understand the busyness of research.
+
+A project doesn't have to be done "all at once" but can be interleaved
+with your own work schedule.
+
 
 
 Costs and time tracking
