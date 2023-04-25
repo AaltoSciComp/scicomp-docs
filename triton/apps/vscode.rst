@@ -6,7 +6,7 @@ connect through your own computer, read below.
 
 "Remote SSH" is a nice way to work on a remote computer, but on
 Triton, that will run everything on the login node.  For light use
-this is OK, but for heavy calculations, since it will affect other
+this is OK, but for heavy calculations it should be avoided, since it will affect other
 login node usage.
 
 
