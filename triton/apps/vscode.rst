@@ -46,7 +46,8 @@ what these mean and what else you might need in here, see
 Now, with VSCode's Remote SSH, you can select the ``triton-vscode``
 remote.  It will ssh to Triton, request a job, and then directly
 connect to the job.  **Configure the job requirements in the
-ProxyCommand line** (you could make different lines).
+ProxyCommand line** (see :ref:`ref-job-submission` - you can have
+multiple ``Host`` sections for different types of requirements).
 
 
 Possible issues which may affect usage:
