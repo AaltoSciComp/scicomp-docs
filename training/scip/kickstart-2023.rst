@@ -268,6 +268,16 @@ takes some effort to get ready.  Browse these resources:
   good to read in detail (ignore the CodeRefinery-specific parts).
 * `How to use HackMD to take answer questions and hold discussions <https://coderefinery.github.io/manuals/hackmd-mechanics/>`__.
 
+.. admonition:: If you can't attend day 1 (Aalto CS Summer day)
+   :class: dropdown
+
+   Most of day 1 is good background information, but not strictly
+   required.  You *will* need the Triton connection set up before
+   day 1.  We recommend you look at the :doc:`connecting tutorial
+   </triton/tut/connecting>` and get this set up in advance (either by
+   talking to a colleague or our :doc:`daily garage </help/garage>`).
+   Then, try to watch the relevant videos Wednesday morning or Tuesday
+   evening.
 
 
 
