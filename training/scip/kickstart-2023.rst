@@ -4,11 +4,7 @@ June 2023 / Intro to Scientific Computing /  HPC Summer Kickstart
 
 .. important::
 
-   This page mostly has information from 2022.  The page will be
-   updated closer to time.  The dates are confirmed to be 6-8 June
-   2023 (T-Th).  The schedule will be updated based on what we decide
-   to focus on this year - if you have special topic requests, please
-   let us know.  `Registration <https://link.webropol.com/ep/scicomphpc2023>`__.
+   `Registration <https://link.webropol.com/ep/scicomphpc2023>`__.
 
 
 Kickstart is a three × half day course for researchers to get
