@@ -27,9 +27,9 @@ to suggest a new course, `please take this survey <https://link.webropol.com/s/s
 .. toctree::
    :maxdepth: 1
 
-   Coderefinery Workshop Spring 2023 (21-23 and 28-30. March) <https://coderefinery.github.io/2023-03-21-workshop/>
-   scip/workflows-2023
    scip/kickstart-2023
+   GPU Programming: Why, When and How? <https://enccs.se/events/2023-06-gpu-programming/>
+   scip/workflows-2023
    Take the survey! Request a re-run of past courses / new courses <https://link.webropol.com/s/scipod>
    scip/index
 

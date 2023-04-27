@@ -60,3 +60,9 @@ deleted.  This series has existed since 2016.
 - :doc:`software-design-2022`
 - :doc:`matlab-advanced-2022`
 - :doc:`kickstart-2022-summer`
+
+
+2023
+----
+
+- `Coderefinery Workshop Spring 2023 (21-23 and 28-30. March) <https://coderefinery.github.io/2023-03-21-workshop/>`__
