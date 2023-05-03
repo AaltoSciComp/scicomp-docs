@@ -39,6 +39,7 @@ Overview
 
 Tutorials
 =========
+
 These are designed to be read (or `watched <tutorial-playlist_>`__) in-order by every Triton user when they
 get their accounts (except maybe the last ones).  In order to use
 Triton well, in the `Hands-on SciComp roadmap <hosc_>`__ you should
@@ -50,7 +51,8 @@ levels as a prerequisite.
 .. _hosc-a: https://hands-on.coderefinery.org/#a-basics
 .. _hosc-c: https://hands-on.coderefinery.org/#c-linux-and-shell
 
-Getting set up:
+Cluster ecosystem explained
+---------------------------
 
 .. toctree::
    :maxdepth: 1
@@ -64,7 +66,8 @@ Getting set up:
    tut/storage.rst
    tut/remotedata
 
-Actually running things:
+Tutorials - running calculations
+--------------------------------
 
 .. toctree::
    :maxdepth: 1
