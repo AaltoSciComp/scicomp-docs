@@ -66,8 +66,8 @@ Cluster ecosystem explained
    tut/storage.rst
    tut/remotedata
 
-Tutorials - running calculations
---------------------------------
+Running calculations
+--------------------
 
 .. toctree::
    :maxdepth: 1
