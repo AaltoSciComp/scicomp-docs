@@ -2,9 +2,14 @@
 Scicomp garage
 ==============
 
+.. role:: strike
+    :class: strike
+
 .. admonition:: Link
 
-   https://aalto.zoom.us/j/61322268370, every workday at 13:00
+   :strike:`https://aalto.zoom.us/j/61322268370`
+   https://aalto.zoom.us/j/61349425656 (Temporary new link
+   while we see what is wrong with the old one),  every workday at 13:00
 
 .. admonition:: Planned disruptions
    :class: important
@@ -74,10 +79,10 @@ Triton, SciComp, RSE, and CS
 
 .. admonition:: Link
 
-   https://aalto.zoom.us/j/61322268370, every workday at 13:00
+   :strike:`https://aalto.zoom.us/j/61322268370` https://aalto.zoom.us/j/61349425656, every workday at 13:00
 
 You can meet us online, every workday, at 13:00, `online via zoom
-<https://aalto.zoom.us/j/61322268370>`__.  Imagine this like walking
+<https://aalto.zoom.us/j/61349425656>`__.  Imagine this like walking
 into our office to ask for help. Even if you are not sure whether we can help you, come
 and chat with us anyway and we can figure it out.
 

@@ -1,6 +1,9 @@
 Help
 ====
 
+.. role:: strike
+    :class: strike
+
 There are many ways to get help with your scientific computing and
 data needs - in fact, so many you don't know what to use.  This page
 lists how to ask for help, for different kinds of needs.
@@ -159,7 +162,7 @@ Garage
 
 .. admonition:: Link
 
-   https://aalto.zoom.us/j/61322268370, every day at 13:00
+   :strike:`https://aalto.zoom.us/j/61322268370` https://aalto.zoom.us/j/61349425656, every day at 13:00
 
 Daily :doc:`SciComp Garage sessions </help/garage>`, where you can
 informally chat.  This is especially useful when your question is not yet
