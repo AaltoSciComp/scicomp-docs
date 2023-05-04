@@ -2,7 +2,7 @@
    :delim: |
    :header-rows: 1
 
-   Node name        | Number of nodes   | Node type              | Year    | Arch (constraint)         | CPU type                                                                                                                                             | Memory Configuration   | Infiniband | GPUs | Disks
+   Node name        | Number of nodes   | Node type              | Year    | Arch (``--constraint``)   | CPU type                                                                                                                                             | Memory Configuration   | Infiniband | GPUs | Disks
    pe[1-48,65-81]   | 65                | Dell PowerEdge C4130   | 2016    | hsw avx avx2              | 2x12 core `Xeon E5 2680 v3 <https://ark.intel.com/products/81908/Intel-Xeon-Processor-E5-2680-v3-30M-Cache-2_50-GHz>`__ 2.50GHz                       | 128GB DDR4-2133        | FDR |   | HDD
    pe[49-64,82]     | 17                | Dell PowerEdge C4130   | 2016    | hsw avx avx2              | 2x12 core `Xeon E5 2680 v3 <https://ark.intel.com/products/81908/Intel-Xeon-Processor-E5-2680-v3-30M-Cache-2_50-GHz>`__ 2.50GHz                       | 256GB DDR4-2133        | FDR |   | HDD
    pe[83-91]        | 8                 | Dell PowerEdge C4130   | 2017    | bdw avx avx2              | 2x14 core `Xeon E5 2680 v4 <https://ark.intel.com/products/91754>`__ 2.40GHz                                                                          | 128GB DDR4-2400        | FDR |   | HDD
