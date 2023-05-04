@@ -96,8 +96,8 @@ may be able to test much faster here.
 
 
 
-Available machine learning frameworks
--------------------------------------
+Commonly used codes that use GPUs
+---------------------------------
 
 We support many common machine learning frameworks out of the box:
 
@@ -166,6 +166,12 @@ Monitoring efficient use of GPUs
 --------------------------------
 
 .. include:: ../examples/monitoring/gpu.rst
+
+Common problems with GPUs
+-------------------------
+
+CUDA libraries not found
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Input/output
 ~~~~~~~~~~~~
