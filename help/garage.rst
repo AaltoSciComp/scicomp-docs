@@ -9,11 +9,6 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * We might leave early on 28.april because of Vappu celebrations,
-     come early.
-
-..
-
    * There are no current planned disruptions in the daily garage.
 
 
