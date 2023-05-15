@@ -155,7 +155,7 @@ of service and pricing if you need to mention these in your  application.
 Focus on cloud computing  
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Aalto University has agreements with major public cloud services (e.g. Microsoft Azure, Google Cloud Platform (coming summer 2022) and Amazon Web Services (coming end of 2022)), and the platforms have been integrated into the Aalto digital environment in a secure and well-governed manner. The cloud provides scalable, collaborative, and integrated computing tooling with software for rapid iteration on data using for example machine learning or access to ready-made AI API’s for [YOUR TOPIC / IMAGE DETECTION / TEXT ANALYSES].   
+Aalto University has agreements with major public cloud services (e.g. Microsoft Azure, Google Cloud Platform and Amazon Web Services (coming soon)), and the platforms have been integrated into the Aalto digital environment in a secure and well-governed manner. The cloud provides scalable, collaborative, and integrated computing tooling with software for rapid iteration on data using for example machine learning or access to ready-made AI API’s for [YOUR TOPIC / IMAGE DETECTION / TEXT ANALYSES].
 
 Aalto has private and secure network connectivity between on-premises environment and the cloud environments, and access is managed through a central identity management system. Expert staff provide solution consultation and hands-on support for end-user needs.
 
