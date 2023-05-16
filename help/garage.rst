@@ -9,6 +9,12 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
+   * 18 May 2023 (Th): Holiday
+   * 19 May 2023 (F): There might be less staff available, or garage
+     canceled, on (Friday between holiday and weekend).  Try dropping
+     by and see if anyone is there.
+
+..
    * There are no current planned disruptions in the daily garage.
 
 
