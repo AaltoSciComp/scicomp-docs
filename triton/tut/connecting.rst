@@ -19,7 +19,6 @@ terminal.  To learn more command line basics, see our :doc:`shell
 crash course </scicomp/shell>` (which can be considered a prerequisite
 for this series of tutorials).
 
-
 .. admonition:: Abstract
 
    * You can connect to Triton via ssh
@@ -49,7 +48,7 @@ There are different ways of connecting:
 
 .. include:: ../ref/connecting.rst
 
-.. highlight:: bash
+.. highlight:: console
 
 
 
@@ -60,12 +59,29 @@ Triton uses Aalto accounts, but your :doc:`account must be
 activated first <../accounts>`.
 
 
+The terminal
+------------
+
+This is what you want in the end.  The command line terminal
+(discussed more in :doc:`cluster-shell`) will explain more about what
+you see.
+
+.. figure:: img/connecting--terminal.png
+   :alt: Image of terminal with two commands ran: ``whoami`` and ``hostname``
+
+   Image of a terminal - this is what you want in the end.  You'll see
+   more about this in :doc:`cluster-shell`.  The prompt
+   ``darstr1@login3:~$`` gives a bit of info about who you are and
+   where you are.  The commands ``whoami`` tells who you are
+   (``darstr1``) and ``hostname`` tells what computer you are on
+   (``login3.triton.aalto.fi``).
+
 
 Connecting via ssh
 ------------------
 
-``ssh`` is one of the most fundamental programs: by using it
-well, you can really do almost anything from anywhere.  It is not only
+``ssh`` is one of the most fundamental programs: by using it well, you
+can really control almost anything from from anywhere.  It is not only
 used for connecting to the cluster, but also for data transfer.  It's
 worth making yourself comfortable with this.
 
@@ -77,20 +93,20 @@ worth making yourself comfortable with this.
       anything.  To use graphical applications, use the standard ``-X`` option,
       nothing extra needed.::
 
-        ssh triton.aalto.fi
-        # OR, if your username is different:
-        ssh USERNAME@triton.aalto.fi
+        $ ssh triton.aalto.fi
+        ## OR, if your username is different:
+        $ ssh USERNAME@triton.aalto.fi
 
-      If you are from outside the Aalto networks, use the ProxyJump option
-      in modern OpenSSH::
+      If you are from outside the Aalto networks, use the ProxyJump
+      option (``-J``) in modern OpenSSH::
 
-          ssh -J kosh.aalto.fi triton.aalto.fi
-          # OR, if your username is different:
-          ssh -J USERNAME@kosh.aalto.fi USERNAME@triton.aalto.fi
+          $ ssh -J kosh.aalto.fi triton.aalto.fi
+          ## OR, if your username is different:
+          $ ssh -J USERNAME@kosh.aalto.fi USERNAME@triton.aalto.fi
 
-          # If you do not have the -J option:
-          ssh kosh.aalto.fi
-          ssh triton.aalto.fi
+          ## If you do not have the -J option:
+          $ ssh kosh.aalto.fi
+          $ ssh triton.aalto.fi
 
    .. tab:: MacOS
 
@@ -192,7 +208,8 @@ Connecting via Open onDemand
 OOD (Open onDemand) is a web-based user interface to Triton, including
 shell access, and data transfer, and a number of other applications
 that utilize graphical user interfaces. Read more from :doc:`its guide
-<../usage/ood>`.
+<../usage/ood>`.  The **Triton shell access** app will get you the
+terminal that you need for basic work and the rest of these tutorials.
 
 It is only available from Aalto networks and VPN.  Go to
 https://ood.triton.aalto.fi and login with your Aalto account.
@@ -288,4 +305,4 @@ See also
 What's next?
 ------------
 
-The next tutorial is about :doc:`software availability in general <applications>`.
+The next tutorial is about :doc:`using the terminal <cluster-shell>`.

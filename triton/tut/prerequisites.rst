@@ -15,3 +15,10 @@ that you know the basics here.
 Open the :doc:`../ref/index` - you don't need to know what is on it
 (that is what these tutorials cover), but having it open now and
 during your work will help you a lot.
+
+
+
+What's next?
+------------
+
+The next tutorial is :doc:`about connecting to the cluster <connecting>`.

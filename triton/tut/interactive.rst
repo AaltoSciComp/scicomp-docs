@@ -25,42 +25,8 @@ Interactive jobs
      * ``sinteractive`` (Triton specific)
 
 
-Introduction to Slurm
----------------------
-
-Triton is a large system that combines many different individual
-computer nodes. Hundreds of people are using Triton simultaneously.
-Thus resources (CPU time, memory, etc.) need to be shared among everyone.
-
-This resource sharing is done by a software called a job scheduler or
-workload manager, and Triton's workload manager is **Slurm** (which is
-also the dominant in the world one these days).
-Triton users submit jobs which are then scheduled and allocated
-resources by the workload manager.
-
-.. admonition:: An analogy: the HPC Diner
-
-   You're eating out at the HPC Diner.  What happens when you arrive?
-
-   - A host greets you and takes your party size and estimated dining
-     time.
-   - You are given a number and asked to wait a bit.
-   - The host looks at who is currently waiting.
-   - If you are two people, you might squeeze in soon.
-   - If you are a lot of people, the host will try to slowly free up
-     enough tables to join to eat together.
-   - If you are a really large party, you might need an advance
-     reservation (or have to wait a really long time).
-   - They want everyone to get a fair share of their food.  Thus,
-     people that have visited more often are asked to wait slightly
-     longer for their table, as a balancing mechanic.
-
-   Thanks to `HPC Carpentry
-   <https://carpentries-incubator.github.io/hpc-intro/13-scheduler/index.html>`__
-   / `Sabry Razick <https://github.com/Sabryr>`__ for the idea.
 
 .. highlight:: shell-session
-
 
 
 Why interactive jobs?
@@ -223,31 +189,10 @@ which is a good way to make sure you have stopped everything.
 Setting resource parameters
 ---------------------------
 
-Slurm comes with a multitude of parameters which you can specify to
-ensure you will be allocated enough memory, CPU cores, time, etc.
-You saw two of them in use in the above examples (``--mem`` and ``--time``)
-and you will learn more in the following tutorials.
+Remember to set the resources you need well, otherwise your are
+wasting resources and lowering your priority.  We went over this in :doc:`slurm`.
 
-Because you are sharing resource with other users, **you should always estimate the amount of time, memory, etc.
-you need and then request them accordingly** for efficiency reasons;
-the default memory and time limits are intentionally set low and may not be
-sufficient for your jobs to run/finish.
 
-The general rule of thumb is to request the least possible, so that your stuff can run faster.
-That is because the **less you request, the faster you are likely to be allocated resources.**
-If you request something slightly less than a node size (note that we have different size nodes)
-or partition limit, you are more likely to fit into a spare spot.
-
-For example, we have many nodes with 12 cores, and some with 20 or 24. If you request 24 cores,
-you have very limited options. However, you are more likely to be allocated a node if you request 10 cores.
-The same applies to memory: most common cutoffs are 48, 64, 128, 256GB.
-It's best to use smaller values when submitting interactive jobs, and more for batch scripts.
-
-.. seealso::
-
-   This `reference page <https://slurm.schedmd.com/sbatch.html>`_ covers the existing resource parameters
-   and options you can use in both your interactive jobs and `batch jobs <serial>` which you will learn about
-   in the next tutorial.
 
 .. _triton-tut-exercise-repo:
 

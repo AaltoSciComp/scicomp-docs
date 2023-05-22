@@ -346,4 +346,4 @@ Exercises
 What's next?
 ------------
 
-The next tutorial is about :doc:`interactive jobs <interactive>`.
+The next tutorial is about :doc:`how the cluster queuing system Slurm works <slurm>`.

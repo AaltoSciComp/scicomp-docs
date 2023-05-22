@@ -122,4 +122,4 @@ the issue tracker, otherwise we will point you there.
 
 What's next?
 ------------
-The next tutorial is :doc:`connecting to the cluster <connecting>`.
+The next tutorial is :doc:`prerequisites`.

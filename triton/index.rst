@@ -61,6 +61,7 @@ Cluster ecosystem explained
    tut/intro.rst
    tut/prerequisites.rst
    tut/connecting.rst
+   tut/cluster-shell.rst
    tut/applications.rst
    tut/modules.rst
    tut/storage.rst
@@ -72,6 +73,7 @@ Running calculations
 .. toctree::
    :maxdepth: 1
 
+   tut/slurm.rst
    Interactive jobs: running your first command <tut/interactive>
    Serial jobs: running in the queue <tut/serial>
    tut/monitoring.rst
