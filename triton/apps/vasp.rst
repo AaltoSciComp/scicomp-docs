@@ -14,10 +14,10 @@ list. Afterwards, contact your local triton admin who will take care of
 the IT gymnastics, and CC the vaspmaster so that he is aware of who gets
 added to the list.
 
-For the PHYS department, the vaspmaster is Janne Blomqvist.
+For the PHYS department, the vaspmaster is Ivan Tervanto.
 
 For each VASP version, there are 3 binaries compiled. All versions are
-MPI versions.
+MPI and OpenMP versions.
 
 -  vasp\_std: The "standard" vasp, compiled with NGZhalf
 -  vasp\_gam: Gamma point only. Faster if you use only a single k-point.
