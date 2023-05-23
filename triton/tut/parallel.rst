@@ -20,11 +20,11 @@ tutorials.
      uses, otherwise you won't know which options to use.
 
      * Embarrassingly parallel: use :doc:`array jobs <array>`.
-     * Multithreaded (OpenMP) or multiple tasks (like Python's
-       multiprocessing): ``--cpus-per-task=N``, ``--mem-per-core=M``
+     * Multithreaded (OpenMP) or multiple processes (like Python's
+       multiprocessing): ``--cpus-per-task=C``, ``--mem-per-core=M``
        (if memory scales per CPU)
      * MPI: compile to link with our Slurm and MPI libraries,
-       ``--ntasks=N``, always use ``srun`` to launch your job.
+       use ``--nodes=N`` and ``--ntasks-per-node=n``, always use ``srun`` to launch your job.
        ``module load`` a MPI version for both compiling and running.
 
    * You must always :doc:`monitor jobs <monitoring>` to make sure they are using all the
@@ -46,20 +46,29 @@ that are present in their programs and thus do not need to learn how to create
 parallel programs. But even when one is running programs in parallel,
 it is important to understand different models of parallel execution.
 
-The two main models are:
+The main models of parallel programming are:
 
-* (Embarrassingly parallel - :doc:`array jobs <array>`.)
+* Embarrassingly parallel - :doc:`array jobs <array>`.
+
+  .. figure:: /images/parallel-array.png
+      :width: 75%
+      :align: center
+
 * Shared memory (or multithreaded/multiprocess) programs run multiple
-  independent workers on the same machine. As the name suggests, all of
+  processes on the same machine. As the name suggests, all of
   the computer's memory has to be accessible to all of the processes.
   **Thus programs that utilize this model should request one node,
   one task and multiple CPUs.**
   Likewise, the maximum number of workers is usually the number of CPU cores
   available on the computational node. The code is easier to implement
-  and the same   code can still be run in a serial mode. Example applications
+  and the same code can still be run in a serial mode. Example applications
   that utilize this model: Matlab, R, Python multithreading/multiprocessing,
   OpenMP applications, BLAS libraries, FFTW libraries, typical
   multithreaded/multiprocess parallel desktop programs.
+
+  .. figure:: /images/parallel-shared.png
+      :width: 75%
+      :align: center
 
 * Message passing programming (e.g. MPI, message passing interface)
   can run on multiple nodes interconnected with the network via passing
@@ -70,6 +79,11 @@ The two main models are:
   request single/multiple nodes with multiple tasks each. You should
   not request multiple CPUs per task.** Example applications that utilize this
   model: CP2K, GPAW, LAMMPS, OpenFoam.
+
+  .. figure:: /images/parallel-mpi.png
+      :width: 75%
+      :align: center
+
 
 Both models, MPI and shared memory, can be combined in one application, in
 this case we are talking about hybrid parallel programming model.
@@ -89,12 +103,9 @@ people are using shared memory models.
    the effort, one should be mindful of
    `Amdahl's law <https://en.wikipedia.org/wiki/Amdahl%27s_law>`_ and
    `Gustafson's law <https://en.wikipedia.org/wiki/Gustafson%27s_law>`_.
-   All programs have some parts that can only be executed in serial and
-   thus the theoretical speedup that one can get from using parallel
-   programming depends on two factors:
-
-     1. How much of programs' execution could be done in parallel?
-     2. What would be the speedup for that parallel part?
+   All programs have some parts that can only be executed in serial fashion and
+   thus speedup that one can get from using parallel execution depends on
+   how much of programs' execution can be done in parallel.
 
    Thus if your program runs mainly in serial but has a small parallel
    part, running it in parallel might not be worth it. Sometimes, doing
