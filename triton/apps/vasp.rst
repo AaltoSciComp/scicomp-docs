@@ -23,8 +23,39 @@ MPI versions.
 -  vasp\_gam: Gamma point only. Faster if you use only a single k-point.
 -  vasp\_ncl: For non-collinear spin calculations
 
-VASP 5.4.4
+VASP 6.4.1
 ==========
+
+The binaries are compiled with the GNU compilers, MKL (incl ScaLAPACK) and OpenMPI
+libraries, the used modules ``gcc/11.2.0 intel-oneapi-mkl/2021.4.0 openmpi/4.0.5``.
+Example batch script
+
+::
+
+    #!/bin/bash -l
+    #SBATCH --nodes=1
+    #SBATCH --ntasks=8
+    #SBATCH --time=06:00:00
+    #SBATCH --mem-per-cpu=1500M
+    module load vasp/6.4.1
+    srun vasp_std
+
+
+Potentials
+==========
+
+Potentials are stored at ``/share/apps/vasp/pot``.
+
+
+
+Old VASP versions (obsolete, for reference only!)
+=================================================
+
+These old versions are unlikely to work as they use old MPI and IB
+libraries that have stopped working due to upgrades over the years.
+
+VASP 5.4.4
+~~~~~~~~~~
 
 The binaries are compiled with the Intel compiler suite and the MKL
 library, the used toolchain module is ``intel-parallel-studio/cluster.2020.0-intelmpi``.
@@ -42,18 +73,6 @@ Example batch script
     srun vasp_std
 
 
-Potentials
-==========
-
-Potentials are stored at ``/share/apps/vasp/pot``.
-
-
-
-Old VASP versions (obsolete, for reference only!)
-=================================================
-
-These old versions are unlikely to work as they use old MPI and IB
-libraries that have stopped working due to upgrades over the years.
 
 VASP 5.4.1
 ~~~~~~~~~~
