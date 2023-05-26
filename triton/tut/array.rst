@@ -249,7 +249,7 @@ to combine multiple program runs into a single array job.
 Easy workaround for this is to create a for-loop in your Slurm script.
 For example, if you want to run the pi script with 50 different seed values
 you could run them in chunks of 10 and run a total of 5 array jobs. This
-the amount of array jobs we need by a factor of 10!
+reduces the amount of array jobs we need by a factor of 10!
 
 This method demands more knowledge of shell scripting, but the end result is a
 fairly simple Slurm script
