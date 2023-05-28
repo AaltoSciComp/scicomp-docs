@@ -280,7 +280,7 @@ Exercises
 
    .. solution::
 
-      The node was last rebooted 18 days ago, and the load average
+      You should see something like this. From this example output we can tell that the node was last rebooted 18 days ago, and the load average
       seems pretty high (1 = "about one processor in use".  There are
       24 processors in 2023.  Load of 1-5 would be normal).  Someone
       is running things directly on the login node, which is not
