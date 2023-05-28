@@ -8,16 +8,14 @@ Interactive jobs
 
 .. admonition:: Abstract
 
-   * We use the standard (and dominant) Slurm batch queuing system,
-     all standard commands will work.
-   * See the :doc:`quick reference <../ref/index>` for the reference you
-     need if you know Slurm or batch systems already.
    * Interactive jobs allow you to quickly test code (before scaling
      up) or getting more resources for manual analysis.
+   * See the :doc:`quick reference <../ref/index>` for the local
+     options you need if you know Slurm or batch systems already.
    * To run a single command interactively
 
-     * ``srun [SLURM OPTIONS] COMMAND ...`` to run before any COMMAND
-       to run it in Slurm
+     * ``srun [SLURM OPTIONS] COMMAND ...`` to run any COMMAND in
+       Slurm
 
    * To get an interactive shell
 
@@ -29,17 +27,30 @@ Interactive jobs
 .. highlight:: shell-session
 
 
+
 Why interactive jobs?
 ---------------------
 
-There are two ways you can submit your jobs to Slurm queue system:
-either interactively using ``srun`` or by submitting a script
-using ``sbatch``.  This tutorial walks you through running your jobs
-interactively, and :doc:`the next tutorial on serial jobs <serial>`
-will go through serial jobs.
+In the next session, we will learn about :doc:`batch scripts
+<serial>`.  Those get submitted and you see the results later.  *But
+what if you want to see the results now, for testing, development, or
+one-time things?* You don't want to run on the login node, so
+interactive jobs let you do that.  This tutorial walks you through
+running your jobs interactively, and :doc:`the next tutorial on serial
+jobs <serial>` will go through serial jobs.
 
-Some people say "the cluster is for batch computing", but really it is
-to help you get your work done.  **Interactive jobs let you:**
+.. admonition:: HPC Diner metaphor: doing testing.
+
+  You go to a restaurant and usually you order something known from
+  the menu: you make your order, send it to the back, do something
+  else, and your food comes.  This is the **serial jobs**.
+
+  But if you are developing something new, do you keep sending
+  different orders back until you get it right?  You could ask to go
+  to the back and cook it yourself (not that health codes would allow
+  it).  This is like getting the **interactive session**.
+
+Interactive jobs let you:
 
 * Run a single job in the Slurm environment to test parameters and
   make sure it works (which is easier than constantly modifying batch
@@ -52,88 +63,72 @@ to help you get your work done.  **Interactive jobs let you:**
 Interactive jobs
 ----------------
 
+Let's say you want to run the following command.  If you just do it
+like this, it runs on the login node and someone might request you
+stop::
 
-Let's say you want to run the following command::
+    $ python3 slurm/pi.py 10000
 
-    $ python3 -c 'import os; print("hi from", os.uname().nodename)'
+You can submit this program to Slurm using ``srun``. All input/output
+still goes to your terminal::
 
-You can submit this program to Triton using ``srun``. All input/output still goes to your terminal
-(but note that graphical applications don't work this way - see
-below)::
-
-    $ srun --mem=100M --time=0:10:00 python3 -c 'import os; print("hi from", os.uname().nodename)'
+    $ srun --mem=100M --time=0:10:00 python3 slurm/pi.py 10000
     srun: job 52204499 queued and waiting for resources
 
 Here, we are asking for 100 Megabytes of memory (``--mem=100M``) for a
 duration of ten minutes (``--time=0:10:00``) (See the :doc:`quick
-reference <../ref/index>` or below for more options).
-While your job - with **jobid** 52204499 - is waiting to be allocated resources, your shell
-blocks while it is waiting to continue.
+reference <../ref/index>` or :doc:`slurm` for more options). While
+your job - with **jobid** 52204499 - is waiting to be allocated
+resources, your shell waits for it to finish.
 
-You can open a new shell (ssh again) on triton and run the command
-``squeue -u $USER`` or ``slurm q`` to see all the jobs
-you currently have waiting in queue::
+You can open a new shell on the cluster and run the command ``squeue
+-u $USER`` or ``slurm q`` to see all the jobs you currently have
+waiting in queue::
 
   $ slurm q
   JOBID              PARTITION NAME                  TIME       START_TIME    STATE NODELIST(REASON)
   52204499           short-ivb python3               0:00              N/A  PENDING (None)
 
-You can see information such as the state, which partition the requested node reside in, etc.
-
-Once resources are allocated to your job, you see the name of the machine
-in the Triton cluster your program ran on, output to your terminal::
+You can see information such as the state, which partition the
+requested node reside in, etc.  Once resources are allocated to your
+job, you see the name of the machine in the Triton cluster your
+program ran on, output to your terminal::
 
   srun: job 52204499 has been allocated resources
-  hi from ivb17.int.triton.aalto.fi
-
-.. admonition:: Disadvantages
-
-   Interactive jobs are useful for debugging purposes, to test your setup
-   and configurations before you put your tasks in a batch script for later execution.
-
-   The major disadvantages include:
-
-   - It blocks your shell until it finishes
-   - If your connection to Triton gets interrupted, you lose the job
-     and its output.
-
-   Keep in mind that you shouldn't open 20 shells to run 20 ``srun`` jobs at once.
-   Please have a look at the :doc:`next tutorial about serial jobs <serial>`.
+  Calculating Pi via 10000 stochastic trials
+  {"successes": 7815, "pi_estimate": 3.126, "iterations": 10000}
 
 
 
 Interactive shell
 -----------------
 
-What if you want an actual shell to do things interactively?
-Put more precisely, you want access to a node in the cluster
-through an interactive bash shell, with many resources available, that
-will let you run commands such as Python and let do some basic work.
-For this, you just need srun's ``--pty`` option coupled with the shell
-you want::
+What if you want an actual shell to do things interactively, and not
+have to wait for resources each time? Put more precisely, you want
+access to a node in the cluster through an interactive bash shell,
+with many resources available, that will let you run commands such as
+Python and let do some basic work. For this, you just need srun's
+``--pty`` option coupled with the shell you want.  In the demo below,
+we see we got the node named pe5::
 
-  srun -p interactive --time=2:00:00 --mem=600M --pty bash
+  $ srun -p interactive --time=2:00:00 --mem=600M --pty bash
+  srun: job 18836568 queued and waiting for resources
+  srun: job 18836568 has been allocated resources
+  USER@pe5$
 
-The command prompt will appear when the job starts.
-And you will have a bash shell runnnig on one of the
-computation nodes with at least 600 Megabytes of memory,
-for a duration of 2 hours, where you can run your programs in.
-The option ``-p interactive`` requests a node in the interactive
-**partition** (group of nodes) which is dedicated to interactive usage
-(more on this later).
+The command prompt will appear when the job starts. And you will have
+a bash shell runnnig on one of the computation nodes with at least 600
+Megabytes of memory, for a duration of 2 hours, where you run anything
+you want. The option ``-p interactive`` requests a node in the
+interactive **partition** (group of nodes) which is dedicated to
+interactive usage (more on this later).
 
 .. warning::
 
-  Remember to exit the shell when you are done!
-  The shell will be running if you don't and
-  it will count towards your usage.
-  This wastes resources and effectively means your priority will degrade
-  in the future.
-
-.. note::
-
-  you can use ``sinfo`` to see information such as the available partitions,
-  number of nodes in each, their time limits, etc.
+  Remember to exit the shell when you are done! The shell will be
+  running if you don't and it will count towards your usage. This
+  wastes resources and effectively means your priority will degrade in
+  the future.
 
 
 
@@ -145,30 +140,33 @@ allows you to do X forwarding. It starts a `screen session
 <https://en.wikipedia.org/wiki/GNU_Screen>`__ on the node,
 then sshes to there and connects to the shell::
 
-     sinteractive --time=1:00:00 --mem=1000M
+     $ sinteractive --time=1:00:00 --mem=1000M
+
+This morks when you have connected to the cluster with ``ssh -X`` from
+a system that supports Linux graphics.  If you don't have this, try
+using :ref:`triton-tut-vdi` to connect via ssh.  Graphical
+applications run slowly across the general Internet, so this might be
+a good idea anyway.
 
 .. warning::
 
-  Just like with ``srun --pty bash``, remember to exit the shell.
-  Since there is a separate screen session running, just closing the terminal isn't enough.
-  Exit all shells in the screen session on the node (C-d or ``exit``) or cancel
-  the job.
-
-.. admonition:: Use remote desktop if off campus
-
-  If you are off-campus, you might want to use https://vdi.aalto.fi as a
-  virtual desktop to connect to Triton to run graphical programs: ssh
-  from there to Triton with ``ssh -XY``.  Graphical programs run very
-  slowly when sent across the general Internet.
+  Just like with ``srun --pty bash``, remember to exit the shell when
+  done, otherwise it wastes resources.
 
 
 
-Monitoring your usage
----------------------
+Monitoring and setting resource parameters
+------------------------------------------
 
-When your jobs enter the queue, you need to be able to get
-information on how much time, memory, etc. your jobs are using
-in order to know what requirements to ask for.
+If you need more resources, the options we discussed in :doc:`slurm`
+and the :doc:`quick reference </triton/ref/index>`.
+
+You might wonder "how much time/memory do I need?".  We went over this
+in :doc:`slurm`.  In short, make a guess, and see if it worked.  If it
+fails, see why it failed (what resource was too low), and increase
+that.  A good starting point is "about as long as your other computer
+needs" and "something less than computer's amount of memory". In
+:doc:`monitoring` we will see how to check, but for now:
 
 The command ``slurm history`` (or ``sacct --long | less``) gives you
 information such as the actual memory used by your recent jobs, total
@@ -178,23 +176,26 @@ As shown in a previous example, the command ``slurm queue`` (or
 ``squeue -u $USER``) will tell you the currently running processes,
 which is a good way to make sure you have stopped everything.
 
-.. note::
-
-  Generally, estimating the amount of time or memory you need comes down to
-  monitoring you Slurm history and utilizing command-line tools such as
-  ``time`` on a few of your jobs and averaging. This is basically a trial and error process.
 
 
+Disadvantages of interactive jobs
+---------------------------------
 
-Setting resource parameters
----------------------------
+Interactive jobs are useful for debugging purposes, to test your setup
+and configurations before you put your tasks in a batch script for
+later execution.
 
-Remember to set the resources you need well, otherwise your are
-wasting resources and lowering your priority.  We went over this in :doc:`slurm`.
+The major disadvantages include:
+
+- It blocks your shell until it finishes
+- If your connection to Triton gets interrupted, you lose the job and
+  its output.
+
+Don't get clever and script 20 shells to run 20 ``srun`` jobs at once.
+Please have a look at the :doc:`next tutorial about serial jobs
+<serial>`.
 
 
-
-.. _triton-tut-exercise-repo:
 
 Exercises
 ---------
@@ -226,6 +227,47 @@ Exercises
       ``python hpc-examples/slurm/memory-hog.py 50M --sleep=60`` -
       keep it available.
 
+  .. solution::
+
+    $ python slurm/memory-hog.py 50M
+    Trying to hog 50000000 bytes of memeory
+    Using 6041600 bytes so far (allocated: 2)
+    Using 6144000 bytes so far (allocated: 4)
+    Using 6144000 bytes so far (allocated: 8)
+    ...
+    Using 39477248 bytes so far (allocated: 33554432)
+    Using 73269248 bytes so far (allocated: 67108864)
+    $ srun --mem=500M python slurm/memory-hog.py 50M
+    srun: job 18839900 queued and waiting for resources
+    (same output as above)
+    $ srun --mem=500M python slurm/memory-hog.py 500M    # works
+    $ srun --mem=500M python slurm/memory-hog.py 2000M   # works
+    $ srun --mem=5000M python slurm/memory-hog.py 5000M  # fails!
+    ...
+    slurmstepd: error: Detected 1 oom-kill event(s) in StepId=18839905.0. Some of your processes may have been killed by the cgroup out-of-memory handler.
+    srun: error: csl41: task 0: Out Of Memory
+    srun: launch/slurm: _step_signal: Terminating StepId=18839905.0
+
+  Triton's Slurm only records the memory usage every 60 seconds, so
+  our program has an option to make it slow enough to measure:
+
+    $ srun --mem=5000M python slurm/memory-hog.py 2000M --sleep=60  # fails!
+
+  This 60-second measurement interval in Slurm isn't ideal, because it
+  means that you can't as easily see when you have run out of memory.
+  Here is what it says without sleep, and with::
+
+    $ slurm history
+    18839906    python               05-29 00:50:08     500M       -    00:01.373    00:00:02  none   1 1   0:0 COMP  csl41
+    └─ extern   *                    05-29 00:50:08               1M    00:00.002    00:00:02     1   1 1   0:0 COMP  csl41
+    └─ 0        python               05-29 00:50:08               1M    00:01.371    00:00:02     1   1 1   0:0 COMP  csl41
+    18839907    python               05-29 00:51:55     500M       -    00:01.399    00:01:02  none   1 1   0:0 COMP  csl41
+    └─ extern   *                    05-29 00:51:55               1M    00:00.002    00:01:02     1   1 1   0:0 COMP  csl41
+    └─ 0        python               05-29 00:51:55            2054M    00:01.397    00:01:02     1   1 1   0:0 COMP  csl41
+
+
+
+
 .. exercise:: Interactive-2: Time scaling
 
    The program ``hpc-examples/slurm/pi.py``
@@ -233,7 +275,7 @@ Exercises
    one positional argument: the number of trials.
 
    The ``time`` program allows you to time any program,  e.g. you can
-   ``time python x.py`` to print the amount of time it takes.
+   ``time python pi.py`` to print the amount of time it takes.
 
    a) Run the program, timing it with ``time``, a few times,
       increasing the number of trials, until it takes about 10
@@ -269,9 +311,20 @@ Exercises
 .. exercise:: Interactive-5: Why not script ``srun``
 
    Some people are clever and use shell scripting to run ``srun`` many
-   times in a loop (using ``&`` to background it so that they all run
+   times in a loop (sometimes using ``&`` to background it so that they all run
    at the same time).  Can you list some advantages and disadvantages
    to this?
+
+   .. solution::
+
+    * First off, it's harder than doing it properly with batch scripts
+      and array jobs.
+    * It's more fragile: if something goes wrong with your shell, all
+      output and jobs can get lost.
+    * You have to understand your script and the command, instead of
+      things being self-contained in the batch file
+    * Because they are independent jobs, Slurm can handle them less
+      efficiently.  It's less good for the whole cluster.
 
 
 

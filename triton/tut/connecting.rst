@@ -67,6 +67,9 @@ you see.
    worry about what the commands mean.
 
 
+
+.. _triton-tut-ssh:
+
 Connecting via ssh
 ------------------
 
@@ -192,6 +195,9 @@ and more. It really will save you time.
    It may take 15 minutes to update, and you will need to log in again.
 
 
+
+.. triton-tut-ood:
+
 Connecting via Open onDemand
 ----------------------------
 
@@ -208,6 +214,9 @@ terminal that you need for basic work and the rest of these tutorials.
 It is only available from Aalto networks and VPN.  Go to
 https://ood.triton.aalto.fi and login with your Aalto account.
 
+
+
+.. _triton-tut-jupyterhub:
 
 Connecting via JupyterHub
 -------------------------
@@ -234,6 +243,8 @@ To learn more about Jupyterlab, you need to read up elsewhere, there
 are plenty of tutorials.
 
 
+
+.. _triton-tut-vdi:
 
 Connecting via the Virtual Desktop Interface
 --------------------------------------------

@@ -127,6 +127,8 @@ You have to be :doc:`connected to the custer and have a terminal
 
 
 
+.. _triton-tut-exercise-repo:
+
 Copy your code to the cluster
 -----------------------------
 
