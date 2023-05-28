@@ -21,16 +21,12 @@ for this series of tutorials).
 
 .. admonition:: Abstract
 
-   * You can connect to Triton via ssh
+   * The standard way of connecting is via ssh, but Open OnDemand and
+     Jupyter provide graphical environments that are useful for
+     interactive work.
    * Host name is ``triton.aalto.fi``
-   * Connections available from the Aalto networks (VPN, most wired,
-     internal servers, ``eduroam``, ``aalto`` *only* if using an
-     Aalto-managed laptop, but *not* ``aalto open``),
-   * VPN is best but ``kosh.aalto.fi`` is a good ssh jump host from
-     outside (note the ``-J`` :doc:`ssh option </scicomp/ssh>`.
-   * https://vdi.aalto.fi (ssh to Triton from there) and
-     https://jupyter.triton.aalto.fi (start a terminal) provide
-     alternatives.
+
+   .. include:: ../ref/connecting.rst
 
 .. admonition:: Kickstart course preparation
 
@@ -44,9 +40,6 @@ for this series of tutorials).
    The way you connect will be different in every site, but you should
    be able to get a terminal somehow.
 
-There are different ways of connecting:
-
-.. include:: ../ref/connecting.rst
 
 .. highlight:: console
 
@@ -69,18 +62,15 @@ you see.
 .. figure:: img/connecting--terminal.png
    :alt: Image of terminal with two commands ran: ``whoami`` and ``hostname``
 
-   Image of a terminal - this is what you want in the end.  You'll see
-   more about this in :doc:`cluster-shell`.  The prompt
-   ``darstr1@login3:~$`` gives a bit of info about who you are and
-   where you are.  The commands ``whoami`` tells who you are
-   (``darstr1``) and ``hostname`` tells what computer you are on
-   (``login3.triton.aalto.fi``).
+   Image of a terminal - this is what you want after this episode.
+   You'll see more about this means in :doc:`cluster-shell`.  Don't
+   worry about what the commands mean.
 
 
 Connecting via ssh
 ------------------
 
-``ssh`` is one of the most fundamental programs: by using it well, you
+``ssh`` is one of the most fundamental programs of remote connections: by using it well, you
 can really control almost anything from from anywhere.  It is not only
 used for connecting to the cluster, but also for data transfer.  It's
 worth making yourself comfortable with this.
@@ -160,20 +150,26 @@ See the :doc:`advanced ssh information </scicomp/ssh>` to learn how
 to log in without a password, automatically save your username
 and more. It really will save you time.
 
-If you use OpenSSH (Linux/MacOS/WSL or Windows Powershell instructions above), the
-``.ssh/config`` file (on windows the ``.ssh`` folder is commonly under ``C:\Users\YourUsername``)
-is valuable to set up to make connecting more seamless, with this you can run 
-``ssh triton_via_kosh`` instead of using the ``-J`` option - and this same 
-``triton_via_kosh`` will work with what you learn on the :doc:`remotedata` page!::
+.. admonition:: SSH configuration file
+   :class: dropdown
 
-   Host triton
-	User USERNAME
-	Hostname triton.aalto.fi
+   This is described under the :doc:`advanced ssh information
+   </scicomp/ssh>`, but here is a quick summary:
 
-   Host triton_via_kosh
-	User USERNAME
-	Hostname triton
-	ProxyJump USERNAME@kosh.aalto.fi
+   If you use OpenSSH (Linux/MacOS/WSL or Windows Powershell instructions above), the
+   ``.ssh/config`` file (on windows the ``.ssh`` folder is commonly under ``C:\Users\YourUsername``)
+   is valuable to set up to make connecting more seamless, with this you can run
+   ``ssh triton_via_kosh`` instead of using the ``-J`` option - and this same
+   ``triton_via_kosh`` will work with what you learn on the :doc:`remotedata` page!::
+
+      Host triton
+      User USERNAME
+      Hostname triton.aalto.fi
+
+      Host triton_via_kosh
+      User USERNAME
+      Hostname triton
+      ProxyJump USERNAME@kosh.aalto.fi
 
 
 .. admonition:: Aalto: Change your shell to bash
@@ -202,8 +198,6 @@ Connecting via Open onDemand
 .. seealso::
 
    :doc:`../usage/ood`
-
-[BETA / Under development]
 
 OOD (Open onDemand) is a web-based user interface to Triton, including
 shell access, and data transfer, and a number of other applications
@@ -244,6 +238,10 @@ are plenty of tutorials.
 Connecting via the Virtual Desktop Interface
 --------------------------------------------
 
+.. seealso::
+
+   `VDI instructions on aalto.fi <https://www.aalto.fi/en/services/vdiaaltofi-how-to-use-aalto-virtual-desktop-infrastructure>`__
+
 If you go to https://vdi.aalto.fi, you can access a cloud-based Aalto Linux
 workstation.  HTML access works from everywhere, or download the
 "VMWare Horizon Client" for a better connection.  Start a Ubuntu
@@ -252,8 +250,6 @@ normal Linux ssh instructions to connect to Triton** (via the Terminal
 application) using the instructions you see above: ``ssh
 triton.aalto.fi``.
 
-For more information, see `the IT help
-<https://www.aalto.fi/en/services/vdiaaltofi-how-to-use-aalto-virtual-desktop-infrastructure>`__.
 
 
 Exercises
@@ -261,8 +257,19 @@ Exercises
 
 .. exercise:: Connecting-1: Connect to Triton
 
-   Connect to Triton.  Use ``hostname`` to verify that you are on
-   Triton.  List your home directory and work directory ``$WRKDIR``.
+   Connect to Triton, and get a terminal.  Type the command
+   ``hostname`` to verify that you are on Triton.  Run ``whoami`` to
+   verify your username.
+
+   .. solution::
+
+      ::
+
+         $ hostname
+         login3.triton.aalto.fi
+         $ whoami
+         darstr1
+
 
 .. exercise:: Connecting-2: Test a few command line programs
 
@@ -271,34 +278,59 @@ Exercises
    ``top`` works almost as well).  What else can you learn about the
    node?
 
+   .. solution::
+
+      You should see something like this. From this example output we can tell that the node was last rebooted 18 days ago, and the load average
+      seems pretty high (1 = "about one processor in use".  There are
+      24 processors in 2023.  Load of 1-5 would be normal).  Someone
+      is running things directly on the login node, which is not
+      good::
+
+         $ uptime
+         17:32:25 up 18 days,  3:20, 128 users,  load average: 29.46, 32.78, 34.28
+
+      More info::
+
+         $ lscpu
+         (long output not listed here)
+         $ uname -a       # tells a bit about operating system info
+         Linux login3.triton.aalto.fi 3.10.0-1160.83.1.el7.x86_64 #1 SMP Wed Jan 25 16:41:43 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+
+      We'll see more in :doc:`cluster-shell`.
+
+
 .. exercise:: (optional, Aalto only) Connecting-3: check your default shell
 
-   Check what your default shell is: ``echo $SHELL``.  Go ahead and
-   change your shell to bash if it's not yet (see below).  This
-   ``$SHELL`` syntax is an **environment variable** and a pattern you
-   will see in the future.
+   Check what your default shell is: ``echo $SHELL``.  If it doesn't
+   say ``/bin/bash``, go ahead and change your shell to bash if it's
+   not yet (see the expandable box above).
+   
+   This ``$SHELL`` syntax is an **environment variable** and a pattern
+   you will see in the future.
 
-   This is not needed for recent Aalto accounts but is a good exercise
-   anyway.
+   .. solution::
+
+      ::
+
+         $ echo $SHELL
+         /bin/bash
+
 
 .. exercise:: (advanced but recommended) Connecting-4: SSH configuration
 
-   If you use Linux/MacOS/WSL, set up a ``.ssh/config`` file as shown
-   above.  Customize it to suit your case. (see above and
-   :doc:`/scicomp/ssh` for more info)
+   If you use Linux/MacOS/WSL, start setting up a ``.ssh/config`` file
+   as shown above and in :doc:`/scicomp/ssh`.  You probably won't have
+   time to finish this, but you can resume later.  Customize it to
+   suit your case.
 
-.. exercise:: (advanced, to fill time) Connecting-5: shell crash
-              course
-
-   Browse the :doc:`/scicomp/shell` and see what you do and don't know
-   from there.  Decide your future shell learning plan.
+   The "solution" is listed in the linked documents.
 
 
 
 See also
 --------
 
-* :doc:`/scicomp/shell`
+* :doc:`/scicomp/ssh`
 
 
 

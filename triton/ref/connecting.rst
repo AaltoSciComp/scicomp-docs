@@ -11,11 +11,14 @@
 
        >Linux/Mac: ``ssh USERNAME@triton.aalto.fi``
 
-       >Windows: WSL+Linux/mac command or use Powershell,
+       >Windows: `WSL <https://learn.microsoft.com/en-us/windows/wsl/>`__\ +Linux/Mac
+       instructions or use Powershell,
        which works very similar to linux shell.
 
-     * Connections only from VPN and Aalto networks.
-       ``kosh.aalto.fi`` is a good proxy host if you are not there:
+     * Connections only from Aalto networks (VPN, most wired,
+       internal servers, ``eduroam``, ``aalto`` *only* if using an
+       Aalto-managed laptop, but *not* ``aalto open``).
+       ``kosh.aalto.fi`` is a good proxy host if you are outside:
        ``ssh -J USERNAME@kosh.aalto.fi USERNAME@triton.aalto.fi``
 
    * * VDI
@@ -26,10 +29,12 @@
 
    * * Jupyter
      * https://jupyter.triton.aalto.fi provides the Jupyter interface
-       directly on Triton (including command line).
+       directly on Triton (including command line).  Get a terminal
+       with "New → Other → Terminal".
      * Whole internet
 
    * * Open OnDemand
      * https://ood.triton.aalto.fi, Web-based interface to the
-       cluster.  Includes shell access and data transfer.
+       cluster.  Includes shell access and data transfer. "Triton
+       Shell Access" for the terminal.
      * VPN and Aalto networks
