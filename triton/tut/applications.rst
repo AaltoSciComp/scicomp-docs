@@ -43,52 +43,74 @@ Linux.
    more common, but they are less standardized.
 
 
+There are four main ways of getting software:
 
-How to find the software you need
----------------------------------
+* It's installed through the operating system some relatively "normal"
+  way.
+* Someone (a cluster admin) has already installed it for you.  Or you
+  ask someone to install what you need.
+* Someone has installed the base of what you need.  You do some extra.
+* Install it yourself in a storage place you have access to.  (Maybe
+  you share it with others?)
 
-You can find what softwares we have available in different ways:
 
-* First, you should check our :doc:`Applications  <../apps/index>` page
-  and see if the software you need is already available and has
-  instructions.
-* If you find the software you need available, you can usually load it via a module.
-  The next tutorial, :doc:`Software modules <modules>` explains what modules
-  are and how to work with them.
-* You can also search this tutorial to see what you can find (though
-  note that not everything is in the Triton section here - some applies
-  to Aalto workstations or own computers).
-* It's always a good idea to search the `issue tracker
+
+Installed through operating system
+----------------------------------
+
+People sometimes expect the cluster to work just like your laptop:
+install something through a package manager or app store.  This
+doesn't really work when you have hundreds of users on the same
+system: if you upgrade X, how many other people's work suddenly
+breaks?
+
+Thus, this isn't really done, except for very basic, standalone
+applications.  If it is done, this stuff isn't upgraded and often old:
+instead, we install through modules (the next point) so that people
+can choose the version they want.
+
+One unfortunate side-effect is that almost all software installation
+instructions you find online donn't work on the cluster.  Often times,
+it can be installed, but people don't think to mention it in the
+documentation.  This often requires some thought to figure out: if you
+can't figure it out, ask for help!
+
+
+
+Cluster admin has installed it for you
+--------------------------------------
+
+The good thing about the cluster is that a few people can install
+software and make it usable by a lot of people.  This can save you a
+lot of time.  Your friendly admins can install things through the
+:doc:`modules` (an upcoming lesson), so  that you can ``module load``
+it with very little work.  You can even choose your exact version, so
+that it keeps working the same even if someone else needs a newer
+version.
+
+Some clusters are very active in this, some the users to do more.
+Some things are so obscure, or so dependent on local needs, that it
+only makes sense to help people install it themselves.  To look for
+what is available:
+
+* Check out the page :doc:`../apps/index` and its sub-pages.
+* Search the `issue tracker
   <https://version.aalto.fi/gitlab/AaltoScienceIT/triton>`__ to see if
-  there are previous issues about it - not everything is always
-  updated.
-* Ask other users in the :ref:`Zulip chat <chat>`. We hope that we can facilitate user
-  group meetings and discussion among users of similar software suites.
-* Ask us admins/Research Software Engineers in `garage </help/garage>`.
+  someone has already requested it and documented there.
+* Ask us: Our `issue tracker
+  <https://version.aalto.fi/gitlab/AaltoScienceIT/triton>`__,
+  :ref:`Zulip chat <chat>` or :ref:`our support garage <garage>`.
+* Modules (:doc:`modules` - next lesson) are the usual way of making
+  this available.  The command ``module spider NAME`` will search for
+  anything of that name.
 
-Throughout this process, try to remember these things:
+**If you need something installed, contact us.**  The `issue tracker
+<https://version.aalto.fi/gitlab/AaltoScienceIT/triton>`__ is
+usually the best way to do this.
 
-1. Scientific software, like scientific process itself, is collaborative.
-   Work on sharing and seeking knowledge among other users. They might have
-   the answer you need.
-2. Interesting problems draw people together independently. If you're working
-   on a certain type of a problem, it is quite likely that some other
-   researcher is working on a similar problem. You might not be alone with
-   your problem.
-3. Try to form connections between users of similar software. The same software
-   that you use can be used by a researcher in completely different field. Many
-   software suites e.g. statistical modelling, machine learning, is common to
-   many other fields. If you cannot find similar users within your field, look
-   across fields.
-4. If you find something useful or interesting, share it. If you do not know
-   who to share it with, share it with us in SciComp. When we hear of a tool,
-   a method, a success story or a problem encountered by one of our users, we
-   often try to share it among other researchers.
+Some of the most common stuff that is available:
 
-
-
-Common applications are available as modules
---------------------------------------------
+.. include:: ../ref/software.rst
 
 .. important::
 
@@ -96,73 +118,59 @@ Common applications are available as modules
    load fgci-common`` at other Finnish sites (but not CSC).  This is
    introduced in the next lesson.
 
-Here is a sample of our most commonly used software:
-
-.. include:: ../ref/software.rst
-
-If one of these ``module load`` commands does not work at your site,
-try ``module spider NAME`` and see if you can find it.  More information
-on these commands will be 
-actually covered under the upcoming :doc:`modules <modules>` tutorial.
-
-We try to install commonly used software for all of our users, so that
-everyone can benefit from them. If you cannot find what you're looking for,
-do let us know.
 
 
+Already installed, you add extra modules you need
+-------------------------------------------------
 
-Singularity containers
-----------------------
+Even if a cluster admin installs some software, often you might need
+to improve it some.  One classic example is Python: we provide Python
+installations, but you need your own modules there.  So, you can use
+our base Python installation to create your own **environments** -
+self-contained systems where you can install whatever you need.
+Different languages have different ways of doing this:
 
-.. seealso::
+* **Python**: Conda environments, virtual environments.  See :doc:`../apps/python-conda`.
 
-   Main article: :doc:`../usage/singularity`
-
-Some software packages are either very complicated to install or they
-have been designed with certain operating systems in mind. For these
-kinds of software we often use containers. A software container is basically a
-complete self-contained operating system environment. Another advantage of
-containers is that they make it easy to move installed software from system
-to system, so that you can have the same environment everywhere.
-
-If your program is usually deployed using Docker or it is hard to maintain,
-do read our documentation on Singularity containers and contact us for
-more information.
-
-We also provide :doc:`some containers built by NVIDIA <../apps/nvidiacontainers>`.
-These containers are from NVIDIA's NGC-repository and meant for GPU
-computations.
+Environments have an advantage that you can do multiple projects at
+once, and move between computers more easily.
 
 
 
-Requesting new software
------------------------
+Install it yourself
+-------------------
 
-We aim to install a good base of software for our users - but it's not
-possible to keep up with all requests.  If you need something, submit
-a request to our :ref:`issue tracker <issuetracker>`, but be aware
-that despite best efforts, we can't do everything.
-See the main :doc:`Applications <../apps/index>` page for more information.
+Sometimes, you need to install software yourself - which you *can* do
+if you can tell it to install just into your home directory.
+Usually, the software's instructions don't talk about how to do this
+(and might not even mention things like the environments in the
+previous point).
+
+One common way of doing this is **containers** (for example,
+**Docker** or **Apptainer**/**Singularity**).  These basically allow
+you to put an *entire operating system in one file*, so that your
+software works everywhere.  Very nice when software is difficult to
+install or needs to be moved from computer to computer, but can take
+some work to set up.  See :doc:`../usage/singularity` for the
+information we have so far.
+
+We can't go into this more right now - ask us for help if needed.  If
+you make a "we need X installed" request, we'll tell you how to do it
+if self-installation is the easiest way.
 
 
 
-Writing software
-----------------
+What you should do
+------------------
 
-Not everyone has to, but many people either write there own software
-or writ scripts to automate the running and analysis.  Yet, these
-skills are often not developed as well as they should be.  Contact the
-:doc:`Research Software Engineers </rse/index>` (part of Science-IT)
-for help here - basic service is free.
-
-
-
-A plea: make your software reusable!
-------------------------------------
-
-Five years from now, when you are releasing your own software that you
-want others to use, :doc:`make it easy to install and reusable
-</scicomp/packaging-software>`.
+* **Check if you can find what you need already**: `issue tracker
+  <https://version.aalto.fi/gitlab/AaltoScienceIT/triton>`__ and
+  searching this site.
+* Ask for :doc:`help </help/index>` if you can't find it.
+* Once you get there, make your software nice and reuseable, so that
+  others won't have the same problems you did: :doc:`make it easy to
+  install and reusable </scicomp/packaging-software>`.  Contact the
+  :doc:`Research Software Engineers </rse/index>` for help!
 
 
 
@@ -202,6 +210,8 @@ modules available on your cluster.
 
    Discuss among your group what software you need, if it's available,
    and how you might get it.  Can they tell you how to get started?
+
+
 
 What's next?
 ------------
