@@ -93,7 +93,7 @@ step, and appears as a separate row in your history - which is useful
 for monitoring.
 
 Having written the script, you need to submit the job to Slum through
-the ``sbatch`` command.  Since the command is ``python slurm/py.py``,
+the ``sbatch`` command.  Since the command is ``python slurm/pi.py``,
 you need to be in the hpc-examples directory from our :ref:`sample
 project <triton-tut-example-repo>`::
 
