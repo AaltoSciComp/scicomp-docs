@@ -126,6 +126,7 @@ You have to be :doc:`connected to the custer and have a terminal
   * Now list ``/scratch/cs``, but don't re-type ``/scratch``.
 
 
+.. _triton-tut-example-repo:
 
 Copy your code to the cluster
 -----------------------------
