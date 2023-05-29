@@ -18,22 +18,48 @@ resources by the workload manager.
 
    You're eating out at the HPC Diner.  What happens when you arrive?
 
+   **Scheduling resources**
+
    - A host greets you and takes your party size and estimated dining
-     time.
-   - You are given a number and asked to wait a bit.
-   - The host looks at who is currently waiting.
-   - If you are two people, you might squeeze in soon.
-   - If you are a lot of people, the host will try to slowly free up
-     enough tables to join to eat together.
-   - If you are a really large party, you might need an advance
-     reservation (or have to wait a really long time).
-   - They want everyone to get a fair share of their food.  Thus,
-     people that have visited more often are asked to wait slightly
-     longer for their table, as a balancing mechanic.
+     time.  You are given a number and asked to wait a bit.
+   - The host looks at who is currently waiting and makes a plan.
+
+     - If you are two people, you might squeeze in soon.
+     - If you are a lot of people, the host will try to slowly free up
+       enough tables to join to eat together.
+     - If you are a really large party, you might need an advance
+       reservation (or have to wait a really long time).
+
+   - Groups are called when it is their turn.
+   - *Resources (tables) are used as efficiently as possible*
+
+   **Cooking in the background**
+
+   - You don't use your time to cook yourself.
+   - You make an order.  It goes to the back and gets cooked (possibly
+     a lot at once!), and you can do something else.
+   - Your food comes out when ready and you can check the results.
+   - *Asynchronous execution allows more efficient dining.*
 
    Thanks to `HPC Carpentry
    <https://carpentries-incubator.github.io/hpc-intro/13-scheduler/index.html>`__
    / `Sabry Razick <https://github.com/Sabryr>`__ for the idea.
+
+
+The basic process
+-----------------
+
+* You have your program mostly working
+* You decide what resources you want
+* You ask Slurm to give you those resources
+
+  * You might say "run this and let me know when done", this is
+    covered later in :doc:`serial`.
+  * You might want those resources to play around yourself.  This is
+    covered next in :doc:`interactive`.
+
+* If you are doing the first one, you come back later and check the
+  output files.
 
 
 
@@ -41,24 +67,8 @@ The resources available to you
 ------------------------------
 
 Slurm comes with a multitude of parameters which you can specify to
-ensure you will be allocated enough memory, CPU cores, time, etc.
-You saw two of them in use in the above examples (``--mem`` and ``--time``)
-and you will learn more in the following tutorials.
-
-Because you are sharing resource with other users, **you should always estimate the amount of time, memory, etc.
-you need and then request them accordingly** for efficiency reasons;
-the default memory and time limits are intentionally set low and may not be
-sufficient for your jobs to run/finish.
-
-The general rule of thumb is to request the least possible, so that your stuff can run faster.
-That is because the **less you request, the faster you are likely to be allocated resources.**
-If you request something slightly less than a node size (note that we have different size nodes)
-or partition limit, you are more likely to fit into a spare spot.
-
-For example, we have many nodes with 12 cores, and some with 20 or 24. If you request 24 cores,
-you have very limited options. However, you are more likely to be allocated a node if you request 10 cores.
-The same applies to memory: most common cutoffs are 48, 64, 128, 256GB.
-It's best to use smaller values when submitting interactive jobs, and more for batch scripts.
+ensure you will be allocated enough **memory**, **CPU cores**,
+**time**, etc.
 
 The basic resources are:
 
@@ -78,17 +88,52 @@ The basic resources are:
 * If you did even larger work on larger clusters, input/output
   bandwidth and licenses are also possible resources.
 
+.. admonition:: All Slurm resource options
+   :class: toggle
+
+   .. include:: ../ref/slurm.rst
+
 .. seealso::
 
-   This `reference page <https://slurm.schedmd.com/sbatch.html>`_ covers the existing resource parameters
-   and options you can use in both your interactive jobs and `batch jobs <serial>` which you will learn about
-   in the next tutorial.
+  As always, the :doc:`Triton quick reference <../ref/index>`
+
+   This `upstream Slurm reference page
+   <https://slurm.schedmd.com/sbatch.html>`_ covers the existing
+   resource parameters and options you can use in both your
+   interactive jobs and `batch jobs <serial>` which you will learn
+   about in the next tutorial.
+
 
 
 How many resources to request?
 ------------------------------
 
-Obviously, this is one of the 
+This is one of the most fundamental questions:
+
+* You want to request enough resources, so that your code actually
+  runs.
+* You don't want to request too much, since it is wasteful and lowers
+  your priority in the future.
+
+Basically, people usually start by guessing and *request more than you
+think you need at the start for testing*.  Check what you have
+actually used (Triton: ``slurm history``), and adjust the requests to
+match.
+
+The general rule of thumb is to request the least possible, so that
+your stuff can run faster. That is because the **less you request, the
+faster you are likely to be allocated resources.** If you request
+something slightly less than a node size (note that we have different
+size nodes) or partition limit, you are more likely to fit into a
+spare spot.
+
+For example, we have many nodes with 12 cores, and some with 20 or 24.
+If you request 24 cores, you have very limited options. However, you
+are more likely to be allocated a node if you request 10 cores. The
+same applies to memory: most common cutoffs are 48, 64, 128, 256GB.
+It's best to use smaller values when submitting interactive jobs, and
+more for batch scripts.
+
 
 
 The basic Slurm commands
