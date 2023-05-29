@@ -247,8 +247,8 @@ Exercises
 
    c) Tell srun to use five CPUs (``-c 5``).  Does it go any faster?
 
-   d) Use the ``--threads=5`` option to the Python program to tell it
-      to also use five threads.  ``... python .../pi.py --threads=5``
+   d) Use the ``--nprocs=5`` option to the Python program to tell it
+      to also use five processes.  ``... python .../pi.py --nprocs=5``
 
    e) Look at the job history using ``slurm history`` - can you see
       how much time each process used?  What's the relation between

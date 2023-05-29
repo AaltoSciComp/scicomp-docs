@@ -1,6 +1,6 @@
-==========
-Array jobs
-==========
+============================================
+Array jobs: embarassingly parallel execution
+============================================
 
 .. admonition:: Video
 
@@ -311,4 +311,4 @@ What's next?
 ------------
 
 
-The next tutorial is about :doc:`GPU computing <gpu>`.
+The next tutorial is about :doc:`shared memory parallelism <parallel-shared>`.

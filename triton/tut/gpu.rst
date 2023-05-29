@@ -259,4 +259,13 @@ See also
 What's next?
 ------------
 
-We go on to :doc:`parallel`.
+You have now seen the basics - but applying these in practice is still
+a difficult challenge!  There is plenty to figure out while combining
+your own software, the Linux environment, and Slurm.
+
+Your time is the most valuable thing you have.  If you aren't fully
+sure of how to use the tools, it is much better to ask that struggle
+forever.  Contact us the :doc:`Research Software Engineers
+</rse/index>` early - for example in our :doc:`daily garage
+</help/garage>`, and we can help you get set up well.  Then, you can
+continue your learning while your projects are progressing.

@@ -193,7 +193,7 @@ which will show information as indicated in the ``--format`` option (jobid,
 elapsed time, number of reserved CPUs, etc.). You can specify any field of
 interest to be shown using ``--format``.
 
-
+.. _monitoring-seff:
 
 Monitoring a job's CPU and RAM usage efficiency after it has finished
 ---------------------------------------------------------------------
@@ -234,10 +234,10 @@ Exercises
 .. exercise:: Monitoring-2: Multiple thread
 
    The script ``pi.py`` has been written so that it can be run using multiple
-   threads. Run the script with multiple threads and :math:`10^8` iterations
+   processe. Run the script with multiple processes and :math:`10^8` iterations
    with::
 
-     srun --cpus-per-task=2 python pi.py --threads=2 100000000
+     srun --cpus-per-task=2 python pi.py --nprocs=2 100000000
 
    After you have run the script, do the following:
 
@@ -251,5 +251,4 @@ Exercises
 What's next?
 ------------
 
-Running multiple instances of a ``sbatch`` script is easier with
-:doc:`array jobs<../tut/array>`.
+Next tutorial is about different ways of doing :doc:`parallel computing <parallel>`.

@@ -77,9 +77,11 @@ Running calculations
    Interactive jobs: running your first command <tut/interactive>
    Serial jobs: running in the queue <tut/serial>
    tut/monitoring.rst
-   tut/array.rst
-   tut/gpu.rst
    tut/parallel.rst
+   tut/array.rst
+   tut/parallel-shared.rst
+   tut/parallel-mpi.rst
+   tut/gpu.rst
    tut/dependency.rst
 
 .. _application-list:
