@@ -9,10 +9,11 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * 18 May 2023 (Th): Holiday
-   * 19 May 2023 (F): There might be less staff available, or garage
-     canceled, on (Friday between holiday and weekend).  Try dropping
-     by and see if anyone is there.
+   * 30 May 2023: Due to an internal meeting, there might be reduced
+     capacity.
+   * 6-8 June 2023: Lower capacity due to the :doc:`kickstart course
+     </training/scip/kickstart-2023>` - watch at
+     https://twitch.tv/coderefinery .
 
 ..
    * There are no current planned disruptions in the daily garage.
