@@ -70,7 +70,7 @@ instead, we install through modules (the next point) so that people
 can choose the version they want.
 
 One unfortunate side-effect is that almost all software installation
-instructions you find online donn't work on the cluster.  Often times,
+instructions you find online don't work on the cluster.  Often times,
 it can be installed, but people don't think to mention it in the
 documentation.  This often requires some thought to figure out: if you
 can't figure it out, ask for help!
@@ -167,7 +167,7 @@ What you should do
   <https://version.aalto.fi/gitlab/AaltoScienceIT/triton>`__ and
   searching this site.
 * Ask for :doc:`help </help/index>` if you can't find it.
-* Once you get there, make your software nice and reuseable, so that
+* Once you get there, make your software nice and reusable, so that
   others won't have the same problems you did: :doc:`make it easy to
   install and reusable </scicomp/packaging-software>`.  Contact the
   :doc:`Research Software Engineers </rse/index>` for help!
