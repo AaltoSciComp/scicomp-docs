@@ -107,7 +107,7 @@ Checklists
    JOSS checklist (external) <https://joss.readthedocs.io/en/latest/review_checklist.html>
    pyOpenSci guides (external) <https://www.pyopensci.org/python-package-guide/>
    rOpenSci guide (external) <https://devguide.ropensci.org/building.html>
-   Matlab project reproduciblity (external) <https://rse.shef.ac.uk/blog/2022-05-05-concise-guide-to-reproducible-matlab/>
+   Matlab project reproducibility (external) <https://rse.shef.ac.uk/blog/2022-05-05-concise-guide-to-reproducible-matlab/>
 
 Other pages on this site: :doc:`/scicomp/packaging-software`, :doc:`/scicomp/zen-of-scicomp`
 
@@ -147,7 +147,7 @@ Related programs from Aalto Scientific Computing
 This is the hands-on compliment our training programs, mainly
 :doc:`scientific computing in practice sessions </training/scip/index>` and
 `CodeRefinery <https://coderefinery.org>`_.  If you want a kickstart
-to put those sessons in practice, this is for you.  Attendance
+to put those lessons in practice, this is for you.  Attendance
 in these courses is useful but by no means required.
 
 Other links
