@@ -124,7 +124,7 @@ takes some effort to get ready.  Browse these resources:
   course, since these basic command line concepts are always useful.
 * Study a bit of Jupyter if you haven't used it before.  The
   `CodeRefinery lesson <https://coderefinery.github.io/jupyter/>`__
-  (episode on JupterLab interface) is enough.
+  (episode on JupyterLab interface) is enough.
 
 Software installation:
 

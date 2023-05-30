@@ -75,8 +75,8 @@ Follow-ups
       Schedule
       - Time estimate:
       - Any deadlines?:
-      - Expected time, likelyhood of going over:
-      - What happens if it goes over time?  Backeup plans?:
+      - Expected time, likelihood of going over:
+      - What happens if it goes over time?  Backup plans?:
 
 
       Links to existing docs:

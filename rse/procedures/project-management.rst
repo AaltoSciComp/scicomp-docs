@@ -16,7 +16,7 @@ data:
    among departments and projects.  This doesn't have to be perfectly
    accurate (and since we have so many small projects, it would be a
    big waste of time to try to be perfect) - but it should be
-   asyptotically correct.  This is tracked in Gitlab.
+   asymptotically correct.  This is tracked in Gitlab.
 
 2) Financial reporting and project payments.  This needs to be
    accurate, but only for the few projects which have special

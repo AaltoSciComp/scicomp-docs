@@ -146,7 +146,7 @@ Preparation
       <https://coderefinery.github.io/installation/bash>`__.
 
   * If all the above fails, the backup plan is to use BASH through your
-    webbrowser by `clicking here
+    web browser by `clicking here
     <https://mybinder.org/v2/gh/AaltoSciComp/bash-binder/HEAD?urlpath=terminals%2F1>`__.
 
 * `Zoom <https://coderefinery.github.io/installation/zoom/>`__ (if

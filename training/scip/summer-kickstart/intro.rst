@@ -70,7 +70,7 @@ We have an interesting strategy:
 There are many parts of the workshop:
 
 - Talking and demos (livestream)
-- Type-along (livesteam)
+- Type-along (livestream)
 - Exercises (Zoom or alone or your own groups)
 - Breaks, at least 10 minutes/hour
 

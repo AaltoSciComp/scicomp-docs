@@ -37,7 +37,7 @@ we can hopefully make it manageable.  The three layers are:
 - **Level 2: Transfer and synchronize file content between
   repositories:** Once the metadata is tracked and the git repository
   is shared, you might want to move the content between repositories.
-  You can easily do this ``git annex get``, ``git annenx copy
+  You can easily do this ``git annex get``, ``git annex copy
   [--to|--from]``.  You can put any file anywhere and metadata is
   always synced.
 
