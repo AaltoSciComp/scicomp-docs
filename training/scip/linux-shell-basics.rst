@@ -10,7 +10,7 @@ Part of :doc:`Scientific Computing in Practice <index>` lecture series at Aalto 
 
 We will start with somewhat basics like files and processes and go up to command line magic like redirections and pipes. This should be enough to get started with the Linux terminal.
 
-There is an advaced part of this course given later in the spring. There on we go through the programming techniques including advanced ones, while here we get familiar with the command line.
+There is an advanced part of this course given later in the spring. There on we go through the programming techniques including advanced ones, while here we get familiar with the command line.
 
 **Lecturer:** Ivan Degtyarenko, D. Sc., Science IT / Department of Applied Physics, Aalto University
 
