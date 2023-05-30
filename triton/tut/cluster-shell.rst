@@ -125,6 +125,13 @@ You have to be :doc:`connected to the custer and have a terminal
   * Change directory to ``/scratch``
   * Now list ``/scratch/cs``, but don't re-type ``/scratch``.
 
+   .. solution::
+   
+      After changing your current directory, you should see the same 
+      output as from the first command with just ``ls cs``. 
+      Like vast majority of commands, ``ls`` uses your relative path to the target. 
+      Since you are already in ``/scratch/`` you don't need to type it again.
+
 
 
 Copy your code to the cluster
@@ -165,6 +172,18 @@ Now we have our code in a place that can be used.
 .. exercise:: Shell-3: clone the hpc-examples repository
 
   Do the steps above.
+  
+   .. solution::
+   
+      You can check that everything is correct with ``git status``. 
+      Output should be something like this::
+      
+         $ git status
+         On branch master
+         Your branch is up to date with 'origin/master'.
+         
+         nothing to commit, working tree clean
+
 
 .. exercise:: Shell-4: log out and re-navigate to the hpc-examples reports
 
