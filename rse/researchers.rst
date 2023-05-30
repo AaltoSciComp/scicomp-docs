@@ -77,7 +77,7 @@ for a few months for your grant?  We can do that.)
 .. note:: Master's and Bachelor's students
 
   The RSE service is intended for researchers, but students can be researchers
-  if they are involved in a research project. To get started on anythin longer
+  if they are involved in a research project. To get started on anything longer
   than a short consultation, we would need to meet with your supervisor.
 
 Short-term examples
