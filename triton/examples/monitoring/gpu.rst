@@ -9,6 +9,8 @@ Once the job has finished, you can use ``slurm history`` to obtain the
 ``jobID`` and run::
 
    $ sacct -j JOBID -o comment -p
+   {"gpu_util": 99.0, "gpu_mem_max": 1279.0, "gpu_power": 204.26, "ncpu": 1, "ngpu": 1}|
+
 
 This also shows the GPU utilization.
 
