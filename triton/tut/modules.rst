@@ -372,6 +372,13 @@ modules available.
    ``module avail`` and check what you see.  Find a software that has
    many different versions available.
    Load the oldest version.
+   
+   .. solution::
+   
+      Let's use anaconda as an example. To see all available versions of anaconda, 
+      we can either use ``module avail anaconda`` or the better option 
+      ``module spider anaconda``. Oldest version of anaconda is ``anaconda/2020-01-tf1``. 
+      We can load it using ``module load anaconda/2020-01-tf1``
 
 .. exercise:: Modules-2: Modules and PATH
 
@@ -386,6 +393,22 @@ modules available.
    * Run ``echo $PATH`` and ``type python``.
    * ``module load anaconda``
    * Re-run ``echo $PATH`` and ``type python``.  How does it change?
+   
+   .. solution::
+   
+      ``echo $PATH`` should print something like this::
+      
+         .../usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/ibutils/bin...
+      
+      Your PATH is most likely longer and doesn't have to look exactly like this.
+      
+      ``type python`` should output something like this::
+      
+         python is /usr/bin/python
+         
+      After ``module load anaconda``, ``type python`` should print something like 
+      ``/share/apps/anaconda-ci/fgci-centos7-anaconda/software/anaconda/2023-01/2eea7963/bin/python`` 
+      and you should see the same path added to your PATH.
 
 .. exercise:: Modules-3: Complex module and PATH
 
@@ -393,6 +416,14 @@ modules available.
    List what it loaded.  Check the value of ``PATH`` again.  Why is
    there so much stuff?  Can you find a module command that explains
    it?
+   
+   .. solution::
+      
+      Running ``module list`` shows you that over 50 modules have been loaded. 
+      All of these are dependencies of ``py-gpaw``, and as such were loaded alongside it. 
+      You can see dependencies of a module using ``module show NAME``. In the case of ``module show py-gpaw`` 
+      you can see that ``py-gpaw`` loads several other modules when it is loaded. Some of these models also load 
+      their own depedencies.
 
 .. exercise:: (advanced) Modules-4: Modules and PATH
 
@@ -413,6 +444,13 @@ modules available.
    Load ``openfoam-org/7-openmpi-metis``.
    Use ``which`` to find where executable ``blockMesh`` is
    coming from and then use ``ldd`` to find out what libraries it uses.
+   
+   .. solution::
+   
+     Path to blockmesh is ``/share/apps/spack/envs/fgci-centos7-generic/software/openfoam-org/7/beuz5lf/platforms/linux64GccDPInt32RpathOpt/bin/blockMesh``
+     The list of used libraries is bit too long to list here, but you can 
+     see it by using ``ldd /path/to/blockMesh`` 
+     or the slightly cleaner option of ``ldd $(which blockMesh)``
 
 
 
