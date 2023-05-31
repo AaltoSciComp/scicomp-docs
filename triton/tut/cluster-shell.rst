@@ -24,7 +24,7 @@ programming languages designed to connect programs together.
 .. figure:: img/connecting--terminal.png
    :alt: Image of terminal with two commands ran: ``whoami`` and ``hostname``
 
-   Image of a terminal - this is what you want does it all.
+   Image of a terminal - this is what does it all.
 
 
 In the image above, we see a pretty typical example.  The **prompt**
