@@ -4,8 +4,15 @@ June 2023 / Intro to Scientific Computing /  HPC Summer Kickstart
 
 .. important::
 
-   `Registration <https://link.webropol.com/ep/scicomphpc2023>`__.
+   | *Come and learn about high performance computing!*
+   | **When**: 6,7,8/June/2023 12:00-16:00 EEST
+   | **Where**: https://www.twitch.tv/coderefinery
+   | **Registration**: `Registration link <https://link.webropol.com/ep/scicomphpc2023>`__ 
+   | Registration is important if you need access to a cluster in a partner organisation and if you want to access the collaborative document. Registered participants from partner organisations also receive a zoom room for direct support.
+   | **Partner organisations**: Aalto University, Helsinki University, Tampere University
+   | **Important**: Check the prerequisites and the schedule here below.
 
+   
 
 Kickstart is a three × half day course for researchers to get
 started with high-performance computing (HPC) clusters.
