@@ -21,19 +21,22 @@ for this series of tutorials).
 
 .. admonition:: Abstract
 
+   * When connecting to a cluster, our goal is to get a command-line
+     terminal that provides a base for the rest of our work.
    * The standard way of connecting is via ssh, but Open OnDemand and
      Jupyter provide graphical environments that are useful for
      interactive work.
-   * Host name is ``triton.aalto.fi``
+   * SSH host name is ``triton.aalto.fi``
 
    .. include:: ../ref/connecting.rst
 
 .. admonition:: Kickstart course preparation
 
-   Are you here for a SciComp KickStart course?  You just need to :doc:`make
-   sure you have an account <../accounts>` and then be able to connect
-   via ssh (first section here), and you don't need to worry about the
-   graphical application parts.  Everything else, we do tomorrow.
+   Are you here for a SciComp KickStart course?  You just need to
+   :doc:`make sure you have an account <../accounts>` and then be able
+   to get a terminal (as seen in the picture below) by any of the
+   means here, and you don't need to worry about anything else.
+   Everything else, we do tomorrow.
 
 .. admonition:: Local differences
 
@@ -55,9 +58,8 @@ activated first <../accounts>`.
 The terminal
 ------------
 
-This is what you want in the end.  The command line terminal
-(discussed more in :doc:`cluster-shell`) will explain more about what
-you see.
+This is what you want: the command line terminal. Later, in
+:doc:`cluster-shell`, will explain more about what you see.
 
 .. figure:: img/connecting--terminal.png
    :alt: Image of terminal with two commands ran: ``whoami`` and ``hostname``
@@ -65,6 +67,11 @@ you see.
    Image of a terminal - this is what you want after this episode.
    You'll see more about this means in :doc:`cluster-shell`.  Don't
    worry about what the commands mean.
+
+Below, you see different ways to get this.  Take the first one that
+works, or the one that's comfortable to you.  It's good to get ``ssh``
+to work someday.
+
 
 
 Connecting via ssh
@@ -202,8 +209,8 @@ Connecting via Open onDemand
 OOD (Open onDemand) is a web-based user interface to Triton, including
 shell access, and data transfer, and a number of other applications
 that utilize graphical user interfaces. Read more from :doc:`its guide
-<../usage/ood>`.  The **Triton shell access** app will get you the
-terminal that you need for basic work and the rest of these tutorials.
+<../usage/ood>`.  The **Triton shell access app will get you the
+terminal** that you need for basic work and the rest of these tutorials.
 
 It is only available from Aalto networks and VPN.  Go to
 https://ood.triton.aalto.fi and login with your Aalto account.
@@ -222,8 +229,8 @@ forget is that it has a full-featured terminal and console included.
 Go to https://jupyter.triton.aalto.fi (not **.cs.**\ aalto.fi) and log
 in.  Select "Slurm 5 day, 2G" and start.
 
-To start a terminal, click File→New→Terminal - this is the shell you
-need.  If you need to edit text
+**To start a terminal, click File→New→Terminal - this is the shell you
+need.**  If you need to edit text
 files, you can also do that through JupyterLab (note: change to the
 right directory *before* creating a new file!).
 
@@ -255,11 +262,14 @@ triton.aalto.fi``.
 Exercises
 ---------
 
+If you are in the kickstart course, Connecting-1 is required for the
+rest of the course.
+
 .. exercise:: Connecting-1: Connect to Triton
 
-   Connect to Triton, and get a terminal.  Type the command
-   ``hostname`` to verify that you are on Triton.  Run ``whoami`` to
-   verify your username.
+   Connect to Triton, and get a terminal by one of the options above.
+   Type the command ``hostname`` to verify that you are on Triton.
+   Run ``whoami`` to verify your username.
 
    .. solution::
 
@@ -271,12 +281,13 @@ Exercises
          darstr1
 
 
-.. exercise:: Connecting-2: Test a few command line programs
+.. exercise:: Connecting-2: (optional) Test a few command line programs
 
    Check the uptime and load of the login node: ``uptime`` and
    ``htop`` (``q`` to quit - if ``htop`` is not available, then
    ``top`` works almost as well).  What else can you learn about the
-   node?
+   node?  (You'll learn more about these in :doc:`cluster-shell`, this
+   is just a preview to fill some time.)
 
    .. solution::
 
@@ -299,7 +310,7 @@ Exercises
       We'll see more in :doc:`cluster-shell`.
 
 
-.. exercise:: (optional, Aalto only) Connecting-3: check your default shell
+.. exercise:: Connecting-3: (optional, Aalto only) Check your default shell
 
    Check what your default shell is: ``echo $SHELL``.  If it doesn't
    say ``/bin/bash``, go ahead and change your shell to bash if it's

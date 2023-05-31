@@ -22,15 +22,20 @@ Linux.
 
 .. admonition:: Abstract
 
-   * There are many ways to get software on Triton: we use the
-     standard module system, have Singularity containers, and you can
-     install your own.
-   * :doc:`Modules <modules>` allow you to activate a lot of software.
+   * There are many ways to get software on Triton: 
+
+     * Usually, you can't install software the normal operating system way.
+     * The cluster admins install many things for you, and they are
+       loadable with :doc:`Modules <modules>`.
+     * Sometimes, you need to install some stuff on top of that (your
+       own libraries or environments)
+     * You can actually install your own applications, but you need to
+       modify insturctions to work in your own directories.
+
    * :doc:`Singularity containers <../usage/singularity>` allow you to
      run other hard-to-install software.
-   * Ask us to install software if you need it.  You can also install
-     software yourself, but you need to update instructions to do a
-     user install (as opposed to admin install).
+   * Ask us to install software if you need it.  Ask for help if you
+     try yourself and it seems to be taking too long.
 
 .. seealso::
 
@@ -177,36 +182,15 @@ What you should do
 Exercises
 ---------
 
-If you are at Aalto, everything will work.  Otherwise, if you are in
-Finland (but not at CSC) ``module load fgci-common`` will make our
-modules available on your cluster.
+These are more for thinking than anything.
 
-.. exercise:: Applications-1: Find Tensorflow documentation
+.. exercise:: Applications-1: Check your needs
 
-   This is an exercise in finding out how to use a new program on
-   Triton.  The goal is not to actually use tensorflow, but practice
-   searching for information on it.
+   Find the Applications page link above, the issue tracker, etc., and
+   if we already have your software installed.  See if we have what
+   you need, using any of the strategies on that list.
 
-   Figure out how to use ``tensorflow``:  What is the documentation
-   page on scicomp.aalto.fi?  Can you see any issues where others have
-   asked for special support?
-
-   If you want to use Python, see if you can import it.  For example,
-   try to run ``python`` and then in Python run ``import tensorflow``.
-
-.. exercise:: Applications-2: Check your needs
-
-   Find the Applications page link above, and check the list for ways
-   to find out if we already have your software installed.  See if we have
-   what you need, using any of the strategies on that list.
-
-.. exercise:: (optional) Applications-3: Spack package list
-
-   From the Applications page, find the Spack package list
-   (warning: it's a very long page and takes a while to load).  Does
-   it have anything useful to you?
-
-.. exercise:: (optional) Applications-4: Your group's needs
+.. exercise:: (optional) Applications-2: Your group's needs
 
    Discuss among your group what software you need, if it's available,
    and how you might get it.  Can they tell you how to get started?
