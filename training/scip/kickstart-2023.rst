@@ -155,36 +155,38 @@ started with the computing resources.
     think about these problems.
 
   * **13:25--13:50: Behind the scenes: the humans of scientific
-    computing** *Richard Darst and ???*
+    computing** *Richard Darst and Teemu Ruokolainen*
 
     Who are we that provide these services?  What makes it such a
     fascinating career?  Learn about what goes on behind the scenes
     and how you could join us.
 
-  * **14:00--14:25: Files and directories: just how is data
-    organized?** *Richard Darst and Teemu Ruokolainen*
+  * **14:00--14:45: Connecting to a HPC cluster** *Thomas Pfau and
+    Simo Tuomisto*
+
+    - Required if you are attending the Triton/HPC tutorials the
+      following days, otherwise the day is done.
+    - 14:00--14:20?: Livestream introduction to connecting
+    - 14:??--15:00: Individual help time in Zoom (links sent to
+      registered participants)
+    - Break until 15:00 once you get connected.
+    - Material: :doc:`/triton/tut/connecting`
+
+
+  * **15:00--15:25: Using the cluster from the shell (files
+    and directories)** *Richard Darst and Teemu Ruokolainen*
 
     Navigating many files stored on large computers has tripped many
     people in the past - we will go over the Zen of Data
     Storage. Large-scale data analysis can't be done without organized
     files and knowing how stuff is stored, so let's start with the
-    basics.
+    basics. Material: :doc:`/triton/tut/cluster-shell`.
 
-  - **14:25--14:50: What can you do with a computational cluster?**
+  - **15:25--15:50: What can you do with a computational cluster?**
 
-    Several real examples of how people use the cluster (what you can
+    See several real examples of how people use the cluster (what you can
     do at the end of the course): 1) Large-scale computing with array
     jobs, 2) Large-scale parallel computing
-
-  * **15:00--15:45: Connecting to a HPC cluster** *Thomas Pfau and
-    Simo Tuomisto*
-
-    - Required if you are attending the Triton/HPC tutorials the
-      following days, otherwise the day is done.
-    - 15:00--15:20?: Livestream introduction to connecting
-    - 15:??--??: Individual help time in Zoom (links sent to
-      registered participants)
-    - Material: :doc:`/triton/tut/connecting`
 
   * Preparation for day 2:
 
@@ -201,11 +203,9 @@ started with the computing resources.
 
     - :doc:`/triton/tut/intro`
 
-  - **12:05--12:30** Structure of a cluster
+  - **12:05--12:30 Structure of a cluster: The Slurm queueing system**
 
-    What is the cluster?  What are the pieces?  Why do we teach
-    everything like we do?  Let's zoom in our the HPC-side of our map
-    and get an overview.
+    - :doc:`/triton/tut/slurm`
 
   - **12:30--15:00: Running your first jobs in the queue**
 
