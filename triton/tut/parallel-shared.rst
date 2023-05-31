@@ -138,7 +138,7 @@ threads, you should be careful to check that only one method of
 parallisation is in effect.
 
 Using both can result in double-booked parallelism where you launch
-:math:`N` processes and each process launches :math:`N`` threads, which
+:math:`N` processes and each process launches :math:`N` threads, which
 results in :math:`N^2` threads. This will usually tank the performance
 of the code as the CPUs are overbooked.
 

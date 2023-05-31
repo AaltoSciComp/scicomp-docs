@@ -234,7 +234,7 @@ Exercises
 .. exercise:: Monitoring-2: Multiple thread
 
    The script ``pi.py`` has been written so that it can be run using multiple
-   processe. Run the script with multiple processes and :math:`10^8` iterations
+   processes. Run the script with multiple processes and :math:`10^8` iterations
    with::
 
      srun --cpus-per-task=2 python pi.py --nprocs=2 100000000
