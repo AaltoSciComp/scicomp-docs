@@ -4,8 +4,6 @@ News
 
 *15/12/2022* `Follow us on Mastodon <https://fosstodon.org/@SciCompAalto>`__.
 
-*21/10/2022* **Upgrade of the triton login node:** After running out of memory several times on our login node, we upgraded the memory from previously 128Gb to 256Gb. This is hopefully sufficient for most compilation and development work happening on the node. Any computation or memory intensive job should still be run on the compute nodes, but this upgrade provides us with a more robust system.
-
 **Upcoming Courses**
 
 From 22nd till 25th of November we will be running our popular `*Python for Scientific Computing* </training/scip/python-for-scicomp-2022/>`__ course again. The registration is open and can be accessed `here <https://docs.google.com/forms/d/e/1FAIpQLSfqBu3ByiuYmVcSouH4OQ-BeqlMRBA8bTzt2SY1KITR8rQHlA/viewform>`__. Please also visit our `training webpages </training/>`__ to check other upcoming courses or request a re-run of past hands-on courses. 
@@ -14,6 +12,10 @@ Join our `daily zoom garage </help/garage/>`__ for any scientific computing rela
 
 News archive
 ~~~~~~~~~~~~
+
+*22/11/2022* From 22nd till 25th of November we will be running our popular `*Python for Scientific Computing* </training/scip/python-for-scicomp-2022/>`__ course again.
+
+*21/10/2022* **Upgrade of the triton login node:** After running out of memory several times on our login node, we upgraded the memory from previously 128Gb to 256Gb. This is hopefully sufficient for most compilation and development work happening on the node. Any computation or memory intensive job should still be run on the compute nodes, but this upgrade provides us with a more robust system.
 
 *12/09/2022* September 2022, it is another academic year! We have CodeRefinery starting in one week: if you write code for research, then this is the workshop for you! Come and learn about git, jupyter, conda, reproducibility and much more. `Click here for CodeRefinery Fall 2022 registration and info page <https://coderefinery.github.io/2022-09-20-workshop/>`__. 
 
