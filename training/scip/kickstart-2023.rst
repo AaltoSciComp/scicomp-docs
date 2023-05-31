@@ -122,7 +122,7 @@ started with the computing resources.
 
 * **Day #1 (Tue 6.jun):** Basics and background
 
-  * 11:50--12:00: Connecting time, basics, and icebreaker
+  * 11:50--12:00: Joining time/icebreaker
 
   * **12:00--12:10 Introduction, about the course** *Richard Darst and
     other staff* Materials: :doc:`../../training/kickstart/intro`
@@ -197,7 +197,7 @@ started with the computing resources.
 * **Day #2 (Wed 7.jun):** Basic use of a cluster *(Richard Darst, Simo
   Tuomisto)*
 
-  - 11:50--12:00: Connecting time and icebreaker
+  - 11:50--12:00: Joining time/icebreaker
 
   - **12:00--12:05: Introduction to days 2-3**
 
@@ -224,13 +224,15 @@ started with the computing resources.
 * **Day #3 (Thu 8.jun):** Advanced cluster use *(Simo Tuomisto, Richard
   Darst)*
 
-  - 11:50: Joining time/icebreaker
+  - 11:50--12:00: Joining time/icebreaker
 
-  - **11:50--13:00: Simple parallelization with array jobs:**
-    :doc:`/triton/tut/array`
+  - **12:00--12:30: What does "parallel" mean?**: :doc:`/triton/tut/parallel`
 
-  - **13:00--14:00: Using more than one CPU at the same time:**
-    :doc:`/triton/tut/parallel`
+  - **12:30--14:00: Forms of parallelization**
+
+    - :doc:`/triton/tut/array`
+    - doc: ``/triton/tut/parallel-shared``
+    - doc: ``/triton/tut/parallel-mpi``
 
   - **14:00--14:30: Laptops to Lumi**
 
@@ -241,7 +243,7 @@ started with the computing resources.
 
   - **14:40--15:30: Running jobs that can utilize GPU hardware:** :doc:`/triton/tut/gpu`
 
-  - **15:30--16:00: Q&A**
+  - **15:30--16:00: Ask us anything**
 
 
 
