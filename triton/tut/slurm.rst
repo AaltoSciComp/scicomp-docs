@@ -63,38 +63,8 @@ The basic process
 
 
 
-A basic Slurm example
----------------------
-
-Here is a basic Slurm batch script template (don't run it yet - we
-aren't there yet):
-
-.. code:: slurm
-
-  #!/bin/bash
-  #SBATCH --mem=5G
-  #SBATCH --time=5:00:00
-
-  module purge
-  module load anaconda
-
-  python slurm/pi.py 10000
-
-This is a batch script - the same shell we learned about it
-:doc:`cluster-shell`.  The parts are:
-
-* The fist line says this is the Bash shell.
-* The next two lines are the Slurm parameters.  It says how much
-  memory and time we need.
-* Then we set our environment - loading modules.
-* Then we run the actual program, our usual pi example.
-
-Let's look at each part in more detail:
-
-
-
-The resources available to you
-------------------------------
+The resources Slurm manages
+---------------------------
 
 Slurm comes with a multitude of parameters which you can specify to
 ensure you will be allocated enough **memory**, **CPU cores**,
@@ -102,21 +72,21 @@ ensure you will be allocated enough **memory**, **CPU cores**,
 
 The basic resources are:
 
+* Time: While not exactly a resources, you need to specify the
+  expacted usage time (run time) of each job for scheduling purposes.
+  If you go over by too much, your job will be killed.  This is
+  ``--time``, for example ``--time=DAYS-HH:MM:SS``.
+* Memory: Memory is needed for data in jobs.  If you run out of
+  processors, your job is slow, but if you run out of memory, then
+  everything dies.  This is ``--mem`` or ``--mem-per-cpu``.
 * CPUs (also known as "processors" or "(processor) cores"): Processor
   cores.  This resource lets you do things in parallel the classic
   way, by adding processors.  Depending on how the parallelism works,
   there are different ways to request the CPUs - see :doc:`parallel`.
   CPUs.  This is ``--cpus-per-task`` and ``--ntasks``, but you must
   read :doc:`parallel` before using these!
-* Memory: Memory is needed for data in jobs.  If you run out of
-  processors, your job is slow, but if you run out of memory, then
-  everything dies.  This is ``--mem`` or ``--mem-per-cpu``.
 * GPUs: Graphical Processing Units are modern, highly parallel compute
   units.  We will discuss requesting them in :doc:`gpu`.
-* Time: While not exactly a resources, you need to specify the
-  expacted usage time (run time) of each job for scheduling purposes.
-  If you go over by too much, your job will be killed.  This is
-  ``--time``, for example ``--time=DAYS-HH:MM:SS``.
 * If you did even larger work on larger clusters, input/output
   bandwidth and licenses are also possible resources.
 
