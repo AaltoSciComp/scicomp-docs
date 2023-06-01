@@ -69,9 +69,9 @@ Running an example shared memory parallel program
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For this example, let's consider
-`pi.py <https://github.com/AaltoSciComp/hpc-examples/blob/master/slurm/pi.py>`_-example
+`pi.py <https://github.com/AaltoSciComp/hpc-examples/blob/master/slurm/pi.py>`__-example
 from the
-`hpc-examples <https://github.com/AaltoSciComp/hpc-examples>`_-repository.
+`hpc-examples <https://github.com/AaltoSciComp/hpc-examples>`__-repository.
 It estimates pi using Monte Carlo methods and can utilize multiple processes for calculating
 the trials.
 
