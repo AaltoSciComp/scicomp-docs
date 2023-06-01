@@ -216,7 +216,7 @@ ways in your scripts. Below are few examples:
 Lack of parallelisation when using srun
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Since Slurm version 22.05 job steps run with ``srun`` will not
+Since Slurm version 22.05, job steps run with ``srun`` will not
 automatically inherit the ``--cpus-per-task``-value that is requested
 by ``sbatch``. This was done to make it easier to start multiple job
 steps with different CPU allocations within one job.
