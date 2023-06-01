@@ -75,7 +75,7 @@ from the
 It estimates pi using Monte Carlo methods and can utilize multiple processes for calculating
 the trials.
 
-You can clone the repository with ``git clone https://github.com/AaltoSciComp/hpc-examples.git``.
+.. include:: ../ref/example-repo.rst
 
 The script is in the ``slurm``-folder. You can call the script with
 ``python pi.py --nprocs=C N``, where ``N`` is the number of iterations to be done by the
