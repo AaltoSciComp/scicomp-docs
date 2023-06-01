@@ -20,6 +20,8 @@ Shared memory parallelism: multithreading & multiprocessing
    * If you aren't fully sure of how to scale up, contact us
      :doc:`Research Software Engineers </rse/index>` early.
 
+
+
 What is shared memory parallelism?
 ----------------------------------
 
@@ -44,6 +46,8 @@ Depending on a program, you might have multiple processes (Matlab parallel
 pool, R parallel-library, Python multiprocessing) or have multiple threads
 (OpenMP threads of BLAS libraries that R/numpy use).
 
+
+
 Running a typical multiprocess program
 --------------------------------------
 
@@ -60,7 +64,6 @@ dataset or runs its own simulation that needs extra memory allocations.
 In these cases you can use ``--mem-per-core=M`` to specify a memory allocation
 that scales with the number of CPUs. We recommend starting with ``--mem=M``
 if you do not know how your program scales.
-
 
 Running an example shared memory parallel program
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -108,6 +111,8 @@ and it is set based on the number of ``--cpus-per-task`` requested. For more tri
 on how to set the number of processors, see the
 :ref:`section on using it effectively<effective-cpus-per-task>`.
 
+
+
 Special cases and common pitfalls
 ---------------------------------
 
@@ -115,6 +120,7 @@ Monitoring CPU utilization for parallel programs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. include:: ../examples/monitoring/seff.rst
+
 
 
 .. _threads-vs-processes:
@@ -147,8 +153,9 @@ implemented using OpenMP. If you encounter bad performace or you
 see a huge number of threads appearing when you use parallel processes
 try setting ``export OMP_NUM_THREADS=1`` in your Slurm script.
 
-.. _cpu-mismatch:
 
+
+.. _cpu-mismatch:
 
 Over- and undersubscription of CPUs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -163,6 +170,9 @@ for the same resources.
 Using threads and processes at the same time can also result in
 :ref:`double-booking<threads-vs-processes>`.
 
+
+
+.. _effective-cpus-per-task:
 
 Using SLURM_CPUS_PER_TASK effectively
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -238,7 +248,6 @@ For more information see documentation pages for
 Asking for multiple tasks when code does not use MPI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 Normally you should **not** use ``--ntasks=n`` when you want to
 run shared memory codes. The number of tasks is only relevant to MPI codes
 and by specifying it you might launch multiple copies of your program
@@ -247,11 +256,10 @@ that all compete on the reserved CPUs.
 Only hybrid parallelization codes should have both ``--ntasks=n`` and
 ``--cpus-per-task=C`` set to be greater than one.
 
-.. _effective-cpus-per-task:
+
 
 What's next?
 ------------
-
 
 The next tutorial is about :doc:`MPI parallelism <parallel-mpi>`.
 

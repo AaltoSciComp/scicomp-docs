@@ -34,6 +34,7 @@ tutorials.
 .. highlight:: bash
 
 
+
 Parallel programming models
 ---------------------------
 
@@ -77,7 +78,9 @@ The main models of parallel programming are:
   **Thus programs that utilize this model should request one node,
   one task and multiple CPUs.**
 
-  Example applications that utilize this model: Matlab, R, Python multithreading/multiprocessing,
+  Example applications that utilize this model: Matlab (internally & parallel
+  pool), R (internally & parallel-library), Python (numpy internally &
+  threading/multiprocessing-modules),
   OpenMP applications, BLAS libraries, FFTW libraries, typical
   multithreaded/multiprocess parallel desktop programs.
 
@@ -154,6 +157,7 @@ The main models of parallel programming are:
    to.**
 
 
+
 Combining different parallel execution models
 ---------------------------------------------
 
@@ -171,7 +175,6 @@ embarassingly parallel fashion if needed.
 One can run shared-memory parallel, MPI parallel and GPU parallel jobs in
 array jobs as well. Each individual job will get their own resources.
 
-
 Hybrid parallelism
 ~~~~~~~~~~~~~~~~~~
 
@@ -184,7 +187,6 @@ For example, CP2K compiled to ``psmp``-target has hybrid parallelization enabled
 while ``popt``-target has only MPI parallelization enabled. The best ratio between
 MPI tasks and CPUs per tasks depends on the program and needs to be measured.
 
-
 Shared memory parallelism and GPUs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -196,7 +198,6 @@ needed by the CPU part of the calculation.
 Deep learning frameworks such as Tensorflow and PyTorch also use CPUs for data
 preprocessing while the GPU is doing training.
 
-
 Multi-node parallelism without MPI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -205,6 +206,7 @@ for communication between nodes. Resources for these programs are reserved in a 
 fashion to the MPI programs, but the program launch is usually done by scripts that
 run different instructions on different machines. The setup depends on the program
 and can be complex.
+
 
 
 See also
@@ -219,6 +221,5 @@ See also
 
 What's next?
 ------------
-
 
 The next tutorial is about :doc:`array jobs <array>`.

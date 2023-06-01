@@ -27,6 +27,8 @@ MPI parallelism: multi-task programs
    * If you aren't fully sure of how to scale up, contact us
      :doc:`Research Software Engineers </rse/index>` early.
 
+
+
 What is MPI parallelism?
 ------------------------
 
@@ -58,8 +60,11 @@ get information on their ranks from Slurm via library called
 `PMIx <https://pmix.github.io/>`_. If the MPI used is some other version,
 they might not connect with the Slurm correctly.
 
+
+
 Running a typical MPI program
 -----------------------------
+
 
 Compiling a MPI program
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -90,7 +95,6 @@ workers evenly among the nodes. To do this, one can use
 Each task will get a default of 1 CPU. See section on
 :ref:`hybrid parallelisation <mpi-hybrid-parallelisation>` for
 information on whether you can give each task more than one CPU.
-
 
 Running and example MPI program
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -139,6 +143,8 @@ Using a slurm script setting the requirements becomes easier:
 Let's call this script ``pi-mpi.sh``. You can submit it with::
 
   sbatch pi-mpi.sh
+
+
 
 Special cases and common pitfalls
 ---------------------------------
@@ -215,6 +221,7 @@ Remember that the number of CPUs in a machine is hardware dependent.
 The total number of CPUs per node when you request ``--ntasks-per-node=n`` and
 ``--cpus-per-task=C`` is :math:`n \cdot C`. This number needs to be equal or less than
 the total number of CPUs in the machine.
+
 
 
 Exercises
