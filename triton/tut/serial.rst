@@ -1,4 +1,3 @@
-===========
 Serial Jobs
 ===========
 
@@ -71,7 +70,7 @@ Let's take a look at the following script
    #!/bin/bash
    #SBATCH --time=00:05:00
    #SBATCH --mem-per-cpu=100M
-   #SBATCH --output=hello.out
+   #SBATCH --output=pi.out
 
    echo "Hello $USER! You are on node $HOSTNAME.  The time is $(date)."
 
@@ -79,7 +78,7 @@ Let's take a look at the following script
    # hpc-examples directory.
    srun python slurm/pi.py 10000
 
-Let's name it ``hello.sh`` (create a file using your editor of choice,
+Let's name it ``run-pi.sh`` (create a file using your editor of choice,
 e.g. ``nano``; write the script above and save it)
 
 The symbol ``#`` is a **comment** in the **bash script**, and Slurm
@@ -98,7 +97,7 @@ you need to be in the hpc-examples directory from our :ref:`sample
 project <triton-tut-example-repo>`::
 
    $ cd hpc-examples       # wherever you have hpc-examples
-   $ sbatch hello.sh
+   $ sbatch run-pi.sh
    Submitted batch job 52428672
 
 .. warning::
@@ -115,10 +114,10 @@ You can check the status of you jobs using ``slurm q``/``slurm queue`` (or
 
    $ slurm q
    JOBID              PARTITION NAME                  TIME       START_TIME    STATE NODELIST(REASON)
-   52428672           debug     hello.sh              0:00              N/A  PENDING (None)
+   52428672           debug     run-pi.sh             0:00              N/A  PENDING (None)
 
 Once the job is completed successfully, the state changes to
-*COMPLETED* and the output is then saved to ``hello.out`` in the
+*COMPLETED* and the output is then saved to ``pi.out`` in the
 current directory. You can also wildcards like ``%u`` for your
 username and ``%j`` for the jobid in the output file name. See the
 `documentation of sbatch <https://slurm.schedmd.com/sbatch.html>`__
@@ -130,13 +129,14 @@ Setting resource parameters
 ---------------------------
 
 The resources were discussed in :doc:`slurm`, and barely need to be
-mentioned again here - the point is they are the same.  Always keep
-the :doc:`reference page <../ref/index>` close for looking these up.
+mentioned again here - the point is they are the same.  For example,
+you might use ``--mem=5G`` or ``--time=5:00:00``.  Always keep the
+:doc:`reference page <../ref/index>` close for looking these up.
 
 
 
-Monitoring your jobs
---------------------
+Checking your jobs
+------------------
 
 Once you submit your jobs, it goes into a queue. The two most useful
 commands to see the status of your jobs with are ``slurm q``/``slurm
@@ -176,7 +176,7 @@ Exercises
 
 .. exercise:: Serial-1: Basic batch job
 
-   Submit a batch job that just runs ``hostname``.
+   Submit a batch job that just runs ``hostname`` and ``pi.py``.
 
    a. Set time to 1 hour and 15 minutes, memory to 500MB.
    b. Change the job's name and output file.
@@ -186,8 +186,9 @@ Exercises
 .. exercise:: Serial-2: Submitting and cancelling a job
 
    Create a batch script which does nothing (or some pointless
-   operation for a while), for example ``sleep 300``. Check the queue to see
-   when it starts running.  Then, cancel the job.  What output is produced?
+   operation for a while), for example ``sleep 300`` (this shell
+   command does nothing for 300 seconds). Check the queue to see when
+   it starts running.  Then, cancel the job.  What output is produced?
 
 .. exercise:: Serial-3: Checking output
 
@@ -207,19 +208,38 @@ Exercises
       to cancel)
    d. Cancel the job once you're finished.
 
-.. exercise:: (advanced) Serial-4: Why you use ``sbatch``, not ``bash``.
+.. exercise:: Serial-4: Constrain to a certain CPU architecture
 
-   (Advanced) What happens if you submit a batch script with ``bash`` instead of
-   ``sbatch``?  Does it appear to run?  Does it use all the Slurm
-   options?
+   Modify the script from exercise #1 to run on only one type of CPU
+   using the ``--constraint`` option.  Hint: check :doc:`../ref/index`
 
-.. exercise:: (advanced) Serial-5: Interpreters other than bash
+.. exercise:: Serial-5: Why you use ``sbatch``, not ``bash``.
+
+   (Advanced) What happens if you submit a batch script with ``bash``
+   instead of ``sbatch``?  Does it appear to run?  Does it use all the
+   Slurm options?
+
+   .. solution::
+
+      It looks like it runs, but actually is only running on the login
+      node!  If you used ``srun python3 slurm/pi.py 10000``, then it
+      would request a Slurm allocation, but not use any of the
+      ``#SBATCH`` parameters, so might not request the resources you
+      need.::
+
+        $ bash run-pi.sh
+        Calculating Pi via 10000 stochastic trials
+        {"successes": 7815, "pi_estimate": 3.126, "iterations": 10000}
+
+
+
+.. exercise:: (advanced) Serial-6: Interpreters other than bash
 
    (Advanced) Create a batch script that runs in another language
    using a different ``#!`` line.
    Does it run?  What are some of the advantages and problems here?
 
-.. exercise:: (advanced) Serial-6: Job environment variables.
+.. exercise:: (advanced) Serial-7: Job environment variables.
 
    Either make a ``sbatch`` script that runs the command ``env | sort``, or
    use ``srun env | sort``.  The ``env`` utility prints all
@@ -233,7 +253,7 @@ Exercises
    allocated CPUs).
 
 What's next?
-============
+------------
 
-There are various tools one can use to do
-:doc:`job monitoring<../tut/monitoring>`.
+There are various tools one can use to do :doc:`job monitoring
+<monitoring>`.

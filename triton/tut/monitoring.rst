@@ -221,10 +221,7 @@ Exercises
 
 .. exercise:: Monitoring-1: Basic monitoring example
 
-   In folder ``slurm/pi.py`` there is a pi estimation algorithm that uses
-   Monte Carlo methods to get an estimate of its value. You can call the script
-   with ``python pi.py N``, where ``N`` is the number of iterations to be
-   done by the algorithm.
+   Using our standard ``pi.py`` example,
 
      a. Create a slurm script that runs the algorithm with 100000000 (:math:`10^8`)
         iterations. Submit it to the queue and use ``slurm queue``,
@@ -233,27 +230,34 @@ Exercises
         the algorithm ``pi.py`` with increasing number of iterations (from range
         100 - 10000000 (:math:`10^7`). How does this appear in
         ``slurm history``?
+
+.. exercise:: Monitoring-2: Using ``seff``
+
+     Continuing from the example above,
+
      c. Use ``seff`` to check performance of individual job steps. Can you
         explain why the CPU utilization numbers change between steps?
 
+     This is really one of the most important take-aways from this
+     lesson.
 
-.. exercise:: Monitoring-2: Multiple threads
+.. exercise:: Monitoring-3: Multiple processors
 
-   The script ``pi.py`` has been written so that it can be run using multiple
-   threads. Run the script with multiple threads and :math:`10^8` iterations
-   with::
+   The script ``pi.py`` has been written so that it can be run using
+   multiple processors. Run the script with multiple processors and
+   :math:`10^8` iterations with::
 
-     srun --cpus-per-task=2 python pi.py --threads=2 100000000
+     $ srun --cpus-per-task=2 python pi.py --nprocs=2 100000000
 
    After you have run the script, do the following:
 
-    a. Use ``slurm history`` to check the ``TotalCPUTime`` and ``WallTime``.
-       Compare them to the timings for the single CPU run with :math:`10^8`
-       iterations.
+    a. Use ``slurm history`` to check the ``TotalCPUTime`` and
+       ``WallTime``. Compare them to the timings for the single CPU
+       run with :math:`10^8` iterations.
     b. Use ``seff`` to check CPU performance of the job.
 
 
-.. exercise:: Monitoring-3: No output
+.. exercise:: Monitoring-4: No output
 
   You submit a job, and it should be writing some stuff to the output.
   But nothing is appearing in the output file.  What's wrong?

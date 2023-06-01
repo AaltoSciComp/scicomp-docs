@@ -55,13 +55,13 @@ Interactive jobs
 
 Let's say you want to run the following command::
 
-    $ python3 -c 'import os; print("hi from", os.uname().nodename)'
+    $ python3 slurm/pi.py 10000
 
 You can submit this program to Triton using ``srun``. All input/output still goes to your terminal
 (but note that graphical applications don't work this way - see
 below)::
 
-    $ srun --mem=100M --time=0:10:00 python3 -c 'import os; print("hi from", os.uname().nodename)'
+    $ srun --mem=100M --time=0:10:00 python3 slurm/pi.py
     srun: job 52204499 queued and waiting for resources
 
 Here, we are asking for 100 Megabytes of memory (``--mem=100M``) for a
@@ -84,7 +84,18 @@ Once resources are allocated to your job, you see the name of the machine
 in the Triton cluster your program ran on, output to your terminal::
 
   srun: job 52204499 has been allocated resources
-  hi from ivb17.int.triton.aalto.fi
+  {"pi_estimate": 3.126, "iterations": 10000, "successes": 7815}
+
+To show it's running on a diferent computer, you can ``srun
+hostname`` (in this case, it runs on ``csl42``)::
+
+  $ hostname
+  login3.triton.aalto.fi
+  $ srun hostname
+  srun: job 19039411 queued and waiting for resources
+  srun: job 19039411 has been allocated resources
+  csl42.int.triton.aalto.fi
+
 
 .. admonition:: Disadvantages
 
@@ -112,7 +123,7 @@ will let you run commands such as Python and let do some basic work.
 For this, you just need srun's ``--pty`` option coupled with the shell
 you want::
 
-  srun -p interactive --time=2:00:00 --mem=600M --pty bash
+  $ srun -p interactive --time=2:00:00 --mem=600M --pty bash
 
 The command prompt will appear when the job starts.
 And you will have a bash shell runnnig on one of the
@@ -145,7 +156,7 @@ allows you to do X forwarding. It starts a `screen session
 <https://en.wikipedia.org/wiki/GNU_Screen>`__ on the node,
 then sshes to there and connects to the shell::
 
-     sinteractive --time=1:00:00 --mem=1000M
+     $ sinteractive --time=1:00:00 --mem=1000M
 
 .. warning::
 
@@ -163,12 +174,13 @@ then sshes to there and connects to the shell::
 
 
 
-Monitoring your usage
----------------------
+Checking your jobs
+------------------
 
-When your jobs enter the queue, you need to be able to get
-information on how much time, memory, etc. your jobs are using
-in order to know what requirements to ask for.
+When your jobs enter the queue, you need to be able to get information
+on how much time, memory, etc. your jobs are using in order to know
+what requirements to ask for.  We'll see this later in
+:doc:`monitoring`.
 
 The command ``slurm history`` (or ``sacct --long | less``) gives you
 information such as the actual memory used by your recent jobs, total
@@ -177,12 +189,6 @@ CPU time, etc.  You will learn more about these commands later on.
 As shown in a previous example, the command ``slurm queue`` (or
 ``squeue -u $USER``) will tell you the currently running processes,
 which is a good way to make sure you have stopped everything.
-
-.. note::
-
-  Generally, estimating the amount of time or memory you need comes down to
-  monitoring you Slurm history and utilizing command-line tools such as
-  ``time`` on a few of your jobs and averaging. This is basically a trial and error process.
 
 
 
@@ -203,10 +209,10 @@ Exercises
 
 .. exercise:: Interactive-1: Basic Slurm options
 
-   The program ``hpc-examples/slurm/memory-hog.py``
+   The program ``hpc-examples/slurm/memory-use.py``
    uses up a lot of memory to do nothing.  Let's play with it.
    It's run as follows:
-   ``python hpc-examples/slurm/memory-hog.py 50M``, where the
+   ``python hpc-examples/slurm/memory-use.py 50M``, where the
    last argument is however much memory you want to eat.  You can use
    ``--help`` to see the options of the program.
 
@@ -223,7 +229,7 @@ Exercises
       every 60 seconds or so.
       To make the program last longer, so that the memory used can be measured,
       give the ``--sleep`` option to the Python process, like this:
-      ``python hpc-examples/slurm/memory-hog.py 50M --sleep=60`` -
+      ``python hpc-examples/slurm/memory-use.py 50M --sleep=60`` -
       keep it available.
 
 .. exercise:: Interactive-2: Time scaling
@@ -245,20 +251,14 @@ Exercises
       (If you'd like to use the ``time`` command, you can run
       ``srun --mem=MEM --time=TIME time python hpc-examples/slurm/pi.py ITERS``)
 
-   c) Tell srun to use five CPUs (``-c 5``).  Does it go any faster?
-
-   d) Use the ``--threads=5`` option to the Python program to tell it
-      to also use five threads.  ``... python .../pi.py --threads=5``
-
-   e) Look at the job history using ``slurm history`` - can you see
+   c) Look at the job history using ``slurm history`` - can you see
       how much time each process used?  What's the relation between
       TotalCPUTime and WallTime?
 
 .. exercise:: Interactive-3: Info commands
 
-   Check out some of these commands: ``sinfo``, ``sinfo -N``, ``squeue``.  Run
-   ``slurm job JOBID`` on some running job - does anything
-   look interesting?
+   Run ``squeue -a`` to see what is running, and then run ``slurm job
+   JOBID`` on some running job - does anything look interesting?
 
 .. exercise:: Interactive-4: Showing node information
 
@@ -273,6 +273,14 @@ Exercises
    at the same time).  Can you list some advantages and disadvantages
    to this?
 
+  .. solution::
+
+    In does work, but it's fragile: if the login node dies, everything
+    gets lost.  It's actually more work than doing it properly
+    (:doc:`array`).  And Slurm knows all array jobs are the same, so
+    it takes less resources to manage them - if someone scripts too
+    many ``srun``\ s, it can actually block other jobs from running
+    when they could otherwise.
 
 
 What's next?

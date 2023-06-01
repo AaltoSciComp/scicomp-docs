@@ -63,6 +63,36 @@ The basic process
 
 
 
+A basic Slurm example
+---------------------
+
+Here is a basic Slurm batch script template (don't run it yet - we
+aren't there yet)::
+
+  .. code:: slurm
+
+    #!/bin/bash
+    #SBATCH --mem=5G
+    #SBATCH --time=5:00:00
+
+    module purge
+    module load anaconda
+
+    python slurm/pi.py 10000
+
+This is a batch script - the same shell we learned about it
+:doc:`cluster-shell`.  The parts are:
+
+* The fist line says this is the Bash shell.
+* The next two lines are the Slurm parameters.  It says how much
+  memory and time we need.
+* Then we set our environment - loading modules.
+* Then we run the actual program, our usual pi example.
+
+Let's look at each part in more detail:
+
+
+
 The resources available to you
 ------------------------------
 
@@ -72,36 +102,40 @@ ensure you will be allocated enough **memory**, **CPU cores**,
 
 The basic resources are:
 
-* CPUs (also known as "processors" or "(processor) cores"): Processor cores.  This resource lets you do things in parallel
-  the classic way, by adding processors.  Depending on how the
-  parallelism works, there are different ways to request the CPUs -
-  see :doc:`parallel`.
-  CPUs.
+* CPUs (also known as "processors" or "(processor) cores"): Processor
+  cores.  This resource lets you do things in parallel the classic
+  way, by adding processors.  Depending on how the parallelism works,
+  there are different ways to request the CPUs - see :doc:`parallel`.
+  CPUs.  This is ``--cpus-per-task`` and ``--ntasks``, but you must
+  read :doc:`parallel` before using these!
 * Memory: Memory is needed for data in jobs.  If you run out of
   processors, your job is slow, but if you run out of memory, then
-  everything dies.
+  everything dies.  This is ``--mem`` or ``--mem-per-cpu``.
 * GPUs: Graphical Processing Units are modern, highly parallel compute
   units.  We will discuss requesting them in :doc:`gpu`.
 * Time: While not exactly a resources, you need to specify the
   expacted usage time (run time) of each job for scheduling purposes.
-  If you go over by too much, your job will be killed.
+  If you go over by too much, your job will be killed.  This is
+  ``--time``, for example ``--time=DAYS-HH:MM:SS``.
 * If you did even larger work on larger clusters, input/output
   bandwidth and licenses are also possible resources.
 
-.. admonition:: All Slurm resource options
-   :class: toggle
-
-   .. include:: ../ref/slurm.rst
+The more resources you request, the lower your priority will be in the
+future.  So be careful what you request!
 
 .. seealso::
 
   As always, the :doc:`Triton quick reference <../ref/index>`
 
-   This `upstream Slurm reference page
-   <https://slurm.schedmd.com/sbatch.html>`_ covers the existing
-   resource parameters and options you can use in both your
-   interactive jobs and `batch jobs <serial>` which you will learn
-   about in the next tutorial.
+
+
+Other submission parameters
+---------------------------
+
+We won't go into them, but there are other parameters that tell Slurm
+what to do.  For example, you could request to only run on the latest
+CPU architecture.  You could say you want a node all to yourself.  And
+so on.
 
 
 
@@ -136,31 +170,6 @@ more for batch scripts.
 
 
 
-The basic Slurm commands
-------------------------
-
-The basic Slurm commands are ``sbatch`` (to submit asynchronous jobs,
-see :doc:`serial`), and ``srun`` to submit interactive jobs (see
-:doc:`interactive`, the next lesson).  Both of these command take the
-same options to request resources, such as ``--cpus-per-task`` for
-CPUs or ``--mem`` for memory per node.  For example, you could run
-(don't do this yet, you will learn next):
-
-* ``srun --mem=5G --time=5:00:00 ...`` to request 5 hours and 5GB of memory.
-* Or this batch script template:
-
-  .. code:: slurm
-
-    #!/bin/bish
-    #SBATCH --mem=5G
-    #SBATCH --time=5:00:00
-
-You'll learn exactly how this works next.
-
-Next, see :doc:`interactive`.
-
-
-
 Partitions
 ----------
 
@@ -182,6 +191,17 @@ On other clusters, you might need to set a partition other times.
 Command ``sinfo -s`` lists a summary of the available partitions. You
 can see the purpose and use of our partitions in the :doc:`quick
 reference<../ref/index>`.
+
+
+
+Exercises
+---------
+
+.. exercise:: Slurm-1: Info commands
+
+   Check out some of these commands: ``sinfo``, ``sinfo -N``,
+   ``squeue``, and ``squeue -a``.  These give you some information
+   about Slurm's state.
 
 
 
