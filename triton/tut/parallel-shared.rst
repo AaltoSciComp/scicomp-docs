@@ -109,7 +109,7 @@ Let's call this script ``pi-sharedmemory.sh``. You can submit it with::
 The environment variable ``$SLURM_CPUS_PER_TASK`` is set during program runtime
 and it is set based on the number of ``--cpus-per-task`` requested. For more tricks
 on how to set the number of processors, see the
-:ref:`section on using it effectively<effective-cpus-per-task>`.
+:ref:`section on using it effectively <effective-cpus-per-task>`.
 
 
 
