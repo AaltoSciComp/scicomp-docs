@@ -106,7 +106,7 @@ The main models of parallel programming are:
   with multiple tasks each. You should not request multiple CPUs per task.**
 
   Example applications that utilize this model: CP2K, GPAW, LAMMPS, OpenFoam.
-  See: :doc:`MPI parallelism <parallel-shared>`.
+  See: :doc:`MPI parallelism <parallel-mpi>`.
 
   .. figure:: /images/parallel-mpi.png
       :width: 80%
