@@ -88,7 +88,7 @@ Let's run the program with two processes using ``srun``::
 **It is vitally important to notice that the program needs to be told the amount of
 processes it should use.** The program does not obtain this information from the
 queue system automatically. For more information, see the section on
-:ref:`CPU over- and undersubscription<cpu-mismatch>`.
+:ref:`CPU over- and undersubscription <cpu-mismatch>`.
 
 Using a slurm script setting the number becomes easier:
 
