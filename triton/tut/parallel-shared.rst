@@ -188,7 +188,8 @@ ways in your scripts. Below are few examples:
   ``export NCORES=${SLURM_CPUS_PER_TASK:-4}`` and use that in your scripts.
 
   Here ``$NCORES`` is set to the number specified by ``$SLURM_CPUS_PER_TASK``
-  if it has been set. Otherwise, it will be set to 4.
+  if it has been set. Otherwise, it will be set to 4 via Bash's syntax for
+  setting default values for unset variables.
 
 - In Python you can use the following for obtaining the environment
   variable:
