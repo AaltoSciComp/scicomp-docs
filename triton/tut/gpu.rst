@@ -44,6 +44,10 @@ are programming environments designed to communicate with GPUs in such a manner.
 An example of such an API is `CUDA <https://en.wikipedia.org/wiki/CUDA>`_
 which is the native programming interface for NVIDIA GPUs.
 
+.. figure:: /images/parallel-gpu.png
+    :width: 80%
+    :align: center
+
 On Triton, we have a large number of NVIDIA GPU cards from different
 generations and currently only support CUDA. Triton GPUs are not the
 typical desktop GPUs, but specialized research-grade server GPUs with

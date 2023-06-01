@@ -61,6 +61,10 @@ The array tasks are copies of the submitted batch script that are automatically 
 to Slurm. Slurm provides a unique environment variable ``SLURM_ARRAY_TASK_ID`` to each
 task which could be used for handling input/output files to each task.
 
+.. figure:: /images/parallel-array.png
+    :width: 80%
+    :align: center
+
 .. admonition:: ``--array`` via the command line
 
    You can also pass the ``--array`` option as a command-line argument to

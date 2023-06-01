@@ -15,11 +15,11 @@ MPI parallelism: multi-task programs
      for your job.
 
    * Start your application via ``srun`` if using module installed
-     MPI or ``mpirun`` if you
+     MPI or ``mpirun`` if you have your own installation of MPI.
 
    * For spreading tasks evenly across nodes, use ``--nodes=N``
      and ``--ntasks-per-node=n`` for getting
-     :math:`N \cdot n` nodes.
+     :math:`N \cdot n` tasks.
 
    * You must always :doc:`monitor jobs <monitoring>` to make sure they are using all the
      resources you request (``seff JOBID``).
@@ -213,7 +213,7 @@ MPI tasks and CPUs per tasks depends on the program and needs to be measured.
 
 Remember that the number of CPUs in a machine is hardware dependent.
 The total number of CPUs per node when you request ``--ntasks-per-node=n`` and
-``--cpus-per-task=C`` is :math:`n * C`. This number needs to be equal or less than
+``--cpus-per-task=C`` is :math:`n \cdot C`. This number needs to be equal or less than
 the total number of CPUs in the machine.
 
 
