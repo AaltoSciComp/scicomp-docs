@@ -308,7 +308,7 @@ like user, group, timestamps, permissions.  To view metadata, use ``ls
 
   Make a copy of the pi.py program we have been using.  Call it
   ``pi-new.py``
-  
+
   .. solution::
 
     ::

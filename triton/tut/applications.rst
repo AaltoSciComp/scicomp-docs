@@ -22,7 +22,7 @@ Linux.
 
 .. admonition:: Abstract
 
-   * There are many ways to get software on Triton: 
+   * There are many ways to get software on Triton:
 
      * Usually, you can't install software the normal operating system way.
      * The cluster admins install many things for you, and they are
