@@ -7,7 +7,7 @@ Shared memory parallelism: multithreading & multiprocessing
 
    * Verify that your program can utilize multiple CPUs.
 
-   * Use ``--cpus-per-task=C`` to reserve multiple CPUs for your job.
+   * Use ``--cpus-per-task=C`` to reserve ``C`` CPUs for your job.
 
    * If you use ``srun`` to launch your program in your sbatch-script and
      want your program to utilize all of the allocated CPUs, run
