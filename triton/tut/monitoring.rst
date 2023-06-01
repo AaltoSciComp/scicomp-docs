@@ -46,8 +46,8 @@ There are various tools available for each of these steps.
 
 
 
-Monitoring job queue state after it has been submitted
-------------------------------------------------------
+Monitoring during queueing
+--------------------------
 
 The command ``slurm q``/``slurm queue`` (or ``squeue -u $USER``) can be used
 to monitor the status of your jobs in the queue. An example output is given below::
@@ -146,8 +146,8 @@ the state of the program.
 
 
 
-Checking job history after it has finished
-------------------------------------------
+Checking job history after completion
+-------------------------------------
 
 The command ``slurm h``/``slurm history`` can be used to check the history
 of your jobs. Example output is given below::
@@ -195,8 +195,8 @@ interest to be shown using ``--format``.
 
 .. _monitoring-seff:
 
-Monitoring a job's CPU and RAM usage efficiency after it has finished
----------------------------------------------------------------------
+CheckingCPU and RAM efficiency after completion
+-----------------------------------------------
 
 .. include:: ../examples/monitoring/seff.rst
 
@@ -204,6 +204,11 @@ Monitoring a job's CPU and RAM usage efficiency after it has finished
 
 Monitoring a job's GPU utilization
 ----------------------------------
+
+.. seealso::
+
+  :doc:`gpu`.  We will talk about how to request GPUs later, but it's
+  kept here for clarity.
 
 .. include:: ../examples/monitoring/gpu.rst
 
@@ -216,10 +221,7 @@ Exercises
 
 .. exercise:: Monitoring-1: Basic monitoring example
 
-   In folder ``slurm/pi.py`` there is a pi estimation algorithm that uses
-   Monte Carlo methods to get an estimate of its value. You can call the script
-   with ``python pi.py N``, where ``N`` is the number of iterations to be
-   done by the algorithm.
+   Using our standard ``pi.py`` example,
 
      a. Create a slurm script that runs the algorithm with 100000000 (:math:`10^8`)
         iterations. Submit it to the queue and use ``slurm queue``,
@@ -228,23 +230,49 @@ Exercises
         the algorithm ``pi.py`` with increasing number of iterations (from range
         100 - 10000000 (:math:`10^7`). How does this appear in
         ``slurm history``?
+
+.. exercise:: Monitoring-2: Using ``seff``
+
+     Continuing from the example above,
+
      c. Use ``seff`` to check performance of individual job steps. Can you
         explain why the CPU utilization numbers change between steps?
 
-.. exercise:: Monitoring-2: Multiple thread
+     This is really one of the most important take-aways from this
+     lesson.
 
-   The script ``pi.py`` has been written so that it can be run using multiple
-   processes. Run the script with multiple processes and :math:`10^8` iterations
-   with::
+.. exercise:: Monitoring-3: Multiple processors
 
-     srun --cpus-per-task=2 python pi.py --nprocs=2 100000000
+   The script ``pi.py`` has been written so that it can be run using
+   multiple processors. Run the script with multiple processors and
+   :math:`10^8` iterations with::
+
+     $ srun --cpus-per-task=2 python pi.py --nprocs=2 100000000
 
    After you have run the script, do the following:
 
-    a. Use ``slurm history`` to check the ``TotalCPUTime`` and ``WallTime``.
-       Compare them to the timings for the single CPU run with :math:`10^8`
-       iterations.
+    a. Use ``slurm history`` to check the ``TotalCPUTime`` and
+       ``WallTime``. Compare them to the timings for the single CPU
+       run with :math:`10^8` iterations.
     b. Use ``seff`` to check CPU performance of the job.
+
+
+.. exercise:: Monitoring-4: No output
+
+  You submit a job, and it should be writing some stuff to the output.
+  But nothing is appearing in the output file.  What's wrong?
+
+  .. solution::
+
+    If it's only been a few minutes, output is probably still
+    buffered.  This happens to avoid writing to disk for every line,
+    which would otherwise slow down a program a lot.
+
+    FYI, interactive programs are usually line-buffered (display to
+    terminal after each line) and non-interactive programs usually
+    fully buffered (output after every few kB.)  Search "[language]
+    flush buffers" to see how to force it to write sooner - but remove
+    this after debugging!
 
 
 

@@ -18,6 +18,7 @@ still serves all Aalto and is organized from the School of Science.
 You are now at the first step of the Triton tutorial.
 
 
+
 About Triton
 ------------
 
@@ -51,35 +52,6 @@ this power requires more effort than using your own computer -
 you will need to get/be comfortable in the shell, using shell
 scripting, managing software, managing data, and so on.  Triton is a
 good system to use for learning.
-
-
-Building your skills
---------------------
-
-.. seealso::
-
-   Main article: :doc:`../../training/index`
-
-As time goes on, computers are getting easier and easier to use.
-However, research is not a consumer product, and the fact is that you
-need more knowledge to use Triton than most people learn in academic
-courses.
-
-We have created a `modular
-training plan <https://hands-on.coderefinery.org>`__, which
-divides useful knowledge into levels.  In order to use Triton well, you need to be somewhat
-proficient at Linux usage (C level).  In order to do parallel work,
-you need to be good at the D-level and also somewhat proficient at the
-HPC level (E-level).  This tutorial and user guide covers the D-level,
-but it is up to you to reach the C-level first.
-
-See our `training program and plan <https://hands-on.coderefinery.org>`__ for
-suggested material for self-study and lessons.  We offer routine
-training, see our :doc:`Scientific Computing in Practice lecture series
-</training/scip/index>` page for info.
-
-**You can't learn everything you need all at once.  Instead,
-continually learn and know when to ask for help.**
 
 
 
@@ -117,6 +89,15 @@ have a :ref:`service email address
 <scicomp-address>`, but this should only be used for account
 matters.  If it affects others (software, usage problems, etc), use
 the issue tracker, otherwise we will point you there.
+
+
+
+Quick reference
+---------------
+
+Open the :doc:`../ref/index` - you don't need to know what is on it
+(that is what these tutorials cover), but having it open now and
+during your work will help you a lot.
 
 
 

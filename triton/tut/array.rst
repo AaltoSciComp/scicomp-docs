@@ -270,31 +270,43 @@ Exercises
 
 .. include:: ../ref/examples-repo.rst
 
-.. exercise:: Array-1: Basic array job
+.. exercise:: Array-1: Array jobs and different random seeds
 
-   Make an array job that runs ``slurm/memory-hog.py``
-   with five different values of memory (50M, 100M, 500M,
-   1000M, 5000M) using one of the techniques above - this is the memory that the
-   memory-hog script requests, **not** the is requested from Slurm.
-   Request 250M of memory for the array job. See if some of the jobs fail.
+   Create a job array that uses the ``slurm/pi.py`` to calculate a
+   combination of different iterations and seed values and save them
+   all to different files.  Keep the standard output (``#SBATCH
+   --output=FILE``) separate from the standard error (``#SBATCH
+   --error=FILE``).
 
-.. exercise:: Array-2: Reflect on array jobs in your work
+.. exercise:: Array-2: Combine the outputs of the previous exercise.
+
+   You find an ``pi-aggregate.py`` program in hpc-examples.  Run this
+   and give all the output files as arguments.  It will combine all
+   the statistics and give a more accurate value of :math:`\pi`.
+
+.. exercise:: Array-3: Reflect on array jobs in your work
 
    Think about your typical work.  How could you split your stuff into
    trivial pieces that can be run with array jobs?  When can you make
    individual jobs smaller, but run more of them as array jobs?
 
-.. exercise:: (Advanced) Array-3: Array jobs with advanced index selector
+.. exercise:: (Advanced) Array-4: Array jobs with advanced index selector
 
    Make a job array which runs every other index, e.g. the array can
    be indexed as 1, 3, 5... (the `sbatch manual page
    <https://slurm.schedmd.com/sbatch.html>`__ can be of help)
 
-.. exercise:: (Advanced) Array-4: Array jobs and different random seeds
+.. exercise:: Array-5: Array job with varying memory requirements.
 
-   Create a job array that uses the ``slurm/pi.py`` to calculate a combination
-   of different iterations and seed values and save them all to
-   different files.
+   Make an array job that runs ``slurm/memory-use.py`` with five
+   different values of memory (50M, 100M, 500M, 1000M, 5000M) using
+   one of the techniques above - this is the memory that the
+   memory-use script requests, **not** the is requested from Slurm.
+   Request 250M of memory for the array job. See if some of the jobs
+   fail.
+
+   Is this a proper use of array jobs?
+
 
 
 See also

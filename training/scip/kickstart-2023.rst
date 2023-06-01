@@ -4,8 +4,15 @@ June 2023 / Intro to Scientific Computing /  HPC Summer Kickstart
 
 .. important::
 
-   `Registration <https://link.webropol.com/ep/scicomphpc2023>`__.
+   | *Come and learn about high performance computing!*
+   | **When**: 6,7,8/June/2023 12:00-16:00 EEST
+   | **Where**: https://www.twitch.tv/coderefinery
+   | **Registration**: `Registration link <https://link.webropol.com/ep/scicomphpc2023>`__ 
+   | Registration is important if you need access to a cluster in a partner organisation and if you want to access the collaborative document. Registered participants from partner organisations also receive a zoom room for direct support.
+   | **Partner organisations**: Aalto University, Helsinki University, Tampere University
+   | **Important**: Check the prerequisites and the schedule here below.
 
+   
 
 Kickstart is a three × half day course for researchers to get
 started with high-performance computing (HPC) clusters.
@@ -66,6 +73,17 @@ students.
 
 **Additional course info at:** scip@aalto.fi
 
+.. admonition:: If you can't attend day 1 (Aalto CS Summer day)
+   :class: dropdown
+
+   Most of day 1 is good background information, but not strictly
+   required.  You *will* need the Triton connection set up before
+   day 1.  We recommend you look at the :doc:`connecting tutorial
+   </triton/tut/connecting>` and get this set up in advance (either by
+   talking to a colleague or our :doc:`daily garage </help/garage>`).
+   Then, try to watch the relevant videos Wednesday morning or Tuesday
+   evening.
+
 
 
 Other universities
@@ -122,7 +140,7 @@ started with the computing resources.
 
 * **Day #1 (Tue 6.jun):** Basics and background
 
-  * 11:50--12:00: Connecting time, basics, and icebreaker
+  * 11:50--12:00: Joining time/icebreaker
 
   * **12:00--12:10 Introduction, about the course** *Richard Darst and
     other staff* Materials: :doc:`../../training/kickstart/intro`
@@ -130,82 +148,81 @@ started with the computing resources.
   * **12:10--12:25: From data storage to your science** *Enrico
     Glerean and Simo Tuomisto*
 
-    Data is how most computational work starts, whether it is
-    externally collected, simulation code, or generated.  And these
-    days, you can work on data even remotely, and these workflows
-    aren't obvious.  We discuss how data storage choices lead to
-    computational workflows. Materials: `SciComp Intro
-    <https://hackmd.io/@AaltoSciComp/SciCompIntro>`__
+    - Data is how most computational work starts, whether it is
+      externally collected, simulation code, or generated.  And these
+      days, you can work on data even remotely, and these workflows
+      aren't obvious.  We discuss how data storage choices lead to
+      computational workflows. Materials: `SciComp Intro
+      <https://hackmd.io/@AaltoSciComp/SciCompIntro>`__
 
   * **12:25--12:50: What is parallel computing?  An analogy with
     cooking** *Enrico Glerean and Thomas Pfau*
 
-    In workshops such as this, you will hear lots about parallel
-    computing and how you need it, but rarely get a understandable
-    introduction to how they relate and which are right for you.
-    Here, we give a understandable metaphor with preparing large
-    meals.  `Slides <https://docs.google.com/presentation/d/e/2PACX-1vQLTzWkRy7Du3jjPJ6Y9BqKczU_JcSTEL6XsndrNJ7ylzi4RWeEy8lhfWZQu_lpwbAKroh51qqLoPFG/pub>`__
+    - In workshops such as this, you will hear lots about parallel
+      computing and how you need it, but rarely get a understandable
+      introduction to how they relate and which are right for you.
+      Here, we give a understandable metaphor with preparing large
+      meals.  `Slides <https://docs.google.com/presentation/d/e/2PACX-1vQLTzWkRy7Du3jjPJ6Y9BqKczU_JcSTEL6XsndrNJ7ylzi4RWeEy8lhfWZQu_lpwbAKroh51qqLoPFG/pub>`__
 
   * **13:00--13:25: How big is my calculation?  Measuring your
     needs.** *Simo Tuomisto and Thomas Pfau*
 
-    People often wonder how many resources their job needs, either on
-    their own computer or on the cluster.  When should you move to a
-    cluster?  How many resources to request?  We'll go over how we
-    think about these problems.
+    - People often wonder how many resources their job needs, either on
+      their own computer or on the cluster.  When should you move to a
+      cluster?  How many resources to request?  We'll go over how we
+      think about these problems.
 
   * **13:25--13:50: Behind the scenes: the humans of scientific
-    computing** *Richard Darst and ???*
+    computing** *Richard Darst and Teemu Ruokolainen*
 
-    Who are we that provide these services?  What makes it such a
-    fascinating career?  Learn about what goes on behind the scenes
-    and how you could join us.
+    - Who are we that teach this course and provide SciComp support?
+      What makes it such a fascinating career?  Learn about what goes on
+      behind the scenes and how you could join us.
 
-  * **14:00--14:25: Files and directories: just how is data
-    organized?** *Richard Darst and Teemu Ruokolainen*
-
-    Navigating many files stored on large computers has tripped many
-    people in the past - we will go over the Zen of Data
-    Storage. Large-scale data analysis can't be done without organized
-    files and knowing how stuff is stored, so let's start with the
-    basics.
-
-  - **14:25--14:50: What can you do with a computational cluster?**
-
-    Several real examples of how people use the cluster (what you can
-    do at the end of the course): 1) Large-scale computing with array
-    jobs, 2) Large-scale parallel computing
-
-  * **15:00--15:45: Connecting to a HPC cluster** *Thomas Pfau and
+  * **14:00--14:45: Connecting to a HPC cluster** *Thomas Pfau and
     Simo Tuomisto*
 
     - Required if you are attending the Triton/HPC tutorials the
       following days, otherwise the day is done.
-    - 15:00--15:20?: Livestream introduction to connecting
-    - 15:??--??: Individual help time in Zoom (links sent to
+    - 14:00--14:20?: Livestream introduction to connecting
+    - 14:??--15:00: Individual help time in Zoom (links sent to
       registered participants)
+    - Break until 15:00 once you get connected.
     - Material: :doc:`/triton/tut/connecting`
+
+
+  * **15:00--15:25: Using the cluster from the shell (files
+    and directories)** *Richard Darst and Teemu Ruokolainen*
+
+    - Once we connect, what can we do?  We'll get a tour of the shell,
+      files diretories, and how we copy basic data to the cluster.
+      Material: :doc:`/triton/tut/cluster-shell`.
+
+  - **15:25--15:50: What can you do with a computational cluster?**
+
+    - See several real examples of how people use the cluster (what you can
+      do at the end of the course): 1) Large-scale computing with array
+      jobs, 2) Large-scale parallel computing.  Demo.
 
   * Preparation for day 2:
 
-    Remember to read/watch the "shell crash course" (see "Preparation"
-    below) if you are not yet confident with the command line.  This
-    will be useful for tomorrow.
+    - Remember to read/watch the "shell crash course" (see "Preparation"
+      below) if you are not yet confident with the command line.  This
+      will be useful for tomorrow.
 
 * **Day #2 (Wed 7.jun):** Basic use of a cluster *(Richard Darst, Simo
   Tuomisto)*
 
-  - 11:50--12:00: Connecting time and icebreaker
+  - 11:50--12:00: Joining time/icebreaker
 
   - **12:00--12:05: Introduction to days 2-3**
 
     - :doc:`/triton/tut/intro`
 
-  - **12:05--12:30** Structure of a cluster
+  - **12:05--12:30 Structure of a cluster: The Slurm queueing system**
+    *(Jarno Rantaharju and Thomas Pfau)*
 
-    What is the cluster?  What are the pieces?  Why do we teach
-    everything like we do?  Let's zoom in our the HPC-side of our map
-    and get an overview.
+    - :doc:`/triton/tut/slurm`
 
   - **12:30--15:00: Running your first jobs in the queue**
 
@@ -224,24 +241,30 @@ started with the computing resources.
 * **Day #3 (Thu 8.jun):** Advanced cluster use *(Simo Tuomisto, Richard
   Darst)*
 
-  - 11:50: Joining time/icebreaker
+  - 11:50--12:00: Joining time/icebreaker
 
-  - **11:50--13:00: Simple parallelization with array jobs:**
-    :doc:`/triton/tut/array`
+  - **12:00--12:30: What does "parallel" mean?**:
 
-  - **13:00--14:00: Using more than one CPU at the same time:**
-    :doc:`/triton/tut/parallel`
+    - :doc:`/triton/tut/parallel`
+
+  - **12:30--14:00: Forms of parallelization**
+
+    - :doc:`/triton/tut/array`
+    - doc: ``/triton/tut/parallel-shared``
+    - doc: ``/triton/tut/parallel-mpi``
 
   - **14:00--14:30: Laptops to Lumi**
 
-    You now know of basics of using a computing cluster.  What if you
-    need more than what a university can provide?  CSC (and other
-    national computing centers) have even more resources, and this is
-    a tour of them. `Slides here <https://github.com/AaltoSciComp/scicomp-docs/raw/master/training/scip/CSC-services_062022.pdf>`__.
+    - You now know of basics of using a computing cluster.  What if you
+      need more than what a university can provide?  CSC (and other
+      national computing centers) have even more resources, and this is
+      a tour of them. `Slides from 2022 here <https://github.com/AaltoSciComp/scicomp-docs/raw/master/training/scip/CSC-services_062022.pdf>`__.
 
-  - **14:40--15:30: Running jobs that can utilize GPU hardware:** :doc:`/triton/tut/gpu`
+  - **14:40--15:30: Running jobs that can utilize GPU hardware:**
 
-  - **15:30--16:00: Q&A**
+    - :doc:`/triton/tut/gpu`
+
+  - **15:30--16:00: Ask us anything**
 
 
 
@@ -263,18 +286,6 @@ takes some effort to get ready.  Browse these resources:
   <https://coderefinery.github.io/manuals/how-to-attend-stream/>`__,
   good to read in detail (ignore the CodeRefinery-specific parts).
 * `How to use HackMD to take answer questions and hold discussions <https://coderefinery.github.io/manuals/hackmd-mechanics/>`__.
-
-.. admonition:: If you can't attend day 1 (Aalto CS Summer day)
-   :class: dropdown
-
-   Most of day 1 is good background information, but not strictly
-   required.  You *will* need the Triton connection set up before
-   day 1.  We recommend you look at the :doc:`connecting tutorial
-   </triton/tut/connecting>` and get this set up in advance (either by
-   talking to a colleague or our :doc:`daily garage </help/garage>`).
-   Then, try to watch the relevant videos Wednesday morning or Tuesday
-   evening.
-
 
 
 Technical prerequisites

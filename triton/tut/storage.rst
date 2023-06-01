@@ -19,7 +19,12 @@ choose between them.  The
 
    * See the :doc:`../ref/index`
 
-   * We are a standard Linux filesystem
+   * There are many places to store files since they all make a
+     different trade-off of speed, size, and backups.
+
+   * We recommend scratch / $WRKDIR (below) for most cases.
+
+   * We are a standard Linux cluster with these options:
 
      * ``$HOME`` = ``/home/$USER``: 10GB, backed up, not made larger
      * Scratch is large but not backed up:
@@ -36,6 +41,9 @@ choose between them.  The
    * See :doc:`remotedata` for how to transfer and access the data
      from other computers.
 
+.. highlight:: console
+
+
 
 Basics
 ------
@@ -50,10 +58,6 @@ data), and special places for scratch during computations (**local
 disks**).  At Aalto, there is **aalto home**, **project**, and
 **archive** directories which, unlike Triton, are backed up but don't
 scale to the size of Triton.
-
-A file consists of its contents and metadata.  The metadata is information
-like user, group, timestamps, permissions.  To view metadata, use ``ls
--l`` or ``stat``.
 
 Filesystem performance can be measured by both IOPS (input-output
 operations per second) and stream I/O speed.  ``/usr/bin/time -v`` can
@@ -108,7 +112,9 @@ Available data storage options
 ------------------------------
 
 Each storage location has different sizes, speed, types of backups,
-and availability.  You need to balance between these.
+and availability.  You need to balance between these.  Most routine
+work should go into scratch (group directories) or work (personal).
+Small configuration and similar can go into your home directory.
 
 .. include:: ../ref/storage.rst
 
