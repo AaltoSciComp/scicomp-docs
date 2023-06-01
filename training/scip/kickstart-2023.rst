@@ -220,6 +220,7 @@ started with the computing resources.
     - :doc:`/triton/tut/intro`
 
   - **12:05--12:30 Structure of a cluster: The Slurm queueing system**
+    *(Jarno Rantaharju and Thomas Pfau)*
 
     - :doc:`/triton/tut/slurm`
 
