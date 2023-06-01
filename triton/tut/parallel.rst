@@ -1,6 +1,6 @@
-==================
-Parallel computing
-==================
+===============================================
+Parallel computing: different methods explained
+===============================================
 
 .. admonition:: Video
 
@@ -19,13 +19,11 @@ tutorials.
    * You need to figure out what parallelization paradigm your program
      uses, otherwise you won't know which options to use.
 
-     * Embarrassingly parallel: use :doc:`array jobs <array>`.
-     * Multithreaded (OpenMP) or multiple tasks (like Python's
-       multiprocessing): ``--cpus-per-task=N``, ``--mem-per-core=M``
-       (if memory scales per CPU)
-     * MPI: compile to link with our Slurm and MPI libraries,
-       ``--ntasks=N``, always use ``srun`` to launch your job.
-       ``module load`` a MPI version for both compiling and running.
+     * Embarrassingly parallel: use options for :doc:`array jobs <array>`.
+     * Multithreaded (OpenMP) or multiple processes (like Python's
+       multiprocessing): use options for :doc:`shared memory parallelism <parallel-shared>`.
+     * MPI: use options for :doc:`MPI parallelism <parallel-mpi>`.
+     * GPU: use options for :doc:`GPUs <gpu>`.
 
    * You must always :doc:`monitor jobs <monitoring>` to make sure they are using all the
      resources you request (``seff JOBID``).
@@ -34,6 +32,7 @@ tutorials.
 
 
 .. highlight:: bash
+
 
 
 Parallel programming models
@@ -46,40 +45,83 @@ that are present in their programs and thus do not need to learn how to create
 parallel programs. But even when one is running programs in parallel,
 it is important to understand different models of parallel execution.
 
-The two main models are:
+The main models of parallel programming are:
 
-* (Embarrassingly parallel - :doc:`array jobs <array>`.)
-* Shared memory (or multithreaded/multiprocess) programs run multiple
-  independent workers on the same machine. As the name suggests, all of
-  the computer's memory has to be accessible to all of the processes.
+* Embarrassingly parallel problem can be split into completely
+  independent jobs that can be executed separately with no communication
+  between individual jobs.
+
+  More often than not, scientific problems involve running a single program again
+  and again with different datasets or parameters. Slurm has a structure called
+  **job array**, which enables users to easily submit a large amount of such jobs.
+
+  Any program can be run in an embarassingly parallel way as long as the
+  problem at hand can be split into multiple independent jobs.
+
+  Each job in an array is identical to every other job, but each independent job
+  gets its own unique ID.
+
+  **Workloads that utilize this model should request what a single job needs
+  and the number of array jobs that the whole array should have.**
+
+  See: :doc:`array jobs <array>`.
+
+
+  .. figure:: /images/parallel-array.png
+      :width: 80%
+      :align: center
+
+* Shared memory (or multithreaded/multiprocess) parallel programs run multiple
+  processes / threads on the same machine. As the name suggests, all
+  of the computer's memory has to be accessible to all of the processes / threads.
+
   **Thus programs that utilize this model should request one node,
   one task and multiple CPUs.**
-  Likewise, the maximum number of workers is usually the number of CPU cores
-  available on the computational node. The code is easier to implement
-  and the same   code can still be run in a serial mode. Example applications
-  that utilize this model: Matlab, R, Python multithreading/multiprocessing,
+
+  Example applications that utilize this model: Matlab (internally & parallel
+  pool), R (internally & parallel-library), Python (numpy internally &
+  threading/multiprocessing-modules),
   OpenMP applications, BLAS libraries, FFTW libraries, typical
   multithreaded/multiprocess parallel desktop programs.
 
-* Message passing programming (e.g. MPI, message passing interface)
-  can run on multiple nodes interconnected with the network via passing
-  data through MPI software libraries. Almost all large-scale scientific
-  programs utilize MPI. MPI can scale to thousands of CPU cores, but
-  depending on the case it can be harder to implement from the
-  programmer's point of view. **Programs that utilize this model should
-  request single/multiple nodes with multiple tasks each. You should
-  not request multiple CPUs per task.** Example applications that utilize this
-  model: CP2K, GPAW, LAMMPS, OpenFoam.
+  See: :doc:`shared-memory parallelism <parallel-shared>`.
 
-Both models, MPI and shared memory, can be combined in one application, in
-this case we are talking about hybrid parallel programming model.
-**Programs that utilize this model can require both multiple tasks
-and multiple CPUs per task.**
+  .. figure:: /images/parallel-shared.png
+      :width: 80%
+      :align: center
 
-Most historical scientific code is MPI, but these days more and more
-people are using shared memory models.
+* MPI parallelism utilizes MPI (Message Passing Interface) libraries for
+  communication between MPI tasks. These MPI tasks work in a collective
+  fashion and each task executes its part of the same program.
 
-.. important::
+  Communication between MPI tasks is passed through the high-speed
+  interconnects between different compute nodes and this allows for
+  programs that can tuilize thousands of CPU cores.
+
+  Almost all large-scale scientific programs utilize MPI. MPI programs are
+  usually quite complex and written for a specific use case as the nature
+  of the collective operations depends on the problem at hand.
+
+  **Programs that utilize this model should request single/multiple nodes
+  with multiple tasks each. You should not request multiple CPUs per task.**
+
+  Example applications that utilize this model: CP2K, GPAW, LAMMPS, OpenFoam.
+  See: :doc:`MPI parallelism <parallel-mpi>`.
+
+  .. figure:: /images/parallel-mpi.png
+      :width: 80%
+      :align: center
+
+* Parallel execution in GPUs is not
+
+  See: :doc:`GPU computing <gpu>`.
+
+  .. figure:: /images/parallel-gpu.png
+      :width: 80%
+      :align: center
+
+
+.. admonition:: Does my code parallelize?
 
    **Normal serial code can't just be run in parallel without
    modifications.** As a user it is your responsibility to
@@ -89,12 +131,14 @@ people are using shared memory models.
    the effort, one should be mindful of
    `Amdahl's law <https://en.wikipedia.org/wiki/Amdahl%27s_law>`_ and
    `Gustafson's law <https://en.wikipedia.org/wiki/Gustafson%27s_law>`_.
-   All programs have some parts that can only be executed in serial and
-   thus the theoretical speedup that one can get from using parallel
-   programming depends on two factors:
+   All programs have some parts that can only be executed in serial fashion and
+   thus speedup that one can get from using parallel execution depends on
+   how much of programs' execution can be done in parallel.
 
-     1. How much of programs' execution could be done in parallel?
-     2. What would be the speedup for that parallel part?
+   .. figure:: /images/parallel-execution.png
+       :width: 80%
+       :align: center
+
 
    Thus if your program runs mainly in serial but has a small parallel
    part, running it in parallel might not be worth it. Sometimes, doing
@@ -114,224 +158,54 @@ people are using shared memory models.
 
 
 
-Embarrassingly parallel: array jobs
------------------------------------
+Combining different parallel execution models
+---------------------------------------------
 
-The :doc:`array jobs <array>` we have already discussed.  Don't forget
-that this is one of the most common ways to parallelize!  A large
-amount of work these days is "array jobs" + "shared memory for these jobs"
+Different parallel execution models can be combined if your program supports
+them. Below a few common situations are listed:
 
 
+Embarassingly parallel everything
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Shared memory: OpenMP/multithreaded/multiprocess
-------------------------------------------------
+As running programs in an embarassingly parallel fashion is not a feature of the
+program, but a feature of the workflow itself, any program can be run in an
+embarassingly parallel fashion if needed.
 
-Diffence between multithreaded and multiprocess
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+One can run shared-memory parallel, MPI parallel and GPU parallel jobs in
+array jobs as well. Each individual job will get their own resources.
 
-Shared memory programs usually parallelize by using multiple threads or
-processes. Processes are individual program executions while threads are
-basically smaller program executions within a process. Processes can
-launch both subprocesses and threads. Slurm reservations for both methods
-behave similarly.
+Hybrid parallelism
+~~~~~~~~~~~~~~~~~~
 
-Depending on a program, you might have multiple processes (Matlab parallel
-pool, R parallel-library, Python `multiprocessing <https://docs.python.org/library/multiprocessing.html>`__) or have multiple threads
-(OpenMP threads of BLAS libraries that R/numpy use).
+When MPI and shared memory parallelism are done by the same application
+it is usually called hybrid parallelization.
+**Programs that utilize this model can require both multiple tasks
+and multiple CPUs per task.**
 
-.. warning::
+For example, CP2K compiled to ``psmp``-target has hybrid parallelization enabled
+while ``popt``-target has only MPI parallelization enabled. The best ratio between
+MPI tasks and CPUs per tasks depends on the program and needs to be measured.
 
-   Some programs (e.g. R) can utilize both multithread and multiprocess
-   parallelism. For example, R has parallel-library for running multiple
-   processes, but BLAS libraries that R uses can utilize multiple threads.
-   If you encounter bad performace when you use parallel processes
-   try setting ``OMP_NUM_THREADS=1`` in your slurm script.
+Shared memory parallelism and GPUs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Running multithreaded/multiprocess applications
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+GPUs are usually very fast to execute their part of the program. This, combined with
+the fact that there are typically much more CPUs in a GPU machine than there are GPUs,
+creates a situation where it is advantageous use multiple CPUs to minimize the time
+needed by the CPU part of the calculation.
 
-The basic slurm option that specifies how many CPUs your job requires is
-``--cpus-per-task=N`` (or ``-c N``). If your memory requirement scales
-with the number of cores, use ``--mem-per-core=M``, if you
-require a fixed amount of memory (per node regardless of number of
-processors), use ``--mem=M``. We recommend starting with ``--mem=M`` if
-you do not know how your problem scales.
+Deep learning frameworks such as Tensorflow and PyTorch also use CPUs for data
+preprocessing while the GPU is doing training.
 
-.. important::
+Multi-node parallelism without MPI
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   The number of threads/processes you launch should match the
-   number of requested processors. If you create a lower number, you will
-   not utilize all CPUs. If you launch a larger number, you will
-   oversubscribe the CPUs and the code will run slower as different
-   threads/processes will have to swap in/out of the CPUs.
-
-.. warning::
-
-   Normally you should **not** use ``--ntasks=N`` when you want to
-   run shared memory codes. The number of tasks is only relevant to MPI codes
-   and by specifying it you might launch multiple copies of your program
-   that all compete on the reserved CPUs.
-
-   Only hybrid parallelization codes should have both ``--ntasks=N`` and
-   ``--cpus-per-task=C`` set to be greater than one.
-
-Running a typical OpenMP program
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-OpenMP is a standard de facto for the multithreading implementations. There
-are many others, but this one is the most common, supported by all known
-compiler suits. For other implementations of shared memory parallelism,
-please consult your code docs.
-
-Let's consider
-`hello_omp-example <https://github.com/AaltoSciComp/hpc-examples/tree/master/openmp/hello_omp>`_
-from HPC examples repository.
-
-Simple code compiling::
-
-  wget https://raw.githubusercontent.com/AaltoSciComp/hpc-examples/master/openmp/hello_omp/hello_omp.c
-  module load gcc/8.4.0
-  gcc -fopenmp -O2 -g hello_omp.c -o hello_omp
-
-Running an OpenMP code::
-
-  export OMP_PROC_BIND=TRUE
-  module load gcc/8.4.0
-  srun --cpus-per-task=4 --mem=500M --time=00:05:00 hello_omp
-
-The
-:download:`slurm script<https://raw.githubusercontent.com/AaltoSciComp/hpc-examples/master/openmp/hello_omp/hello_omp.sh>`
-will look similar:
-
-.. literalinclude:: /triton/examples/openmp/hello_omp/hello_omp.sh
-   :language: slurm
-
-It is good to know that OpenMP is both an environment and set of libraries, but
-those libraries always come as part of the compiler. Thus during runtime
-you should load the same compiler that you used for compiling the code.
-
-.. include:: /triton/examples/python/python_openmp/python_openmp.rst
-
-
-.. _parallel-mpi:
-
-Message passing programs: MPI
------------------------------
-
-For compiling/running an MPI job one has to pick up one of the MPI library
-suites. There are various different MPI libraries that all implement the
-MPI standard. We recommend that you use our OpenMPI installation
-(``openmpi/4.0.5``). For information on other installed versions, see the
-:doc:`MPI applications-page<../apps/mpi>`.
-
-.. include:: /triton/ref/mpi-warning.rst
-
-For basic use of MPI programs, you will need to use the
-``-n N``/``--ntasks=N``-option to specify the number of MPI workers.
-
-Compiling and running an MPI Hello world-program
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. include:: /triton/examples/mpi/hello.rst
-
-Spreading MPI workers evenly
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-In many cases you might require more than one node during your job's runtime.
-
-When this is the case, it is usually recommended to split the number of
-workers evenly among the nodes. To do this, one can use
-``-N N``/``--nodes=N`` and ``--ntasks-per-node=n``. For example, you could
-distribute the previously requested four tasks to two nodes with:
-
-.. code-block:: slurm
-
-  #!/bin/bash
-  #SBATCH --time=00:05:00      # takes 5 minutes all together
-  #SBATCH --mem-per-cpu=200M   # 200MB per process
-  #SBATCH --nodes=2            # 2 nodes
-  #SBATCH --ntasks-per-node=2  # 2 processes per node * 2 nodes = 4 processes in total
-  #SBATCH --constraint=avx     # set constraint for processor architecture
-
-  module load openmpi/4.0.5  # NOTE: should be the same as you used to compile the code
-  srun ./hello_mpi
-
-
-This way the number of workers is distributed more evenly, which in turn
-reduces communication overhead between workers. The total number of tasks is
-``--nodes`` times the ``--ntasks-per-node``.
-
-
-Setting a constraint for a specific CPU architecture
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The number of CPUs/tasks one can specify for a single parallel job depends
-usually on the underlying algorithm. In many codes, such as many
-finite-difference codes, the workers are set in a grid-like structure. The user
-of said codes has then a choice of choosing the dimensions of the simulation
-grid aka. how many workers are in x-, y-, and z-dimensions.
-
-For best perfomance one should reserve half or full nodes when possible. In
-heterogeneous clusters this can be a bit more complicated as different CPUs
-can have different numbers of cores.
-
-In Triton CPU partitions there are machines with 24, 28 and 40 CPUs. See the
-list of :ref:`available nodes<hardware-list>` for more information.
-
-However, one can make the reservations easier by specifying a CPU architecture
-with ``--constraint=ARCHITECTURE``. This tells Slurm to look for nodes that
-satisfy a specific feature. To list available features, one can use
-``slurm features``.
-
-For example, one could limit the code to the Haswell-architecture with the
-following script:
-
-.. code-block:: slurm
-
-  #!/bin/bash
-  #SBATCH --time=00:05:00      # takes 5 minutes all together
-  #SBATCH --mem-per-cpu=200M   # 200MB per process
-  #SBATCH --nodes=1            # 1 node
-  #SBATCH --ntasks-per-node=24 # 24 processes as that is the number in the machine
-  #SBATCH --constraint=hsw     # set constraint for processor architecture
-
-  module load openmpi/4.0.5  # NOTE: should be the same as you used to compile the code
-  srun ./hello_mpi
-
-Monitoring performance
-----------------------
-
-.. include:: ../examples/monitoring/seff.rst
-
-Exercises
----------
-
-.. include:: ../ref/examples-repo.rst
-
-.. exercise:: Parallel-1: Explore and understand basic Slurm options
-
-   Run ``srun --cpus-per-task=4 hostname``, ``srun --ntasks=4 hostname``, and ``srun --nodes=4
-   hostname``.  What's the difference and why?
-
-.. exercise:: Parallel-2: OpenMP with Python
-
-   Find the files ``hpc-examples/openmp/hello_omp/hello_omp.c`` and
-   ``hpc-examples/hello_omp/hello_omp.sh`` that have a short example of OpenMP.
-   Compile and run it - a slurm script is included.
-
-.. exercise:: Parallel-3: OpenMP
-
-   Find the files in ``hpc-examples/python/python_openmp``. Try running the
-   example with a few different ``--constraint=X`` and ``--cpus-per-task=C``.
-   In your opinion, what architecture / cpu number combination would provide the
-   best efficiency? Use ``seff`` to verify.
-
-.. exercise:: Parallel-4: MPI
-
-   Find the files ``hpc-examples/mpi/hello_mpi/hello_mpi.c`` and
-   ``hpc-examples/mpi/hello_mpi/hello_mpi.sh`` that
-   have a short example of MPI.
-   Compile and run it - a slurm script is included.
+Some programs can run with multiple nodes in parallel, but they do not use MPI
+for communication between nodes. Resources for these programs are reserved in a similar
+fashion to the MPI programs, but the program launch is usually done by scripts that
+run different instructions on different machines. The setup depends on the program
+and can be complex.
 
 
 
@@ -348,13 +222,4 @@ See also
 What's next?
 ------------
 
-You have now seen the basics - but applying these in practice is still
-a difficult challenge!  There is plenty to figure out while combining
-your own software, the Linux environment, and Slurm.
-
-Your time is the most valuable thing you have.  If you aren't fully
-sure of how to use the tools, it is much better to ask that struggle
-forever.  Contact us the :doc:`Research Software Engineers
-</rse/index>` early - for example in our :doc:`daily garage
-</help/garage>`, and we can help you get set up well.  Then, you can
-continue your learning while your projects are progressing.
+The next tutorial is about :doc:`array jobs <array>`.

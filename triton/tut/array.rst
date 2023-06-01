@@ -1,6 +1,6 @@
-==========
-Array jobs
-==========
+============================================
+Array jobs: embarassingly parallel execution
+============================================
 
 .. admonition:: Video
 
@@ -60,6 +60,10 @@ creates an array of 5 jobs (tasks) with index values 0, 1, 2, 3, 4.
 The array tasks are copies of the submitted batch script that are automatically submitted
 to Slurm. Slurm provides a unique environment variable ``SLURM_ARRAY_TASK_ID`` to each
 task which could be used for handling input/output files to each task.
+
+.. figure:: /images/parallel-array.png
+    :width: 80%
+    :align: center
 
 .. admonition:: ``--array`` via the command line
 
@@ -323,4 +327,4 @@ What's next?
 ------------
 
 
-The next tutorial is about :doc:`GPU computing <gpu>`.
+The next tutorial is about :doc:`shared memory parallelism <parallel-shared>`.

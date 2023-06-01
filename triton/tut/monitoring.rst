@@ -193,7 +193,7 @@ which will show information as indicated in the ``--format`` option (jobid,
 elapsed time, number of reserved CPUs, etc.). You can specify any field of
 interest to be shown using ``--format``.
 
-
+.. _monitoring-seff:
 
 CheckingCPU and RAM efficiency after completion
 -----------------------------------------------
@@ -279,5 +279,4 @@ Exercises
 What's next?
 ------------
 
-Running multiple instances of a ``sbatch`` script is easier with
-:doc:`array jobs<../tut/array>`.
+Next tutorial is about different ways of doing :doc:`parallel computing <parallel>`.
