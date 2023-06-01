@@ -31,7 +31,7 @@ or threads so that it can leverage multiple CPUs available in the machine.
 **Slurm reservations for both methods behave similarly.** This document
 will talk about processes, but everything mentioned would be applicable to threads
 as well. See section on
-:ref:`difference between processes and threads<threads-vs-processes>`
+:ref:`difference between processes and threads <threads-vs-processes>`
 for more information on who proceseses and threads differ.
 
 Communication between processes happends via shared memory. This means
