@@ -34,7 +34,7 @@ as well. See section on
 :ref:`difference between processes and threads <threads-vs-processes>`
 for more information on who proceseses and threads differ.
 
-Communication between processes happends via shared memory. This means
+Communication between processes happens via shared memory. This means
 that all processes need to run on the same machine.
 
 .. figure:: /images/parallel-shared.png
