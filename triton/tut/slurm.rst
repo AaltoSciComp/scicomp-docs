@@ -67,18 +67,18 @@ A basic Slurm example
 ---------------------
 
 Here is a basic Slurm batch script template (don't run it yet - we
-aren't there yet)::
+aren't there yet):
 
-  .. code:: slurm
+.. code:: slurm
 
-    #!/bin/bash
-    #SBATCH --mem=5G
-    #SBATCH --time=5:00:00
+  #!/bin/bash
+  #SBATCH --mem=5G
+  #SBATCH --time=5:00:00
 
-    module purge
-    module load anaconda
+  module purge
+  module load anaconda
 
-    python slurm/pi.py 10000
+  python slurm/pi.py 10000
 
 This is a batch script - the same shell we learned about it
 :doc:`cluster-shell`.  The parts are:
