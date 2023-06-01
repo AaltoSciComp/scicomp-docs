@@ -87,10 +87,11 @@ Let's run the program with two processes using ``srun``::
 
 **It is vitally important to notice that the program needs to be told the amount of
 processes it should use.** The program does not obtain this information from the
-queue system automatically. For more information, see the section on
+queue system automatically. If the program does not know how many CPUs to use, it
+might try to use too many or too few. For more information, see the section on
 :ref:`CPU over- and undersubscription <cpu-mismatch>`.
 
-Using a slurm script setting the number becomes easier:
+Using a slurm script giving the number of CPUs to the program becomes easier:
 
 .. code-block:: slurm
 
@@ -169,6 +170,11 @@ for the same resources.
 
 Using threads and processes at the same time can also result in
 :ref:`double-booking<threads-vs-processes>`.
+
+Using ``$SLURM_CPUS_PER_TASK`` is the best way of letting your program
+know how many CPUs it should use.
+See :ref:`section on using it effectively <effective-cpus-per-task>`
+for more information.
 
 
 
