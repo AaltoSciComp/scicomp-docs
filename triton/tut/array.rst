@@ -295,6 +295,11 @@ Exercises
    Make a job array which runs every other index, e.g. the array can
    be indexed as 1, 3, 5... (the `sbatch manual page
    <https://slurm.schedmd.com/sbatch.html>`__ can be of help)
+   
+   .. solution::
+      
+      You can specify a step function with colon and a number after indices. 
+      In this case it would be: ``--array=1-X:2``
 
 .. exercise:: Array-5: Array job with varying memory requirements.
 
@@ -307,7 +312,15 @@ Exercises
 
    Is this a proper use of array jobs?
 
-
+   .. solution::
+      
+      At the very least the 5G job should fail. 500M and 1G jobs also go above 
+      the amount of memory allocated to them, but slurm has enough leeway 
+      built in so they will likely go through. 
+      
+      This is a wrong way to use array jobs. Array jobs are meant 
+      for multiple jobs with same resource requirements, since every job 
+      gets allocated the same amount of resources.
 
 See also
 --------
