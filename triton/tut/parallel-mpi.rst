@@ -233,6 +233,22 @@ Exercises
 
    Run ``srun --cpus-per-task=4 hostname``, ``srun --ntasks=4 hostname``, and ``srun --nodes=4
    hostname``.  What's the difference and why?
+   
+   .. solution::
+   
+      ``--cpus-per-task=4`` does exactly what it says, and gives each tasks 4 cpus. Since we 
+      have not requested any additional tasks, we run ``hostname`` once on a single node, 
+      but using 4 cpus.
+      
+      By comparison, ``ntasks=4`` creates 4 MPI workers that each run ``hostname`` once.
+      These all run on a single node, and use one cpu each since we didn't request anything 
+      more.
+      
+      Finally ``srun --nodes=4 hostname`` runs ``hostname`` once each on four separate nodes. 
+      
+      If we were to for example combine all of these, we would run ``hostname`` four times, on 
+      four nodes each for total 16 tasks, with each task using 4 cpus. 
+
 
 .. exercise:: MPI parallelism 2: MPI
 
