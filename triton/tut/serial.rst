@@ -227,6 +227,14 @@ Exercises
 
    Modify the script from exercise #1 to run on only one type of CPU
    using the ``--constraint`` option.  Hint: check :doc:`../ref/index`
+   
+   .. solution::
+   
+      Simply add ``#SBATCH --constraint=X`` to your sbatch script, or 
+      give ``--constraint=X`` to srun as additional argument. For example, 
+      to run only on Haswell cpu's you can add ``--constraint=hsw``, or 
+      similarily for amd milan cpus ``--constraint=milan``. This also 
+      works identically for gpus.
 
 .. exercise:: Serial-5: Why you use ``sbatch``, not ``bash``.
 
