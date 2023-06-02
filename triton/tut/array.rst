@@ -315,8 +315,8 @@ Exercises
    .. solution::
       
       At the very least the 5G job should fail. 500M and 1G jobs also go above 
-      the amount of memory allocated to them, but slurm has enough leeway 
-      built in so they will likely go through. 
+      the amount of memory allocated to them, but slurm allows you to exceed 
+      your resources a little before killing the job, so they will likely go through. 
       
       This is a wrong way to use array jobs. Array jobs are meant 
       for multiple jobs with same resource requirements, since every job 
