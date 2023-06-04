@@ -24,8 +24,6 @@ Array jobs: embarassingly parallel execution
    * If you aren't fully sure of how to scale up, contact us
      :doc:`Research Software Engineers </rse/index>` early.
 
-.. highlight:: console
-
 More often than not, scientific problems involve running a single program again
 and again with different datasets or parameters.
 
@@ -35,6 +33,14 @@ of parallelism is called **embarassingly parallel**.
 
 Slurm has a structure called **job array**, which enables users to easily submit
 and run several instances of the same Slurm script independently in the queue.
+
+.. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-array.png
+   :alt: Schematic of cluster with current discussion points highlighted; see caption or rest of lesson.
+
+   Array jobs let you controll a large amount the cluster.  In
+   :doc:`parallel`, we will see another way.
+
+.. highlight:: console
 
 
 

@@ -8,7 +8,17 @@ computing things.  You are programming the computer to do things
 for you over and over again.  *The shell is the only option to make
 this work, so you have to learn a little bit*.
 
+.. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-login.png
+   :alt: Schematic of cluster with current discussion points highlighted; see caption or rest of lesson.
+
+   We are still only on the login node.  If you stop here, you aren't
+   actually using the cluster - just the entry point.  If you run too
+   much code here, you'll get a polite message asking to use the rest
+   of the cluster.
+
 .. highlight:: console
+
+
 
 Why a shell?
 ------------
