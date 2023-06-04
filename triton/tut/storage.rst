@@ -272,12 +272,19 @@ used as a rudimentary way to see how much I/O load there is.
 .. exercise:: Storage-4: strace and I/O operations
 
    Use ``strace -c`` to compare the number of system calls in ``ls``,
-   ``ls -l``, ``ls --no-color``, and ``ls --color`` on a directory
-   with many files.  On Triton, you can use the directory
-   ``/scratch/scip/lustre_2017/many-files/`` as a place with many
-   files in it.  How many system calls per file were there for each
-   option?
+   ``ls -l``,  on a directory with many files.  On Triton, you can use 
+   the directory ``/scratch/scip/lustre_2017/many-files/`` as a place 
+   with many files in it.  How many system calls per file were there 
+   for each option?
 
+   .. solution::
+   
+      Running ``strace -c ls /scratch/scip/lustre_2017/many-files/`` shows you 
+      that ls took 171 system calls to get the information. By comparison, 
+      ``ls -l`` takes 5210 system calls due to all the additional information 
+      it gives. This might not matter in normal situation, but these system calls 
+      can quickly pile up if used in a script. 
+   
 .. exercise:: Storage-5: strace and time
 
    Using ``strace -c``, compare the times of ``find`` and ``lfs find``

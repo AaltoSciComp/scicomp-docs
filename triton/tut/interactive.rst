@@ -231,6 +231,7 @@ Exercises
       give the ``--sleep`` option to the Python process, like this:
       ``python hpc-examples/slurm/memory-use.py 50M --sleep=60`` -
       keep it available.
+      
 
 .. exercise:: Interactive-2: Time scaling
 
@@ -254,6 +255,16 @@ Exercises
    c) Look at the job history using ``slurm history`` - can you see
       how much time each process used?  What's the relation between
       TotalCPUTime and WallTime?
+      
+   .. solution::
+   
+      c) each process should be visible as a separate step indexed from 0. 
+         For larger iterations, TotalCpuTime should be similar to WallTime, 
+         Since TotalCpuTime shows amount of time Cpus were at full utilization, 
+         times the number of Cpus. Note that TotalCPUTime has precision of 
+         milliseconds, whereas WallTime has precision of seconds. 
+         
+      
 
 .. exercise:: Interactive-3: Info commands
 

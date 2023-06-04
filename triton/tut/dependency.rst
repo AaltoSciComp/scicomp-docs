@@ -47,8 +47,23 @@ Exercises
    Create a chain of jobs A -> B -> C each depending on the successful
    completion of the previous job.  In each job run e.g. ``sleep 60``
    to give you time to investigate the status of the queue.
+   
+   .. solution::
+   
+      You should all of your jobs in queue. Jobs with dependency on a 
+      previous job will have a status on pending, stating a dependency 
+      as the reason.
 
 .. exercise:: Dependencies-3: First job fails
 
    Continuing from the previous exercise, what happens if at the end
    of the job A script you put ``exit 1``. What does it mean?
+   
+   .. solution::
+   
+      Putting ``exit 1`` at the end of your job script means it returns 
+      a unix exit code indicating a failure. Next jobs in your depedency 
+      list will sit in queue forever, since as far as they know the previous 
+      job never completed successfully.
+      
+      
