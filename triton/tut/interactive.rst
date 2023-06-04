@@ -24,7 +24,11 @@ Interactive jobs
      * ``srun [SLURM OPTIONS] --pty bash`` (general Slurm)
      * ``sinteractive`` (Triton specific)
 
+.. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-serial.png
+   :alt: Schematic of cluster with current discussion points highlighted; see caption or rest of lesson.
 
+   Interactive jobs let you control a small amount of resources for
+   development work.
 
 .. highlight:: shell-session
 

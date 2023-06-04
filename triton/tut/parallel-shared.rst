@@ -20,6 +20,14 @@ Shared memory parallelism: multithreading & multiprocessing
    * If you aren't fully sure of how to scale up, contact us
      :doc:`Research Software Engineers </rse/index>` early.
 
+.. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-sharedmem.png
+   :alt: Schematic of cluster with current discussion points highlighted; see caption or rest of lesson.
+
+   Shared-memory parallelism and multiprocessing lets you scale to the
+   size of one node.  For purposes of illustration, the picture isn't
+   true to life: we call the whole stack one node, but in reality each
+   node is one of the rows.
+
 .. highlight:: console
 
 
