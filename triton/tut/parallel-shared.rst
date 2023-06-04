@@ -20,6 +20,8 @@ Shared memory parallelism: multithreading & multiprocessing
    * If you aren't fully sure of how to scale up, contact us
      :doc:`Research Software Engineers </rse/index>` early.
 
+.. highlight:: console
+
 
 
 What is shared memory parallelism?
@@ -83,7 +85,7 @@ algorithm and ``C`` is the number of processors to be used for the parallel calc
 
 Let's run the program with two processes using ``srun``::
 
-  srun --cpus-per-task=2 --time=00:10:00 --mem=1G python pi.py --nprocs=2 1000000
+  $ srun --cpus-per-task=2 --time=00:10:00 --mem=1G python pi.py --nprocs=2 1000000
 
 **It is vitally important to notice that the program needs to be told the amount of
 processes it should use.** The program does not obtain this information from the
@@ -105,7 +107,7 @@ Using a slurm script giving the number of CPUs to the program becomes easier:
 
 Let's call this script ``pi-sharedmemory.sh``. You can submit it with::
 
-  sbatch pi-sharedmemory.sh
+  $ sbatch pi-sharedmemory.sh
 
 The environment variable ``$SLURM_CPUS_PER_TASK`` is set during program runtime
 and it is set based on the number of ``--cpus-per-task`` requested. For more tricks

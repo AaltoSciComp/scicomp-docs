@@ -27,6 +27,8 @@ MPI parallelism: multi-task programs
    * If you aren't fully sure of how to scale up, contact us
      :doc:`Research Software Engineers </rse/index>` early.
 
+.. highlight:: console
+
 
 
 What is MPI parallelism?
@@ -110,20 +112,18 @@ You can clone the repository with ``git clone https://github.com/AaltoSciComp/hp
 The script is in the ``slurm``-folder.
 
 First off, we need to compile the program with a suitable OpenMPI version. Let's use the
-recommended version ``openmpi/4.0.5``.
+recommended version ``openmpi/4.0.5``::
 
-.. code-block:: sh
+   $ module load openmpi/4.0.5
 
-   module load openmpi/4.0.5
-
-   mpicc -o pi-mpi pi-mpi.c
+   $ mpicc -o pi-mpi pi-mpi.c
 
 The program can now be run with ``srun ./pi-mpi N``, where ``N`` is the number of
 iterations to be done by the algorithm.
 
 Let's ask for resources and run the program with two processes using ``srun``::
 
-  srun --nodes=1 --ntasks=2 --time=00:10:00 --mem=1G ./pi-mpi 1000000
+ $ srun --nodes=1 --ntasks=2 --time=00:10:00 --mem=1G ./pi-mpi 1000000
 
 Using a slurm script setting the requirements becomes easier:
 
@@ -142,7 +142,7 @@ Using a slurm script setting the requirements becomes easier:
 
 Let's call this script ``pi-mpi.sh``. You can submit it with::
 
-  sbatch pi-mpi.sh
+  $ sbatch pi-mpi.sh
 
 
 
