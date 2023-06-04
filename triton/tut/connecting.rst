@@ -43,6 +43,11 @@ for this series of tutorials).
    The way you connect will be different in every site, but you should
    be able to get a terminal somehow.
 
+.. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-login.png
+   :alt: Schematic of cluster with current discussion points highlighted; see caption or rest of lesson.
+
+   We are working to get access to the login node.  This is the
+   gateway to all the rest of the cluster.
 
 .. highlight:: console
 
@@ -315,7 +320,7 @@ rest of the course.
    Check what your default shell is: ``echo $SHELL``.  If it doesn't
    say ``/bin/bash``, go ahead and change your shell to bash if it's
    not yet (see the expandable box above).
-   
+
    This ``$SHELL`` syntax is an **environment variable** and a pattern
    you will see in the future.
 

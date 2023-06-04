@@ -27,6 +27,12 @@ MPI parallelism: multi-task programs
    * If you aren't fully sure of how to scale up, contact us
      :doc:`Research Software Engineers </rse/index>` early.
 
+.. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-mpi.png
+   :alt: Schematic of cluster with current discussion points highlighted; see caption or rest of lesson.
+
+   MPI parallelism lets you scale to many nodes on the cluster, at the
+   cost of extra programming work.
+
 
 
 What is MPI parallelism?

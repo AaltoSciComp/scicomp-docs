@@ -14,6 +14,13 @@ also the dominant in the world one these days).
 Triton users submit jobs which are then scheduled and allocated
 resources by the workload manager.
 
+
+.. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-slurm.png
+   :alt: Schematic of cluster with current discussion points highlighted; see caption or rest of lesson.
+
+   Slurm allows you to controll all of the computer power from the
+   login node.
+
 .. admonition:: An analogy: the HPC Diner
 
    You're eating out at the HPC Diner.  What happens when you arrive?

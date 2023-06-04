@@ -26,9 +26,16 @@ Serial Jobs
    * See the :doc:`quick reference <../ref/index>` for complete list
      of options.
 
+.. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-serial.png
+   :alt: Schematic of cluster with current discussion points highlighted; see caption or rest of lesson.
 
+   This tutorial covers the basics of serial jobs.  With what you are
+   learning so far, you can control a small amount of power of the
+   cluster.
 
 .. highlight:: shell-session
+
+
 
 Prerequisites
 -------------

@@ -41,6 +41,12 @@ choose between them.  The
    * See :doc:`remotedata` for how to transfer and access the data
      from other computers.
 
+.. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-storage.png
+   :alt: Schematic of cluster with current discussion points highlighted; see caption or rest of lesson.
+
+   We are now looking at the data storage of a cluster.
+
+
 .. highlight:: console
 
 
