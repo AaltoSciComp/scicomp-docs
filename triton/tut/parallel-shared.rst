@@ -37,7 +37,7 @@ for more information on who proceseses and threads differ.
 Communication between processes happens via shared memory. This means
 that all processes need to run on the same machine.
 
-.. figure:: /images/parallel-shared.png
+.. figure:: /images/parallel-shared.svg
     :width: 80%
     :align: center
 

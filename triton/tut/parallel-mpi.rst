@@ -41,7 +41,7 @@ Programs using MPI need to be written so that they utilize the MPI communication
 **Thus typical programs that are not written around MPI cannot use MPI without
 major modifications.**
 
-.. figure:: /images/parallel-mpi.png
+.. figure:: /images/parallel-mpi.svg
     :width: 80%
     :align: center
 
