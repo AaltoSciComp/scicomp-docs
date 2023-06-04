@@ -10,11 +10,13 @@ Let's run the MNIST example from
 
 The full code for the example is in
 :download:`tensorflow_mnist.py</triton/examples/tensorflow/tensorflow_mnist.py>`.
-One can run this example with ``srun``::
+One can run this example with ``srun``:
 
-  wget https://raw.githubusercontent.com/AaltoSciComp/scicomp-docs/master/triton/examples/tensorflow/tensorflow_mnist.py
-  module load anaconda
-  srun --time=00:15:00 --gres=gpu:1 python tensorflow_mnist.py
+.. code-block:: console
+
+  $ wget https://raw.githubusercontent.com/AaltoSciComp/scicomp-docs/master/triton/examples/tensorflow/tensorflow_mnist.py
+  $ module load anaconda
+  $ srun --time=00:15:00 --gres=gpu:1 python tensorflow_mnist.py
 
 or with ``sbatch`` by submitting
 :download:`tensorflow_mnist.sh</triton/examples/tensorflow/tensorflow_mnist.sh>`:

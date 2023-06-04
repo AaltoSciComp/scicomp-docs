@@ -2,7 +2,7 @@
 Job dependencies
 ================
 
-.. highlight:: bash
+.. highlight:: console
 
 Introduction
 ============
@@ -31,8 +31,8 @@ job ID of job A before it has been submitted.  One solution is to
 catch the job id of job A when submitting it and store it as a shell
 variable, and using the stored value when submitting job B. Like::
 
-    idA=$(sbatch jobA.sh | awk '{print $4}')
-    sbatch --dependency=afterok:${idA} jobB.sh
+    $ idA=$(sbatch jobA.sh | awk '{print $4}')
+    $ sbatch --dependency=afterok:${idA} jobB.sh
 
 
 Exercises
