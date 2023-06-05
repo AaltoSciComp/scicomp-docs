@@ -149,7 +149,7 @@ What's the difference between ``module load anaconda`` and ``module load
 anaconda/2023-01``?
 
 The first ``anaconda`` loads the version that Lmod assumes to
-be the latest one - which migh change someday!  Suddenly, things don't
+be the latest one - which might change someday!  Suddenly, things don't
 work anymore and you have to fix them.
 
 The second loading ``anaconda/2023-01`` loads that exact version,

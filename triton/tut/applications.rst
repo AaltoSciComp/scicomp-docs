@@ -13,7 +13,7 @@ building, and compiling software.  These days, installing and managing
 scientific software is taking more and more time, thus we need to
 specifically talk about it.
 
-Clusters, being a shared systems, has more complicated software
+Clusters, being shared systems, have more complicated software
 requirements.  In this tutorial, you will learn how to use
 existing software.  Be aware that installing your own is possible (and
 people do it all the time), but does require some attention to
@@ -30,12 +30,12 @@ Linux.
      * Sometimes, you need to install some stuff on top of that (your
        own libraries or environments)
      * You can actually install your own applications, but you need to
-       modify insturctions to work in your own directories.
+       modify instructions to work in your own directories.
 
    * :doc:`Singularity containers <../usage/singularity>` allow you to
      run other hard-to-install software.
    * Ask us to install software if you need it.  Ask for help if you
-     try yourself and it seems to be taking too long.
+     try it yourself and it seems to be taking too long.
 
 .. seealso::
 
@@ -93,7 +93,7 @@ it with very little work.  You can even choose your exact version, so
 that it keeps working the same even if someone else needs a newer
 version.
 
-Some clusters are very active in this, some the users to do more.
+Some clusters are very active in this, some expect the users to do more.
 Some things are so obscure, or so dependent on local needs, that it
 only makes sense to help people install it themselves.  To look for
 what is available:

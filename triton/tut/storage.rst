@@ -103,7 +103,7 @@ The following factors are useful to consider:
    you read all at once, scratch is fine. But if there are many small
    files or random access, local disks may help.
 -  Do you write log files/checkpoints more often than is needed?
--  Some programs use local disk as swap-space. Only turn on if you know
+-  Some programs use local disk as swap-space. Only turn it on if you know
    it is reasonable.
 
 There's a checklist in the :doc:`storage details page
