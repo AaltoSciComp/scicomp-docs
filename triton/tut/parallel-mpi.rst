@@ -107,15 +107,13 @@ information on whether you can give each task more than one CPU.
 Running and example MPI program
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. include:: ../ref/examples-repo.rst
+
 For this example, let's consider
 `pi-mpi.c <https://github.com/AaltoSciComp/hpc-examples/blob/master/slurm/pi-mpi.c>`_-example
-from the
-`hpc-examples <https://github.com/AaltoSciComp/hpc-examples>`_-repository.
-It estimates pi using Monte Carlo methods and can utilize multiple MPI tasks for calculating
-the trials.
-
-You can clone the repository with ``git clone https://github.com/AaltoSciComp/hpc-examples.git``.
-The script is in the ``slurm``-folder.
+in the ``slurm``-folder.
+It estimates pi with Monte Carlo methods and
+can utilize multiple MPI tasks for calculating the trials.
 
 First off, we need to compile the program with a suitable OpenMPI version. Let's use the
 recommended version ``openmpi/4.0.5``::
@@ -131,7 +129,8 @@ Let's ask for resources and run the program with two processes using ``srun``::
 
  $ srun --nodes=1 --ntasks=2 --time=00:10:00 --mem=1G ./pi-mpi 1000000
 
-Using a slurm script setting the requirements becomes easier:
+This worked because we had the correct modules already loaded.
+Using a slurm script setting the requirements and loading the correct modules becomes easier:
 
 .. code-block:: slurm
 
@@ -239,21 +238,21 @@ Exercises
 
    Run ``srun --cpus-per-task=4 hostname``, ``srun --ntasks=4 hostname``, and ``srun --nodes=4
    hostname``.  What's the difference and why?
-   
+
    .. solution::
-   
-      ``--cpus-per-task=4`` does exactly what it says, and gives each tasks 4 cpus. Since we 
-      have not requested any additional tasks, we run ``hostname`` once on a single node, 
+
+      ``--cpus-per-task=4`` does exactly what it says, and gives each tasks 4 cpus. Since we
+      have not requested any additional tasks, we run ``hostname`` once on a single node,
       but using 4 cpus.
-      
+
       By comparison, ``ntasks=4`` creates 4 MPI workers that each run ``hostname`` once.
-      These all run on a single node, and use one cpu each since we didn't request anything 
+      These all run on a single node, and use one cpu each since we didn't request anything
       more.
-      
-      Finally ``srun --nodes=4 hostname`` runs ``hostname`` once each on four separate nodes. 
-      
-      If we were to for example combine all of these, we would run ``hostname`` four times, on 
-      four nodes each for total 16 tasks, with each task using 4 cpus. 
+
+      Finally ``srun --nodes=4 hostname`` runs ``hostname`` once each on four separate nodes.
+
+      If we were to for example combine all of these, we would run ``hostname`` four times, on
+      four nodes each for total 16 tasks, with each task using 4 cpus.
 
 
 .. exercise:: MPI parallelism 2: MPI
