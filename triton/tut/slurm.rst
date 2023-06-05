@@ -18,7 +18,7 @@ resources by the workload manager.
 .. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-slurm.png
    :alt: Schematic of cluster with current discussion points highlighted; see caption or rest of lesson.
 
-   Slurm allows you to controll all of the computer power from the
+   Slurm allows you to control all of the computing power from the
    login node.
 
 .. admonition:: An analogy: the HPC Diner

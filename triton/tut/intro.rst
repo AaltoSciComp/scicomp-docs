@@ -38,7 +38,7 @@ more about how it's used together later on.
 
    The things labeled "CPU Node" and "GPU Node" aren't quite accurate
    in real life: that picture better depicts one a whole rack of
-   nodes.  But we sow it like this so that we can pretend that one row
+   nodes.  But we show it like this so that we can pretend that one row
    is a CPU later on to illustrate a point.
 
 
