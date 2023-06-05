@@ -9,11 +9,13 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * 30 May 2023: Due to an internal meeting, there might be reduced
-     capacity.
    * 6-8 June 2023: Lower capacity due to the :doc:`kickstart course
      </training/scip/kickstart-2023>` - watch at
      https://twitch.tv/coderefinery .
+   * 13 June 2023: Probably no garage due to internal development
+     event.
+   * During the high summer (~July), we don't promise to be here every
+     day, but past history shows that there is usually someone.
 
 ..
    * There are no current planned disruptions in the daily garage.
