@@ -49,7 +49,7 @@ are programming environments designed to communicate with GPUs in such a manner.
 An example of such an API is `CUDA <https://en.wikipedia.org/wiki/CUDA>`_
 which is the native programming interface for NVIDIA GPUs.
 
-.. figure:: /images/parallel-gpu.png
+.. figure:: /images/parallel-gpu.svg
     :width: 80%
     :align: center
 

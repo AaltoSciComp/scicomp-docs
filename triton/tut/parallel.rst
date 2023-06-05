@@ -79,9 +79,9 @@ The main models of parallel programming are:
 
      The array job runs independently across the cluster.
 
-  .. figure:: /images/parallel-array.png
-     :width: 80%
-     :align: center
+  .. figure:: /images/parallel-array.svg
+      :width: 80%
+      :align: center
 
 * Shared memory (or multithreaded/multiprocess) parallel programs run multiple
   processes / threads on the same machine. As the name suggests, all
@@ -98,7 +98,6 @@ The main models of parallel programming are:
 
   See: :doc:`shared-memory parallelism <parallel-shared>`.
 
-
   .. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-array.png
      :width: 80%
      :align: center
@@ -107,7 +106,7 @@ The main models of parallel programming are:
      The shared memory job runs across one node - since that's what
      shares memory.
 
-  .. figure:: /images/parallel-shared.png
+  .. figure:: /images/parallel-shared.svg
       :width: 80%
       :align: center
 
@@ -129,6 +128,7 @@ The main models of parallel programming are:
   Example applications that utilize this model: CP2K, GPAW, LAMMPS, OpenFoam.
   See: :doc:`MPI parallelism <parallel-mpi>`.
 
+
   .. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-mpi.png
      :width: 80%
      :align: center
@@ -136,7 +136,7 @@ The main models of parallel programming are:
 
      The MPI job can communicate across nodes.
 
-  .. figure:: /images/parallel-mpi.png
+  .. figure:: /images/parallel-mpi.svg
       :width: 80%
       :align: center
 
@@ -144,7 +144,7 @@ The main models of parallel programming are:
 
   See: :doc:`GPU computing <gpu>`.
 
-  .. figure:: /images/parallel-gpu.png
+  .. figure:: /images/parallel-gpu.svg
       :width: 80%
       :align: center
 
@@ -163,7 +163,7 @@ The main models of parallel programming are:
    thus speedup that one can get from using parallel execution depends on
    how much of programs' execution can be done in parallel.
 
-   .. figure:: /images/parallel-execution.png
+   .. figure:: /images/parallel-execution.svg
        :width: 80%
        :align: center
 
