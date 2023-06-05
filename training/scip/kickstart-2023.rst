@@ -103,17 +103,17 @@ hints about adapting).  How to register if you are not at Aalto:
 
 * Regardless of where you are from, you may use the primary registration
   form to get emails about the course.  You don't get anything else.
-* [to be confirmed] Participants from University of Helsinki can follow how to connect
+* Participants from **University of Helsinki** can follow how to connect
   to their Kale/Turso cluster by following `their own instructions
   <https://wiki.helsinki.fi/pages/viewpage.action?pageId=408323613>`__.
-* [to be confirmed] Participants from University of Oulu: please follow instructions on
+* Participants from **University of Oulu**: please follow instructions on
   `how to access the Carpo2 computing cluster <https://ict.oulu.fi/17120/?page&lang=en>`__.
-* [to be confirmed] Tampere: this course is recommended for all new Narvi users and also all
+* **Tampere**: this course is recommended for all new Narvi users and also all
   interested in HPC. Most things should work with simply replacing triton
   -> narvi. Some differences in configuration are listed in
   `Narvi differences
   <https://narvi-docs.readthedocs.io/narvi/kickstart-diffs.html>`__
-* [to be confirmed] `CSC <https://csc.fi>`__ (Finland): Participants with `CSC user
+* [no active support] `CSC <https://csc.fi>`__ (Finland): Participants with `CSC user
   account <https://docs.csc.fi/accounts/>`__ can try examples also in
   CSC supercomputers, see the `overview of CSC supercomputers
   <https://docs.csc.fi/computing/overview/>`__ for details on
