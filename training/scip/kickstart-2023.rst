@@ -170,7 +170,8 @@ started with the computing resources.
     - People often wonder how many resources their job needs, either on
       their own computer or on the cluster.  When should you move to a
       cluster?  How many resources to request?  We'll go over how we
-      think about these problems.
+      think about these problems. Materials:
+      :doc:`How big is my program? </triton/usage/program-size>`
 
   * **13:25--13:50: Behind the scenes: the humans of scientific
     computing** *Richard Darst and Teemu Ruokolainen*
