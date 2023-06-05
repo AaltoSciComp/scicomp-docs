@@ -275,14 +275,14 @@ Using rsync
    To install rsync on windos please refer to :doc:`this guide </scicomp/rsynconwindows>`
 
 Rsync is good for large files since it can restart interrupted
-tranfsfers.  Use rsync for large file transfers.  ``rsync`` actually
+transfers.  Use rsync for large file transfers.  ``rsync`` actually
 uses the ssh protocol so you can ``rsync`` from anywhere you can
 ``ssh`` from. ``rsync`` is installed by default on Linux and Mac
 terminals. On Windows machines we recommend using `GIT-bash
 <https://gitforwindows.org/>`__.
 
 While there are better places on the internet to read about rsync, it
-is good to try it out to sychronise a local folder on your triton's
+is good to try it out to synchronise a local folder on your triton's
 scratch. Sometimes the issue with copying files is related to group
 permissions. This command takes care of permissions and makes sure
 that all your local files are identical (= same MD5 fingerprint) to
@@ -322,7 +322,7 @@ unless you specify the ``--delete`` option.
 Please note that when working with files containing code or simple
 text, git is a better option to synchronise your local folder with
 your remote one, because not only it will keep the two folders in
-sycn, but you will also gain version controlling so that you can
+sync, but you will also gain version controlling so that you can
 revert to previous version of your code, or txt/csv files.
 
 

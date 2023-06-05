@@ -57,7 +57,7 @@ The parts are like this:
   that Python file itself knows how to handle ``--seed=50``.
 
 These arguments let you control the program without modifying the
-source code (or clicking buttons with yoru mouse!).  this lets us, for
+source code (or clicking buttons with your mouse!).  this lets us, for
 example, make a shell script that runs with many different ``--seed``
 values.
 
@@ -72,7 +72,7 @@ Basic usage: navigating around
 On your phone and other "app"-like things, data just exists - you
 don't really know where. *You* are the programmer when doing
 scientific computing, so you have to make more meaningful decisions
-about data.  This means knowing about **files** (a chuck of data) and
+about data.  This means knowing about **files** (a chunk of data) and
 **directories** (hierarchical storage units, also known as folders).
 *On a cluster, you can't throw everything into the same place. You
 need to sort stuff and keep it organized.  File names are an essential
@@ -161,10 +161,10 @@ would sync this with some online service (such as Github (github.com)
 or Aalto Gitlab (version.aalto.fi)), and then copy it to the cluster.
 Changes can go the other way.  (You can also go straight from
 computer→cluster, but that's beyond the scope of now).  Git is outside
-the scope of this, but you should see CodeRefinery's `git-intro course
+the scope of this tutorial, but you should see CodeRefinery's `git-intro course
 <https://coderefinery.github.io/git-intro/>`__, and really all of
 `CodeRefinery's courses <https://coderefinery.org>`__.  This isn't
-covered any more here.
+covered any further here.
 
 **We are going to pretend we are researchers working on a sample
 project, named hpc-examples.  We'll pretend this is our research code
@@ -268,7 +268,7 @@ method of calculating π.
 .. exercise:: Shell-6: Try the ``--help`` option
 
   Many programs have a ``--help`` option which gives a reminder of the
-  options of the program.  (Note that this has to be explicitely
+  options of the program.  (Note that this has to be explicitly
   programmed - it's a convention, not magic.)  Try giving this option
   to ``pi.py`` and see what happens.
 
