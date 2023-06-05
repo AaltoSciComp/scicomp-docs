@@ -98,7 +98,7 @@ The main models of parallel programming are:
 
   See: :doc:`shared-memory parallelism <parallel-shared>`.
 
-  .. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-array.png
+  .. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-sharedmem.png
      :width: 80%
      :align: center
      :alt: Representation of shared memory jobs on our cluster schematic.
@@ -143,14 +143,15 @@ The main models of parallel programming are:
 * Parallel execution in GPUs is not parallel in the traditional sense where
   multiple CPUs run different processes. Instead GPU parallelism leverages
   GPGPUs (general-purpose graphics processing units) that have thousands
-  of compute cores inside them. In many cases running a calculation in
-  parallel using these thousands of compute cores will result in massive
-  speedups.
+  of compute cores inside them. When running suitable problems GPUs can
+  be substantially faster than CPUs.
 
   Programs that utilize GPUs are written in parts where some part of the
   program executes on the CPU and other is executed on the GPU. The part
   that runs on the CPU usually does things like reading input and writing
   output, while the GPU part is more focused on doing numerical calculations.
+  Often multiple CPUs are needed per GPU to do things such as data
+  preprocessing just to keep the GPU preoccupied.
   
   A typical CPU program cannot utilize GPUs unless it has been designed
   to use them. Additionally programs that utilize GPUs cannot utilize
