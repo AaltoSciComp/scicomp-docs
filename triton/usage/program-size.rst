@@ -124,7 +124,7 @@ So if, for example, the program runs on your laptop (|laptop|), you'll know
 that it should work with a request of 4 CPUs and 16GB.
 
 In general, you can say that:
-|laptop| :math:`\approx 2 \: \cdot` |desktop| :math:`\approx 8 \: \cdot` |server| or more.
+|server| :math:`\approx 4 \: \cdot` |desktop| :math:`\approx 8 \: \cdot` |laptop| or more.
 This will give you a good initial measuring scale.
 
 .. |desktop| image:: https://upload.wikimedia.org/wikipedia/commons/5/56/Black_computer_icon.png
