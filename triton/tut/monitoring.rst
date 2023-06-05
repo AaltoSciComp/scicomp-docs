@@ -240,7 +240,18 @@ Exercises
 
      This is really one of the most important take-aways from this
      lesson.
-
+     
+     .. solution::
+     
+        Using ``seff JOBID.STEPID`` allows you to check efficiency of specific steps. 
+        You should see that steps with low number of iterations had very low cpu 
+        efficiency, while higher amount of iterations had better efficiency. 
+        
+        The important thing to note here is that each srun step has to finish before 
+        next one can start. This means if you have steps with different resource 
+        requirements in one job, lot of the resources you requested will be going to waste.
+        
+        
 .. exercise:: Monitoring-3: Multiple processors
 
    The script ``pi.py`` has been written so that it can be run using

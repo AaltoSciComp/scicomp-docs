@@ -19,6 +19,30 @@ You are now at the first step of the Triton tutorial.
 
 
 
+What is a cluster?
+------------------
+
+A high-performance computing cluster is basically a lot of computers
+not *that* different than your own.  While the hardware is not that
+much more powerful than a typical "power workstation", it's special in
+that there is so much of it and you can use it together.  We'll learn
+more about how it's used together later on.
+
+.. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-cluster.png
+   :alt: Schematic of cluster.  At the left we see our laptop, the internet (cloud), and a network drive.
+         To the right of that we see the login node, by which all connections go, data
+         storage, and then all of the different compute nodes (CPU and GPU).
+
+   The schematic of our sample cluster.  We'll go through this piece
+   by piece.
+
+   The things labeled "CPU Node" and "GPU Node" aren't quite accurate
+   in real life: that picture better depicts one a whole rack of
+   nodes.  But we sow it like this so that we can pretend that one row
+   is a CPU later on to illustrate a point.
+
+
+
 About Triton
 ------------
 

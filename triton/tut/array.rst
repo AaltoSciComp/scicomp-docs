@@ -24,8 +24,6 @@ Array jobs: embarassingly parallel execution
    * If you aren't fully sure of how to scale up, contact us
      :doc:`Research Software Engineers </rse/index>` early.
 
-.. highlight:: console
-
 More often than not, scientific problems involve running a single program again
 and again with different datasets or parameters.
 
@@ -35,6 +33,14 @@ of parallelism is called **embarassingly parallel**.
 
 Slurm has a structure called **job array**, which enables users to easily submit
 and run several instances of the same Slurm script independently in the queue.
+
+.. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-array.png
+   :alt: Schematic of cluster with current discussion points highlighted; see caption or rest of lesson.
+
+   Array jobs let you controll a large amount the cluster.  In
+   :doc:`parallel`, we will see another way.
+
+.. highlight:: console
 
 
 
@@ -295,6 +301,11 @@ Exercises
    Make a job array which runs every other index, e.g. the array can
    be indexed as 1, 3, 5... (the `sbatch manual page
    <https://slurm.schedmd.com/sbatch.html>`__ can be of help)
+   
+   .. solution::
+      
+      You can specify a step function with colon and a number after indices. 
+      In this case it would be: ``--array=1-X:2``
 
 .. exercise:: Array-5: Array job with varying memory requirements.
 
@@ -307,7 +318,15 @@ Exercises
 
    Is this a proper use of array jobs?
 
-
+   .. solution::
+      
+      At the very least the 5G job should fail. 500M and 1G jobs also go above 
+      the amount of memory allocated to them, but slurm allows you to exceed 
+      your resources a little before killing the job, so they will likely go through. 
+      
+      This is a wrong way to use array jobs. Array jobs are meant 
+      for multiple jobs with same resource requirements, since every job 
+      gets allocated the same amount of resources.
 
 See also
 --------

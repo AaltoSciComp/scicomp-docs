@@ -25,6 +25,11 @@ GPU computing
      :doc:`Research Software Engineers </rse/index>` early.
 
 
+.. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-gpu.png
+   :alt: Schematic of cluster with current discussion points highlighted; see caption or rest of lesson.
+
+   GPU nodes allow specialized types of work to be done massively in parallel.
+
 
 Introduction
 ------------

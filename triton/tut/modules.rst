@@ -329,7 +329,14 @@ to check your local documentation for what the equivalents are.
    Load a module with many dependencies, such as ``r-ggplot2`` and
    save it as a collection.  Purge your modules, and restore the
    collection.
-
+   
+   .. solution::
+   
+      Save the collection with ``module save my_env``. After ``module purge`` 
+      you can load your collection again with ``module restore my_env``. Making a 
+      collection can be particularily useful if you have a job that depends on a large 
+      number of separate modules, in which case a collection saves you the trouble of 
+      loading them one by one.
 
 
 

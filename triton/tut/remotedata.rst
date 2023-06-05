@@ -33,6 +33,22 @@ See the main :doc:`storage <storage>` tutorial first.
      Windows: ``\\data.triton.aalto.fi\PATH`` and uses ``\``, ``PATH``
      could be ``work/USERNAME`` or ``scratch/DEPT/GROUPNAME``)
 
+
+.. list-table::
+  :header-rows: 0
+  :class: table-align-top
+
+  * * .. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-datamount.png
+         :alt: Schematic of cluster with current discussion points highlighted; see caption or rest of lesson.
+
+         Mounting data: on your machine, you have a view of the data
+         directly on the cluster: there is only one copy.
+
+    * .. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-datacopy.png
+         :alt: Schematic of cluster with current discussion points highlighted; see caption or rest of lesson.
+
+         Copying data: there become two copies that you have to manage.
+
 .. highlight:: console
 
 
@@ -122,6 +138,12 @@ recommending figuring out how to **mount** the data remotely, so that
 it appears as local data but is accessed over the network.  This saves
 copying data back and forth and is better for data security, but is
 slower and less reliable than local data.
+
+.. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-datamount.png
+   :alt: Schematic of cluster with current discussion points highlighted; see caption or rest of lesson.
+
+   Mounting data: on your machine, you have a view of the data
+   directly on the cluster: there is only one copy.
 
 Remote mounting using SMB
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -217,6 +239,11 @@ Transferring data
 This section tells ways you can copy data back-and-forth between
 Triton and your own computers.  This may be more annoying for
 day-to-day work but is better for transferring large data.
+
+.. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-datacopy.png
+   :alt: Schematic of cluster with current discussion points highlighted; see caption or rest of lesson.
+
+   Copying data: there become two copies that you have to manage.
 
 
 Version control

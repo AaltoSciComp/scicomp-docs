@@ -30,6 +30,12 @@ tutorials.
    * If you aren't fully sure of how to scale up, contact us
      :doc:`Research Software Engineers </rse/index>` early.
 
+.. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-cpunodes.png
+   :alt: Schematic of cluster with current discussion points highlighted; see caption or rest of lesson.
+
+   We are working to get access to the login node.  This is the
+   gateway to all the rest of the cluster.
+
 
 .. highlight:: bash
 
@@ -66,6 +72,12 @@ The main models of parallel programming are:
 
   See: :doc:`array jobs <array>`.
 
+  .. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-array.png
+     :width: 80%
+     :align: center
+     :alt: Representation of array jobs on our cluster schematic.
+
+     The array job runs independently across the cluster.
 
   .. figure:: /images/parallel-array.svg
       :width: 80%
@@ -85,6 +97,14 @@ The main models of parallel programming are:
   multithreaded/multiprocess parallel desktop programs.
 
   See: :doc:`shared-memory parallelism <parallel-shared>`.
+
+  .. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-array.png
+     :width: 80%
+     :align: center
+     :alt: Representation of shared memory jobs on our cluster schematic.
+
+     The shared memory job runs across one node - since that's what
+     shares memory.
 
   .. figure:: /images/parallel-shared.svg
       :width: 80%
@@ -107,6 +127,14 @@ The main models of parallel programming are:
 
   Example applications that utilize this model: CP2K, GPAW, LAMMPS, OpenFoam.
   See: :doc:`MPI parallelism <parallel-mpi>`.
+
+
+  .. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-mpi.png
+     :width: 80%
+     :align: center
+     :alt: Representation of MPI jobs in our cluster schematic.
+
+     The MPI job can communicate across nodes.
 
   .. figure:: /images/parallel-mpi.svg
       :width: 80%

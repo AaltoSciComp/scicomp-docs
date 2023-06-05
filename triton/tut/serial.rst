@@ -26,9 +26,16 @@ Serial Jobs
    * See the :doc:`quick reference <../ref/index>` for complete list
      of options.
 
+.. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-serial.png
+   :alt: Schematic of cluster with current discussion points highlighted; see caption or rest of lesson.
 
+   This tutorial covers the basics of serial jobs.  With what you are
+   learning so far, you can control a small amount of power of the
+   cluster.
 
 .. highlight:: shell-session
+
+
 
 Prerequisites
 -------------
@@ -176,12 +183,19 @@ Exercises
 
 .. exercise:: Serial-1: Basic batch job
 
-   Submit a batch job that just runs ``hostname`` and ``pi.py``.
+   Submit a batch job that just runs ``hostname`` and ``pi.py``. 
+   Remember to give pi.py some number of iterations as an argument.
 
    a. Set time to 1 hour and 15 minutes, memory to 500MB.
    b. Change the job's name and output file.
    c. Check the output.  Does the printed hostname
       match the one given by ``slurm history``/``sacct -u $USER``?
+      
+   .. solution::
+   
+      Output from ``hostname`` should match the node in slurm history. 
+      Sbatch first assigns you a node depending on your requested resources, 
+      and then runs all commands included in the script.
 
 .. exercise:: Serial-2: Submitting and cancelling a job
 
@@ -189,6 +203,14 @@ Exercises
    operation for a while), for example ``sleep 300`` (this shell
    command does nothing for 300 seconds). Check the queue to see when
    it starts running.  Then, cancel the job.  What output is produced?
+   
+   .. solution::
+   
+      You can check when your job starts running with ``slurm q``. Then 
+      you can cancel it with ``scancel JOBID``, where ``JOBID`` can be found 
+      from ``slurm q`` output. After cancelling the job, it should still produce 
+      an output file (named either ``slurm-JOBID.out`` or whatever you defined in the 
+      sbatch file.) The output file also says the job was cancelled.
 
 .. exercise:: Serial-3: Checking output
 
@@ -212,6 +234,14 @@ Exercises
 
    Modify the script from exercise #1 to run on only one type of CPU
    using the ``--constraint`` option.  Hint: check :doc:`../ref/index`
+   
+   .. solution::
+   
+      Simply add ``#SBATCH --constraint=X`` to your sbatch script, or 
+      give ``--constraint=X`` to srun as additional argument. For example, 
+      to run only on Haswell cpu's you can add ``--constraint=hsw``, or 
+      similarily for amd milan cpus ``--constraint=milan``. This also 
+      works identically for gpus.
 
 .. exercise:: Serial-5: Why you use ``sbatch``, not ``bash``.
 
@@ -238,7 +268,17 @@ Exercises
    (Advanced) Create a batch script that runs in another language
    using a different ``#!`` line.
    Does it run?  What are some of the advantages and problems here?
-
+   
+   .. solution::
+   
+      Using other language to run your sbatch script is entirely possible. 
+      For example if you are more used to writing scripts on zsh compared to bash, 
+      you could use ``#!/bin/zsh``. You could even use something completely 
+      different from a shell. For example using ``#!/usr/bin/env python3`` 
+      would let you write python code directly in the sbatch script. This is 
+      mostly an interesting curiosity however and is not usually practical.
+      
+      
 .. exercise:: (advanced) Serial-7: Job environment variables.
 
    Either make a ``sbatch`` script that runs the command ``env | sort``, or

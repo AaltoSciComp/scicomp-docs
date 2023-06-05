@@ -2,7 +2,7 @@
 Job dependencies
 ================
 
-.. highlight:: bash
+.. highlight:: console
 
 Introduction
 ============
@@ -31,8 +31,8 @@ job ID of job A before it has been submitted.  One solution is to
 catch the job id of job A when submitting it and store it as a shell
 variable, and using the stored value when submitting job B. Like::
 
-    idA=$(sbatch jobA.sh | awk '{print $4}')
-    sbatch --dependency=afterok:${idA} jobB.sh
+    $ idA=$(sbatch jobA.sh | awk '{print $4}')
+    $ sbatch --dependency=afterok:${idA} jobB.sh
 
 
 Exercises
@@ -47,8 +47,23 @@ Exercises
    Create a chain of jobs A -> B -> C each depending on the successful
    completion of the previous job.  In each job run e.g. ``sleep 60``
    to give you time to investigate the status of the queue.
+   
+   .. solution::
+   
+      You should all of your jobs in queue. Jobs with dependency on a 
+      previous job will have a status on pending, stating a dependency 
+      as the reason.
 
 .. exercise:: Dependencies-3: First job fails
 
    Continuing from the previous exercise, what happens if at the end
    of the job A script you put ``exit 1``. What does it mean?
+   
+   .. solution::
+   
+      Putting ``exit 1`` at the end of your job script means it returns 
+      a unix exit code indicating a failure. Next jobs in your depedency 
+      list will sit in queue forever, since as far as they know the previous 
+      job never completed successfully.
+      
+      

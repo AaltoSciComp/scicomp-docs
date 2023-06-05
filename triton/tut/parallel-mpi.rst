@@ -27,6 +27,14 @@ MPI parallelism: multi-task programs
    * If you aren't fully sure of how to scale up, contact us
      :doc:`Research Software Engineers </rse/index>` early.
 
+.. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-mpi.png
+   :alt: Schematic of cluster with current discussion points highlighted; see caption or rest of lesson.
+
+   MPI parallelism lets you scale to many nodes on the cluster, at the
+   cost of extra programming work.
+
+.. highlight:: console
+
 
 
 What is MPI parallelism?
@@ -110,20 +118,18 @@ You can clone the repository with ``git clone https://github.com/AaltoSciComp/hp
 The script is in the ``slurm``-folder.
 
 First off, we need to compile the program with a suitable OpenMPI version. Let's use the
-recommended version ``openmpi/4.0.5``.
+recommended version ``openmpi/4.0.5``::
 
-.. code-block:: sh
+   $ module load openmpi/4.0.5
 
-   module load openmpi/4.0.5
-
-   mpicc -o pi-mpi pi-mpi.c
+   $ mpicc -o pi-mpi pi-mpi.c
 
 The program can now be run with ``srun ./pi-mpi N``, where ``N`` is the number of
 iterations to be done by the algorithm.
 
 Let's ask for resources and run the program with two processes using ``srun``::
 
-  srun --nodes=1 --ntasks=2 --time=00:10:00 --mem=1G ./pi-mpi 1000000
+ $ srun --nodes=1 --ntasks=2 --time=00:10:00 --mem=1G ./pi-mpi 1000000
 
 Using a slurm script setting the requirements becomes easier:
 
@@ -142,7 +148,7 @@ Using a slurm script setting the requirements becomes easier:
 
 Let's call this script ``pi-mpi.sh``. You can submit it with::
 
-  sbatch pi-mpi.sh
+  $ sbatch pi-mpi.sh
 
 
 
@@ -233,6 +239,22 @@ Exercises
 
    Run ``srun --cpus-per-task=4 hostname``, ``srun --ntasks=4 hostname``, and ``srun --nodes=4
    hostname``.  What's the difference and why?
+   
+   .. solution::
+   
+      ``--cpus-per-task=4`` does exactly what it says, and gives each tasks 4 cpus. Since we 
+      have not requested any additional tasks, we run ``hostname`` once on a single node, 
+      but using 4 cpus.
+      
+      By comparison, ``ntasks=4`` creates 4 MPI workers that each run ``hostname`` once.
+      These all run on a single node, and use one cpu each since we didn't request anything 
+      more.
+      
+      Finally ``srun --nodes=4 hostname`` runs ``hostname`` once each on four separate nodes. 
+      
+      If we were to for example combine all of these, we would run ``hostname`` four times, on 
+      four nodes each for total 16 tasks, with each task using 4 cpus. 
+
 
 .. exercise:: MPI parallelism 2: MPI
 
