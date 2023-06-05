@@ -206,6 +206,7 @@ started with the computing resources.
       Material: :doc:`/triton/tut/cluster-shell`.
 
   - **15:25--15:50: What can you do with a computational cluster?**
+    *(Jarno Rantaharju and Richard Darst)*
 
     - See several real examples of how people use the cluster (what you can
       do at the end of the course): 1) Large-scale computing with array
@@ -227,7 +228,6 @@ started with the computing resources.
     - :doc:`/triton/tut/intro`
 
   - **12:05--12:30 Structure of a cluster: The Slurm queueing system**
-    *(Jarno Rantaharju and Thomas Pfau)*
 
     - :doc:`/triton/tut/slurm`
 
