@@ -82,7 +82,7 @@ For this example, let's consider
 `pi.py <https://github.com/AaltoSciComp/hpc-examples/blob/master/slurm/pi.py>`__-example
 from the
 `hpc-examples <https://github.com/AaltoSciComp/hpc-examples>`__-repository.
-It estimates pi using Monte Carlo methods and can utilize multiple processes for calculating
+It estimates pi with Monte Carlo methods and can utilize multiple processes for calculating
 the trials.
 
 .. include:: ../ref/example-repo.rst
