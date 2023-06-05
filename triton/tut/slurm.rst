@@ -119,6 +119,10 @@ so on.
 How many resources to request?
 ------------------------------
 
+.. seealso::
+
+  :doc:`../usage/program-size`
+
 This is one of the most fundamental questions:
 
 * You want to request enough resources, so that your code actually
