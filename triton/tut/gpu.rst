@@ -103,17 +103,16 @@ advanced reservation options.
 Running an example program that utilizes GPU
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. include:: ../ref/examples-repo.rst
+
 For this example, let's consider
-`pi-gpu.cu <https://github.com/AaltoSciComp/hpc-examples/blob/master/slurm/pi-gpu.cu>`__-example
-from the
-`hpc-examples <https://github.com/AaltoSciComp/hpc-examples>`__-repository.
+`pi-gpu.cu <https://github.com/AaltoSciComp/hpc-examples/blob/master/slurm/pi-gpu.cu>`__
+in the ``slurm``-folder. 
 It estimates pi with Monte Carlo methods and can utilize a GPU for calculating
 the trials.
 
-.. include:: ../ref/example-repo.rst
-
-The script is in the ``slurm``-folder. This example is written in C++ and
-thus it needs to be compiled before it can be run.
+The script is in the ``slurm``-folder. This example is written in C++ and CUDA.
+Thus it needs to be compiled before it can be run.
 
 To compile CUDA-based code for GPUs, lets load a ``cuda``-module and
 a newer compiler:
@@ -221,7 +220,7 @@ contains both the framework and CUDA framework that the framework
 needs.
 
 We recommend that you either use our centrally installed
-module that contains both frameworks (more info 
+module that contains both frameworks (more info
 :ref:`here <conda>`)
 or install your own using environment using instructions
 presented
@@ -238,7 +237,7 @@ loading these.
 .. _cuda-arch-flags:
 
 Setting CUDA architecture flags when compiling GPU codes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Many GPU codes come with precompiled kernels, but in some
 cases you might need to compile your own kernels. When this is

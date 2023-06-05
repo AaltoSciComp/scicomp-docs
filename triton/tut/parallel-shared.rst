@@ -78,14 +78,16 @@ if you do not know how your program scales.
 Running an example shared memory parallel program
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+.. include:: ../ref/examples-repo.rst
+
 For this example, let's consider
-`pi.py <https://github.com/AaltoSciComp/hpc-examples/blob/master/slurm/pi.py>`__-example
-from the
-`hpc-examples <https://github.com/AaltoSciComp/hpc-examples>`__-repository.
+`pi.py <https://github.com/AaltoSciComp/hpc-examples/blob/master/slurm/pi.py>`__
+in the ``slurm``-folder. 
 It estimates pi with Monte Carlo methods and can utilize multiple processes for calculating
 the trials.
 
-.. include:: ../ref/example-repo.rst
+First off, we need to compile the program with a suitable OpenMPI version. Let's use the
 
 The script is in the ``slurm``-folder. You can call the script with
 ``python pi.py --nprocs=C N``, where ``N`` is the number of iterations to be done by the

@@ -107,15 +107,13 @@ information on whether you can give each task more than one CPU.
 Running and example MPI program
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. include:: ../ref/examples-repo.rst
+
 For this example, let's consider
 `pi-mpi.c <https://github.com/AaltoSciComp/hpc-examples/blob/master/slurm/pi-mpi.c>`_-example
-from the
-`hpc-examples <https://github.com/AaltoSciComp/hpc-examples>`_-repository.
-It estimates pi with Monte Carlo methods and can utilize multiple MPI tasks for calculating
-the trials.
-
-You can clone the repository with ``git clone https://github.com/AaltoSciComp/hpc-examples.git``.
-The script is in the ``slurm``-folder.
+in the ``slurm``-folder.
+It estimates pi with Monte Carlo methods and
+can utilize multiple MPI tasks for calculating the trials.
 
 First off, we need to compile the program with a suitable OpenMPI version. Let's use the
 recommended version ``openmpi/4.0.5``::
