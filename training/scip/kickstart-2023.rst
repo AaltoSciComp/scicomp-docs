@@ -187,7 +187,7 @@ started with the computing resources.
       behind the scenes and how you could join us.
 
   * **14:00--14:45: Connecting to a HPC cluster** *Thomas Pfau and
-    Simo Tuomisto*
+    Jarno Rantaharju*
 
     - Required if you are attending the Triton/HPC tutorials the
       following days, otherwise the day is done.
@@ -257,8 +257,8 @@ started with the computing resources.
   - **12:30--14:00: Forms of parallelization**
 
     - :doc:`/triton/tut/array`
-    - doc: ``/triton/tut/parallel-shared``
-    - doc: ``/triton/tut/parallel-mpi``
+    - :doc:`/triton/tut/parallel-shared`
+    - :doc:`/triton/tut/parallel-mpi`
 
   - **14:00--14:30: Laptops to Lumi**
 
