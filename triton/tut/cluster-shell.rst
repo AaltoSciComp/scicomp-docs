@@ -262,6 +262,12 @@ We can change into the directory::
 
 Now we have our code in a place that can be used.
 
+.. warning::
+
+  Storing your analysis codes in your home directory usually isn't
+  recommended, since it's not large or high performance enough.  You
+  will learn more about where to store your work in :doc:`storage`.
+
 .. exercise:: Shell-3: clone the hpc-examples repository
 
   Do the steps above.  List the directory and verify it matches what
@@ -330,6 +336,13 @@ for a while)::
 The argument "10000" is the number of iterations of the `circle in
 square <https://en.wikipedia.org/wiki/Pi#Monte_Carlo_methods>`__
 method of calculating π.
+
+.. danger::
+
+  This is running your program on the login node!  Since this takes
+  only a second, it's OK enough for now (so that we only have to teach
+  one thing at a time).  You will learn how to run programs properly
+  starting in :doc:`slurm`.
 
 .. exercise:: Shell-5: try calculating pi
 
