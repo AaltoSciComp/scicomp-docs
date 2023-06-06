@@ -81,8 +81,8 @@ most important ones.
 
 
 
-Basic usage: navigating around
-------------------------------
+Files and directories
+---------------------
 
 On your phone and other "app"-like things, data just exists - you
 don't really know where. Now, *you* are the programmer doing
