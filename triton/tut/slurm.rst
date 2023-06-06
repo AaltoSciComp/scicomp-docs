@@ -77,22 +77,32 @@ Slurm comes with a multitude of parameters which you can specify to
 ensure you will be allocated enough **memory**, **CPU cores**,
 **time**, etc.
 
+.. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/slurm-box.svg
+   :alt: 3D drawing of a box, with the three dimensions labeled
+	 "CPUs", "Memory", and "Time"
+   :width: 50%
+   :align: center
+
+   Imagine resource requests as boxes of a requested number of CPUs,
+   memory, time, and any other resources requested.  The smaller the
+   box, the more likely you can get scheduled soon.
+
 The basic resources are:
 
-* Time: While not exactly a resources, you need to specify the
+* **Time:** While not exactly a resources, you need to specify the
   expacted usage time (run time) of each job for scheduling purposes.
   If you go over by too much, your job will be killed.  This is
   ``--time``, for example ``--time=DAYS-HH:MM:SS``.
-* Memory: Memory is needed for data in jobs.  If you run out of
+* **Memory:** Memory is needed for data in jobs.  If you run out of
   processors, your job is slow, but if you run out of memory, then
   everything dies.  This is ``--mem`` or ``--mem-per-cpu``.
-* CPUs (also known as "processors" or "(processor) cores"): Processor
+* **CPUs** (also known as "processors" or "(processor) cores"): Processor
   cores.  This resource lets you do things in parallel the classic
   way, by adding processors.  Depending on how the parallelism works,
   there are different ways to request the CPUs - see :doc:`parallel`.
   CPUs.  This is ``--cpus-per-task`` and ``--ntasks``, but you must
-  read :doc:`parallel` before using these!
-* GPUs: Graphical Processing Units are modern, highly parallel compute
+  read that page  before using these!
+* **GPUs:** Graphical Processing Units are modern, highly parallel compute
   units.  We will discuss requesting them in :doc:`gpu`.
 * If you did even larger work on larger clusters, input/output
   bandwidth and licenses are also possible resources.
@@ -102,7 +112,8 @@ future.  So be careful what you request!
 
 .. seealso::
 
-  As always, the :doc:`Triton quick reference <../ref/index>`
+  As always, the :doc:`Triton quick reference <../ref/index>` lists
+  all the options you need.
 
 
 
