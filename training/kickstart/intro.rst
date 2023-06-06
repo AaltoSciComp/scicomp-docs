@@ -8,10 +8,18 @@ Summer Kickstart intro
 ======================
 
 
+Who are we?
+-----------
+
+* Aalto Scientific Computing: https://scicomp.aalto.fi/about/
+* In collaborations with other universities (Finnish Computing
+  Competence Infrastructure)
+* And one talk in collaboration with CSC
+
+
 
 What is this course?
 --------------------
-
 
 Course contents
 ~~~~~~~~~~~~~~~
@@ -38,16 +46,6 @@ Who is attending?
 
   * May need adapting to other sites
   * We will carefully explain about how things change in other sites.
-
-
-Who are we?
-~~~~~~~~~~~
-
-* Aalto Scientific Computing: https://scicomp.aalto.fi/about/
-* In collaborations with other universities (Finnish Computing
-  Competence Infrastructure)
-* And one talk in collaboration with CSC
-
 
 
 
@@ -184,6 +182,75 @@ We leave you with four pieces of advice for now:
   We want to help, even if the answer is "let's discuss later".
 
 
+What can go wrong
+-----------------
+
+You get overloaded with information
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Don't worry!
+* Change your watching style and know material will be available for you to watch later.
+* Instant video replays help here, but the material is also open.
+
+HackMD is too fast to follow
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*  Don't follow it. It's published for future reference.
+*  Only look at the bottom during the sessions. Review later.
+*  Write your question and come back to it later.
+
+HackMD lags and you can't edit / text goes wrong
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*  This sometimes happens with high load
+*  We recently upgraded but it could still happen.
+*  Everyone: Switch to "view mode" and wait for it to calm down.
+*  The real solution is that we (the staff) need to keep it shorter - we will move older data to an "archive HackMD". Screenshot of HackMD with a link to Archive HackMD outlined in a red box.
+
+.. figure:: https://coderefinery.github.io/manuals/_images/hackmd--archivelink.png
+   :alt: Screenshot with "archive link" highlighted
+
+   Location of archive link.
+
+We don't have time to cover everything
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* This is just a fact - sorry.
+* You can review later
+* Talk with collaborators and make your own study network
+
+We deviate from the schedule
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* We try to stay on track
+* But this is going to happen
+
+There are major accessibility problems
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* e.g. audio quality is bad, screen not visible, breaks not coming,
+  unintelligble explanation...
+* Write the problem in the bottom of HackMD immediately.
+
+The stream suddenly dies
+~~~~~~~~~~~~~~~~~~~~~~~~
+* Broadcaster's computer has crashed.
+* Stay around and it will resume in about 5 minutes.
+
+You don't yet have some important software installed or configured
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Oops... but it's OK
+* Switch to "watching" mode and work on fixing it for the next day.
+* Ask for help if needed
+
+You can't attend every day
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Review material later, raw Twitch video delay is ready immediately.
+* Better YouTube videos later
+
+A cat visits one of the instructors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* How is this a problem?
+
+The course is too cool and you want to know more
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Check out our advanced information
+* Ask your local supporters
+
 
 
 Final notes
@@ -195,8 +262,8 @@ Recording
 - The course is recorded and will be put on YouTube
 - But because of our unique setup, you *can't possibly* be recorded
   yourself.
-- Don't add names in HackMD.
-- All outputs are CC-BY.
+- Don't add names in HackMD.  Don't post any personal information.
+- All outputs, including HackMD, are CC-BY and published.
 
 
 Credits
