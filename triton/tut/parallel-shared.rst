@@ -83,7 +83,7 @@ Running an example shared memory parallel program
 
 For this example, let's consider
 `pi.py <https://github.com/AaltoSciComp/hpc-examples/blob/master/slurm/pi.py>`__
-in the ``slurm``-folder. 
+in the ``slurm``-folder.
 It estimates pi with Monte Carlo methods and can utilize multiple processes for calculating
 the trials.
 
@@ -200,7 +200,7 @@ ways in your scripts. Below are few examples:
 
 - Setting a number of workers when ``$SLURM_CPUS_PER_TASK``  is not set:
 
-  ``$SLURM_CPUS_PER_TASK`` is only set when ``--cpus-per-task`` has 
+  ``$SLURM_CPUS_PER_TASK`` is only set when ``--cpus-per-task`` has
   been specified. If you want to run the same code in your own machine
   and in the cluster it might be useful to set a variable like
   ``export NCORES=${SLURM_CPUS_PER_TASK:-4}`` and use that in your scripts.
@@ -274,6 +274,34 @@ that all compete on the reserved CPUs.
 
 Only hybrid parallelization codes should have both ``--ntasks=n`` and
 ``--cpus-per-task=C`` set to be greater than one.
+
+
+
+Exercises
+---------
+
+.. include:: ../ref/examples-repo.rst
+
+.. exercise:: Shared memory parallelism 1: Test the program scaling
+
+   Run the example with a bigger number of trials (``100000000``)
+   and with 1, 2 and 4 CPUs.  Check the running time and CPU
+   utilization for each run.
+
+   .. solution::
+
+      You can run the program without parallelization with:
+
+      .. code-block:: bash
+
+         srun --time=00:10:00 --mem=1G python pi.py 100000000
+
+      Afterwards you can use ``seff JOBID`` to get the utilization.
+      You can run the program with multiple CPUs with:
+
+      .. code-block:: bash
+
+         srun --cpus-per-task=2 --time=00:10:00 --mem=1G python pi.py --nprocs=2 100000000
 
 
 
