@@ -2,23 +2,31 @@
 June 2023 / Intro to Scientific Computing /  HPC Summer Kickstart
 =====================================================================
 
-.. important::
+.. admonition:: Quick links
+   :class: important
 
-   | *Come and learn about high performance computing!*
-   | **When**: 6,7,8/June/2023 11:50-16:00 EEST
-   | **Where**: https://www.twitch.tv/coderefinery
-   | **Registration**: `Registration link <https://link.webropol.com/ep/scicomphpc2023>`__
-   | Registration is important if you need access to a cluster in a partner organisation and if you want to access the collaborative document. Registered participants from partner organisations also receive a zoom room for direct support.  Anyone may watch the stream.
-   | **Partner organisations**: Aalto University, Helsinki University, Tampere University
-   | **Preparation**: Check the :ref:`prerequisites below <kickstart-2023-prep>` and the schedule.
-   | **Sharing**: You may definitely share the livestream with others!
+   * You can still `register
+     <https://link.webropol.com/ep/scicomphpc2023>`__ to get HackMD
+     access for Q&A.  **Sharing**: You may definitely share the
+     livestream with others!
+   * Quick links
 
-   Quick links:
+     * **When**: 6,7,8/June/2023 11:50-16:00 EEST, **Where**: https://www.twitch.tv/coderefinery
+     * **Preparation**: Check the :ref:`prerequisites below
+       <kickstart-2023-prep>` and the schedule.
+     * Videos will appear in `this youtube playlist
+       <https://www.youtube.com/playlist?list=PLZLVmS9rf3nMKR2jMglaN4su3ojWtWMVw>`__
+       the same evening and `on twitch
+       <https://www.twitch.tv/coderefinery/videos>`__ for 7 days.
+     * `Archived Q&A <https://hackmd.io/@AaltoSciComp/scicomphpc2023archive>`__
 
-   * Videos will appear in `this youtube playlist
-     <https://www.youtube.com/playlist?list=PLZLVmS9rf3nMKR2jMglaN4su3ojWtWMVw>`__
-     the same evening and `on twitch
-     <https://www.twitch.tv/coderefinery/videos>`__ for 7 days.
+    * Day 1 info
+
+      * **Day 2 preparation:** you really need to make sure you are
+        :doc:`connected to the cluster </triton/tut/connecting>` and
+        review the :doc:`cluster and shell
+        </triton/tut/cluster-shell>` lesson.  This is the starting
+	point of day 2.
 
 Kickstart is a three × half day course for researchers to get
 started with high-performance computing (HPC) clusters.
