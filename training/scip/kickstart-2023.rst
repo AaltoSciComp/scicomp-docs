@@ -247,6 +247,7 @@ started with the computing resources.
 
   - **15:00--15:30: Other things you should know about the HPC environment**
 
+    - :doc:`/triton/tut/applications`
     - :doc:`/triton/tut/modules`
     - :doc:`/triton/tut/storage`
     - :doc:`/triton/tut/remotedata`
