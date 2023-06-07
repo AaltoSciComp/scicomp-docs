@@ -282,7 +282,7 @@ Exercises
 
 .. include:: ../ref/examples-repo.rst
 
-.. exercise:: Shared memory parallelism 1: Test the program scaling
+.. exercise:: Shared memory parallelism 1: Test the example's scaling
 
    Run the example with a bigger number of trials (``100000000``)
    and with 1, 2 and 4 CPUs.  Check the running time and CPU
@@ -302,6 +302,76 @@ Exercises
       .. code-block:: bash
 
          srun --cpus-per-task=2 --time=00:10:00 --mem=1G python pi.py --nprocs=2 100000000
+         srun --cpus-per-task=4 --time=00:10:00 --mem=1G python pi.py --nprocs=4 100000000
+
+      You should see that the time needed to run the program
+      ("Job Wall-clock time") ) is basically
+      divided by the number of processors while the CPU utilization
+      time ("CPU Utilized") remains the same.
+
+.. exercise:: Shared memory parallelism 2: Test scaling for a program that has a serial part
+
+   ``pi.py`` can be called with an argument ``--serial=0.1`` to run a
+   fraction of the trials in a serial fashion (here, 10%).
+
+   Run the example with a bigger number of trials (``100000000``),
+   4 CPUs and a varying serial fraction (``0.1``, ``0.5``, ``0.8``). Check the running time and CPU
+   utilization for each run.
+
+   .. solution::
+
+      You can run the program with 10% serial execution using the following:
+
+      .. code-block:: bash
+
+         srun --cpus-per-task=4 --time=00:10:00 --mem=1G python pi.py --serial=0.1 --nprocs=4 100000000
+
+      Afterwards you can use ``seff JOBID`` to get the utilization.
+
+      Doing the run with different serial portion should show that a bigger the
+      serial portion, the less benefit the parallelization gives.
+
+
+.. exercise:: Shared memory parallelism 3: More parallel :math:`\neq` fastest solution
+
+   ``pi.py`` can be called with an argument ``--optimized`` to run an optimized
+   version of the code that utilizes `NumPy <https://numpy.org/>`__
+   for vectorized calculations.
+
+   Run the example with a bigger number of trials (``100000000``) and with
+   4 CPUs. Now run the optimized example with the same amount of trials and with 1 CPU.
+   Check the CPU utilization and running time for each run.
+
+   .. solution::
+
+      You can run the program with 4 CPUs using the following:
+
+      .. code-block:: bash
+
+         srun --cpus-per-task=4 --time=00:10:00 --mem=1G python pi.py --nprocs=4 100000000
+
+      You can run the optimized version with the following:
+
+      .. code-block:: bash
+
+         srun --time=00:10:00 --mem=1G python pi.py --optimized 100000000
+
+      Afterwards you can use ``seff JOBID`` to get the utilization.
+
+      The optimized version, which uses NumPy to create a big batch of random numbers at a time
+      and calculates the hits for all of the random numbers at a same time should be significantly
+      faster. NumPy itself uses libraries written in C and Fortran that make the calculations
+      a lot faster than Python would.
+
+      Using libraries and coding practices that are better suited for the task can
+      provide bigger performance boost that using multiple CPUs.
+
+
+What's next?
+------------
+
+The next tutorial is about :doc:`MPI parallelism <parallel-mpi>`.
+
 
 
 
