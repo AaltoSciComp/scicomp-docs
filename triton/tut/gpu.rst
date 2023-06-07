@@ -81,16 +81,24 @@ Running a typical GPU program
 Reserving resources for GPU programs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Slurm keeps track of the GPU resources as generic resources (GRES) or
+trackable resources (TRES). They are basically limited resources that you
+can request in addition to normal resources such as CPUs and RAM.
+
 To request GPUs on Slurm, you should use the ``--gres=gpu:1`` or ``--gpus=1``
 -flags.
+
+You can also use syntax ``--gres=gpu:GPU_TYPE:1``, where ``GPU_TYPE``
+is a name chosen by the admins for the GPU. For example, ``--gres=gpu:v100:1``
+would give you a V100 card. See section on
+:ref:`reserving specific GPU architectures <gpu-constraint>` for more information.
 
 You can request more than one GPU with ``--gres=gpu:G``, where ``G`` is
 the number of the requested GPUs.
 
-See section
-:ref:`on reserving specific GPU architectures <gpu-constraint>` and
-:ref:`on reserving quick debugging resources <gpushort>` for more
-advanced reservation options.
+Some GPUs are placed in a quick debugging queue. See section on
+:ref:`reserving quick debugging resources <gpushort>` for more
+information.
 
 .. note::
 
@@ -173,10 +181,20 @@ Reserving specific GPU types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can restrict yourself to a certain type of GPU card by using
-using the ``--constraint`` option.  For example, to restrict to Pascal,
-use ``--constraint='pascal'`` or only Volta or Ampere
-generations with ``--constraint='volta|ampere'``. Remember to use the quotes
-since ``|`` is the shell pipe.
+using the ``--constraint`` option.  For example, to restrict the submission to
+Pascal generation GPUs only you can use ``--constraint='pascal'``.
+
+For choosing between multiple generations, you can use the ``|``-character
+between generations. For example, if you want to restrict the submission
+Volta or Ampere generations you can use ``--constraint='volta|ampere'``.
+Remember to use the quotes since ``|`` is the shell pipe.
+
+To see what GPU resources are available, run ``slurm features`` or
+``sinfo -o '%50N %18F %26f %30G'``.
+
+Alternative way is to use syntax ``--gres=gpu:GPU_TYPE:1``, where ``GPU_TYPE``
+is a name chosen by the admins for the GPU. For example, ``--gres=gpu:v100:1``
+would give you a V100 card.
 
 .. _gpushort:
 
@@ -287,7 +305,80 @@ information.
 If your data is too big to fit in the disk, we recommend that you
 contact us for efficient data handling models.
 
+For more information on suggested data loading procedures
+for different frameworks, see
+`Tensorflow's <https://www.tensorflow.org/guide/data_performance>`__
+and
+`PyTorch's <https://pytorch.org/docs/stable/data.html>`__ guides
+on efficient data loading.
 
+.. _cuda-nvprof:
+
+Profiling GPU usage with nvprof
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When using NVIDIA's GPUs you can try to use a profiling tool
+called ``nvprof`` to monitor what took most of the GPU's
+time during the code's execution.
+
+Sample output might look something like this:
+
+.. code-block:: bash
+
+    ==30251== NVPROF is profiling process 30251, command: ./pi-gpu 1000000000
+    ==30251== Profiling application: ./pi-gpu 1000000000
+    ==30251== Profiling result:
+                Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+     GPU activities:   84.82%  11.442ms         1  11.442ms  11.442ms  11.442ms  throw_dart(curandStateXORWOW*, int*, unsigned long*)
+                       14.70%  1.9833ms         1  1.9833ms  1.9833ms  1.9833ms  setup_rng(curandStateXORWOW*, unsigned long)
+                        0.30%  40.704us         1  40.704us  40.704us  40.704us  [CUDA memcpy DtoH]
+                        0.17%  23.328us         1  23.328us  23.328us  23.328us  [CUDA memcpy HtoD]
+          API calls:   89.52%  122.81ms         3  40.936ms  3.6360us  122.70ms  cudaMalloc
+                       10.05%  13.794ms         2  6.8969ms  68.246us  13.726ms  cudaMemcpy
+                        0.20%  269.55us         3  89.851us  11.283us  130.45us  cudaFree
+                        0.14%  196.08us       101  1.9410us     122ns  83.854us  cuDeviceGetAttribute
+                        0.04%  57.228us         2  28.614us  6.3760us  50.852us  cudaLaunchKernel
+                        0.02%  32.426us         1  32.426us  32.426us  32.426us  cuDeviceGetName
+                        0.01%  13.677us         1  13.677us  13.677us  13.677us  cuDeviceGetPCIBusId
+                        0.01%  10.998us         1  10.998us  10.998us  10.998us  cudaGetDevice
+                        0.00%  2.3540us         1  2.3540us  2.3540us  2.3540us  cudaGetDeviceCount
+                        0.00%  1.2690us         3     423ns     207ns     850ns  cuDeviceGetCount
+                        0.00%     663ns         2     331ns     170ns     493ns  cuDeviceGet
+                        0.00%     656ns         1     656ns     656ns     656ns  cuDeviceTotalMem
+                        0.00%     396ns         1     396ns     396ns     396ns  cuModuleGetLoadingMode
+                        0.00%     234ns         1     234ns     234ns     234ns  cuDeviceGetUuid
+
+
+This output shows that most of the computing time was caused by calling the
+``throw_dart``-kernel. It is important to note that in this example memory
+allocation ``cudaMalloc`` and memory copying ``cudaMemcpy`` used more time than
+the actual computation. Memory operations are time consuming operations and thus
+best codes try to minimize the need for doing them.
+
+To see a chronological order of different GPU operations one can also run
+``nprof --print-gpu-trace``. The output will look something like this:
+
+.. code-block:: bash
+
+    ==31050== NVPROF is profiling process 31050, command: ./pi-gpu 1000000000
+    ==31050== Profiling application: ./pi-gpu 1000000000
+    ==31050== Profiling result:
+       Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+    182.84ms  23.136us                    -               -         -         -         -  256.00KB  10.552GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
+    182.89ms  1.9769ms            (512 1 1)       (128 1 1)        31        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  setup_rng(curandStateXORWOW*, unsigned long) [118]
+    184.87ms  11.450ms            (512 1 1)       (128 1 1)        19        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  throw_dart(curandStateXORWOW*, int*, unsigned long*) [119]
+    196.33ms  40.704us                    -               -         -         -         -  512.00KB  11.996GB/s      Device    Pageable  Tesla P100-PCIE         1         7  [CUDA memcpy DtoH]
+    
+    Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+    SSMem: Static shared memory allocated per CUDA block.
+    DSMem: Dynamic shared memory allocated per CUDA block.
+    SrcMemType: The type of source memory accessed by memory operation/copy
+    DstMemType: The type of destination memory accessed by memory operation/copy
+
+Here we see that the sample code did a memory copy to the device, ran kernel ``setup_rng``,
+ran kernel ``throw_dart`` and did a memory copy back to the host memory.
+
+For more information on ``nvprof``, see `NVIDIA's documentation on it <https://docs.nvidia.com/cuda/profiler-users-guide/index.html#nvprof>`__.
 
 Available GPUs and architectures
 --------------------------------
@@ -307,27 +398,39 @@ Exercises
    to check which GPU node you ended up on. Try setting a constraint
    to force a different GPU architecture.
 
-.. exercise:: GPU-2: Running a script
+.. exercise:: GPU-2: Running the example
 
-   Run one of the samples given above. Try using ``sbatch`` as well.
+   Run the example given above with larger number of trials
+   (``10000000000`` or :math:`10^{10}`).
 
-.. exercise:: (advanced) GPU-3: Local job files
+   Try using ``sbatch`` and Slurm script as well.
 
-   (Advanced) The PyTorch example will try to load datasets from a folder
-   called ``data`` in a local folder. Modify the Slurm script so that
-   the script:
+.. exercise:: GPU-3: Run the script and do basic profiling with nvprof
 
-   a. Creates an unique folder in ``/dev/shm`` or ``$TMPDIR`` before running the
-      Python code.
-   b. Moves to this folder when job is running.
-   c. Runs the PyTorch-example from this location. Verify that the
-      datasets are stored in the local disk.
+   ``nvprof`` is part of NVIDIA's profiling tools and it can be
+   used to monitor which parts of the GPU code use up most time.
 
-   HINT: Check out ``mktemp --help``,
-   `command output substitutions
-   <https://aaltoscicomp.github.io/linux-shell/quoting-substitution-aliases/#substitute-a-command-output>`__ section
-   from our Linux shell tutorial and the API page for Python's
-   `os.environ <https://docs.python.org/3/library/os.html#os.environ>`_.
+   Run the program as before, but add ``nvprof`` before it.
+
+   Try running the program with chronological trace mode
+   (``nvprof --print-gpu-trace``) as well.
+
+   .. solution::
+
+      With ``srun`` you can run the profiling as follows:
+
+      .. code-block:: bash
+
+         srun --time=00:10:00 --mem=500M --gres=gpu:1 nvprof ./pi-gpu 10000000000
+
+      To get the trace output, you need to add the ``--print-gpu-trace``-flag:
+
+      .. code-block:: bash
+
+         srun --time=00:10:00 --mem=500M --gres=gpu:1 nvprof --print-gpu-trace ./pi-gpu 10000000000
+
+      You should see output similar to ones shown in the section
+      :ref:`profiling GPU usage with nvprof <cuda-nvprof>`.
 
 
 

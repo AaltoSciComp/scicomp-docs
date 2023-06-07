@@ -285,8 +285,9 @@ Exercises
 
       In the third case, two of the tasks should be running on the first node and two on the second one.
 
+
+
 What's next?
 ------------
-
 
 The next tutorial is about :doc:`GPU parallelism <gpu>`.
