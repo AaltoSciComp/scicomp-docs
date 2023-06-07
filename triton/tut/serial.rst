@@ -82,7 +82,7 @@ Let's take a look at the following script
 
    # For the next line to work, you need to be in the
    # hpc-examples directory.
-   srun python slurm/pi.py 10000
+   srun python3 slurm/pi.py 10000
 
 Let's name it ``run-pi.sh`` (create a file using your editor of choice,
 e.g. ``nano``; write the script above and save it)
