@@ -366,6 +366,19 @@ Exercises
       Using libraries and coding practices that are better suited for the task can
       provide bigger performance boost that using multiple CPUs.
 
+.. exercise:: Shared memory parallelism 4: Your program
+
+   Think of your program. Do you think it can use shared-memory parallelism?
+
+   If you do not know, you can check the program's documentation for words such as:
+
+   - nprocs
+   - nworkers
+   - num_workers
+   - njobs
+   - ...
+
+   These usually point towards some method of parallel execution.
 
 What's next?
 ------------
