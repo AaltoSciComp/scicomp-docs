@@ -209,6 +209,20 @@ Exercises
       you can cancel it with ``scancel JOBID``, where ``JOBID`` can be found
       from ``slurm q`` output. After cancelling the job, it should still produce
       an output file (named either ``slurm-JOBID.out`` or whatever you defined in the
+
+      .. code-block:: slurm
+
+	 #!/bin/bash
+
+	 echo "We are waiting"
+	 sleep 300
+	 echo "We are done waiting"
+	 srun python3 slurm/pi.py 1000000
+
+      You can check when your job starts running with ``slurm q``. Then
+      you can cancel it with ``scancel JOBID``, where ``JOBID`` can be found
+      from ``slurm q`` output. After cancelling the job, it should still produce
+      an output file (named either ``slurm-JOBID.out`` or whatever you defined in the
       sbatch file.) The output file also says the job was cancelled.
 
 .. exercise:: Serial-3: Modifying Slurm script while its running
@@ -278,7 +292,12 @@ Exercises
 
 .. exercise:: Serial-5: Checking output
 
-   Create a slurm script that runs the following program::
+   You can look at the output of files as your program is running.
+   Let's demonstrate.
+
+   Create a slurm script that runs the following program.  This is a
+   shell script which, every 10 seconds (for 30 iterations), prints
+   the date::
 
      for i in $(seq 30); do
        date
@@ -295,6 +314,30 @@ Exercises
    d. Cancel the job once you're finished.
 
 .. exercise:: Serial-6: Constrain to a certain CPU architecture
+
+   .. solution::
+
+      .. code-block:: slurm
+
+	 #!/bin/bash
+	 #SBATCH --output test-check-output.out
+
+         for i in $(seq 30); do
+           date
+           sleep 10
+         done
+
+      We note that a new line appears about every 10 seconds.  Note
+      that the delays might happen because of buffering, as the system
+      tries to avoid doing too many small i/o operations::
+
+	 $ tail -f test-check-output.out
+	 Wed  7 Jun 10:49:58 EEST 2023
+	 Wed  7 Jun 10:50:08 EEST 2023
+	 (more every 10 seconds)
+
+
+.. exercise:: Serial-4: Constrain to a certain CPU architecture
 
    Modify the script from exercise #1 to run on only one type of CPU
    using the ``--constraint`` option.  Hint: check :doc:`../ref/index`
@@ -321,9 +364,9 @@ Exercises
       ``#SBATCH`` parameters, so might not request the resources you
       need.::
 
-        $ bash run-pi.sh
-        Calculating Pi via 10000 stochastic trials
-        {"successes": 7815, "pi_estimate": 3.126, "iterations": 10000}
+	$ bash run-pi.sh
+	Calculating Pi via 10000 stochastic trials
+	{"successes": 7815, "pi_estimate": 3.126, "iterations": 10000}
 
 .. exercise:: (advanced) Serial-8: Interpreters other than bash
 
@@ -353,6 +396,8 @@ Exercises
    reflect the job parameters.  You can use these in your jobs if
    needed (for example, a job that will adapt to the number of
    allocated CPUs).
+
+
 
 What's next?
 ------------
