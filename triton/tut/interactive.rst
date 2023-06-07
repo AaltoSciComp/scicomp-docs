@@ -63,7 +63,7 @@ You can submit this program to Triton using ``srun``. All input/output still goe
 (but note that graphical applications don't work this way - see
 below)::
 
-    $ srun --mem=100M --time=0:10:00 python3 slurm/pi.py
+    $ srun --mem=100M --time=0:10:00 python3 slurm/pi.py 10000
     srun: job 52204499 queued and waiting for resources
 
 Here, we are asking for 100 Megabytes of memory (``--mem=100M``) for a
