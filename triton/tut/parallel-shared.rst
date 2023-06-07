@@ -284,7 +284,7 @@ Exercises
 
 .. exercise:: Shared memory parallelism 1: Test the example's scaling
 
-   Run the example with a bigger number of trials (``100000000``)
+   Run the example with a bigger number of trials (``100000000`` or :math:`10^{8}`)
    and with 1, 2 and 4 CPUs.  Check the running time and CPU
    utilization for each run.
 
@@ -314,7 +314,7 @@ Exercises
    ``pi.py`` can be called with an argument ``--serial=0.1`` to run a
    fraction of the trials in a serial fashion (here, 10%).
 
-   Run the example with a bigger number of trials (``100000000``),
+   Run the example with a bigger number of trials (``100000000`` or :math:`10^{8}`),
    4 CPUs and a varying serial fraction (``0.1``, ``0.5``, ``0.8``). Check the running time and CPU
    utilization for each run.
 
@@ -338,7 +338,7 @@ Exercises
    version of the code that utilizes `NumPy <https://numpy.org/>`__
    for vectorized calculations.
 
-   Run the example with a bigger number of trials (``100000000``) and with
+   Run the example with a bigger number of trials (``100000000`` or :math:`10^{8}`) and with
    4 CPUs. Now run the optimized example with the same amount of trials and with 1 CPU.
    Check the CPU utilization and running time for each run.
 

@@ -258,7 +258,7 @@ Exercises
 .. exercise:: MPI parallelism 2: Test the example with various options
 
    Compile the example ``pi-mpi.c``. Now try running it with a bigger number of trials
-   (``2000000000`` or :math:``2 \cdot 10^{9}`) and with the following Slurm options:
+   (``2000000000`` or :math:`2 \cdot 10^{9}`) and with the following Slurm options:
 
    1. ``--ntasks=4`` without specifying ``--nodes=1``.
    2. ``--ntasks-per-node=4``
