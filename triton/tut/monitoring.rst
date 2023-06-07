@@ -219,7 +219,36 @@ Exercises
 
 .. include:: ../ref/examples-repo.rst
 
-.. exercise:: Monitoring-1: Basic monitoring example
+.. exercise:: Monitoring-1: Adding more verbosity into your scripts
+
+   ``echo`` is a shell command which prints something - the equivalent of "print debugging".
+
+   ``date`` is a shell command that prints the current date and time. It is useful for getting
+   timestamps.
+
+   Modify one of the scripts above with a lot of ``echo MY LINE OF TEXT`` commands
+   to be able to verify what it's doing.  Check the output.
+
+   Now change the script and add ``date``-command below the ``echo``-commands.
+   Run the script and check the output. What do you see?
+
+   Now change the script, remove the echos, and add "set -x" below the
+   ``#SBATCH``-comments. Run the script again. What do you see?
+
+   .. solution::
+
+      Using ``echo``-commands is a good way of verifying what part
+      of the script is being executed.
+
+      Using ``date``-commands in your script is a good way of checking
+      when something was executed.
+
+      Using ``set -x`` will cause the shell to print every command it
+      executes before it executes them. It is useful for debugging
+      complex scripts with if-else-clauses, where you might not know
+      what is exactly being executed.
+
+.. exercise:: Monitoring-2: Basic monitoring example
 
    Using our standard ``pi.py`` example,
 
@@ -231,7 +260,7 @@ Exercises
         100 - 10000000 (:math:`10^7`). How does this appear in
         ``slurm history``?
 
-.. exercise:: Monitoring-2: Using ``seff``
+.. exercise:: Monitoring-3: Using ``seff``
 
      Continuing from the example above,
 
@@ -240,19 +269,19 @@ Exercises
 
      This is really one of the most important take-aways from this
      lesson.
-     
+
      .. solution::
-     
-        Using ``seff JOBID.STEPID`` allows you to check efficiency of specific steps. 
-        You should see that steps with low number of iterations had very low cpu 
-        efficiency, while higher amount of iterations had better efficiency. 
-        
-        The important thing to note here is that each srun step has to finish before 
-        next one can start. This means if you have steps with different resource 
+
+        Using ``seff JOBID.STEPID`` allows you to check efficiency of specific steps.
+        You should see that steps with low number of iterations had very low cpu
+        efficiency, while higher amount of iterations had better efficiency.
+
+        The important thing to note here is that each srun step has to finish before
+        next one can start. This means if you have steps with different resource
         requirements in one job, lot of the resources you requested will be going to waste.
-        
-        
-.. exercise:: Monitoring-3: Multiple processors
+
+
+.. exercise:: Monitoring-4: Multiple processors
 
    The script ``pi.py`` has been written so that it can be run using
    multiple processors. Run the script with multiple processors and
@@ -268,7 +297,7 @@ Exercises
     b. Use ``seff`` to check CPU performance of the job.
 
 
-.. exercise:: Monitoring-4: No output
+.. exercise:: Monitoring-5: No output
 
   You submit a job, and it should be writing some stuff to the output.
   But nothing is appearing in the output file.  What's wrong?
