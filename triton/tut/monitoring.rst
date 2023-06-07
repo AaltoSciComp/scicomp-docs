@@ -226,7 +226,7 @@ Exercises
    ``date`` is a shell command that prints the current date and time. It is useful for getting
    timestamps.
 
-   Modify one of the scripts above with a lot of ``echo MY LINE OF TEXT`` commands
+   Modify one of the scripts from :doc:`serial` with a lot of ``echo MY LINE OF TEXT`` commands
    to be able to verify what it's doing.  Check the output.
 
    Now change the script and add ``date``-command below the ``echo``-commands.
@@ -246,7 +246,25 @@ Exercises
       Using ``set -x`` will cause the shell to print every command it
       executes before it executes them. It is useful for debugging
       complex scripts with if-else-clauses, where you might not know
-      what is exactly being executed.
+      what is exactly being executed:
+
+      .. code-block:: slurm
+
+	 #!/bin/bash
+	 #SBATCH --time=0:10:00
+
+	 set -x
+
+	 srun python3 slurm/pi.py 10000
+
+      The output (notice the ``+srun python3 ...`` line.  This is
+      automatically printed right before the command runs.)::
+
+	 $ cat slurm-19207417.out
+	 + srun python3 slurm/pi.py 10000
+	 Calculating pi via 10000 stochastic trials
+	 {"pi_estimate": 3.126, "iterations": 10000, "successes": 7815}
+
 
 .. exercise:: Monitoring-2: Basic monitoring example
 

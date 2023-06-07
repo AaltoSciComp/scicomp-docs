@@ -272,7 +272,8 @@ Exercises
    can you interpret from this?
 
    Remove the created line after you have finished. You can also use
-   ``git checkout -- pi.py``
+   ``git checkout -- pi.py`` (remember to give a proper relative path,
+   depending on your current working directory!)
 
    .. solution::
 
@@ -313,8 +314,6 @@ Exercises
       to cancel)
    d. Cancel the job once you're finished.
 
-.. exercise:: Serial-6: Constrain to a certain CPU architecture
-
    .. solution::
 
       .. code-block:: slurm
@@ -337,7 +336,7 @@ Exercises
 	 (more every 10 seconds)
 
 
-.. exercise:: Serial-4: Constrain to a certain CPU architecture
+.. exercise:: Serial-6: Constrain to a certain CPU architecture
 
    Modify the script from exercise #1 to run on only one type of CPU
    using the ``--constraint`` option.  Hint: check :doc:`../ref/index`
