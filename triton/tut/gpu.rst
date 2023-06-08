@@ -395,8 +395,7 @@ Exercises
 .. exercise:: GPU 1: Test nvidia-smi
 
    Run ``nvidia-smi`` on a GPU node with ``srun``. Use ``slurm history``
-   to check which GPU node you ended up on. Try setting a constraint
-   to force a different GPU architecture.
+   to check which GPU node you ended up on.
 
 .. exercise:: GPU 2: Running the example
 
