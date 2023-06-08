@@ -433,7 +433,7 @@ Exercises
 
 .. exercise:: GPU 4: Your program
 
-   Think of your program. Do you think it can use MPI parallelism?
+   Think of your program. Do you think it can utilize GPUs?
 
    If you do not know, you can check the program's documentation for words such as:
 
