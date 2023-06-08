@@ -127,7 +127,7 @@ iterations to be done by the algorithm.
 
 Let's ask for resources and run the program with two processes using ``srun``::
 
- $ srun --nodes=1 --ntasks=2 --time=00:10:00 --mem=1G ./pi-mpi 1000000
+ $ srun --nodes=1 --ntasks=2 --time=00:10:00 --mem=500M ./pi-mpi 1000000
 
 This worked because we had the correct modules already loaded.
 Using a slurm script setting the requirements and loading the correct modules becomes easier:
@@ -136,7 +136,7 @@ Using a slurm script setting the requirements and loading the correct modules be
 
    #!/bin/bash
    #SBATCH --time=00:10:00
-   #SBATCH --mem=1G
+   #SBATCH --mem=500M
    #SBATCH --output=pi.out
    #SBATCH --nodes=1
    #SBATCH --ntasks=2
@@ -255,17 +255,53 @@ Exercises
       four nodes each for total 16 tasks, with each task using 4 cpus.
 
 
-.. exercise:: MPI parallelism 2: MPI
+.. exercise:: MPI parallelism 2: Test the example with various options
 
-   Find the files ``hpc-examples/mpi/hello_mpi/hello_mpi.c`` and
-   ``hpc-examples/mpi/hello_mpi/hello_mpi.sh`` that
-   have a short example of MPI.
-   Compile and run it - a Slurm script is included.
+   Compile the example ``pi-mpi.c``. Now try running it with a bigger number of trials
+   (``2000000000`` or :math:`2 \cdot 10^{9}`) and with the following Slurm options:
+
+   1. ``--ntasks=4`` without specifying ``--nodes=1``.
+   2. ``--ntasks-per-node=4``
+   3. ``--nodes=2`` and ``--ntasks-per-node=2``.
+
+   Check the CPU efficiency and running time. Do you see any difference in the output?
+
+   .. solution::
+
+      You can run the commands with:
+
+      .. code-block:: bash
+
+         srun --ntasks=4 --time=00:10:00 --mem=500M ./pi-mpi 2000000000
+         srun --ntasks-per-node=4 --time=00:10:00 --mem=500M ./pi-mpi 2000000000
+         srun --nodes=2 --ntasks-per-node=2 --time=00:10:00 --mem=500M ./pi-mpi 2000000000
+
+      In all cases you should see output from four different tasks and output showing
+      the estimate for pi.
+
+      In the first case, you might be allocated tasks from different nodes.
+
+      In the second case, all tasks should be running in a single node.
+
+      In the third case, two of the tasks should be running on the first node and two on the second one.
+
+.. exercise:: MPI parallelism 3: Your program
+
+   Think of your program. Do you think it can use MPI parallelism?
+
+   If you do not know, you can check the program's documentation for words such as:
+
+   - MPI
+   - message-passing interface
+   - mpirun
+   - mpiexec
+   - ...
+
+   These usually point towards some method of MPI parallel execution.
 
 
 
 What's next?
 ------------
-
 
 The next tutorial is about :doc:`GPU parallelism <gpu>`.

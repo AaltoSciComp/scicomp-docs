@@ -83,7 +83,7 @@ Running an example shared memory parallel program
 
 For this example, let's consider
 `pi.py <https://github.com/AaltoSciComp/hpc-examples/blob/master/slurm/pi.py>`__
-in the ``slurm``-folder. 
+in the ``slurm``-folder.
 It estimates pi with Monte Carlo methods and can utilize multiple processes for calculating
 the trials.
 
@@ -113,7 +113,9 @@ Using a slurm script giving the number of CPUs to the program becomes easier:
    #SBATCH --output=pi.out
    #SBATCH --cpus-per-task=2
 
-   python pi.py --nprocs=$SLURM_CPUS_PER_TASK 1000000
+   export SRUN_CPUS_PER_TASK=$SLURM_CPUS_PER_TASK
+
+   srun python pi.py --nprocs=$SLURM_CPUS_PER_TASK 1000000
 
 Let's call this script ``pi-sharedmemory.sh``. You can submit it with::
 
@@ -123,6 +125,12 @@ The environment variable ``$SLURM_CPUS_PER_TASK`` is set during program runtime
 and it is set based on the number of ``--cpus-per-task`` requested. For more tricks
 on how to set the number of processors, see the
 :ref:`section on using it effectively <effective-cpus-per-task>`.
+
+If you use ``srun`` to launch your program in your sbatch-script and
+want your program to utilize all of the allocated CPUs, run
+``export SRUN_CPUS_PER_TASK=$SLURM_CPUS_PER_TASK`` in your script
+before calling ``srun``. For more information see section on
+:ref:`lack of parallelization when using srun <srun-cpus-per-task>`.
 
 
 
@@ -200,7 +208,7 @@ ways in your scripts. Below are few examples:
 
 - Setting a number of workers when ``$SLURM_CPUS_PER_TASK``  is not set:
 
-  ``$SLURM_CPUS_PER_TASK`` is only set when ``--cpus-per-task`` has 
+  ``$SLURM_CPUS_PER_TASK`` is only set when ``--cpus-per-task`` has
   been specified. If you want to run the same code in your own machine
   and in the cluster it might be useful to set a variable like
   ``export NCORES=${SLURM_CPUS_PER_TASK:-4}`` and use that in your scripts.
@@ -242,6 +250,9 @@ ways in your scripts. Below are few examples:
   :doc:`Matlab documentation </triton/apps/matlab>`.
 
 
+
+.. _srun-cpus-per-task:
+
 Lack of parallelisation when using srun
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -274,6 +285,118 @@ that all compete on the reserved CPUs.
 
 Only hybrid parallelization codes should have both ``--ntasks=n`` and
 ``--cpus-per-task=C`` set to be greater than one.
+
+
+
+Exercises
+---------
+
+.. include:: ../ref/examples-repo.rst
+
+.. exercise:: Shared memory parallelism 1: Test the example's scaling
+
+   Run the example with a bigger number of trials (``100000000`` or :math:`10^{8}`)
+   and with 1, 2 and 4 CPUs.  Check the running time and CPU
+   utilization for each run.
+
+   .. solution::
+
+      You can run the program without parallelization with:
+
+      .. code-block:: bash
+
+         srun --time=00:10:00 --mem=1G python pi.py 100000000
+
+      Afterwards you can use ``seff JOBID`` to get the utilization.
+      You can run the program with multiple CPUs with:
+
+      .. code-block:: bash
+
+         srun --cpus-per-task=2 --time=00:10:00 --mem=1G python pi.py --nprocs=2 100000000
+         srun --cpus-per-task=4 --time=00:10:00 --mem=1G python pi.py --nprocs=4 100000000
+
+      You should see that the time needed to run the program
+      ("Job Wall-clock time") ) is basically
+      divided by the number of processors while the CPU utilization
+      time ("CPU Utilized") remains the same.
+
+.. exercise:: Shared memory parallelism 2: Test scaling for a program that has a serial part
+
+   ``pi.py`` can be called with an argument ``--serial=0.1`` to run a
+   fraction of the trials in a serial fashion (here, 10%).
+
+   Run the example with a bigger number of trials (``100000000`` or :math:`10^{8}`),
+   4 CPUs and a varying serial fraction (``0.1``, ``0.5``, ``0.8``). Check the running time and CPU
+   utilization for each run.
+
+   .. solution::
+
+      You can run the program with 10% serial execution using the following:
+
+      .. code-block:: bash
+
+         srun --cpus-per-task=4 --time=00:10:00 --mem=1G python pi.py --serial=0.1 --nprocs=4 100000000
+
+      Afterwards you can use ``seff JOBID`` to get the utilization.
+
+      Doing the run with different serial portion should show that a bigger the
+      serial portion, the less benefit the parallelization gives.
+
+
+.. exercise:: Shared memory parallelism 3: More parallel :math:`\neq` fastest solution
+
+   ``pi.py`` can be called with an argument ``--optimized`` to run an optimized
+   version of the code that utilizes `NumPy <https://numpy.org/>`__
+   for vectorized calculations.
+
+   Run the example with a bigger number of trials (``100000000`` or :math:`10^{8}`) and with
+   4 CPUs. Now run the optimized example with the same amount of trials and with 1 CPU.
+   Check the CPU utilization and running time for each run.
+
+   .. solution::
+
+      You can run the program with 4 CPUs using the following:
+
+      .. code-block:: bash
+
+         srun --cpus-per-task=4 --time=00:10:00 --mem=1G python pi.py --nprocs=4 100000000
+
+      You can run the optimized version with the following:
+
+      .. code-block:: bash
+
+         srun --time=00:10:00 --mem=1G python pi.py --optimized 100000000
+
+      Afterwards you can use ``seff JOBID`` to get the utilization.
+
+      The optimized version, which uses NumPy to create a big batch of random numbers at a time
+      and calculates the hits for all of the random numbers at a same time should be significantly
+      faster. NumPy itself uses libraries written in C and Fortran that make the calculations
+      a lot faster than Python would.
+
+      Using libraries and coding practices that are better suited for the task can
+      provide bigger performance boost that using multiple CPUs.
+
+.. exercise:: Shared memory parallelism 4: Your program
+
+   Think of your program. Do you think it can use shared-memory parallelism?
+
+   If you do not know, you can check the program's documentation for words such as:
+
+   - nprocs
+   - nworkers
+   - num_workers
+   - njobs
+   - OpenMP
+   - ...
+
+   These usually point towards some method of shared-memory parallel execution.
+
+What's next?
+------------
+
+The next tutorial is about :doc:`MPI parallelism <parallel-mpi>`.
+
 
 
 
