@@ -113,7 +113,9 @@ Using a slurm script giving the number of CPUs to the program becomes easier:
    #SBATCH --output=pi.out
    #SBATCH --cpus-per-task=2
 
-   python pi.py --nprocs=$SLURM_CPUS_PER_TASK 1000000
+   export SRUN_CPUS_PER_TASK=$SLURM_CPUS_PER_TASK
+
+   srun python pi.py --nprocs=$SLURM_CPUS_PER_TASK 1000000
 
 Let's call this script ``pi-sharedmemory.sh``. You can submit it with::
 
@@ -123,6 +125,12 @@ The environment variable ``$SLURM_CPUS_PER_TASK`` is set during program runtime
 and it is set based on the number of ``--cpus-per-task`` requested. For more tricks
 on how to set the number of processors, see the
 :ref:`section on using it effectively <effective-cpus-per-task>`.
+
+If you use ``srun`` to launch your program in your sbatch-script and
+want your program to utilize all of the allocated CPUs, run
+``export SRUN_CPUS_PER_TASK=$SLURM_CPUS_PER_TASK`` in your script
+before calling ``srun``. For more information see section on
+:ref:`lack of parallelization when using srun <srun-cpus-per-task>`.
 
 
 
@@ -241,6 +249,9 @@ ways in your scripts. Below are few examples:
   For more information on parallelisation in Matlab see our
   :doc:`Matlab documentation </triton/apps/matlab>`.
 
+
+
+.. _srun-cpus-per-task:
 
 Lack of parallelisation when using srun
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -376,9 +387,10 @@ Exercises
    - nworkers
    - num_workers
    - njobs
+   - OpenMP
    - ...
 
-   These usually point towards some method of parallel execution.
+   These usually point towards some method of shared-memory parallel execution.
 
 What's next?
 ------------

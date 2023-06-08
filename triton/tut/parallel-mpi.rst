@@ -285,6 +285,20 @@ Exercises
 
       In the third case, two of the tasks should be running on the first node and two on the second one.
 
+.. exercise:: MPI parallelism 3: Your program
+
+   Think of your program. Do you think it can use MPI parallelism?
+
+   If you do not know, you can check the program's documentation for words such as:
+
+   - MPI
+   - message-passing interface
+   - mpirun
+   - mpiexec
+   - ...
+
+   These usually point towards some method of MPI parallel execution.
+
 
 
 What's next?

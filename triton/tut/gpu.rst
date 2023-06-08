@@ -392,20 +392,20 @@ Exercises
 
 .. include:: ../ref/examples-repo.rst
 
-.. exercise:: GPU-1: Test nvidia-smi
+.. exercise:: GPU 1: Test nvidia-smi
 
    Run ``nvidia-smi`` on a GPU node with ``srun``. Use ``slurm history``
    to check which GPU node you ended up on. Try setting a constraint
    to force a different GPU architecture.
 
-.. exercise:: GPU-2: Running the example
+.. exercise:: GPU 2: Running the example
 
    Run the example given above with larger number of trials
    (``10000000000`` or :math:`10^{10}`).
 
    Try using ``sbatch`` and Slurm script as well.
 
-.. exercise:: GPU-3: Run the script and do basic profiling with nvprof
+.. exercise:: GPU 3: Run the script and do basic profiling with nvprof
 
    ``nvprof`` is part of NVIDIA's profiling tools and it can be
    used to monitor which parts of the GPU code use up most time.
@@ -432,6 +432,19 @@ Exercises
       You should see output similar to ones shown in the section
       :ref:`profiling GPU usage with nvprof <cuda-nvprof>`.
 
+.. exercise:: GPU 4: Your program
+
+   Think of your program. Do you think it can use MPI parallelism?
+
+   If you do not know, you can check the program's documentation for words such as:
+
+   - GPU
+   - CUDA
+   - ROCm
+   - OpenMP offloading
+   - OpenACC
+   - OpenCL
+   - ...
 
 
 See also
