@@ -2,11 +2,7 @@
 Monitoring job progress and job efficiency
 ==========================================
 
-.. admonition:: Video
-
-   Watch this in our courses: `2021 June
-   <https://www.youtube.com/watch?v=rksu_mJdvGA&list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V&index=14>`__,
-   `2022 February (short) <https://www.youtube.com/watch?v=rksu_mJdvGA&list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V&index=14>`__.
+.. include:: /triton/ref/videos.rst
 
 .. admonition:: Abstract
 

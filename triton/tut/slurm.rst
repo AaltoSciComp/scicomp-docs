@@ -1,6 +1,8 @@
 Slurm: the queuing system
 =========================
 
+.. include:: /triton/ref/videos.rst
+
 What is a cluster?
 ------------------
 

@@ -2,9 +2,7 @@
 Software modules
 ================
 
-.. admonition:: Video
-
-   Watch this in our courses: `2021 January <https://www.youtube.com/watch?v=dOWBGBdqT4g&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=9>`__
+.. include:: /triton/ref/videos.rst
 
 There are hundreds of people using every cluster.  They all have different
 software needs, including conflicting versions required for different

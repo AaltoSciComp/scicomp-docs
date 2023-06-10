@@ -2,12 +2,7 @@
 GPU computing
 =============
 
-.. admonition:: Video
-
-   Watch this in our courses: `2022 February
-   <https://www.youtube.com/watch?v=H1zEfxlU0M8&list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V&index=24>`__,
-   `2021 January
-   <https://www.youtube.com/watch?v=aoU1-5DjrGc&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=17>`__
+.. include:: /triton/ref/videos.rst
 
 .. admonition:: Abstract
 

@@ -1,6 +1,8 @@
 Using the cluster from a shell
 ==============================
 
+.. include:: /triton/ref/videos.rst
+
 A **shell** is the **command-line terminal interface** which is the
 most common method of accessing remote computers.  If you are using a
 cluster, you aren't just

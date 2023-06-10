@@ -2,13 +2,7 @@
 Parallel computing: different methods explained
 ===============================================
 
-.. admonition:: Video
-
-   Watch this in our courses: `2022 February
-   <https://www.youtube.com/watch?v=GHbrpg75qbQ&list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V&index=22>`__,
-   `2022 February real example with MPI
-   <https://www.youtube.com/watch?v=Y71eftXpyfs&list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V&index=11>`__,
-   `2021 January <https://www.youtube.com/watch?v=z-F25Er_-tw&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=19>`__
+.. include:: /triton/ref/videos.rst
 
 Parallel computing is what HPC is really all about: processing things on
 more than one processor at once. By now, you should have read all of the previous

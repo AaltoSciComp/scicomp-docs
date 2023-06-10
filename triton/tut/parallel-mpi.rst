@@ -4,6 +4,8 @@ MPI parallelism: multi-task programs
 
 .. _parallel-mpi:
 
+.. include:: /triton/ref/videos.rst
+
 .. admonition:: Abstract
 
    * Verify that your program can use MPI.

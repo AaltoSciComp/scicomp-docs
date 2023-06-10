@@ -2,6 +2,7 @@
 Shared memory parallelism: multithreading & multiprocessing
 ===========================================================
 
+.. include:: /triton/ref/videos.rst
 
 .. admonition:: Abstract
 
