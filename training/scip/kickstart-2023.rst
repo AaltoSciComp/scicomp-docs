@@ -5,6 +5,19 @@ June 2023 / Intro to Scientific Computing /  HPC Summer Kickstart
 .. admonition:: Quick links
    :class: important
 
+   * Videos are on YouTube in `this playlist
+     <https://www.youtube.com/playlist?list=PLZLVmS9rf3nMKR2jMglaN4su3ojWtWMVw>`__.
+
+    * Final notes
+
+      * Thanks to all who attended, we hope you enjoyed the course as
+	much as we enjoyed giving it.
+      * We know that this course was a lot.  Learning scientific
+	computing is a lot.  If you felt overwhelmed, it's OK: do what
+	you can for your work, and keep referring back to our material
+	as you work.  Consider coming back next year for the course
+	again - you'll learn much more then.
+
    * You can still `register
      <https://link.webropol.com/ep/scicomphpc2023>`__ to get HackMD
      access for Q&A.  **Sharing**: You may definitely share the
@@ -20,17 +33,6 @@ June 2023 / Intro to Scientific Computing /  HPC Summer Kickstart
        <https://www.twitch.tv/coderefinery/videos>`__ for 7 days.
      * `Archived Q&A <https://hackmd.io/@AaltoSciComp/scicomphpc2023archive>`__
 
-    * Day 2 info
-
-      * We mostly went over what is on the schedule.
-      * It was a long day with lots of relatively hard stuff.  We
-	couldn't possibly explain it all.  We know.  Our goal was to
-	provide the starting point, and then you can read more and ask
-	for help when needed.  Don't give up.
-      * **Day 3 preparation:** get comfortable with the things we did
-	today, especially the :doc:`serial jobs </triton/tut/serial>`
-	part.  We'll go into parallel stuff tomorrow, and this is
-	the starting point of day 3.
 
 Kickstart is a three × half day course for researchers to get
 started with high-performance computing (HPC) clusters.
