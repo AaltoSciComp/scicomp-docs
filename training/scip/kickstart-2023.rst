@@ -8,15 +8,15 @@ June 2023 / Intro to Scientific Computing /  HPC Summer Kickstart
    * Videos are on YouTube in `this playlist
      <https://www.youtube.com/playlist?list=PLZLVmS9rf3nMKR2jMglaN4su3ojWtWMVw>`__.
 
-    * Final notes
+   * Final notes
 
-      * Thanks to all who attended, we hope you enjoyed the course as
-	much as we enjoyed giving it.
-      * We know that this course was a lot.  Learning scientific
-	computing is a lot.  If you felt overwhelmed, it's OK: do what
-	you can for your work, and keep referring back to our material
-	as you work.  Consider coming back next year for the course
-	again - you'll learn much more then.
+     * Thanks to all who attended, we hope you enjoyed the course as
+       much as we enjoyed giving it.
+     * We know that this course was a lot.  Learning scientific
+       computing is a lot.  If you felt overwhelmed, it's OK: do what
+       you can for your work, and keep referring back to our material
+       as you work.  Consider coming back next year for the course
+       again - you'll learn much more then.
 
    * You can still `register
      <https://link.webropol.com/ep/scicomphpc2023>`__ to get HackMD
