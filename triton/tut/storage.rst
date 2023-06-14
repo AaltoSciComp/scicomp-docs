@@ -2,9 +2,7 @@
 Data storage
 ============
 
-.. admonition:: Video
-
-   Watch this in our courses: `2022 February <https://www.youtube.com/watch?v=27ThLTYCeuU&list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V&index=17>`__, `2021 January <https://www.youtube.com/watch?v=guZYMgwdP4Q&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=10>`__
+.. include:: /triton/ref/videos.rst
 
 These days, computing is as much (or more) about data than the actual
 computing power.  And data is more than number of petabytes: it is so

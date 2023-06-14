@@ -105,8 +105,8 @@
     </g>
     <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-426,-185)" stroke-linecap="butt">
       <rect fill="none" x="571" width="25" height="25" y="460" clip-path="url(#clipPath2)"/>
-      <text x="460.41" font-size="20px" y="311.1" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none" xml:space="preserve">n</text>
-      <text x="608.7" font-size="20px" y="441.1" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none" xml:space="preserve">+</text>
+      <text x="460.42" font-size="20px" y="311.1" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none" xml:space="preserve">n</text>
+      <text x="608.7" font-size="20px" y="441.1" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none" xml:space="preserve">+</text>
     </g>
     <g fill="rgb(98,180,164)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-426,-185)" stroke="rgb(98,180,164)">
       <rect x="820.5" width="25" height="25" y="385" clip-path="url(#clipPath2)" stroke="none"/>
@@ -197,8 +197,8 @@
     </g>
     <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-426,-185)" stroke-linecap="butt">
       <rect fill="none" x="870.5" width="25" height="25" y="460" clip-path="url(#clipPath2)"/>
-      <text x="1042.25" font-size="20px" y="391.1" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none" xml:space="preserve">m</text>
-      <text x="907.25" font-size="20px" y="261.1" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none" xml:space="preserve">m</text>
+      <text x="1042.275" font-size="20px" y="391.1" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none" xml:space="preserve">m</text>
+      <text x="907.275" font-size="20px" y="261.1" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none" xml:space="preserve">m</text>
     </g>
     <g fill="rgb(98,180,164)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-426,-185)" stroke="rgb(98,180,164)">
       <rect x="920.5" width="25" height="25" y="385" clip-path="url(#clipPath2)" stroke="none"/>
@@ -493,7 +493,7 @@
     </g>
     <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-426,-185)" stroke-linecap="butt">
       <rect fill="none" x="970.5" width="25" height="25" y="360" clip-path="url(#clipPath2)"/>
-      <text x="556.4252" font-size="20px" y="546.1" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none" xml:space="preserve">Estimating big problem based on a smaller problem</text>
+      <text x="556.9052" font-size="20px" y="546.1" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none" xml:space="preserve">Estimating big problem based on a smaller problem</text>
     </g>
     <g fill="rgb(153,204,255)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-426,-185)" stroke="rgb(153,204,255)">
       <rect x="639.5" width="25" height="25" y="385" clip-path="url(#clipPath2)" stroke="none"/>
@@ -782,11 +782,11 @@
     </g>
     <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-426,-185)" stroke-linecap="butt">
       <rect fill="none" x="571" width="25" height="25" y="330" clip-path="url(#clipPath2)"/>
-      <text x="540.2" font-size="20px" y="376.1" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none" xml:space="preserve">+</text>
-      <text x="608.7" font-size="20px" y="311.1" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none" xml:space="preserve">+</text>
-      <text x="677.2" font-size="20px" y="376.1" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none" xml:space="preserve">+</text>
-      <text x="540.41" font-size="20px" y="231.1" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none" xml:space="preserve">n</text>
-      <text x="774.2" font-size="20px" y="376.1" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none" xml:space="preserve">≈</text>
+      <text x="540.2" font-size="20px" y="376.1" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none" xml:space="preserve">+</text>
+      <text x="608.7" font-size="20px" y="311.1" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none" xml:space="preserve">+</text>
+      <text x="677.2" font-size="20px" y="376.1" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none" xml:space="preserve">+</text>
+      <text x="540.42" font-size="20px" y="231.1" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none" xml:space="preserve">n</text>
+      <text x="774.2" font-size="20px" y="376.1" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none" xml:space="preserve">≈</text>
     </g>
   </g>
 </svg>

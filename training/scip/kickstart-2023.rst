@@ -2,23 +2,37 @@
 June 2023 / Intro to Scientific Computing /  HPC Summer Kickstart
 =====================================================================
 
-.. important::
+.. admonition:: Quick links
+   :class: important
 
-   | *Come and learn about high performance computing!*
-   | **When**: 6,7,8/June/2023 11:50-16:00 EEST
-   | **Where**: https://www.twitch.tv/coderefinery
-   | **Registration**: `Registration link <https://link.webropol.com/ep/scicomphpc2023>`__
-   | Registration is important if you need access to a cluster in a partner organisation and if you want to access the collaborative document. Registered participants from partner organisations also receive a zoom room for direct support.  Anyone may watch the stream.
-   | **Partner organisations**: Aalto University, Helsinki University, Tampere University
-   | **Preparation**: Check the :ref:`prerequisites below <kickstart-2023-prep>` and the schedule.
-   | **Sharing**: You may definitely share the livestream with others!
+   * Videos are on YouTube in `this playlist
+     <https://www.youtube.com/playlist?list=PLZLVmS9rf3nMKR2jMglaN4su3ojWtWMVw>`__.
 
-   Quick links:
+   * Final notes
 
-   * Videos will appear in `this youtube playlist
-     <https://www.youtube.com/playlist?list=PLZLVmS9rf3nMKR2jMglaN4su3ojWtWMVw>`__
-     the same evening and `on twitch
-     <https://www.twitch.tv/coderefinery/videos>`__ for 7 days.
+     * Thanks to all who attended, we hope you enjoyed the course as
+       much as we enjoyed giving it.
+     * We know that this course was a lot.  Learning scientific
+       computing is a lot.  If you felt overwhelmed, it's OK: do what
+       you can for your work, and keep referring back to our material
+       as you work.  Consider coming back next year for the course
+       again - you'll learn much more then.
+
+   * You can still `register
+     <https://link.webropol.com/ep/scicomphpc2023>`__ to get HackMD
+     access for Q&A.  **Sharing**: You may definitely share the
+     livestream with others!
+   * Quick links
+
+     * **When**: 6,7,8/June/2023 11:50-16:00 EEST, **Where**: https://www.twitch.tv/coderefinery
+     * **Preparation**: Check the :ref:`prerequisites below
+       <kickstart-2023-prep>` and the schedule.
+     * Videos will appear in `this youtube playlist
+       <https://www.youtube.com/playlist?list=PLZLVmS9rf3nMKR2jMglaN4su3ojWtWMVw>`__
+       the same evening and `on twitch
+       <https://www.twitch.tv/coderefinery/videos>`__ for 7 days.
+     * `Archived Q&A <https://hackmd.io/@AaltoSciComp/scicomphpc2023archive>`__
+
 
 Kickstart is a three × half day course for researchers to get
 started with high-performance computing (HPC) clusters.
@@ -187,7 +201,7 @@ started with the computing resources.
       behind the scenes and how you could join us.
 
   * **14:00--14:45: Connecting to a HPC cluster** *Thomas Pfau and
-    Simo Tuomisto*
+    Jarno Rantaharju*
 
     - Required if you are attending the Triton/HPC tutorials the
       following days, otherwise the day is done.
@@ -206,6 +220,7 @@ started with the computing resources.
       Material: :doc:`/triton/tut/cluster-shell`.
 
   - **15:25--15:50: What can you do with a computational cluster?**
+    *(Jarno Rantaharju and Richard Darst)*
 
     - See several real examples of how people use the cluster (what you can
       do at the end of the course): 1) Large-scale computing with array
@@ -227,7 +242,6 @@ started with the computing resources.
     - :doc:`/triton/tut/intro`
 
   - **12:05--12:30 Structure of a cluster: The Slurm queueing system**
-    *(Jarno Rantaharju and Thomas Pfau)*
 
     - :doc:`/triton/tut/slurm`
 
@@ -239,6 +253,7 @@ started with the computing resources.
 
   - **15:00--15:30: Other things you should know about the HPC environment**
 
+    - :doc:`/triton/tut/applications`
     - :doc:`/triton/tut/modules`
     - :doc:`/triton/tut/storage`
     - :doc:`/triton/tut/remotedata`
@@ -257,8 +272,8 @@ started with the computing resources.
   - **12:30--14:00: Forms of parallelization**
 
     - :doc:`/triton/tut/array`
-    - doc: ``/triton/tut/parallel-shared``
-    - doc: ``/triton/tut/parallel-mpi``
+    - :doc:`/triton/tut/parallel-shared`
+    - :doc:`/triton/tut/parallel-mpi`
 
   - **14:00--14:30: Laptops to Lumi**
 

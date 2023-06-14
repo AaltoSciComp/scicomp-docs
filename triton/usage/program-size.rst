@@ -43,9 +43,9 @@ Why should you care?
 
 There are many reasons why you should care about this question.
 
-1. **By knowing how big your program is you can more accurately
+.. collapse:: By knowing how big your program is you can more accurately
    request the resources you need and you will get a higher priority
-   in the queue.**
+   in the queue.
 
    A cluster environment is shared among multiple users and thus
    all users will get their own share of the cluster resources.
@@ -54,10 +54,10 @@ There are many reasons why you should care about this question.
    based on the resource requirements you have specified.
 
    This means that if you request more than you need, you will
-   waste resources and you will get less resources in the near 
+   waste resources and you will get less resources in the near
    future.
 
-2. **Knowing how your program behaves can help you organize your work.**
+.. collapse:: Knowing how your program behaves can help you organize your work.
 
    If, for example, you have a program that takes a day to run a single
    computation and you have thousands of computations you need to do,
@@ -70,8 +70,9 @@ There are many reasons why you should care about this question.
    You can also find that something is unfeasible with the method
    you have chosen before you've invested a lot of time in
    implementating it.
-3. **If you know how big your program is you can more easily recognize
-   when it isn't running as it should.**
+
+.. collapse:: If you know how big your program is you can more easily recognize
+   when it isn't running as it should.
 
    If, for example, you have a program that you assume should finish
    in an hour, but it does not finish in an hour, you can infer
@@ -129,10 +130,34 @@ This will give you a good initial measuring scale.
 
 .. |desktop| image:: https://upload.wikimedia.org/wikipedia/commons/5/56/Black_computer_icon.png
    :width: 40
-.. |laptop| image:: https://upload.wikimedia.org/wikipedia/commons/8/8b/Laptop_World.png 
+.. |laptop| image:: https://upload.wikimedia.org/wikipedia/commons/8/8b/Laptop_World.png
    :width: 40
 .. |server| image:: https://upload.wikimedia.org/wikipedia/commons/9/9b/Server_icon_CC0.svg
    :width: 40
+
+
+Getting a better CPU / RAM estimate: check your task manager
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A simple way of getting a better estimate is to check your
+computer's task manager when you are running the program.
+
+- In Windows you can open **Task manager** from the start menu or by pressing
+  CTRL + ALT + DEL.
+- In Mac OS X you can use finder to launch **Activity monitor**
+  or press CMD + ALT + ESC.
+- In Linux you can use **System Monitor** to see your processes.
+
+When you're running a program these tools will easily tell you
+how many CPUs the processes are using and how much memory they
+are using. CPU usage is a percentage of total CPU capacity. So
+if your machine has 4 CPUs and you see an usage of 25%,
+that means your program is using 1 CPU. Similarly, the memory
+usage is reported as a percentage of the total available memory.
+
+In a cluster environment you can use ``seff JOBID`` for seeing how
+much of the reserved CPU and RAM your program used.
+For more information, see the :doc:`monitoring documentation </triton/tut/monitoring>`.
 
 Natural unit of scale: 1 CPU = 4GB of RAM
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -198,7 +223,7 @@ If the time taken by each step is :math:`t_{\textrm{step}}`, then the total runt
 
 Do note that if you're planning on running the same calculation
 multiple times with different parameters and/or datasets you can
-estimate that the time needed for running it 
+estimate that the time needed for running it
 :math:`T_{\textrm{total}} \approx n_{\textrm{parameters}} \cdot T_{\textrm{single}}`.
 In these cases :doc:`array jobs </triton/tut/array>` can often be used to split
 the calculation into multiple jobs.
@@ -243,42 +268,6 @@ are famous for their complexity.
 
 If you're interested on the topic, a good introduction is this
 `excellent blog-series on Big O notation <https://jarednielsen.com/big-o-factorial-time-complexity/>`__.
-
-
-
-Other estimation tricks
------------------------
-
-Getting a better CPU / RAM estimate: check your task manager
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-A simple way of getting a better estimate is to check your
-computer's task manager when you are running the program.
-
-- In Windows you can open **Task manager** from the start menu or by pressing
-  CTRL + ALT + DEL. 
-- In Mac OS X you can use finder to launch **Activity monitor**
-  or press CMD + ALT + ESC.
-- In Linux you can use ``top -u $USER`` to see your processes.
-  A better looking alternative is ``htop -u $USER``, but ``htop``
-  is usually not installed by default. However, it is a very
-  useful tool and highly recommended.
-
-When you're running a program these tools will easily tell you
-how many CPUs the processes are using and how much memory they
-are using.
-
-- In Windows and Mac OS X the CPU usage shown is a percentage of total CPU
-  capacity. So if your machine has 4 CPUs and you see an usage of 25%,
-  that means your program is using 1 CPU.
-- In Linux the usage is measured per CPU. So if a program has a
-  400% CPU usage, it means that it is using four CPUs. In ``htop`` there
-  is a nice visualization of CPU usage in terms of bars and you can
-  usually see quickly how many CPUs you're program is using.
-
-In all systems the memory usage is reported as a percentage of the total
-available memory.
-
 
 
 

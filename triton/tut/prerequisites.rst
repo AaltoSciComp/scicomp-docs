@@ -1,6 +1,8 @@
 Cluster general background knowledge
 ====================================
 
+.. include:: /triton/ref/videos.rst
+
 The following topics are required background knowledge for productive
 use of a remote computer cluster, and not covered in the following
 sequence of tutorials.  You should at least browse these to confirm

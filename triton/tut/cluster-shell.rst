@@ -1,6 +1,8 @@
 Using the cluster from a shell
 ==============================
 
+.. include:: /triton/ref/videos.rst
+
 A **shell** is the **command-line terminal interface** which is the
 most common method of accessing remote computers.  If you are using a
 cluster, you aren't just
@@ -20,8 +22,22 @@ this work, so you have to learn a little bit*.
 
 
 
-Why a shell?
-------------
+Terminology
+-----------
+
+* A **terminal** is the physical or software device that sends lines
+  and shows the output.
+* A **shell** is the interface that reads in lines, does something with
+  the operating system, and sends it back out.
+* The **command line interface** refers to the general concept of
+  these lines in, lines out.
+
+All these terms are usually used somewhat interchangably.
+
+
+
+Why command line interfaces?
+----------------------------
 
 The shell is the most powerful interface to computers: you can script
 other programs to do things automatically.  It's much easier to script
@@ -57,22 +73,23 @@ The parts are like this:
   that Python file itself knows how to handle ``--seed=50``.
 
 These arguments let you control the program without modifying the
-source code (or clicking buttons with your mouse!).  this lets us, for
+source code (or clicking buttons with your mouse!).  This lets us, for
 example, make a shell script that runs with many different ``--seed``
-values.
+values automatically (this is a hint about our future!).
 
 You will learn all sorts of commands as you progress in your career.
-:ref:`ref-command-line` gives the most important ones.
+The :ref:`command line quick reference <ref-command-line>` gives the
+most important ones.
 
 
 
-Basic usage: navigating around
-------------------------------
+Files and directories
+---------------------
 
 On your phone and other "app"-like things, data just exists - you
-don't really know where. *You* are the programmer when doing
+don't really know where. Now, *you* are the programmer doing
 scientific computing, so you have to make more meaningful decisions
-about data.  This means knowing about **files** (a chunk of data) and
+about data arrangement.  This means knowing about **files** (a chunk of data) and
 **directories** (hierarchical storage units, also known as folders).
 *On a cluster, you can't throw everything into the same place. You
 need to sort stuff and keep it organized.  File names are an essential
@@ -93,9 +110,9 @@ available anywhere:
 * ``~`` is another shortcut for you home directory.
 * On Triton, ``/scratch/`` is the basic place for storing research
   data.  Also on Triton, ``$WRKDIR`` is a shortcut for your personal
-  space in scratch.
+  space in scratch (this is an **environment variable**).
 
-On a graphical computer, you open a windown to view files, but this is
+On a graphical computer, you open a window to view files, but this is
 disconnected from how you run programs.  In a shell, they are
 intrinsically connected and that is *good*.
 
@@ -106,7 +123,12 @@ The most common commands related to directories:
   relative to the directory you change to.  This is the **(current)
   working directory**
 * ``ls [NAME]`` lists the contents of a directory.  ``[NAME]`` is an
-  optional directory name - by default, it lists the working directory.
+  optional directory name - by default, it lists the working
+  directory.
+* ``mkdir NAME`` makes a new directory
+* ``rm -r NAME`` removes a directory (or file) recusrsively - that and
+  everything in it!  There is no backup, be careful.
+
 
 Exercises, directories
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -116,18 +138,62 @@ You have to be :doc:`connected to the custer and have a terminal
 
 .. exercise:: Shell-1: Explore directories
 
+  If you are not at Aalto, try to do similar things but adjusted to
+  your cluster's data storage.
+
   * Print your current directory with ``pwd``
   * List the contents with ``ls``
   * List the contents of ``/scratch/``, then the contents of another
-    directory, and so on.
+    directory within it, and so on.
   * List your work directory ``$WRKDIR``.
-  * Change to your work directory.  List it again, with a plan ``ls``
+  * Change to your work directory.  List it again, with a plain ``ls``
     (no full path needed).
   * List your home directory from your work directory (you need to
     give it a path)
   * Log out and in again.  List your current directory.  Note how it
     returns to your home directory - each time you log in, you need to
     navigate to where you need to be.
+
+  .. solution::
+
+    .. code-block:: console
+
+      $ pwd
+      /home/darstr1
+      $ ls
+       ## (lots of stuff here.  Or maybe nothing, if your account is 
+       ## brand new)
+      $ ls /scratch/
+      admin/     cs/       nbe/      rse/      shareddata/
+      apps/      elec/     other/    scicomp/  work/
+      courses/   eng/      math/     phys/     scip/
+       ## (will vary for you)
+      $ ls $WRKDIR
+       ## (output will vary for you.  Or might be empty if nothing is
+       ## there yet)
+      $ cd $WRKDIR
+      $ ls
+       ## (same output as before)
+      $ ls $HOME
+      $ ls ~
+       ## (commands give same output.  Maybe empty if nothing is there
+       ## yet)
+
+    To log out:
+
+    .. code-block:: console
+
+      $ exit
+
+    Logging in again:
+
+    .. code-block:: console
+
+      you@laptop$ ssh USERNAME@triton.aalto.fi
+      $ pwd
+      /home/darstr1
+      $ cd $WRKDIR
+
 
 .. exercise:: Shell-2: Understand power of working directory
 
@@ -136,11 +202,20 @@ You have to be :doc:`connected to the custer and have a terminal
   * Now list ``/scratch/cs``, but don't re-type ``/scratch``.
 
    .. solution::
-   
+
+      .. code-block:: console
+
+        $ ls /scratch/cs/
+        $ cd /scratch
+        $ ls cs/
+
       After changing your current directory, you should see the same 
       output as from the first command with just ``ls cs``. 
       Like vast majority of commands, ``ls`` uses your relative path to the target. 
-      Since you are already in ``/scratch/`` you don't need to type it again.
+      Since you are already in ``/scratch/`` you don't need to type it
+      again.
+
+      You'll be using this concepts in your projects all the time.
 
 
 
@@ -189,26 +264,56 @@ We can change into the directory::
 
 Now we have our code in a place that can be used.
 
+.. warning::
+
+  Storing your analysis codes in your home directory usually isn't
+  recommended, since it's not large or high performance enough.  You
+  will learn more about where to store your work in :doc:`storage`.
+
 .. exercise:: Shell-3: clone the hpc-examples repository
 
-  Do the steps above.
-  
+  Do the steps above.  List the directory and verify it matches what
+  you see in the `Github web interface
+  <https://github.com/AaltoSciComp/hpc-examples/>`__.
+
+  Is your home directory the right place to store this?
+
    .. solution::
-   
-      You can check that everything is correct with ``git status``. 
-      Output should be something like this::
-      
+
+      The steps are listed above.  You also can check that everything is
+      correct with ``git status``. Output should be something like
+      this::
+
+         $ ls
+         io/    mpi/     postgres/  R/          scip/      gpu/
+         misc/  openmp/  python/    README.rst  slurm/
+
          $ git status
          On branch master
          Your branch is up to date with 'origin/master'.
-         
+
          nothing to commit, working tree clean
+
+      Normally, large projects you are working on should be in your
+      work directory.  This is small enough we can ignore that for now
+      (and make our exercises work on different clusters).
 
 
 .. exercise:: Shell-4: log out and re-navigate to the hpc-examples reports
 
   Log out and log in again.  Navigate to the hpc-examples repository.
   Resuming work is an important but often forgotten part of work.
+
+  .. solution::
+
+    .. code-block:: console
+
+      $ exit
+      you@laptop$ ssh USERNAME@triton.aalto.fi
+      $ cd hpc-examples
+      $ ls
+       ## (same output as previous exercise)
+
 
 
 
@@ -234,15 +339,36 @@ The argument "10000" is the number of iterations of the `circle in
 square <https://en.wikipedia.org/wiki/Pi#Monte_Carlo_methods>`__
 method of calculating π.
 
+.. danger::
+
+  This is running your program on the login node!  Since this takes
+  only a second, it's OK enough for now (so that we only have to teach
+  one thing at a time).  You will learn how to run programs properly
+  starting in :doc:`slurm`.
+
 .. exercise:: Shell-5: try calculating pi
 
   Try doing what is above and running ``pi.py`` several times with
   different numbers of iterations.  Try passing the ``--seed`` command
   line option with the values ``13``, and ``19759``.
 
+  **From this point on, you need to manage your working directory.
+  You need to be in the hpc-examples directory when appropriate, or
+  somehow give a proper path to the program to be run.**
+
   .. solution::
 
-    ::
+    All these are equivalent ways to run the program::
+
+      $ python3 hpc-examples/slurm/pi.py 10000
+
+      $ cd hpc-examples
+      $ python3 slurm/pi.py 10000
+
+      $ cd hpc-examples/slurm
+      $ python3 pi.py 10000
+
+    Running with different numbers of iterations::
 
       $ cd hpc-examples
       $ python3 slurm/pi.py 10000
@@ -255,7 +381,7 @@ method of calculating π.
       Calculating Pi via 1000000 stochastic trials
       {"successes": 785148, "pi_estimate": 3.140592, "iterations": 1000000}
 
-    ::
+    Running with different values of the seed::
 
       $ python slurm/pi.py 10000 --seed=13
       Calculating Pi via 10000 stochastic trials
@@ -276,7 +402,10 @@ method of calculating π.
 
     ``pi.py`` does have a ``--help`` option.  Libraries that handle
     command line arguments for you can auto-generate this help, which
-    is useful even if you wrote the program yourself.
+    is useful even if you wrote the program yourself.  In this case,
+    the help output is automatically generated by the Python standard
+    library module `argparse
+    <https://docs.python.org/library/argparse.html>`__.
 
     ::
 
@@ -303,11 +432,9 @@ Copying and manipulating files
 
 More info: :doc:`/scicomp/shell`
 
-``cp OLD NEW`` make a copy of OLD in NEW
-
-``mv OLD NEW`` renames a file OLD to NEW
-
-``rm NAME`` removes a file (with no warning or backup)
+* ``cp OLD NEW`` make a copy of OLD in NEW
+* ``mv OLD NEW`` renames a file OLD to NEW
+* ``rm NAME`` removes a file (with no warning or backup)
 
 A file consists of its contents and metadata.  The metadata is information
 like user, group, timestamps, permissions.  To view metadata, use ``ls
@@ -341,18 +468,18 @@ contents).  You could do this on your computer and copy them over
 every time, but that's really slow.  You can, and should, do basic
 edits directly on the cluster itself.
 
-``nano`` is an **editor** which allows you to **edit files** directly
-from the shell.  This is a simple console editor which always gets the
-job done.  Use *Control-x* (control and x at the same time), then
-``y`` when requested and *enter*, to save and exit.
+* ``nano`` is an **editor** which allows you to **edit files** directly
+  from the shell.  This is a simple console editor which always gets the
+  job done.  Use *Control-x* (control and x at the same time), then
+  ``y`` when requested and *enter*, to save and exit.
 
-``less`` is a **pager** (file viewer) which lets you **view files**
-without editing them.  (``q`` to quit, ``/`` to search, ``n`` / ``N``
-to research forward and backwards, ``<`` for beginning of file, ``>``
-for end of file)
+* ``less`` is a **pager** (file viewer) which lets you **view files**
+  without editing them.  (``q`` to quit, ``/`` to search, ``n`` / ``N``
+  to research forward and backwards, ``<`` for beginning of file, ``>``
+  for end of file)
 
-``cat`` dumps the contents of a file straight to the screen -
-sometimes useful when looking at small things.
+* ``cat`` dumps the contents of a file straight to the screen -
+  sometimes useful when looking at small things.
 
 .. exercise:: Shell-9: Create a new file and show its contents
 
@@ -401,7 +528,7 @@ sometimes useful when looking at small things.
 
     Try to run it::
 
-      $ python slurm/pi-new.py
+      $ python3 slurm/pi-new.py
         File "slurm/pi-new.py", line 10
           mxhbuhetihiugug euhuethuoegceuothoeu
                                              ^
@@ -415,8 +542,11 @@ Exercises
 .. exercise:: Shell-11: (advanced, to fill time) shell crash course
 
    Browse the :doc:`/scicomp/shell` and see what you do and don't know
-   from there.  :doc:`A future lesson <cluster-shell>` goes into this
-   a bit more, too.
+   from there.
+
+   .. solution::
+
+    Did you think there was a solution here?
 
 
 

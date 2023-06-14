@@ -2,14 +2,7 @@
 Array jobs: embarassingly parallel execution
 ============================================
 
-.. admonition:: Video
-
-   Watch this in our courses: `2022 February
-   <https://www.youtube.com/watch?v=xsjf9f88vw0&list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V&index=21>`__,
-   `2022 February real example
-   <https://www.youtube.com/watch?v=HWzpXJIvey4&list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V&index=10>`__,
-   `2021 January
-   <https://www.youtube.com/watch?v=jcWoky9b8zI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=16>`__
+.. include:: /triton/ref/videos.rst
 
 .. admonition:: Abstract
 

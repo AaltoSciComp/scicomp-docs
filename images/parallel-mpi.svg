@@ -15,71 +15,71 @@
     </g>
     <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-168,24)" stroke-linecap="butt">
       <rect x="489.2707" y="15.0932" clip-path="url(#clipPath2)" fill="none" width="197.4006" rx="4" ry="4" height="130.3136"/>
-      <text x="562.3028" y="2.7532" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none" font-weight="bold" xml:space="preserve">Node # 2</text>
+      <text x="563.4158" y="2.7532" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none" font-weight="bold" xml:space="preserve">Node # 2</text>
     </g>
     <g fill="rgb(219,250,244)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-168,24)" stroke="rgb(219,250,244)">
       <rect x="183.2997" y="15.0932" clip-path="url(#clipPath2)" width="197.4006" rx="4" ry="4" height="130.3136" stroke="none"/>
     </g>
     <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-168,24)" stroke-linecap="butt">
       <rect x="183.2997" y="15.0932" clip-path="url(#clipPath2)" fill="none" width="197.4006" rx="4" ry="4" height="130.3136"/>
-      <text x="256.3318" y="2.7532" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none" font-weight="bold" xml:space="preserve">Node # 1</text>
+      <text x="257.4448" y="2.7532" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none" font-weight="bold" xml:space="preserve">Node # 1</text>
     </g>
     <g fill="rgb(98,180,164)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-168,24)" stroke="rgb(98,180,164)">
       <rect x="194" width="176" height="22" y="25" clip-path="url(#clipPath2)" stroke="none"/>
     </g>
     <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-168,24)" stroke-linecap="butt">
       <rect fill="none" x="194" width="176" height="22" y="25" clip-path="url(#clipPath2)"/>
-      <text x="259.7728" xml:space="preserve" y="39.66" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none">Task # 1</text>
+      <text x="259.7968" xml:space="preserve" y="39.66" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none">Task # 1</text>
     </g>
     <g fill="rgb(98,180,164)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-168,24)" stroke="rgb(98,180,164)">
       <rect x="499.971" width="176" height="22" y="25" clip-path="url(#clipPath2)" stroke="none"/>
     </g>
     <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-168,24)" stroke-linecap="butt">
       <rect fill="none" x="499.971" width="176" height="22" y="25" clip-path="url(#clipPath2)"/>
-      <text x="565.7438" xml:space="preserve" y="39.66" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none">Task # 3</text>
+      <text x="565.7678" xml:space="preserve" y="39.66" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none">Task # 3</text>
     </g>
     <g fill="rgb(98,180,164)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-168,24)" stroke="rgb(98,180,164)">
       <rect x="194" width="176" height="22" y="84" clip-path="url(#clipPath2)" stroke="none"/>
     </g>
     <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-168,24)" stroke-linecap="butt">
       <rect fill="none" x="194" width="176" height="22" y="84" clip-path="url(#clipPath2)"/>
-      <text x="259.7728" xml:space="preserve" y="98.66" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none">Task # 2</text>
+      <text x="259.7968" xml:space="preserve" y="98.66" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none">Task # 2</text>
     </g>
     <g fill="rgb(98,180,164)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-168,24)" stroke="rgb(98,180,164)">
       <rect x="499.971" width="176" height="22" y="84" clip-path="url(#clipPath2)" stroke="none"/>
     </g>
     <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-168,24)" stroke-linecap="butt">
       <rect fill="none" x="499.971" width="176" height="22" y="84" clip-path="url(#clipPath2)"/>
-      <text x="565.7438" xml:space="preserve" y="98.66" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none">Task # 4</text>
+      <text x="565.7678" xml:space="preserve" y="98.66" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none">Task # 4</text>
     </g>
     <g fill="rgb(153,204,255)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-168,24)" stroke="rgb(153,204,255)">
       <rect x="253.5" width="57" height="22" y="54.5" clip-path="url(#clipPath2)" stroke="none"/>
     </g>
     <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-168,24)" stroke-linecap="butt">
       <rect fill="none" x="253.5" width="57" height="22" y="54.5" clip-path="url(#clipPath2)"/>
-      <text x="269.9549" xml:space="preserve" y="69.16" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none">CPU</text>
+      <text x="269.9759" xml:space="preserve" y="69.16" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none">CPU</text>
     </g>
     <g fill="rgb(153,204,255)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-168,24)" stroke="rgb(153,204,255)">
       <rect x="559.471" width="57" height="22" y="54.5" clip-path="url(#clipPath2)" stroke="none"/>
     </g>
     <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-168,24)" stroke-linecap="butt">
       <rect fill="none" x="559.471" width="57" height="22" y="54.5" clip-path="url(#clipPath2)"/>
-      <text x="575.9259" xml:space="preserve" y="69.16" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none">CPU</text>
+      <text x="575.9469" xml:space="preserve" y="69.16" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none">CPU</text>
     </g>
     <g fill="rgb(153,204,255)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-168,24)" stroke="rgb(153,204,255)">
       <rect x="253.5" width="57" height="22" y="113.5" clip-path="url(#clipPath2)" stroke="none"/>
     </g>
     <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-168,24)" stroke-linecap="butt">
       <rect fill="none" x="253.5" width="57" height="22" y="113.5" clip-path="url(#clipPath2)"/>
-      <text x="269.9549" xml:space="preserve" y="128.16" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none">CPU</text>
+      <text x="269.9759" xml:space="preserve" y="128.16" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none">CPU</text>
     </g>
     <g fill="rgb(153,204,255)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-168,24)" stroke="rgb(153,204,255)">
       <rect x="559.471" width="57" height="22" y="113.5" clip-path="url(#clipPath2)" stroke="none"/>
     </g>
     <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-168,24)" stroke-linecap="butt">
       <rect fill="none" x="559.471" width="57" height="22" y="113.5" clip-path="url(#clipPath2)"/>
-      <text x="575.9259" xml:space="preserve" y="128.16" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none">CPU</text>
-      <text x="185.7726" font-size="16px" y="179.6799" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none" xml:space="preserve">In MPI parallelism all tasks act as a collective and communicate via MPI</text>
+      <text x="575.9469" xml:space="preserve" y="128.16" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none">CPU</text>
+      <text x="186.3886" font-size="16px" y="179.6799" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none" xml:space="preserve">In MPI parallelism all tasks act as a collective and communicate via MPI</text>
       <path fill="none" stroke-dasharray="12,4" d="M370 36 L499.971 36" stroke-width="2" clip-path="url(#clipPath2)"/>
       <text x="424.4211" xml:space="preserve" y="9.1294" clip-path="url(#clipPath2)" font-family="sans-serif" stroke="none">MPI</text>
       <text x="388.5851" xml:space="preserve" y="23.0981" clip-path="url(#clipPath2)" font-family="sans-serif" stroke="none">communication</text>

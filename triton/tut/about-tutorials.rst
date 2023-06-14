@@ -1,16 +1,7 @@
 About these tutorials
 =====================
 
-.. admonition:: Video
-
-   Watch this in our courses: `2021 January <https://www.youtube.com/watch?v=etYG9YhsXKI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=5>`__.
-
-   Or see the `full playlist (2022 winter)
-   <https://www.youtube.com/playlist?list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V>`__
-   (`2021 summer
-   <https://www.youtube.com/playlist?list=PLZLVmS9rf3nPFw29oKUj6w1QdsTCECS1S>`__,
-   `2021 winter
-   <https://www.youtube.com/playlist?list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc>`__.)
+.. include:: /triton/ref/videos.rst
 
 Welcome to the Aalto Scientific Computing High-performance computing
 (HPC) tutorials.  These tutorials will get you started with the Triton

@@ -4,6 +4,8 @@ MPI parallelism: multi-task programs
 
 .. _parallel-mpi:
 
+.. include:: /triton/ref/videos.rst
+
 .. admonition:: Abstract
 
    * Verify that your program can use MPI.
@@ -107,15 +109,13 @@ information on whether you can give each task more than one CPU.
 Running and example MPI program
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. include:: ../ref/examples-repo.rst
+
 For this example, let's consider
 `pi-mpi.c <https://github.com/AaltoSciComp/hpc-examples/blob/master/slurm/pi-mpi.c>`_-example
-from the
-`hpc-examples <https://github.com/AaltoSciComp/hpc-examples>`_-repository.
-It estimates pi using Monte Carlo methods and can utilize multiple MPI tasks for calculating
-the trials.
-
-You can clone the repository with ``git clone https://github.com/AaltoSciComp/hpc-examples.git``.
-The script is in the ``slurm``-folder.
+in the ``slurm``-folder.
+It estimates pi with Monte Carlo methods and
+can utilize multiple MPI tasks for calculating the trials.
 
 First off, we need to compile the program with a suitable OpenMPI version. Let's use the
 recommended version ``openmpi/4.0.5``::
@@ -129,15 +129,16 @@ iterations to be done by the algorithm.
 
 Let's ask for resources and run the program with two processes using ``srun``::
 
- $ srun --nodes=1 --ntasks=2 --time=00:10:00 --mem=1G ./pi-mpi 1000000
+ $ srun --nodes=1 --ntasks=2 --time=00:10:00 --mem=500M ./pi-mpi 1000000
 
-Using a slurm script setting the requirements becomes easier:
+This worked because we had the correct modules already loaded.
+Using a slurm script setting the requirements and loading the correct modules becomes easier:
 
 .. code-block:: slurm
 
    #!/bin/bash
    #SBATCH --time=00:10:00
-   #SBATCH --mem=1G
+   #SBATCH --mem=500M
    #SBATCH --output=pi.out
    #SBATCH --nodes=1
    #SBATCH --ntasks=2
@@ -239,34 +240,70 @@ Exercises
 
    Run ``srun --cpus-per-task=4 hostname``, ``srun --ntasks=4 hostname``, and ``srun --nodes=4
    hostname``.  What's the difference and why?
-   
+
    .. solution::
-   
-      ``--cpus-per-task=4`` does exactly what it says, and gives each tasks 4 cpus. Since we 
-      have not requested any additional tasks, we run ``hostname`` once on a single node, 
+
+      ``--cpus-per-task=4`` does exactly what it says, and gives each tasks 4 cpus. Since we
+      have not requested any additional tasks, we run ``hostname`` once on a single node,
       but using 4 cpus.
-      
+
       By comparison, ``ntasks=4`` creates 4 MPI workers that each run ``hostname`` once.
-      These all run on a single node, and use one cpu each since we didn't request anything 
+      These all run on a single node, and use one cpu each since we didn't request anything
       more.
-      
-      Finally ``srun --nodes=4 hostname`` runs ``hostname`` once each on four separate nodes. 
-      
-      If we were to for example combine all of these, we would run ``hostname`` four times, on 
-      four nodes each for total 16 tasks, with each task using 4 cpus. 
+
+      Finally ``srun --nodes=4 hostname`` runs ``hostname`` once each on four separate nodes.
+
+      If we were to for example combine all of these, we would run ``hostname`` four times, on
+      four nodes each for total 16 tasks, with each task using 4 cpus.
 
 
-.. exercise:: MPI parallelism 2: MPI
+.. exercise:: MPI parallelism 2: Test the example with various options
 
-   Find the files ``hpc-examples/mpi/hello_mpi/hello_mpi.c`` and
-   ``hpc-examples/mpi/hello_mpi/hello_mpi.sh`` that
-   have a short example of MPI.
-   Compile and run it - a Slurm script is included.
+   Compile the example ``pi-mpi.c``. Now try running it with a bigger number of trials
+   (``2000000000`` or :math:`2 \cdot 10^{9}`) and with the following Slurm options:
+
+   1. ``--ntasks=4`` without specifying ``--nodes=1``.
+   2. ``--ntasks-per-node=4``
+   3. ``--nodes=2`` and ``--ntasks-per-node=2``.
+
+   Check the CPU efficiency and running time. Do you see any difference in the output?
+
+   .. solution::
+
+      You can run the commands with:
+
+      .. code-block:: bash
+
+         srun --ntasks=4 --time=00:10:00 --mem=500M ./pi-mpi 2000000000
+         srun --ntasks-per-node=4 --time=00:10:00 --mem=500M ./pi-mpi 2000000000
+         srun --nodes=2 --ntasks-per-node=2 --time=00:10:00 --mem=500M ./pi-mpi 2000000000
+
+      In all cases you should see output from four different tasks and output showing
+      the estimate for pi.
+
+      In the first case, you might be allocated tasks from different nodes.
+
+      In the second case, all tasks should be running in a single node.
+
+      In the third case, two of the tasks should be running on the first node and two on the second one.
+
+.. exercise:: MPI parallelism 3: Your program
+
+   Think of your program. Do you think it can use MPI parallelism?
+
+   If you do not know, you can check the program's documentation for words such as:
+
+   - MPI
+   - message-passing interface
+   - mpirun
+   - mpiexec
+   - ...
+
+   These usually point towards some method of MPI parallel execution.
 
 
 
 What's next?
 ------------
-
 
 The next tutorial is about :doc:`GPU parallelism <gpu>`.

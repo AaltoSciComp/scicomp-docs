@@ -15,39 +15,39 @@
     </g>
     <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-273,-237)" stroke-linecap="butt">
       <rect fill="none" x="305.64" width="200" height="50" y="302" clip-path="url(#clipPath2)"/>
-      <text x="379.6443" font-size="16px" y="331.8799" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none" xml:space="preserve">Startup</text>
+      <text x="379.7323" font-size="16px" y="331.8799" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none" xml:space="preserve">Startup</text>
     </g>
     <g fill="rgb(153,204,255)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-273,-237)" stroke="rgb(153,204,255)">
       <rect x="496" width="125" height="50" y="302" clip-path="url(#clipPath2)" stroke="none"/>
     </g>
     <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-273,-237)" stroke-linecap="butt">
       <rect fill="none" x="496" width="125" height="50" y="302" clip-path="url(#clipPath2)"/>
-      <text x="521.7004" font-size="16px" y="331.8799" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none" xml:space="preserve">Iteration 1</text>
+      <text x="521.8044" font-size="16px" y="331.8799" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none" xml:space="preserve">Iteration 1</text>
     </g>
     <g fill="rgb(153,204,255)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-273,-237)" stroke="rgb(153,204,255)">
       <rect x="614" width="125" height="50" y="302" clip-path="url(#clipPath2)" stroke="none"/>
     </g>
     <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-273,-237)" stroke-linecap="butt">
       <rect fill="none" x="614" width="125" height="50" y="302" clip-path="url(#clipPath2)"/>
-      <text x="639.7004" font-size="16px" y="331.8799" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none" xml:space="preserve">Iteration 2</text>
+      <text x="639.8044" font-size="16px" y="331.8799" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none" xml:space="preserve">Iteration 2</text>
     </g>
     <g fill="rgb(153,204,255)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-273,-237)" stroke="rgb(153,204,255)">
       <rect x="739" width="125" height="50" y="302" clip-path="url(#clipPath2)" stroke="none"/>
     </g>
     <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-273,-237)" stroke-linecap="butt">
       <rect fill="none" x="739" width="125" height="50" y="302" clip-path="url(#clipPath2)"/>
-      <text x="795.8361" font-size="16px" y="331.8799" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none" xml:space="preserve">...</text>
-      <text x="555.6903" font-size="16px" y="381.8799" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none" xml:space="preserve">Each iteration usually takes the same amount of time</text>
-      <text x="994.876" font-size="16px" y="404.8799" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none" xml:space="preserve">t</text>
-      <text x="340.3168" font-size="16px" y="273.88" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none" xml:space="preserve">Startup might take</text>
-      <text x="312.7732" font-size="16px" y="289.8798" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none" xml:space="preserve">a different amount of time</text>
+      <text x="795.8361" font-size="16px" y="331.8799" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none" xml:space="preserve">...</text>
+      <text x="556.0783" font-size="16px" y="381.8799" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none" xml:space="preserve">Each iteration usually takes the same amount of time</text>
+      <text x="994.892" font-size="16px" y="404.8799" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none" xml:space="preserve">t</text>
+      <text x="340.5128" font-size="16px" y="273.88" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none" xml:space="preserve">Startup might take</text>
+      <text x="312.9572" font-size="16px" y="289.8798" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none" xml:space="preserve">a different amount of time</text>
     </g>
     <g fill="rgb(153,204,255)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-273,-237)" stroke="rgb(153,204,255)">
       <rect x="864" width="125" height="50" y="302" clip-path="url(#clipPath2)" stroke="none"/>
     </g>
     <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-273,-237)" stroke-linecap="butt">
       <rect fill="none" x="864" width="125" height="50" y="302" clip-path="url(#clipPath2)"/>
-      <text x="888.2205" font-size="16px" y="331.8799" clip-path="url(#clipPath2)" font-family="'Lato Medium'" stroke="none" xml:space="preserve">Iteration N</text>
+      <text x="888.3365" font-size="16px" y="331.8799" clip-path="url(#clipPath2)" font-family="'Lato'" stroke="none" xml:space="preserve">Iteration N</text>
       <path fill="none" d="M305.64 400 L981 400" clip-path="url(#clipPath2)"/>
       <path d="M989 400 L977 395 L980 400 L977 405 Z" clip-path="url(#clipPath2)" stroke="none"/>
     </g>

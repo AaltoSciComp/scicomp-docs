@@ -1,9 +1,7 @@
 Serial Jobs
 ===========
 
-.. admonition:: Video
-
-   Watch this in our courses: `2022 February <https://www.youtube.com/watch?v=AJgWuKDSOFY&list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V&index=13>`__, `2021 January <https://www.youtube.com/watch?v=I79KLHb-7T0&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=14>`__
+.. include:: /triton/ref/videos.rst
 
 .. admonition:: Abstract
 
@@ -15,13 +13,12 @@ Serial Jobs
 
      .. code:: slurm
 
-	#!/bin/bash -l
-	#SBATCH --time=01:00:00
-	#SBATCH --cpus-per-task=2
-	#SBATCH --mem=4G
+       #!/bin/bash -l
+       #SBATCH --time=01:00:00
+       #SBATCH --mem=4G
 
-	module load anaconda
-	python my_script.py
+       # Run your code here
+       python my_script.py
 
    * See the :doc:`quick reference <../ref/index>` for complete list
      of options.
@@ -76,14 +73,14 @@ Let's take a look at the following script
 
    #!/bin/bash
    #SBATCH --time=00:05:00
-   #SBATCH --mem-per-cpu=100M
+   #SBATCH --mem=100M
    #SBATCH --output=pi.out
 
    echo "Hello $USER! You are on node $HOSTNAME.  The time is $(date)."
 
    # For the next line to work, you need to be in the
    # hpc-examples directory.
-   srun python slurm/pi.py 10000
+   srun python3 slurm/pi.py 10000
 
 Let's name it ``run-pi.sh`` (create a file using your editor of choice,
 e.g. ``nano``; write the script above and save it)
@@ -91,7 +88,7 @@ e.g. ``nano``; write the script above and save it)
 The symbol ``#`` is a **comment** in the **bash script**, and Slurm
 understands ``#SBATCH`` as parameters, determining the resource
 requests. Here, we have requested a time limit of 5 minutes, along
-with 100 MB of RAM per CPU.
+with 100 MB of RAM.
 
 Resource requests are followed by job steps, which are the actual
 tasks to be done. Each ``srun`` within the a slurm script is a job
@@ -183,18 +180,18 @@ Exercises
 
 .. exercise:: Serial-1: Basic batch job
 
-   Submit a batch job that just runs ``hostname`` and ``pi.py``. 
+   Submit a batch job that just runs ``hostname`` and ``pi.py``.
    Remember to give pi.py some number of iterations as an argument.
 
    a. Set time to 1 hour and 15 minutes, memory to 500MB.
    b. Change the job's name and output file.
    c. Check the output.  Does the printed hostname
       match the one given by ``slurm history``/``sacct -u $USER``?
-      
+
    .. solution::
-   
-      Output from ``hostname`` should match the node in slurm history. 
-      Sbatch first assigns you a node depending on your requested resources, 
+
+      Output from ``hostname`` should match the node in slurm history.
+      Sbatch first assigns you a node depending on your requested resources,
       and then runs all commands included in the script.
 
 .. exercise:: Serial-2: Submitting and cancelling a job
@@ -203,18 +200,103 @@ Exercises
    operation for a while), for example ``sleep 300`` (this shell
    command does nothing for 300 seconds). Check the queue to see when
    it starts running.  Then, cancel the job.  What output is produced?
-   
+
    .. solution::
-   
-      You can check when your job starts running with ``slurm q``. Then 
-      you can cancel it with ``scancel JOBID``, where ``JOBID`` can be found 
-      from ``slurm q`` output. After cancelling the job, it should still produce 
-      an output file (named either ``slurm-JOBID.out`` or whatever you defined in the 
+
+      You can check when your job starts running with ``slurm q``. Then
+      you can cancel it with ``scancel JOBID``, where ``JOBID`` can be found
+      from ``slurm q`` output. After cancelling the job, it should still produce
+      an output file (named either ``slurm-JOBID.out`` or whatever you defined in the
+
+      .. code-block:: slurm
+
+	 #!/bin/bash
+
+	 echo "We are waiting"
+	 sleep 300
+	 echo "We are done waiting"
+	 srun python3 slurm/pi.py 1000000
+
+      You can check when your job starts running with ``slurm q``. Then
+      you can cancel it with ``scancel JOBID``, where ``JOBID`` can be found
+      from ``slurm q`` output. After cancelling the job, it should still produce
+      an output file (named either ``slurm-JOBID.out`` or whatever you defined in the
       sbatch file.) The output file also says the job was cancelled.
 
-.. exercise:: Serial-3: Checking output
+.. exercise:: Serial-3: Modifying Slurm script while its running
 
-   Create a slurm script that runs the following program::
+   Modifying scripts while a job has been submitted is a bad practice.
+
+   Add ``sleep 120`` into the Slurm script that runs ``pi.py``. Submit the
+   script and while it is running, open the Slurm script with an editor of your
+   choice and add the following line near the end of the script.
+
+   .. code-block::
+
+      echo 'Modified'
+
+   Use ``slurm q`` to check when the job finishes and check the output. What
+   can you interpret from this?
+
+   Remove the created line after you have finished.
+
+   .. solution::
+
+      In this case we modified a script after we had submitted it. These
+      modifications do not affect the script that is in the queue as that
+      script has already been given to Slurm.
+
+      **The Slurm script is locked in place when you submit a script.
+      Modifications to the script do not affect the script that is being
+      run.**
+
+      You should always make certain that you do not modify the
+      Slurm script being run or you cannot replicate your run.
+
+
+.. exercise:: Serial-4: Modify script while it is running
+
+   Modifying scripts while a job has been submitted is a bad practice.
+
+   Add ``sleep 180`` into the Slurm script that runs ``pi.py``. Submit the
+   script and while it is running, open the ``pi.py`` with an editor of your
+   choice and add the following line near the start of the script.
+
+   .. code-block::
+
+      raise Exception()
+
+   Use ``slurm q`` to check when the job finishes and check the output. What
+   can you interpret from this?
+
+   Remove the created line after you have finished. You can also use
+   ``git checkout -- pi.py`` (remember to give a proper relative path,
+   depending on your current working directory!)
+
+   .. solution::
+
+      In this case we modified the Python code before it had begun executing
+      (we added a line that raised an error while the ``sleep 180`` was being
+      executed).
+
+      **The code that the Slurm script executes will be determined when
+      the script is running. It is not locked in place when you submit a
+      script.**
+
+      You should always make certain that you do not modify the code that the
+      Slurm script will execute while it is queued or while its being run.
+
+      Otherwise you can get errors and you cannot replicate your run.
+
+
+.. exercise:: Serial-5: Checking output
+
+   You can look at the output of files as your program is running.
+   Let's demonstrate.
+
+   Create a slurm script that runs the following program.  This is a
+   shell script which, every 10 seconds (for 30 iterations), prints
+   the date::
 
      for i in $(seq 30); do
        date
@@ -230,20 +312,42 @@ Exercises
       to cancel)
    d. Cancel the job once you're finished.
 
-.. exercise:: Serial-4: Constrain to a certain CPU architecture
+   .. solution::
+
+      .. code-block:: slurm
+
+	 #!/bin/bash
+	 #SBATCH --output test-check-output.out
+
+         for i in $(seq 30); do
+           date
+           sleep 10
+         done
+
+      We note that a new line appears about every 10 seconds.  Note
+      that the delays might happen because of buffering, as the system
+      tries to avoid doing too many small i/o operations::
+
+	 $ tail -f test-check-output.out
+	 Wed  7 Jun 10:49:58 EEST 2023
+	 Wed  7 Jun 10:50:08 EEST 2023
+	 (more every 10 seconds)
+
+
+.. exercise:: Serial-6: Constrain to a certain CPU architecture
 
    Modify the script from exercise #1 to run on only one type of CPU
    using the ``--constraint`` option.  Hint: check :doc:`../ref/index`
-   
+
    .. solution::
-   
-      Simply add ``#SBATCH --constraint=X`` to your sbatch script, or 
-      give ``--constraint=X`` to srun as additional argument. For example, 
-      to run only on Haswell cpu's you can add ``--constraint=hsw``, or 
-      similarily for amd milan cpus ``--constraint=milan``. This also 
+
+      Simply add ``#SBATCH --constraint=X`` to your sbatch script, or
+      give ``--constraint=X`` to srun as additional argument. For example,
+      to run only on Haswell cpu's you can add ``--constraint=hsw``, or
+      similarily for amd milan cpus ``--constraint=milan``. This also
       works identically for gpus.
 
-.. exercise:: Serial-5: Why you use ``sbatch``, not ``bash``.
+.. exercise:: Serial-7: Why you use ``sbatch``, not ``bash``.
 
    (Advanced) What happens if you submit a batch script with ``bash``
    instead of ``sbatch``?  Does it appear to run?  Does it use all the
@@ -257,29 +361,27 @@ Exercises
       ``#SBATCH`` parameters, so might not request the resources you
       need.::
 
-        $ bash run-pi.sh
-        Calculating Pi via 10000 stochastic trials
-        {"successes": 7815, "pi_estimate": 3.126, "iterations": 10000}
+	$ bash run-pi.sh
+	Calculating Pi via 10000 stochastic trials
+	{"successes": 7815, "pi_estimate": 3.126, "iterations": 10000}
 
-
-
-.. exercise:: (advanced) Serial-6: Interpreters other than bash
+.. exercise:: (advanced) Serial-8: Interpreters other than bash
 
    (Advanced) Create a batch script that runs in another language
    using a different ``#!`` line.
    Does it run?  What are some of the advantages and problems here?
-   
+
    .. solution::
-   
-      Using other language to run your sbatch script is entirely possible. 
-      For example if you are more used to writing scripts on zsh compared to bash, 
-      you could use ``#!/bin/zsh``. You could even use something completely 
-      different from a shell. For example using ``#!/usr/bin/env python3`` 
-      would let you write python code directly in the sbatch script. This is 
+
+      Using other language to run your sbatch script is entirely possible.
+      For example if you are more used to writing scripts on zsh compared to bash,
+      you could use ``#!/bin/zsh``. You could even use something completely
+      different from a shell. For example using ``#!/usr/bin/env python3``
+      would let you write python code directly in the sbatch script. This is
       mostly an interesting curiosity however and is not usually practical.
-      
-      
-.. exercise:: (advanced) Serial-7: Job environment variables.
+
+
+.. exercise:: (advanced) Serial-9: Job environment variables.
 
    Either make a ``sbatch`` script that runs the command ``env | sort``, or
    use ``srun env | sort``.  The ``env`` utility prints all
@@ -291,6 +393,8 @@ Exercises
    reflect the job parameters.  You can use these in your jobs if
    needed (for example, a job that will adapt to the number of
    allocated CPUs).
+
+
 
 What's next?
 ------------

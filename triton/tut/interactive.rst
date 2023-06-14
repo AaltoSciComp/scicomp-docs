@@ -2,16 +2,10 @@
 Interactive jobs
 ================
 
-.. admonition:: Video
-
-   Watch this in our courses: `2022 February <https://www.youtube.com/watch?v=nguLuKJ1gm0&list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V&index=12>`__, `2021 January <https://www.youtube.com/watch?v=xhX_u2OA89s&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=11>`__
+.. include:: /triton/ref/videos.rst
 
 .. admonition:: Abstract
 
-   * We use the standard (and dominant) Slurm batch queuing system,
-     all standard commands will work.
-   * See the :doc:`quick reference <../ref/index>` for the reference you
-     need if you know Slurm or batch systems already.
    * Interactive jobs allow you to quickly test code (before scaling
      up) or getting more resources for manual analysis.
    * To run a single command interactively
@@ -23,6 +17,8 @@ Interactive jobs
 
      * ``srun [SLURM OPTIONS] --pty bash`` (general Slurm)
      * ``sinteractive`` (Triton specific)
+
+   * The exact commands often varies among clusters, check your docs.
 
 .. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/cluster-schematic/cluster-schematic-serial.png
    :alt: Schematic of cluster with current discussion points highlighted; see caption or rest of lesson.
@@ -45,7 +41,7 @@ will go through serial jobs.
 Some people say "the cluster is for batch computing", but really it is
 to help you get your work done.  **Interactive jobs let you:**
 
-* Run a single job in the Slurm environment to test parameters and
+* Run a single job in the Slurm job allocation to test parameters and
   make sure it works (which is easier than constantly modifying batch
   scripts).
 
@@ -65,16 +61,16 @@ You can submit this program to Triton using ``srun``. All input/output still goe
 (but note that graphical applications don't work this way - see
 below)::
 
-    $ srun --mem=100M --time=0:10:00 python3 slurm/pi.py
+    $ srun --mem=100M --time=0:10:00 python3 slurm/pi.py 10000
     srun: job 52204499 queued and waiting for resources
 
 Here, we are asking for 100 Megabytes of memory (``--mem=100M``) for a
 duration of ten minutes (``--time=0:10:00``) (See the :doc:`quick
 reference <../ref/index>` or below for more options).
 While your job - with **jobid** 52204499 - is waiting to be allocated resources, your shell
-blocks while it is waiting to continue.
+blocks.
 
-You can open a new shell (ssh again) on triton and run the command
+You can open a new shell (ssh again) on the cluster and run the command
 ``squeue -u $USER`` or ``slurm q`` to see all the jobs
 you currently have waiting in queue::
 
@@ -85,7 +81,7 @@ you currently have waiting in queue::
 You can see information such as the state, which partition the requested node reside in, etc.
 
 Once resources are allocated to your job, you see the name of the machine
-in the Triton cluster your program ran on, output to your terminal::
+in the cluster your program ran on, output to your terminal::
 
   srun: job 52204499 has been allocated resources
   {"pi_estimate": 3.126, "iterations": 10000, "successes": 7815}
@@ -109,7 +105,7 @@ hostname`` (in this case, it runs on ``csl42``)::
    The major disadvantages include:
 
    - It blocks your shell until it finishes
-   - If your connection to Triton gets interrupted, you lose the job
+   - If your connection to the cluster gets interrupted, you lose the job
      and its output.
 
    Keep in mind that you shouldn't open 20 shells to run 20 ``srun`` jobs at once.
@@ -144,11 +140,6 @@ The option ``-p interactive`` requests a node in the interactive
   it will count towards your usage.
   This wastes resources and effectively means your priority will degrade
   in the future.
-
-.. note::
-
-  you can use ``sinfo`` to see information such as the available partitions,
-  number of nodes in each, their time limits, etc.
 
 
 
@@ -235,7 +226,48 @@ Exercises
       give the ``--sleep`` option to the Python process, like this:
       ``python hpc-examples/slurm/memory-use.py 50M --sleep=60`` -
       keep it available.
-      
+
+   .. solution::
+
+      ::
+
+	 $ srun python slurm/memory-use.py --sleep=60 50M
+         srun: job 19200349 queued and waiting for resources
+         srun: job 19200349 has been allocated resources
+         Trying to use 50000000 bytes of memeory
+         Using 6041600 bytes so far (allocated: 2)
+         Using 6148096 bytes so far (allocated: 4)
+         ...
+	 $ srun --mem=500M python slurm/memory-use.py --sleep=60 50M
+	 (seems to also work)
+	 $ srun --mem=500M python slurm/memory-use.py --sleep=60 1000M
+	 (seems to also work, even though 1000 > 500)
+	 $ srun --mem=500M python slurm/memory-use.py --sleep=60 5000M
+	 srun: job 19201174 queued and waiting for resources
+         srun: job 19201174 has been allocated resources
+         slurmstepd: error: Detected 1 oom-kill event(s) in StepId=19201174.0. Some of your processes may have been killed by the cgroup out-of-memory handler.
+         srun: error: csl48: task 0: Out Of Memory
+         srun: launch/slurm: _step_signal: Terminating StepId=19201174.0
+
+
+      The history output::
+
+	$ slurm history
+	19200349      python               06-06 22:43:54     500M       -    00:00.100    00:01:00  none   1 1   0:0 COMP  csl48
+          └─ extern   *                    06-06 22:43:54               1M    00:00.001    00:01:00     1   1 1   0:0 COMP  csl48
+          └─ 0        python               06-06 22:43:54              70M    00:00.098    00:01:00     1   1 1   0:0 COMP  csl48
+        19201044      python               06-06 22:59:56      50M       -    00:00.085    00:00:10  none   1 1   0:0 CANC  csl48
+          └─ extern   *                    06-06 22:59:56               1M    00:00.001    00:00:10     1   1 1   0:0 COMP  csl48
+          └─ 0        python               06-06 22:59:56               1M    00:00.084    00:00:10     1   1 1   1:0 FAIL  csl48
+        19201047      python               06-06 23:00:13     500M       -    00:00.098    00:01:00  none   1 1   0:0 COMP  csl48
+          └─ extern   *                    06-06 23:00:13               1M    00:00.001    00:01:00     1   1 1   0:0 COMP  csl48
+          └─ 0        python               06-06 23:00:13              70M    00:00.097    00:01:00     1   1 1   0:0 COMP  csl48
+        19201119      python               06-06 23:01:38     500M       -    00:00.618    00:01:01  none   1 1   0:0 COMP  csl48
+          └─ extern   *                    06-06 23:01:38               1M    00:00.001    00:01:01     1   1 1   0:0 COMP  csl48
+          └─ 0        python               06-06 23:01:38            1030M    00:00.617    00:01:01     1   1 1   0:0 COMP  csl48
+
+	The last failing job seems to not be in history!  (but the
+	OOM, out of memory, error is in the output).
 
 .. exercise:: Interactive-2: Time scaling
 
@@ -259,21 +291,143 @@ Exercises
    c) Look at the job history using ``slurm history`` - can you see
       how much time each process used?  What's the relation between
       TotalCPUTime and WallTime?
-      
+
    .. solution::
-   
+
+      a)
+
+         ::
+
+            $ time python3 slurm/pi.py 5000
+            Calculating pi via 5000 stochastic trials
+            {"pi_estimate": 3.1384, "iterations": 5000, "successes": 3923}
+
+            real   0m0.095s
+            user   0m0.082s
+            sys    0m0.014s
+            $ time python3 slurm/pi.py 50000
+            Calculating pi via 50000 stochastic trials
+            {"pi_estimate": 3.13464, "iterations": 50000, "successes": 39183}
+
+            real   0m0.154s
+            user   0m0.134s
+            sys    0m0.020s
+            $ time python3 slurm/pi.py 500000
+            Calculating pi via 500000 stochastic trials
+            {"pi_estimate": 3.141776, "iterations": 500000, "successes": 392722}
+
+            real   0m0.792s
+            user   0m0.766s
+            sys    0m0.023s
+            $ time python3 slurm/pi.py 5000000
+            Calculating pi via 5000000 stochastic trials
+            {"pi_estimate": 3.1424752, "iterations": 5000000, "successes": 3928094}
+
+            real   0m6.287s
+            user   0m6.262s
+            sys    0m0.026s
+
+      b)
+
+	 ::
+
+	    $ srun python3 slurm/pi.py 5000000
+            srun: job 19201873 queued and waiting for resources
+            srun: job 19201873 has been allocated resources
+            Calculating pi via 5000000 stochastic trials
+            {"pi_estimate": 3.1424752, "iterations": 5000000, "successes": 3928094}
+            $ srun python3 slurm/pi.py 50000000
+            srun: job 19201880 queued and waiting for resources
+            srun: job 19201880 has been allocated resources
+            Calculating pi via 50000000 stochastic trials
+            {"pi_estimate": 3.14153752, "iterations": 50000000, "successes": 39269219}
+            $ srun python3 slurm/pi.py 500000000
+            srun: job 19201910 queued and waiting for resources
+            srun: job 19201910 has been allocated resources
+	    Calculating pi via 500000000 stochastic trials
+	    {"pi_estimate": 3.14152692, "iterations": 500000000, "successes": 392690865}
+
+	 ::
+
+	    $ seff 19201873
+            Job ID: 19201873
+            Cluster: triton
+            User/Group: darstr1/darstr1
+            State: COMPLETED (exit code 0)
+            Cores: 1
+            CPU Utilized: 00:00:04
+            CPU Efficiency: 100.00% of 00:00:04 core-walltime
+            Job Wall-clock time: 00:00:04
+            Memory Utilized: 1.21 MB
+            Memory Efficiency: 0.24% of 500.00 MB
+            $ seff 19201880
+            ...
+            CPU Utilized: 00:00:44
+            CPU Efficiency: 97.78% of 00:00:45 core-walltime
+            Job Wall-clock time: 00:00:45
+            ...
+            $ seff 19201910
+            ...
+            CPU Utilized: 00:07:51
+            CPU Efficiency: 99.58% of 00:07:53 core-walltime
+            Job Wall-clock time: 00:07:53
+            ...
+
       c) each process should be visible as a separate step indexed from 0. 
          For larger iterations, TotalCpuTime should be similar to WallTime, 
          Since TotalCpuTime shows amount of time Cpus were at full utilization, 
          times the number of Cpus. Note that TotalCPUTime has precision of 
          milliseconds, whereas WallTime has precision of seconds. 
-         
-      
+
+	 ::
+
+	    JobID         JobName              Start            ReqMem  MaxRSS TotalCPUTime    WallTime Tasks CPU Ns Exit State Nodes
+            19201873      python3              06-06 23:18:21     500M       -    00:04.044    00:00:04  none   1 1   0:0 COMP  csl48
+              └─ extern   *                    06-06 23:18:21               0M    00:00.001    00:00:04     1   1 1   0:0 COMP  csl48
+              └─ 0        python3              06-06 23:18:21               1M    00:04.043    00:00:04     1   1 1   0:0 COMP  csl48
+            19201880      python3              06-06 23:18:35     500M       -    00:44.417    00:00:45  none   1 1   0:0 COMP  csl48
+              └─ extern   *                    06-06 23:18:35               1M    00:00.001    00:00:45     1   1 1   0:0 COMP  csl48
+              └─ 0        python3              06-06 23:18:35               1M    00:44.415    00:00:45     1   1 1   0:0 COMP  csl48
+            19201910      python3              06-06 23:19:25     500M       -    07:51.107    00:07:53  none   1 1   0:0 COMP  csl48
+              └─ extern   *                    06-06 23:19:25               1M    00:00.001    00:07:53     1   1 1   0:0 COMP  csl48
+              └─ 0        python3              06-06 23:19:25              10M    07:51.106    00:07:53     1   1 1   0:0 COMP  csl48
+
 
 .. exercise:: Interactive-3: Info commands
 
    Run ``squeue -a`` to see what is running, and then run ``slurm job
-   JOBID`` on some running job - does anything look interesting?
+   JOBID`` (or ``scontrol show job JOBID``) on some running job - does
+   anything look interesting?
+
+   .. solution::
+
+      There's possibly some interesting things here, if you can get it
+      out of all the rest::
+
+         $ slurm job 19203764
+         JobId=19203764 JobName=python3
+         UserId=darstr1(1300204) GroupId=darstr1(1300204) MCS_label=N/A
+         Priority=630255 Nice=0 Account=aalto_users QOS=normal
+         JobState=COMPLETED Reason=None Dependency=(null)
+         Requeue=1 Restarts=0 BatchFlag=0 Reboot=0 ExitCode=0:0
+         RunTime=00:00:06 TimeLimit=00:15:00 TimeMin=N/A
+         SubmitTime=2023-06-07T00:10:23 EligibleTime=2023-06-07T00:10:23
+         AccrueTime=2023-06-07T00:10:23
+         StartTime=2023-06-07T00:10:25 EndTime=2023-06-07T00:10:31 Deadline=N/A
+         SuspendTime=None SecsPreSuspend=0 LastSchedEval=2023-06-07T00:10:25 Scheduler=Main
+         Partition=batch-csl AllocNode:Sid=triton:4896
+         ReqNodeList=(null) ExcNodeList=(null)
+         NodeList=csl48
+         BatchHost=csl48
+         NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+         TRES=cpu=1,mem=500M,energy=2391,node=1,billing=1
+         Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+         MinCPUsNode=1 MinMemoryCPU=500M MinTmpDiskNode=0
+         Features=(null) DelayBoot=00:00:00
+         OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+         Command=python3
+         WorkDir=/home/darstr1/git/hpc-examples
+         Power=
 
 .. exercise:: Interactive-4: Showing node information
 

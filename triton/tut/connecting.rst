@@ -2,22 +2,12 @@
 Connecting to Triton
 ====================
 
-.. admonition:: Video
+.. include:: /triton/ref/videos.rst
 
-   Watch this in our courses: `2022 February
-   <https://www.youtube.com/watch?v=aug_gFV_cYI&list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V&index=7>`__,
-   `2021 June 1/2
-   <https://www.youtube.com/watch?v=v4ICiWDxVHw&list=PLZLVmS9rf3nPFw29oKUj6w1QdsTCECS1S&index=8>`__,
-   `2021 June 2/2
-   <https://www.youtube.com/watch?v=A3LafWWxaj4&list=PLZLVmS9rf3nPFw29oKUj6w1QdsTCECS1S&index=10>`__,
-   `2021 January
-   <https://www.youtube.com/watch?v=i3m9uHDk9nE&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=7>`__
-
-The traditional way of interacting with a cluster is via a terminal,
-and Secure Shell (``ssh``) is the most common way of doing that.  The
-terminal.  To learn more command line basics, see our :doc:`shell
-crash course </scicomp/shell>` (which can be considered a prerequisite
-for this series of tutorials).
+The traditional way of interacting with a cluster is via the **command
+line** in a **shell** in a **terminal**, and Secure Shell (``ssh``) is
+the most common way of doing that.  To learn more command line basics,
+see our :doc:`shell crash course </scicomp/shell>`.
 
 .. admonition:: Abstract
 
@@ -34,7 +24,7 @@ for this series of tutorials).
 
    Are you here for a SciComp KickStart course?  You just need to
    :doc:`make sure you have an account <../accounts>` and then be able
-   to get a terminal (as seen in the picture below) by any of the
+   to get to a terminal (as seen in the picture below) by any of the
    means here, and you don't need to worry about anything else.
    Everything else, we do tomorrow.
 
@@ -63,19 +53,19 @@ activated first <../accounts>`.
 The terminal
 ------------
 
-This is what you want: the command line terminal. Later, in
-:doc:`cluster-shell`, will explain more about what you see.
+This is what you want by the end of this page: the command line
+terminal.  Take the first option that works, or the one that's
+comfortable to you.  However, it's good to get ``ssh`` working
+someday, since it is very useful.  Later, in :doc:`cluster-shell`,
+will explain more about how to actually use it.
 
 .. figure:: img/connecting--terminal.png
    :alt: Image of terminal with two commands ran: ``whoami`` and ``hostname``
 
-   Image of a terminal - this is what you want after this episode.
+   Image of a terminal - this is what you want after this page.
    You'll see more about this means in :doc:`cluster-shell`.  Don't
-   worry about what the commands mean.
-
-Below, you see different ways to get this.  Take the first one that
-works, or the one that's comfortable to you.  It's good to get ``ssh``
-to work someday.
+   worry about what the commands mean, but you can probably figure
+   out.
 
 
 
@@ -85,7 +75,7 @@ Connecting via ssh
 ``ssh`` is one of the most fundamental programs of remote connections: by using it well, you
 can really control almost anything from from anywhere.  It is not only
 used for connecting to the cluster, but also for data transfer.  It's
-worth making yourself comfortable with this.
+worth making yourself comfortable with its use.
 
 .. tabs::
 
@@ -317,7 +307,7 @@ rest of the course.
 
 .. exercise:: Connecting-3: (optional, Aalto only) Check your default shell
 
-   Check what your default shell is: ``echo $SHELL``.  If it doesn't
+   Check what your default shell is: run ``echo $SHELL``.  If it doesn't
    say ``/bin/bash``, go ahead and change your shell to bash if it's
    not yet (see the expandable box above).
 

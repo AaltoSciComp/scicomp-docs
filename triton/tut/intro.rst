@@ -1,11 +1,7 @@
 About clusters and your work
 ============================
 
-.. admonition:: Video
-
-   Watch this in our courses: `2022 February
-   <https://www.youtube.com/watch?v=XAbE3OyfYNE&list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V&index=9>`__,
-   `2021 January <https://www.youtube.com/watch?v=OYgSBI-5bUo&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=6>`__
+.. include:: /triton/ref/videos.rst
 
 *This is the first tutorial.  The next is* :doc:`connecting`.
 
