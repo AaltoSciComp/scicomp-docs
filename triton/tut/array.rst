@@ -240,11 +240,12 @@ arguments from a csv file, etc.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 What if you wanted an array job that scanned a 2D array of points?
-Well, you can map 1D to 2D via: ``x = TASK_ID // N`` (floor division)
-and ``y = TASK_ID % N`` (modulo operation).  Then map these numbers
-how you need into your grid.  This *can* be done in bash, but maybe at
-this point you'd want to start passing the ``SLURM_ARRAY_TASK_ID``
-variable into your code itself for this processing.
+Well, you can map 1D to 2D via the following pseudo-code: ``x =
+TASK_ID // N`` (floor division) and ``y = TASK_ID % N`` (modulo
+operation).  Then map these numbers into your grid.  This *can* be
+done in bash, but at this point you'd want to start thinking about
+passing the ``SLURM_ARRAY_TASK_ID`` variable into your code itself for
+this processing.
 
 (Advanced) Grouping runs together in bigger chunks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
