@@ -39,6 +39,27 @@ Contacting researchers
    best.
 
 
+Project status (waiting)
+------------------------
+
+.. collapse:: In the queue
+
+   We (Aalto RSE) still have an open issue in our queue about your
+   project DESCRIPTION.
+
+   It's still in our queue, and hopefully someone can get to it in
+   WHEN.  I'm wondering about status from your side - Is this still
+   important to you?  Have you figured out something else already, so
+   that it's not needed?  Anything we should know about our scheduling
+   and planning?  Should we increase/reduce the priority?  Would some
+   smaller amount of help let you get going?
+
+   For short term stuff and consultations about the project, you can
+   always try dropping by our garage, even before we actively start
+   working: https://scicomp.aalto.fi/help/garage/
+
+
+
 Follow-ups
 ----------
 
