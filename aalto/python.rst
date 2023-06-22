@@ -2,11 +2,19 @@
 Python on Aalto Linux
 =====================
 
-The scientific python ecosystem is also available on Aalto Linux workstations,
+The scientific python ecosystem is also available on Aalto Linux
+workstations (desktops),
 including the anaconda (Python 3) and anaconda2 (Python 2) modules providing
 the Anaconda python distribution. For a more indepth description see the
 generic `python page under scientific computing docs </scicomp/python>`.
 
+On Aalto Linux Laptops, these instructions don't work.  Instead, we'd
+recommend installing Anaconda or Miniconda yourself and then you can
+manage packages via environments.  You can also install Python
+packages through the package manager, but that can have problems with
+installing your own libraries if not managed carefully.
+
+.. highlight:: console
 
 
 Anaconda on Aalto Linux
@@ -14,9 +22,7 @@ Anaconda on Aalto Linux
 
 You can mostly use Python like normal - see :doc:`/scicomp/python`.
 
-To create your own anaconda environments, first load the Anaconda module:
-
-.. code-block:: console
+To create your own anaconda environments, first load the Anaconda module::
 
    $ module load anaconda
 
@@ -26,9 +32,7 @@ then you get the ``conda`` command.  If you get an error such as::
   path: /m/work/modules/automatic/anaconda/envs/aalto-ubuntu1804-generic/software/anaconda/2020-04-tf2/1b2b24f2/pkgs/cache/18414ddb.json
 
 Try the following to solve it (this prevents conda from trying to
-store its downloaded files in the shared directory):
-
-.. code-block:: console
+store its downloaded files in the shared directory)::
 
    $ conda config --prepend pkgs_dirs ~/.conda/pkgs
 
