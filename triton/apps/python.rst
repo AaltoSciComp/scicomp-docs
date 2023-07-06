@@ -12,6 +12,8 @@ Python is widely used programming language where we have installed all
 basic packages on every node. Yet, python develops quite fast and the
 system provided packages are ofter not complete or getting old.
 
+.. highlight:: console
+
 Python distributions
 --------------------
 
@@ -88,7 +90,7 @@ Install your own packages easily
 
    If you encounter problems, remove all your user packages::
 
-      rm -r ~/.local/lib/python*.*/
+      $ rm -r ~/.local/lib/python*.*/
 
    and reinstall everything *after* loading the environment you want.
 
@@ -97,7 +99,7 @@ tries to install globally for all users. Instead, you should do this
 (add ``--user``) to install the package in your home directory
 (``~/.local/lib/pythonN.N/``)::
 
-  pip install --user $package_name
+  $ pip install --user $package_name
 
 This is quick and effective best used for leaf packages without many
 dependencies and if you don't switch Python modules often.
@@ -132,8 +134,8 @@ versions):
 
 ::
 
-    module load anaconda     # python3
-    module load anaconda2    # python2
+    $ module load anaconda     # python3
+    $ module load anaconda2    # python2
 
 .. note::
 
@@ -166,50 +168,52 @@ create your own environments.
 By default conda tries to install packages into your home folder, which can
 result in running out of quota. To fix this, you should run the following commands once::
 
-  module load miniconda
+  $ module load miniconda
 
-  mkdir $WRKDIR/.conda_pkgs
-  mkdir $WRKDIR/.conda_envs
+  $ mkdir $WRKDIR/.conda_pkgs
+  $ mkdir $WRKDIR/.conda_envs
 
-  conda config --append pkgs_dirs ~/.conda/pkgs
-  conda config --append envs_dirs ~/.conda/envs
-  conda config --prepend pkgs_dirs $WRKDIR/.conda_pkgs
-  conda config --prepend envs_dirs $WRKDIR/.conda_envs
+  $ conda config --append pkgs_dirs ~/.conda/pkgs
+  $ conda config --append envs_dirs ~/.conda/envs
+  $ conda config --prepend pkgs_dirs $WRKDIR/.conda_pkgs
+  $ conda config --prepend envs_dirs $WRKDIR/.conda_envs
 
 **virtualenv** does not work with Anaconda, use ``conda`` instead.
 
 -  Load the miniconda module. You should look up the version and use
    load same version each time you source the environment::
 
-       # Load miniconda first.  This must always be done before activating the env!
-       module load miniconda
+       ## Load miniconda first.  This must always be done before activating the env!
+       $ module load miniconda
 
 -  Create an environment. This needs to be done once::
 
-       # create environment with the packages you require
-       conda create -n ENV_NAME python pip ipython tensorflow-gpu pandas ...
+       ## create environment with the packages you require
+       $ conda create -n ENV_NAME python pip ipython tensorflow-gpu pandas ...
 
 -  Activate the environment. This needs to be done every time you load
    the environment::
 
-       # This must be run in each shell to set up the environment variables properly.
-       # make sure module is loaded first.
-       source activate ENV_NAME
+       ## This must be run in each shell to set up the environment variables properly.
+       ## make sure module is loaded first.
+       $ source activate ENV_NAME
 
 -  Activating and using the environment, installing more packages,
    etc. can be done either using ``conda install`` or ``pip install``::
 
-       # Install more packages, either conda or pip
-       conda search PACKAGE_NAME
-       conda install PACKAGE_NAME
-       pip install PACKAGE_NAME
+       ## Install more packages, either conda or pip
+       $ conda search PACKAGE_NAME
+       $ conda install PACKAGE_NAME
+       $ pip install PACKAGE_NAME
 
 -  Leaving the environment when done (optional)::
 
-       # Deactivate the environment
-       source deactivate
+       ## Deactivate the environment
+       $ source deactivate
 
--  To activate an environment from a Slurm script::
+-  To activate an environment from a Slurm script:
+
+   .. code-block:: slurm
 
       #!/bin/bash
       #SBATCH --time=00:05:00
@@ -217,18 +221,18 @@ result in running out of quota. To fix this, you should run the following comman
       #SBATCH --mem=1G
 
       source activate ENV_NAME
-      
+
       srun echo "This step is ran inside the activated conda environment!"
 
       source deactivate
-      
+
 -  Worst case, you have incompatibility problems. Remove everything,
    including the stuff installed with ``pip install --user``. If you've
    mixed your personal stuff in with this, then you will have to
    separate it out.::
 
-       # Remove anything installed with pip install --user.
-       rm -r ~/.local/lib/python*.*/
+       ## Remove anything installed with pip install --user.
+       $ rm -r ~/.local/lib/python*.*/
 
 A few notes about conda environments:
 
@@ -257,20 +261,20 @@ works on other systems easily so it's good to know about.
 
 ::
 
-    # Load module python
-    module load py-virtualenv
+    ## Load module python
+    $ module load py-virtualenv
 
-    # Create environment
-    virtualenv DIR
+    ## Create environment
+    $ virtualenv DIR
 
-    # activate it (in each shell that uses it)
-    source DIR/bin/activate
+    ## activate it (in each shell that uses it)
+    $ source DIR/bin/activate
 
-    # install more things (e.g. ipython, etc.)
-    pip install PACKAGE_NAME
+    ## install more things (e.g. ipython, etc.)
+    $ pip install PACKAGE_NAME
 
-    # deactivate the virtualenv
-    deactivate
+    ## deactivate the virtualenv
+    $ deactivate
 
 .. _python-ipyparallel:
 
@@ -300,7 +304,9 @@ Let's say that you are doing some basic interactive work:
   interactively.  You don't need to interact with this once it is
   running, but remember to stop the process once it is done because it
   is using resources.  You can start/stop this as needed.
-* Start your Python process and use things like normal::
+* Start your Python process and use things like normal:
+
+  .. code-block:: python
 
     import os
     import ipyparallel
