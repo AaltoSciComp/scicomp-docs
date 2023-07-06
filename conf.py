@@ -98,6 +98,8 @@ project = u'Aalto Scientific Computing'
 copyright = u'2023, Aalto Science-IT and contributors'
 author = u'Aalto Science-IT'
 
+copybutton_exclude = '.linenos, .gp'
+
 # Substitutions
 substitute_path = ['_substitutions/']
 
