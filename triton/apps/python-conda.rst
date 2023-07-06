@@ -18,23 +18,23 @@ First time setup
 
 You can get conda by loading the ``miniconda``-module:
 
-.. code-block:: bash
+.. code-block:: console
 
-  module load miniconda
+  $ module load miniconda
 
 By default Conda stores installed packages and environments in your home
 directory. However, as your home directory has a lower quota, it is a good idea
 to tell conda to install packages and environments into your work directory:
 
-.. code-block:: bash
+.. code-block:: console
 
-  mkdir $WRKDIR/.conda_pkgs
-  mkdir $WRKDIR/.conda_envs
+  $ mkdir $WRKDIR/.conda_pkgs
+  $ mkdir $WRKDIR/.conda_envs
 
-  conda config --append pkgs_dirs ~/.conda/pkgs
-  conda config --append envs_dirs ~/.conda/envs
-  conda config --prepend pkgs_dirs $WRKDIR/.conda_pkgs
-  conda config --prepend envs_dirs $WRKDIR/.conda_envs
+  $ conda config --append pkgs_dirs ~/.conda/pkgs
+  $ conda config --append envs_dirs ~/.conda/envs
+  $ conda config --prepend pkgs_dirs $WRKDIR/.conda_pkgs
+  $ conda config --prepend envs_dirs $WRKDIR/.conda_envs
 
 Now you're all set up to create your first environment.
 
@@ -48,19 +48,20 @@ is to write an ``environment.yml``-file that describes the environment.
 Below we have a simple :download:`environment.yml </triton/examples/conda/environment.yml>`:
 
 .. literalinclude:: /triton/examples/conda/environment.yml
+   :language: yaml
 
 Now we can use the ``conda``-command to create the environment:
 
-.. code-block:: bash
+.. code-block:: console
 
-  module load miniconda
-  conda env create --file environment.yml
+  $ module load miniconda
+  $ conda env create --file environment.yml
 
 Once the environment is installed, you can activate it with:
 
-.. code-block:: bash
+.. code-block:: console
 
-  source activate conda-example
+  $ source activate conda-example
 
 .. include:: /triton/ref/condaactivate.rst
 
@@ -102,6 +103,7 @@ Some of the most popular channels are:
 One can have multiple channels defined like in the following example:
 
 .. literalinclude:: /triton/examples/pytorch/pytorch-env.yml
+   :language: yaml
 
 
 Setting package dependencies
@@ -117,15 +119,16 @@ would install a numpy with version higher or equal
 than 1.10 using conda and scipy via pip:
 
 .. literalinclude:: /triton/examples/conda/dependency-env.yml
+   :language: yaml
 
 Listing packages in an environment
 ----------------------------------
 
 To list packages installed in an environment, one can use:
 
-.. code-block:: bash
+.. code-block:: console
 
-  conda list
+  $ conda list
 
 
 Removing an environment
@@ -133,9 +136,9 @@ Removing an environment
 
 To remove an environment, one can use:
 
-.. code-block:: bash
+.. code-block:: console
 
-  conda env remove --name environment_name
+  $ conda env remove --name environment_name
 
 Do remember to deactivate the environment before trying to remove it.
 
@@ -160,9 +163,9 @@ Installing new packages into an existing environment can be done with
 ``conda install``-command. The following command would install ``matplotlib``
 from ``conda-forge`` into an environment.
 
-.. code-block:: bash
+.. code-block:: console
 
-  conda install --freeze-installed --channel conda-forge matplotlib
+  $ conda install --freeze-installed --channel conda-forge matplotlib
 
 Installing packages into an existing environment can be risky: conda uses
 channels given from the command line when it determines which channels it
@@ -193,15 +196,15 @@ it easier to install any missing packages.
 For example, one could add ``conda-forge`` into the list of default channels
 with:
 
-.. code-block:: bash
+.. code-block:: console
 
-  conda config --env --add channels conda-forge
+  $ conda config --env --add channels conda-forge
 
 We can check the contents of the configuration file with:
 
-.. code-block:: bash
+.. code-block:: console
 
-  cat $CONDA_PREFIX/.condarc
+  $ cat $CONDA_PREFIX/.condarc
 
 
 Doing everything faster with mamba
@@ -218,9 +221,9 @@ to using ``mamba`` and it should work in the same way, but faster.
 
 For example, one could create an environment with:
 
-.. code-block:: bash
+.. code-block:: console
 
-  mamba env create --file environment.yml
+  $ mamba env create --file environment.yml
 
 
 Motivation for using conda
@@ -288,6 +291,7 @@ In other cases one can use an environment file like this
 :download:`cuda-env.yml </triton/examples/cuda/cuda-env.yml>`:
 
 .. literalinclude:: /triton/examples/cuda/cuda-env.yml
+   :language: yaml
 
 .. _cuda_hint:
 
@@ -323,6 +327,7 @@ One can install this library as the default BLAS by specifying
 :download:`mkl-env.yml </triton/examples/conda/mkl-env.yml>`:
 
 .. literalinclude:: /triton/examples/conda/mkl-env.yml
+   :language: yaml
 
 Advanced usage
 **************
@@ -337,9 +342,9 @@ of a single package.
 
 One can search for a package from a channel with the following command:
 
-.. code-block:: bash
+.. code-block:: console
 
-  mamba search --channel conda-forge tensorflow
+  $ mamba search --channel conda-forge tensorflow
 
 This will return a long list of packages where each line looks something like
 this::
@@ -364,9 +369,9 @@ One can check package dependencies by adding the ``--info``-flag to the
 search command. This can give a lot of output, so it is a good idea to
 limit the search to one specific package:
 
-.. code-block:: bash
+.. code-block:: console
 
-  mamba search --info --channel conda-forge tensorflow=2.8.1=cuda112py39h01bd6f0_0
+  $ mamba search --info --channel conda-forge tensorflow=2.8.1=cuda112py39h01bd6f0_0
 
 The output looks something like this::
 
@@ -398,9 +403,9 @@ Here we can see more info on the package, including its dependencies.
 When using mamba, one can also use ``mamba repoquery depends`` to
 see the dependencies:
 
-.. code-block:: bash
+.. code-block:: console
 
-  mamba repoquery depends --channel conda-forge tensorflow=2.8.1=cuda112py39h01bd6f0_0
+  $ mamba repoquery depends --channel conda-forge tensorflow=2.8.1=cuda112py39h01bd6f0_0
 
 Output looks something like this::
 
@@ -416,9 +421,9 @@ Output looks something like this::
 One can also print the full dependency list with
 ``mamba repoquery depends --tree``. This will produce a really long output.
 
-.. code-block:: bash
+.. code-block:: console
 
-  mamba repoquery depends --channel conda-forge tensorflow=2.8.1=cuda112py39h01bd6f0_0
+  $ mamba repoquery depends --channel conda-forge tensorflow=2.8.1=cuda112py39h01bd6f0_0
 
 Fixing conflicts between packages
 ---------------------------------
