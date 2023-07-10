@@ -10,12 +10,12 @@ There are two variants of Whisper available. The "standard" Whisper uses
 whisper-ctranslate2, which is a CLI for faster-whisper, a reimplementation 
 of OpenAI's Whisper using Ctranslate2. Original repository for this 
 project can be found 
-`here <https://github.com/Softcatala/whisper-ctranslate2>`_.
+`here <https://github.com/Softcatala/whisper-ctranslate2>`__.
 
 The second variant is whisper-diarization, which is a fork of faster-whisper 
 with support for speaker detection (diarization). 
 Original repository for this project can be found 
-`here <https://github.com/MahmoudAshraf97/whisper-diarization>`_.
+`here <https://github.com/MahmoudAshraf97/whisper-diarization>`__.
 
 Of these two, whisper-diarization runs noticable slower and has less versatile 
 options. Using base Whisper is recommended if speaker detection is not necessary.
