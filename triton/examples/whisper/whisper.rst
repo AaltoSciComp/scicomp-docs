@@ -1,6 +1,8 @@
 Whisper
 ======
 
+.. highlight:: console
+
 This uses :doc:`Singularity containers </triton/usage/singularity>`,
 so you should refer to that page first for general information.
 
