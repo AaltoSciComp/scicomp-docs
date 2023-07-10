@@ -53,7 +53,7 @@ multiple ``Host`` sections for different types of requirements).
 Possible issues which may affect usage:
 
 * If the ssh connection dies, the background job will be terminated.
-  You will lose your state and not be able to save.q
+  You will lose your state and not be able to save.
 
 * If the job dies due to time or memory exceeded, the same as above
   will happen: your job will die and there is no time to save.
