@@ -1,5 +1,5 @@
 Whisper
-======
+==========
 
 .. highlight:: console
 
@@ -21,7 +21,7 @@ Of these two, whisper-diarization runs noticable slower and has less versatile
 options. Using base Whisper is recommended if speaker detection is not necessary.
 
 Usage (Whisper)
-~~~~~
+-------------------
 
 This example shows you a sample script to run Whisper.::
 
@@ -47,7 +47,7 @@ For full list of options, run: ::
    singularity_wrapper run --help
 
 Running on GPU
-----
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Singularity-wrapper takes care of making GPUs available for the container, 
 so all you need to do to run Whisper on a GPU is use the previous 
@@ -55,7 +55,7 @@ command and add additional flag: ``--device cuda``.
 Without this, Whisper will only run on a CPU even if a GPU is availabe.
 
 Usage (Whisper-diarization)
-~~~~~
+------------------------------------
 
 This example shows you a sample script to run whisper-diarization.::
 
@@ -77,7 +77,7 @@ For full list of options, run: ::
    singularity_wrapper run --help
 
 Running on GPU
-----
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Compared to plain Whisper, running whisper-diarization on GPU takes little 
 more work. Singularity-wrapper still takes care of making GPUs available 
@@ -116,7 +116,7 @@ elsewhere.
 
 
 Converting audio files
-~~~~~
+-------------------------------
 
 Whisper should automatically convert your audio file to a correct 
 format when you run it. In the case this does not work, you 
