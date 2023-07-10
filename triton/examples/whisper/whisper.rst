@@ -120,12 +120,10 @@ Converting audio files
 
 Whisper should automatically convert your audio file to a correct 
 format when you run it. In the case this does not work, you 
-can convert it on Triton using ``ffmpeg`` with following commands:
-
-.. code-block:: bash
+can convert it on Triton using ``ffmpeg`` with following commands::
     
-    module load ffmpeg
-    ffmpeg -i input_file.audio output.wav
+    $ module load ffmpeg
+    $ ffmpeg -i input_file.audio output.wav
 
 If you want to extract audio from a video, you can instead do: 
 
