@@ -102,25 +102,22 @@ To do this, run following commands:
 
 .. code-block:: bash
     
-    mkdir -p ~/.cache/huggingface/
-    mkdir -p ~/.cache/torch/
-    rm -rf ~/.cache/huggingface/hub
-    rm -rf ~/.cache/torch/NeMo
-    mkdir -p $WRKDIR/whisper_cache/hub
-    mkdir $WRKDIR/whisper_cache/NeMo
-    ln -s $WRKDIR/whisper_cache/hub ~/.cache/huggingface/hub
-    ln -s $WRKDIR/whisper_cache/NeMo ~/.cache/torch/NeMo
+    mkdir -p {~/.cache/huggingface/,~/.cache/torch/NeMo,temp_cache/huggingface/,temp_cache/NeMo/,$WRKDIR/whisper_cache/huggingface,$WRKDIR/whisper_cache/NeMo}
+    mv ~/.cache/huggingface/* temp_cache/huggingface/
+    mv ~/.cache/torch/NeMo/* temp_cache/NeMo/
+    rmdir {~/.cache/huggingface/,~/.cache/torch/NeMo}
+    ln -s $WRKDIR/whisper_cache/huggingface ~/.cache/
+    ln -s $WRKDIR/whisper_cache/NeMo ~/.cache/torch/
+    mv temp_cache/huggingface/* ~/.cache/huggingface/ 
+    mv temp_cache/NeMo/* ~/.cache/torch/NeMo
+    rmdir {temp_cache/huggingface,temp_cache/NeMo,temp_cache}
     
 
-This bunch of commands first creates cache folders if they don't exist, 
-then removes any existing ones and replaces them with symlinks to your 
-work directory. This way all downloaded files exist on your work 
-instead of home. 
-
-Note that if you have downloaded other models from 
-huggingface they might get deleted as well. In this case you might 
-want to check ``.cache/huggingface/hub`` and move any relevant files 
-elsewhere.
+This bunch of commands first creates cache folders if they don't exist 
+and moves any existing files to temp directory, Next it creates symlinks 
+to your work directory in place of original cache directories, and moves 
+all previous files back. This way all downloaded files exist on your work 
+instead of eating your home quota. 
 
 
 Converting audio files
