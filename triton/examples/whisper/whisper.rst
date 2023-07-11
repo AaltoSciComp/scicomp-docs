@@ -23,7 +23,9 @@ options. Using base Whisper is recommended if speaker detection is not necessary
 Usage (Whisper)
 -------------------
 
-This example shows you a sample script to run Whisper.::
+This example shows you a sample script to run Whisper.
+
+.. code-block:: bash
 
     module load whisper
     srun --mem=4G singularity_wrapper run your_audio_file.wav --model_directory $medium_en --local_files_only True --language en
@@ -42,7 +44,9 @@ from English, use a general model e.g. ``$medium``. If your source
 audio is in English, using English-specific models is usually a 
 performance gain.
 
-For full list of options, run: ::
+For full list of options, run:
+
+.. code-block:: bash
 
    singularity_wrapper run --help
 
@@ -57,7 +61,9 @@ Without this, Whisper will only run on a CPU even if a GPU is availabe.
 Usage (Whisper-diarization)
 ------------------------------------
 
-This example shows you a sample script to run whisper-diarization.::
+This example shows you a sample script to run whisper-diarization.
+
+.. code-block:: bash
 
     module load whisper_diarization
     srun --mem=6G singularity_wrapper run -a your_audio_file.wav --whisper-model $medium_en
@@ -72,7 +78,9 @@ Note that syntax is unfortunately somewhat different compared to plain whisper. 
 need to specify the audio file to use with the argument ``-a audio_file.wav`` and 
 similarily the syntax to specificy the model is different.
 
-For full list of options, run: ::
+For full list of options, run:
+
+.. code-block:: bash
 
    singularity_wrapper run --help
 
@@ -120,10 +128,12 @@ Converting audio files
 
 Whisper should automatically convert your audio file to a correct 
 format when you run it. In the case this does not work, you 
-can convert it on Triton using ``ffmpeg`` with following commands::
+can convert it on Triton using ``ffmpeg`` with following commands:
+
+.. code-block:: bash
     
-    $ module load ffmpeg
-    $ ffmpeg -i input_file.audio output.wav
+    module load ffmpeg
+    ffmpeg -i input_file.audio output.wav
 
 If you want to extract audio from a video, you can instead do: 
 
