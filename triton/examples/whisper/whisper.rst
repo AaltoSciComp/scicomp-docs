@@ -38,7 +38,7 @@ are defined when the module is loaded.)
 You can also give it 
 a path to your own model if you have one. The other imporant option here is 
 ``--local_file_only True``. This stops Whisper from checking 
-if there are newer versions of the model online. The option ``--language <lang>`` 
+if there are newer versions of the model online. The option ``--language LANG`` 
 is not necessary, but whisper's language detection is sometimes weird. 
 
 If you are transcribing language different 
