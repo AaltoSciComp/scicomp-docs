@@ -48,9 +48,9 @@ performance gain.
 
 For full list of options, run:
 
-.. code-block:: bash
+.. code-block:: console
 
-   singularity_wrapper run --help
+   $ singularity_wrapper run --help
 
 Running on GPU
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -82,9 +82,9 @@ similarily the syntax to specificy the model is different.
 
 For full list of options, run:
 
-.. code-block:: bash
+.. code-block:: console
 
-   singularity_wrapper run --help
+   $ singularity_wrapper run --help
 
 Running on GPU
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -102,17 +102,17 @@ directory's quota.
 
 To do this, run following commands:
 
-.. code-block:: bash
+.. code-block:: console
     
-    mkdir -p {~/.cache/huggingface/,~/.cache/torch/NeMo,temp_cache/huggingface/,temp_cache/NeMo/,$WRKDIR/whisper_cache/huggingface,$WRKDIR/whisper_cache/NeMo}
-    mv ~/.cache/huggingface/* temp_cache/huggingface/
-    mv ~/.cache/torch/NeMo/* temp_cache/NeMo/
-    rmdir {~/.cache/huggingface/,~/.cache/torch/NeMo}
-    ln -s $WRKDIR/whisper_cache/huggingface ~/.cache/
-    ln -s $WRKDIR/whisper_cache/NeMo ~/.cache/torch/
-    mv temp_cache/huggingface/* ~/.cache/huggingface/ 
-    mv temp_cache/NeMo/* ~/.cache/torch/NeMo
-    rmdir {temp_cache/huggingface,temp_cache/NeMo,temp_cache}
+    $ mkdir -p ~/.cache/huggingface/ ~/.cache/torch/NeMo temp_cache/huggingface/ temp_cache/NeMo/ $WRKDIR/whisper_cache/huggingface $WRKDIR/whisper_cache/NeMo
+    $ mv ~/.cache/huggingface/* temp_cache/huggingface/
+    $ mv ~/.cache/torch/NeMo/* temp_cache/NeMo/
+    $ rmdir ~/.cache/huggingface/ ~/.cache/torch/NeMo
+    $ ln -s $WRKDIR/whisper_cache/huggingface ~/.cache/
+    $ ln -s $WRKDIR/whisper_cache/NeMo ~/.cache/torch/
+    $ mv temp_cache/huggingface/* ~/.cache/huggingface/
+    $ mv temp_cache/NeMo/* ~/.cache/torch/NeMo
+    $ rmdir temp_cache/huggingface temp_cache/NeMo temp_cache
     
 
 This bunch of commands first creates cache folders if they don't exist 
@@ -129,15 +129,15 @@ Whisper should automatically convert your audio file to a correct
 format when you run it. In the case this does not work, you 
 can convert it on Triton using ``ffmpeg`` with following commands:
 
-.. code-block:: bash
+.. code-block:: console
     
-    module load ffmpeg
-    ffmpeg -i input_file.audio output.wav
+    $ module load ffmpeg
+    $ ffmpeg -i input_file.audio output.wav
 
 If you want to extract audio from a video, you can instead do: 
 
-.. code-block:: bash
+.. code-block:: console
     
-    module load ffmpeg
-    ffmpeg -i input_file.video -map 0:a output.wav
+    $ module load ffmpeg
+    $ ffmpeg -i input_file.video -map 0:a output.wav
 
