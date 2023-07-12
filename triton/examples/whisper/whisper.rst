@@ -33,7 +33,9 @@ This example shows you a sample script to run Whisper.
 Option ``--model_directory $medium_en`` Tells whisper to use a local model, in 
 this case the model ``medium.en`` with the path to the model given through 
 the environment variable ``$medium_en``. For list of all local models, you can 
-run ``echo $model_names`` as long as the module is loaded. You can also give it 
+run ``echo $model_names`` as long as the module is loaded. (These models are pre-downloaded by us and the variables
+are defined when the module is loaded.)
+You can also give it 
 a path to your own model if you have one. The other imporant option here is 
 ``--local_file_only True``. This stops Whisper from checking 
 if there are newer versions of the model online. The option ``--language <lang>`` 
