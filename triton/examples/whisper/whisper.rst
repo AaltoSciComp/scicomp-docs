@@ -25,10 +25,10 @@ Usage (Whisper)
 
 This example shows you a sample script to run Whisper.
 
-.. code-block:: bash
+.. code-block:: console
 
-    module load whisper
-    srun --mem=4G singularity_wrapper run your_audio_file.wav --model_directory $medium_en --local_files_only True --language en
+    $ module load whisper
+    $ srun --mem=4G singularity_wrapper run your_audio_file.wav --model_directory $medium_en --local_files_only True --language en
 
 Option ``--model_directory $medium_en`` Tells whisper to use a local model, in 
 this case the model ``medium.en`` with the path to the model given through 
@@ -65,10 +65,10 @@ Usage (Whisper-diarization)
 
 This example shows you a sample script to run whisper-diarization.
 
-.. code-block:: bash
+.. code-block:: console
 
-    module load whisper_diarization
-    srun --mem=6G singularity_wrapper run -a your_audio_file.wav --whisper-model $medium_en
+    $ module load whisper_diarization
+    $ srun --mem=6G singularity_wrapper run -a your_audio_file.wav --whisper-model $medium_en
 
 Option ``--whisper-model $medium_en`` Tells whisper which model to use, in this case 
 ``medium.en``. If you use environment variables that come with the module to specify the 
