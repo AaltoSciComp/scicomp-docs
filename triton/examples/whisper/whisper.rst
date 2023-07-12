@@ -58,7 +58,7 @@ Running on GPU
 Singularity-wrapper takes care of making GPUs available for the container, 
 so all you need to do to run Whisper on a GPU is use the previous 
 command and add additional flag: ``--device cuda``. 
-Without this, Whisper will only run on a CPU even if a GPU is availabe.
+Without this, Whisper will only run on a CPU even if a GPU is available. Remember to :doc:`request a GPU </triton/tut/gpu>` in the Slurm job.
 
 Usage (Whisper-diarization)
 ------------------------------------
