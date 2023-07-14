@@ -66,5 +66,5 @@ deleted.  This series has existed since 2016.
 ----
 
 - `Coderefinery Workshop Spring 2023 (21-23 and 28-30. March) <https://coderefinery.github.io/2023-03-21-workshop/>`__
-- :doc:`scip/kickstart-2023`
+- :doc:`kickstart-2023`
 - GPU Programming: Why, When and How? <https://enccs.se/events/2023-06-gpu-programming/>
