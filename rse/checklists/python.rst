@@ -56,8 +56,8 @@ project will have most of these things.
 * Release
 
   * Module structure
-  * setup.py
-  * requirements.txt
+  * pyproject.toml or setup.py
+  * requirements.txt or environment.yml
   * PyPI release
   * conda-forge
   * Zenodo
