@@ -136,6 +136,12 @@ with plenty of space first)::
   $ cd $WRKDIR
   $ singularity build IMAGE_OUTPUT.sif docker://GROUP/IMAGE_NAME:VERSION
 
+If you are running on your own computer with Docker and Singularity
+both installed, you can use a local image like this (and then you need
+to copy it to the cluser)::
+
+  $ singularity build IMAGE_OUTPUT.sif docker-daemon://LOCAL_IMAGE_NAME:VERSION
+
 This will store the Docker layers in ``$HOME/.singularity/cache/``,
 which can result in running out of quota in your home folder.
 In a situation like this, you can then clean the cache with::
