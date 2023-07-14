@@ -27,8 +27,7 @@ to suggest a new course, `please take this survey <https://link.webropol.com/s/s
 .. toctree::
    :maxdepth: 1
 
-   scip/kickstart-2023
-   GPU Programming: Why, When and How? <https://enccs.se/events/2023-06-gpu-programming/>
+   CodeRefinery September 19-21 and 26-28 <https://coderefinery.org>
    scip/workflows-2023
    Take the survey! Request a re-run of past courses / new courses <https://link.webropol.com/s/scipod>
    scip/index
@@ -43,7 +42,7 @@ to suggest a new course, `please take this survey <https://link.webropol.com/s/s
 
 
 **Future courses**
-*Spring-Summer 2023 courses* -  
+*Summer-Autumn 2023 courses* - Linux Shell, CodeRefinery
 We are always adding interesting courses. Please check this page once in a while. If you are interested in a re-run of our past courses or if you want
 to suggest a new course, `please take this survey <https://link.webropol.com/s/scipod>`__.
 
@@ -51,15 +50,34 @@ to suggest a new course, `please take this survey <https://link.webropol.com/s/s
 Anyone can sign up for announcements at the :doc:`SCIP announcement
 mailinglist <scicomp-announcements-maillist>`.
 
+
+
+Our most important courses
+--------------------------
+
+These are the most important courses we recommend to new users:
+
+.. toctree::
+   :maxdepth: 1
+
+   CodeRefinery <https://coderefinery.org/lessons/core/>
+   Scientific Computing/HPC Kickstart <https://scicomp.aalto.fi/triton/#tutorials>
+
+These are other quite important courses we have developed:
+
+   Linux shell <https://aaltoscicomp.github.io/linux-shell/>
+   Python for Scientific Computing <https://aaltoscicomp.github.io/python-for-scicomp/>
+   Data analysis workflows in Python and R <https://aaltoscicomp.github.io/data-analysis-workflows-course/>
+
+
+
 Other interesting courses
 -------------------------
 
 *Data management, Reproducibility, open science*
 
-
 Other relevant courses by Aalto Open Science team:
 https://www.aalto.fi/en/services/training-in-research-data-management-and-open-science
-
 
 
 *Other courses on scientific computing and data management*
@@ -99,16 +117,3 @@ by level and category, providing you a strategy to get started.
 In order to do basic scientific computing, C (Linux and shell) is
 needed.  To use a computer cluster, D (Clusters and HPC) is useful.  E
 (scientific coding) is useful if you are writing your own software.
-
-
-Our most important courses
---------------------------
-
-You can browse the material we have developed for our courses by following the links below.
-
-.. toctree::
-   :maxdepth: 1
-
-   Linux shell <https://aaltoscicomp.github.io/linux-shell/>
-   Python for Scientific Computing <https://aaltoscicomp.github.io/python-for-scicomp/>
-   Data analysis workflows in Python and R <https://aaltoscicomp.github.io/data-analysis-workflows-course/>
