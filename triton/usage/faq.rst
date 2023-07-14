@@ -415,7 +415,9 @@ Command line interface
      Host triton
          SendEnv LC_ALL=C
 
-
+  ``env | grep LC_`` and ``env | grep LANG`` might give you hints
+  about exactly what environment variables are being sent from your
+  computer (and thus you should override in the ssh config file).
 
 
 .. _FAQ_Modules:
