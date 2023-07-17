@@ -46,6 +46,6 @@ versions of software across many computers. See :ref:`here<module-system>` for a
 Admin rights
 ------------
 
-The primary user of a computer should receive sudo rights by default. 
+The primary user of the computer receives sudo rights by default.
 
 Sudo rights can also be requested for other users (requires approval from primary user). These requests can be sent to CS-IT.
