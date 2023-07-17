@@ -35,7 +35,7 @@ Software
 Ubuntu packages
 ~~~~~~~~~~~~~~~
 
-If you are the primary user, you should have sudo rights. You can then use ``apt`` to install packages.
+If you are the primary user, you have sudo rights. You can then use ``apt`` to install packages.
 
 The module system
 ~~~~~~~~~~~~~~~~~
