@@ -2,7 +2,10 @@
 CS Linux
 ========
 
-CS Linux is an OS used for computers not supported by Aalto Linux. It is maintained by the CS Department IT.
+CS Linux is an OS used for computers not supported by Aalto Linux. 
+It is maintained by the CS Department IT and is currently only available for researchers in the CS department.
+The OS is intended for setups which the :doc:`Aalto Linux <linux>` setup is not flexible enough (mainly custom built setups) for.
+The Aalto Linux setup is recommended if it serves your needs.
 
 Currently only desktop setups are available.
 
@@ -21,8 +24,8 @@ Basics
 
 **Requesting a new CS Linux computer**
 
--  Contact CS-IT.
--  Let CS-IT know who will be using the computer and if they need SSH and sudo access. The primary user should receive sudo rights by default.
+- `Contact CS-IT <https://wiki.aalto.fi/display/CSdept/IT>`__.
+-  Let CS-IT know who will be using the computer and if they need SSH and sudo access. The primary user receives sudo rights by default.
 -  Let CS-IT know if you would like a graphical interface to be installed.
 
 **When you are done with a computer**
@@ -49,3 +52,6 @@ Admin rights
 The primary user of the computer receives sudo rights by default.
 
 Sudo rights can also be requested for other users (requires approval from primary user). These requests can be sent to CS-IT.
+
+CS Linux computers are centrally managed, meaning that the centralized management should not be broken.
+Our support is mostly limited to reinstalling the computer, in cases where sudo rights have been used to change settings.
