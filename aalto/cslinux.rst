@@ -34,30 +34,7 @@ If you are the primary user, you should have sudo rights. You can then use ``apt
 The module system
 ~~~~~~~~~~~~~~~~~
 The command ``module`` provides a way to manage various installed
-versions of software across many computers. This is the way that we
-install custom software and newer versions of software, if it is not
-available in Ubuntu. Note that these are shell functions that alter
-environment variables, so this needs to be repeated in each new shell
-(or automated in login).
-
--  See the :doc:`Triton module docs <../triton/tut/modules>` docs for
-   details.
--  ``module load triton-modules`` will make most Triton software
-   available on Aalto workstations (otherwise, most is hidden).
--  ``module avail`` to list all available package.
--  ``module spider $name`` to search for a particular name.
--  ``module load $name`` to load a module. This adjusts environment
-   variables to bring various directories into ``PATH``, ``LD_LIBRARY_PATH``,
-   etc.
--  We will try to keep important modules synced across the workstations
-   and Triton, but let us know.
-
-Useful modules:
-
--  ``anaconda`` and ``anaconda2`` will always be kept up to date with the latest Python
-   Anaconda distribution, and we'll try to keep this in sync across
-   Aalto Linux and Triton.
-- ``triton-modules``: a metamodule that makes other Triton software available.
+versions of software across many computers. See :ref:`here<module-system>` for a detailed description on the module system.
 
 Admin rights
 ------------

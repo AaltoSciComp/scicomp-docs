@@ -191,6 +191,7 @@ using one of the following commands:
    as part of the standard environment. Help us to create a good
    standard operating environment!
 
+.. _module-system:
 The module system
 ~~~~~~~~~~~~~~~~~
 
