@@ -32,6 +32,14 @@ directly on the login node on Triton.  This is OK for editing, but not
 for main computations (see the section above or below).  **To repeat:
 don't use this for running big computations.**
 
+.. figure:: vscode--connected.png
+   :alt: Screenshot saying "SSH: triton".
+
+   If you see this in the lower left corner (or whatever the name of
+   your cluster SSH config is), you are connected to the login node
+   (and should not do big calculations).  It's possible it may be
+   different for others.
+
 You can see `connection instructions (including screenshots) at the
 Sigma2 instructions
 <https://documentation.sigma2.no/code_development/guides/vs_code/connect_to_server.html>`__.
