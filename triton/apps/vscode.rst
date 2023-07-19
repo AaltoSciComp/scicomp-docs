@@ -32,6 +32,10 @@ directly on the login node on Triton.  This is OK for editing, but not
 for main computations (see the section above or below).  **To repeat:
 don't use this for running big computations.**
 
+You can see `connection instructions (including screenshots) at the
+Sigma2 instructions
+<https://documentation.sigma2.no/code_development/guides/vs_code/connect_to_server.html>`__.
+
 VSCode can use a regular OpenSSH configuration file, so you may as
 well set that up once and it can be used for everything.  The basics
 of SSH is in :ref:`triton-connecting-ssh` and the real SSH config file
