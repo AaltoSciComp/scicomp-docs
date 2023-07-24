@@ -12,10 +12,6 @@ Currently only desktop setups are available.
 Basics
 ------
 
-   directory will be your Aalto home directory. That is, the same home
-   directory that you have in Aalto Windows machines and the Aalto
-   Linux machines, including shell servers (kosh, taltta, lyta, brute, force).
-
 -  Home directory. CS Linux computers have a local home directory (instead of the Aalto home directory found in Aalto Linux).
 -  Aalto credentials are used for login. Anyone in the CS department is able to login to any computer on-site. However, ssh login has to be enabled manually by CS-IT.
 -  The systems are centrally managed with the help of Puppet.
@@ -45,6 +41,30 @@ The module system
 
 The command ``module`` provides a way to manage various installed
 versions of software across many computers. See :ref:`here<module-system>` for a detailed description on the module system.
+
+Data
+----
+
+Everything is stored locally, meaning that there are no backups.
+Anyone with physical access to the computer is able to access the data stored on it.
+
+You are able to mount the Aalto home directory as well as the teamwork directories (requires sudo rights).
+
+Samba share addresses:
+
+-  ``smb://home.org.aalto.fi/$USER``
+-  ``smb://tw-cs.org.aalto.fi/project/$projectname/`` - replace *$projectname*.
+-  ``smb://tw-cs.org.aalto.fi/archive/$archivename/`` - replace *$archivename*.
+
+.. rubric:: Mounting an smb share using terminal
+.. code-block:: bash
+  
+  sudo mount -t cifs -o username=$USER,cruid=$USER,uid=$(id -u $USER),gid=$(id -g $USER),sec=krb5 //tw-cs.org.aalto.fi/project/ ~/mnt
+
+.. note::
+
+   Notice that Samba mounts don't include information about file and directory permissions.
+   This means that all files and directories will have the default permissions. This also applies to anything that you create.
 
 Admin rights
 ------------
