@@ -84,13 +84,11 @@ what these mean and what else you might need in here, see
       # ... any other thing you need for connecting to triton.
       User USERNAME
 
-
 Now, with VSCode's Remote SSH, you can select the ``triton-vscode``
 remote.  It will ssh to Triton, request a job, and then directly
 connect to the job.  **Configure the job requirements in the
 ProxyCommand line** (see :ref:`ref-job-submission` - you can have
 multiple ``Host`` sections for different types of requirements).
-
 
 Possible issues which may affect usage:
 
