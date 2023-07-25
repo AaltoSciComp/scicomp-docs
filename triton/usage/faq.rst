@@ -52,6 +52,26 @@ Job status and submission
 
       #SBATCH --no-requeue
 
+.. collapse:: Why are my jobs in state "PENDING" with "BadConstraints" when it seems constraints are OK.
+
+   This happens when a job is submitted to multiple partitions (this
+   is the default: it tries to go to partitions of all node types) and
+   it is BadConstraints for *some* partitions.  Then, it gives the
+   BadConstraints reason for the whole job, even though it will
+   eventually run.  (If constraints are bad in all partitions, it will
+   usually fail right when you are trying to submit it, something like
+   ``sbatch: error: Batch job submission failed: Requested node
+   configuration is not available``).
+
+   You don't need to do anything, but if you want a clean status: you
+   can get rid of this message by limiting to partitions that
+   actually satisfy the constraints.  For example, if you request 96
+   CPUs, you can limit to the Milan nodes with ``-p batch-milan``
+   since those are tho only nodes with more than 40 CPUs.  This
+   example is valid as of 2023, if you are reading this later you need
+   to figure out what the current state is (or ask us).
+
+
 .. collapse::  How can I find out the remaining runtime of my job/allocation?
 
   You can find out the remaining time of any job that is running with
