@@ -63,7 +63,8 @@ Job status and submission
    ``sbatch: error: Batch job submission failed: Requested node
    configuration is not available``).
 
-   You can get rid of this message by limiting to partitions that
+   You don't need to do anything, but if you want a clean status: you
+   can get rid of this message by limiting to partitions that
    actually satisfy the constraints.  For example, if you request 96
    CPUs, you can limit to the Milan nodes with ``-p batch-milan``
    since those are tho only nodes with more than 40 CPUs.  This
