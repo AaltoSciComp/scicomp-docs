@@ -2,6 +2,7 @@ Nbgrader basics
 ===============
 
 .. note::
+
     We have prepared a tutorial for students on how to
     fetch/submit assignments: :doc:`../jupyterhub/nbgrader-jupyterlab`.
     Feel free to share it with them/link to it in MyCourses pages.

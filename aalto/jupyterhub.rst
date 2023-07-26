@@ -8,9 +8,13 @@ JupyterHub
    JupyterHub for research is documented at
    :doc:`../triton/apps/jupyter`.
 
-.. note::
+.. admonition:: NBGrader in JupyterLab is the default (2023 Autumn)
+   :class: important
+
     `JupyterLab <https://jupyterlab.readthedocs.io/en/stable/>`__ interface
-    is now available and is the default option for new course servers.
+    is now available and is the default option for new course
+    servers.  :doc:`jupyterhub/nbgrader-jupyterlab` tells more about
+    using it.  You can access nbgrader from the JupyterLab menu.
 
 https://jupyter.cs.aalto.fi is a JupyterHub installation for teaching
 and light usage.  Anyone at Aalto may use this for generic light
@@ -85,6 +89,8 @@ computing, see :doc:`../triton/index`.
 Courses and assignments
 -----------------------
 
+New: nbgrader in JupyterLab instructions: :doc:`jupyterhub/nbgrader-jupyterlab`
+
 Some courses may use the `nbgrader
 <https://nbgrader.readthedocs.io/en/stable/>`__ system to give and
 grade assignments. These courses have special entries in the list.
@@ -99,9 +105,10 @@ when starting your notebook server).  You can fetch assignments to
 work on them - they are then copied to your personal ``/notebooks``
 directory.  You can edit the assignments there - fill out the
 solutions and validate them.  Once you are done, you can submit them
-from the same assignment list. `Here <jupyterhub/nbgrader-jupyterlab>` is a
-short tutorial that walks through this process using the new
-JupyterLab interface.
+from the same assignment list. We have a :doc:`short tutorial that
+walks through this process using the new
+JupyterLab interface <jupyterhub/nbgrader-jupyterlab>`.
+
 
 A course may give you access to a ``/coursedata`` folder with any
 course-specific data.

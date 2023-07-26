@@ -1,7 +1,7 @@
 jupyter.cs news
 ===============
 
-Spring 2023
+Autumn 2023
 -----------
 
 * JupyterLab is now available and is the default
@@ -9,7 +9,9 @@ Spring 2023
   using Jupyter Notebook for your courses, let us know
   when requesting a new course.  JupyterLab now supports
   everything nbgrader needs, though the user interface is
-  slightly different.
+  slightly different.  You can send
+  :doc:`../jupyterhub/nbgrader-jupyterlab` to your students for
+  instructions.
 
 Summer/Autumn 2020
 ------------------
