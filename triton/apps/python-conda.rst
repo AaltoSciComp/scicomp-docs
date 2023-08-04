@@ -1,5 +1,5 @@
 ==============================
-Environments with Conda
+Python Environments with Conda
 ==============================
 
 Conda is a popular package manager that is especially
