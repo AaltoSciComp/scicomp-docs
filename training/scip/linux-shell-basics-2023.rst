@@ -20,15 +20,15 @@ On-site: Otakaari 1 (main building), U9
 
 Zoom: link to be posted to the registered participants list
 
-- Mon 29.8 klo 12:00-15:00
-- Wed 30.8 klo 12:00-15:00
-- Fri 31.8 klo 12:00-15:00
+- Tue 29.8 12:00-15:00
+- Wed 30.8 12:00-15:00
+- Thu 31.8 12:00-15:00
 
 **Course material:** will be mostly based on the first part of `aaltoscicomp.github.io/linux-shell <https://aaltoscicomp.github.io/linux-shell/>`__.
 
 **Cost:** Free!
 
-**Registration:** `Please register here <>`__
+**Registration:** `Please register here <https://link.webropol.com/ep/linuxshell2023>`__
 
 **Credits/certificate:** It is not possible to obtain certificates or credits for this course.
 
