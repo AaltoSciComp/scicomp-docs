@@ -48,7 +48,9 @@ Data
 Everything is stored locally, meaning that there are no backups.
 Anyone with physical access to the computer is able to access the data stored on it.
 
-You are able to mount the Aalto home directory as well as the teamwork directories (requires sudo rights).
+You are able to mount the Aalto home directory as well as the teamwork directories (requires sudo rights). This can be done by "connect to server"
+in the file browser for easy graphical access, or via the command line
+to choose the mounting location.
 
 Samba share addresses:
 
