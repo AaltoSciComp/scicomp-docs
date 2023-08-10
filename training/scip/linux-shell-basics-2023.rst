@@ -2,6 +2,14 @@
 August 2023 / Linux Shell Basics
 ==================================
 
+.. admonition:: Updates
+   :class: important
+
+   * 10/8 - Registration is now open at https://link.webropol.com/ep/linuxshell2023
+
+
+
+
 Part of :doc:`Scientific Computing in Practice <index>` lecture series at Aalto University.
 
 **Audience:** employees and students looking for an extensive intro into Linux shell / terminal.
