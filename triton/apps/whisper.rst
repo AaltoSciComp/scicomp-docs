@@ -67,7 +67,7 @@ This example shows you a sample script to run whisper-diarization.
 
 .. code-block:: console
 
-    $ module load whisper_diarization
+    $ module load whisper-diarization
     $ srun --mem=6G singularity_wrapper run -a your_audio_file.wav --whisper-model $medium_en
 
 Option ``--whisper-model $medium_en`` Tells whisper which model to use, in this case 
