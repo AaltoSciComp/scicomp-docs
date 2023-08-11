@@ -33,6 +33,10 @@ help:
 # Make a list of files by last modification date
 find-old:
 	@git ls-files -z | xargs -0 -n1 -I{} -- git --no-pager log -1 --date=format:'%s,%Y-%m-%d' --format='%ad,  {}' -- {}
-# make find-old > _meta/edit-dates.txt
-# python _meta/plausible-get-stats.py plausible.DOMAIN SITENAME TOKEN > _meta/pages-$(date +%Y-%m-%d).csv
-# python _meta/join-edit-dates-and-plausible.py _meta/pages-$(date +%Y-%m-%d).csv _meta=edit-dates.txt > _meta/edit-dates-joined.csv
+
+# export TOKEN=your_plausible_token
+# PLAUSIBLE=plausible.io SITENAME=my.site.eu
+usage-report:
+	make --silent find-old > _meta/edit-dates.txt
+	python _meta/plausible-get-stats.py $(PLAUSIBLE) $(SITENAME) > _meta/pages-$$(date +%Y-%m-%d).csv
+	python _meta/join-edit-dates-and-plausible.py _meta/pages-$$(date +%Y-%m-%d).csv _meta/edit-dates.txt > _meta/edit-dates-joined.csv
