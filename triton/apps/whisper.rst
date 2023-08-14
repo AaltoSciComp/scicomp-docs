@@ -52,6 +52,15 @@ For full list of options, run:
 
    $ singularity_wrapper run --help
 
+Notes on general Slurm resources: 
+
+  - For memory, requesting roughly 4G for medium model or smaller, 
+    and 8G for large should be sufficient. 
+    
+  - When running on CPU, requesting additional CPUs should give a 
+    performance increase until 8 CPUS. Whisper doesn't scale properly 
+    beyond 8 CPUS, and will actually run slower in most cases.
+
 Running on GPU
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -67,7 +76,7 @@ This example shows you a sample script to run whisper-diarization.
 
 .. code-block:: console
 
-    $ module load whisper_diarization
+    $ module load whisper-diarization
     $ srun --mem=6G singularity_wrapper run -a your_audio_file.wav --whisper-model $medium_en
 
 Option ``--whisper-model $medium_en`` Tells whisper which model to use, in this case 
@@ -85,6 +94,17 @@ For full list of options, run:
 .. code-block:: console
 
    $ singularity_wrapper run --help
+
+Notes on general Slurm resources:
+
+  - Whisper-diarization requires slightly more memory than plain Whisper. 
+    Requesting roughly 6G for medium model or smaller, 
+    and 12G for large should be sufficient.
+    
+  - When running on CPU, requesting additional CPUs should give a
+    performance increase until 8 CPUS. Whisper doesn't scale properly
+    beyond 8 CPUS, and will actually run slower in most cases.
+
 
 Running on GPU
 ~~~~~~~~~~~~~~~~~~~~~~~~
