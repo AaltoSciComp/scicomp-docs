@@ -9,10 +9,8 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * During the high summer (~July), we don't promise to be here every
-     day, but past history shows that there is usually someone.  (We
-     might not be able to answer every question as efficiently as
-     normal, but come let us try anyway.)
+   * 15 August: Probably less (or no) availability due to an internal
+     development day.
 
 ..
    * There are no current planned disruptions in the daily garage.
