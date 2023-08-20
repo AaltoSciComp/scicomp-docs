@@ -15,4 +15,4 @@ sphinx_toolbox
 sphinx_ext_substitution
 sphinx-plausible
 sphinx-minipres
-sphinxext-opengraph
+sphinxext-opengraph<0.8  # remove after 8.3 released (matplotlib optional, takes lots of space)
