@@ -23,6 +23,7 @@ import pathlib
 import re
 import sqlite3
 import sys
+import time
 from urllib.parse import unquote
 
 try:
@@ -45,7 +46,7 @@ def create(path=":memory:"):
     conn = sqlite3.connect(path)
     conn.execute(
         "CREATE VIRTUAL TABLE IF NOT EXISTS pages"
-        " USING fts5(path, title, body"
+        " USING fts5(path, title, body, time_update"
         ", tokenize = 'porter unicode61'"
         " );")
     conn.commit()
@@ -56,7 +57,7 @@ def create(path=":memory:"):
         def handle_data(self, data):
             self.text += data
 
-
+    time_start = time.time()
     root = pathlib.Path("_build/dirhtml")
     for file in root.glob('**/*.html'):
         relpath = str(file.relative_to(root).parent) + '/'
@@ -66,7 +67,7 @@ def create(path=":memory:"):
         title = contents.title.contents[0]
         body = contents.find('div', {'class': 'document'})
         body = html2text(body)
-        #conn.execute('INSERT INTO pages VALUES (?, ?, ?)', (relpath, title, body))
+        #conn.execute('INSERT INTO pages VALUES (?, ?, ?, ?)', (relpath, title, body, time.time()))
         #if relpath.startswith('triton/tut/array'):
         #    import pdb; pdb.set_trace()
 
@@ -92,7 +93,7 @@ def create(path=":memory:"):
                 subsec.clear()
             section_body = html2text(section)
             #print(f"  {relpath2:50}, {repr(section_body)[:150]}")
-            conn.execute('INSERT INTO pages VALUES (?, ?, ?)', (relpath2, title, section_body))
+            conn.execute('INSERT INTO pages VALUES (?, ?, ?, ?)', (relpath2, title, section_body, time.time()))
 
         #print(relpath, repr(contents)[:50])
 
@@ -100,7 +101,9 @@ def create(path=":memory:"):
         #f.feed(raw)
         #print(f.text)
 
+    conn.execute('DELETE FROM pages WHERE time_update<?', (time_start,))
     conn.commit()
+    conn.execute('VACUUM;')
     print("Done: creating database", file=sys.stderr)
     return conn
 
