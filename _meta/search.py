@@ -45,7 +45,7 @@ def html2text(s):
 
 
 
-def create(data, path=":memory:"):
+def create(path=":memory:"):
     """Create new database and return the connection object."""
     print("Creating database", file=sys.stderr)
     conn = sqlite3.connect(path)
@@ -240,10 +240,12 @@ def main():
     args = parser.parse_args()
 
     # Make database, insert data if it is temporary.
-    conn = create(get_data(), args.db)
+    conn = create(args.db)
     if args.db == ':memory:' and args.mode != 'update':
         insert(conn, get_data())
 
+    if args.mode == 'create':
+        insert(conn, get_data())
     if args.mode == 'serve':
         serve(conn, bind=args.bind)
     if args.mode == 'search':
