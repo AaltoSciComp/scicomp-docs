@@ -1,0 +1,86 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: scicomp-docs-search-ingress
+  namespace: rse
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+spec:
+  tls:
+    - hosts:
+        #- search.scicomp.aalto.fi
+        - scicomp-docs-search.k8s-test.cs.aalto.fi
+      secretName: scicomp-docs-search-tls
+  rules:
+    - host: scicomp-docs-search.k8s-test.cs.aalto.fi
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: scicomp-docs-search
+                port:
+                  number: 8000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: scicomp-docs-search
+  namespace: rse
+  labels:
+    app.kubernetes.io/name: scicomp-docs-search
+    app.kubernetes.io/component: server
+spec:
+  #type: LoadBalancer
+  ports:
+    - name: http
+      port: 8000
+      targetPort: 8000
+      protocol: TCP
+  selector:
+    app.kubernetes.io/name: scicomp-docs-search
+    app.kubernetes.io/component: server
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scicomp-docs-search
+  namespace: rse
+  labels:
+    app.kubernetes.io/name: scicomp-docs-search
+    app.kubernetes.io/component: server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: scicomp-docs-search
+      app.kubernetes.io/component: server
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: scicomp-docs-search
+        app.kubernetes.io/component: server
+    spec:
+      restartPolicy: Always
+      securityContext:
+        runAsUser: 1000
+        runAsGroup: 1000
+        fsGroup: 1000
+      containers:
+        - name: scicomp-docs-search
+          image: harbor.cs.aalto.fi/aaltorse/scicomp-docs-search:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
+          #env:
+          #  - name: POSTGRES_USER
+          #    valueFrom:
+          #      secretKeyRef:
+          #        name: plausible-db-user
+          #        key: username
+      # created with: `kubectl -n rse create secret docker-registry robot-scicomp-docs-search-pull --docker-server=DOMAIN --docker-username='robot$NAME' --docker-password='SECRET'`
+      imagePullSecrets:
+      - name: robot-scicomp-docs-search-pull

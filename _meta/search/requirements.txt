@@ -1,0 +1,2 @@
+-r scicomp-docs/requirements.txt
+beautifulsoup4
