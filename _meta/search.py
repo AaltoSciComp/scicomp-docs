@@ -12,24 +12,30 @@ To not re-create the database each time:
     python _meta/search.py serve --db=search.db
 
 Searching: `a+b` means a and b right next to each other.
+
+Web API:
+GET /?q=QUERY        return this QUERY
+GET /?limit=N        this many items returned
+GET /?raw=true       query already in fts5 syntax:
+                       https://www.sqlite.org/fts5.html#full_text_query_syntax
+POST /               update database (basic auth, env var SEARCH_UPDATE_AUTHORIZATION)
+
 """
 
 BASE = 'https://scicomp.aalto.fi/'
 
+import base64
 import copy
+import hmac
 import json
 import os
 import pathlib
-import re
 import sqlite3
 import sys
 import time
-from urllib.parse import unquote
+import urllib.parse
+import urllib.request
 
-try:
-    from bs4 import BeautifulSoup
-except ImportError:
-    print("Install pip=beautifulsoup4", file=sys.stderr)
 
 def html2text(s):
     contents = s.get_text()
@@ -37,19 +43,55 @@ def html2text(s):
     #contents = re.sub(r'\n+', '\n', contents)
     return contents
 
-def create(path=":memory:"):
-    """Create new database and return the connection object"""
 
-    if not os.path.exists('_build/dirhtml'):
-        print("You must `make dirhtml` first.", file=sys.stderr)
+
+def create(data, path=":memory:"):
+    """Create new database and return the connection object."""
     print("Creating database", file=sys.stderr)
     conn = sqlite3.connect(path)
+    conn.row_factory = dict_factory
     conn.execute(
         "CREATE VIRTUAL TABLE IF NOT EXISTS pages"
         " USING fts5(path, title, body, time_update"
         ", tokenize = 'porter unicode61'"
         " );")
     conn.commit()
+    return conn
+
+
+
+def insert(conn, data):
+    """Insert data into the database.
+
+    Data is iterable of relpath, title, body.
+    """
+    time_start = time.time()
+
+    for relpath, title, section_body in data:
+        conn.execute('INSERT INTO pages VALUES (?, ?, ?, ?)', (relpath, title, section_body, time.time()))
+
+    conn.execute('DELETE FROM pages WHERE time_update<?', (time_start,))
+    conn.execute("INSERT INTO pages(pages, rank) VALUES('automerge', 8)")
+    conn.commit()
+    conn.execute('VACUUM;')
+    print("Done: creating database", file=sys.stderr)
+
+
+
+
+def get_data():
+    """Iterate over (path, data, value) fields.
+
+    Returns iterable of data which can be inserted into the database.
+    """
+    try:
+        from bs4 import BeautifulSoup
+    except ImportError:
+        print("Install pip=beautifulsoup4", file=sys.stderr)
+
+
+    if not os.path.exists('_build/dirhtml'):
+        print("You must `make dirhtml` first.", file=sys.stderr)
 
     from html.parser import HTMLParser
     class HTMLFilter(HTMLParser):
@@ -57,7 +99,6 @@ def create(path=":memory:"):
         def handle_data(self, data):
             self.text += data
 
-    time_start = time.time()
     root = pathlib.Path("_build/dirhtml")
     for file in root.glob('**/*.html'):
         relpath = str(file.relative_to(root).parent) + '/'
@@ -67,10 +108,6 @@ def create(path=":memory:"):
         title = contents.title.contents[0]
         body = contents.find('div', {'class': 'document'})
         body = html2text(body)
-        #conn.execute('INSERT INTO pages VALUES (?, ?, ?, ?)', (relpath, title, body, time.time()))
-        #if relpath.startswith('triton/tut/array'):
-        #    import pdb; pdb.set_trace()
-
 
         body = contents.findAll('section')
         print(relpath)
@@ -93,47 +130,89 @@ def create(path=":memory:"):
                 subsec.clear()
             section_body = html2text(section)
             #print(f"  {relpath2:50}, {repr(section_body)[:150]}")
-            conn.execute('INSERT INTO pages VALUES (?, ?, ?, ?)', (relpath2, title, section_body, time.time()))
+            yield (relpath2, title, section_body)
 
-        #print(relpath, repr(contents)[:50])
 
-        #f = HTMLFilter()
-        #f.feed(raw)
-        #print(f.text)
 
-    conn.execute('DELETE FROM pages WHERE time_update<?', (time_start,))
-    conn.commit()
-    conn.execute('VACUUM;')
-    print("Done: creating database", file=sys.stderr)
-    return conn
+def search(conn, query, tokens=64, limit=10, raw=False):
+    """Do a single search and yield snipets.
 
-def search(conn, query, tokens=64, limit=10):
-    """Do a single search and return snipets"""
-    #query = f"NEAR({query})"
-    print('Searching:', query)
+
+    raw: if true (default false), the query is already in a sqlite3 fts5 search syntax:
+           https://www.sqlite.org/fts5.html#full_text_query_syntax
+         if false, then quote the tokens to prevent sytax errors.  Form of quoting
+         may change in the future.
+
+    limit: number of results returned (default 10)
+
+    tokens: number of tokens around the snipet (default 64)
+
+    """
+    if not raw:
+        #query = f"NEAR({query})"
+        #query = f'{{title body}} : {query}'
+        query = ' '.join(f'"{x}"' for x in (y.replace('"', '""') for y in query.split()))
+    print('Searching:', repr(query))
     cur = conn.execute(
         f"SELECT :base||path AS path, rank, snippet(pages, 2, '', '', '', :tokens) AS snipet, body"
-        " FROM pages WHERE pages"
-        " MATCH :query"
+        " FROM pages WHERE"
+        " body MATCH :query"
         " ORDER BY rank"
         " LIMIT :limit", dict(tokens=tokens, query=query, limit=limit, base=BASE))
     for result in cur.fetchall():
         yield result
 
 def serve(conn, bind=':8000'):
-    """Start a HTTP server and return snipets"""
+    """Start a HTTP server and serve snipets."""
     import http.server
     class Handler(http.server.BaseHTTPRequestHandler):
+        def do_POST(self):
+            """Accept updates if token-authenticated"""
+            print(f"Updating database from {self.client_address}")
+            mode, auth = self.headers.get("Authorization", "").split(' ', 1)
+            user, token = base64.b64decode(auth).decode().split(':')
+            print(mode, auth, user, token)
+            if (mode == 'Basic'
+                and len(token) > 20
+                and hmac.compare_digest(token, os.environ.get('SEARCH_UPDATE_AUTHORIZATION', ''))
+                ):
+                data_bytes = int(self.headers.get("Content-Length"), 0)
+                data = json.loads(self.rfile.read(data_bytes))
+                create(data)
+                #create(data, conn)
+                self.send_response(200)
+                self.send_header("Content-type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps('{}').encode())
+                return
+            self.send_response(405)
+
+
         def do_GET(self):
+            """Serve results"""
             self.send_response(200)
             self.send_header("Content-type", "application/json")
             self.end_headers()
-            if self.path == '/':
-                self.wfile.write(b'{"error": "specify search query as path"}')
-            query = self.path.strip('/')
-            query = unquote(query)
+            url = urllib.parse.urlparse(self.path)
+            path = url.path
+            qs = urllib.parse.parse_qs(url.query)
+            query = None
+            raw = False
+            limit = 10
+            if 'q' in qs:
+                query = qs['q'][0]
+                if 'raw' in qs:
+                    raw = True
+                if 'limit' in qs:
+                    limit = qs['limit'][0]
+            elif path != '/':
+                query = self.path.strip('/')
+                query = urllib.parse.unquote(query)
+            else:
+                self.wfile.write(b'{"error": "specify search query as q="}')
+                return
             #print(query)
-            data = list(search(conn, query))
+            data = list(search(conn, query, raw=raw, limit=limit))
             self.wfile.write(json.dumps(data).encode())
 
     server_class = http.server.HTTPServer
@@ -145,27 +224,38 @@ def serve(conn, bind=':8000'):
 
 
 def dict_factory(cur, row):
-    """sqlite3 helper to return dicts of each row"""
+    """sqlite3 helper to return dicts of each row.  Used in connection initialization"""
     fields = [col[0] for col in cur.description]
     return {key: value for key, value in zip(fields, row)}
 
 
-import argparse
-parser = argparse.ArgumentParser()
-parser.add_argument('--db', default=':memory:')
-parser.add_argument('--bind', default=':8000')
-parser.add_argument('mode')
-parser.add_argument('query', nargs='*')
-args = parser.parse_args()
+def main():
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--db', default=':memory:')
+    parser.add_argument('--bind', default=':8000')
+    parser.add_argument('--limit', default=10, type=int)
+    parser.add_argument('mode')
+    parser.add_argument('query', nargs='*')
+    args = parser.parse_args()
 
-if args.mode == 'create' or args.db == ':memory:':
-    conn = create(args.db)
-else:
-    conn = sqlite3.connect(args.db)
-conn.row_factory = dict_factory
+    # Make database, insert data if it is temporary.
+    conn = create(get_data(), args.db)
+    if args.db == ':memory:' and args.mode != 'update':
+        insert(conn, get_data())
 
-if args.mode == 'serve':
-    serve(conn, bind=args.bind)
-if args.mode == 'search':
-    for line in search(conn, " ".join(args.query)):
-        print(line)
+    if args.mode == 'serve':
+        serve(conn, bind=args.bind)
+    if args.mode == 'search':
+        for line in search(conn, " ".join(args.query), limit=args.limit):
+            print(line)
+    if args.mode == 'update':
+        url = args.query[0]
+        data = list(get_data())
+        token = os.environ.get('SEARCH_UPDATE_AUTHORIZATION', '')
+        import requests
+        requests.post(url, data=json.dumps(data), auth=('', token), timeout=60)
+
+
+if __name__ == '__main__':
+    main()
