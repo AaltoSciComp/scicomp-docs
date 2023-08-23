@@ -12,7 +12,7 @@ August 2023 / Linux Shell Basics
 
 Part of :doc:`Scientific Computing in Practice </training/index>` lecture series at Aalto University.
 
-**Audience:** Scientologists, researchers, and others looking for an
+**Audience:** Scientists, researchers, and others looking for an
 extensive intro into Linux shell / terminal.  Primary audience is
 academics in Finland, outsiders are welcome to register and are
 accepted if there is space (there always is space).
@@ -21,23 +21,26 @@ accepted if there is space (there always is space).
 remote computers and automate bigger projects - whether you are
 managing a lot of data or running programs on a computer cluster.
 Without it, you are often stuck when you need to do move beyond basic
-tools like Jupyter notebooks.
+tools like Jupyter notebooks.  This course covers the Bash shell, but
+the principles apply to other shells such as zsh.
 
-This course will cover all the basics to know what the shell is, be
-comfortable using it for your own projects, and be able to use it for
-more advanced courses later. We will unleash the power of that
-blinking cursor in the terminal window. Windows/Mac/Linux users are
-warmly welcome - regardless of what you use on your desktop, you'll
-need this when using more powerful remote computers.
+This course will cover the basics so that you'll know what the shell
+is, are comfortable using it for your own projects, and are able to
+attend other courses with the shell as a prerequisite.  We'll get
+familiar with the command line, files and directories, and other
+things you often find in shell environments.  We will
+unleash the power of that blinking cursor in the terminal
+window. Windows/Mac/Linux users are warmly welcome - regardless of
+what you use on your desktop, you'll need this when using more
+powerful remote computers.
 
 We will start with somewhat basics like files and processes and go up
 to command line magic like redirections and pipes. This should be
 enough to get started with the Linux terminal.
 
 There is an advanced part of this course given later in the spring
-which will go through scripting and automation in more detail, while
-here we get familiar with the command line, files and directories, and
-other things of the environment.
+which will go through scripting and automation in more detail (part 2
+in the material).
 
 **Lecturer:** Ivan Tervanto, D. Sc., Science IT / Department of Applied Physics, Aalto University
 
