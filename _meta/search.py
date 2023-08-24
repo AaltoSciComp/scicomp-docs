@@ -166,27 +166,6 @@ def serve(conn, bind=':8000'):
     """Start a HTTP server and serve snipets."""
     import http.server
     class Handler(http.server.BaseHTTPRequestHandler):
-        def do_POST(self):
-            """Accept updates if token-authenticated"""
-            print(f"Updating database from {self.client_address}")
-            mode, auth = self.headers.get("Authorization", "").split(' ', 1)
-            user, token = base64.b64decode(auth).decode().split(':')
-            print(mode, auth, user, token)
-            if (mode == 'Basic'
-                and len(token) > 20
-                and hmac.compare_digest(token, os.environ.get('SEARCH_UPDATE_AUTHORIZATION', ''))
-                ):
-                data_bytes = int(self.headers.get("Content-Length"), 0)
-                data = json.loads(self.rfile.read(data_bytes))
-                create(data)
-                #create(data, conn)
-                self.send_response(200)
-                self.send_header("Content-type", "application/json")
-                self.end_headers()
-                self.wfile.write(json.dumps('{}').encode())
-                return
-            self.send_response(405)
-
 
         def do_GET(self):
             """Serve results"""
@@ -215,6 +194,28 @@ def serve(conn, bind=':8000'):
             #print(query)
             data = list(search(conn, query, raw=raw, limit=limit))
             self.wfile.write(json.dumps(data).encode())
+
+        def do_POST(self):
+            """Accept updates if token-authenticated"""
+            print(f"Updating database from {self.client_address}")
+            mode, auth = self.headers.get("Authorization", "").split(' ', 1)
+            user, token = base64.b64decode(auth).decode().split(':')
+            print(mode, auth, user, token)
+            if (mode == 'Basic'
+                and len(token) > 20
+                and hmac.compare_digest(token, os.environ.get('SEARCH_UPDATE_AUTHORIZATION', ''))
+                ):
+                data_bytes = int(self.headers.get("Content-Length"), 0)
+                data = json.loads(self.rfile.read(data_bytes))
+                create(data)
+                #create(data, conn)
+                self.send_response(200)
+                self.send_header("Content-type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps('{}').encode())
+                return
+            self.send_response(405)
+
 
     server_class = http.server.HTTPServer
     handler_class = Handler
