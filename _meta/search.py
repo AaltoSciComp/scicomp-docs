@@ -192,6 +192,7 @@ def serve(conn, bind=':8000'):
             """Serve results"""
             self.send_response(200)
             self.send_header("Content-type", "application/json")
+            self.send_header("Access-Control-Allow-Origin", "*")
             self.end_headers()
             url = urllib.parse.urlparse(self.path)
             path = url.path
