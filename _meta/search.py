@@ -174,7 +174,7 @@ def search(conn, query, tokens=64, limit=10, raw=False, operator=OPERATOR_DEFAUL
             query = f'NEAR( {query} )'
     print('Searching:', repr(query))
     cur = conn.execute(
-        f"SELECT :base||path AS path, rank, snippet(pages, 2, '', '', '', :tokens) AS snipet, body"
+        f"SELECT :base||path AS path, rank, snippet(pages, 2, '', '', '', :tokens) AS snipet, body, html, markdown"
         " FROM pages WHERE"
         " body MATCH :query"
         " ORDER BY rank"
