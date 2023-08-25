@@ -40,7 +40,8 @@ import urllib.parse
 import urllib.request
 
 
-def html2text(s):
+def textify(s):
+    """html to text, local attempt"""
     contents = s.get_text()
     #contents = ' '.join(contents.split())
     #contents = re.sub(r'\n+', '\n', contents)
@@ -97,7 +98,8 @@ def get_data():
         from bs4 import BeautifulSoup
     except ImportError:
         print("Install pip=beautifulsoup4", file=sys.stderr)
-
+    from markdownify import markdownify
+    #import html2text
 
     if not os.path.exists('_build/dirhtml'):
         print("You must `make dirhtml` first.", file=sys.stderr)
@@ -116,7 +118,7 @@ def get_data():
         contents =  BeautifulSoup(raw, 'html.parser')
         title = contents.title.contents[0]
         body = contents.find('div', {'class': 'document'})
-        body = html2text(body)
+        body = textify(body)
 
         body = contents.findAll('section')
         print(relpath)
@@ -135,11 +137,20 @@ def get_data():
                 x.clear()
             if x := section.find('div', {'class': 'rst-footer-buttons'}):
                 x.clear()
+            for x in section.findAll('a', {'class': 'headerlink'}):
+                x.clear()
             for subsec in section.findAll('section'):
                 subsec.clear()
-            section_body = html2text(section)
+            #import pdb ; pdb.set_trace()
+            section_body = textify(section)
+            section_html = str(section)
+            # underlined titles, ``` blocks
+            section_md = markdownify(str(section), heading_style='ATX')
+            # '#' titles, indented blocks
+            #section_md = html2text(str(section))
             #print(f"  {relpath2:50}, {repr(section_body)[:150]}")
-            yield dict(path=relpath2, title=title, body=section_body)
+            yield dict(path=BASE+relpath2, title=title, body=section_body,
+                       html=section_html, markdown=section_md)
 
 
 
@@ -172,13 +183,13 @@ def search(conn, query, tokens=64, limit=10, raw=False, operator=OPERATOR_DEFAUL
         query = f' {operator} '.join(f'"{x}"' for x in (y.replace('"', '""') for y in query))
         if near:
             query = f'NEAR( {query} )'
-    print('Searching:', repr(query))
+    print('Searching:', repr(query), file=sys.stderr)
     cur = conn.execute(
-        f"SELECT :base||path AS path, rank, snippet(pages, 2, '', '', '', :tokens) AS snipet, body, html, markdown"
+        f"SELECT path AS path, rank, snippet(pages, 2, '', '', '', :tokens) AS snipet, body, html, markdown"
         " FROM pages WHERE"
         " body MATCH :query"
         " ORDER BY rank"
-        " LIMIT :limit", dict(tokens=tokens, query=query, limit=limit, base=BASE))
+        " LIMIT :limit", dict(tokens=tokens, query=query, limit=limit))
     for result in cur.fetchall():
         yield result
 
@@ -274,7 +285,7 @@ def main():
         serve(conn, bind=args.bind, operator=args.operator)
     if args.mode == 'search':
         for line in search(conn, args.query, limit=args.limit, operator=args.operator):
-            print(line)
+            print(json.dumps(line))
     if args.mode == 'update':
         url = args.query[0]
         data = list(get_data())
