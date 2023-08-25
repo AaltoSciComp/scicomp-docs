@@ -222,15 +222,14 @@ def serve(conn, bind=':8000', operator=OPERATOR_DEFAULT):
             print(f"Updating database from {self.client_address}")
             mode, auth = self.headers.get("Authorization", "").split(' ', 1)
             user, token = base64.b64decode(auth).decode().split(':')
-            print(mode, auth, user, token)
+            #print(mode, auth, user, token)
             if (mode == 'Basic'
                 and len(token) > 20
                 and hmac.compare_digest(token, os.environ.get('SEARCH_UPDATE_AUTHORIZATION', ''))
                 ):
                 data_bytes = int(self.headers.get("Content-Length"), 0)
                 data = json.loads(self.rfile.read(data_bytes))
-                create(data)
-                #create(data, conn)
+                insert(conn, data)
                 self.send_response(200)
                 self.send_header("Content-type", "application/json")
                 self.end_headers()
