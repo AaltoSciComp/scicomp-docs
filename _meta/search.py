@@ -55,11 +55,12 @@ def create(path=":memory:"):
     conn.row_factory = dict_factory
     conn.execute(
         "CREATE VIRTUAL TABLE IF NOT EXISTS pages"
-        " USING fts5(path, title, body, time_update"
+        " USING fts5(path, title, time_update, body, html, markdown"
         ", tokenize = 'porter unicode61'"
         " );")
     conn.commit()
     return conn
+
 
 
 
@@ -69,9 +70,14 @@ def insert(conn, data):
     Data is iterable of relpath, title, body.
     """
     time_start = time.time()
-
-    for relpath, title, section_body in data:
-        conn.execute('INSERT INTO pages VALUES (?, ?, ?, ?)', (relpath, title, section_body, time.time()))
+    for row in data:
+        for format in ('html', 'markdown'):
+            if format not in row:
+                row[format] = None
+        row['time_update'] = time_start
+        conn.execute('INSERT INTO pages'
+                     '(path, title, time_update, body, html, markdown)'
+                     ' VALUES (:path, :title, :time_update, :body, :html, :markdown)', row)
 
     conn.execute('DELETE FROM pages WHERE time_update<?', (time_start,))
     conn.execute("INSERT INTO pages(pages, rank) VALUES('automerge', 8)")
@@ -133,7 +139,7 @@ def get_data():
                 subsec.clear()
             section_body = html2text(section)
             #print(f"  {relpath2:50}, {repr(section_body)[:150]}")
-            yield (relpath2, title, section_body)
+            yield dict(path=relpath2, title=title, body=section_body)
 
 
 
