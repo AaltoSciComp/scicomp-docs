@@ -3,7 +3,7 @@ FROM python:3.11-slim-bookworm
 COPY _meta/search/requirements.txt ./
 COPY requirements.txt ./scicomp-docs/
 RUN --mount=type=cache,target=/root/.cache/pip \
-    pip install -r requirements.txt beautifulsoup4
+    pip install -r requirements.txt beautifulsoup4 markdownify
 COPY ./ ./scicomp-docs/
 RUN \
     pwd && ls && \
