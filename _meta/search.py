@@ -18,11 +18,14 @@ GET /?q=QUERY        return this QUERY
 GET /?limit=N        this many items returned
 GET /?raw=true       query already in fts5 syntax:
                        https://www.sqlite.org/fts5.html#full_text_query_syntax
+GET /?operator=OP    Use this search operator (default OR)
+                       AND, OR, NEAR, '' (html: %20), or '+' (html: %2b)
 POST /               update database (basic auth, env var SEARCH_UPDATE_AUTHORIZATION)
 
 """
 
 BASE = 'https://scicomp.aalto.fi/'
+OPERATOR_DEFAULT = 'OR'
 
 import base64
 import copy
@@ -134,7 +137,7 @@ def get_data():
 
 
 
-def search(conn, query, tokens=64, limit=10, raw=False):
+def search(conn, query, tokens=64, limit=10, raw=False, operator=OPERATOR_DEFAULT):
     """Do a single search and yield snipets.
 
 
@@ -149,9 +152,20 @@ def search(conn, query, tokens=64, limit=10, raw=False):
 
     """
     if not raw:
+        operator = operator.upper()
+        if operator not in {'NEAR', 'OR', 'AND', '+', ' ', ''}:
+            raise ValueError(f"Not allowed operator: {operator}")
+        if isinstance(query, str):
+            query = query.split()
         #query = f"NEAR({query})"
         #query = f'{{title body}} : {query}'
-        query = ' '.join(f'"{x}"' for x in (y.replace('"', '""') for y in query.split()))
+        near = False
+        if operator == 'NEAR':
+            operator = ''
+            near = True
+        query = f' {operator} '.join(f'"{x}"' for x in (y.replace('"', '""') for y in query))
+        if near:
+            query = f'NEAR( {query} )'
     print('Searching:', repr(query))
     cur = conn.execute(
         f"SELECT :base||path AS path, rank, snippet(pages, 2, '', '', '', :tokens) AS snipet, body"
@@ -162,12 +176,12 @@ def search(conn, query, tokens=64, limit=10, raw=False):
     for result in cur.fetchall():
         yield result
 
-def serve(conn, bind=':8000'):
+def serve(conn, bind=':8000', operator=OPERATOR_DEFAULT):
     """Start a HTTP server and serve snipets."""
     import http.server
     class Handler(http.server.BaseHTTPRequestHandler):
 
-        def do_GET(self):
+        def do_GET(self, operator=operator):
             """Serve results"""
             self.send_response(200)
             self.send_header("Content-type", "application/json")
@@ -185,6 +199,8 @@ def serve(conn, bind=':8000'):
                     raw = True
                 if 'limit' in qs:
                     limit = qs['limit'][0]
+                if 'operator' in qs:
+                    operator = qs['operator'][0]
             elif path != '/':
                 query = self.path.strip('/')
                 query = urllib.parse.unquote(query)
@@ -192,7 +208,7 @@ def serve(conn, bind=':8000'):
                 self.wfile.write(b'{"error": "specify search query as q="}')
                 return
             #print(query)
-            data = list(search(conn, query, raw=raw, limit=limit))
+            data = list(search(conn, query, raw=raw, limit=limit, operator=operator))
             self.wfile.write(json.dumps(data).encode())
 
         def do_POST(self):
@@ -236,6 +252,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--db', default=':memory:')
     parser.add_argument('--bind', default=':8000')
+    parser.add_argument('--operator', default=OPERATOR_DEFAULT)
     parser.add_argument('--limit', default=10, type=int)
     parser.add_argument('mode')
     parser.add_argument('query', nargs='*')
@@ -249,9 +266,9 @@ def main():
     if args.mode == 'create':
         insert(conn, get_data())
     if args.mode == 'serve':
-        serve(conn, bind=args.bind)
+        serve(conn, bind=args.bind, operator=args.operator)
     if args.mode == 'search':
-        for line in search(conn, " ".join(args.query), limit=args.limit):
+        for line in search(conn, args.query, limit=args.limit, operator=args.operator):
             print(line)
     if args.mode == 'update':
         url = args.query[0]
