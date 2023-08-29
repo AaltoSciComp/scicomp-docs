@@ -65,3 +65,10 @@ Zoom: link to be posted to the registered participants list
 **Required setup:** During the tutorials we’ll use a terminal with a BASH shell, means that either you have a Linux/Mac computer at your place or a Windows PC with the `Git BASH <https://gitforwindows.org/>`__, or VDI to a Linux, or SSH client installed for accessing any of Linux server. If you are at Aalto university you can run ``ssh USERNAME@kosh.aalto.fi`` to connect on a native Linux shell. Other servers are `listed here <https://scicomp.aalto.fi/aalto/linux/#basics>`__ . If you are at University of Helsinki, see the list of `available SSH linux servers at this link <https://wiki.helsinki.fi/display/it4sci/Remote+access+to+University+resources>`__. We will cover ssh connections at the beginning of the first day. 
 
 **Additional course info at:** scip -at- aalto.fi
+
+**What's next?:** After this course, check out `CodeRefinery, 19-21
+and 26-28 September 2023
+<https://coderefinery.github.io/2023-09-19-workshop/>`__.
+CodeRefinery is the next step in scientific programming, not teaching
+programming but the tools to do it comfortable and without wasting
+time on problems.
