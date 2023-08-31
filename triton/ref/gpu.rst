@@ -8,5 +8,5 @@
    Tesla V100          | ``volta``                              | ``v100``                                | 40             | gpu[1-10]    | Volta          | 5120                      | 32GB              | 7.0
    Tesla V100          | ``volta``                              | ``v100``                                | 40             | gpu[28-37]   | Volta          | 5120                      | 32GB              | 7.0
    Tesla V100          | ``volta``                              | ``v100``                                | 16             | dgx[1-7]     | Volta          | 5120                      | 16GB              | 7.0
-   Tesla A100          | ``ampere``                             | ``a100``                                | 28             | gpu[11-17]   | Ampere         | 7936                      | 80GB              | 8.0
+   Tesla A100          | ``ampere``                             | ``a100``                                | 56             | gpu[11-17,38-44] | Ampere         | 7936                      | 80GB              | 8.0
    AMD MI100 (testing) | ``mi100``                              | Use ``-p gpu-amd`` only, no ``--gres``  |                | gpuamd[1]    |
