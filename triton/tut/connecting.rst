@@ -68,6 +68,7 @@ will explain more about how to actually use it.
    out.
 
 
+.. _triton-connecting-ssh:
 
 Connecting via ssh
 ------------------
