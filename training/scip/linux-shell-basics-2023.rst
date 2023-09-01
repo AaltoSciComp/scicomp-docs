@@ -9,7 +9,7 @@ August 2023 / Linux Shell Basics
    * The material: `aaltoscicomp.github.io/linux-shell <https://aaltoscicomp.github.io/linux-shell/>`__
    * YouTube playlist of all days:
      https://www.youtube.com/playlist?list=PLZLVmS9rf3nPRb-QjrWsg_fTUfJ5Bbv07
-   * Q&A ("notes") for all days: (to be added)
+   * Q&A ("notes") for all days: https://hackmd.io/@AaltoSciComp/shellbasics2023
 
 
 Part of :doc:`Scientific Computing in Practice </training/index>` lecture series at Aalto University.
