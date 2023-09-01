@@ -7,7 +7,9 @@ August 2023 / Linux Shell Basics
 
    * 10/8 - Registration is now open at https://link.webropol.com/ep/linuxshell2023
    * The material: `aaltoscicomp.github.io/linux-shell <https://aaltoscicomp.github.io/linux-shell/>`__
-
+   * YouTube playlist of all days:
+     https://www.youtube.com/playlist?list=PLZLVmS9rf3nPRb-QjrWsg_fTUfJ5Bbv07
+   * Q&A ("notes") for all days: (to be added)
 
 
 Part of :doc:`Scientific Computing in Practice </training/index>` lecture series at Aalto University.
