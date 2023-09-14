@@ -164,11 +164,11 @@ Other links
 
 * `History of the RSEs concept <https://www.software.ac.uk/blog/2016-08-17-not-so-brief-history-research-software-engineers-0>`__
 
-* `Who is a RSE? <https://rse.ac.uk/who/>`__
+* `Who is a RSE? <https://society-rse.org/about/>`__
 
 * `Keynote video by Mike Croucher on the rise of RSEs and their benefits <https://youtu.be/8ZSaAM8hhJ4>`__
 
-* The `UK RSE association <https://rse.ac.uk/>`_ is quite advanced in
+* The `UK RSE association <https://society-rse.org/>`_ is quite advanced in
   promoting RSE careers.
 
 * `RSE international <https://researchsoftware.org/>`_.
