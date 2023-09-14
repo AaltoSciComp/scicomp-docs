@@ -89,7 +89,7 @@ try:
 - Manage your data well (remember, it's not just about the software).
 - Use different types of computing environments for your work,
   especially cluster environments (see our :ref:`HPC cluster lessons
-  <tutorials>`.
+  <tutorials>`).
 
 
 
