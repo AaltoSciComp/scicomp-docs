@@ -6,6 +6,8 @@ This page describes remote access solutions. Most of them are provided
 by Aalto, but there are also instruction for accessing your workstations
 here. See Aalto Inside for more details.
 
+.. highlight:: console
+
 Linux shell servers
 ~~~~~~~~~~~~~~~~~~~
 
@@ -49,16 +51,16 @@ For any of these, if you can't access something, run ``kinit``!
 
 .. _aalto_vpn:
 
-VPN / web proxy
-~~~~~~~~~~~~~~~
+VPN
+~~~
 
 To access certain things, you need to be able to connect to the Aalto
-networks via VPN. This is easy and automatically set up on Aalto
-computers.
+networks.  VPN is one way of doing that. This is easy and
+automatically set up on Aalto computers.
 
 `Main Aalto instructions
 <https://www.aalto.fi/en/services/establishing-a-remote-connection-vpn-to-an-aalto-network>`__.
-This section has some quick reference info.
+Below is some quick reference info.
 
 -  Generic: OpenConnect/Cisco AnyConnect protocols. ``vpn.aalto.fi``, ``vpn1.aalto.fi`` or ``vpn2.aalto.fi``
 -  Aalto Linux: Status bar → Network → VPN Connections → Aalto TLS
@@ -75,14 +77,46 @@ This section has some quick reference info.
 -  personal windows: `use Cisco AnyConnect VPN
    Client <https://download.aalto.fi/staff/>`__
 
-For more lightweight things (though not actually easier!), you can use
-ssh proxy. You are on your own
-here. ``ssh -D 8080 $username@kosh.aalto.fi``. Configure your web
-browser or other applications to use a SOCKS5 proxy on ``localhost:8080``
-for connections. Remember to revert when done or else you can't connect
-to anything ("proxy refusing connections"). The extension FoxyProxy
-Standard may be useful here, because you can direct *only the domains
-you want through the proxy*.
+SSH SOCKS proxy
+~~~~~~~~~~~~~~~
+
+If you need to access the Aalto networks, but can't send all of your
+traffic through the Aalto network, you can use SSH + the SSH built in
+SOCKS proxy.  **Only use this on computers that only you control,
+since the proxy itself doesn't have authentication.**
+
+Connect to an Aalto server using SSH with the ``-D`` option::
+
+  $ ssh -D 8080 USERNAME@kosh.aalto.fi
+
+Configure your web browser or other applications to use a SOCKS5 proxy
+on ``localhost:8080`` for connections. Remember to revert when done or
+else you can't connect to anything once the SSH tunnel stops ("proxy
+refusing connections").
+
+The web browser extension FoxyProxy Standard (available on many web
+browsers despite the name) may be useful here, because you can
+direct *only the domains you want through the proxy*.
+
+- Go to the FoxyProxy options
+- Configure a proxy with some title ("Aalto 8080" for example), Proxy
+  type SOCKS5, Proxy IP 127.0.0.1 (localhost), port 8080 (or whatever
+  you used in the ssh command, no username or password.
+- Save and edit patterns
+- Add a new pattern ("New White") and use a pattern you would like,
+  for example ``*.aalto.fi``, and make sure it's enabled.
+- Save
+
+Now, in this browser, when you try to access anything at
+``*.aalto.fi``, it will go through the SOCKS proxy and appear to come
+from the computer to which you connected.  By digging around in
+options or using the extension button, you can direct everything
+through a proxy and so on.
+
+This can actually also be used for SSH on linux at least (install the
+program ``netcat-openbsd``)::
+
+  ssh -o 'ProxyCommand=nc -X 5 -x 127.0.0.1:8123 %h %p' HOSTNAME
 
 
 
