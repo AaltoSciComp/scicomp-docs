@@ -412,7 +412,7 @@ Full sample config file
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 The following code is placed in the config file created above
-(i.e. ``~/.ssh/config`` on Mac/Linux or ``%USERPROFILE%.ssh/config``
+(i.e. ``~/.ssh/config`` on Mac/Linux or ``%USERPROFILE%/.ssh/config``
 on windows):
 
 .. code-block:: none
