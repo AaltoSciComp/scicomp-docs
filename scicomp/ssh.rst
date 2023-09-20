@@ -100,9 +100,11 @@ if you type a password!).  You'll get a message such as::
 
 If possible, compare the key fingerprint you get to the one for the
 machine which you can find online (Triton cluster:
-:doc:`/triton/usage/ssh-fingerprints`), and if they do not match,
-please contact the server administrator **immediately**. If they do
-match, type ``yes`` and press enter. You will receive a notice::
+:doc:`/triton/usage/ssh-fingerprints`, `Aalto servers
+<https://www.aalto.fi/en/services/linux-shell-servers-at-aalto>`__),
+and if they do not match, please contact the server administrator
+**immediately**. If they do match, type ``yes`` and press enter. You
+will receive a notice::
 
     Warning: Permanently added 'triton.aalto.fi,130.233.229.116' (ECDSA) to the list of known hosts.
 
