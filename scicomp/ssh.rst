@@ -310,6 +310,7 @@ Once the password is added, you can ssh as normal but will immediately
 be connected without any further prompts for passwords.
 
 
+
 .. _proxyjump:
 
 ProxyJump
@@ -332,6 +333,40 @@ https://www.redhat.com/sysadmin/ssh-proxy-bastion-proxyjump, including
 putting this in your configuration file (or see below).
 
 
+
+Multiplexing
+------------
+
+Connections can be even faster: you can re-use existing connections to
+start new connections, so that future ``ssh`` commands to the same
+host are almost instant.  It **multiplexes** across the same
+connection, and is controlled by ``ControlMaster``, ``ControlPath``,
+and ``ControlPersist``.  With a proper SSH key setup, the gain is
+minimal, but it can be useful sometimes.  **It is not recommend to use
+this unless you really want this, since there are some gotchas::**
+
+- Connections hanging (e.g. unstable network, changing network) will
+  cause all multiplexed connections to hang.
+- All multiplexed connections need to stop before the master process
+  (first SSH connection) will stop.  So if you try to exit the first
+  SSH but child processes are using it, it will appear to hang - this
+  may not be obvious.
+- If you are using with ProxyJump, there are two possible SSH
+  processes which can hang and cause things to go wrong.
+- Only use this on your own computers that you control, for security
+  reasons.
+
+This works with OpenSSH.  If you want to use this, to you ssh config
+file (see below) add ``ControlMaster auto`` and ``ControlPath
+/tmp/.ssh-USER-mux-ssh-%r@%h:%p`` (replacing USER with your username)
+and test well.  You might want ``ServerAliveInterval 30`` to kill
+stuff soon if network goes down.  We don't give a full example to
+prevent unintended problems.  If you notice weird things happening
+with your ssh, point your helpers to this section.
+
+
+
+.. _ssh-config:
 
 Config file: don't type so many options
 ---------------------------------------
@@ -446,6 +481,12 @@ non-default key name (like the one indicated).
 References
 ----------
 
+- `man ssh
+  <https://manpages.debian.org/stable/openssh-client/ssh_config.5.en.html>`__
+  gives a detail of the SSH command line options
+- `man ssh_config
+  <https://manpages.debian.org/stable/openssh-client/ssh.1.en.html>`__
+  gives a detail of all of the config file options
 - https://www.mn.uio.no/geo/english/services/it/help/using-linux/ssh-tips-and-tricks.html -
   long-form guide
 - https://blog.0xbadc0de.be/archives/300 - long-form guide
