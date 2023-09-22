@@ -218,6 +218,18 @@ the file to Triton.
 	$ cat ~/.ssh/id_ed25519.pub | ssh USER@triton.aalto.fi "cat >> ~/.ssh/authorized_keys"
 	$ ssh USER@triton.aalto.fi "chmod go-rwx ~/.ssh/authorized_keys"
 
+  .. group-tab:: Windows with PuTTY
+
+      You'll need to grab the key from PUTTYgen and copy it to the
+      ``~/.ssh/authorized_keys`` file on the other server.  This is a
+      file in your home directory (``~``), in the ``.ssh`` directory.
+      From a terminal **on the remote computer**, you can::
+
+	$ mkdir -p ~/.ssh
+	$ nano ~/.ssh/authorized_keys
+	## Paste the key into that file and save.
+	$ chmod go-rwx ~/.ssh/authorized_keys
+
 .. admonition:: Connecting from outside of the Aalto network
 
    Sometimes, you can't connect directly to the computer you need to,
@@ -294,6 +306,13 @@ needs to be added to the ``ssh-agent`` with the command
      4. ``ssh-add`` to add the default key (to add a certain key,
         use ``ssh-add ~/.ssh/id_ed25519``, for example)
 
+  .. group-tab:: Windows with PuTTY
+
+     The program Pagent ("PuTTY Agent") can unlock your keys once and
+     give them to PuTTY each time they are needed.  You can add keys
+     and manage it from the small icon in the system tray.  TODO: more
+     instructions on using Pagent.
+
   .. group-tab:: Linux
 
      SSH is likely to automatically save the key the first time you
@@ -305,13 +324,14 @@ needs to be added to the ``ssh-agent`` with the command
      (You'll get a message if ``ssh-agent`` is not running.  In this
      case, to start a new agent, use ``eval $(ssh-agent)``.  It'll
      only work for this one shell, check the rest of the Internet for
-     how to do more.)
+     how to do more.)  TODO: is any more needed?
 
   .. group-tab:: Mac
 
      ::
 
 	$ ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+
 
 Once the password is added, you can ssh as normal but will immediately
 be connected without any further prompts for passwords.
