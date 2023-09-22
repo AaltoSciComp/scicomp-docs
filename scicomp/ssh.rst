@@ -151,7 +151,6 @@ Generate an SSH key
 While there are many options for the key generation program ``ssh-keygen``, here are the four main ones.
 
 - ``-t`` -> the cryptosystem used to make the unique key-pair and encrypt it.
-- ``-b`` -> the number of key bits
 - ``-f`` -> filename of key
 - ``-C`` -> comment on what the key is for
 
@@ -163,14 +162,16 @@ Here are our recommended input options for key generation:
 
       ::
 
-	 $ ssh-keygen -t rsa -b 4096
+	 $ ssh-keygen -t ed25519
 
       This works on Linux, MacOS, Windows
 
    .. group-tab:: Windows with PuTTY
 
       The PuTTYgen program can generate keys.  We don't go into more
-      details right now.
+      details right now.  This provides a graphical application to
+      generate keys and from here you would extract the OpenSSH format
+      keys to copy to the servers.
 
 Accept the default name of the key file by pushing enter with no extra
 text(it will be automatically used later). Then, you will be prompted
@@ -180,6 +181,12 @@ fingerprint as both a SHA256 hex string as well as randomart
 image. Your new key pair should be found in the hidden ``~/.ssh``
 directory (A directory called ``.ssh`` in your user's home directory).
 
+Key type ``ed25519`` makes a private key named ``~/.ssh/id_ed25519``
+and public key named ``~/.ssh/id_ed25519.pub``.  The private key only
+stays on your computer.  The public key goes to other comuters.
+**Other key types were common in the past, and you may need to change
+your filenames in some of the future commands** (for exmaple
+``~/.ssh/id_rsa.pub``).
 
 
 Copy public key to server
@@ -198,7 +205,7 @@ the file to Triton.
 
      ::
 
-	$ ssh-copy-id -i ~/.ssh/id_rsa.pub USER@triton.aalto.fi
+	$ ssh-copy-id -i ~/.ssh/id_ed25519.pub USER@triton.aalto.fi
 
   .. group-tab:: Windows with PowerShell
 
@@ -208,7 +215,7 @@ the file to Triton.
      ::
 
 	$ ssh USER@triton.aalto.fi "mkdir -p ~/.ssh ; chmod go-rwx ~/.ssh"
-	$ cat ~/.ssh/id_rsa.pub | ssh USER@triton.aalto.fi "cat >> ~/.ssh/authorized_keys"
+	$ cat ~/.ssh/id_ed25519.pub | ssh USER@triton.aalto.fi "cat >> ~/.ssh/authorized_keys"
 	$ ssh USER@triton.aalto.fi "chmod go-rwx ~/.ssh/authorized_keys"
 
 .. admonition:: Connecting from outside of the Aalto network
@@ -238,8 +245,8 @@ the file to Triton.
 
 	 ::
 
-	    $ ssh-copy-id -i ~/.ssh/id_rsa.pub USER@kosh.aalto.fi
-	    $ ssh-copy-id -i ~/.ssh/id_rsa.pub -J USER@kosh.aalto.fi USER@triton.aalto.fi
+	    $ ssh-copy-id -i ~/.ssh/id_ed25519.pub USER@kosh.aalto.fi
+	    $ ssh-copy-id -i ~/.ssh/id_ed25519.pub -J USER@kosh.aalto.fi USER@triton.aalto.fi
 
       .. group-tab:: Windows with PowerShell
 
@@ -252,12 +259,12 @@ the file to Triton.
 
 	    ## Copy stuff to our jump host
 	    $ ssh USER@kosh.aalto.fi "mkdir -p ~/.ssh ; chmod go-rwx ~/.ssh"
-	    $ cat ~/.ssh/id_rsa.pub | ssh USER@kosh.aalto.fi "cat >> ~/.ssh/authorized_keys"
+	    $ cat ~/.ssh/id_ed25519.pub | ssh USER@kosh.aalto.fi "cat >> ~/.ssh/authorized_keys"
 	    $ ssh USER@kosh.aalto.fi "chmod go-rwx ~/.ssh/authorized_keys"
 
 	    ## Copy stuff to the real destination
 	    $ ssh -J USER@kosh.aalto.fi USER@triton.aalto.fi "mkdir -p ~/.ssh ; chmod go-rwx ~/.ssh"
-	    $ cat ~/.ssh/id_rsa.pub | ssh -J USER@kosh.aalto.fi USER@triton.aalto.fi "cat >> .ssh/authorized_keys"
+	    $ cat ~/.ssh/id_ed25519.pub | ssh -J USER@kosh.aalto.fi USER@triton.aalto.fi "cat >> .ssh/authorized_keys"
 	    $ ssh -J USER@kosh.aalto.fi USER@triton.aalto.fi "chmod go-rwx ~/.ssh/authorized_keys"
 
 
@@ -285,7 +292,7 @@ needs to be added to the ``ssh-agent`` with the command
 	start the service manually if it is not yet running.
 
      4. ``ssh-add`` to add the default key (to add a certain key,
-        use ``ssh-add ~/.ssh/id_rsa``, for example)
+        use ``ssh-add ~/.ssh/id_ed25519``, for example)
 
   .. group-tab:: Linux
 
@@ -304,7 +311,7 @@ needs to be added to the ``ssh-agent`` with the command
 
      ::
 
-	$ ssh-add --apple-use-keychain ~/.ssh/id_rsa
+	$ ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 
 Once the password is added, you can ssh as normal but will immediately
 be connected without any further prompts for passwords.
@@ -403,8 +410,6 @@ as:
    ForwardX11 yes
    # Connect through another server (eg Kosh) if not connected directly to Aalto network
    ProxyJump USER@kosh.aalto.fi
-   # Specify which ssh private key is used for login identification
-   IdentityFile ~/.ssh/id_rsa_triton
 
 
 
@@ -438,8 +443,7 @@ Now, you can just do command such as::
 
 directly, by using the ``triton`` alias.  Note that the Triton rule
 uses the name ``kosh`` which is defined in the first part of the
-file. The ``IdentityFile`` parameter is necessary only if you have a
-non-default key name (like the one indicated).
+file.
 
 
 
