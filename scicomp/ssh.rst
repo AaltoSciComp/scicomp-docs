@@ -4,7 +4,8 @@ SSH
 Secure Shell (SSH) is the standard program for connecting to remote
 servers and transferring data.  It is very secure and well-supported,
 so it's worth learning to use it properly.  This page both gives a bit
-of a crash course (top) and more details (bottom).
+of a crash course (top) and more details (bottom) for all common
+connection methods.
 
 .. highlight:: console
 
@@ -13,9 +14,8 @@ of a crash course (top) and more details (bottom).
 Setup
 -----
 
-Check the tabs below for your operating system and methods to see what
-you'll try do do.
-
+Check the tabs below for your operating system and methods to see
+which method you want to use.
 
 .. tabs::
 
@@ -54,6 +54,14 @@ you'll try do do.
       together.  This used to be recommended before Windows 10.  There
       aren't detailed instructions below, but most of the ideas can be
       done with PuTTY somehow (except that SSH keys take more work).
+
+   .. group-tab:: Windows with MobaXterm
+
+      `MobaXterm <https://mobaxterm.mobatek.net/>`__ is a separate
+      application that allow SSH and also graphical applications.
+      It's liked by some people, but is freeware/commercial so isn't
+      discussed much more here.  TODO: someone could describe it more
+      if they wanted.
 
    .. group-tab:: Linux
 
