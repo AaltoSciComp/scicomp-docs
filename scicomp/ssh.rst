@@ -226,17 +226,33 @@ the file to Triton.
 	$ cat ~/.ssh/id_ed25519.pub | ssh USER@triton.aalto.fi "cat >> ~/.ssh/authorized_keys"
 	$ ssh USER@triton.aalto.fi "chmod go-rwx ~/.ssh/authorized_keys"
 
-  .. group-tab:: Windows with PuTTY
+  .. group-tab:: Manual
 
-      You'll need to grab the key from PUTTYgen and copy it to the
-      ``~/.ssh/authorized_keys`` file on the other server.  This is a
-      file in your home directory (``~``), in the ``.ssh`` directory.
-      From a terminal **on the remote computer**, you can::
+     Connect to the system via some method and get a shell.  Copy the
+     OpenSSH public key (it should be one line, though a quite long
+     line).  You'll want to past the key as a new line in the file
+     ``~/.ssh/authorized_keys`` file on the other server.  This is a
+     file in your home directory (``~``), in the ``.ssh`` directory.
+
+     From a terminal **on the remote computer**, you can run these
+     commands to make a ``.ssh`` directory, edit the file, and set the
+     permissions correctly.  ``nano`` is a common editor, if it's not
+     available you need to use a different one::
 
 	$ mkdir -p ~/.ssh
 	$ nano ~/.ssh/authorized_keys
 	## Paste the key into that file and save.
-	$ chmod go-rwx ~/.ssh/authorized_keys
+	$ chmod -R go-rwx ~/.ssh/
+
+     You can also edit ``.ssh/authorized_keys`` to manage your keys
+     later.
+
+  .. group-tab:: Windows with PuTTY
+
+      You'll need to grab the key from PUTTYgen and copy it to the
+      remote server.  Copy the key from PuTTYgen and then us ethe
+      "Manual" instructions.
+
 
 .. admonition:: Connecting from outside of the Aalto network
 
@@ -368,6 +384,8 @@ https://www.redhat.com/sysadmin/ssh-proxy-bastion-proxyjump, including
 putting this in your configuration file (or see below).
 
 
+
+.. _ssh-multiplex:
 
 Multiplexing
 ------------
