@@ -308,6 +308,15 @@ the file to Triton.
 Login with SSH key
 ~~~~~~~~~~~~~~~~~~
 
+If the key is in one of the standard filenames, it should work
+directly.
+
+
+.. _ssh-agent:
+
+SSH key agent
+~~~~~~~~~~~~~
+
 To avoid having to type the decryption password, the *private key*
 needs to be added to the ``ssh-agent`` with the command
 
