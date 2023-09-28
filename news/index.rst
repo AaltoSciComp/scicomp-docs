@@ -2,15 +2,13 @@
 News
 ====
 
-*31/05/2023* Join us next week on `Twitch.tv <https://www.twitch.tv/coderefinery>`__ at 12:00 EEST for our `Intro to Scientific Computing and HPC <https://scicomp.aalto.fi/training/scip/kickstart-2023/>`__. The course is open to anyone with an internet connection. If you want to do the hands-on exercises with us, you need access to an HPC cluster. If you are at Aalto please `apply for access to the triton cluster <https://scicomp.aalto.fi/triton/accounts/>`__, otherwise check what is available at your institution. You can also watch without doing the practical parts, but we recommend registering anyway so you will be able to ask questions on a collaborative document. 
-
-*15/12/2022* `Follow us on Mastodon <https://fosstodon.org/@SciCompAalto>`__.
+*28/09/2023* CodeRefinery workshop is still ongoing on `Twitch.tv <https://www.twitch.tv/coderefine>`__. Join us live or watch the videos later in `CodeRefinery YouTube channel <https://www.youtube.com/channel/UC47aupE7HKGduAjXKt1Gwrg/videos>`__.
 
 **Upcoming Courses**
 
-From 22nd till 25th of November we will be running our popular `*Python for Scientific Computing* </training/scip/python-for-scicomp-2022/>`__ course again. The registration is open and can be accessed `here <https://docs.google.com/forms/d/e/1FAIpQLSfqBu3ByiuYmVcSouH4OQ-BeqlMRBA8bTzt2SY1KITR8rQHlA/viewform>`__. Please also visit our `training webpages </training/>`__ to check other upcoming courses or request a re-run of past hands-on courses. 
+From 7th till 10th of November 2023 we will be running our popular `*Python for Scientific Computing* </training/scip/python-for-scicomp-2023/>`__ course again. The registration is open. Please also visit our `training webpages </training/>`__ to check other upcoming courses or request a re-run of past hands-on courses. 
 
-Join our `daily zoom garage </help/garage/>`__ for any scientific computing related issue (not just Triton!) or to just chat and feel part of the community.  
+Join our `daily zoom garage </help/garage/>`__ for any scientific computing related issue (not just Triton!) or to just chat and feel part of the community.  `Follow us on Mastodon <https://fosstodon.org/@SciCompAalto>`__.
 
 News archive
 ~~~~~~~~~~~~
