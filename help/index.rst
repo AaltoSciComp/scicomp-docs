@@ -20,7 +20,6 @@ lists how to ask for help, for different kinds of needs.
        question
      * Well-defined task and end goal
      * Significant or open-ended problem solving
-     *
      * Issues with your own Triton account
      * General needs at Aalto University, not related to SciComp
    * * :ref:`SciComp garage <garage>` to discuss,
@@ -34,7 +33,6 @@ lists how to ask for help, for different kinds of needs.
        at the :ref:`issue tracker <issuetracker>` so we can keep track,
 
        *and possibly ...*
-     *
      * scicomp@aalto.fi email (account issues only, not general
        questions),
 
@@ -49,7 +47,6 @@ lists how to ask for help, for different kinds of needs.
      * Drop by :ref:`SciComp garage <garage>` to discuss details,
 
        *or ...*
-     *
      * :ref:`SciComp Garage <garage>`,
 
        *then if needed ...*
@@ -60,12 +57,10 @@ lists how to ask for help, for different kinds of needs.
        *and/or/then, if needed ...*
      * We'll create a :doc:`Research Software Engineer project on the topic
        </rse/index>` (you could also start here)
-     *
      * :ref:`SciComp chat <chat>` (e.g. "is Triton down for others?")
      *
    * *
      * :ref:`SciComp Garage <garage>` co-working
-     *
      *
      *
      *
