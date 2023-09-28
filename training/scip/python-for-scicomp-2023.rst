@@ -29,7 +29,8 @@ Nov 7th - Nov 10th 2023 / Python for Scientific Computing
 This is a medium-advanced course in Python tools such as NumPy, SciPy,
 Matplotlib, and Pandas.  It is suitable for people who know basic
 Python and want to know some internals and important libraries for
-science.  Read the `learner personas
+science - basically, how a typical scientist actually uses Python.
+Read the `learner personas
 <https://aaltoscicomp.github.io/python-for-scicomp/#learner-personas>`__
 to see if the course is right for you.  `Prerequisites
 <https://aaltoscicomp.github.io/python-for-scicomp/#prerequisites>`__
@@ -80,6 +81,10 @@ but certain partners provide extra benefits for their own audience:
 Practical information
 ---------------------
 
+.. admonition:: Registration
+
+   `General registration: please register here <https://link.webropol.com/ep/python2023>`__
+
 This is an online course streamed via Twitch (the
 `CodeRefinery channel <https://www.twitch.tv/coderefinery>`__) so that
 anyone may follow along without registration. You do *not* need a
@@ -89,10 +94,8 @@ the course.  Certain partners have extra registration possibilities
 (in-person exercise rooms, Zoom for support).  The `actual material is here
 <https://aaltoscicomp.github.io/python-for-scicomp/>`__.
 
-**General registration (but check partner registration above):**
-`Please register here <https://link.webropol.com/ep/python2023>`__.  While
-the stream is available even without providing personal data, if you
-register you may get HackMD access for asking questions and will
+While the stream is available even without providing personal data, if
+you register you may get HackMD access for asking questions and will
 support our funding by contributing to our attendance statistics.
 
 
@@ -138,6 +141,14 @@ sessions 3h each.  All times EET (`convert 9:50 to your timezone
 <https://arewemeetingyet.com/Helsinki/2023-11-07/9:50>`__).
 **The schedule is tentative**, we may run earlier or later, so join early
 if attending a single lesson.
+
+.. warning::
+
+   **Timezones!** Times in this page in the Europe/Helsinki timezone.
+   **In Central Europe, the course starts at 8:50!** (`convert 9:50
+   Helsinki to your timezone
+   <https://arewemeetingyet.com/Helsinki/2023-11-07/9:50>`__)
+
 
 - (week before) **Installation help sessions** (for sites that offer
   them)
