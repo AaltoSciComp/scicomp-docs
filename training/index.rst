@@ -30,6 +30,7 @@ to suggest a new course, `please take this survey <https://link.webropol.com/s/s
    scip/linux-shell-basics-2023
    CodeRefinery September 19-21 and 26-28 <https://coderefinery.org>
    scip/python-for-scicomp-2023
+   scip/shell-scripting-2024
    scip/workflows-2023
    Take the survey! Request a re-run of past courses / new courses <https://link.webropol.com/s/scipod>
    scip/index
