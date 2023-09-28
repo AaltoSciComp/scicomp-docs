@@ -42,7 +42,7 @@ Contributing gives agreement to use content under the licenses (CC-BY
 Requirements and building
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To build the docs, run ``make html``.  You can run ``make clean
+To build the docs, run ``make html``. You can run ``make clean
 check`` to build it and report only the errors that would cause a
 failure.
 
