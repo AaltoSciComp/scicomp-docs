@@ -16,14 +16,20 @@ Nov 7th - Nov 10th 2023 / Python for Scientific Computing
      attend.  **The course is open to everyone in the world**, with
      some partners providing special services (see below).
 
+   * **We'll run this course if we get enough interest**
+     * **~1000 registrations** (it's OK to register if you don't attend
+       all days or follow/watch videos on your own time)
+     * **~10 local partners** (who advertise to their local
+       organizations, run in-person watching parties, provide
+       local support, *or* similar things).  Join `CodeRefinery chat
+       <https://coderefinery.org/join/chat/>`__ (#python-for-scicomp)
+       or mail us at scip _at_ aalto.fi and let us know how to support
+       you.
 
-
-.. warning::
-
-   **Timezones!** Times in this page in the Europe/Helsinki timezone.
-   **In Central Europe, the course starts at 8:50!** (`convert 9:50
-   Helsinki to your timezone
-   <https://arewemeetingyet.com/Helsinki/2023-11-07/9:50>`__)
+   * `Course material
+     <https://aaltoscicomp.github.io/python-for-scicomp/>`__, and
+     `playlist from 2022
+     <https://www.youtube.com/playlist?list=PLZLVmS9rf3nOm3xkYuInBWPUvS93sAUlk>`__
 
 
 This is a medium-advanced course in Python tools such as NumPy, SciPy,
@@ -45,34 +51,39 @@ Partners
 --------
 
 This course is hosted by Aalto Scientific Computing (Aalto University,
-Finland) and CodeRefinery.  **Our livestream and registration is free
-for all to watch** in the spirit of open science and education,
-but certain partners provide extra benefits for their own audience:
+Finland) and CodeRefinery.  **Our livestream, registration, materials,
+and published videos are free for all** in the spirit of open science
+and education, but certain partners provide extra benefits for their
+own audience:
 
 * Aalto University: in-person exercise session, dedicated Zoom.  `General registration
   <https://link.webropol.com/ep/python2023>`__.
 * Finnish and other Nordic universities: Aalto services available for you (see above).
   `General registration <https://link.webropol.com/ep/python2023>`__.
-* **Your organization** - contact us to get listed here!
+* **Your organization** - contact us to get listed here!  Provide
+  advertisement and local support, and get a great course for your audience.
 * Others: General registration link below.
 
 **Staff and partner organizations:**
 
 * :doc:`Aalto Scientific Computing </index>`
 * `CodeRefinery <https://coderefinery.org/>`__
-* `ENCCS <https://enccs.se/>`__  
-* `SNIC <https://www.snic.se/>`__
-* Richard Darst (ASC, Aalto University) (instructor, instructor coordinator, director)
-* Enrico Glerean (ASC, Aalto University) (registration coordinator, communication, helper)
-* Johan Hellsvik (PDC, SNIC, KTH) (instructor, helper)
-* Diana Iusan (`UPPMAX <https://www.uppmax.uu.se/>`__, SNIC, Uppsala University) (instructor, helper, Swedish participants' coordinator)
-* Thomas Pfau (ASC, Aalto University) (instructor, helper)
-* Jarno Rantaharju (ASC, Aalto University) (instructor, helper)
-* Teemu Ruokolainen (ASC, Aalto University) (instructor, helper)
-* Sabry Razick (University of Oslo) (instructor, helper)
-* Simo Tuomisto (ASC, Aalto University) (instructor, helper)
-* Marijn van Vliet (NBE, Aalto University) (instructor, helper)
-* Thor Wikfeldt (ENCCS, RISE) (instructor, helper, Swedish participants' coordinator)
+
+..
+
+  * `ENCCS <https://enccs.se/>`__
+  * `SNIC <https://www.snic.se/>`__
+  * Richard Darst (ASC, Aalto University) (instructor, instructor coordinator, director)
+  * Enrico Glerean (ASC, Aalto University) (registration coordinator, communication, helper)
+  * Johan Hellsvik (PDC, SNIC, KTH) (instructor, helper)
+  * Diana Iusan (`UPPMAX <https://www.uppmax.uu.se/>`__, SNIC, Uppsala University) (instructor, helper, Swedish participants' coordinator)
+  * Thomas Pfau (ASC, Aalto University) (instructor, helper)
+  * Jarno Rantaharju (ASC, Aalto University) (instructor, helper)
+  * Teemu Ruokolainen (ASC, Aalto University) (instructor, helper)
+  * Sabry Razick (University of Oslo) (instructor, helper)
+  * Simo Tuomisto (ASC, Aalto University) (instructor, helper)
+  * Marijn van Vliet (NBE, Aalto University) (instructor, helper)
+  * Thor Wikfeldt (ENCCS, RISE) (instructor, helper, Swedish participants' coordinator)
 
 ...and many `contributors to the learning materials on Github <https://github.com/AaltoSciComp/python-for-scicomp/graphs/contributors>`__.
 
