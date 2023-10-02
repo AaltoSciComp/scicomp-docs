@@ -4,6 +4,17 @@ Project portfolio
 This page lists examples of projects which we have done.
 
 
+Summary table
+-------------
+
+.. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/rse-alignment.svg
+   :alt: 3x3 table with "programming", "workflows integration", "data"
+	 across the top and "help you do it", "do it with you", and
+	 "do it for you" along the side.
+
+   Example range of projects we do.  We sometimes do things outside of
+   this table, too.
+
 
 Software publishing (M)
 -----------------------
