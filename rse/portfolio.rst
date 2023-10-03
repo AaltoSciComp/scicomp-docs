@@ -112,7 +112,7 @@ Julia expertise
 
 
 Releasing an open-source Github-based book (S)
----------------------------------------------
+----------------------------------------------
 
 A researcher had prepared the start of an open-source book and needed
 help and advice in releasing it as an open project.  Aalto RSE helped
