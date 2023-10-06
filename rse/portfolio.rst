@@ -102,7 +102,7 @@ users in certain fields.  A professor taught an undergraduate course
 using Julia, but there were not sufficient introductory resources to
 prepare students for the course, nor any other resources to prepare
 them.  Aalto RSE found an open-source course prepared by CSC (Finland's
-National Scientific Computing Center), improved it to handle the
+national scientific computing center), improved it to handle the
 things needed by the undergraduate course, and successfully taught it
 on demand.  All course material is open source, so that others may
 also use it.  Time spent: ~1 month.  Benefit: Course given twice,
