@@ -68,6 +68,11 @@ Samba share addresses:
    Notice that Samba mounts don't include information about file and directory permissions.
    This means that all files and directories will have the default permissions. This also applies to anything that you create.
 
+User accounts
+-------------
+
+User accounts on CS Linux are managed via the central configuration management. If you want to grant access to the system for other users, please contact CS-IT. Creating local users manually may cause unexpected issues.
+
 Admin rights
 ------------
 
