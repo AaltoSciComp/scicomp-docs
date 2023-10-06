@@ -17,6 +17,7 @@ Nov 7th - Nov 10th 2023 / Python for Scientific Computing
      some partners providing special services (see below).
 
    * **We'll run this course if we get enough interest**
+
      * **~1000 registrations** (it's OK to register if you don't attend
        all days or follow/watch videos on your own time)
      * **~10 local partners** (who advertise to their local
