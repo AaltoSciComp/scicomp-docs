@@ -8,7 +8,7 @@ Installation
 ------------
 
 If you are using on Triton, it's available as a web app through
-:doc:`Open OnDemand <ood>`, see below.
+:doc:`Open OnDemand <../usage/ood>`, see below.
 
 It can also be installed on your own computer, which might be good to
 do anyway.  If you do this, make sure you turn off telemetry if you
@@ -21,8 +21,10 @@ fully turn it off
 (like "chromium" is an open-source build of Google Chrome) that
 disables all telemetry by default and removes non-open source bits.
 It is essentially the same thing, but due to Microsoft licenses it
-can't use the same extension registry as VSCode.  It does have an
-extension registry.
+can't use the same extension registry as VSCode.  It does have a
+`stand-alone extension registry
+<https://github.com/VSCodium/vscodium/blob/master/DOCS.md#extensions-marketplace>`__,
+though.
 
 
 
