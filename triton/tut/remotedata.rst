@@ -160,7 +160,7 @@ Aalto networks at the URLs
     * work: ``\\data.triton.aalto.fi\work\%username%\``.
 
     To access these folders:  To do the mounting, Windows Explorer →
-    Computer → Map network drive → select a free letter.
+    This PC → Map network drive → select a free letter.
 
   .. group-tab:: Mac
 
