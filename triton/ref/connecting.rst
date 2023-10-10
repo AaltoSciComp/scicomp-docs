@@ -5,21 +5,29 @@
      * Description
      * From where?
 
-   * * ssh
+   * * ssh from Aalto networks
      * Standard way of connecting via command line.  Hostname is
-       ``triton.aalto.fi``.  :doc:`More info </scicomp/ssh>`.
+       ``triton.aalto.fi``.  :doc:`More info </scicomp/ssh>`, both
+       `SSH keys and passwords are required since 2023 <https://aaltoscicomp.github.io/blog/2023/ssh-keys-with-passwords/>`__.
 
-       >Linux/Mac: ``ssh USERNAME@triton.aalto.fi``
+       >Linux/Mac/Win from command line: ``ssh USERNAME@triton.aalto.fi``
 
-       >Windows: `WSL <https://learn.microsoft.com/en-us/windows/wsl/>`__\ +Linux/Mac
-       instructions or use Powershell,
-       which works very similar to linux shell.
+       >Windows: same, see :ref:`triton-connecting-ssh` for details
+       options.
 
-     * Connections only from Aalto networks (VPN, most wired,
+     * Connections from Aalto networks (VPN, most wired,
        internal servers, ``eduroam``, ``aalto`` *only* if using an
-       Aalto-managed laptop, but *not* ``aalto open``).
-       ``kosh.aalto.fi`` is a good proxy host if you are outside:
-       ``ssh -J USERNAME@kosh.aalto.fi USERNAME@triton.aalto.fi``
+       Aalto-managed laptop, but *not* ``aalto open``).  **Simplest
+       SSH option if you can use VPNVPN.**
+
+   * * ssh (from rest of Internet)
+
+     * Same as above, but must set up SSH key and then ``ssh -J
+       USERNAME@kosh.aalto.fi USERNAME@triton.aalto.fi``
+
+     * From the rest of the Internet: must have *both* `SSH key AND
+       password set up
+       <https://aaltoscicomp.github.io/blog/2023/ssh-keys-with-passwords/>`__
 
    * * VDI
      * "Virtual desktop interface", https://vdi.aalto.fi, from there you have to

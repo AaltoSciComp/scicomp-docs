@@ -146,6 +146,15 @@ worth making yourself comfortable with its use.
       ``kosh.aalto.fi`` or some other server, and then use the Linux
       instructions to connect to Triton (``ssh triton.aalto.fi``)
 
+**If you are not on an Aalto network, there are extra steps.** Aalto
+networks are VPN, Eduroam, wired workstations, internal servers, and
+``aalto`` network only if using an Aalto-managed computer. **If you
+are not on this, you MUST set up SSH keys in addition to using a
+password** to connect into the Aalto network (the ``-J`` option).
+**The simplest is to set up an Aalto VPN and bypass this.** Read more:
+`Aalto public servers requiring passwords with SSH keys
+<https://aaltoscicomp.github.io/blog/2023/ssh-keys-with-passwords/>`__
+
 When connecting, you can :doc:`verify the ssh key fingerprints
 <../usage/ssh-fingerprints>` which will ensure security.
 
