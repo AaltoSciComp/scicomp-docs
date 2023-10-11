@@ -19,6 +19,9 @@ check:
 	@echo
 	@echo "OK: no errors"
 
+autobuild:
+	sphinx-autobuild . _build/html/
+
 # Put it first so that "make" without argument is like "make help".
 help:
 	$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
