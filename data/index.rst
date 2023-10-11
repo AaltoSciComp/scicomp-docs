@@ -108,7 +108,7 @@ exists.  Currently, this is done via `ACRIS
 particular, you should create a "dataset" object for data you create
 (it doesn't have to be open).  For some hints, for now see the :doc:`ACRIS
 point on the services page <services>` or the `ACRIS instructions on
-data <https://wiki.aalto.fi/display/ACRIShelp/ACRIS+and+research+data>`__.
+data <https://www.aalto.fi/en/services/register-your-dataset-or-software-in-acris>`__.
 
 
 
