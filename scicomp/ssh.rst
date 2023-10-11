@@ -392,6 +392,10 @@ Read more details at
 https://www.redhat.com/sysadmin/ssh-proxy-bastion-proxyjump, including
 putting this in your configuration file (or see below).
 
+(Windows with PuTTY: Connection > Proxy > Proxy type="SSH to proxy and
+use port forward.", then enter the firewall host as "Proxy hostname"
+and port 22.
+
 
 
 .. _ssh-multiplex:
