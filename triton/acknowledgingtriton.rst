@@ -74,10 +74,11 @@ More help:
    <https://wiki.aalto.fi/display/ACRIShelp/Submitting+a+journal+article>`_
    on ACRIShelp.
 
-
-
 Should you have problems, first contact your department's ACRIS help.
 If a publication or academic output somehow can't be linked, let us know
 and we will make sure that we include it in our own lists.
 
-
+Bonus: if you have some good pictures of research which can be share
+publicly, please send them to us to use to promote scientific
+computing resources at Aalto.  Please give any relevant photo credits
+and citations.  Photos may be used publicly.
