@@ -55,6 +55,8 @@ You can always run notebooks yourself on your own (or remote)
 computers, but on Triton we have some facilities already set up to
 make it easier.
 
+.. highlight:: console
+
 
 How Jupyter notebooks work
 ==========================
@@ -267,13 +269,13 @@ environment and do ``pip install ipykernel``.
 Then, you need to make the environment visible inside of Jupyter.
 **For conda environments**, you can do::
 
-  module load jupyterhub/live
-  envkernel conda --user --name INTERNAL_NAME --display-name="My conda" /path/to/conda_env
+  $ module load jupyterhub/live
+  $ envkernel conda --user --name INTERNAL_NAME --display-name="My conda" /path/to/conda_env
 
 Or for **Python virtualenvs**::
 
-  module load jupyterhub/live
-  envkernel virtualenv --user --name INTERNAL_NAME --display-name="My virtualenv" /path/to/virtualenv
+  $ module load jupyterhub/live
+  $ envkernel virtualenv --user --name INTERNAL_NAME --display-name="My virtualenv" /path/to/virtualenv
 
 Installing a different R module as a kernel
 -------------------------------------------
@@ -283,15 +285,15 @@ use envkernel as a wrapper to re-write the kernel (reading the
 ``NAME`` and rewriting to the same ``NAME``), after it loads the
 modules you need::
 
-  # Load jupyterhub/live, and R 3.6.1 with IRkernel.
-  module load r-irkernel/1.1-python3
-  module load jupyterhub/live
+  ## Load jupyterhub/live, and R 3.6.1 with IRkernel.
+  $ module load r-irkernel/1.1-python3
+  $ module load jupyterhub/live
 
-  # Use Rscript to install jupyter kernel
-  Rscript -e "library(IRkernel); IRkernel::installspec(name='NAME', displayname='R 3.6.1')"
+  ## Use Rscript to install jupyter kernel
+  $ Rscript -e "library(IRkernel); IRkernel::installspec(name='NAME', displayname='R 3.6.1')"
 
-  # Use envkernel to re-write, loading the R modules.
-  envkernel lmod --user --kernel-template=NAME --name=NAME r-irkernel/1.1-python3
+  ## Use envkernel to re-write, loading the R modules.
+  $ envkernel lmod --user --kernel-template=NAME --name=NAME r-irkernel/1.1-python3
 
 
 Installing a different R version as a kernel
@@ -308,59 +310,62 @@ is to use the existing R installations on Triton.
         You will need to create your own conda environment with all packages that are necessary
         to deploy the environment as a kernel.::
 
-           # Load and miniconda before creating your environment - this provides mamba that is used to create your environment
-           module load miniconda
+           ## Load and miniconda before creating your environment - this provides mamba that is used to create your environment
+           $ module load miniconda
 
         Create your conda environment, selecting a ``NAME`` for the environment.::
 
-           # This will use the latest R version on conda-forge. If you need a specific version you can specify it
-           # as r-essentials=X.X.X, where X.X.X is your required R version number
-           mamba create -n NAME -c conda-forge r-essentials r-irkernel 
-           # If Mamba doesn't work you can also replace it with conda, but usually mamba is a lot faster
+           ## This will use the latest R version on conda-forge. If you need a specific version you can specify it
+           ## as r-essentials=X.X.X, where X.X.X is your required R version number
+           $ mamba create -n NAME -c conda-forge r-essentials r-irkernel 
+           ## If Mamba doesn't work you can also replace it with conda, but usually mamba is a lot faster
 
         The next steps are the same as building a Kernel, except for activating the environment instead of 
         loading the r-irkernel module, since this module depends on the R version.
         the ``displayname`` will be what will be displayed on jupyter ::
         
-          # Use Rscript to install jupyter kernel, you need the environment for this.
-          # You need the Python `jupyter` command so R can know the right place to
-          # install the kernel (provided by jupyterhub/live)
-          module load jupyterhub/live
-          source activate NAME
-          Rscript -e "library(IRkernel); IRkernel::installspec(name='NAME', displayname='YOUR R Version')"
-          conda deactivate NAME
+          ## Use Rscript to install jupyter kernel, you need the environment for this.
+          ## You need the Python `jupyter` command so R can know the right place to
+          ## install the kernel (provided by jupyterhub/live)
+          $ module load jupyterhub/live
+          $ source activate NAME
+          $ Rscript -e "library(IRkernel); IRkernel::installspec(name='NAME', displayname='YOUR R Version')"
+          $ conda deactivate NAME
 
-          # For R versions before 4, you need to install the kernel. After version 4 IRkernel automatically installs it.
-          envkernel lmod --user --kernel-template=NAME --name=NAME
+          ## For R versions before 4, you need to install the kernel. After version 4 IRkernel automatically installs it.
+          $ envkernel lmod --user --kernel-template=NAME --name=NAME
     
   .. tab:: Using existing Triton installations of R
 
        First, you need to load the R version you want to create 
-       to deploy the environment as a kernel.::
+       to deploy the environment as a kernel::
 
-         module spider r
-         # Select one of the displayed R versions and load it with the following line
-         module load r/THE_VERSION_YOU_WANT
+         $ module spider r
+         ## Select one of the displayed R versions and load it with the following line
+         $ module load r/THE_VERSION_YOU_WANT
 
        Start R and install the IRkernel package. ::
 
-         # start R
-         R
-         # In R install the IRkernel package (to your home directory)
+         ## start R
+         $ R
+
+       .. code-block:: rconsole
+
+         ## In R install the IRkernel package (to your home directory)
          install.packages('IRkernel') 
-         # exit R again
+         ## exit R again
 
        Create the installation specs using Rscript and IRKernel. Select a ``NAME`` for the environment specification
        that can be used to install it. The
        Next install the jupyter kernel. Here you need to select the ``NAME`` given before. 
        The NAME is what is will be referred to for installation, while ``DISPLAYNAME`` will be displayed in jupyter::
 
-         # Use Rscript to install the jupyter kernel. The jupyterhub/live module is required to point R at the right place for jupyter
-         module load jupyterhub/live
-         Rscript -e "library(IRkernel); IRkernel::installspec(name='NAME', displayname='DISPLAYNAME')"
-         # For R versions before 4, you need to install the kernel. After version 4 IRkernel automatically installs it.
-         envkernel lmod --user --kernel-template=NAME --name=IMAGENAME YOURRMODULE
-         # YOURRMODULE should match the module you loaded above (THE_VERSION_YOU_WANT above)
+         ## Use Rscript to install the jupyter kernel. The jupyterhub/live module is required to point R at the right place for jupyter
+         $ module load jupyterhub/live
+         $ Rscript -e "library(IRkernel); IRkernel::installspec(name='NAME', displayname='DISPLAYNAME')"
+         ## For R versions before 4, you need to install the kernel. After version 4 IRkernel automatically installs it.
+         $ envkernel lmod --user --kernel-template=NAME --name=IMAGENAME YOURRMODULE
+         ## YOURRMODULE should match the module you loaded above (THE_VERSION_YOU_WANT above)
 
 .. note:: Installing R packages for jupyter
 
@@ -376,9 +381,9 @@ This works if the module provides the command ``python`` and
 ``ipykernel`` is installed.  This has
 to be done once in any Triton shell::
 
-  module load jupyterhub/live
-  envkernel lmod --user --name INTERNAL_NAME --display-name="Python from my module" MODULE_NAME
-  module purge
+  $ module load jupyterhub/live
+  $ envkernel lmod --user --name INTERNAL_NAME --display-name="Python from my module" MODULE_NAME
+  $ module purge
 
 Install your own kernels from Singularity image
 -----------------------------------------------
@@ -389,9 +394,9 @@ look for ``SING_IMAGE`` in the output.
 Then, install a kernel for your own user using envkernel.  This has to
 be done once in any Triton shell::
 
-  module load jupyterhub/live
-  envkernel singularity --user --name KERNEL_NAME --display-name="Singularity my kernel" SIMG_IMAGE
-  module purge
+  $ module load jupyterhub/live
+  $ envkernel singularity --user --name KERNEL_NAME --display-name="Singularity my kernel" SIMG_IMAGE
+  $ module purge
 
 As with the above, the image has to provide a ``python`` command and
 have ``ipykernel`` installed (assuming you want to use Python, other
@@ -405,14 +410,18 @@ installations (so we can't install it for you, if anyone knows
 something otherwise, let us know).
 Roughly, these steps should work to install the kernel yourself::
 
-  module load julia
-  module load jupyterhub/live
-  julia
+  $ module load julia
+  $ module load jupyterhub/live
+  $ julia
+
+.. code-block:: julia-repl
 
   julia> Pkg.add("IJulia")
 
 If this doesn't work, it may think it is already installed.  Force
-it with this::
+it with this:
+
+.. code-block:: julia-repl
 
   julia> using IJulia
   julia> installkernel("julia")
@@ -475,11 +484,12 @@ Here are the steps necessary to do so:
    the triton file system and use your favorite editor, for guides on how to mount the file system have a look 
    `here </triton/quickstart/data/>` and `here </triton/tut/remotedata/>`).
    Depending on your OS, it might be difficult to mount home and it is 
-   anyways best practice to use ``/scratch/work/<username>`` for your code.
+   anyways best practice to use ``/scratch/work/USERNAME`` for your code.
    :download:`Here </triton/examples/python/simple_python_gpu.sh>` is an example:
    
    .. literalinclude:: /triton/examples/python/simple_python_gpu.sh
-   
+      :language: slurm
+
    This is a minimalistic example. If you have parameter sets that you want to use have a look at :doc:`array jobs here </triton/tut/array/>`)
 
 7. Submit your batch script to the queue : ``sbatch simple_python_gpu.sh``
@@ -497,8 +507,8 @@ particular conda environment first.  The ``sed`` command fixes
 relative paths to absolute paths, so that you use the tools no matter
 what modules you have loaded)::
 
-  /share/apps/jupyterhub/live/miniconda/bin/nbdime config-git --enable
-  sed --in-place -r 's@(= )[ a-z/-]*(git-nb)@\1/share/apps/jupyterhub/live/miniconda/bin/\2@' .git/config
+  $ /share/apps/jupyterhub/live/miniconda/bin/nbdime config-git --enable
+  $ sed --in-place -r 's@(= )[ a-z/-]*(git-nb)@\1/share/apps/jupyterhub/live/miniconda/bin/\2@' .git/config
 
 
 
