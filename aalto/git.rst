@@ -53,7 +53,7 @@ Extra instructions for Aalto Gitlab
 Always login with HAKA wherever you see the button.  To use your Aalto
 account otherwise, use ``username@aalto.fi`` and your Aalto password
 (for example, use this with ``https`` pushing and pulling).  But, you
-really should try to configure ssh keys for pushing and pulling.
+really should try to configure :doc:`ssh keys </scicomp/ssh>` for pushing and pulling.
 
 For outside/public sharing read-only, you can make repositories public.
 
@@ -62,12 +62,13 @@ These outside partners can access repositories shared with them, but
 not make new ones.  They will get a special gitlab username/password,
 and should use that with the normal gitlab login boxes.  To request an
 collaborator account, their Aalto sponsor should `go here to the
-request form <workflow_ext_>`_ (employees only).  (You can always set
+request form <workflow_ext_>`_ (employees only, `more info <ext_moreinfo_>`_).  (You can always set
 a repository as public, so anyone can clone.  Another hackish
 method is to add ssh deploy keys (read-only or read-write) for outside
 collaborators, but this wouldn't be recommended for serious cases.)
 
-.. _workflow_ext: https://workflow.aalto.fi/version_ext/
+.. _workflow_ext: https://selfservice.esupport.aalto.fi/ssc/app%23/order/2068/
+.. _ext_moreinfo: https://www.aalto.fi/en/services/aalto-version-how-to-apply-an-account-for-an-external-user
 
 For **public projects** where you want to build a community, you can also consider
 Github.  There's nothing wrong with having both sites for your group, just
@@ -153,15 +154,16 @@ FAQ
   that this is a major reason for group-based access control!).  Email
   servicedesk for information on what to do to become an external
   collaborator.
-- **When are accounts/data deleted?** The deletion policy is findable
-  in the `privacy policy <versionprivacy_>`_.  In 2017, it's 6 months
+- **When are accounts/data deleted?** In 2017, the deletion policy was findable
+  in the `privacy policy <versionprivacy_>`_.  In 2017, it was 6 months
   after Aalto account closed, 24 months after last login, or 12 months
-  after last login of an external collaborator.
+  after last login of an external collaborator.  Now, that link is
+  dead and only links to the general `IT Services privacy notice <itsprivacy_>`_
 - **Are there continuous integration (CI) services available?**  Not
-  from Aalto, but the CodeRefinery project has free CI services to
+  from Aalto (though you can run your own runners), but the CodeRefinery project has free CI services to
   Nordics, see `their site <coderefinery_repo_>`__
   and the description above.
 
 .. _versionprivacy: https://version.aalto.fi/policies/version_aalto_policy_eng.pdf
 .. _coderefinery_repo: https://coderefinery.org/repository/
-
+.. _itsprivacy: https://www.aalto.fi/en/aalto-university/it-services-privacy-notice
