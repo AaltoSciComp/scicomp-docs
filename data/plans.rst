@@ -162,7 +162,7 @@ Aalto correspondences are.  You can also see the `Aalto guidelines
 <ardm_plan_>`_, but this is also a bit abstract to be immediately
 usable.
 
-.. _oafg: https://www.aka.fi/en/funding/apply-for-funding/az-index-of-application-guidelines/data-management-plan/data-management-plan/
+.. _oafg: https://www.aka.fi/en/research-funding/apply-for-funding/how-to-apply-for-funding/az-index-of-application-guidelines2/data-management-plan/data-management-plan/
 
 .. _ardm_plan: https://www.aalto.fi/en/services/data-management-plan-dmp
 
