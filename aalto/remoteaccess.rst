@@ -31,7 +31,7 @@ Linux shell servers
       (expect them to be overloaded and not that useful). If you are
       trying to use these for research, you really want to be using
       Triton instead.
-   -  ``taltta.aalto.fi``: Staff server (access to workstations and has
+   -  ``viila.aalto.fi``: Staff server (access to workstations and has
       filesystems mounted, but you need to kinit to access them.) that
       is kind of outdated and different.
 
@@ -44,7 +44,7 @@ Linux shell servers
 
    -  The CS filesystems **project** and **archive** and Triton
       filesystems **scratch** and **work** are mounted on
-      ``magi`` (and ``taltta.aalto.fi``) (see
+      ``magi`` (and ``viila.aalto.fi``) (see
       :doc:`storage <aaltostorage>`).
 
 For any of these, if you can't access something, run ``kinit``!
@@ -191,26 +191,30 @@ the shell servers):
    on an *Aalto laptop* on the ``aalto`` network.
 
 
-Accessing you Linux workstation / Triton remotely
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accessing your Linux workstation / Triton remotely
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Remote access to desktop workstations is available via the university
-   staff shell servers ``taltta.aalto.fi`` or department-specific
+   staff shell servers ``viila.aalto.fi`` or department-specific
    servers ``magi.cs.aalto.fi`` (CS), ``amor.org.aalto.fi`` (NBE),
    ``elliptic.aalto.fi``/``illposed.aalto.fi`` (Math).
 -  You need to be the **PrimaryUser** of the desktop in order to ssh to
    it.
 -  Remote access to Triton is available from any Aalto shell server:
-   ``taltta``, ``kosh.aalto.fi``, etc.
--  SSHing directly to computers using openssh ProxyCommand:
+   ``viila``, ``kosh.aalto.fi``, etc.
+-  When connecting from outside Aalto, you `have to
+   use<https://aaltoscicomp.github.io/blog/2023/ssh-keys-with-passwords/>`__
+   both SSH keys and a password, or use the VPN.
+-  See :doc:`/scicomp/ssh` for generic SSH instructions.
+-  SSHing directly to computers using openssh ProxyJump:
 
    -  Put this in your .ssh/config file under the proper Host line:
-      ``ProxyCommand ssh taltta.aalto.fi -W %h:%p``
-   -  For this to be most useful, you probably want to set up ssh keys,
-      otherwise you will have to enter your password twice.
-   -  This starts getting beyond the basic level of ssh use, so you may
-      want to read up on ssh keys, ProxyCommand, ControlMaster. It can
-      make your experience much better.
+      ``ProxyJump viila.aalto.fi`` (or for older SSH clients,
+      ``ProxyCommand ssh viila.aalto.fi -W %h:%p``).
+   -  Note that unless your local username matches your Aalto username, or
+      unless you have defined the username for ``viila.org.aalto.fi`` elsewhere
+      in the SSH config, you will have to use the format
+      ``aaltousername@viila.org.aalto.fi`` instead.
 
 Remote desktop
 ~~~~~~~~~~~~~~
