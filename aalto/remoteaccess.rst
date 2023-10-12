@@ -191,8 +191,8 @@ the shell servers):
    on an *Aalto laptop* on the ``aalto`` network.
 
 
-Accessing you Linux workstation / Triton remotely
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accessing your Linux workstation / Triton remotely
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Remote access to desktop workstations is available via the university
    staff shell servers ``viila.aalto.fi`` or department-specific
@@ -202,15 +202,19 @@ Accessing you Linux workstation / Triton remotely
    it.
 -  Remote access to Triton is available from any Aalto shell server:
    ``viila``, ``kosh.aalto.fi``, etc.
--  SSHing directly to computers using openssh ProxyCommand:
+-  When connecting from outside Aalto, you `have to
+   use<https://aaltoscicomp.github.io/blog/2023/ssh-keys-with-passwords/>`__
+   both SSH keys and a password, or use the VPN.
+-  See :doc:`/scicomp/ssh` for generic SSH instructions.
+-  SSHing directly to computers using openssh ProxyJump:
 
    -  Put this in your .ssh/config file under the proper Host line:
-      ``ProxyCommand ssh viila.aalto.fi -W %h:%p``
-   -  For this to be most useful, you probably want to set up ssh keys,
-      otherwise you will have to enter your password twice.
-   -  This starts getting beyond the basic level of ssh use, so you may
-      want to read up on ssh keys, ProxyCommand, ControlMaster. It can
-      make your experience much better.
+      ``ProxyJump viila.aalto.fi`` (or for older SSH clients,
+      ``ProxyCommand ssh viila.aalto.fi -W %h:%p``).
+   -  Note that unless your local username matches your Aalto username, or
+      unless you have defined the username for ``viila.org.aalto.fi`` elsewhere
+      in the SSH config, you will have to use the format
+      ``aaltousername@viila.org.aalto.fi`` instead.
 
 Remote desktop
 ~~~~~~~~~~~~~~
