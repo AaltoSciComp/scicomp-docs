@@ -9,7 +9,7 @@ agencies are beginning to demand good data management and openness.
 Knowing how to manage data is probably one of the most important
 untaught modern skills.
 
-[Test sentence with an errorxxxx added for demonstration purposes,
+[Test sentence with an error added for demonstration purposes,
 please ignore.]
 
 It's not just "get it done": there are good and bad methods of managing
