@@ -31,7 +31,7 @@ Linux shell servers
       (expect them to be overloaded and not that useful). If you are
       trying to use these for research, you really want to be using
       Triton instead.
-   -  ``taltta.aalto.fi``: Staff server (access to workstations and has
+   -  ``viila.aalto.fi``: Staff server (access to workstations and has
       filesystems mounted, but you need to kinit to access them.) that
       is kind of outdated and different.
 
@@ -44,7 +44,7 @@ Linux shell servers
 
    -  The CS filesystems **project** and **archive** and Triton
       filesystems **scratch** and **work** are mounted on
-      ``magi`` (and ``taltta.aalto.fi``) (see
+      ``magi`` (and ``viila.aalto.fi``) (see
       :doc:`storage <aaltostorage>`).
 
 For any of these, if you can't access something, run ``kinit``!
@@ -195,17 +195,17 @@ Accessing you Linux workstation / Triton remotely
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Remote access to desktop workstations is available via the university
-   staff shell servers ``taltta.aalto.fi`` or department-specific
+   staff shell servers ``viila.aalto.fi`` or department-specific
    servers ``magi.cs.aalto.fi`` (CS), ``amor.org.aalto.fi`` (NBE),
    ``elliptic.aalto.fi``/``illposed.aalto.fi`` (Math).
 -  You need to be the **PrimaryUser** of the desktop in order to ssh to
    it.
 -  Remote access to Triton is available from any Aalto shell server:
-   ``taltta``, ``kosh.aalto.fi``, etc.
+   ``viila``, ``kosh.aalto.fi``, etc.
 -  SSHing directly to computers using openssh ProxyCommand:
 
    -  Put this in your .ssh/config file under the proper Host line:
-      ``ProxyCommand ssh taltta.aalto.fi -W %h:%p``
+      ``ProxyCommand ssh viila.aalto.fi -W %h:%p``
    -  For this to be most useful, you probably want to set up ssh keys,
       otherwise you will have to enter your password twice.
    -  This starts getting beyond the basic level of ssh use, so you may
