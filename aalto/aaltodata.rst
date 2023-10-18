@@ -189,7 +189,7 @@ Confidential or sensitive data
    something more (but be careful about making custom solutions).
 
 Aalto has some `guidelines for classification of confidential
-information <https://inside.aalto.fi/display/ArchiveandRegistryServices/Guidelines+-+Classification+of+Information>`__,
+information <https://www.aalto.fi/en/information-processing/classification-of-information>`__,
 but they tend to deal with documents as opposed to practical guidelines
 for research data. If you have data which needs special attention, you
 should put it in a separate group and tell us when creating the
