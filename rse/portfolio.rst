@@ -155,7 +155,10 @@ The "Programming parallel supercomputers" course, as the name says,
 gives students a first experience with HPC work.  It can be difficult
 to find teaching assistants capable of giving the exercises a
 deep-enough check - in addition to confirming they follow best
-practices on the cluster.  Aalto RSE will play an important role in
+practices on the cluster.  There is also a secondary effect of
+making sure students see best practices in research software
+(development, documentation, etc.), which can often be left behind in
+academic courses.  Aalto RSE plays an important role in
 this course by bridging the technology with the teaching.
 
 
