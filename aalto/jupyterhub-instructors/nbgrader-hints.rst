@@ -12,7 +12,8 @@ General
 
 To export grades, ``nbgrader export`` is your central point.  It will
 generate a CSV file (using a custom MyCourses exporter), which you can
-download, check, and upload to MyCourses.
+download, check, and upload to MyCourses.  You can add the option
+``--MyCoursesExportPlugin.scale_to_100=False`` to not scale points to 100.
 
 
 
@@ -106,7 +107,9 @@ Converting usernames to emails
 ------------------------------
 
 JupyterHub has no access to emails or student numbers.  If you do need
-to link to email addresses, you can do the following.
+to link to email addresses, you can do the following.  (Note: the
+format USERNAME@aalto.fi works for MyCourses upload, this process is
+not usually needed these days anymore.)
 
 * ssh to kosh.aalto.fi
 
