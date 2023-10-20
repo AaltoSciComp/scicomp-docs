@@ -156,24 +156,24 @@ Aalto networks at the URLs
 
   .. group-tab:: Windows
 
-    * scratch: ``\\data.triton.aalto.fi\scratch\``.
-    * work: ``\\data.triton.aalto.fi\work\%username%\``.
+    * scratch: ``\\data.triton.aalto.fi\scratch\``
+    * work: ``\\data.triton.aalto.fi\work\%username%\``
 
     To access these folders:  To do the mounting, Windows Explorer →
     This PC → Map network drive → select a free letter.
 
   .. group-tab:: Mac
 
-    * scratch: ``smb://data.triton.aalto.fi/scratch/``.
-    * work: ``smb://data.triton.aalto.fi/work/USERNAME/``.
+    * scratch: ``smb://data.triton.aalto.fi/scratch/``
+    * work: ``smb://data.triton.aalto.fi/work/USERNAME/``
 
     To access these folders: Finder → Go menu item → Connect to server
     → use the URLs above.
 
   .. group-tab:: Linux
 
-    * scratch: ``smb://data.triton.aalto.fi/scratch/``.
-    * work: ``smb://data.triton.aalto.fi/work/USERNAME/``.
+    * scratch: ``smb://data.triton.aalto.fi/scratch/``
+    * work: ``smb://data.triton.aalto.fi/work/USERNAME/``
 
     To access these folders: Files → Left sidebar → Connect to server
     → use the URLs above. For other Linuxes, you can probably figure
