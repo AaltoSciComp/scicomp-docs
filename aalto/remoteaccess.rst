@@ -203,7 +203,7 @@ Accessing your Linux workstation / Triton remotely
 -  Remote access to Triton is available from any Aalto shell server:
    ``viila``, ``kosh.aalto.fi``, etc.
 -  When connecting from outside Aalto, you `have to
-   use<https://aaltoscicomp.github.io/blog/2023/ssh-keys-with-passwords/>`__
+   use <https://aaltoscicomp.github.io/blog/2023/ssh-keys-with-passwords/>`__
    both SSH keys and a password, or use the VPN.
 -  See :doc:`/scicomp/ssh` for generic SSH instructions.
 -  SSHing directly to computers using openssh ProxyJump:
