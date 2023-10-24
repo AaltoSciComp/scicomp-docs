@@ -55,7 +55,7 @@ possible, but unfortunately we don't have the resources to do
 everything centrally.
 
 Software is generally easy to install if it is in `Spack
-<https://spack.readthedocs.io/en/latest/package_list.html>`__ (check
+<https://packages.spack.io/>`__ (check
 that package list page), a scientific software management and building
 system.  If it has easy-to-install Ubuntu packages,
 it will be easy to do via :doc:`singularity <../usage/singularity>`.
