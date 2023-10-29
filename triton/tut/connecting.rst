@@ -13,10 +13,11 @@ see our :doc:`shell crash course </scicomp/shell>`.
 
    * When connecting to a cluster, our goal is to get a command-line
      terminal that provides a base for the rest of our work.
-   * The standard way of connecting is via ssh, but Open OnDemand and
+   * The standard way of connecting is via **ssh**, but Open OnDemand and
      Jupyter provide graphical environments that are useful for
      interactive work.
-   * SSH host name is ``triton.aalto.fi``
+   * SSH host name is ``triton.aalto.fi``, use `VPN <https://www.aalto.fi/en/services/remote-connection-to-aaltos-network-vpn>`__ if not on an Aalto
+     network.
 
    .. include:: ../ref/connecting.rst
 
@@ -90,16 +91,8 @@ worth making yourself comfortable with its use.
         ## OR, if your username is different:
         $ ssh USERNAME@triton.aalto.fi
 
-      If you are from outside the Aalto networks, use the ProxyJump
-      option (``-J``) in modern OpenSSH::
-
-          $ ssh -J kosh.aalto.fi triton.aalto.fi
-          ## OR, if your username is different:
-          $ ssh -J USERNAME@kosh.aalto.fi USERNAME@triton.aalto.fi
-
-          ## If you do not have the -J option:
-          $ ssh kosh.aalto.fi
-          $ ssh triton.aalto.fi
+      If you are not in the Aalto networks, use the `Aalto VPN
+      <https://www.aalto.fi/en/services/remote-connection-to-aaltos-network-vpn>`__.
 
    .. tab:: MacOS
 
@@ -142,18 +135,13 @@ worth making yourself comfortable with its use.
       You should configure PuTTY with the hostname, username, and save the
       settings so that you can connect quickly.
 
-      If you are outside the Aalto networks, you need to first connect to
-      ``kosh.aalto.fi`` or some other server, and then use the Linux
-      instructions to connect to Triton (``ssh triton.aalto.fi``)
 
-**If you are not on an Aalto network, there are extra steps.** Aalto
-networks are VPN, Eduroam, wired workstations, internal servers, and
-``aalto`` network only if using an Aalto-managed computer. **If you
-are not on this, you MUST set up SSH keys in addition to using a
-password** to connect into the Aalto network (the ``-J`` option).
-**The simplest is to set up an Aalto VPN and bypass this.** Read more:
-`Aalto public servers requiring passwords with SSH keys
-<https://aaltoscicomp.github.io/blog/2023/ssh-keys-with-passwords/>`__
+**If you are not on an Aalto network, there are extra steps.** We
+recommend you use the `Aalto VPN
+<https://www.aalto.fi/en/services/remote-connection-to-aaltos-network-vpn>`__
+rather than any other workarounds.  (Aalto networks are VPN, Eduroam,
+wired workstations, internal servers, and ``aalto`` network only if
+using an Aalto-managed computer.)
 
 When connecting, you can :doc:`verify the ssh key fingerprints
 <../usage/ssh-fingerprints>` which will ensure security.
@@ -161,6 +149,24 @@ When connecting, you can :doc:`verify the ssh key fingerprints
 See the :doc:`advanced ssh information </scicomp/ssh>` to learn how
 to log in without a password, automatically save your username
 and more. It really will save you time.
+
+.. admonition:: SSH from outside the Aalto networks
+   :class: dropdown
+
+   If you are from outside the Aalto networks, use the ProxyJump
+   option (``-J``) in modern OpenSSH to connect directly to Triton
+   without VPN.  This is more work than VPN, since you have to `set up
+   SSH keys AND use a password anyway
+   <https://aaltoscicomp.github.io/blog/2023/ssh-keys-with-passwords/>`__::
+
+       $ ssh -J kosh.aalto.fi triton.aalto.fi
+       ## OR, if your username is different:
+       $ ssh -J USERNAME@kosh.aalto.fi USERNAME@triton.aalto.fi
+
+       ## If you do not have the -J option:
+       $ ssh kosh.aalto.fi
+       $ ssh triton.aalto.fi
+
 
 .. admonition:: SSH configuration file
    :class: dropdown
@@ -261,6 +267,14 @@ desktop (you get Aalto Ubuntu).  From there, you **have to use the
 normal Linux ssh instructions to connect to Triton** (via the Terminal
 application) using the instructions you see above: ``ssh
 triton.aalto.fi``.
+
+
+
+VSCode
+------
+
+You can use a web-based VSCode through Open OnDemand.  Desktop VSCode
+can also connect to Triton via SSH.  :doc:`Read more <../apps/vscode>`
 
 
 
