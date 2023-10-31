@@ -75,12 +75,13 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
-          #env:
-          #  - name: POSTGRES_USER
-          #    valueFrom:
-          #      secretKeyRef:
-          #        name: plausible-db-user
-          #        key: username
+          env:
+            # created with: kubectl -n rse create secret generic scicomp-docs-search-update --from-literal=token=TOKEN
+            - name: SEARCH_UPDATE_AUTHORIZATION
+              valueFrom:
+                secretKeyRef:
+                  name: scicomp-docs-search-update
+                  key: token
       # created with: `kubectl -n rse create secret docker-registry robot-scicomp-docs-search-pull --docker-server=DOMAIN --docker-username='robot$NAME' --docker-password='SECRET'`
       imagePullSecrets:
       - name: robot-scicomp-docs-search-pull
