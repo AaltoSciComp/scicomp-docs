@@ -222,7 +222,8 @@ def serve(conn, bind=':8000', operator=OPERATOR_DEFAULT):
                 query = self.path.strip('/')
                 query = urllib.parse.unquote(query)
             else:
-                self.wfile.write(b'{"error": "specify search query as q="}')
+                time_update = conn.execute('select max(time_update) as tu from pages').fetchone()['tu']
+                self.wfile.write(b'{"error": "specify search query as q=", "time_update": "%s"}'%time.ctime(time_update).encode())
                 return
             #print(query)
             data = list(search(conn, query, raw=raw, limit=limit, operator=operator))
