@@ -292,7 +292,12 @@ def main():
         data = list(get_data())
         token = os.environ.get('SEARCH_UPDATE_AUTHORIZATION', '')
         import requests
-        requests.post(url, data=json.dumps(data), auth=('', token), timeout=60)
+        data = json.dumps(data)
+        print ("Update size:", len(data))
+        response = requests.post(url, data=data, auth=('', token), timeout=60)
+        print(response.status_code, response.reason)
+        if response.status_code != 200:
+            sys.exit(1)
 
 
 if __name__ == '__main__':
