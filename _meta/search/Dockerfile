@@ -1,18 +1,26 @@
 FROM python:3.11-slim-bookworm
 
+# This is a multi-stage build.  First stage:
+
 COPY _meta/search/requirements.txt ./
 COPY requirements.txt ./scicomp-docs/
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install -r requirements.txt beautifulsoup4 markdownify
 COPY ./ ./scicomp-docs/
+
+# This builds the database
 RUN \
     pwd && ls && \
     cd scicomp-docs && \
     sphinx-build -b dirhtml . _build/dirhtml/ && \
     python _meta/search.py create --db=search.db
 
-FROM python:3.11-slim-bookworm
 
+
+# Make final image.  Only copy search.db and search.py into it, since
+# that's all that's needed.
+
+FROM python:3.11-slim-bookworm
 WORKDIR /
 USER 1000
 
