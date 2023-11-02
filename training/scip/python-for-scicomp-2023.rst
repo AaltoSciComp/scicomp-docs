@@ -55,7 +55,16 @@ own audience.
 * `NAISS <https://www.naiss.se/>`__
 * `KTH <https://kth.se>`__
 * `UPPMAX <https://www.uppmax.uu.se/>`__ (Uppsala University)
-* 
+* `IT4SCI <https://helpdesk.it.helsinki.fi/en/services/scientific-computing-services-hpc>`__ (University of Helsinki)
+* `University of Oslo <https://www.usit.uio.no/>`__
+* `Nordic RSE <https://nordic-rse.org/>`__
+* `University of Oulu <https://www.oulu.fi/fi>`__
+* `University of Jyväskylä <https://www.jyu.fi/en>`__
+* `University of Eastern Finland <https://www.uef.fi/en>`__
+* `Finnish Reproducibility Network <https://www.finnish-rn.org/`__
+* `Scientific IT Services of ETH Zurich <https://sis.id.ethz.ch/>`__
+* `eScience center <https://www.esciencecenter.nl/>`__
+  
 
 ..
 
