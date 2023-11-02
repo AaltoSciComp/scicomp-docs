@@ -248,6 +248,7 @@ def serve(conn, bind=':8000', operator=OPERATOR_DEFAULT):
                 self.wfile.write(json.dumps('{}').encode())
                 return
             self.send_response(405)
+            self.end_headers()
 
 
     server_class = http.server.HTTPServer
