@@ -25,6 +25,8 @@ WORKDIR /
 USER 1000
 
 COPY --from=0 scicomp-docs/search.db scicomp-docs/_meta/search.py ./
+RUN chown 1000 search.db && \
+    chmod ug+rwX search.db
 
 CMD ["python", "search.py", "serve", "--db=search.db", "--bind=0.0.0.0:8000"]
 EXPOSE 8000/tcp
