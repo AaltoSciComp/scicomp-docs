@@ -22,11 +22,13 @@ RUN \
 
 FROM python:3.11-slim-bookworm
 WORKDIR /
-USER 1000
 
 COPY --from=0 scicomp-docs/search.db scicomp-docs/_meta/search.py ./
-RUN chown 1000 search.db && \
-    chmod ug+rwX search.db
+RUN mkdir search && \
+    mv search.db search/ && \
+    chown -R 1000 search/ && \
+    chmod -R a+rwX search/
 
-CMD ["python", "search.py", "serve", "--db=search.db", "--bind=0.0.0.0:8000"]
+USER 1000
+CMD ["python", "search.py", "serve", "--db=search/search.db", "--bind=0.0.0.0:8000"]
 EXPOSE 8000/tcp

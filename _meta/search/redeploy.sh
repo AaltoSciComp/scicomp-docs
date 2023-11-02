@@ -1,3 +1,4 @@
+set -e
 cd $(dirname $0)
 sh build.sh
 docker push harbor.cs.aalto.fi/aaltorse/scicomp-docs-search:latest
