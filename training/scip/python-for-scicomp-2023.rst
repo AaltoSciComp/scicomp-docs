@@ -9,23 +9,12 @@ Nov 7th - Nov 10th 2023 / Python for Scientific Computing
 
 .. admonition:: News and Important info
 
-   * We are still updating the content of this page. Come back later to check more updates
+   * Page updated 2/11/2023. Check the schedule!
 
    * `Register here <https://link.webropol.com/ep/python2023>`__
      to get emails about the course, but it's not necessary to
      attend.  **The course is open to everyone in the world**, with
      some partners providing special services (see below).
-
-   * **We'll run this course if we get enough interest**
-
-     * **~1000 registrations** (it's OK to register if you don't attend
-       all days or follow/watch videos on your own time)
-     * **~10 local partners** (who advertise to their local
-       organizations, run in-person watching parties, provide
-       local support, *or* similar things).  Join `CodeRefinery chat
-       <https://coderefinery.org/join/chat/>`__ (#python-for-scicomp)
-       or mail us at scip _at_ aalto.fi and let us know how to support
-       you.
 
    * `Course material
      <https://aaltoscicomp.github.io/python-for-scicomp/>`__, and
@@ -56,36 +45,30 @@ This course is hosted by Aalto Scientific Computing (Aalto University,
 Finland) and CodeRefinery.  **Our livestream, registration, materials,
 and published videos are free for all** in the spirit of open science
 and education, but certain partners provide extra benefits for their
-own audience:
+own audience.
 
-* Aalto University: in-person exercise session, dedicated Zoom.  `General registration
-  <https://link.webropol.com/ep/python2023>`__.
-* Finnish and other Nordic universities: Aalto services available for you (see above).
-  `General registration <https://link.webropol.com/ep/python2023>`__.
-* **Your organization** - contact us to get listed here!  Provide
-  advertisement and local support, and get a great course for your audience.
-* Others: General registration link below.
 
 **Staff and partner organizations:**
 
 * :doc:`Aalto Scientific Computing </index>`
 * `CodeRefinery <https://coderefinery.org/>`__
+* `NAISS <https://www.naiss.se/>`__
+* `KTH <https://kth.se>`__
+* `UPPMAX <https://www.uppmax.uu.se/>`__ (Uppsala University)
+* 
 
 ..
 
-  * `ENCCS <https://enccs.se/>`__
-  * `SNIC <https://www.snic.se/>`__
+  * Radovan Bast (CodeRefinery, The Artic University of Norway) (instructor, helper)
   * Richard Darst (ASC, Aalto University) (instructor, instructor coordinator, director)
-  * Enrico Glerean (ASC, Aalto University) (registration coordinator, communication, helper)
+  * Enrico Glerean (ASC, Aalto University) (instructor, registration coordinator, communication, helper)
   * Johan Hellsvik (PDC, SNIC, KTH) (instructor, helper)
-  * Diana Iusan (`UPPMAX <https://www.uppmax.uu.se/>`__, SNIC, Uppsala University) (instructor, helper, Swedish participants' coordinator)
+  * Diana Iusan (`UPPMAX <https://www.uppmax.uu.se/>`__, SNIC, Uppsala University) (instructor, helper)
   * Thomas Pfau (ASC, Aalto University) (instructor, helper)
   * Jarno Rantaharju (ASC, Aalto University) (instructor, helper)
   * Teemu Ruokolainen (ASC, Aalto University) (instructor, helper)
   * Sabry Razick (University of Oslo) (instructor, helper)
   * Simo Tuomisto (ASC, Aalto University) (instructor, helper)
-  * Marijn van Vliet (NBE, Aalto University) (instructor, helper)
-  * Thor Wikfeldt (ENCCS, RISE) (instructor, helper, Swedish participants' coordinator)
 
 ...and many `contributors to the learning materials on Github <https://github.com/AaltoSciComp/python-for-scicomp/graphs/contributors>`__.
 
@@ -100,14 +83,12 @@ Practical information
 This is an online course streamed via Twitch (the
 `CodeRefinery channel <https://www.twitch.tv/coderefinery>`__) so that
 anyone may follow along without registration. You do *not* need a
-Twitch account.  There is a HackMD link
-(collaborative edited notes) which is used for asking questions during
-the course.  Certain partners have extra registration possibilities
-(in-person exercise rooms, Zoom for support).  The `actual material is here
+Twitch account.  There is a collaborative notes link which is used for asking questions during
+the course. The `actual material is here
 <https://aaltoscicomp.github.io/python-for-scicomp/>`__.
 
 While the stream is available even without providing personal data, if
-you register you may get HackMD access for asking questions and will
+you register you may get collaborative notes access for asking questions and will
 support our funding by contributing to our attendance statistics.
 
 
@@ -170,34 +151,30 @@ if attending a single lesson.
 
   - 10:00 :doc:`Intro <python-for-scicomp/intro>`
   - 10:15 `Jupyter <https://aaltoscicomp.github.io/python-for-scicomp/jupyter/>`__
-  - 11:00 `Advanced NumPy <https://aaltoscicomp.github.io/python-for-scicomp/numpy-advanced/>`__ (new lesson for this year, please browse the
-    `basic numpy lesson material here
-    <https://aaltoscicomp.github.io/python-for-scicomp/numpy/>`__
-    yourself as a prerequisite).
+  - 11:00  `NumPy <https://aaltoscicomp.github.io/python-for-scicomp/numpy/>`__ (Mostly the basic lesson, but we might touch also topics from `Advanced NumPy <https://aaltoscicomp.github.io/python-for-scicomp/numpy-advanced/>`__ ).
   - 12:10 `pandas <https://aaltoscicomp.github.io/python-for-scicomp/pandas/>`__...
 
 - Wed 8.nov, 9:50-13:00
 
   - 10:00 `pandas continued <https://aaltoscicomp.github.io/python-for-scicomp/pandas/>`__
   - 10:30 `matplotlib <https://aaltoscicomp.github.io/python-for-scicomp/data-visualization/>`__
-  - 12:10 `data formats <https://aaltoscicomp.github.io/python-for-scicomp/data-formats/>`__
+  - 12:10 `data formats and productivity tools <https://aaltoscicomp.github.io/python-for-scicomp/data-formats/>`__
 
 - Thu 9.nov, 9:50-13:00
 
   - 10:00 `scripts <https://aaltoscicomp.github.io/python-for-scicomp/scripts/>`__
   - 11:00 `library ecosystem <https://aaltoscicomp.github.io/python-for-scicomp/libraries/>`__
-  - 11:20 `web APIs <https://aaltoscicomp.github.io/python-for-scicomp/web-apis/>`__
-  - 12:10 `parallel <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__...
+  - 11:10 `dependency management <https://aaltoscicomp.github.io/python-for-scicomp/dependencies/>`__
+  - 11:10 `binder <https://aaltoscicomp.github.io/python-for-scicomp/binder/>`__
 
 - Fri 10.nov, 9:50-13:00
 
-  - ... `parallel <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__ continued(?)
-  - 10:00 `dependency management <https://aaltoscicomp.github.io/python-for-scicomp/dependencies/>`__
-  - 11:10 `binder <https://aaltoscicomp.github.io/python-for-scicomp/binder/>`__
-  - 11:50 `packaging <https://aaltoscicomp.github.io/python-for-scicomp/packaging/>`__
+  - 10:00 `parallel <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__...
+  - 11:10 `packaging <https://aaltoscicomp.github.io/python-for-scicomp/packaging/>`__
+  - 12:00 `web APIs <https://aaltoscicomp.github.io/python-for-scicomp/web-apis/>`__
   - 12:30 panel discussion or buffer time?
   - 12:50 :doc:`Outro <python-for-scicomp/outro>`
-  - 13:00 After-party/discussion in zoom (watch chat/HackMD for link)
+  - 13:00 After-party/discussion in zoom (watch chat or notes document for link)
 
 
 
