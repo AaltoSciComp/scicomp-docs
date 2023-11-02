@@ -1,16 +1,26 @@
 ---
+# The ingress says "please HTTP proxy PATH on HOSTNAME to the
+# respective service I am specifying."
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: scicomp-docs-search-ingress
-  namespace: rse
+  namespace: rse  # Everything we do will be in the "rse" namespace,
+                # which logically separates different uses (like with
+                # permissions, resource limits, etc).  Everything
+                # below is in the rse namespace.
   annotations:
+    # The line below magically gives us letsencrypt certificates for
+    # our service!  This is for the CSIT cluster, other clusters may
+    # be different.
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    # We can define various things declaratively... this tells the
+    # maximum HTTP body size to the ingress.
     nginx.ingress.kubernetes.io/proxy-body-size: 20m
+# Spec tells the actual parameters: hosts to listen on, path prefixes.
 spec:
   tls:
     - hosts:
-        #- search.scicomp.aalto.fi
         - scicomp-docs-search.k8s-test.cs.aalto.fi
       secretName: scicomp-docs-search-tls
   rules:
@@ -19,12 +29,21 @@ spec:
         paths:
           - path: /
             pathType: Prefix
+            # To where do we send these incoming requests?  This
+            # defines the target of these requests, and corresponds to
+            # the service defined below (matching the name).
             backend:
               service:
                 name: scicomp-docs-search
                 port:
                   number: 8000
 ---
+# A service defines a network target, basically: you could think of it
+# as a load-balanced internal DNS of some sort (it's more fancy since
+# it has ports and stuff like that).
+#
+# This service points (the "selector") to the app with a certain name
+# (defined below).
 apiVersion: v1
 kind: Service
 metadata:
@@ -35,16 +54,23 @@ metadata:
     app.kubernetes.io/component: server
 spec:
   #type: LoadBalancer
+  # What ports and stuff does this service have?
   ports:
     - name: http
       port: 8000
       targetPort: 8000
       protocol: TCP
+  # This defines where incoming connections are routed to: app of a
+  # certain name, defined below.
   selector:
     app.kubernetes.io/name: scicomp-docs-search
     app.kubernetes.io/component: server
 ---
-
+# This is the actual application: actually it's a **deployment**,
+# which means:
+#   - Define a container that runs
+#   - It can run multiple copies of this in parellel
+#   - Keeps them in sync, scale up and down as needed, etc.
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -53,17 +79,23 @@ metadata:
   labels:
     app.kubernetes.io/name: scicomp-docs-search
     app.kubernetes.io/component: server
+# The definition of the service itself
 spec:
   replicas: 1
+  # This is how the deployment knows which pods are part of it.  These
+  # labels should match the template labels.
   selector:
     matchLabels:
       app.kubernetes.io/name: scicomp-docs-search
       app.kubernetes.io/component: server
+  # The template is used to make each pod of the deployment - as many
+  # as needed to match spec.replicas.
   template:
     metadata:
       labels:
         app.kubernetes.io/name: scicomp-docs-search
         app.kubernetes.io/component: server
+    # You can probably figure out what most of these mean...
     spec:
       restartPolicy: Always
       securityContext:
@@ -76,6 +108,13 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
+          # This defines environment variables inside the container.
+          # This one is from a **secret**, which can be used to
+          # logically separate secrets from config.
+          #
+          # `ConfigMaps` can alse be useful: you can set environment
+          # variables or even dynamically mount config files inside of
+          # the container.
           env:
             # created with: kubectl -n rse create secret generic scicomp-docs-search-update --from-literal=token=TOKEN
             - name: SEARCH_UPDATE_AUTHORIZATION
@@ -83,6 +122,10 @@ spec:
                 secretKeyRef:
                   name: scicomp-docs-search-update
                   key: token
+      # Since the image is private, we need permission to pull it.  I
+      # somehow got this from harbor config.  (AaltoRSE people can
+      # probably re-use this existing secret).
+      #
       # created with: `kubectl -n rse create secret docker-registry robot-scicomp-docs-search-pull --docker-server=DOMAIN --docker-username='robot$NAME' --docker-password='SECRET'`
       imagePullSecrets:
       - name: robot-scicomp-docs-search-pull
