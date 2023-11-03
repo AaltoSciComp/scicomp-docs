@@ -130,6 +130,14 @@ Topics 2021
 
   * NOTE: the second talk on the same Fri 17.12
 
+- Fri 3 Nov 2023 **Simple Kubernetes deployment** by Richard Darst
+
+  * If you have a containerized service, how can you easily deploy it
+    using Kubernetes?
+  * `Notes
+    <https://hackmd.io/@AaltoSciComp/kubernetes-deployment-demo>`__,
+    `Video <https://youtu.be/WnkGkCoRGnk>`__
+
 - (fall 2021) SLURM setup, Simppa Äkäslompolo
 
 - (fall 2021) Cluster monitoring, Simo/Mikko
