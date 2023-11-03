@@ -21,6 +21,8 @@ Nov 7th - Nov 10th 2023 / Python for Scientific Computing
      `playlist from 2022
      <https://www.youtube.com/playlist?list=PLZLVmS9rf3nOm3xkYuInBWPUvS93sAUlk>`__
 
+   * `YouTube playlist from 2023 <https://www.youtube.com/playlist?list=PLZLVmS9rf3nNI3oQEqSJW6yXltOAZnkpa>`__
+
 
 This is a medium-advanced course in Python tools such as NumPy, SciPy,
 Matplotlib, and Pandas.  It is suitable for people who know basic
