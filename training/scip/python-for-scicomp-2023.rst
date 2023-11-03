@@ -61,7 +61,7 @@ own audience.
 * `University of Oulu <https://www.oulu.fi/fi>`__
 * `University of Jyväskylä <https://www.jyu.fi/en>`__
 * `University of Eastern Finland <https://www.uef.fi/en>`__
-* `Finnish Reproducibility Network <https://www.finnish-rn.org/`__
+* `Finnish Reproducibility Network <https://www.finnish-rn.org/>`__
 * `Scientific IT Services of ETH Zurich <https://sis.id.ethz.ch/>`__
 * `eScience center <https://www.esciencecenter.nl/>`__
   
