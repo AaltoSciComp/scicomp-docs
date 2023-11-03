@@ -1,5 +1,5 @@
 :og:title: Python for Scientific Computing
-:og:image: https://www.aalto.fi/sites/g/files/flghsv161/files/styles/o_914w_ah_n/public/2023-11/PFSC23_v2.png
+:og:image: https://www.aalto.fi/sites/g/files/flghsv161/files/styles/o_914w_ah_n/public/2023-10/PFSC23.png
 :og:image:alt: Python for Scientific Computing course logo with date of 7-10/11/2023, twitch.tv/coderefinery, and partner logos
 :description: 7-10 Nov 2023, An online course designed for scientists and researchers in intermediate and practical Python skills.
 
