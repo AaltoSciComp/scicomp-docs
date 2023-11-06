@@ -11,17 +11,24 @@ Nov 7th - Nov 10th 2023 / Python for Scientific Computing
 
    * Page updated 2/11/2023. Check the schedule!
 
+   * Links
+
+     * `Course material
+     <https://aaltoscicomp.github.io/python-for-scicomp/>`__
+     * Watch here: https://twitch.tv/coderefinery/
+     * `YouTube playlist (processed, later that day)
+       <https://www.youtube.com/playlist?list=PLZLVmS9rf3nNI3oQEqSJW6yXltOAZnkpa>`__
+       `Twitch videos (raw, for 7 days, immediately available)
+       <https://www.twitch.tv/coderefinery/videos>`__
+
    * `Register here <https://link.webropol.com/ep/python2023>`__
      to get emails about the course, but it's not necessary to
      attend.  **The course is open to everyone in the world**, with
      some partners providing special services (see below).
 
-   * `Course material
-     <https://aaltoscicomp.github.io/python-for-scicomp/>`__, and
-     `playlist from 2022
+   * `Video playlist from 2022
      <https://www.youtube.com/playlist?list=PLZLVmS9rf3nOm3xkYuInBWPUvS93sAUlk>`__
 
-   * `YouTube playlist from 2023 <https://www.youtube.com/playlist?list=PLZLVmS9rf3nNI3oQEqSJW6yXltOAZnkpa>`__
 
 
 This is a medium-advanced course in Python tools such as NumPy, SciPy,
