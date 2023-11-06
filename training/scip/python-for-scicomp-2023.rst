@@ -177,7 +177,8 @@ if attending a single lesson.
 
   - 10:00 `pandas continued <https://aaltoscicomp.github.io/python-for-scicomp/pandas/>`__
   - 10:30 `matplotlib <https://aaltoscicomp.github.io/python-for-scicomp/data-visualization/>`__
-  - 12:10 `data formats and productivity tools <https://aaltoscicomp.github.io/python-for-scicomp/data-formats/>`__
+  - 12:10 `data formats <https://aaltoscicomp.github.io/python-for-scicomp/data-formats/>`__
+  - 12:20 `productivity tools  <https://aaltoscicomp.github.io/python-for-scicomp/productivity/>`__
 
 - Thu 9.nov, 9:50-13:00
 
