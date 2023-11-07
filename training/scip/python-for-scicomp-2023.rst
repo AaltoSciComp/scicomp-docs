@@ -13,8 +13,7 @@ Nov 7th - Nov 10th 2023 / Python for Scientific Computing
 
    * Links
 
-     * `Course material
-     <https://aaltoscicomp.github.io/python-for-scicomp/>`__
+     * `Course material <https://aaltoscicomp.github.io/python-for-scicomp/>`__
      * Watch here: https://twitch.tv/coderefinery/
      * `YouTube playlist (processed, later that day)
        <https://www.youtube.com/playlist?list=PLZLVmS9rf3nNI3oQEqSJW6yXltOAZnkpa>`__
