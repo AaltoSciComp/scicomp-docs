@@ -168,7 +168,7 @@ There is so much information!  What should we look?
 When do you switch between the stream/exercise Zoom?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Not this year (no zoom)**
+**We don't organize this year (but others might)**
 
 If you have registered and are from a participating institution, you
 have a Zoom link for exercise sessions.  This is optional.

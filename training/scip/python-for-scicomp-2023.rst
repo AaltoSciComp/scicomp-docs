@@ -19,6 +19,7 @@ Nov 7th - Nov 10th 2023 / Python for Scientific Computing
        <https://www.youtube.com/playlist?list=PLZLVmS9rf3nNI3oQEqSJW6yXltOAZnkpa>`__
        `Twitch videos (raw, for 7 days, immediately available)
        <https://www.twitch.tv/coderefinery/videos>`__
+     * `Archived Q&A <https://notes.coderefinery.org/python2023?view>`__
 
    * `Register here <https://link.webropol.com/ep/python2023>`__
      to get emails about the course, but it's not necessary to
