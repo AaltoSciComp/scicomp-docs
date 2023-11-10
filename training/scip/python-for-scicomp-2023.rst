@@ -9,7 +9,10 @@ Nov 7th - Nov 10th 2023 / Python for Scientific Computing
 
 .. admonition:: News and Important info
 
-   * Page updated 2/11/2023. Check the schedule!
+   * Thank you to all who came!  The material will stay available
+     indefinitely, and we hope it's useful to you in the future, too.
+     Please tell others about the course, and if you want to help us
+     make more, get in touch.
 
    * Links
 
@@ -19,7 +22,9 @@ Nov 7th - Nov 10th 2023 / Python for Scientific Computing
        <https://www.youtube.com/playlist?list=PLZLVmS9rf3nNI3oQEqSJW6yXltOAZnkpa>`__
        `Twitch videos (raw, for 7 days, immediately available)
        <https://www.twitch.tv/coderefinery/videos>`__
-     * `Archived Q&A <https://notes.coderefinery.org/python2023?view>`__
+     * `Archived Q&A days 1-2
+       <https://notes.coderefinery.org/python2023?view>`__ and `days
+       3-4 <python2023archive>`__
 
    * `Register here <https://link.webropol.com/ep/python2023>`__
      to get emails about the course, but it's not necessary to
@@ -28,6 +33,7 @@ Nov 7th - Nov 10th 2023 / Python for Scientific Computing
 
    * `Video playlist from 2022
      <https://www.youtube.com/playlist?list=PLZLVmS9rf3nOm3xkYuInBWPUvS93sAUlk>`__
+     (this year is above)
 
 
 
