@@ -183,6 +183,7 @@ html_js_files = [
 html_theme = "sphinx_rtd_theme"
 if on_rtd:
     os.system('git fetch --unshallow')
+    os.system('pip freeze')
 else:
     import sphinx_rtd_theme
     html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
