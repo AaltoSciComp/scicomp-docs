@@ -1,6 +1,6 @@
 docutils
 jupyter_core
-sphinx!=5.2.0.post0    # remove on next release
+sphinx<7.2.0    # some problem with sphinx_toolbox/old python 2023-11-12
 sphinx_rtd_theme>0.5
 sphinx_gitstamp
 #recommonmark
