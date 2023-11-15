@@ -148,7 +148,7 @@ If the evaluation criteria are met for each of the 5 (or more) documents, you wi
 a certificate by mid January 2023. Please note that we do not track course attendance and if you missed one
 session, recordings will be available on Twitch immediately after the streaming ends.
 
-NEW! Credit fast track: if you submit your homework by 15/November/2023 23:59CET, you get the credit/certificate before 30/Nov. If you submit after the 15/Nov deadline, your credit/certificate will be processed in January (see previous paragraph). 
+NEW! Credit fast track: if you submit your homework by 17/November/2023 23:59CET, you get the credit/certificate before 30/Nov. If you submit after the 17/Nov deadline, your credit/certificate will be processed in January (see previous paragraph). 
 
 **Additional course info at:** scip -at- aalto.fi
 
