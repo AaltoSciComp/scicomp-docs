@@ -187,6 +187,18 @@ FAQ
      !conda install -c gurobi gurobi
      !echo [license_file_information] > ~/.[license_file_path]
 
+- **I have done a test release/fetch/autograde of an assignment, and I
+  want to re-generate it.  It says I can't since there are already
+  grades**.  You also need to remove it from the database with the
+  following command.  Note that if students have already fetched, they
+  will need to re-fetch it so *don't do this if it's already in the
+  hands of the students* - you will only create chaos (see the point
+  below).
+
+  .. code-block:: console
+
+     $ nbgrader db assignment remove ASSIGNMENT-ID
+
 - **I have already released an assignment, and now I need to update it
   and release it again.  Some students have already fetched it.**
   This works easily if students haven't fetched it yet, if they have
