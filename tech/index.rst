@@ -16,10 +16,6 @@ explanations.  Guest speakers are welcome.  The name stands for
 We share what our practices are, what we have learned, and informally
 discuss.
 
-.. seealso::
-
-   :doc:`user-support`
-
 
 
 Practicalities
