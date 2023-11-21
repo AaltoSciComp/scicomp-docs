@@ -211,7 +211,7 @@ Accounts and Access to triton
 
       $ sftp user1@triton.aalto.fi:/triton/path/to/dir/* .
 
-  .. _faq-connecttoserveronnode:
+.. _faq-connecttoserveronnode:
 
 .. collapse::  I need to connect to some server on a node
 
@@ -590,7 +590,7 @@ Coding and Compiling
   it displays the type of an executable or object file.
 
 
-  .. _FAQ_Other:
+.. _FAQ_Other:
 
 Other issues
 ^^^^^^^^^^^^ 
