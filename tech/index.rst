@@ -43,6 +43,8 @@ Past and currently planned
 --------------------------
 
 .. toctree::
+   :maxdepth: 1
+   :hidden:
 
    user-support
    Diversity vs services (external) <https://docs.google.com/presentation/d/1pVjFnxGzfy0DTPuc1XLQDFg0-44GUWwfSMxe5vVg-Lc/edit>
