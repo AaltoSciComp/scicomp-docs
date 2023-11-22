@@ -194,7 +194,7 @@ else:
 #html_theme_options = {}
 html_theme_options = {
     'display_version': False,
-    #'navigation_depth': 3,
+    'navigation_depth': 5,
     #'canonical_url': 'https://scicomp.aalto.fi/'
     }
 html_context.update(
