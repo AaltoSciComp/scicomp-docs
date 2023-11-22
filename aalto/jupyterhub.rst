@@ -1,5 +1,5 @@
-JupyterHub
-==========
+JupyterHub (jupyter.cs)
+=======================
 
 .. note::
 
@@ -98,7 +98,7 @@ If you are a student in such a course, you will have a special
 environment for that course.  Your instructor may customize the
 environment, or it may one of our generic environments.
 
-If your course is using **nbgrader**, there are some built-in features
+If your course is using Jupyter with **nbgrader**, there are some built-in features
 for dealing with assignments.  Under the **Assignment list** tab, you
 can see the assignments for your course (only the course you selected
 when starting your notebook server).  You can fetch assignments to
@@ -280,7 +280,7 @@ FAQ and bugs
 More info
 ---------
 
-Students, your first point of contact for course-related matters and
+Students, your first point of contact for course-related or Jupyter matters and
 bugs with JuptyerHub should be your instructors, not us.  They will
 answer questions and send the relevant ones to us.  But, if you can
 actively help with other things, feel free to comment via Github
@@ -295,7 +295,7 @@ Students and others who have difficulty in usage outside of a course
 can contact CS-IT via the :ref:`guru <jupyterhub-instructors-more-info>`
 alias.
 
-Notebooks are *not* an end-all solution: for an entertaining look at
+Jupyter notebooks are *not* an end-all solution: for an entertaining look at
 some problems, see `"I don't like notebooks" by Joel Grus
 <https://docs.google.com/presentation/d/1n2RlMdmv1p25Xy5thJUhkKGvjtV-dkAIsUXP-AL4ffI>`__
 or less humorous :doc:`pitfalls of Jupyter notebooks

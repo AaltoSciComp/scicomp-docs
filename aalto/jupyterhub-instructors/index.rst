@@ -1,5 +1,5 @@
-JupyterHub for instructors
-==========================
+JupyterHub (jupyter.cs) for instructors
+=======================================
 
 .. seealso::
 

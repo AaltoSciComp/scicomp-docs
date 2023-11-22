@@ -1,6 +1,6 @@
-=======
-Jupyter
-=======
+====================
+JupyterHub on Triton
+====================
 
 .. note:: Quick link
 

@@ -1,6 +1,6 @@
-=========================
-Accessing JupyterHub data
-=========================
+======================================
+Accessing JupyterHub (jupyter.cs) data
+======================================
 
 Unlike many JupyterHub deployments, your data is *yours* and have many
 different ways to access it.  Thus, we don't just have jupyter.cs, but

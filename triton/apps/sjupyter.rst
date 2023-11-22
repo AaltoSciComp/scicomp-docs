@@ -1,5 +1,5 @@
-Your own notebooks via ``sjupyter``
-===================================
+Your own notebooks on Triton via ``sjupyter``
+=============================================
 
 .. note::
 
