@@ -173,13 +173,7 @@ FAQ and bugs
 * **Is JupyterLab available?** Yes, and it's nice.  There are two
   general use instances that are actually the same, the only
   difference is one starts JupyterLab by default and one starts
-  classic notebooks by default.  Course environments always use
-  classic notebooks, because the nbgrader assignment list only works
-  there.  To switch back and forth in any notebook server, change
-  ``/tree`` in the URL to ``/lab/tree``.  If you want to use
-  JupyterLab with a course's files, first start that course's server,
-  get the assignments, then change to JupyterLab (change the URL, or
-  stop and restart your server).
+  classic notebooks by default.
 
 * **Can I login with a shell?**  Run a new terminal within the
   notebook interface.
