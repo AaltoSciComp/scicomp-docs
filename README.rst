@@ -14,6 +14,11 @@ HTML.  It's automatically built and hosted by ReadTheDocs, but you
 don't need to mess with that part.  Github will validate basic syntax
 in pull requests.
 
+.. seealso::
+
+   :doc:`/tech/sphinx-docs` for an overview about how and why it's set
+   up like this.
+
 
 
 Contributing
