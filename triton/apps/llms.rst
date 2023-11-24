@@ -28,37 +28,37 @@ We have downloaded following models weights:
 
   * * Llama 2
     * Raw data
-    * `module load model-llama2/raw-data`
+    * ``module load model-llama2/raw-data``
     * Raw weights of `Llama 2 <https://ai.meta.com/llama/>`__.
 
   * * Llama 2
     * 7b
-    * `module load model-llama2/7b`
+    * ``module load model-llama2/7b``
     * Raw weights of 7B parameter version of `Llama 2 <https://ai.meta.com/llama/>`__.
 
   * * Llama 2
     * 7b-chat
-    * `module load model-llama2/7b`
+    * ``module load model-llama2/7b``
     * Raw weights of 7B parameter chat optimized version of `Llama 2 <https://ai.meta.com/llama/>`__.
 
   * * Llama 2
     * 13b
-    * `module load model-llama2/13b`
+    * ``module load model-llama2/13b``
     * Raw weights of 13B parameter version of `Llama 2 <https://ai.meta.com/llama/>`__.
 
   * * Llama 2
     * 13b-chat
-    * `module load model-llama2/13b-chat`
+    * ``module load model-llama2/13b-chat``
     * Raw weights of 13B parameter chat optimized version of `Llama 2 <https://ai.meta.com/llama/>`__.
 
   * * Llama 2
     * 70b
-    * `module load model-llama2/13b`
+    * ``module load model-llama2/13b``
     * Raw weights of 70B parameter version of `Llama 2 <https://ai.meta.com/llama/>`__.
 
   * * Llama 2
     * 70b-chat
-    * `module load model-llama2/13b-chat`
+    * ``module load model-llama2/13b-chat``
     * Raw weights of 70B parameter chat optimized version of `Llama 2 <https://ai.meta.com/llama/>`__.
 
 Each module will set the following environment variables:
@@ -119,22 +119,22 @@ Before loading the modules load a module for the model weight you want to use.
 
   * * Llama 2
     * f16-2023-08-28
-    * `module load model-llama.cpp/f16-2023-08-28` (after loading a Llama 2 model for some weight)
+    * ``module load model-llama.cpp/f16-2023-08-28`` (after loading a Llama 2 model for some weight)
     * Half precision version of Llama 2 weights done with llama.cpp on 28th of Aug 2023.
 
   * * Llama 2
     * q4_0-2023-08-28
-    * `module load model-llama.cpp/q4_0-2023-08-28` (after loading a Llama 2 model for some weight)
+    * ``module load model-llama.cpp/q4_0-2023-08-28`` (after loading a Llama 2 model for some weight)
     * 4-bit integer version of Llama 2 weights done with llama.cpp on 28th of Aug 2023.
 
   * * Llama 2
     * q4_1-2023-08-28
-    * `module load model-llama.cpp/q4_1-2023-08-28` (after loading a Llama 2 model for some weight)
+    * ``module load model-llama.cpp/q4_1-2023-08-28`` (after loading a Llama 2 model for some weight)
     * 4-bit integer version of Llama 2 weights done with llama.cpp on 28th of Aug 2023.
 
   * * Llama 2
     * q8_0-2023-08-28
-    * `module load model-llama.cpp/q8_0-2023-08-28` (after loading a Llama 2 model for some weight)
+    * ``module load model-llama.cpp/q8_0-2023-08-28`` (after loading a Llama 2 model for some weight)
     * 8-bit integer version of Llama 2 weights done with llama.cpp on 28th of Aug 2023.
 
 Each module will set the following environment variables:
