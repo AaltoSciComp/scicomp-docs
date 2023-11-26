@@ -5,7 +5,8 @@
    Command                      | Description
    ``module load`` *NAME*       | load module
    ``module avail``             | list all modules
-   ``module spider`` *NAME*     | search modules
+   ``module spider`` *PATTERN*  | search modules
+   ``module spider`` *NAME/ver* | show prerequisite modules to this one
    ``module list``              | list currently loaded modules
    ``module show`` *NAME*       | details on a module
    ``module help`` *NAME*       | details on a module

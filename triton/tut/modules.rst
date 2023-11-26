@@ -20,7 +20,9 @@ end up taking a lot of your effort as well.
      <https://lmod.readthedocs.io/>`__, which makes more software
      available by adjusting environment variables like ``PATH``.
    * ``module spider NAME`` searches for NAME.
-   * ``module load NAME`` loads the module of that name.
+   * ``module load NAME`` loads the module of that name.  Sometimes,
+     it can't until you ``module load`` something else (read the
+     ``module spider`` message carefully).
    * See the :doc:`../ref/index` for a ``module`` command cheatsheet.
 
 .. admonition:: Local differences
@@ -154,6 +156,50 @@ The second loading ``anaconda/2023-01`` loads that exact version,
 which won't change.  Once you want stability (possibly from day one!), it's
 usually a good idea to load specific version, so that your environment
 will stay the same until you are done.
+
+
+
+Hierarchical modules
+--------------------
+
+Hierarchical modules means that you have to load one module before you
+can load another.  This is usually a compiler:
+
+For example, let's load a newer version of R:
+
+.. code-block:: console
+   :highlight: 34
+
+  $ module load r/4.2.2
+  Lmod has detected the following error:  These module(s) or
+  extension(s) exist but cannot be loaded as requested: "r/4.2.2"
+     Try: "module spider r/4.2.2" to see how to load the module(s).
+
+Lmod says that the modules exist but can't be loaded, but gives a hint
+for what to do next.  Let's do that:
+
+.. code-block:: console
+   :highlight: 7-9
+
+   $ module spider r/4.2.2
+
+   ----------------------------------------------------------------------------
+     r: r/4.2.2
+   ----------------------------------------------------------------------------
+
+       You will need to load all module(s) on any one of the lines below before the "r/4.2.2" module is available to load.
+
+	 gcc/11.3.0
+
+       Help:
+       ...
+
+So now we can load it (we can do it in one line)::
+
+  $ module load gcc/11.3.0 r/4.2.2
+  $ R --version
+  R version 4.2.2 (2022-10-31) -- "Innocent and Trusting"
+
 
 
 
