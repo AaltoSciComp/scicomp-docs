@@ -272,9 +272,9 @@ to check your local documentation for what the equivalents are.
 
    .. solution::
 
-      Let's use anaconda as an example. To see all available versions of anaconda, 
-      we can either use ``module avail anaconda`` or the better option 
-      ``module spider anaconda``. Oldest version of anaconda is ``anaconda/2020-01-tf1``. 
+      Let's use anaconda as an example. To see all available versions of anaconda,
+      we can either use ``module avail anaconda`` or the better option
+      ``module spider anaconda``. Oldest version of anaconda is ``anaconda/2020-01-tf1``.
       We can load it using ``module load anaconda/2020-01-tf1``
 
 .. exercise:: Modules-2: Modules and PATH
@@ -295,16 +295,16 @@ to check your local documentation for what the equivalents are.
 
       ``echo $PATH`` should print something like this::
 
-         .../usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/ibutils/bin...
+	 .../usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/ibutils/bin...
 
       Your PATH is most likely longer and doesn't have to look exactly like this.
 
       ``type python`` should output something like this::
 
-         python is /usr/bin/python
+	 python is /usr/bin/python
 
-      After ``module load anaconda``, ``type python`` should print something like 
-      ``/share/apps/anaconda-ci/fgci-centos7-anaconda/software/anaconda/2023-01/2eea7963/bin/python`` 
+      After ``module load anaconda``, ``type python`` should print something like
+      ``/share/apps/anaconda-ci/fgci-centos7-anaconda/software/anaconda/2023-01/2eea7963/bin/python``
       and you should see the same path added to your PATH.
 
 .. exercise:: Modules-3: Complex module and PATH
@@ -316,10 +316,10 @@ to check your local documentation for what the equivalents are.
 
    .. solution::
 
-      Running ``module list`` shows you that over 50 modules have been loaded. 
-      All of these are dependencies of ``py-gpaw``, and as such were loaded alongside it. 
-      You can see dependencies of a module using ``module show NAME``. In the case of ``module show py-gpaw`` 
-      you can see that ``py-gpaw`` loads several other modules when it is loaded. Some of these models also load 
+      Running ``module list`` shows you that over 50 modules have been loaded.
+      All of these are dependencies of ``py-gpaw``, and as such were loaded alongside it.
+      You can see dependencies of a module using ``module show NAME``. In the case of ``module show py-gpaw``
+      you can see that ``py-gpaw`` loads several other modules when it is loaded. Some of these models also load
       their own depedencies.
 
 .. exercise:: Modules-5: Modules and dependencies
@@ -327,13 +327,13 @@ to check your local documentation for what the equivalents are.
    Load a module with many dependencies, such as ``r-ggplot2`` and
    save it as a collection.  Purge your modules, and restore the
    collection.
-   
+
    .. solution::
-   
-      Save the collection with ``module save my_env``. After ``module purge`` 
-      you can load your collection again with ``module restore my_env``. Making a 
-      collection can be particularily useful if you have a job that depends on a large 
-      number of separate modules, in which case a collection saves you the trouble of 
+
+      Save the collection with ``module save my_env``. After ``module purge``
+      you can load your collection again with ``module restore my_env``. Making a
+      collection can be particularily useful if you have a job that depends on a large
+      number of separate modules, in which case a collection saves you the trouble of
       loading them one by one.
 
 
