@@ -519,6 +519,8 @@ Coding and Compiling
   FGI provides all FGI sites with 7 Intel licenses, thus only 7 users can
   compile/link with Intel at once.
 
+
+
 .. collapse::  Code is compiled with shared libraries and it stops with an error message: ``error while loading shared libraries: libsome.so: cannot open shared object file: No such file or directory``
 
   That means your program can't find libraries which has been used at
@@ -570,6 +572,75 @@ Coding and Compiling
 
       ldconfig -p # print the list of system-wide available shared libraries
 
+
+.. collapse:: ``version GLIBC_2.29 not found`` (or ``GLIBCXX_3.4.26``, or ``LIBCSTDCXX_version``) when running some program.
+
+   Background: Compiled code has dynamic libraries.  When a program
+   runs, it needs to load that code.  The code embeds the name of the
+   library like ``libc.so.6`` and then when it runs, it uses built-in
+   paths (``/etc/ld.so.conf``) and the ``LD_LIBRARY_PATH`` environment
+   variable.  It takes the first thing it finds and loads it.
+
+   In all of these cases, they work in the fine line between the
+   operating system, software we have installed, and software you have
+   installed.  Have a very low threshold to ask for :doc:`help
+   </help/index>` by coming to our :doc:`daily garage </help/garage>`
+   with your problem.  We might have a much easier solution much
+   faster than you con figure out.
+
+   **Problem 1: Library not found**: In this case, something expects a
+   certain library, but it can't be found.  Possible solutions could
+   include:
+
+   * Loading a module that provides the library (did you have a module
+     loaded when you compiled the code?  Are you installing a Python/R
+     extension that needs a library from outside?)
+
+   * Setting the ``LD_LIBRARY_PATH`` variable to point to the
+     library.  If you have self-complied things this might be
+     appropriate, but it might also be a sign that something else is
+     wrong.
+
+   **Problem 2: library version not found** (such as ``GLIBC_2.29 not
+   found``): This usually means that it's finding a library, loading
+   it, but the version is too old.  This especially happens on
+   clusters, where the operating system can't change that often.
+
+   * If it's about ``GLIBCXX_version``, and you can ``module load
+     gcc`` of a proper version, or if you are in a conda environment,
+     install the ``gcc`` package to bring.
+
+   * If it's about ``GLIBC``, then it's about the base C library
+     ``libc``, and that is very hard to solve, since this is
+     intrinsically connected to the operating system.  Likely, the
+     program is compiled on an operating system too new for the
+     cluster and you'd think about re-compiling on the cluster,
+     putting it in a container.
+
+   * Setting ``LD_LIBRARY_PATH`` might help to direct to a proper
+     version.  Again, this probably indicates some other problem.
+
+   **Problem 3: you think you have the newer library loaded by a
+   module or something, but it's still giving a version error**: This
+   has sometimes happened with programs that use extensions.  The base
+   program uses is older version of the library, but an extension
+   needs a newer version.  Since the base program has already loaded
+   an older version, even specifying the new version via
+   ``LD_LIBRARY_PATH`` doesn't help much.
+
+   * Solution: this is tricky, since the program should be using the
+     never version if it's on ``LD_LIBRARY_PATH`` already.  Maybe it's
+     hard-coded to use a particular older version?  In this case,
+     since it's hard-coded to an old version, maybe you need a newer
+     version of the base program itself (an example of this was an R
+     extension that expected a newer ``GLIBCXX_version``: the answer
+     was to build Triton's R module with a newer ``gcc`` compiler
+     version).  If you get this case, you should be asking us to take
+     a look.
+
+
+
+
 .. collapse::  While compiling should I use static or shared version of some library?
 
   One can use both, though for shared libs all your linked libs must be
@@ -588,6 +659,7 @@ Coding and Compiling
       for GNU/Linux 2.4.0, dynamically linked (uses shared libs), not stripped
 
   it displays the type of an executable or object file.
+
 
 
 .. _FAQ_Other:
