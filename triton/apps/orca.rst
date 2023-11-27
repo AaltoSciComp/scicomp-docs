@@ -5,7 +5,7 @@ ORCA is a scientific software that provides cutting-edge methods in the
 fields of density functional theory and correlated wave-function based methods.
 
 Basic Usage
-***********
+-----------
 
 You can do a simple run with ORCA with the
 :download:`following script</triton/examples/orca/orca_example.sh>`.
@@ -25,7 +25,7 @@ To run this script, download it and submit into the queue using ``sbatch``:
   $ sbatch orca_example.sh
 
 How to launch ORCA when using MPI parallelism
-*********************************************
+---------------------------------------------
 
 When doing parallel runs you should always launch ORCA with
 
@@ -39,7 +39,7 @@ tasks independently. For more information, see
 `this documentation page <https://www.orcasoftware.de/tutorials_orca/first_steps/trouble_install.html#using-openmpi>`__.
 
 Setting the number of MPI tasks
-*******************************
+-------------------------------
 
 The example given above asked for 4 MPI tasks by setting
 ``#SBATCH --ntasks-per-node=4`` in the Slurm batch script and then told
