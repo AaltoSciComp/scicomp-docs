@@ -368,6 +368,39 @@ to check your local documentation for what the equivalents are.
       you can see that ``py-gpaw`` loads several other modules when it is loaded. Some of these models also load
       their own depedencies.
 
+.. exercise:: Hierarchical modules
+
+   How can you load the module ``quantum-espresso/7.1``::
+
+     $ ml load quantum-espresso/7.1
+     Lmod has detected the following error:  These module(s) or
+     extension(s) exist but cannot be loaded as requested: "quantum-espresso/7.1"
+        Try: "module spider quantum-espresso/7.1" to see how to load the module(s).
+
+
+   .. solution::
+
+      This is a double-hierarchical module, that is built using two
+      different toolchains, so you have a choice to make when loading::
+
+        $ module spider quantum-espresso/7.1
+        ...
+        You will need to load all module(s) on any one of the lines
+        below before the "openfoam-org/11" module is available to load.
+
+        gcc/11.3.0  openmpi/4.1.5
+	intel-oneapi-compilers/2023.1.0  openmpi/4.1.5
+
+
+      So here we go, loaded and we use ``which`` to verify one of the
+      programs can be found::
+
+         $ module load gcc/11.3.0  openmpi/4.1.5 quantum-espresso/7.1
+	 $ $ which pw.x
+	 /share/apps/scibuilder-spack/aalto-centos7/2023-01/software/linux-centos7-haswell/gcc-11.3.0/quantum-espresso-7.1-sxtbtq2/bin/pw.x
+
+
+
 .. exercise:: Modules-5: Modules and dependencies
 
    Load a module with many dependencies, such as ``r-ggplot2`` and
