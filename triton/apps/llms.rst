@@ -13,7 +13,7 @@ instructions on how to run inference and training on the models.
 
 
 Pre-downloaded model weights
-****************************
+----------------------------
 
 We have downloaded the following models weights (PyTorch model checkpoint directories):
 
@@ -97,7 +97,7 @@ Here is an example slurm script using the raw weights to do batch inference. For
     --max_seq_len 512 --max_batch_size 16
      
 Model weight conversions
-************************
+------------------------
 
 Usually models produced in research are stored as weights from PyTorch or other
 frameworks. When doing inference,
@@ -106,7 +106,7 @@ We also have models that are already converted to different formats.
 
 
 Huggingface
------------
+~~~~~~~~~~~
 
 
 
@@ -144,6 +144,8 @@ Here is a python script using huggingface model.
   input_length = model_inputs.input_ids.shape[1]
   generated_ids = model.generate(**model_inputs, max_new_tokens=20)
   print(tokenizer.batch_decode(generated_ids[:, input_length:], skip_special_tokens=True)[0])
+
+
 
 llama.cpp and GGUF
 ------------------
@@ -201,15 +203,15 @@ This Python code snippet is part of a 'Chat with Your PDF Documents' example, ut
   llm = LlamaCpp(model_path=model_path, verbose=False)
 
 Ollama models
--------------
+~~~~~~~~~~~~~
 
 
 Doing inference with LLMs
-*************************
+-------------------------
 
 Running an interactive chat with Ollama
----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Running inference with LangChain
---------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
