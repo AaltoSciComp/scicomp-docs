@@ -39,7 +39,7 @@ We have downloaded the following models weights (PyTorch model checkpoint direct
 
   * * Llama 2
     * 7b-chat
-    * `module load model-llama2/7b-chat`
+    * ``module load model-llama2/7b-chat``
     * Raw weights of 7B parameter chat optimized version of `Llama 2 <https://ai.meta.com/llama/>`__.
 
   * * Llama 2
@@ -54,12 +54,12 @@ We have downloaded the following models weights (PyTorch model checkpoint direct
 
   * * Llama 2
     * 70b
-    * `module load model-llama2/70b`
+    * ``module load model-llama2/70b``
     * Raw weights of 70B parameter version of `Llama 2 <https://ai.meta.com/llama/>`__.
 
   * * Llama 2
     * 70b-chat
-    * `module load model-llama2/70b-chat`
+    * ``module load model-llama2/70b-chat``
     * Raw weights of 70B parameter chat optimized version of `Llama 2 <https://ai.meta.com/llama/>`__.
 
 Each module will set the following environment variables:
