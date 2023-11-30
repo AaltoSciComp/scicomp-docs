@@ -14,7 +14,8 @@ instructions on how to run inference and training on the models.
 
 Pre-downloaded model weights
 ----------------------------
-
+Raw model weights
+~~~~~~~~~~~~~~~~~
 We have downloaded the following models weights (PyTorch model checkpoint directories):
 
 .. list-table::
@@ -66,7 +67,7 @@ Each module will set the following environment variables:
 - ``MODEL_ROOT`` - Folder where model weights are stored, i.e., PyTorch model checkpoint directory.
 - ``TOKENIZER_PATH`` - File path to the tokenizer.model. 
 
-Here is an example slurm script using the raw weights to do batch inference. For detailed environment setting up, example prompts and python code, please check out `this repo <>`__.
+Here is an example slurm script using the raw weights to do batch inference. For detailed environment setting up, example prompts and python code, please check out `this repo <https://github.com/AaltoSciComp/llm-examples/tree/main/batch-inference-llama2>`__.
 
 .. code-block:: slurm
 
@@ -98,15 +99,14 @@ Here is an example slurm script using the raw weights to do batch inference. For
      
 Model weight conversions
 ------------------------
-
 Usually models produced in research are stored as weights from PyTorch or other
 frameworks. When doing inference,
 
 We also have models that are already converted to different formats.
 
 
-Huggingface
-~~~~~~~~~~~
+Huggingface Models
+~~~~~~~~~~~~~~~~~~~
 
 
 
@@ -148,7 +148,7 @@ Here is a python script using huggingface model.
 
 
 llama.cpp and GGUF
-------------------
+~~~~~~~~~~~~~~~~~~~
 
 `llama.cpp <https://github.com/ggerganov/llama.cpp>`__ is a popular framework
 for running inference on LLM models with CPUs or GPUs. llama.cpp uses a format
@@ -192,7 +192,7 @@ Each module will set the following environment variables:
 - ``MODEL_ROOT`` - Folder where model weights are stored.
 - ``MODEL_WEIGHTS`` - Path to the model weights in GGUF format.
 
-This Python code snippet is part of a 'Chat with Your PDF Documents' example, utilizing LangChain and leveraging model weights stored in a .gguf file. For detailed environment setting up and python code, please check out `this repo <>`__.
+This Python code snippet is part of a 'Chat with Your PDF Documents' example, utilizing LangChain and leveraging model weights stored in a .gguf file. For detailed environment setting up and python code, please check out `this repo <https://github.com/AaltoSciComp/llm-examples/tree/main/chat-with-pdf>`__.
 
 .. code-block:: python
   
@@ -202,15 +202,18 @@ This Python code snippet is part of a 'Chat with Your PDF Documents' example, ut
   model_path = os.environ.get('MODEL_WEIGHTS')
   llm = LlamaCpp(model_path=model_path, verbose=False)
 
-Ollama models
-~~~~~~~~~~~~~
+
+More examples
+------------------------------------------------------------
+
+Running an interactive chat via a local API
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+With the predownloaded model weights, you are also able create an API endpoint locally and initiate an interactive chat interface directly from your shell or command line environment. For detailed setup insturctions, you can checkout `this repo <https://github.com/AaltoSciComp/llm-examples/tree/main/gpt4all-api>`__.
 
 
-Doing inference with LLMs
--------------------------
+Running llama with huggingface
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Running an interactive chat with Ollama
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Running inference with LangChain
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
