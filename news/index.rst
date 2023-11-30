@@ -2,11 +2,11 @@
 News
 ====
 
-*28/09/2023* CodeRefinery workshop is still ongoing on `Twitch.tv <https://www.twitch.tv/coderefine>`__. Join us live or watch the videos later in `CodeRefinery YouTube channel <https://www.youtube.com/channel/UC47aupE7HKGduAjXKt1Gwrg/videos>`__.
+*24/01/2024* Triton users' group meeting. This is a special event for all the users of our cluster: come and hear what's new with Triton. This is also a good moment to express your wishes for future developments.
 
 **Upcoming Courses**
 
-From 7th till 10th of November 2023 we will be running our popular `*Python for Scientific Computing* </training/scip/python-for-scicomp-2023/>`__ course again. The registration is open. Please also visit our `training webpages </training/>`__ to check other upcoming courses or request a re-run of past hands-on courses. 
+*16-18/01/2024* Linux Shell Scripting course. `More info and registrations at this page <https://scicomp.aalto.fi/training/scip/shell-scripting-2024/>`__. Please also visit our `training webpages </training/>`__ to check other upcoming courses or request a re-run of past hands-on courses. 
 
 Join our `daily zoom garage </help/garage/>`__ for any scientific computing related issue (not just Triton!) or to just chat and feel part of the community.  `Follow us on Mastodon <https://fosstodon.org/@SciCompAalto>`__.
 
