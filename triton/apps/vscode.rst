@@ -128,6 +128,14 @@ Possible issues which may affect usage:
 * If the job dies due to time or memory exceeded, the same as above
   will happen: your job will die and there is no time to save.
 
+* If you ``srun`` from within the job, then it gets messed up because
+  the environment variable ``SLURM_JOB_ID`` is set from the
+  interactive job that got started.  It's hard for us to unset this,
+  so if you are using the terminal to ``srun`` or ``sbatch``, you
+  should ``unset SLURM_JOB_ID`` first.  (Note there are many other
+  variables set by Slurm.  Make sure that they don't interfere with
+  jobs you may run from this vscode session).
+
 * If you request a GPU node or other high resources, this is reserved
   the whole time even if you aren't using them.  Consider this before
   reserving large resources (unless you close the jobs soon), or you
