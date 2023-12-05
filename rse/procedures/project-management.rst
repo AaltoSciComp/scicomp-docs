@@ -69,7 +69,7 @@ Day-to-day procedure
 ~~~~~~~~~~~~~~~~~~~~
 
 See `the rse-timetracking repository
-<https://github.com/AaltoRSE/rse-timetracking>` for info on how to use
+<https://github.com/AaltoRSE/rse-timetracking>`__ for info on how to use
 Gitlab.  But the actual data is in **rse-projects**.
 
 
