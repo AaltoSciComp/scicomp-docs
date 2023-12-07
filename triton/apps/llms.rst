@@ -100,14 +100,11 @@ Here is an example slurm script using the raw weights to do batch inference. For
 Model weight conversions
 ------------------------
 Usually models produced in research are stored as weights from PyTorch or other
-frameworks. When doing inference,
-
-We also have models that are already converted to different formats.
+frameworks. As for inference, we also have models that are already converted to different formats.
 
 
 Huggingface Models
 ~~~~~~~~~~~~~~~~~~~
-
 
 
 We have the following Huggingface models stored:
