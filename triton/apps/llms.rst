@@ -6,7 +6,7 @@ Large-language models are AI models that can understand and generate text,
 primarily using transformer architectures.
 
 Because the model weights are typically very large and the interest in the
-models is high, so we provide our users with pre-downloaded model weights and instructions on how to load these weights for inference purposes or for retraining and fine-tuning the models.
+models are high, so we provide our users with pre-downloaded model weights and instructions on how to load these weights for inference purposes or for retraining and fine-tuning the models.
 
 
 Pre-downloaded model weights
