@@ -12,7 +12,7 @@
 
    .. code-block:: console
 
-     $ conda config --show env_dirs
+     $ conda config --show envs_dirs
      $ conda config --show pkgs_dirs
 
    Delete the directories that are listed and start with ``/home/USERNAME`` (this could e.g. be ``/home/<username>/.conda/envs``)
