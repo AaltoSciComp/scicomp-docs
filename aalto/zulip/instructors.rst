@@ -32,8 +32,7 @@ Get started / request Zulip
 
 .. note::
 
-   From the academic year 2022-2023, Zulip will be available for all Aalto courses. From July 21th onwards, chat realms can be
-   requested using the new form at `https://zulip.aalto.fi/requests/ <https://zulip.aalto.fi/requests/>`_.
+   Chat realms can be requested using the form at `https://zulip.aalto.fi/requests/ <https://zulip.aalto.fi/requests/>`_.
 
 .. note::
 
