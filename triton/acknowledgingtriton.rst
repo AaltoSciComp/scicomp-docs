@@ -18,7 +18,6 @@ different departments - you can use Triton without logging into it.)
 
 An appropriate acknowledgement line might be one of:
 
-
     We acknowledge the computational resources provided by the Aalto Science-IT project.
 
 or
@@ -30,11 +29,21 @@ also fine, the main issue is referencing to Science-IT and Aalto.  (Note
 that this does not exist in various funding databases, this is an Aalto
 internal project.)
 
+
+
 Reporting
 ---------
 
-We can't automatically track all the Triton publications.  We need all
-users to link the publications to Science-IT in ACRIS.  It takes about
+.. admonition::  This applies for:
+
+   * Triton cluster usage (including data storage)
+   * The Research Software Engineer service
+   * SciComp garage support (if you think it's significant enough).
+
+
+We can't automatically track all publications, so we need all
+users to verify their publications are linked to Science-IT in ACRIS
+(the Aalto research information system).  It takes about
 30 seconds if you aren't looking at ACRIS now, or 5 when you are already
 there.  All publications are required to be in ACRIS anyway, so this is
 a fast process.
@@ -63,22 +72,40 @@ Instructions:
   :figclass: align-center
 
 
-You are done!  You can see if your publications appears on the list
-above.
+You are done!  Your publication should appear in our lists and support
+our continued funding.
 
 More help:
 
--  General ACRIS help: `ACRIShelp <https://wiki.aalto.fi/display/ACRIShelp/ACRIShelp>`_
+-  `ACRIS instructions <https://www.aalto.fi/en/acris-instructions>`_
 -  Manually adding journal article (most are automatically transferred):
-   `Submitting a journal article
-   <https://wiki.aalto.fi/display/ACRIShelp/Submitting+a+journal+article>`_
-   on ACRIShelp.
+   `Adding articles manually to ACRIS
+   <https://www.aalto.fi/en/services/adding-articles-manually-to-acris>`_
+   (though most articles are transferred automatically).
+- You can also `add datasets and software
+  <https://www.aalto.fi/en/services/register-your-dataset-or-software-in-acris>`__
+  to ACRIS and link it to the Science-IT infrastructure.  These aren't
+  automatically transferred.
 
-Should you have problems, first contact your department's ACRIS help.
+Should you have problems, first contact your department's ACRIS
+help (academic coordinators).
 If a publication or academic output somehow can't be linked, let us know
 and we will make sure that we include it in our own lists.
 
-Bonus: if you have some good pictures of research which can be share
-publicly, please send them to us to use to promote scientific
-computing resources at Aalto.  Please give any relevant photo credits
-and citations.  Photos may be used publicly.
+
+
+Other promotional pictures for Science-IT's use
+-----------------------------------------------
+
+We collect pictures about the work done by our community, which are
+used for various other presentations or funding proposals.  If you
+have some good pictures of research which can be shared publicly,
+please send them to us.
+
+* Please say the requested credit (author) + citation for us to use.
+* Please clarify license.  CC-BY 4.0 is the minimum, but CC-0 is even
+  better.
+* Optional: some text description about the research and/or use of
+  resources.
+* Don't worry about making things look perfect.  Most things aren't.
+* Send to scicomp@aalto.fi
