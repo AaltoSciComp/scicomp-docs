@@ -3,9 +3,13 @@ For grant applicants
 
 .. warning::
 
-   Grant applicants, if you are planning to use Aalto Research Software Engineers service, feel free to contact us at rse-group at aalto.fi, or fill out our `request form <https://selfservice.esupport.aalto.fi/ssc/app#/order/2026/>`__.
+   Grant applicants, if you are planning to use Aalto Research
+   Software Engineers service, feel free to drop by :ref:`SciComp
+   garage for a chat <garage>`, contact us at rse-group at aalto.fi,
+   or fill out our `request form
+   <https://selfservice.esupport.aalto.fi/ssc/app#/order/2026/>`__.
 
-   This page is currently (2022-10) our best understanding of what is
+   This page is currently (2024-01) our best understanding of what is
    possible.  However, we are still exploring what works and doesn't,
    so contact us early so we can work out bugs together.  Please send
    corrections to us.

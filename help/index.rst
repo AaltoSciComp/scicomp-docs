@@ -204,7 +204,8 @@ Email
   things go to the tracker above.
 
 * rse-group at aalto.fi: Research software engineering service
-  requests.
+  requests. (it's usually better to drop by :ref:`SciComp garage
+  <garage>` since we usually need to discuss more.)
 
 
 
