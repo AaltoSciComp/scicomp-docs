@@ -9,11 +9,6 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * Winter holiday: We don't promise availability 21.dec --
-     7.jan, and almost certainly not in the holiday week.  Better to
-     make an issue or send a chat message.
-
-..
    * There are no current planned disruptions in the daily garage.
 
 
