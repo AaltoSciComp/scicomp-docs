@@ -193,6 +193,14 @@ which have been drafted but not presented).
     <https://hackmd.io/@AaltoSciComp/kubernetes-deployment-demo>`__,
     `Video <https://youtu.be/WnkGkCoRGnk>`__
 
+- **Demo: Publishing a Python Package** by Jarno Rantaharju, Fri Jan 26th 2024
+
+ * Demonstration of open source software publishing. I will take a part of an
+   existing Python package and spin it of as a small stand-alone package. We
+   will discuss what is needed for a software publication and recommended
+   practices.
+ * `Notes
+    <https://hackmd.io/@AaltoSciComp/python-package-publication-demo>`__
 
 
 Proposed/requested future topics
