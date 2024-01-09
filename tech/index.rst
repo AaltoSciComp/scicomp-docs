@@ -199,8 +199,7 @@ which have been drafted but not presented).
    existing Python package and spin it of as a small stand-alone package. We
    will discuss what is needed for a software publication and recommended
    practices.
- * `Notes
-    <https://hackmd.io/@AaltoSciComp/python-package-publication-demo>`__
+ * `Notes <https://hackmd.io/@AaltoSciComp/python-package-publication-demo>`__
 
 
 Proposed/requested future topics
