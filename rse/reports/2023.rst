@@ -89,6 +89,14 @@ tracker.
 
    Rough distribution of the types of tasks which we do.
 
+.. figure:: 2020-2023-size-distribution.png
+   :alt: Bar graph as described.
+
+   Size distribution of all tracked projects.  Note that the smallest
+   projects are not all rigorously tracked in this system, especially
+   the "0-G" (garage) projects.  Sizes are "garage", small, medium,
+   large, and "not applicable".
+
 .. figure:: 2020-2023-rse-summary-wordcloud.png
    :alt: Word cloud
 
