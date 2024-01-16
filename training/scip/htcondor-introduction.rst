@@ -29,7 +29,7 @@ To get some details of the high-throughput computing, take a look at `What is HT
 
 **Cost:** Free of charge for FGCI consortium members including Aalto employees and students.
 
-**Registration:** `registeration closed <https://www.webropolsurveys.com/S/1964EAAB01B1375F.par>`__
+**Registration:** `registration closed <https://www.webropolsurveys.com/S/1964EAAB01B1375F.par>`__
 
 **Other comments:** *Participants are expected to bring their own laptops.* We will use SSH for  connections to department networks. One can follow the theoretical part without a laptop, though if you want to try the tutorial you’d better have one.
 
