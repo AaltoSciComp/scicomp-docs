@@ -2,7 +2,7 @@ Generative AI Tools on Triton
 =============================
 Speech to Text: Whisper
 ----------------------------
-Whisper is a general-purpose speech recognition model. It is a multitasking model that can perform multilingual speech recognition, speech translation, and language identification. For the usage on Triton, please check out the `whisper <https://scicomp.aalto.fi/triton/apps/whisper/>`__ page.
+Whisper is a general-purpose speech recognition model. It is a multitasking model that can perform multilingual speech recognition, speech translation, and language identification. For the usage on Triton, please check out the :doc:`whisper <whisper>` page.
 
 Command line tool to chat with local open-source language models
 -----------------------------------------------------------------
