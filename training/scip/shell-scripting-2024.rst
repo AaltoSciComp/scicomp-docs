@@ -12,7 +12,7 @@ We expect that course participants are familiar with the :doc:`shell basics <lin
 
 **Lecturer:** Ivan Degtyarenko, D. Sc., Science IT / Department of Applied Physics, Aalto University
 
-**Place:** Online and in-person at Room U135a (U7) Otaniemi (in-person only if there are enough participants). Please register for receiving the link to streaming and other infos for in-person sessions. 
+**Place:** Online and in-person at Room U135a (U7) Otaniemi (in-person only if there are enough participants). Please register for receiving the link to streaming and other infos for in-person sessions.
 
 **Time, date (all times EET):**
 
@@ -26,7 +26,10 @@ We expect that course participants are familiar with the :doc:`shell basics <lin
 | Thu 18.01 | 12:00-15:00 |
 +-----------+-------------+
 
-**Course material:** will be mostly based on the second part of the `Linux shell tutorial <https://aaltoscicomp.github.io/linux-shell/>`__.
+**Course material:** will be mostly based on the second part of the
+`Linux shell tutorial
+<https://aaltoscicomp.github.io/linux-shell/>`__.  Videos are archived
+at `this playlist <https://www.youtube.com/playlist?list=PLZLVmS9rf3nOXyXh0TEgGhS7bUdOT0dGg>`__
 
 
 **Registration:** `You can register at this link <https://link.webropol.com/ep/shellscripting2024>`__
