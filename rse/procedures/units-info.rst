@@ -31,6 +31,15 @@ PHYS
 Supporting all community.
 
 
+FCAI
+----
+
+FCAI sponsors several research software engineers, who both do general
+work and targeted work.  In effect, FCAI projects get a
+higher priority and management sends some strategic projects to us for
+intense support.
+
+
 Rest of Aalto
 -------------
 IT Services provides a grant to support research in all of Aalto.

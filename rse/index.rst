@@ -26,9 +26,10 @@ high-performance computing, and more**, we can:
 * **Plan your ambitions:** Figure out how far you can reach in your
   next project or grant.
 
-Instead of hiring your own intern, postdoc, etc. to struggle with
+Instead of, or in addition to, hiring your own intern, postdoc,
+etc. to struggle with
 certain issues, we can help instead.  We consist of experienced
-researchers who have relied heavily on computing technology
+researchers who have broad experience with scientific computing
 (programming, computing, data) for our academic work, and thus can
 seamlessly collaborate on research projects.  We can also do
 consultation and training.  You will have more
@@ -38,10 +39,11 @@ grant applications.
 
 .. _rse-history: https://www.software.ac.uk/blog/2016-08-17-not-so-brief-history-research-software-engineers-0
 
-**Service availability:** Garage support is available to everyone.
-Longer project work is also available to everyone at Aalto thanks to
-grants from Aalto IT Services.  For more information, see
-:doc:`procedures/units-info`.
+**Service availability:** Garage support is available to researchers
+at Aalto.
+We serve projects from all Aalto schools thanks to IT Services grants,
+but our main funding currently comes from the School of Science.  For
+more information, see :doc:`procedures/units-info`.
 
 .. admonition:: Contact
 
@@ -60,8 +62,8 @@ About our services
 .. toctree::
    :maxdepth: 1
 
-   For researchers, groups, and group leaders <researchers>
-   For departments and schools <units>
+   researchers
+   units
    portfolio
 
 
