@@ -115,9 +115,10 @@ Sharing and collaboration
 Obviously, you will often need to share data within projects.
 Emailing things back and forth is rarely a good way to do things.
 Check other data sharing services from :doc:`our services page
-<services>` or `Aalto's IT services for research
-<https://www.aalto.fi/en/services/it-services-for-research>`__
-page.
+<services>`, `What file storage to use?
+<https://www.aalto.fi/en/services/what-file-storage-to-use-when>`__,
+or `Aalto's IT services for research
+<https://www.aalto.fi/en/services/it-services-for-research>`__ pages.
 
 We recommend, instead of seeing this as a sharing problem, see this as
 a storage problem: find a place to store data which everyone can

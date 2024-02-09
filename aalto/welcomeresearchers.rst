@@ -13,6 +13,9 @@ computation and data-intensive work, including experimental work).
    * `IT Services for Research <itsr_>`_ is the comprehensive list of
      researcher-oriented IT services available (compared to this which
      is a starting tutorial)
+   * `What file storage to use?
+     <https://www.aalto.fi/en/services/what-file-storage-to-use-when>`__ -
+     good summary not focused on scientific computing.
 
 .. _itsr: https://www.aalto.fi/en/services/it-services-for-research
 
@@ -190,7 +193,9 @@ sharing, and long-term management (so that you don't lose or forget
 about data every time someone leaves).  You should request as many
 projects as you need depending on how fine-grained you need access
 control, and each can have its own members and
-quota.  You can read about the :doc:`storage locations available
+quota.  You can read a `general guide from Aalto
+<https://www.aalto.fi/en/services/what-file-storage-to-use-when>`__
+(going beyond scientific computing) about the :doc:`storage locations available
 <../aalto/aaltostorage>` and :doc:`storage service policy
 <../data/datapolicy>`.
 
@@ -348,8 +353,10 @@ say it is "required" if you have a Triton account).
 Other notes
 -----------
 
-Remember to keep the `IT Services for Research page close <itsr_>`_
-close at hand!
+Remember to keep the `IT Services for Research <itsr_>`_ and `What
+file storage to use?
+<https://www.aalto.fi/en/services/what-file-storage-to-use-when>`__
+pages close at hand
 
 Research is usually collaborative, but sometimes you can feel
 isolated - either because you are lost in a crowd, or far away from
