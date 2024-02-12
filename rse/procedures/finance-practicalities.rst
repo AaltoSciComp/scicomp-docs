@@ -79,21 +79,20 @@ Checklist:
 Instructions for department controller
 --------------------------------------
 
-
 Our Research Software Engineer (RSE) will work on a project for the PI
 according to the PI's requests and be paid by their project.  The RSE
-will track the time they spend internally, and record the actual time
+will track the time they spend and record the actual time
 used for the project in Halli, or salaries can be handled by internal
 charging.
 
 Checklist:
 
-* Name and duration of RSE received.
+* Name staff (RSE) and duration of funding received.
 * Confirm funding conditions.
 * If using Halli:
 
-  * RSE added to Halli by department controller (permission given to
-    record hours to the correct project).
+  * RSE added to Halli by department controller (add permission for
+    staff to record hours to the correct project).
   * Project number and any additional constraints (maximum hours,
     funding deadline, etc.) sent to the RSE, RSE lead (Richard Darst),
     and PI.
@@ -101,5 +100,6 @@ Checklist:
 * If using internal charging:
 
   * Arranged between department controller and RSE controller (SCI)
+  * We'll track all our time internally.
 
 * Tell us how to update this page to be more useful to others.
