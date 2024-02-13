@@ -140,8 +140,8 @@ Possible issues which may affect usage:
 Sometimes you want to debug your code using GPU(s). To connect to a
 GPU node, you can follow the above guide, and request a ``gpudev`` partition.
 Note that ``gpudev`` partition has a strict time limitation: Every session
-is maximum 30 minutes long. For more information, see :doc:`partitions 
-<../ref/partitions>`.
+is maximum 30 minutes long. For more information, see :ref:`partitions 
+<ref-partitions>`.
 
   Host triton-gpu-debug
       ProxyCommand ssh triton /share/apps/ssh-node-proxycommand --partition=gpudev --time=0:30:00
