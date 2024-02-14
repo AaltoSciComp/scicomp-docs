@@ -37,4 +37,4 @@ See also / more info
 Chat with us in the `CodeRefinery chat
 <https://coderefinery.zulipchat.com>`__ or :ref:`Aalto SciComp chat
 <chat>`.  Or private contact via
-Richard Darst, scip -a-t- aalto.fi.
+Enrico Glerean, scip -a-t- aalto.fi.
