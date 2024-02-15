@@ -1,5 +1,5 @@
 Generative AI Tools from Science-IT
-=============================
+====================================
 
 If you need to use generative AI tools for, e.g. question and answering, speech to text, or text embedding, there are many tools and platforms available.
 Roughly speaking, you could
@@ -26,8 +26,9 @@ Speech to Text: Whisper
 Whisper is a general-purpose speech recognition model. It is a
 multitasking model that can perform multilingual speech recognition,
 speech translation, and language identification. For the usage on
-Triton, please check out the :doc:`whisper` page for running
-it yourself, or :doc:`speech2text` for a system of using Whisper
+Triton, please check out the `whisper <whisper.rst>`_ page for running
+it yourself, or  `speech2text <speech2text.rst>`_
+for a system of using Whisper
 designed for non-experts.
 
 
@@ -35,8 +36,8 @@ designed for non-experts.
 Locally installed LLMs
 ----------------------
 We have many models already predownloaded and software installed for
-using them.  See :doc:`llms`.  If you need more models, large datasets or code
-examples, just ask us.  We also have tested and provide support for
+using them.  See `llms <llms.rst>`_.  If you need more models, large datasets or `code
+examples <https://github.com/AaltoSciComp/llm-examples>`_, just ask us.  We also have tested and provide support for
 (for example) running LLMs on CSC or LUMI supercomputers - which have
 plenty more resources, but can be hard to use.
 
