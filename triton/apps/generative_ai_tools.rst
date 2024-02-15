@@ -1,7 +1,7 @@
-Generative AI Tools on Triton
+Generative AI Tools from Science-IT
 =============================
 
-If you need to use generative AI, there are many different ways.
+If you need to use generative AI tools for, e.g. question and answering, speech to text, or text embedding, there are many tools and platforms available.
 Roughly speaking, you could
 
 * Use it via some web service.
@@ -34,9 +34,9 @@ designed for non-experts.
 
 Locally installed LLMs
 ----------------------
-We have many models already downloaded and software installed for
-using them.  See :doc:`llms`.  If you need more models or code
-examples, just as us.  We also have tested and provide support for
+We have many models already predownloaded and software installed for
+using them.  See :doc:`llms`.  If you need more models, large datasets or code
+examples, just ask us.  We also have tested and provide support for
 (for example) running LLMs on CSC or LUMI supercomputers - which have
 plenty more resources, but can be hard to use.
 
@@ -49,12 +49,3 @@ Triton, but will be running only on local hardware under our control.
 The API will be the same as that of ChatGPT, so all ChatGPT tools (if
 they can be directed to a different server) will be usable.
 
-
-
-Command line tool to chat with local open-source language models
------------------------------------------------------------------
-For those who prefer command-line interfaces (CLI) for interacting with AI models, Triton offers a specially designed tool. This CLI tool leverages local resources to facilitate a chat with locally available open-source models. 
-To start the tool, run this executable file:
-XXXX.py
-
-Once the tool is running, you can enter prompts or queries. The model will process it, return a response, and display it in the command-line interface. Enter more queries, the model will respond with the context of the conversation maintained.
