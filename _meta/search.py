@@ -24,7 +24,7 @@ POST /               update database (basic auth, env var SEARCH_UPDATE_AUTHORIZ
 
 """
 
-BASE = 'https://scicomp.aalto.fi/'
+SITE = 'https://scicomp.aalto.fi/'
 OPERATOR_DEFAULT = 'OR'
 
 import base64
@@ -89,7 +89,7 @@ def insert(conn, data, site):
 
 
 
-def get_data(base, dirhtml_dir='_build/dirhtml'):
+def get_data(site, dirhtml_dir='_build/dirhtml'):
     """Iterate over (path, data, value) fields.
 
     Returns iterable of data which can be inserted into the database.
@@ -149,7 +149,7 @@ def get_data(base, dirhtml_dir='_build/dirhtml'):
             # '#' titles, indented blocks
             #section_md = html2text(str(section))
             #print(f"  {relpath2:50}, {repr(section_body)[:150]}")
-            yield dict(site=base, path=base+relpath2, title=title, body=section_body,
+            yield dict(site=site, path=site+relpath2, title=title, body=section_body,
                        html=section_html, markdown=section_md)
 
 
@@ -275,7 +275,7 @@ def main():
     parser.add_argument('--bind', default=':8000', help="default %(default)s")
     parser.add_argument('--operator', default=OPERATOR_DEFAULT)
     parser.add_argument('--limit', default=10, type=int)
-    parser.add_argument('--site', default=BASE, help="Site name, should end in slash to be prepended to the page paths, default '%(default)s'")
+    parser.add_argument('--site', default=SITE, help="Site name, should end in slash to be prepended to the page paths, default '%(default)s'")
     parser.add_argument('--dirhtml', default='_build/dirhtml', help="Location of Sphinx content (should be Sphinx dirhtml output, default '%(default)s'")
     parser.add_argument('mode', help="create, serve, search, update")
     parser.add_argument('query', nargs='*')
@@ -284,10 +284,10 @@ def main():
     # Make database, insert data if it is temporary.
     conn = create(args.db)
     if args.db == ':memory:' and args.mode != 'update':
-        insert(conn, get_data(args.base, args.dirhtml), args.site)
+        insert(conn, get_data(args.site, args.dirhtml), args.site)
 
     if args.mode == 'create':
-        insert(conn, get_data(args.base, args.dirhtml), args.site)
+        insert(conn, get_data(args.site, args.dirhtml), args.site)
     if args.mode == 'serve':
         serve(conn, bind=args.bind, operator=args.operator)
     if args.mode == 'search':
@@ -299,7 +299,7 @@ def main():
         url = args.query[0]
         data = {
             'site': args.site,
-            'data': list(get_data(args.base, args.dirhtml)),
+            'data': list(get_data(args.site, args.dirhtml)),
             }
         token = os.environ.get('SEARCH_UPDATE_AUTHORIZATION', '')
         import requests
