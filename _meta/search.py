@@ -56,7 +56,7 @@ def create(path=":memory:"):
     conn.row_factory = dict_factory
     conn.execute(
         "CREATE VIRTUAL TABLE IF NOT EXISTS pages"
-        " USING fts5(path, title, time_update, body, html, markdown"
+        " USING fts5(site, path, title, time_update, body, html, markdown"
         ", tokenize = 'porter unicode61'"
         " );")
     conn.commit()
@@ -65,7 +65,7 @@ def create(path=":memory:"):
 
 
 
-def insert(conn, data):
+def insert(conn, data, site):
     """Insert data into the database.
 
     Data is iterable of relpath, title, body.
@@ -77,10 +77,10 @@ def insert(conn, data):
                 row[format] = None
         row['time_update'] = time_start
         conn.execute('INSERT INTO pages'
-                     '(path, title, time_update, body, html, markdown)'
-                     ' VALUES (:path, :title, :time_update, :body, :html, :markdown)', row)
+                     '(site, path, title, time_update, body, html, markdown)'
+                     ' VALUES (:site, :path, :title, :time_update, :body, :html, :markdown)', row)
 
-    conn.execute('DELETE FROM pages WHERE time_update<?', (time_start,))
+    conn.execute('DELETE FROM pages WHERE site=? and time_update<?', (site, time_start,))
     conn.execute("INSERT INTO pages(pages, rank) VALUES('automerge', 8)")
     conn.commit()
     conn.execute('VACUUM;')
@@ -89,7 +89,7 @@ def insert(conn, data):
 
 
 
-def get_data():
+def get_data(base, dirhtml_dir='_build/dirhtml'):
     """Iterate over (path, data, value) fields.
 
     Returns iterable of data which can be inserted into the database.
@@ -101,8 +101,8 @@ def get_data():
     from markdownify import markdownify
     #import html2text
 
-    if not os.path.exists('_build/dirhtml'):
-        print("You must `make dirhtml` first.", file=sys.stderr)
+    if not os.path.exists(dirhtml_dir):
+        print(f"You must `make dirhtml` first, {dirhtml_dir} is empty, or use --dirhtml", file=sys.stderr)
 
     from html.parser import HTMLParser
     class HTMLFilter(HTMLParser):
@@ -110,7 +110,7 @@ def get_data():
         def handle_data(self, data):
             self.text += data
 
-    root = pathlib.Path("_build/dirhtml")
+    root = pathlib.Path(dirhtml_dir)
     for file in root.glob('**/*.html'):
         relpath = str(file.relative_to(root).parent) + '/'
 
@@ -149,7 +149,7 @@ def get_data():
             # '#' titles, indented blocks
             #section_md = html2text(str(section))
             #print(f"  {relpath2:50}, {repr(section_body)[:150]}")
-            yield dict(path=BASE+relpath2, title=title, body=section_body,
+            yield dict(site=base, path=base+relpath2, title=title, body=section_body,
                        html=section_html, markdown=section_md)
 
 
@@ -222,8 +222,9 @@ def serve(conn, bind=':8000', operator=OPERATOR_DEFAULT):
                 query = self.path.strip('/')
                 query = urllib.parse.unquote(query)
             else:
-                time_update = conn.execute('select max(time_update) as tu from pages').fetchone()['tu']
-                self.wfile.write(b'{"error": "specify search query as q=", "time_update": "%s"}'%time.ctime(time_update).encode())
+                time_update = conn.execute('select site, max(time_update) as tu from pages group by site').fetchall()
+                time_update = {tu['site']: time.ctime(tu['tu']) for tu in time_update}
+                self.wfile.write(b'{"error": "specify search query as q=", "time_update": %s}'%json.dumps(time_update).encode())
                 return
             #print(query)
             data = list(search(conn, query, raw=raw, limit=limit, operator=operator))
@@ -241,7 +242,9 @@ def serve(conn, bind=':8000', operator=OPERATOR_DEFAULT):
                 ):
                 data_bytes = int(self.headers.get("Content-Length"), 0)
                 data = json.loads(self.rfile.read(data_bytes))
-                insert(conn, data)
+                site = data['site']
+                data = data['data']
+                insert(conn, data, site)
                 self.send_response(200)
                 self.send_header("Content-type", "application/json")
                 self.end_headers()
@@ -268,29 +271,36 @@ def dict_factory(cur, row):
 def main():
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument('--db', default=':memory:')
-    parser.add_argument('--bind', default=':8000')
+    parser.add_argument('--db', default=':memory:', help="default '%(default)s")
+    parser.add_argument('--bind', default=':8000', help="default %(default)s")
     parser.add_argument('--operator', default=OPERATOR_DEFAULT)
     parser.add_argument('--limit', default=10, type=int)
-    parser.add_argument('mode')
+    parser.add_argument('--site', default=BASE, help="Site name, should end in slash to be prepended to the page paths, default '%(default)s'")
+    parser.add_argument('--dirhtml', default='_build/dirhtml', help="Location of Sphinx content (should be Sphinx dirhtml output, default '%(default)s'")
+    parser.add_argument('mode', help="create, serve, search, update")
     parser.add_argument('query', nargs='*')
     args = parser.parse_args()
 
     # Make database, insert data if it is temporary.
     conn = create(args.db)
     if args.db == ':memory:' and args.mode != 'update':
-        insert(conn, get_data())
+        insert(conn, get_data(args.base, args.dirhtml), args.site)
 
     if args.mode == 'create':
-        insert(conn, get_data())
+        insert(conn, get_data(args.base, args.dirhtml), args.site)
     if args.mode == 'serve':
         serve(conn, bind=args.bind, operator=args.operator)
     if args.mode == 'search':
+        print('[')
         for line in search(conn, args.query, limit=args.limit, operator=args.operator):
-            print(json.dumps(line))
+            print(json.dumps(line) + ',')
+        print('null]')
     if args.mode == 'update':
         url = args.query[0]
-        data = list(get_data())
+        data = {
+            'site': args.site,
+            'data': list(get_data(args.base, args.dirhtml)),
+            }
         token = os.environ.get('SEARCH_UPDATE_AUTHORIZATION', '')
         import requests
         data = json.dumps(data)
