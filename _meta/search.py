@@ -154,7 +154,7 @@ def get_data(site, dirhtml_dir='_build/dirhtml'):
 
 
 
-def search(conn, query, tokens=64, limit=10, raw=False, operator=OPERATOR_DEFAULT):
+def search(conn, query, tokens=64, limit=10, raw=False, operator=OPERATOR_DEFAULT, site=None):
     """Do a single search and yield snipets.
 
 
@@ -185,11 +185,13 @@ def search(conn, query, tokens=64, limit=10, raw=False, operator=OPERATOR_DEFAUL
             query = f'NEAR( {query} )'
     print('Searching:', repr(query), file=sys.stderr)
     cur = conn.execute(
-        f"SELECT path AS path, rank, snippet(pages, 2, '', '', '', :tokens) AS snipet, body, html, markdown"
-        " FROM pages WHERE"
-        " body MATCH :query"
-        " ORDER BY rank"
-        " LIMIT :limit", dict(tokens=tokens, query=query, limit=limit))
+        " ".join([
+            "SELECT path AS path, rank, snippet(pages, 2, '', '', '', :tokens) AS snipet, body, html, markdown",
+            " FROM pages WHERE",
+            " body MATCH :query",
+            " and site = :site" if site else "",
+            " ORDER BY rank",
+            " LIMIT :limit"]), dict(tokens=tokens, query=query, limit=limit, site=site))
     for result in cur.fetchall():
         yield result
 
@@ -210,6 +212,7 @@ def serve(conn, bind=':8000', operator=OPERATOR_DEFAULT):
             query = None
             raw = False
             limit = 10
+            site = None
             if 'q' in qs:
                 query = qs['q'][0]
                 if 'raw' in qs:
@@ -218,6 +221,8 @@ def serve(conn, bind=':8000', operator=OPERATOR_DEFAULT):
                     limit = qs['limit'][0]
                 if 'operator' in qs:
                     operator = qs['operator'][0]
+                if 'site' in qs:
+                    site = qs['site'][0]
             elif path != '/':
                 query = self.path.strip('/')
                 query = urllib.parse.unquote(query)
@@ -227,7 +232,7 @@ def serve(conn, bind=':8000', operator=OPERATOR_DEFAULT):
                 self.wfile.write(b'{"error": "specify search query as q=", "time_update": %s}'%json.dumps(time_update).encode())
                 return
             #print(query)
-            data = list(search(conn, query, raw=raw, limit=limit, operator=operator))
+            data = list(search(conn, query, raw=raw, limit=limit, operator=operator, site=site))
             self.wfile.write(json.dumps(data).encode())
 
         def do_POST(self):
@@ -292,7 +297,7 @@ def main():
         serve(conn, bind=args.bind, operator=args.operator)
     if args.mode == 'search':
         print('[')
-        for line in search(conn, args.query, limit=args.limit, operator=args.operator):
+        for line in search(conn, args.query, limit=args.limit, operator=args.operator, site=args.site):
             print(json.dumps(line) + ',')
         print('null]')
     if args.mode == 'update':
