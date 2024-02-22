@@ -151,7 +151,7 @@ Huggingface Models
 ~~~~~~~~~~~~~~~~~~~
 
 
-Currently, we have the following Huggingface models stored on triton. Please contact us if you need any other models.
+Following Huggingface models are stored on triton. Full list of all the available models are located at ``/scratch/shareddata/dldata/huggingface-hub-cache/models.txt``. Please contact us if you need any other models.
 
 .. list-table::
   :header-rows: 1
@@ -177,7 +177,19 @@ Currently, we have the following Huggingface models stored on triton. Please con
 
   * * Text Generation
     * tiiuae/falcon-40b-instruct
-  
+
+  * * Text Generation
+    * google/gemma-2b-it
+
+  * * Text Generation
+    * google/gemma-7b
+
+  * * Text Generation
+    * google/gemma-7b-it
+
+  * * Text Generation
+    * google/gemma-7b
+
   * * Text Generation
     * meta-llama/Llama-2-7b-hf
 
