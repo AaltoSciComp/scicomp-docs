@@ -191,6 +191,10 @@ Following Huggingface models are stored on triton. Full list of all the availabl
     * google/gemma-7b
 
   * * Text Generation
+    * LumiOpen/Poro-34B
+
+
+  * * Text Generation
     * meta-llama/Llama-2-7b-hf
 
   * * Text Generation
