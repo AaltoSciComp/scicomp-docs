@@ -1,5 +1,5 @@
-Project management
-==================
+Project administration
+======================
 
 .. note::
 
@@ -53,15 +53,19 @@ standard RSE salaries project (ask for it).
 
 
 
-Special projects
-----------------
+Types of projects
+-----------------
 
-Special projects are their distinct entirety and are not mixed with
+Special projects
+~~~~~~~~~~~~~~~~
+
+Special projects are their own distinct entity and are not mixed with
 other work of our team.  They receive dedicated days for their work,
-and are not given attention on other days.  Notably, EU-funded projects
-are in this category.  The master data of these projects is in Halli,
-and because Halli is accurate, they are not recorded in Gitlab.  The
-main purpose of Halli is managing financial records of the time we spend.
+and are not given attention on other days.  Because these get
+exclusive days, the master data of these projects is in Halli, and
+because Halli can be used for records later, they are not recorded in
+Gitlab. (Note: "special" does not mean better, it's usually more
+productive to be available for researchers whenever they need us).
 
 Special projects get one Gitlab issue to track the overall contact,
 but it isn't updated on a day-to-day basis.
@@ -69,18 +73,52 @@ but it isn't updated on a day-to-day basis.
 Daily procedures: At the end of every day, record the working time in
 Halli.  As much as possible, these project days should not be mixed
 with other work, but internal team meetings, etc. are allowed if
-necessary.  In Halli, record each day's worktime in proportion to the
-time spent on the special project/internal work (scaled to the
-standard 7.25h/day).
+necessary.  In Halli, record each day's worktime (scaled to the
+standard 7.25h/day) in proportion to the time spent on the special
+project (allocated to that project)/internal work (allocated to
+RSE-salaries).
 
 
+Normal funded projects
+~~~~~~~~~~~~~~~~~~~~~~
 
-Normal projects
----------------
-
-GitLab is used to track projects and the time we spend on them.  The
+For projects providing their own funding, but aren't special, GitLab
+is used to track the time we spend on them.  The
 main purpose of Gitlab is to record the department distribution of all
-of our normal funding, for which Halli can't be fine-grained enough.
+of our basic funding, for which Halli can't hold all the needed information.
+Other funded projects which can be intermixed with our normal work can
+fit into this category.
+
+Daily procedures: A Gitlab issue is created for every
+project and used for each day's work, with funding source
+``Funding::Project``.  Time is recorded in Gitlab and may be mixed
+with other projects however the customer sees appropriate.  Halli is
+marked to the respective project and at least is correct by-month.
+
+
+Internal charging projects
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+"Internal changing" projects are funded, but are paid in one sum for a
+certain amount of work, and there is no place to mark hours into
+Halli.  These are mostly certain types of basic funding.  Gitlab is
+used to track time spent on these projects.
+
+Daily procedures: Like above for Gitlab.  Halli is marked to the
+standard RSE-salaries project.  ``Funding::Project``
+
+
+Basic funding projects
+~~~~~~~~~~~~~~~~~~~~~~
+
+These projects are paid by our basic funding, provided by our
+sponsoring units.  This also includes all of our internal work,
+meetings, development, and teaching.
+
+Daily procedures: Same as above.  Gitlab funding marked as
+``Funding::Unit``
+
+
 
 
 Gitlab day-to-day procedure
