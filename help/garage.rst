@@ -113,7 +113,7 @@ usually give a good answer (especially about Triton, HPC, computing,
 software, and data).
 
 * **Mondays** also have NBE/PHYS IT present.
-* **Tuesdays** We are continuing the :ref:`COMSOL Multiphysics<comsol>` focus days in Spring 2024: someone from COMSOL (the company) plans to join our zoom garage at 13:00 on the following Tuesdays: 2024-01-23, 2023-02-27, 2023-03-26, 2023-04-23, 2023-05-28.
+* **Tuesdays** We are continuing the :ref:`COMSOL Multiphysics<comsol>` focus days in Spring 2024: someone from COMSOL (the company) plans to join our zoom garage at 13:00 on the following Tuesdays: 2024-01-23, 2024-02-27, 2024-03-26, 2024-04-23, 2024-05-28.
 * **Wednesdays** also have NBE/PHYS IT present.
 * **Thursdays**
 * **Fridays** also have CS IT present (at the beginning).
