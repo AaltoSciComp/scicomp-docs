@@ -113,15 +113,18 @@ def get_data(site, dirhtml_dir='_build/dirhtml'):
     root = pathlib.Path(dirhtml_dir)
     for file in root.glob('**/*.html'):
         relpath = str(file.relative_to(root).parent) + '/'
+        print(relpath)
 
         raw = file.open().read()
         contents =  BeautifulSoup(raw, 'html.parser')
+        if not hasattr(contents.title, 'contents'):
+            # These are often stub pages.  Ignore.
+            continue
         title = contents.title.contents[0]
         body = contents.find('div', {'class': 'document'})
         body = textify(body)
 
         body = contents.findAll('section')
-        print(relpath)
         for section in body:
             # skip outer container
             if 'wy-nav-content-wrap' in section.attrs.get('class', []):
