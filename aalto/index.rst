@@ -16,9 +16,6 @@ for Research page
    windows
    coderefinery-setup
    cslinux
-   aaltostorage
-   aaltodata
-   datapolicy
    remoteaccess
    git
    aaltoharbor

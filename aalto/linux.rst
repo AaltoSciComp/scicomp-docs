@@ -65,7 +65,7 @@ Basics
    logo close to the "Login" input field.
 -  Personal web pages. What you put under ``~/public_html`` will be
    visible at ``https://users.aalto.fi/~username``.  See
-   :doc:`aaltostorage`.
+   :doc:`/data/aalto-details`.
 
 **When requesting a new computer:**
 
@@ -134,13 +134,13 @@ remotely to the desktops.
 Data
 ----
 
-See the general :doc:`storage page <aaltostorage>` for the full story
+See the general :doc:`storage page </data/aalto-details>` for the full story
 (this is mainly oriented towards Linux).  All of the common shared
 directories are available on department Linux by default.
 
 We recommend that most data is stored in shared group directories, to
 provide access control and sharing.  See :doc:`the Aalto data page
-<aaltodata>`.
+</data/principles>`.
 
 You can use the program ``unison`` or ``unison-gtk`` to synchronise
 files.

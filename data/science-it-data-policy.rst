@@ -1,4 +1,3 @@
-======================
 Science-IT data policy
 ======================
 
@@ -21,7 +20,7 @@ of service for those who need it, but users must discuss with staff.
 This policy is jointly implemented by department IT and Science-IT.
 
 Summary for users
-=================
+-----------------
 
 -  Do not store research data in home directories, this is not
    accessible should something happen to you or when you leave. They
@@ -46,7 +45,7 @@ Summary for users
    you must ask us.
 
 Summary for data directory owners (professors or long-term staff)
-=================================================================
+-----------------------------------------------------------------
 
 -  Data in the shared directories controlled by you and you make
    decisions on it.
@@ -66,7 +65,7 @@ Summary for data directory owners (professors or long-term staff)
    where the space is going.
 
 Detailed policy
-===============
+---------------
 
 This is the detailed policy. The important summary for users and owners
 is above, but the full details are written below for avoidance of

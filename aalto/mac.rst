@@ -49,8 +49,8 @@ to Server → enter the ``smb://`` URL from the data storage pages.
 
 You can find more information at For generic ways of accessing, see
 :doc:`remoteaccess`.  For Aalto data storage locations see
-:doc:`aaltostorage`, and for the big picture of where and how to store
-data see :doc:`aaltodata`.
+:doc:`/data/aalto-details`, and for the big picture of where and how to store
+data see :doc:`/data/principles`.
 
 The program ``AaltoFileSync`` is pre-installed and can be used to
 synchronize files.  But you basically have to set it up yourself.
