@@ -1,12 +1,19 @@
 LLMs
 ====
 
+Large-language models are AI models that can understand and generate
+text, primarily using transformer architectures.  This page is about
+running them on a local HPC cluster.  This requires extensive
+programming experience and knowledge of using the cluster
+(:ref:`tutorials`), but allows maximum computational power for the
+least cost.  :doc:`Aalto RSE </rse/index>` maintains these models and
+can provide help in using these, even to people who aren't
+computational experts.
 
-Large-language models are AI models that can understand and generate text, 
-primarily using transformer architectures.
-
-Because the model weights are typically very large and the interest in the
-models are high, so we provide our users with pre-downloaded model weights and instructions on how to load these weights for inference purposes or for retraining and fine-tuning the models.
+Because the models are typically very large and there are many people
+interested in them, we provide our users with pre-downloaded model
+weights and this page has instructions on how to load these weights
+for inference purposes or for retraining and fine-tuning the models.
 
 
 Pre-downloaded model weights
