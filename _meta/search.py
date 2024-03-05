@@ -189,7 +189,7 @@ def search(conn, query, tokens=64, limit=10, raw=False, operator=OPERATOR_DEFAUL
     print('Searching:', repr(query), file=sys.stderr)
     cur = conn.execute(
         " ".join([
-            "SELECT path AS path, rank, snippet(pages, 2, '', '', '', :tokens) AS snipet, body, html, markdown",
+            "SELECT path AS path, rank, snippet(pages, 4, '', '', '', :tokens) AS snipet, body, html, markdown",
             " FROM pages WHERE",
             " body MATCH :query",
             " and site = :site" if site else "",
