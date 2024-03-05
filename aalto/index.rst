@@ -23,6 +23,7 @@ for Research page
    git
    aaltoharbor
    jupyterhub
+   llm-web-apis
    matlab_standalone
    opensource
    overleaf
