@@ -126,14 +126,14 @@ Departments
 * **CS,NBE,PHYS** provide storage logically divided into project and
   archive.  These are the counterparts of Triton and are backed up.
   They are actually Aalto "teamwork", but the departments do the
-  day-to-day interfacing.  See :doc:`../aalto/aaltostorage`.
+  day-to-day interfacing.  See :doc:`aalto-details`.
 
 * See the **work** and **teamwork** notes below in the next section.
   In some cases, these are managed by departments.
 
 Aalto
 ~~~~~
-* See :doc:`../aalto/aaltostorage`.
+* See :doc:`aalto-details`.
 
 * Also information is available from Aalto ITS, some `here
   <https://www.aalto.fi/en/services/it-services-for-research>`_.
@@ -146,7 +146,7 @@ Aalto
   actually provided at the Aalto level, but how you request space, how
   you use them, and what the are called varies and is not always very
   well defined.  A little bit of info at
-  :doc:`../aalto/aaltostorage`.
+  :doc:`aalto-details`.
 
 * **Aalto laptops** are not a good place to store data because they are
   usually not backed up, and data is not shareable.  (Even if data is
@@ -155,7 +155,7 @@ Aalto
   network drives.
 
 * **Aalto webspace** can share data.  See
-  :doc:`../aalto/aaltostorage`.  This isn't suitable for archival or
+  :doc:`aalto-details`.  This isn't suitable for archival or
   long-term anything, since it is tied to user accounts.  If you
   want to share here, maybe you could do a bit more work and
   handle it forever at Zenodo?
@@ -163,7 +163,7 @@ Aalto
 * https://version.aalto.fi is the Aalto Gitlab.  It is used for small
   version controlled files.  It is a great place for day to day work
   of private files, but not for permanent archival.  See
-  :doc:`../aalto/git`.
+  :doc:`/aalto/git`.
 
 * **ACRIS** is the Aalto "research information system", meaning it's a
   record of things that everyone is doing research-wise.  You should

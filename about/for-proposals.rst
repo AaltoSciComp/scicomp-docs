@@ -100,6 +100,22 @@ We operate a dedicated secure computing environment SECDATA to enable research w
 
 Our technical, administrative, and legal experts provide advice and hands-on support for handling sensitive data. The Aalto Research Software Engineer (RSE) team and Data Agents help with essential privacy techniques such as minimization, pseudonymization, and anonymization. Aalto's Data Protection Officer provides guidance and oversight on the processing of data and ensuring privacy. 
 
+Confidential data (shorter, for CS)
+-----------------------------------
+
+Aalto CS provides secure data storage for confidential data. This data
+is stored centrally in protected datacenters and is managed by dedicated
+staff. All access is through individual Aalto accounts, and all data is
+stored in group-specific directories with per-person access control.
+Access rights via groups is managed by IT, but data access is only
+provided upon request of the data owner. All data is made available only
+through secure, encrypted, and password-protected systems: it is
+impossible for any person to get data access without a currently active
+user account, password, and group access rights. Backups are made and
+also kept confidential. All data is securely deleted at the end of life.
+CS-IT provides training and consulting for confidential data management.
+
+
 
 
 Focus on connectivity  
