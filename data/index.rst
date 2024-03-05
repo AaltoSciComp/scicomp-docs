@@ -8,11 +8,11 @@ use it?
 
 
 
-Data in Aalto
--------------
+Data storage in Aalto
+---------------------
 
-* Main page: `Research Data Management <https://www.aalto.fi/en/services/research-data-management-rdm-and-open-science>`__
 * Quick summary: `What file storage to use? <https://www.aalto.fi/en/services/what-file-storage-to-use-when>`__
+* `Storage services for research data <https://www.aalto.fi/en/services/storage-services-for-research-data>`__
 * `Summary of storage locations <https://www.aalto.fi/en/services/data-storage-file-services>`__
 * `Guidelines for classification of confidential information <https://www.aalto.fi/en/information-processing/classification-of-information>`__,
 
@@ -38,16 +38,25 @@ Data in Science-IT departments
 Data on Triton
 --------------
 
-Triton provides large and fast data storage connected to significant
-computing power, but it is not backed up.
+:doc:`Triton </triton/index>` is a computer cluster that provides
+large and fast data storage connected to significant computing power,
+but it is not backed up.
 
-* :doc:`/triton/tut/storage`
-* :doc:`/triton/tut/remotedata`
+* Tutorial: :doc:`/triton/tut/storage`
+* Tutorial: :doc:`/triton/tut/remotedata`
+* Triton quick reference: :ref:`ref-storage` and :ref:`ref-remote-data`
+* Overview with checklist: :doc:`/triton/usage/storage`
+* :doc:`/triton/usage/localstorage`
+* :doc:`/triton/usage/lustre`
+* :doc:`/triton/usage/quotas`
+* :doc:`/triton/usage/smallfiles`
 
 
 
 Data management
 ---------------
+
+This section covers administrative and organizational matters about data.
 
 * `Aalto Research Data Management pages
   <https://www.aalto.fi/en/services/research-data-management-rdm-and-open-science>`__,
