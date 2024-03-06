@@ -11,6 +11,8 @@ use it?
 Data storage in Aalto
 ---------------------
 
+Things provided to all Aalto by IT Services.
+
 * Quick summary: `What file storage to use? <https://www.aalto.fi/en/services/what-file-storage-to-use-when>`__
 * `Storage services for research data <https://www.aalto.fi/en/services/storage-services-for-research-data>`__
 * `Summary of storage locations <https://www.aalto.fi/en/services/data-storage-file-services>`__
@@ -20,6 +22,8 @@ Data storage in Aalto
 
 Data in Science-IT departments
 ------------------------------
+
+Things managed by Science-IT departments (mostly CS, PHYS, NBE).
 
 .. toctree::
    :maxdepth: 1
