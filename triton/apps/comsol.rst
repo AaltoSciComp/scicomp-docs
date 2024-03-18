@@ -200,6 +200,14 @@ Please note, that each instance of the below process uses a COMSOL licence, so t
 Example files for batch job workflow
 ************************************
 
+Please check the available versions and installation locations of comsol and update the below scripts accordingly:
+
+          module spider comsol
+          module show comsol/6.2
+
+The installation folder is on the line with "prepend_path".
+
+
 Here is an example batch submit script ``comsol_matlab_livelink.sh``::
 
   #!/bin/bash
