@@ -39,7 +39,7 @@ Episode 2 - 23/04/2024 - Day-to-day working on clusters
 
 **Learning materials**: coming soon
 
-**Registration**: coming soon
+**Registration**: `Please register at this link <https://link.webropol.com/ep/ttt4hpc2>`__
 
 **Schedule** for the day in EEST (Helsinki, Oslo+1) timezone
  - 09:50-10:00 Streaming starts with icebreakers https://www.twitch.tv/coderefinery
