@@ -283,9 +283,6 @@ what the software requires.
 If the package is installed from a conda channel such as ``conda-forge``,
 conda will **automatically retreive the correct version of CUDA toolkit**.
 
-If the code requires manual compilation with CUDA, one should check the
-advanced documentation on
-:doc:`Compiling CUDA code while using conda environments¶ </triton/usage/conda-and-cuda>`.
 
 In other cases one can use an environment file like this
 :download:`cuda-env.yml </triton/examples/cuda/cuda-env.yml>`:
