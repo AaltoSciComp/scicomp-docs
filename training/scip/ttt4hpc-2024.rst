@@ -57,7 +57,7 @@ Episode 3 - 07/05/2024 - Containers on clusters
 
 **Learning materials**: coming soon
 
-**Registration**: coming soon
+**Registration**: `Please register at this link <https://link.webropol.com/ep/ttt4hpc3>`__
 
 **Schedule** for the day in EEST (Helsinki, Oslo+1) timezone
  - 09:50-10:00 Streaming starts with icebreakers https://www.twitch.tv/coderefinery
@@ -75,7 +75,7 @@ Episode 4 - 14/05/2024 - Parallelization and workflows
 
 **Learning materials**: coming soon
 
-**Registration**: coming soon
+**Registration**: `Please register at this link <https://link.webropol.com/ep/ttt4hpc4>`__
 
 **Schedule** for the day in EEST (Helsinki, Oslo+1) timezone
  - 09:50-10:00 Streaming starts with icebreakers https://www.twitch.tv/coderefinery
