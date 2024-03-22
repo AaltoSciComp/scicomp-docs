@@ -32,7 +32,7 @@ to suggest a new course, `please take this survey <https://link.webropol.com/s/s
    scip/python-for-scicomp-2023
    scip/shell-scripting-2024
    CodeRefinery March 12-14 and 19-21 <https://coderefinery.github.io/2024-03-12-workshop/>
-   scip/workflows-2024
+   scip/ttt4hpc-2024
    scip/kickstart-2024
    Take the survey! Request a re-run of past courses / new courses <https://link.webropol.com/s/scipod>
    scip/index
