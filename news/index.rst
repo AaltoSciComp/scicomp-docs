@@ -2,16 +2,20 @@
 News
 ====
 
-*24/01/2024* Triton users' group meeting. This is a special event for all the users of our cluster: come and hear what's new with Triton. This is also a good moment to express your wishes for future developments.
+*22/03/2024* We have a new exciting course coming! Best practices in HPC! More info below
 
 **Upcoming Courses**
 
-*16-18/01/2024* Linux Shell Scripting course. `More info and registrations at this page <https://scicomp.aalto.fi/training/scip/shell-scripting-2024/>`__. Please also visit our `training webpages </training/>`__ to check other upcoming courses or request a re-run of past hands-on courses. 
+*April-May/2024* Tuesdays Tools and Techniques for High Performance Computing (TTT4HPC). `More info and registrations at this page <https://scicomp.aalto.fi/training/scip/ttt4hpc-2024/>`__. A new course on HPC practices! Four self-contained episodes. Pick the one which you need the most or join us for all of them!
 
 Join our `daily zoom garage </help/garage/>`__ for any scientific computing related issue (not just Triton!) or to just chat and feel part of the community.  `Follow us on Mastodon <https://fosstodon.org/@SciCompAalto>`__.
 
 News archive
 ~~~~~~~~~~~~
+
+*24/01/2024* Triton users' group meeting. This is a special event for all the users of our cluster: come and hear what's new with Triton. This is also a good moment to express your wishes for future developments.
+
+*16-18/01/2024* Linux Shell Scripting course. `More info and registrations at this page <https://scicomp.aalto.fi/training/scip/shell-scripting-2024/>`__. Please also visit our `training webpages </training/>`__ to check other upcoming courses or request a re-run of past hands-on courses.
 
 *22/11/2022* From 22nd till 25th of November we will be running our popular `*Python for Scientific Computing* </training/scip/python-for-scicomp-2022/>`__ course again.
 
