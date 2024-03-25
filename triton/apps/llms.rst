@@ -5,15 +5,14 @@ LLMs
 Large-language models are AI models that can understand and generate text, 
 primarily using transformer architectures.
 
-Because the model weights are typically very large and the interest in the
-models are high, so we provide our users with pre-downloaded model weights and instructions on how to load these weights for inference purposes or for retraining and fine-tuning the models.
-
+Because the size of model weights are typically very large and the interest in the
+models are high, so we provide our users with pre-downloaded model weights and instructions on how to load these weights for inference purposes or for retraining and fine-tuning tasks.
 
 Pre-downloaded model weights
 ----------------------------
 Raw model weights
 ~~~~~~~~~~~~~~~~~
-We have downloaded the following raw model weights (PyTorch model checkpoints):
+We have downloaded the following raw llama model weights (PyTorch model checkpoints):
 
 .. list-table::
   :header-rows: 1
@@ -111,7 +110,7 @@ Each module will set the following environment variables:
 - ``MODEL_ROOT`` - Folder where model weights are stored, i.e., PyTorch model checkpoint directory.
 - ``TOKENIZER_PATH`` - File path to the tokenizer.model. 
 
-Here is an example `slurm <https://scicomp.aalto.fi/triton/tut/slurm/>`__, script using the raw weights to do batch inference. For detailed environment setting up, example prompts and Python code, please check out `this repo <https://github.com/AaltoSciComp/llm-examples/tree/main/batch-inference-llama2>`__.
+Here is an example `slurm <https://scicomp.aalto.fi/triton/tut/slurm/>`__ script using the raw weights for batch inference. For detailed environment setting up, example prompts and Python code, please check out `this repo <https://github.com/AaltoSciComp/llm-examples/tree/main/batch-inference-llama2>`__.
 
 .. code-block:: slurm
 
@@ -123,7 +122,7 @@ Here is an example `slurm <https://scicomp.aalto.fi/triton/tut/slurm/>`__, scrip
   #SBATCH --output=llama2inference-gpu.%J.out
   #SBATCH --error=llama2inference-gpu.%J.err
 
-  # get the model weights
+  # get access to the model weights
   module load model-llama2/7b
   echo $MODEL_ROOT
   # Expect output: /scratch/shareddata/dldata/llama-2/llama-2-7b
@@ -226,12 +225,31 @@ Currently, we have the following Huggingface models stored on triton. Please con
   * * Token Classification
     * dslim/bert-base-NER-uncased
 
+To access Huggingface models: 
+
+.. tabs::
+
+  .. group-tab:: sbatch script
+
+    Load module to setup the environment variable HF_HOME:
+
+    .. code-block:: bash
+
+      module load model-huggingface/all
+      # this will setup HF_HOME to /scratch/shareddata/dldata/huggingface-hub-cache
+
+  .. group-tab:: jupyter notebook
+
+    In jupyter notebook, one can set up HF_HOME directly:
+
+    .. code-block:: python
+
+      import os
+      os.environ['TRANSFORMERS_OFFLINE'] = '1'
+      os.environ['HF_HOME']='/scratch/shareddata/dldata/huggingface-hub-cache'
 
 
-All Huggingface models can be loaded with  ``module load model-huggingface/all``.
 Here is a Python script using huggingface model.
-
-.. code-block:: python
 
   ## Force transformer to load model(s) from local hub instead of download and load model(s) from remote hub. NOTE: this must be run before importing transformers.
   import os
