@@ -89,6 +89,35 @@ Aalto has IT infrastructure personnel, who can help researchers with building th
 solution for the use case.  
 
 
+Focus on sensitive data
+-----------------------
+
+Aalto university provides secure solutions for data management and computing throughout the data lifecycle. The university has an Information Security Management System (ISMS) in place, adapted from the ISO 27001 standard. These processes govern how all our IT systems are being acquired, developed, implemented, operated and maintained. Based on the information classification, we use only selected systems that comply with high security requirements and have been approved for use with sensitive data. 
+
+We use encryption technologies to safeguard sensitive data in transit and ensure secure collaboration. Our secure network storage is encrypted at rest, includes the possibility to roll back to previous points in time, and supports encrypted backups for disaster recovery. 
+
+We operate a dedicated secure computing environment SECDATA to enable research with most sensitive data. The environment has been audited to comply with the Act on the Secondary Use of Health and Social Data and Findata requirements. Each research project will get a separate virtual desktop environment with customized amounts of memory, disk space, and computing power with a possibility to use GPUs for computational tasks. To safeguard data, transfers are limited and done only through specific audited process and the environment is disconnected from the public internet. 
+
+Our technical, administrative, and legal experts provide advice and hands-on support for handling sensitive data. The Aalto Research Software Engineer (RSE) team and Data Agents help with essential privacy techniques such as minimization, pseudonymization, and anonymization. Aalto's Data Protection Officer provides guidance and oversight on the processing of data and ensuring privacy. 
+
+Confidential data (shorter, for CS)
+-----------------------------------
+
+Aalto CS provides secure data storage for confidential data. This data
+is stored centrally in protected datacenters and is managed by dedicated
+staff. All access is through individual Aalto accounts, and all data is
+stored in group-specific directories with per-person access control.
+Access rights via groups is managed by IT, but data access is only
+provided upon request of the data owner. All data is made available only
+through secure, encrypted, and password-protected systems: it is
+impossible for any person to get data access without a currently active
+user account, password, and group access rights. Backups are made and
+also kept confidential. All data is securely deleted at the end of life.
+CS-IT provides training and consulting for confidential data management.
+
+
+
+
 Focus on connectivity  
 ---------------------
 

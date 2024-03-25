@@ -227,7 +227,7 @@ directory manager should be able to make choices about data.  We do
 not access this data except with an explicit request, but for
 management purpose we do use the file metadata (``stat $filename``).
 For full information, see the :doc:`Science-IT data policy
-<../aalto/datapolicy>`.
+</data/science-it-data-policy>`.
 
 * We do not look into private files without your explicit request (if
   you want help with something, explicitly tell us if we can look at

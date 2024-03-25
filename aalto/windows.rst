@@ -36,7 +36,7 @@ Data
 This section details built-in ways of accessing data storage
 locations.  For generic ways of accessing remotely, see
 :doc:`remoteaccess`.  For Aalto data storage locations, see
-:doc:`aaltostorage` and :doc:`aaltodata`.
+:doc:`/data/aalto-details` and :doc:`/data/principles`.
 
 Your home directory is automatically synced to some degree.
 

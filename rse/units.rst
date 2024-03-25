@@ -1,5 +1,5 @@
-For units such as departments
-=============================
+For units such as departments, schools, or flagship projects
+============================================================
 
 Our service is funded by departments and schools, and members of these
 units can receive our services free of charge for a short period of
@@ -20,7 +20,7 @@ efficiency: (researcher time saved) ≥ 5 × (time we spend).**
    Your department has a lot of people doing little bits of
    programming everywhere, but everyone is doing things alone. What
    if they could work together better? By joining the RSE program as
-   a unit, your staff can get up to X hours of free help to understand
+   a unit, your staff can get rapid help to understand
    tools to make their programming/data work better. After a few
    years, you notice a dramatic cultural shift: there is more
    collaboration and higher-quality work. Perhaps you already see a
@@ -47,8 +47,10 @@ Benefits to schools/departments:
 Benefits to groups:
 
 * Receive staff/on-call software development expertise within your
-  group, without having to make a separate hire.  We don't disappear
-  right after your project.
+  group, without having to make a separate hire, and at less than a
+  full time equivalent.  We don't disappear right after your project.
+* Instead of just one person, you have the resources of our whole team
+  available to you.
 * Your researchers focus on their science while improving their
   computational skills by co-working with us.
 
@@ -68,7 +70,14 @@ technical services can even join us directly.
 In practice, joining us means that you contribute a certain amount of
 funding, which allows us to hire more staff (combined with the other
 departments), to provide a certain amount of time to research groups
-in your unit.
+in your unit.  This is easy with basic funding, but we can also use
+Halli to work with project funding.
 
 If you would like to join contact Richard Darst or rse-group at
 aalto.fi.
+
+
+Current sponsoring units
+------------------------
+
+See :doc:`procedures/units-info`

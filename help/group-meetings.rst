@@ -104,7 +104,7 @@ Discussion starters
 
 * Data
 
-  * :doc:`Where you store and share data </aalto/aaltostorage>`
+  * :doc:`Where you store and share data </data/aalto-details>`
   * Data-driven research: need more support?
   * Department (project, archive), Triton (scratch), cloud, any other
     needs?

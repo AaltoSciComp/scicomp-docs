@@ -1,3 +1,3 @@
 :orphan:
 
-Moved to :doc:`../aalto/aaltodata`
+Moved to :doc:`principles`

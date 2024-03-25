@@ -293,7 +293,7 @@ modules you need::
   $ Rscript -e "library(IRkernel); IRkernel::installspec(name='NAME', displayname='R 3.6.1')"
 
   ## Use envkernel to re-write, loading the R modules.
-  $ envkernel lmod --user --kernel-template=NAME --name=NAME r-irkernel/1.1-python3
+  $ envkernel conda  --user --kernel-template=NAME --name=NAME $CONDA_PREFIX
 
 
 Installing a different R version as a kernel

@@ -29,8 +29,9 @@ underlying compiler.
    :delim: |
    :header-rows: 1
 
-   MPI provider | MPI version | GCC compiler | Module name
-   OpenMPI      | 4.0.5       | gcc/8.4.0    | openmpi/4.0.5
+   MPI provider | MPI version | GCC compiler | Module name   | Extra notes
+   OpenMPI      | 4.1.5       | gcc/11.3.0   | openmpi/4.1.5 |
+   OpenMPI      | 4.0.5       | gcc/8.4.0    | openmpi/4.0.5 | There are known issues with this version, we do not recommend using this for new compilations
 
 .. include:: /triton/ref/mpi-warning.rst
 
@@ -78,8 +79,8 @@ to compile the Hello world!-example by setting ``OMPI_MPICC``- and
 
     .. code-block:: bash
 
-      module load gcc/8.4.0
-      module load openmpi/4.0.5
+      module load gcc/11.3.0
+      module load openmpi/4.1.5
       module load intel-oneapi-compilers/2021.4.0
 
       export OMPI_MPICC=icc  # Overwrite the C compiler
@@ -92,8 +93,8 @@ to compile the Hello world!-example by setting ``OMPI_MPICC``- and
 
     .. code-block:: bash
 
-      module load gcc/8.4.0
-      module load openmpi/4.0.5
+      module load gcc/11.3.0
+      module load openmpi/4.1.5
       module load intel-oneapi-compilers/2021.4.0
 
       export OMPI_MPIFC=ifort  # Overwrite the Fortran compiler

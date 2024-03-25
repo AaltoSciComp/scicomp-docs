@@ -25,7 +25,7 @@ About CodeRefinery and Aalto SciComp
 Future events
 -------------
 * `CodeRefinery <https://coderefinery.org>`__ - March 2023
-* :doc:`Workflows course <../workflows-2023>` - February 2022
+* :doc:`Workflows course <../workflows-2024>` - February 2022
 * High-performance data analysis with Python - May 2023
 * :doc:`Scientific Computing / HPC Kickstart <../kickstart-2022-summer>` - June 2023 sometime
 

@@ -3,12 +3,10 @@ Storage
 
 .. seealso::
 
-   The :doc:`storage tutorial <../tut/storage>` is a prerequisite.
+   These pages have details that go beyond this page:
 
-   These pages are also related and include solutions to common
-   storage problems:
-
-   * :doc:`../tut/remotedata`
+   * :doc:`../tut/storage` - basic prerequisite tutorial
+   * :doc:`../tut/remotedata` - basic prerequisite tutorial
    * :doc:`../usage/lustre`
    * :doc:`../usage/localstorage`
    * :doc:`../usage/quotas`
@@ -16,7 +14,8 @@ Storage
 
 
 This pages gives an overview of more advanced storage topics.  You
-should read the :doc:`storage tutorial <../tut/storage>` first.
+should read the :doc:`storage <../tut/storage>` and :doc:`remote data
+<../tut/storage>` tutorials first.
 
 
 
@@ -48,7 +47,7 @@ can give some recommendations.
 - Reading from single files from many parallel jobs or threads at the
   same time.
 
-- Is all your IO concatenated at one point, or spread out over the
+- Is all your IO concentrated at one point, or spread out over the
   whole job?
 
 ( and if we've asked you specifically about your jobs, could you also
@@ -60,6 +59,7 @@ across jobs? )
 If you think your IO may have bad patterns or even you just want to
 talk to make sure, let one of the Triton staff know or submit an issue
 in the issue tracker.
+
 
 
 Checking your jobs' IO usage
@@ -78,6 +78,8 @@ IO caused by other jobs on the same server while your job is running.
 More advanced tool are being tested and will be available once they
 are finished.
 
+
+
 Loading data for machine learning
 ---------------------------------
 
@@ -95,5 +97,6 @@ etc. reduces the amount of time the GPU is working unless you
 do it properly (Amdhal's law).
 
 * Tensorflow: `data input pipelines <https://www.tensorflow.org/guide/data_performance>`__
+* PyTorch: `data loaders <https://pytorch.org/tutorials/beginner/basics/data_tutorial.html>`__
 
 (more coming later)

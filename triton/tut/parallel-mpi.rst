@@ -82,7 +82,7 @@ Compiling a MPI program
 For compiling/running an MPI job one has to pick up one of the MPI library
 suites. There are various different MPI libraries that all implement the
 MPI standard. We recommend that you use our OpenMPI installation
-(``openmpi/4.0.5``). For information on other installed versions, see the
+(``openmpi/4.1.5``). For information on other installed versions, see the
 :doc:`MPI applications page<../apps/mpi>`.
 
 .. include:: /triton/ref/mpi-warning.rst
@@ -118,9 +118,9 @@ It estimates pi with Monte Carlo methods and
 can utilize multiple MPI tasks for calculating the trials.
 
 First off, we need to compile the program with a suitable OpenMPI version. Let's use the
-recommended version ``openmpi/4.0.5``::
+recommended version ``openmpi/4.1.5``::
 
-   $ module load openmpi/4.0.5
+   $ module load openmpi/4.1.5
 
    $ mpicc -o pi-mpi pi-mpi.c
 
@@ -143,7 +143,7 @@ Using a slurm script setting the requirements and loading the correct modules be
    #SBATCH --nodes=1
    #SBATCH --ntasks=2
 
-   module load openmpi/4.0.5
+   module load openmpi/4.1.5
 
    srun ./pi-mpi 1000000
 
@@ -201,7 +201,7 @@ following script:
   #SBATCH --ntasks-per-node=24 # 24 processes as that is the number in the machine
   #SBATCH --constraint=hsw     # set constraint for processor architecture
 
-  module load openmpi/4.0.5  # NOTE: should be the same as you used to compile the code
+  module load openmpi/4.1.5  # NOTE: should be the same as you used to compile the code
   srun ./pi-mpi 1000000
 
 Monitoring performance

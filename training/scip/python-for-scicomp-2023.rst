@@ -131,7 +131,7 @@ registered in Aalto systems.
 
 To obtain a certificate/credit, we expect you to have registered to the course by 10/11/2023, 
 follow the 4 sessions and provide us with at least the following 5 documents via email
-(1 text document, 4 or more python scripts/notebooks). 
+(1 text document, 4 or more python scripts/notebooks). **Please remember to add your name and surname to all submitted files. If you are a student at Aalto University, please also add your student number.**
 
 - **1 text document** (PDF or txt or anything for text): For each of the 4 days, write a short paragraph (learning diary) to highlight
   your personal reflections about what you have found useful, which topic inspired

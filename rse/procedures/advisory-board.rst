@@ -23,17 +23,12 @@ to research, scientific computing, and teaching at Aalto.
 Current advisory board
 ----------------------
 
-* ...
-* ...
-* ...
-* ...
-* ...
-* ...
+Currently, the advisory board is the :doc:`Science-IT board </about/science-it>`.
 
 
 
-Meetings
---------
+Meetings (Section not in use)
+-----------------------------
 
 Topics for the next meeting and results from previous meetings are
 located here, newest first.

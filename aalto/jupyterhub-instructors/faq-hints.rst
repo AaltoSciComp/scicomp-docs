@@ -44,7 +44,7 @@ Instructions/hints
   <course-data>` your :doc:`course data <../jupyterhub-data>`.
 
 - The course directory is stored according to the :doc:`Science-IT
-  data policy </aalto/datapolicy>`.  In short, all data is stored in group
+  data policy </data/science-it-data-policy>`.  In short, all data is stored in group
   directories (for these purposes, the course is a group).  The
   instructor in change is the owner of the group: this does not mean
   they own all files, but are responsible for granting access and

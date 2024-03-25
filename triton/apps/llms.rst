@@ -1,9 +1,14 @@
 LLMs
 ====
 
-
-Large-language models are AI models that can understand and generate text, 
-primarily using transformer architectures.
+Large-language models are AI models that can understand and generate
+text, primarily using transformer architectures.  This page is about
+running them on a HPC cluster.  This requires
+programming experience and knowledge of using the cluster
+(:ref:`tutorials`), but allows maximum computational power for the
+least cost.  :doc:`Aalto RSE </rse/index>` maintains these models and
+can provide help in using these, even to people who aren't
+computational experts.
 
 Because the size of model weights are typically very large and the interest in the
 models are high, so we provide our users with pre-downloaded model weights and instructions on how to load these weights for inference purposes or for retraining and fine-tuning tasks.
@@ -150,7 +155,7 @@ Huggingface Models
 ~~~~~~~~~~~~~~~~~~~
 
 
-Currently, we have the following Huggingface models stored on triton. Please contact us if you need any other models.
+Following Huggingface models are stored on triton. Full list of all the available models are located at ``/scratch/shareddata/dldata/huggingface-hub-cache/models.txt``. Please contact us if you need any other models.
 
 .. list-table::
   :header-rows: 1
@@ -176,7 +181,23 @@ Currently, we have the following Huggingface models stored on triton. Please con
 
   * * Text Generation
     * tiiuae/falcon-40b-instruct
-  
+
+  * * Text Generation
+    * google/gemma-2b-it
+
+  * * Text Generation
+    * google/gemma-7b
+
+  * * Text Generation
+    * google/gemma-7b-it
+
+  * * Text Generation
+    * google/gemma-7b
+
+  * * Text Generation
+    * LumiOpen/Poro-34B
+
+
   * * Text Generation
     * meta-llama/Llama-2-7b-hf
 

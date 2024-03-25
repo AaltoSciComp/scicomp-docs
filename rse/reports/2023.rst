@@ -17,12 +17,17 @@ things and provide updated statistics.
    * Changes from the last report (mid-2022)
 
      * We have three more staff (project-funded)
+     * IT Services provides more funding so that we can support
+       computational sciences in non-SCI schools (and also do internal
+       projects).
 
    * Our current status
 
      * We maintain a good mix of small, immediate support
-       (:doc:`SciComp garage </help/garage>`) and longer-term
+       (:doc:`SciComp garage </help/garage>`) and longer-term projects
        (:doc:`../portfolio`)
+     * Even with little advertisement, we are fully booked (but not
+       overwhelmed).
      * **5× time benefit** (time we spend vs time academics save),
        regardless of project size, seems to continue to be true.
 
@@ -30,7 +35,8 @@ things and provide updated statistics.
 
      * Tell academics, who are most in need of scientific computing
        support (the non-experts), about our services.
-
+     * Discussion of how to better align project selection with the
+       university's strategy (if others think this is important.)
 
 
 Current status of Aalto RSE
@@ -82,6 +88,14 @@ tracker.
    :alt: Bar graph as described.
 
    Rough distribution of the types of tasks which we do.
+
+.. figure:: 2020-2023-size-distribution.png
+   :alt: Bar graph as described.
+
+   Size distribution of all tracked projects.  Note that the smallest
+   projects are not all rigorously tracked in this system, especially
+   the "0-G" (garage) projects.  Sizes are "garage", small, medium,
+   large, and "not applicable".
 
 .. figure:: 2020-2023-rse-summary-wordcloud.png
    :alt: Word cloud

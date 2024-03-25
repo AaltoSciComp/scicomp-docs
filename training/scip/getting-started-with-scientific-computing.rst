@@ -141,7 +141,7 @@ the lectures.
 
 `Please register at this link <https://link.webropol.com/s/introHPCJan2022>`__
 Registration is not required to just watch online, lurkers welcome.
-Registration will get you ("*" indicates priority for Finnish acedemic
+Registration will get you ("*" indicates priority for Finnish academic
 members):
 
 - Email reminders and summaries each day.

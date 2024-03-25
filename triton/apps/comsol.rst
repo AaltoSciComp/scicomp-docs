@@ -5,7 +5,7 @@ COMSOL Multiphysics
 .. _comsol:
 
 
-.. hint:: We are continuing the COMSOL focus days in our :ref:`daily zoom garage<scicomp-garage>` in Autumn 2023: someone from COMSOL (the company) plans to join our zoom garage at 13:00 on the following Tuesdays: 2023-09-05, 2023-09-19, 2023-10-03, 2023-10-17, 2023-10-31, 2023-11-14, 2023-11-28, 2023-12-12.
+.. hint:: We are continuing the COMSOL focus days in our :ref:`daily zoom garage<scicomp-garage>` in Spring 2024: someone from COMSOL (the company) plans to join our zoom garage at 13:00 on the following Tuesdays: 2024-01-23, 2024-02-27, 2024-03-26, 2024-04-23, 2024-05-28.
 
 .. hint:: Join the other COMSOL users in our Zulip :ref:`chat`: Stream "#triton", topic "Comsol user group".
 
@@ -199,6 +199,14 @@ Please note, that each instance of the below process uses a COMSOL licence, so t
 
 Example files for batch job workflow
 ************************************
+
+Please check the available versions and installation locations of comsol and update the below scripts accordingly:
+
+          module spider comsol
+          module show comsol/6.2
+
+The installation folder is on the line with "prepend_path".
+
 
 Here is an example batch submit script ``comsol_matlab_livelink.sh``::
 

@@ -6,8 +6,8 @@ You can get the repository with the following command::
 
 Loading module::
 
-  module load gcc/8.4.0      # GCC
-  module load openmpi/4.0.5  # OpenMPI
+  module load gcc/11.3.0      # GCC
+  module load openmpi/4.1.5  # OpenMPI
 
 Compiling the code:
 
@@ -46,7 +46,7 @@ program with a slurm script:
   #SBATCH --mem-per-cpu=200M   # 200MB per process
   #SBATCH --ntasks=4           # 4 processes
 
-  module load openmpi/4.0.5  # NOTE: should be the same as you used to compile the code
+  module load openmpi/4.1.5  # NOTE: should be the same as you used to compile the code
   srun ./hello_mpi
 
 .. important::

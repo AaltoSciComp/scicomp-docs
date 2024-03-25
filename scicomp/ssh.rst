@@ -282,7 +282,7 @@ the file to Triton.
 	 ::
 
 	    $ ssh-copy-id -i ~/.ssh/id_ed25519.pub USER@kosh.aalto.fi
-	    $ ssh-copy-id -i ~/.ssh/id_ed25519.pub -J USER@kosh.aalto.fi USER@triton.aalto.fi
+	    $ ssh-copy-id -i ~/.ssh/id_ed25519.pub -o ProxyJump=USER@kosh.aalto.fi USER@triton.aalto.fi
 
       .. group-tab:: Windows with PowerShell
 

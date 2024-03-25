@@ -1,0 +1,36 @@
+name: Update the search database
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  update-search-index:
+    runs-on: ubuntu-latest
+    environment: deploy
+    strategy:
+      matrix:
+        python-version: ["3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      # https://github.com/actions/setup-python
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install deps
+        run: |
+          pip install sphinx sphinx_rtd_theme markdownify beautifulsoup4
+          pip install -r requirements.txt
+      - name: Build project
+        run: |
+          make dirhtml SPHINXOPTS="-w warnings.txt"
+      - name: Cat warnings
+        run: |
+          cat warnings.txt
+      - name: Upload new data
+        env:
+          SEARCH_UPDATE_AUTHORIZATION: ${{ secrets.SEARCH_UPDATE_AUTHORIZATION }}
+          SEARCH_URL: ${{ secrets.SEARCH_URL }}
+        run: |
+          python _meta/search.py --db=search.db update "$SEARCH_URL"

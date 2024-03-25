@@ -262,7 +262,7 @@ Examples
       directly launches the ```sss2```-executable. Each container can
       run multiple OpenMP threads of Serpent.
    #. The openMPI library (v. 4.0.3) shipping with Ubuntu 20.04 seems
-      to be compatible with the Triton module ``openmpi/4.0.5``
+      to be compatible with the Triton module ``openmpi/4.1.5``
    #. The Ubuntu MPI library binds all the threads to the same
       CPU. This is avoided by passing the parameter ``--bind-to none``
       to mpirun.
