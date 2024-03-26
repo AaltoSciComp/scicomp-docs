@@ -72,7 +72,7 @@ Below is some quick reference info.
    Networks → Add Connection → Cisco AnyConnect compatible VPN. →
    Set Gateway to ``vpn.aalto.fi`` and User Agent to ``AnyConnect''.
    Then connect and use Aalto username/password. Or from the command
-   line: ``openconnect https://vpn.aalto.fi --useragent=AnyConnect``
+   line: ``openconnect https://vpn.aalto.fi --useragent=AnyConnect``.  This requires a new enough OpenConnect, at least Ubuntu 23.10 has it.
 -  Personal mac: `use Cisco AnyConnect VPN
    Client <https://download.aalto.fi/staff/>`__
 -  personal windows: `use Cisco AnyConnect VPN
