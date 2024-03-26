@@ -252,21 +252,21 @@ To access Huggingface models:
 
   .. group-tab:: sbatch script
 
-    Load module to setup the environment variable HF_HOME:
+    Load the hugginface module to setup the environment variable HF_HOME:
 
     .. code-block:: bash
 
       module load model-huggingface/all
       # this will setup HF_HOME to /scratch/shareddata/dldata/huggingface-hub-cache
 
-  .. group-tab:: jupyter notebook
+  .. group-tab:: jupyter-notebook/python
 
-    In jupyter notebook, one can set up HF_HOME directly:
+    In a jupyter notebook or python script, one can set up HF_HOME directly:
 
     .. code-block:: python
 
       import os
-      os.environ['TRANSFORMERS_OFFLINE'] = '1'
+     
       os.environ['HF_HOME']='/scratch/shareddata/dldata/huggingface-hub-cache'
 
 
@@ -353,7 +353,7 @@ Each module will set the following environment variables:
 - ``MODEL_ROOT`` - Folder where model weights are stored.
 - ``MODEL_WEIGHTS`` - Path to the model weights in GGUF file format.
 
-This Python code snippet is part of a 'Chat with Your PDF Documents' example, utilizing LangChain and leveraging model weights stored in a .gguf file. For detailed environment setting up and Python code, please check out `this repo <https://github.com/AaltoSciComp/llm-examples/tree/main/chat-with-pdf>`__.
+The following Python code snippet is part of a 'Chat with Your PDF Documents' example, utilizing LangChain and leveraging model weights stored in a .gguf file. For detailed environment setting up and Python code, please check out `this repo <https://github.com/AaltoSciComp/llm-examples/tree/main/chat-with-pdf>`__.
 
 .. code-block:: python
   
@@ -363,11 +363,31 @@ This Python code snippet is part of a 'Chat with Your PDF Documents' example, ut
   model_path = os.environ.get('MODEL_WEIGHTS')
   llm = LlamaCpp(model_path=model_path, verbose=False)
 
+With one of these gguf files one can start a local API server on a computing node via llama.cpp, e.g.:
+
+.. code-block:: bash
+
+  srun --time=01:00:00 --cpus-per-task=4 --mem=80G \
+  singularity run -B $MODEL_ROOT:/models --env MODEL=ggml-model-f16-v2.gguf \
+  --env HOST=0.0.0.0 --env PORT=8787 --env N_CPUS=4  /scratch/shareddata/dldata/llm_llama2_cpu_latest.sif
+
+After the server is up, you can send a request like this:
+
+.. code-block:: bash
+
+  curl http://nodename:8787/v1/completions \
+  -H "Content-Type: application/json" \
+  -d '{
+  "model": "no-used-but-needed",
+  "prompt": "San Francisco is a",
+  "max_tokens": 7,
+  "temperature": 0
+  }'
+
+To checkout node name run ``squeue --me``
 
 More examples
 ------------------------------------------------------------
 
-Starting a local API
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-With the pre-downloaded model weights, you are also able create an API endpoint locally. For detailed examples, you can checkout `this repo <https://github.com/AaltoSciComp/llm-examples/tree/main/>`__.
+For more detailed examples of LLMs on triton, you can checkout `this repo <https://github.com/AaltoSciComp/llm-examples/tree/main/>`__.
 
