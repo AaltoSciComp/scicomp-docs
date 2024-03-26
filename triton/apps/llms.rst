@@ -272,6 +272,8 @@ To access Huggingface models:
 
 Here is a Python script using huggingface model.
 
+.. code-block:: python
+
   ## Force transformer to load model(s) from local hub instead of download and load model(s) from remote hub. NOTE: this must be run before importing transformers.
   import os
   os.environ['TRANSFORMERS_OFFLINE'] = '1'
