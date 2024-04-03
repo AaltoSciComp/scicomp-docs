@@ -53,11 +53,15 @@ standard RSE salaries project (ask for it).
 
 
 
+.. _rse-project-admin-types-of-projects:
+
 Types of projects
 -----------------
 
 Special projects
 ~~~~~~~~~~~~~~~~
+
+Examples: EU-funded projects
 
 Special projects are their own distinct entity and are not mixed with
 other work of our team.  They receive dedicated days for their work,

@@ -102,4 +102,9 @@ Checklist:
   * Arranged between department controller and RSE controller (SCI)
   * We'll track all our time internally.
 
+* If an EU project or any special constraints on how we keep our
+  records, let us know.  EU projects use Halli and are described on
+  the :ref:`project administration page, heading "special projects"
+  <rse-project-admin-types-of-projects>`.
+
 * Tell us how to update this page to be more useful to others.
