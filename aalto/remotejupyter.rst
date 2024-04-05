@@ -29,8 +29,8 @@ Aalto provides two “light computing” servers: ``brute.org.aalto.fi``, ``forc
 	# Create a session. I use tmux
 	tmux
 
-	# Load Anaconda
-	module load anaconda
+	# Load the Aalto Scicomp python environment
+	module load scicomp-python-env
 
 	# Create your env
 	conda create -n env-name python=3.6 jupyter

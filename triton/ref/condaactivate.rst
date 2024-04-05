@@ -11,7 +11,7 @@
    all cases, no confusion if others don't.)
 
    - If you activate one environment from another, for example after
-     loading an anaconda module, do ``source activate ENV_NAME`` like
+     loading an miniconda module, do ``source activate ENV_NAME`` like
      shown above (conda installation in the environment not needed).
 
    - If you make your own standalone conda environments, install the

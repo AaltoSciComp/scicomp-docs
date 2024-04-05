@@ -4,6 +4,6 @@
 #SBATCH --cpus-per-task=4
 #SBATCH --output=ParallelOut
 
-module load anaconda # use the normal anaconda environment for python
+module load scicomp-python-env # use the normal scicomp environment for python
 srun python parallel.py
 

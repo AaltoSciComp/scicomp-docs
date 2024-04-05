@@ -25,12 +25,12 @@ Python distributions
      * How to install own packages
 
    * * I don't really care, I just want recent stuff and to not worry.
-     * Anaconda: ``module load`` :sub:`(sw-module-anaconda) *anaconda*`
+     * The python environment created by Aalto Scientific computing: ``module load`` :sub:`(sw-module-scicomp-python-env) *scicomp-python-env*`
      *
 
    * * Simple programs with common packages, not switching between
        Pythons often
-     * Anaconda: ``module load anaconda``
+     * Scicomp Environment: ``module load scicomp-python-env``
      * ``pip install --user``
 
    * * Your own conda environment
@@ -48,7 +48,7 @@ bundled togeter), PyPy (a just-in-time compiler,  which can be much faster for
 some use cases). Triton supports all of these.
 
 -  For general scientific/data science use, we suggest that you use
-   Anaconda. It comes with the most common scientific software included,
+   the environment created by us (``module load scicomp-python-env``). It comes with the most common scientific software included,
    and is reasonably optimized.
 -  There are many other "regular" CPython versions in the module system.
    These are compiled and optimized for Triton, and are highly
@@ -64,7 +64,7 @@ dependencies in there.
 Quickstart
 ----------
 
-Use ``module load anaconda`` to get our Python installation.
+Use ``module load scicomp-python-env`` to get our Python installation.
 
 If you have simple needs, use :ref:`pip install --user
 <pip-install-user>` to install packages.  For complex needs, use
@@ -129,21 +129,12 @@ and non-Python compiled software and libraries. It is also all open
 source, and is packaged nicely so that it can easily be installed on
 any major OS.
 
-To load anaconda, use the module system (you can also load specific
-versions):
+To load an environment based on anaconda and maintained by us, use the module
+system (you can also load specific versions):
 
 ::
 
-    $ module load anaconda     # python3
-    $ module load anaconda2    # python2
-
-.. note::
-
-   Before 2020, Python3 was via the ``anaconda3`` module (note the
-   ``3`` on the end).  That's still there, but in 2020 we completely
-   revised our Anaconda installation system, and dropped active
-   maintenance of Python 2.  All updates are in ``anaconda`` only in
-   the future.
+    $ module load scicomp-python-env     # python3
 
 Conda environments
 ~~~~~~~~~~~~~~~~~~
@@ -294,7 +285,7 @@ basic idea is that you have a *controller* and *engines*.  You have a
 *client* process which is actually running your own code.
 
 Preliminary notes: ipyparallel is installed in the
-anaconda{2,3}/latest modules.
+scicomp-python-env/latest module.
 
 Let's say that you are doing some basic interactive work:
 
@@ -364,8 +355,9 @@ Advanced users can see this `rosetta
 stone <https://conda.io/projects/conda/en/latest/commands.html#conda-vs-pip-vs-virtualenv-commands>`__
 for reference.
 
-On Triton we have added some packages on top of the Anaconda
-installation, so cloning the entire Anaconda environment to local conda
+On Triton we have added some packages on top of the Anaconda and make 
+it available as the scicomp-python-env module, so cloning the entire 
+Anaconda environment to local conda
 environment will not work (not a good idea in the first place but some
 users try this every now and then).
 

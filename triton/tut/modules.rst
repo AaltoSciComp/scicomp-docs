@@ -49,20 +49,20 @@ software by default for every user.
 A module lets you adjust what software is available,
 and makes it easy to switch between different versions.
 
-As an example, let's inspect the ``anaconda`` module with ``module
-show anaconda``:
+As an example, let's inspect the ``triton_base_python`` module with ``module
+show scicomp-python-env``:
 
 .. highlight:: console
 
 .. code-block:: console
 
-    $ module show anaconda
+    $ module show scicomp-python-env
     ----------------------------------------------------------------------------
       /share/apps/anaconda-ci/fgci-centos7-anaconda/modules/anaconda/2023-01.lua:
     ----------------------------------------------------------------------------
-    whatis("Name : anaconda")
+    whatis("Name : scicomp-python-env")
     whatis("Version : 2023-01")
-    help([[This is an automatically created Anaconda installation.]])
+    help([[This is an automatically created Python environment installation.]])
     prepend_path("PATH","/share/apps/anaconda-ci/fgci-centos7-anaconda/software/anaconda/2023-01/2eea7963/bin")
     setenv("CONDA_PREFIX","/share/apps/anaconda-ci/fgci-centos7-anaconda/software/anaconda/2023-01/2eea7963")
     setenv("GUROBI_HOME","/share/apps/anaconda-ci/fgci-centos7-anaconda/software/anaconda/2023-01/2eea7963")
@@ -101,11 +101,11 @@ modules (if this doesn't work, use ``which``).::
   Python 3.6.8
 
 But you need a newer version of Python.  To this end, you can **load**
-the ``anaconda`` module using the ``module load anaconda`` command,
+the ``scicomp-python-env`` module using the ``module load scicomp-python-env`` command,
 that has a more up to date Python with lots of libraries already
 included::
 
-  $ module load anaconda
+  $ module load scicomp-python-env
   $ type python
   python3 is /share/apps/anaconda-ci/fgci-centos7-anaconda/software/anaconda/2023-01/2eea7963/bin/python3
   $ python -V
@@ -119,7 +119,7 @@ using the ``module list`` command::
 
   $ module list
   Currently Loaded Modules:
-    1) anaconda/2023-01
+    1) scicomp-python-env/2023-01
 
 .. note::
   The ``module load`` and ``module list`` commands can be abbreviated as ``ml``
@@ -130,10 +130,10 @@ modules::
 
   $ module purge
 
-Or explicitly unload the ``anaconda`` module by using the ``module
-unload anaconda`` command::
+Or explicitly unload the ``scicomp-python-env`` module by using the ``module
+unload scicomp-python-env`` command::
 
-  $ module unload anaconda
+  $ module unload scicomp-python-env
 
 You can load any number of modules in your open shell, your scripts,
 etc.  You could load modules in your ``~/.bash_profile``, but then it
@@ -145,14 +145,14 @@ regularly!
 Module versions
 ---------------
 
-What's the difference between ``module load anaconda`` and ``module load
-anaconda/2023-01``?
+What's the difference between ``module load scicomp-python-env`` and ``module load
+scicomp-python-env/X``?
 
-The first ``anaconda`` loads the version that Lmod assumes to
+The first ``scicomp-python-env`` loads the version that Lmod assumes to
 be the latest one - which might change someday!  Suddenly, things don't
 work anymore and you have to fix them.
 
-The second loading ``anaconda/2023-01`` loads that exact version,
+The second loading ``scicomp-python-env/2023-01`` loads that exact version,
 which won't change.  Once you want stability (possibly from day one!), it's
 usually a good idea to load specific version, so that your environment
 will stay the same until you are done.
@@ -318,10 +318,10 @@ to check your local documentation for what the equivalents are.
 
    .. solution::
 
-      Let's use anaconda as an example. To see all available versions of anaconda,
-      we can either use ``module avail anaconda`` or the better option
-      ``module spider anaconda``. Oldest version of anaconda is ``anaconda/2020-01-tf1``.
-      We can load it using ``module load anaconda/2020-01-tf1``
+      Let's use scicomp-python-env as an example. To see all available versions of scicomp-python-env,
+      we can either use ``module avail scicomp-python-env`` or the better option
+      ``module spider scicomp-python-env``. The oldest version of the module is ``scicomp-python-env/X``.
+      We can load it using ``module load scicomp-python-env/2020-01-tf1``
 
 .. exercise:: Modules-2: Modules and PATH
 
@@ -334,7 +334,7 @@ to check your local documentation for what the equivalents are.
    it looks up the command in ``PATH``
 
    * Run ``echo $PATH`` and ``type python``.
-   * ``module load anaconda``
+   * ``module load scicomp-python-env``
    * Re-run ``echo $PATH`` and ``type python``.  How does it change?
 
    .. solution::
@@ -349,7 +349,7 @@ to check your local documentation for what the equivalents are.
 
 	 python is /usr/bin/python
 
-      After ``module load anaconda``, ``type python`` should print something like
+      After ``module load scicomp-python-env``, ``type python`` should print something like
       ``/share/apps/anaconda-ci/fgci-centos7-anaconda/software/anaconda/2023-01/2eea7963/bin/python``
       and you should see the same path added to your PATH.
 

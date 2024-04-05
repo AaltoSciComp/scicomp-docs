@@ -6,7 +6,7 @@ Spyder is the Scientific PYthon Development
 EnviRonment:\ https://www.spyder-ide.org/
 
 On triton there are two modules that provide Spyder:
-- The basic anaconda module:  ``module load anaconda`` or
+- The basic scicomp environment module:  ``module load scicomp-python-env`` or
 - The neuroimaging environment module: ``module load neuroimaging``
 
 By loading either module you will get access to Spyder.

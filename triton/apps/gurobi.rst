@@ -22,13 +22,13 @@ Gurobi with Python
    
    Unfortunately the python gurobi packages installed via pip and via conda come with
    two distinct package names ``gurobi`` for the anaconda package and ``gurobipy`` for 
-   the pip package. Normally, we install the guobi package in the anaconda environment, 
+   the pip package. Normally, we install the guobi package in the scicomp python environment, 
    but there are some anaconda modules which have the gurobipy package. So you might need
    to select the correct package.
 
-.. admonition:: License Files for older Anaconda modules
+.. admonition:: License Files for older modules
    
-   Older anaconda modules on Triton might not have the GRB_LICENSE_FILE environment variable set 
+   Older modules on Triton might not have the GRB_LICENSE_FILE environment variable set 
    properly, so you might need to point to it manually. To do so, you need to create a 
    ``gurobi.lic`` file in your home folder. The file should contain the following single line:
     
@@ -50,7 +50,7 @@ Gurobi with Python
 
 After setting the license, one can run, for example::
 
-   module load anaconda
+   module load scicomp-python-env
    python 
 
 And then run the following script
@@ -91,7 +91,7 @@ Gurobi with Julia
 For Julia there exists a package called
 `Gurobi.jl <https://github.com/jump-dev/Gurobi.jl>`_ that provides an interface
 to Gurobi. This package needs Gurobi C libraries so that it can run. The
-easiest way of obtaining these libraries is to load the ``anaconda``-module and
+easiest way of obtaining these libraries is to load the ``scicomp-python-env``-module and
 use the same libraries that the Python API uses.
 
 To install Gurobi.jl, one can use the following commands::

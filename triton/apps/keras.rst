@@ -11,8 +11,8 @@ other things).
 Basic usage
 -----------
 
-Keras is available in the ``anaconda`` module and some other anaconda
-modules.  Run ``module spider anaconda`` to list available modules.
+Keras is available in the ``scicomp-python-env`` module and some other 
+modules.  Run ``module spider scicomp-python-env`` to list available modules.
 
 You probably want to learn how to run in the :doc:`GPU queues
 <../tut/gpu>`.  The other information in the :doc:`tensorflow
@@ -25,7 +25,7 @@ Example
 ::
 
    srun --gres=gpu:1 --pty bash
-   module load anaconda
+   module load scicomp-python-env
    python3
    >>> import keras
    Using TensorFlow backend.

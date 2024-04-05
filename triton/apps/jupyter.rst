@@ -391,7 +391,7 @@ it with this:
 Install your own non-Python kernels
 -----------------------------------
 * First, ``module load jupyterhub/live``.  This loads
-  the anaconda environment which contains all the server code and
+  the conda environment which contains all the server code and
   configuration.  (This step may not be needed for all kernels)
 * Follow the instructions you find for your kernel.  You may need to
   specify ``--user`` or some such to have it install in your user
@@ -436,8 +436,8 @@ Here are the steps necessary to do so:
      There are two main reasons for this approach: A) it makes your code more maintainable, since you don't need to modify 
      the code when changing parameters and B) you are less likely to use the wrong version of your code (and thus getting the wrong results).
 5. (Optional) Set up a conda environment. This is mainly necessary if you have multiple conda or pip installable packages that are 
-   required for your job and which are not part of the normal anaconda module. Try it via ``module load anaconda``. 
-   You can't install into the anaconda environment provided by the anaconda module and you should NOT use  ``pip install --user`` as it will bite you later (and can cause difficult to debug problems).
+   required for your job and which are not part of the normal Sc module. Try it via ``module load scicomp-python-env``. 
+   You can't install into the scicomp environment provided by the scicomp-python-env module and you should NOT use  ``pip install --user`` as it will bite you later (and can cause difficult to debug problems).
    If you need to set up your own environment follow :doc:`this guide </triton/apps/python-conda/>`
 6. Set up a slurm batch script in a file e.g. ``simple_python_gpu.sh``. You can do this either with ``nano simple_python_gpu.sh`` 
    (to save the file press ``ctrl+x``, type ``y`` to save the file and press ``Enter`` to accept the file name), or you can mount

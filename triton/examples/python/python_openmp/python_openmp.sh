@@ -5,7 +5,7 @@
 #SBATCH --mem-per-cpu=1G
 #SBATCH -o python_openmp.out
 
-module load anaconda/2022-01
+module load scicomp-python-env
 
 export OMP_PROC_BIND=true
 
