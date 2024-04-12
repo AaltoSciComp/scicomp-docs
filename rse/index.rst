@@ -140,6 +140,11 @@ to improvement at any time.  Also see the :doc:`FCCI Tech
 See also
 --------
 
+* The CSC `optimization service
+  <https://research.csc.fi/optimization-service>`__ is essentially a
+  RSE service, targeted to CSC/LUMI resources (but in theory can do
+  more).  They are good at low-level programming kind of things.
+
 * The `Nvidia AI Tech Center <https://fcai.fi/nvaitc>`__ provides
   *free* RSE services for research projects for Finnish Center for AI
   members (includes Aalto).
