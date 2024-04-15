@@ -20,7 +20,7 @@ Episode 1 - 16/04/2024 - HPC Resources: RAM, CPUs/GPUs, I/O
 -----------------------------------------------------------
 **Content**: focus on HPC computational resources, starting with understanding and managing memory, CPUs, and GPUs, monitoring computational processes and I/O, utilizing local disks and ramdisks, and extending into benchmarking and selecting job parameters.
 
-**Instrucors**: Jarno Rantaharju, Radovan Bast, Diana Iusan
+**Instructors**: Jarno Rantaharju, Radovan Bast, Diana Iusan
 
 **Learning materials**: `Managing resources on HPC <https://coderefinery.github.io/TTT4HPC_resource_management/>`__
 
@@ -102,7 +102,7 @@ Credits
 It is possible to receive 1 ECTS. Here what is required:
 - be affiliated with a research organisation. Your submission must come from an email address of a research organisation.
 - attend all four zoom exercise sessions. During the zoom session send a zoom chat message to Enrico Glerean to mark your presence. You can miss at maximum one session. Please arrange an extra task with Enrico Glerean to compensate for the absence.
-- Submit a tar or zip file with four folders, one folder for each of the four episodes. Inside eaach folder include the scripts, code, commands that you wrote and run during the exercise sessions. Please make sure that all the files submitted have clear comments that explain each of the steps in relation to the exercises and what was done in the zoom session. Provide the output of each of the scripts or commands that you have run (for example as a copy paste from the terminal into a txt file is enough). If the output is very long, it is ok to just copy what is left visible in the terminal.
+- Submit a tar or zip file with four folders, one folder for each of the four episodes. Inside each folder include the scripts, code, commands that you wrote and run during the exercise sessions. Please make sure that all the files submitted have clear comments that explain each of the steps in relation to the exercises and what was done in the zoom session. Provide the output of each of the scripts or commands that you have run (for example as a copy paste from the terminal into a txt file is enough). If the output is very long, it is ok to just copy what is left visible in the terminal.
 - Submit a learning diary for each episode: a short text that highlights i) what went well with the episode, ii) what could be improved, iii) how you will use what you have learned. 
 
 From your organisation's email address, email all these files to scip _at_ aalto.fi by the last day of May 2024. Learners at Aalto University: please include your student number to get the credit registered automatically. Learners from other universities: you might want to check with your study coordinator if you can convert the certificate from this course into 1 ECTS. If they have questions, you can tell them to get in touch with Enrico Glerean
