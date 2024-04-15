@@ -95,7 +95,7 @@ Episode 4 - 14/05/2024 - Parallelization and workflows
 
 Prerequisites
 -------------
-You won't be able to engange with the exercises and examples of the course if you don't have access to an HPC cluster. Usually employers from higher education institutions can always request access to HPC resources. If you are unsure, please get in touch with your local support. Being familiar with basics tools used with HPC and remote computing is fundamental for this course. Familiarize yourself with the Linux command line. You should be familiar with basics concepts and rules of HPC systems. You can watch our past training on "`Introduction to HPC (aka kickstart) <https://www.youtube.com/watch?v=dThyrEXfAbM&list=PLZLVmS9rf3nMKR2jMglaN4su3ojWtWMVw>`__"
+You won't be able to engage with the exercises and examples of the course if you don't have access to an HPC cluster. Usually employers from higher education institutions can always request access to HPC resources. If you are unsure, please get in touch with your local support. Being familiar with basics tools used with HPC and remote computing is fundamental for this course. Familiarize yourself with the Linux command line. You should be familiar with basics concepts and rules of HPC systems. You can watch our past training on "`Introduction to HPC (aka kickstart) <https://www.youtube.com/watch?v=dThyrEXfAbM&list=PLZLVmS9rf3nMKR2jMglaN4su3ojWtWMVw>`__"
 
 Credits
 -------
@@ -109,17 +109,17 @@ From your organisation's email address, email all these files to scip _at_ aalto
 
 Questions
 ---------
-- Q: Can I get a certificate even though I am not affiliated with a University or other reearch organisation?
+- Q: Can I get a certificate even though I am not affiliated with a University or other research organisation?
 - A: Unfortunately we provide credits only for students or researchers affiliated with research organisations.
 
 - Q: I received a calendar invitation only for one of the episodes, but I marked that I want to register for all episodes, how can I get a calendar invitation?
 - A: We do not have a clever system for sending multiple calendar invitations at once. If you find calendar invitations useful, you need to register manually to each of the four episodes.
 
 - Q: The materials are not yet ready, when will they be ready?
-- A: This is the first run ever for this course, so we are still tweaking learning materials until the last minutes before the course. Your feedback is highly appreciated to turn this pilot into a course that we can run again in the future. Consider contributing to the learning materials by joining the CodeRefinery zulip chat.
+- A: This is the first run ever for this course, so we are still tweaking learning materials until the last minutes before the course. Your feedback is highly appreciated to turn this pilot into a course that we can run again in the future. Consider contributing to the learning materials by joining the CodeRefinery Zulip chat.
 
 
-Controbutors and Acknowledgments
+Contributors and Acknowledgments
 --------------------------------
 
 Course coordinator: Enrico Glerean.
