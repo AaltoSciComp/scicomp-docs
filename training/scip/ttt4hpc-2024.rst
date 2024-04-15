@@ -20,6 +20,8 @@ Episode 1 - 16/04/2024 - HPC Resources: RAM, CPUs/GPUs, I/O
 -----------------------------------------------------------
 **Content**: focus on HPC computational resources, starting with understanding and managing memory, CPUs, and GPUs, monitoring computational processes and I/O, utilizing local disks and ramdisks, and extending into benchmarking and selecting job parameters.
 
+**Instrucors**: Jarno Rantaharju, Radovan Bast, Diana Iusan
+
 **Learning materials**: `Managing resources on HPC <https://coderefinery.github.io/TTT4HPC_resource_management/>`__
 
 **Registration**: `Please register at this link <https://link.webropol.com/ep/ttt4hpc1>`__
