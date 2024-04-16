@@ -1,6 +1,15 @@
 Tuesday Tools & Techniques for High Performance Computing
 =========================================================
 
+.. admonition:: Quick links
+
+   - Watching link: https://twitch.tv/coderefinery
+   - `Video playlist
+     <https://www.youtube.com/playlist?list=PLpLblYHCzJABy4epFn-rqsfDbUZ1ff5Pl>`__
+   - Materials
+
+     - `Day 1 <https://coderefinery.github.io/TTT4HPC_resource_management/>`__
+
 .. figure:: img/ttt4hpc.png
 
 
