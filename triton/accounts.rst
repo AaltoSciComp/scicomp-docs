@@ -43,15 +43,15 @@ Accounts are for (:doc:`see details <usagepolicy>`):
   - Anyone affiliated with a research PI in any way (for affiliated
     research).
   - ... for use in research work (scholarly publications, datasets,
-    research software, theses, etc.)  Triton should be acknowledged
-    and linked in ACRIS [LINK].
+    research software, theses, etc.)  Triton should be :doc:`acknowledged
+    and linked in ACRIS <acknowledgingtriton>`.
   - ... for use in research theses (PhD, Masters, Bachelors).
     However, literature review/non-research theses shouldn't use
     Triton (though these shouldn't have a need for Triton).  These
     should also be acknowledged in ACRIS.
   - A thesis at a company doesn't necessarily disqualify Triton use,
     but Triton should be used for the relevant research that will be
-    in the thesis, not general company operations.
+    in the thesis, not other company work.
 
 - Other staff use (minor)
 
