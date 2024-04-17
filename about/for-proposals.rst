@@ -26,7 +26,7 @@ Computing and modelling are strategic areas of Aalto University. To
 support research in these scopes the university is committed to
 provide proper hardware resources and supporting personnel on long
 term basis. Currently Aalto Science-IT provides a system with about 10000 computing
-cores. The System also contains 150 NVIDIA cards for
+cores. The System also contains over 200 NVIDIA cards for
 GPU computing and over 5 PB of fast storage capacity suitable for Big
 Data needs. All parts are connected with a fast Infiniband network to
 support parallel computing and fast data access. To keep the resources
@@ -39,7 +39,7 @@ e.g. University dedicated OpenStack based cloud resources and access
 to thousands of servers via the national computing grid. Furthermore
 Aalto Science-IT provides much preconfigured software and hands on support to make
 the usage for researchers as effective as possible. On the personnel
-side Science-IT has six permanent Ph.D. level staff to keep the system
+side Science-IT has ten permanent Ph.D. level staff to keep the system
 running and providing teaching and consultation for researchers.
 
 
