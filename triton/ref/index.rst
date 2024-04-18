@@ -134,7 +134,8 @@ See also: :doc:`../overview`.
 
 .. include:: hardware.rst
 
-.. include:: hardware_dist.rst
+..
+  .. include:: hardware_dist.rst
 
 
 
