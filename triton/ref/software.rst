@@ -1,4 +1,4 @@
-* **Python:** ``module load anaconda`` for the Anaconda distribution
+* **Python:** ``module load scicomp-python-env`` for the Anaconda distribution
   of Python 3, including a lot of useful packages.  :doc:`More info
   <../apps/python>`.
 
@@ -7,6 +7,3 @@
 
 * **Matlab:** ``module load matlab`` for the latest Matlab version.
   :doc:`More info <../apps/matlab>`.
-
-* **Julia:** ``module load julia`` for the latest Julia version.
-  :doc:`More info <../apps/julia>`.
