@@ -40,6 +40,7 @@
 
    * * Jupyter
      * Since April 2024 Jupyter is part of Open OnDemand, see below. :doc:`More info </triton/apps/jupyter>`.
+     * See the corresponding OOD section
 
    * * Open OnDemand
      * https://ondemand.triton.aalto.fi, Web-based interface to the
