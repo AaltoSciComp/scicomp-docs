@@ -36,6 +36,7 @@
      * "Virtual desktop interface", https://vdi.aalto.fi, from there you can ``ssh``
        to Triton or access OOD.  `More info
        <https://www.aalto.fi/en/services/vdiaaltofi-how-to-use-aalto-virtual-desktop-infrastructure>`__.
+
      * Whole Internet
 
    * * Jupyter
@@ -45,4 +46,5 @@
      * https://ondemand.triton.aalto.fi, Web-based interface to the
        cluster.  Includes shell access, GUI, data transfer, Jupyter and a number of GUI applications
        like Matlab etc.  :doc:`More info </triton/usage/ood>`.
+
      * VPN and Aalto networks or through VDI
