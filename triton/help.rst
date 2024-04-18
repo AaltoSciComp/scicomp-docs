@@ -142,8 +142,8 @@ address.  You can address your request to a specific person.
    Dept       | Name             | Location
    CS/NBE     | Mikko Hakala     | T-building A243 / Otakaari 3, F354
    CS         | Simo Tuomisto    | T-building A243
-   PHYS       | Simppa Äkäslompolo | Otakaari 1, Y415a
-   PHYS       | Ivan Degtyarenko | Otakaari 1, Y415a
+   PHYS       | Simppa Äkäslompolo | Kide, 2512
+   PHYS       | Ivan Tervanto    | Kide, 2512
    CS/SCI     | Richard Darst    | T-building A243
    NBE        | Enrico Glerean   | Otakaari 3, F354
 
