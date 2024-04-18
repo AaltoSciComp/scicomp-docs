@@ -151,12 +151,13 @@ See also: :doc:`../tut/gpu`.
 
 .. _ref-conda:
 
-Conda
-=====
+..
+  Conda
+  =====
 
-See also: :doc:`../apps/python-conda`
+  See also: :doc:`../apps/python-conda`
 
-.. include:: conda.rst
+  .. include:: conda.rst
 
 
 
