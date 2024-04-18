@@ -33,28 +33,16 @@
        <https://aaltoscicomp.github.io/blog/2023/ssh-keys-with-passwords/>`__
 
    * * VDI
-     * "Virtual desktop interface", https://vdi.aalto.fi, from there you have to
-       ``ssh`` to Triton (previous rows) and can run graphical
-       programs via SSH.  `More info
+     * "Virtual desktop interface", https://vdi.aalto.fi, from there you can ``ssh``
+       to Triton or access OOD.  `More info
        <https://www.aalto.fi/en/services/vdiaaltofi-how-to-use-aalto-virtual-desktop-infrastructure>`__.
      * Whole Internet
 
    * * Jupyter
-     * https://jupyter.triton.aalto.fi provides the Jupyter interface
-       directly on Triton (including command line).  Get a terminal
-       with "New → Other → Terminal". :doc:`More info </triton/apps/jupyter>`.
-     * Whole Internet
+     * Since April 2024 Jupyter is part of Open OnDemand, see below. :doc:`More info </triton/apps/jupyter>`.
 
-   * * Open OnDemand
-     * https://ood.triton.aalto.fi, Web-based interface to the
-       cluster.  Includes shell access and data transfer. "Triton
-       Shell Access" for the terminal.  :doc:`More info </triton/usage/ood>`.
-     * VPN and Aalto networks
-
-   * * VSCode
-     * Web-based available via OpenOnDemand (row above).
-
-       Desktop-based "Remote
-       SSH" allows running on Triton (which is OK, but don't use it
-       for large computation).  :doc:`More info </triton/apps/vscode>`.
-     * Same as Open OnDemand or SSH above
+   * * Open OnDemand (aka OOD)
+     * https://ondemand.triton.aalto.fi, Web-based interface to the
+       cluster.  Includes shell access, GUI, data transfer, Jupyter and a number of GUI applications
+       like Matlab etc.  :doc:`More info </triton/usage/ood>`.
+     * VPN and Aalto networks or through VDI
