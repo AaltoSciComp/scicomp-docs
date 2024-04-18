@@ -1,6 +1,28 @@
-==================================
-Creating a graphical job on triton
-==================================
+===============================================
+Applications with graphical interface on Triton
+===============================================
+
+One has two options: the recommended one is use ondemand.triton.alto.fi, though
+alternatively, one can run a job.
+
+OOD
+---
+
+Using Open OnDemand (OOD) is essential and easy, login to https://ondemand.triton.aalto.fi.
+There on you will have several options, if the application you want to run is part
+of the Interactve Apps menu, then proceed from there. For instance Matlab, Paraview,
+R studio are there. In other case, launch a Triton
+Desktop and you recieve a normal Linux GUI environment of your choice (GNOME or alike).
+
+It will be like you run a Linux Desktop on one of the Triton's compute node with native
+access to `/scratch` and `module ...`. Start a terminal within the session and proceed.
+
+OOD is the recommended way.
+
+Running a job
+-------------
+
+Not recommended, but still an option.
 
 .. admonition:: Prerequisites
 
@@ -24,6 +46,7 @@ However, there are instances where you might need large amount of resources e.g.
 There are two things you need to do to run a graphical program on the cluster:
 
 - Start X-forwarding (``ssh -X host`` or ``ssh -Y host``)
+- (Optional) For windows users, you need to launch X Windows first
 - request an interactive job on the cluster (``sinteractive``)
 
 Once you are on a node, you can load and run your program.
