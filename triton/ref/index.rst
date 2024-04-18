@@ -118,13 +118,12 @@ See also: :doc:`../tut/serial`, :doc:`../tut/array`.
 
 .. _ref-toolchains:
 
-Toolchains
-==========
-.. include:: toolchains.rst
+..
+  Toolchains
+  ==========
+  .. include:: toolchains.rst
 
 .. _hardware-list:
-
-
 
 .. _ref-hardware:
 
