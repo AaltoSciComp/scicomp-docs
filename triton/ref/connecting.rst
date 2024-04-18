@@ -36,15 +36,14 @@
      * "Virtual desktop interface", https://vdi.aalto.fi, from there you can ``ssh``
        to Triton or access OOD.  `More info
        <https://www.aalto.fi/en/services/vdiaaltofi-how-to-use-aalto-virtual-desktop-infrastructure>`__.
-
      * Whole Internet
 
    * * Jupyter
      * Since April 2024 Jupyter is part of Open OnDemand, see below. :doc:`More info </triton/apps/jupyter>`.
 
-   * * Open OnDemand (aka OOD)
+   * * Open OnDemand
      * https://ondemand.triton.aalto.fi, Web-based interface to the
-       cluster.  Includes shell access, GUI, data transfer, Jupyter and a number of GUI applications
+       cluster. Also known as OOD. Includes shell access, GUI, data transfer, Jupyter and a number of GUI applications
        like Matlab etc.  :doc:`More info </triton/usage/ood>`.
-
      * VPN and Aalto networks or through VDI
+
