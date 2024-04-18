@@ -45,8 +45,7 @@ is not recommended, since there is no real advantage to submitting a job to the 
 However, there are instances where you might need large amount of resources e.g. to visualize data which is indeed intended use.
 There are two things you need to do to run a graphical program on the cluster:
 
-- Start X-forwarding (``ssh -X host`` or ``ssh -Y host``)
-- (Optional) For windows users, you need to launch X Windows first
+- Start X-forwarding (when login to Triton, use ``ssh -XY ...``)
 - request an interactive job on the cluster (``sinteractive``)
 
 Once you are on a node, you can load and run your program.
