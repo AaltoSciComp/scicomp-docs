@@ -168,7 +168,7 @@ can load another.  This is usually a compiler:
 For example, let's load a newer version of R:
 
 .. code-block:: console
-   :highlight: 34
+  :emphasize-lines: 3-4
 
   $ module load r/4.2.2
   Lmod has detected the following error:  These module(s) or
@@ -179,7 +179,7 @@ Lmod says that the modules exist but can't be loaded, but gives a hint
 for what to do next.  Let's do that:
 
 .. code-block:: console
-   :highlight: 7-9
+   :emphasize-lines: 7-9
 
    $ module spider r/4.2.2
 

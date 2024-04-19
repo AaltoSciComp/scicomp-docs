@@ -7,7 +7,7 @@ Spring 2024
 * We had a user's group meeting.  You can find the `slides here
   <https://docs.google.com/presentation/d/1BySO0EzOeUT4uTdd2_5kkqLAShYdVqo2h2tGlz5OpHg/edit>`__,
   including commentary.
-* :help:`/help/garage` now has a focus day for jupyter.cs on Wednesdays.
+* :doc:`/help/garage` now has a focus day for jupyter.cs on Wednesdays.
 
 Autumn 2023
 -----------
