@@ -15,7 +15,7 @@ R studio are there. In other case, launch a Triton
 Desktop and you recieve a normal Linux GUI environment of your choice (GNOME or alike).
 
 It will be like you run a Linux Desktop on one of the Triton's compute node with native
-access to `/scratch` and `module ...`. Start a terminal within the session and proceed.
+access to ``/scratch`` and ``module ...``. Start a terminal within the session and proceed.
 
 OOD is the recommended way.
 
