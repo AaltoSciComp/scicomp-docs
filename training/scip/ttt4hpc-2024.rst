@@ -9,6 +9,7 @@ Tuesday Tools & Techniques for High Performance Computing
    - Materials
 
      - `Day 1 <https://coderefinery.github.io/TTT4HPC_resource_management/>`__
+     - `Day 2 <https://coderefinery.github.io/TTT4HPC_Interactive/>`__
 
 .. figure:: img/ttt4hpc.png
 
@@ -52,7 +53,7 @@ Episode 2 - 23/04/2024 - Day-to-day working on clusters
 -------------------------------------------------------
 **Content**: focus on software development on HPC, syncing data, interactive work with HPC, vscode
 
-**Learning materials**: coming soon
+**Learning materials**: `Interactive <https://coderefinery.github.io/TTT4HPC_Interactive/>`__
 
 **Registration**: `Please register at this link <https://link.webropol.com/ep/ttt4hpc2>`__
 
