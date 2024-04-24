@@ -11,6 +11,10 @@ For RSE candidates and community
      <https://www.aalto.fi/en/open-positions/>`__.  If you are
      considering Aalto, CSC also quite often has `jobs open
      <https://csc.fi/en/web/guest/careers>`__.
+   * This `blog post
+     <https://aaltoscicomp.github.io/blog/2023/aalto-rse-hiring-process/>`__
+     describes what you might want to know for applying for jobs with
+     us.
    * If you are looking for jobs inside and outside of Aalto, consider
      following the `Society-RSE job vacancies
      <https://society-rse.org/careers/vacancies/>`__ form.

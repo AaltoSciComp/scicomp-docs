@@ -51,6 +51,7 @@ optional_modules = [
     'sphinx_plausible',
     'sphinxext.opengraph',
     'sphinx_minipres',
+    'sphinxext.rediraffe'
     ]
 if on_rtd or 'GITSTAMP' in os.environ:
     optional_modules.append('sphinx_gitstamp')
@@ -71,6 +72,7 @@ ogp_image = "_static/asc-socialshare-02.png"
 ogp_image_alt = "ASC hexagon logo; Aalto Scientific Computing; Data, Software, Computing, HPC, and Training."
 ogp_custom_meta_tags = ['<meta property="twitter:creator" content="@SciCompAalto" />']
 
+rediraffe_redirects = '_meta/redirects.txt'
 
 # Add timestamps from git
 gitstamp_fmt = "%Y %b %d"
@@ -95,7 +97,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Aalto Scientific Computing'
-copyright = u'2023, Aalto Science-IT and contributors'
+copyright = u'2024, Aalto Science-IT and contributors'
 author = u'Aalto Science-IT'
 
 copybutton_exclude = '.linenos, .gp'

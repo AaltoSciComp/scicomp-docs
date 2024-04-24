@@ -1,0 +1,8 @@
+# old_path new_path
+training/scip/workflows-2024 training/scip/ttt4hpc-2024
+training/scip/workflows-2023 training/scip/ttt4hpc-2024
+aalto/aaltodata data/principles
+aalto/aaltostorage data/aalto-details
+aalto/datapolicy data/science-it-data-policy
+data/personaldata data/confidential-data
+data/datapolicy data/science-it-data-policy

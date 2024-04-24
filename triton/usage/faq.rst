@@ -111,7 +111,7 @@ Job status and submission
 .. collapse:: ``srun: error: Unable to allocate resources: Requested node configuration is not available``
 
    You have requested some Slurm options which do not include any
-   nodes (for example, asking for a GPU with ``--gres=gpu`` and a
+   nodes (for example, asking for a GPU with ``--gpus=TYPE:N`` and a
    partition without GPUs).  Figure out what the problem is and adjust
    your Slurm options.
 

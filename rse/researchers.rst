@@ -7,9 +7,7 @@ and it's affecting the quality of your work.  Or maybe you don't know
 how to start your project, or publish it.  You're too busy with the
 science to have time to focus on the computing.
 
-To request a service, contact Aalto Scientific Computing or `answer
-our survey and request to be contacted
-<https://forms.gle/wxnCpCGxdUfGGqfw6>`__ this form.
+To find out more or make a request, contact us.
 
 .. admonition:: Case study: preparation for publication
 
@@ -69,9 +67,10 @@ a project.** Our goal will be to primarily teaching and mentoring, to
 help you help yourselves in the long run.  We'll point you in the
 right direction and where to look next.
 
-**You can also request longer-term programming as a service.**  This
+**You can also request longer-term work as a service.**  This
 can be producing or modifying some software for you, or whatever you
-may need.  This is expected to be paid from your grants.  (Need someone
+may need.  If it's short, it's covered under basic funding, and if it
+is longer it is expected to be paid from your grants.  (Need someone
 for a few months for your grant?  We can do that.)
 
 .. note:: Master's and Bachelor's students
@@ -157,7 +156,8 @@ To request a service, see :ref:`the request area <request-rse>`.
 
 Requests are :doc:`prioritized <procedures/prioritization>` according to:
 
+* Short-term "urgent help" for as many projects as possible
+* Priority for projects and units which provide funding
 * Strategic benefit
 * Long-term impact to research (for example, improved skills)
-* Priority for units which provide funding
 * Diversity and balance

@@ -25,7 +25,7 @@ We:
   teachers.
 
 * Provide services for :doc:`managing the department's research data
-  </aalto/aaltodata>`.
+  </data/principles>`.
 
 * `Provide virtual machines
   <https://wiki.aalto.fi/display/CSdept/IT>`__.

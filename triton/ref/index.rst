@@ -118,13 +118,12 @@ See also: :doc:`../tut/serial`, :doc:`../tut/array`.
 
 .. _ref-toolchains:
 
-Toolchains
-==========
-.. include:: toolchains.rst
+..
+  Toolchains
+  ==========
+  .. include:: toolchains.rst
 
 .. _hardware-list:
-
-
 
 .. _ref-hardware:
 
@@ -135,7 +134,8 @@ See also: :doc:`../overview`.
 
 .. include:: hardware.rst
 
-.. include:: hardware_dist.rst
+..
+  .. include:: hardware_dist.rst
 
 
 
@@ -152,12 +152,13 @@ See also: :doc:`../tut/gpu`.
 
 .. _ref-conda:
 
-Conda
-=====
+..
+  Conda
+  =====
 
-See also: :doc:`../apps/python-conda`
+  See also: :doc:`../apps/python-conda`
 
-.. include:: conda.rst
+  .. include:: conda.rst
 
 
 

@@ -114,7 +114,9 @@ Aalto home directories have a 100GB quota, and this is suitable for
 small use.  Note that files here are lost once you leave Aalto, so
 make sure you back up.
 
-The `IT Services for Research <itsr_>`_ page contains some other cloud
+The `What file storage to use?
+<https://www.aalto.fi/en/services/what-file-storage-to-use-when>`__
+page contains basic
 services which may be useful for data storage.  Of the cloud services,
 note that everyone at Aalto can get an unlimted Google Drive account
 through the Aalto Google Apps service: `instructions

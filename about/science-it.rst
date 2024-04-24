@@ -47,7 +47,7 @@ Science-IT Management
 ---------------------
 
 Science-IT is managed by the board: prof. Harri Lähdesmäki (head),
-prof. Adam Foster, prof. Mikko Kurimo, prof. Jari Saramäki.
+prof. Adam Foster, prof. Mikko Kurimo, prof. Petteri Kaski.
 
 Operational team: Mikko Hakala, D.Sc. (Tech), Ivan Degtyarenko,
 D.Sc. (Tech), Richard Darst (Ph.D.), Simo Tuomisto (M.Sc), Enrico

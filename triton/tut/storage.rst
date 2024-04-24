@@ -174,7 +174,7 @@ Other Aalto data storage locations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Aalto has other non-Triton data storage locations available.  See
-:doc:`/aalto/aaltostorage` and :doc:`/aalto/aaltodata` for more info.
+:doc:`/data/aalto-details` and :doc:`/data/principles` for more info.
 
 
 
@@ -229,7 +229,7 @@ time to review your local guides to see how they are adapted to your site.
 .. exercise:: Storage-1: Review data storage locations
 
    (Optional) Look at the list of data storage locations above.  Also look at the
-   :doc:`/aalto/aaltostorage`.  Which do you
+   :doc:`/data/aalto-details`.  Which do you
    think are suitable for your work?  Do you need to share with
    others?
 

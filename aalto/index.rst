@@ -16,13 +16,11 @@ for Research page
    windows
    coderefinery-setup
    cslinux
-   aaltostorage
-   aaltodata
-   datapolicy
    remoteaccess
    git
    aaltoharbor
    jupyterhub
+   llm-web-apis
    matlab_standalone
    opensource
    overleaf

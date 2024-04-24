@@ -13,6 +13,9 @@ computation and data-intensive work, including experimental work).
    * `IT Services for Research <itsr_>`_ is the comprehensive list of
      researcher-oriented IT services available (compared to this which
      is a starting tutorial)
+   * `What file storage to use?
+     <https://www.aalto.fi/en/services/what-file-storage-to-use-when>`__ -
+     good summary not focused on scientific computing.
 
 .. _itsr: https://www.aalto.fi/en/services/it-services-for-research
 
@@ -174,7 +177,7 @@ on data <../data/index>` (not maintained much anymore), and also there
 are higher level `guides from
 Aalto <aaltordm_>`_.  If you just want to get something done, you
 should start with our :doc:`Aalto-specific guideline for Science-IT
-data storage <aaltodata>` (used in CS, NBE, PHYS) - if you follow our
+data storage </data/principles>` (used in CS, NBE, PHYS) - if you follow our
 plan, you will be doing better than most people.  If you have
 specific questions, there is an official service email address you can
 use (see the Aalto pages), or you can ask the Science-IT team.
@@ -190,9 +193,11 @@ sharing, and long-term management (so that you don't lose or forget
 about data every time someone leaves).  You should request as many
 projects as you need depending on how fine-grained you need access
 control, and each can have its own members and
-quota.  You can read about the :doc:`storage locations available
-<../aalto/aaltostorage>` and :doc:`storage service policy
-<../data/datapolicy>`.
+quota.  You can read a `general guide from Aalto
+<https://www.aalto.fi/en/services/what-file-storage-to-use-when>`__
+(going beyond scientific computing) about the :doc:`storage locations available
+</data/aalto-details>` and :doc:`storage service policy
+</data/science-it-data-policy>`.
 
 Triton has 5PB of non-backed up data storage on the high-performance
 Lustre filesystem.  This is used for large active computation
@@ -219,7 +224,7 @@ instructions <teamwork_>`_
 CSC provides both high-performance Lustre filesystems (like Triton)
 and archive systems.  `CSC research portal <https://research.csc.fi/>`_.
 
-In our :doc:`data management section <../data/index>`, we provide many
+In our :doc:`data management section </data/index>`, we provide many
 more links to long-term data repositories, archival, and so on.  The
 `fairdata.fi <https://fairdata.fi/>`_ project is state-supported
 and has a lot more information on data.  They also provide some
@@ -348,8 +353,10 @@ say it is "required" if you have a Triton account).
 Other notes
 -----------
 
-Remember to keep the `IT Services for Research page close <itsr_>`_
-close at hand!
+Remember to keep the `IT Services for Research <itsr_>`_ and `What
+file storage to use?
+<https://www.aalto.fi/en/services/what-file-storage-to-use-when>`__
+pages close at hand
 
 Research is usually collaborative, but sometimes you can feel
 isolated - either because you are lost in a crowd, or far away from

@@ -26,7 +26,7 @@ Computing and modelling are strategic areas of Aalto University. To
 support research in these scopes the university is committed to
 provide proper hardware resources and supporting personnel on long
 term basis. Currently Aalto Science-IT provides a system with about 10000 computing
-cores. The System also contains 150 NVIDIA cards for
+cores. The System also contains over 200 NVIDIA cards for
 GPU computing and over 5 PB of fast storage capacity suitable for Big
 Data needs. All parts are connected with a fast Infiniband network to
 support parallel computing and fast data access. To keep the resources
@@ -39,7 +39,7 @@ e.g. University dedicated OpenStack based cloud resources and access
 to thousands of servers via the national computing grid. Furthermore
 Aalto Science-IT provides much preconfigured software and hands on support to make
 the usage for researchers as effective as possible. On the personnel
-side Science-IT has six permanent Ph.D. level staff to keep the system
+side Science-IT has ten permanent Ph.D. level staff to keep the system
 running and providing teaching and consultation for researchers.
 
 
@@ -87,6 +87,35 @@ audited storage environments for sensitive data processing. For IoT, Aalto ITS
 utilizes public cloud computing providers for case-specific construction of services. 
 Aalto has IT infrastructure personnel, who can help researchers with building the relevant 
 solution for the use case.  
+
+
+Focus on sensitive data
+-----------------------
+
+Aalto university provides secure solutions for data management and computing throughout the data lifecycle. The university has an Information Security Management System (ISMS) in place, adapted from the ISO 27001 standard. These processes govern how all our IT systems are being acquired, developed, implemented, operated and maintained. Based on the information classification, we use only selected systems that comply with high security requirements and have been approved for use with sensitive data. 
+
+We use encryption technologies to safeguard sensitive data in transit and ensure secure collaboration. Our secure network storage is encrypted at rest, includes the possibility to roll back to previous points in time, and supports encrypted backups for disaster recovery. 
+
+We operate a dedicated secure computing environment SECDATA to enable research with most sensitive data. The environment has been audited to comply with the Act on the Secondary Use of Health and Social Data and Findata requirements. Each research project will get a separate virtual desktop environment with customized amounts of memory, disk space, and computing power with a possibility to use GPUs for computational tasks. To safeguard data, transfers are limited and done only through specific audited process and the environment is disconnected from the public internet. 
+
+Our technical, administrative, and legal experts provide advice and hands-on support for handling sensitive data. The Aalto Research Software Engineer (RSE) team and Data Agents help with essential privacy techniques such as minimization, pseudonymization, and anonymization. Aalto's Data Protection Officer provides guidance and oversight on the processing of data and ensuring privacy. 
+
+Confidential data (shorter, for CS)
+-----------------------------------
+
+Aalto CS provides secure data storage for confidential data. This data
+is stored centrally in protected datacenters and is managed by dedicated
+staff. All access is through individual Aalto accounts, and all data is
+stored in group-specific directories with per-person access control.
+Access rights via groups is managed by IT, but data access is only
+provided upon request of the data owner. All data is made available only
+through secure, encrypted, and password-protected systems: it is
+impossible for any person to get data access without a currently active
+user account, password, and group access rights. Backups are made and
+also kept confidential. All data is securely deleted at the end of life.
+CS-IT provides training and consulting for confidential data management.
+
+
 
 
 Focus on connectivity  

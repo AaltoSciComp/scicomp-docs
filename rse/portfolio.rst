@@ -1,13 +1,14 @@
 Project portfolio
 =================
 
-This page lists examples of projects which we have done.
+This page lists examples of projects which we have done.  As of early
+2024, our internal project numbers are in the 200s.
 
 
 Summary table
 -------------
 
-.. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/rse-alignment.svg
+.. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/rse-alignment.png
    :alt: 3x3 table with "programming", "workflows integration", "data"
 	 across the top and "help you do it", "do it with you", and
 	 "do it for you" along the side.

@@ -56,12 +56,14 @@ CS-IT. (students, always contact your course instructors first.)
 
 * Chat via :ref:`scicomp chat <chat>`,
   https://scicomp.zulip.cs.aalto.fi, stream ``#jupyter.cs`` for quick
-  questions (don't send personal data here).
+  questions (don't send personal data here, it is public).
 * Issues needing action (new courses, autograding, software
   installation, etc) via the CS IT email alias guru @ cs dot aalto.fi
-* Realtime support via :ref:`garage` every day at 13:00 (good for
+* Realtime support via :ref:`garage` every day at 13:00, focus days on
+  Wednesdays but some help might be possible on other days (good for
   screensharing to show a problem, you can prepare us by mentioning
-  your issue in the chat first).
+  your issue in the chat first).  You can coordinate by chat to be
+  sure.
 
 
 

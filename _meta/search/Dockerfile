@@ -18,6 +18,7 @@ COPY ./ ./scicomp-docs/
 RUN \
     pwd && ls && \
     cd scicomp-docs && \
+    rm -f search.db _build/dirhtml/ && \
     sphinx-build -b dirhtml . _build/dirhtml/ && \
     python _meta/search.py create --db=search.db
 

@@ -53,7 +53,7 @@ A basic script (e.g. in the file ``BatchScript.slurm``) for a slurm batch job co
     #SBATCH --mem=2G
     #SBATCH --output=ScriptOutput.log
 
-    module load anaconda
+    module load scicomp-python-env
     srun python /path/to/script.py
 
 
@@ -64,13 +64,13 @@ So, let us go through this script:
 | ``#SBATCH --time=04:00:00`` asks for a 4 hour time slot, after which the job will be stopped.
 | ``#SBATCH --mem=2G`` asks for 2Gb of memory for your job.
 | ``#SBATCH --output=ScriptOutput.log`` sets the terminal output of the job to the specified file.
-| ``module load anaconda`` tells the node you run on to load the anaconda module.
+| ``module load scicomp-python-env`` tells the node you run on to load Python environment module.
 | ``srun python /path/to/script`` tells the cluster to run the command ``python /path/to/script.py``
 
 Most programming languages and tools have their own modules that need to be loaded before they can be run. You can get a list of available
 modules by running ``module spider``. If you need a specific version of a module, you can check the available versions by running ``module spider MODULENAME``
-(e.g. ``module spider r`` for ``R``). To load a specific version you have to specify this version during the load command (e.g. ``module load matlab/r2018b``
-for the 2018b release of MATLAB). For further details please have a look at the :ref:`instructions for the specific application <application-list>`
+(e.g. ``module spider r`` for ``R``). To load a specific version you have to specify this version during the load command (e.g. ``module load matlab/r2023b``
+for the 2023b release of MATLAB). For further details please have a look at the :ref:`instructions for the specific application <application-list>`
 
 There are plenty more parameters that you can set for the slurm scheduler as well (for a detailed list can be found `here <https://slurm.schedmd.com/pdfs/summary.pdf>`__),
 but we are not going to discuss them in detail here, since they are likely not necessary for your first job.
