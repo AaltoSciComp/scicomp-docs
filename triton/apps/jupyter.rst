@@ -445,7 +445,7 @@ you can either a) load the modules within the notebook server
 include the required environment variables (see `kernelspec
 <https://jupyter-client.readthedocs.io/en/stable/kernels.html>`__).
 (We need to do some work to figure out just how this works).  Check
-``/share/apps/jupyterhub/live/miniconda/share/jupyter/kernels/ir/kernel.json``
+``/appl/manual_installations/software/jupyterhub/live/miniconda/share/jupyter/kernels/ir/kernel.json``
 for an example of a kernel that loads a module first.
 
 ..
@@ -507,8 +507,8 @@ particular conda environment first.  The ``sed`` command fixes
 relative paths to absolute paths, so that you use the tools no matter
 what modules you have loaded)::
 
-  $ /share/apps/jupyterhub/live/miniconda/bin/nbdime config-git --enable
-  $ sed --in-place -r 's@(= )[ a-z/-]*(git-nb)@\1/share/apps/jupyterhub/live/miniconda/bin/\2@' .git/config
+  $ /appl/manual_installations/software/jupyterhub/live/miniconda/bin/nbdime config-git --enable
+  $ sed --in-place -r 's@(= )[ a-z/-]*(git-nb)@\1/appl/manual_installations/software/jupyterhub/live/miniconda/bin/\2@' .git/config
 
 
 
