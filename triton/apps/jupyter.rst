@@ -310,8 +310,8 @@ is to use the existing R installations on Triton.
         You will need to create your own conda environment with all packages that are necessary
         to deploy the environment as a kernel.::
 
-           ## Load and miniconda before creating your environment - this provides mamba that is used to create your environment
-           $ module load miniconda
+           ## Load mamba module before creating your environment - this provides mamba that is used to create your environment
+           $ module load mamba
 
         Create your conda environment, selecting a ``NAME`` for the environment.::
 

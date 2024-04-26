@@ -138,7 +138,7 @@ Here is an example `slurm <https://scicomp.aalto.fi/triton/tut/slurm/>`__, scrip
   # Expect output: /scratch/shareddata/dldata/llama-2/tokenizer.model
   
   # activate your conda environment
-  module load miniconda
+  module load mamba
   source activate llama2env
 
   # run batch inference

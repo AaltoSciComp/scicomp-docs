@@ -2,8 +2,11 @@
 Python Environments with Conda
 ==============================
 
-Conda is a popular package manager that is especially
-popular in data science and machine learning communities.
+**Conda** is a popular package manager that is especially
+popular in data science and machine learning communities.  **mamba**
+is a newer drop-in replacement with a much faster resolution
+algorithm, you should use mamba for installing environments both most
+commands work with either.
 
 It is commonly used to handle complex requirements of Python
 and R packages.
@@ -16,11 +19,11 @@ Quick usage guide
 First time setup
 ----------------
 
-You can get conda by loading the ``miniconda``-module:
+You can get conda and mamba by loading the ``mamba``-module:
 
 .. code-block:: console
 
-  $ module load miniconda
+  $ module load mamba
 
 By default Conda stores installed packages and environments in your home
 directory. However, as your home directory has a lower quota, it is a good idea
@@ -54,8 +57,8 @@ Now we can use the ``conda``-command to create the environment:
 
 .. code-block:: console
 
-  $ module load miniconda
-  $ conda env create --file environment.yml
+  $ module load mamba
+  $ mamba env create --file environment.yml
 
 Once the environment is installed, you can activate it with:
 
@@ -214,7 +217,7 @@ Doing everything faster with mamba
 for conda that does environment building and solving much faster than conda.
 
 To use it, you either need to install ``mamba``-package from
-``conda-forge``-channel or use the ``miniconda``-module.
+``conda-forge``-channel or use the ``mamba``-module.
 
 If you have ``mamba``, you can just switch from using ``conda``-command
 to using ``mamba`` and it should work in the same way, but faster.

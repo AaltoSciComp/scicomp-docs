@@ -2,11 +2,11 @@
    :class: toggle
 
    Sometimes it is necessary to reset your Conda configuration. So here are instructions on how to wipe all
-   of your conda settings and existing environments. To be able to do so first activate conda.  On Triton, by loading the miniconda environment:
+   of your conda settings and existing environments. To be able to do so first activate conda.  On Triton, by loading the mamba environment:
 
    .. code-block:: console
 
-      $ module load miniconda
+      $ module load mamba
 
    First, check where conda stores your environments:
 

@@ -3,9 +3,10 @@
 
    * * Command
      * Description
-   * * ``module load miniconda``
-     * Load module that provides miniconda on Triton - recommended for
-       using ``conda`` for your own environments.
+   * * ``module load mamba``
+     * Load module that provides conda/mamba Triton, for use making
+       your own environments.  ``mamba`` is a faster drop-in
+       replacement for ``conda``.
    * * :ref:`conda-first-time-setup`
      * See link for six commands to run once per user account on
        Triton (to avoid filling up all space on your home directory).
@@ -23,7 +24,7 @@
        packages that will be installed.
    * * **Environment management:**
      *
-   * * ``conda env create --file environment.yml``
+   * * ``mamba env create --file environment.yml``
      * Create environment from yaml file.  Use ``-n NAME`` to set or
        override the name from the .yml file.  Environments with ``-n``
        are stored in ``conda config --show envs_dirs``.

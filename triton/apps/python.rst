@@ -34,8 +34,8 @@ Python distributions
      * ``pip install --user``
 
    * * Your own conda environment
-     * Miniconda: ``module load miniconda``
-     * conda environment + conda
+     * Mamba/conda: ``module load mamba``
+     * conda environment + mamba
 
    * * Your own virtual environment
      * Module virtualenv ``module load py-virtualenv``
@@ -161,14 +161,14 @@ environment the packages from the base environment (default environment
 installed by us) will not be used, but you can choose which packages you want
 to install.
 
-We nowadays recommend that you use the ``miniconda``-module for installing these
-environments. Miniconda is basically a minimal Anaconda installation that can be used to
-create your own environments.
+We nowadays recommend that you use the ``mamba``-module for installing these
+environments. This provides a minimal installation that can be used to
+create your own environments with ``mamba`` or ``conda``.
 
 By default conda tries to install packages into your home folder, which can
 result in running out of quota. To fix this, you should run the following commands once::
 
-  $ module load miniconda
+  $ module load mamba
 
   $ mkdir $WRKDIR/.conda_pkgs
   $ mkdir $WRKDIR/.conda_envs
@@ -180,16 +180,16 @@ result in running out of quota. To fix this, you should run the following comman
 
 **virtualenv** does not work with Anaconda, use ``conda`` instead.
 
--  Load the miniconda module. You should look up the version and use
+-  Load the mamba module. You should look up the version and use
    load same version each time you source the environment::
 
-       ## Load miniconda first.  This must always be done before activating the env!
-       $ module load miniconda
+       ## Load mamba first.  This must always be done before activating the env!
+       $ module load mamba
 
 -  Create an environment. This needs to be done once::
 
        ## create environment with the packages you require
-       $ conda create -n ENV_NAME python pip ipython tensorflow-gpu pandas ...
+       $ mamba create -n ENV_NAME python pip ipython tensorflow-gpu pandas ...
 
 -  Activate the environment. This needs to be done every time you load
    the environment::
@@ -202,8 +202,8 @@ result in running out of quota. To fix this, you should run the following comman
    etc. can be done either using ``conda install`` or ``pip install``::
 
        ## Install more packages, either conda or pip
-       $ conda search PACKAGE_NAME
-       $ conda install PACKAGE_NAME
+       $ mamba search PACKAGE_NAME
+       $ mamba install PACKAGE_NAME
        $ pip install PACKAGE_NAME
 
 -  Leaving the environment when done (optional)::
