@@ -6,7 +6,7 @@ Simple batch script, submit with ``sbatch the_script.sh``:
    #SBATCH --time=01:00:00
    #SBATCH --mem-per-cpu=1G
 
-   module load anaconda
+   module load scicomp-python-env
    python my_script.py
 
 
