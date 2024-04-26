@@ -39,7 +39,9 @@
      * Whole Internet
 
    * * Jupyter
-     * Since April 2024 Jupyter is part of Open OnDemand, see below. :doc:`More info </triton/apps/jupyter>`.
+     * Since April 2024 Jupyter is part of Open OnDemand, see
+       below. Use the "Jupyter" app to get same environment as
+       before.  :doc:`More info </triton/apps/jupyter>`.
      * See the corresponding OOD section
 
    * * Open OnDemand
