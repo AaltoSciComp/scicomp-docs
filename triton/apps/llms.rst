@@ -7,20 +7,21 @@ running them on a HPC cluster.  This requires
 programming experience and knowledge of using the cluster
 (:ref:`tutorials`), but allows maximum computational power for the
 least cost.  :doc:`Aalto RSE </rse/index>` maintains these models and
-can provide help in using these, even to people who aren't
+can provide help with using these, even to users who aren't
 computational experts.
 
 Because the size of model weights are typically very large and the interest in the
 models are high, so we provide our users with pre-downloaded model weights in various format, along with instructions on how to load these weights for inference purposes, retraining, and fine-tuning tasks. 
 
 
-Huggingface Models
+HuggingFace Models
 ~~~~~~~~~~~~~~~~~~~
 The simplest way to use an open-source LLM(Large Language Model) is through the tools and pre-trained models hub from huggingface.
 Huggingface is a popular platform for NLP(Natural Language Processing) tasks. It provides a user-friendly interface through the transformers library to load and run various pre-trained models.
 Most open-source models from Huggingface are widely supported and integrated with the transformers library.
 We are keeping our eyes on the latest models and have downloaded some of them for you. 
-The Following Huggingface models are stored on triton. Full list of all the available models are located at ``/scratch/shareddata/dldata/huggingface-hub-cache/models.txt``. Please contact us if you need any other models.
+The full list of all the available models are located at ``/scratch/shareddata/dldata/huggingface-hub-cache/models.txt``. Please contact us if you need any other models.
+The following table lists only a few example from the hosted models:
 
 .. list-table::
   :header-rows: 1
