@@ -157,7 +157,7 @@ Here is a Python script using huggingface model.
   print(tokenizer.batch_decode(generated_ids[:, input_length:], skip_special_tokens=True)[0])
 
 Raw model weights
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 We also downloaded the following raw llama model weights (PyTorch model checkpoints), and they are managed by the following modules. 
 
 .. list-table::
@@ -287,7 +287,7 @@ Here is an example :doc:`slurm script </triton/tut/slurm>`, using the raw weight
     --max_seq_len 512 --max_batch_size 16
      
 llama.cpp and GGUF model weights
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 `llama.cpp <https://github.com/ggerganov/llama.cpp>`__ is another popular framework
 for running inference on LLM models with CPUs or GPUs. It provides C++ implementations of many large language models. llama.cpp uses a format called GGUF as its storage format.
@@ -356,9 +356,9 @@ This Python code snippet is part of a 'Chat with Your PDF Documents' example, ut
 
 
 More examples
-------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Starting a local API
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 With the pre-downloaded model weights, you are also able create an API endpoint locally. For detailed examples, you can checkout `this repo <https://github.com/AaltoSciComp/llm-examples/tree/main/>`__.
 
