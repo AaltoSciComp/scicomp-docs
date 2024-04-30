@@ -1,15 +1,15 @@
-====================
-JupyterHub on Triton
-====================
+=================
+Jupyter on Triton
+=================
 
 .. note:: Quick link
 
-   Triton's JupyterHub is available at
-   https://jupyter.triton.aalto.fi.
+   Triton's Jupyter is available via Open OnDemand,
+   https://ondemand.triton.aalto.fi (Jupyter app).
 
 .. note:: For new users
 
-   Are you new to Triton and want to access JupyterHub?  Triton is a
+   Are you new to Triton and want to access Jupyter?  Triton is a
    high-performance computing cluster, and JupyterHub is just one of
    our services - one of the easiest ways to get started.  You still
    need a Triton account.  This site has many instructions, but you
@@ -29,13 +29,14 @@ JupyterHub on Triton
    If you want to use Triton more, you should finish the entire
    :ref:`tutorials section <tutorials>`.
 
-.. figure:: /images/jupyter_demo.gif
-   :scale: 60%
-   :align: center
-   :alt: alternate text
-   :figclass: align-center
+..
+  .. figure:: /images/jupyter_demo.gif
+     :scale: 60%
+     :align: center
+     :alt: alternate text
+     :figclass: align-center
 
-   < Triton JupyterHub Demo >
+     < Triton JupyterHub Demo >
 
 Jupyter notebooks are a way of interactive, web-based computing:
 instead of either scripts or interactive shells, the notebooks allow
@@ -46,10 +47,8 @@ proper programs (:doc:`more info </scicomp/jupyter-pitfalls>`).  You
 must do this if you are going to large parallel
 computing.
 
-Triton's JupyterHub is available at https://jupyter.triton.aalto.fi.
-You can try them online at `try.jupyter.org
-<https://try.jupyter.org/>`_ (there is a temporary notebook with no
-saving).
+Triton's standard Jupyter environment is available at
+https://ondemand.triton.aalto.fi (the Jupyter app).
 
 You can always run notebooks yourself on your own (or remote)
 computers, but on Triton we have some facilities already set up to
@@ -78,51 +77,38 @@ one tool, and you need to know their limitations.  See our other page
 on :doc:`limitations of notebooks </scicomp/jupyter-pitfalls>`.
 
 
+.. _jupyterhub:
 
-JupyterHub
-==========
+Jupyter via Open OnDemand
+=========================
 
 .. note::
 
-   JupyterHub on Triton is still under development, and features will
-   be added as they are needed or requested.  Please use the `Triton
-   issue tracker
-   <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`__.
+   JupyterHub is replaced by Open OnDemand (OOD) since 2024 April.  The
+   "Jupyter" app has been set up to reproduce the previous general-use
+   Jupyter environment.
 
-The easiest way of using Jupyter is through JupyterHub - it is a
-multi-user jupyter server which takes a web-based login and spawns
-your own single-user server.  This is available on Triton.
 
 Connecting and starting
 -----------------------
-Currently jupyterHub is available only within Aalto networks, or from
-the rest of the internet after a first Aalto login:
-https://jupyter.triton.aalto.fi.
+Currently OOD is available only within Aalto networks:
+https://ondemand.triton.aalto.fi.
 
-..
-    If you are not within the Aalto
-    networks (aalto open is not), either connect to the Aalto VPN (see
-    `it.aalto.fi <https://it.aalto.fi>`__ or
-    :doc:`../../aalto/remoteaccess`, this is the easiest and best
-    supported) or
-    set up a SSH proxy as described right below.
-    You must also have a :doc:`Triton account <../accounts>`.
-
-Once you log in, you must start your single-user server.  There are
-several options available that trade off between long run time and
-short run time but more memory available.  Your server runs in the
+Once you log in, select the Jupyter app.  Then, you must start your
+single-user server.  Your server runs in the
 Slurm queue, so the first start-up takes a few seconds but after that
-it will stay running even if you log out.  The resources you request
+it will stay running even if you log out.
+
+The resources you request
 are managed by slurm: if you go over the memory limit, your server
 will be killed without warning or notification (but you can see it in
-the output log, ``~/'jupyterhub_slurmspawner_*.log``).  The Jupyter
+the output log, ``output.log`` in the session).  The Jupyter
 server nodes are oversubscribed, which means that we can allocate more
 memory and CPU than is actually available.  We will monitor the nodes
 to try to ensure that there are enough resources available, so do
 report problems to us.  **Please request the minimum amount of memory
 you think you need** - you can always restart with more memory.  You
 can go over your memory request a little bit before you get problems.
-
 When you use Jupyter via this interface, the slurm billing weights are
 lower, so that the rest of your Triton priority does not decrease by
 as much.
@@ -173,57 +159,31 @@ user on Triton.  You begin in a convenience directory which has links to
 your notebooks.  You have access to all the Triton filesystems (not
 project/archive) and all normal software.
 
-We have some basic extensions installed:
-
-* Jupyterlab (to use it, change ``/tree`` in the URL to ``/lab``).
-  Jupyterlab will eventually be made the default.
-* modules integration
-* jupyter_contrib_nbextensions - check out the variable inspector
-* diff and merge tools (currently does not work somehow)
-
-The log files for your single-user servers can be found in, see
-``~/jupyterhub_slurmspawner_*.log``.  When a new server starts, these
-are automatically cleaned up when they are one week old.
+The log files for your single-user servers can be found in the OOD
+session directory, see
+``output.log``.
 
 For `reasons of web security
 <https://jupyterhub.readthedocs.io/en/latest/reference/websecurity.html>`__,
 you can't install your own extensions (but you can install your own
 kernels).  Send your requests to us instead.
 
-Problems?  Requests?
---------------------
-This service is currently in beta and under active development.  If
-you notice problems or would like any more extensions or features, let
-us know.  If this is useful to you, please let us know your user
-store, too.  In the current development stage, the threshold for
-feedback should be very low.
-
-Currently, the service level is best effort.  The service may go down
-at any time and/or notebooks may be killed whenever there is a
-shortage of resources or need of maintenance.  However, notebooks
-auto-save and do survive service restarts, and we will try to avoid
-killing things unnecessarily.
-
 
 
 Software and kernels
 ====================
 A **Jupyter Kernel** is the runtime which actually executes the code
-in the notebook (and it is separate from JupyterHub/Jupyter
-itself). We have various kernels automatically installed (these
-instructions should apply to both JupyterHub and ``sjupyter``):
+in the notebook (and it is separate from Jupyter
+itself). We have various kernels automatically installed:
 
-* Python (2 and 3 via some recent anaconda modules + a few
-  more Python modules.)
+* Python (module ``scicomp-python-env``)
 * Matlab (latest module)
 * Bash kernel
-* R (a default R environment you can get by ``module load r-triton``.
+* R (a default R environment you can get by ``module load scicomp-r-env``.
   ("R (safe)" is similar but tries to block some local user configuration
   which sometimes breaks things, see FAQ for more hints.)
-* We do not yet have a kernel management policy.  Kernels may be added
-  or removed over time.  We would like to keep them synced with the
-  most common Triton modules, but it will take some time to get this
-  automatic.  Send requests and problem reports.
+* Kernels (and software in kernels) may be updated over time - create
+  your own environment for reproducibility.
 
 Since these are the normal Triton modules, you can submit installation
 requests for software in these so that it is automatically available.
@@ -293,7 +253,7 @@ modules you need::
   $ Rscript -e "library(IRkernel); IRkernel::installspec(name='NAME', displayname='R 3.6.1')"
 
   ## Use envkernel to re-write, loading the R modules.
-  $ envkernel conda  --user --kernel-template=NAME --name=NAME $CONDA_PREFIX
+  $ envkernel lmod --user --kernel-template=NAME --name=NAME $CONDA_PREFIX r-irkernel/1.1-python3
 
 
 Installing a different R version as a kernel
@@ -317,7 +277,7 @@ is to use the existing R installations on Triton.
 
            ## This will use the latest R version on conda-forge. If you need a specific version you can specify it
            ## as r-essentials=X.X.X, where X.X.X is your required R version number
-           $ mamba create -n NAME -c conda-forge r-essentials r-irkernel 
+           $ mamba create -n ENVNAME -c conda-forge r-essentials r-irkernel 
            ## If Mamba doesn't work you can also replace it with conda, but usually mamba is a lot faster
 
         The next steps are the same as building a Kernel, except for activating the environment instead of 
@@ -328,12 +288,12 @@ is to use the existing R installations on Triton.
           ## You need the Python `jupyter` command so R can know the right place to
           ## install the kernel (provided by jupyterhub/live)
           $ module load jupyterhub/live
-          $ source activate NAME
-          $ Rscript -e "library(IRkernel); IRkernel::installspec(name='NAME', displayname='YOUR R Version')"
-          $ conda deactivate NAME
+          $ source activate ENVNAME
+          $ Rscript -e "library(IRkernel); IRkernel::installspec(name='ir-NAME', displayname='YOUR R Version')"
+          $ conda deactivate ENVNAME
 
           ## For R versions before 4, you need to install the kernel. After version 4 IRkernel automatically installs it.
-          $ envkernel lmod --user --kernel-template=NAME --name=NAME
+          $ envkernel conda --user --kernel-template=ir-NAME --name=ir-NAME ENVNAME    TODO: full path?
     
   .. tab:: Using existing Triton installations of R
 
@@ -370,7 +330,7 @@ is to use the existing R installations on Triton.
 .. note:: Installing R packages for jupyter
 
   Installing packages via jupyter can be problematic, as they require interactivity, which jupyter does not readily support.
-  To install packages therefore go directly to triton. Load the environment or R module you use and install the packages 
+  To install packages therefore go directly to triton. Load the environment or R module you use and install the packages
   ineractively. After that is done, restart your jupyter session and reload your kernel, all packages that you installed should
   then be available.
 
@@ -514,20 +474,10 @@ what modules you have loaded)::
 
 FAQ/common problems
 ===================
-* **Jupyterhub won't spawn my server: "Error: HTTP 500: Internal
-  Server Error (Spawner failed to start [status=1]."**.  Is your home
-  directory quota exceeded?  If that's not it, check the
-  ``~/jupyterhub_slurmspawner_*`` logs then contact us.
-
 * **My server has died mysteriously.**  This may happen if resource
   usage becomes too much and exceed the limits - Slurm will kill your
-  notebook.  You can check the ``~/jupyterhub_slurmspawner_*`` log
-  files for jupyterhub to be sure.
-
-* **My server seems inaccessible / I can't get to the control panel to
-  restart my server.  Especially with JupyterLab**.  In JupyterLab,
-  use File→Hub Control Panel.  If you can't get there, you can change
-  the URL to ``/hub/home``.
+  notebook.  You can check the ``output.log`` file in the OOD session
+  directory.
 
 * **My R kernel keeps dying**.  Some people seem to have global R
   configuration, either in ``.bashrc`` or ``.Renviron`` or some such
@@ -539,12 +489,6 @@ FAQ/common problems
   If you install your own, it is up to you to maintain it (and
   remember that you installed it).
 
-* "Spawner pending" when you try to start - this is hopefully fixed in `issue
-  #1534/#1533
-  <https://github.com/jupyterhub/jupyterhub/issues/1534>`__ in
-  JupyterHub.  Current recommendation: wait a bit and return to
-  JupyterHub home page and see if the server has started.  Don't click
-  the button twice!
 
 
 See also
