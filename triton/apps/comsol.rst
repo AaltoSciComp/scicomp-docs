@@ -24,7 +24,7 @@ Best practices of using COMSOL Graphical User Interface in Triton
    
    - Use :ref:`Open OnDemand<ood>` for the best experience for interactive work on triton.
      
-    1) Connect to `<https://ood.triton.aalto.fi>`_ with your browser, log in. (It currently takes a while, please be patient.) Choose "My Interactive Sessions" from top bar, and then "Triton Desktop" from bottom. Launch your session, and once resources become available in triton, the session will be started on one of the interactive session nodes of triton. You can connect to a desktop in your browser with the "Launch Triton Desktop" button.
+    1) Connect to `<https://ondemand.triton.aalto.fi>`_ with your browser, log in. (It currently takes a while, please be patient.) Choose "My Interactive Sessions" from top bar, and then "Triton Desktop" from bottom. Launch your session, and once resources become available in triton, the session will be started on one of the interactive session nodes of triton. You can connect to a desktop in your browser with the "Launch Triton Desktop" button.
 
     2) Once you have connected, you can open a terminal (in XFCE the black rectangle in the bottom of the screen).
        

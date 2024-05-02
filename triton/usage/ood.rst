@@ -22,7 +22,7 @@ OnDemand).
 Connecting
 ----------
 
-Address: http://ood.triton.aalto.fi .  Log in with the usual Aalto
+Address: http://ondemand.triton.aalto.fi .  Log in with the usual Aalto
 login.  Connections only from Aalto
 networks or VPN.  A pre-existing :doc:`Triton account <../accounts>`
 is needed.

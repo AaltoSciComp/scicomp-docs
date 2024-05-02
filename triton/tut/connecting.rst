@@ -224,7 +224,7 @@ that utilize graphical user interfaces. Read more from :doc:`its guide
 terminal** that you need for basic work and the rest of these tutorials.
 
 It is only available from Aalto networks and VPN.  Go to
-https://ood.triton.aalto.fi and login with your Aalto account.
+https://ondemand.triton.aalto.fi and login with your Aalto account.
 
 
 Connecting via JupyterHub
