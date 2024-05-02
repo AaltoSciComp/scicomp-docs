@@ -9,7 +9,10 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * There are no current planned disruptions in the daily garage.
+   * On 6-8 May 2024, there will be all-day garages (~9-16) to support
+     the transition to the new Triton.  Drop by anytime (availability
+     not guaranteed: if we aren't there, come back later).  This may
+     end early if there are not many visitors.
 
 
 If you need more help than the issue trackers, this is the place to
