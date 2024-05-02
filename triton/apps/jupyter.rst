@@ -91,7 +91,7 @@ Jupyter via Open OnDemand
 
 Connecting and starting
 -----------------------
-Currently OOD is available only within Aalto networks:
+Log in to Open OnDemand:
 https://ondemand.triton.aalto.fi.
 
 Once you log in, select the Jupyter app.  Then, you must start your

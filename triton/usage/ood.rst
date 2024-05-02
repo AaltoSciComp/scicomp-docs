@@ -23,8 +23,7 @@ Connecting
 ----------
 
 Address: http://ondemand.triton.aalto.fi .  Log in with the usual Aalto
-login.  Connections only from Aalto
-networks or VPN.  A pre-existing :doc:`Triton account <../accounts>`
+login.  A pre-existing :doc:`Triton account <../accounts>`
 is needed.
 
 

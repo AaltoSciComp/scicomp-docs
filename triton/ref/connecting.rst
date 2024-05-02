@@ -48,5 +48,5 @@
      * https://ondemand.triton.aalto.fi, Web-based interface to the
        cluster. Also known as OOD. Includes shell access, GUI, data transfer, Jupyter and a number of GUI applications
        like Matlab etc.  :doc:`More info </triton/usage/ood>`.
-     * VPN and Aalto networks or through VDI
+     * Whole internet
 
