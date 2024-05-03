@@ -38,6 +38,7 @@ of applications:
   manager.
 * Files: Top bar → Files → choose your directory.  You can upload and
   download files this way.
+* Jupyter: Top bar → Interactive apps → Jupyter
 * Other applications via the main page or Top bar → Interactive Apps →
   (choose).
 

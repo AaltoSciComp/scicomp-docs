@@ -13,8 +13,8 @@ see our :doc:`shell crash course </scicomp/shell>`.
 
    * When connecting to a cluster, our goal is to get a command-line
      terminal that provides a base for the rest of our work.
-   * The standard way of connecting is via **ssh**, but Open OnDemand and
-     Jupyter provide graphical environments that are useful for
+   * The standard way of connecting is via **ssh**, but Open OnDemand
+     provides graphical environments that are useful for
      interactive work.
    * SSH host name is ``triton.aalto.fi``, use `VPN <https://www.aalto.fi/en/services/remote-connection-to-aaltos-network-vpn>`__ if not on an Aalto
      network.
