@@ -13,6 +13,9 @@ The downside is that it's another thing to understand and manage.
 Luckily, most of the time containers for the software already exists,
 and using them is not much harder than other shell scripting.
 
+**Apptainer** is the same as **Singularity**, but Apptainer is the
+most open-source one that we currently use.  (``singularity`` is an
+alias for ``apptainer`` on our cluster.)
 
 
 What are containers?
@@ -20,7 +23,7 @@ What are containers?
 
 As stated above, the basic idea is that software is packaged into a
 **container** which basically contains the entire operating system.  This
-is done via a **image definition file** (``Dockerfile``, Singularity
+is done via a **image definition file** (``Dockerfile``, Apptainer/Singularity
 definition file ``.def``) which is itself interesting because it
 contains a script that makes the whole image automatically - which
 makes it reproducible and shareable.  The **image** itself is the data
@@ -54,15 +57,15 @@ About Singularity
 -----------------
 
 `Docker <https://www.docker.com/>`__ is the most commonly talked about
-container runtime, but most clusters use `Singularity
-<https://sylabs.io/singularity/>`__.  The following table should make
+container runtime, but most clusters use `Apptainer
+<https://apptainer.org/>`__.  The following table should make
 the reasons clear:
 
 .. list-table::
    :header-rows: 1
 
    * * Docker
-     * Singularity
+     * Apptainer/Singularity
    * * Designed for infrastructure deployment
      * Designed for scientific computing
    * * Operating system service
