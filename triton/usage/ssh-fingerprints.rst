@@ -37,7 +37,7 @@ and the same but with md5 hashes::
 
 
 Or this can be copied and pasted directly into your
-``.ssh/authorized_keys`` file::
+``.ssh/known_hosts`` file::
 
   triton.aalto.fi ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDk8MvTSB2gYZf9Y969vhMczdGSO+rNGZQhZLUGMkMduq4q+b/LpHCn/yH1JN8NWeIDt8NELdnl+/0hmk/zk7IHxtnPvNbZuAYO1T1Hh7Kk72zQFOESHqmbYcPH5SDf12XfNYJ6cQIqHRaF4QT483+f9fvUlp7E+MKQlr3+NreKm4AHdTcHjqW75r1Mh/z0q9Qoqdgn3gDCzmN6+Y0aGyf4wICMJlKUBQP0muqSfYWX43StaPh+hoOQFYOiK1jOVEBY/HFXOuDzgCCG2b9qWhTrA3svcSKK4E6X76sXOR+8FTbC7u9xnLgm+903+zsGfsEQY2eNXfR7YChNxz4y5ASf
   triton.aalto.fi ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAZvw6Bgs+cPGFjwqMABAGC+cG2bBYR69+Hc5ChxQhwNwCW1zCg6w/pAerbr+A6IzJDx8uN03bcTZj+xzLH2kLE=
