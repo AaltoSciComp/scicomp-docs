@@ -37,8 +37,8 @@ e.g. the home directory comes from Triton.
 This sounds complicated, but in practice it is not too hard once you
 see an example and can copy the commands to run.  For images managed
 by Triton admins themselves, this is easy due to
-``singularity_wrapper`` tool we have written for Triton.  You can also
-run singularity on triton without the wrapper, but you may need to
+``apptainer_wrapper`` tool we have written for Triton.  You can also
+run Apptainer on triton without the wrapper, but you may need to
 e.g.  bind ``/scratch`` yourself to access your data.
 
 The hardest part of using containers is keeping track of files inside
@@ -87,7 +87,7 @@ Singularity with Triton's pre-created modules
 Some of the Triton modules automatically activate a Singularity image.
 On Triton, you just need to load the proper module.  This will set
 some environment variables and enable the use of
-``singularity_wrapper`` (to see how it works, check ``module show
+``apptainer_wrapper`` (to see how it works, check ``module show
 MODULE_NAME``).
 
 While the image itself is read-only, remember that ``/home``, ``/m``,
@@ -95,20 +95,20 @@ While the image itself is read-only, remember that ``/home``, ``/m``,
 these locations within the image, that will happen outside the image
 as well.
 
-``singularity_wrapper`` is written so that when you load a module written
-for a singularity image, all the important options are already handled
+``apptainer_wrapper`` is written so that when you load a module written
+for a Apptainer image, all the important options are already handled
 for you.  It has three basic commands:
 
-#. ``singularity_wrapper shell [SHELL]`` - Gives user a shell
+#. ``apptainer_wrapper shell [SHELL]`` - Gives user a shell
    within the image (specify ``[SHELL]`` to say which shell you want).
-#. ``singularity_wrapper exec CMD`` - Executes a program within the
+#. ``apptainer_wrapper exec CMD`` - Executes a program within the
    image.
-#. ``singularity_wrapper run PARAMETERS`` - Runs the singularity image. What this
+#. ``apptainer_wrapper run PARAMETERS`` - Runs the Apptainer image. What this
    means depends on the image in question - each image will define a
    "run command" which does something.  If you don't know what this
    is, use the first two instead.
 
-Under the hood, ``singularity_wrapper`` does this:
+Under the hood, ``apptainer_wrapper`` does this:
 
 #. Choosing appropriate image based on module version
 #. Binding of basic paths (``-B /l:/l``, ``/m:/m``, ``/scratch:/scratch``)
@@ -170,7 +170,7 @@ Running containers
 
 These are the "raw" singularity commands.  If you use these, you have
 to configure the images and bind mounts yourself (which is done
-automatically by ``singularity_wrapper``).  If you ``module show
+automatically by ``apptainer_wrapper``).  If you ``module show
 NAME`` on a singularity module, you will get hints about what happens.
 
 * ``singularity shell IMAGE_FILE.sif`` will start a shell inside of
@@ -378,4 +378,4 @@ See also
       module use /share/apps/singularity-ci/centos/modules/$USER
       module load my_image:latest
 
-    and launch the programs within using the ``singularity_wrapper exec``.
+    and launch the programs within using the ``apptainer_wrapper exec``.
