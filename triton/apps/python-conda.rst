@@ -91,7 +91,7 @@ Some of the most popular channels are:
 
 - ``conda-forge``: An open-source channel with over 18k packages.
   Highly recommended for new environments. Most packages in
-  ``anaconda``-modules come from here.
+  ``scicomp-python-env``-modules come from here.
 - ``defaults``: A channel maintained by
   `Anaconda Inc. <https://www.anaconda.com>`_. Free for non-commercial use.
   Default for anaconda distribution.
@@ -237,7 +237,7 @@ When should you use conda?
 --------------------------
 
 If you need basic Python packages, you can use pre-installed
-``anaconda``-modules. See the :doc:`Python-page <python>` for
+``scicomp-python-env``-modules. See the :doc:`Python-page <python>` for
 more information.
 
 You should use conda when you need to create your own custom environment.

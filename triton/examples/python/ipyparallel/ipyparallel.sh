@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --nodes=4
 
-module load anaconda
+module load scicomp-python-env
 set -x
 
 ipcontroller --ip="*" &

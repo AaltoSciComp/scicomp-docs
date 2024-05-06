@@ -10,4 +10,4 @@ Theano
 Installation
 ------------
 
-The recommended way of installing theano is with an anaconda environment.
+The recommended way of installing theano is with a conda environment.

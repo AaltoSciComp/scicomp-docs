@@ -5,7 +5,7 @@
 #SBATCH --output=python_array_%a.out
 
 
-module load anaconda # use the normal anaconda environment for python
+module load scicomp-python-env # use the normal scicomp environment for python
 
 # size of each batch
 BATCHSIZE=10
