@@ -81,7 +81,7 @@ for you to port your code to another system.
    We stringly recommend not to instal packages using ``pip install --user``.
    If you do this, the package will be shared among all
    your projects, and will even overwrite any package installed in an environment.
-    It is quite likely that eventually, you will get some
+   It is quite likely that eventually, you will get some
    incompatibilities between the Python you are using and the packages
    installed. In that case, you are on your own (simple recommendation is
    to remove all packages from ``~/.local/lib/pythonN.N`` and reinstall). **If
