@@ -210,6 +210,7 @@ and more. It really will save you time.
    It may take 15 minutes to update, and you will need to log in again.
 
 
+
 Connecting via Open onDemand
 ----------------------------
 
@@ -217,14 +218,15 @@ Connecting via Open onDemand
 
    :doc:`../usage/ood`
 
+Link: https://ondemand.triton.aalto.fi
+
 OOD (Open onDemand) is a web-based user interface to Triton, including
 shell access, and data transfer, and a number of other applications
 that utilize graphical user interfaces. Read more from :doc:`its guide
-<../usage/ood>`.  The **Triton shell access app will get you the
-terminal** that you need for basic work and the rest of these tutorials.
+<../usage/ood>`.
 
-It is only available from Aalto networks and VPN.  Go to
-https://ondemand.triton.aalto.fi and login with your Aalto account.
+**To start a terminal, use the Triton shell access app**.
+
 
 
 Connecting via JupyterHub
@@ -234,16 +236,16 @@ Connecting via JupyterHub
 
    :doc:`../apps/jupyter`
 
-Jupyter is a web-based way of doing computing.  But what some people
-forget is that it has a full-featured terminal and console included.
+Link: https://ondemand.triton.aalto.fi → "Jupyter" app.
 
-Go to https://jupyter.triton.aalto.fi (not **.cs.**\ aalto.fi) and log
-in.  Select "Slurm 5 day, 2G" and start.
+Triton used to have a JupyterHub installation, but now this has been
+replaced with the Jupyter app in Open OnDemand (see above).  The
+configuration has been set to be similar to the old JupyterHub.
 
 **To start a terminal, click File→New→Terminal - this is the shell you
-need.**  If you need to edit text
-files, you can also do that through JupyterLab (note: change to the
-right directory *before* creating a new file!).
+need.** If you need to edit text files, you can also do that through
+JupyterLab (note: change to the right directory *before* creating a
+new file!).
 
 Warning: the JupyterHub shell runs on a compute node, not a login
 node.  Some software is missing so some things don't work.  Try ``ssh
