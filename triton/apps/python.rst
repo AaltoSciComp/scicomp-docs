@@ -48,7 +48,8 @@ bundled togeter), PyPy (a just-in-time compiler,  which can be much faster for
 some use cases). Triton supports all of these.
 
 -  For general scientific/data science use, we suggest that you use
-   the environment created by us (``module load scicomp-python-env``). It comes with the most common scientific software included,
+   the python scicomp environment (``module load scicomp-python-env``). 
+   It comes with the most common scientific software included,
    and is reasonably optimized.
 -  There are many other "regular" CPython versions in the module system.
    These are compiled and optimized for Triton, and are highly
@@ -66,23 +67,24 @@ Quickstart
 
 Use ``module load scicomp-python-env`` to get our Python installation.
 
-If you have simple needs, use :ref:`pip install --user
-<pip-install-user>` to install packages.  For complex needs, use
-:ref:`anaconda + conda environments <conda>` to isolate your
-projects.
-
-.. _pip-install-user:
-
-Install your own packages easily
---------------------------------
+This installation comes with the most common packages used on Triton.
+If you need packages, not within this installation, you can either build
+your own environment with conda or virtualenv (detailed below).
+Installing your own packages with ``pip install`` won't work, since it
+tries to install globally for all users.
+We strongly suggest to build environments using environment files, as 
+it greatly increases reproducibility of the code, and it is way easier 
+for you to port your code to another system.
 
 .. warning:: ``pip install --user`` can result in incompatibilities
 
-   If you do this, then the module will be shared among all
-   your projects. It is quite likely that eventually, you will get some
-   incompatibilities between the Python you are using and the modules
+   We stringly recommend not to instal packages using ``pip install --user``.
+   If you do this, the package will be shared among all
+   your projects, and will even overwrite any package installed in an environment.
+   It is quite likely that eventually, you will get some
+   incompatibilities between the Python you are using and the packages
    installed. In that case, you are on your own (simple recommendation is
-   to remove all modules from ``~/.local/lib/pythonN.N`` and reinstall). **If
+   to remove all packages from ``~/.local/lib/pythonN.N`` and reinstall). **If
    you get incompatible module errors, our first recommendation will be to
    remove everything installed this way and use conda/virtual
    environments instead.**  It's not a bad idea to do this when you
@@ -93,16 +95,6 @@ Install your own packages easily
       $ rm -r ~/.local/lib/python*.*/
 
    and reinstall everything *after* loading the environment you want.
-
-Installing your own packages with ``pip install`` won't work, since it
-tries to install globally for all users. Instead, you should do this
-(add ``--user``) to install the package in your home directory
-(``~/.local/lib/pythonN.N/``)::
-
-  $ pip install --user $package_name
-
-This is quick and effective best used for leaf packages without many
-dependencies and if you don't switch Python modules often.
 
 .. note:: Example of dangers of ``pip install --user``
 
@@ -117,24 +109,23 @@ Note: ``pip`` installs from the `Python Package Index
 
 .. _conda:
 
-Anaconda and conda environments
--------------------------------
+The scicomp python env and conda environments
+---------------------------------------------
 
-`Anaconda <https://www.anaconda.com>`__ is a Python distribution by
-Continuum Analytics (open source, of course). It is nothing fancy,
-they just take a lot of useful scientific packages and their dependencies
-and put them all together, make sure they work, and do some optimization.
-They also include most of the most common computing and data science packages
-and non-Python compiled software and libraries. It is also all open
-source, and is packaged nicely so that it can easily be installed on
-any major OS.
+We provide a python environment with most common scientific packages based 
+loosely on the environment provided by `Anaconda <https://www.anaconda.com>`__.
+Anaconda is a Python distribution by Continuum Analytics (open source, of course). 
+It is nothing fancy, they just take a lot of useful scientific packages 
+and their dependencies and put them all together, make sure they work, 
+and do some optimization.
 
-To load an environment based on anaconda and maintained by us, use the module
-system (you can also load specific versions):
+To load this basic environment , use the module system (you can also load specific
+versions):
 
 ::
 
     $ module load scicomp-python-env     # python3
+    
 
 Conda environments
 ~~~~~~~~~~~~~~~~~~
@@ -246,7 +237,7 @@ Python: virtualenv
 ------------------
 
 Virtualenv is default-Python way of making environments, but does
-**not** work with Anaconda.  We generally recommend using anaconda,
+**not** work with Anaconda.  We generally recommend using conda/mamba,
 since it includes a lot more stuff by default, but ``virtualenv``
 works on other systems easily so it's good to know about.
 
@@ -269,8 +260,8 @@ works on other systems easily so it's good to know about.
 
 .. _python-ipyparallel:
 
-Anaconda/virtualenvironments in Jupyter
----------------------------------------
+Conda/virtualenvironments in Jupyter
+------------------------------------
 
 If you make a conda environment / virtual environment, you can use it
 from Triton's JupyterHub (or your own Jupyter).  See
@@ -285,7 +276,7 @@ basic idea is that you have a *controller* and *engines*.  You have a
 *client* process which is actually running your own code.
 
 Preliminary notes: ipyparallel is installed in the
-scicomp-python-env/latest module.
+``scicomp-python-env/latest`` modules.
 
 Let's say that you are doing some basic interactive work:
 
@@ -321,7 +312,7 @@ great for research where you need to be agile and install whatever
 versions and packages you need.  **We highly recommend virtual
 environments or conda environments (below)**
 
-   -  Anaconda: use conda, see below
+   -  Conda: use conda, see below
    -  Normal Python: virtualenv + pip install, see below
 
 You often need to install your own packages. Python has its own package
@@ -355,9 +346,8 @@ Advanced users can see this `rosetta
 stone <https://conda.io/projects/conda/en/latest/commands.html#conda-vs-pip-vs-virtualenv-commands>`__
 for reference.
 
-On Triton we have added some packages on top of the Anaconda and make 
-it available as the scicomp-python-env module, so cloning the entire 
-Anaconda environment to local conda
+On Triton we have added some packages on top of the Anaconda
+installation, so cloning the entire Anaconda environment to local conda
 environment will not work (not a good idea in the first place but some
 users try this every now and then).
 
@@ -371,8 +361,7 @@ Running MPI parallelized Python with mpi4py
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 MPI parallelized Python requires a valid MPI installation that support
-our SLURM scheduler. Thus anaconda is not the best option. We have
-installed MPI-supporting Python versions to different toolchains.
+our SLURM scheduler. We have installed MPI-supporting Python versions to different toolchains.
 
 Using mpi4py is quite easy. Example is provided below.
 
