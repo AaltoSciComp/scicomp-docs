@@ -8,7 +8,7 @@ June 2024 / Intro to Scientific Computing /  HPC Summer Kickstart
    * This page is generated based on the 2023 version.  The
      information and schedule will still be updated - expect
      significant schedule changes.
-   * Registration is not yet open.
+   * Registrations are open at https://link.webropol.com/ep/scicompsummer2024 
 
 
 Kickstart is a three × half day course for researchers to get
@@ -60,8 +60,8 @@ used for a continuous Q&A session.
 partners, and probably in-person discussion/practice rooms at some
 campus.
 
-**Registration:** Please register at this link:
-TODO . It's OK to attend
+**Registration:** Please register at this link: https://link.webropol.com/ep/scicompsummer2024
+It's OK to attend
 only individual sessions is fine.
 
 **Cost:** Livestream is free to everyone.  Aalto in-person is free of 
@@ -81,8 +81,8 @@ be useful to people outside of Aalto, but some of the examples
 won't directly work on your cluster (most will, anyway we will give
 hints about adapting).  How to register if you are not at Aalto:
 
-* Regardless of where you are from, you may use the primary registration
-  form to get emails about the course.  You don't get anything else.
+* Regardless of where you are from, you may use the `primary registration
+  form <https://link.webropol.com/ep/scicompsummer2024>`__ to get emails about the course.  You don't get anything else.
 * Participants from **University of Helsinki** can follow how to connect
   to their Kale/Turso cluster by following `their own instructions
   <https://wiki.helsinki.fi/pages/viewpage.action?pageId=408323613>`__.
