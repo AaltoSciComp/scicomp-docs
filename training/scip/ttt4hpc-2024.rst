@@ -11,6 +11,7 @@ Tuesday Tools & Techniques for High Performance Computing
      - `Day 1 <https://coderefinery.github.io/TTT4HPC_resource_management/>`__
      - `Day 2 <https://coderefinery.github.io/TTT4HPC_Interactive/>`__
      - `Day 3 <https://coderefinery.github.io/ttt4hpc_containers/>`__
+     - `Day 4 <https://coderefinery.github.io/TTT4HPC_parallel_workflows/>`__
 
 .. figure:: img/ttt4hpc.png
 
@@ -91,7 +92,7 @@ Episode 4 - 14/05/2024 - Parallelization and workflows
 ------------------------------------------------------
 **Content**: focus on parallelization with HPC, efficient parameter sweeps, workflow automation, hyperscaling pitfalls
 
-**Learning materials**: coming soon
+**Learning materials**: `Parallelizing without parallelizing <https://coderefinery.github.io/TTT4HPC_parallel_workflows/>`__
 
 **Registration**: `Please register at this link <https://link.webropol.com/ep/ttt4hpc4>`__
 
