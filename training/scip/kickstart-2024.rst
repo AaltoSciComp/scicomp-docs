@@ -8,7 +8,12 @@ June 2024 / Intro to Scientific Computing /  HPC Summer Kickstart
    * This page is generated based on the 2023 version.  The
      information and schedule will still be updated - expect
      some schedule changes.
-   * Registrations are open at https://link.webropol.com/ep/scicompsummer2024
+   * Registrations are open at
+     https://link.webropol.com/ep/scicompsummer2024
+   * Videos (2024) will end up on `this youtube playlist
+     <https://studio.youtube.com/playlist/PLZLVmS9rf3nOeuqXNa8tS-tDtdQrES2We/edit>`__
+     the same evening, and appear `on Twitch
+     <https://twitch.tv/coderefinery/videos>`__ immediately
 
 
 Kickstart is a three × half day course for researchers to get
