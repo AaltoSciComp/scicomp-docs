@@ -5,7 +5,7 @@
      * Description
      * From where?
 
-   * * ssh from Aalto networks
+   * * :ref:`ssh from Aalto networks <triton-connecting-ssh>`
      * Standard way of connecting via command line.  Hostname is
        ``triton.aalto.fi``.  :doc:`More SSH info </scicomp/ssh>`.
 
@@ -19,7 +19,7 @@
        Aalto-managed laptop, but *not* ``aalto open``).  **Simplest
        SSH option if you can use VPN.**
 
-   * * ssh (from rest of Internet)
+   * * :ref:`ssh (from rest of Internet) <triton-connecting-ssh>`
 
      * Use `Aalto VPN
        <https://www.aalto.fi/en/services/remote-connection-to-aaltos-network-vpn>`__
@@ -32,21 +32,27 @@
        also use passwords (since 2023)
        <https://aaltoscicomp.github.io/blog/2023/ssh-keys-with-passwords/>`__
 
-   * * VDI
+   * * `VDI <https://www.aalto.fi/en/services/vdiaaltofi-how-to-use-aalto-virtual-desktop-infrastructure>`__
      * "Virtual desktop interface", https://vdi.aalto.fi, from there you can ``ssh``
        to Triton or access OOD.  `More info
        <https://www.aalto.fi/en/services/vdiaaltofi-how-to-use-aalto-virtual-desktop-infrastructure>`__.
      * Whole Internet
 
-   * * Jupyter
+   * * :doc:`Jupyter </triton/apps/jupyter>`
      * Since April 2024 Jupyter is part of Open OnDemand, see
        below. Use the "Jupyter" app to get same environment as
        before.  :doc:`More info </triton/apps/jupyter>`.
      * See the corresponding OOD section
 
-   * * Open OnDemand
+   * * :doc:`Open OnDemand </triton/usage/ood>`
      * https://ondemand.triton.aalto.fi, Web-based interface to the
        cluster. Also known as OOD. Includes shell access, GUI, data transfer, Jupyter and a number of GUI applications
        like Matlab etc.  :doc:`More info </triton/usage/ood>`.
      * Whole internet
 
+   * * :doc:`VS Code / Codium desktop </triton/apps/vscode>`
+     * With the "Remote-SSH" extension it can provide shell access and
+       file transfer.  Warnings: open only project directories (or it
+       uses excessive CPU), and don't run CPU/mem tasks with it.
+
+     * Same as SSH options above above.

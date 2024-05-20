@@ -4,6 +4,8 @@ VSCode on Triton
 VSCode is a text editor and IDE (Integrated Development Environment).  It is
 very popular these days, partly due to it's good usability.
 
+
+
 Installation
 ------------
 
@@ -28,6 +30,22 @@ though.
 
 
 
+Usage warnings
+--------------
+
+VS Code on clusters have some issues you should avoid.  VS Code is
+still useful, but you need to use it smartly:
+
+.. warning::
+
+   * **Only open specific project directories.** Don't open your home
+     directory, work directory, or all `/scratch/`, or any big
+     directories: it will scan *all* files and use a huge amount of CPU.
+   * **Don't run heavy computations or use too much memory.**  It can use
+     up all your allocated resources and prevent other logins.
+
+
+
 Security and extensions
 -----------------------
 
@@ -41,6 +59,9 @@ VSCode through Open OnDemand
 ----------------------------
 
 .. seealso:: :doc:`../usage/ood`
+
+**Update: Not available on Triton since May 2024 (yet), please ask us
+if this is important to you**
 
 VSCode is available through :doc:`../usage/ood`, and with this you can
 select whatever resources you want (memory, CPU, etc) and run directly
@@ -61,6 +82,7 @@ provides both editing and shell access, but everything will run
 directly on the login node on Triton.  This is OK for writing code
 and editing, but not for main computations (see the section above or below).
 **To repeat: don't use this for running any big computations.**
+
 
 .. figure:: vscode--connected.png
    :alt: Screenshot saying "SSH: triton".

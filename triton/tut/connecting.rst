@@ -275,8 +275,24 @@ triton.aalto.fi``.
 VSCode
 ------
 
+.. seealso::
+
+   :doc:`../apps/vscode`
+
 You can use a web-based VSCode through Open OnDemand.  Desktop VSCode
-can also connect to Triton via SSH.  :doc:`Read more <../apps/vscode>`
+can also connect to Triton via SSH.  :doc:`Read more
+<../apps/vscode>`.  Both of these can provide shell access and file
+transfer.
+
+Warning: VS Code has some common issues, see the :doc:`VS Code
+<../apps/vscode>` page for more:
+
+* **Only open specific project directories.** Don't open your home
+  directory, work directory, all `/scratch/`, or any directories with
+  a huge number of files: it will try to scan and index *all* files
+  and continually use CPU.
+* **Don't run heavy computations or use too much memory.**  It can use
+  up all your allocated resources and prevent other logins.
 
 
 
