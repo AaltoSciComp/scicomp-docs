@@ -216,14 +216,14 @@ Connecting via Open onDemand
 
 .. seealso::
 
-   :doc:`../usage/ood`
-
-Link: https://ondemand.triton.aalto.fi
+   * Link: https://ondemand.triton.aalto.fi
+   * Information: :doc:`../usage/ood`
 
 OOD (Open onDemand) is a web-based user interface to Triton, including
 shell access, and data transfer, and a number of other applications
-that utilize graphical user interfaces. Read more from :doc:`its guide
-<../usage/ood>`.
+that utilize graphical user interfaces.  OOD is good for basic work,
+and an easier way to access a shell terminal.  Read more from
+:doc:`its guide <../usage/ood>`.
 
 **To start a terminal, use the Triton shell access app**.
 
@@ -291,8 +291,10 @@ Warning: VS Code has some common issues, see the :doc:`VS Code
   directory, work directory, all ``/scratch/``, or any directories with
   a huge number of files: it will try to scan and index *all* files
   and continually use CPU.
-* **Don't run heavy computations or use too much memory.**  It can use
-  up all your allocated resources and prevent other logins.
+* **Don't run heavy computations or use too much memory, for
+  example through Jupyter or other computation in VS Code**  Using too
+  much memory can prevent other logins, due to Triton user memory
+  limits.  If you find you can't log in, contact us.
 
 
 

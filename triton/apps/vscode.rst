@@ -41,8 +41,12 @@ still useful, but you need to use it smartly:
    * **Only open specific project directories.** Don't open your home
      directory, work directory, or all ``/scratch/``, or any big
      directories: it will scan *all* files and use a huge amount of CPU.
-   * **Don't run heavy computations or use too much memory.**  It can use
-     up all your allocated resources and prevent other logins.
+   * **Don't run heavy computations or use too much memory, for
+     example through Jupyter or other calculations.** It can
+     use up all your allocated resources and prevent other logins.  If
+     you find you can't log in, contact us.  See the :ref:`"directly
+     to an interactive job" <vscode-interactive-job>` below for a
+     possible work-around.
 
 
 
@@ -103,6 +107,8 @@ are in :ref:`triton-connecting-ssh`.  A SSH key can allow you to
 connect without entering a password every time.
 
 
+
+.. _vscode-interactive-job:
 
 VSCode remote SSH host directly to interactive job
 --------------------------------------------------
