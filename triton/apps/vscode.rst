@@ -39,7 +39,7 @@ still useful, but you need to use it smartly:
 .. warning::
 
    * **Only open specific project directories.** Don't open your home
-     directory, work directory, or all `/scratch/`, or any big
+     directory, work directory, or all ``/scratch/``, or any big
      directories: it will scan *all* files and use a huge amount of CPU.
    * **Don't run heavy computations or use too much memory.**  It can use
      up all your allocated resources and prevent other logins.
