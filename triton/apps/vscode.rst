@@ -1,7 +1,7 @@
 VSCode on Triton
 ================
 
-VSCode is a text editor and integrated development environment.  It is
+VSCode is a text editor and IDE (Integrated Development Environment).  It is
 very popular these days, partly due to it's good usability.
 
 Installation
@@ -47,8 +47,9 @@ select whatever resources you want (memory, CPU, etc) and run directly
 in the Slurm queue.  This means you can directly perform calculations
 in that VSCode session and it runs properly (not on the login node).
 
-This is useful for getting things done quickly, but running in a web
-browser can be limited in some cases (interface, lifetime, etc.).
+This is useful for getting things done quickly or do simple debugging,
+but running in a web browser can be limited in some cases (interface, lifetime, etc.).
+Another limitation is OOD VSCode does not support GPU computing.
 
 
 
@@ -57,17 +58,17 @@ VSCode remote SSH
 
 **"Remote SSH"** is a nice way to work on a remote computer and
 provides both editing and shell access, but everything will run
-directly on the login node on Triton.  This is OK for editing, but not
-for main computations (see the section above or below).  **To repeat:
-don't use this for running big computations.**
+directly on the login node on Triton.  This is OK for writing code
+and editing, but not for main computations (see the section above or below).
+**To repeat: don't use this for running any big computations.**
 
 .. figure:: vscode--connected.png
    :alt: Screenshot saying "SSH: triton".
 
    If you see this in the lower left corner (or whatever the name of
    your cluster SSH config is), you are connected to the login node
-   (and should not do big calculations).  It's possible the exact look
-   may be different for others.
+   (and again, should not do big calculations).  It's possible the
+   exact look may be different for others.
 
 You can see `connection instructions (including screenshots) at the
 Sigma2 instructions
@@ -96,7 +97,7 @@ This section contains original research and may not fully work, and
 **may only work on Linux/Mac right now (but Windows might work too
 since it uses OpenSSH)**.
 
-In you ``~/.ssh/config``, add this block to define a server
+In your ``~/.ssh/config``, add this block to define a server
 ``triton-vscode``.  For more information ``.ssh/config``, including
 what these mean and what else you might need in here, see
 :doc:`/scicomp/ssh`::
