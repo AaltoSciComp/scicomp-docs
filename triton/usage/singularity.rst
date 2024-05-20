@@ -48,13 +48,13 @@ The hardest part of using containers is keeping track of files inside
 vs outside: You specify a command that gets run *inside* the container
 image.  It mostly accesses files *inside* the image, but it can access
 files *outside* if you bind-mount them in.  If you ever get confused,
-use ``singularity shell`` (see below) to enter the container and see
+use ``apptainer shell`` (see below) to enter the container and see
 what is going on.
 
 
 
-About Singularity
------------------
+About Apptainer
+---------------
 
 `Docker <https://www.docker.com/>`__ is the most commonly talked about
 container runtime, but most clusters use `Apptainer
@@ -79,15 +79,15 @@ the reasons clear:
 
 Docker is still a standard image format, and there are ways to convert
 images between the formats.  In practice, if you can use Docker, you
-can also use Singularity by converting your image (commands on this
+can also use Apptainer converting your image (commands on this
 page) and running it by copying other commands on this page.
 
 
 
-Singularity with Triton's pre-created modules
----------------------------------------------
+Apptainer with Triton's pre-created modules
+-------------------------------------------
 
-Some of the Triton modules automatically activate a Singularity image.
+Some of the Triton modules automatically activate a Apptainer image.
 On Triton, you just need to load the proper module.  This will set
 some environment variables and enable the use of
 ``apptainer_wrapper`` (to see how it works, check ``module show
@@ -121,8 +121,8 @@ Under the hood, ``apptainer_wrapper`` does this:
 
 
 
-Singularity commands
---------------------
+Apptainer commands
+------------------
 
 This section describes using Singularity directly, with you managing
 the image file and running it.
@@ -137,19 +137,19 @@ convert it to a ``.sif`` file (remember to change to a scratch folder
 with plenty of space first)::
 
   $ cd $WRKDIR
-  $ singularity build IMAGE_OUTPUT.sif docker://GROUP/IMAGE_NAME:VERSION
+  $ apptainer build IMAGE_OUTPUT.sif docker://GROUP/IMAGE_NAME:VERSION
 
-If you are running on your own computer with Docker and Singularity
+If you are running on your own computer with Docker and Apptainer
 both installed, you can use a local image like this (and then you need
 to copy it to the cluser)::
 
-  $ singularity build IMAGE_OUTPUT.sif docker-daemon://LOCAL_IMAGE_NAME:VERSION
+  $ apptainer build IMAGE_OUTPUT.sif docker-daemon://LOCAL_IMAGE_NAME:VERSION
 
 This will store the Docker layers in ``$HOME/.singularity/cache/``,
 which can result in running out of quota in your home folder.
 In a situation like this, you can then clean the cache with::
 
-  singularity cache clean
+  apptainer  cache clean
 
 You can also use another folder for your singularity cache by setting
 the ``SINGULARITY_CACHEDIR``-variable. For example, you can set it to
@@ -162,10 +162,10 @@ Create your own image
 ~~~~~~~~~~~~~~~~~~~~~
 
 See the `Singularity docs on this
-<https://docs.sylabs.io/guides/latest/user-guide/quick_start.html#build-images-from-scratch>`__.
-You create a Singularity definition file ``NAME.def``, and then::
+<https://apptainer.org/docs/user/latest/quick_start.html#building-images-from-scratch>`__.
+You create a Apptainer definition file ``NAME.def``, and then::
 
-  $ singularity build IMAGE_OUTPUT.sif NAME.def
+  $ apptainer build IMAGE_OUTPUT.sif NAME.def
 
 
 Running containers
