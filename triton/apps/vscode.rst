@@ -102,7 +102,7 @@ what these mean and what else you might need in here, see
 :doc:`/scicomp/ssh`::
 
   Host triton-vscode
-      ProxyCommand ssh triton /share/apps/ssh-node-proxycommand --partition=interactive --time=1:00:00
+      ProxyCommand ssh triton /appl/manual_installations/software/ssh-node-proxycommand --partition=interactive --time=1:00:00
       StrictHostKeyChecking no
       UserKnownHostsFile /dev/null
       User USERNAME
