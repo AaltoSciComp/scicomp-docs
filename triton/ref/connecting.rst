@@ -38,17 +38,17 @@
        <https://www.aalto.fi/en/services/vdiaaltofi-how-to-use-aalto-virtual-desktop-infrastructure>`__.
      * Whole Internet
 
-   * * :doc:`Jupyter </triton/apps/jupyter>`
-     * Since April 2024 Jupyter is part of Open OnDemand, see
-       below. Use the "Jupyter" app to get same environment as
-       before.  :doc:`More info </triton/apps/jupyter>`.
-     * See the corresponding OOD section
-
    * * :doc:`Open OnDemand </triton/usage/ood>`
      * https://ondemand.triton.aalto.fi, Web-based interface to the
        cluster. Also known as OOD. Includes shell access, GUI, data transfer, Jupyter and a number of GUI applications
        like Matlab etc.  :doc:`More info </triton/usage/ood>`.
      * Whole internet
+
+   * * :doc:`Jupyter </triton/apps/jupyter>`
+     * Since April 2024 Jupyter is part of Open OnDemand, see
+       above. Use the "Jupyter" app to get same environment as
+       before.  :doc:`More info </triton/apps/jupyter>`.
+     * See Open OnDemand above
 
    * * :doc:`VS Code / Codium desktop </triton/apps/vscode>`
      * With the "Remote-SSH" extension it can provide shell access and
