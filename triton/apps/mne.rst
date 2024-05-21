@@ -1,8 +1,12 @@
-MNE
-~~~
+[obsolete] MNE
+~~~~~~~~~~~~~~
 
-:pagelastupdate: 2018
+:pagelastupdate: 2024
 :maintainer:
+
+.. admonition:: Obsolete
+   As of May 2024, this application is not supported anymore in the new Triton.
+  
 
 ::
 
