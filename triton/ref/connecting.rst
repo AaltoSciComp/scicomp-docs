@@ -52,8 +52,7 @@
 
    * * :doc:`VS Code / Codium desktop </triton/apps/vscode>`
      * With the "Remote-SSH" extension it can provide shell access and
-       file transfer.  Warnings: open only project directories (or it
-       uses excessive CPU), and don't use large CPU/mem tasks with it
-       (see warnings on the page).
+       file transfer.  See the :doc:`VS Code page
+       </triton/apps/vscode>` for some important usage warnings.
 
      * Same as SSH options above above.

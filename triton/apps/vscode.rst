@@ -40,13 +40,20 @@ still useful, but you need to use it smartly:
 
    * **Only open specific project directories.** Don't open your home
      directory, work directory, or all ``/scratch/``, or any big
-     directories: it will scan *all* files and use a huge amount of CPU.
-   * **Don't run heavy computations or use too much memory, for
-     example through Jupyter or other calculations.** It can
-     use up all your allocated resources and prevent other logins.  If
-     you find you can't log in, contact us.  See the :ref:`"directly
-     to an interactive job" <vscode-interactive-job>` below for a
-     possible work-around.
+     directories: it will scan *all* files and use a huge amount of
+     CPU.
+   * **We recommend against Jupyter computations in VS Code.** The
+     kernels won't stop if your connection ends, and continue to use
+     memory (and possibly CPU).  See the below point.  The strategies
+     in :ref:`OOD <vscode-ood>` or :ref:`interactive jobs"
+     <vscode-interactive-job>` is OK though since it isolates resources.
+   * **Don't run heavy computations or use too much memory.** It can
+     use up all your allocated resources and prevent other logins
+     (because of how we limit resources per user).  If you find you
+     can't log in, contact us.  The strategies in :ref:`OOD
+     <vscode-ood>` or :ref:`interactive jobs"
+     <vscode-interactive-job>` is OK though since it isolates
+     resources.
 
 
 
@@ -58,6 +65,8 @@ extensions you install.  A malicious extension can access and/or
 delete all of the data available via your account.
 
 
+
+.. _vscode-ood:
 
 VSCode through Open OnDemand
 ----------------------------
@@ -112,6 +121,8 @@ connect without entering a password every time.
 
 VSCode remote SSH host directly to interactive job
 --------------------------------------------------
+
+*(Advanced)*
 
 Sometimes you want more resources than the login node.  This section
 presents a way to have VSCode directly connect to a job resource
