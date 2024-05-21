@@ -1,7 +1,7 @@
 docutils
 jupyter_core
 sphinx<7.2.0    # some problem with sphinx_toolbox/old python 2023-11-12
-sphinx_rtd_theme>0.5
+sphinx-book-theme
 sphinx_gitstamp
 #recommonmark
 # For the slurm lexer

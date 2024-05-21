@@ -182,7 +182,7 @@ html_js_files = [
     "redirect-to-https.js",
 ]
 
-html_theme = "sphinx_rtd_theme"
+html_theme = "sphinx_book_theme"
 if on_rtd:
     os.system('git fetch --unshallow')
     os.system('pip freeze')
