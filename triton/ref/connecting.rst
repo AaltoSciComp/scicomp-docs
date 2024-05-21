@@ -32,12 +32,6 @@
        also use passwords (since 2023)
        <https://aaltoscicomp.github.io/blog/2023/ssh-keys-with-passwords/>`__
 
-   * * `VDI <https://www.aalto.fi/en/services/vdiaaltofi-how-to-use-aalto-virtual-desktop-infrastructure>`__
-     * "Virtual desktop interface", https://vdi.aalto.fi, from there you can ``ssh``
-       to Triton or access OOD.  `More info
-       <https://www.aalto.fi/en/services/vdiaaltofi-how-to-use-aalto-virtual-desktop-infrastructure>`__.
-     * Whole Internet
-
    * * :doc:`Open OnDemand </triton/usage/ood>`
      * https://ondemand.triton.aalto.fi, Web-based interface to the
        cluster. Also known as OOD. Includes shell access, GUI, data transfer, Jupyter and a number of GUI applications
