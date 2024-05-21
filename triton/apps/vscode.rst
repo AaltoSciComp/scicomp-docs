@@ -38,10 +38,10 @@ still useful, but you need to use it smartly:
 
 .. warning::
 
-   * **Only open specific project directories.** Don't open your home
-     directory, work directory, or all ``/scratch/``, or any big
-     directories: it will scan *all* files and use a huge amount of
-     CPU.
+   * **Only open specific project directories.** Don't open your whole
+     home directory, whole ``$WRKDIR`` work directory, or all
+     ``/scratch/``, or any directories with a huge number of files: it
+     will scan *all* files and use a huge amount of CPU.
    * **We recommend against Jupyter computations in VS Code.** The
      kernels won't stop if your connection ends, and continue to use
      memory (and possibly CPU).  See the below point.  The strategies
