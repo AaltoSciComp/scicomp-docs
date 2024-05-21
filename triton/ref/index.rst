@@ -54,6 +54,28 @@ See also: :doc:`../tut/modules`.
 Common software
 ---------------
 
+See also: :doc:`../tut/applications`.
+
+.. include:: software.rst
+
+
+
+.. _ref-storage:
+
+Storage
+-------
+
+See also: :doc:`../tut/storage`
+
+.. include:: storage.rst
+
+
+
+.. _ref-remote-data:
+
+Remote data access
+------------------
+
 See also: :doc:`../tut/remotedata`.
 
 .. include:: remotedata.rst
