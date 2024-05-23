@@ -98,7 +98,7 @@ hints about adapting).  How to register if you are not at Aalto:
   interested in HPC. Most things should work with simply replacing triton
   -> narvi. Some differences in configuration are listed in
   `Narvi differences
-  <https://narvi-docs.readthedocs.io/narvi/kickstart-diffs.html>`__
+  <https://narvi-docs.readthedocs.io/kickstart-diffs.html>`__
 * [no active support] `CSC <https://csc.fi>`__ (Finland): Participants with `CSC user
   account <https://docs.csc.fi/accounts/>`__ can try examples also in
   CSC supercomputers, see the `overview of CSC supercomputers
