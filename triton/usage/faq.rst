@@ -131,7 +131,7 @@ Accounts and Access to triton
 
 .. collapse:: Mac users ...  invalid byte issue at login
 
-  Mac users may experience a login issue when logining with SSH or to https://ondemand.aalto.fi
+  Mac users may experience a login issue when logining with SSH or to https://ondemand.triton.aalto.fi
   due to a locale settings on the local laptop/desktop. A workaround would be to tell Terminal to *not* set
   the locale environment variables, by *turning off* this setting in the Terminal app:
 
