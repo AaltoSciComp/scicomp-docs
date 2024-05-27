@@ -9,11 +9,9 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * Garage continues as normal, 13:00-14:00 each work day.
-     Communicate by :ref:`chat <chat>` for urgent issues.
-   * From 6-8 May 2024, we had all-day garages (~9-16) to support
-     the transition to the new Triton.  Now that the immediate
-     transition period is over, we are back to normal.
+   * The week of 27-31 May 2024 we have garages, but staff may be
+     rather limited because of several conferences.  Do come if you
+     want, but we might push some issues to the issue tracker.
 
 
 If you need more help than the issue trackers, this is the place to
