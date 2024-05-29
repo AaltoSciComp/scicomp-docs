@@ -210,6 +210,10 @@ An alternative to using ``case`` statement would be using ``bash`` arrays, like 
 .. literalinclude:: /triton/examples/array/pi_array_hardcoded_alt.sh
    :language: slurm
 
+``bash`` arrays only support non-negative integers or strings, so if your parameters are e.g. real numbers, they can be put in the array as strings::
+   FREQUENCIES=("2.8" "2.9" "3.0" "3.1")
+   FREQUENCY=${FREQUENCIES[SLURM_ARRAY_TASK_ID]}
+
 Reading parameters from one file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
