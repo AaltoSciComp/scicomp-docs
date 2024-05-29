@@ -138,7 +138,7 @@ Accounts and Access to triton
     Terminal > Preferences > Settings > [profile] > Advanced > Set locale environment variables on startup
 
   Additionally check System Preferences > Language and Text  to make sure the settings are correct, the default
-  should be `LANG=C.UTF-8` or alike and not anything that ends with the ASCII.
+  should be ``LANG=C.UTF-8`` or alike and not anything that ends with the ASCII.
 
 
 .. collapse::  Invalid account ... error message
