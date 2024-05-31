@@ -197,7 +197,7 @@ requests for software in these so that it is automatically available.
    that depends on the environment or adding an absolute path.
 
    You can list your installed kernels with ``jupyter kernelspec
-   list`` (to ensure the list is the same as jupyter.triton sees,
+   list`` (to ensure the list is the same as Jupyter in OnDemand sees,
    ``module load jupyterhub/live first``).  Look in these directories,
    at ``kernel.json``, to see just what it does.
 

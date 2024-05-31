@@ -245,7 +245,7 @@ time to review your local guides to see how they are adapted to your site.
 
    a) A job is submitted but fails with no output or messages.
 
-   b) I can't start a Jupyter server on jupyter.triton.
+   b) I can't start a Jupyter server on ondemand.triton.aalto.fi.
 
    c) Some files are randomly empty.  Or the file had content, I tried
       to save it again, and now it's empty!
