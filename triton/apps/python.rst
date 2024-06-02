@@ -38,7 +38,7 @@ Python distributions
      * conda environment + mamba
 
    * * Your own virtual environment
-     * Module virtualenv ``module load py-virtualenv``
+     * Module virtualenv ``module load scicomp-python-env``
      * virtualenv + pip + setuptools
 
 The main version of modern Python is 3. Support for old Python 2 ended at the
@@ -244,7 +244,7 @@ works on other systems easily so it's good to know about.
 ::
 
     ## Load module python
-    $ module load py-virtualenv
+    $ module load scicomp-python-env
 
     ## Create environment
     $ virtualenv DIR
