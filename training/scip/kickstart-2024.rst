@@ -130,6 +130,7 @@ started with the computing resources.
    Schedule may still have minor updates, please check back for
    the latest.
 
+
 * **Day #1 (Tue 4.jun):** Basics and background
 
   * 11:50--12:00: Joining time/icebreaker
@@ -146,63 +147,54 @@ started with the computing resources.
       aren't obvious.  We discuss how data storage choices lead to
       computational workflows. Materials: `SciComp Intro
       <https://hackmd.io/@AaltoSciComp/SciCompIntro>`__
+      
+  * **12:25--12:50: (Computational) reproducibility and open science** *Enrico Glerean and Samantha Wittke*
+     
+    - Transparency in science is one of the core principles in research integrity. Did you know that half of published studies are actually not reproducible? Here we give an overview of CodeRefinery learning materials for those who want to start picking up good enough practices like git version control, clear project folder structure, conda environments, containers. Materials: `Reproducible research (CodeRefinery) <https://coderefinery.github.io/reproducible-research/>`__  
 
-  * **12:25--12:50: What is parallel computing?  An analogy with
-    cooking** *Enrico Glerean and Thomas Pfau*
-
-    - In workshops such as this, you will hear lots about parallel
-      computing and how you need it, but rarely get a understandable
-      introduction to how they relate and which are right for you.
-      Here, we give a understandable metaphor with preparing large
-      meals.  `Slides <https://docs.google.com/presentation/d/e/2PACX-1vQLTzWkRy7Du3jjPJ6Y9BqKczU_JcSTEL6XsndrNJ7ylzi4RWeEy8lhfWZQu_lpwbAKroh51qqLoPFG/pub>`__
-
-  * **13:00--13:25: How big is my calculation?  Measuring your
-    needs.** *Simo Tuomisto and Thomas Pfau*
-
-    - People often wonder how many resources their job needs, either on
-      their own computer or on the cluster.  When should you move to a
-      cluster?  How many resources to request?  We'll go over how we
-      think about these problems. Materials:
-      :doc:`How big is my program? </triton/usage/program-size>`
-
-  * **13:25--13:50: Behind the scenes: the humans of scientific
-    computing** *Richard Darst and Teemu Ruokolainen*
+  * **12:50--13:00: Break**
+  
+  * **13:00--13:25: Behind the scenes: the humans of scientific computing** *Richard Darst and a special guest*
 
     - Who are we that teach this course and provide SciComp support?
       What makes it such a fascinating career?  Learn about what goes on
       behind the scenes and how you could join us.
+  
+  * **13:25--13:50: What can you do with a computational cluster?**
+    *(Simo Tuomisto and Enrico Glerean)*
 
-  * **14:00--14:45: Connecting to a HPC cluster** *Thomas Pfau and
+    - A couple of real examples of how people use the cluster (what you can
+      do at the end of the course): 1) Multi-cpu-node computations with LAMMPS, 2) Suprise demo.  
+      
+  * **13:50--14:00: break** 
+  
+  * **14:00--15:00: Connecting to a HPC cluster** *Thomas Pfau and
     Jarno Rantaharju*
 
     - Required if you are attending the Triton/HPC tutorials the
       following days, otherwise the day is done.
-    - 14:00--14:20?: Livestream introduction to connecting
-    - 14:??--15:00: Individual help time in Zoom (links sent to
-      registered participants)
+    - 14:00--14:20: Livestream introduction to connecting (ssh, openondemand)
+    - 14:20--14:50: Individual help time in Zoom (links sent to
+      registered participants for the affiliated HPC clusters)
     - Break until 15:00 once you get connected.
     - Material: :doc:`/triton/tut/connecting`
 
+  * **15:00--15:25: How to ask for help with (super)computers** *Radovan Bast and Richard Darst*
 
-  * **15:00--15:25: Using the cluster from the shell (files
-    and directories)** *Richard Darst and Teemu Ruokolainen*
-
-    - Once we connect, what can we do?  We'll get a tour of the shell,
-      files diretories, and how we copy basic data to the cluster.
-      Material: :doc:`/triton/tut/cluster-shell`.
-
-  - **15:25--15:50: What can you do with a computational cluster?**
-    *(Jarno Rantaharju and Richard Darst)*
-
-    - See several real examples of how people use the cluster (what you can
-      do at the end of the course): 1) Large-scale computing with array
-      jobs, 2) Large-scale parallel computing.  Demo.
+    - It’s dangerous to go alone, take us! Don’t waste time struggling, there are plenty of people here for you.
+      Materials: `Slides <https://zenodo.org/records/8392763>`__.
+      
+  * **15:25--15:50: Editors and local/remote workflows** *Hossein Firooz and Richard Darst*
+   
+    - One can use clusters also without the shell, but it comes with some extra care. Materials: `VSCode on HPC <https://coderefinery.github.io/TTT4HPC_Interactive/VSCode/>`__
+  * **15:50--16:00: Wrapping-up and getting ready for day 2** *Richard Darst*
 
   * Preparation for day 2:
 
     - Remember to read/watch the "shell crash course" (see "Preparation"
       below) if you are not yet confident with the command line.  This
       will be useful for tomorrow.
+
 
 * **Day #2 (Wed 5.jun):** Basic use of a cluster *(Richard Darst, Simo
   Tuomisto)*
