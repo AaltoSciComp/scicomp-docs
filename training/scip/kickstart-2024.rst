@@ -186,7 +186,7 @@ started with the computing resources.
       
   * **15:25--15:50: Editors and local/remote workflows** *Hossein Firooz and Richard Darst*
    
-    - One can use clusters also without the shell, but it comes with some extra care. Materials: `VSCode on HPC <https://coderefinery.github.io/TTT4HPC_Interactive/VSCode/>`__
+    - One can use clusters also without the shell, but it comes with some extra care. Materials: :doc:`/triton/apps/vscode`
   * **15:50--16:00: Wrapping-up and getting ready for day 2** *Richard Darst*
 
   * Preparation for day 2:
