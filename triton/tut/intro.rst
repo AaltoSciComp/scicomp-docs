@@ -88,7 +88,9 @@ Getting help
 
 .. seealso::
 
-   Main article: :doc:`../help`
+   * Main reference: :doc:`../help`
+   * `How to ask for help with (super)computers
+     <https://zenodo.org/records/8392763>`__
 
 First off, realize **it is hard to do everything alone** - with the
 diversity of types of computational research and researchers, it's not
