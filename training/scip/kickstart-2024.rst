@@ -184,7 +184,7 @@ started with the computing resources.
     - It’s dangerous to go alone, take us! Don’t waste time struggling, there are plenty of people here for you.
       Materials: `Slides <https://zenodo.org/records/8392763>`__.
       
-  * **15:25--15:50: Editors and local/remote workflows** *Hossein Firooz and Richard Darst*
+  * **15:25--15:50: VS Code on HPC** *Hossein Firooz and Richard Darst*
    
     - One can use clusters also without the shell, but it comes with some extra care. Materials: :doc:`/triton/apps/vscode`
   * **15:50--16:00: Wrapping-up and getting ready for day 2** *Richard Darst*
