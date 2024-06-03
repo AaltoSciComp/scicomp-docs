@@ -176,11 +176,10 @@ On Triton, you don't need to worry about partitions most of the time -
 they are automatically set.  You might need partition in several cases
 though:
 
-* ``--partition debug`` gives you some nodes reserved for quick testing.
 * ``--partition interactive`` gives you some settings optimized for
   interactive work (where things aren't running constantly).
 
-On other clusters, you might need to set a partition other times.
+On other clusters, you might need to set a partition sometimes.
 
 Command ``sinfo -s`` lists a summary of the available partitions. You
 can see the purpose and use of our partitions in the :doc:`quick
