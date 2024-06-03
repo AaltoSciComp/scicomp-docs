@@ -341,10 +341,13 @@ method of calculating π.
 
 .. danger::
 
-  This is running your program on the login node!  Since this takes
-  only a second, it's OK enough for now (so that we only have to teach
-  one thing at a time).  You will learn how to run programs properly
-  starting in :doc:`slurm`.
+  This is running your program on the login node!  Since this takes only
+  a second, it's OK enough for now (so that we only have to teach one
+  thing at a time).  Since May 2024, Triton limits resources for each
+  logged in user, and running too much might possibly block future
+  logins.
+
+  You will learn how to run programs properly starting in :doc:`slurm`.
 
 .. exercise:: Shell-5: try calculating pi
 
