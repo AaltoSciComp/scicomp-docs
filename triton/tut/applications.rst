@@ -147,13 +147,14 @@ Usually, the software's instructions don't talk about how to do this
 (and might not even mention things like the environments in the
 previous point).
 
-One common way of doing this is **containers** (for example,
-**Docker** or **Apptainer**/**Singularity**).  These basically allow
-you to put an *entire operating system in one file*, so that your
-software works everywhere.  Very nice when software is difficult to
-install or needs to be moved from computer to computer, but can take
-some work to set up.  See :doc:`../usage/singularity` for the
-information we have so far.
+One common way of doing this is **containers** (for example, **Docker**
+or **Apptainer**/**Singularity**).  These basically allow you to put an
+*entire operating system in one file*, so that your software works
+everywhere.  Very nice when software is difficult to install or needs to
+be moved from computer to computer, but can take some work to set up.
+See :doc:`../usage/singularity` or the longer lesson on `containers on
+HPC <https://coderefinery.github.io/ttt4hpc_containers/>`__ for more
+information.
 
 We can't go into this more right now - ask us for help if needed.  If
 you make a "we need X installed" request, we'll tell you how to do it
