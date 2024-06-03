@@ -61,10 +61,10 @@ which can be used to install some software automatically.
 Installing other software
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To install most other software, you need to apply for a workstation
-admin (``wa``) account.  Contact your department IT to get the process
-started.
+To install most other software, you need administrator rights. These are granted through an application called BeyondTrust.
+If BeyondTrust is not already installed, open "Start Software Installation - Aalto IT" from the Start Menu. Install BeyondTrust from the Installation status tab. The computer might require a restart after this.
 
+To enable admin rights go back to "Start Software Installation - Aalto IT" and from the application tab install "Enable Admin Rights for Primary User". Read and accept the agreement and restart the computer after the installation has been completed.
 
 Common problems
 ---------------
