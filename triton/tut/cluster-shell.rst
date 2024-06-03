@@ -1,5 +1,5 @@
-Using the cluster from a shell
-==============================
+Using the cluster from a command line
+=====================================
 
 .. include:: /triton/ref/videos.rst
 

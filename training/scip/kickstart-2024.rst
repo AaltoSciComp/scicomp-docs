@@ -262,7 +262,11 @@ Preparation
 We strongly recommend you are familiar with the Linux command line.
 Browsing the following material is sufficient:
 
-* `Basic Linux shell and scripting
+* :doc:`/triton/tut/cluster-shell` (`video
+  <https://youtu.be/bJMmz5-svJo?t=7&list=PLZLVmS9rf3nMKR2jMglaN4su3ojWtWMVw&index=8>`__)
+  - important background knowledge for days 2-3.
+
+* A more detailed version of the above is `Basic Linux shell and scripting
   <https://www.youtube.com/watch?v=ESXLbtaxpdI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=3>`__
   (important) (or read/watch the shorter :doc:`crash course
   </scicomp/shell>` / `video <https://youtu.be/56p6xX0aToI>`__)
@@ -316,8 +320,8 @@ these videos yourself as preparation.
 
 Very strongly recommended:
 
-* `When and how to ask for help
-  <https://www.youtube.com/watch?v=5fgXXz3fzdM>`__ (very useful)
+* `Installing Python packages with Conda
+  <https://youtu.be/dmTlNh3MWx8>`__ (Note that conda on new-Triton has changed.  See :doc:`/triton/apps/python-conda` for details)
 * `Git intro
   <https://www.youtube.com/watch?v=r9AT7MqmLrU&list=PLZLVmS9rf3nOaNzGrzPwLtkvFLu35kVF4&index=5>`__ (useful)
 
