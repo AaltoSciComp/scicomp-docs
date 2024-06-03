@@ -58,22 +58,26 @@ show scicomp-python-env``:
 
     $ module show scicomp-python-env
     ----------------------------------------------------------------------------
-      /share/apps/anaconda-ci/fgci-centos7-anaconda/modules/anaconda/2023-01.lua:
+      /appl/scibuilder-mamba/aalto-rhel9/prod/modules/scicomp-python-env/2024-01.lua:
     ----------------------------------------------------------------------------
     whatis("Name : scicomp-python-env")
-    whatis("Version : 2023-01")
-    help([[This is an automatically created Python environment installation.]])
-    prepend_path("PATH","/share/apps/anaconda-ci/fgci-centos7-anaconda/software/anaconda/2023-01/2eea7963/bin")
-    setenv("CONDA_PREFIX","/share/apps/anaconda-ci/fgci-centos7-anaconda/software/anaconda/2023-01/2eea7963")
-    setenv("GUROBI_HOME","/share/apps/anaconda-ci/fgci-centos7-anaconda/software/anaconda/2023-01/2eea7963")
-    setenv("GRB_LICENSE_FILE","/share/apps/manual_installations/gurobi/license/gurobi.lic")
+    whatis("Version : 2024-01")
+    help([[This is an Aalto Scientific Computing managed Python environment with various packages.]])
+    family("conda")
+    prepend_path("PATH","/appl/scibuilder-mamba/aalto-rhel9/prod/software/scicomp-python-env/2024-01/f56a564/bin")
+    setenv("CONDA_PREFIX","/appl/scibuilder-mamba/aalto-rhel9/prod/software/scicomp-python-env/2024-01/f56a564")
+    setenv("GUROBI_HOME","/appl/scibuilder-mamba/aalto-rhel9/prod/software/scicomp-python-env/2024-01/f56a564")
+    setenv("GRB_LICENSE_FILE","/appl/manual_installations/software/gurobi/license/gurobi.lic")
+    setenv("OMPI_MCA_btl_openib_allow_ib","true")
+    setenv("SLURM_MPI_TYPE","pmix")
+    setenv("PMIX_MCA_psec","^munge")
 
 
 The command shows some meta-info (name of the module, its version, etc.)
 When you load this module, it adjusts various environment paths (as
 you see there),
 so that when you type ``python`` it runs the program from
-``/share/apps/anaconda-ci/fgci-centos7-anaconda/software/anaconda/2023-01/2eea7963/bin``.
+``/appl/scibuilder-mamba/aalto-rhel9/prod/software/scicomp-python-env/2024-01/f56a564/bin``.
 This is almost magic: we can have many versions of any software installed,
 and everyone can pick what they want, with no conflicts.
 
@@ -98,7 +102,7 @@ modules (if this doesn't work, use ``which``).::
   $ type python3
   python3 is /usr/bin/python3
   $ python3 -V
-  Python 3.6.8
+  Python 3.9.18
 
 But you need a newer version of Python.  To this end, you can **load**
 the ``scicomp-python-env`` module using the ``module load scicomp-python-env`` command,
@@ -106,10 +110,10 @@ that has a more up to date Python with lots of libraries already
 included::
 
   $ module load scicomp-python-env
-  $ type python
-  python3 is /share/apps/anaconda-ci/fgci-centos7-anaconda/software/anaconda/2023-01/2eea7963/bin/python3
-  $ python -V
-  Python 3.10.8
+  $ type python3
+  python3 is /appl/scibuilder-mamba/aalto-rhel9/prod/software/scicomp-python-env/2024-01/f56a564/bin/python
+  $ python3 -V
+  Python 3.11.9
 
 As you see, you now have a newer version of Python, in a different
 directory.
@@ -140,19 +144,25 @@ etc.  You could load modules in your ``~/.bash_profile``, but then it
 will always automatically load it - this causes unexplainable bugs
 regularly!
 
+.. warning::
+
+  We regularly see problems caused by something in ``~/.bash_profile`` /
+  ``~/.bash_rc`` affecting other unrelated software in
+  hard-to-understand ways.  Be very cautious about anything in your
+  shell startup files, and always remove it as a first debugging step.
 
 
 Module versions
 ---------------
 
-What's the difference between ``module load scicomp-python-env`` and ``module load
-scicomp-python-env/X``?
+What's the difference between ``module load scicomp-python-env`` and
+``module load scicomp-python-env/2024-01``?
 
 The first ``scicomp-python-env`` loads the version that Lmod assumes to
 be the latest one - which might change someday!  Suddenly, things don't
 work anymore and you have to fix them.
 
-The second loading ``scicomp-python-env/2023-01`` loads that exact version,
+The second loading ``scicomp-python-env/2024-01`` loads that exact version,
 which won't change.  Once you want stability (possibly from day one!), it's
 usually a good idea to load specific version, so that your environment
 will stay the same until you are done.
@@ -164,6 +174,9 @@ Hierarchical modules
 
 Hierarchical modules means that you have to load one module before you
 can load another.  This is usually a compiler:
+
+**Warning: This example is not yet updated for new-Triton and won't work
+anymore.  The concept still applies.**
 
 For example, let's load a newer version of R:
 
@@ -189,7 +202,7 @@ for what to do next.  Let's do that:
 
        You will need to load all module(s) on any one of the lines below before the "r/4.2.2" module is available to load.
 
-	 gcc/11.3.0
+   gcc/11.3.0
 
        Help:
        ...
@@ -229,7 +242,9 @@ dependencies. This can result in long loading times or be annoying to
 do each time you log in to the system. However, there is a solution:
 ``module save COLLECTION_NAME`` and ``module restore COLLECTION_NAME``
 
-Let's see how to do this in an example.
+Let's see how to do this in an example.  **Warning: This example is not
+yet updated for new-Triton and won't work anymore.  The concept still
+applies.**
 
 Let's say that for compiling / running your program you need:
 
@@ -318,10 +333,12 @@ to check your local documentation for what the equivalents are.
 
    .. solution::
 
-      Let's use scicomp-python-env as an example. To see all available versions of scicomp-python-env,
-      we can either use ``module avail scicomp-python-env`` or the better option
-      ``module spider scicomp-python-env``. The oldest version of the module is ``scicomp-python-env/X``.
-      We can load it using ``module load scicomp-python-env/2020-01-tf1``
+      Let's use scicomp-python-env as an example. To see all available
+      versions of scicomp-python-env, we can either use ``module avail
+      scicomp-python-env`` or the better option ``module spider
+      scicomp-python-env``. The oldest version of the module is
+      ``scicomp-python-env/2024-01``. We can load it using ``module load
+      scicomp-python-env/2024-01``.
 
 .. exercise:: Modules-2: Modules and PATH
 
@@ -333,49 +350,66 @@ to check your local documentation for what the equivalents are.
    full path of what will be run for a given command name - basically
    it looks up the command in ``PATH``
 
-   * Run ``echo $PATH`` and ``type python``.
+   * Run ``echo $PATH`` and ``type python3``.
    * ``module load scicomp-python-env``
-   * Re-run ``echo $PATH`` and ``type python``.  How does it change?
+   * Re-run ``echo $PATH`` and ``type python3``.  How does it change?
 
    .. solution::
 
-      ``echo $PATH`` should print something like this::
+      Did you remember to reset your modules before starting?  Do this
+      before every exercise, even if we don't say it every time.
 
-	 .../usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/ibutils/bin...
+      ::
 
-      Your PATH is most likely longer and doesn't have to look exactly like this.
+        $ module purge
 
-      ``type python`` should output something like this::
+      The initial state should look something like this.  Your PATH is
+      most likely longer and doesn't have to look exactly like this::
 
-	 python is /usr/bin/python
+        $ echo $PATH
+         .../usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/ibutils/bin...
+        $ type python
+        python is /usr/bin/python
 
-      After ``module load scicomp-python-env``, ``type python`` should print something like
-      ``/share/apps/anaconda-ci/fgci-centos7-anaconda/software/anaconda/2023-01/2eea7963/bin/python``
-      and you should see the same path added to your PATH.
+      Then we load our module::
+
+        $ module load scicomp-python-env
+
+      Then we look at our final state::
+
+        $ echo $PATH
+        /appl/scibuilder-mamba/aalto-rhel9/prod/software/scicomp-python-env/2024-01/f56a564/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/darstr1/bin
+        $ type python3
+        python3 is /appl/scibuilder-mamba/aalto-rhel9/prod/software/scicomp-python-env/2024-01/f56a564/bin/python3
+
+      We see that ``$PATH`` and ``python3`` have been adjusted.
+
+
 
 .. exercise:: Modules-3: Complex module and PATH
 
-   Check the value of ``$PATH``.  Then, load the module ``py-gpaw``.
+   Check the value of ``$PATH``.  Then, load the module ``cmake``.
    List what it loaded.  Check the value of ``PATH`` again.  Why is
    there so much stuff?  Can you find a module command that explains
    it?
 
    .. solution::
 
-      Running ``module list`` shows you that over 50 modules have been loaded.
-      All of these are dependencies of ``py-gpaw``, and as such were loaded alongside it.
-      You can see dependencies of a module using ``module show NAME``. In the case of ``module show py-gpaw``
-      you can see that ``py-gpaw`` loads several other modules when it is loaded. Some of these models also load
-      their own depedencies.
+      Running ``module list`` shows you that 11 modules have been
+      loaded. All of these are dependencies of ``cmake``, and as such
+      were loaded alongside it. You can see dependencies of a module
+      using ``module show NAME``. In the case of ``module show cmake``
+      you can see that ``cmake`` loads several other modules when it
+      is loaded. Some of these models also load their own depedencies.
 
 .. exercise:: Hierarchical modules
 
-   How can you load the module ``quantum-espresso/7.1``::
+   How can you load the module ``quantum-espresso/7.2``::
 
-     $ ml load quantum-espresso/7.1
+     $ module load quantum-espresso/7.2
      Lmod has detected the following error:  These module(s) or
-     extension(s) exist but cannot be loaded as requested: "quantum-espresso/7.1"
-        Try: "module spider quantum-espresso/7.1" to see how to load the module(s).
+     extension(s) exist but cannot be loaded as requested: "quantum-espresso/7.2"
+        Try: "module spider quantum-espresso/7.2" to see how to load the module(s).
 
 
    .. solution::
@@ -383,27 +417,26 @@ to check your local documentation for what the equivalents are.
       This is a double-hierarchical module, that is built using two
       different toolchains, so you have a choice to make when loading::
 
-        $ module spider quantum-espresso/7.1
+        $ module spider quantum-espresso/7.2
         ...
         You will need to load all module(s) on any one of the lines
         below before the "openfoam-org/11" module is available to load.
 
-        gcc/11.3.0  openmpi/4.1.5
-	intel-oneapi-compilers/2023.1.0  openmpi/4.1.5
-
+        openmpi/4.1.6
+        scibuilder-spack-dev/2024-01  openmpi/4.1.6
 
       So here we go, loaded and we use ``which`` to verify one of the
       programs can be found::
 
-         $ module load gcc/11.3.0  openmpi/4.1.5 quantum-espresso/7.1
-	 $ $ which pw.x
-	 /share/apps/scibuilder-spack/aalto-centos7/2023-01/software/linux-centos7-haswell/gcc-11.3.0/quantum-espresso-7.1-sxtbtq2/bin/pw.x
+         $ module load openmpi/4.1.6 quantum-espresso/7.2
+         $ which pw.x
+         /appl/scibuilder-spack/aalto-rhel9-dev/2024-01/software/linux-rhel9-haswell/gcc-12.3.0/quantum-espresso-7.2-kmqslxn/bin/pw.x
 
 
 
 .. exercise:: Modules-5: Modules and dependencies
 
-   Load a module with many dependencies, such as ``r-ggplot2`` and
+   Load a module with many dependencies, such as ``geant4`` and
    save it as a collection.  Purge your modules, and restore the
    collection.
 
