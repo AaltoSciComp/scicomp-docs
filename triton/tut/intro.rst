@@ -52,6 +52,14 @@ are a cluster: many connected nodes with a scheduling system to divide
 work between them.  The network and some storage is shared, CPUs,
 memory, and other storage is not shared.
 
+.. admonition:: Triton was renewed in May 2024
+   :class: warning, triton-v2
+
+   Triton was completely re-installed and upgraded in May 2024. Anything
+   that worked before has to be updated or reinstalled to work again,
+   and many lesser-used things haven't been.  If you notice something
+   wrong or missing, let us know.
+
 .. admonition:: A real Ship of Theseus
 
    In the `Ship of Theseus
