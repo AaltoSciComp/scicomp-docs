@@ -3,8 +3,6 @@ About clusters and your work
 
 .. include:: /triton/ref/videos.rst
 
-*This is the first tutorial.  The next is* :doc:`connecting`.
-
 Science-IT is an Aalto infrastructure for scientific computing.  Its
 roots was a collaboration between the Information and Computer Science
 department (now part of CS), Biomedical Engineering and Computational

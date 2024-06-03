@@ -393,16 +393,9 @@ Exercises
 
    These usually point towards some method of shared-memory parallel execution.
 
-What's next?
-------------
-
-The next tutorial is about :doc:`MPI parallelism <parallel-mpi>`.
-
-
 
 
 What's next?
 ------------
 
 The next tutorial is about :doc:`MPI parallelism <parallel-mpi>`.
-

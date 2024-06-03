@@ -388,4 +388,4 @@ See also
 What's next?
 ------------
 
-The next tutorial is about :doc:`using the terminal <cluster-shell>`.
+The next tutorial is about :doc:`using a command line <cluster-shell>`.
