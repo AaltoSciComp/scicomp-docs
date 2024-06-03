@@ -4,8 +4,8 @@
    This is the initial intro of the kickstart course.  The old one at
    /training/scip/summer-kickstart/intro can be removed eventually
 
-Summer Kickstart intro
-======================
+SciComp kickstart intro
+=======================
 
 
 Who are we?
@@ -15,6 +15,7 @@ Who are we?
 * In collaborations with other universities (Finnish Computing
   Competence Infrastructure)
 * And one talk in collaboration with CSC
+* And occassionally talks in cooperation with other partners.
 
 
 
@@ -46,6 +47,8 @@ Who is attending?
 
   * May need adapting to other sites
   * We will carefully explain about how things change in other sites.
+  * You can ask questions about other universities (and get help during
+    exercise sessions).
 
 
 
@@ -77,12 +80,9 @@ There are many parts of the workshop:
 Chat and communication
 ----------------------
 
-- Please don't use the Zoom/Twitch chat for questions: who can keep track?
+- Please don't use the Zoom/Twitch chat for questions: insturctors won't see.
 
-  - Instructors won't see
-  - But you can for practical questions
-
-- Use HackMD for chat: questions in bullet points:
+- Use the "Notes" for chat: questions in bullet points:
 
   .. image:: https://coderefinery.github.io/manuals/_images/hackmd--questions2.png
      :alt: View and edit modes at top
@@ -103,9 +103,9 @@ Chat and communication
 
 - Don't get overloaded!  The point is you can read later.
 
-- **Don't include names or identifies in HackMD: it is public.**
+- **Don't include names or identifies in the Notes: it is public.**
 
-**Icebreaker: Please answer the icebreaker question in HackMD**
+**Icebreaker: Please answer the icebreaker question in the Notes**
 
 
 Where do you focus?
@@ -115,12 +115,12 @@ There is so much information!  What should we look?
 
 - **Screenshare and lecture**
 - **Your own type-along**
-- **HackMD (all important links should be pasted here)**
+- **Notes (all important links should be pasted here)**
 
   - Only look at the bottom.
   - Come back and read detailed answers later, not during.
 
-- Lesson webpage (as needed, direct links in HackMD)
+- Lesson webpage (as needed, direct links in the Notes)
 
 
 Screen arrangement
@@ -128,10 +128,8 @@ Screen arrangement
 
 Arranging your screen is surprisingly difficult!
 
-- We share a vertical window, so half of the screen is for us, and
-  half is for demos.
-- Zoom "Dual monitor mode" (in the settings) gives you two *windows*
-  which might be useful.
+We share a vertical window, so half of the screen is for us, and
+half is for demos.
 
 .. figure:: https://coderefinery.github.io/manuals/_images/layout--learner-livestream-sidebyside-onebrowser.png
 
@@ -178,7 +176,7 @@ We leave you with four pieces of advice for now:
   course when you are helping others.
 - **Take time to check in.** For example, ask "how's it going? is
   everyone getting what they need?", in breakout rooms.
-- **When something isn't going right, speak (or HackMD) up quickly**.
+- **When something isn't going right, speak up (or Notes write) quickly**.
   We want to help, even if the answer is "let's discuss later".
 
 
@@ -212,6 +210,7 @@ HackMD lags and you can't edit / text goes wrong
 We don't have time to cover everything
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * This is just a fact - sorry.
+* We aim to give a summary, you are smart enough to follow up later
 * You can review later
 * Talk with collaborators and make your own study network
 
@@ -224,7 +223,7 @@ There are major accessibility problems
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * e.g. audio quality is bad, screen not visible, breaks not coming,
   unintelligble explanation...
-* Write the problem in the bottom of HackMD immediately.
+* Write the problem in the bottom of the Notes immediately.
 
 The stream suddenly dies
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -234,7 +233,7 @@ The stream suddenly dies
 You don't yet have some important software installed or configured
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Oops... but it's OK
-* Switch to "watching" mode and work on fixing it for the next day.
+* Switch to "watching" mode and once the day is over, work on fixing it for the next day.
 * Ask for help if needed
 
 You can't attend every day
@@ -262,8 +261,8 @@ Recording
 - The course is recorded and will be put on YouTube
 - But because of our unique setup, you *can't possibly* be recorded
   yourself.
-- Don't add names in HackMD.  Don't post any personal information.
-- All outputs, including HackMD, are CC-BY and published.
+- Don't add names in the Notes.  Don't post any personal information.
+- All outputs, including the Notes, are CC-BY and published.
 
 
 Credits
