@@ -229,8 +229,8 @@ and an easier way to access a shell terminal.  Read more from
 
 
 
-Connecting via JupyterHub
--------------------------
+Connecting via Jupyter
+----------------------
 
 .. seealso::
 
@@ -255,8 +255,8 @@ are plenty of tutorials.
 
 
 
-Connecting via the Virtual Desktop Interface
---------------------------------------------
+Connecting via a Virtual Desktop
+--------------------------------
 
 .. seealso::
 
@@ -279,10 +279,13 @@ VSCode
 
    :doc:`../apps/vscode`
 
-You can use a web-based VSCode through Open OnDemand.  Desktop VSCode
-can also connect to Triton via SSH.  :doc:`Read more
-<../apps/vscode>`.  Both of these can provide shell access and file
-transfer.
+.. role:: strikeout
+   :class: strike
+
+:strikeout:`You can use a web-based VSCode through Open OnDemand.` (update: not
+currently available in the new Triton since 2024 May)  Desktop VSCode
+can also connect to Triton via SSH.  :doc:`Read more <../apps/vscode>`.
+Both of these can provide shell access and file transfer.
 
 Warning: VS Code has some common issues with running calculations
 directly in it, see the :doc:`VS Code
@@ -299,10 +302,16 @@ rest of the course.
 .. exercise:: Connecting-1: Connect to Triton
 
    Connect to Triton, and get a terminal by one of the options above.
-   Type the command ``hostname`` to verify that you are on Triton.
-   Run ``whoami`` to verify your username.
+   Choose a method based on what is simple enough for your needs (we
+   recommend SSH if you are comfortable with the command line, or Open
+   OnDemand otherwise).
+
+   Type the command ``hostname`` to verify that you are on Triton.  Run
+   ``whoami`` to verify your username.
 
    .. solution::
+
+      The sections above should say what to do.
 
       ::
 
@@ -317,7 +326,7 @@ rest of the course.
    Check the uptime and load of the login node: ``uptime`` and
    ``htop`` (``q`` to quit - if ``htop`` is not available, then
    ``top`` works almost as well).  What else can you learn about the
-   node?  (You'll learn more about these in :doc:`cluster-shell`, this
+   comuter you are connected to?  (You'll learn more about these in :doc:`cluster-shell`, this
    is just a preview to fill some time.)
 
    .. solution::
@@ -345,7 +354,7 @@ rest of the course.
 
    Check what your default shell is: run ``echo $SHELL``.  If it doesn't
    say ``/bin/bash``, go ahead and change your shell to bash if it's
-   not yet (see the expandable box above).
+   not yet (see an expandable box :ref:`above <triton-connecting-ssh>`).
 
    This ``$SHELL`` syntax is an **environment variable** and a pattern
    you will see in the future.
@@ -362,10 +371,10 @@ rest of the course.
 
    If you use Linux/MacOS/WSL, start setting up a ``.ssh/config`` file
    as shown above and in :doc:`/scicomp/ssh`.  You probably won't have
-   time to finish this, but you can resume later.  Customize it to
-   suit your case.
+   time to finish this in a live course, but you can resume later.
+   Customize it to suit your case.
 
-   The "solution" is listed in the linked documents.
+   The "solution" is listed on the :doc:`linked page </scicomp/ssh>`.
 
 
 

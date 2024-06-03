@@ -32,7 +32,7 @@
        also use passwords (since 2023)
        <https://aaltoscicomp.github.io/blog/2023/ssh-keys-with-passwords/>`__
 
-   * * `VDI <https://www.aalto.fi/en/services/vdiaaltofi-how-to-use-aalto-virtual-desktop-infrastructure>`__
+   * * `Virtual desktop <https://www.aalto.fi/en/services/vdiaaltofi-how-to-use-aalto-virtual-desktop-infrastructure>`__
      * "Virtual desktop interface", https://vdi.aalto.fi, from there you can ``ssh``
        to Triton or access OOD.  `More info
        <https://www.aalto.fi/en/services/vdiaaltofi-how-to-use-aalto-virtual-desktop-infrastructure>`__.
