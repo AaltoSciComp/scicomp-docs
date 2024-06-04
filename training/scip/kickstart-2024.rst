@@ -8,8 +8,9 @@ June 2024 / Intro to Scientific Computing /  HPC Summer Kickstart
    * Watching links
 
      * Livestream: https://twitch.tv/coderefinery
-     * Notes doc: for registered participants
-     * Archive notes doc: https://hackmd.io/@AaltoSciComp/kickstart2024archive1
+     * Notes doc: for registered participants, you can register and
+       get it automatically
+     * `Archive notes doc <https://hackmd.io/@AaltoSciComp/scicomphpc2023archive>`__
      * Videos (2024) will end up on `this youtube playlist
        <https://studio.youtube.com/playlist/PLZLVmS9rf3nOeuqXNa8tS-tDtdQrES2We/edit>`__
        the same evening, and appear `on Twitch
