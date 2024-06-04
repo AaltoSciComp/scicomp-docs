@@ -5,6 +5,17 @@ June 2024 / Intro to Scientific Computing /  HPC Summer Kickstart
 .. admonition:: Quick links
    :class: important
 
+   * News (day 1):
+
+     * We covered the things seen in the schedule.  Most was
+       high-level background stuff.
+     * For day 2, you need to: be able to connect to your respective
+       cluster (:doc:`/triton/tut/connecting`)
+     * Read or watch something about how to use the
+       shell/terminal/command line, since this will be extensively
+       used.  See the links under :ref:`preparation
+       <kickstart-2024-prep>` below.
+
    * Watching links
 
      * Livestream: https://twitch.tv/coderefinery
