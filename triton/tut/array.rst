@@ -203,6 +203,17 @@ of successes)::
    $ cat pi_22.json
    {"successes": 1963163, "pi_estimate": 3.1410608, "iterations": 2500000}
 
+An alternative to using ``case`` statement would be using ``bash`` arrays, like in the following example
+:download:`pi_array_hardcoded_alt.sh </triton/examples/array/pi_array_hardcoded_alt.sh>`
+.
+
+.. literalinclude:: /triton/examples/array/pi_array_hardcoded_alt.sh
+   :language: slurm
+
+``bash`` arrays and variables only support non-negative integers or strings, so if your parameters are e.g. real numbers, they can be put in the array as strings::
+   FREQUENCIES=("2.8" "2.9" "3.0" "3.1")
+   FREQUENCY=${FREQUENCIES[SLURM_ARRAY_TASK_ID]}
+
 Reading parameters from one file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
