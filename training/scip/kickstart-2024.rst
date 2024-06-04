@@ -56,12 +56,12 @@ Practical information
 ---------------------
 
 This is a **livestream course with distributed in-person exercise and
-support**. Everyone may attend
-the **livestream** at https://twitch.tv/coderefinery, no registration
-needed, and this is the primary way to watch all sessions.  Aalto has
-an **in-person exercise and support session** (location TBA), as do
-some other partners, and a **collaborative document** is
-used for a continuous Q&A session.
+support**. Everyone may attend the **livestream** at
+https://twitch.tv/coderefinery, no registration needed, and this is
+the primary way to watch all sessions.  Aalto sometimes an **in-person
+exercise and support session**, as do some other
+partners, and a **shared notes** is used for a continuous
+Q&A session.
 
 **Time, date:**  4 -- 6 June 2024 (Tue--Thu). 11:50-16:00 EEST /
 10:50-15:00 CEST
@@ -70,12 +70,12 @@ used for a continuous Q&A session.
 partners, and probably in-person discussion/practice rooms at some
 campus.
 
-**Registration:** Please register at this link: https://link.webropol.com/ep/scicompsummer2024
-It's OK to attend
-only individual sessions is fine.
+**Registration:** Please register at this link:
+https://link.webropol.com/ep/scicompsummer2024 .
+It's OK to register and attend only individual sessions.
 
-**Cost:** Livestream is free to everyone.  Aalto in-person is free of 
-charge for FGCI consortium members including Aalto employees and
+**Cost:** Livestream is free to everyone.  Aalto in-person is free of
+charge for FCCI consortium members including Aalto employees and
 students.
 
 **Additional course info at:** scip@aalto.fi
@@ -131,8 +131,7 @@ started with the computing resources.
 
 .. admonition:: Subject to change
 
-   Schedule may still have minor updates, please check back for
-   the latest.
+   Schedule may still have minor updates as it happens.
 
 
 * **Day #1 (Tue 4.jun):** Basics and background
