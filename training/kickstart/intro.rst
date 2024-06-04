@@ -189,18 +189,19 @@ You get overloaded with information
 * Change your watching style and know material will be available for you to watch later.
 * Instant video replays help here, but the material is also open.
 
-HackMD is too fast to follow
+Notes are too fast to follow
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 *  Don't follow it. It's published for future reference.
 *  Only look at the bottom during the sessions. Review later.
 *  Write your question and come back to it later.
 
-HackMD lags and you can't edit / text goes wrong
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The notes lag and you can't edit / text goes wrong
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 *  This sometimes happens with high load
 *  We recently upgraded but it could still happen.
 *  Everyone: Switch to "view mode" and wait for it to calm down.
-*  The real solution is that we (the staff) need to keep it shorter - we will move older data to an "archive HackMD". Screenshot of HackMD with a link to Archive HackMD outlined in a red box.
+*  The real solution is that we (the staff) need to keep it shorter -
+   we will move older data to an "Notes archive".
 
 .. figure:: https://coderefinery.github.io/manuals/_images/hackmd--archivelink.png
    :alt: Screenshot with "archive link" highlighted
