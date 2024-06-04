@@ -12,7 +12,7 @@ June 2024 / Intro to Scientific Computing /  HPC Summer Kickstart
        get it automatically
      * `Archive notes doc <https://hackmd.io/@AaltoSciComp/scicomphpc2023archive>`__
      * Videos (2024) will end up on `this youtube playlist
-       <https://studio.youtube.com/playlist/PLZLVmS9rf3nOeuqXNa8tS-tDtdQrES2We/edit>`__
+       <https://www.youtube.com/playlist?list=PLZLVmS9rf3nOeuqXNa8tS-tDtdQrES2We>`__
        the same evening, and appear `on Twitch
        <https://twitch.tv/coderefinery/videos>`__ immediately.
 
