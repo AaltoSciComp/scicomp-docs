@@ -171,7 +171,7 @@ started with the computing resources.
       
   * **13:50--14:00: break** 
   
-  * **14:00--15:00: Connecting to a HPC cluster** *Thomas Pfau and
+  * **14:00--14:50: Connecting to a HPC cluster** *Thomas Pfau and
     Jarno Rantaharju*
 
     - Required if you are attending the Triton/HPC tutorials the
@@ -181,6 +181,8 @@ started with the computing resources.
       registered participants for the affiliated HPC clusters)
     - Break until 15:00 once you get connected.
     - Material: :doc:`/triton/tut/connecting`
+
+  * **14:50--15:00: Break**
 
   * **15:00--15:25: How to ask for help with (super)computers** *Radovan Bast and Richard Darst*
 
