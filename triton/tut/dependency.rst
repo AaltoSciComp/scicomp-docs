@@ -4,6 +4,14 @@ Job dependencies
 
 .. highlight:: console
 
+.. admonition:: Abstract
+
+   * Sometimes, several jobs need to be run in sequence (for example,
+     different parts that require different types of resources).  This
+     can be done with job dependencies.
+
+   * This can be done with the ``--dependency`` Slurm option.
+
 Introduction
 ============
 
