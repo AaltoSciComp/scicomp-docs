@@ -65,14 +65,20 @@ You can submit this program to Triton using ``srun``. All input/output still goe
 (but note that graphical applications don't work this way - see
 below)::
 
-    $ srun --mem=100M --time=0:10:00 python3 slurm/pi.py 10000
-    srun: job 52204499 queued and waiting for resources
+    srun --mem=100M --time=00:10:00 python3 slurm/pi.py 10000
+    srun: slurm_job_submit: Automatically setting partition to: batch-hsw,batch-bdw,batch-csl,batch-skl,batch-milan
+    srun: job 462418 queued and waiting for resources
 
-Here, we are asking for 100 Megabytes of memory (``--mem=100M``) for a
-duration of ten minutes (``--time=0:10:00``) (See the :doc:`quick
+Here, we are asking for 100 megabytes of memory (``--mem=100M``) for a
+duration of ten minutes (``--time=00:10:00``) (See the :doc:`quick
 reference <../ref/index>` or below for more options).
-While your job - with **jobid** 52204499 - is waiting to be allocated resources, your shell
+While your job - with **jobid** 462418 - is waiting to be allocated resources, your shell
 blocks.
+
+In other HPC systems you might need to specify account via ``--account=ACCOUNT_NAME`` or
+partition ``--partition=PARTITION_NAME`` when submitting a job. In Triton a parser
+script will give sensible defaults for these based on your job's requirements, so in most
+cases you do not need to use them.
 
 You can open a new shell (ssh again) on the cluster and run the command
 ``squeue -u $USER`` or ``slurm q`` to see all the jobs
@@ -80,26 +86,26 @@ you currently have waiting in queue::
 
   $ slurm q
   JOBID              PARTITION NAME                  TIME       START_TIME    STATE NODELIST(REASON)
-  52204499           short-ivb python3               0:00              N/A  PENDING (None)
+  462418             batch-hsw python3               0:00              N/A  PENDING (None)
 
 You can see information such as the state, which partition the requested node reside in, etc.
 
-Once resources are allocated to your job, you see the name of the machine
-in the cluster your program ran on, output to your terminal::
+Once resources are allocated to your job you will see output to your terminal::
 
-  srun: job 52204499 has been allocated resources
+  srun: job 462418 has been allocated resources
+  Calculating pi via 10000 stochastic trials
   {"pi_estimate": 3.126, "iterations": 10000, "successes": 7815}
 
 To show it's running on a diferent computer, you can ``srun
-hostname`` (in this case, it runs on ``csl42``)::
+hostname`` (in this case, it runs on ``pe84``)::
 
   $ hostname
-  login3.triton.aalto.fi
+  login4.triton.aalto.fi
   $ srun hostname
-  srun: job 19039411 queued and waiting for resources
-  srun: job 19039411 has been allocated resources
-  csl42.int.triton.aalto.fi
-
+  srun: slurm_job_submit: Automatically setting partition to: batch-hsw,batch-bdw,batch-csl,batch-skl,batch-milan
+  srun: job 462453 queued and waiting for resources
+  srun: job 462453 has been allocated resources
+  pe84.int.triton.aalto.fi
 
 .. admonition:: Disadvantages
 
@@ -190,15 +196,6 @@ As shown in a previous example, the command ``slurm queue`` (or
 which is a good way to make sure you have stopped everything.
 
 
-
-Setting resource parameters
----------------------------
-
-Remember to set the resources you need well, otherwise your are
-wasting resources and lowering your priority.  We went over this in :doc:`slurm`.
-
-
-
 .. _triton-tut-exercise-repo:
 
 Exercises
@@ -211,13 +208,15 @@ Exercises
    The program ``hpc-examples/slurm/memory-use.py``
    uses up a lot of memory to do nothing.  Let's play with it.
    It's run as follows:
-   ``python hpc-examples/slurm/memory-use.py 50M``, where the
+   ``python3 hpc-examples/slurm/memory-use.py 50M``, where the
    last argument is however much memory you want to eat.  You can use
    ``--help`` to see the options of the program.
 
-   a) Try running the program with ``50M``.
+   a) Try running the program with a memory use of ``50M`` and with no
+      memory request specified.
 
-   b) Run the program with ``50M`` and ``srun --mem=500M``.
+   b) Run the program with a memory use of ``50M`` and a memory request
+      of 500 megabytes (``srun --mem=500M``).
 
    c) Increase the amount of memory the Python process tries to use (not the
       amount of memory Slurm allocates).  How much memory can
@@ -228,47 +227,45 @@ Exercises
       every 60 seconds or so.
       To make the program last longer, so that the memory used can be measured,
       give the ``--sleep`` option to the Python process, like this:
-      ``python hpc-examples/slurm/memory-use.py 50M --sleep=60`` -
+      ``python3 hpc-examples/slurm/memory-use.py 50M --sleep=60`` -
       keep it available.
 
    .. solution::
 
-      ::
+     ::
 
-	 $ srun python slurm/memory-use.py --sleep=60 50M
-         srun: job 19200349 queued and waiting for resources
-         srun: job 19200349 has been allocated resources
-         Trying to use 50000000 bytes of memeory
-         Using 6041600 bytes so far (allocated: 2)
-         Using 6148096 bytes so far (allocated: 4)
-         ...
-	 $ srun --mem=500M python slurm/memory-use.py --sleep=60 50M
-	 (seems to also work)
-	 $ srun --mem=500M python slurm/memory-use.py --sleep=60 1000M
-	 (seems to also work, even though 1000 > 500)
-	 $ srun --mem=500M python slurm/memory-use.py --sleep=60 5000M
-	 srun: job 19201174 queued and waiting for resources
-         srun: job 19201174 has been allocated resources
-         slurmstepd: error: Detected 1 oom-kill event(s) in StepId=19201174.0. Some of your processes may have been killed by the cgroup out-of-memory handler.
-         srun: error: csl48: task 0: Out Of Memory
-         srun: launch/slurm: _step_signal: Terminating StepId=19201174.0
+      $ srun python3 slurm/memory-use.py --sleep=60 50M
+      srun: slurm_job_submit: Automatically setting partition to: batch-hsw,batch-bdw,batch-csl,batch-skl,batch-milan
+      srun: job 463444 queued and waiting for resources
+      srun: job 463444 has been allocated resources
+      Trying to use 50000000 bytes of memeory
+      Using 10293248 bytes so far (allocated: 2)
+      Using 10293248 bytes so far (allocated: 4)
+      ...
+      $ srun --mem=500M python slurm/memory-use.py --sleep=60 50M
+      (this works as well)
+      $ srun --mem=500M python3 slurm/memory-use.py --sleep=60 1000M
+      srun: slurm_job_submit: Automatically setting partition to: batch-hsw,batch-bdw,batch-csl,batch-skl,batch-milan
+      srun: job 463531 queued and waiting for resources
+      srun: job 463531 has been allocated resources
+      slurmstepd: error: Detected 1 oom_kill event in StepId=463531.0. Some of the step tasks have been OOM Killed.
+      srun: error: pe83: task 0: Out Of Memory
+      srun: Terminating StepId=463531.0
 
 
-      The history output::
+   The history output::
 
-	$ slurm history
-	19200349      python               06-06 22:43:54     500M       -    00:00.100    00:01:00  none   1 1   0:0 COMP  csl48
-          └─ extern   *                    06-06 22:43:54               1M    00:00.001    00:01:00     1   1 1   0:0 COMP  csl48
-          └─ 0        python               06-06 22:43:54              70M    00:00.098    00:01:00     1   1 1   0:0 COMP  csl48
-        19201044      python               06-06 22:59:56      50M       -    00:00.085    00:00:10  none   1 1   0:0 CANC  csl48
-          └─ extern   *                    06-06 22:59:56               1M    00:00.001    00:00:10     1   1 1   0:0 COMP  csl48
-          └─ 0        python               06-06 22:59:56               1M    00:00.084    00:00:10     1   1 1   1:0 FAIL  csl48
-        19201047      python               06-06 23:00:13     500M       -    00:00.098    00:01:00  none   1 1   0:0 COMP  csl48
-          └─ extern   *                    06-06 23:00:13               1M    00:00.001    00:01:00     1   1 1   0:0 COMP  csl48
-          └─ 0        python               06-06 23:00:13              70M    00:00.097    00:01:00     1   1 1   0:0 COMP  csl48
-        19201119      python               06-06 23:01:38     500M       -    00:00.618    00:01:01  none   1 1   0:0 COMP  csl48
-          └─ extern   *                    06-06 23:01:38               1M    00:00.001    00:01:01     1   1 1   0:0 COMP  csl48
-          └─ 0        python               06-06 23:01:38            1030M    00:00.617    00:01:01     1   1 1   0:0 COMP  csl48
+      $ slurm history
+      463444        python3              06-05 10:55:07     500M       -    00:00.081    00:01:01  none   1 1   0:0 COMP  pe83
+        └─ extern   *                    06-05 10:55:07               0M    00:00.001    00:01:01     1   1 1   0:0 COMP  pe83
+        └─ 0        python3              06-05 10:55:08              69M    00:00.080    00:01:00     1   1 1   0:0 COMP  pe83
+      463501        python3              06-05 10:56:43     500M       -    00:00.081    00:01:00  none   1 1   0:0 COMP  pe83
+        └─ extern   *                    06-05 10:56:43               0M    00:00.001    00:01:00     1   1 1   0:0 COMP  pe83
+        └─ 0        python3              06-05 10:56:43              69M    00:00.080    00:01:00     1   1 1   0:0 COMP  pe83
+      463531        python3              06-05 10:57:52     500M       -    00:00.223    00:00:00  none   1 1 0:125 OUT_  pe83
+        └─ extern   *                    06-05 10:57:52               0M    00:00.001    00:00:00     1   1 1   0:0 COMP  pe83
+        └─ 0        python3              06-05 10:57:52               0M    00:00.222    00:00:00     1   1 1 0:125 OUT_  pe83
+
 
 	The last failing job seems to not be in history!  (but the
 	OOM, out of memory, error is in the output).
@@ -377,11 +374,11 @@ Exercises
             Job Wall-clock time: 00:07:53
             ...
 
-      c) each process should be visible as a separate step indexed from 0. 
-         For larger iterations, TotalCpuTime should be similar to WallTime, 
-         Since TotalCpuTime shows amount of time Cpus were at full utilization, 
-         times the number of Cpus. Note that TotalCPUTime has precision of 
-         milliseconds, whereas WallTime has precision of seconds. 
+      c) each process should be visible as a separate step indexed from 0.
+         For larger iterations, TotalCpuTime should be similar to WallTime,
+         Since TotalCpuTime shows amount of time Cpus were at full utilization,
+         times the number of Cpus. Note that TotalCPUTime has precision of
+         milliseconds, whereas WallTime has precision of seconds.
 
 	 ::
 
