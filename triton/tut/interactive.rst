@@ -253,18 +253,18 @@ Exercises
       srun: Terminating StepId=463531.0
 
 
-   The history output::
+     The history output::
 
-      $ slurm history
-      463444        python3              06-05 10:55:07     500M       -    00:00.081    00:01:01  none   1 1   0:0 COMP  pe83
-        └─ extern   *                    06-05 10:55:07               0M    00:00.001    00:01:01     1   1 1   0:0 COMP  pe83
-        └─ 0        python3              06-05 10:55:08              69M    00:00.080    00:01:00     1   1 1   0:0 COMP  pe83
-      463501        python3              06-05 10:56:43     500M       -    00:00.081    00:01:00  none   1 1   0:0 COMP  pe83
-        └─ extern   *                    06-05 10:56:43               0M    00:00.001    00:01:00     1   1 1   0:0 COMP  pe83
-        └─ 0        python3              06-05 10:56:43              69M    00:00.080    00:01:00     1   1 1   0:0 COMP  pe83
-      463531        python3              06-05 10:57:52     500M       -    00:00.223    00:00:00  none   1 1 0:125 OUT_  pe83
-        └─ extern   *                    06-05 10:57:52               0M    00:00.001    00:00:00     1   1 1   0:0 COMP  pe83
-        └─ 0        python3              06-05 10:57:52               0M    00:00.222    00:00:00     1   1 1 0:125 OUT_  pe83
+        $ slurm history
+        463444        python3              06-05 10:55:07     500M       -    00:00.081    00:01:01  none   1 1   0:0 COMP  pe83
+          └─ extern   *                    06-05 10:55:07               0M    00:00.001    00:01:01     1   1 1   0:0 COMP  pe83
+          └─ 0        python3              06-05 10:55:08              69M    00:00.080    00:01:00     1   1 1   0:0 COMP  pe83
+        463501        python3              06-05 10:56:43     500M       -    00:00.081    00:01:00  none   1 1   0:0 COMP  pe83
+          └─ extern   *                    06-05 10:56:43               0M    00:00.001    00:01:00     1   1 1   0:0 COMP  pe83
+          └─ 0        python3              06-05 10:56:43              69M    00:00.080    00:01:00     1   1 1   0:0 COMP  pe83
+        463531        python3              06-05 10:57:52     500M       -    00:00.223    00:00:00  none   1 1 0:125 OUT_  pe83
+          └─ extern   *                    06-05 10:57:52               0M    00:00.001    00:00:00     1   1 1   0:0 COMP  pe83
+          └─ 0        python3              06-05 10:57:52               0M    00:00.222    00:00:00     1   1 1 0:125 OUT_  pe83
 
 
 	The last failing job seems to not be in history!  (but the
