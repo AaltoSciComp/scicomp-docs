@@ -301,7 +301,7 @@ Exercises
    multiple processors. Run the script with multiple processors and
    :math:`10^8` iterations with::
 
-     $ srun --cpus-per-task=2 python pi.py --nprocs=2 100000000
+     $ srun --cpus-per-task=2 python3 pi.py --nprocs=2 100000000
 
    After you have run the script, do the following:
 
