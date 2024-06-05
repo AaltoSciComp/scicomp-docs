@@ -227,6 +227,7 @@ started with the computing resources.
 
   - **12:30--15:00: Running your first jobs in the queue**
 
+    - Cluster shell, section :ref:`triton-tut-example-repo`
     - :doc:`/triton/tut/interactive`
     - :doc:`/triton/tut/serial`
     - :doc:`/triton/tut/monitoring`
