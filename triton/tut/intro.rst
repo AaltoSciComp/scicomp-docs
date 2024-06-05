@@ -3,6 +3,22 @@ About clusters and your work
 
 .. include:: /triton/ref/videos.rst
 
+.. admonition:: Abstract
+
+   * A cluster is a bunch of computers connected together by network,
+     shared storage, and a scheduler (Slurm) that distributes waiting
+     jobs across the available resources.
+
+   * Triton is the Aalto University cluster and has significant
+     resources and local support.
+
+   * A cluster needs techniques to use properly - it's not like your
+     own computer which you have full access to.
+
+   * Ask for help if you need it.
+
+   * Keep the :doc:`../ref/index` open.
+
 Science-IT is an Aalto infrastructure for scientific computing.  Its
 roots was a collaboration between the Information and Computer Science
 department (now part of CS), Biomedical Engineering and Computational

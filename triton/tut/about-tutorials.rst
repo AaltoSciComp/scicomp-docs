@@ -3,6 +3,15 @@ About these tutorials
 
 .. include:: /triton/ref/videos.rst
 
+.. admonition:: Abstract
+
+   * These tutorials are written for Aalto University's Triton
+     cluster, but we have tried to make them useful far any
+     Slurm-based cluster.
+
+   * They are focused on basic usage, not the *high-performance* part:
+     there is plenty else about that.
+
 Welcome to the Aalto Scientific Computing High-performance computing
 (HPC) tutorials.  These tutorials will get you started with the Triton
 cluster.

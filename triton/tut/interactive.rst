@@ -8,6 +8,10 @@ Interactive jobs
 
    * Interactive jobs allow you to quickly test code (before scaling
      up) or getting more resources for manual analysis.
+
+   * More importantly, you can request resources via the options you
+     can find in the :doc:`/triton/ref/index`.
+
    * To run a single command interactively
 
      * ``srun [SLURM OPTIONS] COMMAND ...`` to run before any COMMAND
