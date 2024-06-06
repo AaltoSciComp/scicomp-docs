@@ -5,16 +5,27 @@ June 2024 / Intro to Scientific Computing /  HPC Summer Kickstart
 .. admonition:: Quick links
    :class: important
 
-   * News (day 1):
+   * News (final):
 
-     * We covered the things seen in the schedule.  Most was
-       high-level background stuff.
-     * For day 2, you need to: be able to connect to your respective
-       cluster (:doc:`/triton/tut/connecting`)
-     * Read or watch something about how to use the
-       shell/terminal/command line, since this will be extensively
-       used.  See the links under :ref:`preparation
-       <kickstart-2024-prep>` below.
+     - We hope that you are inspired by this course.  There is plenty
+       more to learn, keep reading and asking.
+     - The website will be updated with some more recommended
+       follow-up info (extra special topics we haven't covered this
+       time).
+     - Things we would recommend for follow-ups:
+       - `Kickstart best-of list
+	 <https://www.youtube.com/playlist?list=PLZLVmS9rf3nPd3HpX5x3Ff2IAyS6kuhMi>`__ -
+	 has some videos from this year, but also videos that are
+	 taught only some years.  Check this list for things you
+	 *didn't* see this year, and consider watching them.
+       - :doc:`Python environments with Conda
+	 </triton/apps/python-conda>` - a page on this site.
+       - `CodeRefinery workshop <https://coderefinery.org>`__ -
+	 software and programming tools for scientists and researchers
+	 (also a livestream course)
+       - `Python for Scientific Computing
+	 <https://aaltoscicomp.github.io/python-for-scicomp>`__ (also
+	 livestream, later this year)
 
    * Watching links
 
