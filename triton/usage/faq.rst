@@ -129,6 +129,18 @@ Job status and submission
 Accounts and Access to triton
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. collapse:: Mac users ...  invalid byte issue at login
+
+  Mac users may experience a login issue when logining with SSH or to https://ondemand.triton.aalto.fi
+  due to a locale settings on the local laptop/desktop. A workaround would be to tell Terminal to *not* set
+  the locale environment variables, by *turning off* this setting in the Terminal app:
+
+    Terminal > Preferences > Settings > [profile] > Advanced > Set locale environment variables on startup
+
+  Additionally check System Preferences > Language and Text  to make sure the settings are correct, the default
+  should be ``LANG=C.UTF-8`` or alike and not anything that ends with the ASCII.
+
+
 .. collapse::  Invalid account ... error message
 
   While submitting a job you receive an error message like

@@ -19,18 +19,18 @@ request the account.
 
 A few prerequisites:
 
--  You must :doc:`check the intended use cases and agree with the Triton
-   usage policies <usagepolicy>`, including the data and privacy
-   policies.
--  You must have valid Aalto account.
--  Also tell us your department/school in your account creation
-   request.
--  You should have enough background to use Triton well, including
-   Linux skills.  Read
-   `hands-on scientific computing
-   <https://hands-on.coderefinery.org/>`__, and you
-   should know A ("Basics"), C ("Linux"), and D ("HPC") well.  Also
-   see the :ref:`Triton tutorials <tutorials>`.
+- You must :doc:`check the intended use cases and agree with the
+  Triton usage policies <usagepolicy>`, including the data and
+  privacy policies.
+- You must learn how to use a computer cluster properly.  At minimum,
+  read the :ref:`Triton tutorials <tutorials>` relevant to your uses
+  (scanning all tutorials if it is new to you).  Also, you might want
+  to read `hands-on scientific computing
+  <https://hands-on.coderefinery.org/>`__, and you should know A
+  ("Basics"), C ("Linux"), and D ("HPC") well.
+- You must have valid Aalto account.
+- Also tell us your department/school in your account creation
+  request.
 
 .. _triton-accounts-are-for:
 

@@ -40,8 +40,8 @@ How to use local drives on compute nodes
 
 NOT for the long-term data. Cleaned every time your job is finished.
 
-You have to use ``--gres=spindle`` to ensure that you get a hard
-disk (note 2019-january: except GPU nodes).
+You have to use ``--constraint=localdisk`` to ensure that you get a hard
+disk.
 
 ``/tmp`` is a bind-mounted user specific directory. Directory is per-user
 (not per-job that is), if you get two jobs running on the same node, you
