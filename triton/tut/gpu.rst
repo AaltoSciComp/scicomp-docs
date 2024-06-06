@@ -7,7 +7,7 @@ GPU computing
 .. admonition:: Abstract
 
    * Request a GPU with the Slurm option ``--gpus=1`` or
-     ``--gres=gpu:0`` (some clusters need ``--partition=gpu`` or similar).
+     ``--gres=gpu:1`` (some clusters need ``--partition=gpu`` or similar).
    * Select a certain type of GPU with e.g. ``--constraint='volta'``
      (see :doc:`the quick reference for names <../ref/index>`).
    * Monitor GPU performance with ``sacct -j JOBID -o comment -p``.
