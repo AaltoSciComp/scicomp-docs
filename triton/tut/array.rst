@@ -182,17 +182,24 @@ you want to submit to Slurm.
 Assume you would like to run the pi estimation code for 5 different seed values, each
 for 2.5 million iterations. You could assign a seed value to each task in you job array
 and save each output to a file. Having calculated all estimations, you could take the
-average of all the pi values to arrive at a more accurate estimate. An example of such
-a batch script
-:download:`pi_array_hardcoded.sh </triton/examples/array/pi_array_hardcoded.sh>`
-is as follows.
+average of all the pi values to arrive at a more accurate estimate.
 
-.. literalinclude:: /triton/examples/array/pi_array_hardcoded.sh
+We can do this in multiple different ways, but here are two examples that
+utilize Bash scripting for doing it.
+
+Bash case style
+===============
+
+The batch script
+:download:`pi_array_hardcoded_case.sh </triton/examples/array/pi_array_hardcoded_case.sh>`
+utilizes the case-statement in Bash to choose between different seed values:
+
+.. literalinclude:: /triton/examples/array/pi_array_hardcoded_case.sh
    :language: slurm
 
 Save the script and submit it to Slurm::
 
-   $ sbatch pi_array_hardcoded.sh
+   $ sbatch pi_array_hardcoded_case.sh
    Submitted batch job 60997871
 
 Once finished, 5 Slurm output files and 5 application output files will
@@ -202,6 +209,23 @@ of successes)::
 
    $ cat pi_22.json
    {"successes": 1963163, "pi_estimate": 3.1410608, "iterations": 2500000}
+
+Bash array style
+================
+
+The batch script
+:download:`pi_array_hardcoded_array.sh </triton/examples/array/pi_array_hardcoded_array.sh>`
+utilizes the Bash arrays to choose between different seed values:
+
+.. literalinclude:: /triton/examples/array/pi_array_hardcoded_array.sh
+   :language: slurm
+
+Save the script and submit it to Slurm::
+
+   $ sbatch pi_array_hardcoded_array.sh
+
+Results are identical to the case-switch way. Do note that in this method the
+Bash array starts from 0, so your ``--array``-range should start from 0 as well.
 
 Reading parameters from one file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

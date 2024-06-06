@@ -10,10 +10,9 @@ Shared memory parallelism: multithreading & multiprocessing
 
    * Use ``--cpus-per-task=C`` to reserve ``C`` CPUs for your job.
 
-   * If you use ``srun`` to launch your program in your sbatch-script and
-     want your program to utilize all of the allocated CPUs, run
-     ``export SRUN_CPUS_PER_TASK=$SLURM_CPUS_PER_TASK`` in your script
-     before calling ``srun``.
+   * In your program set the number of used CPUs to match the number
+     of requested CPUs. You can use ``$SLURM_CPUS_PER_TASK`` environment
+     variable to get this number dynamically.
 
    * You must always :doc:`monitor jobs <monitoring>` to make sure they are using all the
      resources you request (``seff JOBID``).
@@ -80,23 +79,17 @@ Running an example shared memory parallel program
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. include:: ../ref/examples-repo.rst
+For this example, let's again use the
+`slurm/pi.py <https://github.com/AaltoSciComp/hpc-examples/blob/master/slurm/pi.py>`__
+-script that estimates pi with Monte Carlo methods.
 
-For this example, let's consider
-`pi.py <https://github.com/AaltoSciComp/hpc-examples/blob/master/slurm/pi.py>`__
-in the ``slurm``-folder.
-It estimates pi with Monte Carlo methods and can utilize multiple processes for calculating
-the trials.
-
-First off, we need to compile the program with a suitable OpenMPI version. Let's use the
-
-The script is in the ``slurm``-folder. You can call the script with
-``python pi.py --nprocs=C N``, where ``N`` is the number of iterations to be done by the
+To utilize parallelism written into the script you can run it with the arguments
+``python3 slurm/pi.py --nprocs=C N``, where ``N`` is the number of iterations to be done by the
 algorithm and ``C`` is the number of processors to be used for the parallel calculation.
 
 Let's run the program with two processes using ``srun``::
 
-  $ srun --cpus-per-task=2 --time=00:10:00 --mem=1G python pi.py --nprocs=2 1000000
+  $ srun --cpus-per-task=2 --time=00:10:00 --mem=1G python3 slurm/pi.py --nprocs=2 1000000
 
 **It is vitally important to notice that the program needs to be told the amount of
 processes it should use.** The program does not obtain this information from the
@@ -114,9 +107,7 @@ Using a slurm script giving the number of CPUs to the program becomes easier:
    #SBATCH --output=pi.out
    #SBATCH --cpus-per-task=2
 
-   export SRUN_CPUS_PER_TASK=$SLURM_CPUS_PER_TASK
-
-   srun python pi.py --nprocs=$SLURM_CPUS_PER_TASK 1000000
+   srun python3 slurm/pi.py --nprocs=$SLURM_CPUS_PER_TASK 1000000
 
 Let's call this script ``pi-sharedmemory.sh``. You can submit it with::
 
@@ -126,13 +117,6 @@ The environment variable ``$SLURM_CPUS_PER_TASK`` is set during program runtime
 and it is set based on the number of ``--cpus-per-task`` requested. For more tricks
 on how to set the number of processors, see the
 :ref:`section on using it effectively <effective-cpus-per-task>`.
-
-If you use ``srun`` to launch your program in your sbatch-script and
-want your program to utilize all of the allocated CPUs, run
-``export SRUN_CPUS_PER_TASK=$SLURM_CPUS_PER_TASK`` in your script
-before calling ``srun``. For more information see section on
-:ref:`lack of parallelization when using srun <srun-cpus-per-task>`.
-
 
 
 Special cases and common pitfalls
@@ -252,30 +236,6 @@ ways in your scripts. Below are few examples:
 
 
 
-.. _srun-cpus-per-task:
-
-Lack of parallelisation when using srun
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Since Slurm version 22.05, job steps run with ``srun`` will not
-automatically inherit the ``--cpus-per-task``-value that is requested
-by ``sbatch``. This was done to make it easier to start multiple job
-steps with different CPU allocations within one job.
-
-If you want to give all CPUs to ``srun`` you can either call ``srun``
-in the script with ``srun --cpus-per-task=$SLURM_CPUS_PER_TASK`` or
-set:
-
-.. code-block:: sh
-
-     export SRUN_CPUS_PER_TASK=$SLURM_CPUS_PER_TASK
-
-
-For more information see documentation pages for
-`srun <https://slurm.schedmd.com/srun.html>`_ and
-`sbatch <https://slurm.schedmd.com/sbatch.html>`_.
-
-
 Asking for multiple tasks when code does not use MPI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -306,15 +266,15 @@ Exercises
 
       .. code-block:: bash
 
-         srun --time=00:10:00 --mem=1G python pi.py 100000000
+         srun --time=00:10:00 --mem=1G python3 slurm/pi.py 100000000
 
       Afterwards you can use ``seff JOBID`` to get the utilization.
       You can run the program with multiple CPUs with:
 
       .. code-block:: bash
 
-         srun --cpus-per-task=2 --time=00:10:00 --mem=1G python pi.py --nprocs=2 100000000
-         srun --cpus-per-task=4 --time=00:10:00 --mem=1G python pi.py --nprocs=4 100000000
+         srun --cpus-per-task=2 --time=00:10:00 --mem=1G python3 slurm/pi.py --nprocs=2 100000000
+         srun --cpus-per-task=4 --time=00:10:00 --mem=1G python3 slurm/pi.py --nprocs=4 100000000
 
       You should see that the time needed to run the program
       ("Job Wall-clock time") ) is basically
@@ -336,7 +296,7 @@ Exercises
 
       .. code-block:: bash
 
-         srun --cpus-per-task=4 --time=00:10:00 --mem=1G python pi.py --serial=0.1 --nprocs=4 100000000
+         srun --cpus-per-task=4 --time=00:10:00 --mem=1G python3 slurm/pi.py --serial=0.1 --nprocs=4 100000000
 
       Afterwards you can use ``seff JOBID`` to get the utilization.
 
@@ -360,13 +320,13 @@ Exercises
 
       .. code-block:: bash
 
-         srun --cpus-per-task=4 --time=00:10:00 --mem=1G python pi.py --nprocs=4 100000000
+         srun --cpus-per-task=4 --time=00:10:00 --mem=1G python3 slurm/pi.py --nprocs=4 100000000
 
       You can run the optimized version with the following:
 
       .. code-block:: bash
 
-         srun --time=00:10:00 --mem=1G python pi.py --optimized 100000000
+         srun --time=00:10:00 --mem=1G python3 slurm/pi.py --optimized 100000000
 
       Afterwards you can use ``seff JOBID`` to get the utilization.
 

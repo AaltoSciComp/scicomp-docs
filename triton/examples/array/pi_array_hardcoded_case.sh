@@ -13,4 +13,4 @@ case $SLURM_ARRAY_TASK_ID in
    4)  SEED=432 ;;
 esac
 
-srun python slurm/pi.py 2500000 --seed=$SEED > pi_$SEED.json
+srun python3 slurm/pi.py 2500000 --seed=$SEED > pi_$SEED.json

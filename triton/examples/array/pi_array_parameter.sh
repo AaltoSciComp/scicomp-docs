@@ -7,4 +7,4 @@
 
 n=$SLURM_ARRAY_TASK_ID
 iteration=`sed -n "${n} p" iterations.txt`      # Get n-th line (1-indexed) of the file
-srun python slurm/pi.py ${iteration} > pi_iter_${iteration}.json
+srun python3 slurm/pi.py ${iteration} > pi_iter_${iteration}.json
