@@ -205,12 +205,6 @@ There is a ``gpu-debug``-partition that you can use to run short jobs
 CUDA libraries not found
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. figure:: /images/cuda_drivers.png
-   :width: 100%
-   :align: center
-
-   CUDA toolkit is usually installed separately to CUDA drivers
-
 If you ever get ``libcuda.so.1: cannot open shared object file: No such
 file or directory``, this means you are attempting to use a CUDA
 program on a node without a GPU. This especially happens if you try
@@ -229,6 +223,12 @@ If you're using Python, see the section on :ref:`CUDA libraries and Python <cuda
 
 CUDA libraries and Python deep learning frameworks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: /images/cuda_drivers.png
+   :width: 100%
+   :align: center
+
+   CUDA toolkit is usually installed separately to CUDA drivers
 
 When using a Python deep learning frameworks such as Tensorflow
 or PyTorch you usually need to create a conda environment that
@@ -266,8 +266,8 @@ For GPUs in Triton these flags are:
 
    -arch=sm_60 -gencode=arch=compute_60,code=sm_60 -gencode=arch=compute_70,code=sm_70 -gencode=arch=compute_80,code=sm_80 -gencode=arch=compute_90,code=sm_90
 
-Here architectures (``compute_XX``/``sm_XX``) number 60, 70 and 80
-correspond to GPU cards P100, V100 and A100 respectively.
+Here architectures (``compute_XX``/``sm_XX``) number 60, 70, 80 and 90
+correspond to GPU cards P100, V100, A100 and H100 respectively.
 
 For more information, you can check this
 `excellent article <https://arnon.dk/matching-sm-architectures-arch-and-gencode-for-various-nvidia-cards/>`__
