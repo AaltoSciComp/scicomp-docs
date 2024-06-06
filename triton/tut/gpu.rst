@@ -6,13 +6,13 @@ GPU computing
 
 .. admonition:: Abstract
 
-   * Request a GPU with the Slurm option ``--gres=gpu:1`` or
-     ``--gpus=1`` (some clusters need ``-p gpu`` or similar).
+   * Request a GPU with the Slurm option ``--gpus=1`` or
+     ``--gres=gpu:0`` (some clusters need ``--partition=gpu`` or similar).
    * Select a certain type of GPU with e.g. ``--constraint='volta'``
      (see :doc:`the quick reference for names <../ref/index>`).
    * Monitor GPU performance with ``sacct -j JOBID -o comment -p``.
-   * For development, run jobs of 4 hours or less, and they can run
-     quickly in the ``gpushort`` queue.
+   * You can test out small jobs of 30 minutes or less in the
+     ``gpu-debug``-partition (``--partition=gpu-debug``).
    * If you aren't fully sure of how to scale up, contact us
      :doc:`Research Software Engineers </rse/index>` early.
 
@@ -80,19 +80,19 @@ Slurm keeps track of the GPU resources as generic resources (GRES) or
 trackable resources (TRES). They are basically limited resources that you
 can request in addition to normal resources such as CPUs and RAM.
 
-To request GPUs on Slurm, you should use the ``--gres=gpu:1`` or ``--gpus=1``
+To request GPUs on Slurm, you should use the ``--gpus=1`` or ``--gres=gpu:1``
 -flags.
 
-You can also use syntax ``--gres=gpu:GPU_TYPE:1``, where ``GPU_TYPE``
-is a name chosen by the admins for the GPU. For example, ``--gres=gpu:v100:1``
-would give you a V100 card. See section on
+You can also use syntax ``--gpus=GPU_TYPE:1`` (or ``--gres=gpu:GPU_TYPE:1``),
+where ``GPU_TYPE`` is a name chosen by the admins for the GPU.
+For example, ``--gpus=v100:1`` would give you a V100 card. See section on
 :ref:`reserving specific GPU architectures <gpu-constraint>` for more information.
 
-You can request more than one GPU with ``--gres=gpu:G``, where ``G`` is
+You can request more than one GPU with ``--gpus=G``, where ``G`` is
 the number of the requested GPUs.
 
 Some GPUs are placed in a quick debugging queue. See section on
-:ref:`reserving quick debugging resources <gpushort>` for more
+:ref:`reserving quick debugging resources <gpu-debug>` for more
 information.
 
 .. note::
@@ -122,14 +122,14 @@ a newer compiler:
 
 .. code-block:: bash
 
-   module load gcc/8.4.0 cuda
+   module load gcc/12.3.0 cuda/12.2.1
 
 Now we should have a compiler and a CUDA toolkit loaded. After this
 we can compile the code with:
 
 .. code-block:: bash
 
-   nvcc -arch=sm_60 -gencode=arch=compute_60,code=sm_60 -gencode=arch=compute_70,code=sm_70 -gencode=arch=compute_80,code=sm_80 -o pi-gpu pi-gpu.cu
+   nvcc -arch=sm_60 -gencode=arch=compute_60,code=sm_60 -gencode=arch=compute_70,code=sm_70 -gencode=arch=compute_80,code=sm_80 -gencode=arch=compute_90,code=sm_90 -o pi-gpu slurm/pi-gpu.cu
 
 This monstrosity of a command is written like this because we want our code
 to be able run on multiple different GPU architectures. For more information,
@@ -140,7 +140,7 @@ Now we can run the program using ``srun``:
 
 .. code-block:: bash
 
-   srun --time=00:10:00 --mem=500M --gres=gpu:1 ./pi-gpu 1000000
+   srun --time=00:10:00 --mem=500M --gpus=1 ./pi-gpu 1000000
 
 This worked because we had the correct modules already loaded.
 Using a slurm script setting the requirements and loading the correct modules becomes easier:
@@ -151,9 +151,9 @@ Using a slurm script setting the requirements and loading the correct modules be
    #SBATCH --time=00:10:00
    #SBATCH --mem=500M
    #SBATCH --output=pi-gpu.out
-   #SBATCH --gres=gpu:1
+   #SBATCH --gpus=1
 
-   module load gcc/8.4.0 cuda
+   module load cuda/12.2.1
    ./pi-gpu 1000000
 
 .. note::
@@ -191,22 +191,25 @@ Alternative way is to use syntax ``--gres=gpu:GPU_TYPE:1``, where ``GPU_TYPE``
 is a name chosen by the admins for the GPU. For example, ``--gres=gpu:v100:1``
 would give you a V100 card.
 
-.. _gpushort:
+.. _gpu-debug:
 
 Reserving resources from the short job queue for quick debugging
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-There is a ``gpushort`` partition with a time limit of 4 hours that
-often has space (like with other partitions, this is automatically
-selected for short jobs).  As of early 2022, it has four Tesla P100
-cards in it (view with ``slurm partitions | grep gpushort``).  If you
-are doing testing and development and these GPUs meet your needs, you
-may be able to test much faster here. Use ``-p gpushort`` for this.
+There is a ``gpu-debug``-partition that you can use to run short jobs
+(30 minutes or less) for quick tests and debugging. Use
+``--partition=gpu-debug`` for this.
 
 .. _cuda-missing:
 
 CUDA libraries not found
 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: /images/cuda_drivers.png
+   :width: 100%
+   :align: center
+
+   CUDA toolkit is usually installed separately to CUDA drivers
 
 If you ever get ``libcuda.so.1: cannot open shared object file: No such
 file or directory``, this means you are attempting to use a CUDA
@@ -261,7 +264,7 @@ For GPUs in Triton these flags are:
 
 .. code-block:: make
 
-   -arch=sm_60 -gencode=arch=compute_60,code=sm_60 -gencode=arch=compute_70,code=sm_70 -gencode=arch=compute_80,code=sm_80
+   -arch=sm_60 -gencode=arch=compute_60,code=sm_60 -gencode=arch=compute_70,code=sm_70 -gencode=arch=compute_80,code=sm_80 -gencode=arch=compute_90,code=sm_90
 
 Here architectures (``compute_XX``/``sm_XX``) number 60, 70 and 80
 correspond to GPU cards P100, V100 and A100 respectively.
@@ -311,6 +314,13 @@ on efficient data loading.
 
 Profiling GPU usage with nvprof
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: NVIDIA has a new profiling suite called Nsight Compute
+
+   ``nvprof`` has been superceded by a tool called ``ncu``, which
+   is a command line interface (CLI) for
+   `NVIDIA Nsight Compute suite <https://docs.nvidia.com/nsight-compute/index.html>`__.
+   We'll produce more up-to-date profiling examples in the future.
 
 When using NVIDIA's GPUs you can try to use a profiling tool
 called ``nvprof`` to monitor what took most of the GPU's
