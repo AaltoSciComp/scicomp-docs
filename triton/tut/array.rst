@@ -324,7 +324,7 @@ Exercises
 
 .. exercise:: Array-2: Combine the outputs of the previous exercise.
 
-   You find an ``pi-aggregate.py`` program in hpc-examples.  Run this
+   You find the ``slurm/pi_aggregation.py`` program in hpc-examples.  Run this
    and give all the output files as arguments.  It will combine all
    the statistics and give a more accurate value of :math:`\pi`.
 
