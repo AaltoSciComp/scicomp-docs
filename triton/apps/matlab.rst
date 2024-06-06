@@ -47,7 +47,7 @@ sample slurm script is provided below::
 
     #!/bin/bash -l
     #SBATCH --time=00:05:00
-    #SBATCH --mem=100M
+    #SBATCH --mem=1GB
     #SBATCH -o serial_Matlab.out
     module load matlab
     n=3
@@ -138,6 +138,7 @@ Parallel matlab in exclusive mode
 
     #!/bin/bash -l
     #SBATCH --time=00:15:00
+    #SBATCH --mem=4GB
     #SBATCH --exclusive
     #SBATCH -o parallel_Matlab3.out
 
