@@ -6,7 +6,7 @@ Shared memory parallelism: multithreading & multiprocessing
 
 .. admonition:: Abstract
 
-   * Verify that your program can utilize multiple CPUs.
+   * Verify that your program can use multiple CPUs.
 
    * Use ``--cpus-per-task=C`` to reserve ``C`` CPUs for your job.
 

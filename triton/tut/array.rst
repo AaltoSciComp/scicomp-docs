@@ -12,6 +12,16 @@ Array jobs: embarassingly parallel execution
      like ``--array=1-10,12-15``.
    * The ``$SLURM_ARRAY_TASK_ID`` environment variable tells a job
      which array index it is.
+   * Minimal example:
+
+     .. code:: slurm
+
+       #!/bin/bash -l
+       #SBATCH --array=1-10
+
+       # Each job loads a different input file
+       srun python my_script.py input_${SLURM_ARRAY_TASK_ID}
+
    * There are different templates to use below, which you can adapt
      to your task.
    * If you aren't fully sure of how to scale up, contact us

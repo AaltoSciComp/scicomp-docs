@@ -11,16 +11,18 @@ tutorials.
 .. admonition:: Abstract
 
    * You need to figure out what parallelization paradigm your program
-     uses, otherwise you won't know which options to use.
+     uses, otherwise you won't know which options to use.  *It's not
+     always obvious and not always easy.*
 
-     * Embarrassingly parallel: use options for :doc:`array jobs <array>`.
-     * Multithreaded (OpenMP) or multiple processes (like Python's
+     * **Embarrassingly parallel** (fully separate runs): use options for :doc:`array jobs <array>`.
+     * **Multithreaded (OpenMP)** or **multiple processes** (like Python's
        multiprocessing): use options for :doc:`shared memory parallelism <parallel-shared>`.
-     * MPI: use options for :doc:`MPI parallelism <parallel-mpi>`.
+     * **MPI (message passing)**: use options for :doc:`MPI parallelism <parallel-mpi>`.
      * GPU: use options for :doc:`GPUs <gpu>`.
 
-   * You must always :doc:`monitor jobs <monitoring>` to make sure they are using all the
-     resources you request (``seff JOBID``).
+   * There is always a scaling limit.  You must always :doc:`monitor
+     jobs <monitoring>` to make sure they are using all the resources
+     you request (``seff JOBID``).  There
    * If you aren't fully sure of how to scale up, contact us
      :doc:`Research Software Engineers </rse/index>` early.
 

@@ -14,7 +14,8 @@ Monitoring job progress and job efficiency
    * ``slurm queue`` shows waiting and running jobs (this is a custom command)
    * ``slurm history`` shows completed jobs (also custom command)
    * GPU efficiency: A job's ``comment`` field shows GPU performance info
-     (custom setup at Aalto), ``sacct -j JOBID -o comment -p`` shows this.
+     and , ``sacct -j JOBID -o comment -p`` shows this. (custom setup
+     at Aalto, won't work on others).
 
 
 
