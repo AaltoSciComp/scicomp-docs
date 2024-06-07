@@ -6,4 +6,4 @@
 
 module load matlab
 
-srun matlab_multithread -nodisplay -r "parpool_parallel($SLURM_CPUS_PER_TASK) ; exit(0)"
+srun matlab -nodisplay -r "parpool_parallel($SLURM_CPUS_PER_TASK) ; exit(0)"

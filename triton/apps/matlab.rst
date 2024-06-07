@@ -139,12 +139,13 @@ Parallel matlab in exclusive mode
     #!/bin/bash -l
     #SBATCH --time=00:15:00
     #SBATCH --exclusive
+    #SBATCH --mem=4G
     #SBATCH -o parallel_Matlab3.out
 
     export OMP_NUM_THREADS=$(nproc)
 
-    module load matlab/r2017b
-    matlab_multithread -nosplash -r "parallel_Matlab3($OMP_NUM_THREADS) ; exit(0)"
+    module load matlab
+    matlab -nosplash -r "parallel_Matlab3($OMP_NUM_THREADS) ; exit(0)"
 
 parallel\_Matlab3.m::
 
