@@ -24,20 +24,21 @@ run in parallel on one node, with up to 40 cores.)
 
 .. include:: importantnotes/matlab.rst
 
+Memory requirements
+-------------------
+
+The matlab runtime is quite memory hungry.  If you are running a job keep in mind
+that even for small examples you will likely need a minimum of 2 GB just for the 
+runtime. If you plan to run anything in a parpool, you will likely need at least
+2 GB per worker + 2 GB for the runtime.
+
 Interactive usage
 -----------------
 
-Interactive usage is currently available via the ``sinteractive`` tool. Do
-not use the cluster front-end for this, but connect to a node with ``sinteractive``
-The login node is only meant for submitting jobs/compiling. 
-To run an interactive session with a user interface run the following commands from a terminal.
-
-::
-
-    ssh -X user@triton.aalto.fi
-    sinteractive
-    module load matlab
-    matlab &
+Interactive usage is currently available via our `ondemand service <https://ondemand.triton.aalto.fi>`__
+On there, request a Triton Desktop instance and you can run Matlab interactively.
+On the desktop, start a terminal (click on Application (Top right corner -> Favorites -> Terminal).
+Run ``module load matlab`` and then ``matlab`` and you will get a matlab gui. 
 
 Simple serial script
 --------------------
@@ -47,7 +48,7 @@ sample slurm script is provided below::
 
     #!/bin/bash -l
     #SBATCH --time=00:05:00
-    #SBATCH --mem=100M
+    #SBATCH --mem-per-cpu=3G
     #SBATCH -o serial_Matlab.out
     module load matlab
     n=3

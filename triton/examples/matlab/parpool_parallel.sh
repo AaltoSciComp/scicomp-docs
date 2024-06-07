@@ -1,7 +1,7 @@
 #!/bin/bash -l
 #SBATCH --time=00:15:00
 #SBATCH --cpus-per-task=4
-#SBATCH --mem-per-cpu=2G
+#SBATCH --mem-per-cpu=3G
 #SBATCH -o parpool_parallel.out
 
 module load matlab
