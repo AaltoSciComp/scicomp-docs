@@ -13,10 +13,10 @@ June 2024 / Intro to Scientific Computing /  HPC Summer Kickstart
        follow-up info (extra special topics we haven't covered this
        time).
      - Things we would recommend for follow-ups:
-       - `Kickstart best-of list <https://www.youtube.com/playlist?list=PLZLVmS9rf3nPd3HpX5x3Ff2IAyS6kuhMi>`__ -
-	 has some videos from this year, but also videos that are
-	 taught only some years.  Check this list for things you
-	 *didn't* see this year, and consider watching them.
+       - `Kickstart best-of list <https://www.youtube.com/playlist?list=PLZLVmS9rf3nPd3HpX5x3Ff2IAyS6kuhMi>`__
+         has some videos from this year, but also videos that are
+         taught only some years.  Check this list for things you
+         *didn't* see this year, and consider watching them.
        - :doc:`Python environments with Conda
 	 </triton/apps/python-conda>` - a page on this site.
        - `CodeRefinery workshop <https://coderefinery.org>`__ -
