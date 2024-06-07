@@ -9,11 +9,12 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * T-Th 4-6 June 2024 we have our :doc:`kickstart course
-     </training/scip/kickstart-2024>`, so we may have very limited
-     garage support.
    * T 11 June 2024 we may have limited support due to a summer day.
    * W 12 June 2024 there is no garage due to ASC staff development.
+   * Summertime, garages will continue, but may have less support
+     available (and no guarantees that we are there every day, but in
+     past years there has usually been someone).  You may also need to
+     ask by chat/issue trackers sometimes.
 
 
 If you need more help than the issue trackers, this is the place to
