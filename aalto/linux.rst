@@ -27,7 +27,7 @@ Basics
    directory will be your Aalto home directory. That is, the same home
    directory that you have in Aalto Windows machines and the Aalto
    Linux machines, including shell servers (kosh, taltta, lyta, brute, force).
--  Most installations have Ubuntu 16.04 or 18.04, 20.04 is coming soon.
+-  Most installations have Ubuntu 20.04 or 22.04, 24.04 is coming soon.
 -  A pretty good guide is availiable at https://linux.aalto.fi .
 -  **Login is with Aalto credentials**. Anyone can
    log in to any computer.  Since login is tied to your Aalto account,
