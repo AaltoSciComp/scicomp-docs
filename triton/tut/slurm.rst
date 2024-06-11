@@ -3,6 +3,19 @@ Slurm: the queuing system
 
 .. include:: /triton/ref/videos.rst
 
+.. admonition:: Abstract
+
+   * Slurm knows of all resources (compute nodes) and all resource
+     requests (job submissions), and tries to schedule jobs to the
+     nodes as efficiently as possible.
+
+   * Available resources include CPUs, memory, GPUs, and time.  For
+     information on how to request these, see :doc:`../ref/index`.
+
+   * How do you know how many resources to request?  Usually you start
+     with some guess, and increase/decrease based on :doc:`monitoring
+     <monitoring>` of the job.
+
 What is a cluster?
 ------------------
 
@@ -176,11 +189,10 @@ On Triton, you don't need to worry about partitions most of the time -
 they are automatically set.  You might need partition in several cases
 though:
 
-* ``--partition debug`` gives you some nodes reserved for quick testing.
 * ``--partition interactive`` gives you some settings optimized for
   interactive work (where things aren't running constantly).
 
-On other clusters, you might need to set a partition other times.
+On other clusters, you might need to set a partition sometimes.
 
 Command ``sinfo -s`` lists a summary of the available partitions. You
 can see the purpose and use of our partitions in the :doc:`quick

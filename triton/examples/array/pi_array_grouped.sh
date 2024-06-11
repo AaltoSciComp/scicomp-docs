@@ -14,5 +14,5 @@ indexes=`seq $((n*CHUNKSIZE)) $(((n + 1)*CHUNKSIZE - 1))`
 
 for i in $indexes
 do
-   srun python slurm/pi.py 1500000 --seed=$i > json_files/pi_$i.json
+   srun python3 slurm/pi.py 1500000 --seed=$i > json_files/pi_$i.json
 done

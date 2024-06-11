@@ -2,6 +2,15 @@
 Octave
 ======
 
+.. admonition:: Warning: page not updated for current Triton
+  :class: warning, triton-v2-apps
+
+  This page hasn't been updated since Triton was completely upgraded
+  in May 2024.  The software might not be installed and the old
+  information below might not work anymore (or  might need adapting).
+  If you need this software, :ref:`open an issue <issuetracker>` and
+  tell us so we can reinstall/update it.
+
 From Octave's `web page <https://www.gnu.org/software/octave/about.html>`_:
     GNU Octave is a high-level language, primarily intended for numerical computations. It provides a convenient command line interface for solving linear and nonlinear problems numerically, and for performing other numerical experiments using a language that is mostly compatible with Matlab. It may also be used as a batch-oriented language.
 

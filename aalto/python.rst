@@ -51,12 +51,12 @@ To use it on Aalto Ubuntu workstations and VDI::
     $ ml anaconda3
     $ source activate neuroimaging
 
-To use it on Triton::
+To use it on the new Triton (as of May 2024)::
 
     $ ml purge
-    $ ml neuroimaging
+    $ ml neuroimaging-env
 
-To see the full list of packages what are installed in the environment, use::
+Note that the module name has changed on the new Triton, to make it clearer that this is *not* the same neuroimaging environment as it was in the old Triton. If you need exactly the same old environments, please get in touch. **This it not working anymore:** To see the full list of packages what are installed in the environment, use::
 
     $ conda list
 

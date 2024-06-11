@@ -1,8 +1,10 @@
 VSCode on Triton
 ================
 
-VSCode is a text editor and integrated development environment.  It is
+VSCode is a text editor and IDE (Integrated Development Environment).  It is
 very popular these days, partly due to it's good usability.
+
+
 
 Installation
 ------------
@@ -28,6 +30,33 @@ though.
 
 
 
+Usage warnings
+--------------
+
+VS Code on clusters have some issues you should avoid.  VS Code is
+still useful, but you need to use it smartly:
+
+.. warning::
+
+   * **Only open specific project directories.** Don't open your whole
+     home directory, whole ``$WRKDIR`` work directory, or all
+     ``/scratch/``, or any directories with a huge number of files: it
+     will scan *all* files and use a huge amount of CPU.
+   * **We recommend against Jupyter computations in VS Code.** The
+     kernels won't stop if your connection ends, and continue to use
+     memory (and possibly CPU).  See the below point.  The strategies
+     in :ref:`OOD <vscode-ood>` or :ref:`interactive jobs"
+     <vscode-interactive-job>` is OK though since it isolates resources.
+   * **Don't run heavy computations or use too much memory.** It can
+     use up all your allocated resources and prevent other logins
+     (because of how we limit resources per user).  If you find you
+     can't log in, contact us.  The strategies in :ref:`OOD
+     <vscode-ood>` or :ref:`interactive jobs"
+     <vscode-interactive-job>` is OK though since it isolates
+     resources.
+
+
+
 Security and extensions
 -----------------------
 
@@ -37,18 +66,24 @@ delete all of the data available via your account.
 
 
 
+.. _vscode-ood:
+
 VSCode through Open OnDemand
 ----------------------------
 
 .. seealso:: :doc:`../usage/ood`
+
+**Update: Not available on Triton since May 2024 (yet), please ask us
+if this is important to you**
 
 VSCode is available through :doc:`../usage/ood`, and with this you can
 select whatever resources you want (memory, CPU, etc) and run directly
 in the Slurm queue.  This means you can directly perform calculations
 in that VSCode session and it runs properly (not on the login node).
 
-This is useful for getting things done quickly, but running in a web
-browser can be limited in some cases (interface, lifetime, etc.).
+This is useful for getting things done quickly or do simple debugging,
+but running in a web browser can be limited in some cases (interface, lifetime, etc.).
+Another limitation is OOD VSCode does not support GPU computing.
 
 
 
@@ -57,17 +92,18 @@ VSCode remote SSH
 
 **"Remote SSH"** is a nice way to work on a remote computer and
 provides both editing and shell access, but everything will run
-directly on the login node on Triton.  This is OK for editing, but not
-for main computations (see the section above or below).  **To repeat:
-don't use this for running big computations.**
+directly on the login node on Triton.  This is OK for writing code
+and editing, but not for main computations (see the section above or below).
+**To repeat: don't use this for running any big computations.**
+
 
 .. figure:: vscode--connected.png
    :alt: Screenshot saying "SSH: triton".
 
    If you see this in the lower left corner (or whatever the name of
    your cluster SSH config is), you are connected to the login node
-   (and should not do big calculations).  It's possible the exact look
-   may be different for others.
+   (and again, should not do big calculations).  It's possible the
+   exact look may be different for others.
 
 You can see `connection instructions (including screenshots) at the
 Sigma2 instructions
@@ -81,8 +117,12 @@ connect without entering a password every time.
 
 
 
+.. _vscode-interactive-job:
+
 VSCode remote SSH host directly to interactive job
 --------------------------------------------------
+
+*(Advanced)*
 
 Sometimes you want more resources than the login node.  This section
 presents a way to have VSCode directly connect to a job resource
@@ -96,13 +136,13 @@ This section contains original research and may not fully work, and
 **may only work on Linux/Mac right now (but Windows might work too
 since it uses OpenSSH)**.
 
-In you ``~/.ssh/config``, add this block to define a server
+In your ``~/.ssh/config``, add this block to define a server
 ``triton-vscode``.  For more information ``.ssh/config``, including
 what these mean and what else you might need in here, see
 :doc:`/scicomp/ssh`::
 
   Host triton-vscode
-      ProxyCommand ssh triton /share/apps/ssh-node-proxycommand --partition=interactive --time=1:00:00
+      ProxyCommand ssh triton /appl/manual_installations/software/ssh-node-proxycommand --partition=interactive --time=1:00:00
       StrictHostKeyChecking no
       UserKnownHostsFile /dev/null
       User USERNAME

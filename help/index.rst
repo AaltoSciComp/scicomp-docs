@@ -10,7 +10,7 @@ lists how to ask for help, for different kinds of needs.
    Wonder if you should, or how, to ask for help?  `video: When and how
    to ask for help
    <https://www.youtube.com/watch?v=5fgXXz3fzdM&list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V&index=4>`__
-   (`slides <https://cicero.xyz/v3/remark/0.14.0/github.com/bast/help-with-supercomputers/main/talk.md/>`__)
+   (`slides <https://zenodo.org/records/8392763/>`__)
 
 .. list-table::
    :header-rows: 1

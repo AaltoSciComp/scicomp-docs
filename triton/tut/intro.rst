@@ -3,7 +3,21 @@ About clusters and your work
 
 .. include:: /triton/ref/videos.rst
 
-*This is the first tutorial.  The next is* :doc:`connecting`.
+.. admonition:: Abstract
+
+   * A cluster is a bunch of computers connected together by network,
+     shared storage, and a scheduler (Slurm) that distributes waiting
+     jobs across the available resources.
+
+   * Triton is the Aalto University cluster and has significant
+     resources and local support.
+
+   * A cluster needs techniques to use properly - it's not like your
+     own computer which you have full access to.
+
+   * Ask for help if you need it.
+
+   * Keep the :doc:`../ref/index` open.
 
 Science-IT is an Aalto infrastructure for scientific computing.  Its
 roots was a collaboration between the Information and Computer Science
@@ -52,6 +66,14 @@ are a cluster: many connected nodes with a scheduling system to divide
 work between them.  The network and some storage is shared, CPUs,
 memory, and other storage is not shared.
 
+.. admonition:: Triton was renewed in May 2024
+   :class: warning, triton-v2
+
+   Triton was completely re-installed and upgraded in May 2024. Anything
+   that worked before has to be updated or reinstalled to work again,
+   and many lesser-used things haven't been.  If you notice something
+   wrong or missing, let us know.
+
 .. admonition:: A real Ship of Theseus
 
    In the `Ship of Theseus
@@ -80,7 +102,9 @@ Getting help
 
 .. seealso::
 
-   Main article: :doc:`../help`
+   * Main reference: :doc:`../help`
+   * `How to ask for help with (super)computers
+     <https://zenodo.org/records/8392763>`__
 
 First off, realize **it is hard to do everything alone** - with the
 diversity of types of computational research and researchers, it's not

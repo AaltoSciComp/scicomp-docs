@@ -153,7 +153,7 @@ Local disks are on each node separately.  It is used for the fastest I/Os
 with single-node jobs and is cleaned up after job is finished.  Since 2019,
 things have gotten a bit more complicated given that our newest (skl) nodes
 don't have local disks.  If you want to ensure you have local storage,
-submit your job with ``--gres=spindle``.
+submit your job with ``--constraint=localdisk``.
 
 See the :doc:`Compute
 node local drives <../usage/localstorage>` page for further details and script
@@ -245,7 +245,7 @@ time to review your local guides to see how they are adapted to your site.
 
    a) A job is submitted but fails with no output or messages.
 
-   b) I can't start a Jupyter server on jupyter.triton.
+   b) I can't start a Jupyter server on ondemand.triton.aalto.fi.
 
    c) Some files are randomly empty.  Or the file had content, I tried
       to save it again, and now it's empty!

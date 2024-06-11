@@ -1,6 +1,5 @@
 :gitstamp_ignore:
 
-======================
 Triton quick reference
 ======================
 
@@ -31,7 +30,7 @@ as well as `other cheatsheets <https://aaltoscicomp.github.io/cheatsheets/>`__.
 .. _ref-connecting:
 
 Connecting
-==========
+----------
 
 See also: :doc:`../tut/connecting`.
 
@@ -42,7 +41,7 @@ See also: :doc:`../tut/connecting`.
 .. _ref-modules:
 
 Modules
-=======
+-------
 
 See also: :doc:`../tut/modules`.
 
@@ -53,7 +52,7 @@ See also: :doc:`../tut/modules`.
 .. _ref-common-software:
 
 Common software
-===============
+---------------
 
 See also: :doc:`../tut/applications`.
 
@@ -64,7 +63,7 @@ See also: :doc:`../tut/applications`.
 .. _ref-storage:
 
 Storage
-=======
+-------
 
 See also: :doc:`../tut/storage`
 
@@ -75,7 +74,7 @@ See also: :doc:`../tut/storage`
 .. _ref-remote-data:
 
 Remote data access
-==================
+------------------
 
 See also: :doc:`../tut/remotedata`.
 
@@ -86,7 +85,7 @@ See also: :doc:`../tut/remotedata`.
 .. _ref-partitions:
 
 Partitions
-==========
+----------
 
 .. include:: partitions.rst
 
@@ -95,7 +94,7 @@ Partitions
 .. _ref-job-submission:
 
 Job submission
-==============
+--------------
 See also: :doc:`../tut/serial`, :doc:`../tut/array`,
 :doc:`../tut/parallel`, :doc:`../tut/serial`.
 
@@ -108,7 +107,7 @@ See also: :doc:`../tut/serial`, :doc:`../tut/array`,
 .. _ref-slurm-examples:
 
 Slurm examples
-==============
+--------------
 
 See also: :doc:`../tut/serial`, :doc:`../tut/array`.
 
@@ -128,7 +127,7 @@ See also: :doc:`../tut/serial`, :doc:`../tut/array`.
 .. _ref-hardware:
 
 Hardware
-========
+--------
 
 See also: :doc:`../overview`.
 
@@ -142,7 +141,7 @@ See also: :doc:`../overview`.
 .. _ref-gpus:
 
 GPUs
-====
+----
 
 See also: :doc:`../tut/gpu`.
 
@@ -154,7 +153,7 @@ See also: :doc:`../tut/gpu`.
 
 
 Conda
-=====
+-----
 
 See also: :doc:`../apps/python-conda`
 
@@ -165,7 +164,7 @@ See also: :doc:`../apps/python-conda`
 .. _ref-command-line:
 
 Command line
-============
+------------
 
 See also: :doc:`/scicomp/shell`.
 

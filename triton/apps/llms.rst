@@ -263,11 +263,11 @@ Here is an example :doc:`slurm script </triton/tut/slurm>`, using the raw weight
 
   #!/bin/bash
   #SBATCH --time=00:25:00
-  #SBATCH --cpus_per_task=4
+  #SBATCH --cpus-per-task=4
   #SBATCH --mem=20GB
   #SBATCH --gpus=1
-  #SBATCH --output=llama2inference-gpu.%J.out
-  #SBATCH --error=llama2inference-gpu.%J.err
+  #SBATCH --output llama2inference-gpu.%J.out
+  #SBATCH --error llama2inference-gpu.%J.err
 
   # get access to the model weights
   module load model-llama2/7b

@@ -88,6 +88,15 @@ And then run the following script
 Gurobi with Julia
 -----------------
 
+.. admonition:: Warning: page not updated for current Triton
+  :class: warning, triton-v2-apps
+
+  This page hasn't been updated since Triton was completely upgraded
+  in May 2024.  The software might not be installed and the old
+  information below might not work anymore (or  might need adapting).
+  If you need this software, :ref:`open an issue <issuetracker>` and
+  tell us so we can reinstall/update it.
+
 For Julia there exists a package called
 `Gurobi.jl <https://github.com/jump-dev/Gurobi.jl>`_ that provides an interface
 to Gurobi. This package needs Gurobi C libraries so that it can run. The
@@ -120,6 +129,15 @@ the use of
 
 Gurobi with any other language supported by gurobi
 --------------------------------------------------
+
+.. admonition:: Warning: page not updated for current Triton
+  :class: warning, triton-v2-apps
+
+  This page hasn't been updated since Triton was completely upgraded
+  in May 2024.  The software might not be installed and the old
+  information below might not work anymore (or  might need adapting).
+  If you need this software, :ref:`open an issue <issuetracker>` and
+  tell us so we can reinstall/update it.
 
 For other languages supported by gurobi (like MATLAB, R or C/C++) use
 

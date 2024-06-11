@@ -72,7 +72,7 @@ Summary table for remote data analysis workflows
      * Computing resources are limited.
      * Excellent for prototyping, working on the go, doing tests, interactive work (e.g. making figures). More secure access to data.
      * Y
-   * * 4. Aalto Jupyterhub (https://jupyter.triton.aalto.fi)
+   * * 4. Jupyter on Triton (via https://ondemand.triton.aalto.fi)
      * Cloud based - resume work from anywhere.  Includes command line (#6) and batch (#7) easily.  Same data as seen on Triton (/scratch/dept/ and /work/ folders)
      * Jupyter can `become a mess if you aren't careful <https://scicomp.aalto.fi/scicomp/jupyter-pitfalls.html>`__.  You need to plan to scale up with #7 eventually, once your needs increase.
      * Excellent for prototyping, working on the go, doing tests, interactive work (e.g. making figures).  Secure access to data. Use if you know you need to switch to batch jobs eventually (7).
@@ -131,7 +131,7 @@ Summary table for remote data analysis workflows
 4. Aalto Jupyterhub
 -------------------
 
-**Description**: Jupyter notebooks are a way of interactive, web-based computing: instead of either scripts or interactive shells, the notebooks allow you to see a whole script + output and experiment interactively and visually. They are good for developing and testing things, but once things work and you need to scale up, it is best to put your code into proper programs. Triton’s JupyterHub is available at https://jupyter.triton.aalto.fi . Read more about it at: https://scicomp.aalto.fi/triton/apps/jupyter.html. `Triton account required <https://scicomp.aalto.fi/triton/accounts.html>`__.
+**Description**: Jupyter notebooks are a way of interactive, web-based computing: instead of either scripts or interactive shells, the notebooks allow you to see a whole script + output and experiment interactively and visually. They are good for developing and testing things, but once things work and you need to scale up, it is best to put your code into proper programs. Triton’s Jupyter is available at https://ondemand.triton.aalto.fi . Read more about it at: https://scicomp.aalto.fi/triton/apps/jupyter.html. `Triton account required <https://scicomp.aalto.fi/triton/accounts.html>`__.
 
 **Pros**: JupyterHub it has similar advantages than #4, although data and code are accessed through the JupyterHub interface.  In addition, things can stay running in the cloud.  Although it can be used with R or Matlab, Python users will most likely find this to be a very familiar and comfortable prototyping environment. Similar to the VDI case, you can resume workflow (there are sessions of different lengths).  You also also access Triton shell and batch (#6, #7) in the Jupyter interface, and it's easy to scale up and use them all together.
 

@@ -12,6 +12,16 @@ Array jobs: embarassingly parallel execution
      like ``--array=1-10,12-15``.
    * The ``$SLURM_ARRAY_TASK_ID`` environment variable tells a job
      which array index it is.
+   * Minimal example:
+
+     .. code:: slurm
+
+       #!/bin/bash -l
+       #SBATCH --array=1-10
+
+       # Each job loads a different input file
+       srun python my_script.py input_${SLURM_ARRAY_TASK_ID}
+
    * There are different templates to use below, which you can adapt
      to your task.
    * If you aren't fully sure of how to scale up, contact us
@@ -182,17 +192,24 @@ you want to submit to Slurm.
 Assume you would like to run the pi estimation code for 5 different seed values, each
 for 2.5 million iterations. You could assign a seed value to each task in you job array
 and save each output to a file. Having calculated all estimations, you could take the
-average of all the pi values to arrive at a more accurate estimate. An example of such
-a batch script
-:download:`pi_array_hardcoded.sh </triton/examples/array/pi_array_hardcoded.sh>`
-is as follows.
+average of all the pi values to arrive at a more accurate estimate.
 
-.. literalinclude:: /triton/examples/array/pi_array_hardcoded.sh
+We can do this in multiple different ways, but here are two examples that
+utilize Bash scripting for doing it.
+
+Bash case style
+===============
+
+The batch script
+:download:`pi_array_hardcoded_case.sh </triton/examples/array/pi_array_hardcoded_case.sh>`
+utilizes the case-statement in Bash to choose between different seed values:
+
+.. literalinclude:: /triton/examples/array/pi_array_hardcoded_case.sh
    :language: slurm
 
 Save the script and submit it to Slurm::
 
-   $ sbatch pi_array_hardcoded.sh
+   $ sbatch pi_array_hardcoded_case.sh
    Submitted batch job 60997871
 
 Once finished, 5 Slurm output files and 5 application output files will
@@ -202,6 +219,23 @@ of successes)::
 
    $ cat pi_22.json
    {"successes": 1963163, "pi_estimate": 3.1410608, "iterations": 2500000}
+
+Bash array style
+================
+
+The batch script
+:download:`pi_array_hardcoded_array.sh </triton/examples/array/pi_array_hardcoded_array.sh>`
+utilizes the Bash arrays to choose between different seed values:
+
+.. literalinclude:: /triton/examples/array/pi_array_hardcoded_array.sh
+   :language: slurm
+
+Save the script and submit it to Slurm::
+
+   $ sbatch pi_array_hardcoded_array.sh
+
+Results are identical to the case-switch way. Do note that in this method the
+Bash array starts from 0, so your ``--array``-range should start from 0 as well.
 
 Reading parameters from one file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -290,7 +324,7 @@ Exercises
 
 .. exercise:: Array-2: Combine the outputs of the previous exercise.
 
-   You find an ``pi-aggregate.py`` program in hpc-examples.  Run this
+   You find the ``slurm/pi_aggregation.py`` program in hpc-examples.  Run this
    and give all the output files as arguments.  It will combine all
    the statistics and give a more accurate value of :math:`\pi`.
 
