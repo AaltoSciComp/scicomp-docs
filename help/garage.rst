@@ -9,11 +9,13 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * W 12 June 2024 there is no garage due to ASC staff development.
    * Summertime, garages will continue, but may have less support
-     available (and no guarantees that we are there every day, but in
-     past years there has usually been someone).  You may also need to
-     ask by chat/issue trackers sometimes.
+     available.  We don't promise to be there every day, but from past
+     years there has usually been someone.  You can ask in
+     ref:`SciComp chat <chat>` too coordinate a meeting day.  Software
+     requests should go to the :doc:`issue tracker <issuetracker>`.
+
+     * 27 June (T) - 4 July (Th) there may be less people around.
 
 
 If you need more help than the issue trackers, this is the place to
