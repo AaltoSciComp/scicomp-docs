@@ -9,7 +9,7 @@ The app is run on the `Aalto Triton cluster <https://scicomp.aalto.fi/triton/>`_
 
 Supported languages are:
 
-arabic, armenian, bulgarian, catalan, chinese, czech, danish, dutch, english, estonian, finnish, french, galician, german, greek, hebrew, hindi, hungarian, icelandic, indonesian, italian, japanese, kazakh, korean, latvian, lithuanian, malay, marathi, nepali, norwegian, persian, polish, portuguese, romanian, russian, serbian, slovak, slovenian, spanish, swedish, thai, turkish, ukrainian, urdu, vietnamese
+Arabic, Armenian, Bulgarian, Catalan, Chinese, Czech, Danish, Dutch, English, Estonian, Finnish, French, Galician, German, Greek, Hebrew, Hindi, Hungarian, Icelandic, Indonesian, Italian, Japanese, Kazakh, Korean, Latvian, Lithuanian, Malay, Marathi, Nepali, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, Thai, Turkish, Ukrainian, Urdu, Vietnamese
 
 .. note::
 
@@ -27,7 +27,7 @@ In order to transcribe your speech files into text, apply the following steps (d
 .. note::
 
     The workflow described here is suitable for processing sensitive and personal data.
-    All data uploaded to and processed on Triton are stored on servers managed by Aalto and can only be accessed from within Aalto network. The files and folders on Triton are protected by standard Unix permissions so that only their owner (you) and Triton administrators has access to them.
+    All data uploaded to and processed on Triton are stored on servers managed by Aalto and can only be accessed from within Aalto network. The files and folders on Triton are protected by standard Unix permissions so that only their owner (you) and Triton administrators can access them.
 
 .. note::
 
@@ -53,13 +53,15 @@ If you don't already have a Triton account, please, visit the `account page <htt
 
     However, if you are in a hurry, visit us at `the daily Zoom help session at 13.00-14.00 <https://scicomp.aalto.fi/help/garage/#id1>`_ and we can speed up the process.
 
+The Triton account needs to be created only once.
+
 
 Connect to Triton
 =================
 
 Go to Triton's web browser interface `Open On Demand <http://ondemand.triton.aalto.fi>`_. 
 
-Log in with your Aalto username and password. (You will be granted access since your Aalto account has been synced with your Triton account.)
+Log in with your **Aalto username and password**. (You will be granted access since your Aalto account has been synced with your Triton account.)
 
 .. note::
 
@@ -154,9 +156,9 @@ You should now see the newly created `results` folder.
 
 Enter the `results` folder and notice there are two result files corresponding to each audio file:
 
-- `.csv` files: e.g. `test.csv`
+- `.csv` (computer-friendly, e.g. `test.csv`)
 
-- `.txt` files: e.g. `test.txt`
+- `.txt` (human-friendly, e.g. `test.txt`)
 
 Example of `.csv` output format (computer-friendly):
 
@@ -212,7 +214,12 @@ If you do not need your audio and/or result files and/or folders, you can remove
 Known issues and troubleshooting
 ================================
 
-If at any point something doesn't work or you are unsure how to proceed, do not hesitate to contact `the Aalto RSEs <https://scicomp.aalto.fi/rse/>`. You can visit us at `the daily Zoom help session at 13.00-14.00 <https://scicomp.aalto.fi/help/garage/#id1>`_ where we can walk through the speech2text workflow together, debug problems, answer questions, help with data analysis, and more.
+If at any point something doesn't work or you are unsure how to proceed, do not hesitate to contact `the Aalto RSEs <https://scicomp.aalto.fi/rse/>`_. You can visit us at `the daily Zoom help session at 13.00-14.00 <https://scicomp.aalto.fi/help/garage/#id1>`_ where we can walk through the speech2text workflow together, debug problems, answer questions, help with data analysis, and more.
+
+Can I use the speech2text app from the terminal (command line)?
+------------------------------------------------
+
+Yes! Check the command line usage from the `speech2text GitHub repository <https://github.com/AaltoRSE/speech2text?tab=readme-ov-file#command-line>`_.
 
 My transcription has a weird segment where a word or two are repeated over and over.
 -------------------------------------------------------------------------------------
