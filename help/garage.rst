@@ -13,7 +13,7 @@ Scicomp garage
      available.  We don't promise to be there every day, but from past
      years there has usually been someone.  You can ask in
      ref:`SciComp chat <chat>` too coordinate a meeting day.  Software
-     requests should go to the :doc:`issue tracker <issuetracker>`.
+     requests should go to the :ref:`issue tracker <issuetracker>`.
 
      * 27 June (T) - 4 July (Th) there may be less people around.
 

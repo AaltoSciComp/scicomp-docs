@@ -13,6 +13,7 @@ June 2024 / Intro to Scientific Computing /  HPC Summer Kickstart
        follow-up info (extra special topics we haven't covered this
        time).
      - Things we would recommend for follow-ups:
+
        - `Kickstart best-of list <https://www.youtube.com/playlist?list=PLZLVmS9rf3nPd3HpX5x3Ff2IAyS6kuhMi>`__
          has some videos from this year, but also videos that are
          taught only some years.  Check this list for things you
