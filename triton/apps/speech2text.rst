@@ -44,7 +44,7 @@ Triton is the Aalto high-performance computing cluster where we will run the spe
 
 Access is free for Aalto researchers.
 
-If you don't already have a Triton account, please, visit the `account page <https://scicomp.aalto.fi/triton/accounts/>`__ and proceed to fill the account request form. 
+If you don't already have a Triton account, please, visit the :doc:`account page </triton/accounts>` and proceed to fill the account request form. 
 
 .. note::
 
