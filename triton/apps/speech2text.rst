@@ -114,7 +114,7 @@ After the transfer is done, you should see your folder in the list of existing c
 
    Some people have been experiencing difficulties with the Open On Demand file upload.
 
-   If you receive a "File Upload Failed" error several times in a row, you can visit us at `the daily Zoom help session at 13.00-14.00 <https://scicomp.aalto.fi/help/garage/#id1>`__ and we can figure it out.
+   If you receive a "File Upload Failed" error several times in a row, you can visit us at :ref:`the daily Zoom help session at 13.00-14.00 <garage>` and we can figure it out.
 
 
 Submit the uploaded files for processing
