@@ -4,7 +4,7 @@ Speech2Text: Easy Speech Transcription
 
 Aalto speech2text app is available to researchers of Aalto University. 
 
-The app is run on the `Aalto Triton cluster <https://scicomp.aalto.fi/triton/>`__ and its usage is free for all Aalto researchers (master's thesis workers, doctoral students, post docs, visiting researchers). 
+The app is run on the :doc:`Aalto Triton cluster </triton/index>` and its usage is free for all Aalto researchers (master's thesis workers, doctoral students, post docs, visiting researchers). 
 
 Supported languages are:
 
