@@ -232,7 +232,7 @@ Unfortunately, there is nothing we can do about this at the moment: you have to 
 Why do we use work directory ``Work /scratch/work/user-name`` instead of ``Home Directory``?
 ---------------------------------------------------------------------------------------------
 
-``Home Directory`` has a small disk space quota (10Gb) and ``/scratch/work/`` has a large one (200Gb). Workspace disk is also faster than the home directory.
+``Home Directory`` has a small disk space quota (10Gb) and ``/scratch/work/`` has a large one (200Gb), and we can easily add even more space if it is needed. Workspace disk is also faster than the home directory.
 
 What if my audio file contains speech in more than one language?
 -----------------------------------------------------------------
