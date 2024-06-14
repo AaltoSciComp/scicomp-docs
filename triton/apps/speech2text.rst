@@ -32,7 +32,7 @@ In order to transcribe your speech files into text, apply the following steps (d
 
     If at any point something doesn't work or you are unsure how to proceed, do not hesitate to contact :doc:`the Aalto RSEs </rse/index>`. 
 
-    You can visit us at `the daily Zoom help session at 13.00-14.00 <https://scicomp.aalto.fi/help/garage/#id1>`__ where we can e.g. create a Triton account for you, walk through the speech2text workflow together, answer questions, help with data analysis, and more.
+    You can visit us at :ref:`the daily Zoom help session at 13.00-14.00 <garage>` where we can e.g. create a Triton account for you, walk through the speech2text workflow together, answer questions, help with data analysis, and more.
 
     You can also check the list of `known issues and troubleshooting <#known-issues-and-troubleshooting>`_.
 
