@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --time=00:30:00
 #SBATCH --array=1-10
-#SBATCH --mem=500M
+#SBATCH --mem=3G
 #SBATCH --output=matlab_array_%a.out
 
 
