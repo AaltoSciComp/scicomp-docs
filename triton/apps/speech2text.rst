@@ -230,7 +230,7 @@ The behavior is sometimes triggered by bad audio quality during that segment (ba
 Unfortunately, there is nothing we can do about this at the moment: you have to go through that particular audio segment and transcribe it manually.
 
 Why do we use work directory ``Work /scratch/work/user-name`` instead of ``Home Directory``?
-------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 
 ``Home Directory`` has a small disk space quota (10Gb) and ``/scratch/work/`` has a large one (200Gb). Workspace disk is also faster than the home directory.
 
@@ -247,6 +247,6 @@ What happens if I submit speech2text audio file(s) that have already been proces
 This is safe to do: speech2text checks if the expected result files already exist and if so, exits early without doing any further processing.
 
 I submitted my audio files with wrong language. What to do?
-----------------------------------------------------------
+------------------------------------------------------------
 
 Wait until the processing is finished, delete the ``results`` folder, and submit the job again with the correct language.
