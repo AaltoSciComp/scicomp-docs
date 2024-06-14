@@ -50,7 +50,7 @@ If you don't already have a Triton account, please, visit the :doc:`account page
 
     Activating the account takes on average 1-2 work days. 
 
-    However, if you are in a hurry, visit us at `the daily Zoom help session at 13.00-14.00 <https://scicomp.aalto.fi/help/garage/#id1>`__ and we can speed up the process.
+    However, if you are in a hurry, visit us at :ref:`the daily Zoom help session at 13.00-14.00 <garage>` and we can speed up the process.
 
 The Triton account needs to be created only once.
 
