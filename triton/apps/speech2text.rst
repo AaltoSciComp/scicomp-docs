@@ -12,7 +12,7 @@ Arabic, Armenian, Bulgarian, Catalan, Chinese, Czech, Danish, Dutch, English, Es
 
 .. note::
 
-    If you use speech2text in your research, `please acknowledge Triton and the Aalto Science-IT project in your publication <https://scicomp.aalto.fi/triton/acknowledgingtriton/>`__. 
+    If you use speech2text in your research, :doc:`please acknowledge Triton and the Aalto Science-IT project in your publication </triton/acknowledgingtriton>`. 
 
 In order to transcribe your speech files into text, apply the following steps (detailed instructions in the sections below):
 
