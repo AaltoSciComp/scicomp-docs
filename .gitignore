@@ -8,6 +8,3 @@ warnings.txt
 
 # Vim swap files
 *.swp
-
-# Environments
-env
