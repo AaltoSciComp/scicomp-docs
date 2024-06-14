@@ -34,7 +34,7 @@ In order to transcribe your speech files into text, apply the following steps (d
 
     You can visit us at :ref:`the daily Zoom help session at 13.00-14.00 <garage>` where we can e.g. create a Triton account for you, walk through the speech2text workflow together, answer questions, help with data analysis, and more.
 
-    You can also check the list of `known issues and troubleshooting <#known-issues-and-troubleshooting>`_.
+    You can also check the items in :ref:`speech2text-known-issues-and-troubleshooting`.
 
 
 Create a Triton account (only done once)
@@ -209,6 +209,8 @@ Delete unneeded files and folders from Triton workspace (optional)
 If you do not need your audio and/or result files and/or folders, you can remove them by selecting ``Delete`` from the dropdown menus next to individual files and folders.
 
 
+
+.. _speech2text-known-issues-and-troubleshooting:
 
 Known issues and troubleshooting
 ================================
