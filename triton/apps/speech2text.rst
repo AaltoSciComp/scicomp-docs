@@ -213,7 +213,7 @@ If you do not need your audio and/or result files and/or folders, you can remove
 Known issues and troubleshooting
 ================================
 
-If at any point something doesn't work or you are unsure how to proceed, do not hesitate to contact `the Aalto RSEs <https://scicomp.aalto.fi/rse/>`__. You can visit us at `the daily Zoom help session at 13.00-14.00 <https://scicomp.aalto.fi/help/garage/#id1>`__ where we can walk through the speech2text workflow together, debug problems, answer questions, help with data analysis, and more.
+If at any point something doesn't work or you are unsure how to proceed, do not hesitate to contact `the Aalto RSEs <https://scicomp.aalto.fi/rse/>`__. You can visit us at :ref:`the daily Zoom help session at 13.00-14.00 <garage>` where we can walk through the speech2text workflow together, debug problems, answer questions, help with data analysis, and more.
 
 Can I use the speech2text app from the terminal (command line)?
 ---------------------------------------------------------------
