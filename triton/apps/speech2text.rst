@@ -1,5 +1,5 @@
 =================
-Speech2Text
+Speech2Text: Easy Speech Transcription
 =================
 
 Aalto speech2text app is available to researchers of Aalto University. 
