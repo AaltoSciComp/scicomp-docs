@@ -9,7 +9,7 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * Summertime, garages will continue, but may have less support
+   * Summertime (~1.july -- 2.august), garages will continue, but may have less support
      available.  We don't promise to be there every day, but from past
      years there has usually been someone.  You can ask in
      ref:`SciComp chat <chat>` too coordinate a meeting day.  Software
