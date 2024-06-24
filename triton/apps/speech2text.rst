@@ -168,7 +168,7 @@ Corresponding example of ``.txt`` output format (human-friendly):
 .. code-block::
 
     (00:00:00 - 00:00:10) SPEAKER_00
-/
+
     This is the first sentence of the first speaker. This is the second sentence of the first speaker.
 
     (00:00:11 - 00:00:15) SPEAKER_01
