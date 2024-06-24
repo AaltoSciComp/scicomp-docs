@@ -94,27 +94,21 @@ In the following file browser, you will able to select the folder on your comput
  
 .. note::
 
-    We recommend following these practices when uploading your files to Triton:
+    We recommend the following practices when uploading your files to Triton:
 
-    While not strictly necessary, it is a good practice to put the audio files in a folder even if you only have one. This will keep your workspace organized on both Triton and your own computer.
+    Divide files into folders according to language. For example, put English interview files in folder ``my-english-interviews``, French interviews to ``my-french-interviews``, and so forth.
 
-    Make sure your folder and file names do **not** contain white spaces or special characters apart from dash, underscore, and period, that is, use ``my-audio-folder`` and ``my_audio_file.mp3`` instead of ``my audio folder`` and ``my"audio"file!.mp3``, respectively.
+    Put the audio files in folders even if you only have one. This will keep your workspace organized on both Triton and your own computer.
 
-    It is recommended to divide files into folders according to language, that is, put English interview files in folder ``my-english-interviews``, French interviews to ``my-french-interviews``, and so forth.
-
+    Do not include white spaces in the file and folder names. Instead, use dashes, underscores, or periods. For example, instead of ``my audio folder`` and ``my audio file.mp3``, use ``my-audio-folder`` and ``my_audio_file.mp3``, respectively.
+    
 Finally, if your browser asks for confirmation, (``Are you sure you want to upload all files from “my-audio-folder”? Only do this if you trust the site.``), you can answer "yes".
 
-Depending on the size of your audio files and the quality of your internet connection, the transfer can take a short or a long time (from a few seconds to several hours). Remember that video files are in general much bigger than audio files.
+Depending on the number and size of your audio files and the quality of your internet connection, the transfer can take a short or a long time (from a few seconds to several hours).
 
 After the transfer is done, you should see your folder in the list of existing content on the ``Files`` page.
 
 .. image:: speech2text_upload3.png
-
-.. note::
-
-   Some people have been experiencing difficulties with the Open On Demand file upload.
-
-   If you receive a "File Upload Failed" error several times in a row, you can visit us at :ref:`the daily Zoom help session at 13.00-14.00 <garage>` and we can figure it out.
 
 
 Submit the uploaded files for processing
@@ -174,7 +168,7 @@ Corresponding example of ``.txt`` output format (human-friendly):
 .. code-block::
 
     (00:00:00 - 00:00:10) SPEAKER_00
-
+/
     This is the first sentence of the first speaker. This is the second sentence of the first speaker.
 
     (00:00:11 - 00:00:15) SPEAKER_01
@@ -190,14 +184,6 @@ The ``.txt`` files have basic text format and can be opened in a text editor (e.
 The ``.csv`` files have comma separated table format which is easy to read by computers and can be opened in a spreadsheet software (e.g. Microsoft Excel, Google Sheets).
 
 You can either download individual result files or the whole ``results`` folder if you want to continue working on them on your personal computer using your preferred software. (Check the dropdown menus next to individual files and folders.)
-
-.. note::
-
-    The result files for a single audio file are created only **after** the processing of that audio file has been fully completed.
-
-    In other words, if you can see and access the result files, you are free to move/copy them as the processing has already completed.
-
-
 
 
 
@@ -217,10 +203,12 @@ Known issues and troubleshooting
 
 If at any point something doesn't work or you are unsure how to proceed, do not hesitate to contact `the Aalto RSEs <https://scicomp.aalto.fi/rse/>`__. You can visit us at :ref:`the daily Zoom help session at 13.00-14.00 <garage>` where we can walk through the speech2text workflow together, debug problems, answer questions, help with data analysis, and more.
 
+
 Can I use the speech2text app from the terminal (command line)?
 ---------------------------------------------------------------
 
 Yes! Check the command line usage from the `speech2text GitHub repository <https://github.com/AaltoRSE/speech2text?tab=readme-ov-file#command-line>`__.
+
 
 My transcription has a weird segment where a word or two are repeated over and over.
 -------------------------------------------------------------------------------------
@@ -231,22 +219,26 @@ The behavior is sometimes triggered by bad audio quality during that segment (ba
 
 Unfortunately, there is nothing we can do about this at the moment: you have to go through that particular audio segment and transcribe it manually.
 
+
 Why do we use work directory ``Work /scratch/work/user-name`` instead of ``Home Directory``?
 ---------------------------------------------------------------------------------------------
 
 ``Home Directory`` has a small disk space quota (10Gb) and ``/scratch/work/`` has a large one (200Gb), and we can easily add even more space if it is needed. Workspace disk is also faster than the home directory.
 
+
 What if my audio file contains speech in more than one language?
 -----------------------------------------------------------------
 
-If a single audio file contains speech in more than one language, result files will (probably) still be produced but the results will (probably) be nonsensical to some extent. 
+If an audio file contains speech in more than one language, the result may contain translations of the transcriptions, which is usually not what you want. This is due to the Whisper speech transcription model used by speech2text.
 
 In some cases, this can be avoided easily. For example, if the language changes at the middle of the audio, just split the file into two parts and process them separately. You can use any available audio software to do this, for example, `Audacity <https://www.audacityteam.org/>`__.
+
 
 What happens if I submit speech2text audio file(s) that have already been processed and completed?
 --------------------------------------------------------------------------------------------------
 
 This is safe to do: speech2text checks if the expected result files already exist and if so, exits early without doing any further processing.
+
 
 I submitted my audio files with wrong language. What to do?
 ------------------------------------------------------------
