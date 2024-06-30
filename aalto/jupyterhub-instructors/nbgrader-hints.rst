@@ -32,12 +32,29 @@ If students submit assignments/you use autograding
 
 
 
-Late Submission Policy
-----------------------
+Late Submission
+---------------
 
-The default policy is ``none``, which does nothing (no penalty assigned). You can change the policy by setting the ``c.LateSubmissionPlugin.policy`` in the ``nbgrader_config.py`` file if you are using your own nbgrader configuration, or in the ``etc.jupyter.nbgrader_config.py.append`` file if you are using the default configuration (refer to the :doc:`./nbgrader` to learn more about the configuration).
+In this section, we will discuss how to handle late submissions and collection in nbgrader. You might need to customize some configurations, which you will write in the ``nbgrader_config.py`` file if you are using your own nbgrader configuration, or in the ``etc.jupyter.nbgrader_config.py.append`` file if you are using the default configuration (refer to the :doc:`./nbgrader` to learn more about the configuration). Either way, this file will be referred to as the **configuration file**.
 
-Another policy provided by the default plugin is ``zero``, which assigns a zero grade to late submissions. You can set the policy by adding the following line to the configuration file:
+Collection
+~~~~~~~~~~
+Before autograding, the submissions are collected from the students. The default behavior is to collect all submissions, regardless of the due date. This can become a problem if a student submits the assignment both before and after the due date. In this case, the student's grade will be based on the last submission.
+
+You can change this behavior by setting the ``c.ExchangeCollect.before_duedate`` to ``True`` in the configuration file. This will collect the students' *last* submission before the due date, or their last late submission if there is no submission before due date.
+
+.. code:: python
+
+   c.ExchangeCollect.before_duedate = True
+
+The late submission policies in the following section will affect the submissions collected after the due date regardless.
+
+Policies and Plugins
+~~~~~~~~~~~~~~~~~~~~
+
+The default policy is ``none``, which does nothing (no penalty assigned).
+
+Another policy provided by the default plugin is ``zero``, which assigns a zero grade to late submissions. You can change the policy by setting the ``c.LateSubmissionPlugin.policy`` in the configuration file:
 
 .. code:: python
 
