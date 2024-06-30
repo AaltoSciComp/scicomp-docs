@@ -1,10 +1,10 @@
 Exporting Grades from Nbgrader
-================================
+==============================
 
 To export grades, ``nbgrader export`` is your central point.
 
 Default Exporter (MyCourses)
------------------
+----------------------------
 
 Running the command above will generate a CSV file (using a custom MyCourses exporter), which you can download, check, and upload to MyCourses.
 
