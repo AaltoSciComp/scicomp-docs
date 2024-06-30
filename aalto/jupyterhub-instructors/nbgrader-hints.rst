@@ -44,7 +44,13 @@ Another policy provided by the default plugin is ``zero``, which assigns a zero 
    c.LateSubmissionPlugin.policy = 'zero'
   
 
-In addition, you can set your desired late submission policy for your course. There are some pre-defined policies that you can choose from, or send us a ticket describing the policy and we will try to create it for you. The policies are defined in the ``aalto_nbgrader_late.py`` file (visible under the path ``/m/jhnas/jupyter/software/pymod/``). So far, the available policies are:
+In addition, you can set your desired late submission policy for your course. There are some pre-defined policies that you can choose from, or send us a ticket describing the policy and we will try to create it for you.
+
+.. seealso::
+
+   :doc:`request-course`
+
+The policies are defined in the ``aalto_nbgrader_late.py`` file (visible under the path ``/m/jhnas/jupyter/software/pymod/``). So far, the available policies are:
 
 1. ``SubMarks``: The student's grade is reduced by a fixed number of marks for each hour the assignment is late (``penalty_unit=1`` would reduce 1 mark per hour from the submission score).
 
@@ -55,7 +61,7 @@ In addition, you can set your desired late submission policy for your course. Th
 Moreover, you can provide a list of students to exempt from the late submission policy. You can set the list by adding a line to the nbgrader configuration file (see the example below).
 
 
-.. note::
+.. admonition:: Example
    For example, to adopt the ``SubRatio`` policy, you can use the following lines:
 
    .. code:: python
@@ -65,11 +71,6 @@ Moreover, you can provide a list of students to exempt from the late submission 
       c.SubRatio.student_exemptions = ['student1', 'student2']
 
    In this example, the **SubRatio** policy is used with a penalty ratio of 20% per day. The students *student1* and *student2* are exempted from the late submission policy.
-
-.. seealso::
-
-   :doc:`request-course`
-
 
 Testing releasing assignments, without students seeing
 ------------------------------------------------------

@@ -11,7 +11,7 @@ Running the command above will generate a CSV file (using a custom MyCourses exp
 - You can add the option ``--MyCoursesExportPlugin.scale_to_100=False`` to not scale points to 100.
 
 
-.. note::
+.. admonition:: Example
         
     The example below will export the grades for the assignment ``pa1`` (mandatory to set) to a CSV file named ``grades.csv`` (optional). The grades will not be scaled to 100.
 
@@ -50,6 +50,5 @@ To export multiple assignments, you can set the ``assignment`` attribute in the 
 
 .. seealso::
 
-   :doc:`Nbgrader Basics <./nbgrader>` for learning more about Nbgrader and the configuration.
-
-   :doc:`Hints <./nbgrader-hints>` for more tips, such as late submission policy.
+   - :doc:`Nbgrader Basics <./nbgrader>` for learning more about Nbgrader and the configuration.
+   - :doc:`Hints <./nbgrader-hints>` for more tips, such as late submission policy.
