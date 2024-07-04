@@ -51,7 +51,7 @@ projects** when needed to keep things organized.INLINE
 +--------------+--------------+--------------+--------------+--------------+-------------------+
 | scratch      | /m/$dept/scr | yes          | per-project, | RAID6, but   | Don't even        |
 |              | atch/$pro    |              | 2 PiB        | no backups.  | think about       |
-|              | hect/        |              | available    |              | leaving           |
+|              | ject/        |              | available    |              | leaving           |
 |              |              |              |              |              | irreplaceable     |
 |              |              |              |              |              | files here!       |
 |              |              |              |              |              | Need Triton       |
