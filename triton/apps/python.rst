@@ -25,7 +25,8 @@ Python distributions
      * How to install own packages
 
    * * I don't really care, I just want recent stuff and to not worry.
-     * The python environment created by Aalto Scientific computing: ``module load`` :sub:`(sw-module-scicomp-python-env) *scicomp-python-env*`
+     * The python environment created by Aalto Scientific computing:
+       ``module load scicomp-python-env``
      *
 
    * * Simple programs with common packages, not switching between
