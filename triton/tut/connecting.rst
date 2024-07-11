@@ -153,6 +153,8 @@ and more. It really will save you time.
 .. admonition:: SSH from outside the Aalto networks
    :class: dropdown
 
+   We recommend VPN instead of this.
+
    If you are from outside the Aalto networks, use the ProxyJump
    option (``-J``) in modern OpenSSH to connect directly to Triton
    without VPN.  This is more work than VPN, since you have to `set up
