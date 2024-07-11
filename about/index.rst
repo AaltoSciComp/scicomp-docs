@@ -151,44 +151,68 @@ added here, let us know.  We welcome all contributors.  *There is no
 Aalto Scientific Computing, just people who want to make computing
 better.*
 
+This table is to show the diversity of our skills, not to contact a
+certain person.  Always contact us by :doc:`our help channels
+</help/index>` for new questions.
+
 .. list-table::
 
    * *
-     * Affiliations
-     * Specialties
+     * Internal specialties
+     * Background skills
 
-   * * `Richard Darst <https://people.aalto.fi/richard_darst>`_
-     * Science-IT, CS-IT, Data Agents, Aalto RSE
-     * Data science, Triton, teaching, usability
-
-   * * Ivan Tervanto
-     * Science-IT, PHYS-IT
-     * Triton, HPC hardware, HPC OS, teaching
+   * * Richard Darst
+     * Triton admin, RSE, **RSE lead**, online teaching, **documentation**
+     * computational physics/chemistry, complex systems, data science
 
    * * Enrico Glerean
-     * Science-IT, NBE, Data Agents, Aalto ethics committee
-     * Triton, ethics and personal data, data.
+     * Triton admin, RSE, **research ethics**, **personal data**, organizing teaching, statistics
+     * neuroimaging methods, statistics, signal processing, responsible conduct of research
 
-   * * `Simppa Äkäslompolo <https://www.aalto.fi/en/people/simppa-akaslompolo>`_
-     * Science-IT, PHYS-IT
-     * Triton, HPC OS, parallel software
-
-   * * Jarno Rantaharju
-     * Science-IT, Aalto RSE
-     * Software Development, HPC software and optimization, profiling
-
-   * * Thomas Pfau
-     * Science-IT, Aalto RSE
-     * Software development, Matlab, Linear/mixed integer programming, Constraint based metabolic modelling
-
-   * * Simo Tuomisto
-     * Science-IT, CS-IT
-     * Software Development, HPC software design and optimization, GPU
-       computing
+   * * Hossein Firooz
+     * RSE (earmarked for FCAI)
+     * machine learning
 
    * * Mikko Hakala
-     * Science-IT, CS-IT, NBE-IT
-     * Triton, data storage systems, HPC administration
+     * Triton admin, **team lead**, **strategy and finance**
+     * Computational physics, mathematics
+
+   * * Sami Laine
+     * Triton admin
+     * JupyterHub, software deployment, security and cloud
+
+   * * Thomas Pfau
+     * RSE (web)
+     * Computational Biology, Metabolic modelling, Linear Programming
+
+   * * Jarno Rantaharju
+     * RSE
+     * computational physics (quantum mechanics), HPC development and optimization.
+
+   * * Teemu Ruokolainen
+     * RSE (earmarked for FCAI)
+     * Natural language processing, digital humanities, social sciences
+
+   * * Mira Salmensaari
+     * Triton admin, software deployment, teaching
+     * Computational physics
+
+   * * Ivan Tervanto
+     * Triton admin, **Triton hardware**, **data center**, Applied Physics support, teaching
+     * Computational physics, computer science
+
+   * * Yu Tian
+     * RSE (generative AI, earmarked for FCAI)
+     * Machine learning, medical research
+
+   * * Simo Tuomisto
+     * RSE, Triton admin
+     * Computational physics, deep learning
+
+   * * Simppa Äkäslompolo
+     * Triton admin, **data storage systems**, **Slurm**, hardware and data center, COMSOL
+     * Monte Carlo computations, FEM
+
 
 Scientific outputs
 ------------------
