@@ -15,7 +15,11 @@ Scicomp garage
      ref:`SciComp chat <chat>` too coordinate a meeting day.  Software
      requests should go to the :ref:`issue tracker <issuetracker>`.
 
-     * 27 June (T) - 4 July (Th) there may be less people around.
+     * Week of 8.july: OK
+     * Week of 15.july: less than OK
+     * Week of 22.july: maybe OK
+     * Week of 29.july: probably OK
+     * week of 5.august and after: basically normal
 
 
 If you need more help than the issue trackers, this is the place to
