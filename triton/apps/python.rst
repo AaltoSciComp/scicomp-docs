@@ -21,26 +21,21 @@ Python distributions
    :header-rows: 1
 
    * *
-     * Python to use
-     * How to install own packages
+     * What to use
+     * How
 
-   * * I don't really care, I just want recent stuff and to not worry.
-     * The python environment created by Aalto Scientific computing:
-       ``module load scicomp-python-env``
-     *
+   * * I use some common libraries
+     * The pre-built python environment by ASC
+     * ``module load scicomp-python-env``
 
-   * * Simple programs with common packages, not switching between
-       Pythons often
-     * Scicomp Environment: ``module load scicomp-python-env``
-     * ``pip install --user``
+   * * I need to select my own packages
+     * Mamba/conda environments
+     * ``module load mamba`` and :doc:`python-conda`
 
-   * * Your own conda environment
-     * Mamba/conda: ``module load mamba``
-     * conda environment + mamba
+   * * Own small pure Python packages
+     * Virtual environment (for most purposes we recommend Conda though)
+     * Normal virtualenv tools
 
-   * * Your own virtual environment
-     * Module virtualenv ``module load scicomp-python-env``
-     * virtualenv + pip + setuptools
 
 The main version of modern Python is 3. Support for old Python 2 ended at the
 end of 2019. There are also different distributions: The "regular" CPython,
@@ -48,34 +43,65 @@ Anaconda (a package containing CPython + a lot of other scientific software all
 bundled togeter), PyPy (a just-in-time compiler,  which can be much faster for
 some use cases). Triton supports all of these.
 
--  For general scientific/data science use, we suggest that you use
-   the python scicomp environment (``module load scicomp-python-env``). 
-   It comes with the most common scientific software included,
-   and is reasonably optimized.
--  There are many other "regular" CPython versions in the module system.
-   These are compiled and optimized for Triton, and are highly
-   recommended.  The default system Python is old and won't be updated.
-
 Make sure your environments are **reproducible** - you can recreate
-them from scratch.  History shows you will probably have to do this
-eventually, and it also ensures that others can always use your code.
-We recommend a minimal ``requirements.txt`` (pip) or
-``environment.yml`` (conda), hand-created with the minimal
-dependencies in there.
+them from scratch.  History shows it's easier to re-create when you
+have a problem (compared to solving dependency problems), and your
+code will also be installable on other systems.
+We recommend a minimal ``environment.yml`` (conda) or
+``requirements.txt`` (pip), hand-created with exactly what you need in
+there.
 
-Quickstart
-----------
 
-Use ``module load scicomp-python-env`` to get our Python installation.
 
-This installation comes with the most common packages used on Triton.
-If you need packages, not within this installation, you can either build
-your own environment with conda or virtualenv (detailed below).
-Installing your own packages with ``pip install`` won't work, since it
-tries to install globally for all users.
-We strongly suggest to build environments using environment files, as 
-it greatly increases reproducibility of the code, and it is way easier 
-for you to port your code to another system.
+Triton pre-built ``scicomp-python-env``
+---------------------------------------
+
+This module contains a pre-built Conda environment with many common
+packages people request.  It might serve your needs, and we can
+install other packages into it if you need it (but it might be faster
+to make your own env).  Note that the versions in this might get updated
+at any time, so it's not a stable solution.
+
+It is loaded through the module system::
+
+  $ module load scicomp-python-env
+
+
+
+Conda environments
+------------------
+
+.. seealso::
+
+   :doc:`python-conda`
+
+
+
+.. _virtualenv:
+
+Virtual environments
+--------------------
+
+Python's normal virtual environment tools work on Triton.  We normally
+recommend Conda environments instead, since they handle all the extra
+compiled libraries needed for scientific software.  Virtual
+environments probably work fine for pure-Python code.
+
+We don't include more instructions on virtual environments here.
+
+
+
+Conda/virtualenvironments in Jupyter
+------------------------------------
+
+If you make a conda environment / virtual environment, you can use it
+from Triton's JupyterHub (or your own Jupyter).  See
+:ref:`triton-jupyter-virtualenv-conda-kernels`.
+
+
+
+Warning: ``pip install --user``
+-------------------------------
 
 .. warning:: ``pip install --user`` can result in incompatibilities
 
@@ -105,204 +131,7 @@ for you to port your code to another system.
    install that was hiding any Tensorflow in any module (forcing a CPU
    version on them).
 
-Note: ``pip`` installs from the `Python Package Index
-<https://pypi.org/>`__.
 
-.. _conda:
-
-The scicomp python env and conda environments
----------------------------------------------
-
-We provide a python environment with most common scientific packages based 
-loosely on the environment provided by `Anaconda <https://www.anaconda.com>`__.
-Anaconda is a Python distribution by Continuum Analytics (open source, of course). 
-It is nothing fancy, they just take a lot of useful scientific packages 
-and their dependencies and put them all together, make sure they work, 
-and do some optimization.
-
-To load this basic environment , use the module system (you can also load specific
-versions):
-
-::
-
-    $ module load scicomp-python-env     # python3
-    
-
-Conda environments
-~~~~~~~~~~~~~~~~~~
-
-.. seealso::
-
-   Watch a `Research Software Hour episode on conda
-   <https://www.youtube.com/watch?v=ddCde5Nu2qo&list=PLpLblYHCzJAB6blBBa0O2BEYadVZV3JYf>`__
-   for an introduction + demo.
-
-
-If you encounter a situation where you need to create your own environment,
-we recommend that you use conda environments. When you create your own
-environment the packages from the base environment (default environment
-installed by us) will not be used, but you can choose which packages you want
-to install.
-
-We nowadays recommend that you use the ``mamba``-module for installing these
-environments. This provides a minimal installation that can be used to
-create your own environments with ``mamba`` or ``conda``.
-
-By default conda tries to install packages into your home folder, which can
-result in running out of quota. To fix this, you should run the following commands once::
-
-  $ module load mamba
-
-  $ mkdir $WRKDIR/.conda_pkgs
-  $ mkdir $WRKDIR/.conda_envs
-
-  $ conda config --append pkgs_dirs ~/.conda/pkgs
-  $ conda config --append envs_dirs ~/.conda/envs
-  $ conda config --prepend pkgs_dirs $WRKDIR/.conda_pkgs
-  $ conda config --prepend envs_dirs $WRKDIR/.conda_envs
-
-**virtualenv** does not work with Anaconda, use ``conda`` instead.
-
--  Load the mamba module. You should look up the version and use
-   load same version each time you source the environment::
-
-       ## Load mamba first.  This must always be done before activating the env!
-       $ module load mamba
-
--  Create an environment. This needs to be done once::
-
-       ## create environment with the packages you require
-       $ mamba create -n ENV_NAME python pip ipython tensorflow-gpu pandas ...
-
--  Activate the environment. This needs to be done every time you load
-   the environment::
-
-       ## This must be run in each shell to set up the environment variables properly.
-       ## make sure module is loaded first.
-       $ source activate ENV_NAME
-
--  Activating and using the environment, installing more packages,
-   etc. can be done either using ``conda install`` or ``pip install``::
-
-       ## Install more packages, either conda or pip
-       $ mamba search PACKAGE_NAME
-       $ mamba install PACKAGE_NAME
-       $ pip install PACKAGE_NAME
-
--  Leaving the environment when done (optional)::
-
-       ## Deactivate the environment
-       $ source deactivate
-
--  To activate an environment from a Slurm script:
-
-   .. code-block:: slurm
-
-      #!/bin/bash
-      #SBATCH --time=00:05:00
-      #SBATCH --cpus_per_task=1
-      #SBATCH --mem=1G
-
-      source activate ENV_NAME
-
-      srun echo "This step is ran inside the activated conda environment!"
-
-      source deactivate
-
--  Worst case, you have incompatibility problems. Remove everything,
-   including the stuff installed with ``pip install --user``. If you've
-   mixed your personal stuff in with this, then you will have to
-   separate it out.::
-
-       ## Remove anything installed with pip install --user.
-       $ rm -r ~/.local/lib/python*.*/
-
-A few notes about conda environments:
-
--  Once you use a conda environment, everything goes into it. Don't mix
-   versions with, for example, local packages in your home dir and
-   ``--pip install --user``.  Things installed (even previously) with
-   ``pip install --user`` will be visible in the conda environment and
-   can make your life hard!
-   Eventually you'll get dependency problems.
--  Often the same goes for other python based modules. We have setup
-   many modules that do use anaconda as a backend. So, if you know what
-   you are doing this might work.
-
-.. include:: /triton/ref/condaactivate.rst
-
-
-.. _virtualenv:
-
-Python: virtualenv
-------------------
-
-Virtualenv is default-Python way of making environments, but does
-**not** work with Anaconda.  We generally recommend using conda/mamba,
-since it includes a lot more stuff by default, but ``virtualenv``
-works on other systems easily so it's good to know about.
-
-::
-
-    ## Load module python
-    $ module load scicomp-python-env
-
-    ## Create environment
-    $ virtualenv DIR
-
-    ## activate it (in each shell that uses it)
-    $ source DIR/bin/activate
-
-    ## install more things (e.g. ipython, etc.)
-    $ pip install PACKAGE_NAME
-
-    ## deactivate the virtualenv
-    $ deactivate
-
-.. _python-ipyparallel:
-
-Conda/virtualenvironments in Jupyter
-------------------------------------
-
-If you make a conda environment / virtual environment, you can use it
-from Triton's JupyterHub (or your own Jupyter).  See
-:ref:`triton-jupyter-virtualenv-conda-kernels`.
-
-IPython Parallel
-----------------
-
-`ipyparallel <https://ipyparallel.readthedocs.io/en/latest/>`__ is a
-tool for running embarrassingly parallel code using Python.   The
-basic idea is that you have a *controller* and *engines*.  You have a
-*client* process which is actually running your own code.
-
-Preliminary notes: ipyparallel is installed in the
-``scicomp-python-env/latest`` modules.
-
-Let's say that you are doing some basic interactive work:
-
-* Controller: this can run on the frontend node, or you can put it on
-  a script.  To start: ``ipcontroller --ip="*"``
-* Engines: ``srun -N4 ipengine``: This runs the four engines in slurm
-  interactively.  You don't need to interact with this once it is
-  running, but remember to stop the process once it is done because it
-  is using resources.  You can start/stop this as needed.
-* Start your Python process and use things like normal:
-
-  .. code-block:: python
-
-    import os
-    import ipyparallel
-    client = ipyparallel.Client()
-    result = client[:].apply_async(os.getpid)
-    pid_map = result.get_dict()
-    print(pid_map)
-
-This method lets you turn on/off the engines as needed.  This isn't the
-most advanced way to use ipyparallel, but works for interactive use.
-
-See also: :doc:`../examples/python/ipyparallel/ipyparallel` for a version
-which goes in a slurm script.
 
 Background: ``pip`` vs ``python`` vs ``anaconda`` vs ``conda`` vs ``virtualenv``
 --------------------------------------------------------------------------------
@@ -351,6 +180,8 @@ On Triton we have added some packages on top of the Anaconda
 installation, so cloning the entire Anaconda environment to local conda
 environment will not work (not a good idea in the first place but some
 users try this every now and then).
+
+
 
 Examples
 --------

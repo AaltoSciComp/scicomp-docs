@@ -1,3 +1,5 @@
+.. _conda:
+
 ==============================
 Python Environments with Conda
 ==============================
@@ -10,6 +12,13 @@ commands work with either.
 
 It is commonly used to handle complex requirements of Python
 and R packages.
+
+.. seealso::
+
+   Watch a `Research Software Hour episode on conda
+   <https://www.youtube.com/watch?v=ddCde5Nu2qo&list=PLpLblYHCzJAB6blBBa0O2BEYadVZV3JYf>`__
+   for an introduction + demo.
+
 
 Quick usage guide
 *****************
