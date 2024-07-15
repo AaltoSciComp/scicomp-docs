@@ -1,5 +1,5 @@
 Creating an environment with GPU enabled PyTorch
-************************************************
+""""""""""""""""""""""""""""""""""""""""""""""""
 
 To create an environment with GPU enabled PyTorch you can use an
 environment file like this

@@ -17,12 +17,12 @@ Tensorflow
 Tensorflow is a commonly used Python package for deep learning.
 
 Basic usage
-***********
+-----------
 
 First, check the tutorials up to and including :doc:`../tut/gpu`.
 
 Installing via conda
-********************
+--------------------
 
 Have a look :doc:`here </triton/apps/python-conda>` for details on how to install
 conda environments.
@@ -32,8 +32,8 @@ conda environments.
 .. include:: /triton/examples/cuda/cuda_override_hint.rst
 
 
-Examples:
-*********
+Examples
+--------
 
 .. include:: ../examples/tensorflow/tensorflow_mnist.rst
 

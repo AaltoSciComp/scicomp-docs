@@ -152,10 +152,11 @@ See also: :doc:`../tut/gpu`.
 .. _ref-conda:
 
 
-Conda
------
+Conda Environments (Mamba)
+--------------------------
 
-See also: :doc:`../apps/python-conda`
+See also: :doc:`../apps/python-conda`.  Note that ``mamba`` is a
+drop-in replacement for ``conda``.
 
 .. include:: conda.rst
 
