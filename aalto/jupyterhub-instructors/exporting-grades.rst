@@ -1,7 +1,7 @@
 Exporting Grades from Nbgrader
 ==============================
 
-To export grades, ``nbgrader export`` is your central point.
+To export grades, ``nbgrader export`` is your central point.  Jupyter.cs is configured to use our MyCourses exporter by default (which can be examined in `GitHub <https://github.com/AaltoSciComp/jupyterhub-aalto/blob/main/user-scripts/mycourses_exporter.py>`__ or `on jupyter.cs </m/jhnas/jupyter/software/pymod/mycourses_exporter.py>`__).
 
 Default Exporter (MyCourses)
 ----------------------------
