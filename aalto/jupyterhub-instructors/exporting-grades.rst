@@ -21,6 +21,9 @@ Running the command above will generate a CSV file (using a custom MyCourses exp
 
     You can also use the configuration file to set these arguments. See the next section for more information.
 
+The exporter can't know which students are enrolled in MyCourses, so if students have accessed the courses in jupyter.cs and submitted assignments, they will be in the output and cause the MyCourses import to fail.  There isn't a way to tell MyCourses to ignore missing students, so for the time being you should find these students and manually remove them from the exported csv file.
+
+
 Detailed Exporter
 -----------------
 
