@@ -27,7 +27,7 @@ The exporter can't know which students are enrolled in MyCourses, so if students
 Detailed Exporter
 -----------------
 
-You could also use the detailed exporter, which exports the grades in a more detailed format. This is useful if you want to see the grades for each graded cell in notebooks.
+You could also use the detailed exporter, which exports the grades in a more detailed format. This is useful if you want to see the grades for each graded cell in notebooks and is designed for cases where teachers want full control over their grades to be able to manually compute a final grade according to custom rules. (This exporter could also be used as a starting point to make your own custom grades exporter that programs your custom rules, but it might be easier to download the raw data with this pre-made exporter and process the grades on your own computer).
 
 This exporter can be used to export multiple assignments grades in a single file. The column names will include the assignment name (if exporting more than one assignment), notebook name (if the assignment contains more than one notebook) and the cell name. The cell names will look something like ``cell-fe326c8d9fe8d3a3`` unless you assign a proper name in the cell metadata while creating the assignment notebook, which we encourage you to do.
 
