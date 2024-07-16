@@ -79,7 +79,8 @@ Moreover, you can provide a list of students to exempt from the late submission 
 
 
 .. admonition:: Example
-   For example, to adopt the ``SubRatio`` policy, you can use the following lines:
+   
+   To adopt the ``SubRatio`` policy, you can use the following lines:
 
    .. code:: python
    

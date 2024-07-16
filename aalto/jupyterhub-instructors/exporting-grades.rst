@@ -6,7 +6,7 @@ To export grades, ``nbgrader export`` is your central point.  Jupyter.cs is conf
 Default Exporter (MyCourses)
 ----------------------------
 
-Running the command above will generate a CSV file (using a custom MyCourses exporter), which you can download, check, and upload to MyCourses.  The format `USERNAME@aalto.fi` does work with MyCourses.
+Running the command above will generate a CSV file (using a custom MyCourses exporter), which you can download, check, and upload to MyCourses.  The format ``USERNAME@aalto.fi`` does work with MyCourses.
 
 - You can add the option ``--MyCoursesExportPlugin.scale_to_100=False`` to not scale points to 100.
 
