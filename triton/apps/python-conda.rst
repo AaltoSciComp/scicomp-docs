@@ -1,6 +1,5 @@
 .. _conda:
 
-==============================
 Python Environments with Conda
 ==============================
 
@@ -20,15 +19,26 @@ and R packages.
    for an introduction + demo.
 
 
+Doing everything faster with mamba
+----------------------------------
+
+For most purposes, `mamba <https://github.com/mamba-org/mamba>`_ is a drop-in replacement
+for conda that *is much faster*.  We recommend it everywhere it can be
+used, and for most purposes mamba and conda are interchangeable.  They
+manage the exact same environments.
+
+
 Quick usage guide
-*****************
+-----------------
 
 .. _conda-first-time-setup:
 
 First time setup
-----------------
+~~~~~~~~~~~~~~~~
 
-You can get conda and mamba by loading the ``mamba``-module:
+You can get conda and mamba by loading the ``mamba``-module.  **Mamba
+is a faster drop-in replacement for conda and we recommend its use
+where possible.**
 
 .. code-block:: console
 
@@ -52,7 +62,7 @@ Now you're all set up to create your first environment.
 
 
 Creating a simple environment with conda
-----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 One can install environments from the command line itself, but a better idea
 is to write an ``environment.yml``-file that describes the environment.
@@ -80,7 +90,7 @@ Once the environment is installed, you can activate it with:
 .. include:: /triton/apps/importantnotes/resetconda.rst 
 
 Understanding the environment file
-----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Conda environment files are written using YAML syntax.
 In an environment file one usually defines the following:
@@ -90,7 +100,7 @@ In an environment file one usually defines the following:
 - ``dependencies``: Which conda and pip packages to install.
 
 Choosing conda channels
-~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^
 
 When an environment file is used to create an environment, conda
 looks up the list of channels (in descending priority) and it will try to find
@@ -119,7 +129,7 @@ One can have multiple channels defined like in the following example:
 
 
 Setting package dependencies
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Packages in ``environment.yml`` can have version constraints and version
 wildcards. One can also specify pip packages to install after conda-packages
@@ -134,50 +144,66 @@ than 1.10 using conda and scipy via pip:
    :language: yaml
 
 Listing packages in an environment
-----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To list packages installed in an environment, one can use:
 
 .. code-block:: console
 
-  $ conda list
+  $ mamba list
 
 
 Removing an environment
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 To remove an environment, one can use:
 
 .. code-block:: console
 
-  $ conda env remove --name environment_name
+  $ mamba env remove --name environment_name
 
 Do remember to deactivate the environment before trying to remove it.
 
 Cleaning up conda cache
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Conda uses a cache for downloaded and installed packages. This cache can get
 large or it can be corrupted by failed downloads.
 
-In these situations one can use ``conda clean`` to clean up the cache.
+In these situations one can use ``mamba clean`` to clean up the cache.
 
-- ``conda clean -i`` cleans up the index cache that conda uses to find the packages.
-- ``conda clean -t`` cleans up downloaded package installers.
-- ``conda clean -p`` cleans up unused packages.
-- ``conda clean -a`` cleans up all of the above.
+- ``mamba clean -i`` cleans up the index cache that conda uses to find the packages.
+- ``mamba clean -t`` cleans up downloaded package installers.
+- ``mamba clean -p`` cleans up unused packages.
+- ``mamba clean -a`` cleans up all of the above.
 
 
-Installing new packages into an environment
--------------------------------------------
+Updating packages in an environment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Installing new packages into an existing environment can be done with
-``conda install``-command. The following command would install ``matplotlib``
-from ``conda-forge`` into an environment.
+We recommend updating the ``environment.yml`` file, and then::
+
+  $ mamba env update --file environment.yml
+
+If you make major changes, or *anything* goes wrong, we recommend
+removing the environment and re-creating it.  (This is a big benefit
+of environment files).
+
+
+Installing single new packages into an environment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+We recommend the previous section instead, so that the
+``environment.yml`` file stays consistent, and you can always re-create
+or move the environment if needed
+
+
+If needed, ``mamba-install`` can be used (in this case, install
+``matplotlib`` from ``conda-forge`` into an environment.
 
 .. code-block:: console
 
-  $ conda install --freeze-installed --channel conda-forge matplotlib
+  $ mamba install --freeze-installed --channel conda-forge matplotlib
 
 Installing packages into an existing environment can be risky: conda uses
 channels given from the command line when it determines which channels it
@@ -199,7 +225,7 @@ easier.
 
 
 Setting default channels for an environment
--------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 It is a good idea to store channels used when creating the environment
 into a configuration file that is stored within the environment. This makes
@@ -219,31 +245,12 @@ We can check the contents of the configuration file with:
   $ cat $CONDA_PREFIX/.condarc
 
 
-Doing everything faster with mamba
-**********************************
-
-`mamba <https://github.com/mamba-org/mamba>`_ is a drop-in replacement
-for conda that does environment building and solving much faster than conda.
-
-To use it, you either need to install ``mamba``-package from
-``conda-forge``-channel or use the ``mamba``-module.
-
-If you have ``mamba``, you can just switch from using ``conda``-command
-to using ``mamba`` and it should work in the same way, but faster.
-
-For example, one could create an environment with:
-
-.. code-block:: console
-
-  $ mamba env create --file environment.yml
-
-
 Motivation for using conda
-**************************
+--------------------------
 
 
 When should you use conda?
---------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you need basic Python packages, you can use pre-installed
 ``scicomp-python-env``-modules. See the :doc:`Python-page <python>` for
@@ -253,7 +260,7 @@ You should use conda when you need to create your own custom environment.
 
 
 Why use conda? What are its advantages?
----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Quite often Python packages are installed with Pip from the
 `Python Package Index (PyPI) <https://pypi.org/>`_. These packages contain
@@ -282,7 +289,7 @@ reproducible.
 
 
 Creating an environment with CUDA toolkit
-*****************************************
+-----------------------------------------
 
 NVIDIA's `CUDA-toolkit <https://developer.nvidia.com/cuda-toolkit>`_ is
 needed for working with NVIDIA's GPUs. Many Python frameworks that work on
@@ -323,7 +330,7 @@ CUDA during installation.
 
 
 Installing numpy with Intel MKL enabled BLAS
-********************************************
+--------------------------------------------
 
 `NumPy <https://numpy.org/>`_ and other mathematical libaries utilize BLAS
 (Basic Linear Algebra Subprograms) implementation for speeding up many
@@ -339,11 +346,11 @@ One can install this library as the default BLAS by specifying
    :language: yaml
 
 Advanced usage
-**************
+--------------
 
 
 Finding available packages
---------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Because conda tries to make certain that all packages in an environment
 are compatible with each other, there are usually tens of different versions
@@ -372,7 +379,7 @@ Here we have:
 - Channel where the package comes from (``conda-forge``).
 
 Checking package dependencies
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 One can check package dependencies by adding the ``--info``-flag to the
 search command. This can give a lot of output, so it is a good idea to
@@ -435,7 +442,7 @@ One can also print the full dependency list with
   $ mamba repoquery depends --channel conda-forge tensorflow=2.8.1=cuda112py39h01bd6f0_0
 
 Fixing conflicts between packages
----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Usually first step of fixing conflicts between packages is to write a new
 environment file and list all required packages in the file as dependencies.
