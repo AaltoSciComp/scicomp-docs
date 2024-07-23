@@ -86,9 +86,23 @@ Moreover, you can provide a list of students to exempt from the late submission 
    
       c.AssignLatePenalties.plugin_class = 'aalto_nbgrader_late.SubRatio'
       c.SubRatio.penalty_unit = 0.2
-      c.SubRatio.student_exemptions = ['student1', 'student2']
+      c.SubRatio.student_extensions = {"student1": 3600 * 24, "student2": 3600 * 12}
 
-   In this example, the **SubRatio** policy is used with a penalty ratio of 20% per day. The students *student1* and *student2* are exempted from the late submission policy.
+   In this example, the **SubRatio** policy is used with a penalty ratio of 20% per day. The students *student1* and *student2* are granted 24 hours and 12 hours extension respectively.
+
+Another way to extend the deadline for some students is using the Formgrader interface, which is explained in the next section. We recommend using one approach or the other, as using both at the same time may cause issues.
+
+Grant Extensions
+~~~~~~~~~~~~~~~~
+
+Another way to extend the deadline for some students is to use the "🗓️ Grant Extension" button on the "Manage Submissions" page for each individual.
+
+.. note::
+    
+   - You can grant extensions to autograded submissions only.
+
+   - The students cannot see the extension granted to them. You can inform them yourself.
+
 
 Testing releasing assignments, without students seeing
 ------------------------------------------------------
