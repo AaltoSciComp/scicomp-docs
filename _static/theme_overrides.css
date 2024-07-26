@@ -57,3 +57,12 @@ details {
 .scicomp-table-dense th, .scicomp-table-dense td {
     padding: 8px 8px !important;
 }
+
+
+/* Link icon.  See more: https://stackoverflow.com/q/1899772 */
+a.reference.external::after {
+    /* content: "\01F517\00FE0E"; /* Globe emoji (text presentation) */
+    /*content: "\002197\00FE0E"; /* Up right arrow (text presentation) */
+    content: " \002197\00FE0F"; /* Up right arrow (emoji presentation) */
+    font-size: 60%;
+}
