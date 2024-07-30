@@ -37,8 +37,8 @@ A few prerequisites:
 Accounts are for (:doc:`see details <usagepolicy>`):
 
 - Research, for which a research supervisor can take
-  responsibility. (please tell us who your supervisor is in your
-  account request).
+  responsibility. (please tell us who your research supervisor is in your
+  account request: someone Professer/Lecturer/Staff Scientist level).
 
   - Anyone affiliated with a research PI in any way (for affiliated
     research).
@@ -63,13 +63,17 @@ Accounts are for (:doc:`see details <usagepolicy>`):
 - NOT for: study projects
 
   - There are other resources for this, see
-    :doc:`/aalto/welcomestudents`
+    :doc:`/aalto/welcomestudents`.
   - If you are a student doing a course project in which you join a
     research group and contribute to research, you fit in the research
-    category and may use Triton.  You should be clear about this in
-    your request, put your research supervisor (not course instructor)
-    as supervisor.  The supervisor should respond to an email
-    confirming the account.
+    category and may use Triton.  (For example, your work will guide
+    future research directions.  Your work may lead to a publication
+    someday, even if not an active part of this project.  The project
+    comes from research ideas)  You should
+    be clear about this in your request and indicate *research* supervisor
+    (Professer/Lecturer level, not course instructor or thesis course
+    supervisor).  The supervisor should respond to an email confirming
+    the account.
 
 - Students coming to one of our :doc:`Scientific Computing in Practice
   courses </training/scip/index>` which uses Triton.. You will be
