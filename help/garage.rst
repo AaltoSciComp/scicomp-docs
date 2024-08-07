@@ -9,18 +9,7 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * Summertime (~1.july -- 2.august), garages will continue, but may have less support
-     available.  We don't promise to be there every day, but from past
-     years there has usually been someone.  You can ask in
-     ref:`SciComp chat <chat>` too coordinate a meeting day.  Software
-     requests should go to the :ref:`issue tracker <issuetracker>`.
-
-     * Week of 8.july: OK
-     * Week of 15.july: less than OK
-     * Week of 22.july: maybe OK
-     * Week of 29.july: probably OK
-     * week of 5.august and after: basically normal
-
+   * There are no known upcoming disruptions.
 
 If you need more help than the issue trackers, this is the place to
 be.  It's not just Triton, but all aspects of scientific computing.
