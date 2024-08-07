@@ -31,7 +31,7 @@ we'll be using the version 22Jun2022.
   cd build
 
   # Activate CMake and OpenMPI modules needed by LAMMPS
-  module load cmake gcc/11.3.0 openmpi/4.1.5
+  module load cmake gcc/13.2.0 openmpi/4.1.6
 
   # Configure LAMMPS packages and set install folder
   cmake ../cmake -D BUILD_MPI=yes -D BUILD_OMP=yes -D CMAKE_INSTALL_PREFIX=../../lammps-mpi-23Jun2022

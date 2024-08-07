@@ -27,7 +27,8 @@ Below is an example that installs LAMMPS with "most packages"-collection enabled
   cd build
 
   # Activate CMake and OpenMPI modules needed by LAMMPS
-  module load cmake gcc/11.3.0 openmpi/4.1.5 fftw/3.3.10 openblas/0.3.23 eigen/3.4.0 ffmpeg/6.0  voropp/0.4.6 zstd/1.5.5
+  module load cmake gcc/13.2.0 openmpi/4.1.6 fftw/3.3.10 openblas/0.3.24 eigen/3.4.0 ffmpeg/6.0 zstd/1.5.5
+  # Not on new-triton-2024: voropp/0.4.6
 
   # Configure LAMMPS packages and set install folder
   cmake ../cmake -C ../cmake/presets/most.cmake -D BUILD_MPI=yes -D BUILD_OMP=yes -D CMAKE_INSTALL_PREFIX=../../lammps-mpi-most-23Jun2022
