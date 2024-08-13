@@ -56,7 +56,7 @@ Account eligibility checklist (:doc:`see details <usagepolicy>`):
     but Triton should be used for the relevant research that will be
     in the thesis, not other company work.
 
-- **Possible: Other minor staff**
+- **Possible: Other minor staff use**
 
   - For example, testing computational methods, supporting other
     research, or simple usage of computational tools.  However, Triton
