@@ -12,7 +12,7 @@ Example project
 
 To get started using Snakemake on Triton, we have prepared `a git repo with a small example project <https://github.com/AaltoRSE/snakemake-triton-example>`_. 
 
-You can clone the repo, follow the instructions in `README.md` to run the project on Triton, and use it as a starting point for your own workflow.
+You can clone the repo, follow the instructions in ``README.md`` to run the project on Triton, and use it as a starting point for your own workflow.
 
 The project
 
