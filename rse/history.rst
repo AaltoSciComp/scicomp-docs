@@ -2,14 +2,14 @@ History of Aalto RSE
 ====================
 
 The term "Research Software Engineer" was first heard around by us
-around 2017-2018 as part of the `CodeRefinery
+around 2018 as part of the `CodeRefinery
 <https://coderefinery.org>`__ project.  At first, the hearer didn't
 understand what it was, but by 2019 it was clear, and clear that we
 needed something like this.
 
-Why did we need this?  Because it's what we were already doing, and we
-needed more of it in the future.  By connecting to an existing thing,
-we would be able to make it more of a thing.  But what was "research
+Why did we need this?  Because it's what we were already doing, and
+what our researchers.  By connecting to an existing concept,
+we would be able to make our work more professional.  But what was "research
 software engineer" to us?  We took a very inclusive view: someone that
 was somewhere between the technology of research, and the research
 itself.  By this view, we were all already RSEs (although most of us
@@ -96,7 +96,8 @@ focus on what they need.
 Our long-term funding goal was to receive a significant amount of
 funding from projects (as in: from external grants).  Some initial
 projects were willing to fund us, but the finance practicalities were
-too complex and this didn't happen as soon as we wanted.
+too complex (too much effort to internally transfer the money) and
+this didn't happen as soon as we wanted.
 
 We never had any shortage of work to do: with a minimal amount of
 advertisement, we had a steady stream of projects that was neither too
@@ -110,24 +111,26 @@ Projects continued to come in about as fast as we could do them: no
 advertising needed, also the delay to starting a project wasn't that
 long.
 
-We got some big projects funders: some flagship projects hired
+We got some big projects funders: some flagship projects funded
 full-time 100% RSEs as part of our team.  They would be dedicated to
 that project, but in practice our whole team is working together on
 whatever projects there may be.  This model seemed to work pretty
 well.
 
-We did work out a project funding method: the general agreement was
-that projects taking less than a month would be funded under basic
-funding, while projects would be expected to fund work lasting more
-than a month themselves.  This was the right balance of "research
-support" and "minimize administrative overhead".  With this, several
-projects provided funding for RSE work.
+We did work out a sustainable project funding method: the general
+agreement was that projects taking less than a month would be funded
+under basic funding, while projects would be expected to fund work
+lasting more than a month themselves.  This was the right balance of
+"project funding" and "minimize administrative overhead" while giving
+the best benefit.  Yes, this was a significant investment into
+research quality.  With this system, several projects began providing
+us with funding.
 
 We also received funding from our university's IT Services.  They
 often had support requests which went beyond IT support into "research
-software engineer" support, and thus they started some pilot projects
-where they would provide funding for non-School of Science projects.
-This eventually became an established funding source.
+software engineer" support, and thus began providing funding projects
+outside the School of Science.  This eventually became an established
+funding source.
 
 When you consider funding from stuff dedicated 100% to projects,
 smaller project funding, and IT Services funding, we certainly have
@@ -136,10 +139,10 @@ most of our funding coming from project sources.
 All during this time, we never had a shortage of projects.  More and
 more projects came specifically as RSE projects, and not as cluster
 usage help requests.  We maintained a nice self-emerging balance,
-where our projects were in balance with our time without us having to
-do any advertisement.  (On the other hand, this mean we probably
-weren't reaching the people who most needed us, so this isn't exactly
-a good thing).
+where our projects were in balance with the time available without us
+having to do any advertisement.  (On the other hand, this mean we
+probably weren't reaching the people who most needed us, so this isn't
+exactly a good thing).
 
 
 Future (As of 2024)
