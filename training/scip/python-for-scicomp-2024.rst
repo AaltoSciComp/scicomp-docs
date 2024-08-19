@@ -10,7 +10,7 @@ Nov 5th - Nov 7th 2024 / Python for Scientific Computing
 .. admonition:: News and Important info
 
    * August 2024 - Please check later, we are updating the page
-   * In the meantime you can register at this link: 
+   * In the meantime you can register at this link: https://link.webropol.com/ep/pfsc24
 
 
 .. admonition:: Last year edition
@@ -96,7 +96,7 @@ Practical information
 
 .. admonition:: Registration
 
-   `General registration: please register here <https://link.webropol.com/ep/python2023>`__
+   `General registration: please register here <https://link.webropol.com/ep/pfsc24>`__
 
 This is an online course streamed via Twitch (the
 `CodeRefinery channel <https://www.twitch.tv/coderefinery>`__) so that
@@ -122,7 +122,7 @@ credit system. Please make sure that your supervisor/study program accepts it.
 Learners with a valid Aalto student number will automatically get the credit
 registered in Aalto systems.
 
-To obtain a certificate/credit, we expect you to have registered to the course by 10/11/2023, 
+To obtain a certificate/credit, we expect you to have registered to the course by 7/11/2024, 
 follow the 4 sessions and provide us with at least the following 5 documents via email
 (1 text document, 4 or more python scripts/notebooks). **Please remember to add your name and surname to all submitted files. If you are a student at Aalto University, please also add your student number.**
 
@@ -136,12 +136,10 @@ follow the 4 sessions and provide us with at least the following 5 documents via
   research. There is no right or wrong way of doing this, but please submit a
   python script/notebook that we are eventually able to run and test on our local computers.
 
-These 5 (or more) documents should be sent before 31/December/2023 23:59CET to scip@aalto.fi.
+These 5 (or more) documents should be sent before 30/November/2024 23:59CET to scip@aalto.fi.
 If the evaluation criteria are met for each of the 5 (or more) documents, you will receive
-a certificate by mid January 2023. Please note that we do not track course attendance and if you missed one
+a certificate by end of December 2024. Please note that we do not track course attendance and if you missed one
 session, recordings will be available on Twitch immediately after the streaming ends.
-
-NEW! Credit fast track: if you submit your homework by 17/November/2023 23:59CET, you get the credit/certificate before 30/Nov. If you submit after the 17/Nov deadline, your credit/certificate will be processed in January (see previous paragraph). 
 
 **Additional course info at:** scip -at- aalto.fi
 
