@@ -67,4 +67,15 @@ deleted.  This series has existed since 2016.
 
 - `Coderefinery Workshop Spring 2023 (21-23 and 28-30. March) <https://coderefinery.github.io/2023-03-21-workshop/>`__
 - :doc:`kickstart-2023`
-- GPU Programming: Why, When and How? <https://enccs.se/events/2023-06-gpu-programming/>
+- `GPU Programming: Why, When and How? <https://enccs.se/events/2023-06-gpu-programming/>`__
+- :doc:`linux-shell-basics-2023`
+- `CodeRefinery September 19-21 and 26-28 <https://coderefinery.org>`__
+- :doc:`python-for-scicomp-2023`
+ 
+2024
+----
+ 
+- :doc:`shell-scripting-2024`
+- `CodeRefinery March 12-14 and 19-21 <https://coderefinery.github.io/2024-03-12-workshop/>`__
+- :doc:`ttt4hpc-2024`
+- :doc:`kickstart-2024`
