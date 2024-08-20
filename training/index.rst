@@ -27,13 +27,8 @@ to suggest a new course, `please take this survey <https://link.webropol.com/s/s
 .. toctree::
    :maxdepth: 1
 
-   scip/linux-shell-basics-2023
-   CodeRefinery September 19-21 and 26-28 <https://coderefinery.org>
-   scip/python-for-scicomp-2023
-   scip/shell-scripting-2024
-   CodeRefinery March 12-14 and 19-21 <https://coderefinery.github.io/2024-03-12-workshop/>
-   scip/ttt4hpc-2024
-   scip/kickstart-2024
+   CodeRefinery September 10-12 and 17-19 <https://coderefinery.org>
+   scip/python-for-scicomp-2024
    Take the survey! Request a re-run of past courses / new courses <https://link.webropol.com/s/scipod>
    scip/index
 
@@ -47,7 +42,6 @@ to suggest a new course, `please take this survey <https://link.webropol.com/s/s
 
 
 **Future courses**
-*Autumn 2023 courses* - Linux Shell, CodeRefinery, Python for Scientific Computing, ... and more!
 We are always adding interesting courses. Please check this page once in a while. If you are interested in a re-run of our past courses or if you want
 to suggest a new course, `please take this survey <https://link.webropol.com/s/scipod>`__.
 
