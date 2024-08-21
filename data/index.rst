@@ -6,26 +6,88 @@ term, but in the long term it can become so chaotic it loses its
 value.  Can you access your research group's data from 5 years ago and
 use it?
 
+Summary for Triton data
+-----------------------
+
+If you use Triton or go beyond your own device/simple cloud services,
+you have the following basic options:
+
+.. list-table::
+   :header-rows: 1
+
+   * *
+     * Shared
+     * Size / backups
+     * When you leave
+     * Usage
+   * * Triton Work
+     * no
+     * 100s GB+
+
+       no
+
+     * deleted
+     * Small projects, testing work, or getting started.  Switch to a
+       scratch directory when a project becomes large.
+
+       ``/scratch/work/USER``
+   * * Triton project
+     * yes
+     * No limit
+
+       no
+     * stays
+     * The most recommended place for large data.  Make sure you back
+       up irreplaceable data (see below).
+
+       ``/scratch/DEPT/PROJECT/``
+
+   * * (Aalto/Dept) Project directory
+     * yes
+     * GBs-TBs
+
+       yes
+     * stays
+     * Recommend to have a copy here for original or irreplaceable
+       data.  Only available on login nodes, so you need a Scratch/Work
+       directory also to copy
+
+       ``/m/DEPT/PROJECT/``
+
+
+You *really should* talk to your group leader about data storage
+locations - data is important and you can't decide yourself.
 
 
 Data storage in Aalto
 ---------------------
 
 * Quick summary: `What file storage to use? <https://www.aalto.fi/en/services/what-file-storage-to-use-when>`__
+* `Teamwork storage space <https://www.aalto.fi/en/services/file-storage-space-for-research-and-groups-teamwork>`__ (Aalto project directories)
 * `Storage services for research data <https://www.aalto.fi/en/services/storage-services-for-research-data>`__
 * `Summary of storage locations <https://www.aalto.fi/en/services/data-storage-file-services>`__
 * `Guidelines for classification of confidential information <https://www.aalto.fi/en/information-processing/classification-of-information>`__,
 
 
-
 Data in Science-IT departments
 ------------------------------
+
+(CS, NBE, PHYS).
+
+Getting space:
 
 .. toctree::
    :maxdepth: 1
 
    requesting
    principles
+
+More details:
+
+.. toctree::
+   :maxdepth: 1
+
+
    aalto-details
    confidential-data
    archival
@@ -74,7 +136,15 @@ Other
 Summary table
 --------------
 
+This is a broad summary of many of the locations mentioned above.
+
 O = good, x  = bad
+
+
+Requirements table
+~~~~~~~~~~~~~~~~~~
+
+Different data has different needs.
 
 .. csv-table::
    :delim: |
@@ -87,6 +157,9 @@ O = good, x  = bad
      Intermediate files | OO           | OO           | OO?          |              |
      Final results/open data |              |              |              |              | OO
 
+
+Storage location table
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. csv-table::
    :delim: |
