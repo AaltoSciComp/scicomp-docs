@@ -153,6 +153,10 @@ the subject of passwords. This authentication method will allow you to
 log into multiple ssh sessions while only needing to enter your
 password once, saving you time and keystrokes.
 
+You make a key on your own computer/laptop, the copy the public
+(``*.pub``) side to the cluster.  The private one (without ``.pub``)
+stays on your computer.
+
 Generate an SSH key
 ~~~~~~~~~~~~~~~~~~~
 
