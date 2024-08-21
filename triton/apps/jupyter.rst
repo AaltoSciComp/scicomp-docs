@@ -290,10 +290,7 @@ is to use the existing R installations on Triton.
           $ module load jupyterhub/live
           $ source activate ENVNAME
           $ Rscript -e "library(IRkernel); IRkernel::installspec(name='ir-NAME', displayname='YOUR R Version')"
-          $ conda deactivate ENVNAME
-
-          ## For R versions before 4, you need to install the kernel. After version 4 IRkernel automatically installs it.
-          $ envkernel conda --user --kernel-template=ir-NAME --name=ir-NAME ENVNAME    TODO: full path?
+          $ envkernel conda --user --kernel-template=ir-NAME --name=ir-NAME ENV_FULL_PATH
     
   .. tab:: Using existing Triton installations of R
 
@@ -323,8 +320,7 @@ is to use the existing R installations on Triton.
          ## Use Rscript to install the jupyter kernel. The jupyterhub/live module is required to point R at the right place for jupyter
          $ module load jupyterhub/live
          $ Rscript -e "library(IRkernel); IRkernel::installspec(name='NAME', displayname='DISPLAYNAME')"
-         ## For R versions before 4, you need to install the kernel. After version 4 IRkernel automatically installs it.
-         $ envkernel lmod --user --kernel-template=NAME --name=IMAGENAME YOURRMODULE
+         $ envkernel lmod --user --kernel-template=NAME --name=IMAGENAME YOURRMODULENAME
          ## YOURRMODULE should match the module you loaded above (THE_VERSION_YOU_WANT above)
 
 .. note:: Installing R packages for jupyter
