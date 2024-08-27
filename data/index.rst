@@ -28,7 +28,7 @@ you have the following basic options:
 
      * deleted
      * Small projects, testing work, or getting started.  Switch to a
-       scratch directory when a project becomes large.
+       Triton project directory when a project becomes large.
 
        ``/scratch/work/USER``
    * * Triton project
