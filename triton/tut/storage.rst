@@ -159,10 +159,11 @@ See the :doc:`Compute
 node local drives <../usage/localstorage>` page for further details and script
 examples.
 
+.. _ramfs description:
+
 ramfs - fast and highly temporary storage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**On login nodes only**,
 ``$XDG_RUNTIME_DIR`` is a ramfs, which means that it looks like files
 but is stored only in memory.  Because of this, it is extremely fast,
 but has no persistence whatsoever.  Use it if you have to make small

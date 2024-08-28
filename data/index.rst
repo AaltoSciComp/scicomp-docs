@@ -41,6 +41,7 @@ you have the following basic options:
        up irreplaceable data (see below).
 
        ``/scratch/DEPT/PROJECT/``
+       Needs to be requested as described :doc:`here </data/requesting/>`
 
    * * (Aalto/Dept) Project directory
      * yes
@@ -171,8 +172,8 @@ Storage location table
    Triton    | :doc:`Triton project </triton/usage/lustre>`    | OO        | OO*       | O            | x         | x                  | O
              | :doc:`work </triton/usage/lustre>`              | OO        | OO*       | O            | x         | x                  |
              | :doc:`Triton home </triton/usage/lustre>`             | x         |           | O            | OO        |                    |
-             | :doc:`Local disks </triton/usage/localstorage`>       | O         | OO        | O            |           |                    |
-             | ramfs             |           | OOO       | OO           |           |                    |
+             | :doc:`Local disks </triton/usage/localstorage>`       | O         | OO        | O            |           |                    |
+             | :ref:`ramfs <ramfs description>`             |           | OOO       | OO           |           |                    |
    Depts     | /m/.../project    | O         | O         | OO           | OO        |                    | O
              | /m/.../archive    | O         | O         | OO           | OO        | O                  | O
    Aalto     | Aalto home        |           |           | OO           | OO        |                    |
@@ -196,5 +197,5 @@ Storage location table
              | Emails            |           |           | x            | x         | x                  |
              | EUDAT B2SHARE     |           |           |              | O         | O                  | O
 
-* For details check out the description of :doc:`the lustre file system </triton/usage/lustre>` and the issue of :doc:`small Files<triton/usage/smallfiles/>` on Triton.
+* For details check out the description of :doc:`the lustre file system </triton/usage/lustre>` and the issue of :doc:`small Files</triton/usage/smallfiles/>` on Triton.
 
