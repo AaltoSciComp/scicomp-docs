@@ -32,9 +32,10 @@ choose between them.  The
          (recommended for most work, group leaders can request them)
 
      * ``/tmp``: temporary directory, pre-user mounted in jobs and
-       automatically cleaned up.
+       automatically cleaned up. (depending node: either ramfs or
+       actual disks)
      * ``/l/``: local persistent storage on some group servers
-     * ``$XDG_RUNTIME_DIR``: ramfs on login node
+     * ``/dev/shm``: ramfs
 
    * See :doc:`remotedata` for how to transfer and access the data
      from other computers.
@@ -124,7 +125,7 @@ Small configuration and similar can go into your home directory.
 
 Home directories
 ~~~~~~~~~~~~~~~~
-The place you start when you log in.  Home directory should be used for init files,
+``/home/$USER``: The place you start when you log in.  Home directory should be used for init files,
 small config files, etc.  It is however not suitable for storing calculation data.
 Home directories are backed up daily.  You usually want to use scratch instead.
 
@@ -136,9 +137,8 @@ reliable against hardware failures (RAID6, redundant servers), but
 *not* safe against human error..  It is
 shared on all nodes, and has very fast access.  It is divided into two
 parts, **scratch (by groups)** and **work (per-user)**.  In general, always
-change to ``$WRKDIR`` or a group ``scratch`` directory when you first
-log in and start doing work. (note: home and work may be deleted six
-months after your account expires: use a group-based space instead).
+change to ``$WRKDIR`` (``/scratch/work/$USER``) or a project ``/scratch/DEPT/PROJECT/`` directory when you first
+log in and start doing work.
 
 Lustre separates metadata and contents onto separate object and
 metadata servers.  This allows fast access to large files, but induces
@@ -149,10 +149,10 @@ See :doc:`../usage/lustre`
 
 Local disks
 ~~~~~~~~~~~
-Local disks are on each node separately.  It is used for the fastest I/Os
-with single-node jobs and is cleaned up after job is finished.  Since 2019,
-things have gotten a bit more complicated given that our newest (skl) nodes
-don't have local disks.  If you want to ensure you have local storage,
+``/tmp``: Local disks are on each node separately.  It is used for the fastest I/Os
+with single-node jobs and is cleaned up after job is finished.  Not
+all nodes have them: some don't have any disks, and ``/tmp`` is also
+in-memory ramfs.  If you want to ensure you have local storage,
 submit your job with ``--constraint=localdisk``.
 
 See the :doc:`Compute
@@ -162,19 +162,20 @@ examples.
 ramfs - fast and highly temporary storage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**On login nodes only**,
-``$XDG_RUNTIME_DIR`` is a ramfs, which means that it looks like files
+``/dev/shm`` is a ramfs, which means that it looks like files
 but is stored only in memory.  Because of this, it is extremely fast,
 but has no persistence whatsoever.  Use it if you have to make small
 temporary files that don't need to last long.  Note that this is no
 different than just holding the data in memory, if you can hold in
 memory that's better.
 
+ramfs counts against the memory of your job or user session.
+
 Other Aalto data storage locations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Aalto has other non-Triton data storage locations available.  See
-:doc:`/data/aalto-details` and :doc:`/data/principles` for more info.
+:doc:`/data/index` for more info.
 
 
 
