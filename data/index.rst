@@ -57,8 +57,9 @@ you have the following basic options:
 
 
 You *really should* talk to your group leader about data storage
-locations - data is important and getting a second opinion of others 
-involved in your project is always a good idea.
+locations - data is important and your group leader needs to be aware
+of where all the group's data is stored so they can coordinate all the
+use.
 
 
 Data storage in Aalto
