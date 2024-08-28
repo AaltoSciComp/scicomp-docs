@@ -101,7 +101,7 @@ Software development
 --------------------
 
 Technical skills are an important part of what we do: computing, data,
-and software.  Many people basic programming courses, but there are
+and software.  Many people attend basic programming courses, but there are
 many important practices beyond that: version control, other tools,
 methods (Scrum, agile, etc), deployment strategies, and so on.
 
@@ -151,9 +151,9 @@ To develop these skills, try:
   project.
 - Report issues and try to help debug a project of interest to you.
 - Make a contribution to a project of interest to you.
-- Package and release one your projects...
+- Package and release one of your projects...
 - ... and see if you can get others to use it.
-- Help others use one of your tools.
+- Help others use some of your tools.
 
 
 

@@ -28,14 +28,14 @@ high-performance computing, and more**, we can:
 
 Instead of, or in addition to, hiring your own intern, postdoc,
 etc. to struggle with
-certain issues, we can help instead.  We consist of experienced
+certain issues, we can help you. Our working groups consist of experienced
 researchers who have broad experience with scientific computing
 (programming, computing, data) for our academic work, and thus can
-seamlessly collaborate on research projects.  We can also do
-consultation and training.  You will have more
-impact since your work is more reusable, open, and higher quality.  We
-can work on existing projects or you can write us directly into your
-grant applications.
+seamlessly collaborate on research projects. We can also do
+consultation and training. You will have more
+impact since your work will become more reusable, open, and of a higher quality. We
+can work on your ongoing projects, or you can add us directly into your next
+grant application.
 
 .. _rse-history: https://www.software.ac.uk/blog/2016-08-17-not-so-brief-history-research-software-engineers-0
 
