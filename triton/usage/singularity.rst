@@ -6,7 +6,7 @@ Singularity Containers
 .. seealso::
 
   * The longer `Container on HPC with Apptainer lesson
-    <https://coderefinery.github.io/ttt4hpc_containers/>`__
+    <https://coderefinery.github.io/hpc-containers/>`__
 
 A **container** is basically an operating system within a file: by
 including all the operating system support files, software inside of
@@ -283,7 +283,7 @@ See also
 --------
 
 * `Containers on HPC with Apptainer
-  <https://coderefinery.github.io/ttt4hpc_containers/>`__ - a longer
+  <https://coderefinery.github.io/hpc-containers/>`__ - a longer
   lesson by our team.
 * Singularity documentation: https://docs.sylabs.io/
 * Singularity docs on building a container: https://docs.sylabs.io/guides/latest/user-guide/build_a_container.html
