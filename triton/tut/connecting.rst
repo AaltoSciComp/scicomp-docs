@@ -257,23 +257,6 @@ are plenty of tutorials.
 
 
 
-Connecting via a Virtual Desktop
---------------------------------
-
-.. seealso::
-
-   `VDI instructions on aalto.fi <https://www.aalto.fi/en/services/vdiaaltofi-how-to-use-aalto-virtual-desktop-infrastructure>`__
-
-If you go to https://vdi.aalto.fi, you can access a cloud-based Aalto Linux
-workstation.  HTML access works from everywhere, or download the
-"VMWare Horizon Client" for a better connection.  Start a Ubuntu
-desktop (you get Aalto Ubuntu).  From there, you **have to use the
-normal Linux ssh instructions to connect to Triton** (via the Terminal
-application) using the instructions you see above: ``ssh
-triton.aalto.fi``.
-
-
-
 VSCode
 ------
 

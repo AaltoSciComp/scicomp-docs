@@ -159,6 +159,8 @@ See the :doc:`Compute
 node local drives <../usage/localstorage>` page for further details and script
 examples.
 
+.. _ramfs-description:
+
 ramfs - fast and highly temporary storage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

@@ -41,6 +41,7 @@ you have the following basic options:
        up irreplaceable data (see below).
 
        ``/scratch/DEPT/PROJECT/``
+       Needs to be requested as described :doc:`here </data/requesting/>`
 
    * * (Aalto/Dept) Project directory
      * yes
@@ -56,7 +57,9 @@ you have the following basic options:
 
 
 You *really should* talk to your group leader about data storage
-locations - data is important and you can't decide yourself.
+locations - data is important and your group leader needs to be aware
+of where all the group's data is stored so they can coordinate all the
+use.
 
 
 Data storage in Aalto
@@ -151,11 +154,11 @@ Different data has different needs.
    :header-rows: 1
    :stub-columns: 1
 
-                  | Large        | Fast         | Confidential | Frequent backups| Long-term archival
-     Code         |              |              |              | OO           | OO
-     Original data | O            | O            | OO?          | OO           | OO
-     Intermediate files | OO           | OO           | OO?          |              |
-     Final results/open data |              |              |              |              | OO
+                              | Large        | Fast         | Confidential | Frequent backups | Long-term archival  | Shareable
+     Code                     |              |              |              | OO               | OO                  | O
+     Original data            | O            | O            | OO?          | OO               | OO                  | O
+     Intermediate files       | OO           | OO           | OO?          |                  |                     | 
+     Final results/open data  |              |              |              |                  | OO                  | OO
 
 
 Storage location table
@@ -166,31 +169,34 @@ Storage location table
    :header-rows: 1
    :stub-columns: 2
 
-             |           | Large     | Fast      | Confidential | Backups|Long-term archival | Shareable
-   Triton    | scratch   | OO        | OO        | O         | x         | x         | O
-             | work      | OO        | OO        | O         | x         | x         |
-             |Triton home| x         |           | O         | OO        |           |
-             |Local disks| O         | OO        | O         |           |           |
-             | ramfs     |           | OOO       | OO        |           |           |
-   Depts     | /m/.../project| O     | O         | OO        | OO        |           | O
-             | /m/.../archive| O     | O         | OO        | OO        | O         | O
-   Aalto     | Aalto home|           |           | OO        | OO        |           |
-             | Aalto work| O         | O         | OO        | OO        |           | O
-             | Aalto teamwork| O     | O         | OO        | OO        |           | O
-             | Aalto laptops |       |           | x         | x         | X         |
-             | Aalto webspace|       |           |           |           |           | OO
-             | version.aalto.fi|     |           | OO        | OO        | O         | OO
-             | ACRIS           |     |           | O         | O         |           |
-             | Eduuni          |     |           |           |           |           |
-             | Aalto Wiki      |     |           |           |           |           |
-   Finland   | Funet filesender|     |           | O         |           |           | OO
-             | CSC cPouta| O         | O         |           |           |           | O
-             | CSC Ida   | OOO       | x         |           | OO        | O         | O
-             | FSD       |           |           | OO        | O         | OO        | O
-   Public    | github    |           |           | x         |           |           | OO
-             | Zenodo    |           |           |           |           | OO        | OO
-             | Google drive|         |           | x         |           |           | O
-             | OneDrive    |         |           |           |           |           |
-             | Own computers|        |           | x         | x         | x         |
-             | Emails    |           |           | x         | x         | x         |
-             | EUDAT B2SHARE |       |           |           | O         | O         | O
+             |                   | Large     | Fast      | Confidential | Backups   |Long-term archival  | Shareable
+   Triton    | :doc:`Triton project </triton/usage/lustre>`    | OO        | OO*       | O            | x         | x                  | O
+             | :doc:`work </triton/usage/lustre>`              | OO        | OO*       | O            | x         | x                  |
+             | :doc:`Triton home </triton/usage/lustre>`       | x         |           | O            | OO        |                    |
+             | :doc:`Local disks </triton/usage/localstorage>` | O         | OO        | O            |           |                    |
+             | :ref:`ramfs <ramfs-description>`                |           | OOO       | OO           |           |                    |
+   Depts     | /m/.../project    | O         | O         | OO           | OO        |                    | O
+             | /m/.../archive    | O         | O         | OO           | OO        | O                  | O
+   Aalto     | Aalto home        |           |           | OO           | OO        |                    |
+             | Aalto work        | O         | O         | OO           | OO        |                    | O
+             | Aalto teamwork    | O         | O         | OO           | OO        |                    | O
+             | Aalto laptops     |           |           | x            | x         | X                  |
+             | Aalto webspace    |           |           |              |           |                    | OO
+             | version.aalto.fi  |           |           | OO           | OO        | O                  | OO
+             | ACRIS             |           |           | O            | O         |                    |
+             | Eduuni            |           |           |              |           |                    |
+             | Aalto Wiki        |           |           |              |           |                    |
+   Finland   | Funet filesender  |           |           | O            |           |                    | OO
+             | CSC cPouta        | O         | O         |              |           |                    | O
+             | CSC Ida           | OOO       | x         |              | OO        | O                  | O
+             | FSD               |           |           | OO           | O         | OO                 | O
+   Public    | github            |           |           | x            |           |                    | OO
+             | Zenodo            |           |           |              |           | OO                 | OO
+             | Google drive      |           |           | x            |           |                    | O
+             | OneDrive          |           |           |              |           |                    |
+             | Own computers     |           |           | x            | x         | x                  |
+             | Emails            |           |           | x            | x         | x                  |
+             | EUDAT B2SHARE     |           |           |              | O         | O                  | O
+
+(*) For details check out the description of :doc:`the lustre file system </triton/usage/lustre>` and the issue of :doc:`small Files</triton/usage/smallfiles>` on Triton.
+
