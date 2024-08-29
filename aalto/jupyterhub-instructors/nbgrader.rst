@@ -71,6 +71,9 @@ Aalto specifics
 - Join the :ref:`shared course repository <jupyterhub-courses-repo>`
   to share knowledge with others
 
+- Instructors can create a file ``etc.jupyter.nbgrader_config.py.append`` in their ``/course/`` directory. The configuration provided in this file gets appended to ``/etc/jupyter/nbgrader_config.py`` and overwrites the prior default configuration. You can use this file to set the custom settings such as late submission policy or grade exporter for your course.
+
+
 To use nbgrader:
 
 - Request a course as above.
