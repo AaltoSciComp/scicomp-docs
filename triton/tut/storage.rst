@@ -29,13 +29,12 @@ choose between them.  The
 
        * ``$WRKDIR`` = ``/scratch/work/$USER``: Personal work directory
        * ``/scratch/DEPARTMENT/NAME/``: Group-based shared directories
-         (recommended for most work, group leaders can request them)
+         (recommended for most work)
 
-     * ``/tmp``: temporary directory, pre-user mounted in jobs and
-       automatically cleaned up. (depending node: either ramfs or
-       actual disks)
-     * ``/l/``: local persistent storage on some group servers
-     * ``/dev/shm``: ramfs
+     * ``/tmp``: temporary local disk space, pre-user mounted in jobs and
+       automatically cleaned up. Only on nodes with disks
+       (``--constraint=localdisk``), otherwise it's ramfs
+     * ``/dev/shm``: ramfs, in-memory file storage
 
    * See :doc:`remotedata` for how to transfer and access the data
      from other computers.
