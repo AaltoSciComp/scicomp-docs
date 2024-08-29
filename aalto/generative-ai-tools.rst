@@ -73,7 +73,7 @@ of text inputs.
 
 
 * `Aalto can provide Azure OpenAI API access
-  <https://www.aalto.fi/en/services/faq-productised-ai-and-azure-openai>`__,
+  <https://www.aalto.fi/en/services/aalto-ai-apis>`__,
   which gives you access to the same models as ChatGPT.  This comes
   with a good data security agreement, and small usage can be provided
   for free.
