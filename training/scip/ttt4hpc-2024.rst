@@ -10,7 +10,7 @@ Tuesday Tools & Techniques for High Performance Computing
 
      - `Day 1 <https://coderefinery.github.io/TTT4HPC_resource_management/>`__
      - `Day 2 <https://coderefinery.github.io/TTT4HPC_Interactive/>`__
-     - `Day 3 <https://coderefinery.github.io/ttt4hpc_containers/>`__
+     - `Day 3 <https://coderefinery.github.io/hpc-containers/>`__
      - `Day 4 <https://coderefinery.github.io/TTT4HPC_parallel_workflows/>`__
 
 .. figure:: img/ttt4hpc.png
@@ -73,7 +73,7 @@ Episode 3 - 07/05/2024 - Containers on clusters
 -----------------------------------------------
 **Content**: focus on containers with Apptainer/Singularity, how to build containers for HPC, how to work with the filesystem, other practical examples with containers
 
-**Learning materials**: `Containers <https://coderefinery.github.io/ttt4hpc_containers/>`__
+**Learning materials**: `Containers <https://coderefinery.github.io/hpc-containers/>`__
 
 
 **Registration**: `Please register at this link <https://link.webropol.com/ep/ttt4hpc3>`__

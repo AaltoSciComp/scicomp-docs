@@ -153,7 +153,7 @@ or **Apptainer**/**Singularity**).  These basically allow you to put an
 everywhere.  Very nice when software is difficult to install or needs to
 be moved from computer to computer, but can take some work to set up.
 See :doc:`../usage/singularity` or the longer lesson on `containers on
-HPC <https://coderefinery.github.io/ttt4hpc_containers/>`__ for more
+HPC <https://coderefinery.github.io/hpc-containers/>`__ for more
 information.
 
 We can't go into this more right now - ask us for help if needed.  If
