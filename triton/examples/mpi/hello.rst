@@ -6,8 +6,8 @@ You can get the repository with the following command::
 
 Loading module::
 
-  module load gcc/11.3.0      # GCC
-  module load openmpi/4.1.5  # OpenMPI
+  module load gcc/12.3.0      # GCC
+  module load openmpi/4.1.6  # OpenMPI
 
 Compiling the code:
 
@@ -19,7 +19,7 @@ Compiling the code:
 
     .. code-block:: bash
 
-      cd hpc-examples/hello_mpi/
+      cd hpc-examples/mpi/hello_mpi/
       mpicc    -O2 -g hello_mpi.c -o hello_mpi
 
   .. group-tab:: Fortran
@@ -28,7 +28,7 @@ Compiling the code:
 
     .. code-block:: bash
 
-      cd hpc-examples/hello_mpi_fortran/  # fortran
+      cd hpc-examples/mpi/hello_mpi_fortran/  # fortran
       mpifort  -O2 -g hello_mpi_fortran.f90 -o hello_mpi_fortran # Fortran code
 
 For testing one might be interested in running the program with srun::
@@ -46,7 +46,7 @@ program with a slurm script:
   #SBATCH --mem-per-cpu=200M   # 200MB per process
   #SBATCH --ntasks=4           # 4 processes
 
-  module load openmpi/4.1.5  # NOTE: should be the same as you used to compile the code
+  module load openmpi/4.1.6  # NOTE: should be the same as you used to compile the code
   srun ./hello_mpi
 
 .. important::
