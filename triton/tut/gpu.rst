@@ -310,6 +310,7 @@ and
 `PyTorch's <https://pytorch.org/docs/stable/data.html>`__ guides
 on efficient data loading.
 
+.. _cuda-nvprof:
 
 Profiling GPU usage with NVIDIA Profilers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -337,7 +338,7 @@ We have produced some profiling examples.
    module load cuda
    nsys profile -o my_application_report ./my_application
 
-This will generate a report file called `my_application_report.qdrep`. To visualize the report on Triton, you can launch a desktop from :doc:`Open Ondemand <../usage/ood>`. In the desktop's terminal, run:
+This will generate a report file called ``my_application_report.qdrep``. To visualize the report on Triton, you can launch a desktop from :doc:`Open Ondemand <../usage/ood>`. In the desktop's terminal, run:
 
 .. code-block:: bash
 
@@ -346,7 +347,7 @@ This will generate a report file called `my_application_report.qdrep`. To visual
 
 to launch the Nsight Systems GUI. You can then open the report file in the GUI to analyze the performance of your application.
 
-If you want to have a quick overview of the performance of your application, you can add the `-stats true` flag to the `nsys` command:
+If you want to have a quick overview of the performance of your application, you can add the ``--stats true`` flag to the ``nsys`` command:
 
 .. code-block:: bash
 
@@ -436,7 +437,7 @@ For more detailed guides on how to use ``nsys``, refer to the    `official NVIDI
    module load cuda
    ncu --target-processes all --set full ./my_application
 
-This command profiles all CUDA kernels in your application, providing a comprehensive set of performance metrics including instruction throughput, memory access efficiency, and occupancy. Nsight Compute generates a report file called `my_application.ncu-rep`.
+This command profiles all CUDA kernels in your application, providing a comprehensive set of performance metrics including instruction throughput, memory access efficiency, and occupancy. Nsight Compute generates a report file called ``my_application.ncu-rep``.
 
 Nsight Compute also allows to analyze the performance of specific CUDA kernels.
 For example, you can run:
@@ -445,14 +446,14 @@ For example, you can run:
 
    ncu --kernel-name 'myKernel' ./my_cuda_application
 
-to profile a kernel named `myKernel`,
+to profile a kernel named ``myKernel``,
 or 
 
 .. code-block:: bash
 
    ncu --kernel-name '^myKernel.*' ./my_cuda_application
 
-to profile all kernels whose names start with `myKernel`.
+to profile all kernels whose names start with ``myKernel``.
 
 Sample output might look something like this:
 
@@ -599,7 +600,6 @@ Available GPUs and architectures
 --------------------------------
 
 .. include:: ../ref/gpu.rst
-
 
 
 Exercises
