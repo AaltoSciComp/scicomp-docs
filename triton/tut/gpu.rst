@@ -313,37 +313,37 @@ on efficient data loading.
 .. _cuda-nvprof:
 
 Profiling GPU usage with NVIDIA Profilers
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------------
 
 NVIDIA provides a suite of profiling tools designed to help users optimize and analyze the performance of applications running on NVIDIA GPUs. These tools are essential for understanding how applications utilize GPU resources and for identifying bottlenecks in the code.
 
 Overview of NVIDIA Profilers:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Nsight Systems is a system-wide performance analysis tool that provides detailed insights into GPU workloads, CPU workloads, and their interactions. It helps identify issues related to CPU-GPU interaction, GPU utilization, memory bandwidth, and other system-level bottlenecks, such as I/O operations.
 
 Nsight Compute is a GPU kernel profiling tool specifically designed for deep-dive analysis of CUDA kernels. It provides a wide range of performance metrics.
 
-nvprof is being deprecated. It has been largely replaced by Nsight Compute and Nsight Systems, both of which provide a more comprehensive and user-friendly profiling experience.
+The old profiler nvprof is being deprecated and is no longer recommended for profiling GPU applications. It has been replaced by Nsight Compute and Nsight Systems, which provide a more comprehensive and user-friendly profiling experience. 
 
 Examples
-^^^^^^^^^^
+~~~~~~~~~~
 
 We have produced some profiling examples.
 
 **To use Nsight Systems**, you need to run:
 
-.. code-block:: bash
+.. code-block:: console  
 
-   module load cuda
-   nsys profile -o my_application_report ./my_application
+   $ module load cuda  
+   $ nsys profile -o my_application_report ./my_application  
 
 This will generate a report file called ``my_application_report.qdrep``. To visualize the report on Triton, you can launch a desktop from :doc:`Open Ondemand <../usage/ood>`. In the desktop's terminal, run:
 
-.. code-block:: bash
+.. code-block:: console
 
-   module load cuda qt
-   nsys-ui
+   $ module load cuda qt
+   $ nsys-ui
 
 to launch the Nsight Systems GUI. You can then open the report file in the GUI to analyze the performance of your application.
 
@@ -432,10 +432,10 @@ For more detailed guides on how to use ``nsys``, refer to the    `official NVIDI
 
 **To use Nsight Compute**, you need to run:
 
-.. code-block:: bash
+.. code-block:: console
 
-   module load cuda
-   ncu --target-processes all --set full ./my_application
+   $ module load cuda
+   $ ncu --target-processes all --set full ./my_application
 
 This command profiles all CUDA kernels in your application, providing a comprehensive set of performance metrics including instruction throughput, memory access efficiency, and occupancy. Nsight Compute generates a report file called ``my_application.ncu-rep``.
 
@@ -526,75 +526,6 @@ The profiling result suggests that the kernel grid is too small, meaning the wor
 
 For detailed guides on how to use ``ncu``, refer to the documentation: `NVIDIA Nsight Compute suite <https://docs.nvidia.com/nsight-compute/index.html>`__.
 
-
-.. admonition:: To be Deprecated
-
-   ``nvprof`` has been largely superceded by ``ncu``, but you can still use it on triton to monitor what took most of the GPU's time during the code's execution.
-
-Similarly, you will run:
-
-.. code-block:: bash
-
-   module load cuda
-   nvprof --metrics all ./my_cuda_application
-
-Sample output might look something like this:
-
-.. code-block:: bash
-
-    ==30251== NVPROF is profiling process 30251, command: ./pi-gpu 1000000000
-    ==30251== Profiling application: ./pi-gpu 1000000000
-    ==30251== Profiling result:
-                Type  Time(%)      Time     Calls       Avg       Min       Max  Name
-     GPU activities:   84.82%  11.442ms         1  11.442ms  11.442ms  11.442ms  throw_dart(curandStateXORWOW*, int*, unsigned long*)
-                       14.70%  1.9833ms         1  1.9833ms  1.9833ms  1.9833ms  setup_rng(curandStateXORWOW*, unsigned long)
-                        0.30%  40.704us         1  40.704us  40.704us  40.704us  [CUDA memcpy DtoH]
-                        0.17%  23.328us         1  23.328us  23.328us  23.328us  [CUDA memcpy HtoD]
-          API calls:   89.52%  122.81ms         3  40.936ms  3.6360us  122.70ms  cudaMalloc
-                       10.05%  13.794ms         2  6.8969ms  68.246us  13.726ms  cudaMemcpy
-                        0.20%  269.55us         3  89.851us  11.283us  130.45us  cudaFree
-                        0.14%  196.08us       101  1.9410us     122ns  83.854us  cuDeviceGetAttribute
-                        0.04%  57.228us         2  28.614us  6.3760us  50.852us  cudaLaunchKernel
-                        0.02%  32.426us         1  32.426us  32.426us  32.426us  cuDeviceGetName
-                        0.01%  13.677us         1  13.677us  13.677us  13.677us  cuDeviceGetPCIBusId
-                        0.01%  10.998us         1  10.998us  10.998us  10.998us  cudaGetDevice
-                        0.00%  2.3540us         1  2.3540us  2.3540us  2.3540us  cudaGetDeviceCount
-                        0.00%  1.2690us         3     423ns     207ns     850ns  cuDeviceGetCount
-                        0.00%     663ns         2     331ns     170ns     493ns  cuDeviceGet
-                        0.00%     656ns         1     656ns     656ns     656ns  cuDeviceTotalMem
-                        0.00%     396ns         1     396ns     396ns     396ns  cuModuleGetLoadingMode
-                        0.00%     234ns         1     234ns     234ns     234ns  cuDeviceGetUuid
-
-
-This output also shows that most of the computing time was caused by calling the
-``throw_dart``-kernel. 
-allocation ``cudaMalloc`` and memory copying ``cudaMemcpy`` used more time than
-the actual computation.
-
-To see a chronological order of different GPU operations one can also run
-``nprof --print-gpu-trace``. The output will look something like this:
-
-.. code-block:: bash
-
-    ==31050== NVPROF is profiling process 31050, command: ./pi-gpu 1000000000
-    ==31050== Profiling application: ./pi-gpu 1000000000
-    ==31050== Profiling result:
-       Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
-    182.84ms  23.136us                    -               -         -         -         -  256.00KB  10.552GB/s    Pageable      Device  Tesla P100-PCIE         1         7  [CUDA memcpy HtoD]
-    182.89ms  1.9769ms            (512 1 1)       (128 1 1)        31        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  setup_rng(curandStateXORWOW*, unsigned long) [118]
-    184.87ms  11.450ms            (512 1 1)       (128 1 1)        19        0B        0B         -           -           -           -  Tesla P100-PCIE         1         7  throw_dart(curandStateXORWOW*, int*, unsigned long*) [119]
-    196.33ms  40.704us                    -               -         -         -         -  512.00KB  11.996GB/s      Device    Pageable  Tesla P100-PCIE         1         7  [CUDA memcpy DtoH]
-    
-    Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
-    SSMem: Static shared memory allocated per CUDA block.
-    DSMem: Dynamic shared memory allocated per CUDA block.
-    SrcMemType: The type of source memory accessed by memory operation/copy
-    DstMemType: The type of destination memory accessed by memory operation/copy
-
-Here we see that the sample code did a memory copy to the device, ran kernel ``setup_rng``,
-ran kernel ``throw_dart`` and did a memory copy back to the host memory.
-
-For more information on ``nvprof``, see `NVIDIA's documentation on it <https://docs.nvidia.com/cuda/profiler-users-guide/index.html#nvprof>`__.
 
 Available GPUs and architectures
 --------------------------------
