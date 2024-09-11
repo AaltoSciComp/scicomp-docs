@@ -198,7 +198,7 @@ MPIP environment variables to change the profiler behavior. Example::
 Scalasca
 ^^^^^^^^
 
-Available through `module load scalasca`
+Available through ``module load scalasca``
 
 .. _gpu-profiling:
 
@@ -244,7 +244,7 @@ On Triton, there are at least two approaches to visualizing profiler results:
       If you connect to Triton through VS Code by setting up an SSH connection.
       You can install the TensorBoard VS Code Extension to view TensorBoard outputs directly on the VS Code interface. 
 
-      Typically, once you have added this line of code `import torch.profiler` to your python script, you will be prompted to install the extension, you will see something like this:
+      Typically, once you have added this line of code ``import torch.profiler`` to your python script, you will be prompted to install the extension, you will see something like this:
 
       .. image:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/tensorboard-vscode.png
          :alt: TensorBoard VS Code Extension

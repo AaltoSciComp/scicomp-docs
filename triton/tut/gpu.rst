@@ -345,32 +345,21 @@ Exercises
 
    Try using ``sbatch`` and Slurm script as well.
 
-.. exercise:: GPU 3: Run the script and do basic profiling with nvprof
+.. exercise:: GPU 3: Run the script and do basic profiling with ``nsys`` (nsight system)
 
-   ``nvprof`` is part of NVIDIA's profiling tools and it can be
+   ``nsys`` is part of NVIDIA's profiling tools and it can be
    used to monitor which parts of the GPU code use up most time.
-
-   Run the program as before, but add ``nvprof`` before it.
-
-   Try running the program with chronological trace mode
-   (``nvprof --print-gpu-trace``) as well.
+   Run the previous program with ``nsys profile`` command and add ``--stats true`` flag.
 
    .. solution::
 
       With ``srun`` you can run the profiling as follows:
 
       .. code-block:: bash
+            
+         srun --time=00:10:00 --mem=500M --gpus=1 nsys profile --stats true -o my_report ./pi-gpu 10000000000
 
-         srun --time=00:10:00 --mem=500M --gres=gpu:1 nvprof ./pi-gpu 10000000000
-
-      To get the trace output, you need to add the ``--print-gpu-trace``-flag:
-
-      .. code-block:: bash
-
-         srun --time=00:10:00 --mem=500M --gres=gpu:1 nvprof --print-gpu-trace ./pi-gpu 10000000000
-
-      You should see output similar to ones shown in the section
-      :ref:`profiling GPU usage with nvprof <cuda-nvprof>`.
+      You should see output similar to ones shown in the section :ref:`gpu-profiling`.
 
 .. exercise:: GPU 4: Your program
 
