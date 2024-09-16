@@ -549,10 +549,10 @@ References
 ----------
 
 - `man ssh
-  <https://manpages.debian.org/stable/openssh-client/ssh_config.5.en.html>`__
+  <https://manpages.debian.org/stable/openssh-client/ssh.1.en.html>`__
   gives a detail of the SSH command line options
 - `man ssh_config
-  <https://manpages.debian.org/stable/openssh-client/ssh.1.en.html>`__
+  <https://manpages.debian.org/stable/openssh-client/ssh_config.5.en.html>`__
   gives a detail of all of the config file options
 - https://www.mn.uio.no/geo/english/services/it/help/using-linux/ssh-tips-and-tricks.html -
   long-form guide
