@@ -94,11 +94,11 @@ Supports by discipline
    :maxdepth: 1
 
    discipline/machinelearning.rst
-   .. discipline/mathematics.rst
-   .. discipline/biosciences.rst
-   .. discipline/chemistry.rst
-   .. discipline/physics.rst
-   .. discipline/miscellaneous.rst
+   discipline/mathematics.rst
+   discipline/biosciences.rst
+   discipline/chemistry.rst
+   discipline/physics.rst
+   discipline/miscellaneous.rst
 
 
 .. _application-list:

@@ -35,7 +35,7 @@ For more information regarding data loading, see
 and
 `PyTorch's <https://pytorch.org/docs/stable/data.html>`__ guides.
 
-To save your quota, we have downloaded some datasets and large language models to the shared folder `/scratch/shareddata/dldata`. For detailed instructions/examples, please refer to the :ref:`llms` section or our example repositories: https://github.com/AaltoRSE/ImageNetTools, https://github.com/AaltoRSE/pytorch-ddp-imagenet.
+To save your quota, we have downloaded some datasets and large language models to the shared folder ``/scratch/shareddata/dldata``. For detailed instructions/examples, please refer to the :ref:`llms` section or our example repositories: https://github.com/AaltoRSE/ImageNetTools, https://github.com/AaltoRSE/pytorch-ddp-imagenet.
 
 
 GPU-accelerated model training
