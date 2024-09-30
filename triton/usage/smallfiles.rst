@@ -1,3 +1,4 @@
+.. _smallfiles:
 ===========
 Small files
 ===========

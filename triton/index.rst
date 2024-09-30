@@ -85,11 +85,27 @@ Running calculations
    tut/gpu.rst
    tut/dependency.rst
 
+Supports by discipline 
+======================
+
+(Updating in progress)
+
+.. toctree::
+   :maxdepth: 1
+
+   discipline/machinelearning.rst
+   discipline/mathematics.rst
+   discipline/biosciences.rst
+   discipline/chemistry.rst
+   discipline/physics.rst
+   discipline/miscellaneous.rst
+
+
 .. _application-list:
 .. _apps:
 
 
-Applications
+Applications 
 ============
 
 See our :doc:`general information <apps/index>` and the full list below:

@@ -273,6 +273,7 @@ For more information, you can check this
 `excellent article <https://arnon.dk/matching-sm-architectures-arch-and-gencode-for-various-nvidia-cards/>`__
 or `CUDA documentation on the subject <https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/index.html#options-for-steering-gpu-code-generation>`__.
 
+.. _gpu-occupancy:
 Keeping GPUs occupied when doing deep learning
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
