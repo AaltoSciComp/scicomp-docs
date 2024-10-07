@@ -227,7 +227,8 @@ environment: Add it to your requirements/environment, or activate the
 environment and do ``pip install ipykernel``.
 
 Then, you need to make the environment visible inside of Jupyter.
-**For conda environments**, you can do::
+**For conda environments**, you can do (you can get the path to the
+environment with ``echo $CONDA_PREFIX`` from the environment)::
 
   $ module load jupyterhub/live
   $ envkernel conda --user --name INTERNAL_NAME --display-name="My conda" /path/to/conda_env
