@@ -173,6 +173,44 @@ this grant.  During this period, one of the Aalto research software engineers jo
 project as a researcher, equal to all other project employees.
 
 
+
+Research infrastructure: Aalto University Data Hub (AUDH)
+---------------------------------------------------------
+
+Aalto University Data Hub (AUDH - datahub.aalto.fi/en) is a research
+infrastructure providing access to reusable data sources, including
+both licensed datasets and open source data. AUDH facilitates Aalto
+researchers with access to commercial and unique, high-quality
+datasets with register data on energy and electricity markets,
+transportation, and telecommunication, as well as important business
+and finance related datasets.
+
+AUDH services include data acquisition and contracting support, data
+stewardship (data curation, provision, encouragement for use, and
+dissemination), data development (such as creating pre-processed
+datasets), data-related technical advice, and maintaining a data
+catalogue at datahub.aalto.fi. AUDH also acts as center of excellence
+for research projects using Statistics Finland data.
+
+AUDH works under the principles of open data: all datasets purchased
+with university-wide licenses are disseminated with no further charge
+to end users. AUDH also monitors access and usage to the datasets to
+comply with contracts written with the data providers and to ensure
+FAIR (Findable, Accessible, Interoperable, and Reusable) use of the
+data.
+
+*Inspirational quote:* British mathematician Clive Humby said "like
+oil, data is valuable... but if unrefined it cannot really be used."
+Data is an essential ingredient for empirical research in many fields
+of science. However, relevant and refined data is a scarce and
+expensive resource and access to high-quality datasets is typically
+restricted. In top universities worldwide, availability of relevant
+and refined research data for empirical social science research with
+dedicated support is a norm. AUHD serves this purpose at Aalto
+University.
+
+
+
 Other computing and IT solutions
 --------------------------------
 
