@@ -186,16 +186,16 @@ html_theme = "sphinx_rtd_theme"
 if on_rtd:
     os.system('git fetch --unshallow')
     os.system('pip freeze')
-else:
-    import sphinx_rtd_theme
-    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+#else:
+#    import sphinx_rtd_theme
+#    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #html_theme_options = {}
 html_theme_options = {
-    'display_version': False,
+    #'display_version': False, # no longer needed in 3.0.0
     'navigation_depth': 5,
     'prev_next_buttons_location': None,
     #'canonical_url': 'https://scicomp.aalto.fi/'
