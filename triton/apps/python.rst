@@ -39,9 +39,12 @@ Python distributions
 
 The main version of modern Python is 3. Support for old Python 2 ended at the
 end of 2019. There are also different distributions: The "regular" CPython,
-Anaconda (a package containing CPython + a lot of other scientific software all
-bundled togeter), PyPy (a just-in-time compiler,  which can be much faster for
-some use cases). Triton supports all of these.
+Anaconda (using the conda package manager and containing CPython + a lot of other scientific software all
+bundled together, but not licensed for use in large organizations),
+miniforge/micromamba (installers focusing on the conda-forge channel
+from the conda package manager),
+PyPy (a just-in-time compiler,  which can be much faster for
+some use cases).
 
 Make sure your environments are **reproducible** - you can recreate
 them from scratch.  History shows it's easier to re-create when you
