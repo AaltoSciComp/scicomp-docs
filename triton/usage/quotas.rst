@@ -10,7 +10,7 @@ space, just ask. We'll either give you more or find a solution for you.
 
 There is a inode (number of files) quota of 1 million, because scratch
 is not that great for too many small files. If you have too many small
-files, see `the page on small files <smallfiles>`.
+files, see :doc:`the page on small files <smallfiles>`.
 
 .. admonition:: Useful commands
 

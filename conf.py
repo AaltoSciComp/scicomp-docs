@@ -105,6 +105,10 @@ copybutton_exclude = '.linenos, .gp'
 # Substitutions
 substitute_path = ['_substitutions/']
 
+supress_warnings = [
+    #'toc.excluded',  # This does not work to hide the orphan page warnings
+    ]
+
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.

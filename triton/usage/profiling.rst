@@ -290,13 +290,11 @@ to launch the Nsight Systems GUI. You can then open the report file in the GUI t
 
 If you want to have a quick overview of the performance of your application, you can add the ``--stats true`` flag to the ``nsys`` command:
 
-.. code-block:: bash
+.. code-block:: console
 
-   nsys profile --stats true -o my_application_report ./my_application
+   $ nsys profile --stats true -o my_application_report ./my_application
 
-Sample output might look something like this:
-
-.. code-block:: bash
+Sample output might look something like this::
 
    Calculating pi using 1000000000 stochastic trials
    Throws: 785390400/1000000000 Pi: 3.141561508
@@ -383,22 +381,22 @@ This command profiles all CUDA kernels in your application, providing a comprehe
 Nsight Compute also allows to analyze the performance of specific CUDA kernels.
 For example, you can run:
 
-.. code-block:: bash
+.. code-block:: console
 
-   ncu --kernel-name 'myKernel' ./my_cuda_application
+   $ ncu --kernel-name 'myKernel' ./my_cuda_application
 
 to profile a kernel named ``myKernel``,
 or 
 
-.. code-block:: bash
+.. code-block:: console
 
-   ncu --kernel-name '^myKernel.*' ./my_cuda_application
+   $ ncu --kernel-name '^myKernel.*' ./my_cuda_application
 
 to profile all kernels whose names start with ``myKernel``.
 
 Sample output might look something like this:
 
-.. code-block:: bash
+::
 
    Calculating pi using 1000000000 stochastic trials
    ==PROF== Connected to process 3944692 (/home/username/hpc-examples/slurm/pi-gpu)
@@ -463,6 +461,7 @@ Sample output might look something like this:
           as well as across blocks of the same kernel. See the CUDA Best Practices Guide
           (https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#occupancy) for more details on
           optimizing occupancy.
+
 The profiling result suggests that the kernel grid is too small, meaning the workload is not sufficient to fully utilize the GPU's resources. Only 0.4 full waves across all SMs were active, indicating suboptimal GPU utilization. To improve performance, one may need to increase the grid size to better match the GPU's capabilities.
 
 For detailed guides on how to use ``ncu``, refer to the documentation: `NVIDIA Nsight Compute suite <https://docs.nvidia.com/nsight-compute/index.html>`__.

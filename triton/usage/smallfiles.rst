@@ -1,4 +1,5 @@
 .. _smallfiles:
+
 ===========
 Small files
 ===========
@@ -22,10 +23,10 @@ This page is mostly done, but specific examples could be expanded.
 
 See also:
 
--  `Data storage on the Lustre file
+-  :doc:`Data storage on the Lustre file
    system <lustre>`,
    especially the bottom.
--  `Compute node local drives <localstorage>`
+-  :doc:`Compute node local drives <localstorage>`
 
 Contents
 --------
@@ -190,7 +191,7 @@ Strategies
 -  If you do have to keep many small flies, check the link above for
    lustre performance tuning.
 
-   -  `Data storage on the Lustre file
+   -  :doc:`Data storage on the Lustre file
       system <lustre>`
 
 -  If you have other programs that can only operate on separate files
@@ -219,7 +220,7 @@ things for time serieses or graphs.
 Specific example: Unpacking to local disk
 -----------------------------------------
 
-You can see examples at `compute node local
+You can see examples at :doc:`compute node local
 drives <localstorage>`
 
 Specific example: Key-value stores
@@ -236,6 +237,6 @@ if you need to analyze it from different programs.
 Performance tuning for small files
 ----------------------------------
 
-See here: `Data storage on the Lustre file
+See here: :doc:`Data storage on the Lustre file
 system <lustre>`
 
