@@ -1,5 +1,3 @@
-.. _smallfiles:
-
 ===========
 Small files
 ===========

@@ -1,5 +1,3 @@
-.. _llms:
-
 LLMs
 ====
 
@@ -13,7 +11,7 @@ can provide help with using these, even to users who aren't
 computational experts.
 
 Because the size of model weights are typically very large and the interest in the
-models are high, so we provide our users with pre-downloaded model weights in various format, along with instructions on how to load these weights for inference purposes, retraining, and fine-tuning tasks. 
+models is high, so we provide our users with pre-downloaded model weights in various formats, along with instructions on how to load these weights for inference purposes, retraining, and fine-tuning tasks. We also provide a dedicated python environment (run `module load scicomp-llm-env` to activate it) that has many commonly used python libraries installed for you to test the models quickly.
 
 
 HuggingFace Models
@@ -348,6 +346,7 @@ Each module will set the following environment variables:
 - ``MODEL_WEIGHTS`` - Path to the model weights in GGUF file format.
 
 This Python code snippet is part of a 'Chat with Your PDF Documents' example, utilizing LangChain and leveraging model weights stored in a .gguf file. For detailed environment setting up and Python code, please check out `this repo <https://github.com/AaltoSciComp/llm-examples/tree/main/chat-with-pdf>`__.
+NOTE: this example repo is mainly meant to run on CPUs, if you want to run on GPUs, you can checkout a branch "llamacpp-gpu" of this repo for details. 
 
 .. code-block:: python
   
