@@ -1,5 +1,3 @@
-.. _data-storage:
-
 ============
 Data storage
 ============

@@ -10,15 +10,16 @@ Triton provides a Jupyter interface in Open OnDemand: https://ondemand.triton.aa
 
 Python environment for machine learning
 ----------------------------------------
-Via ``module load scicomp-python-env``, you can load an Aalto Scientific Computing managed Python environment with commonly used packages, such as PyTorch, TensorFlow, jax, etc. This is also the default kernel for Jupyter on Triton. More info on :ref:`scicomp-python-env`.
+Via ``module load scicomp-python-env``, you can load an Aalto Scientific Computing(ASC) managed Python environment with commonly used packages, such as PyTorch, TensorFlow, jax, etc. This is also the default kernel for Jupyter on Triton. More info on :ref:`scicomp-python-env`.
+Another ASC managed Python environment is ``scicomp-llm-env`` which is meant for large language models (LLMs) tasks and includes packages like Huggingface Transformers, llama_cpp_python, vllm, langchain, fastapi,etc. 
 You can also create customized :ref:`conda` for your jobs. 
 
 
 Data storage and I/O for machine learning
 -----------------------------------------
-:ref:`Data storage and I/O <data-storage>` play a critical role in the performance of machine learning tasks on HPCs. Properly handling data can significantly speed up training and inference.
+:doc:`Data storage and I/O <../tut/storage>` play a critical role in the performance of machine learning tasks on HPCs. Properly handling data can significantly speed up training and inference.
 
-:ref:`Local storage <local-drives>` on computing nodes are the recommended place for I/O operations, especially for tasks that involve large datasets and require repeated data loading. Also read the section :ref:`smallfiles` and :ref:`Lustre <lustre>` for more information on how to handle millions of small files efficiently on Triton.
+:doc:`Local storage <../usage/localstorage>` on computing nodes are the recommended places for I/O operations, especially for tasks that involve large datasets and require repeated data loading. Also read the section :doc:`smallfiles <../usage/smallfiles>` and :doc:`lustre <../usage/lustre>` for more information on how to handle millions of small files efficiently on Triton.
 
 Modern machine learning frameworks such as PyTorch and TensorFlow have been implemented to take advantage of multiple CPU cores for I/O operations such as data loading. For example, try different values for --cpus-per-task in combination with using a `DataLoader <https://pytorch.org/docs/stable/data.html>`__  to see if you get a speed-up:
 
@@ -35,7 +36,7 @@ For more information regarding data loading, see
 and
 `PyTorch's <https://pytorch.org/docs/stable/data.html>`__ guides.
 
-To save your quota, we have downloaded some datasets and large language models to the shared folder ``/scratch/shareddata/dldata``. For detailed instructions/examples, please refer to the :ref:`llms` section or our example repositories: https://github.com/AaltoRSE/ImageNetTools, https://github.com/AaltoRSE/pytorch-ddp-imagenet.
+To save your quota, we have downloaded some datasets and large language models to the shared folder ``/scratch/shareddata/dldata``. For detailed instructions/examples, please refer to the :doc:`../apps/llms` section or our example repositories: https://github.com/AaltoRSE/ImageNetTools, https://github.com/AaltoRSE/pytorch-ddp-imagenet.
 
 
 GPU-accelerated model training
@@ -112,7 +113,7 @@ A straightforward way for hyperparameter searching is using a job array. This wi
 Working with large language models
 ----------------------------------
 
-As mentioned above, you can find more instructions on how to use open source LLMs on its :ref:`dedicated documentation page <llms>` . For more generative AI services in Aalto, see :doc:`Generative-ai-tools </aalto/generative-ai-tools>`.
+As mentioned above, you can find more instructions on how to use open source LLMs on its :doc:`dedicated documentation page <../apps/llms>` . For more generative AI services in Aalto, see :doc:`Generative-ai-tools </aalto/generative-ai-tools>`.
 
 
 Deep learning softwares
