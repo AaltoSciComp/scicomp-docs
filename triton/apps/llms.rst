@@ -11,7 +11,7 @@ can provide help with using these, even to users who aren't
 computational experts.
 
 Because the size of model weights are typically very large and the interest in the
-models is high, so we provide our users with pre-downloaded model weights in various formats, along with instructions on how to load these weights for inference purposes, retraining, and fine-tuning tasks. We also provide a dedicated python environment (run `module load scicomp-llm-env` to activate it) that has many commonly used python libraries installed for you to test the models quickly.
+models is high, so we provide our users with pre-downloaded model weights in various formats, along with instructions on how to load these weights for inference purposes, retraining, and fine-tuning tasks. We also provide a dedicated python environment (run ``module load scicomp-llm-env`` to activate it) that has many commonly used python libraries installed for you to test the models quickly.
 
 
 HuggingFace Models
