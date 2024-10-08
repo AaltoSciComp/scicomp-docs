@@ -178,7 +178,7 @@ FAQ
   even be distributed by us.  So far, we only support open software.
 
   But, courses have used gurobi before.  They had students install
-  themselves, in the anaconda environment, and somehow told it what
+  themselves, in the Python environment, and somehow told it what
   the Aalto license server was.  For examaple, using the magic of "!"
   shell commands embedded in notebooks, it was something like this,
   which would automatically install gurobi for students and set the

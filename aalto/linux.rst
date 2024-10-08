@@ -172,7 +172,7 @@ Software
 
 Already available
 ~~~~~~~~~~~~~~~~~
-- Python: ``module load anaconda`` (or anaconda2 for Python 2) (desktops)
+- Python: TODO
 - Matlab: automatically installed on desktops, Ubuntu package
   on laptops.
 
@@ -220,9 +220,6 @@ not on laptops.
 
 Useful modules:
 
--  ``anaconda`` and ``anaconda2`` will always be kept up to date with the latest Python
-   Anaconda distribution, and we'll try to keep this in sync across
-   Aalto Linux and Triton.
 - ``triton-modules``: a metamodule that makes other Triton software available.
 
 

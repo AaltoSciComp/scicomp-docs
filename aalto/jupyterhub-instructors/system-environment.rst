@@ -73,7 +73,7 @@ Software
 --------
 
 For Python, software is distributed through `conda
-<https://anaconda.org/>`__.  You can install your own packages using
+<https://conda.io/>`__.  You can install your own packages using
 ``pip`` or ``conda``, but *everything is reset when you restart the
 server*.  This is sort of by design: a person can't permanently break
 their own environment (restarting gets you to a good state), but you
