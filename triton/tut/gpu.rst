@@ -10,7 +10,7 @@ GPU computing
      ``--gres=gpu:1`` (some clusters need ``--partition=gpu`` or similar).
    * Select a certain type of GPU with e.g. ``--constraint='volta'``
      (see :doc:`the quick reference for names <../ref/index>`).
-   * Monitor GPU performance with ``sacct -j JOBID -o comment -p``.
+   * Monitor GPU performance with ``sacct -j JOBID -o TRESUsageInAve -p``.
    * You can test out small jobs of 30 minutes or less in the
      ``gpu-debug``-partition (``--partition=gpu-debug``).
    * If you aren't fully sure of how to scale up, contact us

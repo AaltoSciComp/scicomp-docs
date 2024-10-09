@@ -7,8 +7,8 @@ When your job has started, you can ``ssh`` to the node and run
 Once the job has finished, you can use ``slurm history`` to obtain the
 ``jobID`` and run::
 
-   $ sacct -j JOBID -o comment -p
-   {"gpu_util": 99.0, "gpu_mem_max": 1279.0, "gpu_power": 204.26, "ncpu": 1, "ngpu": 1}|
+   $ sacct -j JOBID -o TRESUsageInAve -p
+   cpu=01:09:20,energy=909169,fs/disk=192466115,gres/gpumem=1648M,gres/gpuutil=66,mem=2810884K,pages=8,vmem=0|
 
 
 This also shows the GPU utilization.
