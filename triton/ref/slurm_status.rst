@@ -8,7 +8,7 @@
    ``slurm cpus`` *PARTITION*               | list free CPUs in a partition
    ``slurm history`` *[1day,2hour,...]*     | Show status of recent jobs
    ``seff`` *JOBID*                         | Show percent of mem/CPU used in job.  See :doc:`Monitoring <../tut/monitoring>`.
-   ``sacct -o comment -p -j`` *JOBID*       | Show GPU efficiency
+   ``sacct -o TRESUsageInAve -p -j`` *JOBID* | Show GPU efficiency
    ``slurm j`` *JOBID*                      | Job details (only while running)
    ``slurm s`` ; ``slurm ss`` *PARTITION*   | Show status of all jobs
    ``sacct``                                | Full history information (advanced, needs args)
