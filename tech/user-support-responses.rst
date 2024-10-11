@@ -26,6 +26,74 @@ Unsorted notes:
   - the environment setup
 
 
+Quick reference
+---------------
+
+This is the quick summary about effective synchronous one-on-one
+support strategies to avoid common problems.  There are many things on
+the list: the more you know the person or the work, the less you need
+to ask.  Maybe some are obvious.  It's an art, not a science.
+
+.. admonition:: Summary
+
+1. Starting
+
+   a) Understand who they are, their department, their current job
+      (postdoc, professor, PhD, research assistant, etc.  Ask at
+      beginning, not end - if you ask at end is only recordkeeping)
+   b) Other questions: who do you work for? What's your background?
+      (try to understand the kinds of skills they have and what kind
+      of level you should answer)
+   c) :ref:`Other questions from the help page
+      <formulate-your-question>`, if it's not clear yet:
+
+      - Has it ever worked before?
+      - What's your end objective?
+      - What did you do so far?
+      - What do you want now?
+
+   d) Have you excluded the XY problem (need X but are asking for Y, Y
+      isn't a very good solution for X).
+
+2. Doing
+
+   a) My general rule of thumb is that if someone has never seen
+      something before, they don't do it themselves the first time. At
+      least I demo it once.  Often (with their permission) I request
+      Zoom remote control in the screenshare and do it for them,
+      slowly, explaining the steps.  They can focus on understanding
+      and not typing.
+   b) Take time to check if you are doing what they want.
+   c) Avoid harsh things like "X is wrong" or "you can't have seen
+      that". Avoid saying things are easy, simple, obvious, and so on.
+      (It never is for someone else).
+   d) Avoid direct commands without at least something like "does that
+      sound good to you?" or similar.
+
+3. Wrap-up
+
+   a) Check in again: "Did you get what you wanted out of this?" (This
+      should also be asked several times along the way).
+   b) Give some encouraging words, I often say things like "with your
+      experience I think you are well prepared to figure it out now".
+   c) A team member who is a former (human) doctor had a really good
+      idea insight. Don't ask about their understanding, ask if you
+      explained clearly enough.
+   d) Say they can come back if they still have problems and this is
+      normal. It's normal for us to give some basic info and let them
+      explore some, but already be planning for them to come back for
+      implementation.  Express desire to hear more or see them again.
+
+4. Internal follow-up
+
+   a) Did you do well?  If others are around You can discuss
+      internally if it if was good technical, and social, support.
+
+Remember: the above is things to consider, decide what's appropriate
+for each circumstance.
+
+
+
 
 Why care about how you respond?
 -------------------------------
