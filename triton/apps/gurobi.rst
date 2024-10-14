@@ -21,9 +21,9 @@ Gurobi with Python
 .. admonition:: Package names
    
    Unfortunately the python gurobi packages installed via pip and via conda come with
-   two distinct package names ``gurobi`` for the anaconda package and ``gurobipy`` for 
+   two distinct package names ``gurobi`` for the conda package and ``gurobipy`` for 
    the pip package. Normally, we install the guobi package in the scicomp python environment, 
-   but there are some anaconda modules which have the gurobipy package. So you might need
+   but there are some conda modules which have the gurobipy package. So you might need
    to select the correct package.
 
 .. admonition:: License Files for older modules
@@ -58,7 +58,7 @@ And then run the following script
 .. code-block:: python
 
   import gurobipy as gp 
-  # Depending on your anaconda version you 
+  # Depending on your conda version you 
   # might need gurobi instead of gurobipy
 
   # Create a new model

@@ -131,22 +131,21 @@ from a location, right click and select "Open in Terminal".
 
 Now that you have the terminal and the data, you can do whatever you
 want with it.  Presumably, you will start Jupyter here - but first you
-want to make the right software available.  If you course tells you
-how to do that using an Anaconda environment, go ahead and do it.
-(Please don't go installing large amounts of software like anaconda in
+want to make the right software available.  (Please don't go installing large amounts of software in
 the Jupyter data directories - they are for notebooks and small-medium
 data.)
 
-Using the built-in anaconda, you can load the Python modules with
-``module load anaconda`` and start Jupyter with ``jupyter notebook``:
+..
+    Using the built-in anaconda, you can load the Python modules
+    and start Jupyter with ``jupyter notebook``:
 
-.. figure:: /images/jupyterdata_04_startjupyter.png
-	    :scale: 75%
-	    :align: center
-	    :alt: Start jupyter with the anaconda module.
+    .. figure:: /images/jupyterdata_04_startjupyter.png
+            :scale: 75%
+            :align: center
+            :alt: Start jupyter with a Python module.
 
-	    Note that now, you need to ``module load anaconda``, not
-	    anaconda\ **3** like the image shows.
+            Note that now, you need to ``module load anaconda``, not
+            anaconda\ **3** like the image shows.
 
 
 

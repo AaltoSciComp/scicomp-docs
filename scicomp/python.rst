@@ -16,12 +16,12 @@ Python distributions
 |                          | Python to use            | How to install own       |
 |                          |                          | packages                 |
 +==========================+==========================+==========================+
-| Simple programs with     | Anaconda 2/3             | ``pip install --user``   |
+| Simple programs with     |                          | ``pip install --user``   |
 | common packages, not     |                          |                          |
 | switching between        |                          |                          |
 | Pythons often            |                          |                          |
 +--------------------------+--------------------------+--------------------------+
-| Most of the use cases,   | Anaconda 2/3             | conda environment +      |
+| Most of the use cases,   |                          | conda environment +      |
 | but sometimes different  |                          | conda                    |
 | versions of modules      |                          |                          |
 | needed                   |                          |                          |
@@ -158,8 +158,7 @@ remove everything installed this way and not do it anymore.**
 Python: virtualenv
 ------------------
 
-Virtualenv is default-Python way of making environments, but does
-**not** work with Anaconda.
+Virtualenv is default-Python way of making environments.
 
 ::
 
