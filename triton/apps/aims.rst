@@ -2,15 +2,6 @@
 FHI-aims
 ========
 
-.. admonition:: Warning: page not updated for current Triton
-  :class: warning, triton-v2-apps
-
-  This page hasn't been updated since Triton was completely upgraded
-  in May 2024.  The software might not be installed and the old
-  information below might not work anymore (or  might need adapting).
-  If you need this software, :ref:`open an issue <issuetracker>` and
-  tell us so we can reinstall/update it.
-
 `FHI-aims <https://fhi-aims.org/>`__  (Fritz Haber
 Institute ab initio molecular simulations package) is an electronic
 structure theory code package for computational molecular and
@@ -25,11 +16,11 @@ license can use pre-built binaries available on Triton. To this end,
 contact Ville Havu at the PHYS department after obtaining the license.
 
 On Triton the most recent version of FHI-aims is available via the
-modules ``aims/240507`` that is compiled using OpenMPI.
+module ``aims/240507`` that is compiled using OpenMPI.
 The binaries are available in 
-``/appl/manual_installations/software/aims/<version>/bin`` as
+``/appl/manual_installations/software/aims/<version>`` as
 ``aims.<version>.scalapack.mpi.x`` where <version> indicates the version
-stamp.
+stamp. The module will also add the executable to your PATH.
 
 Notes:
 
@@ -53,5 +44,6 @@ To run FHI-aims on Triton a following example batch script can be used:
 
    ulimit -s unlimited
    export OMP_NUM_THREADS=1
+   module purge
    module load aims/240507
    srun aims.240507.scalapack.mpi.x
