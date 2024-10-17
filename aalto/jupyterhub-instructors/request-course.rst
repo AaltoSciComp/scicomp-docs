@@ -38,6 +38,7 @@ YAML, by the way (but we can handle the syntax details).
 
 .. code-block:: yaml
 
+   ---
    name: CS-E0000 Course Name (Year)
    uid: (leave blank, we fill in)
    gid: (leave blank, we fill in)
@@ -57,10 +58,10 @@ YAML, by the way (but we can handle the syntax details).
 
    # Important dates.  But not too important, we can always adjust later.
    # So far, you need to email us to make it public when you are ready!
-   public_date:  2020-09-08      # becomes visible to students before course
-   private_date: 2021-01-31      # hidden from students after course
-   archive_date: 2021-09-01      # becomes hidden from instructors
-   delete_date:  2021-09-01      # after this, we ask if it can be deleted
+   public_date: 2020-09-08   # becomes visible to students before course
+   private_date: 2021-01-31  # hidden from students after course
+   archive_date: 2021-09-01  # becomes hidden from instructors
+   delete_date: 2021-09-01   # after this, we ask if it can be deleted
 
    # For the course dates itself (just for our reference, not too important)
    start_date: 2020-10-01
