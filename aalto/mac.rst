@@ -123,7 +123,7 @@ Contact your department admin for details.
 CS Mac backup service
 ---------------------
 The CS department provides a full clone-backup service for
-Aalto-installation mac computers.  Aalto-installation means the OS is
+Aalto-installation mac computers of *CS department employees*.  Aalto-installation means the OS is
 installed from Aalto repository.
 
 We use Apple `Time Machine
