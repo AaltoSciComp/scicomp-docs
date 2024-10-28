@@ -112,11 +112,9 @@ Some of the most popular channels are:
   Highly recommended for new environments. Most packages in
   ``scicomp-python-env``-modules come from here.
 - ``defaults``: A channel maintained by
-  `Anaconda Inc. <https://www.anaconda.com>`_. Free for non-commercial use.
-  Default for anaconda distribution.
-- ``r``: A channel of
-  `R packages <https://docs.anaconda.com/anaconda/packages/r-language-pkg-docs>`_
-  maintained by Anaconda Inc.. Free for non-commercial use.
+  `Anaconda Inc. <https://www.anaconda.com>`_. You should exclude this
+  in your own environments
+  due to licensing issues.  Default for anaconda distribution.
 - ``bioconda``: A community maintained channel of
   `bioinformatics packages <https://bioconda.github.io>`_.
 - ``pytorch``: Official channel for `PyTorch <https://pytorch.org/>`_, a
