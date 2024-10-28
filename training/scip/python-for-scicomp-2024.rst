@@ -73,6 +73,7 @@ own audience.
 * `Finnish Reproducibility Network <https://www.finnish-rn.org/>`__
 * `Scientific IT Services of ETH Zurich <https://sis.id.ethz.ch/>`__
 * `eScience center <https://www.esciencecenter.nl/>`__
+* `ENCCS <https://enccs.se/>`__
   
 
 ..
@@ -87,6 +88,8 @@ own audience.
   * Teemu Ruokolainen (ASC, Aalto University) (instructor, helper)
   * Sabry Razick (University of Oslo) (instructor, helper)
   * Simo Tuomisto (ASC, Aalto University) (instructor, helper)
+  * Yonglei Wang (ENCCS / Linköping University) (instructor, helper)
+  * Ashwin Mohanan (ENCCS / RISE) (instructor, helper)
 
 ...and many `contributors to the learning materials on Github <https://github.com/AaltoSciComp/python-for-scicomp/graphs/contributors>`__.
 
