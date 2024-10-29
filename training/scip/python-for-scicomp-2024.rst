@@ -9,30 +9,13 @@ Nov 5th - Nov 7th 2024 / Python for Scientific Computing
 
 .. admonition:: News and Important info
 
-   * August 2024 - Please check later, we are updating the page
+   * October 2024 - Finalizing the program, few days to go!
    * In the meantime you can register at this link: https://link.webropol.com/ep/pfsc24
-
-
-.. admonition:: Last year edition
-
-   * Links
-
-     * `Course material <https://aaltoscicomp.github.io/python-for-scicomp/>`__
-     * Watch here: https://twitch.tv/coderefinery/
-     * `YouTube playlist (processed, later that day)
-       <https://www.youtube.com/playlist?list=PLZLVmS9rf3nNI3oQEqSJW6yXltOAZnkpa>`__
-       `Twitch videos (raw, for 7 days, immediately available)
-       <https://www.twitch.tv/coderefinery/videos>`__
-     * `Archived Q&A days 1-2
-       <https://notes.coderefinery.org/python2023?view>`__ and `days
-       3-4 <python2023archive>`__
-
-
 
 
 This is a medium-advanced course in Python tools such as NumPy, SciPy,
 Matplotlib, and Pandas.  It is suitable for people who know basic
-Python and want to know some internals and important libraries for
+Python and want to understand some internals and important libraries for
 science - basically, how a typical scientist actually uses Python.
 Read the `learner personas
 <https://aaltoscicomp.github.io/python-for-scicomp/#learner-personas>`__
@@ -44,54 +27,6 @@ Part of :doc:`Scientific Computing in Practice <index>` lecture series
 at Aalto University, in partnership with `CodeRefinery
 <https://coderefinery.org>`__.
 
-
-
-Partners
---------
-
-This course is hosted by Aalto Scientific Computing (Aalto University,
-Finland) and CodeRefinery.  **Our livestream, registration, materials,
-and published videos are free for all** in the spirit of open science
-and education, but certain partners provide extra benefits for their
-own audience.
-
-
-**Staff and partner organizations:**
-
-* :doc:`Aalto Scientific Computing </index>`
-* `CodeRefinery <https://coderefinery.org/>`__
-* `NAISS <https://www.naiss.se/>`__
-* `KTH <https://kth.se>`__
-* `UPPMAX <https://www.uppmax.uu.se/>`__ (Uppsala University)
-* `IT4SCI <https://helpdesk.it.helsinki.fi/en/services/scientific-computing-services-hpc>`__ (University of Helsinki)
-* `University of Oslo <https://www.usit.uio.no/>`__
-* `Nordic RSE <https://nordic-rse.org/>`__
-* `University of Oulu <https://www.oulu.fi/fi>`__
-* `University of Jyväskylä <https://www.jyu.fi/en>`__
-* `University of Eastern Finland <https://www.uef.fi/en>`__
-* `CSC IT Center for Science <https://csc.fi/>`__
-* `Finnish Reproducibility Network <https://www.finnish-rn.org/>`__
-* `Scientific IT Services of ETH Zurich <https://sis.id.ethz.ch/>`__
-* `eScience center <https://www.esciencecenter.nl/>`__
-* `ENCCS <https://enccs.se/>`__
-  
-
-..
-
-  * Radovan Bast (CodeRefinery, The Artic University of Norway) (instructor, helper)
-  * Richard Darst (ASC, Aalto University) (instructor, instructor coordinator, director)
-  * Enrico Glerean (ASC, Aalto University) (instructor, registration coordinator, communication, helper)
-  * Johan Hellsvik (PDC, NAISS, KTH) (instructor, helper)
-  * Diana Iusan (`UPPMAX <https://www.uppmax.uu.se/>`__, NAISS, Uppsala University) (instructor, helper)
-  * Thomas Pfau (ASC, Aalto University) (instructor, helper)
-  * Jarno Rantaharju (ASC, Aalto University) (instructor, helper)
-  * Teemu Ruokolainen (ASC, Aalto University) (instructor, helper)
-  * Sabry Razick (University of Oslo) (instructor, helper)
-  * Simo Tuomisto (ASC, Aalto University) (instructor, helper)
-  * Yonglei Wang (ENCCS / Linköping University) (instructor, helper)
-  * Ashwin Mohanan (ENCCS / RISE) (instructor, helper)
-
-...and many `contributors to the learning materials on Github <https://github.com/AaltoSciComp/python-for-scicomp/graphs/contributors>`__.
 
 
 Practical information
@@ -111,41 +46,6 @@ the course. The `actual material is here
 While the stream is available even without providing personal data, if
 you register you may get collaborative notes access for asking questions and will
 support our funding by contributing to our attendance statistics.
-
-
-
-Credits
-------- 
-
-It is possible to obtain a certificate from the course with
-a little extra work. The certificate is equivalent to 1 ECTS and your study
-supervisor will be able to register it as a credit in your university study
-credit system. Please make sure that your supervisor/study program accepts it.
-
-Learners with a valid Aalto student number will automatically get the credit
-registered in Aalto systems.
-
-To obtain a certificate/credit, we expect you to have registered to the course by 7/11/2024, 
-follow the 4 sessions and provide us with at least the following 5 documents via email
-(1 text document, 4 or more python scripts/notebooks). **Please remember to add your name and surname to all submitted files. If you are a student at Aalto University, please also add your student number.**
-
-- **1 text document** (PDF or txt or anything for text): For each of the 4 days, write a short paragraph (learning diary) to highlight
-  your personal reflections about what you have found useful, which topic inspired
-  you to go deeper, and more in general what you liked and what could be improved.
-- **4 (or more) .py scripts/notebooks**: For each of the 4 days take one code example from the 
-  course materials and make sure you can run it locally as a ".py" script or as a jupyter notebook.
-  Modify it a bit according to what inspires you: adding more comments, testing the
-  code with different inputs, expanding it with something related to your field of
-  research. There is no right or wrong way of doing this, but please submit a
-  python script/notebook that we are eventually able to run and test on our local computers.
-
-These 5 (or more) documents should be sent before 30/November/2024 23:59CET to scip@aalto.fi.
-If the evaluation criteria are met for each of the 5 (or more) documents, you will receive
-a certificate by end of December 2024. Please note that we do not track course attendance and if you missed one
-session, recordings will be available on Twitch immediately after the streaming ends.
-
-**Additional course info at:** scip -at- aalto.fi
-
 
 
 Schedule
@@ -229,6 +129,40 @@ takes some effort to get ready.  Browse these resources:
 
 
 
+Credits
+------- 
+
+It is possible to obtain a certificate from the course with
+a little extra work. The certificate is equivalent to 1 ECTS and your study
+supervisor will be able to register it as a credit in your university study
+credit system. Please make sure that your supervisor/study program accepts it.
+
+Learners with a valid Aalto student number will automatically get the credit
+registered in Aalto systems.
+
+To obtain a certificate/credit, we expect you to have registered to the course by 7/11/2024, 
+follow the 4 sessions and provide us with at least the following 5 documents via email
+(1 text document, 4 or more python scripts/notebooks). **Please remember to add your name and surname to all submitted files. If you are a student at Aalto University, please also add your student number.**
+
+- **1 text document** (PDF or txt or anything for text): For each of the 4 days, write a short paragraph (learning diary) to highlight
+  your personal reflections about what you have found useful, which topic inspired
+  you to go deeper, and more in general what you liked and what could be improved.
+- **4 (or more) .py scripts/notebooks**: For each of the 4 days take one code example from the 
+  course materials and make sure you can run it locally as a ".py" script or as a jupyter notebook.
+  Modify it a bit according to what inspires you: adding more comments, testing the
+  code with different inputs, expanding it with something related to your field of
+  research. There is no right or wrong way of doing this, but please submit a
+  python script/notebook that we are eventually able to run and test on our local computers.
+
+These 5 (or more) documents should be sent before 30/November/2024 23:59CET to scip@aalto.fi.
+If the evaluation criteria are met for each of the 5 (or more) documents, you will receive
+a certificate by end of December 2024. Please note that we do not track course attendance and if you missed one
+session, recordings will be available on Twitch immediately after the streaming ends.
+
+**Additional course info at:** scip -at- aalto.fi
+
+
+
 Community standards
 -------------------
 
@@ -276,6 +210,52 @@ Material
 * https://aaltoscicomp.github.io/python-for-scicomp/
 
 
+Partners
+--------
+
+This course is hosted by Aalto Scientific Computing (Aalto University,
+Finland) and CodeRefinery.  **Our livestream, registration, materials,
+and published videos are free for all** in the spirit of open science
+and education, but certain partners provide extra benefits for their
+own audience.
+
+
+**Staff and partner organizations:**
+
+* :doc:`Aalto Scientific Computing </index>`
+* `CodeRefinery <https://coderefinery.org/>`__
+* `NAISS <https://www.naiss.se/>`__
+* `KTH <https://kth.se>`__
+* `UPPMAX <https://www.uppmax.uu.se/>`__ (Uppsala University)
+* `IT4SCI <https://helpdesk.it.helsinki.fi/en/services/scientific-computing-services-hpc>`__ (University of Helsinki)
+* `University of Oslo <https://www.usit.uio.no/>`__
+* `Nordic RSE <https://nordic-rse.org/>`__
+* `University of Oulu <https://www.oulu.fi/fi>`__
+* `University of Jyväskylä <https://www.jyu.fi/en>`__
+* `University of Eastern Finland <https://www.uef.fi/en>`__
+* `CSC IT Center for Science <https://csc.fi/>`__
+* `Finnish Reproducibility Network <https://www.finnish-rn.org/>`__
+* `Scientific IT Services of ETH Zurich <https://sis.id.ethz.ch/>`__
+* `eScience center <https://www.esciencecenter.nl/>`__
+* `ENCCS <https://enccs.se/>`__
+  
+
+..
+
+  * Radovan Bast (CodeRefinery, The Artic University of Norway) (instructor, helper)
+  * Richard Darst (ASC, Aalto University) (instructor, instructor coordinator, director)
+  * Enrico Glerean (ASC, Aalto University) (instructor, coordinator, communication, helper)
+  * Johan Hellsvik (PDC, NAISS, KTH) (instructor, helper)
+  * Diana Iusan (`UPPMAX <https://www.uppmax.uu.se/>`__, NAISS, Uppsala University) (instructor, helper)
+  * Thomas Pfau (ASC, Aalto University) (instructor, helper)
+  * Teemu Ruokolainen (ASC, Aalto University) (instructor, helper)
+  * Sabry Razick (University of Oslo) (instructor, helper)
+  * Simo Tuomisto (ASC, Aalto University) (instructor, helper)
+  * Yonglei Wang (ENCCS / Linköping University) (instructor, helper)
+  * Ashwin Mohanan (ENCCS / RISE) (instructor, helper)
+
+...and many more `contributors to the learning materials on Github <https://github.com/AaltoSciComp/python-for-scicomp/graphs/contributors>`__.
+
 
 Contact
 -------
@@ -288,8 +268,24 @@ Contact
   University scicomp chat <chat>`
 
 
+
+
 See also
 --------
 
 * https://coderefinery.org
 * https://scicomp.aalto.fi/training/
+
+.. admonition:: Last year edition
+
+   * Links
+
+     * `Course material <https://aaltoscicomp.github.io/python-for-scicomp/>`__
+     * Watch here: https://twitch.tv/coderefinery/
+     * `YouTube playlist (processed, later that day)
+       <https://www.youtube.com/playlist?list=PLZLVmS9rf3nNI3oQEqSJW6yXltOAZnkpa>`__
+       `Twitch videos (raw, for 7 days, immediately available)
+       <https://www.twitch.tv/coderefinery/videos>`__
+     * `Archived Q&A days 1-2
+       <https://notes.coderefinery.org/python2023?view>`__ and `days
+       3-4 <python2023archive>`__
