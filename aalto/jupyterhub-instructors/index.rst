@@ -45,6 +45,7 @@ important notes you do not find other places.
    testing-a-course
    nbgrader-hints
    autograding
+   exporting-grades
    public-copy
    faq-hints
 
