@@ -82,12 +82,14 @@ See also: :doc:`../tut/remotedata`.
 
 
 
-.. _ref-partitions:
+.. _ref-quotas:
 
-Partitions
-----------
+Quotas
+------
 
-.. include:: partitions.rst
+See also: :doc:`../usage/quotas`.
+
+.. include:: quotas.rst
 
 
 
@@ -112,6 +114,15 @@ Slurm examples
 See also: :doc:`../tut/serial`, :doc:`../tut/array`.
 
 .. include:: slurm_examples.rst
+
+
+
+.. _ref-partitions:
+
+Slurm Partitions
+----------------
+
+.. include:: partitions.rst
 
 
 
