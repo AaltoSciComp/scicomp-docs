@@ -202,7 +202,10 @@ html_theme_options = {
     #'display_version': False, # no longer needed in 3.0.0
     'navigation_depth': 5,
     'prev_next_buttons_location': None,
-    #'canonical_url': 'https://scicomp.aalto.fi/'
+    #'canonical_url': 'https://scicomp.aalto.fi/',
+    'sticky_navigation': False,  # nav sidebar scrolls with pages
+    'version_selector': False, # for RTD
+    'style_external_links': True,
     }
 html_context.update(
     {'display_github': True,
