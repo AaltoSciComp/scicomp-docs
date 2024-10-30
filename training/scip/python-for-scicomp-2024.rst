@@ -74,26 +74,26 @@ if attending a single lesson.
   - 10:15 `Jupyter <https://aaltoscicomp.github.io/python-for-scicomp/jupyter/>`__
   - 11:00  `NumPy <https://aaltoscicomp.github.io/python-for-scicomp/numpy/>`__ 
   - 12:00 Lunch break
-  - 13:00 `Advanced NumPy <https://aaltoscicomp.github.io/python-for-scicomp/numpy-advanced/>`__ ).
-  - 13:30 `pandas <https://aaltoscicomp.github.io/python-for-scicomp/pandas/>`__...
+  - 13:00 `Pandas <https://aaltoscicomp.github.io/python-for-scicomp/pandas/>`__
+  - 14:30 `Xarray <https://aaltoscicomp.github.io/python-for-scicomp/xarray/>`__
   - 15:00 End of day 1
 
 - Wed 6.nov, 9:50-15:00
 
-  - 10:00 `matplotlib <https://aaltoscicomp.github.io/python-for-scicomp/data-visualization/>`__
-  - 11:30 `data formats <https://aaltoscicomp.github.io/python-for-scicomp/data-formats/>`__
+  - 10:00 `Working with data <https://aaltoscicomp.github.io/python-for-scicomp/data-formats/>`__
+  - 10:30 `Data visualisations <https://aaltoscicomp.github.io/python-for-scicomp/data-visualization/>`__
   - 12:00 Lunch break
-  - 13:00 `productivity tools  <https://aaltoscicomp.github.io/python-for-scicomp/productivity/>`__
-  - 14:00 `scripts <https://aaltoscicomp.github.io/python-for-scicomp/scripts/>`__
+  - 13:00 `Scripts <https://aaltoscicomp.github.io/python-for-scicomp/scripts/>`__
+  - 14:00 `Python productivity tools (profiling, autoformatting, linting, AI tools)  <https://aaltoscicomp.github.io/python-for-scicomp/productivity/>`__
   - 15:00 End of day 2
 
-- Thu 9.nov, 9:50-15:00
+- Thu 7.nov, 9:50-15:00
 
-  - 10:00 `library ecosystem <https://aaltoscicomp.github.io/python-for-scicomp/libraries/>`__
-  - 11:00 `dependency management <https://aaltoscicomp.github.io/python-for-scicomp/dependencies/>`__
+  - 10:00 `Library ecosystem <https://aaltoscicomp.github.io/python-for-scicomp/libraries/>`__
+  - 10:30 `Dependency management <https://aaltoscicomp.github.io/python-for-scicomp/dependencies/>`__
   - 12:00 Lunch break
-  - 13:00 `parallel <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__...
-  - 14:00 `packaging <https://aaltoscicomp.github.io/python-for-scicomp/packaging/>`__
+  - 13:00 `Parallel programming <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__...
+  - 14:00 `Packaging <https://aaltoscicomp.github.io/python-for-scicomp/packaging/>`__
   - 14:50 :doc:`Outro <python-for-scicomp/outro>`
   - 15:00 End of day 3
 
