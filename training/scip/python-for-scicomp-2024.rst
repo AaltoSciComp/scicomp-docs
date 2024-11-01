@@ -70,30 +70,33 @@ if attending a single lesson.
   intro already starts then.
 - Tue 5.nov, 9:50-15:00
 
-  - 10:00 :doc:`Intro <python-for-scicomp/intro>`
-  - 10:15 `Jupyter <https://aaltoscicomp.github.io/python-for-scicomp/jupyter/>`__
-  - 11:00  `NumPy <https://aaltoscicomp.github.io/python-for-scicomp/numpy/>`__ 
+  - 09:50 Icebreakers and warming up (Richard Darst, Enrico Glerean)
+  - 10:00 :doc:`Intro <python-for-scicomp/intro>` (Richard Darst, Enrico Glerean)
+  - 10:15 `Jupyter <https://aaltoscicomp.github.io/python-for-scicomp/jupyter/>`__ (Richard Darst, Diana Iusan)
+  - 11:00  `NumPy <https://aaltoscicomp.github.io/python-for-scicomp/numpy/>`__ (Ashwin Mohanan, Yonglei Wang)
   - 12:00 Lunch break
-  - 13:00 `Pandas <https://aaltoscicomp.github.io/python-for-scicomp/pandas/>`__
-  - 14:30 `Xarray <https://aaltoscicomp.github.io/python-for-scicomp/xarray/>`__
+  - 13:00 `Pandas <https://aaltoscicomp.github.io/python-for-scicomp/pandas/>`__ (Richard Darst, Simo Tuomisto)
+  - 14:30 `Xarray <https://aaltoscicomp.github.io/python-for-scicomp/xarray/>`__ (Gregor Decristoforo, Marijn Van Vliet)
   - 15:00 End of day 1
 
 - Wed 6.nov, 9:50-15:00
 
-  - 10:00 `Working with data <https://aaltoscicomp.github.io/python-for-scicomp/data-formats/>`__
-  - 10:30 `Data visualisations <https://aaltoscicomp.github.io/python-for-scicomp/data-visualization/>`__
+  - 09:50  Icebreakers and warming up (Richard Darst, Enrico Glerean)
+  - 10:00 `Working with data <https://aaltoscicomp.github.io/python-for-scicomp/data-formats/>`__ (Thomas Pfau)
+  - 10:30 `Data visualisations <https://aaltoscicomp.github.io/python-for-scicomp/data-visualization/>`__ (Radovan Bast, Richard Darst)
   - 12:00 Lunch break
-  - 13:00 `Scripts <https://aaltoscicomp.github.io/python-for-scicomp/scripts/>`__
-  - 14:00 `Python productivity tools (profiling, autoformatting, linting, AI tools)  <https://aaltoscicomp.github.io/python-for-scicomp/productivity/>`__
+  - 13:00 `Scripts <https://aaltoscicomp.github.io/python-for-scicomp/scripts/>`__ (Thomas Pfau, Yonglei Wang)
+  - 14:00 `Python productivity tools (profiling, autoformatting, linting, AI tools)  <https://aaltoscicomp.github.io/python-for-scicomp/productivity/>`__ (Radovan Bast, Gregor Decristoforo)
   - 15:00 End of day 2
 
 - Thu 7.nov, 9:50-15:00
 
-  - 10:00 `Library ecosystem <https://aaltoscicomp.github.io/python-for-scicomp/libraries/>`__
-  - 10:30 `Dependency management <https://aaltoscicomp.github.io/python-for-scicomp/dependencies/>`__
+  - 09:50  Icebreakers and warming up (Richard Darst, Enrico Glerean)
+  - 10:00 `Library ecosystem <https://aaltoscicomp.github.io/python-for-scicomp/libraries/>`__ (Thomas Pfau)
+  - 10:30 `Dependency management <https://aaltoscicomp.github.io/python-for-scicomp/dependencies/>`__ (Radovan Bast, Sabry Razick)
   - 12:00 Lunch break
-  - 13:00 `Parallel programming <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__...
-  - 14:00 `Packaging <https://aaltoscicomp.github.io/python-for-scicomp/packaging/>`__
+  - 13:00 `Parallel programming <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__ (Richard Darst, Johan Hellsvik)
+  - 14:00 `Packaging <https://aaltoscicomp.github.io/python-for-scicomp/packaging/>`__ (
   - 14:50 :doc:`Outro <python-for-scicomp/outro>`
   - 15:00 End of day 3
 
@@ -244,16 +247,18 @@ own audience.
 
   * Radovan Bast (CodeRefinery, The Artic University of Norway) (instructor, helper)
   * Richard Darst (ASC, Aalto University) (instructor, instructor coordinator, director)
+  * Gregor Decristoforo (The Artic University of Norway) (instructor, helper)
   * Enrico Glerean (ASC, Aalto University) (instructor, coordinator, communication, helper)
   * Johan Hellsvik (PDC, NAISS, KTH) (instructor, helper)
   * Diana Iusan (`UPPMAX <https://www.uppmax.uu.se/>`__, NAISS, Uppsala University) (instructor, helper)
+  * Ashwin Mohanan (ENCCS / RISE) (instructor, helper)
   * Thomas Pfau (ASC, Aalto University) (instructor, helper)
   * Teemu Ruokolainen (ASC, Aalto University) (instructor, helper)
   * Sabry Razick (University of Oslo) (instructor, helper)
   * Simo Tuomisto (ASC, Aalto University) (instructor, helper)
+  * Marijn Van Vliet (Aalto University) (instructor, helper)
   * Yonglei Wang (ENCCS / Linköping University) (instructor, helper)
-  * Ashwin Mohanan (ENCCS / RISE) (instructor, helper)
-
+ 
 ...and many more `contributors to the learning materials on Github <https://github.com/AaltoSciComp/python-for-scicomp/graphs/contributors>`__.
 
 
