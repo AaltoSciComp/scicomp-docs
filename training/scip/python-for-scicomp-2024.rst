@@ -82,7 +82,7 @@ if attending a single lesson.
 - Wed 6.nov, 9:50-15:00
 
   - 09:50  Icebreakers and warming up (Richard Darst, Enrico Glerean)
-  - 10:00 `Working with data <https://aaltoscicomp.github.io/python-for-scicomp/data-formats/>`__ (Thomas Pfau)
+  - 10:00 `Working with data <https://aaltoscicomp.github.io/python-for-scicomp/data-formats/>`__ (Thomas Pfau, Simo Tuomisto)
   - 10:30 `Data visualisations <https://aaltoscicomp.github.io/python-for-scicomp/data-visualization/>`__ (Radovan Bast, Richard Darst)
   - 12:00 Lunch break
   - 13:00 `Scripts <https://aaltoscicomp.github.io/python-for-scicomp/scripts/>`__ (Thomas Pfau, Yonglei Wang)
@@ -93,10 +93,10 @@ if attending a single lesson.
 
   - 09:50  Icebreakers and warming up (Richard Darst, Enrico Glerean)
   - 10:00 `Library ecosystem <https://aaltoscicomp.github.io/python-for-scicomp/libraries/>`__ (Thomas Pfau)
-  - 10:30 `Dependency management <https://aaltoscicomp.github.io/python-for-scicomp/dependencies/>`__ (Radovan Bast, Sabry Razick)
+  - 10:30 `Dependency management <https://aaltoscicomp.github.io/python-for-scicomp/dependencies/>`__ (Radovan Bast, Sabry Razick, Simo Tuomisto)
   - 12:00 Lunch break
   - 13:00 `Parallel programming <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__ (Richard Darst, Johan Hellsvik)
-  - 14:00 `Packaging <https://aaltoscicomp.github.io/python-for-scicomp/packaging/>`__ (
+  - 14:00 `Packaging <https://aaltoscicomp.github.io/python-for-scicomp/packaging/>`__ (Richard Darst, Ashwin Mohanan)
   - 14:50 :doc:`Outro <python-for-scicomp/outro>`
   - 15:00 End of day 3
 
