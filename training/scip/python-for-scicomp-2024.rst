@@ -72,10 +72,10 @@ if attending a single lesson.
 
   - 09:50 Icebreakers and warming up (Richard Darst, Enrico Glerean)
   - 10:00 :doc:`Intro <python-for-scicomp/intro>` (Richard Darst, Enrico Glerean)
-  - 10:15 `Jupyter <https://aaltoscicomp.github.io/python-for-scicomp/jupyter/>`__ (Richard Darst, Diana Iusan)
+  - 10:15 `Jupyter <https://aaltoscicomp.github.io/python-for-scicomp/jupyter/>`__ (Diana Iusan, Richard Darst)
   - 11:00  `NumPy <https://aaltoscicomp.github.io/python-for-scicomp/numpy/>`__ (Ashwin Mohanan, Yonglei Wang)
   - 12:00 Lunch break
-  - 13:00 `Pandas <https://aaltoscicomp.github.io/python-for-scicomp/pandas/>`__ (Richard Darst, Simo Tuomisto)
+  - 13:00 `Pandas <https://aaltoscicomp.github.io/python-for-scicomp/pandas/>`__ (Simo Tuomisto, Richard Darst)
   - 14:30 `Xarray <https://aaltoscicomp.github.io/python-for-scicomp/xarray/>`__ (Gregor Decristoforo, Marijn Van Vliet)
   - 15:00 End of day 1
 
@@ -94,9 +94,10 @@ if attending a single lesson.
   - 09:50  Icebreakers and warming up (Richard Darst, Enrico Glerean)
   - 10:00 `Library ecosystem <https://aaltoscicomp.github.io/python-for-scicomp/libraries/>`__ (Thomas Pfau)
   - 10:30 `Dependency management <https://aaltoscicomp.github.io/python-for-scicomp/dependencies/>`__ (Radovan Bast, Sabry Razick, Simo Tuomisto)
+  - 11:30 `Parallel programming intro <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__ (Johan Hellsvik, Richard Darst)
   - 12:00 Lunch break
-  - 13:00 `Parallel programming <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__ (Richard Darst, Johan Hellsvik)
-  - 14:00 `Packaging <https://aaltoscicomp.github.io/python-for-scicomp/packaging/>`__ (Richard Darst, Ashwin Mohanan)
+  - 13:00 `Parallel programming continued <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__ (Johan Hellsvik, Richard Darst)
+  - 14:00 `Packaging <https://aaltoscicomp.github.io/python-for-scicomp/packaging/>`__ (Ashwin Mohanan, Richard Darst)
   - 14:50 :doc:`Outro <python-for-scicomp/outro>`
   - 15:00 End of day 3
 
