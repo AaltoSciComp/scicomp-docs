@@ -213,6 +213,10 @@ certain person.  Always contact us by :doc:`our help channels
      * Triton admin, **data storage systems**, **Slurm**, hardware and data center, COMSOL
      * Monte Carlo computations, FEM
 
+   * * Susanne Merz
+     * RSE
+     * Neuroimaging, medical research
+
 
 Scientific outputs
 ------------------
@@ -220,7 +224,7 @@ Scientific outputs
 Most of the computationally-intensive research outputs from our member
 departments use our resources.  In addition, at least the CS and NBE
 departments use our data storage for most big data projects.  You may
-view the our research results using `research.aalto.fi (Science-IT
+view our users' research results using `research.aalto.fi (Science-IT
 infrastructure section
 <https://research.aalto.fi/en/equipment/scienceit(27991559-92d9-4b3b-95ee-77147899d043)/publications.html>`_).
 
