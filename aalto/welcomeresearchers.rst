@@ -371,5 +371,5 @@ maintains.  They are somewhat specialized, but useful in the right
 places.
 
 It can be hard to find your way around Aalto, the official campus maps
-and directions are known for being confusing confusing.  Try
+and directions are known for being confusing.  Try
 `UsefulAaltoMap <https://usefulaaltomap.fi>`_ instead.

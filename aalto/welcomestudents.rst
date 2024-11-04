@@ -9,7 +9,7 @@ Welcome, students!
    which focuses on basic services.  This focuses on students in
    computing and data intensive programs.
 
-Welcome to the Aalto!  We are glad you are interested in scientific
+Welcome to Aalto!  We are glad you are interested in scientific
 computing and data.  `scicomp.aalto.fi <https://scicomp.aalto.fi>`_
 may be useful to you, but is
 somewhat targeted to research usage.  However, it can still
@@ -17,17 +17,13 @@ serve as a good introduction to resources for scientific and
 data-intensive computing at Aalto if you are a student.  This page is
 devoted to resources which are available to students.
 
-If you are involved in a research group or doing researcher for a
+If you are involved in a research group or doing research for a
 professor/group leader, you are a researcher!  You should acquaint
 yourself with all information on this site, starting with
 :doc:`welcomeresearchers` and use whatever you need.
 
-General IT instructions can be found at https://www.aalto.fi/en/it-help.  There
-used to be some on into.aalto.fi, but these are gone now.  There also used
-to be a 2-page PDF introduction for students, but it also seems to be
-gone from online.  `IT Services for Students
-<https://www.aalto.fi/en/services/it-services-for-students>`_ is
-now the best introduction.
+General IT instructions can be found at https://www.aalto.fi/en/it-help. In addition `IT Services for Students
+<https://www.aalto.fi/en/services/it-services-for-students>`_ has an introduction specifically for students.
 
 
 
@@ -76,7 +72,7 @@ use programming or data.
 The `shell servers
 <https://www.aalto.fi/en/services/linux-shell-servers-at-aalto>`_
 ``brute`` and ``force`` are for light computing, and generally for
-students.  You may find them useful, but can often be
+students.  You may find them useful, but they can often be
 overloaded. `Light computing shell servers
 <https://www.aalto.fi/en/services/servers-for-light-duty-calculation>`_. :doc:`Learn
 how to launch Jupyter notebook on there <../aalto/remotejupyter>`.
@@ -161,10 +157,10 @@ Common software:
 Other notes
 ===========
 It can be hard to find your way around Aalto, the official campus maps
-and directions are known for being confusing confusing.  Try
+and directions are known for being confusing.  Try
 `UsefulAaltoMap <https://usefulaaltomap.fi>`_ instead.
 
-Do you have suggestions for this page?  Please leave on `issue on
+Do you have suggestions for this page?  Please leave an `issue on
 Github <scicomp_github_issues_>`_ (make sure you have a good title
 that mentions the audience is students, so we can put the information
 in the right place).  Better yet, send a pull request to us yourself.
