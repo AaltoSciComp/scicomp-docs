@@ -89,10 +89,11 @@ if attending a single lesson.
 
   - 09:50  Icebreakers and warming up (Richard Darst, Enrico Glerean)
   - 10:00 `Working with data <https://aaltoscicomp.github.io/python-for-scicomp/data-formats/>`__ (Thomas Pfau, Simo Tuomisto)
-  - 10:30 `Data visualisations <https://aaltoscicomp.github.io/python-for-scicomp/data-visualization/>`__ (Radovan Bast, Richard Darst)
+  - 10:30 `Plotting with Vega-Altair <https://aaltoscicomp.github.io/python-for-scicomp/plotting-vega-altair/>`__ (Radovan Bast, Richard Darst)
   - 12:00 Lunch break
   - 13:00 `Scripts <https://aaltoscicomp.github.io/python-for-scicomp/scripts/>`__ (Thomas Pfau, Yonglei Wang)
-  - 14:00 `Python productivity tools (profiling, autoformatting, linting, AI tools)  <https://aaltoscicomp.github.io/python-for-scicomp/productivity/>`__ (Radovan Bast, Gregor Decristoforo)
+  - 14:00 `Profiling <https://aaltoscicomp.github.io/python-for-scicomp/profiling/>`__ (Gregor Decristoforo, Radovan Bast)
+  - 14:40 `Python productivity tools (autoformatting, linting, AI tools)  <https://aaltoscicomp.github.io/python-for-scicomp/productivity/>`__ (Gregor Decristoforo, Radovan Bast)
   - 15:00 End of day 2
 
 - Thu 7.nov, 9:50-15:00
