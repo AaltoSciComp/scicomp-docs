@@ -9,10 +9,9 @@ Nov 5th - Nov 7th 2024 / Python for Scientific Computing
 
 .. admonition:: News and Important info
 
-   * October 2024 - Finalizing the program, few days to go!
-   * In the meantime you can register at this link: https://link.webropol.com/ep/pfsc24
+   * 5/11/2024 update: Preparing for Day2 -- I's most important to have Jupyter working so you can do the exercises - if you had problems, now you can work on solving it before tomorrow. An extra installation session will be offered to participants from partners organisations. 
    * `Course material <https://aaltoscicomp.github.io/python-for-scicomp/>`__
-   * Watch here: https://twitch.tv/coderefinery/
+   * Watch here: https://twitch.tv/coderefinery/ (recording available for 7 days)
    * `YouTube playlist (videos appear when processed)
      <https://www.youtube.com/playlist?list=PLZLVmS9rf3nMWEKWtagJ6h0q9BrFO49tn>`__
      `Twitch videos (raw, for 7 days, immediately available)
