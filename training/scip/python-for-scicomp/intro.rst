@@ -16,25 +16,26 @@ Who are we?
 ~~~~~~~~~~~
 
 * Instructors introduce themselves.
-* Aalto Scientific Computing: https://scicomp.aalto.fi/about/
-* In collaborations with CodeRefinery partners, in particular in
+* A collaboration of CodeRefinery partners and more, in particular in
   Sweden and Norway: https://coderefinery.org
-* Ten different instructors, about as many other helpers, too.
+* Coordinated by Aalto Scientific Computing: https://scicomp.aalto.fi/
+* More than ten different instructors, about as many other helpers, too.
 
 
 Course contents
 ~~~~~~~~~~~~~~~
 
-* **Day 1:** Basic tools (jupyter, numpy, pandas)
+* **Day 1:** Basic tools (jupyter, numpy, pandas, xarray)
 
-* **Day 2:** Still fairly basic (pandas continued, visualization, data formats)
+* **Day 2:** More specialized tools (working with data, plotting, scripts,
+  productivity tools)
 
-* **Day 3:** More specialized tools (scripting, libraries, parallel)
-
-* **Day 4:** Again more special tools (dependencies and environments,
-  Binder, packaging)
+* **Day 3:** Even more specialized (libraries, dependencies and
+  packaging, parallel programming)
 
 * If early days are too boring for you, don't skip the later days!
+
+* If later days get too complex for you, it's OK!
 
 * We will adjust the schedule as needed.
 
@@ -77,14 +78,12 @@ We have an interesting strategy:
 - Livestream broadcast, like a TV production.
 - Anyone can watch.
 - There are pauses for exercises, you can work (alone or in groups).
-- Our university's people can be in Zoom and switch there for exercise
-  sessions (some years).
 
 There are many parts of the workshop:
 
 - Talking and demos (livestream)
 - Type-along (livesteam)
-- Exercises (Zoom or alone or your own groups)
+- Exercises (In your own groups or alone)
 - Breaks, at least 10 minutes/hour
 
 
@@ -92,7 +91,7 @@ There are many parts of the workshop:
 Chat and communication
 ~~~~~~~~~~~~~~~~~~~~~~
 
-- Please don't use the chat for questions: who can keep track?
+- Please don't use the steam chat for questions: who can keep track?
 
   - Instructors won't see
   - But you can for practical questions
@@ -138,6 +137,7 @@ Arranging your screen is surprisingly difficult!
   half is for demos.
 - The other half is for web browsers, your workspace, etc.  Have
   the Notes easy to access!
+- Use the settings to force the highest resolution.
 
 .. figure:: https://coderefinery.github.io/manuals/_images/layout--learner-livestream-sidebyside-onebrowser.png
 
@@ -159,26 +159,10 @@ There is so much information!  What should we look?
   - Only look at the bottom.
   - Come back and read detailed answers later, not during.
 
-- Zoom or your own exercise group (during the exercises, optional).
+- The exercises (your group or alone) (during the exercises, optional).
 
 - Lesson webpage (as needed, direct links in Notes)
 
-
-
-When do you switch between the stream/exercise Zoom?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-**We don't organize this year (but others might)**
-
-If you have registered and are from a participating institution, you
-have a Zoom link for exercise sessions.  This is optional.
-
-- **During main lectures,** you look at the livestream + follow along.
-- **During exercise sessions,** you will be told to switch to Zoom if
-  you have it (livestream is quiet)
-- **After exercise sessions** you will hear the livestream become
-  active again, and know it is time to come back.
-- We will be explicit at every step of the way.
 
 
 
@@ -200,10 +184,10 @@ What can go wrong?
 * **The stream dies:** something has happened to the broadcaster's
   computer.  Stick around, it will resume soon.
 * **The internet dies:** This happened in a previous course (Fastly
-  CDN problems).  Wait around, we see what happens.  Remember, we have
+  CDN problem).  Wait around, we see what happens.  Remember, we have
   videos no matter what.
-* **CATS disrupts the instructors:** wait, this is the opposite of a
-  problem an actually what we all want.
+* **a CAT disrupts the instructors:** wait, this is the opposite of a
+  problem.
 
 
 
@@ -212,7 +196,7 @@ Videos
 
 * You miss a day or want to review?  No problem.
 * Videos are available on Twitch for 7 days
-* ... and YouTube after we process them (by midnight)
+* ... and YouTube after we process them
 
 
 
@@ -242,8 +226,8 @@ We leave you with four pieces of advice for now:
 Final notes
 -----------
 
-Credit points
-~~~~~~~~~~~~~
+Certificates
+~~~~~~~~~~~~
 
 - See the course webpage for information.
 
@@ -270,5 +254,5 @@ Other workshops
 
 - Consider attending a "real" CodeRefinery workshop, with more
   practical skills about the development side of things:
-  https://coderefinery.org (next one in 2023 March)
+  https://coderefinery.org (next one in spring 2025)
 - Sign up for the CodeRefinery newsletter to get announcements.

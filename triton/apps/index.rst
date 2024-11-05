@@ -42,9 +42,10 @@ In the chart below, we have these categories (which don't really mean
 anything, but in the future should help us be more transparent about
 what we are able to support):
 
-* A: Full support and documentation, should always work
+* A: Full support and good documentation, installed for everyone,
+  installation should always work.
 * B: We install and provide best-effort documentation, but may be out
-  of date.
+  of date.  We only update the install and documentation on-demand.
 * C: Basic info, no guarantees
 
 If you know some application which is missing from this list but is
