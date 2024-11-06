@@ -152,20 +152,20 @@ registered in Aalto systems.
 
 To obtain a certificate/credit, we expect you to have registered to the course by 7/11/2024, 
 follow the 4 sessions and provide us with at least the following 5 documents via email
-(1 text document, 4 or more python scripts/notebooks). **Please remember to add your name and surname to all submitted files. If you are a student at Aalto University, please also add your student number.**
+(1 text document, 3 or more python scripts/notebooks). **Please remember to add your name and surname to all submitted files. If you are a student at Aalto University, please also add your student number.**
 
-- **1 text document** (PDF or txt or anything for text): For each of the 4 days, write a short paragraph (learning diary) to highlight
+- **1 text document** (PDF or txt or anything for text): For each of the 3 days, write a short paragraph (learning diary) to highlight
   your personal reflections about what you have found useful, which topic inspired
   you to go deeper, and more in general what you liked and what could be improved.
-- **4 (or more) .py scripts/notebooks**: For each of the 4 days take one code example from the 
+- **4 (or more) .py scripts/notebooks**: For each of the 3 days take one code example from the 
   course materials and make sure you can run it locally as a ".py" script or as a jupyter notebook.
   Modify it a bit according to what inspires you: adding more comments, testing the
   code with different inputs, expanding it with something related to your field of
   research. There is no right or wrong way of doing this, but please submit a
   python script/notebook that we are eventually able to run and test on our local computers.
 
-These 5 (or more) documents should be sent before 30/November/2024 23:59CET to scip@aalto.fi.
-If the evaluation criteria are met for each of the 5 (or more) documents, you will receive
+These 4 (or more) documents should be sent before 30/November/2024 23:59CET to scip@aalto.fi.
+If the evaluation criteria are met for each of the 4 (or more) documents, you will receive
 a certificate by end of December 2024. Please note that we do not track course attendance and if you missed one
 session, recordings will be available on Twitch immediately after the streaming ends.
 
