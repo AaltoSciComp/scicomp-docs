@@ -157,7 +157,7 @@ follow the 4 sessions and provide us with at least the following 5 documents via
 - **1 text document** (PDF or txt or anything for text): For each of the 3 days, write a short paragraph (learning diary) to highlight
   your personal reflections about what you have found useful, which topic inspired
   you to go deeper, and more in general what you liked and what could be improved.
-- **4 (or more) .py scripts/notebooks**: For each of the 3 days take one code example from the 
+- **3 (or more) .py scripts/notebooks**: For each of the 3 days take one code example from the 
   course materials and make sure you can run it locally as a ".py" script or as a jupyter notebook.
   Modify it a bit according to what inspires you: adding more comments, testing the
   code with different inputs, expanding it with something related to your field of
