@@ -87,7 +87,7 @@ if attending a single lesson.
 - Wed 6.nov, 9:50-15:00
 
   - 09:50  Icebreakers and warming up (Richard Darst, Enrico Glerean)
-  - 10:00 `Working with data <https://aaltoscicomp.github.io/python-for-scicomp/data-formats/>`__ (Thomas Pfau, Simo Tuomisto)
+  - 10:00 `Working with data <https://aaltoscicomp.github.io/python-for-scicomp/work-with-data/>`__ (Thomas Pfau, Simo Tuomisto)
   - 10:30 `Plotting with Vega-Altair <https://aaltoscicomp.github.io/python-for-scicomp/plotting-vega-altair/>`__ (Radovan Bast, Richard Darst)
   - 12:00 Lunch break
   - 13:00 `Scripts <https://aaltoscicomp.github.io/python-for-scicomp/scripts/>`__ (Thomas Pfau, Yonglei Wang)
