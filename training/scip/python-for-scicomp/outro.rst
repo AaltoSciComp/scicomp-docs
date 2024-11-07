@@ -38,6 +38,7 @@ Subscribe to the CodeRefinery newsletter for announcements about all
 of these: https://coderefinery.org and `Aalto Sci Comp newsletter <https://list.aalto.fi/mailman/listinfo/scicomp-announcements>`__.
 
 Check other partners doing relevant courses:
+
 * https://enccs.se/events
 * https://csc.fi/en/trainings/training-calendar/
 * `Aalto Data Agents trainings on open science, ethics, and responsible conduct of research <https://www.aalto.fi/en/services/training-in-research-data-management-and-open-science>`__
