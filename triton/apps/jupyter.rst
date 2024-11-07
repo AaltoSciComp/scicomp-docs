@@ -238,25 +238,6 @@ Or for **Python virtualenvs**::
   $ module load jupyterhub/live
   $ envkernel virtualenv --user --name INTERNAL_NAME --display-name="My virtualenv" /path/to/virtualenv
 
-Installing a different R module as a kernel
--------------------------------------------
-
-Load your R modules, install R kernel normally (to some ``NAME``),
-use envkernel as a wrapper to re-write the kernel (reading the
-``NAME`` and rewriting to the same ``NAME``), after it loads the
-modules you need::
-
-  ## Load jupyterhub/live, and R 3.6.1 with IRkernel.
-  $ module load r-irkernel/1.1-python3
-  $ module load jupyterhub/live
-
-  ## Use Rscript to install jupyter kernel
-  $ Rscript -e "library(IRkernel); IRkernel::installspec(name='NAME', displayname='R 3.6.1')"
-
-  ## Use envkernel to re-write, loading the R modules.
-  $ envkernel lmod --user --kernel-template=NAME --name=NAME $CONDA_PREFIX r-irkernel/1.1-python3
-
-
 Installing a different R version as a kernel
 --------------------------------------------
 
