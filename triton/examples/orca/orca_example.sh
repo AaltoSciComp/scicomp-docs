@@ -5,10 +5,17 @@
 #SBATCH --mem=2G
 #SBATCH --output=orca_example.out
 
-module load orca/4.2.1-openmpi
+# remove any existing modules
+module purge
+# load the open-mpi library
+module load openmpi/4.1.2
+# load orca module
+module load orca/5.0.3
 
+# remove old outputs
 rm -f water*
 
+# create an example input
 cat > water.inp << EOF
 !HF
 !DEF2-SVP
