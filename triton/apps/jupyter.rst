@@ -246,29 +246,25 @@ The disadvantage is that you will need to create a kernel, the advantage is that
 is to use the existing R installations on Triton.
 
 .. tabs::
-
+ 
   .. tab:: Using a conda environment
      
         You will need to create your own conda environment with all packages that are necessary
-        to deploy the environment as a kernel.::
+        to deploy the environment as a kernel. See :doc:`here </triton/apps/python-conda`  for 
+        general instructions on how to create a conda environment. In short: We recommend you
+        to use Mamba, configureing mamba such that environments are not saved in your home directory, 
+        and use and environment.yml file whenever you need more than a few packages (i.e in any actual use-case) 
+        Your environment needs to at least contain the R version you want to use ( r-essentials=X.X.X where X.X.X is the R version), and r-ikernel.::
 
-           ## Load mamba module before creating your environment - this provides mamba that is used to create your environment
-           $ module load mamba
-
-        Create your conda environment, selecting a ``NAME`` for the environment.::
-
-           ## This will use the latest R version on conda-forge. If you need a specific version you can specify it
-           ## as r-essentials=X.X.X, where X.X.X is your required R version number
-           $ mamba create -n ENVNAME -c conda-forge r-essentials r-irkernel 
-           ## If Mamba doesn't work you can also replace it with conda, but usually mamba is a lot faster
-
-        The next steps are the same as building a Kernel, except for activating the environment instead of 
-        loading the r-irkernel module, since this module depends on the R version.
-        the ``displayname`` will be what will be displayed on jupyter ::
-        
-          ## Use Rscript to install jupyter kernel, you need the environment for this.
-          ## You need the Python `jupyter` command so R can know the right place to
-          ## install the kernel (provided by jupyterhub/live)
+          $ module load mamba
+          ## This will use the latest R version on conda-forge.
+          $ mamba create -n ENVNAME -c conda-forge r-essentials r-irkernel 
+           
+        The next step is to build a Kernel, with the environment you just created. For this you need your 
+        environment, the python ``jupyter`` command (from module ``jupyterhub/live``), and R's IRkernel
+        ``displayname``  will be what will be displayed on jupyter ::
+        ``ir-NAME`` will be the internal name of the kernel
+         
           $ module load jupyterhub/live
           $ source activate ENVNAME
           $ Rscript -e "library(IRkernel); IRkernel::installspec(name='ir-NAME', displayname='YOUR R Version')"
