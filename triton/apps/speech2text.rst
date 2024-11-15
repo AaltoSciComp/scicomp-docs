@@ -94,13 +94,9 @@ In the following file browser, you will able to select the folder on your comput
  
 .. note::
 
-    We recommend the following practices when uploading your files to Triton:
+    It is recommended to divide files into folders according to language. For example, put English interview files in folder ``my-english-interviews``, French interviews to ``my-french-interviews``, and so forth.
 
-    Divide files into folders according to language. For example, put English interview files in folder ``my-english-interviews``, French interviews to ``my-french-interviews``, and so forth.
-
-    Put the audio files in folders even if you only have one. This will keep your workspace organized on both Triton and your own computer.
-
-    Do not include white spaces in the file and folder names. Instead, use dashes, underscores, or periods. For example, instead of ``my audio folder`` and ``my audio file.mp3``, use ``my-audio-folder`` and ``my_audio_file.mp3``, respectively.
+    Put the audio files in folders even if you only have one. This will keep your project files organized on both Triton and your own computer.
     
 Finally, if your browser asks for confirmation, (``Are you sure you want to upload all files from “my-audio-folder”? Only do this if you trust the site.``), you can answer "yes".
 
