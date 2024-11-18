@@ -111,3 +111,14 @@ for us to organize our support internally.
      * n/a
      * Minimal or none: "word of mouth" or garage support.  (check
        issue tracker/chat)
+
+
+
+**Internal note:** The A-level software and relevant document pages is
+listed below.  Don't contact the people listed directly, they have the
+overall view but might not be the right person to contact for any
+given problem.
+
+* Python (module scicomp-python-env, :doc:`python`,
+  :doc:`python-conda`)
+* LLM environment (module scicomp-llm-env, :doc:`llms`)
