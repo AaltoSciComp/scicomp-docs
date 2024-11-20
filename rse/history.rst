@@ -97,7 +97,9 @@ Our long-term funding goal was to receive a significant amount of
 funding from projects (as in: from external grants).  Some initial
 projects were willing to fund us, but the finance practicalities were
 too complex (too much effort to internally transfer the money) and
-this didn't happen as soon as we wanted.
+this didn't happen as soon as we wanted.  Our school and departments
+were happy to have us support research while waiting for the funding
+to be sorted out.
 
 We never had any shortage of work to do: with a minimal amount of
 advertisement, we had a steady stream of projects that was neither too
