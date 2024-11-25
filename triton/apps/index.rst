@@ -16,6 +16,7 @@ When you need software, check the following for instructions (roughly in this or
 * The `issue tracker
   <https://version.aalto.fi/gitlab/AaltoScienceIT/triton>`__ for other
   people who have asked - some instructions only live there.
+* Visit :doc:`/help/garage` to ask for advice.
 
 If you have difficulty, it's usually a good idea to search the issue
 tracker anyway, in order to learn from the experience of others.
@@ -34,49 +35,79 @@ that provide an operating system within an operating system.  Software
 will tell you if you need to use it via Singularity.
 
 
-Software installation and policy
---------------------------------
+Software installations
+----------------------
 
-We want to support all software, but unfortunately time is limited.
-In the chart below, we have these categories (which don't really mean
-anything, but in the future should help us be more transparent about
-what we are able to support):
+We aim to help as many people as possible, but we can't do everything.
+For things we can't install for everyone, we can often provide
+instructions for how you can install it by yourself.
 
-* A: Full support and good documentation, installed for everyone,
-  installation should always work.
-* B: We install and provide best-effort documentation, but may be out
-  of date.  We only update the install and documentation on-demand.
-* C: Basic info, no guarantees
+Software is generally easy to install if it is in the `conda's
+conda-forge channel <https://anaconda.org/search>`__ (for almost any
+software, see our :doc:`conda guide </triton/apps/python-conda>`) or the
+`Spack package manager <https://packages.spack.io/>`__ (for compiled
+software).  If it has easy-to-install Ubuntu packages, it will be easy
+to do via :doc:`singularity <../usage/singularity>` containers.
 
-If you know some application which is missing from this list but is
-widely in use (anyone else than you is using it) it would make sense
-install to ``/share/apps/`` directory and create a module file. Send
-your request to the tracker.  We want to support as much software as
-possible, but unfortunately we don't have the resources to do
-everything centrally.
-
-Software is generally easy to install if it is in `Spack
-<https://packages.spack.io/>`__ (check
-that package list page), a scientific software management and building
-system.  If it has easy-to-install Ubuntu packages,
-it will be easy to do via :doc:`singularity <../usage/singularity>`.
-
+The :ref:`Triton issue tracker <issuetracker>` should have a record of
+all software we help people to install which isn't documented at
+scicomp.aalto.fi.
 
 
 
 Software documentation pages
 ----------------------------
 
-.. csv-table::
-   :delim: |
-
-
-   Name          | |
-   Python        |A|
-
-
 .. toctree::
    :maxdepth: 1
    :glob:
 
    *
+
+
+Software installation and policy
+--------------------------------
+
+We want to support all software, but unfortunately time is limited.
+If we tried to install everything perfectly, we would in practice not
+be able to support much.  Thus, we try to do the best we can for as
+many people as we can by defining these levels of support.  You don't
+have to know the levels: just ask for what you need, the levels are
+for us to organize our support internally.
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+
+   * *
+     * Installation
+     * Support by ASC staff
+     * Updates (new versions, etc)
+     * Documentation
+   * * A
+     * Installed globally (with functionality checks)
+     * Full support (named responsible person)
+     * Automatically (every so often)
+     * Always up to date
+   * * B
+     * Installed globally
+     * Good, usually
+     * Upon request (without much testing)
+     * May be out of date unless we get requests
+   * * C
+     * Installed globally (without checks of functionality)
+     * None promised (ask anyway)
+     * Upon request (*if* there is time)
+     * None or minimal stub page (check issue tracker/chat for more
+       info or updates)
+   * * E
+     * User-installed
+     * Good
+     * n/a
+     * Updated when requested
+   * * F
+     * User-installed
+     * None promised (ask anyway)
+     * n/a
+     * Minimal or none: "word of mouth" or garage support.  (check
+       issue tracker/chat)
