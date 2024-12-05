@@ -267,7 +267,7 @@ For GPUs in Triton these flags are:
    -arch=sm_60 -gencode=arch=compute_60,code=sm_60 -gencode=arch=compute_70,code=sm_70 -gencode=arch=compute_80,code=sm_80 -gencode=arch=compute_90,code=sm_90
 
 Here architectures (``compute_XX``/``sm_XX``) number 60, 70, 80 and 90
-correspond to GPU cards P100, V100, A100 and H100 respectively.
+correspond to GPU cards P100, V100, A100 and H100/H200 respectively.
 
 For more information, you can check this
 `excellent article <https://arnon.dk/matching-sm-architectures-arch-and-gencode-for-various-nvidia-cards/>`__
