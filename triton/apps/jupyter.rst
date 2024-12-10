@@ -238,25 +238,6 @@ Or for **Python virtualenvs**::
   $ module load jupyterhub/live
   $ envkernel virtualenv --user --name INTERNAL_NAME --display-name="My virtualenv" /path/to/virtualenv
 
-Installing a different R module as a kernel
--------------------------------------------
-
-Load your R modules, install R kernel normally (to some ``NAME``),
-use envkernel as a wrapper to re-write the kernel (reading the
-``NAME`` and rewriting to the same ``NAME``), after it loads the
-modules you need::
-
-  ## Load jupyterhub/live, and R 3.6.1 with IRkernel.
-  $ module load r-irkernel/1.1-python3
-  $ module load jupyterhub/live
-
-  ## Use Rscript to install jupyter kernel
-  $ Rscript -e "library(IRkernel); IRkernel::installspec(name='NAME', displayname='R 3.6.1')"
-
-  ## Use envkernel to re-write, loading the R modules.
-  $ envkernel lmod --user --kernel-template=NAME --name=NAME $CONDA_PREFIX r-irkernel/1.1-python3
-
-
 Installing a different R version as a kernel
 --------------------------------------------
 
@@ -265,64 +246,73 @@ The disadvantage is that you will need to create a kernel, the advantage is that
 is to use the existing R installations on Triton.
 
 .. tabs::
-
+ 
   .. tab:: Using a conda environment
      
         You will need to create your own conda environment with all packages that are necessary
-        to deploy the environment as a kernel.::
+        to deploy the environment as a kernel. See :doc:`here </triton/apps/python-conda>`  for 
+        general instructions on how to create a conda environment. (Yes, conda can install R)
 
-           ## Load mamba module before creating your environment - this provides mamba that is used to create your environment
-           $ module load mamba
+	In short: We recommend you
+        to use Mamba, configureing mamba such that environments are not saved in your home directory, 
+        and use and a ``environment.yml`` file whenever you need more than a few packages (i.e in any actual use-case) 
+        Your environment needs to at least contain the R version you want to use (``r-essentials=X.X.X`` where ``X.X.X``
+	is the R version), and ``r-irkernel``::
 
-        Create your conda environment, selecting a ``NAME`` for the environment.::
-
-           ## This will use the latest R version on conda-forge. If you need a specific version you can specify it
-           ## as r-essentials=X.X.X, where X.X.X is your required R version number
-           $ mamba create -n ENVNAME -c conda-forge r-essentials r-irkernel 
-           ## If Mamba doesn't work you can also replace it with conda, but usually mamba is a lot faster
-
-        The next steps are the same as building a Kernel, except for activating the environment instead of 
-        loading the r-irkernel module, since this module depends on the R version.
-        the ``displayname`` will be what will be displayed on jupyter ::
-        
-          ## Use Rscript to install jupyter kernel, you need the environment for this.
-          ## You need the Python `jupyter` command so R can know the right place to
-          ## install the kernel (provided by jupyterhub/live)
+          $ module load mamba
+          ## This will use the latest R version on conda-forge.
+          $ mamba create -n ENVNAME -c conda-forge r-essentials r-irkernel 
+           
+        The next step is to build a kernel, with the environment you just created. For this you need your 
+        environment, the python ``jupyter`` command (from module
+	``jupyterhub/live``).  In these commands ``DISPLAYNAME``  will be what will be displayed on jupyter and
+        ``ir-NAME`` will be the internal name of the kernel.  Replace
+	``NAME`` with some identifier::
+         
           $ module load jupyterhub/live
           $ source activate ENVNAME
-          $ Rscript -e "library(IRkernel); IRkernel::installspec(name='ir-NAME', displayname='YOUR R Version')"
+          $ Rscript -e "library(IRkernel); IRkernel::installspec(name='ir-NAME', displayname='DISPLAYNAME')"
           $ envkernel conda --user --kernel-template=ir-NAME --name=ir-NAME ENV_FULL_PATH
+        
+        This creates a new kernel in your own list of kernels. The next time you open jupyterhub on OOD you 
+        will see a new kernel option in the list of kernels.
+
     
   .. tab:: Using existing Triton installations of R
 
-       First, you need to load the R version you want to create 
-       to deploy the environment as a kernel::
+       First, you need to load the R module you want to use as a basis for your kernel and 
+       load the ``jupyterhub/live`` module to point R at the right place for jupyter::
 
          $ module spider r
          ## Select one of the displayed R versions and load it with the following line
          $ module load r/THE_VERSION_YOU_WANT
+         $ module load jupyterhub/live
 
-       Start R and install the IRkernel package. ::
+       Next, you need to start R::
 
-         ## start R
          $ R
+
+       In R you need to install the IRkernel package and any R package you want to use in your Jupyter kernel. 
+       After that you will use the IRkernel package to create the kernel specifications. The kernel needs a ``NAME`` 
+       which will be the internal name, and a ``DISPLAYNAME``, which will be the name displayed in jupyter:
 
        .. code-block:: rconsole
 
-         ## In R install the IRkernel package (to your home directory)
-         install.packages('IRkernel') 
+         install.packages('IRkernel')
+         # add other package installs here
+
+         library(IRkernel)
+         IRkernel::installspec(name='NAME', displayname='DISPLAYNAME')
          ## exit R again
 
-       Create the installation specs using Rscript and IRKernel. Select a ``NAME`` for the environment specification
-       that can be used to install it. The
-       Next install the jupyter kernel. Here you need to select the ``NAME`` given before. 
-       The NAME is what is will be referred to for installation, while ``DISPLAYNAME`` will be displayed in jupyter::
+       Next update the jupyter kernel so that it loads the module. Here you need to select the ``NAME`` given before, 
+       both as template and as output name, and give it the module you want to base the kernel on::
+        
+         $ envkernel lmod --user --kernel-template=NAME --name=NAME r/THE_VERSION_YOU_WANT
 
-         ## Use Rscript to install the jupyter kernel. The jupyterhub/live module is required to point R at the right place for jupyter
-         $ module load jupyterhub/live
-         $ Rscript -e "library(IRkernel); IRkernel::installspec(name='NAME', displayname='DISPLAYNAME')"
-         $ envkernel lmod --user --kernel-template=NAME --name=IMAGENAME YOURRMODULENAME
-         ## YOURRMODULE should match the module you loaded above (THE_VERSION_YOU_WANT above)
+       This creates a new kernel in your own list of kernels. The next time you open jupyterhub on OOD you 
+       will see a new kernel option in the list of kernels.
+
 
 .. note:: Installing R packages for jupyter
 
