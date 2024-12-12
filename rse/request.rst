@@ -24,7 +24,7 @@ We recommend you come to our daily :ref:`garage sessions
 after you send the email).  We almost always have more questions and
 want to chat, so that responding to email is slow.
 
-Our email is rse-group@aalto.fi (the Triton email address
+Our email is rse@aalto.fi (the Triton email address
 scicomp@aalto.fi also gets to us). You can also use the `structured request
 form <https://selfservice.esupport.aalto.fi/ssc/app#/order/2026/>`__
 ("Research Software Engineer request").  This guides you through some

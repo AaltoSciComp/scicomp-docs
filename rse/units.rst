@@ -123,7 +123,7 @@ How to get in touch
 
 If the above sounds like something that would benefit your unit, Aalto
 RSE is ready to help you (2024).  Gen in touch with Richard Darst or
-rse-group@aalto.fi.
+rse@aalto.fi.
 
 
 

@@ -50,7 +50,7 @@ more information, see :doc:`procedures/units-info`.
    For a quick chat to get started with any kind of project or request
    any type of support, come to our :ref:`daily garage <scicomp-garage>`,
    every workday online at 13:00.  Or
-   contact us by email at rse-group at aalto.fi, or fill out our
+   contact us by email at rse at aalto.fi, or fill out our
    `request form <https://selfservice.esupport.aalto.fi/ssc/app#/order/2026/>`__.  See
    :ref:`requesting RSE <request-rse>` for more.
 

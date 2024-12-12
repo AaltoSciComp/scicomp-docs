@@ -5,7 +5,7 @@ For grant applicants
 
    Grant applicants, if you are planning to use Aalto Research
    Software Engineers service, feel free to drop by :ref:`SciComp
-   garage for a chat <garage>`, contact us at rse-group at aalto.fi,
+   garage for a chat <garage>`, contact us at rse at aalto.fi,
    or fill out our `request form
    <https://selfservice.esupport.aalto.fi/ssc/app#/order/2026/>`__.
 

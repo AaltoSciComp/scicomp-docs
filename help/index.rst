@@ -205,7 +205,7 @@ Email
   account (requesting a Triton account), quota, etc. - most other
   things go to the tracker above.
 
-* rse-group at aalto.fi: Research software engineering service
+* rse at aalto.fi: Research software engineering service
   requests. (it's usually better to drop by :ref:`SciComp garage
   <garage>` since we usually need to discuss more.)
 

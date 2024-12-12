@@ -182,7 +182,7 @@ Email tracker
   - Most users know this and we get few emails
 
 - Aalto IT services uses Efecte, CS uses its own RT (much nicer).
-- Three groups: scicomp, scip (teaching), rse-group (RSE services).
+- Three groups: scicomp, scip (teaching), rse (RSE services).
 
 
 Daily Garage
