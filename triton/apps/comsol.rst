@@ -5,7 +5,7 @@ COMSOL Multiphysics
 .. _comsol:
 
 
-.. hint:: We are continuing the COMSOL focus days in our :ref:`daily zoom garage<scicomp-garage>` in Spring 2024: someone from COMSOL (the company) plans to join our zoom garage at 13:00 on the following Tuesdays: 2024-01-23, 2024-02-27, 2024-03-26, 2024-04-23, 2024-05-28.
+.. hint:: We will retry the COMSOL focus days in our :ref:`daily zoom garage<scicomp-garage>` in Spring 2025: someone from COMSOL (the company) plans to join our zoom garage at 13:00 on the following Wednesday: 2025-01-15. The continuation of the focus days depends on the popularity of the first session.
 
 .. hint:: Join the other COMSOL users in our Zulip :ref:`chat`: Stream "#triton", topic "Comsol user group".
 

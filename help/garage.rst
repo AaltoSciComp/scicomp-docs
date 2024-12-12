@@ -112,9 +112,9 @@ usually give a good answer (especially about Triton, HPC, computing,
 software, and data).
 
 * **Mondays** also have NBE/PHYS IT present.
-* **Tuesdays** We are continuing the :ref:`COMSOL Multiphysics<comsol>` focus days in Spring 2024: someone from COMSOL (the company) plans to join our zoom garage at 13:00 on the following Tuesdays: 2024-01-23, 2024-02-27, 2024-03-26, 2024-04-23, 2024-05-28.
+* **Tuesdays** 
 * **Wednesdays** also have NBE/PHYS IT present.  We also have more
-  staff to help :doc:`jupyter.cs instructors/TAs </aalto/jupyterhub-instructors/index>`.
+  staff to help :doc:`jupyter.cs instructors/TAs </aalto/jupyterhub-instructors/index>`. On 2024-01-15 we will have a :ref:`COMSOL Multiphysics<comsol>` focus day: someone from COMSOL (the company) plans to join.
 * **Thursdays**
 * **Fridays** also have CS IT present (at the beginning).
 
