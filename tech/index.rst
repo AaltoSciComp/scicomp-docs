@@ -1,41 +1,66 @@
-FCCI Tech (fka Behind Triton)
-=============================
+FCCI Tech (aka the SciComp Tech series)
+=======================================
 
-This is a series of talks about scientific computing support and HPC
-infrastructure administration in practice.  It started as our internal
-kickstart to new members of our staff, but the scope is expanded and
-now others interested in research infrastructure is invited, though
-our orientation is still primarily on our own team.  Typical attendee are computational research engineers,
-scientific computing support, or HPC cluster/SciComp admins.
+.. admonition:: Upcoming talks
 
-In the future, this may turn into a more general "research
-engineering" seminar series, once we are done with internal
-explanations.  Guest speakers are welcome.  The name stands for
-"Finnish Computing Competence Infrastructure Tech".
+   (none right now)
 
-We share what our practices are, what we have learned, and informally
-discuss.
+This is a seminar series on scientific computing, research software
+engineering, and generally being a good collaborator in scientific
+computing research.  The target ranges from aspiring research software
+engineers to computing infrastructure specialists.  It is part of the
+ASC's new research software engineer training.
+
+It evolved from a series "how ASC does things, taught to people
+joining our team" to something similar (with more general topics) but
+with a broader audience (everyone is invited).  If you want to network
+with and learn from other people in research computing, you are
+welcome to attend.
 
 
 
 Practicalities
 --------------
 
-**Time:** The next speaker announce the time/date of the seminar the
-week before. The speaker sends invitation with the Zoom link.  Usually
-Fridays at 10:00 EET.
+**Time:** Usually Fridays at 10:00 Europe/Helsinki time.
 
-**Duration:** Rough estimate: as desired; ~60 minutes time slots;
-should be plenty of time for questions and discussion.
+**Duration:** 60 minute time slot, good to plan for 20-30 minutes
+presentation and 20-30 minutes discussion.
 
-**Location:** Zoom, ask for an invitation but it is usually the
-:doc:`garage link </help/garage>`.
+**Location:** Zoom, usually the :doc:`garage link </help/garage>`.
 
 **Recordings:** You can view a playlist of *some* videos `on youtube
-<https://www.youtube.com/playlist?list=PLZLVmS9rf3nN1Rj-TAqFEzFM22Y1kJmvn>`__
-(and a few more are available to our team internally).
+<https://www.youtube.com/playlist?list=PLZLVmS9rf3nN1Rj-TAqFEzFM22Y1kJmvn>`__.
+
+**How to present:** Talk to rkdarst, get on the schedule.
 
 *It is not a right but a privilege to participate. Free.*
+
+
+Proposed/requested future topics
+--------------------------------
+
+- SLURM setup, Simppa Äkäslompolo
+
+- Cluster monitoring, Simo/Mikko
+
+- Online courses and CodeRefinery, Richard Darst
+
+- Online work and support, Richard Darst
+
+  - :doc:`online-work-and-support`
+
+- Respectfully and efficiently handling user support requests, Richard Darst
+
+  - :doc:`user-support-responses`
+
+- Science-IT data management: policies and procedures
+
+- Science-IT data management: storage systems and tech setup
+
+- History and structure of FCCI
+
+- Security
 
 
 
@@ -200,34 +225,3 @@ which have been drafted but not presented).
    will discuss what is needed for a software publication and recommended
    practices.
  * `Notes <https://hackmd.io/@AaltoSciComp/python-package-publication-demo>`__
-
-
-Proposed/requested future topics
---------------------------------
-
-- SLURM setup, Simppa Äkäslompolo
-
-- Cluster monitoring, Simo/Mikko
-
-- Online courses and CodeRefinery, Richard Darst
-
-- Online work and support, Richard Darst
-
-  - :doc:`online-work-and-support`
-
-- Respectfully and efficiently handling user support requests, Richard Darst
-
-  - :doc:`user-support-responses`
-
-- Science-IT data management: policies and procedures
-
-- Science-IT data management: storage systems and tech setup
-
-- History and structure of FCCI
-
-- Security
-
-
-
-Send pull requests to this section to add more requests, or to the
-previous section to schedule a talk.
