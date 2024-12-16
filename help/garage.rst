@@ -123,9 +123,15 @@ software, and data).
 Others
 ------
 
-Aalto IT services runs something similar `for some other schools and
-departments
-<https://www.aalto.fi/en/news/new-service-for-researchers-it-support-via-zoom>`__.
+* Aalto IT Services runs `a similar support session for some other schools and
+  departments
+  <https://www.aalto.fi/en/news/new-service-for-researchers-it-support-via-zoom>`__.
+* CSC has a `weekly user support session
+  <https://csc.fi/en/training-calendar/csc-research-support-coffee-every-wednesday-at-1400-finnish-time-2-2/>`__
+  similar to the SciComp garage.
+* The University of Helsinki IT for Science has a `daily garage
+  session
+  <https://version.helsinki.fi/it-for-science/hpc/-/wikis/home>`__.
 
 
 
