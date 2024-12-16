@@ -9,7 +9,10 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * There are no known upcoming disruptions.
+   * 10.december -- 1 january: Winter holiday times.  Garages are not
+     likely.  Some people are around watching over things, we
+     recommend you ask by chat or the Triton issue tracker.
+   * 6.january: Public holiday, no garage.
 
 If you need more help than the issue trackers, this is the place to
 be.  It's not just Triton, but all aspects of scientific computing.
