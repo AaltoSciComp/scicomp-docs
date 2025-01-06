@@ -57,3 +57,9 @@ details {
 .scicomp-table-dense th, .scicomp-table-dense td {
     padding: 8px 8px !important;
 }
+
+.rst-content .document figcaption p {
+    font-size: 85%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
