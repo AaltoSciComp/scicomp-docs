@@ -136,6 +136,7 @@ to improvement at any time.  Also see the :doc:`FCCI Tech
    history
    reports/2022
    reports/2023
+   reports/2024
 
 
 
