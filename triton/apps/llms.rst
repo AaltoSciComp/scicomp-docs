@@ -133,6 +133,7 @@ To access Huggingface models:
 
       import os
       os.environ['TRANSFORMERS_OFFLINE'] = '1'
+      os.environ['HF_HUB_OFFLINE'] = '1'
       os.environ['HF_HOME']='/scratch/shareddata/dldata/huggingface-hub-cache'
 
 
@@ -144,6 +145,7 @@ Here is a Python script using huggingface model.
   ## !!!!!! NOTE: this must be in front of import transformers.
   import os
   os.environ['TRANSFORMERS_OFFLINE'] = '1'
+  os.environ['HF_HUB_OFFLINE'] = '1'
 
   from transformers import AutoModelForCausalLM, AutoTokenizer
 
