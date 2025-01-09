@@ -34,7 +34,7 @@ How it works
 .. list-table::
    :header-rows: 1
 
-* * Resources
+* * Name
   * Who has access
   * Resources
 
@@ -46,6 +46,9 @@ How it works
   * Anyone, but sessions will be stopped without warning if a higher
     priority user comes.
   * Same as above
+
+Time limits and other parameters are visible in OnDemand (and not
+copied here since they may change).
 
 Remember, Jupyter+GPUs are designed to be used for testing and
 development, not production runs.  You should plan (from the
