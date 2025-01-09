@@ -21,7 +21,7 @@ Basic usage
 There is one ``starcd`` module, but most usage is direct without
 access.  For information on what current installations are available,
 and how to use them contact Olli (above).
-
+To make the starccm and starview commands available run `module load starcd/2402_multinode`.
 Admin notes: They are installed in
 /appl/manual_installations/{starcd,starccm}/ and should be protected
 by a unix group.
