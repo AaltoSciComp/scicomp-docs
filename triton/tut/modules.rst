@@ -236,6 +236,10 @@ You can explore more with ``module show NAME``.
 Making a module collection
 --------------------------
 
+.. note::
+  If you are using R or python, we recommend using conda environments 
+  (:doc:`Python environments with Conda </triton/apps/python-conda/ >`). 
+
 There is a basic dependency/conflict system to handle module
 dependency. Each time you load a module, it resolves all the
 dependencies. This can result in long loading times or be annoying to
