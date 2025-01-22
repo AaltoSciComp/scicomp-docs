@@ -9,9 +9,8 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * 10.january: RSE development day, may be limited support (someone
-     will be there though)
-   * 22.january: ASC development day, there is probably no garage.
+   * 23.january: User Group meeting during garage time.  You can join
+     and watch and ask general questions, but limited support.
 
 
 If you need more help than the issue trackers, this is the place to
