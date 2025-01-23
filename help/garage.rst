@@ -9,8 +9,7 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * 23.january: User Group meeting during garage time.  You can join
-     and watch and ask general questions, but limited support.
+   * No known upcoming disruptions.
 
 
 If you need more help than the issue trackers, this is the place to
