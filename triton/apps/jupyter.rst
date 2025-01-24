@@ -2,12 +2,12 @@
 Jupyter on Triton
 =================
 
-.. note:: Quick link
+.. admonition:: Quick link
 
    Triton's Jupyter is available via Open OnDemand,
    https://ondemand.triton.aalto.fi (Jupyter app).
 
-.. note:: For new users
+.. admonition:: For new users
 
    Are you new to Triton and want to access Jupyter?  Triton is a
    high-performance computing cluster, and JupyterHub is just one of
@@ -314,7 +314,7 @@ is to use the existing R installations on Triton.
        will see a new kernel option in the list of kernels.
 
 
-.. note:: Installing R packages for jupyter
+.. admonition:: Installing R packages for jupyter
 
   Installing packages via jupyter can be problematic, as they require interactivity, which jupyter does not readily support.
   To install packages therefore go directly to triton. Load the environment or R module you use and install the packages
