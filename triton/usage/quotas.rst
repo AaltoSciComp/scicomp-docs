@@ -3,7 +3,7 @@ Quotas
 ======
 
 Triton has quotas which limit both the space usage and number of files.
-The quota for your home directory (`$HOME`) is 20GB, for $WRKDIR by default is
+The quota for your home directory (``$HOME``) is 20GB, for $WRKDIR by default is
 200GB, and project directories depending on request (as of 2021). These quotas exist
 to avoid usage exploding without anyone noticing. If you ever need more
 space, just ask. We'll either give you more or find a solution for you.
