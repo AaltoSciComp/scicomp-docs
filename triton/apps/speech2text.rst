@@ -213,7 +213,7 @@ This is a quite known issue with the OpenAI Whisper speech recognition model.
 
 The behavior is sometimes triggered by bad audio quality during that segment (background noise, mic issues, people talking over each other). However, sometimes this seems to happen even with good audio quality. 
 
-Unfortunately, there is nothing we can do about this at the moment: you have to go through that particular audio segment and transcribe it manually.
+Unfortunately, there is little we can do about this at the moment. We recommend you to submit the file again as there is some randomness in the transcription results. If the problem persists, you have to transcribe that particular audio segment manually.
 
 
 Why do we use work directory ``Work /scratch/work/user-name`` instead of ``Home Directory``?
