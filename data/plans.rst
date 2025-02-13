@@ -46,13 +46,6 @@ There are plenty of other good resources about making funder DMPs.
 * The Aalto RDM pages have a subsection dedicated to `data management
   plans <aaltordm_>`_.
 
-* The `DMPTuuli <https://www.dmptuuli.fi/>`_ is a combination
-  template, instructions, and web form which makes it easy to do the
-  mechanical assembly of DMPs.  They also have `public docx/pdf
-  templates <dmptuuli_templates_>`_ which can be used even without the
-  web form.  Aalto recommends this service, though be aware it helps
-  you fill out a form, not plan your work.
-
 .. _aaltordm: https://www.aalto.fi/en/services/data-management-plan-dmp
 
 As some concrete suggestions:
@@ -97,17 +90,7 @@ is some more advice:
   you know the big picture.  If you fill this out first and give it to
   someone, they can guide you in making the next version.
 
-* Use the `DMP Tuuli <https://www.dmptuuli.fi/>`_ tool to prepare the
-  DMP.  It just makes a final document you can download (you could do
-  the same using a word processor), but breaks everything down into a
-  nice form.
-
-  * If you don't like the idea of a web form, the `templates seem to be
-    available publicly <dmptuuli_templates_>`_, too.  These seem to
-    have roughly the info as the DMPTuuli web forms.
-
 .. _aalto_rdm_plans: https://www.aalto.fi/en/services/data-management-plan-dmp
-.. _dmptuuli_templates: https://dmptuuli.fi/public_templates/
 
 Why do they want DMPs?  What should it include?  Answering these will
 help you to know what to write, since there is not near enough room to

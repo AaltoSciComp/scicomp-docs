@@ -110,8 +110,6 @@ In general, if you need to
   metadata still in ACRIS)
 * For **day to day work** within Aalto, Aalto network drives are a
   good service and (different options below).
-* For **making a data management plan**, DMPTuuli along with :doc:`our
-  info <plans>` is good.
 
 
 
@@ -263,14 +261,6 @@ Finnish services
   data, so they can help in data preparation and curation..  It is one
   of the few places in Finland allowed to archive personally
   identifiable data.
-
-* **DMPTuuli** (`dmptuuli.fi <https://dmptuuli.fi>`__) is a service
-  for making data management plans.  It is primarily targeted at
-  funder DMPs, so it won't help you plan your actual research (and
-  even for funder DMPs, you need to know what to say).  You can check
-  our :doc:`data management plans <plans>` page, including the
-  "emergency DMP" section.  Aalto also has a `little bit of guidance
-  <https://www.aalto.fi/en/services/data-management-plan-dmp>`__.
 
 EU services
 ~~~~~~~~~~~
