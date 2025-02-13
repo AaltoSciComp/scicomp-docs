@@ -152,11 +152,9 @@ Local disks
 with single-node jobs and is cleaned up after job is finished.  Not
 all nodes have them: some don't have any disks, and ``/tmp`` is also
 in-memory ramfs.  If you want to ensure you have local storage,
-submit your job with ``--constraint=localdisk``.
+submit your job with ``--constraint=localdisk`` and/or ``--tmp=nnnG``.
 
-See the :doc:`Compute
-node local drives <../usage/localstorage>` page for further details and script
-examples.
+See :doc:`../usage/localstorage`
 
 .. _ramfs-description:
 
@@ -170,7 +168,11 @@ temporary files that don't need to last long.  Note that this is no
 different than just holding the data in memory, if you can hold in
 memory that's better.
 
-ramfs counts against the memory of your job or user session.
+ramfs counts against the memory of your job or user session, so your
+``--mem`` value must be increased based on your storage space.
+
+See :doc:`../usage/localstorage` (which also covers ramfs).
+
 
 Other Aalto data storage locations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

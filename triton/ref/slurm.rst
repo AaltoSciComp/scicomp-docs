@@ -32,6 +32,7 @@
                             ! ``--exclusive``                ! allocate exclusive access to nodes.  For large parallel jobs.
                             ! ``--constraint=``\ *FEATURE*   ! request *feature* (see ``slurm features`` for the current list of configured features, or Arch under the :ref:`hardware list <hardware-list>`).  Multiple with ``--constraint="hsw|skl"``.
                             ! ``--constraint=localdisk``     ! request nodes that have local disks
+			    ! ``--tmp=nnnG``                 ! Request ``nnn`` GB of :doc:`local disk storage space </triton/usage/localstorage>`
                             ! ``--array=``\ *0-5,7,10-15*    ! Run job multiple times, use variable ``$SLURM_ARRAY_TASK_ID`` to adjust parameters.
                             ! ``--gres=gpu``                 ! request a GPU, or ``--gres=gpu:``\ *n* for multiple
                             ! ``--mail-type=``\ *TYPE*       ! notify of events: ``BEGIN``, ``END``, ``FAIL``, ``ALL``, ``REQUEUE`` (not on triton) or ``ALL.`` MUST BE used with ``--mail-user=`` only

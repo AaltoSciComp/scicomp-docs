@@ -61,7 +61,7 @@ double check from within the cluster, you can verify node info with
 tens of TB.
 
 You have to use ``--constraint=localdisk`` to ensure that you get a
-hard disk.  You can use ``--tmp=NNNG`` (for example ``--tmp=100G``) to
+hard disk.  You can use ``--tmp=nnnG`` (for example ``--tmp=100G``) to
 request a node with at least that much temporary space.  But,
 ``--tmp`` doesn't allocate this space just for you: it's shared among
 all users, including those which didn't request storage space.  So,
