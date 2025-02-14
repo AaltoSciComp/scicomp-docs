@@ -26,7 +26,16 @@ In order to transcribe your speech files into text, apply the following steps (d
 .. note::
 
     The workflow described here is suitable for processing sensitive and personal data.
-    All data uploaded to and processed on Triton are stored on servers managed by Aalto and can only be accessed from within Aalto network. The files and folders on Triton are protected by standard Unix permissions so that only their owner (you) and Triton administrators can access them.
+
+    All data uploaded to and processed on Triton are stored on servers managed by Aalto and can only be accessed from within Aalto network. 
+    
+    The files and folders on Triton are protected by standard Unix permissions so that only their owner (you) and Triton administrators can access them.
+
+.. note::
+
+    Speech2text produces non-verbatim transcriptions, meaning that it tries to remove filler words, repetitions, and other non-essential parts of the speech.
+
+    Therefore, the transcription is suitable for tasks where the exact wording is not crucial.
 
 .. note::
 
@@ -35,6 +44,7 @@ In order to transcribe your speech files into text, apply the following steps (d
     You can visit us at :ref:`the daily Zoom help session at 13.00-14.00 <garage>` where we can e.g. create a Triton account for you, walk through the speech2text workflow together, answer questions, help with data analysis, and more.
 
     You can also check the items in :ref:`speech2text-known-issues-and-troubleshooting`.
+
 
 
 Create a Triton account (only done once)
