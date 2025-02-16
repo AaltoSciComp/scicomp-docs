@@ -19,118 +19,38 @@ HuggingFace Models
 The simplest way to use an open-source LLM(Large Language Model) is through the tools and pre-trained models hub from huggingface.
 Huggingface is a popular platform for NLP(Natural Language Processing) tasks. It provides a user-friendly interface through the transformers library to load and run various pre-trained models.
 Most open-source models from Huggingface are widely supported and integrated with the transformers library.
-We are keeping our eyes on the latest models and have downloaded some of them for you. 
-The full list of all the available models are located at ``/scratch/shareddata/dldata/huggingface-hub-cache/models.txt``. Please contact us if you need any other models.
-The following table lists only a few example from the hosted models:
+We are keeping our eyes on the latest models and have downloaded some of them for you. If you need any other models, please contact us.
 
-.. list-table::
-  :header-rows: 1
-  :widths: 1 1
+Run command ``ls /scratch/shareddata/dldata/huggingface-hub-cache/hub`` to see the full list of all the available models.
 
-  * * Model type
-    * Huggingface model identifier
-
-  * * Text Generation
-    * meta-llama/Meta-Llama-3-8B
-
-  * * Text Generation
-    * meta-llama/Meta-Llama-3-8B-Instruct
-
-  * * Text Generation
-    * mistralai/Mixtral-8x22B-v0.1
-
-  * * Text Generation
-    * mistralai/Mixtral-8x22B-Instruct-v0.1
-
-  * * Text Generation
-    * tiiuae/falcon-40b
-
-  * * Text Generation
-    * tiiuae/falcon-40b-instruct
-
-  * * Text Generation
-    * google/gemma-2b-it
-
-  * * Text Generation
-    * google/gemma-7b
-
-  * * Text Generation
-    * google/gemma-7b-it
-
-  * * Text Generation
-    * google/gemma-7b
-
-  * * Text Generation
-    * LumiOpen/Poro-34B
-
-
-  * * Text Generation
-    * meta-llama/Llama-2-7b-hf
-
-  * * Text Generation
-    * meta-llama/Llama-2-13b-hf
-
-  * * Text Generation
-    * meta-llama/Llama-2-70b-hf
-
-  * * Text Generation
-    * codellama/CodeLlama-7b-hf
-
-  * * Text Generation
-    * codellama/CodeLlama-13b-hf
-
-  * * Text Generation
-    * codellama/CodeLlama-34b-hf
-
-  * * Translation
-    * Helsinki-NLP/opus-mt-en-fi
-
-  * * Translation
-    * Helsinki-NLP/opus-mt-fi-en
-
-  * * Translation
-    * t5-base
-  
-  * * Fill Mask
-    * bert-base-uncased
-
-  * * Fill Mask
-    * bert-base-cased
-
-  * * Fill Mask
-    * distilbert-base-uncased
-
-  * * Text to Speech
-    * microsoft/speecht5_hifigan
-  
-  * * Text to Speech
-    * facebook/hf-seamless-m4t-large
-
-  * * Automatic Speech Recognition
-    * openai/whisper-large-v3
-
-  * * Token Classification
-    * dslim/bert-base-NER-uncased
 
 To access Huggingface models: 
 
 .. tabs::
 
-  .. group-tab:: slurm script
+  .. group-tab:: slurm/shell script
 
-    Load the module to setup the environment variable HF_HOME:
+    Load the module for huggingface models and setup environment variables:
 
     .. code-block:: bash
-
-      module load model-huggingface/all
+    
       # this will set HF_HOME to /scratch/shareddata/dldata/huggingface-hub-cache
+      module load model-huggingface/all
+
+      # this will force transformer to load model(s) from local hub instead of download and load model(s) from remote hub. 
+      export TRANSFORMERS_OFFLINE=1
+      export HF_HUB_OFFLINE=1
+
+      python your_script.py
 
   .. group-tab:: jupyter notebook
 
-    In jupyter notebook, one can set up HF_HOME directly:
+    In jupyter notebook, one can set up all necessary environment variables directly:
 
     .. code-block:: python
 
+     ## Force transformer to load model(s) from local hub instead of download and load model(s) from remote hub. 
+     ## IMPORTANT: This must be executed before importing the transformers library
       import os
       os.environ['TRANSFORMERS_OFFLINE'] = '1'
       os.environ['HF_HUB_OFFLINE'] = '1'
@@ -140,12 +60,6 @@ To access Huggingface models:
 Here is a Python script using huggingface model.
 
 .. code-block:: python
-
-  ## Force transformer to load model(s) from local hub instead of download and load model(s) from remote hub. 
-  ## !!!!!! NOTE: this must be in front of import transformers.
-  import os
-  os.environ['TRANSFORMERS_OFFLINE'] = '1'
-  os.environ['HF_HUB_OFFLINE'] = '1'
 
   from transformers import AutoModelForCausalLM, AutoTokenizer
 
