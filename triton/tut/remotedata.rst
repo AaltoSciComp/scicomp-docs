@@ -350,6 +350,21 @@ the folder is there, just not yet visible).
 Exercises
 ---------
 
+.. exercise:: RemoteData-1: Copy the ngrams data over to the cluster
+   :class: exercise-ngrams
+
+   Download one of the following archives and upload it to Triton.
+   The data is the same, just different numbers of books, so choose a
+   file small enough for your internet connection to be happy:
+
+   * 19 MB repack of the original: https://users.aalto.fi/~darstr1/public/Gutenberg-Fiction-first100.zip
+   * 152MB repack of the original: https://users.aalto.fi/~darstr1/public/Gutenberg-Fiction-first1000.zip
+   * Full 2.6GB (original): https://zenodo.org/records/5783256
+
+   Then, upload the data to Triton from your computer, into the
+   location decided in the previous step (some project directory
+   within your work directory.)
+
 .. exercise:: RemoteData-1: Mounting your work directory
 
    Mount your work directory by SMB (or sshfs) and transfer a file to

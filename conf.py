@@ -45,6 +45,7 @@ optional_modules = [
     'sphinx_rtd_theme_ext_color_contrast',
     'sphinx_copybutton',
     'sphinx_lesson.directives',
+    'sphinx_lesson.exerciselist',
     'sphinx_tabs.tabs',
     'sphinx_togglebutton',
     'sphinx_ext_substitution',

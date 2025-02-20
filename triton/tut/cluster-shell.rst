@@ -128,6 +128,8 @@ The most common commands related to directories:
 * ``mkdir NAME`` makes a new directory
 * ``rm -r NAME`` removes a directory (or file) recusrsively - that and
   everything in it!  There is no backup, be careful.
+* ``du -sh NAME`` tell the total size of this directory and everything
+  under it.
 
 
 Exercises, directories
@@ -193,6 +195,26 @@ You have to be :doc:`connected to the custer and have a terminal
       $ pwd
       /home/darstr1
       $ cd $WRKDIR
+
+
+.. exercise:: Shell-2: Look at the Ngrams dataset
+   :class: exercise-ngrams
+
+   (Part of a series: :doc:`ngrams </triton/tut/exercises-ngrams>`)
+
+   There is a directory with some books in it:
+   ``/scratch/shareddata/teaching/gutenberg-fiction/``.  Try to take a
+   look at it:
+
+   * What files are they?
+   * How big are they?
+
+   .. solution::
+
+      ::
+
+	 $ ls /scratch/shareddata/teaching/gutenberg-fiction/
+	 $ du -sh /scratch/shareddata/teaching/gutenberg-fiction/*
 
 
 .. exercise:: Shell-2: Understand power of working directory
@@ -270,7 +292,10 @@ Now we have our code in a place that can be used.
   recommended, since it's not large or high performance enough.  You
   will learn more about where to store your work in :doc:`storage`.
 
-.. exercise:: Shell-3: clone the hpc-examples repository
+.. exercise:: Shell-3: [PI, NGRAMS] clone the hpc-examples repository
+  :class: exercise-pi, exercise-ngrams
+
+  (Part of a series: :doc:`pi </triton/tut/exercises-pi>`, :doc:`ngrams </triton/tut/exercises-ngrams>`)
 
   Do the steps above.  List the directory and verify it matches what
   you see in the `Github web interface
@@ -299,7 +324,8 @@ Now we have our code in a place that can be used.
       (and make our exercises work on different clusters).
 
 
-.. exercise:: Shell-4: log out and re-navigate to the hpc-examples reports
+.. exercise:: Shell-4: [PI, NGRAMS] log out and re-navigate to the hpc-examples reports
+   :class: example-pi, example-ngrams
 
   Log out and log in again.  Navigate to the hpc-examples repository.
   Resuming work is an important but often forgotten part of work.
@@ -395,6 +421,9 @@ method of calculating π.
 
 
 .. exercise:: Shell-6: Try the ``--help`` option
+  :class: exercise-pi
+
+  (Part of a series: :doc:`pi </triton/tut/exercises-pi>`)
 
   Many programs have a ``--help`` option which gives a reminder of the
   options of the program.  (Note that this has to be explicitly
@@ -446,6 +475,8 @@ like user, group, timestamps, permissions.  To view metadata, use ``ls
 
 .. exercise:: Shell-7: (optional) Make a copy of pi.py
 
+  (Part of a series: :doc:`pi </triton/tut/exercises-pi>`)
+
   Make a copy of the pi.py program we have been using.  Call it
   ``pi-new.py``
 
@@ -483,6 +514,23 @@ edits directly on the cluster itself.
 
 * ``cat`` dumps the contents of a file straight to the screen -
   sometimes useful when looking at small things.
+
+.. exercise:: Shell-9: Read our Ngrams dataset README files
+   :class: exercise-ngrams
+
+   (Part of a series: :doc:`ngrams </triton/tut/exercises-ngrams>`)
+
+   "README" files are simple text file documentation, which it's good
+   to include with your data.  Check out the README files within
+   ``/scratch/shareddata/teaching/gutenberg-fiction/``.
+
+   .. solution::
+
+      ::
+
+	 $ less /scratch/shareddata/teaching/gutenberg-fiction/Gutenberg-Fiction/README.md
+	 $ less /scratch/shareddata/teaching/gutenberg-fiction/Gutenberg-Fiction-first100/README
+
 
 .. exercise:: Shell-9: Create a new file and show its contents
 

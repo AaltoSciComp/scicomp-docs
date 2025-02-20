@@ -194,7 +194,19 @@ Exercises
       Sbatch first assigns you a node depending on your requested resources,
       and then runs all commands included in the script.
 
+Part of a series: :doc:`ngrams </triton/tut/exercises-ngrams>`:
+
+.. exercise:: Serial-2: Compute ngrams via a batch jobs
+   :class: exercise-ngrams
+
+   Create a batch job that computes our ngrams.
+
+   TODO: solution
+
+Part of a series: :doc:`pi </triton/tut/exercises-pi>`:
+
 .. exercise:: Serial-2: Submitting and cancelling a job
+   :class: exercise-pi
 
    Create a batch script which does nothing (or some pointless
    operation for a while), for example ``sleep 300`` (this shell
@@ -224,6 +236,7 @@ Exercises
       sbatch file.) The output file also says the job was cancelled.
 
 .. exercise:: Serial-3: Modifying Slurm script while its running
+   :class: exercise-pi
 
    Modifying scripts while a job has been submitted is a bad practice.
 
@@ -255,6 +268,7 @@ Exercises
 
 
 .. exercise:: Serial-4: Modify script while it is running
+   :class: exercise-pi
 
    Modifying scripts while a job has been submitted is a bad practice.
 

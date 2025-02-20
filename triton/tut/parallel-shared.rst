@@ -254,7 +254,69 @@ Exercises
 
 .. include:: ../ref/examples-repo.rst
 
+.. exercise:: Shared memory parallelism1: Test scaling
+   :class: exercise-ngrams
+
+   Test scaling of the ngrams code.  How many processors should be used?
+
+   .. solution::
+
+      Running the code.  Note we don't save the output anywhere.  This
+      will still generate the output but not save it to a disk file.::
+
+	# 100 books
+	srun --constraint=skl python3 ngrams/count.py -n 2 /scratch/shareddata/teaching/Gutenberg-Fiction-first100.zip -o /dev/null
+	srun --constraint=skl -c 1 python3 ngrams/count-multi.py -n 2 /scratch/shareddata/teaching/Gutenberg-Fiction-first100.zip -o /dev/null -t auto
+	srun --constraint=skl -c 2 python3 ngrams/count-multi.py -n 2 /scratch/shareddata/teaching/Gutenberg-Fiction-first100.zip -o /dev/null -t auto
+	srun --constraint=skl -c 4 python3 ngrams/count-multi.py -n 2 /scratch/shareddata/teaching/Gutenberg-Fiction-first100.zip -o /dev/null -t auto
+	srun --constraint=skl -c 8 python3 ngrams/count-multi.py -n 2 /scratch/shareddata/teaching/Gutenberg-Fiction-first100.zip -o /dev/null -t auto
+
+	## 1000 books:
+	srun --constraint=skl --time=0-1 --mem=20G -c 4 python3 ngrams/count-multi.py -n 2 --words /scratch/shareddata/teaching/Gutenberg-Fiction-first1000.zip -o /dev/null -t auto
+
+
+      Durations (character ngrams):
+
+      .. csv-table::
+	 :header-rows: 1
+	 :delim: |
+
+	 N processors         | time   | speedup  | total core time
+         single-core version  | 24.7 s |          | 24.7 s
+	 1                    | 23.8 s | 1.04     | 23.8 s
+	 2                    | 12.5 s | 1.9      | 25.0 s
+	 4                    | 7.2 s  | 1.76     | 28.8 s
+	 8                    | 5.0 s  | 1.44     | 40.0 s
+
+      For these, it makes since to go up to 4 cores, since that's how
+      far you can go with a speedup of 1.5 or greater.
+
+      Durations (word ngrams, for 100 books and 1000 books):
+
+      .. csv-table::
+	 :header-rows: 1
+	 :delim: |
+
+	 N processors         | time (100 books)| speedup | core time used | | time (1000 books) | speedup | core time used
+         single-core code     | 22.5 s          |         | 22.5           | | 170 s             |         | 170 s
+	 1                    | 29.6 s          | .75     | 29.6           | | 201 s	       | .84     | 201 s
+	 2                    | 17.7 s          | 1.71    | 35.4           | | 116 s	       | 1.73    | 232 s
+	 4                    | 14.4 s          | 1.22    | 57.6           | | 82 s	       | 1.41    | 328 s
+	 8                    | 12.1 s          | 1.19    | 96.8           | | 79 s              | 1.04    | 632 s
+
+      For word ngrams, it's justifiable to use two processes because
+      the speed up there is still more than 1.71.  Still, this is
+      relatively bad compared to what we expect for something that
+      *should* be perfectly parallel.  In this case, the problem is
+      that the code isn't very efficient and is spending too much time
+      passing the data around.  Using an array job allows every array
+      task to write separately, and then one single-core job is used
+      to accumulate the counts.  Better yet would be to re-do the code
+      so that this inefficiency is improved.
+
+
 .. exercise:: Shared memory parallelism 1: Test the example's scaling
+   :class: exercise-pi
 
    Run the example with a bigger number of trials (``100000000`` or :math:`10^{8}`)
    and with 1, 2 and 4 CPUs.  Check the running time and CPU
@@ -282,6 +344,7 @@ Exercises
       time ("CPU Utilized") remains the same.
 
 .. exercise:: Shared memory parallelism 2: Test scaling for a program that has a serial part
+   :class: exercise-pi
 
    ``pi.py`` can be called with an argument ``--serial=0.1`` to run a
    fraction of the trials in a serial fashion (here, 10%).
@@ -305,6 +368,7 @@ Exercises
 
 
 .. exercise:: Shared memory parallelism 3: More parallel :math:`\neq` fastest solution
+   :class: exercise-pi
 
    ``pi.py`` can be called with an argument ``--optimized`` to run an optimized
    version of the code that utilizes `NumPy <https://numpy.org/>`__

@@ -314,7 +314,62 @@ Exercises
 
 .. include:: ../ref/examples-repo.rst
 
+Part of a series: :doc:`ngrams </triton/tut/exercises-ngrams>`:
+
+.. exercise:: Array-1: Compute ngrams via an array jobs
+   :class: exercise-ngrams
+
+   Computing the ngrams over the whole Gutenberg-Fiction dataset can
+   take a while.  Array jobs make a let of sense.  Type along with the
+   following:
+
+   The following batch job computes 3grams on the dataset in 20
+   batches, and saves them all to their own file.
+
+   .. code-block:: slurm
+
+      #!/bin/bash
+      #SBATCH --mem=50G
+      #SBATCH --array=0-20
+      #SBATCH --time=0-6
+      #SBATCH --job-name=words-array
+
+      mkdir -p /scratch/work/$USER/ngrams-output/
+
+      python3 ngrams/count.py /scratch/work/darstr1/data/Gutenberg-Fiction.zip -n 3 --words --start=$SLURM_ARRAY_TASK_ID --step=20 \
+      -o /scratch/work/$USER/ngrams-output/ngrams3-words-all-array_$SLURM_ARRAY_TASK_ID.out
+
+   That runs fast.  We can then see there are 20 outputs::
+
+      $ ls /scratch/work/$USER/ngrams-output/
+      ngrams3-words-all-array_0.out   ngrams3-words-all-array_14.out  ngrams3-words-all-array_2.out   ngrams3-words-all-array_7.out
+      ngrams3-words-all-array_1.out   ngrams3-words-all-array_15.out  ngrams3-words-all-array_20.out  ngrams3-words-all-array_8.out
+      ...
+
+      $ head -5 /scratch/work/$USER/ngrams-output/ngrams3-words-all-array_0.out
+      29765 ["i", "don", "t"]
+      19063 ["one", "of", "the"]
+      16104 ["out", "of", "the"]
+      14583 ["there", "was", "a"]
+      13595 ["it", "was", "a"]
+
+   We can then combine the individual output files to one::
+
+     $ python3 ngrams/combine-counts.py /scratch/work/$USER/ngrams-output/ngrams3-words-all-array_* -o /scratch/work/$USER/ngrams-output/ngrams3-words-all.out
+
+   This file has ngrams from *all* of them::
+
+     $ head -5 /scratch/work/$USER/ngrams-output/ngrams3-words-all.out
+     617142 ["i", "don", "t"]
+     395089 ["one", "of", "the"]
+     338236 ["out", "of", "the"]
+     309473 ["there", "was", "a"]
+     284908 ["it", "was", "a"]
+
+Part of a series: :doc:`ngrams </triton/tut/exercises-pi>`:
+
 .. exercise:: Array-1: Array jobs and different random seeds
+   :class: exercise-pi
 
    Create a job array that uses the ``slurm/pi.py`` to calculate a
    combination of different iterations and seed values and save them
@@ -323,6 +378,7 @@ Exercises
    --error=FILE``).
 
 .. exercise:: Array-2: Combine the outputs of the previous exercise.
+   :class: exercise-pi
 
    You find the ``slurm/pi_aggregation.py`` program in hpc-examples.  Run this
    and give all the output files as arguments.  It will combine all

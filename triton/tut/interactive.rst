@@ -270,7 +270,45 @@ Exercises
 	The last failing job seems to not be in history!  (but the
 	OOM, out of memory, error is in the output).
 
+
+Part of a series: :doc:`ngrams </triton/tut/exercises-ngrams>`:
+
+.. exercise:: Interactive-2: Compute ngrams via batch jobs
+   :class: exercise-ngrams
+
+   Let's compute some ngrams.  This uses the code from the
+   hpc-examples repository AND the data we have transferred, even
+   though they are in two different directories.  We want to go to the
+   code directory and point it to the data directory
+
+   ::
+
+      $ cd hpc-examples
+      $ python3 ngrams/count.py /scratch/shareddata/teaching/gutenberg-fiction/Gutenberg-Fiction-first100.zip -o ngrams2 -n 2
+
+   ::
+
+      $ cd hpc-examples
+      $ python3 ngrams/count.py /scratch/shareddata/teaching/gutenberg-fiction/Gutenberg-Fiction-first100.zip -o ngrams2 -n 2
+
+      $ srun python3 ngrams/count.py /scratch/shareddata/teaching/gutenberg-fiction/Gutenberg-Fiction-first100.zip -o ngrams2 -n 2 --words
+
+   ::
+
+      $ srun python3 ngrams/count.py /scratch/shareddata/teaching/gutenberg-fiction/Gutenberg-Fiction-first1000.zip --words -o ngrams2 -n 2
+      srun: slurm_job_submit: Automatically setting partition to: batch-hsw,batch-bdw,batch-csl,batch-skl,batch-milan
+      srun: job 5766825 queued and waiting for resources
+      srun: job 5766825 has been allocated resources
+      Found 1000 files in /scratch/shareddata/teaching/gutenberg-fiction/Gutenberg-Fiction-first1000.zip
+      slurmstepd: error: Detected 1 oom_kill event in StepId=5766825.0. Some of the step tasks have been OOM Killed.
+
+      $ srun --mem=5G --time=0-1 python3 ngrams/count.py /scratch/shareddata/teaching/gutenberg-fiction/Gutenberg-Fiction-first1000.zip --words -o ngrams2 -n 2
+
+
+Part of a series: :doc:`pi </triton/tut/exercises-pi>`:
+
 .. exercise:: Interactive-2: Time scaling
+   :class: exercise-pi
 
    The program ``hpc-examples/slurm/pi.py``
    calculates pi using a simple stochastic algorithm.  The program takes

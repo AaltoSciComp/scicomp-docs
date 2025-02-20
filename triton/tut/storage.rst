@@ -228,6 +228,43 @@ Exercises
 Most of these exercises will be specific to your local site.  Use this
 time to review your local guides to see how they are adapted to your site.
 
+**Ngrams exercise**
+
+.. exercise:: Storage-0: Create a place to store our ngrams data.
+   :class: exercise-ngrams
+
+   We will do a recurring example using public domain Project
+   Gutenberg books.  We will compute ngrams (tuples of words that
+   occur in a sequence (for example (``this``, ``book``, ``is``) is a
+   3-gram).  After computing a list of all n-grams and how often they
+   occur, we can understand something about the books (and sometime
+   generate some text).
+
+   In the next step you will use data that is a 2.6 GB zipfile (6.3GB
+   uncompressed).  Where would you store this data?
+
+   .. solution::
+
+      * 6.3 GB is small enough to fit in your home directory, but would
+        use up most of the space.
+      * Also, the data is downloadable from a public archive, so you
+        don't need to worry about backups.
+      * You aren't currently working with other people
+
+      So your personal Triton work directory ($WRKDIR,
+      ``/scratch/work/USER/``) seems appropriate.  You would make a
+      subdirectory within here::
+
+	$ mkdir $WRKDIR/gutenberg-fiction/
+
+      Since it's a common dataset, it also makes sense to make one
+      copy for everyone.  We have done this in
+      ``/scratch/shareddata/``:
+
+      * ``/scratch/shareddata/teaching/gutenberg-fiction/Gutenberg-Fiction.zip``
+      * ``/scratch/shareddata/teaching/gutenberg-fiction/Gutenberg-Fiction-first1000.zip``
+      * ``/scratch/shareddata/teaching/gutenberg-fiction/Gutenberg-Fiction-first100.zip``
+
 **Data storage locations:**
 
 .. exercise:: Storage-1: Review data storage locations
