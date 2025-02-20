@@ -83,7 +83,7 @@ Job title?  All of these can be adapted to what makes the most sense
 for your school.
 
 .. admonition:: School of Science practices
-   :classes: dropdown
+   :class: dropdown
 
    At the School of Science our arrangement is:
 
