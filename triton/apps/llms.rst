@@ -18,23 +18,25 @@ get familiar with the basics of using the cluster, including running jobs and us
 HuggingFace Models
 ~~~~~~~~~~~~~~~~~~~
 
-The simplest way to use open-source LLMs is through the tools and pre-trained models hub provided by the `HuggingFace <https://huggingface.co/>`__ platform.
+The simplest way to use pre-trained open-source LLMs is to access them through HuggingFace and to leverage their `🤗 Transformers Python library <https://huggingface.co/docs/transformers/en/index>`__. 
 
-Most open-source models from HuggingFace are widely supported and integrated with the transformers Python library.
+HuggingFace provides a wide range of tools and pre-trained models, making it easy to integrate and utilize these models in your projects.
+
+You can explore their offerings at `🤗 HuggingFace <https://huggingface.co/>`__.
 
 .. note::
 
-  We are keeping our eyes on the latest models and have pre-downloaded some of them for you. If you need any other models, please contact :doc:`the Aalto RSEs </rse/index>`.
+  We are keeping an eye on the latest models and have pre-downloaded some of them for you. If you need any other models, please contact :doc:`the Aalto RSEs </rse/index>`.
 
   Run command ``ls /scratch/shareddata/dldata/huggingface-hub-cache/hub`` to see the full list of all the available models.
 
-An example how to run a HuggingFace model on Triton using a Slurm script or Jupyter notebook is shown below.
+Below is an example of how to use the 🤗 Transformers `pipeline() <https://huggingface.co/docs/transformers/v4.49.0/en/main_classes/pipelines#transformers.pipeline>`__ to load a pre-trained model and use it for text generation.
 
 .. tabs::
 
   .. group-tab:: Slurm script
 
-    Request computational resources and load the module for huggingface models:
+    Request computational resources and load the necessary modules.
 
     .. code-block:: bash
     
@@ -49,7 +51,7 @@ An example how to run a HuggingFace model on Triton using a Slurm script or Jupy
       # Set HF_HOME to /scratch/shareddata/dldata/huggingface-hub-cache
       module load model-huggingface
 
-      # Load environment
+      # Load Python environment to use HuggingFace Transformers
       module load scicomp-llm-env
 
       # Force transformer to load model(s) from local hub instead of download and load model(s) from remote hub. 
@@ -74,7 +76,7 @@ An example how to run a HuggingFace model on Triton using a Slurm script or Jupy
       os.environ['HF_HOME']='/scratch/shareddata/dldata/huggingface-hub-cache'
 
 
-Below is a Python script using a HuggingFace model (``mistralai/Mistral-7B-v0.1``) for text generation. 
+Below is a Python script using a HuggingFace model (``meta-llama/Llama-3.1-8B``) for text generation. 
 
 Use it as the content of ``your_script.py`` in the Slurm script example above or a Jupyter notebook cell.
 
@@ -82,7 +84,7 @@ Use it as the content of ``your_script.py`` in the Slurm script example above or
 
   from transformers import pipeline
 
-  pipe = pipeline("text-generation", model="mistralai/Mistral-7B-v0.1")
+  pipe = pipeline("text-generation", model="meta-llama/Llama-3.1-8B")
 
   prompts = ["How many stars in a galaxy?", "How many planets in a solar system?"]
 
