@@ -82,19 +82,48 @@ Use it as the content of ``your_script.py`` in the Slurm script example above or
 
 .. code-block:: python
 
-  from transformers import pipeline
+  from transformers import AutoModelForCausalLM, AutoTokenizer
+  import torch
 
-  pipe = pipeline("text-generation", model="meta-llama/Llama-3.1-8B")
+  model_name = "meta-llama/Llama-3.1-8B"
 
-  prompts = ["How many stars in a galaxy?", "How many planets in a solar system?"]
+  # Load tokenizer
+  tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-  results = pipe(prompts)
+  # Load model with bfloat16 on GPU
+  model = AutoModelForCausalLM.from_pretrained(
+      model_name,
+      torch_dtype=torch.bfloat16,  # Use bfloat16
+      device_map="auto"            # Automatically maps to GPU if available
+  )
 
-  print(results)
+  # Prepare input
+  prompt = "How many stars in the space?"
+  model_inputs = tokenizer([prompt], return_tensors="pt").to("cuda")  # Send inputs to GPU
+  input_length = model_inputs.input_ids.shape[1]
+
+  # Generate response
+  generated_ids = model.generate(**model_inputs, max_new_tokens=20)
+
+  # Decode and print result
+  print(tokenizer.batch_decode(generated_ids[:, input_length:], skip_special_tokens=True)[0])
+
+
+Other Frameworks
+~~~~~~~~~~~~~~~~
+
+While HuggingFace provides a convenient way to access and use LLMs, there are other frameworks available for running LLMs, such as
+
+- `LangChain <https://langchain.github.io/>`__
+- `TensorFlow <https://www.tensorflow.org/>`__
+- `PyTorch <https://pytorch.org/>`__
+- `DeepSpeed <https://www.deepspeed.ai/>`__
+
+If you need assistance running LLMs in these or other frameworks, please contact :doc:`the Aalto RSEs </rse/index>`.
 
 
 More examples
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 AaltoRSE has prepared a repository with examples of using LLMs on Triton. You can find it `here <https://github.com/AaltoSciComp/llm-examples/tree/main/>`__.
 
