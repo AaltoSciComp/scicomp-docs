@@ -60,9 +60,11 @@ Request computational resources and load the necessary modules.
 
     python your_script.py
 
-The following Python script uses a HuggingFace model (``meta-llama/Llama-3.1-8B``) for text generation. 
+The following Python script uses a HuggingFace model `mistralai/Mistral-7B-Instruct-v0.1` for conversations and instructions.
 
-Use it as the content of ``your_script.py`` in the Slurm script above.
+You can look at the `model card <https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1>`__ for more information about the model.
+
+Use the following script as the content of ``your_script.py`` in the Slurm script above.
 
 .. code-block:: python
 
