@@ -73,27 +73,30 @@ started with the computing resources.
 
   * **10:15--11:45: A day in the life of an HPC user** *Richard Darst and Simo Tuomisto*
 
-    - 1. Check your connection to the cluster [[ref.](https://scicomp.aalto.fi/triton/tut/connecting/)]
-    - 2. Moving data to the cluster [[ref.](https://scicomp.aalto.fi/triton/tut/storage/)]
+    - 1. :doc:`Check your connection to the cluster </triton/tut/connecting>`
+    - 2. :doc:`Moving data to the cluster </triton/tut/storage>`
     - 3. Datasets/projects that could be used for the demo:
-        - ["Ngrams example"](https://github.com/AaltoSciComp/hpc-examples/tree/master/ngrams) 
-    - 4. Loading an application? Not needed but good to remeber (e.g. python env) [[ref.](
-https://scicomp.aalto.fi/triton/tut/modules/)]
-    - 5. Analysing data with slurm [[ref.](https://scicomp.aalto.fi/triton/#running-calculations)]
-        - 5.1 Getting an interactive session [[ref.](https://scicomp.aalto.fi/triton/tut/interactive/)]
-        - 5.2 Non-interactive serial job [[ref.](https://scicomp.aalto.fi/triton/tut/interactive/)]
-        - 5.3 Parralelisation and array jobs [[ref1](https://scicomp.aalto.fi/triton/tut/parallel/), [ref2](https://scicomp.aalto.fi/triton/tut/array/)]
-        - 5.4 More advanced parallelisation - discussion only - ([multithreading/multiprocessing](https://scicomp.aalto.fi/triton/tut/parallel-shared/), [MPI](https://scicomp.aalto.fi/triton/tut/parallel-mpi/), [GPUs](https://scicomp.aalto.fi/triton/tut/gpu/))
+
+        - `"Ngrams example" <https://github.com/AaltoSciComp/hpc-examples/tree/master/ngrams>`__
+
+    - 4. Loading an application? Not needed but good to remeber (e.g. python env) ` <https://scicomp.aalto.fi/triton/tut/modules/>`__
+    - 5. :ref:`Analysing data with slurm <tutorials>`
+
+        - 5.1 :doc:`Getting an interactive session </triton/tut/interactive>`
+        - 5.2 :doc:`Non-interactive serial job </triton/tut/interactive>`
+        - 5.3 :doc:`Parralelisation and array jobs </triton/tut/parallel>`, :doc:`[ref2] </triton/tut/array>`
+        - 5.4 More advanced parallelisation - discussion only - (:doc:`multithreading/multiprocessing </triton/tut/parallel-shared>`, :doc:`MPI </triton/tut/parallel-mpi>`, :doc:`GPUs </triton/tut/gpu>`
+
     - 6. Visualising the results (e.g OOD)
     - 7. Moving the data away from the cluster
 
 
 
-  * **11:45--12:00: Where to go from here and how to ask for help (Susanne Merz and Enrico Glerean)
+  * **11:45--12:00: Where to go from here and how to ask for help (Susanne Merz and Enrico Glerean)**
 
   * **12:00--13:00: Lunch break (on your own)**
 
-  * **13:00--16:00: Hands-on exercises with Triton HPC cluster
+  * **13:00--16:00: Hands-on exercises with Triton HPC cluster**
 
     - Main room: Lobby and Generic questions (SM)
     - Room 1: Hands-on with exercises from the morning, Slurm and Triton basics (RD)
@@ -117,7 +120,7 @@ Browsing the following material is sufficient:
     </scicomp/shell>` / `video <https://youtu.be/56p6xX0aToI>`__.
 
 
-* Watch `this background info about why we use computer clusters <https://www.youtube.com/playlist?list=PLZLVmS9rf3nNDHRo1Baz_JVQWDI0mTYyB>`__.  This is important information for *why* we are in this course, which we *won't cover directly*.  The most important videos are the `intro (what is a cluster and why?) <https://www.youtube.com/watch?v=yqGtnA7CUtU&list=PLZLVmS9rf3nNDHRo1Baz_JVQWDI0mTYyB&index=1&pp=gAQBiAQB>`, `storage hierarchy (how the data looks) <https://www.youtube.com/watch?v=JAR9xyy5rcE&list=PLZLVmS9rf3nNDHRo1Baz_JVQWDI0mTYyB&index=2&pp=gAQBiAQB>`, and `the Slurm job scheduler (how the cluster runs things) <https://www.youtube.com/watch?v=Y73A7lXISxU&list=PLZLVmS9rf3nNDHRo1Baz_JVQWDI0mTYyB&index=5&pp=gAQBiAQB>`.
+* Watch `this background info about why we use computer clusters <https://www.youtube.com/playlist?list=PLZLVmS9rf3nNDHRo1Baz_JVQWDI0mTYyB>`__.  This is important information for *why* we are in this course, which we *won't cover directly*.  The most important videos are the `intro (what is a cluster and why?) <https://www.youtube.com/watch?v=yqGtnA7CUtU&list=PLZLVmS9rf3nNDHRo1Baz_JVQWDI0mTYyB&index=1&pp=gAQBiAQB>`__, `storage hierarchy (how the data looks) <https://www.youtube.com/watch?v=JAR9xyy5rcE&list=PLZLVmS9rf3nNDHRo1Baz_JVQWDI0mTYyB&index=2&pp=gAQBiAQB>`__, and `the Slurm job scheduler (how the cluster runs things) <https://www.youtube.com/watch?v=Y73A7lXISxU&list=PLZLVmS9rf3nNDHRo1Baz_JVQWDI0mTYyB&index=5&pp=gAQBiAQB>`__.
 
 
 
