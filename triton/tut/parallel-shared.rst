@@ -257,25 +257,32 @@ Exercises
 .. exercise:: Shared memory parallelism1: Test scaling
    :class: exercise-ngrams
 
-   Test scaling of the ngrams code.  How many processors should be used?
+   Test scaling of the ngrams code.  How many processors should be
+   used?  (This is involved enough you might want to follow the steps
+   in the solution).
+
+   To get good stats, compute with ``-n 2 --words`` (word 2-grams),
+   and constrain to a single processor archicteure (like the Slurm
+   option``--constraint skl``).
 
    .. solution::
 
-      Running the code.  Note we don't save the output anywhere.  This
-      will still generate the output but not save it to a disk file.::
+      Running the code for character ngrams.  Note we don't save the output anywhere so
+      that we don't measure the time of disk writing, and we constrain
+      to the same type of node (processor architecture) to make sure
+      our results are comparable::
 
 	# 100 books
-	srun --constraint=skl python3 ngrams/count.py -n 2 /scratch/shareddata/teaching/Gutenberg-Fiction-first100.zip -o /dev/null
-	srun --constraint=skl -c 1 python3 ngrams/count-multi.py -n 2 /scratch/shareddata/teaching/Gutenberg-Fiction-first100.zip -o /dev/null -t auto
-	srun --constraint=skl -c 2 python3 ngrams/count-multi.py -n 2 /scratch/shareddata/teaching/Gutenberg-Fiction-first100.zip -o /dev/null -t auto
-	srun --constraint=skl -c 4 python3 ngrams/count-multi.py -n 2 /scratch/shareddata/teaching/Gutenberg-Fiction-first100.zip -o /dev/null -t auto
-	srun --constraint=skl -c 8 python3 ngrams/count-multi.py -n 2 /scratch/shareddata/teaching/Gutenberg-Fiction-first100.zip -o /dev/null -t auto
+	srun --constraint=skl -c 1 python3 ngrams/count.py -n 2 /scratch/shareddata/teaching/Gutenberg-Fiction-first100.zip -o /dev/null
+	srun --constraint=skl -c 1 python3 ngrams/count-multi.py -n 2 -t auto /scratch/shareddata/teaching/Gutenberg-Fiction-first100.zip -o /dev/null
+	srun --constraint=skl -c 2 python3 ngrams/count-multi.py -n 2 -t auto /scratch/shareddata/teaching/Gutenberg-Fiction-first100.zip -o /dev/null
+	srun --constraint=skl -c 4 python3 ngrams/count-multi.py -n 2 -t auto /scratch/shareddata/teaching/Gutenberg-Fiction-first100.zip -o /dev/null
+	srun --constraint=skl -c 8 python3 ngrams/count-multi.py -n 2 -t auto /scratch/shareddata/teaching/Gutenberg-Fiction-first100.zip -o /dev/null
 
-	## 1000 books:
-	srun --constraint=skl --time=0-1 --mem=20G -c 4 python3 ngrams/count-multi.py -n 2 --words /scratch/shareddata/teaching/Gutenberg-Fiction-first1000.zip -o /dev/null -t auto
-
-
-      Durations (character ngrams):
+      Summary table for character ngrams: Speedup is (single core
+      time)/(multi-core time).  "Total core time" is (time × number of
+      processors) and is a measure of how much computing resources you
+      actually used:
 
       .. csv-table::
 	 :header-rows: 1
@@ -284,14 +291,28 @@ Exercises
 	 N processors         | time   | speedup  | total core time
          single-core version  | 24.7 s |          | 24.7 s
 	 1                    | 23.8 s | 1.04     | 23.8 s
-	 2                    | 12.5 s | 1.9      | 25.0 s
-	 4                    | 7.2 s  | 1.76     | 28.8 s
-	 8                    | 5.0 s  | 1.44     | 40.0 s
+	 2                    | 12.5 s | 1.98     | 25.0 s
+	 4                    | 7.2 s  | 3.4      | 28.8 s
+	 8                    | 5.0 s  | 4.9      | 40.0 s
 
-      For these, it makes since to go up to 4 cores, since that's how
-      far you can go with a speedup of 1.5 or greater.
+      For these, it seems reasonable to go up to 4 cores, since that's
+      how far you can go with a reasonable speedup and you aren't
+      wasting too many resources.
 
-      Durations (word ngrams, for 100 books and 1000 books):
+      Second, let's compute the same thing but with words (`--words`).  We see
+      that the speedup is much worse, and it almost doesn't make sense
+      to use multi-core at all.  This is because word ngrams have much
+      more output data, and the programs spend more time moving that
+      data around than computing anything. This is computed for both
+      100 and 1000 books::
+
+	## 1000 books:
+	srun --constraint=skl --time=0-1 --mem=20G -c 1 python3 ngrams/count.py -n 2 --words /scratch/shareddata/teaching/Gutenberg-Fiction-first1000.zip -o /dev/null
+	srun --constraint=skl --time=0-1 --mem=20G -c 1 python3 ngrams/count-multi.py -n 2 --words -t auto /scratch/shareddata/teaching/Gutenberg-Fiction-first1000.zip -o /dev/null
+	srun --constraint=skl --time=0-1 --mem=20G -c 2 python3 ngrams/count-multi.py -n 2 --words -t auto /scratch/shareddata/teaching/Gutenberg-Fiction-first1000.zip -o /dev/null
+	srun --constraint=skl --time=0-1 --mem=20G -c 4 python3 ngrams/count-multi.py -n 2 --words -t auto /scratch/shareddata/teaching/Gutenberg-Fiction-first1000.zip -o /dev/null
+	srun --constraint=skl --time=0-1 --mem=20G -c 8 python3 ngrams/count-multi.py -n 2 --words -t auto /scratch/shareddata/teaching/Gutenberg-Fiction-first1000.zip -o /dev/null
+
 
       .. csv-table::
 	 :header-rows: 1
@@ -299,20 +320,29 @@ Exercises
 
 	 N processors         | time (100 books)| speedup | core time used | | time (1000 books) | speedup | core time used
          single-core code     | 22.5 s          |         | 22.5           | | 170 s             |         | 170 s
-	 1                    | 29.6 s          | .75     | 29.6           | | 201 s	       | .84     | 201 s
-	 2                    | 17.7 s          | 1.71    | 35.4           | | 116 s	       | 1.73    | 232 s
-	 4                    | 14.4 s          | 1.22    | 57.6           | | 82 s	       | 1.41    | 328 s
-	 8                    | 12.1 s          | 1.19    | 96.8           | | 79 s              | 1.04    | 632 s
+	 1                    | 29.6 s          | 0.76    | 29.6           | | 201 s	         | .84     | 201 s
+	 2                    | 17.7 s          | 1.27    | 35.4           | | 116 s	         | 1.5     | 232 s
+	 4                    | 14.4 s          | 1.56    | 57.6           | | 82 s	         | 2.1     | 328 s
+	 8                    | 12.1 s          | 1.86    | 96.8           | | 79 s              | 2.2     | 632 s
 
-      For word ngrams, it's justifiable to use two processes because
-      the speed up there is still more than 1.71.  Still, this is
-      relatively bad compared to what we expect for something that
-      *should* be perfectly parallel.  In this case, the problem is
-      that the code isn't very efficient and is spending too much time
-      passing the data around.  Using an array job allows every array
-      task to write separately, and then one single-core job is used
-      to accumulate the counts.  Better yet would be to re-do the code
-      so that this inefficiency is improved.
+      For word ngrams, it doesn't even seem justifiable to use two
+      processes because the speed up there is not even 1.5.  In this
+      case, the problem is that the code isn't very efficient and is
+      spending too much time passing the data around.  Using an array
+      job allows every array task to write separately, and then one
+      single-core job is used to accumulate the counts.  Better yet
+      would be to re-do the code so that this inefficiency is
+      improved.
+
+      From our experience, some of the main slow points of the code are:
+
+      - Reading all the individual files (even from the zip file) is slow.
+      - Writing the results in plain text + JSON is slow: using a
+        binary format of some form would be better.
+      - The python ``multiprocessing`` module has to inefficiently
+        move data between processes.  Since this is a heavily
+        data-based computation (and there are quite a few ngrams it
+        makes), it is slow.
 
 
 .. exercise:: Shared memory parallelism 1: Test the example's scaling
