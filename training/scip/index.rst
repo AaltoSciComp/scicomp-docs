@@ -80,4 +80,4 @@ deleted.  This series has existed since 2016.
 - :doc:`ttt4hpc-2024`
 - :doc:`kickstart-2024`
 - `CodeRefinery September 10-12 and 17-19 <https://coderefinery.org>`__
-- :doc:`scip/python-for-scicomp-2024`
+- :doc:`python-for-scicomp-2024`
