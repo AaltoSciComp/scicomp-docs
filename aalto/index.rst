@@ -28,3 +28,4 @@ for Research page
    python
    remotejupyter
    zulip
+   generative-ai-tools

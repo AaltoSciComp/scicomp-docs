@@ -13,10 +13,10 @@ Roughly speaking, you could
 * Use remote APIs to run models with your own code.
 
   * An OpenAI API
-  * Models hosted locally at Aalto *good for data security*
+  * Models hosted locally at Aalto: `Aalto LLM API <https://github.com/AaltoSciComp/llm-examples/tree/main/aalto-llm-api>`__   *good for data security*
 
 * Running locally-installable models on your own
-  computer/Triton. *best for data security*.
+  computer/Triton. Examples can be found `here <https://github.com/AaltoSciComp/llm-examples>`__.
 
 The first category is good for easy interactive or occasional use
 (they can only be run manually), the second is good for scripted use
@@ -97,6 +97,10 @@ of text inputs.
   for a price.  Without an Aalto contract, data security can not be
   guaranteed.
 
+* Tools like `vllm <https://docs.vllm.ai/en/v0.4.1/serving/openai_compatible_server.html>`__  can be used to 
+  quickly host an OpenAI compatible API with local models. This is an option if you need a model
+  that is not available in the Aalto LLM API. `This example <https://github.com/AaltoSciComp/llm-examples/tree/main/server-via-vllm>`__ 
+  can help you try it out on triton.
 
 
 Locally installed models
@@ -118,9 +122,7 @@ analysis (especially when combined with HPC clusters).
 * :doc:`Aalto's Triton </triton/index>` cluster has many models
   pre-downloaded and software ready for your use.
 
-  * See :doc:`/triton/apps/llms` for instructions (there are more
-    model than listed on that page, and it is easy for us to
-    download more as soon as they are released).
+  * See :doc:`/triton/apps/llms` for instructions.
   * Installing the required software can sometimes be tricky, but
     Aalto SciComp has done this many times: come to our :ref:`garage
     help session <garage>` and ask us rather than waste your own time.
