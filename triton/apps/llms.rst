@@ -30,11 +30,11 @@ You can explore their offerings at `🤗 HuggingFace <https://huggingface.co/>`_
 
   Run command ``ls /scratch/shareddata/dldata/huggingface-hub-cache/hub`` to see the full list of all the available models.
 
-Below is an example of how to use the 🤗 Transformers `pipeline() <https://huggingface.co/docs/transformers/v4.49.0/en/main_classes/pipelines#transformers.pipeline>`__ to load a pre-trained model and use it for text generation.
+Below is an example of how to use the 🤗 Transformers `pipeline() <https://huggingface.co/docs/transformers/v4.49.0/en/main_classes/pipelines#transformers.pipeline>`__ to load a pre-trained model and use it for question answering.
 
 
-Example: Text Generation
-------------------------
+Example: Question Answering
+---------------------------
 
 Request computational resources and load the necessary modules.
 
