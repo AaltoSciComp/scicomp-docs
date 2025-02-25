@@ -27,8 +27,7 @@ to suggest a new course, `please take this survey <https://link.webropol.com/s/s
 .. toctree::
    :maxdepth: 1
 
-   CodeRefinery September 10-12 and 17-19 <https://coderefinery.org>
-   scip/python-for-scicomp-2024
+   scip/winter-kickstart-2025
    Take the survey! Request a re-run of past courses / new courses <https://link.webropol.com/s/scipod>
    scip/index
 

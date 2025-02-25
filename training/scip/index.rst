@@ -79,3 +79,5 @@ deleted.  This series has existed since 2016.
 - `CodeRefinery March 12-14 and 19-21 <https://coderefinery.github.io/2024-03-12-workshop/>`__
 - :doc:`ttt4hpc-2024`
 - :doc:`kickstart-2024`
+- `CodeRefinery September 10-12 and 17-19 <https://coderefinery.org>`__
+- :doc:`scip/python-for-scicomp-2024`
