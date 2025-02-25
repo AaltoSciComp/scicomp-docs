@@ -60,7 +60,7 @@ In the following sbatch script, we request computational resources, load the nec
 
     python your_script.py
 
-The `your_script.py` Python script uses a HuggingFace model `mistralai/Mistral-7B-Instruct-v0.1` for conversations and instructions.
+The ``your_script.py`` Python script uses a HuggingFace model ``mistralai/Mistral-7B-Instruct-v0.1`` for conversations and instructions.
 
 .. code-block:: python
 
