@@ -36,7 +36,7 @@ Below is an example of how to use the 🤗 Transformers `pipeline() <https://hug
 Example: Question Answering
 ---------------------------
 
-Request computational resources and load the necessary modules.
+In the following sbatch script, we request computational resources, load the necessary modules, and run a Python script that uses a HuggingFace model for question answering.
 
   .. code-block:: bash
   
@@ -60,11 +60,7 @@ Request computational resources and load the necessary modules.
 
     python your_script.py
 
-The following Python script uses a HuggingFace model `mistralai/Mistral-7B-Instruct-v0.1` for conversations and instructions.
-
-You can look at the `model card <https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1>`__ for more information about the model.
-
-Use the following script as the content of ``your_script.py`` in the Slurm script above.
+The `your_script.py` Python script uses a HuggingFace model `mistralai/Mistral-7B-Instruct-v0.1` for conversations and instructions.
 
 .. code-block:: python
 
@@ -85,6 +81,8 @@ Use the following script as the content of ``your_script.py`` in the Slurm scrip
   # Generate and print responses
   responses = pipe(prompts) 
   print(responses)
+
+You can look at the `model card <https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1>`__ for more information about the model.
 
 
 Other Frameworks
