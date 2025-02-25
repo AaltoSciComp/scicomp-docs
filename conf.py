@@ -98,7 +98,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Aalto Scientific Computing'
-copyright = u'2024, Aalto Science-IT and contributors'
+copyright = u'2025, Aalto Science-IT and contributors'
 author = u'Aalto Science-IT'
 
 copybutton_exclude = '.linenos, .gp'
