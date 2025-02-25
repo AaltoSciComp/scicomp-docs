@@ -2,7 +2,7 @@ Local LLM web APIs
 ==================
 
 As a pilot service, :doc:`Aalto RSE </rse/index>` has a service
-running some common open-source LLMS (llama2, mistral, etc.) available
+running some common open-source LLMS (llama3, deepseek, etc.) available
 via the web.  This can be used for lightweight purposes via
 programming, but shouldn't replace batch usage (use
 :doc:`/triton/apps/llms`) or interactive chatting (use Aalto GPT).
@@ -18,8 +18,7 @@ provide development access.  Chat with us in the #llms stream on
 
 The API doesn't have it's own detailed documentation (ask us), but the
 API should be OpenAI compatible (for chat models) so many existing
-libraries work automatically.
-
+libraries work automatically. Here are some simple `examples. <https://github.com/AaltoSciComp/llm-examples/tree/main/aalto-llm-api>`__ 
 
 Intended use and resource availability
 --------------------------------------
