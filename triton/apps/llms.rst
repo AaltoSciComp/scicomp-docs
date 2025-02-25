@@ -76,7 +76,7 @@ The `your_script.py` Python script uses a HuggingFace model `mistralai/Mistral-7
   ) 
 
   # Prepare prompts
-  prompts = ["How many stars in the space?", "What is the meaning of life?"]
+  prompts = ["Continue the following sequence: 1, 2, 3, 5, 8", "What is the meaning of life?"]
 
   # Generate and print responses
   responses = pipe(prompts) 
