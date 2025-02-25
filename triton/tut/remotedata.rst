@@ -350,6 +350,8 @@ the folder is there, just not yet visible).
 Exercises
 ---------
 
+Part of a series: :doc:`ngrams </triton/tut/exercises-ngrams>`:
+
 .. exercise:: RemoteData-1: Copy the ngrams data over to the cluster
    :class: exercise-ngrams
 
@@ -357,7 +359,8 @@ Exercises
    The data is the same, just different numbers of books, so choose a
    file small enough for your internet connection to be happy:
 
-   * 19 MB repack of the original: https://users.aalto.fi/~darstr1/public/Gutenberg-Fiction-first100.zip
+   * 19 MB repack of the original:
+     https://users.aalto.fi/~darstr1/public/Gutenberg-Fiction-first100.zip (recommended)
    * 152MB repack of the original: https://users.aalto.fi/~darstr1/public/Gutenberg-Fiction-first1000.zip
    * Full 2.6GB (original): https://zenodo.org/records/5783256
 
@@ -365,14 +368,14 @@ Exercises
    location decided in the previous step (some project directory
    within your work directory.)
 
-.. exercise:: RemoteData-1: Mounting your work directory
+.. exercise:: RemoteData-2: Mounting your work directory
 
    Mount your work directory by SMB (or sshfs) and transfer a file to
    Triton. Note that for SMB, you must be connected to the Aalto VPN
    (from outside campus), or on ``eduroam``, the ``aalto`` *with Aalto
    laptop* (from campus).
 
-.. exercise:: (advanced) RemoteData-2: rsync
+.. exercise:: (advanced) RemoteData-3: rsync
 
    If you have a Linux or Mac computer, or have installed it on
    Windows, study the ``rsync`` manual page and try to transfer a

@@ -201,11 +201,27 @@ Part of a series: :doc:`ngrams </triton/tut/exercises-ngrams>`:
 
    Create a batch job that computes our ngrams.
 
-   TODO: solution
+   .. solution::
+
+      Create a script file ``ngrams.sh`` with the ``nano`` editor::
+
+	$ nano ngrams.sh
+
+      .. code-block:: slurm
+
+	 #!/bin/bash
+	 #SBATCH --time=00:05:00
+	 #SBATCH --mem=1G
+
+	 srun python3 ngrams/count.py /scratch/shareddata/teaching/gutenberg-fiction/Gutenberg-Fiction-first100.zip -o ngrams2 -n 2
+
+      We submit with::
+
+	$ sbatch ngrams.sh
 
 Part of a series: :doc:`pi </triton/tut/exercises-pi>`:
 
-.. exercise:: Serial-2: Submitting and cancelling a job
+.. exercise:: Serial-3: Submitting and cancelling a job
    :class: exercise-pi
 
    Create a batch script which does nothing (or some pointless
@@ -235,7 +251,7 @@ Part of a series: :doc:`pi </triton/tut/exercises-pi>`:
       an output file (named either ``slurm-JOBID.out`` or whatever you defined in the
       sbatch file.) The output file also says the job was cancelled.
 
-.. exercise:: Serial-3: Modifying Slurm script while its running
+.. exercise:: Serial-4: Modifying Slurm script while its running
    :class: exercise-pi
 
    Modifying scripts while a job has been submitted is a bad practice.
@@ -267,7 +283,7 @@ Part of a series: :doc:`pi </triton/tut/exercises-pi>`:
       Slurm script being run or you cannot replicate your run.
 
 
-.. exercise:: Serial-4: Modify script while it is running
+.. exercise:: Serial-5: Modify script while it is running
    :class: exercise-pi
 
    Modifying scripts while a job has been submitted is a bad practice.
@@ -303,7 +319,7 @@ Part of a series: :doc:`pi </triton/tut/exercises-pi>`:
       Otherwise you can get errors and you cannot replicate your run.
 
 
-.. exercise:: Serial-5: Checking output
+.. exercise:: Serial-6: Checking output
 
    You can look at the output of files as your program is running.
    Let's demonstrate.
@@ -348,7 +364,7 @@ Part of a series: :doc:`pi </triton/tut/exercises-pi>`:
 	 (more every 10 seconds)
 
 
-.. exercise:: Serial-6: Constrain to a certain CPU architecture
+.. exercise:: Serial-7: Constrain to a certain CPU architecture
 
    Modify the script from exercise #1 to run on only one type of CPU
    using the ``--constraint`` option.  Hint: check :doc:`../ref/index`
@@ -361,7 +377,7 @@ Part of a series: :doc:`pi </triton/tut/exercises-pi>`:
       similarily for amd milan cpus ``--constraint=milan``. This also
       works identically for gpus.
 
-.. exercise:: Serial-7: Why you use ``sbatch``, not ``bash``.
+.. exercise:: Serial-8: Why you use ``sbatch``, not ``bash``.
 
    (Advanced) What happens if you submit a batch script with ``bash``
    instead of ``sbatch``?  Does it appear to run?  Does it use all the
@@ -379,7 +395,7 @@ Part of a series: :doc:`pi </triton/tut/exercises-pi>`:
 	Calculating Pi via 10000 stochastic trials
 	{"successes": 7815, "pi_estimate": 3.126, "iterations": 10000}
 
-.. exercise:: (advanced) Serial-8: Interpreters other than bash
+.. exercise:: (advanced) Serial-9: Interpreters other than bash
 
    (Advanced) Create a batch script that runs in another language
    using a different ``#!`` line.
@@ -395,7 +411,7 @@ Part of a series: :doc:`pi </triton/tut/exercises-pi>`:
       mostly an interesting curiosity however and is not usually practical.
 
 
-.. exercise:: (advanced) Serial-9: Job environment variables.
+.. exercise:: (advanced) Serial-10: Job environment variables.
 
    Either make a ``sbatch`` script that runs the command ``env | sort``, or
    use ``srun env | sort``.  The ``env`` utility prints all

@@ -202,9 +202,13 @@ You have to be :doc:`connected to the custer and have a terminal
 
    (Part of a series: :doc:`ngrams </triton/tut/exercises-ngrams>`)
 
-   There is a directory with some books in it:
-   ``/scratch/shareddata/teaching/gutenberg-fiction/``.  Try to take a
-   look at it:
+   First, let's look at the Gutenberg-Fiction dataset.  There is
+   already a copy on the cluster (this is different than the personal
+   copy you will make later).
+
+   Use the command line to look at this directory with some books in
+   it: ``/scratch/shareddata/teaching/gutenberg-fiction/``.  Try to
+   find:
 
    * What files are they?
    * How big are they?
@@ -217,7 +221,7 @@ You have to be :doc:`connected to the custer and have a terminal
 	 $ du -sh /scratch/shareddata/teaching/gutenberg-fiction/*
 
 
-.. exercise:: Shell-2: Understand power of working directory
+.. exercise:: Shell-3: Understand power of working directory
 
   * ``ls /scratch/cs/``
   * Change directory to ``/scratch``
@@ -292,16 +296,17 @@ Now we have our code in a place that can be used.
   recommended, since it's not large or high performance enough.  You
   will learn more about where to store your work in :doc:`storage`.
 
-.. exercise:: Shell-3: [PI, NGRAMS] clone the hpc-examples repository
+.. exercise:: Shell-4: Clone the hpc-examples repository
   :class: exercise-pi, exercise-ngrams
 
   (Part of a series: :doc:`pi </triton/tut/exercises-pi>`, :doc:`ngrams </triton/tut/exercises-ngrams>`)
 
-  Do the steps above.  List the directory and verify it matches what
-  you see in the `Github web interface
+  Do the :ref:`steps above to clone the hpc-examples repository
+  <triton-tut-example-repo>`.  List the directory from the command line and verify it
+  matches what you see in the view on `Github repo page
   <https://github.com/AaltoSciComp/hpc-examples/>`__.
 
-  Is your home directory the right place to store this?
+  Is your home directory the right place to store a cloned git repository?
 
    .. solution::
 
@@ -324,11 +329,13 @@ Now we have our code in a place that can be used.
       (and make our exercises work on different clusters).
 
 
-.. exercise:: Shell-4: [PI, NGRAMS] log out and re-navigate to the hpc-examples reports
+.. exercise:: Shell-5: Log out and re-navigate to the hpc-examples reports
    :class: example-pi, example-ngrams
 
   Log out and log in again.  Navigate to the hpc-examples repository.
   Resuming work is an important but often forgotten part of work.
+  Each time you log in, you need to navigate to your working
+  directory - don't forget this, and don't forget where you are!
 
   .. solution::
 
@@ -375,7 +382,7 @@ method of calculating π.
 
   You will learn how to run programs properly starting in :doc:`slurm`.
 
-.. exercise:: Shell-5: try calculating pi
+.. exercise:: Shell-6: try calculating pi
 
   Try doing what is above and running ``pi.py`` several times with
   different numbers of iterations.  Try passing the ``--seed`` command
@@ -420,7 +427,7 @@ method of calculating π.
       {"successes": 7817, "pi_estimate": 3.1268, "iterations": 10000}
 
 
-.. exercise:: Shell-6: Try the ``--help`` option
+.. exercise:: Shell-7: Try the ``--help`` option
   :class: exercise-pi
 
   (Part of a series: :doc:`pi </triton/tut/exercises-pi>`)
@@ -473,7 +480,7 @@ like user, group, timestamps, permissions.  To view metadata, use ``ls
 -l`` or ``stat``.
 
 
-.. exercise:: Shell-7: (optional) Make a copy of pi.py
+.. exercise:: Shell-8: (optional) Make a copy of pi.py
 
   (Part of a series: :doc:`pi </triton/tut/exercises-pi>`)
 
@@ -515,24 +522,35 @@ edits directly on the cluster itself.
 * ``cat`` dumps the contents of a file straight to the screen -
   sometimes useful when looking at small things.
 
-.. exercise:: Shell-9: Read our Ngrams dataset README files
+.. exercise:: Shell-9: Practice looking at README files
    :class: exercise-ngrams
 
    (Part of a series: :doc:`ngrams </triton/tut/exercises-ngrams>`)
 
-   "README" files are simple text file documentation, which it's good
-   to include with your data.  Check out the README files within
-   ``/scratch/shareddata/teaching/gutenberg-fiction/``.
+   "README" files are simple text file documentation, which is good
+   to include with your data.  Once you get new data, it's good to
+   look at README files to get oriented.  Check out the README files
+   within the Gutenberg Fiction dataset located at
+   ``/scratch/shareddata/teaching/gutenberg-fiction/`` (again: you'll
+   download your own copy of this later)
 
    .. solution::
 
+      We haven't given you the exact file paths, so you need to use
+      ``ls`` some to find them.  (You can also push TAB twice to
+      tab-complete, which lists what is in a directory.  Then, type a
+      few characters and push TAB again and it'll fill in the path for
+      you.  This is a fast way to explore directories.)
+
       ::
 
+	 $ ls /scratch/shareddata/teaching/gutenberg-fiction/
+	 $ ls /scratch/shareddata/teaching/gutenberg-fiction/Gutenberg-Fiction/
 	 $ less /scratch/shareddata/teaching/gutenberg-fiction/Gutenberg-Fiction/README.md
 	 $ less /scratch/shareddata/teaching/gutenberg-fiction/Gutenberg-Fiction-first100/README
 
 
-.. exercise:: Shell-9: Create a new file and show its contents
+.. exercise:: Shell-10: Create a new file and show its contents
 
   Create a new file ``poem.txt``.  Write some poem in it.  View the
   contents of the file.
@@ -558,7 +576,7 @@ edits directly on the cluster itself.
       high performance computing
       cluster for our work?
 
-.. exercise:: Shell-10: (optional, advanced) Edit py-new.py
+.. exercise:: Shell-11: (optional, advanced) Edit py-new.py
 
   Remember the pi-new.py file you made?  Add some nonsense edits to it
   and try to run it.  See if it fails.
@@ -590,7 +608,7 @@ edits directly on the cluster itself.
 Exercises
 ---------
 
-.. exercise:: Shell-11: (advanced, to fill time) shell crash course
+.. exercise:: Shell-12: (advanced, to fill time) shell crash course
 
    Browse the :doc:`/scicomp/shell` and see what you do and don't know
    from there.

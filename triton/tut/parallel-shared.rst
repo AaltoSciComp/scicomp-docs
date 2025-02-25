@@ -263,21 +263,22 @@ Exercises
 
    To get good stats, compute with ``-n 2 --words`` (word 2-grams),
    and constrain to a single processor archicteure (like the Slurm
-   option``--constraint skl``).
+   option ``--constraint=skl``).
 
    .. solution::
 
-      Running the code for character ngrams.  Note we don't save the output anywhere so
-      that we don't measure the time of disk writing, and we constrain
-      to the same type of node (processor architecture) to make sure
-      our results are comparable::
+      First, let's run the scaling tests for character ngrams just for
+      comparison.  Note we don't save the output anywhere so that we
+      don't measure the time of disk writing, and we constrain to the
+      same type of node (processor architecture) to make sure our
+      results are comparable::
 
-	# 100 books
-	srun --constraint=skl -c 1 python3 ngrams/count.py -n 2 /scratch/shareddata/teaching/Gutenberg-Fiction-first100.zip -o /dev/null
-	srun --constraint=skl -c 1 python3 ngrams/count-multi.py -n 2 -t auto /scratch/shareddata/teaching/Gutenberg-Fiction-first100.zip -o /dev/null
-	srun --constraint=skl -c 2 python3 ngrams/count-multi.py -n 2 -t auto /scratch/shareddata/teaching/Gutenberg-Fiction-first100.zip -o /dev/null
-	srun --constraint=skl -c 4 python3 ngrams/count-multi.py -n 2 -t auto /scratch/shareddata/teaching/Gutenberg-Fiction-first100.zip -o /dev/null
-	srun --constraint=skl -c 8 python3 ngrams/count-multi.py -n 2 -t auto /scratch/shareddata/teaching/Gutenberg-Fiction-first100.zip -o /dev/null
+	## 100 books
+	$ srun --constraint=skl -c 1 python3 ngrams/count.py -n 2 /scratch/shareddata/teaching/Gutenberg-Fiction-first100.zip -o /dev/null
+	$ srun --constraint=skl -c 1 python3 ngrams/count-multi.py -n 2 -t auto /scratch/shareddata/teaching/Gutenberg-Fiction-first100.zip -o /dev/null
+	$ srun --constraint=skl -c 2 python3 ngrams/count-multi.py -n 2 -t auto /scratch/shareddata/teaching/Gutenberg-Fiction-first100.zip -o /dev/null
+	$ srun --constraint=skl -c 4 python3 ngrams/count-multi.py -n 2 -t auto /scratch/shareddata/teaching/Gutenberg-Fiction-first100.zip -o /dev/null
+	$ srun --constraint=skl -c 8 python3 ngrams/count-multi.py -n 2 -t auto /scratch/shareddata/teaching/Gutenberg-Fiction-first100.zip -o /dev/null
 
       Summary table for character ngrams: Speedup is (single core
       time)/(multi-core time).  "Total core time" is (time × number of
@@ -299,7 +300,7 @@ Exercises
       how far you can go with a reasonable speedup and you aren't
       wasting too many resources.
 
-      Second, let's compute the same thing but with words (`--words`).  We see
+      Second, let's compute the same thing but with words (``--words``).  We see
       that the speedup is much worse, and it almost doesn't make sense
       to use multi-core at all.  This is because word ngrams have much
       more output data, and the programs spend more time moving that
@@ -307,11 +308,11 @@ Exercises
       100 and 1000 books::
 
 	## 1000 books:
-	srun --constraint=skl --time=0-1 --mem=20G -c 1 python3 ngrams/count.py -n 2 --words /scratch/shareddata/teaching/Gutenberg-Fiction-first1000.zip -o /dev/null
-	srun --constraint=skl --time=0-1 --mem=20G -c 1 python3 ngrams/count-multi.py -n 2 --words -t auto /scratch/shareddata/teaching/Gutenberg-Fiction-first1000.zip -o /dev/null
-	srun --constraint=skl --time=0-1 --mem=20G -c 2 python3 ngrams/count-multi.py -n 2 --words -t auto /scratch/shareddata/teaching/Gutenberg-Fiction-first1000.zip -o /dev/null
-	srun --constraint=skl --time=0-1 --mem=20G -c 4 python3 ngrams/count-multi.py -n 2 --words -t auto /scratch/shareddata/teaching/Gutenberg-Fiction-first1000.zip -o /dev/null
-	srun --constraint=skl --time=0-1 --mem=20G -c 8 python3 ngrams/count-multi.py -n 2 --words -t auto /scratch/shareddata/teaching/Gutenberg-Fiction-first1000.zip -o /dev/null
+	$ srun --constraint=skl --time=0-1 --mem=20G -c 1 python3 ngrams/count.py -n 2 --words /scratch/shareddata/teaching/Gutenberg-Fiction-first1000.zip -o /dev/null
+	$ srun --constraint=skl --time=0-1 --mem=20G -c 1 python3 ngrams/count-multi.py -n 2 --words -t auto /scratch/shareddata/teaching/Gutenberg-Fiction-first1000.zip -o /dev/null
+	$ srun --constraint=skl --time=0-1 --mem=20G -c 2 python3 ngrams/count-multi.py -n 2 --words -t auto /scratch/shareddata/teaching/Gutenberg-Fiction-first1000.zip -o /dev/null
+	$ srun --constraint=skl --time=0-1 --mem=20G -c 4 python3 ngrams/count-multi.py -n 2 --words -t auto /scratch/shareddata/teaching/Gutenberg-Fiction-first1000.zip -o /dev/null
+	$ srun --constraint=skl --time=0-1 --mem=20G -c 8 python3 ngrams/count-multi.py -n 2 --words -t auto /scratch/shareddata/teaching/Gutenberg-Fiction-first1000.zip -o /dev/null
 
 
       .. csv-table::

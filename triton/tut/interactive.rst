@@ -281,17 +281,43 @@ Part of a series: :doc:`ngrams </triton/tut/exercises-ngrams>`:
    though they are in two different directories.  We want to go to the
    code directory and point it to the data directory
 
+   This and following examples use the data that is already downloaded
+   to the cluster, stored under
+   ``/scratch/shareddata/teaching/gutenberg-fiction/`` (so that the
+   examples will just work, without having to do previous steps).  You
+   can also give it the path to the copy of the data you downloaded.
+
+   Some things about this code: If you run with ``--words``, it
+   computes word-ngrams (["the", "lake"]).  Otherwise, it computes
+   character ngrams (["t", "h"]).  The option ``-n`` specifies the n
+   in ngrams (like ``-n 2``; the default is 1-gram which is simple
+   character/word frequencies).  The ``-o`` option says where an
+   output file should be saved, otherwise it prints it to the screen.
+   The ``--help`` option tells you more or `check the code on Github
+   <https://github.com/AaltoSciComp/hpc-examples/tree/master/ngrams>`__.
+
+   First, we try running on the login node.  This is just a quick test
+   to make sure that nothing is really wrong.  We don't want to do
+   real computing here.  These save the output to a file named
+   ``ngrams2``, which you might want to change between examples:
+
    ::
 
       $ cd hpc-examples
       $ python3 ngrams/count.py /scratch/shareddata/teaching/gutenberg-fiction/Gutenberg-Fiction-first100.zip -o ngrams2 -n 2
 
+   Now we do the same, but with ``srun`` to run on the cluster:
+
    ::
+      ## character ngrams
+      $ srun python3 ngrams/count.py /scratch/shareddata/teaching/gutenberg-fiction/Gutenberg-Fiction-first100.zip -o ngrams2 -n 2
 
-      $ cd hpc-examples
-      $ python3 ngrams/count.py /scratch/shareddata/teaching/gutenberg-fiction/Gutenberg-Fiction-first100.zip -o ngrams2 -n 2
-
+      ## word ngrams
       $ srun python3 ngrams/count.py /scratch/shareddata/teaching/gutenberg-fiction/Gutenberg-Fiction-first100.zip -o ngrams2 -n 2 --words
+
+   If we compute word-ngrams for the 1000-book dataset, we see that we
+   run out of memory.  Thus, we try again with the ``--mem=5G`` option
+   to see that it then works.
 
    ::
 
@@ -307,7 +333,7 @@ Part of a series: :doc:`ngrams </triton/tut/exercises-ngrams>`:
 
 Part of a series: :doc:`pi </triton/tut/exercises-pi>`:
 
-.. exercise:: Interactive-2: Time scaling
+.. exercise:: Interactive-3: Time scaling
    :class: exercise-pi
 
    The program ``hpc-examples/slurm/pi.py``
@@ -432,7 +458,7 @@ Part of a series: :doc:`pi </triton/tut/exercises-pi>`:
               └─ 0        python3              06-06 23:19:25              10M    07:51.106    00:07:53     1   1 1   0:0 COMP  csl48
 
 
-.. exercise:: Interactive-3: Info commands
+.. exercise:: Interactive-4: Info commands
 
    Run ``squeue -a`` to see what is running, and then run ``slurm job
    JOBID`` (or ``scontrol show job JOBID``) on some running job - does
@@ -468,13 +494,13 @@ Part of a series: :doc:`pi </triton/tut/exercises-pi>`:
          WorkDir=/home/darstr1/git/hpc-examples
          Power=
 
-.. exercise:: Interactive-4: Showing node information
+.. exercise:: Interactive-5: Showing node information
 
    Run ``scontrol show node csl1``  What is this?  (``csl1`` is the
    name of a node on Triton - if you are not on Triton, look at the
    ``sinfo -N`` command and try one of those names).
 
-.. exercise:: Interactive-5: Why not script ``srun``
+.. exercise:: Interactive-6: Why not script ``srun``
 
    Some people are clever and use shell scripting to run ``srun`` many
    times in a loop (using ``&`` to background it so that they all run

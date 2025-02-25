@@ -230,10 +230,17 @@ time to review your local guides to see how they are adapted to your site.
 
 **Ngrams exercise**
 
-.. exercise:: Storage-0: Create a place to store our ngrams data.
+Part of a series: :doc:`ngrams </triton/tut/exercises-ngrams>`:
+
+.. exercise:: Storage-1: Create a place to store our Gutenberg (ngrams) data.
    :class: exercise-ngrams
 
-   We will do a recurring example using public domain Project
+   We looked at the Gutenberg-Fiction dataset before, where it's
+   already on Triton.  In this next few exercises, let's pretend we
+   didn't already have it on the cluster, and practice copying the
+   data to the cluster yourself.
+
+   Background: we will do a recurring example using public domain Project
    Gutenberg books.  We will compute ngrams (tuples of words that
    occur in a sequence (for example (``this``, ``book``, ``is``) is a
    3-gram).  After computing a list of all n-grams and how often they
@@ -267,20 +274,20 @@ time to review your local guides to see how they are adapted to your site.
 
 **Data storage locations:**
 
-.. exercise:: Storage-1: Review data storage locations
+.. exercise:: Storage-2: Review data storage locations
 
    (Optional) Look at the list of data storage locations above.  Also look at the
    :doc:`/data/aalto-details`.  Which do you
    think are suitable for your work?  Do you need to share with
    others?
 
-.. exercise:: Storage-2: Your group's data storage locations
+.. exercise:: Storage-3: Your group's data storage locations
 
    Ask your group what they use and if you can use that, too.
 
 **Misc:**
 
-.. exercise:: Storage-3: Common errors
+.. exercise:: Storage-4: Common errors
 
    What do all of the following have in common?
 
@@ -314,7 +321,7 @@ time to review your local guides to see how they are adapted to your site.
 number of times the operating system has to do something.  It can be
 used as a rudimentary way to see how much I/O load there is.
 
-.. exercise:: Storage-4: strace and I/O operations
+.. exercise:: Storage-5: strace and I/O operations
 
    Use ``strace -c`` to compare the number of system calls in ``ls``,
    ``ls -l``,  on a directory with many files.  On Triton, you can use 
@@ -330,7 +337,7 @@ used as a rudimentary way to see how much I/O load there is.
       it gives. This might not matter in normal situation, but these system calls 
       can quickly pile up if used in a script. 
    
-.. exercise:: Storage-5: strace and time
+.. exercise:: Storage-6: strace and time
 
    Using ``strace -c``, compare the times of ``find`` and ``lfs find``
    on the directory mentioned above.  Why is it different?

@@ -324,7 +324,8 @@ Part of a series: :doc:`ngrams </triton/tut/exercises-ngrams>`:
    following:
 
    The following batch job computes 3grams on the dataset in 20
-   batches, and saves them all to their own file.
+   batches, and saves them all to their own file (The ``\`` at the end
+   of the line allows you to continue to following lines).
 
    .. code-block:: slurm
 
@@ -336,8 +337,10 @@ Part of a series: :doc:`ngrams </triton/tut/exercises-ngrams>`:
 
       mkdir -p /scratch/work/$USER/ngrams-output/
 
-      python3 ngrams/count.py /scratch/work/darstr1/data/Gutenberg-Fiction.zip -n 3 --words --start=$SLURM_ARRAY_TASK_ID --step=20 \
-      -o /scratch/work/$USER/ngrams-output/ngrams3-words-all-array_$SLURM_ARRAY_TASK_ID.out
+      python3 ngrams/count.py /scratch/work/darstr1/data/Gutenberg-Fiction.zip \
+        -n 3 --words \
+	--start=$SLURM_ARRAY_TASK_ID --step=20 \
+        -o /scratch/work/$USER/ngrams-output/ngrams3-words-all-array_$SLURM_ARRAY_TASK_ID.out
 
    That runs fast.  We can then see there are 20 outputs::
 
@@ -368,7 +371,7 @@ Part of a series: :doc:`ngrams </triton/tut/exercises-ngrams>`:
 
 Part of a series: :doc:`ngrams </triton/tut/exercises-pi>`:
 
-.. exercise:: Array-1: Array jobs and different random seeds
+.. exercise:: Array-2: Array jobs and different random seeds
    :class: exercise-pi
 
    Create a job array that uses the ``slurm/pi.py`` to calculate a
@@ -377,7 +380,7 @@ Part of a series: :doc:`ngrams </triton/tut/exercises-pi>`:
    --output=FILE``) separate from the standard error (``#SBATCH
    --error=FILE``).
 
-.. exercise:: Array-2: Combine the outputs of the previous exercise.
+.. exercise:: Array-3: Combine the outputs of the previous exercise.
    :class: exercise-pi
 
    You find the ``slurm/pi_aggregation.py`` program in hpc-examples.  Run this
@@ -395,10 +398,10 @@ Part of a series: :doc:`ngrams </triton/tut/exercises-pi>`:
    Make a job array which runs every other index, e.g. the array can
    be indexed as 1, 3, 5... (the `sbatch manual page
    <https://slurm.schedmd.com/sbatch.html>`__ can be of help)
-   
+
    .. solution::
-      
-      You can specify a step function with colon and a number after indices. 
+
+      You can specify a step function with colon and a number after indices.
       In this case it would be: ``--array=1-X:2``
 
 .. exercise:: Array-5: Array job with varying memory requirements.
@@ -413,13 +416,13 @@ Part of a series: :doc:`ngrams </triton/tut/exercises-pi>`:
    Is this a proper use of array jobs?
 
    .. solution::
-      
-      At the very least the 5G job should fail. 500M and 1G jobs also go above 
-      the amount of memory allocated to them, but slurm allows you to exceed 
-      your resources a little before killing the job, so they will likely go through. 
-      
-      This is a wrong way to use array jobs. Array jobs are meant 
-      for multiple jobs with same resource requirements, since every job 
+
+      At the very least the 5G job should fail. 500M and 1G jobs also go above
+      the amount of memory allocated to them, but slurm allows you to exceed
+      your resources a little before killing the job, so they will likely go through.
+
+      This is a wrong way to use array jobs. Array jobs are meant
+      for multiple jobs with same resource requirements, since every job
       gets allocated the same amount of resources.
 
 See also
