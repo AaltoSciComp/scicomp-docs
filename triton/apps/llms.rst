@@ -76,11 +76,14 @@ The ``your_script.py`` Python script uses a HuggingFace model ``mistralai/Mistra
   ) 
 
   # Prepare prompts
-  prompts = ["Continue the following sequence: 1, 2, 3, 5, 8", "What is the meaning of life?"]
+  messages = [
+    {"role": "user", "content": "Continue the following sequence: 1, 2, 3, 5, 8"},
+    {"role": "user", "content": "What is the meaning of life?"}
+    ]
 
   # Generate and print responses
-  responses = pipe(prompts) 
-  print(responses)
+  responses = pipe(messages) 
+  print(messages)
 
 You can look at the `model card <https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1>`__ for more information about the model.
 
