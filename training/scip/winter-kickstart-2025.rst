@@ -10,6 +10,7 @@ February 2025 / Intro to Triton and HPC /  HPC Winter Kickstart
      * Link to register: https://link.webropol.com/ep/hpcwinter25
      * See the time-line below
      * Livestream (morning): https://twitch.tv/coderefinery
+     * Video playlist: https://www.youtube.com/playlist?list=PLZLVmS9rf3nOeuqXNa8tS-tDtdQrES2We
      * Exercises (afternoon): *Link sent to registered participants*
      * Notes document: *Link sent to registered participants*
 
