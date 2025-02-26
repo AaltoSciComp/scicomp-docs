@@ -13,7 +13,7 @@ Roughly speaking, you could
 * Use remote APIs to run models with your own code.
 
   * An OpenAI API
-  * Models hosted locally at Aalto: `Aalto LLM API <https://github.com/AaltoSciComp/llm-examples/tree/main/aalto-llm-api>`__   *good for data security*
+  * :doc:`APIs <llm-web-apis>` hosted locally at Aalto *good for data security*
 
 * Running locally-installable models on your own
   computer/Triton. Examples can be found `here <https://github.com/AaltoSciComp/llm-examples>`__.
@@ -85,7 +85,7 @@ of text inputs.
   since the data never leaves Aalto networks or Aalto computers.  It
   is possible to add models and cost-effectively scale as needed. (If
   these work, it is easy to use these models locally,
-  allowing extreme scaling to large computer clusters)
+  allowing extreme scaling to large computer clusters). `Some examples <https://github.com/AaltoSciComp/llm-examples/tree/main/aalto-llm-api>`__. 
 
   * We are currently limited in the number of models and hardware
     resources, but plan to scale in proportion to the need.
