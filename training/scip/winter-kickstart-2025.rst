@@ -68,8 +68,10 @@ started with the computing resources.
 
   * 09:45--10:00: Joining time/icebreaker
 
-  * **10:00--10:15 Introduction, about the course** *Enrico Glerean and
-    other staff* Materials: :doc:`../../training/kickstart/intro`
+  * **10:00--10:15 Introduction: what are HPC systems?** *Enrico Glerean and
+    other staff* 
+    
+    - Materials: :doc:`../../training/kickstart/introoneday` and `A short introduction to scientific computing <https://hackmd.io/@AaltoSciComp/SciCompIntro>`__
 
   * **10:15--11:45: A day in the life of an HPC user** *Richard Darst and Simo Tuomisto*
 
@@ -94,17 +96,20 @@ started with the computing resources.
 
   * **11:45--12:00: Where to go from here and how to ask for help (Susanne Merz and Enrico Glerean)**
 
+    - :doc:`How to get help from us </help/>`
+    - :doc:`Skills map, our courses, CodeRefinery, CSC </training>`
+
+
   * **12:00--13:00: Lunch break (on your own)**
 
   * **13:00--16:00: Hands-on exercises with Triton HPC cluster**
 
     - Main room: Lobby and Generic questions (SM)
-    - Room 1: Hands-on with exercises from the morning, Slurm and Triton basics (RD)
+    - Room 1: Hands-on with exercises from the morning, Slurm and Triton basics (RD, EG)
     - Room 2: Connecting questions? (TP)
-    - Room 3: GPUs (ST)
-    - Room 4: Advanced parallelization
-    - Room 5: AI / LLMs (YT)
-    - Room 6: Speech2Text (TR)
+    - Room 3: GPUs and parallelization (ST)
+    - Room 4: AI / LLMs (YT)
+    - Room 5: Speech2Text (TR)
 
 Preparation
 -----------
