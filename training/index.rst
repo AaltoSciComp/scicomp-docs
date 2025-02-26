@@ -28,6 +28,8 @@ to suggest a new course, `please take this survey <https://link.webropol.com/s/s
    :maxdepth: 1
 
    scip/winter-kickstart-2025
+   CodeRefinery March 2025 <https://coderefinery.github.io/2025-03-25-workshop/>
+   Practical Deep Learning on LUMI (with CSC, April 2025, registrations opening soon) <https://csc.fi/en/trainings/training-calendar/>
    Take the survey! Request a re-run of past courses / new courses <https://link.webropol.com/s/scipod>
    scip/index
 
@@ -65,6 +67,7 @@ These are other quite important courses we have developed:
 
    Linux shell <https://aaltoscicomp.github.io/linux-shell/>
    Python for Scientific Computing <https://aaltoscicomp.github.io/python-for-scicomp/>
+   Tools and Techniques for HPC <https://scicomp.aalto.fi/training/scip/ttt4hpc-2024/>
    Data analysis workflows in Python and R <https://aaltoscicomp.github.io/data-analysis-workflows-course/>
 
 
