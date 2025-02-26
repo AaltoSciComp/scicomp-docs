@@ -96,8 +96,8 @@ started with the computing resources.
 
   * **11:45--12:00: Where to go from here and how to ask for help (Susanne Merz and Enrico Glerean)**
 
-    - :doc:`How to get help from us </help/>`
-    - :doc:`Skills map, our courses, CodeRefinery, CSC </training>`
+    - :doc:`How to get help from us </help/index>`
+    - :doc:`Skills map, our courses, CodeRefinery, CSC </training/index>`
 
 
   * **12:00--13:00: Lunch break (on your own)**
