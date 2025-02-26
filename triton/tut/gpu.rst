@@ -70,11 +70,8 @@ they generally outperform the best desktop GPUs.
 
 
 
-Running a typical GPU program
------------------------------
-
 Reserving resources for GPU programs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------
 
 Slurm keeps track of the GPU resources as generic resources (GRES) or
 trackable resources (TRES). They are basically limited resources that you
@@ -83,17 +80,51 @@ can request in addition to normal resources such as CPUs and RAM.
 To request GPUs on Slurm, you should use the ``--gpus=1`` or ``--gres=gpu:1``
 -flags.
 
-You can also use syntax ``--gpus=GPU_TYPE:1`` (or ``--gres=gpu:GPU_TYPE:1``),
-where ``GPU_TYPE`` is a name chosen by the admins for the GPU.
-For example, ``--gpus=v100:1`` would give you a V100 card. See section on
-:ref:`reserving specific GPU architectures <gpu-constraint>` for more information.
+Choosing a specific type of GPU
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In most cases you will want to choose a GPU that suits your specific use case.
+
+There are three ways you can use to choose the GPU type:
+
+1. All compute nodes with GPUs are separated into partitions based on their GPU
+   architectures.
+
+   Thus you can choose the GPU type by limiting your job to the partitions that
+   have GPUs that you want to use with ``--partition=GPU_PARTITION``, where
+   ``GPU_PARTITION`` is the name of the partition. You can specify multiple
+   partition, separated by commas.
+
+   For example ``--partition=gpu-a100-80g,gpu-h100-80g`` would give you a
+   A100 or H100 GPU.
+
+2. You can restrict yourself to a certain type of GPU card by using
+   using the ``--constraint`` option.  For example, to restrict the submission to
+   Ampere generation GPUs only you can use ``--constraint='ampere'``.
+
+   For choosing between multiple generations, you can use the ``|``-character
+   between generations. For example, if you want to restrict the submission
+   Volta or Ampere generations you can use ``--constraint='volta|ampere'``.
+   Remember to use the quotes since ``|`` is the shell pipe.
+
+3. You can use the syntax ``--gpus=GPU_TYPE:1`` (or ``--gres=gpu:GPU_TYPE:1``),
+   where ``GPU_TYPE`` is a name chosen by the admins for the GPU.
+
+   For example, ``--gpus=v100:1`` would give you a V100 card.
+
+See the :ref:`available GPUs reference <available-gpus>` for more information on
+available partitions and feature names.
+
+In the cluster you can run ``slurm features`` or
+``sinfo -o '%50N %18F %26f %30G'`` to see what GPU resources are available.
+
+
+
+Reserving more than one GPU
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can request more than one GPU with ``--gpus=G``, where ``G`` is
 the number of the requested GPUs.
-
-Some GPUs are placed in a quick debugging queue. See section on
-:ref:`reserving quick debugging resources <gpu-debug>` for more
-information.
 
 .. note::
 
@@ -101,10 +132,17 @@ information.
    trying to reserve multiple GPUs you should verify that your code
    can utilize them.
 
+Reserving a GPU from the debug queue
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+There is a ``gpu-debug``-partition that you can use to run short jobs
+(30 minutes or less) for quick tests and debugging. Use
+``--partition=gpu-debug`` for this.
 
 
 Running an example program that utilizes GPU
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------------
 
 .. include:: ../ref/examples-repo.rst
 
@@ -162,43 +200,14 @@ Using a slurm script setting the requirements and loading the correct modules be
   :ref:`section on missing CUDA libraries <cuda-missing>`.
 
 
-Special cases and common pitfalls
----------------------------------
-
 Monitoring efficient use of GPUs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------
 
 .. include:: ../examples/monitoring/gpu.rst
 
-.. _gpu-constraint:
 
-Reserving specific GPU types
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-You can restrict yourself to a certain type of GPU card by using
-using the ``--constraint`` option.  For example, to restrict the submission to
-Pascal generation GPUs only you can use ``--constraint='pascal'``.
-
-For choosing between multiple generations, you can use the ``|``-character
-between generations. For example, if you want to restrict the submission
-Volta or Ampere generations you can use ``--constraint='volta|ampere'``.
-Remember to use the quotes since ``|`` is the shell pipe.
-
-To see what GPU resources are available, run ``slurm features`` or
-``sinfo -o '%50N %18F %26f %30G'``.
-
-Alternative way is to use syntax ``--gres=gpu:GPU_TYPE:1``, where ``GPU_TYPE``
-is a name chosen by the admins for the GPU. For example, ``--gres=gpu:v100:1``
-would give you a V100 card.
-
-.. _gpu-debug:
-
-Reserving resources from the short job queue for quick debugging
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-There is a ``gpu-debug``-partition that you can use to run short jobs
-(30 minutes or less) for quick tests and debugging. Use
-``--partition=gpu-debug`` for this.
+Special cases and common pitfalls
+---------------------------------
 
 .. _cuda-missing:
 
@@ -323,6 +332,8 @@ NVIDIA provides profiling tools such as Nsight Systems and Nsight Compute, which
 Additionally, PyTorch offers its own set of profilers, like torch.profiler, which allows users to monitor CPU, GPU, and memory usage in PyTorch-based applications. 
 
 For a detailed introduction to both Torch and NVIDIA profilers, please refer to GPU profiling section :ref:`gpu-profiling`.
+
+.. _available-gpus:
 
 Available GPUs and architectures
 --------------------------------
