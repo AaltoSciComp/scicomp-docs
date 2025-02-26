@@ -81,7 +81,7 @@ started with the computing resources.
 
         - `"Ngrams example" <https://github.com/AaltoSciComp/hpc-examples/tree/master/ngrams>`__
 
-    - 4. Loading an application? Not needed but good to remeber (e.g. python env) ` <https://scicomp.aalto.fi/triton/tut/modules/>`__
+    - 4. Loading an application? Not needed but good to remeber (e.g. python env): :doc:`Modules </triton/tut/modules>`
     - 5. :ref:`Analysing data with slurm <tutorials>`
 
         - 5.1 :doc:`Getting an interactive session </triton/tut/interactive>`
