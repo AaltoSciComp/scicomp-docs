@@ -3,8 +3,14 @@ Jupyter with GPUs
 
 .. warning::
 
-   Jupyter with GPUs are only available for certain projects which
-   have funded the GPUs.  More information below.
+   Jupyter with GPUs are mainly available for certain projects which
+   have funded the GPUs.  Others can attempt to use in a preemptible
+   queue (the jobs are killed with no warning if a higher-priority
+   user comes).
+
+   We are still tuning the parameters (run time, resources available,
+   etc.) to balance usefulness vs resource wastage.  There is no service
+   guarantee.  Let us know what is useful or not working.
 
 The normal OnDemand Jupyter does not include GPUs, because they are
 very expensive and Jupyter interactive work by its nature has lots of
@@ -18,6 +24,26 @@ wasted resources.
 
 
 
+Expected use case
+-----------------
+
+Remember, Jupyter+GPUs are designed to be used for testing and
+development, not production runs or real computation.  The GPU memory
+is limited, so you can test code but probably not even run
+moderately-sized models.  This is because any resources allocated to a
+Jupyter job are mostly idle.
+
+You should plan (from the beginning) how you will transition to batch
+jobs for your main computations.  For example, write and verify code
+in Jupyter with tiny data, then from the command line submit the code
+to run in the batch queue with much more resources
+
+.. code-block:: console
+
+   $ sbatch --gpu=1 --wrap 'jupyter nbconvert --to notebook --execute mynotebook.ipynb --output mynotebook.$(date -Iseconds).ipynb'
+
+
+
 How it works
 ------------
 
@@ -27,9 +53,8 @@ How it works
 * Your Jupyter session will start.  Note it has shorter timeouts that
   other Jupyter sessions, to prevent inefficiency.  Once you have
   resources, don't forget to use them.
-* There is no service guarantee, resources may be adjusted anytime
-  without warning.  Save often.
-
+* There is no service guarantee, resources may be stopped or adjusted
+  anytime without warning.  Save often.
 
 .. list-table::
    :header-rows: 1
@@ -40,7 +65,7 @@ How it works
 
 * * Ellis H200 GPU
   * ELLIS project staff (``ellis`` unix group), contact XXX for access.
-  * 4 H200 GPUs split into 56 vGPUs with 18G mem each
+  * 4 H200 GPUs split into 56 vGPUs with 18G mem each.
 
 * * General H200 GPU
   * Anyone, but sessions will be stopped without warning if a higher
@@ -49,16 +74,6 @@ How it works
 
 Time limits and other parameters are visible in OnDemand (and not
 copied here since they may change).
-
-Remember, Jupyter+GPUs are designed to be used for testing and
-development, not production runs.  You should plan (from the
-beginning) how you will transition to batch jobs for your main
-computations, otherwise you may have a bad time.
-
-The virtual GPUs have much less memory than full GPUs.  Please contact
-us if it doesn't serve your needs and we can try to adjust to make it
-better.  Resources and availability may change at any time - including
-restarting for maintenance without warning.
 
 
 
