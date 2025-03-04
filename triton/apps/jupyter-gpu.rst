@@ -23,6 +23,8 @@ testing while not having the cost while minimizing the amount of
 wasted resources.
 
 
+.. highlight:: console
+
 
 Expected use case
 -----------------
@@ -36,11 +38,9 @@ Jupyter job are mostly idle.
 You should plan (from the beginning) how you will transition to batch
 jobs for your main computations.  For example, write and verify code
 in Jupyter with tiny data, then from the command line submit the code
-to run in the batch queue with much more resources
+to run in the batch queue with much more resources::
 
-.. code-block:: console
-
-   $ sbatch --gpu=1 --wrap 'jupyter nbconvert --to notebook --execute mynotebook.ipynb --output mynotebook.$(date -Iseconds).ipynb'
+   $ sbatch --gpus=1 --wrap 'jupyter nbconvert --to notebook --execute mynotebook.ipynb --output mynotebook.$(date -Iseconds).ipynb'
 
 
 
