@@ -36,7 +36,7 @@ jobs for your main computations.  For example, write and verify code
 in Jupyter with tiny data, then from the command line submit the code
 to run in the batch queue with much more resources::
 
-   $ sbatch --gpus=1 --wrap 'jupyter nbconvert --to notebook --execute mynotebook.ipynb --output mynotebook.$(date -Iseconds).ipynb'
+   $ sbatch --gpus=1 --wrap 'jupyter nbconvert --to notebook --execute --allow-errors mynotebook.ipynb --output mynotebook.$(date -Iseconds).ipynb'
 
 
 
@@ -57,19 +57,19 @@ How it works
 .. list-table::
    :header-rows: 1
 
-* * Name
-  * Who has access
-  * Resources
+   * * Name
+     * Who has access
+     * Resources
 
-* * Ellis H200 GPU
-  * ELLIS project staff (``ellis`` unix group). Still being formed, contact ASC
-    for access for now.
-  * 8 H200 GPUs split into a total of 56 vGPUs with 18G mem each.
+   * * Ellis H200 GPU
+     * ELLIS project staff (``ellis`` unix group). Still being formed, contact ASC
+       for access for now.
+     * 8 H200 GPUs split into a total of 56 vGPUs with 18G mem each.
 
-* * General H200 GPU
-  * Anyone, but sessions can be stopped without warning if a higher
-    priority user comes and needs the resources.
-  * Same as above
+   * * General H200 GPU
+     * Anyone, but sessions can be stopped without warning if a higher
+       priority user comes and needs the resources.
+     * Same as above
 
 Time limits and other parameters are visible in OnDemand (and not
 copied here since they may change).
