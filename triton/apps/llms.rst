@@ -83,7 +83,7 @@ The ``your_script.py`` Python script uses a HuggingFace model ``mistralai/Mistra
 
   # Generate and print responses
   responses = pipe(messages) 
-  print(messages)
+  print(responses)
 
 You can look at the `model card <https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1>`__ for more information about the model.
 
