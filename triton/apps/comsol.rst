@@ -142,7 +142,7 @@ Use the parameters ``-clustersimple`` and ``-launcher slurm``. Here is a sample 
 
           comsol batch -clustersimple -launcher slurm -np $SLURM_CPUS_PER_TASK -inputfile $INPUTFILE -outputfile $OUTPUTFILE -tmpdir $TMPDIR
 
-One would not expect to need `-np $SLURM_CPUS_PER_TASK`, but in practice COMSOL does not always automatically limit the jobs to the number of cpus per task. Instead, COMSOL assumes all CPUs on the node are reserved for it, and there are more COMSOL process trying to run than there are CPUs available.
+One would not expect to need ``-np $SLURM_CPUS_PER_TASK``, but in practice COMSOL does not always automatically limit the jobs to the number of cpus per task. Instead, COMSOL assumes all CPUs on the node are reserved for it, and there are more COMSOL process trying to run than there are CPUs available.
 
 Distributed Parametric Sweep
 ----------------------------
