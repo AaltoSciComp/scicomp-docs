@@ -50,7 +50,7 @@ Best practices of using COMSOL Graphical User Interface in Triton
 
       ::
       
-        module load comsol/6.1
+        module load comsol/6.3
 
    3) and finally start comsol
 
@@ -93,10 +93,6 @@ The cluster settings can be saved in comsol settings, not in the model file. The
 	   
 You can test by loading from the Application Libraries the "cluster_setup_validation" model. The model comes with a documentation -pdf file, which you can open in the Application Libraries dialogue after selecting the model.
 
-COMSOL requires MPICH2 compatible MPI libraries::
-
-  $ module purge
-  $ module load comsol/6.1 intel-parallel-studio/cluster.2020.0-intelmpi
 
 
 A dictionary of COMSOL HPC lexicon
@@ -138,18 +134,22 @@ Use the parameters ``-clustersimple`` and ``-launcher slurm``. Here is a sample 
           #SBATCH --cpus-per-task=20
 
           cd $WRKDIR/my_comsol_directory
-          module load Java
-          module load comsol/6.1
-	  module load intel-parallel-studio/cluster.2020.0-intelmpi
+          module load comsol/6.3
 
           # Details of your input and output files
           INPUTFILE=input_model.mph
-          OUTPUTFILE=output_model.mph
+          OUTPUTFILE=output_model_$SLURM_JOB_ID.mph
 
-          comsol batch -clustersimple -launcher slurm -inputfile $INPUTFILE -outputfile $OUTPUTFILE -tmpdir $TMPDIR
+          comsol batch -clustersimple -launcher slurm -np $SLURM_CPUS_PER_TASK -inputfile $INPUTFILE -outputfile $OUTPUTFILE -tmpdir $TMPDIR
 
-	  
+One would not expect to need ``-np $SLURM_CPUS_PER_TASK``, but in practice COMSOL does not always automatically limit the jobs to the number of cpus per task. Instead, COMSOL assumes all CPUs on the node are reserved for it, and there are more COMSOL process trying to run than there are CPUs available.
 
+Distributed Parametric Sweep
+----------------------------
+
+It is possible to soleve multiple parameter scan values in parallel with comsol. The details are explained in the Document `How to Perform a Distributed Parametric Sweep in COMSOL Multiphysics <https://www.comsol.com/support/learning-center/article/89801>`_.
+
+Distributed Parametric Sweep is suitable for fast parameter sweeps that can be reasonably calculated within a single SLURM job. COMSOL launches multiple computations in parallel within the same job.
 
 Cluster sweep
 -------------
@@ -159,10 +159,10 @@ If you have a parameter scan to perform, you can use the Cluster sweep node. The
 First set up the cluster preferences, as described above.
 
 
-Start by loading the correct modules in triton (COMSOL requires MPICH2 compatible MPI libraries). Then open the graphical user interface to comsol on the login node and open your model. ::
+Start by opening the graphical user interface to comsol on the login node and open your model. ::
 
   $ module purge
-  $ module load comsol/6.1 intel-parallel-studio/cluster.2020.0-intelmpi
+  $ module load comsol/6.3
   $ comsol
 
 Add a "Cluster Sweep" node to your study and a "Cluster Computing" node into your "Job Configurations" (You may need to first enable them in the "Show more options". Check the various options. You can try solving a small test case from the graphical user interface. You should see COMSOL submitting jobs to the SLURM queue. You can download an  :download:`example file <ringing_plate_cluster_sweep.mph>`.
@@ -190,7 +190,7 @@ Save a username and password for COMSOL mph server
 
 Before your first use, you need to save the username and password for COMSOL mph server. On the login node, run::
 
-  $ module load comsol/6.1
+  $ module load comsol/6.3
   $ comsol mphserver
   
 And COMSOL will ask for you to choose a username and password. You can close the comsol server with "close".
@@ -222,7 +222,7 @@ Here is an example batch submit script ``comsol_matlab_livelink.sh``::
   
   
   module load matlab
-  module load comsol/6.1
+  module load comsol/6.3
  
 
   echo starting comsol server in the background
