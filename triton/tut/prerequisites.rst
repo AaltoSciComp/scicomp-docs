@@ -10,7 +10,7 @@ that you know the basics here.
 
 * The "Shell crash course".  You can :doc:`read it (10-20 min)
   </scicomp/shell>`, watch a `short version (20 min)
-  <https://youtu.be/56p6xX0aToI>`__ or `longer version (1 hour)
+  <https://youtu.be/xbTTDLA3txI>`__ or `longer version (1 hour)
   <https://www.youtube.com/watch?v=ESXLbtaxpdI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=3&t=1402s>`__.
   The shorter options are fine.
 

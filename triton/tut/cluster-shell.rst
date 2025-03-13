@@ -627,7 +627,7 @@ This is only a short intro.
 
 * :doc:`/scicomp/shell`: You really need to read
   this for more info. You can also watch a `short version (20 min)
-  <https://youtu.be/56p6xX0aToI>`__ or `longer version (1 hour)
+  <https://youtu.be/xbTTDLA3txI>`__ or `longer version (1 hour)
   <https://www.youtube.com/watch?v=ESXLbtaxpdI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=3&t=1402s>`__.
   The shorter options are fine.
 * `Working directory <https://en.wikipedia.org/wiki/Working_directory>`__

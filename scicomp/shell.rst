@@ -14,7 +14,7 @@ Linux shell crash course
 .. admonition:: Watch this in video format
 
    There is a `companion video on YouTube
-   <https://youtu.be/56p6xX0aToI>`__, if you would also like that
+   <https://youtu.be/xbTTDLA3txI>`__, if you would also like that
    format (and a `slightly longer one
    <https://youtu.be/ESXLbtaxpdI>`__ with more detail).
 
