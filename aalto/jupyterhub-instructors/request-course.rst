@@ -54,7 +54,7 @@ YAML, by the way (but we can handle the syntax details).
    # if true, create a separate data directory
    datadir: false
 
-   # Important dates, but we can always be adjusted later.
+   # Important dates, but can always be adjusted later.
    # So far, you need to email us to make it public when you are ready!
    public_date: 2020-09-08   # becomes visible to students before course
    private_date: 2021-01-31  # hidden from students after course
