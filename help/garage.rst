@@ -9,10 +9,8 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * T-Th, 25-27 March and 1-3 April, is a `CodeRefinery workshop
-     <https://coderefinery.github.io/2025-03-25-workshop/>`__.  There
-     may be less people around (but still should be someone each
-     day).  (btw, consider watching the workshop livestream!)
+   * 16 April (W): No garage (or very limited) due to an internal
+     development event.
 
 
 If you need more help than the issue trackers, this is the place to
