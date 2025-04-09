@@ -1,3 +1,6 @@
+:orphan:
+:no-search:
+
 ============
 Data storage
 ============

@@ -1,3 +1,5 @@
+:no-search:
+
 ====
 Data
 ====
