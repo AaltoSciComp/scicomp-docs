@@ -263,7 +263,7 @@ We strongly recommend you are familiar with the Linux command line.
 Browsing the following material is sufficient:
 
 * :doc:`/triton/tut/cluster-shell` (`video
-  <https://youtu.be/bJMmz5-svJo?t=7&list=PLZLVmS9rf3nMKR2jMglaN4su3ojWtWMVw&index=8>`__, `shorter video <https://www.youtube.com/watch?v=xbTTDLA3txI`__)
+  <https://youtu.be/bJMmz5-svJo?t=7&list=PLZLVmS9rf3nMKR2jMglaN4su3ojWtWMVw&index=8>`__, `shorter video <https://www.youtube.com/watch?v=xbTTDLA3txI>`__)
   - important background knowledge for command line work.
 
   
