@@ -116,8 +116,8 @@ software, and data).
 * **Mondays** also have NBE/PHYS IT present.
 * **Tuesdays** 
 * **Wednesdays** also have NBE/PHYS IT present.  We also have more
-  staff to help :doc:`jupyter.cs instructors/TAs </aalto/jupyterhub-instructors/index>`. On 2025-04-02 we will have a :ref:`COMSOL Multiphysics<comsol>` focus day: someone from COMSOL (the company) plans to join.
-* **Thursdays**
+  staff to help :doc:`jupyter.cs instructors/TAs </aalto/jupyterhub-instructors/index>`.
+* **Thursdays** On 2025-04-26 we will have a :ref:`COMSOL Multiphysics<comsol>` focus day: someone from COMSOL (the company) plans to join.
 * **Fridays** also have CS IT present (at the beginning).
 
 
