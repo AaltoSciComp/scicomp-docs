@@ -125,7 +125,7 @@ Schedule
 
 * **Day 1 (Tue 3 June)**
 
-  * :localtime:`4 June 9:50 +03:00 (hh:mm YYYY-MM-DD)`: Joining time/icebreaker
+  * :localtime:`4 June 9:50 +03:00 (hh:mm [(on ]YYYY-MM-DD[)])`: Joining time/icebreaker
 
   * :localtime:`3 June 10:00 +03:00` **Introduction, about the course** Materials:
     :doc:`../../training/kickstart/intro`
@@ -176,7 +176,7 @@ Schedule
 
 * **Day 2 (4 June)**
 
-  * :localtime:`4 June 09:50 +03:00 (hh:mm YYYY-MM-DD)` Connecting, icebreakers, Q&A
+  * :localtime:`4 June 09:50 +03:00 (hh:mm [(on ]YYYY-MM-DD[)])` Connecting, icebreakers, Q&A
 
   * :localtime:`4 June 10:00 +03:00` **Behind the scenes: the humans of scientific computing** *Richard Darst and a special guest*
 
@@ -215,7 +215,7 @@ Schedule
 
 * **Day 3 (5 June)**
 
-  * :localtime:`5 June 10:00 +03:00 (hh:mm YYYY-MM-DD)` Connecting, icebreaker, Q&A
+  * :localtime:`5 June 9:50 +03:00 (hh:mm [(on ]YYYY-MM-DD[)])` Connecting, icebreaker, Q&A
   * :localtime:`5 June 10:00 +03:00` **How to ask for help with (super)computers**
 
     - It’s dangerous to go alone, take us! Don’t waste time struggling, there are plenty of people here for you.
