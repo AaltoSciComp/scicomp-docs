@@ -125,7 +125,7 @@ Schedule
 
 * **Day 1 (Tue 3 June)**
 
-  * :localtime:`4 June 9:50 +03:00 (hh:mm [(on ]YYYY-MM-DD[)])`: Joining time/icebreaker
+  * :localtime:`3 June 9:50 +03:00 (hh:mm [(on ]YYYY-MM-DD[)])`: Joining time/icebreaker
 
   * :localtime:`3 June 10:00 +03:00` **Introduction, about the course** Materials:
     :doc:`../../training/kickstart/intro`
