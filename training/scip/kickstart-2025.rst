@@ -116,33 +116,23 @@ between our course and your cluster.
 Schedule
 --------
 
-.. warning::
-
-   The schedule will be updated
-
-**All times are EEST (Europe/Helsinki time)!**
-
-The daily schedule will be adjusted based on the audience's questions.
-There will be frequent breaks and continuous questions time going on,
-this is the mass equivalent of an informal help session to get you
-started with the computing resources.
-
-
 .. admonition:: Subject to change
 
-   Schedule may still have minor updates as it happens.
+   Schedule may still have updates before the course, and also during
+   as we adapt to audience questions and interests.
 
+**Times automatically converted to:** :localtime2:`3 Jun 2025 (zzz)`
 
 * **Day 1 (Tue 3 June)**
 
-  * 9:50: Joining time/icebreaker
+  * :localtime:`4 June 9:50 +03:00 (hh:mm YYYY-MM-DD)`: Joining time/icebreaker
 
-  * **10:00 Introduction, about the course** Materials:
+  * :localtime:`3 June 10:00 +03:00` **Introduction, about the course** Materials:
     :doc:`../../training/kickstart/intro`
 
-  * **10:10 The HPC Kitchen**
+  * :localtime:`3 June 10:10 +03:00` **The HPC Kitchen**
 
-  * **10:20** From data storage to your science**
+  * :localtime:`3 June 10:20 +03:00` **From data storage to your science**
 
     - Data is how most computational work starts, whether it is
       externally collected, simulation code, or generated.  And these
@@ -151,100 +141,94 @@ started with the computing resources.
       computational workflows. Materials: `SciComp Intro
       <https://hackmd.io/@AaltoSciComp/SciCompIntro>`__
       
-  * 10:50 Break
+  * :localtime:`3 June 10:50 +03:00`  Break
 
-  * 11:00 ???
+  * :localtime:`3 June 11:00 +03:00`  ???
 
-  * **11:30 Connecting to the cluster**
+  * :localtime:`3 June 11:30 +03:00` **Connecting to the cluster**
 
-
-    .. 
-      * **12:25--12:50: (Computational) reproducibility and open science** *Enrico Glerean and Samantha Wittke*
-         
-        - Transparency in science is one of the core principles in research integrity. Did you know that half of published studies are actually not reproducible? Here we give an overview of CodeRefinery learning materials for those who want to start picking up good enough practices like git version control, clear project folder structure, conda environments, containers. Materials: `Reproducible research (CodeRefinery) <https://coderefinery.github.io/reproducible-research/>`__  
-    
-  * 12:00 Lunch break
+  * :localtime:`3 June 12:00 +03:00` Lunch break
   
-  * **13:00: Setting up for a new project**
+  * :localtime:`3 June 13:00 +03:00` **Setting up for a new project**
 
     - :doc:`/triton/tut/intro`
     - Cluster shell, section :ref:`triton-tut-example-repo`
 
-  * **13:20** Data transfer
+  * :localtime:`3 June 13:20 +03:00` **Data transfer**
 
     - :doc:`/triton/tut/storage`
     - :doc:`/triton/tut/remotedata`
 
-  * **13:40** What is Slurm?
+  * :localtime:`3 June 13:40 +03:00` **What is Slurm?**
     - :doc:`/triton/tut/slurm`
 
-  * 13:50 Break
+  * :localtime:`3 June 13:50 +03:00` Break
 
-  * **14:00 Interactive jobs**
+  * :localtime:`3 June 14:00 +03:00` **Interactive jobs**
 
     - :doc:`/triton/tut/interactive`
 
-  * **14:20 First serial jobs**
+  * :localtime:`3 June 14:20 +03:00` **First serial jobs**
 
     - :doc:`/triton/tut/serial`
 
-  * 15:00 End of day
+  * :localtime:`3 June 15:00 +03:00` End of day
 
 * **Day 2 (4 June)**
 
-  * 9:50 Connecting, icebreakers, Q&A
+  * :localtime:`4 June 09:50 +03:00 (hh:mm YYYY-MM-DD)` Connecting, icebreakers, Q&A
 
-  * **10:00: Behind the scenes: the humans of scientific computing** *Richard Darst and a special guest*
+  * :localtime:`4 June 10:00 +03:00` **Behind the scenes: the humans of scientific computing** *Richard Darst and a special guest*
 
     - Who are we that teach this course and provide SciComp support?
       What makes it such a fascinating career?  Learn about what goes on
       behind the scenes and how you could join us.
   
-  * **10:20: Conda**
+  * :localtime:`4 June 10:20 +03:00` **Conda**
 
-  * 11:00 Break
+  * :localtime:`4 June 11:00 +03:00` Break
 
-  * **11:10: Array jobs**
+  * :localtime:`4 June 11:10 +03:00` **Array jobs**
 
     - :doc:`/triton/tut/parallel`
     - :doc:`/triton/tut/array`
 
-  * 12:00: Lunch break
+  * :localtime:`4 June 12:00 +03:00`: Lunch break
 
-  * **13:00: Monitoring**
+  * :localtime:`4 June 13:00 +03:00` **Monitoring**
 
     - :doc:`/triton/tut/monitoring`
 
-  * **13:20: Applications**
+  * :localtime:`4 June 13:20 +03:00` **Applications**
 
     - :doc:`/triton/tut/applications`
     - :doc:`/triton/tut/modules`
 
-  * 13:40: ???
+  * :localtime:`4 June 13:40 +03:00` ???
     
-  * **14:10: Parallel**
+  * :localtime:`4 June 14:10 +03:00` **Parallel**
 
     - :doc:`/triton/tut/parallel-shared`
     - :doc:`/triton/tut/parallel-mpi`
 
-  * 15:00: End of day
+  * :localtime:`4 June 15:00 +03:00` End of day
 
 * **Day 3 (5 June)**
 
-  * 9:50: Connecting, icebreaker, Q&A
-  * **10:00: How to ask for help with (super)computers**
+  * :localtime:`5 June 10:00 +03:00 (hh:mm YYYY-MM-DD)` Connecting, icebreaker, Q&A
+  * :localtime:`5 June 10:00 +03:00` **How to ask for help with (super)computers**
 
     - It’s dangerous to go alone, take us! Don’t waste time struggling, there are plenty of people here for you.
       Materials: `Slides <https://zenodo.org/records/8392763>`__.
 
-  * **10:20: GPUs**
+  * :localtime:`5 June 10:20 +03:00` **GPUs**
 
     - :doc:`/triton/tut/gpu`
 
-  * 10:50: Break
-  * **11:00: LLM example**
-  * **11:40: Wrap up and summary, ask us anything**
-  * 12:00: End of day
+  * :localtime:`5 June 10:50 +03:00` Break
+  * :localtime:`5 June 11:00 +03:00` **LLM example**
+  * :localtime:`5 June 11:40 +03:00` **Wrap up and summary, ask us anything**
+  * :localtime:`5 June 12:00 +03:00` End of day
 
   
 

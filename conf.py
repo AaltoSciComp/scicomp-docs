@@ -52,7 +52,8 @@ optional_modules = [
     'sphinx_plausible',
     'sphinxext.opengraph',
     'sphinx_minipres',
-    'sphinxext.rediraffe'
+    'sphinxext.rediraffe',
+    'sphinx_localtime',
     ]
 if on_rtd or 'GITSTAMP' in os.environ:
     optional_modules.append('sphinx_gitstamp')
@@ -102,6 +103,10 @@ copyright = u'2025, Aalto Science-IT and contributors'
 author = u'Aalto Science-IT'
 
 copybutton_exclude = '.linenos, .gp'
+
+# Default timezone for sphinx_localtime
+import dateutil.tz
+localtime_default_tz = dateutil.tz.gettz('Europe/Helsinki')
 
 # Substitutions
 substitute_path = ['_substitutions/']
