@@ -16,6 +16,13 @@ Summary table
    Example range of projects we do.  We sometimes do things outside of
    this table, too.
 
+.. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/support-levels.png
+   :alt: 3x3 table like above.  Columns are "programming, "integration/workflows", and "data", but the rows are now "basic", "practical", "specilist", and "research"
+
+   We work at different levels, too: most of our work is "practical"
+   and "specialist".
+
+
 
 Software publishing (M)
 -----------------------
