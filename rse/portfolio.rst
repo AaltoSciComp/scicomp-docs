@@ -83,6 +83,17 @@ hire could do themselves.
 
 
 
+Nordic MicroData Database (L)
+-----------------------------
+
+Nordic MicroData Database is an externally funded project to make
+company-level data available for researchers throughout the Nordics.
+The project has many staff who know about the sources and contents of
+the data.  Aalto RSE complements this with the data engineering and
+pipelines needed to implement the project.
+
+
+
 Business Finland project (M)
 ----------------------------
 
