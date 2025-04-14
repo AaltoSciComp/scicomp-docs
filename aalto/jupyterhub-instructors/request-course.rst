@@ -23,9 +23,9 @@ needs.**  Students can upload and download any files they need.  You
 could add data to the "shareddata" location, which is available to any
 user.
 
-You *would* want a course environment if you want to (distribute
-assignments to students via the interface) and/or (collect assignments
-via the interface).
+You *do* want a course environment if you want to distribute
+assignments to students via the interface and/or collect assignments
+via the interface and/or grade the assignments on jupyter.cs.
 
 Request template
 ----------------
@@ -43,20 +43,18 @@ YAML, by the way (but we can handle the syntax details).
    uid: (leave blank, we fill in)
    gid: (leave blank, we fill in)
 
-   # supervisor = faculty in charge of course
-   # contacts = primary TAs which should also get emails from us.
-   # manager = (optional) has rights to add other TAs via
-   #           domesti.cs.aalto.fi (supervisor is always a manager)
-   # Please separately tell us who the initial TAs are!  Managers can
-   # add more later via domesti.cs.aalto.fi.
+   # Faculty in charge of course
    supervisor: teacher.in.charge@aalto.fi
+   # Primary TAs who should also get emails from us.
    contact: [teacher.in.charge@aalto.fi, head.ta@aalto.fi]
+   # (optional) has rights to add other TAs via
+   # domesti.cs.aalto.fi (supervisor is always a manager)
    #manager: [can_add.tas@aalto.fi]
 
    # if true, create a separate data directory
    datadir: false
 
-   # Important dates.  But not too important, we can always adjust later.
+   # Important dates, but can always be adjusted later.
    # So far, you need to email us to make it public when you are ready!
    public_date: 2020-09-08   # becomes visible to students before course
    private_date: 2021-01-31  # hidden from students after course
