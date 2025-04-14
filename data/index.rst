@@ -69,7 +69,7 @@ Data storage in Aalto
 * `Teamwork storage space <https://www.aalto.fi/en/services/file-storage-space-for-research-and-groups-teamwork>`__ (Aalto project directories)
 * `Storage services for research data <https://www.aalto.fi/en/services/storage-services-for-research-data>`__
 * `Summary of storage locations <https://www.aalto.fi/en/services/data-storage-file-services>`__
-* `Guidelines for classification of confidential information <https://www.aalto.fi/en/information-processing/classification-of-information>`__,
+* `Guidelines for classification of confidential information <https://www.aalto.fi/en/cyber-security/classification-of-information-basic-instructions-and-services>`__
 
 
 Data in Science-IT departments
