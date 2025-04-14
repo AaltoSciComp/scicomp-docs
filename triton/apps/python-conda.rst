@@ -179,7 +179,9 @@ In these situations one can use ``mamba clean`` to clean up the cache.
 Updating packages in an environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We recommend updating the ``environment.yml`` file, and then::
+We recommend updating the ``environment.yml`` file, and then:
+
+.. code-block:: console
 
   $ mamba env update --file environment.yml
 
