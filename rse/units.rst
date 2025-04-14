@@ -62,7 +62,7 @@ We also make new projects possible, which couldn't be done otherwise.
 Aalto RSE's biggest impact is speeding up and improving lots of small
 projects, but we usually have some longer projects going on, too.
 
-.. figure:: https://github.com/AaltoSciComp/aaltoscicomp-graphics/blob/master/figures/rse-alignment.png
+.. figure:: https://raw.githubusercontent.com/AaltoSciComp/aaltoscicomp-graphics/master/figures/rse-alignment.png
 
    One way of looking at the types of projects a RSE can do.  Note we
    do anything from providing advice to speed up other projects to
