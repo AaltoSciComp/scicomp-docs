@@ -105,7 +105,8 @@ virtual team and your unit can easily join.**
    - Funded from school and department budgets.  Research projects
      also directly contribute funding via Halli for their share of the
      work, reducing the school share.
-   - Some flagships projects fund 100% time for some RSEs.
+   - Some flagships projects fund some RSE staff 100% and they are
+     dedicated for that project.
 
 
 
