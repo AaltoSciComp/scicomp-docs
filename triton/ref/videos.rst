@@ -10,3 +10,4 @@
    <https://www.youtube.com/playlist?list=PLZLVmS9rf3nOKhGHMw4ZY57rO7tQIxk5V>`__,
    `2021 Summer <https://www.youtube.com/playlist?list=PLZLVmS9rf3nPFw29oKUj6w1QdsTCECS1S>`__,
    `2021 February <https://www.youtube.com/playlist?list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc>`__.
+   Or see `computing explained with HPC kitchen <https://www.youtube.com/playlist?list=PLZLVmS9rf3nNDHRo1Baz_JVQWDI0mTYyB>`__.
