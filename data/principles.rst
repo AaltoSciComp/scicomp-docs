@@ -206,7 +206,7 @@ of how you'll deal with data)
 
 Please see:
 
-* :ref:`The DMP section on this site <scicomp_dmp>`
+* :doc:`The DMP section on this site <plans>`
 * The `Aalto data management plan
   page <https://www.aalto.fi/en/services/data-management-plan-dmp>`__
 
