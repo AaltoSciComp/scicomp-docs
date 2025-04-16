@@ -54,7 +54,7 @@ This exists in SCI since 2020 and can exist for you, too.
 Real benefits
 -------------
 
-SCI has seen many real benefits.
+During the work we have seen many real benefits.
 
 **Statistics show that when the RSE spends X time, the academic's
 time saved is 5X.**
@@ -76,7 +76,7 @@ time saved is 5X.**
 Proposal: join us and we expand Science-IT
 ------------------------------------------
 
-It's time to consider the benefits outside of SCI.  **Science-IT is a
+It's time to consider the benefits wider at Aalto.  **Science-IT is a
 virtual team and your unit can easily join.**
 
 **Current state:** ITS provides funding for SCI-RSE to do projects
