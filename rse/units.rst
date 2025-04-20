@@ -1,5 +1,5 @@
-For units such as departments, schools, or flagship projects
-============================================================
+For units who would like Research Software Engineers
+====================================================
 
 Computing is everywhere, even in your unit.  But computing is hard, so
 much that can go wrong: bugs take time to fix, data gets messy and
