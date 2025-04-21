@@ -15,7 +15,14 @@ should check out our :doc:`intro for students
 clusters, though CSC clusters are larger and Triton is easier to use
 because it is more integrated into the Aalto environment.
 
+.. admonition:: Important links
+   :class: important
 
+   Keep these links close by:
+
+   * :doc:`ref/index`
+   * :ref:`tutorials`
+   * :doc:`help`
 
 
 Overview
