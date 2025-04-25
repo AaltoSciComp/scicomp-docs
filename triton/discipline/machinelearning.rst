@@ -86,28 +86,62 @@ A proper distributed learning run requires setting some environment variables. T
 
 Hyperparameter searching
 ------------------------
-A straightforward way for hyperparameter searching is using a job array. This will allow you to run multiple jobs with one sbatch command. Each job within the array trains the network using a different set of parameters. A simple example looks like this:
-::
 
-    #!/bin/bash
+Hyperparameter optimization (HPO) is crucial for model performance but can be resource-intensive. 
+Here are some guidelines for effective HPO on HPC systems:
 
-    #SBATCH --job-name=array_job_name
-    #SBATCH --output=torch_%A_%a.out
-    #SBATCH --array=0-14
+**Before You Start**
 
-    # Parameter arrays
-    parameterA=(0.1 0.01 0.001)
-    parameterB=(2 4 6 8 10)
+- Prioritize key parameters using domain knowledge or literature
 
-    # Calculate index 
-    index_A=$((SLURM_ARRAY_TASK_ID / 5))
-    index_B=$((SLURM_ARRAY_TASK_ID % 5))
+- Start with coarse searches before fine-tuning
 
-    # Extract the actual value based on the index
-    valueA=${parameterA[$index_A]}
-    valueB=${parameterB[$index_B]}
+- Use smaller validation datasets during initial exploration
 
-    python script.py --parameterA $valueA --parameterB $valueB
+**Implementation Strategies**
+
+1. **Parallel Trials with Slurm Array Jobs** (Straightforward)
+
+   - Run multiple independent trials simultaneously
+   - Each array task runs with different parameters
+   - Store results in separate directories (e.g., ``results/$SLURM_ARRAY_TASK_ID``)
+
+2. **More Efficient Search Methods**
+
+   +----------------+------------------------------------------+
+   | Method         | Best For                                 |
+   +================+==========================================+
+   | Random Search  | Quick exploration of parameter space     |
+   +----------------+------------------------------------------+
+   | Bayesian Opt.  | Expensive evaluations with dependencies  |
+   +----------------+------------------------------------------+
+   | Grid Search    | Small parameter spaces (<10 dimensions)  |
+   +----------------+------------------------------------------+
+
+**Essential Best Practices**
+
+- **Early Stopping**: Implement in-code checks to halt unpromising trials
+- **Checkpointing**: Save model weights periodically to resume interrupted jobs
+- **Result Tracking**: Use tools like:
+
+  - `Weights & Biases <https://wandb.ai>`_ (cloud/local server)
+  - `TensorBoard <https://tensorflow.org/tensorboard>`_
+  - Simple logging with unique trial IDs
+
+
+Our `example repository <https://github.com/AaltoRSE/hpo-on-hpc>`__ demonstrates several practical methods for implementing HPO workflows on HPC systems, including:
+
+1.  Naive Grid Search via Slurm Array Jobs
+2.  WandB Sweeps integrated with Slurm Array Jobs
+3.  Optuna using a shared backend (like SQLite or a dedicated database) coordinated via Slurm Array Jobs
+4.  Ray Tune for distributed HPO (example primarily targets LUMI)
+
+Additional Resources
+====================
+
+- `WandB Documentation <https://docs.wandb.ai/>`_
+- `Optuna Documentation <https://optuna.readthedocs.io/>`_
+- `Ray Tune Documentation <https://docs.ray.io/en/latest/tune/index.html>`_
 
 
 Working with large language models
