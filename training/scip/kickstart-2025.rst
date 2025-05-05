@@ -77,8 +77,8 @@ students.
 
 
 
-Other universities
-------------------
+Other organizations
+--------------------
 
 **If you are not at Aalto University**, you can follow along and
 probably learn a lot.  We design the course to be useful even to
@@ -98,10 +98,10 @@ about adapting).  How to register if you are not at Aalto:
   -> narvi. Some differences in configuration are listed in
   `Narvi differences
   <https://narvi-docs.readthedocs.io/kickstart-diffs.html>`__
-* [no active support] `CSC <https://csc.fi>`__ (Finland): Participants with `CSC user
+* `CSC <https://research.csc.fi/>`__ (Finland): Participants with `CSC user
   account <https://docs.csc.fi/accounts/>`__ can try examples also in
   CSC supercomputers, see the `overview of CSC supercomputers
-  <https://docs.csc.fi/computing/overview/>`__ for details on
+  <https://csc-training.github.io/csc-env-eff/part-1/>`__ for details on
   connecting, etc.
 
 If you want to get your site listed here and/or help out, contact us
