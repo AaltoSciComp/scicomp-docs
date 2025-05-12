@@ -84,7 +84,9 @@ just harder for random people to contribute).  For non-work private
 repos, you have to make your own choice.
 
 * Github is a proprietary commercial service, but extremely popular.
-  It can allow personal private repositories and there is an option to apply for a "pro" accoutn with your university email as part of their `GitHub Education <https://github.com/education>`__ program.
+  It can allow personal private repositories and there is an option
+  to apply for a "pro" account with your university email as part of
+  their `GitHub Education <https://github.com/education>`__ program.
 
 * Bitbucket is also somewhat popular, limit of free 5 private repositories
   (but you can pay for more).
