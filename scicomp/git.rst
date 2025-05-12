@@ -84,7 +84,9 @@ just harder for random people to contribute).  For non-work private
 repos, you have to make your own choice.
 
 * Github is a proprietary commercial service, but extremely popular.
-  No free private repositories or groups (but you can pay).
+  It can allow personal private repositories and there is an option
+  to apply for a "pro" account with your university email as part of
+  their `GitHub Education <https://github.com/education>`__ program.
 
 * Bitbucket is also somewhat popular, limit of free 5 private repositories
   (but you can pay for more).
@@ -96,3 +98,9 @@ repos, you have to make your own choice.
   another Gitlab hosted by the Coderefinery project, a pan-Nordic
   academic group.  It might be useful if you have a very distributed
   project, but realistically for Aalto projects, use Aalto gitlab.
+
+
+Git installation and configuration
+==================================
+
+If you are planning to use git version control and you do not have it in your system, you can check the `git installation instructions on CodeRefinery webpages <https://coderefinery.github.io/installation/git-in-terminal/#git-in-the-terminal>`__. Please note that in some windows systems managed by organisations (for example Aalto Windows) the default HOME for git (git bash) is on a drive that is NOT local (e.g. ``Z:\``). This can be an issue if you want to use git when the internet connection is not reliable, you can make sure your system uses another folder as ``$HOME`` by editing the global file "profile" which is usually found in "C:\Program Files\Git\etc" and add a line such as ``export HOME="/c/Users/<username>/"`` near the top of the file.
