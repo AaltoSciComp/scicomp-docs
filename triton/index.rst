@@ -20,7 +20,7 @@ because it is more integrated into the Aalto environment.
 
    Keep these links close by:
 
-   * :doc:`ref/index`
+   * :doc:`ref/index` (and the `printable cheatsheet <https://aaltoscicomp.github.io/cheatsheets/triton-cheatsheet.pdf>`__)
    * :ref:`tutorials`
    * :doc:`help`
 
