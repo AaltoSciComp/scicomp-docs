@@ -132,18 +132,32 @@ require a separate time tracking system.
 * Distinct contact people 2024: 69 supervisors, 77 contacts
 * Number of distinct schools: 5 (all except CHEM)
 
+.. admonition:: Note on data accuracy
+
+   We focus on helping everyone who needs help (via lots of small
+   projects), and unfortunately that means we don't have perfect
+   stats.  What we record as a "project" has also changed over time.
+   The figures below record the general relative demand for services,
+   but are not 100% accurate.  To record general demand, it includes
+   requested projects that have not been realized (no response,
+   unfunded grants, waiting to start, etc.).
+
 .. figure:: 2024-projects-per-year.png
    :alt: Projects per year chart, slightly increasing.
 
    Projects per year.  The data is interesting, but since it tracks
-   "RSE project issues created" and the standard for what should be an
-   issue changes over time, it shouldn't be relied on too much.
+   "RSE project issues created" it doesn't tell the whole story.  We
+   used to make issues at a much lower threshold (small things we
+   did), now we tend to make only issues for bigger things (the garage
+   diary tracks small work).  So, this shouldn't be relied on too
+   much.
 
 .. figure:: 2024-projects-contacts.png
    :alt: Listed contacts for various projects.
 
    We see that the general trend for number of contacts is
-   increasing.  This data isn't completely accurate, though.
+   increasing.  This data isn't completely accurate, since over time
+   we hive tried harder to record better information.
 
 .. figure:: 2024-projects-per-school.png
    :alt: A bar graph split by year and by school, we see that SCI is
@@ -152,7 +166,8 @@ require a separate time tracking system.
 
    We see that the School of Science continues to be the primary
    customer base, as is expected since it's the only one providing
-   basic funding.
+   basic funding and the one that has had the most outreach for new
+   projects.
 
 .. figure:: 2024-projects-time-per-school.png
    :alt: Bar graph with time spent for unit, the highest is 'Sci' with
@@ -174,16 +189,18 @@ require a separate time tracking system.
    :alt: Bar graph of project time spent by task, with the largest
 	 categories the same as above.
 
-   Like above, but with the time distribution.  Again, the absolute
-   values are not accurate but this shows the relative distribution.
+   Like above, but with the time distribution.  No absolute values are
+   given, since it's not accurate enough to be relevant.
 
 .. figure:: 2024-projects-size-by-year.png
    :alt: Bar graph showing project size (G, S, M, L) that as years
 	 progress, there are more and more large projects.
 
    We see that we are shifting more towards larger projects.  This is
-   a real effect, but also "don't bother recording small and garage
-   projects" is a big part of it, too.
+   a real effect, but also an artifact of how we record things.  The
+   garage diary now records most of the garage and some of the small
+   projects.  Garage: Hours or less.  Small: days or less.  Medium:
+   weeks or less.  Large: Month or more.
 
 .. figure:: 2024-projects-wordcloud.png
    :alt: Would cloud of project summaries
