@@ -122,7 +122,7 @@ Schedule
     - :doc:`/triton/tut/applications`
     - :doc:`/triton/tut/modules`
 
-  * :localtime:`4 June 13:40 +03:00` ???
+  * :localtime:`4 June 13:40 +03:00` **Research integrity, security, compliance, and reproducibility**
     
   * :localtime:`4 June 14:10 +03:00` **Parallel**
 
