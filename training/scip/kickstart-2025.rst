@@ -6,7 +6,7 @@ June 2025 / Intro to Scientific Computing /  HPC Summer Kickstart
    :class: important
 
    
-   * **Registrations are open at https://link.webropol.com/ep/scicompsummer2025**
+   * **Registrations are open**: https://link.webropol.com/ep/scicompsummer2025
    
    * News:
 
