@@ -5,9 +5,12 @@ June 2025 / Intro to Scientific Computing /  HPC Summer Kickstart
 .. admonition:: Quick links
    :class: important
 
+   
+   * **Registrations are open at https://link.webropol.com/ep/scicompsummer2025**
+   
    * News:
 
-     - Course structure updated!
+     - 21.5.2025: Course structure updated!
 
    * Watching links
 
@@ -16,20 +19,17 @@ June 2025 / Intro to Scientific Computing /  HPC Summer Kickstart
        get it automatically
      * Zoom: live zoom support for students from partner organisations
 
-   * Registrations are open at
-     https://link.webropol.com/ep/scicompsummer2025
 
 
 **Kickstart: Introduction to HPC and Scientific Computing**
 
 *Kickstart* is a three half-day course for researchers and students who want to get started with high-performance computing (HPC) and scientific computing workflows.
 
-Day 1 focuses on the basics of HPC through practical examples. You will learn how to connect to the cluster, how storage choices affect your workflow, how to transfer data, and run your first jobs with slurm.
-
-Days 2 and 3 introduce tools and practices for scaling up your work. Topics include Conda environments, batch and array jobs, job monitoring, software modules, parallel computing, GPU usage, and working with real examples like large language models.
+* **Day 1**: focuses on the basics of HPC through practical examples. You will learn how to connect to a supercomputer, how storage choices affect your workflow, how to transfer data, and run your first jobs with slurm.
+* **Day 2** introduces tools and practices for efficient and responsible data science. Topics include Conda environments, batch and array jobs, job monitoring, software modules, parallel computing
+* **Day 3** covers more advanced topics: GPU usage, working with real examples: local open-weights LLMs (large language models).
 
 By the end of the course, you will be ready to use HPC clusters effectively with hands-on skills and ready-made examples.
-
 
 
 If you are at Aalto University: the course is obligatory for all new Triton users and recommended to all interested in the field.
