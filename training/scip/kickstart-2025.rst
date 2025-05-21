@@ -7,110 +7,35 @@ June 2025 / Intro to Scientific Computing /  HPC Summer Kickstart
 
    * News:
 
-     - Coming
+     - Course structure updated!
 
    * Watching links
 
      * Livestream: https://twitch.tv/coderefinery
      * Notes doc: for registered participants, you can register and
        get it automatically
+     * Zoom: live zoom support for students from partner organisations
 
    * Registrations are open at
      https://link.webropol.com/ep/scicompsummer2025
 
 
-Kickstart is a three (half) day course for researchers to get
-started with high-performance computing (HPC) clusters.
+**Kickstart: Introduction to HPC and Scientific Computing**
 
-**The first day serves as a guide to skills you need in your career:** a map to the types of
-resources that are available and skills you may need in your career,
-so that you can be prepared when you
-need more in the future.  This part is especially suitable to new researchers or students trying to
-understand computational/data analysis options available to them.  It
-won't go into anything too deep, but will provide you with a good
-background for your next steps.
+*Kickstart* is a three half-day course for researchers and students who want to get started with high-performance computing (HPC) and scientific computing workflows.
 
-**The second and third days take
-you from being a new user to being competent to run your code at a
-larger scale than you could before using a computer cluster.**
-This part is good for any researcher who thinks they may need to
-scale up to larger resources in the next six months, in any field -
-this is many new researchers in our departments.
-Even if you don't use computing clusters, you will be better prepared
-to understand how computing works on other systems.  If you are a
-student, this is an investment in your skills.  By the end of the course you
-get the hints, ready solutions and
-copy/paste examples on how to find, run and monitor your applications,
-and manage your data.
+Day 1 focuses on the basics of HPC through practical examples. You will learn how to connect to the cluster, how storage choices affect your workflow, how to transfer data, and run your first jobs with slurm.
 
-If you are at Aalto University: the course is obligatory for all new
-Triton users and recommended to all interested in the field.
+Days 2 and 3 introduce tools and practices for scaling up your work. Topics include Conda environments, batch and array jobs, job monitoring, software modules, parallel computing, GPU usage, and working with real examples like large language models.
+
+By the end of the course, you will be ready to use HPC clusters effectively with hands-on skills and ready-made examples.
+
+
+
+If you are at Aalto University: the course is obligatory for all new Triton users and recommended to all interested in the field.
 
 This course is part of :doc:`Scientific Computing in Practice <index>` lecture series
 at Aalto University, supported by many others outside Aalto, and offered to others as part of `CodeRefinery <https://coderefinery.org>`__.
-
-
-
-Practical information
----------------------
-
-This is a **livestream course with distributed in-person exercise and
-support**. Everyone may attend the **livestream** at
-https://twitch.tv/coderefinery, no registration needed, and this is
-the primary way to watch all sessions.  There is constant Q&A via **shared notes**.
-
-**Time, date:**  3 -- 5 June 2025 (Tue--Thu). 10:00-12:00 EEST  (days 1-3) and 13:00-15:00 EEST (days 1-2).
-
-**Place:** Online via public livestream, Zoom exercise sessions for
-partners, and probably in-person discussion/practice rooms at some
-campuses.
-
-**Registration:** Please register at this link:
-https://link.webropol.com/ep/scicompsummer2025 .
-It's OK to register and attend only individual sessions.
-
-**Cost:** Livestream is free to everyone.  Aalto in-person is free of
-charge for FCCI consortium members including Aalto employees and
-students.
-
-**Additional course info at:** scip@aalto.fi
-
-
-
-Other universities
-------------------
-
-**If you are not at Aalto University**, you can follow along and
-probably learn a lot.  We design the course to be useful even to
-others outside of Aalto University, but some of the examples won't
-directly work on your cluster (most will, anyway we will give hints
-about adapting).  How to register if you are not at Aalto:
-
-* Regardless of where you are from, you may use the `primary registration
-  form <https://link.webropol.com/ep/scicompsummer2025>`__ to get emails about the course.  You don't get anything else.
-* Participants from **University of Helsinki** can follow how to connect
-  to their Kale/Turso cluster by following `their own instructions
-  <https://wiki.helsinki.fi/pages/viewpage.action?pageId=408323613>`__.
-* Participants from **University of Oulu**: please follow instructions on
-  `how to access the Carpo2 computing cluster <https://ict.oulu.fi/17120/?page&lang=en>`__.
-* **Tampere**: this course is recommended for all new Narvi users and also all
-  interested in HPC. Most things should work with simply replacing triton
-  -> narvi. Some differences in configuration are listed in
-  `Narvi differences
-  <https://narvi-docs.readthedocs.io/kickstart-diffs.html>`__
-* [no active support] `CSC <https://csc.fi>`__ (Finland): Participants with `CSC user
-  account <https://docs.csc.fi/accounts/>`__ can try examples also in
-  CSC supercomputers, see the `overview of CSC supercomputers
-  <https://docs.csc.fi/computing/overview/>`__ for details on
-  connecting, etc.
-
-If you want to get your site listed here and/or help out, contact us
-via the `CodeRefinery chat
-<https://coderefinery.github.io/manuals/chat/>`__ (#kickstart-aalto stream).
-We have :doc:`docs for other sites' staff
-</triton/tut/required-cluster-setup>` to know what might be different
-between our course and your cluster.
-
 
 
 Schedule
@@ -132,20 +57,13 @@ Schedule
 
   * :localtime:`3 June 10:10 +03:00` **The HPC Kitchen**
 
-  * :localtime:`3 June 10:20 +03:00` **From data storage to your science**
-
-    - Data is how most computational work starts, whether it is
-      externally collected, simulation code, or generated.  And these
-      days, you can work on data even remotely, and these workflows
-      aren't obvious.  We discuss how data storage choices lead to
-      computational workflows. Materials: `SciComp Intro
-      <https://hackmd.io/@AaltoSciComp/SciCompIntro>`__
+  * :localtime:`3 June 10:20 +03:00` **Connecting to the cluster**
       
   * :localtime:`3 June 10:50 +03:00`  Break
 
-  * :localtime:`3 June 11:00 +03:00`  ???
+  * :localtime:`3 June 11:00 +03:00`  CSC resources for scientific computing
 
-  * :localtime:`3 June 11:30 +03:00` **Connecting to the cluster**
+    - A special guest from `CSC <https://csc.fi>`__ will talk about our national supercomputers Mahti/Puhti/LUMI and how to use them in practice. 
 
   * :localtime:`3 June 12:00 +03:00` Lunch break
   
@@ -231,6 +149,71 @@ Schedule
   * :localtime:`5 June 12:00 +03:00` End of day
 
   
+
+
+
+Practical information
+---------------------
+
+This is a **livestream course with distributed in-person exercise and
+support**. Everyone may attend the **livestream** at
+https://twitch.tv/coderefinery, no registration needed, and this is
+the primary way to watch all sessions.  There is constant Q&A via **shared notes**.
+
+**Time, date:**  3 -- 5 June 2025 (Tue--Thu). 10:00-12:00 EEST  (days 1-3) and 13:00-15:00 EEST (days 1-2).
+
+**Place:** Online via public livestream, Zoom exercise sessions for
+partners, and probably in-person discussion/practice rooms at some
+campuses.
+
+**Registration:** Please register at this link:
+https://link.webropol.com/ep/scicompsummer2025 .
+It's OK to register and attend only individual sessions.
+
+**Cost:** Livestream is free to everyone.  Aalto in-person is free of
+charge for FCCI consortium members including Aalto employees and
+students.
+
+**Additional course info at:** scip@aalto.fi
+
+
+
+Other universities
+------------------
+
+**If you are not at Aalto University**, you can follow along and
+probably learn a lot.  We design the course to be useful even to
+others outside of Aalto University, but some of the examples won't
+directly work on your cluster (most will, anyway we will give hints
+about adapting).  How to register if you are not at Aalto:
+
+* Regardless of where you are from, you may use the `primary registration
+  form <https://link.webropol.com/ep/scicompsummer2025>`__ to get emails about the course.  You don't get anything else.
+* Participants from **University of Helsinki** can follow how to connect
+  to their Kale/Turso cluster by following `their own instructions
+  <https://wiki.helsinki.fi/pages/viewpage.action?pageId=408323613>`__.
+* Participants from **University of Oulu**: please follow instructions on
+  `how to access the Carpo2 computing cluster <https://ict.oulu.fi/17120/?page&lang=en>`__.
+* **Tampere**: this course is recommended for all new Narvi users and also all
+  interested in HPC. Most things should work with simply replacing triton
+  -> narvi. Some differences in configuration are listed in
+  `Narvi differences
+  <https://narvi-docs.readthedocs.io/kickstart-diffs.html>`__
+* [no active support] `CSC <https://csc.fi>`__ (Finland): Participants with `CSC user
+  account <https://docs.csc.fi/accounts/>`__ can try examples also in
+  CSC supercomputers, see the `overview of CSC supercomputers
+  <https://docs.csc.fi/computing/overview/>`__ for details on
+  connecting, etc.
+
+If you want to get your site listed here and/or help out, contact us
+via the `CodeRefinery chat
+<https://coderefinery.github.io/manuals/chat/>`__ (#kickstart-aalto stream).
+We have :doc:`docs for other sites' staff
+</triton/tut/required-cluster-setup>` to know what might be different
+between our course and your cluster.
+
+
+
 
 
 
