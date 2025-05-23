@@ -103,8 +103,9 @@ Here are some guidelines for effective HPO on HPC systems:
 1. **Parallel Trials with Slurm Array Jobs** (Straightforward)
 
    - Run multiple independent trials simultaneously
-   - Each array task runs with different parameters
+   - Each array task runs with different hyperparameters
    - Store results in separate directories (e.g., ``results/$SLURM_ARRAY_TASK_ID``)
+   
 
 2. **More Efficient Search Methods**
 
