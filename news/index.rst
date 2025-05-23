@@ -2,16 +2,18 @@
 News
 ====
 
-*22/03/2024* We have a new exciting course coming! Best practices in HPC! More info below
+*22/05/2025* Registrations have opened for our "kickstart" course on how to use Triton efficiently!
 
 **Upcoming Courses**
 
-*April-May/2024* Tuesdays Tools and Techniques for High Performance Computing (TTT4HPC). `More info and registrations at this page <https://scicomp.aalto.fi/training/scip/ttt4hpc-2024/>`__. A new course on HPC practices! Four self-contained episodes. Pick the one which you need the most or join us for all of them!
+*June/2025* Introduction to scientific computing and HPC: how to use Triton efficiently. Highly recommended for those who just started with Triton! `More info and registrations at this link <https://scicomp.aalto.fi/training/scip/kickstart-2025/>`__. 
 
 Join our `daily zoom garage </help/garage/>`__ for any scientific computing related issue (not just Triton!) or to just chat and feel part of the community.  `Follow us on Mastodon <https://fosstodon.org/@SciCompAalto>`__.
 
 News archive
 ~~~~~~~~~~~~
+
+*April-May/2024* Tuesdays Tools and Techniques for High Performance Computing (TTT4HPC). `More info and registrations at this page <https://scicomp.aalto.fi/training/scip/ttt4hpc-2024/>`__. A new course on HPC practices! Four self-contained episodes. Pick the one which you need the most or join us for all of them!
 
 *24/01/2024* Triton users' group meeting. This is a special event for all the users of our cluster: come and hear what's new with Triton. This is also a good moment to express your wishes for future developments.
 

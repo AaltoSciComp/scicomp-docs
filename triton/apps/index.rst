@@ -58,11 +58,7 @@ scicomp.aalto.fi.
 Software documentation pages
 ----------------------------
 
-.. toctree::
-   :maxdepth: 1
-   :glob:
-
-   *
+See the :ref:`application list on the main Triton page <apps>`
 
 
 Software installation and policy

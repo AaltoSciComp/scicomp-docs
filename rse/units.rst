@@ -79,18 +79,24 @@ Proposal: join us and we expand Science-IT
 It's time to consider the benefits wider at Aalto.  **Science-IT is a
 virtual team and your unit can easily join.**
 
-**Current state:** ITS provides funding for SCI-RSE to do projects
- outside of SCI.  We are reaching the limit of our stability, and
- other units need specialists in their research.
+**Current state:** ITS provides funding for SCI-RSE to do small
+projects outside of SCI.  We are reaching the limit of our stability,
+and other units need specialists in their research.
 
-* Hires within your unit- focused on your needs.
-* Possibility of development funding for 2-3 year startup.
+* You can hire an approprate RSE within your unit.
+
+* They work as part of the Science-IT virtual team.
+
 * SCI-RSE helps with start-up:
 
   * SCI-RSE can help hiring and onboarding
   * SCI-RSE can mentor in software/data/SciComp skills
   * SCI-RSE can help connect to the right kind of projects
   * We work as a team
+
+* In 2025-2026, we have the possibility of development project
+  co-funding for a 2-3 year startup.
+
 
 .. admonition:: School of Science practices
    :class: dropdown

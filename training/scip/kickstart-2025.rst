@@ -5,49 +5,152 @@ June 2025 / Intro to Scientific Computing /  HPC Summer Kickstart
 .. admonition:: Quick links
    :class: important
 
+   
+   * **Registrations are open**: https://link.webropol.com/ep/scicompsummer2025
+   
    * News:
 
-     - Coming
+     - 21.5.2025: Course structure updated!
 
    * Watching links
 
      * Livestream: https://twitch.tv/coderefinery
      * Notes doc: for registered participants, you can register and
        get it automatically
-
-   * Registrations are open at
-     https://link.webropol.com/ep/scicompsummer2025
+     * Zoom: live zoom support for students from partner organisations
 
 
-Kickstart is a three (half) day course for researchers to get
-started with high-performance computing (HPC) clusters.
 
-**The first day serves as a guide to skills you need in your career:** a map to the types of
-resources that are available and skills you may need in your career,
-so that you can be prepared when you
-need more in the future.  This part is especially suitable to new researchers or students trying to
-understand computational/data analysis options available to them.  It
-won't go into anything too deep, but will provide you with a good
-background for your next steps.
+**Kickstart: Introduction to HPC and Scientific Computing**
 
-**The second and third days take
-you from being a new user to being competent to run your code at a
-larger scale than you could before using a computer cluster.**
-This part is good for any researcher who thinks they may need to
-scale up to larger resources in the next six months, in any field -
-this is many new researchers in our departments.
-Even if you don't use computing clusters, you will be better prepared
-to understand how computing works on other systems.  If you are a
-student, this is an investment in your skills.  By the end of the course you
-get the hints, ready solutions and
-copy/paste examples on how to find, run and monitor your applications,
-and manage your data.
+*Kickstart* is a three half-day course for researchers and students who want to get started with high-performance computing (HPC) and scientific computing workflows.
 
-If you are at Aalto University: the course is obligatory for all new
-Triton users and recommended to all interested in the field.
+* **Day 1**: focuses on the basics of HPC through practical examples. You will learn how to connect to a supercomputer, how storage choices affect your workflow, how to transfer data, and run your first jobs with slurm.
+* **Day 2** introduces tools and practices for efficient and responsible data science. Topics include Conda environments, batch and array jobs, job monitoring, software modules, parallel computing
+* **Day 3** covers more advanced topics: GPU usage, working with real examples: local open-weights LLMs (large language models).
+
+By the end of the course, you will be ready to use HPC clusters effectively with hands-on skills and ready-made examples.
+
+
+If you are at Aalto University: the course is obligatory for all new Triton users and recommended to all interested in the field.
 
 This course is part of :doc:`Scientific Computing in Practice <index>` lecture series
 at Aalto University, supported by many others outside Aalto, and offered to others as part of `CodeRefinery <https://coderefinery.org>`__.
+
+
+Schedule
+--------
+
+.. admonition:: Subject to change
+
+   Schedule may still have updates before the course, and also during
+   as we adapt to audience questions and interests.
+
+**Times automatically converted to:** :localtime2:`3 Jun 2025 (zzz)`
+
+* **Day 1 (Tue 3 June)**
+
+  * :localtime:`3 June 9:50 +03:00 (hh:mm [(on ]YYYY-MM-DD[)])`: Joining time/icebreaker
+
+  * :localtime:`3 June 10:00 +03:00` **Introduction, about the course** Materials:
+    :doc:`../../training/kickstart/intro`
+
+  * :localtime:`3 June 10:10 +03:00` **The HPC Kitchen**
+
+  * :localtime:`3 June 10:20 +03:00` **Connecting to the cluster**
+      
+  * :localtime:`3 June 10:50 +03:00`  Break
+
+  * :localtime:`3 June 11:00 +03:00`  CSC resources for scientific computing
+
+    - A special guest from `CSC <https://csc.fi>`__ will talk about our national supercomputers Mahti/Puhti/LUMI and how to use them in practice. 
+
+  * :localtime:`3 June 12:00 +03:00` Lunch break
+  
+  * :localtime:`3 June 13:00 +03:00` **Setting up for a new project**
+
+    - :doc:`/triton/tut/intro`
+    - Cluster shell, section :ref:`triton-tut-example-repo`
+
+  * :localtime:`3 June 13:20 +03:00` **Data transfer**
+
+    - :doc:`/triton/tut/storage`
+    - :doc:`/triton/tut/remotedata`
+
+  * :localtime:`3 June 13:40 +03:00` **What is Slurm?**
+    - :doc:`/triton/tut/slurm`
+
+  * :localtime:`3 June 13:50 +03:00` Break
+
+  * :localtime:`3 June 14:00 +03:00` **Interactive jobs**
+
+    - :doc:`/triton/tut/interactive`
+
+  * :localtime:`3 June 14:20 +03:00` **First serial jobs**
+
+    - :doc:`/triton/tut/serial`
+
+  * :localtime:`3 June 15:00 +03:00` End of day
+
+* **Day 2 (4 June)**
+
+  * :localtime:`4 June 09:50 +03:00 (hh:mm [(on ]YYYY-MM-DD[)])` Connecting, icebreakers, Q&A
+
+  * :localtime:`4 June 10:00 +03:00` **Behind the scenes: the humans of scientific computing** *Richard Darst and a special guest*
+
+    - Who are we that teach this course and provide SciComp support?
+      What makes it such a fascinating career?  Learn about what goes on
+      behind the scenes and how you could join us.
+  
+  * :localtime:`4 June 10:20 +03:00` **Conda**
+
+  * :localtime:`4 June 11:00 +03:00` Break
+
+  * :localtime:`4 June 11:10 +03:00` **Array jobs**
+
+    - :doc:`/triton/tut/parallel`
+    - :doc:`/triton/tut/array`
+
+  * :localtime:`4 June 12:00 +03:00`: Lunch break
+
+  * :localtime:`4 June 13:00 +03:00` **Monitoring**
+
+    - :doc:`/triton/tut/monitoring`
+
+  * :localtime:`4 June 13:20 +03:00` **Applications**
+
+    - :doc:`/triton/tut/applications`
+    - :doc:`/triton/tut/modules`
+
+  * :localtime:`4 June 13:40 +03:00` **Research integrity, security, compliance, and reproducibility**
+    
+  * :localtime:`4 June 14:00 +03:00` Break
+  
+  * :localtime:`4 June 14:10 +03:00` **Parallel**
+
+    - :doc:`/triton/tut/parallel-shared`
+    - :doc:`/triton/tut/parallel-mpi`
+
+  * :localtime:`4 June 15:00 +03:00` End of day
+
+* **Day 3 (5 June)**
+
+  * :localtime:`5 June 9:50 +03:00 (hh:mm [(on ]YYYY-MM-DD[)])` Connecting, icebreaker, Q&A
+  * :localtime:`5 June 10:00 +03:00` **How to ask for help with (super)computers**
+
+    - It’s dangerous to go alone, take us! Don’t waste time struggling, there are plenty of people here for you.
+      Materials: `Slides <https://zenodo.org/records/8392763>`__.
+
+  * :localtime:`5 June 10:20 +03:00` **GPUs**
+
+    - :doc:`/triton/tut/gpu`
+
+  * :localtime:`5 June 10:50 +03:00` Break
+  * :localtime:`5 June 11:00 +03:00` **LLM example**
+  * :localtime:`5 June 11:40 +03:00` **Wrap up and summary, ask us anything**
+  * :localtime:`5 June 12:00 +03:00` End of day
+
+  
 
 
 
@@ -113,124 +216,6 @@ between our course and your cluster.
 
 
 
-Schedule
---------
-
-.. admonition:: Subject to change
-
-   Schedule may still have updates before the course, and also during
-   as we adapt to audience questions and interests.
-
-**Times automatically converted to:** :localtime2:`3 Jun 2025 (zzz)`
-
-* **Day 1 (Tue 3 June)**
-
-  * :localtime:`3 June 9:50 +03:00 (hh:mm [(on ]YYYY-MM-DD[)])`: Joining time/icebreaker
-
-  * :localtime:`3 June 10:00 +03:00` **Introduction, about the course** Materials:
-    :doc:`../../training/kickstart/intro`
-
-  * :localtime:`3 June 10:10 +03:00` **The HPC Kitchen**
-
-  * :localtime:`3 June 10:20 +03:00` **From data storage to your science**
-
-    - Data is how most computational work starts, whether it is
-      externally collected, simulation code, or generated.  And these
-      days, you can work on data even remotely, and these workflows
-      aren't obvious.  We discuss how data storage choices lead to
-      computational workflows. Materials: `SciComp Intro
-      <https://hackmd.io/@AaltoSciComp/SciCompIntro>`__
-      
-  * :localtime:`3 June 10:50 +03:00`  Break
-
-  * :localtime:`3 June 11:00 +03:00`  ???
-
-  * :localtime:`3 June 11:30 +03:00` **Connecting to the cluster**
-
-  * :localtime:`3 June 12:00 +03:00` Lunch break
-  
-  * :localtime:`3 June 13:00 +03:00` **Setting up for a new project**
-
-    - :doc:`/triton/tut/intro`
-    - Cluster shell, section :ref:`triton-tut-example-repo`
-
-  * :localtime:`3 June 13:20 +03:00` **Data transfer**
-
-    - :doc:`/triton/tut/storage`
-    - :doc:`/triton/tut/remotedata`
-
-  * :localtime:`3 June 13:40 +03:00` **What is Slurm?**
-    - :doc:`/triton/tut/slurm`
-
-  * :localtime:`3 June 13:50 +03:00` Break
-
-  * :localtime:`3 June 14:00 +03:00` **Interactive jobs**
-
-    - :doc:`/triton/tut/interactive`
-
-  * :localtime:`3 June 14:20 +03:00` **First serial jobs**
-
-    - :doc:`/triton/tut/serial`
-
-  * :localtime:`3 June 15:00 +03:00` End of day
-
-* **Day 2 (4 June)**
-
-  * :localtime:`4 June 09:50 +03:00 (hh:mm [(on ]YYYY-MM-DD[)])` Connecting, icebreakers, Q&A
-
-  * :localtime:`4 June 10:00 +03:00` **Behind the scenes: the humans of scientific computing** *Richard Darst and a special guest*
-
-    - Who are we that teach this course and provide SciComp support?
-      What makes it such a fascinating career?  Learn about what goes on
-      behind the scenes and how you could join us.
-  
-  * :localtime:`4 June 10:20 +03:00` **Conda**
-
-  * :localtime:`4 June 11:00 +03:00` Break
-
-  * :localtime:`4 June 11:10 +03:00` **Array jobs**
-
-    - :doc:`/triton/tut/parallel`
-    - :doc:`/triton/tut/array`
-
-  * :localtime:`4 June 12:00 +03:00`: Lunch break
-
-  * :localtime:`4 June 13:00 +03:00` **Monitoring**
-
-    - :doc:`/triton/tut/monitoring`
-
-  * :localtime:`4 June 13:20 +03:00` **Applications**
-
-    - :doc:`/triton/tut/applications`
-    - :doc:`/triton/tut/modules`
-
-  * :localtime:`4 June 13:40 +03:00` ???
-    
-  * :localtime:`4 June 14:10 +03:00` **Parallel**
-
-    - :doc:`/triton/tut/parallel-shared`
-    - :doc:`/triton/tut/parallel-mpi`
-
-  * :localtime:`4 June 15:00 +03:00` End of day
-
-* **Day 3 (5 June)**
-
-  * :localtime:`5 June 9:50 +03:00 (hh:mm [(on ]YYYY-MM-DD[)])` Connecting, icebreaker, Q&A
-  * :localtime:`5 June 10:00 +03:00` **How to ask for help with (super)computers**
-
-    - It’s dangerous to go alone, take us! Don’t waste time struggling, there are plenty of people here for you.
-      Materials: `Slides <https://zenodo.org/records/8392763>`__.
-
-  * :localtime:`5 June 10:20 +03:00` **GPUs**
-
-    - :doc:`/triton/tut/gpu`
-
-  * :localtime:`5 June 10:50 +03:00` Break
-  * :localtime:`5 June 11:00 +03:00` **LLM example**
-  * :localtime:`5 June 11:40 +03:00` **Wrap up and summary, ask us anything**
-  * :localtime:`5 June 12:00 +03:00` End of day
-
-  
 
 
 

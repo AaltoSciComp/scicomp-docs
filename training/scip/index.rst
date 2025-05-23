@@ -81,3 +81,11 @@ deleted.  This series has existed since 2016.
 - :doc:`kickstart-2024`
 - `CodeRefinery September 10-12 and 17-19 <https://coderefinery.org>`__
 - :doc:`python-for-scicomp-2024`
+
+
+2025
+----
+
+- :doc:`winter-kickstart-2025`
+- `CodeRefinery March 2025 <https://coderefinery.github.io/2025-03-25-workshop/>`__
+- `Practical Deep Learning on LUMI (with CSC, April 2025, registrations opening soon) <https://csc.fi/en/trainings/training-calendar/>`__

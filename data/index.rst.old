@@ -63,9 +63,6 @@ can help you with funding or practical data management plans.
 
 __ https://www.aalto.fi/en/services/data-management-plan-dmp
 
-.. toctree::
-
-   plans
 
 
 During the project
@@ -88,11 +85,6 @@ possibly daily work.  See the :doc:`outline of data management at
 Aalto <principles>` page.
 
 
-.. toctree::
-   :maxdepth: 1
-
-   services
-   organization
 
 
 
@@ -169,10 +161,6 @@ See our :doc:`Open Source page <../aalto/opensource>` for more info.
 Other info
 ==========
 
-.. toctree::
-   :maxdepth: 1
-
-   ida
 
 External links
 ==============

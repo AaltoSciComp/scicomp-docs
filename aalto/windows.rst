@@ -8,7 +8,7 @@ where login is via Aalto accounts.  If you have a standalone laptop
 the most part you will access your data and Aalto resources via
 :doc:`remoteaccess`.
 
-More instructions: https://inside.aalto.fi/display/ITServices/Windows
+More instructions: https://www.aalto.fi/en/services/aalto-windows-quick-guide
 
 
 
