@@ -402,37 +402,42 @@ to check your local documentation for what the equivalents are.
       you can see that ``cmake`` loads several other modules when it
       is loaded. Some of these models also load their own depedencies.
 
-.. exercise:: Hierarchical modules
+.. exercise:: Modules-4: Modules with multiple hierarchies
 
-   How can you load the module ``quantum-espresso/7.2``::
+   How can you load the module ``fftw/3.3.10``::
 
-     $ module load quantum-espresso/7.2
+     $ module load fftw/3.3.10
      Lmod has detected the following error:  These module(s) or
-     extension(s) exist but cannot be loaded as requested: "quantum-espresso/7.2"
-        Try: "module spider quantum-espresso/7.2" to see how to load the module(s).
+     extension(s) exist but cannot be loaded as requested: "fftw/3.3.10"
+        Try: "module spider fftw/3.3.10" to see how to load the module(s).
 
 
    .. solution::
 
       This is a double-hierarchical module, that is built using two
-      different toolchains, so you have a choice to make when loading::
+      different toolchains. In addition to requiring the relevant software
+      stack module, you also have a choice to make when loading::
 
-        $ module spider quantum-espresso/7.2
+        $ module spider fftw/3.3.10
         ...
         You will need to load all module(s) on any one of the lines
         below before the "openfoam-org/11" module is available to load.
 
-        openmpi/4.1.6
-        scibuilder-spack-dev/2024-01  openmpi/4.1.6
+        triton-software-stack/2024.1-gcc
+        triton-software-stack/2024.1-gcc  openmpi/4.1.6
 
-      So here we go, loaded and we use ``which`` to verify one of the
-      programs can be found::
+      Now let us load the version compiled with openmpi support as an example::
 
-         $ module load openmpi/4.1.6 quantum-espresso/7.2
-         $ which pw.x
-         /appl/scibuilder-spack/aalto-rhel9-dev/2024-01/software/linux-rhel9-haswell/gcc-12.3.0/quantum-espresso-7.2-kmqslxn/bin/pw.x
+         $ module load triton/2024.1-gcc openmpi/4.1.6 fftw/3.3.10
 
+      Then check what happens if we unload the openmpi module::
 
+         $ module unload openmpi/4.1.6
+        Due to MODULEPATH changes, the following have been reloaded:
+          1) fftw/3.3.10
+
+      Lmod automatically changed the version of fftw to one without mpi support, 
+      since we no longer have any mpi libraries loaded. 
 
 .. exercise:: Modules-5: Modules and dependencies
 
