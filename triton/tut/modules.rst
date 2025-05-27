@@ -49,7 +49,7 @@ software by default for every user.
 A module lets you adjust what software is available,
 and makes it easy to switch between different versions.
 
-As an example, let's inspect the ``triton_base_python`` module with ``module
+As an example, let's inspect the ``scicomp-python-env`` module with ``module
 show scicomp-python-env``:
 
 .. highlight:: console
@@ -173,20 +173,19 @@ Hierarchical modules
 --------------------
 
 Hierarchical modules means that you have to load one module before you
-can load another.  This is usually a compiler:
+can load another. In the case of Triton, most compiled software will 
+require loading a relevant software stack module. Another common 
+hierarchy is for MPI software.
 
-**Warning: This example is not yet updated for new-Triton and won't work
-anymore.  The concept still applies.**
-
-For example, let's load a newer version of R:
+For example, let's load a newer version of CMake:
 
 .. code-block:: console
   :emphasize-lines: 3-4
 
-  $ module load r/4.2.2
+  $ module load cmake/3.27.7
   Lmod has detected the following error:  These module(s) or
-  extension(s) exist but cannot be loaded as requested: "r/4.2.2"
-     Try: "module spider r/4.2.2" to see how to load the module(s).
+  extension(s) exist but cannot be loaded as requested: "cmake/3.27.7"
+     Try: "module spider cmake/3.27.7" to see how to load the module(s).
 
 Lmod says that the modules exist but can't be loaded, but gives a hint
 for what to do next.  Let's do that:
@@ -194,25 +193,24 @@ for what to do next.  Let's do that:
 .. code-block:: console
    :emphasize-lines: 7-9
 
-   $ module spider r/4.2.2
+   $ module spider cmake/3.27.7
 
    ----------------------------------------------------------------------------
-     r: r/4.2.2
+     cmake: cmake/3.27.7
    ----------------------------------------------------------------------------
 
-       You will need to load all module(s) on any one of the lines below before the "r/4.2.2" module is available to load.
+       You will need to load all module(s) on any one of the lines below before the "cmake/3.27.7" module is available to load.
 
-   gcc/11.3.0
+        triton/2024.1-gcc
 
        Help:
        ...
 
 So now we can load it (we can do it in one line)::
 
-  $ module load gcc/11.3.0 r/4.2.2
-  $ R --version
-  R version 4.2.2 (2022-10-31) -- "Innocent and Trusting"
-
+  $ module load triton/2024.1-gcc cmake/3.27.7
+  $ cmake --version
+  cmake version 3.27.7
 
 
 
@@ -242,9 +240,7 @@ dependencies. This can result in long loading times or be annoying to
 do each time you log in to the system. However, there is a solution:
 ``module save COLLECTION_NAME`` and ``module restore COLLECTION_NAME``
 
-Let's see how to do this in an example.  **Warning: This example is not
-yet updated for new-Triton and won't work anymore.  The concept still
-applies.**
+Let's see how to do this in an example.
 
 Let's say that for compiling / running your program you need:
 
@@ -256,8 +252,8 @@ Let's say that for compiling / running your program you need:
 
 You could run this each time you want to compile/run your code::
 
-  $ module load gcc/9.2.0 cmake/3.15.3 openmpi/3.1.4 fftw/3.3.8-openmpi openblas/0.3.7
-  $ module list           # 15 modules
+  $ module load triton/2024.1-gcc gcc/12.3.0 cmake/3.27.7 openmpi/4.1.6 fftw/3.3.10 openblas/0.3.24
+  $ module list           # 32 modules
 
 Let's say this environment works for you. Now you can save it with
 ``module save MY-ENV-NAME``.  Then ``module purge`` to unload
@@ -266,7 +262,7 @@ everything.  Now, do ``module restore MY-ENV-NAME``::
   $ module save my-env
   $ module purge
   $ module restore my-env
-  $ module list           # same 15 modules
+  $ module list           # same 32 modules
 
 Generally, it is a good idea to save your modules as a collection to
 have your desired modules all set up each time you want to
@@ -402,37 +398,42 @@ to check your local documentation for what the equivalents are.
       you can see that ``cmake`` loads several other modules when it
       is loaded. Some of these models also load their own depedencies.
 
-.. exercise:: Hierarchical modules
+.. exercise:: Modules-4: Modules with multiple hierarchies
 
-   How can you load the module ``quantum-espresso/7.2``::
+   How can you load the module ``fftw/3.3.10``::
 
-     $ module load quantum-espresso/7.2
+     $ module load fftw/3.3.10
      Lmod has detected the following error:  These module(s) or
-     extension(s) exist but cannot be loaded as requested: "quantum-espresso/7.2"
-        Try: "module spider quantum-espresso/7.2" to see how to load the module(s).
+     extension(s) exist but cannot be loaded as requested: "fftw/3.3.10"
+        Try: "module spider fftw/3.3.10" to see how to load the module(s).
 
 
    .. solution::
 
       This is a double-hierarchical module, that is built using two
-      different toolchains, so you have a choice to make when loading::
+      different toolchains. In addition to requiring the relevant software
+      stack module, you also have a choice to make when loading::
 
-        $ module spider quantum-espresso/7.2
+        $ module spider fftw/3.3.10
         ...
         You will need to load all module(s) on any one of the lines
         below before the "openfoam-org/11" module is available to load.
 
-        openmpi/4.1.6
-        scibuilder-spack-dev/2024-01  openmpi/4.1.6
+        triton/2024.1-gcc
+        triton/2024.1-gcc  openmpi/4.1.6
 
-      So here we go, loaded and we use ``which`` to verify one of the
-      programs can be found::
+      Now let us load the version compiled with openmpi support as an example::
 
-         $ module load openmpi/4.1.6 quantum-espresso/7.2
-         $ which pw.x
-         /appl/scibuilder-spack/aalto-rhel9-dev/2024-01/software/linux-rhel9-haswell/gcc-12.3.0/quantum-espresso-7.2-kmqslxn/bin/pw.x
+         $ module load triton/2024.1-gcc openmpi/4.1.6 fftw/3.3.10
 
+      Then check what happens if we unload the openmpi module::
 
+         $ module unload openmpi/4.1.6
+        Due to MODULEPATH changes, the following have been reloaded:
+          1) fftw/3.3.10
+
+      Lmod automatically changed the version of fftw to one without mpi support, 
+      since we no longer have any mpi libraries loaded. 
 
 .. exercise:: Modules-5: Modules and dependencies
 

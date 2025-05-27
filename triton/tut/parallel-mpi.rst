@@ -120,7 +120,7 @@ can utilize multiple MPI tasks for calculating the trials.
 First off, we need to compile the program with a suitable OpenMPI version. Let's use the
 recommended version ``openmpi/4.1.6``::
 
-   $ module load openmpi/4.1.6
+   $ module load triton/2024.1-gcc openmpi/4.1.6
 
    $ mpicc -o pi-mpi slurm/pi-mpi.c
 
@@ -143,7 +143,7 @@ Using a slurm script setting the requirements and loading the correct modules be
    #SBATCH --nodes=1
    #SBATCH --ntasks=2
 
-   module load openmpi/4.1.6
+   module load triton/2024.1-gcc openmpi/4.1.6
 
    srun ./pi-mpi 1000000
 
@@ -201,7 +201,7 @@ following script:
   #SBATCH --ntasks-per-node=24 # 24 processes as that is the number in the machine
   #SBATCH --constraint=hsw     # set constraint for processor architecture
 
-  module load openmpi/4.1.6  # NOTE: should be the same as you used to compile the code
+  module load triton/2024.1-gcc openmpi/4.1.6  # NOTE: should be the same as you used to compile the code
   srun ./pi-mpi 1000000
 
 Monitoring performance
