@@ -69,7 +69,9 @@ So, let us go through this script:
 
 Most programming languages and tools have their own modules that need to be loaded before they can be run. You can get a list of available
 modules by running ``module spider``. If you need a specific version of a module, you can check the available versions by running ``module spider MODULENAME``
-(e.g. ``module spider r`` for ``R``). To load a specific version you have to specify this version during the load command (e.g. ``module load matlab/r2023b``
+(e.g. ``module spider r`` for ``R``). Several modules also require loading a specific software stack module before they can be loaded. 
+You can do ``module spider MODULENAME/VERSION`` to see what modules need to be loaded beforehand and what software stacks contain that specific version. 
+To load a specific version you have to specify this version during the load command (e.g. ``module load matlab/r2023b``
 for the 2023b release of MATLAB). For further details please have a look at the :ref:`instructions for the specific application <application-list>`
 
 There are plenty more parameters that you can set for the slurm scheduler as well (for a detailed list can be found `here <https://slurm.schedmd.com/pdfs/summary.pdf>`__),
