@@ -49,7 +49,7 @@ software by default for every user.
 A module lets you adjust what software is available,
 and makes it easy to switch between different versions.
 
-As an example, let's inspect the ``triton_base_python`` module with ``module
+As an example, let's inspect the ``scicomp-python-env`` module with ``module
 show scicomp-python-env``:
 
 .. highlight:: console
@@ -212,10 +212,6 @@ So now we can load it (we can do it in one line)::
   $ cmake --version
   cmake version 3.27.7
 
-We also have convenient aliases for software stack modules. Instead of 
-writing ``triton-software-stack/<version>`` every time, you can use alias 
-``triton/<version>``. Similarily we have alias ``triton-dev`` for the 
-development version of our software stack.
 
 
 What's going on under the hood here?
