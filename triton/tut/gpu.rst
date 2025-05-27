@@ -160,7 +160,7 @@ a newer compiler:
 
 .. code-block:: bash
 
-   module load gcc/12.3.0 cuda/12.2.1
+   module load triton/2024.1-gcc gcc/12.3.0 cuda/12.2.1
 
 Now we should have a compiler and a CUDA toolkit loaded. After this
 we can compile the code with:
@@ -191,7 +191,7 @@ Using a slurm script setting the requirements and loading the correct modules be
    #SBATCH --output=pi-gpu.out
    #SBATCH --gpus=1
 
-   module load cuda/12.2.1
+   module load triton/2024.1-gcc cuda/12.2.1
    ./pi-gpu 1000000
 
 .. note::
