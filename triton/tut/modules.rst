@@ -201,14 +201,14 @@ for what to do next.  Let's do that:
 
        You will need to load all module(s) on any one of the lines below before the "cmake/3.27.7" module is available to load.
 
-        triton-software-stack/2024.1-gcc
+        triton/2024.1-gcc
 
        Help:
        ...
 
 So now we can load it (we can do it in one line)::
 
-  $ module load triton-software-stack/2024.1-gcc cmake/3.27.7
+  $ module load triton/2024.1-gcc cmake/3.27.7
   $ cmake --version
   cmake version 3.27.7
 
@@ -423,8 +423,8 @@ to check your local documentation for what the equivalents are.
         You will need to load all module(s) on any one of the lines
         below before the "openfoam-org/11" module is available to load.
 
-        triton-software-stack/2024.1-gcc
-        triton-software-stack/2024.1-gcc  openmpi/4.1.6
+        triton/2024.1-gcc
+        triton/2024.1-gcc  openmpi/4.1.6
 
       Now let us load the version compiled with openmpi support as an example::
 
