@@ -3,7 +3,11 @@ channels:
   - nvidia
   - conda-forge
 dependencies:
-  - pytorch
-  - pytorch-cuda=12.4
+  - pytorch-gpu==2.6.0
   - torchvision
-  - torchaudio
+  - torchaudio=*=cuda*
+  - cudnn
+  - cuda-version>=12.6,<12.7
+  - cuda-compiler>=12.6,<12.7
+  - cuda-nvcc>=12.6,<12.7
+  - cuda-libraries-dev>=12.6,<12.7
