@@ -61,7 +61,7 @@ Schedule
       
   * :localtime:`3 June 10:50 +03:00`  Break
 
-  * :localtime:`3 June 11:00 +03:00`  CSC resources for scientific computing
+  * :localtime:`3 June 11:00 +03:00`  **CSC resources for scientific computing**
 
     - A special guest from `CSC <https://csc.fi>`__ will talk about our national supercomputers Mahti/Puhti/LUMI and how to use them in practice. 
 
