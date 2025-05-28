@@ -11,6 +11,8 @@ There is a better way.  Scientific computing must be a team effort in
 the future (just like physical laboratories have their own
 specialists).
 
+`Three slide introduction <https://aaltofi.sharepoint.com/:p:/s/SciComp--ITSCloudTeam/EdbJv90A2QtCg182W20tzeUBb_mWX-7W1Uu8dh62mN34-w?e=uCg9sA>`__ (internal users only).
+
 
 
 What are Research Software Engineers (RSE)?
