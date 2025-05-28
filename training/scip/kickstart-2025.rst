@@ -5,9 +5,9 @@ June 2025 / Intro to Scientific Computing /  HPC Summer Kickstart
 .. admonition:: Quick links
    :class: important
 
-   
+
    * **Registrations are open**: https://link.webropol.com/ep/scicompsummer2025
-   
+
    * News:
 
      - 21.5.2025: Course structure updated!
@@ -53,42 +53,52 @@ Schedule
   * :localtime:`3 June 9:50 +03:00 (hh:mm [(on ]YYYY-MM-DD[)])`: Joining time/icebreaker
 
   * :localtime:`3 June 10:00 +03:00` **Introduction, about the course** Materials:
-    :doc:`../../training/kickstart/intro`
+    :doc:`../../training/kickstart/intro` (EG, )
 
-  * :localtime:`3 June 10:10 +03:00` **The HPC Kitchen**
+    * Intro to SciComp and HPC: (traditional hackmd link, video link)
 
-  * :localtime:`3 June 10:20 +03:00` **Connecting to the cluster**
-      
+  * :localtime:`3 June 10:10 +03:00` **The HPC Kitchen** (RD, TP)
+
+    - `Video playlist <https://www.youtube.com/watch?v=yqGtnA7CUtU&list=PLZLVmS9rf3nNDHRo1Baz_JVQWDI0mTYyB>`__, `Slides (separate from the videos) <https://docs.google.com/presentation/d/16BTILZlUvEzCt6FfMsB9sSZm0PZHHXLBthE5QfoSrjo/edit>`__
+
+  * :localtime:`3 June 10:20 +03:00` **Connecting to the cluster** (TP, SM)
+
   * :localtime:`3 June 10:50 +03:00`  Break
 
-  * :localtime:`3 June 11:00 +03:00`  **CSC resources for scientific computing**
+  * :localtime:`3 June 11:00 +03:00`  **CSC resources for scientific computing** (JL)
 
-    - A special guest from `CSC <https://csc.fi>`__ will talk about our national supercomputers Mahti/Puhti/LUMI and how to use them in practice. 
+    - A special guest from `CSC <https://csc.fi>`__ will talk about our national supercomputers Mahti/Puhti/LUMI and how to use them in practice.
 
   * :localtime:`3 June 12:00 +03:00` Lunch break
-  
-  * :localtime:`3 June 13:00 +03:00` **Setting up for a new project**
+
+  * :localtime:`3 June 13:00 +03:00` **Setting up for a new project** (RD, ST)
 
     - :doc:`/triton/tut/intro`
     - Cluster shell, section :ref:`triton-tut-example-repo`
+    - New page on project setup
+    - Big example: Cloning our Gutenberg analysis code to the cluster.
 
-  * :localtime:`3 June 13:20 +03:00` **Data transfer**
+  * :localtime:`3 June 13:20 +03:00` **Data transfer** (RD, ST)
 
     - :doc:`/triton/tut/storage`
     - :doc:`/triton/tut/remotedata`
+    - Big example: Copying Project Gutenburg data to your work directory
 
-  * :localtime:`3 June 13:40 +03:00` **What is Slurm?**
+  * :localtime:`3 June 13:40 +03:00` **What is Slurm?** (ST, RD)
+
     - :doc:`/triton/tut/slurm`
 
   * :localtime:`3 June 13:50 +03:00` Break
 
-  * :localtime:`3 June 14:00 +03:00` **Interactive jobs**
+  * :localtime:`3 June 14:00 +03:00` **Interactive jobs** (RD, ST)
 
     - :doc:`/triton/tut/interactive`
+    - Big example: Project Gutenburg n-gram analysis
 
-  * :localtime:`3 June 14:20 +03:00` **First serial jobs**
+  * :localtime:`3 June 14:20 +03:00` **First serial jobs** (RD, ST)
 
     - :doc:`/triton/tut/serial`
+    - Big example: Project Gutenburg n-gram analysis
 
   * :localtime:`3 June 15:00 +03:00` End of day
 
@@ -96,40 +106,45 @@ Schedule
 
   * :localtime:`4 June 09:50 +03:00 (hh:mm [(on ]YYYY-MM-DD[)])` Connecting, icebreakers, Q&A
 
-  * :localtime:`4 June 10:00 +03:00` **Behind the scenes: the humans of scientific computing** *Richard Darst and a special guest*
+  * :localtime:`4 June 10:00 +03:00` **Behind the scenes: the humans of scientific computing** (RD, SM)
 
     - Who are we that teach this course and provide SciComp support?
       What makes it such a fascinating career?  Learn about what goes on
       behind the scenes and how you could join us.
-  
-  * :localtime:`4 June 10:20 +03:00` **Conda**
+
+  * :localtime:`4 June 10:20 +03:00` **Conda** (JR, YT)
+
+    - :doc:`/triton/apps/python-conda`
+    - Big example: Make a conda environment for LLMs
 
   * :localtime:`4 June 11:00 +03:00` Break
 
-  * :localtime:`4 June 11:10 +03:00` **Array jobs**
+  * :localtime:`4 June 11:10 +03:00` **Array jobs** (ST, RD)
 
     - :doc:`/triton/tut/parallel`
     - :doc:`/triton/tut/array`
+    - Big Example: Project Gutenberg book analysis in parallel
 
   * :localtime:`4 June 12:00 +03:00`: Lunch break
 
-  * :localtime:`4 June 13:00 +03:00` **Monitoring**
+  * :localtime:`4 June 13:00 +03:00` **Monitoring** (ST, RD)
 
     - :doc:`/triton/tut/monitoring`
 
-  * :localtime:`4 June 13:20 +03:00` **Applications**
+  * :localtime:`4 June 13:20 +03:00` **Applications** (RD, ST)
 
     - :doc:`/triton/tut/applications`
     - :doc:`/triton/tut/modules`
 
-  * :localtime:`4 June 13:40 +03:00` **Research integrity, security, compliance, and reproducibility**
-    
+  * :localtime:`4 June 13:40 +03:00` **Research integrity, security, compliance, and reproducibility** (EG, TP)
+
   * :localtime:`4 June 14:00 +03:00` Break
-  
-  * :localtime:`4 June 14:10 +03:00` **Parallel**
+
+  * :localtime:`4 June 14:10 +03:00` **Parallel** (ST, RD)
 
     - :doc:`/triton/tut/parallel-shared`
     - :doc:`/triton/tut/parallel-mpi`
+    - Big example: Calculating pi in parallel
 
   * :localtime:`4 June 15:00 +03:00` End of day
 
@@ -139,18 +154,18 @@ Schedule
   * :localtime:`5 June 10:00 +03:00` **How to ask for help with (super)computers**
 
     - It’s dangerous to go alone, take us! Don’t waste time struggling, there are plenty of people here for you.
-      Materials: `Slides <https://zenodo.org/records/8392763>`__.
+      Materials: `Slides <https://cicero.xyz/v3/remark/0.14.0/github.com/bast/help-with-supercomputers/main/talk.md/>`__.
 
-  * :localtime:`5 June 10:20 +03:00` **GPUs**
+  * :localtime:`5 June 10:20 +03:00` **GPUs** (ST, HF)
 
     - :doc:`/triton/tut/gpu`
 
   * :localtime:`5 June 10:50 +03:00` Break
-  * :localtime:`5 June 11:00 +03:00` **LLM example**
+  * :localtime:`5 June 11:00 +03:00` **LLM example** (YT, HF)
   * :localtime:`5 June 11:40 +03:00` **Wrap up and summary, ask us anything**
   * :localtime:`5 June 12:00 +03:00` End of day
 
-  
+
 
 
 
@@ -219,7 +234,7 @@ between our course and your cluster.
 
 
 
-      
+
 
 
 
@@ -235,7 +250,7 @@ Browsing the following material is sufficient:
   <https://youtu.be/bJMmz5-svJo?t=7&list=PLZLVmS9rf3nMKR2jMglaN4su3ojWtWMVw&index=8>`__, `shorter video <https://www.youtube.com/watch?v=xbTTDLA3txI>`__)
   - important background knowledge for command line work.
 
-  
+
 
 Technical prerequisites
 -----------------------
