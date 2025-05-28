@@ -4,6 +4,6 @@ channels:
   - conda-forge
 dependencies:
   - pytorch
-  - pytorch-cuda=12.1
+  - pytorch-cuda=12.4
   - torchvision
   - torchaudio
