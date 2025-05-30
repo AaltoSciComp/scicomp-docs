@@ -18,7 +18,8 @@ get familiar with the basics of using the cluster, including running jobs and us
 HuggingFace Models
 ~~~~~~~~~~~~~~~~~~~
 
-The simplest way to use pre-trained open-source LLMs is to access them through HuggingFace and to leverage their `🤗 Transformers Python library <https://huggingface.co/docs/transformers/en/index>`__. 
+The most common way to use pre-trained open-source LLMs is to access them through HuggingFace 
+and to leverage their `🤗 Transformers Python library <https://huggingface.co/docs/transformers/en/index>`__. 
 
 HuggingFace provides a wide range of tools and pre-trained models, making it easy to integrate and utilize these models in your projects.
 
@@ -43,15 +44,17 @@ In the following sbatch script, we request computational resources, load the nec
     #!/bin/bash
     #SBATCH --time=00:30:00
     #SBATCH --cpus-per-task=4
-    #SBATCH --mem=40GB
+    #SBATCH --mem=80GB #This is system memory, not GPU memory.
     #SBATCH --gpus=1
+    #SBATCH --partition=gpu-v100-32GB # modify according to your needs
     #SBATCH --output huggingface.%J.out
     #SBATCH --error huggingface.%J.err
 
-    # Set HF_HOME to /scratch/shareddata/dldata/huggingface-hub-cache
+    #By loading the model-huggingface module, we set HF_HOME to /scratch/shareddata/dldata/huggingface-hub-cache which is a shared scratch space.
+    #By default, HF_HOME is set to $HOME/.cache/huggingface, which is under your own home directory where you have limited quota.
     module load model-huggingface
 
-    # Load Python environment to use HuggingFace Transformers
+    # Load a ready to use conda environment to use HuggingFace Transformers
     module load scicomp-llm-env
 
     # Force transformer to load model(s) from local hub instead of download and load model(s) from remote hub. 
@@ -71,7 +74,7 @@ The ``your_script.py`` Python script uses a HuggingFace model ``mistralai/Mistra
   pipe = pipeline( 
     "text-generation", # Task type 
     model="mistralai/Mistral-7B-Instruct-v0.1", # Model name 
-    device="cuda" if torch.cuda.is_available() else "cpu", # Use GPU if available 
+    device="auto", # Let the pipeline automatically select best available device
     max_new_tokens=1000 
   ) 
 
@@ -91,8 +94,10 @@ You can look at the `model card <https://huggingface.co/mistralai/Mistral-7B-Ins
 Other Frameworks
 ~~~~~~~~~~~~~~~~
 
-While HuggingFace provides a convenient way to access and use LLMs, there are other frameworks available for running LLMs, 
-such as `DeepSpeed <https://www.deepspeed.ai/tutorials/inference-tutorial/>`__ and `LangChain <https://python.langchain.com/docs/how_to/local_llms/>`__.
+While HuggingFace provides a convenient way to access and use LLMs, there are other popular frameworks 
+available for running LLMs, such as `vLLM <https://docs.vllm.ai/en/latest/>`__ for high-performance inference,
+`Ollama <https://ollama.com/>`__ for local deployment, `DeepSpeed <https://www.deepspeed.ai/tutorials/inference-tutorial/>`__, 
+and `LangChain <https://python.langchain.com/docs/how_to/local_llms/>`__ for building LLM applications.
 
 If you need assistance running LLMs in these or other frameworks, please contact :doc:`the Aalto RSEs </rse/index>`.
 
