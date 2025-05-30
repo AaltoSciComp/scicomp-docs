@@ -55,7 +55,7 @@ Schedule
   * :localtime:`3 June 10:00 +03:00` **Introduction, about the course** Materials:
     :doc:`../../training/kickstart/intro` (EG, )
 
-    * Intro to SciComp and HPC: (traditional hackmd link, video link)
+    * Intro to SciComp and HPC: (`Material <https://hackmd.io/@AaltoSciComp/SciCompIntro>`__, `Video link from 2024 <https://www.youtube.com/watch?v=8qQ9riStB0Y&list=PLZLVmS9rf3nOeuqXNa8tS-tDtdQrES2We&index=3>`__)
 
   * :localtime:`3 June 10:10 +03:00` **The HPC Kitchen** (RD, TP)
 
