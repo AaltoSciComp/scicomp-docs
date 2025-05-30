@@ -151,7 +151,7 @@ Schedule
 * **Day 3 (5 June)**
 
   * :localtime:`5 June 9:50 +03:00 (hh:mm [(on ]YYYY-MM-DD[)])` Connecting, icebreaker, Q&A
-  * :localtime:`5 June 10:00 +03:00` **How to ask for help with (super)computers**
+  * :localtime:`5 June 10:00 +03:00` **How to ask for help with (super)computers** (RD, )
 
     - It’s dangerous to go alone, take us! Don’t waste time struggling, there are plenty of people here for you.
       Materials: `Slides <https://cicero.xyz/v3/remark/0.14.0/github.com/bast/help-with-supercomputers/main/talk.md/>`__.
