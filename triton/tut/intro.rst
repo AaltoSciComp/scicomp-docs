@@ -70,7 +70,7 @@ Typical cluster workflow is outlined in the image below:
 
    Figure 2: Example workflow in the cluster.
 
-Each project starts with an **intial setup** that usually involves
+Each project starts with an **initial setup** that usually involves
 getting your code and data into Triton and then installing software needed
 by the code.
 
@@ -111,7 +111,7 @@ and running it, you should keep the following considerations in mind:
 - What is the easiest way for you to manage your Slurm submission scripts
   and your jobs?
 - Do you want to do the changes on your computer and then transfer them to
-  Triton or could I do the changes on Triton in the first place? Which
+  Triton or could you do the changes on Triton in the first place? Which
   is easier in my case?
 - How much data do you need to transfer to verify my results? Can you view
   your results without having to move things around?
