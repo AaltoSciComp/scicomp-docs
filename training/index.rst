@@ -12,8 +12,7 @@ Scientific Computing in Practice
 
 SCIP is a lecture series at Aalto University which covers hands-on,
 practical scientific computing related topics. Lectures are open for
-the entire Aalto community as well as our partners at FGCI
-consortium.
+the entire Aalto community as well as our partners around the world.
 
 Examples of topics covered at different lectures: HPC crash course,
 Triton kickstarts, Linux Shell, Parallel programming models: MPI and
@@ -63,27 +62,32 @@ These are the most important courses we recommend to new users:
 
 These are other quite important courses we have developed:
 
+.. toctree::
+   :maxdepth: 1
+
    Linux shell <https://aaltoscicomp.github.io/linux-shell/>
    Python for Scientific Computing <https://aaltoscicomp.github.io/python-for-scicomp/>
    Tools and Techniques for HPC <https://scicomp.aalto.fi/training/scip/ttt4hpc-2024/>
    Data analysis workflows in Python and R <https://aaltoscicomp.github.io/data-analysis-workflows-course/>
-
+   Containers on HPC with Apptainer <https://coderefinery.github.io/hpc-containers/>
 
 
 Other interesting courses
 -------------------------
 
-*Data management, Reproducibility, open science*
+Aalto Open Science team has courses on data management, reproducibility and open science:
 
-Other relevant courses by Aalto Open Science team will be listed at:
-https://www.aalto.fi/en/services/training-in-research-data-management-and-open-science
+  - https://www.aalto.fi/en/services/training-in-research-data-management-and-open-science
 
+Please check the following page for other courses at Aalto:
 
-*Other courses on scientific computing and data management*
+  - https://mycourses.aalto.fi/ 
 
-Please check https://mycourses.aalto.fi/ for other courses at Aalto and https://www.csc.fi/en/training for training courses and events at CSC.
+CSC has a portal for their training and courses:
 
-MOOC on scientific computing:
+  - https://www.csc.fi/en/training
+
+MOOC courses on scientific computing:
 
   - https://www.futurelearn.com/courses/python-in-hpc
 
