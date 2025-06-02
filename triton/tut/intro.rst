@@ -43,7 +43,7 @@ more about how it's used together later on.
          To the right of that we see the login node, by which all connections go, data
          storage, and then all of the different compute nodes (CPU and GPU).
 
-   The schematic of our sample cluster.  We'll go through this piece
+   Figure 1: The schematic of our sample cluster.  We'll go through this piece
    by piece.
 
    The things labeled "CPU Node" and "GPU Node" aren't quite accurate
@@ -51,6 +51,72 @@ more about how it's used together later on.
    nodes.  But we show it like this so that we can pretend that one row
    is a CPU later on to illustrate a point.
 
+.. _example_project:
+
+Cluster workflow
+----------------
+
+Typical cluster workflow is outlined in the image below:
+
+.. figure:: /images/example_workflow.png
+   :alt: An illustration that describes a typical workflow split into "Initial
+         setup"- and "Running code"-phases. Steps in "Initial setup" are:
+         login to cluster; go to your work directory; get your code into your
+         work directory; get your data into your work directory; and
+         install sofware needed by your code. Steps in the "Running code" are:
+         Run your code through the queue system; if the result are good,
+         copy results from cluster, else edit your code and run again.
+   :scale: 50%
+
+   Figure 2: Example workflow in the cluster.
+
+Each project starts with an **intial setup** that usually involves
+getting your code and data into Triton and then installing software needed
+by the code.
+
+We usually recommend that:
+
+- Each project should have a separate folder in the work directory. This
+  makes project management easier.
+- Big software installations should be done outside of the code repositories.
+  Version control tools and editors often monitor filesystem changes and having
+  installations in the same folder as your code can result in unnecessary traffic
+  towards the file system. It makes uninstallation of programs more difficult
+  as well.
+
+After initial setup most workflows spend a lot of time **running and editing
+the code**. The running part is done through the Slurm queue system while
+the editing part can be done in many different ways.
+
+The image below highlights some of the options you have for editing your code:
+
+.. figure:: /images/code_editing_options.png
+   :alt: Diagram of some of the various ways to edit your code. First option
+         is says that you can use terminal to do code edits and it recommends
+         nano as a simple editor. Second option says that you can mount the
+         cluster filesystem into your computer, which allows you to use your
+         preferred editor to do code changes. Third option says says that
+         you can have a git repository on your own computer where you make
+         the edits, push the changes to are remote repository and pull them
+         in the cluster.  Fourth option says that you can use an editor that
+         supports remote connections to do edits on your computer to the
+         files that are in the cluster.
+
+   Figure 3: Various ways of editing your code in the cluster.
+
+You'll have to decide which way of editing works for you and your project,
+but because most of a project's lifetime is usually spent editing your code
+and running it, you should keep the following considerations in mind:
+
+- What is the easiest way for you to manage your Slurm submission scripts
+  and your jobs?
+- Do you want to do the changes on your computer and then transfer them to
+  Triton or could I do the changes on Triton in the first place? Which
+  is easier in my case?
+- How much data do you need to transfer to verify my results? Can you view
+  your results without having to move things around?
+- Do you need to run the same code in multiple places? Would version
+  control make it easier to synchronize multiple copies?
 
 
 About Triton
