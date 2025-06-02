@@ -88,6 +88,22 @@ The ``your_script.py`` Python script uses a HuggingFace model ``mistralai/Mistra
   responses = pipe(messages) 
   print(responses)
 
+For reference, here is a table of model size and memory requirements for different model sizes and data types:
+
++---------------+------------+---------------+---------------+------------+
+| Model Size    | Parameters | float32 (4B)  | float16 (2B)  | int8 (1B)  |
++===============+============+===============+===============+============+
+| 1B parameters | 1e9        | 4 GB          | 2 GB          | 1 GB       |
++---------------+------------+---------------+---------------+------------+
+| 7B parameters | 7e9        | 28 GB         | 14 GB         | 7 GB       |
++---------------+------------+---------------+---------------+------------+
+|13B parameters | 13e9       | 52 GB         | 26 GB         | 13 GB      |
++---------------+------------+---------------+---------------+------------+
+
+In addition to the model size, you should also consider additional memory overhead for intermediate activations and input token embeddings.
+
+Note: this is the scenario where you are using the model for inference. For training, memory requirements are significantly higher due to gradients, optimizer states (e.g., Adam maintains momentum and variance estimates), gradient accumulation buffers, and larger activation caches. Training can require 3-4x more memory than the model size alone.
+
 You can look at the `model card <https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1>`__ for more information about the model.
 
 
