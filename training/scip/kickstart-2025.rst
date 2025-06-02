@@ -250,6 +250,7 @@ Browsing the following material is sufficient:
 * Watch `this background info about why we use computer clusters <https://www.youtube.com/playlist?list=PLZLVmS9rf3nNDHRo1Baz_JVQWDI0mTYyB>`__.  This is important information for *why* we are in this course, which we *won't cover directly*.  The most important videos are the `intro (what is a cluster and why?) <https://www.youtube.com/watch?v=yqGtnA7CUtU&list=PLZLVmS9rf3nNDHRo1Baz_JVQWDI0mTYyB&index=1&pp=gAQBiAQB>`__, `storage hierarchy (how the data looks) <https://www.youtube.com/watch?v=JAR9xyy5rcE&list=PLZLVmS9rf3nNDHRo1Baz_JVQWDI0mTYyB&index=2&pp=gAQBiAQB>`__, and `the Slurm job scheduler (how the cluster runs things) <https://www.youtube.com/watch?v=Y73A7lXISxU&list=PLZLVmS9rf3nNDHRo1Baz_JVQWDI0mTYyB&index=5&pp=gAQBiAQB>`__.
 
 
+
 Technical prerequisites
 -----------------------
 
