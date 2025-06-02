@@ -1,10 +1,9 @@
 name: pytorch-env
 channels:
   - nvidia
-  - pytorch
   - conda-forge
 dependencies:
-  - pytorch
-  - pytorch-cuda=12.1
+  - python==3.12
+  - pytorch-gpu>=2.6,<2.7
   - torchvision
   - torchaudio
