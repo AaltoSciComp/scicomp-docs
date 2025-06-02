@@ -309,6 +309,7 @@ Part of a series: :doc:`ngrams </triton/tut/exercises-ngrams>`:
    Now we do the same, but with ``srun`` to run on the cluster:
 
    ::
+
       ## character ngrams
       $ srun python3 ngrams/count.py /scratch/shareddata/teaching/gutenberg-fiction/Gutenberg-Fiction-first100.zip -o ngrams2 -n 2
 
