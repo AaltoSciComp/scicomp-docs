@@ -77,15 +77,12 @@ Schedule
   * :localtime:`3 June 13:00 +03:00` **Setting up for a new project** (RD, ST)
 
     - :doc:`/triton/tut/intro`
+    - `Cluster workflow <example_project>`
     - Cluster shell, section :ref:`triton-tut-example-repo`
-    - New page on project setup
     - Big example: Cloning our Gutenberg analysis code to the cluster.
-
-  * :localtime:`3 June 13:20 +03:00` **Data transfer** (RD, ST)
-
     - :doc:`/triton/tut/storage`
     - :doc:`/triton/tut/remotedata`
-    - Big example: Copying Project Gutenburg data to your work directory
+    - Big example: Copying the Project Gutenburg data to your work directory
 
   * :localtime:`3 June 13:40 +03:00` **What is Slurm?** (ST, RD)
 
