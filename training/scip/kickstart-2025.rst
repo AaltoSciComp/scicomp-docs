@@ -18,6 +18,9 @@ June 2025 / Intro to Scientific Computing /  HPC Summer Kickstart
      * Notes doc: for registered participants, you can register and
        get it automatically
      * Zoom: live zoom support for students from partner organisations
+     * `YouTube playlist
+       <https://www.youtube.com/playlist?list=PLZLVmS9rf3nNK5qWN6FdrQPHns4fNZyMX>`__
+     * `Twitch archive <https://www.twitch.tv/coderefinery/videos>`__ (7 days only)
 
 
 
