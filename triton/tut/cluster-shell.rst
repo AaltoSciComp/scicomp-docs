@@ -576,7 +576,7 @@ edits directly on the cluster itself.
       high performance computing
       cluster for our work?
 
-.. exercise:: Shell-11: (optional, advanced) Edit py-new.py
+.. exercise:: Shell-11: (optional, advanced) Edit pi-new.py
 
   Remember the pi-new.py file you made?  Add some nonsense edits to it
   and try to run it.  See if it fails.
