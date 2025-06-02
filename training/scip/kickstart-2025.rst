@@ -172,7 +172,7 @@ Schedule
 Practical information
 ---------------------
 
-This is a **livestream course with distributed in-person exercise and
+This is a **livestream course with distributed exercise and
 support**. Everyone may attend the **livestream** at
 https://twitch.tv/coderefinery, no registration needed, and this is
 the primary way to watch all sessions.  There is constant Q&A via **shared notes**.
@@ -180,16 +180,13 @@ the primary way to watch all sessions.  There is constant Q&A via **shared notes
 **Time, date:**  3 -- 5 June 2025 (Tue--Thu). 10:00-12:00 EEST  (days 1-3) and 13:00-15:00 EEST (days 1-2).
 
 **Place:** Online via public livestream, Zoom exercise sessions for
-partners, and probably in-person discussion/practice rooms at some
-campuses.
+partners.
 
 **Registration:** Please register at this link:
 https://link.webropol.com/ep/scicompsummer2025 .
 It's OK to register and attend only individual sessions.
 
-**Cost:** Livestream is free to everyone.  Aalto in-person is free of
-charge for FCCI consortium members including Aalto employees and
-students.
+**Cost:** Livestream is free to everyone. 
 
 **Additional course info at:** scip@aalto.fi
 
