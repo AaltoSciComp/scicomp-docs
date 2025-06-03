@@ -9,8 +9,9 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * 16 April (W): No garage (or very limited) due to an internal
-     development event.
+   * 3-4 June (T-W): Limited garage due to our ongoing :doc:`HPC kickstart
+     course </training/scip/kickstart-2025>`
+   * 5 June (Th): Limited garage due to a school-wide event.
 
 
 If you need more help than the issue trackers, this is the place to
