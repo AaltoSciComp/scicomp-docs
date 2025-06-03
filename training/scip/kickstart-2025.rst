@@ -81,11 +81,12 @@ Schedule
 
     - :doc:`/triton/tut/intro`
     - `Cluster workflow <example_project>`
-    - Cluster shell, section :ref:`triton-tut-example-repo`
-    - Big example: Cloning our Gutenberg analysis code to the cluster.
-    - :doc:`/triton/tut/storage`
-    - :doc:`/triton/tut/remotedata`
-    - Big example: Copying the Project Gutenburg data to your work directory
+    - Cluster shell, section :ref:`triton-tut-example-repo` (Exercise
+      Shell-4 and Shell-5)
+    - Exercise: Cloning our Gutenberg analysis code to the cluster.
+    - :doc:`/triton/tut/storage` - Exercise Storage-1
+    - :doc:`/triton/tut/remotedata` - Exercise RemoteData-1
+    - Exercise: Copying the Project Gutenburg data to your work directory
 
   * :localtime:`3 June 13:40 +03:00` **What is Slurm?** (ST, RD)
 
@@ -95,12 +96,12 @@ Schedule
 
   * :localtime:`3 June 14:00 +03:00` **Interactive jobs** (RD, ST)
 
-    - :doc:`/triton/tut/interactive`
+    - :doc:`/triton/tut/interactive` - Exercise Interactive-2
     - Big example: Project Gutenburg n-gram analysis
 
   * :localtime:`3 June 14:20 +03:00` **First serial jobs** (RD, ST)
 
-    - :doc:`/triton/tut/serial`
+    - :doc:`/triton/tut/serial` - Exercise Serial-2
     - Big example: Project Gutenburg n-gram analysis
 
   * :localtime:`3 June 15:00 +03:00` End of day
