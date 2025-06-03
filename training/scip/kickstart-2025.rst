@@ -210,7 +210,7 @@ about adapting).  How to register if you are not at Aalto:
   to their Kale/Turso cluster by following `their own instructions
   <https://wiki.helsinki.fi/pages/viewpage.action?pageId=408323613>`__.
 * Participants from **University of Oulu**: please follow instructions on
-  `how to access the Carpo2 computing cluster <https://ict.oulu.fi/17120/?page&lang=en>`__.
+  `how to access the Lehmus computing cluster <https://tki-kapasiteettipalvelut.version-pages.oulu.fi/lehmus-doc/>`__.
 * **Tampere**: this course is recommended for all new Narvi users and also all
   interested in HPC. Most things should work with simply replacing triton
   -> narvi. Some differences in configuration are listed in
