@@ -330,7 +330,7 @@ Now we have our code in a place that can be used.
 
 
 .. exercise:: Shell-5: Log out and re-navigate to the hpc-examples reports
-   :class: example-pi, example-ngrams
+  :class: example-pi, example-ngrams
 
   Log out and log in again.  Navigate to the hpc-examples repository.
   Resuming work is an important but often forgotten part of work.
