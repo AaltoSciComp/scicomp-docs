@@ -64,7 +64,10 @@ Schedule
 
     - `Video playlist <https://www.youtube.com/watch?v=yqGtnA7CUtU&list=PLZLVmS9rf3nNDHRo1Baz_JVQWDI0mTYyB>`__, `Slides (separate from the videos) <https://docs.google.com/presentation/d/16BTILZlUvEzCt6FfMsB9sSZm0PZHHXLBthE5QfoSrjo/edit>`__
 
-  * :localtime:`3 June 10:20 +03:00` **Connecting to the cluster** (TP, SM)
+  * :localtime:`3 June 10:20 +03:00` **Connecting to the cluster**
+    (TP, SM)
+
+    - :doc:`/triton/tut/connecting`
 
   * :localtime:`3 June 10:50 +03:00`  Break
 
