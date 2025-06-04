@@ -1,8 +1,7 @@
 Responsible Computational Research
 ----------------------------------
 
-
-Doing research comes with responsibilities, how to make sure the principles of research integrity are translated into scientific computing practices? This page presents a short structured view of ethical and legal considerations in computational research in Europe, with an extra overview of responsible use of generative AI for writing code.
+Doing research comes with responsibilities, how to make sure the principles of research integrity are translated into scientific computing practices? This page presents a short structured view of ethical and legal considerations in computational research in Europe, with an extra overview of responsible use of generative AI for writing code. **This page is a draft, help us improving it!**.
 
 The Normative Cascade
 *********************
@@ -78,8 +77,8 @@ Responsible research in practice
 
 So what is the real-world application of ethical and legal standards for computational researchers?
 
-* **Transparency and openness**: Open science practices, FAIR principles, FAIR4RS (FAIR for research software)
-* **Reproducibility and documentation**: Version control, workflow tools, reproducible computational environments (conda, venv, containers), reusability of tools
+* **Transparency and openness**: `Open science practices <https://avointiede.fi/en>`__, `FAIR principles <https://www.aalto.fi/en/services/fair-data>`__, `FAIR4RS (FAIR for research software) <https://coderefinery.github.io/social-coding/software-citation/>`__
+* **Reproducibility and documentation**: `Version control <https://coderefinery.github.io/git-intro/>`__, `workflow tools <https://coderefinery.github.io/reproducible-research/workflow-management/#workflow-tools>`__, `reproducible computational environments <https://coderefinery.github.io/reproducible-research/dependencies/>`__ (conda, venv, containers), `reusability of tools <https://coderefinery.github.io/modular-type-along/>`__
 * **Data protection and cybersecurity**: Use the right system for the type of data you are working with; "ignorance of the law is no excuse"
 * **Accountability**: Internal logging, reproducible steps / reproducible results, research governance, fair authorship and citations
 
@@ -106,24 +105,28 @@ Effective cybersecurity ensures that sensitive data remains protected, systems f
 Data (and code) can have different levels of **classification of information**.
 
   * Public:
+
     * Publications​
     * Open data (CC*)​
     * Open source software​
     * Other content made public (social media posts, lectures on YouTube)​
 
   * Internal:
+  
     * Drafts​
     * Team notes, meetings data​
     * Pages that require authentication​
     * Project code, software, scripts​
 
   * Confidential:
+  
     * Research data with personal data​
     * Trade secrets​
     * Research proposals​
     * Any other file that requires only a specific group of individuals to have access to​  
 
   * Secret:
+  
     * Data that is required to be secret (e.g. secondary health data, high risk research projects)​
     * Sensitive research data that requires strong protection (e.g. as a result of a DPIA).​
 
