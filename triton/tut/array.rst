@@ -314,60 +314,71 @@ Exercises
 
 .. include:: ../ref/examples-repo.rst
 
-Part of a series: :doc:`ngrams </triton/tut/exercises-ngrams>`:
+Part of a series: :doc:`ngrams </triton/tut/exercises-ngrams>`
 
 .. exercise:: Array-1: Compute ngrams via an array jobs
    :class: exercise-ngrams
 
-   Computing the ngrams over the whole Gutenberg-Fiction dataset can
-   take a while.  Array jobs make a let of sense.  Type along with the
-   following:
+   Computing the n-grams over the whole Gutenberg-Fiction dataset could
+   take a while. Using array jobs can make this calculation faster
+   by splitting the calculation across multiple array tasks where
+   each task does the n-gram calculation for a subset of books in the
+   dataset.
 
-   The following batch job computes 3grams on the dataset in 20
+   Before jumping to the full dataset, let's start with the smaller
+   subset of first 100 books and test our code with that.
+
+   Type along with the following:
+
+   The following batch job computes 3-grams on the dataset in 20
    batches, and saves them all to their own file (The ``\`` at the end
    of the line allows you to continue to following lines).
+
+   ``count-3grams-array.sh``:
 
    .. code-block:: slurm
 
       #!/bin/bash
-      #SBATCH --mem=50G
-      #SBATCH --array=0-20
-      #SBATCH --time=0-6
-      #SBATCH --job-name=words-array
+      #SBATCH --mem=2G
+      #SBATCH --array=0-19
+      #SBATCH --time=00:10:00
 
-      mkdir -p /scratch/work/$USER/ngrams-output/
+      mkdir -p ngrams-output
 
-      python3 ngrams/count.py /scratch/work/darstr1/data/Gutenberg-Fiction.zip \
+      python3 ngrams/count.py /scratch/work/$USER/gutenberg-fiction/Gutenberg-Fiction-first100.zip \
         -n 3 --words \
-	--start=$SLURM_ARRAY_TASK_ID --step=20 \
-        -o /scratch/work/$USER/ngrams-output/ngrams3-words-all-array_$SLURM_ARRAY_TASK_ID.out
+        --start=$SLURM_ARRAY_TASK_ID --step=20 \
+        --output=ngrams-output/ngrams3-words-array_$SLURM_ARRAY_TASK_ID.out
 
-   That runs fast.  We can then see there are 20 outputs::
+   Submit the script with ``sbatch count-3grams-array.sh``. It will run very fast.
 
-      $ ls /scratch/work/$USER/ngrams-output/
-      ngrams3-words-all-array_0.out   ngrams3-words-all-array_14.out  ngrams3-words-all-array_2.out   ngrams3-words-all-array_7.out
-      ngrams3-words-all-array_1.out   ngrams3-words-all-array_15.out  ngrams3-words-all-array_20.out  ngrams3-words-all-array_8.out
+   We can then see there are 20 outputs::
+
+      $ ls ngrams-output/
+      ngrams3-words-array_0.out   ngrams3-words-array_14.out  ngrams3-words-array_2.out   ngrams3-words-array_7.out
+      ngrams3-words-array_1.out   ngrams3-words-array_15.out  ngrams3-words-array_20.out  ngrams3-words-array_8.out
       ...
 
-      $ head -5 /scratch/work/$USER/ngrams-output/ngrams3-words-all-array_0.out
-      29765 ["i", "don", "t"]
-      19063 ["one", "of", "the"]
-      16104 ["out", "of", "the"]
-      14583 ["there", "was", "a"]
-      13595 ["it", "was", "a"]
+      $ head -5 ngrams-output/ngrams3-words-array_0.out
+      521 ["i", "don", "t"]
+      189 ["don", "t", "know"]
+      166 ["one", "of", "the"]
+      156 ["it", "was", "a"]
+      153 ["you", "don", "t"]
 
    We can then combine the individual output files to one::
 
-     $ python3 ngrams/combine-counts.py /scratch/work/$USER/ngrams-output/ngrams3-words-all-array_* -o /scratch/work/$USER/ngrams-output/ngrams3-words-all.out
+     $ srun --mem=6G --time=00:10:00 python3 ngrams/combine-counts.py ngrams-output/ngrams3-words-array_* -o ngrams-output/ngrams3-words.out
 
    This file has ngrams from *all* of them::
 
-     $ head -5 /scratch/work/$USER/ngrams-output/ngrams3-words-all.out
-     617142 ["i", "don", "t"]
-     395089 ["one", "of", "the"]
-     338236 ["out", "of", "the"]
-     309473 ["there", "was", "a"]
-     284908 ["it", "was", "a"]
+     $ head -5 ngrams-output/ngrams3-words.out
+     5265 ["i", "don", "t"]
+     2848 ["one", "of", "the"]
+     2535 ["it", "was", "a"]
+     2428 ["out", "of", "the"]
+     2389 ["there", "was", "a"]
+
 
 Part of a series: :doc:`ngrams </triton/tut/exercises-pi>`:
 
