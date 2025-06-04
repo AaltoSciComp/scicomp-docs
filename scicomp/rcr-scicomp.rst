@@ -134,7 +134,7 @@ Data (and code) can have different levels of **classification of information**.
 ​
 **Which storage/computing system is good for what?**
 
-Rules of thumb for secure storage and computing (please check your university guidelines):
+Rules of thumb for secure storage and computing with the systems provided by your University/organisation (please check your university guidelines of course):
   * If it does not require authentication: only public data
   * If it has single factor authentication (e.g. login and password), then it might be good for internal information.
   * If it has​ multi factor authentication, then it might be good for confidential data (examples at Aalto/CSC: Triton Cluster, Teamwork, Allas)
