@@ -25,7 +25,7 @@ The normative cascade (`Floridi, 2018 <https://royalsocietypublishing.org/doi/fu
 Level 1: Foundational ethical principles in research
 ====================================================
 
-In the context of research, the `ALLEA - European Code of Conduct for Research Integrity <https://allea.org/code-of-conduct/](https://allea.org/code-of-conduct/>`__ defines the core principles of ethics in research:
+In the context of research, the `ALLEA - European Code of Conduct for Research Integrity <https://allea.org/code-of-conduct/>`__ defines the core principles of ethics in research:
 
     * **Reliability**: Ensuring the quality of research, reflected in the design, methodology, analysis, and use of resources. 
     * **Honesty**: Developing, undertaking, reviewing, reporting, and communicating research in a transparent, fair, full, and unbiased way​
