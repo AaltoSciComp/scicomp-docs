@@ -168,9 +168,12 @@ Schedule
 
   * :localtime:`5 June 10:50 +03:00` Break
   * :localtime:`5 June 11:00 +03:00` **LLM example** (YT, HF)
+
+    - :doc:`/triton/apps/llms`
+    - :doc:`/aalto/generative-ai-tools`
+
   * :localtime:`5 June 11:40 +03:00` **Wrap up and summary, ask us anything**
   * :localtime:`5 June 12:00 +03:00` End of day
-
 
 
 
