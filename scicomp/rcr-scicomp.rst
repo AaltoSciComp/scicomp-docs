@@ -19,7 +19,7 @@ The normative cascade (`Floridi, 2018 <https://royalsocietypublishing.org/doi/fu
     :align: center
     :alt: The normative cascade
 
-    Redrawn from Floridi, 2018, and re-adapted by on the context of ethics, laws, and academic research.
+    Redrawn from Floridi, 2018, and re-adapted in the context of ethics, laws, and academic research.
 
 
 Level 1: Foundational ethical principles in research
