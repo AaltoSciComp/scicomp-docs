@@ -3,6 +3,12 @@ Responsible Computational Research
 
 Doing research comes with responsibilities, how to make sure the principles of research integrity are translated into scientific computing practices? This page presents a short structured view of ethical and legal considerations in computational research in Europe, with an extra overview of responsible use of generative AI for writing code. **This page is a draft, help us improving it!**.
 
+.. exercise:: Which ethical, moral, or legal issue is making you doubtful about your research?
+
+    Discuss with your peers on what do you perceive as a potential issue regarding your research. A good example is **reproducibility** and validity of research: Are my results **true** and do they reflect real phenomena? Will others be able to **validate and replicate** my findings? **Will I be able to re-run the same code/scripts and re-obtain the same results?**
+
+
+
 The Normative Cascade
 *********************
 
