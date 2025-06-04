@@ -334,7 +334,7 @@ Part of a series: :doc:`ngrams </triton/tut/exercises-ngrams>`
    batches, and saves them all to their own file (The ``\`` at the end
    of the line allows you to continue to following lines).
 
-   `count-3grams-array.sh`:
+   ``count-3grams-array.sh``:
 
    .. code-block:: slurm
 
@@ -350,7 +350,7 @@ Part of a series: :doc:`ngrams </triton/tut/exercises-ngrams>`
         --start=$SLURM_ARRAY_TASK_ID --step=20 \
         --output=ngrams-output/ngrams3-words-array_$SLURM_ARRAY_TASK_ID.out
 
-   Submit the script with `sbatch count-3grams-array.sh`. It will run very fast.
+   Submit the script with ``sbatch count-3grams-array.sh``. It will run very fast.
 
    We can then see there are 20 outputs::
 
