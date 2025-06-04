@@ -5,7 +5,7 @@ Doing research comes with responsibilities, how to make sure the principles of r
 
 .. exercise:: Which ethical, moral, or legal issue is making you doubtful about your research?
 
-    Discuss with your peers on what do you perceive as a potential issue regarding your research. A good example is **reproducibility** and validity of research: Are my results **true** and do they reflect real phenomena? Will others be able to **validate and replicate** my findings? **Will I be able to re-run the same code/scripts and re-obtain the same results?**
+    Discuss with your peers about what you perceive as a potential issue regarding your research. A good example is **reproducibility** and **validity** of research: Are my results **true** and do they reflect real phenomena? Will others be able to **validate and replicate** my findings with new data/experiments? **Will I be able to re-run the same code/scripts and same data and re-obtain the same results?**
 
 
 
