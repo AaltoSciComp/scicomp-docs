@@ -14,6 +14,7 @@ Scientific computing tips
    new-group-leaders
    packaging-software
    python
+   rcr-scicomp
    shell
    ssh
    zen-of-scicomp
