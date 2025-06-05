@@ -10,16 +10,28 @@ June 2025 / Intro to Scientific Computing /  HPC Summer Kickstart
 
    * News:
 
-     - 21.5.2025: Course structure updated!
+     - The course is over.  We hope that you learned something and can
+       keep studying as you need.  There is a lot more written
+       material available linked from the schedule, available for
+       independent learning.
+     - Other relevant courses as follow-ups:
 
-   * Watching links
+       - `Python for Scientific Computing (usually late autumn each
+	 year) <https://aaltoscicomp.github.io/python-for-scicomp/>`__
+       - `CodeRefinery <https://coderefinery.org>`__ covers version
+	 control (git) and related practical software tools.
+       - `Shell usage and scripting
+	 <https://aaltoscicomp.github.io/linux-shell/>`__, though
+	 you should select the parts relevant to you.
+
+   * Links
 
      * Livestream: https://twitch.tv/coderefinery
-     * Notes doc: for registered participants, you can register and
-       get it automatically
+     * Notes docs: `Archive day 1 <https://hackmd.io/@AaltoSciComp/scicomphpc2025Archive>`__, `Archive days 2-3 <https://hackmd.io/@AaltoSciComp/scicomphpc2025Archive2>`__.
      * Zoom: live zoom support for students from partner organisations
-     * `YouTube playlist
-       <https://www.youtube.com/playlist?list=PLZLVmS9rf3nNK5qWN6FdrQPHns4fNZyMX>`__
+     * Videos: `YouTube playlist
+       <https://www.youtube.com/playlist?list=PLZLVmS9rf3nNK5qWN6FdrQPHns4fNZyMX>`__,
+       or `git-annex to avoid YouTube <https://github.com/coderefinery/video-processing>`__.
      * `Twitch archive <https://www.twitch.tv/coderefinery/videos>`__ (7 days only)
 
 
