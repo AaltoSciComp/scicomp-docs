@@ -117,8 +117,6 @@ Some of the most popular channels are:
   due to licensing issues.  Default for anaconda distribution.
 - ``bioconda``: A community maintained channel of
   `bioinformatics packages <https://bioconda.github.io>`_.
-- ``pytorch``: Official channel for `PyTorch <https://pytorch.org/>`_, a
-  popular machine learning framework.
 
 One can have multiple channels defined like in the following example:
 
