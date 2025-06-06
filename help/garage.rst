@@ -9,9 +9,10 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * 3-4 June (T-W): Limited garage due to our ongoing :doc:`HPC kickstart
-     course </training/scip/kickstart-2025>`
-   * 5 June (Th): Limited garage due to a school-wide event.
+   * During the high summer (~july) there are usually people around,
+     but we don't make promises for any given day.  Try to join and
+     see.  July 7-18 seems to be the time with the fewest staff
+     around.
 
 
 If you need more help than the issue trackers, this is the place to
