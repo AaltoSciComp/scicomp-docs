@@ -9,9 +9,10 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * 3-4 June (T-W): Limited garage due to our ongoing :doc:`HPC kickstart
-     course </training/scip/kickstart-2025>`
-   * 5 June (Th): Limited garage due to a school-wide event.
+   * During the high summer (~july) there are usually people around,
+     but we don't make promises for any given day.  Try to join and
+     see.  July 7-18 seems to be the time with the fewest staff
+     around.
 
 
 If you need more help than the issue trackers, this is the place to
@@ -117,7 +118,7 @@ software, and data).
 * **Mondays** also have NBE/PHYS IT present.
 * **Tuesdays** 
 * **Wednesdays** also have NBE/PHYS IT present.  We also have more
-  staff to help :doc:`jupyter.cs instructors/TAs </aalto/jupyterhub-instructors/index>`. On 2025-06-18 we will have a :ref:`COMSOL Multiphysics<comsol>` focus day: someone from COMSOL (the company) plans to join.
+  staff to help :doc:`jupyter.cs instructors/TAs </aalto/jupyterhub-instructors/index>`. On 2025-06-18 and 2025-06-25 we will have a :ref:`COMSOL Multiphysics<comsol>` focus day: someone from COMSOL (the company) plans to join.
 * **Thursdays**
 * **Fridays** also have CS IT present (at the beginning).
 
