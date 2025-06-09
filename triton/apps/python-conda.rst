@@ -67,9 +67,9 @@ Creating a simple environment with conda
 One can install environments from the command line itself, but a better idea
 is to write an ``environment.yml``-file that describes the environment.
 
-Below we have a simple :download:`environment.yml </triton/examples/conda/environment.yml>`:
+Below we have a simple :download:`environment.yml </triton/examples/conda/python-environment.yml>`:
 
-.. literalinclude:: /triton/examples/conda/environment.yml
+.. literalinclude:: /triton/examples/conda/python-environment.yml
    :language: yaml
 
 Now we can use the ``conda``-command to create the environment:
