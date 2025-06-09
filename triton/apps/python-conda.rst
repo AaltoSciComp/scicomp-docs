@@ -99,6 +99,7 @@ In an environment file one usually defines the following:
 - ``channels``: Which channels to use for packages.
 - ``dependencies``: Which conda and pip packages to install.
 
+
 Choosing conda channels
 ^^^^^^^^^^^^^^^^^^^^^^^
 
