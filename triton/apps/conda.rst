@@ -11,7 +11,7 @@ commands work with either.
 
 It is commonly used to handle complex requirements of Python
 and R packages. Conda can handle many other library and software
-installation as well, for example cmake, Node.js, Java or Perl
+installation as well, for example cmake, Node.js, Java or Perl.
 
 .. seealso::
 
@@ -137,8 +137,236 @@ One can have multiple channels defined like in the following example:
 
    .. group-tab:: Python
 
-        .. literalinclude:: /triton/examples/pytorch/pytorch-env.yml
-           :language: yaml
+      .. literalinclude:: /triton/examples/pytorch/pytorch-env.yml
+         :language: yaml
 
+  .. group-tab:: R
+
+      .. literalinclude:: /triton/examples/r/bioconda-env.yml
+
+
+Setting package dependencies
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Packages in ``environment.yml`` can have version constraints and version
+wildcards. One can also specify pip packages to install after conda-packages
+have been installed.
+
+For example, the following
+:download:`dependency-env.yml </triton/examples/conda/dependency-env.yml>`
+would install a numpy with version higher or equal
+than 1.10 using conda and scipy via pip:
+
+.. tabs::
+
+  .. group-tab:: Python
+
+    .. literalinclude:: /triton/examples/conda/dependency-env.yml
+    :language: yaml
+
+
+Listing packages in an environment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To list packages installed in an environment, one can use:
+
+.. code-block:: console
+
+  $ mamba list
+
+
+Removing an environment
+~~~~~~~~~~~~~~~~~~~~~~~
+
+To remove an environment, one can use:
+
+.. code-block:: console
+
+  $ mamba env remove --name environment_name
+
+Do remember to deactivate the environment before trying to remove it.
+
+
+Cleaning up conda cache
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Conda uses a cache for downloaded and installed packages. This cache can get
+large or it can be corrupted by failed downloads.
+
+In these situations one can use ``mamba clean`` to clean up the cache.
+
+- ``mamba clean -i`` cleans up the index cache that conda uses to find the packages.
+- ``mamba clean -t`` cleans up downloaded package installers.
+- ``mamba clean -p`` cleans up unused packages.
+- ``mamba clean -a`` cleans up all of the above.
+
+
+Updating packages in an environment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+We recommend updating the ``environment.yml`` file, and then:
+
+.. code-block:: console
+
+  $ mamba env update --file environment.yml
+
+If you make major changes, or *anything* goes wrong, we recommend
+removing the environment and re-creating it.  (This is a big benefit
+of environment files).
+
+
+Installing single new packages into an environment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+We recommend the previous section instead, so that the
+``environment.yml`` file stays consistent, and you can always re-create
+or move the environment if needed
+
+
+If needed, ``mamba-install`` can be used (in this case, install
+``matplotlib`` from ``conda-forge`` into an environment.
+
+.. code-block:: console
+
+  $ mamba install --freeze-installed --channel conda-forge matplotlib
+
+Installing packages into an existing environment can be risky: conda uses
+channels given from the command line when it determines which channels it
+should use for the new packages.
+
+This can cause a situation where installing a new package results in the
+removal and reinstallation of multiple packages. Adding the
+``--freeze-installed``-flags makes already installed packages safe and by
+giving explicitly the channels to use, one can make certain that the new
+packages come from the same source.
+
+It is usually a better option to create a new environment with the new
+package set as an additional dependency in the ``environment.yml``.
+This keeps the environment reproducible.
+
+If you intend on installing packages to existing environment, adding
+default channels for the environment can also make installing packages
+easier.
+
+
+Setting default channels for an environment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+It is a good idea to store channels used when creating the environment
+into a configuration file that is stored within the environment. This makes
+it easier to install any missing packages.
+
+For example, one could add ``conda-forge`` into the list of default channels
+with:
+
+.. code-block:: console
+
+  $ conda config --env --add channels conda-forge
+
+We can check the contents of the configuration file with:
+
+.. code-block:: console
+
+  $ cat $CONDA_PREFIX/.condarc
+
+  
+Motivation for using conda
+--------------------------
+
+
+When should you use conda?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you need basic Python packages, you can use pre-installed
+``scicomp-python-env``-modules. See the :doc:`Python-page <python>` for
+more information.
+
+You should use conda when you need to create your own custom environment.
+
+
+Why use conda? What are its advantages?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Quite often Python packages are installed with Pip from the
+`Python Package Index (PyPI) <https://pypi.org/>`_. These packages contain
+Python code and in many cases some compiled code as well.
+
+However, there are three problems pip cannot solve without additional tools:
+
+1. How do you install multiple separate suites of packages for different use cases?
+2. How do you handle packages that depend on some external libraries?
+3. How do you make sure that all of the packages have are compatible with each other?
+
+Conda tries to solve these problems with the following ways:
+
+1. Conda creates **environments** where packages are installed. Each
+   environment can be activated separately.
+2. Conda installs library **dependencies** to the environment with the Python
+   packages.
+3. Conda uses a **solver engine** to figure out whether packages are compatible
+   with each other.
+
+Conda also caches installed packages so doing copies of similar environments
+does not use additional space.
+
+One can also use the environment files to make the installation procedure more
+reproducible.
+
+
+Creating an environment with CUDA toolkit
+-----------------------------------------
+
+NVIDIA's `CUDA-toolkit <https://developer.nvidia.com/cuda-toolkit>`_ is
+needed for working with NVIDIA's GPUs. Many Python frameworks that work on
+GPUs need to have a supported CUDA toolkit installed.
+
+Conda is often used to provide the CUDA toolkit and additional libraries such
+as cuDNN. However, one should choose the version of the CUDA toolkit based on
+what the software requires.
+
+If the package is installed from a conda channel such as ``conda-forge``,
+conda will **automatically retreive the correct version of CUDA toolkit**.
+
+
+In other cases one can use an environment file like this
+:download:`cuda-env.yml </triton/examples/cuda/cuda-env.yml>`:
+
+.. literalinclude:: /triton/examples/cuda/cuda-env.yml
+   :language: yaml
+  
+.. _cuda_hint:
+
+.. include:: /triton/examples/cuda/cuda_override_hint.rst
+
+
+.. include:: /triton/examples/tensorflow/tensorflow_with_conda.rst
+
+If you encounter errors related to CUDA while creating the
+environment, do note :ref:`this hint <cuda_hint>` on overriding
+CUDA during installation.
+
+
+.. include:: /triton/examples/pytorch/pytorch_with_conda.rst
+
+If you encounter errors related to CUDA while creating the
+environment, do note :ref:`this hint <cuda_hint>` on overriding
+CUDA during installation.
+
+
+Installing numpy with Intel MKL enabled BLAS
+--------------------------------------------
+
+`NumPy <https://numpy.org/>`_ and other mathematical libaries utilize BLAS
+(Basic Linear Algebra Subprograms) implementation for speeding up many
+operations. Intel provides their own fast BLAS implementation in
+Intel MKL (Math Kernel Library). When using Intel CPUs, this library
+can give a significant performance boost to mathematical calculations.
+
+One can install this library as the default BLAS by specifying
+``blas * mkl`` as a requirement in the dependencies like in this
+:download:`mkl-env.yml </triton/examples/conda/mkl-env.yml>`:
+
+.. literalinclude:: /triton/examples/conda/mkl-env.yml
+   :language: yaml
 
 

@@ -1,4 +1,4 @@
-.. _conda:
+.. _python_conda:
 
 Python Environments with Conda
 ==============================
