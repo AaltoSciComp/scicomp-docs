@@ -135,7 +135,7 @@ One can have multiple channels defined like in the following example:
 
 .. tabs::
 
-   .. group-tab:: Python
+  .. group-tab:: Python
 
       .. literalinclude:: /triton/examples/pytorch/pytorch-env.yml
          :language: yaml
