@@ -9,6 +9,8 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
+   * 12 June (Th): No garage due to an internal development day (or
+     maybe one or two people hanging out, but limited support).
    * During the high summer (~july) there are usually people around,
      but we don't make promises for any given day.  Try to join and
      see.  July 7-18 seems to be the time with the fewest staff
