@@ -5,71 +5,42 @@ FCCI Tech (aka the SciComp Tech series)
 
    (none right now)
 
-This is a seminar series on scientific computing, research software
-engineering, and generally being a good collaborator in scientific
-computing research.  The target ranges from aspiring research software
-engineers to computing infrastructure specialists.  It is part of the
-ASC's new research software engineer training.
+This section is about how our team works: both the raw infrastructure
+but also how our team is organized socially.  The target ranges from
+aspiring research software engineers to computing infrastructure
+specialists.  It is part of the ASC's new research software engineer
+training.
 
-It evolved from a series "how ASC does things, taught to people
-joining our team" to something similar (with more general topics) but
-with a broader audience (everyone is invited).  If you want to network
-with and learn from other people in research computing, you are
-welcome to attend.
+It started as a seminar series in 2020/2021 "how ASC does things,
+taught to people joining our team" to something more broad.
 
 
 
-Practicalities
---------------
+Seminar Practicalities
+----------------------
 
-**Time:** Usually Fridays at 10:00 Europe/Helsinki time.
-
-**Duration:** 60 minute time slot, good to plan for 20-30 minutes
-presentation and 20-30 minutes discussion.
-
-**Location:** Zoom, usually the :doc:`garage link </help/garage>`.
-
-**Recordings:** You can view a playlist of *some* videos `on youtube
-<https://www.youtube.com/playlist?list=PLZLVmS9rf3nN1Rj-TAqFEzFM22Y1kJmvn>`__.
-
-**How to present:** Talk to rkdarst, get on the schedule.
-
-*It is not a right but a privilege to participate. Free.*
-
-
-Proposed/requested future topics
---------------------------------
-
-- SLURM setup, Simppa Äkäslompolo
-
-- Cluster monitoring, Simo/Mikko
-
-- Online courses and CodeRefinery, Richard Darst
-
-- Online work and support, Richard Darst
-
-  - :doc:`online-work-and-support`
-
-- Respectfully and efficiently handling user support requests, Richard Darst
-
-  - :doc:`user-support-responses`
-
-- Science-IT data management: policies and procedures
-
-- Science-IT data management: storage systems and tech setup
-
-- History and structure of FCCI
-
-- Security
+* **Time:** Usually Fridays at 10:00 Europe/Helsinki time.
+* **Duration:** 60 minute time slot, good to plan for 20-30 minutes
+  presentation and 20-30 minutes discussion.
+* **Location:** Zoom, usually the :doc:`garage link </help/garage>`.
+* **Recordings:** You can view a playlist of *some* videos `on youtube
+  <https://www.youtube.com/playlist?list=PLZLVmS9rf3nN1Rj-TAqFEzFM22Y1kJmvn>`__.
+* **How to present:** Talk to rkdarst, get on the schedule.
+* *It is not a right but a privilege to participate. Free.*
 
 
 
-Past and currently planned
---------------------------
+Material and links
+------------------
+
+Subpages and reference materials whose home is in this section.  This
+overlaps with the seminar series list below.  This is interesting
+reference material, but in order to really use this you probably need
+a guide to help you through.  The sorting is rough order of usefulness
+to a broad audience.
 
 .. toctree::
    :maxdepth: 1
-   :hidden:
 
    user-support
    Diversity vs services (external) <https://docs.google.com/presentation/d/1pVjFnxGzfy0DTPuc1XLQDFg0-44GUWwfSMxe5vVg-Lc/edit>
@@ -81,13 +52,38 @@ Past and currently planned
    RSE service status 2021 <https://docs.google.com/presentation/d/1Ti4TvjAilnElk9ITBZVsMnR0g7pfgPg8t5HHe2YOQs4>
    Triton software stack (external) <https://www.youtube.com/watch?v=2lj4JqJWzz8&list=PLZLVmS9rf3nN1Rj-TAqFEzFM22Y1kJmvn>
    Anaconda on Triton (external) <https://www.youtube.com/watch?v=2lj4JqJWzz8&list=PLZLVmS9rf3nN1Rj-TAqFEzFM22Y1kJmvn>
+   Publishing a Python package (external) <https://hackmd.io/@AaltoSciComp/python-package-publication-demo>
    Introduction to kubernetes deployment <https://hackmd.io/@AaltoSciComp/SyAgcmTQF>
    jupyter.cs <https://hackmd.io/TCPjGdR5Q7WoLbzlvsPHUA>
    Simple kubernetes deployment <https://hackmd.io/@AaltoSciComp/kubernetes-deployment-demo>
 
-Events are listed below in chronological order, but sort of sorted by
-usefulness to a broad audience in the left sidebar (including events
-which have been drafted but not presented).
+
+
+Proposed/requested future topics
+--------------------------------
+
+- SLURM setup, Simppa Äkäslompolo
+- Cluster monitoring, Simo/Mikko
+- Online courses and CodeRefinery, Richard Darst
+- Online work and support, Richard Darst
+
+  - :doc:`online-work-and-support`
+
+- Respectfully and efficiently handling user support requests, Richard Darst
+
+  - :doc:`user-support-responses`
+
+- Science-IT data management: policies and procedures
+- Science-IT data management: storage systems and tech setup
+- History and structure of FCCI
+- Security
+
+
+
+Past seminars
+-------------
+
+Events are listed below in chronological order.
 
 - **Triton hardware**, Ivan Degtyarenko, Wed 3.3 2021, 10:00
 
@@ -225,3 +221,7 @@ which have been drafted but not presented).
    will discuss what is needed for a software publication and recommended
    practices.
  * `Notes <https://hackmd.io/@AaltoSciComp/python-package-publication-demo>`__
+
+..
+  When you add material to this list, also add it to the "Materials
+  and links" section above.
