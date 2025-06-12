@@ -143,26 +143,30 @@ One can have multiple channels defined like in the following example:
   .. group-tab:: R
 
       .. literalinclude:: /triton/examples/r/bioconda-env.yml
+         :language: yaml
 
 
 Setting package dependencies
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Packages in ``environment.yml`` can have version constraints and version
-wildcards. One can also specify pip packages to install after conda-packages
-have been installed.
+wildcards.
 
-For example, the following
-:download:`dependency-env.yml </triton/examples/conda/dependency-env.yml>`
-would install a numpy with version higher or equal
-than 1.10 using conda and scipy via pip:
 
 .. tabs::
 
   .. group-tab:: Python
 
-    .. literalinclude:: /triton/examples/conda/dependency-env.yml
-    :language: yaml
+    One can also specify pip packages to install after conda-packages
+    have been installed.
+
+    .. literalinclude:: /triton/examples/conda/python-dependency-env.yml
+      :language: yaml
+
+  .. group-tab:: R
+
+    .. literalinclude:: /triton/examples/conda/r-dependency-env.yml
+      :language: yaml
 
 
 Listing packages in an environment
@@ -287,22 +291,22 @@ You should use conda when you need to create your own custom environment.
 Why use conda? What are its advantages?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Quite often Python packages are installed with Pip from the
-`Python Package Index (PyPI) <https://pypi.org/>`_. These packages contain
-Python code and in many cases some compiled code as well.
-
-However, there are three problems pip cannot solve without additional tools:
+Installing package directly with a system package manager such as
+`apt` or a language specific package manager such as `pip` or `npm` can
+is usually enough if you are the only user and working on one project.
+However, conda solces several problems that often arise in scientific
+computing. If these are familiar, using Conda is a good idea:
 
 1. How do you install multiple separate suites of packages for different use cases?
 2. How do you handle packages that depend on some external libraries?
 3. How do you make sure that all of the packages have are compatible with each other?
+4. How do you install and use multiple different versions of the same package?
 
 Conda tries to solve these problems with the following ways:
 
 1. Conda creates **environments** where packages are installed. Each
    environment can be activated separately.
-2. Conda installs library **dependencies** to the environment with the Python
-   packages.
+2. Conda installs library **dependencies** to the environment.
 3. Conda uses a **solver engine** to figure out whether packages are compatible
    with each other.
 
@@ -328,8 +332,7 @@ If the package is installed from a conda channel such as ``conda-forge``,
 conda will **automatically retreive the correct version of CUDA toolkit**.
 
 
-In other cases one can use an environment file like this
-:download:`cuda-env.yml </triton/examples/cuda/cuda-env.yml>`:
+In other cases one can use an environment file like this:
 
 .. literalinclude:: /triton/examples/cuda/cuda-env.yml
    :language: yaml
@@ -339,14 +342,44 @@ In other cases one can use an environment file like this
 .. include:: /triton/examples/cuda/cuda_override_hint.rst
 
 
-.. include:: /triton/examples/tensorflow/tensorflow_with_conda.rst
 
-If you encounter errors related to CUDA while creating the
-environment, do note :ref:`this hint <cuda_hint>` on overriding
-CUDA during installation.
+Creating an environment with GPU enabled Tensorflow
+---------------------------------------------------
 
 
-.. include:: /triton/examples/pytorch/pytorch_with_conda.rst
+.. tabs::
+
+  .. group-tab:: Python
+
+    .. include:: /triton/examples/tensorflow/tensorflow_with_conda.rst
+
+  .. group-tab:: R
+
+    To create an environment with GPU enabled Tensorflow you can use an
+    environment file like this:
+
+    .. literalinclude:: /triton/examples/conda/r-tensorflow-cuda.yml
+
+    Here we install the latest tensorflow from ``conda-forge``-channel with an additional
+    requirement that the build version of the ``tensorflow``-package must contain
+    a reference to a CUDA toolkit. For a specific version replace the ``=*=*cuda*`` with e.g. ``=2.8.1=*cuda*`` for version ``2.8.1``.
+
+
+
+Creating an environment with GPU enabled Torch
+----------------------------------------------
+
+.. tabs::
+
+  .. group-tab:: Python
+
+    .. include:: /triton/examples/pytorch/pytorch_with_conda.rst
+
+  .. group-tab:: R
+
+    .. include:: /triton/examples/conda/r-torch-cuda.rst
+
+
 
 If you encounter errors related to CUDA while creating the
 environment, do note :ref:`this hint <cuda_hint>` on overriding
@@ -363,10 +396,19 @@ Intel MKL (Math Kernel Library). When using Intel CPUs, this library
 can give a significant performance boost to mathematical calculations.
 
 One can install this library as the default BLAS by specifying
-``blas * mkl`` as a requirement in the dependencies like in this
-:download:`mkl-env.yml </triton/examples/conda/mkl-env.yml>`:
+``blas * mkl`` as a requirement in the dependencies like in this:
 
-.. literalinclude:: /triton/examples/conda/mkl-env.yml
-   :language: yaml
+
+.. tabs::
+
+  .. group-tab:: Python
+
+    .. literalinclude:: /triton/examples/conda/numpy-mkl-env.yml
+      :language: yaml
+  .. group-tab:: R
+
+    .. literalinclude:: /triton/examples/conda/r-mkl-env.yml
+      :language: yaml
+
 
 
