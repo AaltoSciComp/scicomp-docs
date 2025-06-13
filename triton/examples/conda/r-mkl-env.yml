@@ -1,0 +1,6 @@
+name: mkl-env
+channels:
+  - conda-forge
+dependencies:
+  - blas * mkl
+  - r-base

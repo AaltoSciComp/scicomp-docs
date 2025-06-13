@@ -30,7 +30,7 @@ Python distributions
 
    * * I need to select my own packages
      * Mamba/conda environments
-     * ``module load mamba`` and :doc:`python-conda`
+     * ``module load mamba`` and :doc:`conda`
 
    * * Own small pure Python packages
      * Virtual environment (for most purposes we recommend Conda though)
@@ -77,7 +77,7 @@ Conda environments
 
 .. seealso::
 
-   :doc:`python-conda`
+   :doc:`conda`
 
 
 

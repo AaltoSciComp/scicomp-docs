@@ -130,7 +130,7 @@ Schedule
 
   * :localtime:`4 June 10:20 +03:00` **Conda** (JR, YT)
 
-    - :doc:`/triton/apps/python-conda`
+    - :doc:`/triton/deprecated/python-conda`
     - Big example: Make a conda environment for LLMs
 
   * :localtime:`4 June 11:00 +03:00` Break
@@ -311,7 +311,7 @@ these videos yourself as preparation.
 Very strongly recommended:
 
 * `Installing Python packages with Conda
-  <https://youtu.be/dmTlNh3MWx8>`__ (Note that conda on new-Triton has changed.  See :doc:`/triton/apps/python-conda` for details)
+  <https://youtu.be/dmTlNh3MWx8>`__ (Note that conda on new-Triton has changed.  See :doc:`/triton/apps/conda` for details)
 * `Git intro
   <https://www.youtube.com/watch?v=r9AT7MqmLrU&list=PLZLVmS9rf3nOaNzGrzPwLtkvFLu35kVF4&index=5>`__ (useful)
 

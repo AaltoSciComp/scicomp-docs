@@ -179,7 +179,7 @@ started with the computing resources.
     Usually, on clusters, this happens via *environments*, which
     allows you to install specific software per-project.  We'll give a
     demonstration of how these work in Python. Materials for demo:
-    :doc:`/triton/apps/python-conda`
+    :doc:`/triton/deprecated/python-conda`
 
   - **14:00--14:50: Secure Shell (ssh) tips and tricks** *Thomas Pfau
     and Enrico Glerean*

@@ -250,7 +250,7 @@ is to use the existing R installations on Triton.
   .. tab:: Using a conda environment
      
         You will need to create your own conda environment with all packages that are necessary
-        to deploy the environment as a kernel. See :doc:`here </triton/apps/python-conda>`  for 
+        to deploy the environment as a kernel. See :doc:`here </triton/apps/conda>`  for 
         general instructions on how to create a conda environment. (Yes, conda can install R)
 
 	In short: We recommend you
@@ -425,7 +425,7 @@ Here are the steps necessary to do so:
 5. (Optional) Set up a conda environment. This is mainly necessary if you have multiple conda or pip installable packages that are 
    required for your job and which are not part of the normal Sc module. Try it via ``module load scicomp-python-env``. 
    You can't install into the scicomp environment provided by the scicomp-python-env module and you should NOT use  ``pip install --user`` as it will bite you later (and can cause difficult to debug problems).
-   If you need to set up your own environment follow :doc:`this guide </triton/apps/python-conda/>`
+   If you need to set up your own environment follow :doc:`this guide </triton/apps/conda/>`
 6. Set up a slurm batch script in a file e.g. ``simple_python_gpu.sh``. You can do this either with ``nano simple_python_gpu.sh`` 
    (to save the file press ``ctrl+x``, type ``y`` to save the file and press ``Enter`` to accept the file name), or you can mount
    the triton file system and use your favorite editor, for guides on how to mount the file system have a look 

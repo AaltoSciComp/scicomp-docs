@@ -30,7 +30,7 @@ Building your own environment with PyTorch
 ******************************************
 
 If you need a PyTorch version different to the one supplied with the scicomp python environment we
-recommend installing your own conda environment as detailed `here </triton/apps/python-conda.rst>`_.
+recommend installing your own conda environment as detailed `here </triton/apps/conda.rst>`_.
 
 .. include:: /triton/examples/pytorch/pytorch_with_conda.rst
 
