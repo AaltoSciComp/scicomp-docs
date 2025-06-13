@@ -1,7 +1,7 @@
 .. _conda:
 
-Software Environments with Conda
-================================
+Conda
+=====
 
 **Conda** is a popular package manager that is especially
 popular in data science and machine learning communities.  **mamba**
@@ -109,9 +109,31 @@ In an environment file one usually defines the following:
 
 - ``name``: Name of the desired environment.
 - ``channels``: Which channels to use for packages.
-- ``dependencies``: Which packages to install. This can
-  include dependencies from PyPI using ``pip`` with
-  :doc:`special syntax <python-conda>`.
+- ``dependencies``: Which packages to install. 
+
+
+.. admonition:: Python-Specific: Using Pip in an environment file
+  :class: dropdown
+
+  Some packages or versions of packages may not be available in the
+  Conda channels, but are available on the Python Package Index (PyPI).
+  Conda provides a syntax for specifying these packages in the environment
+  file, allowing you to track all dependencies in one place.
+
+  .. code-block:: yaml
+
+    name: conda-pip-env
+    channels:
+      - conda-forge
+    dependencies:
+      # Conda packages
+      - python=3.9
+      - pandas
+
+      # Pip packages
+      - pip:
+        - some-pypi-only-package
+        - git+https://github.com/user/repo.git@main
 
 
 Choosing conda channels
@@ -416,6 +438,120 @@ One can install this library as the default BLAS by specifying
 
     .. literalinclude:: /triton/examples/conda/r-mkl-env.yml
       :language: yaml
+
+
+
+Advanced usage
+--------------
+
+
+Finding available packages
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Because conda tries to make certain that all packages in an environment
+are compatible with each other, there are usually tens of different versions
+of a single package.
+
+One can search for a package from a channel with the following command:
+
+.. code-block:: console
+
+  $ mamba search --channel conda-forge tensorflow
+
+This will return a long list of packages where each line looks something like
+this::
+
+  tensorflow                     2.8.1 cuda112py39h01bd6f0_0  conda-forge
+
+Here we have:
+
+- The package name (``tensorflow``).
+- Version of the package (``2.8.1``).
+- Package build version. This version often contains information on:
+
+  - Python version needed by the package (``py39`` or Python 3.9).
+  - Other libraries used by the package (``cuda112`` or CUDA 11.2).
+
+- Channel where the package comes from (``conda-forge``).
+
+
+Checking package dependencies
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+One can check package dependencies by adding the ``--info``-flag to the
+search command. This can give a lot of output, so it is a good idea to
+limit the search to one specific package:
+
+.. code-block:: console
+
+  $ mamba search --info --channel conda-forge tensorflow=2.8.1=cuda112py39h01bd6f0_0
+
+The output looks something like this::
+
+  tensorflow 2.8.1 cuda112py39h01bd6f0_0
+  --------------------------------------
+  file name   : tensorflow-2.8.1-cuda112py39h01bd6f0_0.tar.bz2
+  name        : tensorflow
+  version     : 2.8.1
+  build       : cuda112py39h01bd6f0_0
+  build number: 0
+  size        : 26 KB
+  license     : Apache-2.0
+  subdir      : linux-64
+  url         : https://conda.anaconda.org/conda-forge/linux-64/tensorflow-2.8.1-cuda112py39h01bd6f0_0.tar.bz2
+  md5         : 35716504c8ce6f685ae66a1d9b084fc7
+  timestamp   : 2022-05-21 09:09:53 UTC
+  dependencies:
+    - __cuda
+    - python >=3.9,<3.10.0a0
+    - python_abi 3.9.* *_cp39
+    - tensorflow-base 2.8.1 cuda112py39he716a45_0
+    - tensorflow-estimator 2.8.1 cuda112py39hd320b7a_0
+
+Packages with underscores are meta-packages that should not be added to conda
+environment specifications. They will be solved by conda automatically.
+
+Here we can see more info on the package, including its dependencies.
+
+When using mamba, one can also use ``mamba repoquery depends`` to
+see the dependencies:
+
+.. code-block:: console
+
+  $ mamba repoquery depends --channel conda-forge tensorflow=2.8.1=cuda112py39h01bd6f0_0
+
+Output looks something like this::
+
+   Name                     Version Build                 Channel
+  ─────────────────────────────────────────────────────────────────────────────
+   tensorflow               2.8.1   cuda112py39h01bd6f0_0 conda-forge/linux-64
+   __cuda >>> NOT FOUND <<<
+   python                   3.9.9   h62f1059_0_cpython    conda-forge/linux-64
+   python_abi               3.9     2_cp39                conda-forge/linux-64
+   tensorflow-base          2.8.1   cuda112py39he716a45_0 conda-forge/linux-64
+   tensorflow-estimator     2.8.1   cuda112py39hd320b7a_0 conda-forge/linux-64
+
+One can also print the full dependency list with
+``mamba repoquery depends --tree``. This will produce a really long output.
+
+.. code-block:: console
+
+  $ mamba repoquery depends --channel conda-forge tensorflow=2.8.1=cuda112py39h01bd6f0_0
+
+Fixing conflicts between packages
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Usually first step of fixing conflicts between packages is to write a new
+environment file and list all required packages in the file as dependencies.
+A fresh solve of the environment can often result in a working environment.
+
+Sometimes there is a case where a single package does not have support for a
+specific version of Python or specific version of CUDA toolkit. In these cases
+it is usually beneficial to give more flexibility to the solver by limiting
+the number of specified versions.
+
+One can also use the search commands provided by ``mamba`` to see what
+dependencies individual packages have.
 
 
 
