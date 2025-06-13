@@ -109,7 +109,9 @@ In an environment file one usually defines the following:
 
 - ``name``: Name of the desired environment.
 - ``channels``: Which channels to use for packages.
-- ``dependencies``: Which conda and pip packages to install.
+- ``dependencies``: Which packages to install. This can
+  include dependencies from PyPI using ``pip`` with
+  :doc:`special syntax <python-conda>`.
 
 
 Choosing conda channels
@@ -122,14 +124,18 @@ the needed packages.
 Some of the most popular channels are:
 
 - ``conda-forge``: An open-source channel with over 18k packages.
-  Highly recommended for new environments. Most packages in
-  ``scicomp-python-env``-modules come from here.
+  Highly recommended for new environments.
 - ``defaults``: A channel maintained by
   `Anaconda Inc. <https://www.anaconda.com>`_. You should exclude this
-  in your own environments
   due to licensing issues.  Default for anaconda distribution.
+  in your own environments
+- ``r`` : A subchannel of ``defaults``. The same licencing
+  issues apply.
 - ``bioconda``: A community maintained channel of
   `bioinformatics packages <https://bioconda.github.io>`_.
+- ``nvidia`` : Maintained by NVIDIA. Contains packages for
+  `CUDA <https://developer.nvidia.com/cuda-toolkit>`_ and other NVIDIA
+  software.
 
 One can have multiple channels defined like in the following example:
 
@@ -151,7 +157,6 @@ Setting package dependencies
 
 Packages in ``environment.yml`` can have version constraints and version
 wildcards.
-
 
 .. tabs::
 
@@ -281,9 +286,9 @@ Motivation for using conda
 When should you use conda?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you need basic Python packages, you can use pre-installed
-``scicomp-python-env``-modules. See the :doc:`Python-page <python>` for
-more information.
+For many common use cases, you can use the pre-installed scientific
+computing modules. For example, see the :doc:`Python-page <python>` or
+the :doc:`R-page <r>` for more information.
 
 You should use conda when you need to create your own custom environment.
 
@@ -292,7 +297,8 @@ Why use conda? What are its advantages?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Installing package directly with a system package manager such as
-`apt` or a language specific package manager such as `pip` or `npm` can
+`apt` or a language specific package manager such as `pip` for Python or
+`npm` for JavaScript
 is usually enough if you are the only user and working on one project.
 However, conda solces several problems that often arise in scientific
 computing. If these are familiar, using Conda is a good idea:
@@ -321,7 +327,7 @@ Creating an environment with CUDA toolkit
 -----------------------------------------
 
 NVIDIA's `CUDA-toolkit <https://developer.nvidia.com/cuda-toolkit>`_ is
-needed for working with NVIDIA's GPUs. Many Python frameworks that work on
+needed for working with NVIDIA's GPUs. Many frameworks that work on
 GPUs need to have a supported CUDA toolkit installed.
 
 Conda is often used to provide the CUDA toolkit and additional libraries such
@@ -386,12 +392,13 @@ environment, do note :ref:`this hint <cuda_hint>` on overriding
 CUDA during installation.
 
 
-Installing numpy with Intel MKL enabled BLAS
---------------------------------------------
+Using an optimized Intel MKL enabled BLAS library
+-------------------------------------------------
 
-`NumPy <https://numpy.org/>`_ and other mathematical libaries utilize BLAS
-(Basic Linear Algebra Subprograms) implementation for speeding up many
-operations. Intel provides their own fast BLAS implementation in
+BLAS (Basic Linear Algebra Subprograms) is a linear algebra library used
+be R and Julia, the `Numpy <https://numpy.org/>`_ library for Python, and
+many other libraries.
+Intel provides their own fast BLAS implementation in
 Intel MKL (Math Kernel Library). When using Intel CPUs, this library
 can give a significant performance boost to mathematical calculations.
 
