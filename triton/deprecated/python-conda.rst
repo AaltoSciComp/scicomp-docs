@@ -253,7 +253,7 @@ When should you use conda?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you need basic Python packages, you can use pre-installed
-``scicomp-python-env``-modules. See the :doc:`Python-page <python>` for
+``scicomp-python-env``-modules. See the :doc:`Python-page </triton/apps/conda>` for
 more information.
 
 You should use conda when you need to create your own custom environment.
