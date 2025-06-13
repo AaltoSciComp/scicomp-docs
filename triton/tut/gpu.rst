@@ -249,7 +249,7 @@ module that contains both frameworks (more info
 :ref:`here <conda>`)
 or install your own using environment using instructions
 presented
-:doc:`here </triton/apps/python-conda>`. These instructions
+:doc:`here </triton/apps/conda>`. These instructions
 make certain that the installed framework has a corresponding
 CUDA toolkit available. See the :ref:`application list <application-list>`
 for more details on specific frameworks.

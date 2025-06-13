@@ -319,8 +319,8 @@ Why use conda? What are its advantages?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Installing package directly with a system package manager such as
-`apt` or a language specific package manager such as `pip` for Python or
-`npm` for JavaScript
+``apt`` or a language specific package manager such as ``pip`` for Python or
+``npm`` for JavaScript
 is usually enough if you are the only user and working on one project.
 However, conda solces several problems that often arise in scientific
 computing. If these are familiar, using Conda is a good idea:

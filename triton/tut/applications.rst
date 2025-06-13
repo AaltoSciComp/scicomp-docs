@@ -131,7 +131,7 @@ our base Python installation to create your own **environments** -
 self-contained systems where you can install whatever you need.
 Different languages have different ways of doing this:
 
-* **Python**: Conda environments, virtual environments.  See :doc:`../apps/python-conda`.
+* **Python**: Conda environments, virtual environments.  See :doc:`../apps/conda`.
 
 Environments have an advantage that you can do multiple projects at
 once, and move between computers more easily.
