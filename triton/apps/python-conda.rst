@@ -31,36 +31,6 @@ manage the exact same environments.
 Quick usage guide
 -----------------
 
-.. _conda-first-time-setup:
-
-First time setup
-~~~~~~~~~~~~~~~~
-
-You can get conda and mamba by loading the ``mamba``-module.  **Mamba
-is a faster drop-in replacement for conda and we recommend its use
-where possible.**
-
-.. code-block:: console
-
-  $ module load mamba
-
-By default Conda stores installed packages and environments in your home
-directory. However, as your home directory has a lower quota, it is a good idea
-to tell conda to install packages and environments into your work directory:
-
-.. code-block:: console
-
-  $ mkdir $WRKDIR/.conda_pkgs
-  $ mkdir $WRKDIR/.conda_envs
-
-  $ conda config --append pkgs_dirs ~/.conda/pkgs
-  $ conda config --append envs_dirs ~/.conda/envs
-  $ conda config --prepend pkgs_dirs $WRKDIR/.conda_pkgs
-  $ conda config --prepend envs_dirs $WRKDIR/.conda_envs
-
-Now you're all set up to create your first environment.
-
-
 Creating a simple environment with conda
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -343,6 +313,7 @@ One can install this library as the default BLAS by specifying
 
 .. literalinclude:: /triton/examples/conda/numpy-mkl-env.yml
    :language: yaml
+
 
 Advanced usage
 --------------
