@@ -309,8 +309,8 @@ When should you use conda?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For many common use cases, you can use the pre-installed scientific
-computing modules. For example, see the :doc:`Python-page <python>` or
-the :doc:`R-page <r>` for more information.
+computing modules. For example, see the :ref:`Python page <scicomp-python-env>` or
+the :doc:`R page <r>` for more information.
 
 You should use conda when you need to create your own custom environment.
 
@@ -456,21 +456,21 @@ One can search for a package from a channel with the following command:
 
 .. code-block:: console
 
-  $ mamba search --channel conda-forge tensorflow
+  $ conda search --channel conda-forge libtorch
 
 This will return a long list of packages where each line looks something like
 this::
 
-  tensorflow                     2.8.1 cuda112py39h01bd6f0_0  conda-forge
+  libtorch                       2.6.0 cuda126_mkl_h76b5ff1_303  conda-forge
 
 Here we have:
 
-- The package name (``tensorflow``).
-- Version of the package (``2.8.1``).
-- Package build version. This version often contains information on:
-
-  - Python version needed by the package (``py39`` or Python 3.9).
-  - Other libraries used by the package (``cuda112`` or CUDA 11.2).
+- The package name (``libtorch``).
+- Version of the package (``2.6.0``).
+- Package build version. This version often contains information on
+  the libraries used by the package ( or CUDA 12.6).
+  - ``cuda126`` indicates CUDA 12.6
+  - ``mkl`` refers to the Intel MKL library
 
 - Channel where the package comes from (``conda-forge``).
 
@@ -484,29 +484,59 @@ limit the search to one specific package:
 
 .. code-block:: console
 
-  $ mamba search --info --channel conda-forge tensorflow=2.8.1=cuda112py39h01bd6f0_0
+  $ conda search --info --channel conda-forge libtorch=2.6.0=cuda126_mkl_h76b5ff1_303
 
 The output looks something like this::
 
-  tensorflow 2.8.1 cuda112py39h01bd6f0_0
-  --------------------------------------
-  file name   : tensorflow-2.8.1-cuda112py39h01bd6f0_0.tar.bz2
-  name        : tensorflow
-  version     : 2.8.1
-  build       : cuda112py39h01bd6f0_0
-  build number: 0
-  size        : 26 KB
-  license     : Apache-2.0
+  libtorch 2.6.0 cuda126_mkl_h76b5ff1_303
+  ---------------------------------------
+  file name   : libtorch-2.6.0-cuda126_mkl_h76b5ff1_303.conda
+  name        : libtorch
+  version     : 2.6.0
+  build       : cuda126_mkl_h76b5ff1_303
+  build number: 303
+  size        : 498.4 MB
+  license     : BSD-3-Clause
   subdir      : linux-64
-  url         : https://conda.anaconda.org/conda-forge/linux-64/tensorflow-2.8.1-cuda112py39h01bd6f0_0.tar.bz2
-  md5         : 35716504c8ce6f685ae66a1d9b084fc7
-  timestamp   : 2022-05-21 09:09:53 UTC
-  dependencies:
-    - __cuda
-    - python >=3.9,<3.10.0a0
-    - python_abi 3.9.* *_cp39
-    - tensorflow-base 2.8.1 cuda112py39he716a45_0
-    - tensorflow-estimator 2.8.1 cuda112py39hd320b7a_0
+  url         : https://conda.anaconda.org/conda-forge/linux-64/libtorch-2.6.0-cuda126_mkl_h76b5ff1_303.conda
+  md5         : 9e678f51a95616bfb8435cce925d8866
+  timestamp   : 2025-03-26 00:20:08 UTC
+  constraints : 
+    - pytorch-gpu ==2.6.0
+    - pytorch-cpu ==99999999
+    - pytorch 2.6.0 cuda126_mkl_*_303
+  dependencies: 
+    - __glibc >=2.17,<3.0.a0
+    - _openmp_mutex * *_llvm
+    - _openmp_mutex >=4.5
+    - cuda-cudart >=12.6.77,<13.0a0
+    - cuda-cupti >=12.6.80,<13.0a0
+    - cuda-nvrtc >=12.6.85,<13.0a0
+    - cuda-nvtx >=12.6.77,<13.0a0
+    - cuda-version >=12.6,<13
+    - cudnn >=9.8.0.87,<10.0a0
+    - libabseil * cxx17*
+    - libabseil >=20250127.1,<20250128.0a0
+    - libblas * *mkl
+    - libcblas >=3.9.0,<4.0a0
+    - libcublas >=12.6.4.1,<13.0a0
+    - libcudss >=0.5.0.16,<0.5.1.0a0
+    - libcufft >=11.3.0.4,<12.0a0
+    - libcufile >=1.11.1.6,<2.0a0
+    - libcurand >=10.3.7.77,<11.0a0
+    - libcusolver >=11.7.1.2,<12.0a0
+    - libcusparse >=12.5.4.2,<13.0a0
+    - libgcc >=13
+    - libmagma >=2.9.0,<2.9.1.0a0
+    - libprotobuf >=5.29.3,<5.29.4.0a0
+    - libstdcxx >=13
+    - libuv >=1.50.0,<2.0a0
+    - libzlib >=1.3.1,<2.0a0
+    - llvm-openmp >=20.1.1
+    - mkl >=2024.2.2,<2025.0a0
+    - nccl >=2.26.2.1,<3.0a0
+    - sleef >=3.8,<4.0a0
+
 
 Packages with underscores are meta-packages that should not be added to conda
 environment specifications. They will be solved by conda automatically.
@@ -522,21 +552,46 @@ see the dependencies:
 
 Output looks something like this::
 
-   Name                     Version Build                 Channel
+  Name                     Version Build                 Channel
   ─────────────────────────────────────────────────────────────────────────────
-   tensorflow               2.8.1   cuda112py39h01bd6f0_0 conda-forge/linux-64
-   __cuda >>> NOT FOUND <<<
-   python                   3.9.9   h62f1059_0_cpython    conda-forge/linux-64
-   python_abi               3.9     2_cp39                conda-forge/linux-64
-   tensorflow-base          2.8.1   cuda112py39he716a45_0 conda-forge/linux-64
-   tensorflow-estimator     2.8.1   cuda112py39hd320b7a_0 conda-forge/linux-64
+  __glibc >=2.17,<3.0.a0 >>> NOT FOUND <<<                                                           
+  _openmp_mutex                            4.5        3_gnu                      conda-forge linux-64
+  cuda-cudart                              12.9.79    h5888daf_0                 conda-forge linux-64
+  cuda-cupti                               12.9.79    h9ab20c4_0                 conda-forge linux-64
+  cuda-nvrtc                               12.9.86    h5888daf_0                 conda-forge linux-64
+  cuda-nvtx                                12.9.79    h5888daf_0                 conda-forge linux-64
+  cuda-version                             12.9       h4f385c5_3                 conda-forge noarch  
+  cudnn                                    9.10.1.4   h7646684_0                 conda-forge linux-64
+  libabseil                                20250512.0 cxx17_hba17884_0           conda-forge linux-64
+  libabseil                                20250127.1 cxx17_hbbce691_0           conda-forge linux-64
+  libblas                                  3.9.0      19_linux64_mkl             conda-forge linux-64
+  libcblas                                 3.9.0      11_h71a1b9d_netlib         conda-forge linux-64
+  libcublas                                12.9.1.4   h9ab20c4_0                 conda-forge linux-64
+  libcudss                                 0.5.0.16   h14340ca_0                 conda-forge linux-64
+  libcufft                                 11.4.1.4   h5888daf_0                 conda-forge linux-64
+  libcufile                                1.14.1.1   ha8da6e3_0                 conda-forge linux-64
+  libcurand                                10.3.10.19 h9ab20c4_0                 conda-forge linux-64
+  libcusolver                              11.7.5.82  h9ab20c4_0                 conda-forge linux-64
+  libcusparse                              12.5.10.65 h5888daf_0                 conda-forge linux-64
+  libgcc                                   15.1.0     h767d61c_2                 conda-forge linux-64
+  libmagma                                 2.9.0      h19665d7_1                 conda-forge linux-64
+  libprotobuf                              5.29.3     h501fc15_0                 conda-forge linux-64
+  libstdcxx                                15.1.0     h8f9b012_2                 conda-forge linux-64
+  libtorch                                 2.6.0      cuda126_mkl_h76b5ff1_303   conda-forge linux-64
+  libuv                                    1.51.0     hb9d3cd8_0                 conda-forge linux-64
+  libzlib                                  1.3.1      h4ab18f5_1                 conda-forge linux-64
+  llvm-openmp                              20.1.6     h024ca30_0                 conda-forge linux-64
+  mkl                                      2024.2.2   ha957f24_15                conda-forge linux-64
+  nccl                                     2.27.3.1   h03a54cd_0                 conda-forge linux-64
+  sleef                                    3.8        h1b44611_0                 conda-forge linux-64
 
 One can also print the full dependency list with
 ``mamba repoquery depends --tree``. This will produce a really long output.
 
 .. code-block:: console
 
-  $ mamba repoquery depends --channel conda-forge tensorflow=2.8.1=cuda112py39h01bd6f0_0
+  $ mamba repoquery depends --tree --channel conda-forge tensorflow=2.8.1=cuda112py39h01bd6f0_0
+
 
 Fixing conflicts between packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -552,6 +607,4 @@ the number of specified versions.
 
 One can also use the search commands provided by ``mamba`` to see what
 dependencies individual packages have.
-
-
 
