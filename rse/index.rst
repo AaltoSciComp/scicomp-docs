@@ -133,6 +133,7 @@ to improvement at any time.  Also see the :doc:`FCCI Tech
    procedures/job-descriptions
    procedures/units-info
    procedures/advisory-board
+   procedures/template-projects
    history
    reports/2022
    reports/2023
