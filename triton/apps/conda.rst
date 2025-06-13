@@ -94,7 +94,7 @@ Once the environment is installed, you can activate it with:
 
 .. code-block:: console
 
-   $ source activate tidyverse
+   $ source activate conda-example
 
 .. include:: /triton/ref/condaactivate.rst
 

@@ -1,4 +1,4 @@
-name: tidyverse
+name: conda-example
 channels:
   - conda-forge
 dependencies:
