@@ -44,7 +44,7 @@ where possible.**
 
 .. code-block:: console
 
-  $ module load mamba
+   $ module load mamba
 
 By default Conda stores installed packages and environments in your home
 directory. However, as your home directory has a lower quota, it is a good idea
@@ -52,13 +52,13 @@ to tell conda to install packages and environments into your work directory:
 
 .. code-block:: console
 
-  $ mkdir $WRKDIR/.conda_pkgs
-  $ mkdir $WRKDIR/.conda_envs
+   $ mkdir $WRKDIR/.conda_pkgs
+   $ mkdir $WRKDIR/.conda_envs
 
-  $ conda config --append pkgs_dirs ~/.conda/pkgs
-  $ conda config --append envs_dirs ~/.conda/envs
-  $ conda config --prepend pkgs_dirs $WRKDIR/.conda_pkgs
-  $ conda config --prepend envs_dirs $WRKDIR/.conda_envs
+   $ conda config --append pkgs_dirs ~/.conda/pkgs
+   $ conda config --append envs_dirs ~/.conda/envs
+   $ conda config --prepend pkgs_dirs $WRKDIR/.conda_pkgs
+   $ conda config --prepend envs_dirs $WRKDIR/.conda_envs
 
 Now you're all set up to create your first environment.
 
@@ -75,26 +75,26 @@ Below we have a simple environment.yml
 
    .. group-tab:: Python
 
-        .. literalinclude:: /triton/examples/conda/python-environment.yml
-           :language: yaml
+      .. literalinclude:: /triton/examples/conda/python-environment.yml
+         :language: yaml
 
-    .. group-tab:: R
+   .. group-tab:: R
 
-        .. literalinclude:: /triton/examples/conda/r-environment.yml
-           :language: yaml
+      .. literalinclude:: /triton/examples/conda/r-environment.yml
+         :language: yaml
 
 Now we can use the ``conda``-command to create the environment:
 
 .. code-block:: console
 
-  $ module load mamba
-  $ mamba env create --file environment.yml
+   $ module load mamba
+   $ mamba env create --file environment.yml
 
 Once the environment is installed, you can activate it with:
 
 .. code-block:: console
 
-  $ source activate conda-example
+   $ source activate tidyverse
 
 .. include:: /triton/ref/condaactivate.rst
 
@@ -113,27 +113,27 @@ In an environment file one usually defines the following:
 
 
 .. admonition:: Python-Specific: Using Pip in an environment file
-  :class: dropdown
+   :class: dropdown
 
-  Some packages or versions of packages may not be available in the
-  Conda channels, but are available on the Python Package Index (PyPI).
-  Conda provides a syntax for specifying these packages in the environment
-  file, allowing you to track all dependencies in one place.
+   Some packages or versions of packages may not be available in the
+   Conda channels, but are available on the Python Package Index (PyPI).
+   Conda provides a syntax for specifying these packages in the environment
+   file, allowing you to track all dependencies in one place.
 
-  .. code-block:: yaml
+   .. code-block:: yaml
 
-    name: conda-pip-env
-    channels:
-      - conda-forge
-    dependencies:
-      # Conda packages
-      - python=3.9
-      - pandas
+      name: conda-pip-env
+      channels:
+         - conda-forge
+      dependencies:
+         # Conda packages
+         - python=3.9
+         - pandas
 
-      # Pip packages
-      - pip:
-        - some-pypi-only-package
-        - git+https://github.com/user/repo.git@main
+         # Pip packages
+         - pip:
+            - some-pypi-only-package
+            - git+https://github.com/user/repo.git@main
 
 
 Choosing conda channels
@@ -182,28 +182,28 @@ wildcards.
 
 .. tabs::
 
-  .. group-tab:: Python
+   .. group-tab:: Python
 
-    One can also specify pip packages to install after conda-packages
-    have been installed.
+      One can also specify pip packages to install after conda-packages
+      have been installed.
 
-    .. literalinclude:: /triton/examples/conda/python-dependency-env.yml
-      :language: yaml
+      .. literalinclude:: /triton/examples/conda/python-dependency-env.yml
+         :language: yaml
 
-  .. group-tab:: R
+   .. group-tab:: R
 
-    .. literalinclude:: /triton/examples/conda/r-dependency-env.yml
-      :language: yaml
+      .. literalinclude:: /triton/examples/conda/r-dependency-env.yml
+         :language: yaml
 
 
 Listing packages in an environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To list packages installed in an environment, one can use:
+To list packages installed the in currently activated environment, one can use:
 
 .. code-block:: console
 
-  $ mamba list
+   $ mamba list
 
 
 Removing an environment
@@ -213,7 +213,7 @@ To remove an environment, one can use:
 
 .. code-block:: console
 
-  $ mamba env remove --name environment_name
+   $ mamba env remove --name environment_name
 
 Do remember to deactivate the environment before trying to remove it.
 
@@ -239,7 +239,7 @@ We recommend updating the ``environment.yml`` file, and then:
 
 .. code-block:: console
 
-  $ mamba env update --file environment.yml
+   $ mamba env update --file environment.yml
 
 If you make major changes, or *anything* goes wrong, we recommend
 removing the environment and re-creating it.  (This is a big benefit
@@ -259,7 +259,7 @@ If needed, ``mamba-install`` can be used (in this case, install
 
 .. code-block:: console
 
-  $ mamba install --freeze-installed --channel conda-forge matplotlib
+   $ mamba install --freeze-installed --channel conda-forge matplotlib
 
 Installing packages into an existing environment can be risky: conda uses
 channels given from the command line when it determines which channels it
@@ -292,13 +292,13 @@ with:
 
 .. code-block:: console
 
-  $ conda config --env --add channels conda-forge
+   $ conda config --env --add channels conda-forge
 
 We can check the contents of the configuration file with:
 
 .. code-block:: console
 
-  $ cat $CONDA_PREFIX/.condarc
+   $ cat $CONDA_PREFIX/.condarc
 
   
 Motivation for using conda
@@ -377,20 +377,20 @@ Creating an environment with GPU enabled Tensorflow
 
 .. tabs::
 
-  .. group-tab:: Python
+   .. group-tab:: Python
 
-    .. include:: /triton/examples/tensorflow/tensorflow_with_conda.rst
+      .. include:: /triton/examples/tensorflow/tensorflow_with_conda.rst
 
-  .. group-tab:: R
+   .. group-tab:: R
 
-    To create an environment with GPU enabled Tensorflow you can use an
-    environment file like this:
+      To create an environment with GPU enabled Tensorflow you can use an
+      environment file like this:
 
-    .. literalinclude:: /triton/examples/conda/r-tensorflow-cuda.yml
+      .. literalinclude:: /triton/examples/conda/r-tensorflow-cuda.yml
 
-    Here we install the latest tensorflow from ``conda-forge``-channel with an additional
-    requirement that the build version of the ``tensorflow``-package must contain
-    a reference to a CUDA toolkit. For a specific version replace the ``=*=*cuda*`` with e.g. ``=2.8.1=*cuda*`` for version ``2.8.1``.
+      Here we install the latest tensorflow from ``conda-forge``-channel with an additional
+      requirement that the build version of the ``tensorflow``-package must contain
+      a reference to a CUDA toolkit. For a specific version replace the ``=*=*cuda*`` with e.g. ``=2.8.1=*cuda*`` for version ``2.8.1``.
 
 
 
@@ -399,13 +399,13 @@ Creating an environment with GPU enabled Torch
 
 .. tabs::
 
-  .. group-tab:: Python
+   .. group-tab:: Python
 
-    .. include:: /triton/examples/pytorch/pytorch_with_conda.rst
+      .. include:: /triton/examples/pytorch/pytorch_with_conda.rst
 
-  .. group-tab:: R
+   .. group-tab:: R
 
-    .. include:: /triton/examples/conda/r-torch-cuda.rst
+      .. include:: /triton/examples/conda/r-torch-cuda.rst
 
 
 
@@ -430,14 +430,14 @@ One can install this library as the default BLAS by specifying
 
 .. tabs::
 
-  .. group-tab:: Python
+   .. group-tab:: Python
 
-    .. literalinclude:: /triton/examples/conda/numpy-mkl-env.yml
-      :language: yaml
-  .. group-tab:: R
+      .. literalinclude:: /triton/examples/conda/numpy-mkl-env.yml
+         :language: yaml
+   .. group-tab:: R
 
-    .. literalinclude:: /triton/examples/conda/r-mkl-env.yml
-      :language: yaml
+      .. literalinclude:: /triton/examples/conda/r-mkl-env.yml
+         :language: yaml
 
 
 
@@ -456,7 +456,7 @@ One can search for a package from a channel with the following command:
 
 .. code-block:: console
 
-  $ conda search --channel conda-forge libtorch
+   $ conda search --channel conda-forge libtorch
 
 This will return a long list of packages where each line looks something like
 this::
@@ -484,7 +484,7 @@ limit the search to one specific package:
 
 .. code-block:: console
 
-  $ conda search --info --channel conda-forge libtorch=2.6.0=cuda126_mkl_h76b5ff1_303
+   $ conda search --info --channel conda-forge libtorch=2.6.0=cuda126_mkl_h76b5ff1_303
 
 The output looks something like this::
 
@@ -548,7 +548,7 @@ see the dependencies:
 
 .. code-block:: console
 
-  $ mamba repoquery depends --channel conda-forge tensorflow=2.8.1=cuda112py39h01bd6f0_0
+   $ mamba repoquery depends --channel conda-forge tensorflow=2.8.1=cuda112py39h01bd6f0_0
 
 Output looks something like this::
 
@@ -590,7 +590,7 @@ One can also print the full dependency list with
 
 .. code-block:: console
 
-  $ mamba repoquery depends --tree --channel conda-forge tensorflow=2.8.1=cuda112py39h01bd6f0_0
+   $ mamba repoquery depends --tree --channel conda-forge tensorflow=2.8.1=cuda112py39h01bd6f0_0
 
 
 Fixing conflicts between packages
