@@ -133,11 +133,11 @@ wildcards. One can also specify pip packages to install after conda-packages
 have been installed.
 
 For example, the following
-:download:`dependency-env.yml </triton/examples/conda/dependency-env.yml>`
+:download:`python-dependency-env.yml </triton/examples/conda/python-dependency-env.yml>`
 would install a numpy with version higher or equal
 than 1.10 using conda and scipy via pip:
 
-.. literalinclude:: /triton/examples/conda/dependency-env.yml
+.. literalinclude:: /triton/examples/conda/python-dependency-env.yml
    :language: yaml
 
 Listing packages in an environment
@@ -339,9 +339,9 @@ can give a significant performance boost to mathematical calculations.
 
 One can install this library as the default BLAS by specifying
 ``blas * mkl`` as a requirement in the dependencies like in this
-:download:`mkl-env.yml </triton/examples/conda/mkl-env.yml>`:
+:download:`mkl-env.yml </triton/examples/conda/numpy-mkl-env.yml>`:
 
-.. literalinclude:: /triton/examples/conda/mkl-env.yml
+.. literalinclude:: /triton/examples/conda/numpy-mkl-env.yml
    :language: yaml
 
 Advanced usage
