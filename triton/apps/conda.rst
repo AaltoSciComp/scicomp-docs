@@ -20,6 +20,13 @@ installation as well, for example cmake, Node.js, Java or Perl.
    for an introduction + demo.
 
 
+.. seealso::
+
+   Watch our
+   `kitchen analogy video
+   <https://www.youtube.com/watch?v=ddCde5Nu2qo&list=PLpLblYHCzJAB6blBBa0O2BEYadVZV3JYf>`__
+   for an explanation of software environments.
+
 Doing everything faster with mamba
 ----------------------------------
 
