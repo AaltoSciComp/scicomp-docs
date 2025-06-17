@@ -12,7 +12,7 @@
    NVIDIA A100          | ``gpu-a100-80g``                   | ``ampere``                             | ``a100``                                | 56             | gpu[11-17,38-44] | Ampere     | 7936                      | 80GB              | 8.0
    NVIDIA H100          | ``gpu-h100-80g``                   | ``hopper``                             | ``h100``                                | 16             | gpu[45-48]   | Hopper         | 16896                     | 80GB              | 9.0
    NVIDIA H200          | ``gpu-h200-18g-ia``                | ``hopper``                             | ``h200-18g``                            | 56             | gpu[49]      | Hopper         |                           | 18GB              | 9.0
-   NVIDIA H200(*)       | ``gpu-h200-141g-ellis``, ``gpu-h200-141g-short``  | ``hopper``              | ``h200``                                | 16             | gpu[50-51]   | Hopper         |                           | 141GB             | 9.0
+   NVIDIA H200(*)       | ``gpu-h200-141g-ellis``, ``gpu-h200-141g-short``  | ``hopper``              | ``h200``                                | 112            | gpu[50-63]   | Hopper         |                           | 141GB             | 9.0
    AMD MI100 (testing)  |   *Not yet installed*              | ``mi100``                              | Use ``-p gpu-amd`` only, no ``--gres``  |                | gpuamd[1]    |                |                           |                   |
 
 (*) These GPUs have a priority queue for the ellis project, since they were procured for this project. 
