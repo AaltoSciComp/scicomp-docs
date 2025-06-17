@@ -1,0 +1,5 @@
+name: conda-example
+channels:
+  - conda-forge
+dependencies:
+  - r-tidyverse

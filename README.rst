@@ -88,7 +88,7 @@ add there.
 Recommended pages for copying:
 
 * :doc:`/triton/tut/serial` - tutorial
-* :doc:`/triton/apps/python-conda` - topical discussion on a certain
+* :doc:`/triton/apps/conda` - topical discussion on a certain
   item
 * ``/triton/apps/TEMPLATE.rst.template`` is a template for an
   application information page.

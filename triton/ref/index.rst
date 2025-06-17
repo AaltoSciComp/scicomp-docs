@@ -166,7 +166,7 @@ See also: :doc:`../tut/gpu`.
 Conda Environments (Mamba)
 --------------------------
 
-See also: :doc:`../apps/python-conda`.  Note that ``mamba`` is a
+See also: :doc:`../apps/conda`.  Note that ``mamba`` is a
 drop-in replacement for ``conda``.
 
 .. include:: conda.rst

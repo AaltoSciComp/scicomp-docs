@@ -1,4 +1,4 @@
-.. _conda:
+.. _python_conda:
 
 Python Environments with Conda
 ==============================
@@ -31,7 +31,7 @@ manage the exact same environments.
 Quick usage guide
 -----------------
 
-.. _conda-first-time-setup:
+.. _python_conda-first-time-setup:
 
 First time setup
 ~~~~~~~~~~~~~~~~
@@ -67,9 +67,9 @@ Creating a simple environment with conda
 One can install environments from the command line itself, but a better idea
 is to write an ``environment.yml``-file that describes the environment.
 
-Below we have a simple :download:`environment.yml </triton/examples/conda/environment.yml>`:
+Below we have a simple :download:`python-environment.yml </triton/examples/conda/python-environment.yml>`:
 
-.. literalinclude:: /triton/examples/conda/environment.yml
+.. literalinclude:: /triton/examples/conda/python-environment.yml
    :language: yaml
 
 Now we can use the ``conda``-command to create the environment:
@@ -134,11 +134,11 @@ wildcards. One can also specify pip packages to install after conda-packages
 have been installed.
 
 For example, the following
-:download:`dependency-env.yml </triton/examples/conda/dependency-env.yml>`
+:download:`python-dependency-env.yml </triton/examples/conda/python-dependency-env.yml>`
 would install a numpy with version higher or equal
 than 1.10 using conda and scipy via pip:
 
-.. literalinclude:: /triton/examples/conda/dependency-env.yml
+.. literalinclude:: /triton/examples/conda/python-dependency-env.yml
    :language: yaml
 
 Listing packages in an environment
@@ -253,7 +253,7 @@ When should you use conda?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you need basic Python packages, you can use pre-installed
-``scicomp-python-env``-modules. See the :doc:`Python-page <python>` for
+``scicomp-python-env``-modules. See the :doc:`Python-page </triton/apps/conda>` for
 more information.
 
 You should use conda when you need to create your own custom environment.
@@ -340,9 +340,9 @@ can give a significant performance boost to mathematical calculations.
 
 One can install this library as the default BLAS by specifying
 ``blas * mkl`` as a requirement in the dependencies like in this
-:download:`mkl-env.yml </triton/examples/conda/mkl-env.yml>`:
+:download:`numpy-mkl-env.yml </triton/examples/conda/numpy-mkl-env.yml>`:
 
-.. literalinclude:: /triton/examples/conda/mkl-env.yml
+.. literalinclude:: /triton/examples/conda/numpy-mkl-env.yml
    :language: yaml
 
 Advanced usage

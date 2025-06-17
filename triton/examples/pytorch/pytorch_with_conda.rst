@@ -7,8 +7,5 @@ environment file like this
 
 .. literalinclude:: /triton/examples/pytorch/pytorch-env.yml
 
-Here we install the latest pytorch version from ``pytorch``-channel and
-the ``pytorch-cuda``-metapackage that makes certain that the
-
-Additional packages required by pytorch
-are installed from ``conda-forge``-channel.
+Here we install the latest gpu enabled pytorch version from
+``conda-forge``-channel.

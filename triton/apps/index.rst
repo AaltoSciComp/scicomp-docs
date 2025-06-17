@@ -44,7 +44,7 @@ instructions for how you can install it by yourself.
 
 Software is generally easy to install if it is in the `conda's
 conda-forge channel <https://anaconda.org/search>`__ (for almost any
-software, see our :doc:`conda guide </triton/apps/python-conda>`) or the
+software, see our :doc:`conda guide </triton/apps/conda>`) or the
 `Spack package manager <https://packages.spack.io/>`__ (for compiled
 software).  If it has easy-to-install Ubuntu packages, it will be easy
 to do via :doc:`singularity <../usage/singularity>` containers.

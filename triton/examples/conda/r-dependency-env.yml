@@ -1,0 +1,9 @@
+name: bioconda_env
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - r-base=4.3.*
+  - r-essentials
+  - r-tidyverse>=2.0<=3.0
+  - bioconductor-dada2
