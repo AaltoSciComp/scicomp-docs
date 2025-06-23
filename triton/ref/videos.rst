@@ -2,6 +2,7 @@
 
    Videos of this topic may be available from one of our kickstart
    course playlists:
+   `2025 summer <https://www.youtube.com/playlist?list=PLZLVmS9rf3nNK5qWN6FdrQPHns4fNZyMX>`__,
    `2025 winter <https://www.youtube.com/playlist?list=PLZLVmS9rf3nOeuqXNa8tS-tDtdQrES2We>`__,
    `2024 <https://www.youtube.com/playlist?list=PLZLVmS9rf3nOeuqXNa8tS-tDtdQrES2We>`__,
    `2023 <https://www.youtube.com/playlist?list=PLZLVmS9rf3nMKR2jMglaN4su3ojWtWMVw>`__,
