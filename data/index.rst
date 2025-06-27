@@ -65,6 +65,9 @@ use.
 Data storage in Aalto
 ---------------------
 
+This section is for general data in Aalto.  These references aren't
+focused on Triton and scientific computing data, but they are mentioned.
+
 * Quick summary: `What file storage to use? <https://www.aalto.fi/en/services/what-file-storage-to-use-when>`__
 * `Teamwork storage space <https://www.aalto.fi/en/services/file-storage-space-for-research-and-groups-teamwork>`__ (Aalto project directories)
 * `Storage services for research data <https://www.aalto.fi/en/services/storage-services-for-research-data>`__
@@ -72,10 +75,10 @@ Data storage in Aalto
 * `Guidelines for classification of confidential information <https://www.aalto.fi/en/cyber-security/classification-of-information-basic-instructions-and-services>`__
 
 
-Data in Science-IT departments
-------------------------------
+Data in Science-IT departments (CS, NBE, PHYS)
+----------------------------------------------
 
-(CS, NBE, PHYS).
+Common practices in our departments.
 
 Getting space:
 
