@@ -46,7 +46,7 @@ In the following sbatch script, we request computational resources, load the nec
     #SBATCH --cpus-per-task=4
     #SBATCH --mem=80GB #This is system memory, not GPU memory.
     #SBATCH --gpus=1
-    #SBATCH --partition=gpu-v100-32GB # modify according to your needs
+    #SBATCH --partition=gpu-v100-32g # modify according to your needs
     #SBATCH --output huggingface.%J.out
     #SBATCH --error huggingface.%J.err
 
@@ -55,7 +55,7 @@ In the following sbatch script, we request computational resources, load the nec
     module load model-huggingface
 
     # Load a ready to use conda environment to use HuggingFace Transformers
-    module load scicomp-llm-env
+    module load scicomp-llm-env/2025.2
 
     # Force transformer to load model(s) from local hub instead of download and load model(s) from remote hub. 
     export TRANSFORMERS_OFFLINE=1
@@ -74,14 +74,13 @@ The ``your_script.py`` Python script uses a HuggingFace model ``mistralai/Mistra
   pipe = pipeline( 
     "text-generation", # Task type 
     model="mistralai/Mistral-7B-Instruct-v0.1", # Model name 
-    device="auto", # Let the pipeline automatically select best available device
+    device="cuda", # Specify to use CUDA as device
     max_new_tokens=1000 
   ) 
 
   # Prepare prompts
   messages = [
-    {"role": "user", "content": "Continue the following sequence: 1, 2, 3, 5, 8"},
-    {"role": "user", "content": "What is the meaning of life?"}
+    {"role": "user", "content": "Continue the following sequence: 1, 2, 3, 5, 8"}    
     ]
 
   # Generate and print responses
