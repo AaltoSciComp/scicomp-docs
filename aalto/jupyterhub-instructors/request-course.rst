@@ -49,7 +49,8 @@ YAML, by the way (but we can handle the syntax details).
    contact: [teacher.in.charge@aalto.fi, head.ta@aalto.fi]
    # (optional) has rights to add other TAs via
    # domesti.cs.aalto.fi (supervisor is always a manager)
-   #manager: [can_add.tas@aalto.fi]
+   # Uncomment below to add extra managers
+   # manager: [can_add.tas@aalto.fi]
 
    # if true, create a separate data directory
    datadir: false
