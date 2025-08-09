@@ -65,6 +65,7 @@ Science-IT
    :maxdepth: 2
 
    science-it
+   science-it-history
 
 Science-IT is the organizational manifestation of Aalto Scientific
 Computing.
