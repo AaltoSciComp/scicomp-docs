@@ -107,7 +107,11 @@ In the following file browser, you will able to select the folder on your comput
     It is recommended to divide files into folders according to language. For example, put English interview files in folder ``my-english-interviews``, French interviews to ``my-french-interviews``, and so forth.
 
     Put the audio files in folders even if you only have one. This will keep your project files organized on both Triton and your own computer.
-    
+
+.. note::
+
+    File and folder names should not contain white spaces. Instead, use hyphens (``-``) or underscores (``_``) to separate words. 
+
 Finally, if your browser asks for confirmation, (``Are you sure you want to upload all files from “my-audio-folder”? Only do this if you trust the site.``), you can answer "yes".
 
 Depending on the number and size of your audio files and the quality of your internet connection, the transfer can take a short or a long time (from a few seconds to several hours).
@@ -142,6 +146,11 @@ Finally, press ``Launch`` and you're done!
 
 You will get an email notification when the results are available.
 
+.. note::
+
+    If the expected result files already exist (i.e. you have submitted the same audio file before), the app will exit early without doing any further processing.
+
+    If you want to re-process the same audio file, please, delete or rename the result files first and then submit the job again.
 
 
 Inspect and copy result to your personal computer
