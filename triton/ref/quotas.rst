@@ -3,16 +3,18 @@
   recommend project-based storage instead of increasing personal
   quotas.
 * ``quota`` - print your quota and usage
-* ``du -h $HOME | sort -h``: print all directories and
-  subdirectories in your home directory, sorted by size.  This lets
-  you find out where space is being used.  ``$HOME`` can be
-  replaced with any other directory (or left off for the current
-  directory).  Use ``du -a`` to list all files, not only directories.
+* Finding what is using space
 
-  * ``du -h --max-depth=1 $HOME | sort -h``: Similar, but only list
-    down to ``--max-depth`` levels.
-  * ``du --inodes --max-depth=1 $HOME | sort -n``: Similar, but list
-    the number of files in the directories.
+  * The ``dust`` tool prints a nice tree of largest directories.
+    ``module load dust`` then ``dust $HOME`` on Triton.  ``$HOME`` can be
+    replaced with any other directory (or left off for current directory)
+  * ``du -h $HOME | sort -h``: Like above but works everywhere.  Use
+    ``du -ah`` to list all files.
+
+    * ``du -h --max-depth=1 $HOME | sort -h``: Similar, but only list
+      down to ``--max-depth`` levels.
+    * ``du --inodes --max-depth=1 $HOME | sort -n``: Similar, but list
+      the number of files in the directories.
 
 * ``rm`` removes a single file, ``rm -r`` removes a whole directory
   tree.  **Warning: on scratch and Linux in general (unless backed
