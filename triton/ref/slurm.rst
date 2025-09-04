@@ -34,7 +34,7 @@
                             ! ``--constraint=localdisk``     ! request nodes that have local disks
 			    ! ``--tmp=nnnG``                 ! Request ``nnn`` GB of :doc:`local disk storage space </triton/usage/localstorage>`
                             ! ``--array=``\ *0-5,7,10-15*    ! Run job multiple times, use variable ``$SLURM_ARRAY_TASK_ID`` to adjust parameters.
-                            ! ``--gres=gpu``                 ! request a GPU, or ``--gres=gpu:``\ *n* for multiple
+                            ! ``--gpus=1``                   ! request a GPU, or ``--gpus=N`` for multiple
                             ! ``--mail-type=``\ *TYPE*       ! notify of events: ``BEGIN``, ``END``, ``FAIL``, ``ALL``, ``REQUEUE`` (not on triton) or ``ALL.`` MUST BE used with ``--mail-user=`` only
                             ! ``--mail-user=``\ *YOUR@EMAIL* ! whome to send the email
    ``srun``                 ! ``-N`` *N_NODES* hostname    ! Print allocated nodes (from within script)

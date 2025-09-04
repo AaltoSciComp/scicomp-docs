@@ -24,7 +24,7 @@ Example
 
 ::
 
-   srun --gres=gpu:1 --pty bash
+   srun --gpus=1 --pty bash
    module load scicomp-python-env
    python3
    >>> import keras
