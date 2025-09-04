@@ -148,7 +148,14 @@ data are unrecoverable after deleting, which will happen eventually.
 If data is stored in a group directory (/scratch/$dept/$groupname), it
 won't be deleted and will stay managed by the group owner.
 
+Reactivating an expired/deactivated account
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+If your account has expired in between contracts or for some other
+reason, you can request it to be reactivated by using the regular
+`account request form
+<https://selfservice.esupport.aalto.fi/ssc/app#/order/2025/>`__
+and mentioning that you've had an account before.
 
 Terms of use/privacy policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
