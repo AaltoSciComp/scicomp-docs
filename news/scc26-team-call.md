@@ -27,7 +27,7 @@ We are seeking team players with the following qualifications:
 
 Candidates must demonstrate motivation, eagerness to learn, and a commitment to contributing to the team. CSC, alongside Aalto and HY, will offer comprehensive training and coaching.
 
-We value diversity and inclusiveness and strongly encourage applications from women and other underrepresented groups in the field. Apply with a cover letter (explaining why you should be selected) and a CV by Sunday 17.9.2025.
+We value diversity and inclusiveness and strongly encourage applications from women and other underrepresented groups in the field. Apply with a cover letter (explaining why you should be selected) and a CV by Wed 17.9.2025.
 
 *Please send your cover letter and CV together in a single email with the subject line **'SCC26 Team Application'** to either Aaron (HY) or Ivan (Aalto), see contacts below. In the cover letter please tell us the following:*
 
