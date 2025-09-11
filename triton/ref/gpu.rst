@@ -14,6 +14,8 @@
    AMD MI210            | ``mi210`` with  ``-p gpu-amd``         | 32GB                             |                                 | 2              | gpuamd[1]        | 2             | 7680                      | ``gpu-amd``                                      |
    AMD MI100            | ``mi100`` with  ``-p gpu-amd``         | 64GB                             |                                 | 1              | gpuamd[1]        | 1             | 6656                      | ``gpu-amd``                                      |
 
+To request multiple gres, e.g. both 32GB of memory and compute capability 8.0, use a comma separated list: ``--gres=gpu-vram:32g,min-cuda-cc=80``.
+
 (*) These GPUs have a priority queue for the Ellis project, since they were
 procured for this project. Any job submitted to the short queue might be
 preempted if a job requiring the resources comes in from the Ellis queue.
