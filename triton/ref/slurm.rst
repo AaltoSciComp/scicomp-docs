@@ -36,5 +36,5 @@
                             ! ``--array=``\ *0-5,7,10-15*    ! Run job multiple times, use variable ``$SLURM_ARRAY_TASK_ID`` to adjust parameters.
                             ! ``--gres=gpu``                 ! request a GPU, or ``--gres=gpu:``\ *n* for multiple
                             ! ``--mail-type=``\ *TYPE*       ! notify of events: ``BEGIN``, ``END``, ``FAIL``, ``ALL``, ``REQUEUE`` (not on triton) or ``ALL.`` MUST BE used with ``--mail-user=`` only
-                            ! ``--mail-user=``\ *first.last@Eaalto.fi* ! Aalto email to send the notification about the job. External email addresses doesn't work.
+                            ! ``--mail-user=``\ *first.last@aalto.fi* ! Aalto email to send the notification about the job. External email addresses doesn't work.
    ``srun``                 ! ``-N`` *N_NODES* hostname    ! Print allocated nodes (from within script)
