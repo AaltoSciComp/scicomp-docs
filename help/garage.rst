@@ -6,14 +6,6 @@ Scicomp garage
 
    https://aalto.zoom.us/j/61322268370, every workday at 13:00
 
-.. admonition:: Planned disruptions
-   :class: important
-
-   * 7 -18 July there are very few people around.  It's better to ask
-     in chat.  Otherwise, there are usually a few people around
-     but we don't make promises for any given day.  Try to join and
-     see (and try to help each other in chat, too).
-
 
 If you need more help than the issue trackers, this is the place to
 be.  It's not just Triton, but all aspects of scientific computing.

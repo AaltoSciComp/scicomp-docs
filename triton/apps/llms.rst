@@ -50,16 +50,11 @@ In the following sbatch script, we request computational resources, load the nec
     #SBATCH --output huggingface.%J.out
     #SBATCH --error huggingface.%J.err
 
-    #By loading the model-huggingface module, we set HF_HOME to /scratch/shareddata/dldata/huggingface-hub-cache which is a shared scratch space.
-    #By default, HF_HOME is set to $HOME/.cache/huggingface, which is under your own home directory where you have limited quota.
+    #By loading the model-huggingface module, models will be loaded from /scratch/shareddata/dldata/huggingface-hub-cache which is a shared scratch space.
     module load model-huggingface
 
     # Load a ready to use conda environment to use HuggingFace Transformers
     module load scicomp-llm-env
-
-    # Force transformer to load model(s) from local hub instead of download and load model(s) from remote hub. 
-    export TRANSFORMERS_OFFLINE=1
-    export HF_HUB_OFFLINE=1
 
     python your_script.py
 
@@ -74,7 +69,7 @@ The ``your_script.py`` Python script uses a HuggingFace model ``mistralai/Mistra
   pipe = pipeline( 
     "text-generation", # Task type 
     model="mistralai/Mistral-7B-Instruct-v0.1", # Model name 
-    device="auto", # Let the pipeline automatically select best available device
+    device_map="auto", # Let the pipeline automatically select best available device
     max_new_tokens=1000 
   ) 
 
