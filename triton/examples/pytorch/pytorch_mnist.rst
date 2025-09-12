@@ -16,7 +16,7 @@ One can run this example with ``srun``:
 
   $ wget https://raw.githubusercontent.com/AaltoSciComp/scicomp-docs/master/triton/examples/pytorch/pytorch_mnist.py
   $ module load scicomp-python-env
-  $ srun --time=00:15:00 --gres=gpu:1 python pytorch_mnist.py
+  $ srun --time=00:15:00 --mem=4G --gpus=1 python pytorch_mnist.py
 
 or with ``sbatch`` by submitting
 :download:`pytorch_mnist.sh</triton/examples/pytorch/pytorch_mnist.sh>`:
