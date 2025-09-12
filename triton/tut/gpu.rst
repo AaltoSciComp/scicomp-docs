@@ -9,7 +9,7 @@ GPU computing
    * Request a GPU with the Slurm option ``--gpus=1``.
    * Select a certain type of GPU with e.g. ``--gpus=h200:1``.
    * Select a GPU with certain amount of memory with e.g.
-     ``--gpus=1 --gres=gpu-vram:80g``.
+     ``--gpus=1 --gres=min-vram:80g``.
    * Select a GPU with certain CUDA compute capability with e.g.
      ``--gpus=1 --gres=min-cuda-cc:80``.
    * See :ref:`the quick reference <available-gpus>` for available GPU names,
@@ -116,12 +116,12 @@ GPU VRAM memory (e.g. running an LLM AI model), you can choose only those
 GPUs that have enough memory.
 
 To specify the amount of memory you require, use syntax
-``--gres=gpu-vram:NNg``, where ``NN`` is the amount of VRAM needed.
+``--gres=min-vram:NNg``, where ``NN`` is the amount of VRAM needed.
 
 As with any GPU request, you'll need to specify the amount of GPUs you want
 with ``--gpus=N`` as well.
 
-For example, specifying ``--gpus=1`` and ``--gres=gpu-vram:40g`` would give
+For example, specifying ``--gpus=1`` and ``--gres=min-vram:40g`` would give
 you a single GPU with at least 40GB of memory.
 
 See the :ref:`available GPUs reference <available-gpus>` for more information on
