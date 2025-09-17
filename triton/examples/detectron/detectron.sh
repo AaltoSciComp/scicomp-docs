@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --time=00:30:00
 #SBATCH --mem=8G
-#SBATCH --gres=gpu:teslap100:1
+#SBATCH --gpus=1
 #SBATCH -o detectron.out
 
 module load singularity-detectron

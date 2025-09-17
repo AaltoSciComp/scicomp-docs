@@ -16,7 +16,7 @@ One can run this example with ``srun``:
 
   $ wget https://raw.githubusercontent.com/AaltoSciComp/scicomp-docs/master/triton/examples/tensorflow/tensorflow_mnist.py
   $ module load scicomp-python-env
-  $ srun --time=00:15:00 --gres=gpu:1 python tensorflow_mnist.py
+  $ srun --time=00:15:00 --mem=4G --gpus=1 python tensorflow_mnist.py
 
 or with ``sbatch`` by submitting
 :download:`tensorflow_mnist.sh</triton/examples/tensorflow/tensorflow_mnist.sh>`:

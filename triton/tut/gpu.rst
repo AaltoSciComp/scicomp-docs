@@ -6,11 +6,15 @@ GPU computing
 
 .. admonition:: Abstract
 
-   * Request a GPU with the Slurm option ``--gpus=1`` or
-     ``--gres=gpu:1`` (some clusters need ``--partition=gpu`` or similar).
-   * Select a certain type of GPU with e.g. ``--constraint='volta'``
-     (see :doc:`the quick reference for names <../ref/index>`).
-   * Monitor GPU performance with ``sacct -j JOBID -o TRESUsageInAve -p``.
+   * Request a GPU with the Slurm option ``--gpus=1``.
+   * Select a certain type of GPU with e.g. ``--gpus=h200:1``.
+   * Select a GPU with certain amount of memory with e.g.
+     ``--gpus=1 --gres=min-vram:80g``.
+   * Select a GPU with certain CUDA compute capability with e.g.
+     ``--gpus=1 --gres=min-cuda-cc:80``.
+   * See :ref:`the quick reference <available-gpus>` for available GPU names,
+     memory capacities and compute capabilities.
+   * Monitor GPU performance with ``seff JOBID``.
    * You can test out small jobs of 30 minutes or less in the
      ``gpu-debug``-partition (``--partition=gpu-debug``).
    * If you aren't fully sure of how to scale up, contact us
@@ -70,61 +74,17 @@ they generally outperform the best desktop GPUs.
 
 
 
-Reserving resources for GPU programs
-------------------------------------
+Reserving a GPU
+---------------
 
 Slurm keeps track of the GPU resources as generic resources (GRES) or
 trackable resources (TRES). They are basically limited resources that you
 can request in addition to normal resources such as CPUs and RAM.
 
-To request GPUs on Slurm, you should use the ``--gpus=1`` or ``--gres=gpu:1``
--flags.
+To request GPUs on Slurm, you should use the ``--gpus=N``, where ``N``
+is the number of GPUs you wish to request.
 
-Choosing a specific type of GPU
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-In most cases you will want to choose a GPU that suits your specific use case.
-
-There are three ways you can use to choose the GPU type:
-
-1. All compute nodes with GPUs are separated into partitions based on their GPU
-   architectures.
-
-   Thus you can choose the GPU type by limiting your job to the partitions that
-   have GPUs that you want to use with ``--partition=GPU_PARTITION``, where
-   ``GPU_PARTITION`` is the name of the partition. You can specify multiple
-   partition, separated by commas.
-
-   For example ``--partition=gpu-a100-80g,gpu-h100-80g`` would give you a
-   A100 or H100 GPU.
-
-2. You can restrict yourself to a certain type of GPU card by using
-   using the ``--constraint`` option.  For example, to restrict the submission to
-   Ampere generation GPUs only you can use ``--constraint='ampere'``.
-
-   For choosing between multiple generations, you can use the ``|``-character
-   between generations. For example, if you want to restrict the submission
-   Volta or Ampere generations you can use ``--constraint='volta|ampere'``.
-   Remember to use the quotes since ``|`` is the shell pipe.
-
-3. You can use the syntax ``--gpus=GPU_TYPE:1`` (or ``--gres=gpu:GPU_TYPE:1``),
-   where ``GPU_TYPE`` is a name chosen by the admins for the GPU.
-
-   For example, ``--gpus=v100:1`` would give you a V100 card.
-
-See the :ref:`available GPUs reference <available-gpus>` for more information on
-available partitions and feature names.
-
-In the cluster you can run ``slurm features`` or
-``sinfo -o '%50N %18F %26f %30G'`` to see what GPU resources are available.
-
-
-
-Reserving more than one GPU
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-You can request more than one GPU with ``--gpus=G``, where ``G`` is
-the number of the requested GPUs.
+For example, ``--gpus=1`` will give you a single GPU.
 
 .. note::
 
@@ -132,13 +92,74 @@ the number of the requested GPUs.
    trying to reserve multiple GPUs you should verify that your code
    can utilize them.
 
+
+Choosing a specific type of GPU
+-------------------------------
+
+In most cases you will want to choose a GPU that suits your specific use case.
+
+You can use the syntax ``--gpus=GPU_TYPE:1`` where ``GPU_TYPE`` is a name
+chosen by the admins for the GPU.
+
+For example, ``--gpus=h200:1`` would give you a H100 card.
+
+See the :ref:`available GPUs reference <available-gpus>` for more information on
+available GPUs.
+
+
+Choosing a GPU based on available VRAM
+--------------------------------------
+
+Different GPUs have different amounts of VRAM (video random access memory)
+available. If you're running a program that requires some minimum amount of
+GPU VRAM memory (e.g. running an LLM AI model), you can choose only those
+GPUs that have enough memory.
+
+To specify the amount of memory you require, use syntax
+``--gres=min-vram:NNg``, where ``NN`` is the amount of VRAM needed.
+
+As with any GPU request, you'll need to specify the amount of GPUs you want
+with ``--gpus=N`` as well.
+
+For example, specifying ``--gpus=1`` and ``--gres=min-vram:40g`` would give
+you a single GPU with at least 40GB of memory.
+
+See the :ref:`available GPUs reference <available-gpus>` for more information on
+available GPUs.
+
+
+Choosing a GPU based on CUDA compute capability
+-----------------------------------------------
+
+Different GPUs have different chip architectures that support different levels
+of CUDA compute capability. CUDA compute capability represents various different
+hardware features that the GPU chips are capable of implementing (bfloat16
+support, lower precision floating point arithmetic etc.).
+
+Sometimes codes and libraries require GPUs that support some minimum level of
+CUDA compute capability. In these cases you'll want to choose GPUs based on their
+compute capability.
+
+To specify the minimum compute capability, use syntax ``--gres=min-cuda-cc:CC``,
+where ``CC`` is the compute capability as a number (so compute capability 3.5
+would be 35 and compute capability 8.0 would be 80).
+
+As with any GPU request, you'll need to specify the amount of GPUs you want
+with ``--gpus=N`` as well.
+
+For example, specifying ``--gpus=1`` and ``--gres=min-cuda-cc:80`` would give
+you a single GPU with minimum compute capabilty support of 8.0.
+
+See the :ref:`available GPUs reference <available-gpus>` for more information on
+available GPUs.
+
+
 Reserving a GPU from the debug queue
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 There is a ``gpu-debug``-partition that you can use to run short jobs
 (30 minutes or less) for quick tests and debugging. Use
-``--partition=gpu-debug`` for this.
+``--partition=gpu-debug`` to ask for a GPU from this partition.
 
 
 Running an example program that utilizes GPU
