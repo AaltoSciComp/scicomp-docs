@@ -13,7 +13,8 @@ GPU computing
    * Select a GPU with certain CUDA compute capability with e.g.
      ``--gpus=1 --gres=min-cuda-cc:80``.
    * See :ref:`the quick reference <available-gpus>` for available GPU names,
-     memory capacities and compute capabilities.
+     memory capacities, and compute capabilities, and how to combine
+     ``--gres`` options.
    * Monitor GPU performance with ``seff JOBID``.
    * You can test out small jobs of 30 minutes or less in the
      ``gpu-debug``-partition (``--partition=gpu-debug``).
@@ -149,6 +150,9 @@ with ``--gpus=N`` as well.
 
 For example, specifying ``--gpus=1`` and ``--gres=min-cuda-cc:80`` would give
 you a single GPU with minimum compute capabilty support of 8.0.
+
+Only one ``--gres`` option can be given, so combine them with a comma
+like ``--gres=min-vram:40g,min-cuda-cc:80``.
 
 See the :ref:`available GPUs reference <available-gpus>` for more information on
 available GPUs.
