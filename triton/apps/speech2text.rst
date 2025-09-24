@@ -134,13 +134,13 @@ This opens the speech2text submission form.
 
 In the submission form
 
-#. Use the ``Select Path`` button to browse and select your audio file/folder you just uploaded to Triton. This field is mandatory.
+#. Use the ``Select Path`` button to browse and select your audio file/files/folder you just uploaded to Triton. This field is mandatory.
 
-#. Add your Aalto email address. This field is mandatory.
+#. Check the ``Receive transcripted files as email attachments`` box if you want to get the result files as email attachments. (You will get an email notification anyway when the processing is done.)
 
-#. Choose language of the audio. This field is mandatory.
+#. Choose language of the audio. This field is mandatory. The default is English.
 
-#. You can leave the Model version field to "default" - this will use the latest available model.
+#. Check the ``Advanced Settings`` box if you want to see further options. Currently, advanced options include the Model version field only. You can leave it to "default" - this will use the latest available model.
 
 Finally, press ``Launch`` and you're done! 
 
@@ -148,9 +148,13 @@ You will get an email notification when the results are available.
 
 .. note::
 
+    All notifications are sent to your Aalto email address.
+
     If the expected result files already exist (i.e. you have submitted the same audio file before), the app will exit early without doing any further processing.
 
     If you want to re-process the same audio file, please, delete or rename the result files first and then submit the job again.
+
+    
 
 
 Inspect and copy result to your personal computer
@@ -246,7 +250,7 @@ What if my audio file contains speech in more than one language?
 
 If an audio file contains speech in more than one language, the result may contain translations of the transcriptions, which is usually not what you want. This is due to the Whisper speech transcription model used by speech2text.
 
-In some cases, this can be avoided easily. For example, if the language changes at the middle of the audio, just split the file into two parts and process them separately. You can use any available audio software to do this, for example, `Audacity <https://www.audacityteam.org/>`__.
+In some cases, this can be avoided relatively easily. For example, if the language changes at the middle of the audio, just split the file into two parts and process them separately. You can use any available audio software to do this, for example, `Audacity <https://www.audacityteam.org/>`__.
 
 
 What happens if I submit speech2text audio file(s) that have already been processed and completed?
@@ -258,4 +262,4 @@ This is safe to do: speech2text checks if the expected result files already exis
 I submitted my audio files with wrong language. What to do?
 ------------------------------------------------------------
 
-Wait until the processing is finished, delete the ``results`` folder, and submit the job again with the correct language.
+No problem! Wait until the processing is finished, delete the result files from the ``results`` folder, and submit the job again with the correct language.
