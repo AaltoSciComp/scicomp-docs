@@ -26,7 +26,10 @@ it minimally usable for others.
 
 **In both cases, you need to** ``chmod -R a+rX`` **the data directory 
 whenever new files or directories are added so that the data becomes
-readable to students.**
+readable to students.** This can be done either by running
+`chmod -R a+rX` in the Jupyter terminal for each newly added
+file/directory, or by running `chmod -R a+rX /coursedata/*` to
+change permissions for all files at once.
 
 Note: after you are added to relevant group to access the data, it
 make take up to 12 hours for your account information to be updated
