@@ -1,14 +1,11 @@
 FMRIprep
 ~~~~~~~~
 
-.. admonition:: Warning: page not updated for current Triton
+.. admonition:: As of 26/09/2025 fmriprep has changed.
   :class: warning, triton-v2-apps
+  
+  The new version of fmriprep has a different syntax. You can load a previous version by running ``module load apptainer-fmriprep/VERSION``
 
-  This page hasn't been updated since Triton was completely upgraded
-  in May 2024.  The software might not be installed and the old
-  information below might not work anymore (or  might need adapting).
-  If you need this software, :ref:`open an issue <issuetracker>` and
-  tell us so we can reinstall/update it.
 
 This page describe how to use fmriprep on Triton.
 
@@ -19,9 +16,41 @@ This page describe how to use fmriprep on Triton.
 fmriprep is installed as an Apptainer container. By default it will always run the newest version installed on triton. If you need a version that is not currently installed on triton, please open an issue at https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues
 
 
-=============
-How to run it
-=============
+=======================
+How to run new versions
+=======================
+
+Here an example script with open data
+
+::
+
+   #!/bin/bash
+   #SBATCH --time=2-00:00:00
+   #SBATCH --mem-per-cpu=50G
+   #SBATCH --array=1 # here one can change
+   #SBATCH --output=logs/fmriprep_%A_%a.out
+   #SBATCH --cpus-per-task=6
+
+   n=$SLURM_ARRAY_TASK_ID
+   iteration=`sed -n "${n} p" subjects_list.txt`     # Get n-th line (1-indexed) of the file
+   bids_folder="/scratch/shareddata/set1/openneuro/ds003017-download/"
+   derivatives_folder="/scratch/rse/installations/fmriprep/derivatives/"
+   work_folder="/scratch/rse/installations/fmriprep/temp/$iteration"
+
+   mkdir -p logs
+   mkdir -p ${work_folder}
+   echo ${iteration}
+
+   module apptainer-fmriprep/25.1.4
+
+   apptainer exec -B /m:/m -B /l:/l -B /scratch:/scratch ${IMAGE_PATH} fmriprep ${bids_folder}  ${derivatives_folder} -w ${work_folder} participant --participant-label ${iteration} --n_cpus 6 --output-spaces MNI152NLin6Asym:res-2  T1w --cifti-output 91k  --return-all-components --fd-spike-threshold 0.2 --fs-license-file /scratch/shareddata/set1/freesurfer/license.txt --write-graph
+
+
+The main difference is that we are not using anymore apptainer_wrapper which used to take care of all the ``-B`` mounting of folders. 
+
+=======================
+How to run old versions
+=======================
 
 Here an example to run fmriprep for four subject, using an array. The raw data in BIDS format are in the path ``<path-to-bids>``, then you can create a folder for the derivatives that is different than the BIDS folder ``<path-to-your-derivatives-folder>``. Also create a temporary folder under your scratch/work folders for storing temporary files ``<path-to-your-scratch-temporary-folder>`` for example ``/scratch/work/USERNAME/tmp/``. The content of this folder should be removed after fmriprep has finished.
 
