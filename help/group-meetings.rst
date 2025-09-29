@@ -126,9 +126,11 @@ Discussion starters
 * Usability and accessibility (user interfaces)
 
   * :doc:`Remote access </aalto/remoteaccess>`
-  * Virtual desktops, VDI
+  * Virtual desktops, VDI (now in OnDemand)
   * Jupyter (:doc:`Jupyter via OnDemand </triton/apps/jupyter>`)
-  * Other (:doc:`Open OnDemand </triton/usage/ood>`, ...)
+  * VSCode on Triton (:doc:`triton/apps/vscode`)
+  * OnDemand (:doc:`Open OnDemand </triton/usage/ood>`)
+  * Others...?
   * Usability and accessibility in general in the modern world
 
 * Teaching
