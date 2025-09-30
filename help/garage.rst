@@ -6,6 +6,10 @@ Scicomp garage
 
    https://aalto.zoom.us/j/61322268370, every workday at 13:00
 
+.. admonition:: Planned disruptions
+   :class: important
+
+   * September 30: We do have an internal development day. There is no garage session.
 
 If you need more help than the issue trackers, this is the place to
 be.  It's not just Triton, but all aspects of scientific computing.
