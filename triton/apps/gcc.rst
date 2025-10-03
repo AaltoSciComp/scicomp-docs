@@ -19,7 +19,7 @@ Available installations
 
 System compiler is installed only on the login node.
 Other versions of GCC are installed as modules and are all part of one 
-of our software stacks. To make them availabe, you need to first load 
+of our software stacks. To make them available, you need to first load 
 the appropriate software stack module. Versions labeled "default" are 
 the ones that have been used to build the rest of that software stack.
 
