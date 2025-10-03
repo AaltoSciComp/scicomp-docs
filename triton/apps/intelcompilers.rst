@@ -26,7 +26,7 @@ have a ``gcc``-module loaded with it:
 
   module load triton/2024.1-gcc gcc/12.3.0 intel-oneapi-compilers/2023.2.1
 
-Intel compilers from `triton/2025.1-intel` environment and newer make the relevant 
+Intel compilers from ``triton/2025.1-intel`` environment and newer make the relevant 
 gcc available automatically.
 
 See :doc:`GCC page </triton/apps/gcc>` for more information on available GCC compilers.
