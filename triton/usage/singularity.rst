@@ -96,7 +96,7 @@ Some of the Triton modules automatically activate a Singularity image.
 On Triton, you just need to load the proper module.  This will set
 some environment variables and enable the use of
 ``apptainer_wrapper`` (to see how it works, check ``module show
-MODULE_NAME``).
+apptainer-wrapper``).
 
 While the image itself is read-only, remember that ``/home``, ``/m``,
 ``/scratch`` and ``/l`` etc. are not. If you edit/remove files in
