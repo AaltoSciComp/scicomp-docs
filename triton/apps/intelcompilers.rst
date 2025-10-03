@@ -2,17 +2,8 @@
 Intel Compilers
 ===============
 
-.. admonition:: Warning: page not updated for current Triton
-  :class: warning, triton-v2-apps
-
-  This page hasn't been updated since Triton was completely upgraded
-  in May 2024.  The software might not be installed and the old
-  information below might not work anymore (or  might need adapting).
-  If you need this software, :ref:`open an issue <issuetracker>` and
-  tell us so we can reinstall/update it.
-
 Intel provides their own compiler suite which is popular in HPC settings.
-This suite contains compilers for C (``icc``), C++ (``icpc``) and Fortran (``ifc``).
+This suite contains compilers for C (``icx``), C++ (``icpx``) and Fortran (``ifx``).
 
 Previously this suite was licensed, but nowadays Intel provides it for free as a part of
 their
@@ -29,11 +20,14 @@ Choosing a GCC for Intel compilers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Intel uses many tools from the GCC suite and thus it is recommended to
-load a ``gcc``-module with it:
+have a ``gcc``-module loaded with it:
 
 .. code-block:: bash
 
-  module load gcc/8.4.0 intel-oneapi-compilers/2021.4.0
+  module load triton/2024.1-gcc gcc/12.3.0 intel-oneapi-compilers/2023.2.1
+
+Intel compilers from `triton/2025.1-intel` environment and newer make the relevant 
+gcc available automatically.
 
 See :doc:`GCC page </triton/apps/gcc>` for more information on available GCC compilers.
 
@@ -42,32 +36,15 @@ See :doc:`GCC page </triton/apps/gcc>` for more information on available GCC com
 Current installations
 ---------------------
 
-There are various Intel compiler versions installed as modules.
+There are various Intel compiler versions installed as modules. 
+To make them available, you need to first load the appropriate software stack module.
 
 .. csv-table::
    :delim: |
    :header-rows: 1
 
-   Intel compiler version | Module
-   2021.2.0               | intel-oneapi-compilers/2021.2.0
-   2021.3.0               | intel-oneapi-compilers/2021.3.0
-   2021.4.0               | intel-oneapi-compilers/2021.4.0
+   Intel compiler version | Module                            | Software stack
+   2023.2.1               | intel-oneapi-compilers/2023.2.1   | triton/2024.1-gcc
+   2025.0.0               | intel-oneapi-compilers/2025.0.0   | triton/2025.1-intel
 
 If you need a different version of these compilers, please send a request through the :ref:`issue tracker <issuetracker>`.
-
-Old installations
------------------
-
-These installations will work, but they are not actively updated.
-
-.. csv-table::
-   :delim: |
-   :header-rows: 1
-
-   Intel compiler version                        | Module
-   2019.3 with Intel MPI                         | intel-parallel-studio/cluster.2019.3-intelmpi
-   2019.3                                        | intel-parallel-studio/cluster.2019.3
-   2020.0 with Intel MPI                         | intel-parallel-studio/cluster.2020.0-intelmpi
-   2020.0                                        | intel-parallel-studio/cluster.2020.0
-
-Other old installations are not recommended.
