@@ -172,12 +172,13 @@ to a different location (``$WRKDIR/$SLURM_JOB_ID``) in case of errors
 compared to other normal exits.
 
 .. code-block:: slurm
-   :emphasize-lines: 14-16,25-26
+   :emphasize-lines: 15-17,26-27
 
    #!/bin/bash
    #SBATCH --time=12:00:00
    #SBATCH --mem-per-cpu=2500M            # time and memory requirements
    #SBATCH --output=test-local.out
+   #SBATCH --tmp=50G
 
    # The below, if uncommented, will cause the script to abort (and trap
    # to run) if there are any unhandled errors.
@@ -229,11 +230,12 @@ Working with tar balls is done in a following fashion:
 A sample code is below:
 
 .. code-block:: slurm
-   :emphasize-lines: 9-10,18-23
+   :emphasize-lines: 10-11,19-24
 
     #!/bin/bash
     #SBATCH --time=12:00:00
     #SBATCH --mem-per-cpu=2000M                       # time and memory requirements
+    #SBATCH --tmp=50G
 
     # get a directory where you will put your data and change to it
     mkdir /tmp/$SLURM_JOB_ID
