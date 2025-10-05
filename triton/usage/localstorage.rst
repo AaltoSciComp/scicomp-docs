@@ -11,8 +11,8 @@ Storage: local drives
    - Local storage can be either SSD drives (big and reasonably fast),
      spinning hard disks (HDDs; older nodes), or ramdisk (using your
      job's memory; extremely fast).
-   - Request a spinning disk or SSD with ``--constraint=localdisk``
-     and ``--tmp=NNg`` (but the space isn't reserved just for you).
+   - Request local storage with ``--tmp=NNg`` (the space you think you
+     need; but the space isn't reserved just for you).
    - For ramdisk, the space comes out of your ``--mem=`` allocation.
 
 .. seealso::
@@ -35,13 +35,12 @@ have different types of disks, Triton is very heterogeneous**:
    - - Solid-state drives (SSDs)
      - Much faster than HDDs but much slower than ramdisk.  Generally
        GPU nodes have SSDs these days.
-     - ``--constraint=localdisk`` and ``--tmp=NNg``.  The space is not
-       guaranteed just for you.
+     - ``--tmp=NNg``.  The space is not guaranteed just for you.
      - ``/tmp/``
    - - Spinning hard disks (HDDs)
      - Generally only older CPU nodes have HDDs.
-     - ``--constraint=localdisk`` and ``--tmp=NNg`` to specify size
-       you need.  The space is not guaranteed just for you.
+     - ``--tmp=NNg`` to specify size you need.  The space is not
+       guaranteed just for you.
      - ``/tmp/``
    - - Ramdisk
      - Uses your jobs memory allocation.  Limited space but lightning
@@ -121,13 +120,14 @@ training).
    ``AvailableFeatures=localdisk``.  ``slurm features`` will list all
    nodes (look for ``localdisk`` in features).
 
-You have to use ``--constraint=localdisk`` to ensure that you get a
-disk of some type.  You can use ``--tmp=nnnG`` (for example
-``--tmp=100G``) to request a node with at least that much temporary
-space.  But, ``--tmp`` doesn't allocate this space just for you: it's
-shared among all users, including those which didn't request storage
-space.  So, you *might* not have as much as you think.  Beware and
-handle "out of space" errors gracefully.
+You can use ``--tmp=nnnG`` (for example ``--tmp=100G``).  You can use
+``--constraint=localdisk`` to ensure a disk of any type, but you may
+as well just specify how much space you need.
+
+``--tmp`` doesn't allocate this space just for you: it's shared among
+all users, including those which didn't request storage space.  So,
+you *might* not have as much as you think.  Beware and handle "out of
+space" errors gracefully.
 
 
 Nodes without local disks
