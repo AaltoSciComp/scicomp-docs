@@ -1,9 +1,8 @@
-==========================
 Cluster technical overview
 ==========================
 
 Shared resource
-===============
+---------------
 
 Triton is a joint installation by a number of Aalto School of Science
 faculties within `Science-IT
@@ -19,7 +18,7 @@ Through the national grid and cloud infrastructure, Triton also becomes
 part of the European Grid Infrastructure.
 
 Hardware
-========
+--------
 
 .. include:: ref/hardware.rst
 
@@ -29,7 +28,7 @@ access to common file system. Each node has its own unique host name and
 ip-address.
 
 Networking
-==========
+----------
 
 The cluster has two internal networks: Infiniband for MPI and Lustre
 filesystem and Gigabit Ethernet for everything else like NFS ``/home``
@@ -51,16 +50,16 @@ Running MPI jobs possible on the entire island or its segment, but not
 across the cluster.
 
 Disk arrays
-===========
+----------
 
-All compute nodes and front-end are connected to `DDN SFA12k storage
+All compute nodes and front-end are connected to a `ClusterStor storage
 system <usage/lustre>`:
 large disk arrays with the Lustre filesystem on top of it cross-mounted
-under ``/scratch`` directory. The system provides about 1.8PB of disk
+under ``/scratch`` directory. The system provides about 5PB of disk
 space available to end-user.
 
 Software
-========
+--------
 
 The cluster is running open source software infrastructure: CentOS 7,
 with SLURM as the scheduler and batch system.
