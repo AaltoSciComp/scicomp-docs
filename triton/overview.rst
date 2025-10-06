@@ -50,7 +50,7 @@ Running MPI jobs possible on the entire island or its segment, but not
 across the cluster.
 
 Disk arrays
-----------
+-----------
 
 All compute nodes and front-end are connected to a `ClusterStor storage
 system <usage/lustre>`:
