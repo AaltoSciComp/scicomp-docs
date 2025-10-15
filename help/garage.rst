@@ -9,7 +9,7 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * September 30: We do have an internal development day. There is no garage session.
+   * We don't know of any upcoming disruptions to the garage scheduce.
 
 If you need more help than the issue trackers, this is the place to
 be.  It's not just Triton, but all aspects of scientific computing.
