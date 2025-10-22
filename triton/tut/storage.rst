@@ -32,8 +32,8 @@ choose between them.  The
          (recommended for most work)
 
      * ``/tmp``: temporary local disk space, pre-user mounted in jobs and
-       automatically cleaned up. Only on nodes with disks
-       (``--constraint=localdisk``), otherwise it's ramfs
+       automatically cleaned up. Use ``--tmp=nnnG`` to request at
+       least ``nnn`` GB of space, otherwise it's ramfs
      * ``/dev/shm``: ramfs, in-memory file storage
 
    * See :doc:`remotedata` for how to transfer and access the data
