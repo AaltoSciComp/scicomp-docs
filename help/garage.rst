@@ -9,7 +9,7 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * We don't know of any upcoming disruptions to the garage scheduce.
+   * We don't know of any upcoming disruptions to the garage schedule.
 
 If you need more help than the issue trackers, this is the place to
 be.  It's not just Triton, but all aspects of scientific computing.
