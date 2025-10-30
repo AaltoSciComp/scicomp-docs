@@ -15,8 +15,8 @@ the shell servers):
 
   .. group-tab:: Windows
 
-    - In all cases, username=aalto username, domain=AALTO,
-      password=Aalto password.
+    - username=AALTO\``$aalto_username`` (e.g. AALTO\user1),
+      password=``$aalto_password``.
     - For NBE/PHYS, replace ``tw-cs`` with ``tw-nbe`` or ``tw-phys``.
     - **Home** directories: ``\\home.org.aalto.fi\``
     - **Project** directories: ``\\tw-cs.org.aalto.fi\project\$name\``
@@ -33,8 +33,8 @@ the shell servers):
 
   .. group-tab:: Mac
 
-    - In all cases, username=aalto username, domain=AALTO,
-      password=Aalto password.
+    - username=``$aalto_username``,
+      password=``$aalto_password``.
     - For NBE/PHYS, replace ``tw-cs`` with ``tw-nbe`` or ``tw-phys``.
     - **Home** directories: ``smb://home.org.aalto.fi/``
     - **Project** directories: ``smb://tw-cs.org.aalto.fi/project/$name/``
@@ -51,8 +51,8 @@ the shell servers):
 
   .. group-tab:: Linux
 
-    - In all cases, username=aalto username, domain=AALTO,
-      password=Aalto password.
+    - username=``$aalto_username``, domain=AALTO,
+      password=``$aalto_password``.
     - For NBE/PHYS, replace ``tw-cs`` with ``tw-nbe`` or ``tw-phys``.
     - **Home** directories: ``smb://home.org.aalto.fi/``
     - **Project** directories: ``smb://tw-cs.org.aalto.fi/project/$name/``
