@@ -15,7 +15,7 @@ the shell servers):
 
   .. group-tab:: Windows
 
-    - username=AALTO\``$aalto_username`` (e.g. AALTO\user1),
+    - username=AALTO\\``$aalto_username`` (e.g. AALTO\\user1),
       password=``$aalto_password``.
     - For NBE/PHYS, replace ``tw-cs`` with ``tw-nbe`` or ``tw-phys``.
     - **Home** directories: ``\\home.org.aalto.fi\``
