@@ -46,7 +46,7 @@ In the following sbatch script, we request computational resources, load the nec
     #SBATCH --cpus-per-task=4
     #SBATCH --mem=80GB #This is system memory, not GPU memory.
     #SBATCH --gpus=1
-    #SBATCH --partition=gpu-v100-32GB # modify according to your needs
+    #SBATCH --partition=gpu-v100-32g # modify according to your needs
     #SBATCH --output huggingface.%J.out
     #SBATCH --error huggingface.%J.err
 
