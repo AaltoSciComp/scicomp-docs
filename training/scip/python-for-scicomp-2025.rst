@@ -73,33 +73,33 @@ if attending a single lesson.
 - Tue 25.nov, 9:50-15:00
 
   - 09:50 Icebreakers and warming up (Richard Darst, Enrico Glerean)
-  - 10:00 :doc:`Intro <python-for-scicomp/intro>` (Richard Darst, Enrico Glerean)
-  - 10:15 `Jupyter <https://aaltoscicomp.github.io/python-for-scicomp/jupyter/>`__ (Diana Iusan, Richard Darst)
-  - 11:00  `NumPy <https://aaltoscicomp.github.io/python-for-scicomp/numpy/>`__ (Ashwin Mohanan, Yonglei Wang)
+  - 10:00 :doc:`Intro <python-for-scicomp/intro>` (Enrico Glerean, Susanne Merz)
+  - 10:15  Cython (Lauri Niemi, Ashwin Mohanan)
+  - 11:00  `NumPy <https://aaltoscicomp.github.io/python-for-scicomp/numpy/>`__ (Marijn Van Vliet, Susanne Merz)
   - 12:00 Lunch break
-  - 13:00 `Pandas <https://aaltoscicomp.github.io/python-for-scicomp/pandas/>`__ (Simo Tuomisto, Richard Darst)
-  - 14:30 `Xarray <https://aaltoscicomp.github.io/python-for-scicomp/xarray/>`__ (Gregor Decristoforo, Marijn Van Vliet)
+  - 13:00 `Pandas <https://aaltoscicomp.github.io/python-for-scicomp/pandas/>`__ (Marijn Van Vliet)
+  - 14:30 `Xarray <https://aaltoscicomp.github.io/python-for-scicomp/xarray/>`__ (Marijn Van Vliet, Ashwin Mohanan)
   - 15:00 End of day 1
 
 - Wed 26.nov, 9:50-15:00
 
   - 09:50  Icebreakers and warming up (Richard Darst, Enrico Glerean)
-  - 10:00 `Working with data <https://aaltoscicomp.github.io/python-for-scicomp/work-with-data/>`__ (Thomas Pfau, Simo Tuomisto)
-  - 10:30 `Plotting with Vega-Altair <https://aaltoscicomp.github.io/python-for-scicomp/plotting-vega-altair/>`__ (Radovan Bast, Richard Darst)
+  - 10:00 `Jupyter <https://aaltoscicomp.github.io/python-for-scicomp/jupyter/>`__ (Diana Iusan)
+  - 10:30 `Working with data <https://aaltoscicomp.github.io/python-for-scicomp/work-with-data/>`__ (Thomas Pfau, Simo Tuomisto)
   - 12:00 Lunch break
-  - 13:00 `Scripts <https://aaltoscicomp.github.io/python-for-scicomp/scripts/>`__ (Thomas Pfau, Yonglei Wang)
-  - 14:00 `Profiling <https://aaltoscicomp.github.io/python-for-scicomp/profiling/>`__ (Gregor Decristoforo, Radovan Bast)
-  - 14:40 `Python productivity tools (autoformatting, linting, AI tools)  <https://aaltoscicomp.github.io/python-for-scicomp/productivity/>`__ (Gregor Decristoforo, Radovan Bast)
+  - 13:00 `Plotting with Vega-Altair <https://aaltoscicomp.github.io/python-for-scicomp/plotting-vega-altair/>`__ (Simo Tuomisto, Samantha Wittke)
+  - 14:00 `Scripts <https://aaltoscicomp.github.io/python-for-scicomp/scripts/>`__ (Thomas Pfau, Simo Tuomisto)
+  - 14:40 `Profiling <https://aaltoscicomp.github.io/python-for-scicomp/profiling/>`__ (to be decided) or `Python productivity tools (autoformatting, linting, AI tools)  <https://aaltoscicomp.github.io/python-for-scicomp/productivity/>`__ (to be decided)
   - 15:00 End of day 2
 
 - Thu 27.nov, 9:50-15:00
 
   - 09:50  Icebreakers and warming up (Richard Darst, Enrico Glerean)
   - 10:00 `Library ecosystem <https://aaltoscicomp.github.io/python-for-scicomp/libraries/>`__ (Thomas Pfau)
-  - 10:30 `Dependency management <https://aaltoscicomp.github.io/python-for-scicomp/dependencies/>`__ (Radovan Bast, Sabry Razick, Simo Tuomisto)
-  - 11:30 `Parallel programming intro <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__ (Johan Hellsvik, Richard Darst)
+  - 10:30 `Dependency management <https://aaltoscicomp.github.io/python-for-scicomp/dependencies/>`__ (Sabry Razick, Simo Tuomisto)
+  - 11:30 `Parallel programming intro <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__ (Johan Hellsvik, Susanne Merz)
   - 12:00 Lunch break
-  - 13:00 `Parallel programming continued <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__ (Johan Hellsvik, Richard Darst)
+  - 13:00 `Parallel programming continued <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__ (Johan Hellsvik, Susanne Merz)
   - 14:00 `Packaging <https://aaltoscicomp.github.io/python-for-scicomp/packaging/>`__ (Ashwin Mohanan, Richard Darst)
   - 14:50 :doc:`Outro <python-for-scicomp/outro>`
   - 15:00 End of day 3
@@ -262,6 +262,7 @@ own audience.
   * Simo Tuomisto (ASC, Aalto University) (instructor, helper)
   * Marijn Van Vliet (Aalto University) (instructor, helper)
   * Yonglei Wang (ENCCS / Linköping University) (instructor, helper)
+  * Susanne Merz (ASC, Aalto University)(instructor, helper)
  
 ...and many more `contributors to the learning materials on Github <https://github.com/AaltoSciComp/python-for-scicomp/graphs/contributors>`__.
 
