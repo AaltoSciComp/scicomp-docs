@@ -74,7 +74,7 @@ if attending a single lesson.
 
   - 09:50 Icebreakers and warming up (Richard Darst, Enrico Glerean)
   - 10:00 :doc:`Intro <python-for-scicomp/intro>` (Enrico Glerean, Susanne Merz)
-  - 10:15  Cython (Lauri Niemi, Ashwin Mohanan)
+  - 10:15  `Jupyter <https://aaltoscicomp.github.io/python-for-scicomp/jupyter/>`__ (Diana Iusan)
   - 11:00  `NumPy <https://aaltoscicomp.github.io/python-for-scicomp/numpy/>`__ (Marijn Van Vliet, Susanne Merz)
   - 12:00 Lunch break
   - 13:00 `Pandas <https://aaltoscicomp.github.io/python-for-scicomp/pandas/>`__ (Marijn Van Vliet)
@@ -84,11 +84,11 @@ if attending a single lesson.
 - Wed 26.nov, 9:50-15:00
 
   - 09:50  Icebreakers and warming up (Richard Darst, Enrico Glerean)
-  - 10:00 `Jupyter <https://aaltoscicomp.github.io/python-for-scicomp/jupyter/>`__ (Diana Iusan)
-  - 10:30 `Working with data <https://aaltoscicomp.github.io/python-for-scicomp/work-with-data/>`__ (Thomas Pfau, Simo Tuomisto)
+  - 10:00 `Plotting with Vega-Altair <https://aaltoscicomp.github.io/python-for-scicomp/plotting-vega-altair/>`__ (Simo Tuomisto, Samantha Wittke)
+  - 11:30  ? Cython (Lauri Niemi, Ashwin Mohanan)
   - 12:00 Lunch break
-  - 13:00 `Plotting with Vega-Altair <https://aaltoscicomp.github.io/python-for-scicomp/plotting-vega-altair/>`__ (Simo Tuomisto, Samantha Wittke)
-  - 14:00 `Scripts <https://aaltoscicomp.github.io/python-for-scicomp/scripts/>`__ (Thomas Pfau, Simo Tuomisto)
+  - 13:00 `Working with data <https://aaltoscicomp.github.io/python-for-scicomp/work-with-data/>`__ (Thomas Pfau, Simo Tuomisto)
+  - 13:30 `Scripts <https://aaltoscicomp.github.io/python-for-scicomp/scripts/>`__ (Thomas Pfau, Simo Tuomisto)
   - 14:40 `Profiling <https://aaltoscicomp.github.io/python-for-scicomp/profiling/>`__ (to be decided) or `Python productivity tools (autoformatting, linting, AI tools)  <https://aaltoscicomp.github.io/python-for-scicomp/productivity/>`__ (to be decided)
   - 15:00 End of day 2
 
