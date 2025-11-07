@@ -221,7 +221,7 @@ certain person.  Always contact us by :doc:`our help channels
      * RSE
      * applied mathematics, computational geometry, signal processing, machine learning
 
-    * * Nguyen Luong
+   * * Nguyen Luong
      * RSE
      * computational social science, statistics, machine learning
 
