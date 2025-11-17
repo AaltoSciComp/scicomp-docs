@@ -74,35 +74,35 @@ if attending a single lesson.
 
   - 09:50 Icebreakers and warming up (Richard Darst, Enrico Glerean)
   - 10:00 :doc:`Intro <python-for-scicomp/intro>` (Enrico Glerean, Susanne Merz)
-  - 10:15  `Jupyter <https://aaltoscicomp.github.io/python-for-scicomp/jupyter/>`__ (Diana Iusan)
+  - 10:15  `Jupyter <https://aaltoscicomp.github.io/python-for-scicomp/jupyter/>`__ (Diana Iusan, Heman)
   - 11:00  `NumPy <https://aaltoscicomp.github.io/python-for-scicomp/numpy/>`__ (Marijn Van Vliet, Susanne Merz)
   - 12:00 Lunch break
-  - 13:00 `Pandas <https://aaltoscicomp.github.io/python-for-scicomp/pandas/>`__ (Marijn Van Vliet)
-  - 14:30 `Xarray <https://aaltoscicomp.github.io/python-for-scicomp/xarray/>`__ (Marijn Van Vliet, Ashwin Mohanan)
+  - 13:00 `Pandas <https://aaltoscicomp.github.io/python-for-scicomp/pandas/>`__ (Ashwin Mohanan, Susanne Merz)
+  - 14:30 `Xarray <https://aaltoscicomp.github.io/python-for-scicomp/xarray/>`__ (Marijn Van Vliet, Thomas Pfau)
   - 15:00 End of day 1
 
 - Wed 26.nov, 9:50-15:00
 
   - 09:50  Icebreakers and warming up (Richard Darst, Enrico Glerean)
-  - 10:00 `Plotting with Vega-Altair <https://aaltoscicomp.github.io/python-for-scicomp/plotting-vega-altair/>`__ (Simo Tuomisto, Samantha Wittke)
-  - 11:30  ? Cython (Lauri Niemi, Ashwin Mohanan)
+  - 10:00 `Plotting with Vega-Altair <https://aaltoscicomp.github.io/python-for-scicomp/plotting-vega-altair/>`__ (Simo Tuomisto, Thomas Pfau)
+  - 11:30  `Working with data <https://aaltoscicomp.github.io/python-for-scicomp/work-with-data/>`__ (Thomas Pfau, Simo Tuomisto)
   - 12:00 Lunch break
-  - 13:00 `Working with data <https://aaltoscicomp.github.io/python-for-scicomp/work-with-data/>`__ (Thomas Pfau, Simo Tuomisto)
-  - 13:30 `Scripts <https://aaltoscicomp.github.io/python-for-scicomp/scripts/>`__ (Thomas Pfau, Simo Tuomisto)
-  - 14:40 `Profiling <https://aaltoscicomp.github.io/python-for-scicomp/profiling/>`__ (to be decided) or `Python productivity tools (autoformatting, linting, AI tools)  <https://aaltoscicomp.github.io/python-for-scicomp/productivity/>`__ (to be decided)
+  - 13:00 `Scripts <https://aaltoscicomp.github.io/python-for-scicomp/scripts/>`__ (Thomas Pfau, Luca Ferranti)
+  - 14:00 `Profiling <https://aaltoscicomp.github.io/python-for-scicomp/profiling/>`__ (Simo Tuomisto, Susanne Merz)
+  - 14:40 `Library ecosystem <https://aaltoscicomp.github.io/python-for-scicomp/libraries/>`__ (Thomas Pfau), Luca Ferranti
   - 15:00 End of day 2
 
 - Thu 27.nov, 9:50-15:00
 
   - 09:50  Icebreakers and warming up (Richard Darst, Enrico Glerean)
-  - 10:00 `Library ecosystem <https://aaltoscicomp.github.io/python-for-scicomp/libraries/>`__ (Thomas Pfau)
-  - 10:30 `Dependency management <https://aaltoscicomp.github.io/python-for-scicomp/dependencies/>`__ (Sabry Razick, Simo Tuomisto)
-  - 11:30 `Parallel programming intro <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__ (Johan Hellsvik, Susanne Merz)
+  - 10:00 `Parallel programming intro <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__ (Johan Hellsvik, Lauri Niemi, Susanne Merz)
+  - 11:30 Cython (Lauri Niemi, Ashwin Mohanan)
   - 12:00 Lunch break
-  - 13:00 `Parallel programming continued <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__ (Johan Hellsvik, Susanne Merz)
-  - 14:00 `Packaging <https://aaltoscicomp.github.io/python-for-scicomp/packaging/>`__ (Ashwin Mohanan, Richard Darst)
+  - 13:00 `Packaging <https://aaltoscicomp.github.io/python-for-scicomp/packaging/>`__ (Ashwin Mohanan, Simo Tuomisto)
+  - 13:55 `Dependency management <https://aaltoscicomp.github.io/python-for-scicomp/dependencies/>`__ (Simo Tuomisto, Sabry Razick)
   - 14:50 :doc:`Outro <python-for-scicomp/outro>`
   - 15:00 End of day 3
+? 
 
 
 Preparation
@@ -147,7 +147,7 @@ credit system. Please make sure that your supervisor/study program accepts it.
 Learners with a valid Aalto student number will automatically get the credit
 registered in Aalto systems.
 
-To obtain a certificate/credit, we expect you to have registered to the course by 7/11/2024, 
+To obtain a certificate/credit, we expect you to have registered to the course by 27/11/2025, 
 follow the 4 sessions and provide us with at least the following 5 documents via email
 (1 text document, 3 or more python scripts/notebooks). **Please remember to add your name and surname to all submitted files. If you are a student at Aalto University, please also add your student number.**
 
@@ -161,9 +161,9 @@ follow the 4 sessions and provide us with at least the following 5 documents via
   research. There is no right or wrong way of doing this, but please submit a
   python script/notebook that we are eventually able to run and test on our local computers.
 
-These 4 (or more) documents should be sent before 30/November/2024 23:59CET to scip@aalto.fi.
+These 4 (or more) documents should be sent before 15/December/2025 23:59CET to scip@aalto.fi.
 If the evaluation criteria are met for each of the 4 (or more) documents, you will receive
-a certificate by end of December 2024. Please note that we do not track course attendance and if you missed one
+a certificate by end of January 2026. Please note that we do not track course attendance and if you missed one
 session, recordings will be available on Twitch immediately after the streaming ends.
 
 **Additional course info at:** scip -at- aalto.fi
