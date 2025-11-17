@@ -72,35 +72,35 @@ if attending a single lesson.
   intro already starts then.
 - Tue 25.nov, 9:50-15:00
 
-  - 09:50 Icebreakers and warming up (Richard Darst, Enrico Glerean)
-  - 10:00 :doc:`Intro <python-for-scicomp/intro>` (Enrico Glerean, Susanne Merz)
-  - 10:15  `Jupyter <https://aaltoscicomp.github.io/python-for-scicomp/jupyter/>`__ (Diana Iusan)
-  - 11:00  `NumPy <https://aaltoscicomp.github.io/python-for-scicomp/numpy/>`__ (Marijn Van Vliet, Susanne Merz)
+  - 09:50 Icebreakers and warming up (Enrico)
+  - 10:00 :doc:`Intro <python-for-scicomp/intro>` (Enrico)
+  - 10:15  `Jupyter <https://aaltoscicomp.github.io/python-for-scicomp/jupyter/>`__ (Diana, Hemanadhan)
+  - 11:00  `NumPy <https://aaltoscicomp.github.io/python-for-scicomp/numpy/>`__ (Marijn, Susa)
   - 12:00 Lunch break
-  - 13:00 `Pandas <https://aaltoscicomp.github.io/python-for-scicomp/pandas/>`__ (Marijn Van Vliet)
-  - 14:30 `Xarray <https://aaltoscicomp.github.io/python-for-scicomp/xarray/>`__ (Marijn Van Vliet, Ashwin Mohanan)
+  - 13:00 `Pandas <https://aaltoscicomp.github.io/python-for-scicomp/pandas/>`__ (Ashwin, Susa)
+  - 14:30 `Xarray <https://aaltoscicomp.github.io/python-for-scicomp/xarray/>`__ (Marijn, Thomas)
   - 15:00 End of day 1
 
 - Wed 26.nov, 9:50-15:00
 
-  - 09:50  Icebreakers and warming up (Richard Darst, Enrico Glerean)
-  - 10:00 `Plotting with Vega-Altair <https://aaltoscicomp.github.io/python-for-scicomp/plotting-vega-altair/>`__ (Simo Tuomisto, Samantha Wittke)
-  - 11:30  ? Cython (Lauri Niemi, Ashwin Mohanan)
+  - 09:50  Icebreakers and warming up (Enrico)
+  - 10:00 `Plotting with Vega-Altair <https://aaltoscicomp.github.io/python-for-scicomp/plotting-vega-altair/>`__ (Simo, Thomas)
+  - 11:30  `Working with data <https://aaltoscicomp.github.io/python-for-scicomp/work-with-data/>`__ (Thomas, Simo)
   - 12:00 Lunch break
-  - 13:00 `Working with data <https://aaltoscicomp.github.io/python-for-scicomp/work-with-data/>`__ (Thomas Pfau, Simo Tuomisto)
-  - 13:30 `Scripts <https://aaltoscicomp.github.io/python-for-scicomp/scripts/>`__ (Thomas Pfau, Simo Tuomisto)
-  - 14:40 `Profiling <https://aaltoscicomp.github.io/python-for-scicomp/profiling/>`__ (to be decided) or `Python productivity tools (autoformatting, linting, AI tools)  <https://aaltoscicomp.github.io/python-for-scicomp/productivity/>`__ (to be decided)
+  - 13:00 `Scripts <https://aaltoscicomp.github.io/python-for-scicomp/scripts/>`__ (Thomas, Luca)
+  - 14:10 `Profiling <https://aaltoscicomp.github.io/python-for-scicomp/profiling/>`__ (Simo, Susa)
+  - 14:30 `Library ecosystem <https://aaltoscicomp.github.io/python-for-scicomp/libraries/>`__ (Thomas, Luca)
   - 15:00 End of day 2
 
 - Thu 27.nov, 9:50-15:00
 
-  - 09:50  Icebreakers and warming up (Richard Darst, Enrico Glerean)
-  - 10:00 `Library ecosystem <https://aaltoscicomp.github.io/python-for-scicomp/libraries/>`__ (Thomas Pfau)
-  - 10:30 `Dependency management <https://aaltoscicomp.github.io/python-for-scicomp/dependencies/>`__ (Sabry Razick, Simo Tuomisto)
-  - 11:30 `Parallel programming intro <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__ (Johan Hellsvik, Susanne Merz)
+
+  - 09:50  Icebreakers and warming up (Enrico)
+  - 10:00 `Parallel programming intro <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__ (Johan, Susa, Lauri)
+  - 11:30 Cython (Lauri, Ashwin)
   - 12:00 Lunch break
-  - 13:00 `Parallel programming continued <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__ (Johan Hellsvik, Susanne Merz)
-  - 14:00 `Packaging <https://aaltoscicomp.github.io/python-for-scicomp/packaging/>`__ (Ashwin Mohanan, Richard Darst)
+  - 13:00 `Packaging <https://aaltoscicomp.github.io/python-for-scicomp/packaging/>`__ (Ashwin, Simo)
+  - 14:00 `Dependency management <https://aaltoscicomp.github.io/python-for-scicomp/dependencies/>`__ (Simo, Sabry)
   - 14:50 :doc:`Outro <python-for-scicomp/outro>`
   - 15:00 End of day 3
 
@@ -147,7 +147,7 @@ credit system. Please make sure that your supervisor/study program accepts it.
 Learners with a valid Aalto student number will automatically get the credit
 registered in Aalto systems.
 
-To obtain a certificate/credit, we expect you to have registered to the course by 7/11/2024, 
+To obtain a certificate/credit, we expect you to have registered to the course by xx/xx/2025, 
 follow the 4 sessions and provide us with at least the following 5 documents via email
 (1 text document, 3 or more python scripts/notebooks). **Please remember to add your name and surname to all submitted files. If you are a student at Aalto University, please also add your student number.**
 
@@ -244,26 +244,25 @@ own audience.
 * `Finnish Reproducibility Network <https://www.finnish-rn.org/>`__
 * `Scientific IT Services of ETH Zurich <https://sis.id.ethz.ch/>`__
 * `eScience center <https://www.esciencecenter.nl/>`__
-* `MIMER AI Factory <https://mimer-ai.eu/>`__
 * `ENCCS <https://enccs.se/>`__
+* `University of Iceland <https://english.hi.is/>`__
   
 
 ..
 
-  * Radovan Bast (CodeRefinery, The Artic University of Norway) (instructor, helper)
   * Richard Darst (ASC, Aalto University) (instructor, instructor coordinator, director)
-  * Gregor Decristoforo (The Artic University of Norway) (instructor, helper)
   * Enrico Glerean (ASC, Aalto University) (instructor, coordinator, communication, helper)
   * Johan Hellsvik (PDC, NAISS, KTH) (instructor, helper)
   * Diana Iusan (`UPPMAX <https://www.uppmax.uu.se/>`__, NAISS, Uppsala University) (instructor, helper)
-  * Ashwin Mohanan (MIMER AI Factory / RISE) (instructor, helper)
+  * Ashwin Mohanan (ENCCS / RISE) (instructor, helper)
   * Thomas Pfau (ASC, Aalto University) (instructor, helper)
-  * Teemu Ruokolainen (ASC, Aalto University) (instructor, helper)
   * Sabry Razick (University of Oslo) (instructor, helper)
   * Simo Tuomisto (ASC, Aalto University) (instructor, helper)
   * Marijn Van Vliet (Aalto University) (instructor, helper)
-  * Yonglei Wang (ENCCS / Linköping University) (helper)
   * Susanne Merz (ASC, Aalto University)(instructor, helper)
+  * Hemanadhan Myneni (University of Iceland)(instructor, helper)
+  * Lauri Niemi (CSC - IT Center for Science)(instructor, helper)
+  * ...
  
 ...and many more `contributors to the learning materials on Github <https://github.com/AaltoSciComp/python-for-scicomp/graphs/contributors>`__.
 
@@ -297,6 +296,4 @@ See also
        <https://www.youtube.com/playlist?list=PLZLVmS9rf3nNI3oQEqSJW6yXltOAZnkpa>`__
        `Twitch videos (raw, for 7 days, immediately available)
        <https://www.twitch.tv/coderefinery/videos>`__
-     * `Archived Q&A days 1-2
-       <https://notes.coderefinery.org/python2023?view>`__ and `days
-       3-4 <python2023archive>`__
+     * `Archived Q&A (coming as the course progresses)
