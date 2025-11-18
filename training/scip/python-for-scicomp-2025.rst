@@ -262,6 +262,7 @@ own audience.
   * Susanne Merz (ASC, Aalto University)(instructor, helper)
   * Hemanadhan Myneni (University of Iceland)(instructor, helper)
   * Lauri Niemi (CSC - IT Center for Science)(instructor, helper)
+  * Luca Ferranti (ASC, Aalto University)(instructor, helper)
   * ...
  
 ...and many more `contributors to the learning materials on Github <https://github.com/AaltoSciComp/python-for-scicomp/graphs/contributors>`__.
