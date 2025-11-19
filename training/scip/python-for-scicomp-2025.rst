@@ -147,7 +147,7 @@ credit system. Please make sure that your supervisor/study program accepts it.
 Learners with a valid Aalto student number will automatically get the credit
 registered in Aalto systems.
 
-To obtain a certificate/credit, we expect you to have registered to the course by xx/xx/2025, 
+To obtain a certificate/credit, we expect you to have registered to the course by 27/11/2025, 
 follow the 4 sessions and provide us with at least the following 5 documents via email
 (1 text document, 3 or more python scripts/notebooks). **Please remember to add your name and surname to all submitted files. If you are a student at Aalto University, please also add your student number.**
 
