@@ -217,6 +217,9 @@ certain person.  Always contact us by :doc:`our help channels
      * RSE
      * Neuroimaging, medical research
 
+   * * Luca Ferranti
+     * RSE
+     * applied mathematics, computational geometry, signal processing, machine learning
 
 Scientific outputs
 ------------------

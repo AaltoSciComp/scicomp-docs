@@ -9,7 +9,7 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * September 30: We do have an internal development day. There is no garage session.
+   * We don't know of any upcoming disruptions to the garage schedule.
 
 If you need more help than the issue trackers, this is the place to
 be.  It's not just Triton, but all aspects of scientific computing.
@@ -112,7 +112,7 @@ usually give a good answer (especially about Triton, HPC, computing,
 software, and data).
 
 * **Mondays** also have NBE/PHYS IT present.
-* **Tuesdays** On 2025-10-06 and 2025-11-04 we will have a :ref:`COMSOL Multiphysics<comsol>` focus day: someone from COMSOL (the company) plans to join.
+* **Tuesdays** On 2025-12-09 we will have a :ref:`COMSOL Multiphysics<comsol>` focus day: someone from COMSOL (the company) plans to join.
 * **Wednesdays** also have NBE/PHYS IT present.  We also have more
   staff to help :doc:`jupyter.cs instructors/TAs </aalto/jupyterhub-instructors/index>`. 
 * **Thursdays**

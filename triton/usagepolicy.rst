@@ -93,7 +93,8 @@ data:
 In summary:
 
 * The **Triton account** is not a separate account, it is part of the
-  Aalto account.  We do not control that.
+  Aalto account.  We do not control that.  Do not share Aalto or
+  Triton accounts or access.
 * **Triton usage statistics and logs.**  Triton is used for university
   academic research only, so this information may be used for
   reporting and management in any way.  Identifying information won't

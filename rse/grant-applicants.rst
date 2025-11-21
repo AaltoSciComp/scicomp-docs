@@ -228,3 +228,12 @@ European Commission grants
 Internal billing is (for practical purposes) not possible
 for EC grants.  Use the "RSE salary" method (and don't call it
 subcontracting or purchasing - we are normal salary).
+
+With EU projects, since the funding is generally less flexible, you
+should consider how the funding can be flexibly used if we don't have
+enough staff at the specific times you plan.  For example,
+interchanging with other staff categories.  (As of 2025, until there
+is funding, we can't reserve future time).  However, as said above, in
+the worst case we will help you get started and help you find an
+appropriate person to hire (and mentor them along the way).  So far,
+we've been able to help almost all projects to their satisfaction.

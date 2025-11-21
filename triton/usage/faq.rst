@@ -395,7 +395,7 @@ Storage, file transfer and quota
     mainly for user initialization files and for some plain configs. We
     make regular backups from ``$HOME``.
   | ``$WRKDIR`` (aka ``/triton``) is fast Lustre, has large quota, mounted
-    through InfiniBand. Though no backups made from ``/triton``, the DDN
+    through InfiniBand. Though no backups made from ``/triton``, the scratch
     storage system as such is secure and safe place for your data, though
     you can always loose your data deleting them by mistake. Every user
     must take care about his work files himself. We provide as much
@@ -504,7 +504,7 @@ Coding and Compiling
     current network state. Certainly, you must not expect that, as many
     CPUs your application has got, that faster it will run. In general the
     scaling on Triton is good since we have Infiniband for nodes
-    interconnect and DDN / Lustre for I/O.
+    interconnect and scratch/Lustre for I/O.
 
   Few recommendations about CPU number:
 
