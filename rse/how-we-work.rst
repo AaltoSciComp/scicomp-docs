@@ -1,60 +1,75 @@
-Starting a project with us
-==========================
+Project management: researcher perspective
+==========================================
 
-This page is mostly focused on how long-term scheduled projects, which
-are funded by the research groups themselves, work.
-**Long-term projects** are scheduled by fraction of full-time-equivalent
-(FTE) over weeks or months.
+This page describes the way that medium and long (week or longer)
+projects should be handled.
 
 For short-term code review tasks, come to any of our :doc:`garage
-sessions </help/garage>` and we will immediately take a look.
+sessions </help/garage>` and we will immediately take a look - no
+advance planning needed.  The garage is also the starting point to
+upgrading to a longer project.
 
 
 
-Types of service
-----------------
+Background
+----------
 
-* **Long-term** service deals with jobs that last months, and are
-  scheduled in terms of FTE percentage over months.  This is often
-  directly as salary from some grant, as a researcher would be.
+Short-term
 
-* **Medium-term** service deal with jobs scheduled in days.  This is
-  mostly funded by basic funding from the member units.
+.. figure:: https://github.com/AaltoSciComp/aaltoscicomp-graphics/blob/master/figures/project-steps.png?raw=true
+   :alt: A flowchart diagram, of which me main point is that you can
+	 request short-term "garage" support as much as you want, and
+	 it can get upgraded to a "project" if it's a big enough
+	 task.  The project should have a clear planning meeting in it
+	 and we'll verify that we have enough time before accepting.
 
-* **Short-term** usually consists of support at one of our
-  :doc:`garages </help/garage>` or a few hours of work.  This is
-  generally free (paid by unit basic funding).
-
-
-
-Beginning
----------
-
-To actually make a request for support, see :doc:`request`.
+   Project management diagram.  The main point is short stuff is free
+   and easy in garage, and from garage we can upgrade to longer projects.
 
 
-Initial meeting
-~~~~~~~~~~~~~~~
+Requesting
+~~~~~~~~~~
+
+We encourage most people to request their initial support via the
+:ref:`SciComp Garage <scicomp-garage>`.  Really, almost no matter how
+you request, we'll ask you to drop by there some day to talk to us.
+If you request early, we might be able to do some advance preparation,
+but usually it's worth dropping by once to talk, and we can tell you
+what preparation is needed for a second meeting.
+
+For more info, see :doc:`request`.
+
+
+
+Project planning meeting
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 First, you can expect an quick initial meeting between the researchers
-and RSEs.  Depending on the size and complexity of the project, there
-may be several to find the right RSE and ensure that we can do a good
-job helping you.
+and RSEs.  We'll go over the project and some of the main recurrent
+issues and try to handle them in advance.  Our `meeting template
+<https://docs.google.com/document/d/1XcxeNLRq0kOsFbDEmA7ArdbIrCVudMWHPFQsKRVcTIk/>`__
+goes over things we may ask.
 
-* What scientific background knowledge is needed?  How long does it take to get
-  started?
+The first meeting should have whoever is actively working on it from
+the researcher side, possibly the supervisor, and at least two RSE
+staff to provide a wider perspective.
+
+Things we may go over include:
+
+* What scientific background knowledge is needed?  How long does it
+  take to get started?
 * What type of contribution will the RSE make (see next section)?  For
-  purposes of
-  scientific integrity, consider if this reaches the point of
-  scientific authorship (see bottom).
-* Researchers: provide access to code, documentation, and relevant
-  scientific background in advance, so
-  that they can be browsed.  The more we know in advance, the better
-  we can estimate the time required and how to best help you.
+  purposes of scientific integrity, consider if this reaches the point
+  of scientific authorship (see bottom).
+* Researchers: If possible, provide access to code, documentation, and
+  relevant scientific background in advance, so that they can be
+  browsed.  The more we know in advance, the better we can estimate
+  the time required and how to best help you.
 * How do you manage your data?  To map things out, consider `this
   one-page data management plan table
   <https://drive.google.com/drive/folders/0BzlGN0F6ew2hc0hGVXVTaGZwQjQ>`__.
 * Final outputs, location, publication.
+* Risks and risk management
 * Time frame and schedule flexibility.
 
 
@@ -86,7 +101,7 @@ needs.  Together, we will think about these questions:
   - Prepare a project for publication, release, or being used by more
     people.
 
-- Future plan
+- Future plan and long-term maintenance
 
   - Primarily teach via example, so that the researcher can fully
     continue developing the project themselves.
@@ -120,23 +135,25 @@ project.
 If we schedule a project but lose contact with you (no responses to
 our messages), we'll assume you are busy with other things and may
 re-add the project to the queue, and we'll need to find a new time in
-the schedule.  Please let us know if you don't have time, we
-understand the busyness of research.
+the schedule.  In other words, we don't change for no-shows, but you
+may lose your place in the queue.  Please let us know if you don't
+have time, we understand the busyness of research.
 
 A project doesn't have to be done "all at once" but can be interleaved
-with your own work schedule.
-
+with your own work schedule.  In other words, we can work 25-50% for
+multiple months, as you may need.
 
 
 Costs and time tracking
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-We track the time we spend and record it to your project.
+We track the time we spend and record it to your project via Halli.
+The PI can track this progress.
 
 
 
-Getting started
----------------
+Typical concerns when getting started
+-------------------------------------
 
 Version control
 ~~~~~~~~~~~~~~~
@@ -163,20 +180,6 @@ period of refactoring to improve the existing code, where it seems
 like not much is getting done.  This is a necessary step in investing
 for the future.
 
-
-
-During the project
-------------------
-
-Our RSE will most likely want to go work with you, in your physical
-location (well, after corona-time), a lot of the time.  It would be
-good to arrange a desk area as close as possible to existing
-researchers.  "Mobile-space" but close is better than fixed but
-further.
-
-Our goal isn't just to provide a service, but to teach your group how
-to work better yourselves after the project.
-
 Software quality and testing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -191,6 +194,21 @@ We also pay particular attention to the maintenance burden of
 software: you'll be using software much longer than you write it.  We
 aim for simple, reliable strategies rather than the fanciest things
 *right now*.
+
+
+
+
+During the project
+------------------
+
+As you may prefer, we can either work online or go visit you
+in-person, especially if you have convenient office space.  It would
+be good to arrange a desk area as close as possible to existing
+researchers.  "Mobile-space" but close is better than fixed but
+further.
+
+Our goal isn't just to provide a service, but to teach your group how
+to work better yourselves after the project.
 
 ..
   Overheads
@@ -210,22 +228,13 @@ aim for simple, reliable strategies rather than the fanciest things
   For short-term projects scheduled by hours, overhead isn't expected.
 
 
-
 After the project
 -----------------
 
 We don't want to drop support right after the project (that's why you
-work with us, not an external software developer).  Still, we have
-finite resources and can't fund work on one project from another, so
-can't do everything for everyone.  You can expect
-us to try to passively keep supporting you for during the "daily
-garage" time as best we can.
-
-If your department or unit provides basic funding (see the
-:doc:`implementation plan <procedures/implementation>`), then long-term service
-is included, and this has no limits.  However, this is shared among
-everyone in your unit, and focused on strategically support that helps
-many people.
+work with us, not an external software developer).  As best we can,
+you can keep coming to get help during the SciComp garage time, but
+you'll need to take a more active role.
 
 .. _rse-how-we-work-kpis:
 

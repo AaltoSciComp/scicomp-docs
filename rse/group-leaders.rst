@@ -1,5 +1,5 @@
-For group leaders
-=================
+Project management: PI perspective
+==================================
 
 You, or someone in your group, has requested :doc:`Research Software
 Engineer <../index>` services for one of your group's projects.  This
@@ -16,8 +16,8 @@ How it is funded
 There are two funding strategies:
 
 * Short term (a few weeks or less) is funded by your department, if
-  you are in one of the :doc:`sponsoring units <units>`.  You don't
-  need to do anything special.
+  you are in one of the :doc:`sponsoring units
+  <procedures/units-info>`.  You don't need to do anything special.
 * Longer term (month or more) is funded from your own projects.  See
   the information for :doc:`grant applicants <grant-applicants>`, it
   is also relevant if you already have funding you want to use.
@@ -26,6 +26,18 @@ There are two funding strategies:
   have us around on retainer to support all of your projects (for
   example, 20% time for a year).  If you are applying for a new grant,
   see :doc:`grant-applicants`.
+
+
+
+Project planning meeting
+------------------------
+
+We'll try to have a planning meeting to start the project at the
+beginning.  We'll talk about what needs to be done, what the goals
+are, who does what, risks and risk management, and long-term
+maintenance.  This should be written in some sort of shared doc that
+everyone can view and edit (ideally wherever your group normally
+stores such things, like OneDrive or Google Drive).
 
 
 
@@ -54,7 +66,8 @@ agreement that Aalto IT system administrators have, and are similarly
 vetted.
 
 Using our services doesn't affect your intellectual property right any
-more than another employee working on the project will.  This is
-service-for-pay, so you get all rights.  However, our RSEs expect to
-be acknowledged according to good scientific practice (see
-:doc:`how-we-work`).
+more than another employee working on the project will.  (In the event
+you don't plan for open science / open licenses, it should be planned
+first, though, to make sure everything gets taken care of.)  However,
+our RSEs expect to be acknowledged according to good scientific
+practice (see :doc:`how-we-work`).

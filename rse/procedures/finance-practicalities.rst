@@ -9,6 +9,22 @@ controller directly if you have the funding already.
 
 
 
+Abstract
+--------
+
+* Most of the time, we work like normal academics and use Halli to
+  record or salaries.
+* The PI needs to request the controller to set up Halli access for
+  the RSE.  The controller can also calculate the exact cost to your
+  grant based on the salary we provide (the overheads are a function
+  of your grant, not our work).
+* The RSE staff record via Halli, and your controller can answer
+  questions about how much funding has been used.
+
+Below are template emails to request this to be set up.
+
+
+
 Instructions for group leaders
 ------------------------------
 

@@ -9,6 +9,67 @@ science to have time to focus on the computing.
 
 To find out more or make a request, contact us.
 
+
+Free tier: Garage, small, and medium support
+--------------------------------------------
+
+Aalto recognizes the importance of researchers in every field being
+able to use scientific computing competently, so our expertise is
+available to some degree to everyone.
+
+The :ref:`SciComp garage <scicomp-garage>` is a daily online office
+hour where anyone can ask us anything.  This is a great way to
+un-stick any small things that you may have.  When something takes
+more time than this, we can work on it for a few hours or days outside
+the garage.
+
+When we have time, and :doc:`prioritized by the participating units
+<procedures/units-info>`, we can take projects for free for up to a
+month.  To do this, just join the garage to get started.
+
+
+With funding: long projects
+---------------------------
+
+If a project provides funding, we can work longer than a month.  We
+would essentially join the project as a collaborator, as much as you
+would like, and can take much more independent responsibility for
+whatever you need us to do.
+
+To get started this way, it's still best to join the garage and
+request help.
+
+
+
+How to contact us and request help
+----------------------------------
+
+To request a service, see :ref:`the request area <request-rse>`.
+
+Requests are :doc:`prioritized <procedures/prioritization>` according to:
+
+* Short-term "urgent help" for as many projects as possible
+* Priority for projects and units which provide funding
+* Strategic benefit
+* Long-term impact to research (for example, improved skills)
+* Diversity and balance
+
+
+
+Examples
+--------
+
+.. note:: Master's and Bachelor's students
+
+  The RSE service is intended for researchers, but students can be
+  researchers if they are involved in a research project. To get
+  started on anything longer than a short consultation, we would need
+  to meet with your supervisor.  (We can arrange help of courses if
+  the course instructors contact us).
+
+Case studies
+~~~~~~~~~~~~
+
 .. admonition:: Case study: preparation for publication
 
    A group is about to publish a paper about a method, but their code
@@ -55,30 +116,6 @@ To find out more or make a request, contact us.
    these services.
 
 
-What we do
-----------
-
-Our RSEs may provide both mentorship and programming-as-a-service for
-your projects.  Are you tired of research being held back by slow
-programming?  We can help.
-
-**You can request our help for a few hours, to consult and co-work on
-a project.** Our goal will be to primarily teaching and mentoring, to
-help you help yourselves in the long run.  We'll point you in the
-right direction and where to look next.
-
-**You can also request longer-term work as a service.**  This
-can be producing or modifying some software for you, or whatever you
-may need.  If it's short, it's covered under basic funding, and if it
-is longer it is expected to be paid from your grants.  (Need someone
-for a few months for your grant?  We can do that.)
-
-.. note:: Master's and Bachelor's students
-
-  The RSE service is intended for researchers, but students can be researchers
-  if they are involved in a research project. To get started on anything longer
-  than a short consultation, we would need to meet with your supervisor.
-
 Short-term examples
 ~~~~~~~~~~~~~~~~~~~
 
@@ -118,46 +155,3 @@ go to you and work with you.
 * Adding features to existing software
 * Contributing to some other open source software you need for your
   research
-
-
-
-Paid project service
---------------------
-
-In the dedicated service, your research groups pays and we will do
-whatever you want (in particular the more involved examples above).
-Still, our model is as much co-working as consulting: we want to
-improve your own skills so that you can still be productive
-afterwards.
-
-The research group must pay for this service, but the rate is
-essentially at-cost and with minimal bureaucratic overhead.
-
-
-
-Free basic service
-------------------
-
-In order to help *everyone* and avoid microtransactions,
-departments/schools/etc can sponsor a basic service, which provides a
-few hours or days of close support to improve how you work (especially
-for the "basic examples" above.
-
-One of our trained RSEs will work with you for a short period to begin
-or improve your project.  The goal is not to do it for you, but to
-show you by example so that you can do it yourself later.
-
-
-
-How to contact us and request help
-----------------------------------
-
-To request a service, see :ref:`the request area <request-rse>`.
-
-Requests are :doc:`prioritized <procedures/prioritization>` according to:
-
-* Short-term "urgent help" for as many projects as possible
-* Priority for projects and units which provide funding
-* Strategic benefit
-* Long-term impact to research (for example, improved skills)
-* Diversity and balance
