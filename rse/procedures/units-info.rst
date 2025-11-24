@@ -1,16 +1,18 @@
-Unit information
-================
+Participating units
+===================
 
 This page describes the Aalto units which are supporting the RSE
 program and what their priorities are.  Our basic priorities:
 
-* First, we try to do all **garage/short projects** (day or less).  These
-  have a high impact because they unblock immediate problems.
-  Reporting is via the end-of-year garage report.
+* First, we try to do all **garage/short projects** (day or less).
+  These have a high impact because they unblock immediate problems.
+  Reporting is via the end-of-year garage report.  We advertise garage
+  more aggressively to units with less than their share of visitors.
 
 * Then, we try to do all **long projects** (month+), balanced and
-  prioritized according to the list below.  (As of 2025, if you aren't
-  on the list below, we usually still find time.)
+  prioritized according to the list below.  These reduce the basic
+  funding paid by the units.  (As of 2025, if you aren't on the
+  list below, we usually still find time.)
 
 * Then, we work on **medium projects** (days--weeks), which are free
   for the customers, balanced and prioritized according to the list

@@ -133,11 +133,11 @@ to improvement at any time.  Also see the :doc:`FCCI Tech
    procedures/project-administration
    procedures/templates
    procedures/prioritization
-   procedures/implementation
-   procedures/job-descriptions
    procedures/units-info
+   procedures/job-descriptions
    procedures/advisory-board
    procedures/template-projects
+   procedures/implementation
    history
    reports/2022
    reports/2023
