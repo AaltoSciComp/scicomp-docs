@@ -12,9 +12,9 @@ Python for Scientific Computing outro
 
 1 ECTS Credit
 -------------
-* :doc:`See the website <../python-for-scicomp-2024>`
-* Submission deadline is last day of November
-* If you are at Aalto we will register the credit for you, if you are affiliated with another university, you will receive a PDF that you can pass to your supervisor / study coordinator and they can register the credit for you.
+* :doc:`See the website <../python-for-scicomp-2025>`
+* Submission deadline is middle of December
+* If you are at Aalto we will register the credit for you into our umbrella course Scientific Computing Skills. Get in touch to understand how it works.
 * Homework: You can pick your own adventure, make sure your submitted scripts run and produce some results.
 
 
@@ -24,13 +24,13 @@ About CodeRefinery and Aalto SciComp
   project to support computational research. 
 * :doc:`Aalto Scientific Computing supports </index>` supports
   computational research at Aalto University
-* Special thanks to many other partners involved (ENCCS, CSC, various universities in the Nordics)
+* Special thanks to many other partners involved (ENCCS, CSC, various universities in the Nordics, LUMI AI Factory)
 
 
 Future events
 -------------
-* Introduction to HPC (aka Kickstart) - Febryary 2025
-* `CodeRefinery <https://coderefinery.org>`__ - March 2025
+* Introduction to HPC (aka Kickstart) - Febryary 2026
+* `CodeRefinery <https://coderefinery.org>`__ - March 2026
 * We might do a re-run of past courses, you can see all of them on `Aalto Scientific Computing YouTube Channel <https://www.youtube.com/@aaltoscientificcomputing3454>`__
 * You can `request a new course or a re-run with this survey <https://link.webropol.com/s/scipod>`__
 
@@ -47,9 +47,9 @@ Check other partners doing relevant courses:
 
 How to stay in touch
 --------------------
-CodeRefinery Mastodon: `@coderefinery@fosstodon.org <https://fosstodon.org/@CodeRefinery>`__ or twitter @coderefine
+CodeRefinery Mastodon: `@coderefinery@fosstodon.org <https://fosstodon.org/@CodeRefinery>`__ 
 
-Aalto Scientific Computing Mastodon: `@SciCompAalto@fosstodon.org <https://fosstodon.org/@SciCompAalto>`__ or twitter @SciCompAalto
+Aalto Scientific Computing Mastodon: `@SciCompAalto@fosstodon.org <https://fosstodon.org/@SciCompAalto>`__ 
 
 Nordic Research Software Engineers contains many like-minded people:
 if you want to do computational science as your career, consider
