@@ -97,7 +97,7 @@ if attending a single lesson.
 
   - 09:50  Icebreakers and warming up (Enrico)
   - 10:00 `Parallel programming intro <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__ (Johan, Susa, Lauri)
-  - 11:30 Cython (Lauri, Ashwin)
+  - 11:30 `Cython <https://aaltoscicomp.github.io/python-for-scicomp/cython/>`__ (Lauri, Ashwin)
   - 12:00 Lunch break
   - 13:00 `Packaging <https://aaltoscicomp.github.io/python-for-scicomp/packaging/>`__ (Ashwin, Simo)
   - 14:00 `Dependency management <https://aaltoscicomp.github.io/python-for-scicomp/dependencies/>`__ (Simo, Sabry)
