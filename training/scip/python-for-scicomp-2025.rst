@@ -85,7 +85,8 @@ if attending a single lesson.
 
   - 09:50  Icebreakers and warming up (Enrico)
   - 10:00 `Plotting with Vega-Altair <https://aaltoscicomp.github.io/python-for-scicomp/plotting-vega-altair/>`__ (Simo, Thomas)
-  - 11:30  `Working with data <https://aaltoscicomp.github.io/python-for-scicomp/work-with-data/>`__ (Thomas, Simo)
+  - 11:30 `Working with data <https://aaltoscicomp.github.io/python-for-scicomp/work-with-data/>`__ (Thomas, Simo)
+  - 11:55 Data ethics
   - 12:00 Lunch break
   - 13:00 `Scripts <https://aaltoscicomp.github.io/python-for-scicomp/scripts/>`__ (Thomas, Luca)
   - 14:10 `Profiling <https://aaltoscicomp.github.io/python-for-scicomp/profiling/>`__ (Simo, Susa)
@@ -102,7 +103,7 @@ if attending a single lesson.
   - 13:00 `Packaging <https://aaltoscicomp.github.io/python-for-scicomp/packaging/>`__ (Ashwin, Simo)
   - 14:00 `Dependency management <https://aaltoscicomp.github.io/python-for-scicomp/dependencies/>`__ (Simo, Sabry)
   - 14:50 :doc:`Outro <python-for-scicomp/outro>`
-  - 15:00 End of day 3
+  - 15:00 End of day 3 + zoom discussion
 
 
 Preparation
