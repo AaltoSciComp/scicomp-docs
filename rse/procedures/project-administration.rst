@@ -98,7 +98,12 @@ Procedures for M/L projects
      * Decision in weekly meeting based on pre-planning meeting info.
        Ensure we have time, ensure we have funding.  See if anyone
        else can find new risks.  Final check for who has time to
-       actually do the project.
+       actually do the project.  Checklist:
+
+       * Project can be defined
+       * A RSE has skills, interest, and *time*
+       * Team as whole has time and skills to support
+
      * Person(s) doing it contact the customer.
    * * S3 In progress
      * It's being worked on.
@@ -293,6 +298,9 @@ decision.
 * The project is presented at the meeting to decide if we can or can't
   do it.
 
+  * Project has been defined
+  * A RSE has skills, interest, and *time*
+  * Team as whole has time and skills to support
   * What is the goal?
   * How do you plan on approaching it?
   * What help do you need?
