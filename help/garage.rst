@@ -129,8 +129,11 @@ Others
 * CSC has a `weekly user support session
   <https://csc.fi/en/training-calendar/csc-research-support-coffee-every-wednesday-at-1400-finnish-time-2-2/>`__
   similar to the SciComp garage.
-* The University of Helsinki IT for Science has a `daily garage
-  session
+* University of Helsinki
+
+  * `Research Software Engineer garage
+    <https://wiki.helsinki.fi/xwiki/bin/view/Research%20Software%20Engineering%20group/>`__
+  * `HPC / IT for Science garage
   <https://version.helsinki.fi/it-for-science/hpc/-/wikis/home>`__.
 
 

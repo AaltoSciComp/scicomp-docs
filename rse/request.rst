@@ -13,6 +13,8 @@ Quick Consultations
 We recommend you come to our daily :ref:`garage sessions
 <scicomp-garage>` for a short chat.  There are no reservations, and
 this is the online equivalent of dropping by our office to say hi.
+Since it is online, we have a wide variety of people to help with many
+different types of tasks.
 
 
 

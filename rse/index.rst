@@ -15,7 +15,8 @@ For anything related to **custom software development, computational
 research, data management, workflow automation, scaling-up, deployment
 of public previews,
 collaborative work, reproducible research, optimization,
-high-performance computing, and more**, we can:
+high-performance computing, and more**, we can be the collaborator you
+need.  We can:
 
 * **Do it for you:** You need some custom technical
   software/solution.  We do it for you, you get straight to your work.
@@ -30,8 +31,7 @@ Instead of, or in addition to, hiring your own intern, postdoc,
 etc. to struggle with
 certain issues, we can help you. Our working groups consist of experienced
 researchers who have broad experience with scientific computing
-(programming, computing, data) for our academic work, and thus can
-seamlessly collaborate on research projects. We can also do
+in academic projects. We can also do
 consultation and training. You will have more
 impact since your work will become more reusable, open, and of a higher quality. We
 can work on your ongoing projects, or you can add us directly into your next
@@ -39,20 +39,23 @@ grant application.
 
 .. _rse-history: https://www.software.ac.uk/blog/2016-08-17-not-so-brief-history-research-software-engineers-0
 
-**Service availability:** Garage support is available to researchers
-at Aalto.
-We serve projects from all Aalto schools thanks to IT Services grants,
-but our main funding currently comes from the School of Science.  For
-more information, see :doc:`procedures/units-info`.
+**Service availability:** Our daily help session :ref:`SciComp Garage
+<scicomp-garage>` is available to researchers at Aalto.  Medium-length
+projects (days--weeks) is available for "free" in proportion to our
+funding from various :doc:`units in proportion to their funding
+<procedures/units-info>`.  Longer projects (month+) should have their
+:doc:`own project funding <procedures/finance-practicalities>`.
 
 .. admonition:: Contact
 
-   For a quick chat to get started with any kind of project or request
-   any type of support, come to our :ref:`daily garage <scicomp-garage>`,
-   every workday online at 13:00.  Or
-   contact us by email at rse at aalto.fi, or fill out our
-   `request form <https://selfservice.esupport.aalto.fi/ssc/app#/order/2026/>`__.  See
-   :ref:`requesting RSE <request-rse>` for more.
+   It's best to talk live!  Come to our :ref:`online office hour ("SciComp
+   Garage") <scicomp-garage>` any workday at 13:00. You don't even
+   need a specific question; you can ask about a vague idea, if
+   we are even the right place to ask, or drop by to chat about your
+   experiences.  This is also how you would start a larger project
+   with us.
+
+   See :ref:`requesting RSE <request-rse>` for more including email.
 
 
 
@@ -105,6 +108,7 @@ Checklists
 .. toctree::
    :maxdepth: 1
 
+   Project starting template <https://docs.google.com/document/d/1XcxeNLRq0kOsFbDEmA7ArdbIrCVudMWHPFQsKRVcTIk>
    checklists/project-done
    checklists/python
    JOSS checklist (external) <https://joss.readthedocs.io/en/latest/review_checklist.html>
@@ -126,14 +130,14 @@ to improvement at any time.  Also see the :doc:`FCCI Tech
 .. toctree::
    :maxdepth: 1
 
-   procedures/templates
    procedures/project-administration
+   procedures/templates
    procedures/prioritization
-   procedures/implementation
-   procedures/job-descriptions
    procedures/units-info
+   procedures/job-descriptions
    procedures/advisory-board
    procedures/template-projects
+   procedures/implementation
    history
    reports/2022
    reports/2023

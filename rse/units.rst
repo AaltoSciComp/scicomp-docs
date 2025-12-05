@@ -148,4 +148,4 @@ Hakala.
 Current member units
 --------------------
 
-See :doc:`procedures/units-info`
+See :doc:`procedures/units-info`.

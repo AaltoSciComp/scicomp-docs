@@ -18,7 +18,7 @@
 Since 2025, the main way to request certain types of GPUs is with
 ``--gres``, for example ``--gpus=1 --gres=min-vram:32``.  Only one
 ``--gres`` option is allowed, so to combine gres, use a comma
-separated list: ``--gres=gpu-vram:32g,min-cuda-cc=80``.
+separated list: ``--gres=gpu-vram:32g,min-cuda-cc:80``.
 
 (*) These GPUs have a priority queue for the Ellis project, since they were
 procured for this project. Any job submitted to the short queue might be
