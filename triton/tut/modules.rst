@@ -213,6 +213,23 @@ So now we can load it (we can do it in one line)::
   cmake version 3.27.7
 
 
+Available software stacks on Triton
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Below is a list of different sotware stacks on Triton, and the core 
+compiler used to build the majority of the software in them. These 
+are only relevant for compiled software, because things like mamba 
+environments and apptainer containers are essentially independent 
+software stacks.
+
+.. csv-table::
+   :delim: |
+   :header-rows: 1
+
+   Software stack    | Software availability    | Core compiler                    | Purpose
+   2024.1-gcc        | extensive                | GCC 12.3.0                       | general use
+   2025.1-gcc        | extensive                | GCC 13.3.0                       | general use
+   2025.1-intel      | slim                     | Intel Oneapi Compilers 2025.0.0  | compiling your own code
+
 
 What's going on under the hood here?
 ------------------------------------
