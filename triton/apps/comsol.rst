@@ -12,7 +12,9 @@ COMSOL Multiphysics
 
 To check which versions of Comsol are available, run::
 
-          module spider comsol
+.. code-block:: console
+
+  $ module spider comsol
 
 
 Comsol in Triton is best run in `Batch-mode <https://www.comsol.com/blogs/how-to-run-simulations-in-batch-mode-from-the-command-line/>`_, i.e. without the graphical userinterface. Prepare your models on your workstation and bring the ready-to-run models to triton. For detailed tutorials from COMSOL, see for example the Comsol Knowledge base articles `Running COMSOL® in parallel on clusters <https://www.comsol.com/support/knowledgebase/1001>`_ and `Running parametric sweeps, batch sweeps, and cluster sweeps from the command line <https://www.comsol.com/support/knowledgebase/1250>`_. However, various settings must be edited in the graphical user interface.
@@ -32,9 +34,9 @@ Best practices of using COMSOL Graphical User Interface in Triton
     
     1) Open a terminal, and connect with ssh to triton login node
 
-      ::
-      
-          ssh -Y triton.aalto.fi
+      .. code-block:: console
+
+        $ ssh -Y triton.aalto.fi
 
       However, if you use this terminal to start COMSOL, it will be running on the login node, which is a shared resource, and you should be careful not to use too much memory or CPUs.
 
@@ -42,21 +44,21 @@ Best practices of using COMSOL Graphical User Interface in Triton
 
    1) First make sure you have graphical connection (should print something like ":1.0")
 
-      ::
-      
-        echo $DISPLAY
+      .. code-block:: console
+
+        $ echo $DISPLAY
 
    2) then load the comsol module (version of your choice)
 
-      ::
-      
-        module load comsol/6.3
+      .. code-block:: console
+
+        $ module load comsol/6.3
 
    3) and finally start comsol
 
-      ::
-   
-	comsol
+      .. code-block:: console
+
+	    $ comsol
 
 
 	
@@ -68,9 +70,11 @@ There is a largish but limited pool of floating COMSOL licenses in Aalto Univers
 -  Comsol uses a lot of temp file storage, which by default goes to
    ``$HOME``. Fix a bit like the following::
 
-       $ rm -rf ~/.comsol/
-       $ mkdir /scratch/work/$USER/comsol_recoveries/
-       $ ln -sT /scratch/work/$USER/comsol_recoveries/ ~/.comsol
+   .. code-block:: console
+
+     $ rm -rf ~/.comsol/
+     $ mkdir /scratch/work/$USER/comsol_recoveries/
+     $ ln -sT /scratch/work/$USER/comsol_recoveries/ ~/.comsol
 
 
 - You may need to  enable access to the whole filesystem in *File|Options --> Preferences --> Security*: **File system access:** "*All files*"
@@ -161,6 +165,8 @@ First set up the cluster preferences, as described above.
 
 Start by opening the graphical user interface to comsol on the login node and open your model. ::
 
+.. code-block:: console
+
   $ module purge
   $ module load comsol/6.3
   $ comsol
@@ -169,6 +175,8 @@ Add a "Cluster Sweep" node to your study and a "Cluster Computing" node into you
  
 
 For a larger run, COMSOL can then submit the jobs with comsol but without the GUI::
+
+.. code-block:: console
 
   $ comsol batch -inputfile your_ready_to_run_model.mph -outputfile output_file.mph -study std1 -mode desktop
 
@@ -190,6 +198,8 @@ Save a username and password for COMSOL mph server
 
 Before your first use, you need to save the username and password for COMSOL mph server. On the login node, run::
 
+.. code-block:: console
+
   $ module load comsol/6.3
   $ comsol mphserver
   
@@ -202,14 +212,18 @@ Example files for batch job workflow
 
 Please check the available versions and installation locations of comsol and update the below scripts accordingly:
 
-          module spider comsol
+.. code-block:: console
 
-          module show comsol/6.2
+  $ module spider comsol
+
+  $ module show comsol/6.2
 
 The installation folder is on the line with "prepend_path".
 
 
-Here is an example batch submit script ``comsol_matlab_livelink.sh``::
+Here is an example batch submit script ``comsol_matlab_livelink.sh``:
+
+.. code-block:: yaml
 
   #!/bin/bash
 
@@ -233,7 +247,9 @@ Here is an example batch submit script ``comsol_matlab_livelink.sh``::
   echo matlab closed
 
 
-The MATLAB process is running the ``runner.m`` script::
+The MATLAB process is running the ``runner.m`` script:
+
+.. code-block::
 
   disp('Including comsol routines into the path.')
   addpath /share/apps/comsol/5.6/mli/
@@ -250,7 +266,9 @@ The MATLAB process is running the ``runner.m`` script::
   exit(0);
 
 
-The Model Control Script ``script.m`` could be e.g. the following::
+The Model Control Script ``script.m`` could be e.g. the following:
+
+.. code-block::
 
   import com.comsol.model.*;
   import com.comsol.model.util.*;
@@ -259,7 +277,9 @@ The Model Control Script ``script.m`` could be e.g. the following::
   %...
 
 
-The job is submitted with::
+The job is submitted with:
+
+.. code-block:: console 
 
   $ sbatch comsol_matlab_livelink.sh
 
