@@ -10,7 +10,7 @@ COMSOL Multiphysics
 .. hint:: Join the other COMSOL users in our Zulip :ref:`chat`: Stream "#triton", topic "Comsol user group".
 
 
-To check which versions of Comsol are available, run::
+To check which versions of Comsol are available, run:
 
 .. code-block:: console
 
@@ -23,15 +23,15 @@ Best practices of using COMSOL Graphical User Interface in Triton
 -----------------------------------------------------------------
 
 1) Connect to triton
-   
+
    - Use :ref:`Open OnDemand<ood>` for the best experience for interactive work on triton.
-     
+
     1) Connect to `<https://ondemand.triton.aalto.fi>`_ with your browser, log in. (It currently takes a while, please be patient.) Choose "My Interactive Sessions" from top bar, and then "Triton Desktop" from bottom. Launch your session, and once resources become available in triton, the session will be started on one of the interactive session nodes of triton. You can connect to a desktop in your browser with the "Launch Triton Desktop" button.
 
     2) Once you have connected, you can open a terminal (in XFCE the black rectangle in the bottom of the screen).
-       
+
   - You can alternatively open a linux session in `<https://vdi.aalto.fi>`_.
-    
+
     1) Open a terminal, and connect with ssh to triton login node
 
       .. code-block:: console
@@ -61,14 +61,14 @@ Best practices of using COMSOL Graphical User Interface in Triton
 	    $ comsol
 
 
-	
+
 Prerequsities of running COMSOL in Triton
 -----------------------------------------
 
 There is a largish but limited pool of floating COMSOL licenses in Aalto University, so please be careful not launch large numbers of comsol processess that each consume a separate license.
-	  
+
 -  Comsol uses a lot of temp file storage, which by default goes to
-   ``$HOME``. Fix a bit like the following::
+   ``$HOME``. Fix a bit like the following:
 
    .. code-block:: console
 
@@ -78,23 +78,23 @@ There is a largish but limited pool of floating COMSOL licenses in Aalto Univers
 
 
 - You may need to  enable access to the whole filesystem in *File|Options --> Preferences --> Security*: **File system access:** "*All files*"
- 
+
   .. image:: comsol_preferences_security.jpg
 	     :width: 50%
 	     :alt: Figure showing the comsol security preferences dialog box: File system access: All files is highlighted.
 
 - Enable the "Study -> Batch and Cluster" as well as "Study -> Solver and Job Configurations" nodes in the "Show More Options dialog box you can open by right-clicking the study in the Model Builder Tree.
-		   
-  
 
 
 
-The cluster settings can be saved in comsol settings, not in the model file. The correct settings are entered in *File|Options --> Preferences --> Multicore and Cluster Computing*. It is enough to choose **Scheduler type**: "*SLURM*" 
+
+
+The cluster settings can be saved in comsol settings, not in the model file. The correct settings are entered in *File|Options --> Preferences --> Multicore and Cluster Computing*. It is enough to choose **Scheduler type**: "*SLURM*"
 
 .. image:: comsol_preferences_cluster.jpg
 	   :width: 50%
 	   :alt: Figure showing the cluster preferences dialog box: Scheduler type: Slurm is highlighted.
-	   
+
 You can test by loading from the Application Libraries the "cluster_setup_validation" model. The model comes with a documentation -pdf file, which you can open in the Application Libraries dialogue after selecting the model.
 
 
@@ -111,7 +111,7 @@ The knowledge base article `Running COMSOL® in parallel on clusters <https://ww
 
    * - COMSOL
      - SLURM & MPI
-     - 
+     -
    * - node
      - task
      - A process, software concept
@@ -119,32 +119,34 @@ The knowledge base article `Running COMSOL® in parallel on clusters <https://ww
      - node
      - A single computer
    * - core
-     - cpu   
+     - cpu
      - A single CPU-core
 
 However, COMSOL does not seem to be using the terms in a 100% consistent way. E.g. sometimes in the SLURM context COMSOL may use node in the SLURM meaning.
 
-  
+
 An example run in a single node
 -------------------------------
 
-Use the parameters ``-clustersimple`` and ``-launcher slurm``. Here is a sample batch-job::
+Use the parameters ``-clustersimple`` and ``-launcher slurm``. Here is a sample batch-job:
 
-          #!/bin/bash
+.. code-block:: bash
 
-          # Ask for e.g. 20 compute cores
-          #SBATCH --time=10:00:00
-          #SBATCH --mem-per-cpu=2G
-          #SBATCH --cpus-per-task=20
+  #!/bin/bash
 
-          cd $WRKDIR/my_comsol_directory
-          module load comsol/6.3
+  # Ask for e.g. 20 compute cores
+  #SBATCH --time=10:00:00
+  #SBATCH --mem-per-cpu=2G
+  #SBATCH --cpus-per-task=20
 
-          # Details of your input and output files
-          INPUTFILE=input_model.mph
-          OUTPUTFILE=output_model_$SLURM_JOB_ID.mph
+  cd $WRKDIR/my_comsol_directory
+  module load comsol/6.3
 
-          comsol batch -clustersimple -launcher slurm -np $SLURM_CPUS_PER_TASK -inputfile $INPUTFILE -outputfile $OUTPUTFILE -tmpdir $TMPDIR
+  # Details of your input and output files
+  INPUTFILE=input_model.mph
+  OUTPUTFILE=output_model_$SLURM_JOB_ID.mph
+
+  comsol batch -clustersimple -launcher slurm -np $SLURM_CPUS_PER_TASK -inputfile $INPUTFILE -outputfile $OUTPUTFILE -tmpdir $TMPDIR
 
 One would not expect to need ``-np $SLURM_CPUS_PER_TASK``, but in practice COMSOL does not always automatically limit the jobs to the number of cpus per task. Instead, COMSOL assumes all CPUs on the node are reserved for it, and there are more COMSOL process trying to run than there are CPUs available.
 
@@ -163,7 +165,7 @@ If you have a parameter scan to perform, you can use the Cluster sweep node. The
 First set up the cluster preferences, as described above.
 
 
-Start by opening the graphical user interface to comsol on the login node and open your model. ::
+Start by opening the graphical user interface to comsol on the login node and open your model.
 
 .. code-block:: console
 
@@ -172,9 +174,9 @@ Start by opening the graphical user interface to comsol on the login node and op
   $ comsol
 
 Add a "Cluster Sweep" node to your study and a "Cluster Computing" node into your "Job Configurations" (You may need to first enable them in the "Show more options". Check the various options. You can try solving a small test case from the graphical user interface. You should see COMSOL submitting jobs to the SLURM queue. You can download an  :download:`example file <ringing_plate_cluster_sweep.mph>`.
- 
 
-For a larger run, COMSOL can then submit the jobs with comsol but without the GUI::
+
+For a larger run, COMSOL can then submit the jobs with comsol but without the GUI:
 
 .. code-block:: console
 
@@ -182,7 +184,7 @@ For a larger run, COMSOL can then submit the jobs with comsol but without the GU
 
 See also how to `run a parametric sweep from command line? <https://www.comsol.com/support/knowledgebase/1250>`_
 
-  
+
 Since the sweep may take some time to finnish, please consider using `tmux <https://github.com/tmux/tmux/wiki/Getting-Started>`_ or `screen <https://www.gnu.org/software/screen/manual/screen.html#Getting-Started>`_ to keep your session open.
 
 
@@ -196,13 +198,13 @@ It is possible to control COMSOL with MATLAB. The `blog post <https://knifelees3
 Save a username and password for COMSOL mph server
 **************************************************
 
-Before your first use, you need to save the username and password for COMSOL mph server. On the login node, run::
+Before your first use, you need to save the username and password for COMSOL mph server. On the login node, run:
 
 .. code-block:: console
 
   $ module load comsol/6.3
   $ comsol mphserver
-  
+
 And COMSOL will ask for you to choose a username and password. You can close the comsol server with "close".
 
 Please note, that each instance of the below process uses a COMSOL licence, so this method is not useful for parameter scans.
@@ -233,23 +235,23 @@ Here is an example batch submit script ``comsol_matlab_livelink.sh``:
   # and this is an easy way to avoid clashes between multiple jobs.
   #SBATCH --nodes=1
   #SBATCH --exclusive
-  
-  
+
+
   module load matlab
   module load comsol/6.3
- 
+
 
   echo starting comsol server in the background
   comsol mphserver &
   echo comsol is now running
-  
+
   matlab -nodesktop -nosplash -r "runner;exit(0)"
   echo matlab closed
 
 
 The MATLAB process is running the ``runner.m`` script:
 
-.. code-block::
+.. code-block:: matlab
 
   disp('Including comsol routines into the path.')
   addpath /share/apps/comsol/5.6/mli/
@@ -257,29 +259,29 @@ The MATLAB process is running the ``runner.m`` script:
   disp('Connecting to COMSOL from MATLAB')
   mphstart(2036)
   disp('Connection established')
-  
+
   disp('Starting Model Control Script')
 
   script;
-  
+
   disp('Exiting Matlab')
   exit(0);
 
 
 The Model Control Script ``script.m`` could be e.g. the following:
 
-.. code-block::
+.. code-block:: matlab
 
   import com.comsol.model.*;
   import com.comsol.model.util.*;
-  model = ModelUtil.create('Model1');  
+  model = ModelUtil.create('Model1');
   model.component.create('comp1', true);
   %...
 
 
 The job is submitted with:
 
-.. code-block:: console 
+.. code-block:: console
 
   $ sbatch comsol_matlab_livelink.sh
 
@@ -310,6 +312,6 @@ Prerequisities:
 	     :width: 50%
 	     :alt: Figure showing the comsol settings for Cluster Computing within the Job Configurations.
 
-  
+
 ..
   /share/apps/spack/envs/fgci-centos7-generic/software/intel-parallel-studio/cluster.2020.0/ttn75qk/compilers_and_libraries_2020.0.166/linux/mpi/intel64/bin/mpirun
