@@ -9,9 +9,7 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * From 22 Dec -- 6 Jan, there is essentially no garage support.  We
-     recommend you use chat/issues and some people may reply when they
-     have time.  Some people will make sure the cluster keeps running.
+   * No planned disruptions.
 
 If you need more help than the issue trackers, this is the place to
 be.  It's not just Triton, but all aspects of scientific computing.
