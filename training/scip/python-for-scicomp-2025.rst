@@ -289,4 +289,4 @@ See also
        <https://www.youtube.com/playlist?list=PLZLVmS9rf3nNI3oQEqSJW6yXltOAZnkpa>`__
        `Twitch videos (raw, for 7 days, immediately available)
        <https://www.twitch.tv/coderefinery/videos>`__
-     * `Archived Q&A (coming as the course progresses)
+     * Archived Q&A (coming as the course progresses)

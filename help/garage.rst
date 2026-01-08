@@ -134,7 +134,7 @@ Others
   * `Research Software Engineer garage
     <https://wiki.helsinki.fi/xwiki/bin/view/Research%20Software%20Engineering%20group/>`__
   * `HPC / IT for Science garage
-  <https://version.helsinki.fi/it-for-science/hpc/-/wikis/home>`__.
+    <https://version.helsinki.fi/it-for-science/hpc/-/wikis/home>`__.
 
 
 
