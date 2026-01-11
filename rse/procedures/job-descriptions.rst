@@ -78,8 +78,8 @@ move to another place.
 
 
 
-Internal specializations
-------------------------
+Internal roles
+--------------
 
 For reference, these are various roles which people within the team
 take on.  Every person is some mix of these and no one should be
