@@ -123,8 +123,11 @@ though we'll try to avoid this).
 We will work with you to give a good view of how long we take
 something will take and any risks (as in, what if it turns out to not
 be possible?)  We can't promise specific results in a specific time
-(no one can), but we do try to give the best estimates we can.  This
-planning includes any buffer and backup plans.
+(no one can), but we do try to give the best estimates we can -
+however, estimating within research projects can be extremely
+difficult, because the development is so closely tied to research and
+most projects have unique challenges.  This planning includes any
+buffer and backup plans.
 
 It may take some time to fit your project into our schedule (of course
 this also depends on the urgency.)  We realizes that your schedule is
