@@ -105,16 +105,15 @@ typecast, but writing them down allows us to talk about them.
        they can be directed to other help (with advice).  Primary
        challenges include the huge variety of questions which may
        come, and the need to think on your feet.
-   * * Project planner
-     * Meet with customers to create an initial project plan in
-       complex cases spanning domains and tools, including those we
-       don't know.  Must consider the customer's actual needs and what
-       technology can solve it most efficiently and know when we must
-       say "no" and recommend other options.  Mentors junior RSEs in
-       our project process.  Primary challenges include understanding
-       the customers needs and best solution, when no one yet know
-       what optimal solution is, or maybe not even what questions to
-       ask.
+   * * Project planner (architect?)
+     * This person has enough broad experience to to untangle what the
+       customer actually needs even when they may not know (or it may
+       not be possible).  Meet with customers to create the initial
+       project plan, critically ask questions, and guide the work.
+       Mentors junior RSEs in the project process.  Primary challenges
+       include understanding the optimal solution when even the
+       customer may not know what they need and conveying risks and
+       limitations.
    * * Technical mentor
      * Work with junior RSEs in the execution of projects, giving
        pointers and co-working to teach the junior RSE new skills.
