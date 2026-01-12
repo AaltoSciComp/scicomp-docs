@@ -51,7 +51,15 @@ What kind of issues can we help with:
 
 Notes:
 
-* All garages are designed for researchers and staff working in Aalto (or those who have a need to contact us).
+* All garages are designed for researchers and staff working in Aalto
+  (or those who have a need to contact us).
+
+  * By special agreement it is also available regardless of university
+    for `ELLIS Institute Finland faculty and their research groups
+    <https://www.ellisinstitute.fi/people>`__ and `AI-DOC doctoral
+    students <https://fcai.fi/ai-doc/people>`__ - if you aren't from
+    Aalto, please mention your affiliation with one of these so we can
+    serve you best.
 
 * You don't have to have a specific question, you can come by just to
   chat, listen, or figure out if you should have a question.
