@@ -92,22 +92,29 @@ typecast, but writing them down allows us to talk about them.
    * *
      * Responsibilities
    * * Project work
-     * The default RSE job: given a project, learn the necessary
-       scientific and technical background and work on it over time in
-       close collaboration with the customers. Primary challenges
-       include ongoing communication with the customers.
+     * The default RSE job: for a project, learn and/or apply the
+       necessary scientific and technical background and work on it
+       over time in close collaboration with the customers.  This
+       includes project planning when projects are straightforward.
+       Primary challenges include ongoing communication with the
+       customers.
    * * Garage support
-     * Help users with drop-in questions in garage.  Questions may be
-       anything, and customers may be helped directly, you may call
-       someone who can help, or they can be directed to other help
-       (with advice).  Primary challenges include the huge variety of
-       questions which may come, and the need to think on your feet.
+     * Help users with drop-in questions in garage and other
+       short-term support.  Questions may be anything, and customers
+       may be helped directly, you may call someone who can help, or
+       they can be directed to other help (with advice).  Primary
+       challenges include the huge variety of questions which may
+       come, and the need to think on your feet.
    * * Project planner
-     * Meet with customers to create the initial project plan,
-       considering the customer's actual needs and what technology can
-       solve it most efficiently.  Mentors junior RSEs in our project
-       process.  Primary challenges include understanding the optimal
-       solution when even the customer may not know what they need.
+     * Meet with customers to create an initial project plan in
+       complex cases spanning domains and tools, including those we
+       don't know.  Must consider the customer's actual needs and what
+       technology can solve it most efficiently and know when we must
+       say "no" and recommend other options.  Mentors junior RSEs in
+       our project process.  Primary challenges include understanding
+       the customers needs and best solution, when no one yet know
+       what optimal solution is, or maybe not even what questions to
+       ask.
    * * Technical mentor
      * Work with junior RSEs in the execution of projects, giving
        pointers and co-working to teach the junior RSE new skills.
@@ -116,7 +123,8 @@ typecast, but writing them down allows us to talk about them.
    * * Unit liaison
      * Keep active communication with the unit, including telling them
        about general RSE activities, attending unit meetings, and
-       keeping an active search for projects.
+       keeping an active search for projects.  Primary challenges
+       include networking with diverse busy people.
    * * Team Supervisor
      * Manage HR and financial practicalities, especially including
        ultimate responsibility for mentoring and productivity of all
