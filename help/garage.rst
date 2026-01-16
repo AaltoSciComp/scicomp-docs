@@ -9,6 +9,10 @@ Scicomp garage
 .. admonition:: Planned disruptions
    :class: important
 
+   * 20 January 2026: Limited Triton/HPC garage due to an internal
+     development day.
+
+..
    * No planned disruptions.
 
 If you need more help than the issue trackers, this is the place to
