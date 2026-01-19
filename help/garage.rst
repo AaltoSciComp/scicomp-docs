@@ -1,5 +1,5 @@
 ==============
-Scicomp garage
+SciComp garage
 ==============
 
 .. admonition:: Link
@@ -15,8 +15,15 @@ Scicomp garage
 ..
    * No planned disruptions.
 
-If you need more help than the issue trackers, this is the place to
-be.  It's not just Triton, but all aspects of scientific computing.
+"Garage" is an online, every (work)day office hour where you can drop
+by and ask anything.  We can screenshare, talk quickly, and either
+solve your problem or plan a follow-up.  The main focuses are (but we
+will try to answer questions about anything):
+
+* Scientific computing, Triton cluster, other HPC like CSC
+* Programming and scientific software, including GPUs
+* Data management
+* CS-IT and CS Educational Technology (A+, jupyter.cs, and more)
 
 Come if you want to:
 
@@ -27,31 +34,6 @@ Come if you want to:
 -  Network with others who are doing similar work and learn something
    new
 
-What kind of issues can we help with:
-
-- Code and Software:
-
-  - Issues with your code or software tools you use (e.g. debugging, setting up software, linking libraries)
-  - Code parallelization
-  - Code versioning, git, testing
-
-- Data Management:
-
-  - Data management plans, data sharing
-  - Handling of sensitive data and general legal and ethical (to some extent) questions about research data
-  - Workflows for big datasets
-  - Data versioning
-
-- Triton cluster:
-
-  - Slurm job submissions
-  - Cluster usage
-  - Script setup
-  - Module management / Library loading
-
-- General:
-
-  - Basic methodological or statistical issues
 
 Notes:
 
@@ -72,6 +54,7 @@ Notes:
   on reply time, though).
 
 
+
 .. _garage:
 .. _scicomp-garage:
 
@@ -86,6 +69,33 @@ You can meet us online, every workday, at 13:00, `online via zoom
 <https://aalto.zoom.us/j/61322268370>`__.  Imagine this like walking
 into our office to ask for help. Even if you are not sure whether we can help you, come
 and chat with us anyway and we can figure it out.
+
+.. admonition:: SciComp/Triton issues include:
+   :class: dropdown
+
+   - Code and Software:
+
+     - Issues with your code or software tools you use (e.g. debugging, setting up software, linking libraries)
+     - Code parallelization
+     - Code versioning, git, testing
+
+   - Data Management:
+
+     - Data management plans, data sharing
+     - Handling of sensitive data and general legal and ethical (to some extent) questions about research data
+     - Workflows for big datasets
+     - Data versioning
+
+   - Triton cluster:
+
+     - Slurm job submissions
+     - Cluster usage
+     - Script setup
+     - Module management / Library loading
+
+   - General:
+
+     - Basic methodological or statistical issues
 
 
 * This doesn't replace email or the `Triton issue
@@ -115,6 +125,22 @@ Regular reminders are sent to the department personnel lists.
 
 
 
+CS-IT and CS EduTech
+--------------------
+
+CS support is usually available every day of the week.
+
+.. admonition:: CS-IT/CS EduTech issues include
+   :class: dropdown
+
+   - Any CS-IT services, including data and virtual machines.
+   - Aplus course creation.
+   - Aplus autograding and management.
+   - Anything else in the Aplus ecosystem
+   - jupyter.cs course creation, support, software installation.
+
+
+
 Special days
 ------------
 
@@ -125,8 +151,7 @@ software, and data).
 
 * **Mondays** also have NBE/PHYS IT present.
 * **Tuesdays** On 2026-01-27 we will have a :ref:`COMSOL Multiphysics<comsol>` focus day: someone from COMSOL (the company) plans to join.
-* **Wednesdays** also have NBE/PHYS IT present.  We also have more
-  staff to help :doc:`jupyter.cs instructors/TAs </aalto/jupyterhub-instructors/index>`. 
+* **Wednesdays** also have NBE/PHYS IT present.
 * **Thursdays**
 * **Fridays** also have CS IT present (at the beginning).
 
@@ -155,7 +180,8 @@ In person
 
 In-person garages haven't been held since early 2020 for the obvious
 reason.  The online garage above is more frequent and you are more
-likely to meet the very best person for your topic.
+likely to meet the very best person for your topic.  We can arrange
+in-person meetups during the garage.
 
 ..
   General garage (CS Building)
