@@ -26,7 +26,7 @@ to suggest a new course, `please take this survey <https://link.webropol.com/s/s
 .. toctree::
    :maxdepth: 1
     
-   scip/kickstart-2025
+   scip/winter-kickstart-2026
    Take the survey! Request a re-run of past courses / new courses <https://link.webropol.com/s/scipod>
    scip/index
 
