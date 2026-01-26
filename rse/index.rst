@@ -136,6 +136,7 @@ to improvement at any time.  Also see the :doc:`FCCI Tech
    procedures/units-info
    procedures/job-descriptions
    procedures/advisory-board
+   procedures/rse-training
    procedures/template-projects
    procedures/implementation
    history
