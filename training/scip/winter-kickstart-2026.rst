@@ -64,32 +64,37 @@ started with the computing resources.
   * 11:50--12:00: Joining time/icebreaker
 
   * **12:00--12:15 Introduction: what are HPC systems?** *Enrico Glerean and
-    other staff* 
+    Hossein Firooz* 
     
     - Materials: :doc:`../../training/kickstart/introoneday` and `A short introduction to scientific computing <https://hackmd.io/@AaltoSciComp/SciCompIntro>`__
 
-  * **12:15--14:45: A day in the life of an HPC user** *Richard Darst and Simo Tuomisto*
+  * **12:15--13:30: A day in the life of an HPC user** *Simo Tuomisto and Thomas Pfau*
 
-    - 1. :doc:`Check your connection to the cluster </triton/tut/connecting>`
-    - 2. :doc:`Moving data to the cluster </triton/tut/storage>`
-    - 3. Datasets/projects that could be used for the demo:
+    1. What is a cluster
+    2. :doc:`ngrams an example problem </triton/tut/exercises-ngrams>`
+    3. Set up our project
+         - :doc:`Get the files to triton </triton/tut/storage>`
+         - Some initial tests via interactive sessions
+    4. Run code on cluster
+         - :doc:`The Queue system </triton/tut/slurm>`
+         - :doc:`Interactive Sessions </triton/tut/interactive>`
+         - :doc:`Batch submission scripts </triton/tut/serial>`
+         - :doc:`Check Your Jobs </triton/tut/monitoring>`
+    5. Run code parallel
+         - :doc:`What are array jobs and how do they work </triton/tut/array>`
+         - Multiprocessing on the cluster
+    6. :doc:`Looking at results and outputs </triton/tut/monitoring>`
+    7. Speed considerations
+         - :doc:`IO limitations </triton/tut/storage>`
+         - GPU / CPU interactions
 
-        - `"Ngrams example" <https://github.com/AaltoSciComp/hpc-examples/tree/master/ngrams>`__
+  * **13:30--13:45: Break**
 
-    - 4. Loading an application? Not needed but good to remeber (e.g. python env): :doc:`Modules </triton/tut/modules>`
-    - 5. :ref:`Analysing data with slurm <tutorials>`
+  * **13:45--14:30: Moving your program to a HPC cluster** *Simo Tuomisto and Patricia Hernandez Leon*
 
-        - 5.1 :doc:`Getting an interactive session </triton/tut/interactive>`
-        - 5.2 :doc:`Non-interactive serial job </triton/tut/interactive>`
-        - 5.3 :doc:`Parralelisation and array jobs </triton/tut/parallel>`, :doc:`[ref2] </triton/tut/array>`
-        - 5.4 More advanced parallelisation - discussion only - (:doc:`multithreading/multiprocessing </triton/tut/parallel-shared>`, :doc:`MPI </triton/tut/parallel-mpi>`, :doc:`GPUs </triton/tut/gpu>`
+    - Covered topics include: storage, environment modules and program installations.
 
-    - 6. Visualising the results (e.g OOD)
-    - 7. Moving the data away from the cluster
-
-
-
-  * **14:45--15:00: Where to go from here and how to ask for help (Susanne Merz and Enrico Glerean)**
+  * **14:30--15:00: What is SciComp and who can you ask for help?** *Enrico Glerean and Susanne Merz*
 
     - :doc:`How to get help from us </help/index>`
     - :doc:`Skills map, our courses, CodeRefinery, CSC </training/index>`
