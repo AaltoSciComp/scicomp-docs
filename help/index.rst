@@ -124,6 +124,13 @@ doing, too.  Our main focus areas are
 * Triton Accounts (by email)
 * Increasing quotas, requesting group storage space (by email)
 
+
+.. figure:: /images/ASC_ScienceIT.png
+   :width: 100%
+
+   A schematic on how ASC/Science-IT relates to other parts of Aalto. In practice it does not matter much to you, but in some cases, although we cannot directly help you, we can at least help you find the right person at Aalto.
+
+
 .. toctree::
    :maxdepth: 1
 
