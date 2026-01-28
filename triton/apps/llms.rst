@@ -2,7 +2,7 @@ LLMs
 ====
 
 Large-language models (LLMs) are AI models that can understand and generate
-text, primarily using transformer architectures. They are extensively used for tools and 
+text, primarily using transformer architectures. They are extensively used for tools and
 tasks such as chatbots, translation, summarization, sentiment analysis, and question answering.
 
 This page is about running LLMs on Aalto Triton. As a prerequisite, it is recommended to
@@ -10,16 +10,16 @@ get familiar with the basics of using the cluster, including running jobs and us
 
 .. note::
 
-    If at any point something doesn't work, you are unsure how to get started or proceed, do not hesitate to contact :doc:`the Aalto RSEs </rse/index>`. 
+    If at any point something doesn't work, you are unsure how to get started or proceed, do not hesitate to contact :doc:`the Aalto RSEs </rse/index>`.
 
     You can visit us at :ref:`the daily Zoom help session at 13.00-14.00 <garage>`.
- 
+
 
 HuggingFace Models
 ~~~~~~~~~~~~~~~~~~~
 
-The most common way to use pre-trained open-source LLMs is to access them through HuggingFace 
-and to leverage their `🤗 Transformers Python library <https://huggingface.co/docs/transformers/en/index>`__. 
+The most common way to use pre-trained open-source LLMs is to access them through HuggingFace
+and to leverage their `🤗 Transformers Python library <https://huggingface.co/docs/transformers/en/index>`__.
 
 HuggingFace provides a wide range of tools and pre-trained models, making it easy to integrate and utilize these models in your projects.
 
@@ -39,49 +39,53 @@ Example: Question Answering
 
 In the following sbatch script, we request computational resources, load the necessary modules, and run a Python script that uses a HuggingFace model for question answering.
 
+``huggingface_example.sh``:
+
   .. code-block:: bash
-  
+
     #!/bin/bash
     #SBATCH --time=00:30:00
     #SBATCH --cpus-per-task=4
-    #SBATCH --mem=80GB #This is system memory, not GPU memory.
+    #SBATCH --mem=16GB # This is system memory, not GPU memory.
     #SBATCH --gpus=1
-    #SBATCH --partition=gpu-v100-32g # modify according to your needs
     #SBATCH --output huggingface.%J.out
     #SBATCH --error huggingface.%J.err
 
-    #By loading the model-huggingface module, models will be loaded from /scratch/shareddata/dldata/huggingface-hub-cache which is a shared scratch space.
+    # By loading the model-huggingface module, models will be loaded from /scratch/shareddata/dldata/huggingface-hub-cache which is a shared scratch space.
     module load model-huggingface
 
     # Load a ready to use conda environment to use HuggingFace Transformers
     module load scicomp-llm-env
 
-    python your_script.py
+    python huggingface_example.py
 
-The ``your_script.py`` Python script uses a HuggingFace model ``mistralai/Mistral-7B-Instruct-v0.1`` for conversations and instructions.
+The ``huggingface_example.py`` Python script uses a HuggingFace model ``mistralai/Mistral-7B-Instruct-v0.3`` for conversations and instructions.
+
+``huggingface_example.py``:
 
 .. code-block:: python
 
-  from transformers import pipeline
-  import torch
+    from transformers import pipeline
+    import torch
 
-  # Initialize pipeline
-  pipe = pipeline( 
-    "text-generation", # Task type 
-    model="mistralai/Mistral-7B-Instruct-v0.1", # Model name 
-    device_map="auto", # Let the pipeline automatically select best available device
-    max_new_tokens=1000 
-  ) 
+    # Initialize the pipeline
+    pipe = pipeline(
+      "text-generation", # Task type
+      model="mistralai/Mistral-7B-Instruct-v0.3", # Model name
+      device_map="auto", # Let the pipeline automatically select best available device
+      max_new_tokens=1000
+    )
 
-  # Prepare prompts
-  messages = [
-    {"role": "user", "content": "Continue the following sequence: 1, 2, 3, 5, 8"},
-    {"role": "user", "content": "What is the meaning of life?"}
+    # Prepare prompts
+    messages = [
+      {"role": "system", "content": "You're an helpful assistant. Answer to the questions with the best of your abilities."},
+      {"role": "user", "content": "Continue the following sequence: 1, 2, 3, 5, 8"},
     ]
 
-  # Generate and print responses
-  responses = pipe(messages) 
-  print(responses)
+    # Generate text and print the response
+    response = pipe(messages, return_full_text=False)[0]["generated_text"]
+    print(response)
+
 
 For reference, here is a table of model size and memory requirements for different model sizes and data types:
 
@@ -105,9 +109,9 @@ You can look at the `model card <https://huggingface.co/mistralai/Mistral-7B-Ins
 Other Frameworks
 ~~~~~~~~~~~~~~~~
 
-While HuggingFace provides a convenient way to access and use LLMs, there are other popular frameworks 
+While HuggingFace provides a convenient way to access and use LLMs, there are other popular frameworks
 available for running LLMs, such as `vLLM <https://docs.vllm.ai/en/latest/>`__ for high-performance inference,
-`Ollama <https://ollama.com/>`__ for local deployment, `DeepSpeed <https://www.deepspeed.ai/tutorials/inference-tutorial/>`__, 
+`Ollama <https://ollama.com/>`__ for local deployment, `DeepSpeed <https://www.deepspeed.ai/tutorials/inference-tutorial/>`__,
 and `LangChain <https://python.langchain.com/docs/how_to/local_llms/>`__ for building LLM applications.
 
 If you need assistance running LLMs in these or other frameworks, please contact :doc:`the Aalto RSEs </rse/index>`.
