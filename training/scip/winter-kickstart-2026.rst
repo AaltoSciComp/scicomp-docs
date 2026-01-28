@@ -7,7 +7,7 @@ January 2026 / Intro to Triton and HPC /  HPC Winter Kickstart
 
    * News and important links (12/01/2026):
 
-     * Link to register: https://link.webropol.com/ep/kickstartwinter2026 
+     * Link to register: https://link.webropol.com/ep/kickstartwinter2026
      * See the time-line below
      * Livestream: https://twitch.tv/coderefinery
      * Notes document: *Link sent to registered participants*
@@ -64,8 +64,8 @@ started with the computing resources.
   * 11:50--12:00: Joining time/icebreaker
 
   * **12:00--12:15 Introduction: what are HPC systems?** *Enrico Glerean and
-    Hossein Firooz* 
-    
+    Hossein Firooz*
+
     - Materials: :doc:`../../training/kickstart/introoneday` and `A short introduction to scientific computing <https://hackmd.io/@AaltoSciComp/SciCompIntro>`__
 
   * **12:15--13:30: A day in the life of an HPC user** *Simo Tuomisto and Thomas Pfau*
@@ -82,16 +82,17 @@ started with the computing resources.
          - :doc:`Check Your Jobs </triton/tut/monitoring>`
     5. Run code parallel
          - :doc:`What are array jobs and how do they work </triton/tut/array>`
-         - Multiprocessing on the cluster
+         - :doc:`Multiprocessing on the cluster </triton/tut/parallel>`
     6. :doc:`Looking at results and outputs </triton/tut/monitoring>`
     7. Speed considerations
          - :doc:`IO limitations </triton/tut/storage>`
-         - GPU / CPU interactions
+         - :doc:`GPU / CPU interactions </triton/tut/gpu>`
 
   * **13:30--13:45: Break**
 
-  * **13:45--14:30: Moving your program to a HPC cluster** *Simo Tuomisto and Patricia Hernandez Leon*
+  * **13:45--14:30: Moving your program to an HPC cluster** *Simo Tuomisto and Patricia Hernandez Leon*
 
+    - Materials: `Moving your program to an HPC cluster <https://hackmd.io/@AaltoSciComp/wks2026-moving-programs>`__
     - Covered topics include: storage, environment modules and program installations.
 
   * **14:30--15:00: What is SciComp and who can you ask for help?** *Enrico Glerean and Susanne Merz*
