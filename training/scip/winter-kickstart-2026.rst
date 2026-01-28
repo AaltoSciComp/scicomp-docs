@@ -111,7 +111,8 @@ Browsing the following material is sufficient:
 * Command line/shell basics `[ref] <https://scicomp.aalto.fi/triton/tut/cluster-shell>`__ `[video] <https://youtu.be/bJMmz5-svJo?t=7&list=PLZLVmS9rf3nMKR2jMglaN4su3ojWtWMVw&index=8>`__
   - **Important background knowledge which we won't go over again.**
 
-  - A more detailed version of the above, for those who automate a lot of analysis, is `[Basic Linux shell and scripting]<https://www.youtube.com/watch?v=ESXLbtaxpdI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=3>`__
+  - A more detailed version of the above, for those who automate a lot
+    of analysis, is `Basic Linux shell and scripting <https://www.youtube.com/watch?v=ESXLbtaxpdI&list=PLZLVmS9rf3nN_tMPgqoUQac9bTjZw8JYc&index=3>`__
   - Or read/watch the shorter :doc:`crash course
     </scicomp/shell>` / `video <https://youtu.be/56p6xX0aToI>`__.
 
