@@ -41,7 +41,7 @@ Here an example script with open data
    mkdir -p ${work_folder}
    echo ${iteration}
 
-   module apptainer-fmriprep/25.1.4
+   module load apptainer-fmriprep/25.1.4
 
    apptainer exec -B /m:/m -B /l:/l -B /scratch:/scratch ${IMAGE_PATH} fmriprep ${bids_folder}  ${derivatives_folder} -w ${work_folder} participant --participant-label ${iteration} --n_cpus 6 --output-spaces MNI152NLin6Asym:res-2  T1w --cifti-output 91k  --return-all-components --fd-spike-threshold 0.2 --fs-license-file /scratch/shareddata/set1/freesurfer/license.txt --write-graph
 
