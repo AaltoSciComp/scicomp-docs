@@ -255,6 +255,8 @@ community.  (TODO)
 References
 ~~~~~~~~~~
 
+- `Aalto.fi page that says these things <https://www.aalto.fi/en/open-science-and-research/opening-your-software-at-aalto-university>`__
+
 - `CSC open source policy
   <https://github.com/CSCfi/open-source-policy>`__, with similar
   practical effects to what we have here.
