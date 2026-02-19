@@ -77,7 +77,9 @@ See top of page for link.
 * For who?
 
   * All researchers and staff at Aalto.
-  * Students doing research count as researchers.
+  * Students doing research count as researchers (research assistants,
+    thesis workers doing research, interns, summer workers, visitors,
+    etc.).
   * It is also available regardless of university for `ELLIS Institute
     Finland faculty and their research groups
     <https://www.ellisinstitute.fi/people>`__ and `AI-DOC doctoral
