@@ -397,3 +397,27 @@ h2 + .sd-container-fluid,
 h2 + div > .sd-container-fluid {
     margin-top: 0.5em;
 }
+
+/* ---- Upcoming Events cards ---- */
+/* Fixed-height image banner with cover crop */
+.event-card .sd-card-img-top {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Red top border to visually distinguish events from topic cards */
+.sd-grid-item .event-card {
+    border-top: 3px solid #FD6360;
+}
+
+/* Image-only variant: hide title/body, stretch image to fill card */
+/* Usage: add class-card: event-card event-card-imgonly */
+.event-card-imgonly .sd-card-img-top {
+    height: 240px;
+    object-fit: cover;
+}
+.event-card-imgonly .sd-card-header,
+.event-card-imgonly .sd-card-body {
+    display: none;
+}

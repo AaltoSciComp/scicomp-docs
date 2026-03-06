@@ -80,6 +80,42 @@ Documentation about scientific and data-intensive computing at Aalto University 
    about/index
 
 
+Upcoming Events
+===============
+
+.. grid:: 3
+
+   .. grid-item-card:: CodeRefinery Workshop
+      :link: https://coderefinery.github.io/2026-03-17-workshop/
+      :link-type: url
+      :img-top: /_static/event-coderefinery.png
+      :class-card: event-card
+
+      **Mar 17–26, 2026** · Online
+
+      Version control, reproducibility, and software best practices for researchers. Open to all.
+
+   .. grid-item-card:: Practical Deep Learning
+      :link: https://csc.fi/en/training-calendar/practical-deep-learning-7/
+      :link-type: url
+      :img-top: /_static/event-pdl.png
+      :class-card: event-card
+
+      **Apr 14–15, 2026** · Aalto University + Online
+
+      Neural networks, PyTorch, GPU computing on LUMI. Free for EU academia and industry.
+
+   .. grid-item-card:: Data Analysis with R
+      :link: https://csc.fi/en/training-calendar/data-analysis-with-r-6/
+      :link-type: url
+      :img-top: /_static/event-r.png
+      :class-card: event-card
+
+      **May 12–13, 2026** · Aalto University + Online
+
+      Data wrangling, visualization, and statistics with R and tidyverse. Beginner-friendly.
+
+
 Start here — who are you?
 =========================
 
