@@ -16,22 +16,22 @@ Core values
 
 Explanations:
 
-(1) **We are researchers who aren't academics**.  Research is far more
-    than publications.  We help round out the skillset that
-    high-performing teams need, even if we aren't directly involved in
-    publications.
+1. **We are researchers who aren't academics**.  Research is far more
+   than publications.  We help round out the skillset that
+   high-performing teams need, even if we aren't directly involved in
+   publications.
 
-(2) **University research needs more than papers to succeed and help
-    society.**  Software, data, and general skills are important
-    university impacts.  We recognize this and help to keep it going.
+2. **University research needs more than papers to succeed and help
+   society.**  Software, data, and general skills are important
+   university impacts.  We recognize this and help to keep it going.
 
-(3) **Superstar team and processes, not superstar people.**
-    "Superstar" isn't a good term because it glorifies single things,
-    but our society works because all the parts work together.  Even
-    our team only works because it's a part of a broader university,
-    national, and international ecosystem.  But still, if we have to
-    say something is our "superstar", it's the way our team works
-    together (people+processes), not any individual people.
+3. **Superstar team and processes, not superstar people.**
+   "Superstar" isn't a good term because it glorifies single things,
+   but our society works because all the parts work together.  Even
+   our team only works because it's a part of a broader university,
+   national, and international ecosystem.  But still, if we have to
+   say something is our "superstar", it's the way our team works
+   together (people+processes), not any individual people.
 
 4. **Radical openness.** We are open by design, there are few reasons
    to hide our work.  Something doesn't have to be perfect to be
