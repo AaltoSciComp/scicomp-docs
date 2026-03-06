@@ -54,6 +54,7 @@ optional_modules = [
     'sphinx_minipres',
     'sphinxext.rediraffe',
     'sphinx_localtime',
+    'sphinx_design',
     ]
 if on_rtd or 'GITSTAMP' in os.environ:
     optional_modules.append('sphinx_gitstamp')
