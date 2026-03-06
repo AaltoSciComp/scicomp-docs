@@ -1,44 +1,229 @@
-/* override table width restrictions:
-   https://github.com/rtfd/sphinx_rtd_theme/issues/117 */
-.wy-table-responsive table td, .wy-table-responsive table th {
-  white-space: normal !important;
+/* ============================================================
+   Aalto Scientific Computing — Theme Override
+   Aligned with aalto.fi brand identity
+
+   Aalto color palette (from slidev-theme-aalto/notes.md):
+     Blue:        #46A5FF  (accent, UI elements, on dark bg)
+     Blue (dark): #0070C0  (links on white bg, WCAG AA)
+     Red:         #FD6360
+     Yellow:      #F7E159
+     Gray Dark:   #5A5A5A
+     Gray:        #B4B4B4
+     Gray Light:  #E8E8E8
+   Font: Inter (Google Fonts), Arial fallback
+   ============================================================ */
+
+
+/* ---- Font stack (Inter preferred, Arial fallback) ---- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body,
+.wy-nav-content,
+.rst-content,
+.wy-menu-vertical {
+    font-family: "Inter", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
-@media screen and (min-width: 767px) {
-  .wy-table-responsive {
-    max-width: 100%  !important;
-    overflow: visible  !important;
-  }
+
+/* ---- Sidebar search header: Aalto Blue ---- */
+.wy-side-nav-search {
+    background-color: #46A5FF;
 }
 
-/* RST has an extra space after sub-lists in unordered lists.  This */
-/* fixes that annoying problem. */
-.rst-content .section ul p {
-    margin-bottom: 0px;
-}
-.rst-content .section li ol {
-    margin-bottom: 0px;
+/* Home link text: white on blue background */
+.wy-side-nav-search > a,
+.wy-side-nav-search .wy-dropdown > a {
+    color: #FFFFFF;
 }
 
-/* Strikethrough */
-/* https://stackoverflow.com/questions/6518788/rest-strikethrough */
-.strike {
-    text-decoration: line-through;
+/* Hover: no opacity grayout — just white glow on the logo */
+.wy-side-nav-search > a:hover,
+.wy-side-nav-search .wy-dropdown > a:hover {
+    background-color: transparent;
+    color: #FFFFFF;
+    opacity: 1;
 }
 
-/*  */
-.wy-side-nav-search > a img.logo, .wy-side-nav-search .wy-dropdown > a img.logo {
+.wy-side-nav-search > a:hover img.logo,
+.wy-side-nav-search .wy-dropdown > a:hover img.logo {
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.85));
+    transition: filter 0.2s ease;
+}
+
+.wy-side-nav-search > a img.logo,
+.wy-side-nav-search .wy-dropdown > a img.logo {
+    transition: filter 0.2s ease;
+}
+
+.wy-side-nav-search > div.version {
+    color: #FFFFFF;
+    opacity: 0.85;
+}
+
+/* Logo sizing in sidebar */
+.wy-side-nav-search > a img.logo,
+.wy-side-nav-search .wy-dropdown > a img.logo {
     max-width: 70%;
 }
 
-details summary {
-    font-size: large;
-    font-weight: bold;
-    margin-bottom:12px
+/* Sidebar search input */
+.wy-side-nav-search input[type=text] {
+    border-color: #000000;
+    border-radius: 0;
+    color: #000000;
 }
 
-details {
-    margin-bottom:20px
+
+/* ---- Sidebar nav: Aalto Black background, blue highlights ---- */
+.wy-nav-side {
+    background-color: #000000;
+}
+
+.wy-menu-vertical a {
+    color: #B4B4B4;
+}
+
+.wy-menu-vertical a:hover {
+    background-color: #1a1a1a;
+    color: #46A5FF;
+}
+
+.wy-menu-vertical li.current > a,
+.wy-menu-vertical li.on a {
+    background-color: #1a1a1a;
+    color: #46A5FF;
+    border-right: 3px solid #46A5FF;
+}
+
+.wy-menu-vertical li.current > a:hover {
+    background-color: #222222;
+}
+
+/* Toctree caption headers in sidebar */
+.wy-menu-vertical p.caption {
+    color: #B4B4B4;
+    letter-spacing: 0.05em;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+/* ---- Top bar (mobile): Aalto Blue ---- */
+.wy-nav-top {
+    background-color: #46A5FF;
+    color: #000000;
+}
+
+.wy-nav-top a {
+    color: #000000;
+}
+
+
+/* ---- Body text: improved line-height & readability ---- */
+.rst-content p,
+.rst-content li {
+    line-height: 1.65;
+}
+
+.rst-content .section > p:first-of-type {
+    font-size: 1.05em;  /* Lead paragraph slightly larger */
+}
+
+
+/* ---- Links: darkened Aalto blue for WCAG AA on white ---- */
+a {
+    color: #0070C0;
+}
+
+a:hover {
+    color: #46A5FF;
+    text-decoration: underline;
+}
+
+.rst-content a {
+    color: #0070C0;
+}
+
+.rst-content a:hover {
+    color: #46A5FF;
+}
+
+/* External link icon color */
+.rst-content a.reference.external:after {
+    color: #B4B4B4;
+}
+
+
+/* ---- Headings ---- */
+.rst-content h1 {
+    font-family: "Inter", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    color: #000000;
+    border-bottom: 4px solid #46A5FF;   /* Aalto Blue */
+    padding-bottom: 0.35em;
+    margin-top: 0.5em;
+    margin-bottom: 0.8em;
+    letter-spacing: -0.01em;
+}
+
+.rst-content h2 {
+    font-family: "Inter", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #000000;
+    border-bottom: 3px solid #F7E159;   /* Aalto Yellow */
+    padding-bottom: 0.25em;
+    margin-top: 1.5em;
+    margin-bottom: 0.7em;
+}
+
+.rst-content h3 {
+    font-family: "Inter", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.15em;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-top: 1.2em;
+    border-left: 4px solid #FD6360;     /* Aalto Red */
+    padding-left: 0.5em;
+}
+
+.rst-content h4 {
+    font-size: 1em;
+    font-weight: 700;
+    color: #5A5A5A;
+    border-left: 3px solid #B4B4B4;    /* Aalto Gray */
+    padding-left: 0.4em;
+}
+
+/* Anchor links next to headings */
+.rst-content h1 .headerlink,
+.rst-content h2 .headerlink,
+.rst-content h3 .headerlink,
+.rst-content h4 .headerlink {
+    color: #B4B4B4;
+}
+
+.rst-content h1 .headerlink:hover,
+.rst-content h2 .headerlink:hover,
+.rst-content h3 .headerlink:hover {
+    color: #46A5FF;
+}
+
+
+/* ---- Tables ---- */
+/* override table width restrictions:
+   https://github.com/rtfd/sphinx_rtd_theme/issues/117 */
+.wy-table-responsive table td, .wy-table-responsive table th {
+    white-space: normal !important;
+}
+
+@media screen and (min-width: 767px) {
+    .wy-table-responsive {
+        max-width: 100%  !important;
+        overflow: visible  !important;
+    }
 }
 
 /* Allow literals in tables to wrap. */
@@ -58,8 +243,157 @@ details {
     padding: 8px 8px !important;
 }
 
+
+/* ---- Lists: fix extra spacing in RST sub-lists ---- */
+.rst-content .section ul p {
+    margin-bottom: 0px;
+}
+
+.rst-content .section li ol {
+    margin-bottom: 0px;
+}
+
+
+/* ---- Strikethrough ---- */
+/* https://stackoverflow.com/questions/6518788/rest-strikethrough */
+.strike {
+    text-decoration: line-through;
+}
+
+
+/* ---- Details/summary (collapsible) ---- */
+details summary {
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #0070C0;
+    cursor: pointer;
+}
+
+details {
+    margin-bottom: 20px;
+}
+
+
+/* ---- Figure captions ---- */
 .rst-content .document figcaption p {
     font-size: 85%;
     margin-left: 10%;
     margin-right: 10%;
+    color: #5A5A5A;
+}
+
+
+/* ---- Code / pre blocks ---- */
+.rst-content code,
+.rst-content tt {
+    background-color: #F5F5F5;
+    border: 1px solid #E8E8E8;
+    border-radius: 2px;
+    color: #1A1A1A;
+    font-size: 0.9em;
+}
+
+.rst-content pre {
+    border-left: 4px solid #46A5FF;
+    background-color: #F8F8F8;
+    border-radius: 0 2px 2px 0;
+}
+
+
+/* ---- Admonitions: all use Aalto Red palette ---- */
+.rst-content .admonition,
+.rst-content .note,
+.rst-content .warning,
+.rst-content .caution,
+.rst-content .attention,
+.rst-content .danger,
+.rst-content .error,
+.rst-content .hint,
+.rst-content .important,
+.rst-content .tip,
+.rst-content .seealso,
+.rst-content .todo {
+    background-color: #FFF0EF;   /* light Aalto Red tint */
+    border-left: 4px solid #FD6360;
+}
+
+.rst-content .admonition-title,
+.rst-content .note .admonition-title,
+.rst-content .warning .admonition-title,
+.rst-content .caution .admonition-title,
+.rst-content .attention .admonition-title,
+.rst-content .danger .admonition-title,
+.rst-content .error .admonition-title,
+.rst-content .hint .admonition-title,
+.rst-content .important .admonition-title,
+.rst-content .tip .admonition-title,
+.rst-content .seealso .admonition-title,
+.rst-content .todo .admonition-title {
+    background-color: #FD6360;   /* Aalto Red */
+    color: #FFFFFF;
+}
+
+
+/* ---- Sphinx-design cards (landing page grid) ---- */
+/* Based on aalto.fi card style: clean, minimal, with accent on hover */
+.sd-card {
+    border: 1px solid #E8E8E8;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    font-family: "Inter", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.sd-card:hover {
+    border-color: #46A5FF;
+    box-shadow: 0 2px 10px rgba(70, 165, 255, 0.12) !important;
+}
+
+.sd-card-title,
+.sd-card-header .sd-card-title {
+    font-weight: 700;
+    font-size: 1.05em;
+    color: #000000;
+}
+
+/* Blue left-border accent on the card title area */
+.sd-card-header {
+    border-bottom: 2px solid #46A5FF;
+    background-color: #FFFFFF;
+    padding-bottom: 0.5em;
+}
+
+.sd-card-body {
+    font-size: 0.9em;
+    color: #5A5A5A;
+    line-height: 1.55;
+}
+
+/* Card link: make the whole card feel clickable */
+.sd-stretched-link::after {
+    z-index: 1;
+}
+
+/* Card link text color */
+.sd-card a.sd-stretched-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Persona cards row: slightly taller min-height for visual balance */
+.sd-grid-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.sd-grid-item .sd-card {
+    flex: 1;
+    border-top: 3px solid #46A5FF;
+}
+
+/* Section headings above grids */
+h2 + .sd-container-fluid,
+h2 + div > .sd-container-fluid {
+    margin-top: 0.5em;
 }
