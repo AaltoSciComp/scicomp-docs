@@ -83,7 +83,7 @@ Documentation about scientific and data-intensive computing at Aalto University 
 Upcoming Events
 ===============
 
-.. grid:: 3
+.. grid:: 1 1 3 3
 
    .. grid-item-card:: CodeRefinery Workshop
       :link: https://coderefinery.github.io/2026-03-17-workshop/
@@ -119,7 +119,7 @@ Upcoming Events
 Start here — who are you?
 =========================
 
-.. grid:: 3
+.. grid:: 1 1 3 3
 
    .. grid-item-card:: New Researcher
       :link: aalto/welcomeresearchers
@@ -143,7 +143,7 @@ Start here — who are you?
 Explore by topic
 ================
 
-.. grid:: 2
+.. grid:: 1 1 2 2
 
    .. grid-item-card:: Triton HPC Cluster
       :link: triton/index
