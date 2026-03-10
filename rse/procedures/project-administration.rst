@@ -62,8 +62,8 @@ Procedures by project size
      * Same ^
      * Same ^
 
-Procedures for M/L projects
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Procedures for tracked projects
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -80,12 +80,15 @@ Procedures for M/L projects
        proceed.
      * - If vague: nowhere, tell them to contact us again when ready.
 
-       - If they want to proceed: (a) set up the next stage yourself
-         or (b) add to weekly meeting agenda to find someone who will
-         do the pre-planning meeting.
-   * * Pre-planning meeting
-     * Discussed enough to work out details before acceptance.
-     * Pre-planning meeting with at least two RSEs (doesn't have to be
+       - If a concrete lead: make a rse-projects issue with state
+	 "Lead".  Include description, estimated time, unit label, and
+	 ``/summary`` at least.
+       - If they want to proceed: (a) set up the planning meeting
+	 yourself or (b) add to weekly meeting agenda to find someone
+	 who will do the pre-planning meeting.
+   * * Planning meeting
+     * Discussed enough to understand what it is
+     * Planning meeting with at least two RSEs (doesn't have to be
        those who got the lead, but it's good if someone who might do
        it is there + someone who can mentor that person).  Use the `template doc
        <https://docs.google.com/document/d/1XcxeNLRq0kOsFbDEmA7ArdbIrCVudMWHPFQsKRVcTIk>`__
@@ -96,9 +99,9 @@ Procedures for M/L projects
    * * S1/S2 Accepted (Waiting / Queued)
      * We've decided we can do the project.
      * Decision in weekly meeting based on pre-planning meeting info.
-       Ensure we have time, ensure we have funding.  See if anyone
-       else can find new risks.  Final check for who has time to
-       actually do the project.  Checklist:
+       Ensure we have time, ensure we have funding.  Look for
+       unmanaged risks.  Final check for who has time to actually do
+       the project.  Checklist:
 
        * Project can be defined
        * A RSE has skills, interest, and *time*
@@ -145,9 +148,8 @@ Our project management is designed to:
 * Show that our output work roughly corresponds to input funding (by
   unit, and goals of those units).
 * Avoid projects which we may not be successful at due to {undefined
-  goals, impossible goals, or generally not knowing}.
-* Prevent over-committing ourselves, so that we start hurting
-  ourselves or failing at everything we do.
+  goals, impossible goals, or generally not knowing what is going on}.
+* Prevent over-committing ourselves.
 * Provide sound financial tracking for projects that need it.
 
 
@@ -157,7 +159,7 @@ Prioritization
 
 See the summary at the top (G/S/M/L projects)   In short,
 
-* **garage** projects get top priority since they connect us together
+* **Garage** projects get top priority since they connect us together
   and serve to share skills.
 * Then we would do projects preferred by funders (projects with their
   own funding, those from units providing funding).
@@ -218,21 +220,43 @@ Typical project flow
 This is what should happen for anything bigger than a "small"
 project.
 
-Potential project identified
+Project lead
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This is the broad strokes of finding potential projects.
+This is project ideas, which are not yet ready to plan or begin.
 
 * Anyone may hear of a potential project at any time.  You can tell
   them about the RSE service, what will happen next, and see if they
   are interested.
-* You don't have to commit to anything.
-* You can discuss the lead at the weekly meeting if you would like
-  feedback or someone else to take it over.
-* You can use the RSE weekly meeting to find someone else to help make
-  the project plan if it's outside of your expertise.
-* You usually wouldn't make an issue in ``rse-projects`` yet.  (Info
-  on how to do this is in below).  It would me made in cases such as:
+* You shouldn't commit to anything.
+* If it is only a broad idea, not concrete at all.
+
+  * Tell them about RSE services and how it might be useful.
+  * Tell them how to contact us once it's ready.
+
+* If there is an actual project idea, but it's not ready to be planned
+  yet.
+
+  * (you can ask someone else to do this if you aren't the right
+    person)
+  * Ask them enough to understand if it's appropriate for us, what
+    skills it needs, etc.
+  * Set expectations with the customer.
+  * Create an ``rse-projects`` issue with the description.  Include
+    description/skills needed, and set at least the unit label, state
+    ``S::0-lead``, and estimated time.
+  * Tell them they need to contact us when they are ready.
+  * This serves as a insight for future needs, but we don't actively
+    work yet.
+
+* If there is an actual project idea and it's ready to be planned.
+
+  * Add it to the RSE weekly meeting agenda.
+  * Begin the planning phase, or find someone else to do that.
+  * If you need to find project planners and can't via chat/garage,
+    add it to a RSE weekly meeting agenda.
+
+* Cases where a ``rse-projects`` issue should be made:
 
   * You are very sure it will become a project (may as well get the
     project number to start tracking).
@@ -243,12 +267,12 @@ This is the broad strokes of finding potential projects.
     should usually be contacted for grant application stuff.
 
 
-Project pre-planning meeting
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Project planning
+~~~~~~~~~~~~~~~~
 
-This meetings gets enough details so that we can make a decision.  It
-may happen right away (lead comes up in garage) or after some delay
-(need to find the people to do the meetings).
+This meetings gets enough details so that we can make a decision to
+begin.  It may happen right away (lead comes up in garage) or after
+some delay (need to find the people to do the meetings).
 
 * `Pre-planning meeting template doc
   <https://docs.google.com/document/d/1XcxeNLRq0kOsFbDEmA7ArdbIrCVudMWHPFQsKRVcTIk>`__
@@ -264,12 +288,12 @@ may happen right away (lead comes up in garage) or after some delay
 * Nothing is promised at this time, and planning doesn't have to go
   into technical details.  But it should be deep enough to know if
   there's a technical reason we can't take it on.
-* Fill out the project together with the customers.
-  Make a copy in some shared space, give everyone edit access, and
-  start filling out.
+* Fill out the project template together with the customers (or
+  whatever your system is).  Make a copy in some shared space, give
+  everyone edit access, and start filling out.  *Write stuff down.*
 * The purpose of this meeting is to set expectations
 
-  * What the actual need and outcome may be
+  * What is the actual need and desired outcome
   * What we actually can do and may have time to do
   * How hard the project will be
   * How much time it might take us
@@ -279,7 +303,7 @@ may happen right away (lead comes up in garage) or after some delay
   * Who will manege it long-term
   * Funding
 
-* At this point, there probably should be an issue made in
+* At this point, there should be an issue made in
   rse-projects.
 
   * The readme in the `rse-timetracking repository
@@ -289,8 +313,8 @@ may happen right away (lead comes up in garage) or after some delay
     <https://version.aalto.fi/gitlab/AaltoRSE/rse-projects/>`__.
 
 
-RSE team decision to begin
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Decision to begin
+~~~~~~~~~~~~~~~~~
 
 The project plan as above is brought to the RSE meeting for a go/no-go
 decision.
@@ -334,6 +358,8 @@ Working on the project
   item in the RSE weekly meeting if you can't get help in garage or
   you need a wider audience.
 * If the project has funding, record time spent in Halli.
+* Update the time estimate in rse-projects, if the expected time
+  changes.
 * TODO: add more here
 
 
