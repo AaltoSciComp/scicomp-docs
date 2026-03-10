@@ -52,10 +52,14 @@ department or school.
      * Key projects as requested by management, then FCAI members,
        then other AI-related projects.
 
-   * * LUMI AI Factory
+   * * LUMI AI Factory and ELLIS Institute
      * 3
      * Spearhead projects as requested by management, then other AI-related
        projects.
+
+   * * AI-DOC (AI doctoral pilot)
+     * 1
+     * Broad support of all member doctoral students.
 
 (*) Share is a general fraction.  Funding may be lower than this
 fraction, since long projects replace the funding of the unit.

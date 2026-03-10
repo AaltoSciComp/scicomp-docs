@@ -1,40 +1,35 @@
 For researchers and research groups
 ===================================
 
-You program or analyze data in your daily work, and you know something is missing:
-your code and data is less organized, less efficient, less managed than others,
-and it's affecting the quality of your work.  Or maybe you don't know
-how to start your project, or publish it.  You're too busy with the
-science to have time to focus on the computing.
+You program or analyze data in your daily work, and you know something
+is missing: your code and data is less organized, less efficient, less
+managed than others, and it's affecting the quality of your work.  Or
+maybe you don't know how to start your project, or publish it.  You're
+too busy with the science to have time to focus on the computing.
 
 To find out more or make a request, contact us.
 
 
-Free tier: Garage, small, and medium support
---------------------------------------------
+Garage support
+--------------
 
 Aalto recognizes the importance of researchers in every field being
-able to use scientific computing competently, so our expertise is
-available to some degree to everyone.
+able to use scientific computing competently, so our basic expertise is
+available to everyone.
 
 The :ref:`SciComp garage <scicomp-garage>` is a daily online office
 hour where anyone can ask us anything.  This is a great way to
-un-stick any small things that you may have.  When something takes
-more time than this, we can work on it for a few hours or days outside
-the garage.
-
-When we have time, and :doc:`prioritized by the participating units
-<procedures/units-info>`, we can take projects for free for up to a
-month.  To do this, just join the garage to get started.
+un-stick any small problems that you may have.  Sometimes, we can work
+for a few hours or days outside the garage.
 
 
-With funding: long projects
----------------------------
+Projects
+--------
 
-If a project provides funding, we can work longer than a month.  We
-would essentially join the project as a collaborator, as much as you
-would like, and can take much more independent responsibility for
-whatever you need us to do.
+If a project lasts more than a few days, we will work with you to make
+a plan for a longer project.  We need to get on the same page and
+confirm we have the time.  `Member units <procedures/units-info>`
+provide funding for their projects (most for "free" under a month).
 
 To get started this way, it's still best to join the garage and
 request help.
@@ -45,14 +40,6 @@ How to contact us and request help
 ----------------------------------
 
 To request a service, see :ref:`the request area <request-rse>`.
-
-Requests are :doc:`prioritized <procedures/prioritization>` according to:
-
-* Short-term "urgent help" for as many projects as possible
-* Priority for projects and units which provide funding
-* Strategic benefit
-* Long-term impact to research (for example, improved skills)
-* Diversity and balance
 
 
 

@@ -13,12 +13,11 @@ services, also see :doc:`how-we-work`.
 
 How it is funded
 ----------------
-There are two funding strategies:
 
-* Short term (a few weeks or less) is funded by your department, if
+* **Short term (a few weeks or less)** is funded by your department, if
   you are in one of the :doc:`sponsoring units
   <procedures/units-info>`.  You don't need to do anything special.
-* Longer term (month or more) is funded from your own projects.  See
+* **Longer term (month or more)** is funded from your own projects.  See
   the information for :doc:`grant applicants <grant-applicants>`, it
   is also relevant if you already have funding you want to use.
 
@@ -26,6 +25,9 @@ There are two funding strategies:
   have us around on retainer to support all of your projects (for
   example, 20% time for a year).  If you are applying for a new grant,
   see :doc:`grant-applicants`.
+* **Keystone projects** are long, major project sponsored by units.
+  Apply for these either through the unit or through our normal means.
+  The unit decides which keystone projects it supports.
 
 
 

@@ -7,14 +7,14 @@ can point you in the right direction.
 
 
 
-Quick Consultations
--------------------
+Office hour ("garage")
+----------------------
 
 We recommend you come to our daily :ref:`garage sessions
 <scicomp-garage>` for a short chat.  There are no reservations, and
 this is the online equivalent of dropping by our office to say hi.
-Since it is online, we have a wide variety of people to help with many
-different types of tasks.
+Since it is online, there are a wide variety of staff ready to answer
+almost any computing or software problem you may have.
 
 
 
@@ -24,14 +24,21 @@ Contact
 We recommend you come to our daily :ref:`garage sessions
 <scicomp-garage>` (see above), rather than send email (or to come by
 after you send the email).  We almost always have more questions and
-want to chat, so that responding to email is slow.
+want to chat as a first point anyway.  Email can work to arrange a
+meeting some other time, though.
 
-Our email is rse@aalto.fi (the Triton email address
-scicomp@aalto.fi also gets to us). You can also use the `structured request
-form <https://selfservice.esupport.aalto.fi/ssc/app#/order/2026/>`__
+Our email is rse@aalto.fi
+
+
+
+Request form
+------------
+
+You can also use the `structured request form
+<https://selfservice.esupport.aalto.fi/ssc/app#/order/2026/>`__
 ("Research Software Engineer request").  This guides you through some
-of our initial questions, but goes to the same place as email and
-everything is read by a human anyway.
+of our initial questions so we can evaluate quickly.  Still, we will
+quickly invite you to garage for a chat.
 
 
 
