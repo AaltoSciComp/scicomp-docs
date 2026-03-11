@@ -31,11 +31,6 @@ Most common tasks include:
 - Brainstorm the best strategy are for your problems
 - Work with someone on your issues in real time
 
-Notes:
-
-* All garages are designed for researchers and staff working in Aalto
-  (or those who have a need to contact us).
-
 
 
 .. _garage:
