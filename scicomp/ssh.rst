@@ -195,7 +195,7 @@ directory (A directory called ``.ssh`` in your user's home directory).
 
 Key type ``ed25519`` makes a private key named ``~/.ssh/id_ed25519``
 and public key named ``~/.ssh/id_ed25519.pub``.  The private key only
-stays on your computer.  The public key goes to other comuters.
+stays on your computer.  The public key goes to other computers.
 **Other key types were common in the past, and you may need to change
 your filenames in some of the future commands** (for exmaple
 ``~/.ssh/id_rsa.pub``).
