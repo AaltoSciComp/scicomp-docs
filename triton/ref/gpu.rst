@@ -7,6 +7,7 @@
    NVIDIA B300(*)       | ``b300``                               | ``288``                           | 10.3 (``103``)                                      | 16             | gpu[64-65]       | 8             | 18944                     | ``gpu-b300-288g-ellis``, ``gpu-b300-288g-short`` |
    NVIDIA H200(*)       | ``h200``                               | ``141``                           | 9.0 (``90``)                                        | 112            | gpu[50-63]       | 8             | 16896                     | ``gpu-h200-141g-ellis``, ``gpu-h200-141g-short`` |
    NVIDIA H200(**)      | ``h200_2g.35gb``                       | ``35``                            | 9.0 (``90``)                                        | 24             | gpu[49]          | 24            | 4224                      | ``gpu-h200-35g-ia-ellis``, ``gpu-h200-35g-ia``   |
+   NVIDIA Grace-H200(+) | ``h200``                               | ``141``                           | 9.0 (``90``)                                        | 4              | gpuarm[1-2]      | 2             | 16896                     | ``gpu-grace-h200-141g``                          |
    NVIDIA H100          | ``h100``                               | ``80``                            | 9.0 (``90``)                                        | 16             | gpu[45-48]       | 4             | 16896                     | ``gpu-h100-80g``                                 |
    NVIDIA A100          | ``a100``                               | ``80``                            | 8.0 (``80``)                                        | 56             | gpu[11-17,38-44] | 4             | 7936                      | ``gpu-a100-80g``                                 |
    NVIDIA V100          | ``v100``                               | ``32``                            | 7.0 (``70``)                                        | 40             | gpu[28-37]       | 4             | 5120                      | ``gpu-v100-32g``                                 |
@@ -27,3 +28,5 @@ preempted if a job requiring the resources comes in from the Ellis queue.
 
 (**) These GPUs are split from a single GPU with NVIDIA's
 `Multi-Instance GPU <https://docs.nvidia.com/datacenter/tesla/mig-user-guide/index.html>`__-feature.
+
+(+) These computers have the Nvidia Grace CPU, an ARM based cpu. Normal software compiled for x86 does not run on these nodes.
