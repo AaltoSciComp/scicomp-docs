@@ -42,6 +42,7 @@ extensions = [
 # (nothing other than what you can find in Ubuntu).  So, add these to
 # extensions only if they are importable:
 optional_modules = [
+    'sphinx_rtd_dark_mode',
     'sphinx_rtd_theme_ext_color_contrast',
     'sphinx_copybutton',
     'sphinx_lesson.directives',
@@ -189,11 +190,15 @@ todo_include_todos = True
 
 html_css_files = [
     "theme_overrides.css",
+    "aalto_dark_overrides.css",
 ]
 
 html_js_files = [
     "redirect-to-https.js",
+    "aalto_theme_init.js",
 ]
+
+default_dark_mode = False
 
 html_theme = "sphinx_rtd_theme"
 if on_rtd:
