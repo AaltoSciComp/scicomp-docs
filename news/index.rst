@@ -15,8 +15,6 @@ Join our `daily zoom garage </help/garage/>`__ for any scientific computing rela
 
 *Jan 28, 2026* New NVIDIA Blackwell B300 GPUs on Triton: nodes ``gpu[64-65]``, each with 8× B300 SXM6 GPUs (288 GB VRAM each), available via partitions ``gpu-b300-288g-ellis`` and ``gpu-b300-288g-short``.
 
-*Jan 2026* RSE 2025 Annual Report published — see `/rse/reports/2025 </rse/reports/2025>`__.
-
 *Jan 12–28, 2026* `Winter Kickstart 2026 </training/scip/winter-kickstart-2026/>`__: Introduction to Triton and HPC — highly recommended for all new Triton users.
 
 *Jan 2026* The RSE team grew to 10 staff, supported by the LUMI AI Factory grant.
