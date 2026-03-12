@@ -3,7 +3,7 @@
    :header-rows: 1
    :class: scicomp-table-dense
 
-   GPU brand name       | GPU name in Slurm (``--gpus=NAME:n``)  | VRAM GB (``--gres=gpu-vram:NNg``) | CUDA compute capability (``--gres=min-cuda-cc=NN``) | total amount   | nodes            | GPUs per node | Compute threads per GPU   | Slurm partition (``--partition=``)               |
+   GPU brand name       | GPU name in Slurm (``--gpus=NAME:n``)  | VRAM GB (``--gres=gpu-vram:NNg``) | CUDA compute capability (``--gres=min-cuda-cc:NN``) | total amount   | nodes            | GPUs per node | Compute threads per GPU   | Slurm partition (``--partition=``)               |
    NVIDIA B300(*)       | ``b300``                               | ``288``                           | 10.3 (``103``)                                      | 16             | gpu[64-65]       | 8             | 18944                     | ``gpu-b300-288g-ellis``, ``gpu-b300-288g-short`` |
    NVIDIA H200(*)       | ``h200``                               | ``141``                           | 9.0 (``90``)                                        | 112            | gpu[50-63]       | 8             | 16896                     | ``gpu-h200-141g-ellis``, ``gpu-h200-141g-short`` |
    NVIDIA H200(**)      | ``h200_2g.35gb``                       | ``35``                            | 9.0 (``90``)                                        | 24             | gpu[49]          | 24            | 4224                      | ``gpu-h200-35g-ia-ellis``, ``gpu-h200-35g-ia``   |
