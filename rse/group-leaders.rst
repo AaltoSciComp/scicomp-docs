@@ -9,6 +9,7 @@ you.  You probably have some questions about what this is, and this
 page will answer those practical questions.  For researchers using our
 services, also see :doc:`how-we-work`.
 
+To contact us, see :doc:`request`.
 
 
 How it is funded
