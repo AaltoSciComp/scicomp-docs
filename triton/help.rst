@@ -6,9 +6,6 @@ There are many ways to get help, and you should try them all.  If you
 are just looking for the most important link, it is :ref:`our issue
 tracker <issuetracker>`.
 
-Whatever you do, these `guidelines for making good support requests
-<https://research.csc.fi/support-request-howto>`__ are very useful.
-
 .. seealso::
 
    Are you just looking for a Triton account?  See :doc:`accounts`.
