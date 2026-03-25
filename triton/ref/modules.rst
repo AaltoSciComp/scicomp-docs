@@ -3,8 +3,8 @@
    :header-rows: 1
 
    Command / concept            | Description
-   "module"                     | A software that can be made available.
-   "software stack"             | Includes the compliers (etc) needed for other modules.  Must be loaded before other modules.
+   'module'                     | A software that can be made available.
+   'software stack'             | Includes the compliers (etc) needed for other modules.  Must be loaded before other modules.
    ``module load`` *NAME*       | Load module, can combine multiple names.
    ``module load`` triton/*NAME* | Load software stack module.  Makes other compiled software available.  Generally, run ``module spider`` to first to see what you need.
    ``module avail``             | List all modules available with current software stack.
