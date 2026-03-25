@@ -23,7 +23,7 @@ program and what their priorities are.  Our basic priorities:
   them in a simpler way (for example, giving advice as a garage/short
   project instead of doing it for them as a medium project).
 
-See :doc:`../units` if you would like to join the RSE service as a
+See :doc:`../for-units` if you would like to join the RSE service as a
 department or school.
 
 

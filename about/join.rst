@@ -116,7 +116,7 @@ their members can receive short-term support without any billing
 needed.  Their members will also receive priority for the project
 services.
 
-For more information, see the :doc:`RSE for units </rse/units>` page.
+For more information, see the :doc:`RSE for units </rse/for-units>` page.
 
 
 Contact

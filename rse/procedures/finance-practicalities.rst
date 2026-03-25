@@ -4,7 +4,7 @@ RSE financial practicalities
 Let's say you :doc:`know what we do <../index>` and have funding and
 would like to send it our way.  This page says what to do.  You can
 read :doc:`what we know about different funders
-<../grant-applicants>`, but it's probably better to ask your
+<../for-grant-applicants>`, but it's probably better to ask your
 controller directly if you have the funding already.
 
 

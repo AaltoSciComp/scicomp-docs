@@ -1,5 +1,5 @@
-Project management: researcher perspective
-==========================================
+Project lifecycle
+=================
 
 This page describes the way that medium and long (week or longer)
 projects should be handled.

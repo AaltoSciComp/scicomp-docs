@@ -1,5 +1,5 @@
-Project management: PI perspective
-==================================
+Group leader info for starting a project
+========================================
 
 You, or someone in your group, has requested :doc:`Research Software
 Engineer <../index>` services for one of your group's projects.  This
@@ -7,9 +7,9 @@ service provides specialist support for software, data, and open
 science so that you can focus on the science that is interesting to
 you.  You probably have some questions about what this is, and this
 page will answer those practical questions.  For researchers using our
-services, also see :doc:`how-we-work`.
+services, also see :doc:`project-lifecycle`.
 
-To contact us, see :doc:`request`.
+To contact us, see :doc:`contact`.
 
 
 How it is funded
@@ -19,13 +19,13 @@ How it is funded
   you are in one of the :doc:`sponsoring units
   <procedures/units-info>`.  You don't need to do anything special.
 * **Longer term (month or more)** is funded from your own projects.  See
-  the information for :doc:`grant applicants <grant-applicants>`, it
+  the information for :doc:`grant applicants <for-grant-applicants>`, it
   is also relevant if you already have funding you want to use.
 
   You can use our services for both a specific project, or generally
   have us around on retainer to support all of your projects (for
   example, 20% time for a year).  If you are applying for a new grant,
-  see :doc:`grant-applicants`.
+  see :doc:`for-grant-applicants`.
 * **Keystone projects** are long, major project sponsored by units.
   Apply for these either through the unit or through our normal means.
   The unit decides which keystone projects it supports.
@@ -73,4 +73,4 @@ more than another employee working on the project will.  (In the event
 you don't plan for open science / open licenses, it should be planned
 first, though, to make sure everything gets taken care of.)  However,
 our RSEs expect to be acknowledged according to good scientific
-practice (see :doc:`how-we-work`).
+practice (see :doc:`project-lifecycle`).

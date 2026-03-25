@@ -150,7 +150,7 @@ Research software engineering services
 
 .. seealso::
 
-   :doc:`/rse/grant-applicants`
+   :doc:`/rse/for-grant-applicants`
 
 (this text must be tuned to your grant, replace the parts in CAPITAL LETTERS)
 
