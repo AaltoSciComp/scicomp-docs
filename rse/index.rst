@@ -124,6 +124,7 @@ works internally.
    procedures/advisory-board
    procedures/template-projects
    procedures/implementation
+   RSE internal training <https://aaltoscicomp.github.io/rse-training/>
    history
 
 
