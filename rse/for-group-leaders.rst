@@ -1,5 +1,5 @@
-RSE info for group leaders
-==========================
+For group leaders
+=================
 
 Aalto Research Software Engineers are part of Science-IT, a research
 infrastructure in the School of Science.  We serve everyone in Aalto,

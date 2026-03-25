@@ -1,5 +1,5 @@
-Group leader info for starting a project
-========================================
+Starting a project (group leader info)
+======================================
 
 You, or someone in your group, has requested :doc:`Research Software
 Engineer <../index>` services for one of your group's projects.  This

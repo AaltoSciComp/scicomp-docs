@@ -29,6 +29,18 @@ units <procedures/units-info>` at no cost to you.**  Longer projects (months+)
 are generally expected to have their own funding.
 
 
+.. admonition:: Contact
+
+   It's best to talk live!  Come to our :doc:`online office hour
+   ("SciComp Garage") </help/garage>` any workday at 13:00. You
+   don't even need a specific question; you can ask about a vague
+   idea, if we are even the right place to ask, or drop by to chat
+   about your experiences.  This is also a good place to ask about
+   larger projects with us.
+
+   See :doc:`contact` for other ways to contact, including email.
+
+
 Brief intros
 ------------
 
@@ -54,21 +66,8 @@ Project procedures
    project-setup
    procedures/finance-practicalities
 
-
-Old stuff below here
---------------------
-
-.. admonition:: Contact
-
-   It's best to talk live!  Come to our :ref:`online office hour ("SciComp
-   Garage") <scicomp-garage>` any workday at 13:00. You don't even
-   need a specific question; you can ask about a vague idea, if
-   we are even the right place to ask, or drop by to chat about your
-   experiences.  This is also how you would start a larger project
-   with us.
-
-   See :ref:`requesting RSE <request-rse>` for more including email.
-
+Below this point is advanced material you only need to check if you
+have a special interest.
 
 
 About the research software engineers
@@ -93,10 +92,10 @@ Checklists
 .. toctree::
    :maxdepth: 1
 
-   Project starting template <https://docs.google.com/document/d/1XcxeNLRq0kOsFbDEmA7ArdbIrCVudMWHPFQsKRVcTIk>
+   Project starting template doc <https://docs.google.com/document/d/1XcxeNLRq0kOsFbDEmA7ArdbIrCVudMWHPFQsKRVcTIk>
    checklists/project-done
    checklists/python
-   JOSS checklist (external) <https://joss.readthedocs.io/en/latest/review_checklist.html>
+   JOSS review criteria (external) <https://joss.readthedocs.io/en/latest/review_criteria.html>
    pyOpenSci guides (external) <https://www.pyopensci.org/python-package-guide/>
    rOpenSci guide (external) <https://devguide.ropensci.org/building.html>
    Matlab project reproducibility (external) <https://rse.shef.ac.uk/blog/2022-05-05-concise-guide-to-reproducible-matlab/>

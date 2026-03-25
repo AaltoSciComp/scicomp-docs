@@ -1,8 +1,7 @@
-Portfolio of past projects
-==========================
+Examples of past projects
+=========================
 
-This page lists examples of projects which we have done.  As of early
-2024, our internal project numbers are in the 200s.
+This page lists some examples of projects which we have done.
 
 
 Summary table

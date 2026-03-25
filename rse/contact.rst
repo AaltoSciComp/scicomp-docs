@@ -1,5 +1,5 @@
-Requesting RSE support
-======================
+Contact RSEs
+============
 
 You can contact us regardless of how small your issue is - or even if
 you would like to know if we could help your project.  At least, we
