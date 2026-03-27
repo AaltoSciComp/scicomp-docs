@@ -1,12 +1,16 @@
 Grace Hopper Super Chips
 ========================
 
-
 Hardware in Triton
 ------------------
 
 Triton has currently two compute nodes (gpuarm[1,2]) with the Grace-Hopper superchip.
 To gain access, please use the slurm partition: ``--partition gpu-grace-h200-141g``.
+
+Run time limits
+---------------
+
+The servers are for testing and development, not for long production runs. The jobs in triton are limited to 12 gpu-hours. So a single gpu job can run for 12 hours or two gpu job for 6 hours.
 
 Super chip
 ----------
