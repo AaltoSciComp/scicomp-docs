@@ -107,7 +107,7 @@ In most cases you will want to choose a GPU that suits your specific use case.
 You can use the syntax ``--gpus=GPU_TYPE:1`` where ``GPU_TYPE`` is a name
 chosen by the admins for the GPU.
 
-For example, ``--gpus=h200:1`` would give you a H100 card.
+For example, ``--gpus=h200:1`` would give you a H200 card.
 
 See the :ref:`available GPUs reference <available-gpus>` for more information on
 available GPUs.
