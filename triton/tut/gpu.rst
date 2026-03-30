@@ -18,6 +18,8 @@ GPU computing
    * Monitor GPU performance with ``seff JOBID``.
    * You can test out small jobs of 30 minutes or less in the
      ``gpu-debug``-partition (``--partition=gpu-debug``).
+   * To run a job on GPU node, you must request at least one GPU.
+     Running CPU-only workloads on GPU nodes is not permitted.
    * If you aren't fully sure of how to scale up, contact us
      :doc:`Research Software Engineers </rse/index>` early.
 
@@ -93,6 +95,9 @@ For example, ``--gpus=1`` will give you a single GPU.
    trying to reserve multiple GPUs you should verify that your code
    can utilize them.
 
+   Moreover, running CPU-only jobs on GPU nodes is not permitted in our
+   current setup. Thus, if you request a GPU partition in your job script,
+   you must also request at least one GPU.
 
 Choosing a specific type of GPU
 -------------------------------
