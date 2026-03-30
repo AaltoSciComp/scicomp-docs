@@ -123,6 +123,11 @@ Job status and submission
    To fix this we can either wait for the node to be available or choose a different partition with the ``--partition=`` command, using one of the partitions from ``sinfo`` which has free and available (``idle``) nodes.
 
 
+.. collapse:: ``srun: error: Unable to allocate resources: Job violates accounting/QOS policy``
+
+   This error can occur for instance if you have requested a GPU partition without requesting GPUs.
+   In other words, you have ``--partition=gpu-h100-80g`` in your submission script, but no ``--gpus=n``.
+   Note that running CPU-only workloads on Triton GPU nodes is not permitted.
 
 .. _FAQ_Accounts:
 
