@@ -309,6 +309,49 @@ Notes, warnings, etc.
      sets a CSS class which gets interpreted in the HTML.
 
 
+Upcoming Events cards (landing page)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The top of ``index.rst`` has an "Upcoming Events" grid.  Each card supports
+three variants:
+
+**Image + text card** (standard)::
+
+   .. grid-item-card:: Event Title
+      :link: https://event-website.example.com
+      :link-type: url
+      :img-top: /_static/your-event-banner.png
+      :class-card: event-card
+
+      **Month DD, YYYY** · Location or "Online"
+
+      One or two sentences describing the event.
+
+**Text-only card** (no image — omit ``:img-top:``)::
+
+   .. grid-item-card:: Event Title
+      :link: https://event-website.example.com
+      :link-type: url
+      :class-card: event-card
+
+      **Month DD, YYYY** · Location
+
+      One or two sentences describing the event.
+
+**Image-only card** (banner with no text — add ``event-card-imgonly``)::
+
+   .. grid-item-card:: Event Title
+      :link: https://event-website.example.com
+      :link-type: url
+      :img-top: /_static/your-event-banner.png
+      :class-card: event-card event-card-imgonly
+
+The grid column count is set on the ``.. grid:: N`` line above the cards.
+Change ``N`` to match the number of events you want per row (e.g. ``3`` or
+``4``).  The placeholder image ``_static/event-placeholder.svg`` can be
+replaced with any image file placed in ``_static/``.
+
+
 Indexing
 ~~~~~~~~
 

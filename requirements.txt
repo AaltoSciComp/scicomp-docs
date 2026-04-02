@@ -15,6 +15,7 @@ sphinx_toolbox
 sphinx_ext_substitution
 sphinx-plausible
 sphinx-minipres
+sphinx-design
 sphinxext-opengraph<0.8  # remove after 8.3 released (matplotlib optional, takes lots of space)
 sphinxext-rediraffe
 https://github.com/coderefinery/sphinx-localtime/archive/main.zip

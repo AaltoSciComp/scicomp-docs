@@ -54,6 +54,7 @@ optional_modules = [
     'sphinx_minipres',
     'sphinxext.rediraffe',
     'sphinx_localtime',
+    'sphinx_design',
     ]
 if on_rtd or 'GITSTAMP' in os.environ:
     optional_modules.append('sphinx_gitstamp')
@@ -148,7 +149,9 @@ exclude_patterns = [
     '_meta',
     '_substitutions',
     'triton/apps/TEMPLATE.rst',
-    'venv*'
+    'venv*',
+    'CLAUDE.md',
+    'aalto_fi_examples',
     ]
 
 # The reST default role (used for this markup: `text`) to use for all
