@@ -1,38 +1,23 @@
 =====================================================================
-June 2025 / Intro to Scientific Computing /  HPC Summer Kickstart
+June 2026 / Intro to Scientific Computing /  HPC Summer Kickstart
 =====================================================================
 
 .. admonition:: Quick links
    :class: important
 
 
-   * **Registrations are closed**
+   * **Registrations are open**: https://link.webropol.com/ep/kickstart2026 
 
    * News:
 
-     - The course is over.  We hope that you learned something and can
-       keep studying as you need.  There is a lot more written
-       material available linked from the schedule, available for
-       independent learning.
-     - Other relevant courses as follow-ups:
-
-       - `Python for Scientific Computing (usually late autumn each
-	 year) <https://aaltoscicomp.github.io/python-for-scicomp/>`__
-       - `CodeRefinery <https://coderefinery.org>`__ covers version
-	 control (git) and related practical software tools.
-       - `Shell usage and scripting
-	 <https://aaltoscicomp.github.io/linux-shell/>`__, though
-	 you should select the parts relevant to you.
+     - 04/04/2026 Registrations are open! The content of the course in this page is still being revised
 
    * Links
 
      * Livestream: https://twitch.tv/coderefinery
-     * Notes docs: `Archive day 1 <https://hackmd.io/@AaltoSciComp/scicomphpc2025Archive>`__, `Archive days 2-3 <https://hackmd.io/@AaltoSciComp/scicomphpc2025Archive2>`__.
+     * Notes docs: TBA
      * Zoom: live zoom support for students from partner organisations
-     * Videos: `YouTube playlist
-       <https://www.youtube.com/playlist?list=PLZLVmS9rf3nNK5qWN6FdrQPHns4fNZyMX>`__,
-       or `git-annex to avoid YouTube <https://github.com/coderefinery/video-processing>`__.
-     * `Twitch archive <https://www.twitch.tv/coderefinery/videos>`__ (7 days only)
+     * Videos: TBA
 
 
 
@@ -40,9 +25,9 @@ June 2025 / Intro to Scientific Computing /  HPC Summer Kickstart
 
 *Kickstart* is a three half-day course for researchers and students who want to get started with high-performance computing (HPC) and scientific computing workflows.
 
-* **Day 1**: focuses on the basics of HPC through practical examples. You will learn how to connect to a supercomputer, how storage choices affect your workflow, how to transfer data, and run your first jobs with slurm.
-* **Day 2** introduces tools and practices for efficient and responsible data science. Topics include Conda environments, batch and array jobs, job monitoring, software modules, parallel computing
-* **Day 3** covers more advanced topics: GPU usage, working with real examples: local open-weights LLMs (large language models).
+* **Day 1 (Wed 3 June)**: focuses on the basics of HPC through practical examples. You will learn how to connect to a supercomputer, how storage choices affect your workflow, how to transfer data, and run your first jobs with slurm.
+* **Day 2 (Thu 4 June)** introduces tools and practices for efficient and responsible data science. Topics include Conda environments, batch and array jobs, job monitoring, software modules, parallel computing
+* **Day 3 (Fri 5 June)** covers more advanced topics: GPU usage, working with real examples: local open-weights LLMs (large language models).
 
 By the end of the course, you will be ready to use HPC clusters effectively with hands-on skills and ready-made examples.
 
@@ -61,35 +46,39 @@ Schedule
    Schedule may still have updates before the course, and also during
    as we adapt to audience questions and interests.
 
-**Times automatically converted to:** :localtime2:`3 Jun 2025 (zzz)`
+**Times automatically converted to:** :localtime2:`3 Jun 2026 (zzz)`
 
-* **Day 1 (Tue 3 June)**
+* **Day 1 (Wed 3 June)**
 
-  * :localtime:`3 June 9:50 +03:00 (hh:mm [(on ]YYYY-MM-DD[)])`: Joining time/icebreaker
+  * :localtime:`3 June 12:50 +03:00 (hh:mm [(on ]YYYY-MM-DD[)])`: Joining time/icebreaker
 
-  * :localtime:`3 June 10:00 +03:00` **Introduction, about the course** Materials:
-    :doc:`../../training/kickstart/intro` (EG, )
+  * :localtime:`3 June 13:00 +03:00` **Introduction, about the course** Materials:
+    :doc:`../../training/kickstart/intro` (Enrico Glerean, Richard Darst, Thomas Pfau )
 
     * Intro to SciComp and HPC: (`Material <https://hackmd.io/@AaltoSciComp/SciCompIntro>`__, `Video link from 2024 <https://www.youtube.com/watch?v=8qQ9riStB0Y&list=PLZLVmS9rf3nOeuqXNa8tS-tDtdQrES2We&index=3>`__)
 
-  * :localtime:`3 June 10:10 +03:00` **The HPC Kitchen** (RD, TP)
+  * :localtime:`3 June 13:10 +03:00` **The HPC Kitchen** (RD, TP)
 
     - `Video playlist <https://www.youtube.com/watch?v=yqGtnA7CUtU&list=PLZLVmS9rf3nNDHRo1Baz_JVQWDI0mTYyB>`__, `Slides (separate from the videos) <https://docs.google.com/presentation/d/16BTILZlUvEzCt6FfMsB9sSZm0PZHHXLBthE5QfoSrjo/edit>`__
 
-  * :localtime:`3 June 10:20 +03:00` **Connecting to the cluster**
+  * :localtime:`3 June 13:20 +03:00` **Connecting to the cluster**
     (TP, SM)
 
     - :doc:`/triton/tut/connecting`
 
-  * :localtime:`3 June 10:50 +03:00`  Break
+  * :localtime:`3 June 13:50 +03:00`  Break
 
-  * :localtime:`3 June 11:00 +03:00`  **CSC resources for scientific computing** (JL)
+  * :localtime:`3 June 14:00 +03:00`  **CSC resources for scientific computing** (tbc)
 
     - A special guest from `CSC <https://csc.fi>`__ will talk about our national supercomputers Mahti/Puhti/LUMI and how to use them in practice.
 
-  * :localtime:`3 June 12:00 +03:00` Lunch break
+  * :localtime:`3 June 15:00 +03:00` End of day
 
-  * :localtime:`3 June 13:00 +03:00` **Setting up for a new project** (RD, ST)
+* **Day 2 (Thu 4 June)**
+
+  * :localtime:`4 June 09:50 +03:00 (hh:mm [(on ]YYYY-MM-DD[)])` Connecting, icebreakers, Q&A
+
+  * :localtime:`4 June 10:00 +03:00` **Setting up for a new project** (RD, Simo Tuomisto)
 
     - :doc:`/triton/tut/intro`
     - `Cluster workflow <example_project>`
@@ -100,92 +89,90 @@ Schedule
     - :doc:`/triton/tut/remotedata` - Exercise RemoteData-1
     - Exercise: Copying the Project Gutenburg data to your work directory
 
-  * :localtime:`3 June 13:40 +03:00` **What is Slurm?** (ST, RD)
+  * :localtime:`4 June 10:40 +03:00` **What is Slurm?** (ST, RD)
 
     - :doc:`/triton/tut/slurm`
 
-  * :localtime:`3 June 13:50 +03:00` Break
+  * :localtime:`4 June 10:50 +03:00` Break
 
-  * :localtime:`3 June 14:00 +03:00` **Interactive jobs** (RD, ST)
+  * :localtime:`4 June 11:00 +03:00` **Interactive jobs** (RD, ST)
 
     - :doc:`/triton/tut/interactive` - Exercise Interactive-2
     - Big example: Project Gutenburg n-gram analysis
 
-  * :localtime:`3 June 14:20 +03:00` **First serial jobs** (RD, ST)
+  * :localtime:`4 June 11:20 +03:00` **First serial jobs** (RD, ST)
 
     - :doc:`/triton/tut/serial` - Exercise Serial-2
     - Big example: Project Gutenburg n-gram analysis
 
-  * :localtime:`3 June 15:00 +03:00` End of day
+  * :localtime:`4 June 12:00 +03:00`: Lunch break
 
-* **Day 2 (4 June)**
-
-  * :localtime:`4 June 09:50 +03:00 (hh:mm [(on ]YYYY-MM-DD[)])` Connecting, icebreakers, Q&A
-
-  * :localtime:`4 June 10:00 +03:00` **Behind the scenes: the humans of scientific computing** (RD, SM)
+  * :localtime:`4 June 13:00 +03:00` **Behind the scenes: the humans of scientific computing** (RD, Susanne Merz)
 
     - Who are we that teach this course and provide SciComp support?
       What makes it such a fascinating career?  Learn about what goes on
       behind the scenes and how you could join us.
 
-  * :localtime:`4 June 10:20 +03:00` **Conda** (JR, YT)
+  * :localtime:`4 June 13:20 +03:00` **Conda** (SM, Jarno Rantaharju)
 
     - :doc:`/triton/deprecated/python-conda`
     - Big example: Make a conda environment for LLMs
 
-  * :localtime:`4 June 11:00 +03:00` Break
+  * :localtime:`4 June 14:00 +03:00` Break
 
-  * :localtime:`4 June 11:10 +03:00` **Array jobs** (ST, RD)
+  * :localtime:`4 June 14:10 +03:00` **Array jobs** (ST, RD)
 
     - :doc:`/triton/tut/parallel`
     - :doc:`/triton/tut/array`
     - Big Example: Project Gutenberg book analysis in parallel
 
-  * :localtime:`4 June 12:00 +03:00`: Lunch break
+  * :localtime:`4 June 15:00 +03:00` End of day
 
-  * :localtime:`4 June 13:00 +03:00` **Monitoring** (ST, RD)
+* **Day 3 (Fri 5 June)**
+
+  * :localtime:`5 June 9:50 +03:00 (hh:mm [(on ]YYYY-MM-DD[)])` Connecting, icebreaker, Q&A
+
+  * :localtime:`5 June 10:00 +03:00` **Monitoring** (ST, RD)
 
     - :doc:`/triton/tut/monitoring`
 
-  * :localtime:`4 June 13:20 +03:00` **Applications** (RD, ST)
+  * :localtime:`5 June 10:20 +03:00` **Applications** (RD, ST)
 
     - :doc:`/triton/tut/applications`
     - :doc:`/triton/tut/modules`
 
-  * :localtime:`4 June 13:40 +03:00` **Research integrity, security, compliance, and reproducibility** (EG, TP)
+  * :localtime:`5 June 10:40 +03:00` **Research integrity, security, compliance, and reproducibility** (EG, TP)
 
     - :doc:`/scicomp/rcr-scicomp`
 
-  * :localtime:`4 June 14:00 +03:00` Break
+  * :localtime:`5 June 11:00 +03:00` Break
 
-  * :localtime:`4 June 14:10 +03:00` **Parallel** (ST, RD)
+  * :localtime:`5 June 11:10 +03:00` **Parallel** (ST, RD)
 
     - :doc:`/triton/tut/parallel-shared`
     - :doc:`/triton/tut/parallel-mpi`
     - Big example: Calculating pi in parallel
 
-  * :localtime:`4 June 15:00 +03:00` End of day
+  * :localtime:`5 June 12:00 +03:00`: Lunch break
 
-* **Day 3 (5 June)**
+  * :localtime:`5 June 13:00 +03:00` **How to ask for help with (super)computers** (RD, )
 
-  * :localtime:`5 June 9:50 +03:00 (hh:mm [(on ]YYYY-MM-DD[)])` Connecting, icebreaker, Q&A
-  * :localtime:`5 June 10:00 +03:00` **How to ask for help with (super)computers** (RD, )
-
-    - It’s dangerous to go alone, take us! Don’t waste time struggling, there are plenty of people here for you.
+    - It's dangerous to go alone, take us! Don't waste time struggling, there are plenty of people here for you.
       Materials: `Slides <https://cicero.xyz/v3/remark/0.14.0/github.com/bast/help-with-supercomputers/main/talk.md/>`__.
 
-  * :localtime:`5 June 10:20 +03:00` **GPUs** (ST, HF)
+  * :localtime:`5 June 13:20 +03:00` **GPUs** (ST, HF)
 
     - :doc:`/triton/tut/gpu`
 
-  * :localtime:`5 June 10:50 +03:00` Break
-  * :localtime:`5 June 11:00 +03:00` **LLM example** (YT, HF)
+  * :localtime:`5 June 13:50 +03:00` Break
+
+  * :localtime:`5 June 14:00 +03:00` **LLM example** (ST, HF)
 
     - :doc:`/triton/apps/llms`
     - :doc:`/aalto/generative-ai-tools`
 
-  * :localtime:`5 June 11:40 +03:00` **Wrap up and summary, ask us anything**
-  * :localtime:`5 June 12:00 +03:00` End of day
+  * :localtime:`5 June 14:40 +03:00` **Wrap up and summary, ask us anything**
+  * :localtime:`5 June 15:00 +03:00` End of course
 
 
 
@@ -198,19 +185,23 @@ support**. Everyone may attend the **livestream** at
 https://twitch.tv/coderefinery, no registration needed, and this is
 the primary way to watch all sessions.  There is constant Q&A via **shared notes**.
 
-**Time, date:**  3 -- 5 June 2025 (Tue--Thu). 10:00-12:00 EEST  (days 1-3) and 13:00-15:00 EEST (days 1-2).
+**Time, date:**  3 -- 5 June 2026 (Wed--Fri). Day 1: 13:00-15:00 EEST. Days 2-3: 10:00-12:00 EEST and 13:00-15:00 EEST.
 
 **Place:** Online via public livestream, Zoom exercise sessions for
 partners.
 
-**Registration:** Please register at this link:
-https://link.webropol.com/ep/scicompsummer2025 .
+**Registration:** TBA.
 It's OK to register and attend only individual sessions.
 
-**Cost:** Livestream is free to everyone. 
+**Cost:** Livestream is free to everyone.
 
 **Additional course info at:** scip@aalto.fi
 
+
+Credits and certificates
+------------------------
+
+It is possible to get 1 ECTS with some extra homework. Those of you at Aalto University will need to add SCI-L1010 to your study plan and submit the homework in MyCourses. If you are not at Aalto University, more instructions will appear here during the course days. Please note that in some universities our certificate is not valid for Master studies. So please do check in advance with your study coordinator. Doctoral students should not have any issue in registering the credit at their university. 
 
 
 Other organizations
@@ -222,8 +213,8 @@ others outside of Aalto University, but some of the examples won't
 directly work on your cluster (most will, anyway we will give hints
 about adapting).  How to register if you are not at Aalto:
 
-* Regardless of where you are from, you may use the `primary registration
-  form <https://link.webropol.com/ep/scicompsummer2025>`__ to get emails about the course.  You don't get anything else.
+* Regardless of where you are from, you may use the primary registration
+  form (TBA) to get emails about the course.  You don't get anything else.
 * Participants from **University of Helsinki** can follow how to connect
   to their Kale/Turso cluster by following `their own instructions
   <https://wiki.helsinki.fi/pages/viewpage.action?pageId=408323613>`__.
@@ -249,14 +240,7 @@ between our course and your cluster.
 
 
 
-
-
-
-
-
-
-
-.. _kickstart-2025-prep:
+.. _kickstart-2026-prep:
 
 Preparation
 -----------
