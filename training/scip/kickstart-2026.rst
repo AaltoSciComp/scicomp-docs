@@ -53,7 +53,7 @@ Schedule
   * :localtime:`3 June 12:50 +03:00 (hh:mm [(on ]YYYY-MM-DD[)])`: Joining time/icebreaker
 
   * :localtime:`3 June 13:00 +03:00` **Introduction, about the course** Materials:
-    :doc:`../../training/kickstart/intro` (EG, )
+    :doc:`../../training/kickstart/intro` (Enrico Glerean, Richard Darst, Thomas Pfau )
 
     * Intro to SciComp and HPC: (`Material <https://hackmd.io/@AaltoSciComp/SciCompIntro>`__, `Video link from 2024 <https://www.youtube.com/watch?v=8qQ9riStB0Y&list=PLZLVmS9rf3nOeuqXNa8tS-tDtdQrES2We&index=3>`__)
 
@@ -68,7 +68,7 @@ Schedule
 
   * :localtime:`3 June 13:50 +03:00`  Break
 
-  * :localtime:`3 June 14:00 +03:00`  **CSC resources for scientific computing** (JL)
+  * :localtime:`3 June 14:00 +03:00`  **CSC resources for scientific computing** (tbc)
 
     - A special guest from `CSC <https://csc.fi>`__ will talk about our national supercomputers Mahti/Puhti/LUMI and how to use them in practice.
 
@@ -78,7 +78,7 @@ Schedule
 
   * :localtime:`4 June 09:50 +03:00 (hh:mm [(on ]YYYY-MM-DD[)])` Connecting, icebreakers, Q&A
 
-  * :localtime:`4 June 10:00 +03:00` **Setting up for a new project** (RD, ST)
+  * :localtime:`4 June 10:00 +03:00` **Setting up for a new project** (RD, Simo Tuomisto)
 
     - :doc:`/triton/tut/intro`
     - `Cluster workflow <example_project>`
@@ -107,13 +107,13 @@ Schedule
 
   * :localtime:`4 June 12:00 +03:00`: Lunch break
 
-  * :localtime:`4 June 13:00 +03:00` **Behind the scenes: the humans of scientific computing** (RD, SM)
+  * :localtime:`4 June 13:00 +03:00` **Behind the scenes: the humans of scientific computing** (RD, Susanne Merz)
 
     - Who are we that teach this course and provide SciComp support?
       What makes it such a fascinating career?  Learn about what goes on
       behind the scenes and how you could join us.
 
-  * :localtime:`4 June 13:20 +03:00` **Conda** (JR, YT)
+  * :localtime:`4 June 13:20 +03:00` **Conda** (SM, Jarno Rantaharju)
 
     - :doc:`/triton/deprecated/python-conda`
     - Big example: Make a conda environment for LLMs
@@ -166,7 +166,7 @@ Schedule
 
   * :localtime:`5 June 13:50 +03:00` Break
 
-  * :localtime:`5 June 14:00 +03:00` **LLM example** (YT, HF)
+  * :localtime:`5 June 14:00 +03:00` **LLM example** (ST, HF)
 
     - :doc:`/triton/apps/llms`
     - :doc:`/aalto/generative-ai-tools`
@@ -197,6 +197,11 @@ It's OK to register and attend only individual sessions.
 
 **Additional course info at:** scip@aalto.fi
 
+
+Credits and certificates
+------------------------
+
+It is possible to get 1 ECTS with some extra homework. Those of you at Aalto University will need to add SCI-L1010 to your study plan and submit the homework in MyCourses. If you are not at Aalto University, more instructions will appear here during the course days. Please note that in some universities our certificate is not valid for Master studies. So please do check in advance with your study coordinator. Doctoral students should not have any issue in registering the credit at their university. 
 
 
 Other organizations
