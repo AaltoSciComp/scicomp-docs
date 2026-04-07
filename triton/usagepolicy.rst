@@ -77,6 +77,16 @@ these conditions of use:
    <acknowledgingtriton>`.
 
 
+AI agents on Triton
+-------------------
+
+If you use AI coding agents (e.g. Claude Code, OpenAI Codex) on Triton or any other
+computer connected to our infrastructure, please read our policy on acceptable use,
+risks, and required cooperation:
+
+:doc:`AI Agents on HPC <AI_agents_on_HPC>`
+
+
 .. _privacypolicy:
 
 Triton data (privacy) policy
