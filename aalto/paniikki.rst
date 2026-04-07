@@ -1,9 +1,8 @@
-===================================
 Paniikki: Computer Lab For Students
 ===================================
 
 Paniikki is a cutting edge computer lab in the computer science
-department. It is located in `T-building C106
+department. It is located in `T-building C106.1
 <https://usefulaaltomap.fi/#!/select/paniikki>`__ (right under lecture
 hall T1). This documentation is a Paniikki cheatsheet.
 
@@ -17,22 +16,22 @@ hall T1). This documentation is a Paniikki cheatsheet.
 For more services directed at students, see :doc:`welcomestudents`.
 
 The name
-========
+--------
 Paniikki means "panic" in English which is a fascinating name as people in panic are in panic. I don't know which comes first, the space or the emotion. Anyway, people experience the both simultaneously.
 
 Access
-======
+------
 
 Physical
-########
+~~~~~~~~
 
-You can access Paniikki in the `T-building C106
+You can access Paniikki in the `T-building C106.1
 <https://usefulaaltomap.fi/#!/select/paniikki>`__.  It is right by the
 building's main entrance (you can see it through the windows by the
 building's main entrance).
 
 Remote
-######
+~~~~~~
 
 You can ssh via the normal `Aalto shell servers kosh and lyta
 <https://www.aalto.fi/en/services/linux-shell-servers-at-aalto>`__.
@@ -45,53 +44,14 @@ You can find the `hostnames of the Paniikki computers on aalto.fi
 
 
 Hardware
-========
+~~~~~~~~
 
-.. csv-table::
-   :header-rows: 1
-   :delim: |
-
-   CPU properties| Spec
-   Model                  | Intel(R) Xeon(R) CPU E5-1650 v4 @ 3.60GHz
-   Architecture            | x86_64
-   CPU(s)                  | 12
-   Thread(s) per core      | 2
-   max MHz                | 4000.0000
-   Virtualization         | VT-x
-   L1d cache              | 32K
-   L1i cache              | 32K
-   L2 cache               | 256K
-   L3 cache               | 15360K
-
-
-.. csv-table::
-   :header-rows: 1
-   :delim: |
-
-   Model | NVIDIA Quadro P5000
-   GPU properties| Spec
-   Core | GP104GL (Pascal-based)
-   Core clock | 1607 MHz
-   Memory clock | 1251 MHz
-   Memory size | 16384 MiB
-   Memory type | 256-bit GDDR5X
-   Memory bandwidth | 320
-   CUDA cores | 2560
-   CUDA compute capability | 6.1
-   OpenGL | 4.5
-   OpenCL | 1.2
-   Near GeForce Model| GeForce GTX 1080
-
-.. csv-table::
-   :header-rows: 1
-   :delim: |
-
-   Memory properties| Spec
-   RAM                        | 32GiB
+For now see the `list of classroom computers
+<https://www.aalto.fi/en/services/linux-computer-names-in-it-classrooms>`__
 
 
 Software
-========
+--------
 First thing first, you don't have sudo rights on Aalto classroom
 machines and you can't, because they are shared. We provide the most used SW and if you need
 more you could inquire via servicedesk@aalto.fi.  We try to have a good
@@ -103,13 +63,12 @@ base software that covers most people's needs.
 
    What?  |  How?
 
-   Python via Anaconda | ``module load anaconda``
+   Python via conda | ``module load scicomp-python-env``
    Python (system) | Default available
-   Tensorflow | in the Python environments, e.g. anaconda above
 
 
 Modules
-#######
+-------
 In short, ``module`` is a software environment management tool. With
 ``module`` you can manage multiple versions of software easily. Here
 are some sample commands:
@@ -119,10 +78,12 @@ are some sample commands:
 There are some modules set up specifically for different courses: if
 you just load the environment with "module load", you will have everything you need.
 
-Read the details in :doc:`Module environment page </triton/tut/modules>`.
+Read the details in :doc:`Module environment page
+</triton/tut/modules>` (note that this is about the Triton cluster for
+research, but the general principles apply here, too).
 
 Example 1
-^^^^^^^^^
+~~~~~~~~~
 Assume we are in Paniikki and wants to do our homework for CS-E4820 Machine Learning: Advanced probabilistic methods. In the course students use Tensorflow and Edward.
 
 .. code-block:: bash
@@ -152,22 +113,19 @@ Assume we are in Paniikki and wants to do our homework for CS-E4820 Machine Lear
 
 
 Example 2: General Python software
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Need Python and general software?  The anaconda modules have Python, a
 bunch of useful scientific and data packages, and machine learning
 libraries.
 
 .. code-block:: bash
 
-   # Latest Python 3
-   $ module load anaconda
-
-   # Old Python 2
-   $ module load anaconda2
+   # Python 3
+   $ module load scicomp-python-env
 
 
 Example 3: List all software
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 You can check all other modules as well
 
 .. code-block:: bash
@@ -191,20 +149,6 @@ You want to use Matlab?
 
 
 Questions?
-==========
+----------
 If you have any question please contact servicedesk@aalto.fi and
 clearly mention the Paniikki classroom in the message.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
