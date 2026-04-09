@@ -5,19 +5,54 @@ AI agents like `Claude Code <https://code.claude.com/docs/en/overview>`__ or
 `OpenAI Codex <https://openai.com/codex/>`__ (via Command Line Interface or
 `VSCode plugin <https://marketplace.visualstudio.com/search?term=ai%20code&target=VSCode&category=All%20categories&sortBy=Installs>`__)
 are getting popular and some of our Triton users have started using them for coding assistance
-or Slurm monitoring and job management. We want to encourage researchers to use these tools,
-and to learn together how to use them well.
+or Slurm monitoring and job management. We want to encourage researchers to use these tools
+responsibly, and to learn together how to use them well.
 
 AI agents are powerful and can introduce security risks or disruptions for you and for other
 users of the cluster. We want to develop good practices for working with AI agents on Triton,
 and more broadly on any computer you use.
 
-We ask for your cooperation and we would like you to:
+
+How do I run a coding agent? Am I running an agent on Triton?
+--------------------------------------------------------------
+
+It depends on your workflow. Here some of the most common setups:
+
+#. **VS Code (or other editor) with coding agent running only on your computer:** You run
+   VS Code on your computer with
+   `coding agent extensions <https://marketplace.visualstudio.com/search?term=ai%20code&target=VSCode&category=All%20categories&sortBy=Relevance>`__
+   (GitHub Copilot, Cline, Claude Code, etc) without any remote SSH to Triton. Queries are
+   sent to an external Large Language Model (LLM) provider and you should have an account
+   there (info on accounts at the bottom of this page). Nothing runs on Triton, so this is
+   fine from a cluster perspective, but you can still face many of the risks listed in the
+   table below.
+
+#. **CLI agent only on your computer:** This is similar to the scenario above, but this time
+   you use a command line interface tool like Claude Code or OpenAI Codex. You are running
+   the agent locally on your computer and your code and data are sent to the remote LLM
+   provider. Again, nothing runs on Triton.
+
+#. **VSCode with remote SSH to Triton:** You open VS Code on your computer, but this time you
+   connect to ``triton.aalto.fi`` via remote SSH. In this case VS Code server runs on Triton's
+   login node and any coding agent extension also runs there.
+
+#. **CLI agents over SSH on Triton:** You SSH into ``triton.aalto.fi`` and from the terminal
+   start a command line agent such as Claude Code or OpenAI Codex. The agent runs on the
+   login node and sends your code and other data it can access to the remote LLM provider.
+
+*If you are not sure about these workflows, just come and chat with us at the daily zoom
+garage.*
+
+
+I am running a coding agent, what should I do?
+-----------------------------------------------
+
+If you are running a coding agent, we ask for your cooperation and we would like you to:
 
 #. Tell us which agent you use and how you use it at the `daily zoom garage
    <https://scicomp.aalto.fi/help/garage/>`__ or in the `Zulip chat
    <https://scicomp.zulip.cs.aalto.fi/>`__.
-#. Be aware of what could go wrong, we summarised some of the risks in the table below.
+#. Be aware of what could go wrong. We summarised some of the risks in the table below.
 #. Save your work frequently. Triton admins will have to kill agent processes (or other
    processes) if they affect system stability.
 #. If you (or we) suspect that something went wrong with your agent, we are happy to check
@@ -28,8 +63,8 @@ We ask for your cooperation and we would like you to:
 We will get in touch with those of you running AI agents.
 
 
-Common problems and how to avoid them
---------------------------------------
+Common problems with coding agents and how to avoid them
+---------------------------------------------------------
 
 The table below summarises some of the things that could go wrong and how you could mitigate
 risks.
@@ -50,6 +85,18 @@ risks.
        installations *before* running the agent. For your own computers: never run agents with
        elevated privileges. In general: avoid using the most recent version of packages. Read
        more at the `OWASP website <https://owasp.org/www-community/Component_Analysis>`__.
+   * - Prompt injection
+     - Agents read files, documentation, and web pages as part of their work. A malicious
+       package README, a GitHub comment, or webpage may contain hidden instructions that
+       hijack the agent's behaviour — for example, causing it to execute unexpected commands.
+       This is called prompt injection and is difficult to detect.
+     - Be cautious about which URLs or repositories you let the agent browse. Some agents
+       also use "skills" — installable extensions written as markdown files — which can
+       contain malicious instructions. Review what the agent does after it reads external
+       content and check which skills your agent is using. Prefer agents that ask for
+       confirmation before taking actions following a web or file lookup. See also:
+       `an extensive review article on prompt injection attacks
+       <https://arxiv.org/html/2601.17548v1>`__.
    * - Code & data confidentiality
      - Code, file contents, and error messages are sent to an external LLM provider's servers.
        Sensitive data, unpublished results, personal data (GDPR), or secrets (passwords, API
@@ -66,11 +113,14 @@ risks.
    * - Triton cluster stability
      - Agents may submit batch jobs, run shell commands, spawn runaway loops, or consume
        excessive CPU/memory/I/O, affecting all users on shared infrastructure (e.g. login
-       node). Agents can also aggressively monitor running jobs via squeue/sacct queries,
-       which put heavy load on the Slurm controller and cause instabilities for all users.
-     - Monitor your agent sessions actively, ideally don't run more than one agent. Terminate
-       processes that behave unexpectedly. If agents become disruptive, we might need to set
-       up some automations to moderate their activities so that other users are not affected.
+       node). Patterns that are fine on a laptop can cause serious problems on a cluster:
+       agents aggressively monitoring running jobs via squeue/sacct queries, submitting tens
+       of thousands of small jobs instead of combining them, or aggressive I/O patterns can
+       all cause instabilities for other users. Agents don't know Triton's specific setup:
+       always verify Slurm job parameters against the Triton documentation before submitting.
+     - Monitor your agent sessions actively; ideally don't run more than one agent. Terminate
+       processes that behave unexpectedly. If agents become disruptive, we may introduce
+       automations to moderate their activities so that other users are not affected.
    * - Login node availability
      - If the login node becomes unstable, Triton admins will stop active agentic processes
        without prior notice before attempting a reboot. In-progress work may be lost.
@@ -106,7 +156,9 @@ risks.
      - There are no officially approved ways to use AI agents on Aalto systems.
      - With some agents (e.g. Codex) it is possible to use endpoints hosted in the EU Azure
        datacentre similarly to what is done with `ai.aalto.fi <http://ai.aalto.fi>`__. This
-       requires some extra set-up and is currently being tested.
+       requires some extra set-up and is currently being tested. In general these tools can
+       never be 100% secure, so it is best to work only with public data, or fake synthetic
+       data.
    * - Ethical and responsible AI
      - Using generative AI systems built on
        `data scraped without explicit consent from creators or copyright holders
@@ -115,6 +167,22 @@ risks.
        might not align with your ethical principles.
      - Consider using AI tools which were built responsibly. Unfortunately this is easier said
        than done: let's work on this together!
+
+
+Accounts to remote AI systems
+------------------------------
+
+The coding agent itself is just a script that packages your code, questions, plans, and data
+into a clever "prompt" that is sent to a remote AI system — very similar to chatting with
+ChatGPT or `duck.ai <http://duck.ai>`__, but this time you do not control what is sent to the
+remote large language model. While some chatbots are free and require no accounts (e.g.
+`duck.ai <http://duck.ai>`__), coding agents want you to register and in most cases you need
+to buy the service from the provider (e.g. OpenAI for Codex or Anthropic for Claude Code).
+GitHub Copilot allows some free credits for GitHub accounts that are
+`registered as a teacher <https://docs.github.com/en/education/about-github-education/github-education-for-teachers/apply-to-github-education-as-a-teacher>`__
+(in practice this is suitable for any Aalto researcher or academic staff, since they are all
+teaching assistants or supervisors/mentors of other students or researchers). There are some
+ways to use open-source large language models and we will document them later.
 
 
 Recommendations for specific agents
