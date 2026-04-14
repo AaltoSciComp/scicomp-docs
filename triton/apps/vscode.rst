@@ -1,8 +1,13 @@
-VSCode on Triton
-================
+VSCode and AI coding agents on Triton
+=====================================
 
 VSCode is a text editor and IDE (Integrated Development Environment).  It is
-very popular these days, partly due to it's good usability.
+very popular these days, partly due to it's good usability. AI coding agents
+are also getting very popular. They can be installed as a VSCode extension or
+run as Command-Line-Interface tools.
+
+**This page covers VSCode usage on Triton without AI coding agents. Read more 
+about `how to use AI coding agents on Triton <../usage/ai-agents>`.**
 
 
 
