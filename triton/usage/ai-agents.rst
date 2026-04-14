@@ -100,10 +100,13 @@ risks.
    * - Code & data confidentiality
      - Code, file contents, and error messages are sent to an external LLM provider's servers.
        Sensitive data, unpublished results, personal data (GDPR), or secrets (passwords, API
-       keys, tokens) may be exposed.
+       keys, tokens) may be exposed. You might also expose code to other users of the shared
+       HPC node (e.g. login node).
      - Never process sensitive or confidential data through an agent: instead, work with
        synthetic data. Keep secrets out of files/folders the agent can access. Running the
-       agent inside a container can limit its potential *blast radius*.
+       agent inside a container can limit its potential *blast radius*. CLI agents like Claude
+       code also typically run ``python -c <long python code here>`` which are visible to other
+       users of the cluster. 
    * - LLM provider data retention
      - The LLM provider may retain your queries according to their own privacy policy
        (`up to 5 years for Claude <https://code.claude.com/docs/en/data-usage>`__,
