@@ -77,8 +77,6 @@ these conditions of use:
    <acknowledgingtriton>`.
 
 
-:doc:`AI Agents on HPC <AI_agents_on_HPC>`
-
 
 .. _privacypolicy:
 
