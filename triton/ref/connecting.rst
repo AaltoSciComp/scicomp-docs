@@ -50,3 +50,10 @@
        </triton/apps/vscode>` for some important usage warnings.
 
      * Same as SSH options above above.
+
+   * * :doc:`AI agents </triton/usage/ai-agents>`
+     * They connect via SSH (see above), but read the :doc:`AI coding
+       agents page </triton/usage/ai-agents>` carefully for common
+       problems.
+
+     * Same as SSH options above above.

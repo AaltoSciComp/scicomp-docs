@@ -257,12 +257,13 @@ are plenty of tutorials.
 
 
 
-VSCode
-------
+VSCode and AI coding agents
+---------------------------
 
 .. seealso::
 
-   :doc:`../apps/vscode`
+   * :doc:`../apps/vscode`
+   * :doc:`../usage/ai-agents`
 
 .. role:: strikeout
    :class: strike
@@ -273,8 +274,10 @@ can also connect to Triton via SSH.  :doc:`Read more <../apps/vscode>`.
 Both of these can provide shell access and file transfer.
 
 Warning: VS Code has some common issues with running calculations
-directly in it, see the :doc:`VS Code
-<../apps/vscode>` page for more.
+directly in it, see the :doc:`VS Code <../apps/vscode>` page for more.
+Also, if you use an AI coding agent, read :doc:`some common ways it
+can go wrong and what to do about it <../usage/ai-agents>` before you
+start.
 
 
 
