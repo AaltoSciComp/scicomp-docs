@@ -43,6 +43,10 @@ It depends on your workflow. Here some of the most common setups:
 *If you are not sure about these workflows, just come and chat with us at the daily zoom
 garage.*
 
+**NEW: If you are conneting to triton.aalto.fi with your coding tool (VScode, Claude code, 
+Codex, PyCharm, ...) please use the new login server ``code.triton.aalto.fi``**
+
+
 
 I am running a coding agent, what should I do?
 -----------------------------------------------
