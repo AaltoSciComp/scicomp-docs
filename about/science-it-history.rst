@@ -12,6 +12,8 @@ M-grid (name from "materials", as in physics stuff) was funded as a
 Finnish Research Infrastructure (FIRI) project by the Academic of
 Finland.  It provided funding for local university department HPC
 clusters and a collaboration to develop the configuration to run them.
+The Helsinki University of Technology (predecessor to Aalto
+University) cluster was named kvartsi ("qwartz").
 They were run together as a grid, where jobs submitted to one cluster
 can also run on others.  This was the start of one of the parts of the
 Triton cluster.  `Check out these old docs
@@ -37,9 +39,10 @@ professionalization of all of the management.
 
 During this time, Science-IT was still funded by FIRI, in the projects
 "Finnish Grid Infrastructure" (FGI) and later the "Finnish Grid and
-Cloud Infrastructure" (FGCI, starting in 2014).  It provided continued
-growth, regular new hardware, and most importantly a collaboration
-with other universities and CSC.
+Cloud Infrastructure" (FGCI, starting in 2014, `ref
+<https://www.aka.fi/globalassets/1-tutkimusrahoitus/4-ohjelmat-ja-muut-rahoitusmuodot/4-tutkimusinfrastruktuurit/tutkimusinfrastruktuurien_strategia_ja_tiekartta_2014_en.pdf>`__).
+It provided continued growth, regular new hardware, and most
+importantly a collaboration with other universities and CSC.
 
 Training was a part of Science-IT/FGI/FGCI from the beginning.
 Courses began in earnest around 2015ish.  We began yearly "HPC
@@ -73,3 +76,14 @@ more users from all around Aalto.  Our mission is no longer to only
 support the Triton cluster, but to support computing in general:
 Triton locally, CSC computers, or even smaller scale data and software
 support.
+
+Around this time, the FGCI collaboration turned into the "Finnish
+Computing Competence Infrastructure" to emphasize that its role is not
+just hardware, but promoting the broader competence in computing at
+the university level.
+
+
+See also
+--------
+
+* `University of Helsinki history <https://www.helsinki.fi/en/infrastructures/fcci/fcci-predecessors>`__
