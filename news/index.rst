@@ -2,12 +2,26 @@
 News
 ====
 
-*Mar 17–26, 2026* (upcoming) `CodeRefinery workshop <https://coderefinery.github.io/2026-03-17-workshop/>`__ — version control, reproducibility, and software best practices. Open to all.
+*Upcoming courses:* `Data Analysis with R (May 12–13) <https://csc.fi/en/training-calendar/data-analysis-with-r-6/>`__ (1 ECTS), `Reproducibility and Open Science in ML (May 20) <https://www.aalto.fi/en/events/reproducibility-and-open-science-practices-in-machine-learning-20may2026>`__ (1 ECTS), `Intro to HPC (Jun 3–5) <https://www.aalto.fi/en/events/intro-to-scientific-computing-and-hpc-3-5-june-2026>`__ (1 ECTS), `LUMI AI Workshop (Jun 11–12) <https://lumi-supercomputer.eu/events/moving-your-ai-training-jobs-to-lumi-a-hands-on-workshop-june2026/>`__, `CSC Summer School (Jun 23–Jul 2) <https://csc.fi/en/training-calendar/csc-summer-school-in-high-performance-computing-2026/>`__. More: `CSC training calendar <https://csc.fi/en/training/>`__ | `LUMI AI Factory events <https://lumi-supercomputer.eu/events/>`__.
 
-Join our `daily zoom garage </help/garage/>`__ for any scientific computing related issue (not just Triton!) or to just chat and feel part of the community.  `Follow us on Mastodon <https://fosstodon.org/@SciCompAalto>`__.
+New page: `AI Agents on Triton </triton/usage/ai-agents/>`__ — guidance on using AI coding agents (Claude Code, GitHub Copilot, etc.) responsibly on HPC. Join our `daily zoom garage </help/garage/>`__ for any scientific computing question.  `Follow us on Mastodon <https://fosstodon.org/@SciCompAalto>`__.
 
 2026
 ~~~~
+
+*Jun 23–Jul 2, 2026* (upcoming) `CSC Summer School in High-Performance Computing 2026 <https://csc.fi/en/training-calendar/csc-summer-school-in-high-performance-computing-2026/>`__.
+
+*Jun 11–12, 2026* (upcoming) `Moving your AI training jobs to LUMI <https://lumi-supercomputer.eu/events/moving-your-ai-training-jobs-to-lumi-a-hands-on-workshop-june2026/>`__ — hands-on workshop by LUMI AI Factory.
+
+*Jun 3–5, 2026* (upcoming) `Intro to Scientific Computing and HPC <https://www.aalto.fi/en/events/intro-to-scientific-computing-and-hpc-3-5-june-2026>`__ — 1 ECTS available.
+
+*May 20, 2026* (upcoming) `Reproducibility and Open Science Practices in Machine Learning <https://www.aalto.fi/en/events/reproducibility-and-open-science-practices-in-machine-learning-20may2026>`__ — 1 ECTS available.
+
+*May 12–13, 2026* (upcoming) `Data Analysis with R <https://csc.fi/en/training-calendar/data-analysis-with-r-6/>`__ — 1 ECTS available.
+
+*Apr 2026* New page: `AI Agents on Triton </triton/usage/ai-agents/>`__ — responsible use of AI coding agents (Claude Code, GitHub Copilot, Cline, etc.) on HPC clusters, including a security and risk overview.
+
+*Apr 2026* `Practical Deep Learning <https://csc.fi/en/training-calendar/practical-deep-learning-7/>`__ — PyTorch deep learning course on LUMI, by CSC/LUMI AI Factory.
 
 *Mar 17–26, 2026* (upcoming) `CodeRefinery workshop <https://coderefinery.github.io/2026-03-17-workshop/>`__ — version control, reproducibility, and software best practices. Open to all researchers and students.
 
