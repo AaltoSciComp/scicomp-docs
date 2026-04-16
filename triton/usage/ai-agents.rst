@@ -44,7 +44,7 @@ It depends on your workflow. Here some of the most common setups:
 garage.*
 
 **NEW: If you are conneting to triton.aalto.fi with your coding tool (VScode, Claude code, 
-Codex, PyCharm, ...) please use the new login server ``code.triton.aalto.fi``**
+Codex, PyCharm, ...) please use the new login server** ``code.triton.aalto.fi``.
 
 
 
