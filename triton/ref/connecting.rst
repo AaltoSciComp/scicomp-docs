@@ -49,11 +49,13 @@
        file transfer.  See the :doc:`VS Code page
        </triton/apps/vscode>` for some important usage warnings.
 
-     * Same as SSH options above above.
+     * Same as SSH options above, but connect to
+       ``code.triton.aalto.fi`` with SSH.
 
    * * :doc:`AI agents </triton/usage/ai-agents>`
      * They connect via SSH (see above), but read the :doc:`AI coding
        agents page </triton/usage/ai-agents>` carefully for common
        problems.
 
-     * Same as SSH options above above.
+     * Same as SSH options above, but connect to
+       ``code.triton.aalto.fi`` with SSH.

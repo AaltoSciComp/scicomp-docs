@@ -268,16 +268,19 @@ VSCode and AI coding agents
 .. role:: strikeout
    :class: strike
 
-:strikeout:`You can use a web-based VSCode through Open OnDemand.` (update: not
-currently available in the new Triton since 2024 May)  Desktop VSCode
-can also connect to Triton via SSH.  :doc:`Read more <../apps/vscode>`.
+:strikeout:`You can use a web-based VSCode through Open OnDemand.`
+(update: not currently available in the new Triton since 2024 May)
+Desktop VSCode can also connect to Triton via SSH, but use
+``code.triton.aalto.fi`` as your SSH server (this is a separate login
+node managed for IDEs and agents).  :doc:`Read more <../apps/vscode>`.
 Both of these can provide shell access and file transfer.
 
 Warning: VS Code has some common issues with running calculations
 directly in it, see the :doc:`VS Code <../apps/vscode>` page for more.
 Also, if you use an AI coding agent, read :doc:`some common ways it
 can go wrong and what to do about it <../usage/ai-agents>` before you
-start.
+start.  Remember to connect via ``code.triton.aalto.fi`` or your agent
+processes will eventually be killed.
 
 
 
