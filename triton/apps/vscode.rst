@@ -7,7 +7,7 @@ are also getting very popular. They can be installed as a VSCode extension or
 run as Command-Line-Interface tools.
 
 **This page covers VSCode usage on Triton without AI coding agents. Read more 
-about `how to use AI coding agents on Triton <../usage/ai-agents>`.**
+about :doc:`how to use AI coding agents on Triton <../usage/ai-agents>`.**
 
 **NEW:  you are conneting to triton.aalto.fi with your coding tool (VScode, Claude code,
 Codex, PyCharm, ...) please use the new login server ``code.triton.aalto.fi`` (even if
