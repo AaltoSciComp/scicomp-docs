@@ -289,6 +289,12 @@ present or it loads the needed modules. Thus you
 **do not need to explicitly load CUDA** from the module system when
 loading these.
 
+There is also a Pytorch module ``scicomp-pytorch-env/2026.1`` that 
+contains the latest version of Pytorch and the corresponding CUDA toolkit. 
+This module is optimized for newer GPUs (B300s) but does not work on 
+older GPUs (V100s) due to differences in CUDA compute capability 
+requirements and supported GPU architectures.
+
 .. _cuda-arch-flags:
 
 Setting CUDA architecture flags when compiling GPU codes

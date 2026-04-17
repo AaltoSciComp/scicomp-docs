@@ -1,5 +1,5 @@
 Simple PyTorch model
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 Let's run the MNIST example from
 `PyTorch's tutorials <https://github.com/pytorch/examples/blob/master/mnist/main.py>`_:
@@ -23,5 +23,13 @@ or with ``sbatch`` by submitting
 
 .. literalinclude:: /triton/examples/pytorch/pytorch_mnist.sh
    :language: slurm
+
+The new module ``scicomp-pytorch-env/2026.1`` can also be used to run the example, but you will need to specify the min CUDA version in your batch script.
+
+:download:`pytorch_mnist_min_cuda.sh</triton/examples/pytorch/pytorch_mnist_min_cuda.sh>`:
+
+.. literalinclude:: /triton/examples/pytorch/pytorch_mnist_min_cuda.sh
+   :language: slurm
+
 
 The Python-script will download the MNIST dataset to ``data`` folder.

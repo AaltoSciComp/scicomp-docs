@@ -1,17 +1,6 @@
 PyTorch
 =======
 
-.. admonition:: Warning: page not updated for current Triton
-  :class: warning, triton-v2-apps
-
-  This page hasn't been updated since Triton was completely upgraded
-  in May 2024.  The software might not be installed and the old
-  information below might not work anymore (or  might need adapting).
-  If you need this software, :ref:`open an issue <issuetracker>` and
-  tell us so we can reinstall/update it.
-
-:pagelastupdated: 2022-08-08
-
 PyTorch is a commonly used Python package for deep learning.
 
 Basic usage
@@ -24,6 +13,10 @@ the page about :doc:`nvidiacontainers`.
 
 The basic way to use PyTorch is via the Python in the ``scicomp-python-env`` module.
 Don't load any additional CUDA modules, ``scicomp-python-env`` includes everything.
+
+On newer GPUs like B300, you will need to load the new Pytorch module ``scicomp-pytorch-env/2026.1`` 
+to get the latest version of PyTorch that supports these GPUs. However, this module does not work on older GPUs like the V100s
+due to differences in CUDA compute capability requirements and supported GPU architectures.
 
 
 Building your own environment with PyTorch

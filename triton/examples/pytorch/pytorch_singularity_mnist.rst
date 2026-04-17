@@ -1,5 +1,5 @@
 Running simple PyTorch model with NVIDIA's containers
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------------------------
 
 Let's run the MNIST example from
 `PyTorch's tutorials <https://github.com/pytorch/examples/blob/master/mnist/main.py>`_:
