@@ -9,6 +9,9 @@ SciComp garage
    * Try to arrive between 13:00 - 13:15 if possible.  Please don't
      arrive early since we have other meetings then.
 
+   * Want to reserve a session in advance?  Contact us by :doc:`chat
+     or email </rse/contact>` and we can confirm when a good supporter
+     will be there.
 
 .. admonition:: Planned disruptions
    :class: important
