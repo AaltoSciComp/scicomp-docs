@@ -261,7 +261,7 @@ Accounts and Access to triton
   (check with ``quota``) is exceeded, then this can't be written and
   graphical programs can't open.  If your quota is exceeded, clean up
   some files, close connections, and log in again.  You can find where
-  most of your space goes with ``du -h $HOME | sort -hr | less``.
+  most of your space goes with ``du -h $HOME/ | sort -hr | less``.
 
   This is often the case if you get ``X11 connection rejected because of
   wrong authentication``.    
