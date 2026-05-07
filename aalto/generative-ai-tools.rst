@@ -1,7 +1,7 @@
 Generative AI services roadmap
 ==============================
 
-If you need to use generative AI tools for, e.g. question and answering, speech to text, or text embedding, there are many tools and platforms available.
+If you need to use generative AI tools for, e.g. question and answering, speech to text, coding assistance, or text embedding, there are many tools and platforms available.
 Roughly speaking, you could
 
 * Use it via some web service.
@@ -10,7 +10,7 @@ Roughly speaking, you could
   * Public services with contract to Aalto (e.g. `Aalto GPT
     <https://www.aalto.fi/en/services/aalto-gpt>`__)
 
-* Use remote APIs to run models with your own code.
+* Use remote APIs to generate content with your own code.
 
   * An OpenAI API
   * :doc:`APIs <llm-web-apis>` hosted locally at Aalto *good for data security*
@@ -18,11 +18,15 @@ Roughly speaking, you could
 * Running locally-installable models on your own
   computer/Triton. Examples can be found `here <https://github.com/AaltoSciComp/llm-examples>`__.
 
+* Use AI-integrated applications and plugins. Data security depends on the API type and your account type. 
+  Instructions for using AI agents on Triton are available at :doc:`AI agents on Triton </triton/usage/ai-agents>`.
+
 The first category is good for easy interactive or occasional use
 (they can only be run manually), the second is good for scripted use
 that isn't too intense (the network traffic slows things down and you
-have to share resources), and the last category is good for
-large-scale analysis.
+have to share resources), the third category is good for large-scale
+analysis, and the fourth category is good for using AI directly in an
+existing software workflow.
 
 
 
@@ -146,6 +150,28 @@ analysis (especially when combined with HPC clusters).
 
 * Models can of course be run on your own computer.  It is good to
   have GPU hardware.
+
+
+
+.. _ai-integrated-apps:
+
+AI-integrated applications and agentic workflows
+-------------------------------------------------
+
+This category means AI features that are built into existing software
+tools (for example IDEs such as Cursor or VS Code, command-line tools
+like Claude Code or OpenAI Codex, and creative tools such as Photoshop).
+In practice, these are usually backed by remote APIs, but you use them
+through the application's own interface.  Data security and terms of
+use depend on the vendor, your account type, and any institutional
+agreements.
+
+This can be very productive because AI is directly in your workflow.
+However, if these tools are used for automated or agentic workflows on
+shared HPC systems, they can generate heavy or unexpected load.
+
+If you use agentic workflows on Triton, read and follow the guidance at
+:doc:`AI agents on Triton </triton/usage/ai-agents>`.
 
 
 
