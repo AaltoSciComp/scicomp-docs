@@ -45,6 +45,9 @@ Examples:
   (Locally run but uses the same models as ChatGPT, paid by Aalto,
   good data security agreements).  Free for basic use within Aalto.
   It is possible for us to add features if requested.
+* `Chat with aalto.fi <https://www.aalto.fi/en/for-personnel#4-ask-anything-about-aalto-fi-content---powered-by-aalto-ai-assistant>`__ 
+  This is powered by Aalto AI Assistant and only answers based on content on the main `www.aalto.fi <https://www.aalto.fi>`__ site (around 65,000 pages), excluding attachment files. Also
+  good data security.
 * Public Chat GPT (not good for data security: there is no processing
   agreement with Aalto, things you submit may be used for other
   purposes)
@@ -186,3 +189,7 @@ For computationally-oriented questions, Aalto SciComp offers a
 :ref:`daily help session "garage" <garage>`, where you can ask any
 question, including getting advice on recommended solutions *before*
 you begin a project.
+
+More reading
+------------
+`Key research area: Digitalisation and AI <https://www.aalto.fi/en/research-art/key-research-area-digitalisation-and-ai>`__
