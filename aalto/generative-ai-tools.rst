@@ -18,7 +18,8 @@ Roughly speaking, you could
 * Running locally-installable models on your own
   computer/Triton. Examples can be found `here <https://github.com/AaltoSciComp/llm-examples>`__.
 
-* Use AI-integrated applications and plugins. Data security depends on the API type and your account type.
+* Use AI-integrated applications and plugins. Data security depends on the API type and your account type. 
+  Instructions for using AI agents on Triton are available at :doc:`AI agents on Triton </triton/usage/ai-agents>`.
 
 The first category is good for easy interactive or occasional use
 (they can only be run manually), the second is good for scripted use
@@ -170,7 +171,7 @@ However, if these tools are used for automated or agentic workflows on
 shared HPC systems, they can generate heavy or unexpected load.
 
 If you use agentic workflows on Triton, read and follow the guidance at
-`AI agents on Triton <https://scicomp.aalto.fi/triton/usage/ai-agents/>`__.
+:doc:`AI agents on Triton </triton/usage/ai-agents>`.
 
 
 
