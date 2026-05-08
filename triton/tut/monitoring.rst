@@ -35,6 +35,11 @@ different stages:
 
 There are various tools available for each of these steps.
 
+Checking your jobs and making them efficient is important for several
+reasons: the more you run now, the lower your priority in the future.
+Also, the more efficient your jobs, the less the overall environmental
+impact of computing.
+
 .. seealso::
 
    Please ensure you have read :doc:`interactive` and :doc:`serial`
