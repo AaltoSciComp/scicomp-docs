@@ -19,7 +19,7 @@ chatting (use Aalto GPT).
 Who can use the endpoint and with what data?
 --------------------------------------------
 
-To use the local endpoint you need to have an active Aalto account. The advantage of a fully local solution is that the endpoint can be use with data classified as confidential. Secret data should not be processed with these tools.
+To use the local endpoint you need to have an active Aalto account and be part of Aalto staff. Students can get access via their course organiser (the organiser creates an API key for the students to use). The advantage of a fully local solution is that the endpoint can be use with data classified as confidential. Secret data should not be processed with these tools.
 
 
 Access and API keys
@@ -55,16 +55,20 @@ always-up-to-date list):
 
 All models support the OpenAI-compatible chat/completions API, so most
 existing OpenAI client libraries work without changes. If you want to request new models, please email ``rse@aalto.fi``. Please note that only models smaller than 45GB can be used in the current hardware we have.
-Model loading can take quite some time since the data is not as closely connected to the machines of the local kubernetes cluster. If you are unsure which one to pick as a start, pick "RedHatAI/gemma-4-31B-it-FP8-Dynamic".
+
 Only two models:
+
 - ``Qwen/Qwen3-30B-A3B-Instruct-2507-FP8``
 - ``RedHatAI/gemma-4-31B-it-FP8-Dynamic``
+
 are permanently on, i.e. there is an instance of those running constantly. 
+
 The other models are on demand, i.e. they will be spun up once a request comes in and 
 will be turned off again if there are no requests for some time. 
 Given the limited resources (at time of writing the whole supporting infrastructure has 8 L40s cards)
 not all models can run at the same time and it is entirely possible that a model
 will not spin up after a request because resources are in use.
+If you are unsure which one to pick as a start, pick "RedHatAI/gemma-4-31B-it-FP8-Dynamic".
 
 Python quickstart
 -----------------
