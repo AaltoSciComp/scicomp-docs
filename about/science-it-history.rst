@@ -86,4 +86,4 @@ the university level.
 See also
 --------
 
-* `University of Helsinki history <https://www.helsinki.fi/en/infrastructures/fcci/fcci-predecessors>`__
+* `FCCI history at University of Helsinki <https://www.helsinki.fi/en/infrastructures/fcci/fcci-predecessors>`__
