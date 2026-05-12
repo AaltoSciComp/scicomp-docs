@@ -59,9 +59,6 @@ always-up-to-date list):
    * - ``RedHatAI/gemma-4-31B-it-FP8-Dynamic``
      - `Model card <https://huggingface.co/RedHatAI/gemma-4-31B-it-FP8-Dynamic>`__
      - ~17
-   * - ``google/gemma-4-31B-it``
-     - `Model card <https://huggingface.co/google/gemma-4-31B-it>`__
-     - ~70
    * - ``google/gemma-4-E4B-it``
      - `Model card <https://huggingface.co/google/gemma-4-E4B-it>`__
      - ~16
