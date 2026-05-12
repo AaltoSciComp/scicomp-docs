@@ -155,6 +155,6 @@ Technical implementation
 
 Models run on local hardware on the Aalto University premises.
 Kubernetes is used to manage computing power, so in principle there is
-plenty of opportunity for scaling, but this is not turned on until a
+plenty of opportunity for increasing resources if there is high demand, but this is not turned on until a
 need is established.  CPU resources are significant, but there are
 limited GPU resources (but that can change, depending on demand).
