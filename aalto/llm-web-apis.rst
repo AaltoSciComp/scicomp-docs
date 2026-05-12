@@ -16,6 +16,12 @@ chatting (use Aalto GPT).
    between requests.
 
 
+Who can use the endpoint and with what data?
+--------------------------------------------
+
+To use the local endpoint you need to have an active Aalto account. The advantage of a fully local solution is that the endpoint can be use with data classified as confidential. Secret data should not be processed with these tools.
+
+
 Access and API keys
 -------------------
 
