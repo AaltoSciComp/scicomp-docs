@@ -8,7 +8,9 @@ It serves several open-source
 models on Aalto hardware — your data never leaves Aalto premises.
 This can be used for lightweight programmatic use, but shouldn't
 replace batch usage (use :doc:`/triton/apps/llms`) or interactive
-chatting (use Aalto AI assitant).
+chatting (use Aalto AI assitant). The API provided is basically a responses and chat/completions API 
+and mostly OpenAI compatible. The service is based on `vLLM <https://vllm.ai/>`__ and the 
+api specification can be found `here. <https://llm-gateway.k8s.aalto.fi/docs>`
 
 .. note::
 
