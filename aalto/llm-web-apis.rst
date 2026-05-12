@@ -1,7 +1,7 @@
 Local LLM web APIs
 ==================
 
-:doc:`Aalto RSE </rse/index>` runs an LLM gateway service at
+As a pilot service, Aalto IT Services and :doc:`Aalto RSE </rse/index>` run an LLM gateway service at
 `https://llm-gateway.k8s.aalto.fi/ <https://llm-gateway.k8s.aalto.fi/>`__
 that is available to all Aalto employees for research and teaching purposes.  
 It serves several open-source
