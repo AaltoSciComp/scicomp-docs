@@ -54,7 +54,7 @@ always-up-to-date list):
 - ``openai/gpt-oss-120b``
 
 All models support the OpenAI-compatible chat/completions API, so most
-existing OpenAI client libraries work without changes.
+existing OpenAI client libraries work without changes. If you want to request new models, please email ``rse@aalto.fi``. Please note that only models smaller than 45GB can be used in the current hardware we have.
 
 
 Python quickstart
