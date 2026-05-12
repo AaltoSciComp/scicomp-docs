@@ -20,7 +20,7 @@ chatting (use Aalto GPT).
 Who can use the endpoint and with what data?
 --------------------------------------------
 
-To use the local endpoint you need to have an active Aalto account and be part of Aalto staff. Students can get access via their course organiser (the organiser creates an API key for the students to use). The advantage of a fully local solution is that the endpoint can be use with data classified as confidential. Secret data should not be processed with these tools.
+To use the local endpoint you need to have an active Aalto account and be part of Aalto staff. Students can get access via their course organiser (the organiser creates an API key for the students to use); teachers are responsible for revoking student keys once the course work is complete. The advantage of a fully local solution is that the endpoint can be use with data classified as confidential. Secret data should not be processed with these tools.
 
 
 Access and API keys
@@ -73,7 +73,7 @@ always-up-to-date list):
      - ~70
 
 All models support the OpenAI-compatible chat/completions API, so most
-existing OpenAI client libraries work without changes. If you want to request new models, please email ``rse@aalto.fi``. Please note that only models smaller than ~70GB can be used in the current hardware we have. Please note that the system does NOT provide ``responses`` background functionality (i.e. submit now, come back later). It does otherwise support ``responses``.
+existing OpenAI client libraries work without changes. If you want to request new models, please email ``rse@aalto.fi``; models must be available on HuggingFace and downloadable from within Europe. Please note that only models smaller than ~70GB can be used in the current hardware we have. Models of 40 GB or below are preferred as they fit on a single GPU; multi-GPU deployments are more fragile and may fail to start. Please note that the system does NOT provide ``responses`` background functionality (i.e. submit now, come back later). It does otherwise support ``responses``.
 
 Only two models:
 
@@ -82,8 +82,10 @@ Only two models:
 
 are permanently on, i.e. there is an instance of those running constantly. 
 
-The other models are on demand, i.e. they will be spun up once a request comes in and 
-will be turned off again if there are no requests for some time. 
+The other models are on demand, i.e. they will be spun up once a request comes in
+(this can take up to several minutes depending on model size) and
+will be turned off again if there are no requests for some time.
+On-demand models are labelled as such in the model overview on the gateway frontend.
 Given the limited resources (at time of writing the whole supporting infrastructure has 8 L40s cards)
 not all models can run at the same time and it is entirely possible that a model
 will not spin up after a request because resources are in use.
