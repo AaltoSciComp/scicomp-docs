@@ -46,16 +46,37 @@ The following models are currently available (check
 `the API docs <https://llm-gateway.k8s.aalto.fi/docs>`__ for an
 always-up-to-date list):
 
-- ``Qwen/Qwen3-30B-A3B-Instruct-2507-FP8``
-- ``RedHatAI/gemma-4-31B-it-FP8-Dynamic``
-- ``google/gemma-4-31B-it``
-- ``google/gemma-4-E4B-it``
-- ``Qwen/Qwen3-VL-30B-A3B-Instruct-FP8``
-- ``Qwen/Qwen3-VL-30B-A3B-Thinking-FP8``
-- ``openai/gpt-oss-120b``
+.. list-table::
+   :header-rows: 1
+   :widths: 50 30 20
+
+   * - Model
+     - HuggingFace
+     - Size (GB, estimated)
+   * - ``Qwen/Qwen3-30B-A3B-Instruct-2507-FP8``
+     - `Model card <https://huggingface.co/Qwen/Qwen3-30B-A3B-Instruct-2507-FP8>`__
+     - ~16
+   * - ``RedHatAI/gemma-4-31B-it-FP8-Dynamic``
+     - `Model card <https://huggingface.co/RedHatAI/gemma-4-31B-it-FP8-Dynamic>`__
+     - ~17
+   * - ``google/gemma-4-31B-it``
+     - `Model card <https://huggingface.co/google/gemma-4-31B-it>`__
+     - ~70
+   * - ``google/gemma-4-E4B-it``
+     - `Model card <https://huggingface.co/google/gemma-4-E4B-it>`__
+     - ~16
+   * - ``Qwen/Qwen3-VL-30B-A3B-Instruct-FP8``
+     - `Model card <https://huggingface.co/Qwen/Qwen3-VL-30B-A3B-Instruct-FP8>`__
+     - ~62
+   * - ``Qwen/Qwen3-VL-30B-A3B-Thinking-FP8``
+     - `Model card <https://huggingface.co/Qwen/Qwen3-VL-30B-A3B-Thinking-FP8>`__
+     - ~16
+   * - ``openai/gpt-oss-120b``
+     - `Model card <https://huggingface.co/openai/gpt-oss-120b>`__
+     - ~70
 
 All models support the OpenAI-compatible chat/completions API, so most
-existing OpenAI client libraries work without changes. If you want to request new models, please email ``rse@aalto.fi``. Please note that only models smaller than 45GB can be used in the current hardware we have.
+existing OpenAI client libraries work without changes. If you want to request new models, please email ``rse@aalto.fi``. Please note that only models smaller than ~70GB can be used in the current hardware we have.
 
 Only two models:
 
