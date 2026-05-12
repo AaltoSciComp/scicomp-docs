@@ -38,8 +38,8 @@ management:
 For questions or feedback, join the ``#llms`` stream on :ref:`chat`.
 
 
-Available models
-----------------
+Available models and limitations
+--------------------------------
 
 The following models are currently available (check
 `the API docs <https://llm-gateway.k8s.aalto.fi/docs>`__ for an
@@ -55,6 +55,7 @@ always-up-to-date list):
 
 All models support the OpenAI-compatible chat/completions API, so most
 existing OpenAI client libraries work without changes. If you want to request new models, please email ``rse@aalto.fi``. Please note that only models smaller than 45GB can be used in the current hardware we have.
+Model loading can take quite some time since the data is not as closely connected to the machines of the local kubernetes cluster. If you are unsure which one to pick as a start, pick "RedHatAI/gemma-4-31B-it-FP8-Dynamic".
 
 
 Python quickstart
