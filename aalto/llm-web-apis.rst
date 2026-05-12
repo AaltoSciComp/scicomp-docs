@@ -8,7 +8,7 @@ It serves several open-source
 models on Aalto hardware — your data never leaves Aalto premises.
 This can be used for lightweight programmatic use, but shouldn't
 replace batch usage (use :doc:`/triton/apps/llms`) or interactive
-chatting (use Aalto GPT).
+chatting (use Aalto AI assitant).
 
 .. note::
 
