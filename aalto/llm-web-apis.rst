@@ -73,7 +73,7 @@ always-up-to-date list):
      - ~70
 
 All models support the OpenAI-compatible chat/completions API, so most
-existing OpenAI client libraries work without changes. If you want to request new models, please email ``rse@aalto.fi``. Please note that only models smaller than ~70GB can be used in the current hardware we have.
+existing OpenAI client libraries work without changes. If you want to request new models, please email ``rse@aalto.fi``. Please note that only models smaller than ~70GB can be used in the current hardware we have. Please note that the system does NOT provide ``responses`` background functionality (i.e. submit now, come back later). It does otherwise support ``responses``.
 
 Only two models:
 
