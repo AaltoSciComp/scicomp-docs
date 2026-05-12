@@ -10,7 +10,7 @@ This can be used for lightweight programmatic use, but shouldn't
 replace batch usage (use :doc:`/triton/apps/llms`) or interactive
 chatting (use Aalto AI assitant). The API provided is basically a responses and chat/completions API 
 and mostly OpenAI compatible. The service is based on `vLLM <https://vllm.ai/>`__ and the 
-api specification can be found `here. <https://llm-gateway.k8s.aalto.fi/docs>`
+api specification can be found `here <https://llm-gateway.k8s.aalto.fi/docs>`__.
 
 .. note::
 
@@ -75,7 +75,7 @@ always-up-to-date list):
      - ~70
 
 All models support the OpenAI-compatible chat/completions API, so most
-existing OpenAI client libraries work without changes. If you want to request new models or discuss improvements, please use the `issue tracker <version.aalto.fi/gitlab/llmdeployment/gateway-issue-tracker>`__ or just email ``rse@aalto.fi``. Requested models must be available on HuggingFace and downloadable from within Europe. Please note that only models smaller than ~70GB can be used in the current hardware we have. Models of 40 GB or below are preferred as they fit on a single GPU; multi-GPU deployments are more fragile and may fail to start. Please note that the system does NOT provide ``responses`` background functionality (i.e. submit now, come back later). It does otherwise support ``responses``.
+existing OpenAI client libraries work without changes. If you want to request new models or discuss improvements, please use the `issue tracker <https://version.aalto.fi/gitlab/llmdeployment/gateway-issue-tracker>`__ or just email ``rse@aalto.fi``. Requested models must be available on HuggingFace and downloadable from within Europe. Please note that only models smaller than ~70GB can be used in the current hardware we have. Models of 40 GB or below are preferred as they fit on a single GPU; multi-GPU deployments are more fragile and may fail to start. Please note that the system does NOT provide ``responses`` background functionality (i.e. submit now, come back later). It does otherwise support ``responses``.
 
 Only two models:
 
