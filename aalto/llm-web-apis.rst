@@ -3,7 +3,8 @@ Local LLM web APIs
 
 :doc:`Aalto RSE </rse/index>` runs an LLM gateway service at
 `https://llm-gateway.k8s.aalto.fi/ <https://llm-gateway.k8s.aalto.fi/>`__
-that is available to all Aalto users.  It serves several open-source
+that is available to all Aalto employees for research and teaching purposes.  
+It serves several open-source
 models on Aalto hardware — your data never leaves Aalto premises.
 This can be used for lightweight programmatic use, but shouldn't
 replace batch usage (use :doc:`/triton/apps/llms`) or interactive
