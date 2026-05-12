@@ -238,3 +238,17 @@ FAQ
      * If you have already submitted the assignment, submit again.
        The old assignment is still submitted, but our fetching should
        get the new one.
+
+- **I noticed an error in a hidden test and want to change it before
+  grading.** It is possible to change the contents of existing hidden
+  test cells even after an assignment has been released and submissions
+  have been collected. Because individual test cell IDs are referenced
+  in the student version of the notebook, you **cannot** add or remove
+  test cells, only edit the contents of existing ones.
+
+  After editing cells, ``generate`` a new version of the notebook either
+  using the Formgrader interface or the ``nbgrader`` CLI tool. There is
+  no need to ``release`` this version to students. After checking that
+  the grading works by using a known (usually instructor-submitted) notebook,
+  :ref:`contact <jupyterhub-instructors-contact>` CS-IT and request a re-run
+  of autograding.

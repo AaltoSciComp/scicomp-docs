@@ -50,6 +50,7 @@ important notes you do not find other places.
    faq-hints
 
 
+.. _jupyterhub-instructors-contact:
 
 Contact
 -------

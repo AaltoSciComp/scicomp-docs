@@ -1,8 +1,7 @@
-Project portfolio
-=================
+Examples of past projects
+=========================
 
-This page lists examples of projects which we have done.  As of early
-2024, our internal project numbers are in the 200s.
+This page lists some examples of projects which we have done.
 
 
 Summary table
@@ -49,7 +48,8 @@ Cor:ona (Comparison of rhythms: old vs. new activity) was research
 study studying personal habits during the transition between remote
 work and post-remote-work.  For this study to be successful, a platform
 to integrate survey and smart device data had to be created within a
-one-month time frame.
+one-month time frame.  The lessons of this platform have been reused
+in other future projects, saving a lot of time.
 
 Aalto RSE worked with the researcher to do a complete and quick
 ethical review and build the platform.  Unlike a hired software

@@ -78,15 +78,57 @@ move to another place.
 
 
 
-Beyond
-------
+Internal roles
+--------------
 
-At this point, you are not exactly developing RSE skills but
-leadership skills.  This is surely adjusted to each person
-individually, but two possible layers include:
+For reference, these are various roles which people within the team
+take on.  Every person is some mix of these and no one should be
+typecast, but writing them down allows us to talk about them.
 
-* RSE leader responsible for a department, school, or research area.
-* RSE group leader responsible for university-wide leadership.
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+
+   * *
+     * Responsibilities
+   * * Project work
+     * The default RSE job: for a project, learn and/or apply the
+       necessary scientific and technical background and work on it
+       over time in close collaboration with the customers.  This
+       includes project planning when projects are straightforward.
+       Primary challenges include ongoing communication with the
+       customers.
+   * * Garage support
+     * Help users with drop-in questions in garage and other
+       short-term support.  Questions may be anything, and customers
+       may be helped directly, you may call someone who can help, or
+       they can be directed to other help (with advice).  Primary
+       challenges include the huge variety of questions which may
+       come, and the need to think on your feet.
+   * * Project planner (architect?)
+     * This person has enough broad experience to to untangle what the
+       customer actually needs even when they may not know (or it may
+       not be possible).  Meet with customers to create the initial
+       project plan, critically ask questions, and guide the work.
+       Mentors junior RSEs in the project process.  Primary challenges
+       include understanding the optimal solution when even the
+       customer may not know what they need and conveying risks and
+       limitations.
+   * * Technical mentor
+     * Work with junior RSEs in the execution of projects, giving
+       pointers and co-working to teach the junior RSE new skills.
+       Mentors junior RSEs in our project process.  Primary challenges
+       include the hands-on teaching and knowing the tech.
+   * * Unit liaison
+     * Keep active communication with the unit, including telling them
+       about general RSE activities, attending unit meetings, and
+       keeping an active search for projects.  Primary challenges
+       include networking with diverse busy people.
+   * * Team Supervisor
+     * Manage HR and financial practicalities, especially including
+       ultimate responsibility for mentoring and productivity of all
+       team members and the team itself.
+
 
 
 

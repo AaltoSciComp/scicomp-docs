@@ -81,7 +81,7 @@ gitstamp_fmt = "%Y %b %d"
 # dates earlier than this are highlighted in red in the theme.  Only
 # years supported so far due to %b time format.  Can be overwritten by
 # `:gitstamp_warn_date` in page metadata.
-html_context['gitstamp_warn'] = '2022'
+html_context['gitstamp_warn'] = '2023'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -99,7 +99,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Aalto Scientific Computing'
-copyright = u'2025, Aalto Science-IT and contributors'
+copyright = u'2026, Aalto Science-IT and contributors'
 author = u'Aalto Science-IT'
 
 copybutton_exclude = '.linenos, .gp'

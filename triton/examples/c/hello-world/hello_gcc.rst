@@ -15,7 +15,7 @@ First, let's load up a GCC module:
 
 .. code-block:: bash
 
-  module load gcc/8.4.0
+  module load triton/2024.1-gcc gcc/12.3.0
 
 Secondly, let's compile the code:
 

@@ -156,7 +156,7 @@ access </triton/accounts>`, check the :ref:`tutorials <tutorials>`
 sequence (or :doc:`quickstart guide </triton/quickstart/index>` if you
 know the basics), and you'll learn all you need.
 
-`CSC <https://csc.fi>`_ (the Finnish IT Center for Science) is a
+`CSC <https://research.csc.fi>`_ (the Finnish IT Center for Science) is a
 government-owned organization which provides a lot of services, most
 notably huge HPC clusters, data, and IT infrastructure services to the academic
 sector.  All of their services are free to the academic community
@@ -280,10 +280,6 @@ also https://download.aalto.fi/.
 .. _its_sw_fi: https://www.aalto.fi/fi/palvelut/yliopiston-ohjelmistolisenssit
 .. _its_sw_list: https://inside.aalto.fi/display/ITServices/University+software+licenses
 .. _sw_download: http://download.aalto.fi/
-
-CSC also has `a lot of software
-<https://research.csc.fi/software>`__.  Some is on CSC computers, some
-is exported to Triton.
 
 
 

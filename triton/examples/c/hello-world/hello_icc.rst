@@ -9,19 +9,19 @@ written in C.
 	 :language: c
 
 
-After downloading it to a folder, we can compile it with Intel C compiler (``icc``).
+After downloading it to a folder, we can compile it with Intel C compiler (``icx``).
 
-First, let's load up Intel compilers and a GCC module that ``icc`` will use in the background:
+First, let's load up Intel compilers module that ``icx`` will use in the background:
 
 .. code-block:: bash
 
-  module load gcc/8.4.0 intel-oneapi-compilers/2021.4.0
+  module load triton/2025.1-intel intel-oneapi-compilers/2025.0.0
 
 Now let's compile the code:
 
 .. code-block:: bash
 
-  icc -o hello hello.c
+  icx -o hello hello.c
 
 Now we can run the program:
 

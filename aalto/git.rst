@@ -76,10 +76,13 @@ make sure people know about both.  Gitlab can have public projects,
 and Github can also have group organizations.
 
 **NOTE!** If your work contract type changes (e.g. staff -> visitor,
-student->employee, different department),
-the Aalto Version blocks the access as a "security" measure. Please
-contact Aalto ITS Servicedesk <servicedesk@aalto.fi> to unblock you.
-This is annoying, but can't be fixed yet.
+student->employee, different department), a bug in the current
+Gitlab version causes your user account to be blocked. You can try
+to unblock the account by logging in using the Aalto (not HAKA) login
+and using the format ``username@aalto.fi`` (e.g. ``lastnf1@aalto.fi``)
+with your usual Aalto password. After logging in once that way, the
+regular HAKA login should work again. If this method doesn't work,
+contact the Aalto ITS Servicedesk <servicedesk@aalto.fi> to unblock you.
 
 The service doesn't have quotas right now, but has limited resources
 and we expect everyone to use disk space responsibly.  If you use too
@@ -143,11 +146,15 @@ FAQ
 -  **What password should I use?** It is best to use HAKA to log in to
    gitlab, in which case you don't need a separate gitlab password. To
    push, it is best to use ssh keys.
--  **My account is blocked!** That's not a question, but Gitlab blocks users
-   when your Aalto unit changes. This is unfortunately part of gitlab
-   and hasn't been worked around yet. Mail servicedesk@aalto.fi with
-   your username and request "my version.aalto.fi username XXX be
-   unblocked (because my aalto unit changed)" and they should do it.
+-  **My account is blocked!** If your work contract type changes (e.g.
+   staff -> visitor, student->employee, different department), a bug
+   in the current Gitlab version causes your user account to be blocked.
+   You can try to unblock the account by logging in using the Aalto (not
+   HAKA) login and using the format ``username@aalto.fi`` (e.g.
+   ``lastnf1@aalto.fi``) with your usual Aalto password. After logging
+   in once that way, the regular HAKA login should work again. If this
+   method doesn't work, contact the Aalto ITS Servicedesk
+   <servicedesk@aalto.fi> to unblock you.
 - **What happens when I leave, can I still access my stuff?** Aalto
   can only support it's community, so your projects should be owned by
   a group which you can continue collaborating after you leave (note

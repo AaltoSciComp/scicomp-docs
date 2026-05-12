@@ -38,6 +38,11 @@ what is even possible computationally, let us know, too!
    * We are written is as a normal staff, since we are.  **Don't
      mention subcontracting or purchasing** or things that imply that
      (this can make funders ask questions).
+   * Just like with academic staff, until you have funding, there is
+     no guarantee that our exact people (or someone) will be
+     available.  You should write us in to improve your grant.  Worst
+     case, we advise you in hiring someone to do what you need and
+     help mentor them.
    * :doc:`Contact us <request>` for more exact costs and our
      availability.
 
@@ -223,3 +228,12 @@ European Commission grants
 Internal billing is (for practical purposes) not possible
 for EC grants.  Use the "RSE salary" method (and don't call it
 subcontracting or purchasing - we are normal salary).
+
+With EU projects, since the funding is generally less flexible, you
+should consider how the funding can be flexibly used if we don't have
+enough staff at the specific times you plan.  For example,
+interchanging with other staff categories.  (As of 2025, until there
+is funding, we can't reserve future time).  However, as said above, in
+the worst case we will help you get started and help you find an
+appropriate person to hire (and mentor them along the way).  So far,
+we've been able to help almost all projects to their satisfaction.

@@ -123,6 +123,11 @@ Job status and submission
    To fix this we can either wait for the node to be available or choose a different partition with the ``--partition=`` command, using one of the partitions from ``sinfo`` which has free and available (``idle``) nodes.
 
 
+.. collapse:: ``srun: error: Unable to allocate resources: Job violates accounting/QOS policy``
+
+   This error can occur for instance if you have requested a GPU partition without requesting GPUs.
+   In other words, you have ``--partition=gpu-h100-80g`` in your submission script, but no ``--gpus=n``.
+   Note that running CPU-only workloads on Triton GPU nodes is not permitted.
 
 .. _FAQ_Accounts:
 
@@ -256,7 +261,7 @@ Accounts and Access to triton
   (check with ``quota``) is exceeded, then this can't be written and
   graphical programs can't open.  If your quota is exceeded, clean up
   some files, close connections, and log in again.  You can find where
-  most of your space goes with ``du -h $HOME | sort -hr | less``.
+  most of your space goes with ``du -h $HOME/ | sort -hr | less``.
 
   This is often the case if you get ``X11 connection rejected because of
   wrong authentication``.    
@@ -395,7 +400,7 @@ Storage, file transfer and quota
     mainly for user initialization files and for some plain configs. We
     make regular backups from ``$HOME``.
   | ``$WRKDIR`` (aka ``/triton``) is fast Lustre, has large quota, mounted
-    through InfiniBand. Though no backups made from ``/triton``, the DDN
+    through InfiniBand. Though no backups made from ``/triton``, the scratch
     storage system as such is secure and safe place for your data, though
     you can always loose your data deleting them by mistake. Every user
     must take care about his work files himself. We provide as much
@@ -504,7 +509,7 @@ Coding and Compiling
     current network state. Certainly, you must not expect that, as many
     CPUs your application has got, that faster it will run. In general the
     scaling on Triton is good since we have Infiniband for nodes
-    interconnect and DDN / Lustre for I/O.
+    interconnect and scratch/Lustre for I/O.
 
   Few recommendations about CPU number:
 

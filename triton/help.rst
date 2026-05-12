@@ -6,9 +6,6 @@ There are many ways to get help, and you should try them all.  If you
 are just looking for the most important link, it is :ref:`our issue
 tracker <issuetracker>`.
 
-Whatever you do, these `guidelines for making good support requests
-<https://research.csc.fi/support-request-howto>`__ are very useful.
-
 .. seealso::
 
    Are you just looking for a Triton account?  See :doc:`accounts`.
@@ -141,7 +138,7 @@ address.  You can address your request to a specific person.
 
    Dept       | Name             | Location
    CS/NBE     | Mikko Hakala     | T-building A243 / Otakaari 3, F354
-   CS         | Simo Tuomisto    | T-building A243
+   CS         | Sami Laine       | T-building A243
    PHYS       | Simppa Äkäslompolo | Kide, 2512
    PHYS       | Ivan Tervanto    | Kide, 2512
    CS/SCI     | Richard Darst    | T-building A243

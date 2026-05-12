@@ -34,7 +34,7 @@ Use a different environment for Spyder
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you want to use python packages which are not part of the module you use spyder from,
-it is strongly to suggested to create a virtual environment (e.g. :doc:`e.g. Conda environments <python-conda>`).
+it is strongly to suggested to create a virtual environment (e.g. :doc:`e.g. Conda environments <conda>`).
 Set up the environment with all packages you want to use. After that, the following steps will make spyder use the environment:
 
 1. Activate your environment

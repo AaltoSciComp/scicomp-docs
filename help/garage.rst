@@ -1,152 +1,172 @@
 ==============
-Scicomp garage
+SciComp garage
 ==============
 
-.. admonition:: Link
+.. admonition:: Link for all garages on this page
 
-   https://aalto.zoom.us/j/61322268370, every workday at 13:00
+   https://aalto.zoom.us/j/61322268370, every workday at 13:00--14:00
+
+   * Try to arrive between 13:00 - 13:15 if possible.  Please don't
+     arrive early since we have other meetings then.
+
+   * Want to reserve a session in advance?  Contact us by :doc:`chat
+     or email </rse/contact>` and we can confirm when a good supporter
+     will be there.
 
 .. admonition:: Planned disruptions
    :class: important
 
-   * 12 June (Th): No garage due to an internal development day (or
-     maybe one or two people hanging out, but limited support).
-   * During the high summer (~july) there are usually people around,
-     but we don't make promises for any given day.  Try to join and
-     see.  July 7-18 seems to be the time with the fewest staff
-     around.
+   * No planned disruptions.
 
+A "Garage" is a office hour to get practical advice and hands-on
+support and ask anything.  Our garage is online, every (work)day, so
+you are never far from help.  Consider us like the office of the
+person down the hall.  We are a good first stop for questions, even if
+we recommend you to go somewhere else next.  You don't need a specific
+question.
 
-If you need more help than the issue trackers, this is the place to
-be.  It's not just Triton, but all aspects of scientific computing.
+Most common tasks include:
 
-Come if you want to:
+- Solve specific problems
+- Discuss and solve vague problems/concerns
+- Get advice on what you should do next
+- Discuss and figure out what your problem really is
+- Brainstorm the best strategy are for your problems
+- Work with someone on your issues in real time
 
--  Solve problems
--  Discuss and figure out what your problem really is
--  Brainstorm the best strategy are for your problems
--  Work with someone on your issues in real time
--  Network with others who are doing similar work and learn something
-   new
-
-What kind of issues can we help with:
-
-- Code and Software:
-
-  - Issues with your code or software tools you use (e.g. debugging, setting up software, linking libraries)
-  - Code parallelization
-  - Code versioning, git, testing
-
-- Data Management:
-
-  - Data management plans, data sharing
-  - Handling of sensitive data and general legal and ethical (to some extent) questions about research data
-  - Workflows for big datasets
-  - Data versioning
-
-- Triton cluster:
-
-  - Slurm job submissions
-  - Cluster usage
-  - Script setup
-  - Module management / Library loading
-
-- General:
-
-  - Basic methodological or statistical issues
-
-Notes:
-
-* All garages are designed for researchers and staff working in Aalto (or those who have a need to contact us).
-
-* You don't have to have a specific question, you can come by just to
-  chat, listen, or figure out if you should have a question.
-
-* You can also :ref:`chat with us <chat>` any other time (no promises
-  on reply time, though).
 
 
 .. _garage:
 .. _scicomp-garage:
 
-Triton, SciComp, RSE, and CS
-----------------------------
+"SciComp": Triton, research software, data, HPC, etc
+----------------------------------------------------
 
-.. admonition:: Link
+This is the "main event" and we have many people around every day.
+See top of page for link.
 
-   https://aalto.zoom.us/j/61322268370, every workday at 13:00
+.. admonition:: SciComp/Triton covers:
+   :class: dropdown
 
-You can meet us online, every workday, at 13:00, `online via zoom
-<https://aalto.zoom.us/j/61322268370>`__.  Imagine this like walking
-into our office to ask for help. Even if you are not sure whether we can help you, come
-and chat with us anyway and we can figure it out.
+   - Code and Software:
 
+     - Issues with your code or software tools you use (e.g. debugging, setting up software, linking libraries)
+     - Code parallelization
+     - Code versioning, git, testing
 
-* This doesn't replace email or the `Triton issue
-  tracker
-  <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`__
-  for clearly-defined tasks.  Garage is good for discussion,
-  brainstorming, and deciding the best path.   If in doubt, come to
-  garage and we will help you decide.  Many people make an issue, then
-  come to garage to discuss.
+   - Data Management:
 
-* Try to arrive between 13:00 - 13:15.  We may leave early if there is
-  no one around.  Please don't arrive early since we have other
-  meetings then.
+     - Data management plans, data sharing
+     - Handling of sensitive data and general legal and ethical (to some extent) questions about research data
+     - Workflows for big datasets
+     - Data versioning
 
-* We have some **special days** (see list below) to ask about specific
-  topics, but in reality we can answer any question any day.
+   - Triton cluster:
 
-* Join on Zoom via https://aalto.zoom.us/j/61322268370 .
+     - Slurm job submissions
+     - Cluster usage
+     - Script setup
+     - Module management / Library loading
+
+   - General:
+
+     - Basic methodological or statistical issues
+
+* For who?
+
+  * All researchers and staff at Aalto.
+  * Students doing research count as researchers (research assistants,
+    thesis workers doing research, interns, summer workers, visitors,
+    etc.).
+  * It is also available regardless of university for `ELLIS Institute
+    Finland faculty and their research groups
+    <https://www.ellisinstitute.fi/people>`__ and `AI-DOC doctoral
+    students <https://fcai.fi/ai-doc/people>`__.  If you aren't from
+    Aalto, please mention your affiliation with one of these so we can
+    serve you best.
+
+* You can also :ref:`chat with us <chat>` at other times.  See also :doc:`/help/index`
+
+* For clearly defined requests like software installation, use the
+  `Triton issue tracker
+  <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`__.
+  You can also make an issue then come to garage to follow up.  You
+  can always ask in garage first and we'll advise on making an issue.
 
 
 
 NBE/PHYS
 --------
 
-PHYS, NBE, and ITS (Aalto IT Services) staff are part of the Garage sessions every **Monday and Wednesday**.
-Regular reminders are sent to the department personnel lists.
+PHYS, NBE, and ITS (Aalto IT Services) staff are part of the Garage
+sessions every **Monday and Wednesday**.  This is an extension of the
+SciComp garage above, with extra info about department computers, data
+systems, etc.
+
+See top of page for link.
+
+
+CS-IT and CS EduTech
+--------------------
+
+CS support is usually available every day of the week.  See top of
+page for link.
+
+.. admonition:: CS-IT/CS EduTech covers
+   :class: dropdown
+
+   - Any CS-IT services, including data and virtual machines.
+   - We can usually advise on other IT services at Aalto.
+   - Aplus course creation.
+   - Aplus autograding and management.
+   - Anything else in the Aplus ecosystem
+   - jupyter.cs course creation, support, software installation.
+
+* For who?:
+
+  * Any staff in the CS department, including research assistants,
+    teaching assistants, visitors, etc.
+  * Any teachers/TAs using the CS-maintained educational services: A+,
+    jupyter.cs, Radar, Ossi, etc.
 
 
 
 Special days
 ------------
 
-Some days are special, and have extra staff about certain topics.  But
-you can always visit on any day and ask any question, and we can
-usually give a good answer (especially about Triton, HPC, computing,
-software, and data).
-
-* **Mondays** also have NBE/PHYS IT present.
-* **Tuesdays** 
-* **Wednesdays** also have NBE/PHYS IT present.  We also have more
-  staff to help :doc:`jupyter.cs instructors/TAs </aalto/jupyterhub-instructors/index>`. On 2025-06-18 and 2025-06-25 we will have a :ref:`COMSOL Multiphysics<comsol>` focus day: someone from COMSOL (the company) plans to join.
-* **Thursdays**
-* **Fridays** also have CS IT present (at the beginning).
+* **Tuesdays** On 2026-05-12 we will have a :ref:`COMSOL Multiphysics<comsol>` focus day: an expert from COMSOL (the company) plans to join.
 
 
 
-Others
-------
+Other garages
+-------------
 
-* Aalto IT Services runs `a similar support session for some other schools and
+* Aalto IT Services used to run `a similar support session for some other schools and
   departments
   <https://www.aalto.fi/en/news/new-service-for-researchers-it-support-via-zoom>`__.
 * CSC has a `weekly user support session
   <https://csc.fi/en/training-calendar/csc-research-support-coffee-every-wednesday-at-1400-finnish-time-2-2/>`__
   similar to the SciComp garage.
-* The University of Helsinki IT for Science has a `daily garage
-  session
-  <https://version.helsinki.fi/it-for-science/hpc/-/wikis/home>`__.
+* University of Helsinki
+
+  * Research Software Engineer group
+    has `a garage
+    <https://version.helsinki.fi/rse/garage/-/wikis/home>`__
+    (`calendar event
+    <https://tapahtumat.helsinki.fi/fi-FI/page/68df95bc281b450007745e56/research-software-engineering-online-help-sessions>`__,
+    `group link <https://wiki.helsinki.fi/xwiki/bin/view/Research%20Software%20Engineering%20group/>`__)
+  * `HPC / IT for Science garage
+    <https://version.helsinki.fi/it-for-science/hpc/-/wikis/home>`__.
 
 
 
 In person
 ---------
 
-In-person garages haven't been held since early 2020 for the obvious
-reason.  The online garage above is more frequent and you are more
-likely to meet the very best person for your topic.
+In-person garages stopped in early 2020 for the obvious reason.  The
+online garage above is more frequent and has more staff, so you are
+more likely to meet the very best person for your topic.  From the
+online garage, we can arrange in-person follow-ups if it helps.
 
 ..
   General garage (CS Building)

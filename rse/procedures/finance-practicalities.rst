@@ -4,8 +4,24 @@ RSE financial practicalities
 Let's say you :doc:`know what we do <../index>` and have funding and
 would like to send it our way.  This page says what to do.  You can
 read :doc:`what we know about different funders
-<../grant-applicants>`, but it's probably better to ask your
+<../for-grant-applicants>`, but it's probably better to ask your
 controller directly if you have the funding already.
+
+
+
+Abstract
+--------
+
+* Most of the time, we work like normal academics and use Halli to
+  record or salaries.
+* The PI needs to request the controller to set up Halli access for
+  the RSE.  The controller can also calculate the exact cost to your
+  grant based on the salary we provide (the overheads are a function
+  of your grant, not our work).
+* The RSE staff record via Halli, and your controller can answer
+  questions about how much funding has been used.
+
+Below are template emails to request this to be set up.
 
 
 

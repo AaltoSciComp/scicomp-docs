@@ -19,7 +19,7 @@ June 2024 / Intro to Scientific Computing /  HPC Summer Kickstart
          taught only some years.  Check this list for things you
          *didn't* see this year, and consider watching them.
        - :doc:`Python environments with Conda
-	 </triton/apps/python-conda>` - a page on this site.
+	 </triton/deprecated/python-conda>` - a page on this site.
        - `CodeRefinery workshop <https://coderefinery.org>`__ -
 	 software and programming tools for scientists and researchers
 	 (also a livestream course)
@@ -349,7 +349,7 @@ these videos yourself as preparation.
 Very strongly recommended:
 
 * `Installing Python packages with Conda
-  <https://youtu.be/dmTlNh3MWx8>`__ (Note that conda on new-Triton has changed.  See :doc:`/triton/apps/python-conda` for details)
+  <https://youtu.be/dmTlNh3MWx8>`__ (Note that conda on new-Triton has changed.  See :doc:`/triton/apps/conda` for details)
 * `Git intro
   <https://www.youtube.com/watch?v=r9AT7MqmLrU&list=PLZLVmS9rf3nOaNzGrzPwLtkvFLu35kVF4&index=5>`__ (useful)
 

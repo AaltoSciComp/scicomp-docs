@@ -11,83 +11,67 @@ software, computing, and data. As research becomes more digital and
 computer-dependent, the prerequisite knowledge grows larger and
 larger, and we exist to help you fill that gap.
 
-For anything related to **custom software development, computational
-research, data management, workflow automation, scaling-up, deployment
-of public previews,
-collaborative work, reproducible research, optimization,
-high-performance computing, and more**, we can:
-
-* **Do it for you:** You need some custom technical
-  software/solution.  We do it for you, you get straight to your work.
-* **Do it with you:** We co-work with your group, teaching while we go
-  along.
-* **Make it reusable:** You already have something, but it doesn't
-  work for others.
-* **Plan your ambitions:** Figure out how far you can reach in your
-  next project or grant.
-
-Instead of, or in addition to, hiring your own intern, postdoc,
-etc. to struggle with
-certain issues, we can help you. Our working groups consist of experienced
-researchers who have broad experience with scientific computing
-(programming, computing, data) for our academic work, and thus can
-seamlessly collaborate on research projects. We can also do
-consultation and training. You will have more
-impact since your work will become more reusable, open, and of a higher quality. We
-can work on your ongoing projects, or you can add us directly into your next
-grant application.
-
 .. _rse-history: https://www.software.ac.uk/blog/2016-08-17-not-so-brief-history-research-software-engineers-0
 
-**Service availability:** Garage support is available to researchers
-at Aalto.
-We serve projects from all Aalto schools thanks to IT Services grants,
-but our main funding currently comes from the School of Science.  For
-more information, see :doc:`procedures/units-info`.
+We support people, not software or infrastructures.  For anything
+related to **custom software development, computational research, data
+management, workflow automation, scaling-up, deployment of public
+previews, collaborative work, reproducible research, optimization,
+high-performance computing, and more**, we can be the collaborator you
+need.  We can either give quick support or do longer term projects, either as
+a collaborator or leader.
+
+
+**Service availability:** Our daily help session :ref:`SciComp Garage
+<scicomp-garage>` is available to researchers at Aalto for free.  There is
+various funding for medium-length (days--weeks) projects from `various
+units <procedures/units-info>` at no cost to you.**  Longer projects (months+)
+are generally expected to have their own funding.
+
 
 .. admonition:: Contact
 
-   For a quick chat to get started with any kind of project or request
-   any type of support, come to our :ref:`daily garage <scicomp-garage>`,
-   every workday online at 13:00.  Or
-   contact us by email at rse at aalto.fi, or fill out our
-   `request form <https://selfservice.esupport.aalto.fi/ssc/app#/order/2026/>`__.  See
-   :ref:`requesting RSE <request-rse>` for more.
+   It's best to talk live!  Come to our :doc:`online office hour
+   ("SciComp Garage") </help/garage>` any workday at 13:00. You
+   don't even need a specific question; you can ask about a vague
+   idea, if we are even the right place to ask, or drop by to chat
+   about your experiences.  This is also a good place to ask about
+   larger projects with us.
+
+   See :doc:`contact` for other ways to contact, including email.
 
 
-
-About our services
-------------------
+Brief intros
+------------
 
 .. toctree::
    :maxdepth: 1
 
-   researchers
-   units
+   contact
+   for-researchers
+   for-group-leaders
+   for-grant-applicants
+   for-units
    portfolio
-
-
 
 .. _request-rse:
 
-How to get started
+Project procedures
 ------------------
-
-Contact us as mentioned above, or read here for more details.
 
 .. toctree::
    :maxdepth: 1
 
-   request
-   how-we-work
-   group-leaders
-   grant-applicants
+   project-lifecycle
+   project-setup
    procedures/finance-practicalities
 
+Below this point is advanced material you only need to check if you
+have a special interest.
 
 
-About research software engineers
----------------------------------
+About the research software engineers
+-------------------------------------
 
 .. toctree::
    :maxdepth: 1
@@ -96,6 +80,9 @@ About research software engineers
    Become a RSE <become-a-rse>
    Video: Aalto RSE status report, May 2021 <https://www.youtube.com/watch?v=rvuwLSKLaJI>
    Video: Support services vs diversity <https://www.youtube.com/watch?v=z1VS1wleN-o>
+   reports/2022
+   reports/2023
+   reports/2024
 
 
 
@@ -105,9 +92,10 @@ Checklists
 .. toctree::
    :maxdepth: 1
 
+   Project starting template doc <https://docs.google.com/document/d/1XcxeNLRq0kOsFbDEmA7ArdbIrCVudMWHPFQsKRVcTIk>
    checklists/project-done
    checklists/python
-   JOSS checklist (external) <https://joss.readthedocs.io/en/latest/review_checklist.html>
+   JOSS review criteria (external) <https://joss.readthedocs.io/en/latest/review_criteria.html>
    pyOpenSci guides (external) <https://www.pyopensci.org/python-package-guide/>
    rOpenSci guide (external) <https://devguide.ropensci.org/building.html>
    Matlab project reproducibility (external) <https://rse.shef.ac.uk/blog/2022-05-05-concise-guide-to-reproducible-matlab/>
@@ -116,53 +104,50 @@ Other pages on this site: :doc:`/scicomp/packaging-software`, :doc:`/scicomp/zen
 
 
 
-Internal documents
-------------------
+Team internal documents
+-----------------------
 
-We believe in openness, so make our procedures open.  They are subject
-to improvement at any time.  Also see the :doc:`FCCI Tech
-</tech/index>` seminar series for how our broader team works internally.
+We believe in openness, so make our procedures open.  They may be out
+of date and are subject to change at any time.  Also see the
+:doc:`FCCI Tech </tech/index>` seminar series for how our broader team
+works internally.
 
 .. toctree::
    :maxdepth: 1
 
+   procedures/project-tracking
    procedures/templates
-   procedures/project-administration
    procedures/prioritization
-   procedures/implementation
-   procedures/job-descriptions
    procedures/units-info
+   procedures/job-descriptions
    procedures/advisory-board
+   procedures/template-projects
+   procedures/implementation
+   RSE internal training <https://aaltoscicomp.github.io/rse-training/>
    history
-   reports/2022
-   reports/2023
-   reports/2024
 
 
 
-See also
---------
+Other similar services
+----------------------
+
+* The University of Helsinki also has a `Research Software Engineering
+  group
+  <https://wiki.helsinki.fi/xwiki/bin/view/Research%20Software%20Engineering%20group/>`__.
 
 * The CSC `optimization service
   <https://research.csc.fi/optimization-service>`__ is essentially a
   RSE service, targeted to CSC/LUMI resources (but in theory can do
-  more).  They are good at low-level programming kind of things.
+  more).  They are good at low-level programming kind of things.  With
+  funding, they can also collaborate on other projects.
 
 * The `Nvidia AI Tech Center <https://fcai.fi/nvaitc>`__ provides
   *free* RSE services for research projects for Finnish Center for AI
   members (includes Aalto).
 
-Related programs from Aalto Scientific Computing
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This is the hands-on compliment our training programs, mainly
-:doc:`scientific computing in practice sessions </training/scip/index>` and
-`CodeRefinery <https://coderefinery.org>`_.  If you want a kickstart
-to put those lessons in practice, this is for you.  Attendance
-in these courses is useful but by no means required.
 
 Other links
-~~~~~~~~~~~
+-----------
 
 * :doc:`Aalto Scientific Computing </index>`, the organization behind
   this program.

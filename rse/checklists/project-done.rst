@@ -22,6 +22,7 @@ Discuss with the researchers
     entry can be made private or public, and the actual software/data
     is usually hosted elsewhere (and can be public or not).
 
+* Discuss long-term maintenance.
 * Discuss what to do if there are issues in the future - garage, issue
   tracker, training courses.
 * Discuss what else may (or may not) need doing in the future.
@@ -33,14 +34,23 @@ Internal (RSE group) tasks
 * Issue tracker:
 
   * ``/summary`` should contain a several sentence summary focused on the
-    benefit to RSE service (this is used for final reports, etc).
+    benefit to RSE service (this is used for final reports, etc).  A
+    single or few imperative sentences like a commit message, for
+    example "Port code to the LUMI supercomputer in order to allow
+    researchers to scale their work".
   * Confirm other metadata is correct
 
     * ``/contact``, ``/supervisor`` contains
       people who may get emails about the project later (and shouldn't
       contain people who may be surprised about automated survey
       emails).  If these people should not get
-    * ``/timesaved``
+    * ``/timesaved NN{h,d,mo}`` updated to include a rough estimate of
+      how much time was saved by the researcher, if you know.  If you
+      don't know, leave it blank.
+    * Use ``/estimate N{h,d,mo}`` to record the overall amount of time
+      you have spent (as in, as you get to the end, the estimate
+      should become pretty accurate).  (The defaults are taken from
+      size labels, G=1hr, S=2d, M=2w, L=2mo)
     * Outputs ``/projects``, ``/publications``, ``/software``,
       ``/datasets``, ``/outputs``
 
@@ -54,12 +64,11 @@ Internal (RSE group) tasks
   * Include a readme with citation, confirmation
     of what usage permissions there are, and a one-sentence general
     description suitable for presentations.
-  * Examples; screenshot of website, screenshot of code that looks
-    interesting, screenshot of repository page, picture of hardware
-    device used, etc.
+  * Examples: some figure generated, some equipment used, screenshot
+    of website, screenshot of code that looks interesting, screenshot
+    of repository page, picture of hardware device used, etc.
 
-* Add it to the next meeting agenda.  We will collaboratively do an
-  analysis to find lessons learned:
+* Add the project to the next meeting agenda for a lessons-learned discussion:
 
   * Facts about the project
   * Arrange facts into the big picture and timeline

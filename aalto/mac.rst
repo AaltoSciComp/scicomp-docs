@@ -8,8 +8,12 @@ which does not use your Aalto account), some of this may be relevant,
 but for the most part you are on your own and you will access your
 data and Aalto resources via :doc:`remoteaccess`.
 
-More instructions: https://inside.aalto.fi/display/ITServices/Mac
+Relevant instructions at aalto.fi:
 
+- `First time setup <https://www.aalto.fi/en/services/aalto-mac-first-time-setup>`__
+- `Changing password <https://www.aalto.fi/en/services/aalto-mac-changing-the-password>`__
+- `Admin rights <https://www.aalto.fi/en/services/activating-administrator-rights-on-mac-workstations>`__
+- `Managed software <https://www.aalto.fi/en/services/aalto-mac-application-distribution-managed-software-centre>`__
 
 Basics
 ------
@@ -62,17 +66,20 @@ Software
 .dmg files
 ~~~~~~~~~~
 If you are the primary user, in the Software Center you can install
-the program "Get temporary admin rights". This will allow you to become an
-administrator for 30 minutes at a time. Then, you can install ``.dmg``
+the program "Privileges". This will allow you to become an
+administrator for 15 minutes at a time. Then, you can install ``.dmg``
 files yourself.  This is the recommended way of installing ``.dmg``
 files.
+
+See also `ITS instructions <https://www.aalto.fi/en/services/activating-administrator-rights-on-mac-workstations>`__.
 
 Aalto software
 ~~~~~~~~~~~~~~
 There is an application called "Managed software center"
 pre-installed (or "Managed software update" in older versions).  You
-can use this to install a wide variety of ready-packaged software.  (`ITS
-instructions <https://inside.aalto.fi/display/ITServices/Mac>`__).
+can use this to install a wide variety of ready-packaged software.
+
+See also `ITS instructions <https://www.aalto.fi/en/services/aalto-mac-application-distribution-managed-software-centre>`__.
 
 Homebrew
 ~~~~~~~~

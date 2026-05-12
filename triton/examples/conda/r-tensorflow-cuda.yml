@@ -1,0 +1,7 @@
+name: r-tensorflow
+channels:
+  - conda-forge
+dependencies:
+  - r-reticulate
+  - r-tensorflow
+  - tensorflow=*=*cuda*

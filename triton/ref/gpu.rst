@@ -1,20 +1,38 @@
 .. csv-table::
    :delim: |
    :header-rows: 1
+   :class: scicomp-table-dense
 
-   Card                 | Slurm partition (``--partition=``) | Slurm feature name (``--constraint=``) | Slurm gres name (``--gres=gpu:NAME:n``) | total amount   | nodes        | architecture   | compute threads per GPU   | memory per card   | CUDA compute capability
-   NVIDIA K80\*         |  *Not available*                   | ``kepler``                             | ``teslak80``                            | 12             | gpu[20-22]   | Kepler         | 2x2496                    | 2x12GB            | 3.7
-   NVIDIA P100          | ``gpu-p100-16g``                   | ``pascal``                             | ``teslap100``                           | 20             | gpu[23-27]   | Pascal         | 3854                      | 16GB              | 6.0
-   NVIDIA V100          | ``gpu-v100-32g``                   | ``volta``                              | ``v100``                                | 40             | gpu[1-10]    | Volta          | 5120                      | 32GB              | 7.0
-   NVIDIA V100          | ``gpu-v100-32g``                   | ``volta``                              | ``v100``                                | 40             | gpu[28-37]   | Volta          | 5120                      | 32GB              | 7.0
-   NVIDIA V100          | ``gpu-v100-16g``                   | ``volta``                              | ``v100``                                | 176            | dgx[1-2,8-27]| Volta          | 5120                      | 16GB              | 7.0
-   NVIDIA V100          | ``gpu-v100-32g``                   | ``volta``                              | ``v100``                                | 32             | dgx[3,5-7]   | Volta          | 5120                      | 32GB              | 7.0
-   NVIDIA A100          | ``gpu-a100-80g``                   | ``ampere``                             | ``a100``                                | 56             | gpu[11-17,38-44] | Ampere     | 7936                      | 80GB              | 8.0
-   NVIDIA H100          | ``gpu-h100-80g``                   | ``hopper``                             | ``h100``                                | 16             | gpu[45-48]   | Hopper         | 16896                     | 80GB              | 9.0
-   NVIDIA H200          | ``gpu-h200-18g-ia``                | ``hopper``                             | ``h200-18g``                            | 56             | gpu[49]      | Hopper         |                           | 18GB              | 9.0
-   NVIDIA H200(*)       | ``gpu-h200-141g-ellis``, ``gpu-h200-141g-short``  | ``hopper``              | ``h200``                                | 16             | gpu[50-51]   | Hopper         |                           | 141GB             | 9.0
-   AMD MI100 (testing)  |   *Not yet installed*              | ``mi100``                              | Use ``-p gpu-amd`` only, no ``--gres``  |                | gpuamd[1]    |                |                           |                   |
+   GPU brand name       | GPU name in Slurm (``--gpus=NAME:n``)  | VRAM GB (``--gres=gpu-vram:NNg``) | CUDA compute capability (``--gres=min-cuda-cc:NN``) | total amount   | nodes            | GPUs per node | Compute threads per GPU   | Slurm partition (``--partition=``)
+   NVIDIA B300(*)       | ``b300``                               | ``288``                           | 10.3 (``103``)                                      | 16             | gpu[64-65]       | 8             | 18944                     | ``gpu-b300-288g-ellis``, ``gpu-b300-288g-short``
+   NVIDIA H200(*)       | ``h200``                               | ``141``                           | 9.0 (``90``)                                        | 112            | gpu[50-63]       | 8             | 16896                     | ``gpu-h200-141g-ellis``, ``gpu-h200-141g-short``
+   NVIDIA H200(**)      | ``h200_2g.35gb``                       | ``35``                            | 9.0 (``90``)                                        | 24             | gpu[49]          | 24            | 4224                      | ``gpu-h200-35g-ia-ellis``, ``gpu-h200-35g-ia``
+   NVIDIA :doc:`Grace-H200(+) </triton/usage/gracehopper>` | ``h200``                               | ``141``                           | 9.0 (``90``)                                        | 4              | gpuarm[1-2]      | 2             | 16896                     | ``gpu-grace-h200-141g``
+   NVIDIA H100          | ``h100``                               | ``80``                            | 9.0 (``90``)                                        | 16             | gpu[45-48]       | 4             | 16896                     | ``gpu-h100-80g``
+   NVIDIA A100          | ``a100``                               | ``80``                            | 8.0 (``80``)                                        | 56             | gpu[11-17,38-44] | 4             | 7936                      | ``gpu-a100-80g``
+   NVIDIA V100          | ``v100``                               | ``32``                            | 7.0 (``70``)                                        | 40             | gpu[28-37]       | 4             | 5120                      | ``gpu-v100-32g``
+   NVIDIA V100          | ``v100``                               | ``32``                            | 7.0 (``70``)                                        | 40             | gpu[1-10]        | 4             | 5120                      | ``gpu-v100-32g``
+   NVIDIA V100          | ``v100``                               | ``32``                            | 7.0 (``70``)                                        | 32             | dgx[3,5-7]       | 8             | 5120                      | ``gpu-v100-32g``
+   NVIDIA V100          | ``v100``                               | ``16``                            | 7.0 (``70``)                                        | 176            | dgx[1-2,8-27]    | 8             | 5120                      | ``gpu-v100-16g``
+   AMD MI210            | ``mi210`` with  ``-p gpu-amd``         | ``32``                            |                                                     | 2              | gpuamd[1]        | 2             | 7680                      | ``gpu-amd``
+   AMD MI100            | ``mi100`` with  ``-p gpu-amd``         | ``64``                            |                                                     | 1              | gpuamd[1]        | 1             | 6656                      | ``gpu-amd``
 
-(*) These GPUs have a priority queue for the ellis project, since they were procured for this project. 
-Any job submitted to the short queue might be preempted if a job requiring the resources comes in from the ellis queue. 
-They are not allocated automatcally unless you specifically request a job on their partition.
+Since 2025, the main way to request certain types of GPUs is with
+``--gres``, for example ``--gpus=1 --gres=min-vram:32``.  Only one
+``--gres`` option is allowed, so to combine gres, use a comma
+separated list: ``--gres=gpu-vram:32g,min-cuda-cc:80``.
+
+Running CPU-only workloads on GPU partitions is not permitted.
+If you encounter an error along the lines of
+``srun: error: Unable to allocate resources: Job violates accounting/QOS policy 
+(job submit limit, user's size and/or time limits)``, one possible
+cause is that you request a GPU partition but script is missing ``--gpus=n``.
+
+(*) These GPUs have a priority queue for the Ellis project, since they were
+procured for this project. Any job submitted to the short queue might be
+preempted if a job requiring the resources comes in from the Ellis queue.
+
+(**) These GPUs are split from a single GPU with NVIDIA's
+`Multi-Instance GPU <https://docs.nvidia.com/datacenter/tesla/mig-user-guide/index.html>`__-feature.
+
+(+) These computers have the Nvidia Grace CPU, an ARM based cpu. Normal software compiled for x86 does not run on these nodes. See :doc:`/triton/usage/gracehopper`.

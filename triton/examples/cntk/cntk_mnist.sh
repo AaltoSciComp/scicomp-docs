@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH --gres=gpu:1
 #SBATCH --time=00:15:00
+#SBATCH --gpus=1
 
 module load nvidia-cntk
 

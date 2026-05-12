@@ -81,13 +81,17 @@ For GPU computing, the :doc:`Paniikki Linux computer lab
 <../aalto/paniikki>` (`map
 <https://usefulaaltomap.fi/#!/select/paniikki>`_) has GPUs in all
 workstations.  Software is available via ``module spider $name`` to
-search and ``module load $name`` to load (and the module ``anaconda``
+search and ``module load $name`` to load (and the module ``scicomp-python-env``
 has Python, tensorflow, etc.).  Read the :doc:`Paniikki cheatsheet
 here <../aalto/paniikki>`.  The instructions for :doc:`Aalto
 workstations <../aalto/linux>` sort of apply there as well.  The
 software on these machines is managed by the Aalto-IT team.  This is
 the place if you need to play with GPUs, deep learning, etc, and helps
 you transition to serious computing on large clusters.
+
+There is a `list of other Linux classroom computers available by SSH
+connection
+<https://www.aalto.fi/en/services/linux-computer-names-in-it-classrooms>`__.
 
 A new (2018) remote desktop service is available at
 https://vdi.aalto.fi (`instructions <https://www.aalto.fi/en/services/vdiaaltofi-how-to-use-aalto-virtual-desktop-infrastructure>`_).

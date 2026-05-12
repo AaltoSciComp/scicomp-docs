@@ -1,5 +1,5 @@
-For units who would like Research Software Engineers
-====================================================
+For units who would like RSE services
+=====================================
 
 Computing is everywhere, even in your unit.  But computing is hard, so
 much that can go wrong: bugs take time to fix, data gets messy and
@@ -148,4 +148,4 @@ Hakala.
 Current member units
 --------------------
 
-See :doc:`procedures/units-info`
+See :doc:`procedures/units-info`.

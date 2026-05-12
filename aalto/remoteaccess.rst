@@ -31,9 +31,8 @@ Linux shell servers
       (expect them to be overloaded and not that useful). If you are
       trying to use these for research, you really want to be using
       Triton instead.
-   -  ``viila.aalto.fi``: Staff server (access to workstations and has
-      filesystems mounted, but you need to kinit to access them.) that
-      is kind of outdated and different.
+   -  ``viila.org.aalto.fi``: A RHEL staff server (access to workstations and has
+      filesystems mounted, but you need to kinit to access them).
 
 -  Your **home** directory is shared on all Aalto shell servers, and
    that means ``.ssh/authorized_keys`` as well.
