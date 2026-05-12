@@ -1,24 +1,96 @@
 Local LLM web APIs
 ==================
 
-As a pilot service, :doc:`Aalto RSE </rse/index>` has a service
-running some common open-source LLMS (llama3, deepseek, etc.) available
-via the web.  This can be used for lightweight purposes via
-programming, but shouldn't replace batch usage (use
-:doc:`/triton/apps/llms`) or interactive chatting (use Aalto GPT).
+:doc:`Aalto RSE </rse/index>` runs an LLM gateway service at
+`https://llm-gateway.k8s.aalto.fi/ <https://llm-gateway.k8s.aalto.fi/>`__
+that is available to all Aalto users.  It serves several open-source
+models on Aalto hardware — your data never leaves Aalto premises.
+This can be used for lightweight programmatic use, but shouldn't
+replace batch usage (use :doc:`/triton/apps/llms`) or interactive
+chatting (use Aalto GPT).
+
+.. note::
+
+   The service requires the **Aalto VPN**.  It is a shared resource
+   with limited computing power, so please expect some waiting time
+   between requests.
 
 
-Access
-------
+Access and API keys
+-------------------
 
-Currently this is not available publicly, but if you ask, we can
-provide development access.  Chat with us in the #llms stream on
-:ref:`chat`.  That's also the best way to contact the developers
-(other contact methods are in :doc:`/help/index`.
+The gateway uses API key authentication with self-service key
+management:
 
-The API doesn't have it's own detailed documentation (ask us), but the
-API should be OpenAI compatible (for chat models) so many existing
-libraries work automatically. Here are some simple `examples. <https://github.com/AaltoSciComp/llm-examples/tree/main/aalto-llm-api>`__ 
+1. Connect to the Aalto VPN and open
+   `https://llm-gateway.k8s.aalto.fi/ <https://llm-gateway.k8s.aalto.fi/>`__.
+2. In the box labelled *Add a New key*, type a descriptive name for
+   your key and submit.  You may create up to 10 keys.
+3. Copy the generated key and store it somewhere safe — it will be used
+   as ``api_key`` in your code.
+
+For questions or feedback, join the ``#llms`` stream on :ref:`chat`.
+
+
+Available models
+----------------
+
+The following models are currently available (check
+`the API docs <https://llm-gateway.k8s.aalto.fi/docs>`__ for an
+always-up-to-date list):
+
+- ``Qwen/Qwen3-30B-A3B-Instruct-2507-FP8``
+- ``RedHatAI/gemma-4-31B-it-FP8-Dynamic``
+- ``google/gemma-4-31B-it``
+- ``google/gemma-4-E4B-it``
+- ``Qwen/Qwen3-VL-30B-A3B-Instruct-FP8``
+- ``Qwen/Qwen3-VL-30B-A3B-Thinking-FP8``
+- ``openai/gpt-oss-120b``
+
+All models support the OpenAI-compatible chat/completions API, so most
+existing OpenAI client libraries work without changes.
+
+
+Python quickstart
+-----------------
+
+**1. Set up an environment**
+
+.. code-block:: bash
+
+   mkdir my-llm-project && cd my-llm-project
+   mamba create python=3.11 -p ./env
+   mamba activate ./env
+   pip install openai rich
+
+**2. Run a test query**
+
+Replace ``YOURKEYGOESHERE`` with the key you created above.
+
+.. code-block:: python
+
+   from openai import OpenAI
+   from rich.console import Console
+   from rich.markdown import Markdown
+
+   client = OpenAI(
+       api_key="YOURKEYGOESHERE",
+       base_url="https://llm-gateway.k8s.aalto.fi/api/v1"
+   )
+   completion = client.chat.completions.create(
+       model="RedHatAI/gemma-4-31B-it-FP8-Dynamic",
+       messages=[
+           {"role": "system", "content": "Helpful assistant that writes python for research."},
+           {"role": "user", "content": "I need a python script to load a csv."}
+       ]
+   )
+
+   console = Console()
+   console.print(Markdown(completion.choices[0].message.content))
+
+More examples are available at
+`AaltoSciComp/llm-examples <https://github.com/AaltoSciComp/llm-examples/tree/main/aalto-llm-api>`__.
+
 
 Intended use and resource availability
 --------------------------------------
@@ -31,12 +103,11 @@ answering.  It's also good if you need to test various open-source
 LLMs out before beginning batch work.  It's perfectly suited for
 intermittent daily use.
 
-Right now, each models has limited resources (some running on CPUs and
-some on GPUs).  They can serve a request every few seconds, but
-resources could easily be overloaded.  We intend to add resources as
-needed, depending on use.  For any serious use, please contact us so
-that we can plan for the future.  Don't assume any stability or
-performance right now.
+Right now, resources are limited and shared across all users.  Models
+can serve a request every few seconds, but could easily be overloaded
+under heavy demand.  We intend to add resources as needed, depending
+on use.  For any serious use, please contact us so that we can plan
+for the future.  Don't assume any stability or performance right now.
 
 
 Technical implementation
