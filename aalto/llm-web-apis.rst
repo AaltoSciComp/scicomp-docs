@@ -14,15 +14,15 @@ api specification can be found `here <https://llm-gateway.k8s.aalto.fi/docs>`__.
 
 .. note::
 
-   The service requires the **Aalto VPN**.  It is a shared resource
-   with limited computing power, so please expect some waiting time
-   between requests.
+   The service is **only available inside the Aalto network** and requires the **Aalto VPN**.  
+   It is a shared resource with limited computing power, so please expect some waiting time
+   between requests. Resources will be adjusted based on the demand.
 
 
 Who can use the endpoint and with what data?
 --------------------------------------------
 
-To use the local endpoint you need to have an active Aalto account and be part of Aalto staff. Students can get access via their course organiser (the organiser creates an API key for the students to use); teachers are responsible for revoking student keys once the course work is complete. The advantage of a fully local solution is that the endpoint can be use with data classified as confidential. Secret data should not be processed with these tools.
+To use the local endpoint you need to have an active Aalto account and be part of Aalto employees. Students can get access via their course organiser (the organiser creates an API key for the students to use); teachers are responsible for revoking student keys once the course work is complete. The advantage of a fully local solution is that the endpoint can be use with data classified as confidential. Secret data should not be processed with these tools.
 
 
 Access and API keys
