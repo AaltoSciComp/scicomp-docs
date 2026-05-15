@@ -9,7 +9,7 @@ For grant applicants
    or fill out our `request form
    <https://selfservice.esupport.aalto.fi/ssc/app#/order/2026/>`__.
 
-   This page is currently (2024-01) our best understanding of what is
+   This page is currently (2026-05) our best understanding of what is
    possible.  However, we are still exploring what works and doesn't,
    so contact us early so we can work out bugs together.  Please send
    corrections to us.
@@ -32,12 +32,14 @@ what is even possible computationally, let us know, too!
 
    * We can serve as a specialist to complement the researchers in
      your project, which will make your grant more competitive.
+   * We can also help prepare resource estimates and benchmark tests
+     if needed by your grant.
    * Plan on "Staff Scientist" salary level for at least a few months
      when convenient for you.  (can be as low as 10% time spread out
      over a longer period of time).
    * We are written is as a normal staff, since we are.  **Don't
      mention subcontracting or purchasing** or things that imply that
-     (this can make funders ask questions).
+     (this may not be allowed by funders).
    * Just like with academic staff, until you have funding, there is
      no guarantee that our exact people (or someone) will be
      available.  You should write us in to improve your grant.  Worst
