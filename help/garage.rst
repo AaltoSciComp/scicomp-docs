@@ -16,6 +16,9 @@ SciComp garage
 .. admonition:: Planned disruptions
    :class: important
 
+   * Development day 18 May 2026.  No Triton and RSE support.
+
+..
    * No planned disruptions.
 
 A "Garage" is a office hour to get practical advice and hands-on
