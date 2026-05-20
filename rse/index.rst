@@ -118,6 +118,7 @@ works internally.
    procedures/project-tracking
    procedures/templates
    procedures/prioritization
+   procedures/outreach-material
    procedures/units-info
    procedures/job-descriptions
    procedures/advisory-board
