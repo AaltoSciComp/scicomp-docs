@@ -69,6 +69,8 @@ There are two main styles of remote data access:
   * We have this already set up for you from many computers at Aalto.
 
 
+.. _triton-remotedata-servers:
+
 
 Data availability throughout Aalto
 ----------------------------------
@@ -123,6 +125,9 @@ and group scratch directories at ``/m/cs/scratch/PROJECT/``.  The
 department shell server is ``magi.cs.aalto.fi`` and has these
 available.
 
+
+
+.. _triton-remotedata-mounting:
 
 
 Remote mounting
