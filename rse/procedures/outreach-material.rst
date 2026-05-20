@@ -43,10 +43,12 @@ Posters and printable material
   <https://users.aalto.fi/~darstr1/hidden/asc-poster-2026.pdf>`__
   (A0-A1 size, printable A3 for posting in hallways.)
 
-  * Look for updates.  Source in aaltoscicomp-marketing.git
+  * Look for updates.  Source in aaltoscicomp-marketing.git.
 
-* Many more posters in `aaltoscicomp-graphics
-  <https://github.com/AaltoSciComp/aaltoscicomp-graphics/tree/master/posters-copy>`__
+* Many more posters have a PDF in `aaltoscicomp-graphics
+  <https://github.com/AaltoSciComp/aaltoscicomp-graphics/tree/master/posters-copy>`__.
+  The sources are either in Google Drive (ASC -> outreach and
+  marketing -> posters) or aaltoscicomp-marketing.git
 
   * ``ASC data management flyer``: A4 summary of data storage
     considerations and locations.
