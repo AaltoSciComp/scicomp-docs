@@ -113,7 +113,8 @@ Checklist for visiting events:
 * Flyers and stickers (livestreaming room, ask rkdarst)
 * Posters (some printed and are in the livestreaming room, ask
   rkdarst)
-* dgx04 can be brought as a demo.
+* dgx04 can be brought as a demo (laminated signs for it, tape,
+  screwdriver (not hex key)).
 
 
 
