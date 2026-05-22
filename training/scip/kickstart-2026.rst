@@ -53,7 +53,7 @@ Schedule
   * :localtime:`3 June 12:50 +03:00 (hh:mm [(on ]YYYY-MM-DD[)])`: Joining time/icebreaker
 
   * :localtime:`3 June 13:00 +03:00` **Introduction, about the course** Materials:
-    :doc:`../../training/kickstart/intro` (Enrico Glerean, Richard Darst, Thomas Pfau )
+    :doc:`../../training/kickstart/intro` (Enrico Glerean, Thomas Pfau )
 
     * Intro to SciComp and HPC: (`Material <https://hackmd.io/@AaltoSciComp/SciCompIntro>`__, `Video link from 2024 <https://www.youtube.com/watch?v=8qQ9riStB0Y&list=PLZLVmS9rf3nOeuqXNa8tS-tDtdQrES2We&index=3>`__)
 
@@ -78,7 +78,7 @@ Schedule
 
   * :localtime:`4 June 09:50 +03:00 (hh:mm [(on ]YYYY-MM-DD[)])` Connecting, icebreakers, Q&A
 
-  * :localtime:`4 June 10:00 +03:00` **Setting up for a new project** (RD, Simo Tuomisto)
+  * :localtime:`4 June 10:00 +03:00` **Setting up for a new project** (Jarno Rantaharju, Simo Tuomisto)
 
     - :doc:`/triton/tut/intro`
     - `Cluster workflow <example_project>`
@@ -89,25 +89,25 @@ Schedule
     - :doc:`/triton/tut/remotedata` - Exercise RemoteData-1
     - Exercise: Copying the Project Gutenburg data to your work directory
 
-  * :localtime:`4 June 10:40 +03:00` **What is Slurm?** (ST, RD)
+  * :localtime:`4 June 10:40 +03:00` **What is Slurm?** (ST, JR)
 
     - :doc:`/triton/tut/slurm`
 
   * :localtime:`4 June 10:50 +03:00` Break
 
-  * :localtime:`4 June 11:00 +03:00` **Interactive jobs** (RD, ST)
+  * :localtime:`4 June 11:00 +03:00` **Interactive jobs** (JR, ST)
 
     - :doc:`/triton/tut/interactive` - Exercise Interactive-2
     - Big example: Project Gutenburg n-gram analysis
 
-  * :localtime:`4 June 11:20 +03:00` **First serial jobs** (RD, ST)
+  * :localtime:`4 June 11:20 +03:00` **First serial jobs** (JR, ST)
 
     - :doc:`/triton/tut/serial` - Exercise Serial-2
     - Big example: Project Gutenburg n-gram analysis
 
   * :localtime:`4 June 12:00 +03:00`: Lunch break
 
-  * :localtime:`4 June 13:00 +03:00` **Behind the scenes: the humans of scientific computing** (RD, Susanne Merz)
+  * :localtime:`4 June 13:00 +03:00` **Behind the scenes: the humans of scientific computing** (RD, tba)
 
     - Who are we that teach this course and provide SciComp support?
       What makes it such a fascinating career?  Learn about what goes on
@@ -120,7 +120,7 @@ Schedule
 
   * :localtime:`4 June 14:00 +03:00` Break
 
-  * :localtime:`4 June 14:10 +03:00` **Array jobs** (ST, RD)
+  * :localtime:`4 June 14:10 +03:00` **Array jobs** (ST, JR)
 
     - :doc:`/triton/tut/parallel`
     - :doc:`/triton/tut/array`
@@ -132,11 +132,11 @@ Schedule
 
   * :localtime:`5 June 9:50 +03:00 (hh:mm [(on ]YYYY-MM-DD[)])` Connecting, icebreaker, Q&A
 
-  * :localtime:`5 June 10:00 +03:00` **Monitoring** (ST, RD)
+  * :localtime:`5 June 10:00 +03:00` **Monitoring** (ST, HF)
 
     - :doc:`/triton/tut/monitoring`
 
-  * :localtime:`5 June 10:20 +03:00` **Applications** (RD, ST)
+  * :localtime:`5 June 10:20 +03:00` **Applications** (HF, ST)
 
     - :doc:`/triton/tut/applications`
     - :doc:`/triton/tut/modules`
@@ -147,7 +147,7 @@ Schedule
 
   * :localtime:`5 June 11:00 +03:00` Break
 
-  * :localtime:`5 June 11:10 +03:00` **Parallel** (ST, RD)
+  * :localtime:`5 June 11:10 +03:00` **Parallel** (ST, HF)
 
     - :doc:`/triton/tut/parallel-shared`
     - :doc:`/triton/tut/parallel-mpi`
