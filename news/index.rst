@@ -2,9 +2,9 @@
 News
 ====
 
-*Upcoming courses:* `Data Analysis with R (May 12–13) <https://csc.fi/en/training-calendar/data-analysis-with-r-6/>`__ (1 ECTS), `Reproducibility and Open Science in ML (May 20) <https://www.aalto.fi/en/events/reproducibility-and-open-science-practices-in-machine-learning-20may2026>`__ (1 ECTS), `Intro to HPC (Jun 3–5) <https://www.aalto.fi/en/events/intro-to-scientific-computing-and-hpc-3-5-june-2026>`__ (1 ECTS), `LUMI AI Workshop (Jun 11–12) <https://lumi-supercomputer.eu/events/moving-your-ai-training-jobs-to-lumi-a-hands-on-workshop-june2026/>`__, `CSC Summer School (Jun 23–Jul 2) <https://csc.fi/en/training-calendar/csc-summer-school-in-high-performance-computing-2026/>`__. More: `CSC training calendar <https://csc.fi/en/training/>`__ | `LUMI AI Factory events <https://lumi-supercomputer.eu/events/>`__.
+*Upcoming courses:* `Intro to HPC (Jun 3–5) <https://www.aalto.fi/en/events/intro-to-scientific-computing-and-hpc-3-5-june-2026>`__ (1 ECTS), `LUMI AI Workshop (Jun 11–12) <https://lumi-supercomputer.eu/events/moving-your-ai-training-jobs-to-lumi-a-hands-on-workshop-june2026/>`__, `CSC Summer School (Jun 23–Jul 2) <https://csc.fi/en/training-calendar/csc-summer-school-in-high-performance-computing-2026/>`__. More: `CSC training calendar <https://csc.fi/en/training/>`__ | `LUMI AI Factory events <https://lumi-supercomputer.eu/events/>`__.
 
-New page: `AI Agents on Triton </triton/usage/ai-agents/>`__ — guidance on using AI coding agents (Claude Code, GitHub Copilot, etc.) responsibly on HPC. Join our `daily zoom garage </help/garage/>`__ for any scientific computing question.  `Follow us on Mastodon <https://fosstodon.org/@SciCompAalto>`__.
+New pages: `AI Agents on Triton </triton/usage/ai-agents/>`__, `Local LLM web APIs </aalto/llm-web-apis/>`__ (pilot Aalto-hosted open-weight LLM gateway), `Triton Maintenance Downtime </triton/usage/mainenance-downtime/>`__ (security-patch policy), `HPC Kitchen </scicomp/hpc-kitchen/>`__ (HPC video series). Join our `daily zoom garage </help/garage/>`__ for any scientific computing question.  `Follow us on Mastodon <https://fosstodon.org/@SciCompAalto>`__.
 
 2026
 ~~~~
@@ -15,9 +15,15 @@ New page: `AI Agents on Triton </triton/usage/ai-agents/>`__ — guidance on usi
 
 *Jun 3–5, 2026* (upcoming) `Intro to Scientific Computing and HPC <https://www.aalto.fi/en/events/intro-to-scientific-computing-and-hpc-3-5-june-2026>`__ — 1 ECTS available.
 
-*May 20, 2026* (upcoming) `Reproducibility and Open Science Practices in Machine Learning <https://www.aalto.fi/en/events/reproducibility-and-open-science-practices-in-machine-learning-20may2026>`__ — 1 ECTS available.
+*May 20, 2026* `Reproducibility and Open Science Practices in Machine Learning <https://www.aalto.fi/en/events/reproducibility-and-open-science-practices-in-machine-learning-20may2026>`__ — 1 ECTS available.
 
-*May 12–13, 2026* (upcoming) `Data Analysis with R <https://csc.fi/en/training-calendar/data-analysis-with-r-6/>`__ — 1 ECTS available.
+*May 20, 2026* New page: `Triton Maintenance Downtime </triton/usage/mainenance-downtime/>`__ — policy and recommendations for when Triton is taken offline with short notice for urgent security updates.
+
+*May 17, 2026* New page: `HPC Kitchen </scicomp/hpc-kitchen/>`__ — YouTube video series explaining HPC concepts (storage, parallelism, Slurm, containers) through cooking metaphors.
+
+*May 13, 2026* New page: `Local LLM web APIs </aalto/llm-web-apis/>`__ — pilot Aalto-hosted open-weight LLM gateway at ``llm-gateway.k8s.aalto.fi``, available to all Aalto employees for research and teaching (Aalto network/VPN required).
+
+*May 12–13, 2026* `Data Analysis with R <https://csc.fi/en/training-calendar/data-analysis-with-r-6/>`__ — 1 ECTS available.
 
 *Apr 2026* New page: `AI Agents on Triton </triton/usage/ai-agents/>`__ — responsible use of AI coding agents (Claude Code, GitHub Copilot, Cline, etc.) on HPC clusters, including a security and risk overview.
 
