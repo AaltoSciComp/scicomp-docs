@@ -29,6 +29,14 @@ person down the hall.  We are a good first stop for questions, even if
 we recommend you to go somewhere else next.  You don't need a specific
 question.
 
+.. sidebar::
+
+   An a PhD student, having garage available to me everyday greatly
+   reduces my stress.
+
+   - NBE doctoral researcher
+
+
 Most common tasks include:
 
 - Solve specific problems
