@@ -31,7 +31,7 @@ question.
 
 .. sidebar::
 
-   An a PhD student, having garage available to me everyday greatly
+   A PhD student, having garage available to me everyday greatly
    reduces my stress.
 
    - NBE doctoral researcher
