@@ -86,9 +86,11 @@ worth making yourself comfortable with its use.
       All Linux distributions come with an ``ssh`` client, so you don't need to do
       anything.  To use graphical applications, use the standard ``-X`` option,
       nothing extra needed.::
-
+        
         $ ssh triton.aalto.fi
-        ## OR, if your username is different:
+        ## OR, if you want to use AI assisted coding:
+        $ ssh code.triton.aalto.fi
+        ## If your username is different add it to the connection command e.g.:
         $ ssh USERNAME@triton.aalto.fi
 
       If you are not in the Aalto networks, use the `Aalto VPN
@@ -134,7 +136,14 @@ worth making yourself comfortable with its use.
 
       You should configure PuTTY with the hostname, username, and save the
       settings so that you can connect quickly.
+   .. tab:: VS Code Remote
 
+      VSCode offers a Remote SSH connection plugin,. that can be used on triton. 
+      We offer a dedicated node for these kinds of workflows that often also include AI agents. 
+      The node to connect to with VSCode is: ``code.triton.aalto.fi``, with your aalto user name 
+      ( not the email address ) as username
+      If you are not in the Aalto networks, use the `Aalto VPN
+      <https://www.aalto.fi/en/services/remote-connection-to-aaltos-network-vpn>`__.
 
 **If you are not on an Aalto network, there are extra steps.** We
 recommend you use the `Aalto VPN
