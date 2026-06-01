@@ -107,7 +107,7 @@ Schedule
 
   * :localtime:`4 June 12:00 +03:00`: Lunch break
 
-  * :localtime:`4 June 13:00 +03:00` **Behind the scenes: the humans of scientific computing** (RD, tba)
+  * :localtime:`4 June 13:00 +03:00` **Behind the scenes: the humans of scientific computing** (RD, AV)
 
     - Who are we that teach this course and provide SciComp support?
       What makes it such a fascinating career?  Learn about what goes on
