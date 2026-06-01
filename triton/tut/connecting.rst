@@ -136,6 +136,7 @@ worth making yourself comfortable with its use.
 
       You should configure PuTTY with the hostname, username, and save the
       settings so that you can connect quickly.
+
    .. tab:: VS Code Remote
 
       VSCode offers a Remote SSH connection plugin,. that can be used on triton. 
