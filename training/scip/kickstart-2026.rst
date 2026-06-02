@@ -59,7 +59,11 @@ Schedule
 
   * :localtime:`3 June 13:10 +03:00` **The HPC Kitchen** (RD, TP)
 
-    - `Video playlist <https://www.youtube.com/watch?v=yqGtnA7CUtU&list=PLZLVmS9rf3nNDHRo1Baz_JVQWDI0mTYyB>`__, `Slides (separate from the videos) <https://docs.google.com/presentation/d/16BTILZlUvEzCt6FfMsB9sSZm0PZHHXLBthE5QfoSrjo/edit>`__
+    - `Slides
+      <https://docs.google.com/presentation/d/1YRt8FV9c8WMkFT2mz7TC78uTPe2znx0WHlYPFpZGaWM/edit>`__,
+      `Video playlist
+      <https://www.youtube.com/watch?v=yqGtnA7CUtU&list=PLZLVmS9rf3nNDHRo1Baz_JVQWDI0mTYyB>`__,
+      `Long slides <https://docs.google.com/presentation/d/16BTILZlUvEzCt6FfMsB9sSZm0PZHHXLBthE5QfoSrjo/edit>`__.
 
   * :localtime:`3 June 13:20 +03:00` **Connecting to the cluster**
     (TP, SM)
