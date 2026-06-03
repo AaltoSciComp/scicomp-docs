@@ -72,7 +72,7 @@ Schedule
 
   * :localtime:`3 June 13:50 +03:00`  Break
 
-  * :localtime:`3 June 14:00 +03:00`  **CSC resources for scientific computing** (Oskar Taubert)
+  * :localtime:`3 June 14:00 +03:00`  **CSC resources for scientific computing** (Oskar Taubert).  `Slides here <https://github.com/AaltoSciComp/scicomp-docs/raw/master/training/scip/CSC-services_062026.pdf>`__.
 
     - A special guest from `CSC <https://csc.fi>`__ will talk about our national supercomputers Mahti/Puhti/LUMI and how to use them in practice.
 
