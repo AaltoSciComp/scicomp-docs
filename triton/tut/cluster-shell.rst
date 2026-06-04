@@ -274,11 +274,11 @@ tutorials.**  You can look at all the files in the repository here:
 https://github.com/AaltoSciComp/hpc-examples/ .
 
 Let's **clone** the HPC-examples repository so that we can work on it.
-First, we make sure we are in our home directory (we always want to
-make sure we know where we are!  The home directory is the default
-place, though)::
+First, we make sure we are in our work directory (we always want to
+make sure we know where we are! By default we are in our home directory, but
+we rarely want to store our codes there)::
 
-  $ cd $HOME
+  $ cd $WRKDIR
 
 Then we clone our git repository::
 
