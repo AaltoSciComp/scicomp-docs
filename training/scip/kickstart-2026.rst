@@ -178,6 +178,9 @@ Schedule
     - :doc:`/triton/usage/ai-agents`
 
   * :localtime:`5 June 14:40 +03:00` **Wrap up and summary, ask us anything**
+
+    - :doc:`/training/scip/kickstart-outro`
+
   * :localtime:`5 June 15:00 +03:00` End of course
 
 
@@ -207,7 +210,23 @@ It's OK to register and attend only individual sessions.
 Credits and certificates
 ------------------------
 
-It is possible to get 1 ECTS with some extra homework. Those of you at Aalto University will need to add SCI-L1010 to your study plan and submit the homework in MyCourses. If you are not at Aalto University, more instructions will appear here during the course days. Please note that in some universities our certificate is not valid for Master studies. So please do check in advance with your study coordinator. Doctoral students should not have any issue in registering the credit at their university. 
+It is possible to get 1 ECTS with some extra homework if you are a doctoral student with active study rights. Those of you at Aalto University will need to add SCI-L1010 to your study plan and submit the homework in MyCourses. If you are not at Aalto University, more instructions will appear here during the course days. Please note that in some universities (or mater programs) our certificate/credit is not accepted for Master studies. So please do check in advance with your study coordinator. Doctoral students should not have any issue in registering the credit at their university. 
+
+The homework tasks are `described at this webpage <https://scicomp.aalto.fi/triton/tut/exercises-ngrams/>`__.
+Here the list of tasks to complete:
+
+* Shell-2: Look at the Ngrams dataset
+* Shell-4: Clone the hpc-examples repository
+* Shell-9: Practice looking at README files
+* Storage-1: Create a place to store our Gutenberg (ngrams) data.
+* RemoteData-1: Copy the ngrams data over to the cluster
+* Interactive-2: Compute ngrams via batch jobs
+* Serial-2: Compute ngrams via a batch jobs
+* Array-1: Compute ngrams via an array jobs
+* Shared memory parallelism1: Test scaling
+
+Upload / send your solutions as a single pdf/text/docx document which contains the commands you have run, the terminal outputs, the code of the slurm scripts, and the output of the exercises listed in that page. Please note that, for the exercises that use slurm, you need to run the actual jobs on the cluster and also include the job IDs with the solutions. Send everything to scip@aalto.fi (or use SCI-L1010 MyCourses submission box if you are at Aalto).
+
 
 
 Other organizations
