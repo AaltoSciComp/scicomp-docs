@@ -88,4 +88,12 @@ deleted.  This series has existed since 2016.
 
 - :doc:`winter-kickstart-2025`
 - `CodeRefinery March 2025 <https://coderefinery.github.io/2025-03-25-workshop/>`__
-- `Practical Deep Learning on LUMI (with CSC, April 2025, registrations opening soon) <https://csc.fi/en/trainings/training-calendar/>`__
+- `Practical Deep Learning on LUMI (with CSC, April 2025) <https://csc.fi/en/trainings/training-calendar/>`__
+- :doc:`HPC Summer Kickstart 2025 <kickstart-2025>`
+- :doc:`Python for Scientific Computing 2025 <python-for-scicomp-2025>` (Nov 25–27, 2025)
+
+
+2026
+----
+
+- :doc:`HPC Winter Kickstart (Jan 28, 2026) <winter-kickstart-2026>`
