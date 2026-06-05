@@ -19,14 +19,17 @@ Triton kickstarts, Linux Shell, Parallel programming models: MPI and
 OpenMP, GPU computing, Python for scientists, Data analysis with R
 and/or Python, Matlab and many others.
 
-If you are interested in a re-run of our past courses or if you want 
+If you are interested in a re-run of our past courses or if you want
 to suggest a new course, `please take this survey <https://link.webropol.com/s/scipod>`__.
 
+*Upcoming courses:* :doc:`HPC Kickstart (Jun 3–5) <scip/kickstart-2026>` (1 ECTS),
+`LUMI AI Workshop (Jun 11–12) <https://lumi-supercomputer.eu/events/moving-your-ai-training-jobs-to-lumi-a-hands-on-workshop-june2026/>`__,
+`CSC Summer School (Jun 23–Jul 2) <https://csc.fi/en/training-calendar/csc-summer-school-in-high-performance-computing-2026/>`__.
+More: `CSC training calendar <https://csc.fi/en/training/>`__ | `LUMI AI Factory events <https://lumi-supercomputer.eu/events/>`__.
 
 .. toctree::
    :maxdepth: 1
-    
-   scip/winter-kickstart-2026
+
    scip/kickstart-2026
    Take the survey! Request a re-run of past courses / new courses <https://link.webropol.com/s/scipod>
    scip/index
@@ -40,9 +43,17 @@ to suggest a new course, `please take this survey <https://link.webropol.com/s/s
 
 
 
-**Future courses**
-We are always adding interesting courses. Please check this page once in a while. If you are interested in a re-run of our past courses or if you want
-to suggest a new course, `please take this survey <https://link.webropol.com/s/scipod>`__.
+**Upcoming courses**
+
+*Jun 3–5, 2026* (upcoming) :doc:`HPC Summer Kickstart <scip/kickstart-2026>` —
+intro to scientific computing and HPC, 1 ECTS available.
+
+*Jun 11–12, 2026* (upcoming) `LUMI AI Workshop
+<https://lumi-supercomputer.eu/events/moving-your-ai-training-jobs-to-lumi-a-hands-on-workshop-june2026/>`__ —
+hands-on workshop on running AI training jobs on LUMI.
+
+*Jun 23–Jul 2, 2026* (upcoming) `CSC Summer School in HPC
+<https://csc.fi/en/training-calendar/csc-summer-school-in-high-performance-computing-2026/>`__.
 
 
 Anyone can sign up for announcements at the :doc:`SCIP announcement
