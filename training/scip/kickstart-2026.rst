@@ -175,7 +175,7 @@ Schedule
 
     - :doc:`/aalto/generative-ai-tools`
     - :doc:`/triton/apps/llms`
-    - :doc:`/triton/usage/ai-agents
+    - :doc:`/triton/usage/ai-agents`
 
   * :localtime:`5 June 14:40 +03:00` **Wrap up and summary, ask us anything**
   * :localtime:`5 June 15:00 +03:00` End of course
