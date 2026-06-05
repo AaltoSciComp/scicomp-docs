@@ -142,6 +142,7 @@ Schedule
 
   * :localtime:`5 June 10:20 +03:00` **Applications** (HF, ST)
 
+    - `Moving your program to a HPC cluster <https://hackmd.io/@AaltoSciComp/moving-programs>`__.
     - :doc:`/triton/tut/applications`
     - :doc:`/triton/tut/modules`
 
@@ -170,10 +171,11 @@ Schedule
 
   * :localtime:`5 June 13:50 +03:00` Break
 
-  * :localtime:`5 June 14:00 +03:00` **LLM example** (ST, HF)
+  * :localtime:`5 June 14:00 +03:00` **Generative AI, LLMs and Agents in HPC** (ST, HF)
 
-    - :doc:`/triton/apps/llms`
     - :doc:`/aalto/generative-ai-tools`
+    - :doc:`/triton/apps/llms`
+    - :doc:`/triton/usage/ai-agents
 
   * :localtime:`5 June 14:40 +03:00` **Wrap up and summary, ask us anything**
   * :localtime:`5 June 15:00 +03:00` End of course
