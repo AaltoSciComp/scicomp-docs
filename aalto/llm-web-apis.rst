@@ -173,7 +173,7 @@ about whether the endpoint is the right tool for what you have in mind.
      - Fine as long as the code you create will be used for research purposes.
    * - Teaching students how LLM APIs work in a course or workshop
      - Yes
-     - Students can be given API keys by the course organiser; whiel this case is not research, it is great for hands-on
+     - Students can be given API keys by the course organiser; while this case is not research, it is great for hands-on
        learning about how these systems work and safe since it is all local.
    * - Comparing outputs of several open-weight models as part of a study
      - Yes
