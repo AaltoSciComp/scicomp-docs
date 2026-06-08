@@ -4,7 +4,7 @@
    This is the final outro of the python-for-scicomp course
 
 Introduction to Scientific Computing and HPC outro
-=================================================
+==================================================
 
 * Materials will stay online. You can browse the source and improve them at: https://github.com/AaltoSciComp/python-for-scicomp
 * Videos recordings are already available on TwitchTV, we will move them to YouTube and add subtitles.

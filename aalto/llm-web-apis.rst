@@ -151,6 +151,51 @@ on use.  For any serious use, please contact us so that we can plan
 for the future.  Don't assume any stability or performance right now.
 
 
+Recommended and not recommended use cases
+------------------------------------------
+
+Here are some examples of what fits well and what doesn't.  This isn't a policy or anything legal, just a practical guide to help you think
+about whether the endpoint is the right tool for what you have in mind.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 45 15 40
+
+   * - Use case
+     - Fits?
+     - Notes
+   * - Using the LLM to annotate or label a research dataset (e.g. extracting entities,
+       classifying text)
+     - Yes
+     - Classic research use to prepare or analyse text data
+   * - An agent that generates and runs analysis code as part of a research workflow
+     - Yes
+     - Fine as long as the code you create will be used for research purposes.
+   * - Teaching students how LLM APIs work in a course or workshop
+     - Yes
+     - Students can be given API keys by the course organiser; whiel this case is not research, it is great for hands-on
+       learning about how these systems work and safe since it is all local.
+   * - Comparing outputs of several open-weight models as part of a study
+     - Yes
+     - This is exactly what the variety of models is there for, useful to benchmark various models on same task.
+   * - Automated homework grading as a service for your department
+     - No
+     - Unless your actual research question is *how* LLMs grade, building a grading
+       service puts you in "AI provider" territory under the EU AI Act. If you want to develope a new service beyond research, 
+       this tool is not for you. But do get in touch with us so we could work on this together with our IT Services.
+   * - Connecting an agent to your email or personal calendar
+     - No
+     - While I am sure it can be fun to play with productivity AI agents, please use a personal API key from
+       a commercial provider if the use won't really be classified as research. Get in touch if you want to discuss this.
+   * - Deploying a public-facing tool or app powered by the endpoint
+     - No
+     - Deploying tools to end users (students, staff, public) makes you an AI system
+       provider under the EU AI Act, which comes with obligations we can't support here. Just get in touch so we can chat about your idea.
+
+If you're not sure whether your use case fits, just ask: drop a message in the
+``#llms`` stream on :ref:`chat` or email ``rse@aalto.fi`` and we'll help you figure it out.
+
+
 Technical implementation
 ------------------------
 
