@@ -193,7 +193,7 @@ about whether the endpoint is the right tool for what you have in mind.
        provider under the EU AI Act, which comes with obligations we can't support here. Just get in touch so we can chat about your idea.
 
 If you're not sure whether your use case fits, just ask: drop a message in the
-``#llms`` stream on :ref:`chat` or email ``rse@aalto.fi`` and we'll help you figure it out.
+``#llms`` stream on :ref:`chat` or email ``rse@aalto.fi`` and we'll help you figure it out. If you are making any type of production system that is not for research, it might have extra legal requirements. Using this platform does not give you any compliance towards these rules.
 
 
 Technical implementation
