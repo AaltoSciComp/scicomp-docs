@@ -16,8 +16,12 @@ SciComp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * We have an internal seminar 2026 May 26.  There may be limited
-     staff at the garage.
+   * We have an internal event on 2026 June 16.  There will be limited
+     or no staff at the Triton/SciComp garage (CSIT present).
+
+   * There will be limited staff around during the summer.  Past
+     years, there has been someone there most days, but it isn't
+     guaranteed.  Keep an eye here for further updates.
 
 ..
    * No planned disruptions.
