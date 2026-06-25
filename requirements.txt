@@ -1,6 +1,6 @@
 docutils
 jupyter_core
-sphinx<7.2.0    # some problem with sphinx_toolbox/old python 2023-11-12
+sphinx #<7.2.0    # some problem with sphinx_toolbox/old python 2023-11-12
 sphinx_rtd_theme>0.5
 sphinx_gitstamp
 #recommonmark
@@ -15,6 +15,6 @@ sphinx_toolbox
 sphinx_ext_substitution
 sphinx-plausible
 sphinx-minipres
-sphinxext-opengraph<0.8  # remove after 8.3 released (matplotlib optional, takes lots of space)
+sphinxext-opengraph #<0.8  # remove after 8.3 released (matplotlib optional, takes lots of space)
 sphinxext-rediraffe
 https://github.com/coderefinery/sphinx-localtime/archive/main.zip
