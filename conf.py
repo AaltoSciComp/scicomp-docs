@@ -15,7 +15,9 @@
 import importlib
 import sys
 import os
+import pathlib
 on_rtd = os.environ.get('READTHEDOCS') == 'True'
+base_dir = pathlib.Path(__file__).parent.relative_to(pathlib.Path.cwd())
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -150,6 +152,9 @@ exclude_patterns = [
     'triton/apps/TEMPLATE.rst',
     'venv*'
     ]
+# Exclude ref pages which are only included in others
+exclude_patterns += [ str(x) for x in base_dir.glob('triton/ref/*.rst') if x.name != 'index.rst' ]
+print(exclude_patterns)
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
