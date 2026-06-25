@@ -115,6 +115,7 @@ substitute_path = ['_substitutions/']
 
 supress_warnings = [
     #'toc.excluded',  # This does not work to hide the orphan page warnings
+    'toc.not_included',
     ]
 
 # The version info for the project you're documenting, acts as replacement for
