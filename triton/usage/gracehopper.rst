@@ -76,7 +76,7 @@ The hello-world.cu could be e.g.::
     return 0;
   }
 
-Building a simple pytorch environment
+Building a simple PyTorch environment
 -------------------------------------
 
 Nvidia provides ARM containers for PyTorch, which you can use as a starting point for your own containers.
