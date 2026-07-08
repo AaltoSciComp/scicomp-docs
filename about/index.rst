@@ -65,8 +65,7 @@ Science-IT
    :maxdepth: 2
 
    science-it
-   science-it-history
-   values-and-culture
+   Science-IT history <https://aaltoscicomp.github.io/rse-training/asc-handbook/science-it-history/>
 
 Science-IT is the organizational manifestation of Aalto Scientific
 Computing.
