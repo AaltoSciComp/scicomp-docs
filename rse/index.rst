@@ -109,7 +109,7 @@ Team internal documents
 
 We believe in openness, so make our procedures open.  They may be out
 of date and are subject to change at any time.  Also see the
-:doc:`FCCI Tech </tech/index>` seminar series for how our broader team
+`FCCI Tech <https://aaltoscicomp.github.io/rse-training/seminars/archive-2020/>`__ seminar series for how our broader team
 works internally.
 
 .. toctree::

@@ -274,13 +274,13 @@ FCCI Tech Seminar series
 ------------------------
 
 We have an occasional seminar series, open to all, on how we run our
-group, :doc:`FCCI Tech </tech/index>`.  Our archive may be interesting
-to other scientific computing teams and research software engineers.
+group.  Our archive may be interesting to other scientific computing
+teams and research software engineers.
 
 .. toctree::
    :maxdepth: 1
 
-   /tech/index
+   Seminar archive <https://aaltoscicomp.github.io/rse-training/seminars/archive-2020/>
 
 
 Other

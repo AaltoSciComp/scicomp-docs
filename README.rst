@@ -16,8 +16,9 @@ in pull requests.
 
 .. seealso::
 
-   :doc:`/tech/sphinx-docs` for an overview about how and why it's set
-   up like this.
+   `Technical documentation with Sphinx
+   <https://aaltoscicomp.github.io/rse-training/seminars/archive-2020/sphinx-docs/>`__
+   for an overview about how and why it's set up like this.
 
 
 
