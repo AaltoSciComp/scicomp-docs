@@ -9,6 +9,7 @@ Scientific computing tips
    git
    git-annex
    hybrid-events
+   hpc-kitchen
    jupyter-pitfalls
    nbscript
    new-group-leaders
