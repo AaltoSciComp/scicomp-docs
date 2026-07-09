@@ -128,8 +128,6 @@ Checklist:
   * We'll track our time internally.
 
 * If an EU project or any special constraints on how we keep our
-  records, let us know.  EU projects use Halli strictly, as
-  described on the :ref:`project administration page, heading "special
-  projects" <rse-project-admin-types-of-projects>`.
+  records, let us know.  EU projects use Halli strictly.
 
 * Tell us how to update this page to be more useful to others.

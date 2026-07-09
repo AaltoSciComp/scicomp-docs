@@ -115,10 +115,6 @@ works internally.
 .. toctree::
    :maxdepth: 1
 
-   procedures/project-tracking
-   procedures/templates
-   procedures/prioritization
-   procedures/outreach-material
    procedures/units-info
    procedures/job-descriptions
    procedures/advisory-board
