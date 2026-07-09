@@ -116,6 +116,9 @@ academic.  And help others.
 [data-management]: Data management is as important as data storage
 ------------------------------------------------------------------
 
+.. role:: strikeout
+   :class: strike
+
 https://www.youtube.com/watch?v=Q5A7n7mu-AI&list=PLZLVmS9rf3nNDHRo1Baz_JVQWDI0mTYyB
 
 People may think that getting a big enough storage space for your data
@@ -129,9 +132,6 @@ problems down the line.  Take care of your data and you data will
 
 [big-vs-small-jobs]: The pitfalls of big jobs
 ---------------------------------------------
-
-.. role:: strikeout
-   :class: strike
 
 https://www.youtube.com/watch?v=Qrql8rGfRVo&list=PLZLVmS9rf3nNDHRo1Baz_JVQWDI0mTYyB
 
