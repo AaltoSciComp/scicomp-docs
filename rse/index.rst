@@ -93,7 +93,6 @@ Checklists
    :maxdepth: 1
 
    Project starting template doc <https://docs.google.com/document/d/1XcxeNLRq0kOsFbDEmA7ArdbIrCVudMWHPFQsKRVcTIk>
-   checklists/project-done
    checklists/python
    JOSS review criteria (external) <https://joss.readthedocs.io/en/latest/review_criteria.html>
    pyOpenSci guides (external) <https://www.pyopensci.org/python-package-guide/>
