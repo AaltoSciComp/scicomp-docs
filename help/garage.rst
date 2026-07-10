@@ -17,8 +17,8 @@ SciComp garage
    :class: important
 
    * There will be limited staff around during the summer - most
-     limited 6--13 July.
-   * There are no staff during: (nothing listed yet)
+     limited 13-17 July.
+   * There are no staff during: (no times yet)
    * Past years, there has been someone in Garage most days, but it isn't
      guaranteed.  Keep an eye here for further updates.
 
