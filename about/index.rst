@@ -66,6 +66,7 @@ Science-IT
 
    science-it
    Science-IT history <https://aaltoscicomp.github.io/rse-training/asc-handbook/science-it-history/>
+   ASC internal training and handbook <https://aaltoscicomp.github.io/rse-training/>
 
 Science-IT is the organizational manifestation of Aalto Scientific
 Computing.
