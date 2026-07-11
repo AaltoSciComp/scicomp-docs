@@ -113,7 +113,7 @@ localtime_default_tz = dateutil.tz.gettz('Europe/Helsinki')
 # Substitutions
 substitute_path = ['_substitutions/']
 
-supress_warnings = [
+suppress_warnings = [
     #'toc.excluded',  # This does not work to hide the orphan page warnings
     'toc.not_included',
     ]
