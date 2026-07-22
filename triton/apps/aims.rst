@@ -10,10 +10,12 @@ perturbation calculations at all-electron, full-potential level.
 
 FHI-aims is licensed software with voluntary payment for an `academic
 license
-<https://fhi-aims.org/get-the-code-menu/get-the-code>`__. While
-the license grants access to the FHI-aims source code each holder of a
+<https://fhi-aims.org/get-the-code-menu/get-the-code>`__.
+If you are a member of a research group already holding a license, please register
+to `FHI-aims-club <https://fhi-aims.org/get-the-code-menu/aimsclub-registration>`__.
+While the license grants access to the FHI-aims source code each holder of a
 license can use pre-built binaries available on Triton. To this end,
-contact Ville Havu at the PHYS department after obtaining the license.
+contact Ville Havu or triton admins at the PHYS department after obtaining the license.
 
 On Triton the most recent version of FHI-aims is available via the
 module ``aims/240507`` that is compiled using OpenMPI.
