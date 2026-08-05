@@ -19,13 +19,6 @@ SciComp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * There will be limited staff around during the summer - most
-     limited 13-17 July.
-   * There are no staff during: (no times yet)
-   * Past years, there has been someone in Garage most days, but it isn't
-     guaranteed.  Keep an eye here for further updates.
-
-..
    * No planned disruptions.
 
 A "Garage" is a office hour to get practical advice and hands-on
