@@ -6,8 +6,9 @@
 * Finding what is using space
 
   * The ``dust`` tool prints a nice tree of largest directories.
-    ``module load dust`` then ``dust $HOME`` on Triton.  ``$HOME`` can be
-    replaced with any other directory (or left off for current directory)
+    ``module load triton/2024.1-gcc dust`` then ``dust $HOME`` on
+    Triton.  ``$HOME`` can be replaced with any other directory (or
+    left off for current directory)
   * ``du -h $HOME/ | sort -h``: Like above but works everywhere.  Use
     ``du -ah`` to list all files.
 
