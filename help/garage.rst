@@ -1,3 +1,6 @@
+.. _garage:
+.. _scicomp-garage:
+
 ==============
 SciComp garage
 ==============
@@ -49,10 +52,6 @@ Most common tasks include:
 - Brainstorm the best strategy are for your problems
 - Work with someone on your issues in real time
 
-
-
-.. _garage:
-.. _scicomp-garage:
 
 "SciComp": Triton, research software, data, HPC, etc
 ----------------------------------------------------
