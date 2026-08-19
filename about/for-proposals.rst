@@ -98,7 +98,11 @@ We use encryption technologies to safeguard sensitive data in transit and ensure
 
 We operate a dedicated secure computing environment SECDATA to enable research with most sensitive data. The environment has been audited to comply with the Act on the Secondary Use of Health and Social Data and Findata requirements. Each research project will get a separate virtual desktop environment with customized amounts of memory, disk space, and computing power with a possibility to use GPUs for computational tasks. To safeguard data, transfers are limited and done only through specific audited process and the environment is disconnected from the public internet. 
 
-Our technical, administrative, and legal experts provide advice and hands-on support for handling sensitive data. The Aalto Research Software Engineer (RSE) team and Data Agents help with essential privacy techniques such as minimization, pseudonymization, and anonymization. Aalto's Data Protection Officer provides guidance and oversight on the processing of data and ensuring privacy. 
+Our technical, administrative, and legal experts provide advice and hands-on support for handling sensitive data. The Aalto Research Software Engineer (RSE) team and Data Agents help with essential privacy techniques such as minimization, pseudonymization, and anonymization. Aalto's Data Protection Officer provides guidance and oversight on the processing of data and ensuring privacy.
+
+.. seealso::
+
+   Practical notes for using the environment: :doc:`/aalto/secdata`
 
 Confidential data (shorter, for CS)
 -----------------------------------
