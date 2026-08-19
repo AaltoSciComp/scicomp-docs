@@ -144,7 +144,7 @@ Rules of thumb for secure storage and computing with the systems provided by you
   * If it does not require authentication: only public data
   * If it has single factor authentication (e.g. login and password), then it might be good for internal information.
   * If it has​ multi factor authentication, then it might be good for confidential data (examples at Aalto/CSC: Triton Cluster, Teamwork, Allas)
-  * If it has MFA and it is not accessible from the internet, then it might be good for secret data (examples at Aalto/CSC: SECDATA, CSC Sensitive Data Services)
+  * If it has MFA and it is not accessible from the internet, then it might be good for secret data (examples at Aalto/CSC: :doc:`SECDATA </aalto/secdata>`, CSC Sensitive Data Services)
 
 Unsure? Get in touch with your local admins/experts/support team.
 

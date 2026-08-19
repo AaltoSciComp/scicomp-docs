@@ -20,8 +20,10 @@ Confidential or sensitive data
 .. note::
 
    This meets the requirements for "Confidential" data, which covers
-   most use cases.  If you have extreme requirements, you will need
-   something more (but be careful about making custom solutions).
+   most use cases.  If you have **secret** data (secondary-use health
+   data, a DPIA that requires strong isolation, etc.), see
+   :doc:`SECDATA </aalto/secdata>` rather than inventing a custom
+   solution.
 
 Aalto has some `guidelines for classification of confidential
 information <https://www.aalto.fi/en/information-processing/classification-of-information>`__,

@@ -17,6 +17,7 @@ for Research page
    coderefinery-setup
    cslinux
    remoteaccess
+   secdata
    git
    aaltoharbor
    jupyterhub
