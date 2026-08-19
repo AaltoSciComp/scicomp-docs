@@ -73,6 +73,7 @@ focused on Triton and scientific computing data, but they are mentioned.
 * `Storage services for research data <https://www.aalto.fi/en/services/storage-services-for-research-data>`__
 * `Summary of storage locations <https://www.aalto.fi/en/services/data-storage-file-services>`__
 * `Guidelines for classification of confidential information <https://www.aalto.fi/en/cyber-security/classification-of-information-basic-instructions-and-services>`__
+* :doc:`SECDATA </aalto/secdata>` — secure computing environment for secret / secondary-use health data
 
 
 Data in Science-IT departments (CS, NBE, PHYS)
