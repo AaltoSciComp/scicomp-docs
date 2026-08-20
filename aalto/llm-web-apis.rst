@@ -54,24 +54,33 @@ always-up-to-date list):
    * - Model
      - HuggingFace
      - Size (GB, estimated)
-   * - ``Qwen/Qwen3-30B-A3B-Instruct-2507-FP8``
-     - `Model card <https://huggingface.co/Qwen/Qwen3-30B-A3B-Instruct-2507-FP8>`__
-     - ~16
-   * - ``RedHatAI/gemma-4-31B-it-FP8-Dynamic``
-     - `Model card <https://huggingface.co/RedHatAI/gemma-4-31B-it-FP8-Dynamic>`__
-     - ~17
-   * - ``google/gemma-4-E4B-it``
-     - `Model card <https://huggingface.co/google/gemma-4-E4B-it>`__
-     - ~16
-   * - ``Qwen/Qwen3-VL-30B-A3B-Instruct-FP8``
-     - `Model card <https://huggingface.co/Qwen/Qwen3-VL-30B-A3B-Instruct-FP8>`__
-     - ~62
-   * - ``Qwen/Qwen3-VL-30B-A3B-Thinking-FP8``
-     - `Model card <https://huggingface.co/Qwen/Qwen3-VL-30B-A3B-Thinking-FP8>`__
-     - ~16
    * - ``openai/gpt-oss-120b``
      - `Model card <https://huggingface.co/openai/gpt-oss-120b>`__
      - ~70
+   * - ``google/codegemma-7b-it``
+     - `Model card <https://huggingface.co/google/codegemma-7b-it>`__
+     - ~17
+   * - ``Qwen/Qwen3-VL-30B-A3B-Instruct-FP8``
+     - `Model card <https://huggingface.co/Qwen/Qwen3-VL-30B-A3B-Instruct-FP8>`__
+     - ~62
+   * - ``RedHatAI/gemma-4-31B-it-FP8-Dynamic``
+     - `Model card <https://huggingface.co/RedHatAI/gemma-4-31B-it-FP8-Dynamic>`__
+     - ~17
+   * - ``Qwen/Qwen3-VL-30B-A3B-Thinking-FP8``
+     - `Model card <https://huggingface.co/Qwen/Qwen3-VL-30B-A3B-Thinking-FP8>`__
+     - ~16
+   * - ``Qwen/Qwen3-Coder-30B-A3B-Instruct-FP8``
+     - `Model card <https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct-FP8>`__
+     - ~16
+   * - ``google/gemma-4-E4B-it``
+     - `Model card <https://huggingface.co/google/gemma-4-E4B-it>`__
+     - ~16
+   * - ``Qwen/Qwen3.8-27B-FP8``
+     - `Model card <https://huggingface.co/Qwen/Qwen3.8-27B-FP8>`__
+     - ~31
+   * - ``Qwen/Qwen3-30B-A3B-Instruct-2507-FP8``
+     - `Model card <https://huggingface.co/Qwen/Qwen3-30B-A3B-Instruct-2507-FP8>`__
+     - ~16
 
 All models support the OpenAI-compatible chat/completions API, so most
 existing OpenAI client libraries work without changes. If you want to request new models or discuss improvements, please use the `issue tracker <https://version.aalto.fi/gitlab/llmdeployment/gateway-issue-tracker>`__ or just email ``rse@aalto.fi``. Requested models must be available on HuggingFace and downloadable from within Europe. Please note that only models smaller than ~70GB can be used in the current hardware we have. Models of 40 GB or below are preferred as they fit on a single GPU; multi-GPU deployments are more fragile and may fail to start. Please note that the system does NOT provide ``responses`` background functionality (i.e. submit now, come back later). It does otherwise support ``responses``.
