@@ -2,18 +2,36 @@
 News
 ====
 
-*Upcoming courses:* `Intro to HPC (Jun 3–5) <https://www.aalto.fi/en/events/intro-to-scientific-computing-and-hpc-3-5-june-2026>`__ (1 ECTS), `LUMI AI Workshop (Jun 11–12) <https://lumi-supercomputer.eu/events/moving-your-ai-training-jobs-to-lumi-a-hands-on-workshop-june2026/>`__, `CSC Summer School (Jun 23–Jul 2) <https://csc.fi/en/training-calendar/csc-summer-school-in-high-performance-computing-2026/>`__. More: `CSC training calendar <https://csc.fi/en/training/>`__ | `LUMI AI Factory events <https://lumi-supercomputer.eu/events/>`__.
+*Upcoming courses:* `High Performance R (Sep 7–8) <https://csc.fi/en/training-calendar/high-performance-r-3/>`__ (1 ECTS), `Roihu NVIDIA GH200 Training (Sep 14–15) <https://csc.fi/en/training-calendar/roihu-nvidia-gh200-training/>`__ (1 ECTS), `CodeRefinery workshop (Sep 22–Oct 1) <https://coderefinery.github.io/2026-09-22-workshop/>`__ (1 ECTS). More: `CSC training calendar <https://csc.fi/en/training/>`__ | `RSE Seminar Series <https://aaltoscicomp.github.io/rse-training/seminars/>`__. Our SCI-L1010 course is now part of the `doctoralcourses.fi <https://www.doctoralcourses.fi/>`__ network, making it easier for doctoral students at partner Finnish universities to get credit for our courses (and CSC/LUMI training) across institutions.
 
-New pages: `AI Agents on Triton </triton/usage/ai-agents/>`__, `Local LLM web APIs </aalto/llm-web-apis/>`__ (pilot Aalto-hosted open-weight LLM gateway), `Triton Maintenance Downtime </triton/usage/mainenance-downtime/>`__ (security-patch policy), `HPC Kitchen </scicomp/hpc-kitchen/>`__ (HPC video series). Join our `daily zoom garage </help/garage/>`__ for any scientific computing question.  `Follow us on Mastodon <https://fosstodon.org/@SciCompAalto>`__.
+New pages: `SECDATA </aalto/secdata/>`__ (guideline for Aalto's secure environment for confidential/secret research data), `Local LLM web APIs </aalto/llm-web-apis/>`__ (updated: dynamic model list, expanded compliance guidance), `AI Agents on Triton </triton/usage/ai-agents/>`__, `HPC Kitchen </scicomp/hpc-kitchen/>`__ (HPC video series). Join our `daily zoom garage </help/garage/>`__ for any scientific computing question.  `Follow us on Mastodon <https://fosstodon.org/@SciCompAalto>`__.
 
 2026
 ~~~~
 
-*Jun 23–Jul 2, 2026* (upcoming) `CSC Summer School in High-Performance Computing 2026 <https://csc.fi/en/training-calendar/csc-summer-school-in-high-performance-computing-2026/>`__.
+*Nov 24–26, 2026* (upcoming) `Containers in Supercomputing Environment <https://csc.fi/en/training-calendar/containers-in-supercomputing-environment-2/>`__ — 1 ECTS available.
 
-*Jun 11–12, 2026* (upcoming) `Moving your AI training jobs to LUMI <https://lumi-supercomputer.eu/events/moving-your-ai-training-jobs-to-lumi-a-hands-on-workshop-june2026/>`__ — hands-on workshop by LUMI AI Factory.
+*Sep 24–25, 2026* (upcoming) `Data Analysis with R <https://csc.fi/en/training-calendar/data-analysis-with-r-7/>`__ — 1 ECTS available.
 
-*Jun 3–5, 2026* (upcoming) `Intro to Scientific Computing and HPC <https://www.aalto.fi/en/events/intro-to-scientific-computing-and-hpc-3-5-june-2026>`__ — 1 ECTS available.
+*Sep 22–Oct 1, 2026* (upcoming) `CodeRefinery workshop <https://coderefinery.github.io/2026-09-22-workshop/>`__ — version control, reproducibility, and software best practices. Open to all researchers and students. 1 ECTS available.
+
+*Sep 14–15, 2026* (upcoming) `Roihu NVIDIA GH200 Training <https://csc.fi/en/training-calendar/roihu-nvidia-gh200-training/>`__ — GPU programming on the Grace Hopper architecture. 1 ECTS available.
+
+*Sep 11, 2026* (upcoming) `RSE Seminar Series <https://aaltoscicomp.github.io/rse-training/seminars/>`__ kicks off: "AI agent coding without sending stuff to foreign clouds" — a new quarterly seminar by LUMI AI Factory partners Aalto SciComp and CSC.
+
+*Sep 7–8, 2026* (upcoming) `High Performance R <https://csc.fi/en/training-calendar/high-performance-r-3/>`__ — 1 ECTS available.
+
+*Aug 21, 2026* SCI-L1010 Scientific Computing Skills joins the `doctoralcourses.fi <https://www.doctoralcourses.fi/>`__ network — doctoral students at partner Finnish universities can now get credit for our courses (and CSC/LUMI courses) more seamlessly than before.
+
+*Aug 21, 2026* `Local LLM web APIs </aalto/llm-web-apis/>`__ page updated: dynamically loaded model list and expanded compliance guidance.
+
+*Aug 19, 2026* New page: `SECDATA </aalto/secdata/>`__ — guideline for Aalto's secure operating environment for confidential and secret research data.
+
+*Jun 23–Jul 2, 2026* `CSC Summer School in High-Performance Computing 2026 <https://csc.fi/en/training-calendar/csc-summer-school-in-high-performance-computing-2026/>`__.
+
+*Jun 11–12, 2026* `Moving your AI training jobs to LUMI <https://lumi-supercomputer.eu/events/moving-your-ai-training-jobs-to-lumi-a-hands-on-workshop-june2026/>`__ — hands-on workshop by LUMI AI Factory.
+
+*Jun 3–5, 2026* `Intro to Scientific Computing and HPC <https://www.aalto.fi/en/events/intro-to-scientific-computing-and-hpc-3-5-june-2026>`__ — 1 ECTS available.
 
 *May 20, 2026* `Reproducibility and Open Science Practices in Machine Learning <https://www.aalto.fi/en/events/reproducibility-and-open-science-practices-in-machine-learning-20may2026>`__ — 1 ECTS available.
 
@@ -29,7 +47,7 @@ New pages: `AI Agents on Triton </triton/usage/ai-agents/>`__, `Local LLM web AP
 
 *Apr 2026* `Practical Deep Learning <https://csc.fi/en/training-calendar/practical-deep-learning-7/>`__ — PyTorch deep learning course on LUMI, by CSC/LUMI AI Factory.
 
-*Mar 17–26, 2026* (upcoming) `CodeRefinery workshop <https://coderefinery.github.io/2026-03-17-workshop/>`__ — version control, reproducibility, and software best practices. Open to all researchers and students.
+*Mar 17–26, 2026* `CodeRefinery workshop <https://coderefinery.github.io/2026-03-17-workshop/>`__ — version control, reproducibility, and software best practices. Open to all researchers and students.
 
 *Feb 2026* Big revisions to the `garage page </help/garage/>`__ — expanded access for ELLIS, AIF, and University of Helsinki members.
 
