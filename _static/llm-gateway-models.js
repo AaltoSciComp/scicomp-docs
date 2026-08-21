@@ -1,4 +1,7 @@
 (function () {
+  var scriptEl = document.currentScript;
+  var FETCH_TIMEOUT_MS = 5000;
+
   function escapeHtml(value) {
     return value
       .replace(/&/g, "&amp;")
@@ -8,7 +11,7 @@
       .replace(/'/g, "&#39;");
   }
 
-  function renderTable(container, models) {
+  function tableHtml(models) {
     var rows = models
       .slice()
       .sort(function (left, right) {
@@ -27,7 +30,7 @@
       })
       .join("");
 
-    container.innerHTML = [
+    return [
       '<div class="wy-table-responsive">',
       '<table class="docutils align-default">',
       "<thead>",
@@ -41,6 +44,20 @@
     ].join("");
   }
 
+  function renderTable(container, models) {
+    container.innerHTML = tableHtml(models);
+  }
+
+  function renderFallbackTable(container, models) {
+    container.innerHTML = [
+      '<p class="llm-models-fallback-note">',
+      "Showing a locally cached model list because the live gateway did not respond. ",
+      '<a href="https://llm-gateway.k8s.aalto.fi/docs">Check the API docs</a> for the current list.',
+      "</p>",
+      tableHtml(models),
+    ].join("");
+  }
+
   function renderError(container) {
     container.innerHTML = [
       '<p class="llm-models-error">',
@@ -48,6 +65,43 @@
       '<a href="https://llm-gateway.k8s.aalto.fi/docs">Check the API docs</a>.',
       "</p>",
     ].join("");
+  }
+
+  function fetchWithTimeout(url, timeoutMs) {
+    var controller = new AbortController();
+    var timer = setTimeout(function () {
+      controller.abort();
+    }, timeoutMs);
+
+    return fetch(url, { signal: controller.signal }).finally(function () {
+      clearTimeout(timer);
+    });
+  }
+
+  function loadFallback(container) {
+    if (!scriptEl) {
+      renderError(container);
+      return;
+    }
+
+    var fallbackUrl = new URL("models.json", scriptEl.src).href;
+
+    fetch(fallbackUrl)
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error("Unexpected status " + response.status);
+        }
+        return response.json();
+      })
+      .then(function (models) {
+        if (!Array.isArray(models)) {
+          throw new Error("Model response was not an array");
+        }
+        renderFallbackTable(container, models);
+      })
+      .catch(function () {
+        renderError(container);
+      });
   }
 
   function loadModels() {
@@ -59,7 +113,7 @@
     var modelsUrl = container.getAttribute("data-models-url");
     container.innerHTML = "<p>Loading current model list...</p>";
 
-    fetch(modelsUrl)
+    fetchWithTimeout(modelsUrl, FETCH_TIMEOUT_MS)
       .then(function (response) {
         if (!response.ok) {
           throw new Error("Unexpected status " + response.status);
@@ -73,7 +127,7 @@
         renderTable(container, models);
       })
       .catch(function () {
-        renderError(container);
+        loadFallback(container);
       });
   }
 

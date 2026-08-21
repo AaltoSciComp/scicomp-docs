@@ -1,0 +1,101 @@
+[
+  {
+    "id": "openai/gpt-oss-120b",
+    "owned_by": "Admin",
+    "permissions": [],
+    "object": "model",
+    "type": [
+      "chat",
+      "responses",
+      "messages"
+    ]
+  },
+  {
+    "id": "google/codegemma-7b-it",
+    "owned_by": "Admin",
+    "permissions": [],
+    "object": "model",
+    "type": [
+      "chat",
+      "responses",
+      "messages"
+    ]
+  },
+  {
+    "id": "Qwen/Qwen3-VL-30B-A3B-Instruct-FP8",
+    "owned_by": "Admin",
+    "permissions": [],
+    "object": "model",
+    "type": [
+      "chat",
+      "responses",
+      "messages"
+    ]
+  },
+  {
+    "id": "RedHatAI/gemma-4-31B-it-FP8-Dynamic",
+    "owned_by": "Admin",
+    "permissions": [],
+    "object": "model",
+    "type": [
+      "chat",
+      "responses",
+      "messages"
+    ]
+  },
+  {
+    "id": "Qwen/Qwen3-VL-30B-A3B-Thinking-FP8",
+    "owned_by": "Admin",
+    "permissions": [],
+    "object": "model",
+    "type": [
+      "chat",
+      "responses",
+      "messages"
+    ]
+  },
+  {
+    "id": "Qwen/Qwen3-Coder-30B-A3B-Instruct-FP8",
+    "owned_by": "Admin",
+    "permissions": [],
+    "object": "model",
+    "type": [
+      "chat",
+      "responses",
+      "messages"
+    ]
+  },
+  {
+    "id": "google/gemma-4-E4B-it",
+    "owned_by": "Admin",
+    "permissions": [],
+    "object": "model",
+    "type": [
+      "chat",
+      "responses",
+      "messages"
+    ]
+  },
+  {
+    "id": "Qwen/Qwen3.8-27B-FP8",
+    "owned_by": "Admin",
+    "permissions": [],
+    "object": "model",
+    "type": [
+      "chat",
+      "responses",
+      "messages"
+    ]
+  },
+  {
+    "id": "Qwen/Qwen3-30B-A3B-Instruct-2507-FP8",
+    "owned_by": "Admin",
+    "permissions": [],
+    "object": "model",
+    "type": [
+      "chat",
+      "responses",
+      "messages"
+    ]
+  }
+]
