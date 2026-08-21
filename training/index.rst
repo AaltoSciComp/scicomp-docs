@@ -22,10 +22,11 @@ and/or Python, Matlab and many others.
 If you are interested in a re-run of our past courses or if you want
 to suggest a new course, `please take this survey <https://link.webropol.com/s/scipod>`__.
 
-*Upcoming courses:* :doc:`HPC Kickstart (Jun 3–5) <scip/kickstart-2026>` (1 ECTS),
-`LUMI AI Workshop (Jun 11–12) <https://lumi-supercomputer.eu/events/moving-your-ai-training-jobs-to-lumi-a-hands-on-workshop-june2026/>`__,
-`CSC Summer School (Jun 23–Jul 2) <https://csc.fi/en/training-calendar/csc-summer-school-in-high-performance-computing-2026/>`__.
-More: `CSC training calendar <https://csc.fi/en/training/>`__ | `LUMI AI Factory events <https://lumi-supercomputer.eu/events/>`__.
+*Upcoming courses:* `High Performance R (Sep 7–8) <https://csc.fi/en/training-calendar/high-performance-r-3/>`__ (1 ECTS),
+`Roihu NVIDIA GH200 Training (Sep 14–15) <https://csc.fi/en/training-calendar/roihu-nvidia-gh200-training/>`__ (1 ECTS),
+`CodeRefinery workshop (Sep 22–Oct 1) <https://coderefinery.github.io/2026-09-22-workshop/>`__ (1 ECTS).
+More: `CSC training calendar <https://csc.fi/en/training/>`__ | `RSE Seminar Series <https://aaltoscicomp.github.io/rse-training/seminars/>`__.
+Our SCI-L1010 course is now part of the `doctoralcourses.fi <https://www.doctoralcourses.fi/>`__ network — doctoral students at partner Finnish universities can get credit for our courses (and CSC/LUMI training) more easily.
 
 .. toctree::
    :maxdepth: 1
@@ -45,15 +46,25 @@ More: `CSC training calendar <https://csc.fi/en/training/>`__ | `LUMI AI Factory
 
 **Upcoming courses**
 
-*Jun 3–5, 2026* (upcoming) :doc:`HPC Summer Kickstart <scip/kickstart-2026>` —
-intro to scientific computing and HPC, 1 ECTS available.
+*Sep 7–8, 2026* (upcoming) `High Performance R <https://csc.fi/en/training-calendar/high-performance-r-3/>`__ —
+efficient and parallel R programming, 1 ECTS available.
 
-*Jun 11–12, 2026* (upcoming) `LUMI AI Workshop
-<https://lumi-supercomputer.eu/events/moving-your-ai-training-jobs-to-lumi-a-hands-on-workshop-june2026/>`__ —
-hands-on workshop on running AI training jobs on LUMI.
+*Sep 11, 2026* (upcoming) `RSE Seminar Series <https://aaltoscicomp.github.io/rse-training/seminars/>`__ kicks off —
+a new quarterly seminar by LUMI AI Factory partners Aalto SciComp and CSC.
 
-*Jun 23–Jul 2, 2026* (upcoming) `CSC Summer School in HPC
-<https://csc.fi/en/training-calendar/csc-summer-school-in-high-performance-computing-2026/>`__.
+*Sep 14–15, 2026* (upcoming) `Roihu NVIDIA GH200 Training
+<https://csc.fi/en/training-calendar/roihu-nvidia-gh200-training/>`__ —
+GPU programming on the Grace Hopper architecture, 1 ECTS available.
+
+*Sep 22–Oct 1, 2026* (upcoming) `CodeRefinery workshop
+<https://coderefinery.github.io/2026-09-22-workshop/>`__ —
+version control, reproducibility, and software best practices, 1 ECTS available.
+
+*Sep 24–25, 2026* (upcoming) `Data Analysis with R
+<https://csc.fi/en/training-calendar/data-analysis-with-r-7/>`__ — 1 ECTS available.
+
+*Nov 24–26, 2026* (upcoming) `Containers in Supercomputing Environment
+<https://csc.fi/en/training-calendar/containers-in-supercomputing-environment-2/>`__ — 1 ECTS available.
 
 
 Anyone can sign up for announcements at the :doc:`SCIP announcement
