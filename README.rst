@@ -218,9 +218,9 @@ that for internal links there are no trailing underscores.  Internal
 links can get their text from the target.  Internal links are the
 ``:doc:`` domain::
 
-  :doc:`../tut/interactive.rst`
+  :doc:`../tut/interactive`
 
-  With different text: :doc:`Text <../tut/interactive.rst>`
+  With different text: :doc:`Text <../tut/interactive>`
 
 
 Internal reference links
