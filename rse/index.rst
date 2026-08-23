@@ -5,29 +5,24 @@
 Research Software Engineers
 ===========================
 
-The Aalto `Research Software Engineers <rse-history_>`_ (RSEs) provide
+The Aalto Research Software Engineers (RSEs) provide
 specialist support regarding
-software, computing, and data. As research becomes more digital and
-computer-dependent, the prerequisite knowledge grows larger and
-larger, and we exist to help you fill that gap.
+software, computing, and data. Research is becoming more digital and
+computer-dependent, and we exist to make sure all research can be successful.
 
-.. _rse-history: https://www.software.ac.uk/blog/2016-08-17-not-so-brief-history-research-software-engineers-0
+We support people, without limitation to software or infrastructures.
+For anything related to **computational research, research data,
+artificial intelligence, high-performance computing, custom software
+development, workflow automation, scaling-up computing, deployment of
+research web services, collaborative work, reproducible research,
+optimization, and more**, we can be the internal collaborator you
+need:
 
-We support people, not software or infrastructures.  For anything
-related to **custom software development, computational research, data
-management, workflow automation, scaling-up, deployment of public
-previews, collaborative work, reproducible research, optimization,
-high-performance computing, and more**, we can be the collaborator you
-need.  We can either give quick support or do longer term projects, either as
-a collaborator or leader.
-
-
-**Service availability:** Our daily help session :ref:`SciComp Garage
-<scicomp-garage>` is available to researchers at Aalto for free.  There is
-various funding for medium-length (days--weeks) projects from `various
-units <procedures/units-info>` at no cost to you.**  Longer projects (months+)
-are generally expected to have their own funding.
-
+* **For any quick questions or consultations,** drop by our :ref:`online
+  "garage" office hour <scicomp-garage>`, for free (anyone at Aalto)
+* **Hire us for longer projects,** either collaborative or delegated to
+  us.  Different Aalto units have different free thresholds, but we
+  can always make an initial plan for free.
 
 .. admonition:: Contact
 

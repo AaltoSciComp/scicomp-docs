@@ -16,66 +16,35 @@ For grant applicants
 
 
 If you've decided you would like to use the :doc:`research software
-engineer <index>` services in your project for a long period, you
+engineer <index>` services in your project, you
 might want to write it directly into your grant proposals.  If written
-correctly, this can increase your competitiveness:
-your research will be better because you can use RSEs for
-porting/optimizing/scaling of codes, automation, data management, and
-open science, while concentrating the main
-project resources on the actual research question.  We can do those
-listed things *much* faster than most researchers.
-
-If you don't know if you need our services, or need a consultation of
-what is even possible computationally, let us know, too!
+correctly, this can increase your competitiveness: we can do
+some things much faster than other researchers, and if you can
+convince reviewers of this, good for you.
 
 .. admonition:: Summary
 
-   * We can serve as a specialist to complement the researchers in
-     your project, which will make your grant more competitive.
-   * We can also help prepare resource estimates and benchmark tests
-     if needed by your grant.
-   * Plan on "Staff Scientist" salary level for at least a few months
-     when convenient for you.  (can be as low as 10% time spread out
-     over a longer period of time).
-   * We are written is as a normal staff, since we are.  **Don't
-     mention subcontracting or purchasing** or things that imply that
-     (this may not be allowed by funders).
+   * We can serve as a normal project member (as for as funding
+     agencies are concerned).  **Don't mention subcontracting or
+     purchasing** or things that imply that (this may not be allowed
+     by funders).
+   * Ideally, first talk to us for a rough estimate and to ensure we
+     know what is coming up.
+   * Plan on "Staff Scientist" salary level at some percent for at
+     least a few months when convenient for you.  (it can be as low as
+     10% FTE spread out over a longer period of time).
    * Just like with academic staff, until you have funding, there is
      no guarantee that our exact people (or someone) will be
      available.  You should write us in to improve your grant.  Worst
      case, we advise you in hiring someone to do what you need and
-     help mentor them.
+     help mentor them.  Contact us as soon as you get funding for time
+     planning.
    * :doc:`Contact us <request>` for more exact costs and our
      availability.
 
 
-
-Funding options
----------------
-
-Short-term services, less than one month per research group, are
-funded by various departments and schools and free to the users (part
-of the "research environment" services).  Longer term service should
-be funded by projects - either an external grant or basic funds.
-There are two ways to write this into a project proposal:
-
-1. As a **research salary**, just like other salaries on your project.
-   This has fewer limits, but is less flexible because we need to go
-   through HR and financial planning.
-
-2. As a **internal changing/purchased service**, like usage of
-   different infrastructures.  This is flexible, but not compatible
-   with some funders.  It should work well with internal, basic
-   funding.
-
-**Don't mention subcontracting or purchasing in your grant text**
-unless it really has to be organized that way.  Make us appear as
-normal employees, since we are.
-
-
-
-(1) Funding RSE salary
------------------------
+Option 1: Funding RSE salary
+----------------------------
 
 In this option, your grant directly pays the salary of an RSE from our
 team.  To a funder, this appears the same as hiring a researcher, so
@@ -85,22 +54,22 @@ is compatible with many types of grants.  Some considerations:
 * Contact us for salary levels (it is roughly staff scientist) and
   availability.
 * Tell your controller this salary level and duration.  Your
-  controller will compute the necessary overhead and tell you if it is
-  possible.  (You should tell you financial staff/HR/etc. that the
-  salary will be used for someone in the School of Science
-  (SCI-common) and ensure that this is fine.)
-* Finance/HR will set up the Halli system so that we can bill our
-  working hours directly to your project, based on actual time we work.
-* Realistically, we can spend up to about 80-90% time in a month on a
-  single project (but you must make sure we have time first!).
-* We bill only the actual time relevant to your project, so
-  while the costs are higher, in the end we are much more efficient
-  than typical researchers who have many other tasks going on.
+  controller will compute the necessary overheads and budget.  (You
+  should tell your financial staff/HR/etc that the salary will be used
+  for someone in the School of Science (SCI-common) and ensure that
+  this is fine for the grant.)
+* Once funded and the project begins, Finance will allow your assigned
+  RSEs to record their working hours via the Halli system.
+* You should not plan for more than 80% FTE for a RSE so that we have
+  time for our team overheads (unless we specifically plan this).
+* We bill only the actual time relevant to your project.  Thus,
+  while the raw salary is higher, our efficiency usually saves you
+  money in the long run.
 
 
 
-(2) Purchasing RSE services
----------------------------
+Option 2: Internal invoicing
+----------------------------
 
 Contact us with your needs, and we can give you an estimated price and
 time required.  We can provide the services distributed over a time
@@ -111,13 +80,12 @@ period that is relevant to you.
   include this in a grant, carefully consult with grant/financial
   services to make sure this is possible.
 * In theory, we can serve groups outside of Aalto, but overheads are
-  quite large.  We are working on a RSE network within Finland so that
-  we you can efficiently get RSE services no matter where you are.
+  quite large to the point of being not practical.
 
 
 
-General grant considerations
-----------------------------
+General considerations
+----------------------
 
 You can find general boilerplate text to include in your proposals
 :doc:`/about/for-proposals`, but you can read below to build it in
@@ -184,7 +152,8 @@ this for computational and data sciences.
     implementation of the research plan or action plan (or
     equivalent). Short-term research, studies or other assignments
     may also be carried out in the form of outsourced services."  So,
-    consider this in justifying the research plan.
+    consider this in justifying the research plan.  This doesn't seem
+    to have been a problem in the past.
 
   * Don't call this subcontracting or purchasing.  It's normal
     internal salary.
