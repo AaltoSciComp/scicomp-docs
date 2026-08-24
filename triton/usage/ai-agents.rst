@@ -16,7 +16,7 @@ and more broadly on any computer you use.
 How do I run a coding agent? Am I running an agent on Triton?
 --------------------------------------------------------------
 
-It depends on your workflow. Here some of the most common setups:
+It depends on your workflow. Here are some of the most common setups:
 
 #. **VS Code (or other editor) with coding agent running only on your computer:** You run
    VS Code on your computer with
@@ -225,7 +225,7 @@ isolation method for Triton.
 
 
 Configuring AI agents to use a custom model API (often openAI-compatible API)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Some agent harnesses can use a custom or OpenAI-compatible API instead of the
 vendor's default service.  The exact setting names differ between agents, but
@@ -263,59 +263,98 @@ Global rules should apply to every session on Triton, while project rules
 should describe the conventions and resources of one repository.  Keep both
 short enough that the agent can follow them reliably.
 
-Suggested global rules:
+Example global rules to copy into any coding agent that runs on Triton
+(for example ``CLAUDE.md``, ``AGENTS.md``, Cursor/Codex user rules, or
+the agent's equivalent).
 
-* Use login nodes only for light interactive work.  Run computations through
-  Slurm; see the :doc:`cluster shell guidance </triton/tut/cluster-shell>` and
-  :doc:`Slurm tutorial </triton/tut/slurm>` before proposing resource requests.
-* Ask before submitting or cancelling jobs, installing software, deleting
-  files, changing permissions, or performing remote Git operations.
-* Monitor jobs with bounded checks at least 15 seconds apart and stop watchers
-  when they are no longer needed.  Prefer Triton's documented commands and use
-  :doc:`job monitoring </triton/tut/monitoring>` to assess efficiency after a
-  job finishes.
-* Do not submit large numbers of small jobs individually.  Group short tasks
-  or use :doc:`Slurm arrays </triton/tut/array>`.
-* Never read, print, move, or commit credentials.
-* Stop and ask the user when Triton documentation, project instructions, and
-  the requested action disagree.
+.. code-block:: text
 
-Suggested project rules:
+   You are working on the Triton HPC cluster at Aalto University.
+   Follow these rules and fetch the linked pages when you need
+   site-specific details.
 
-* Read the project's documentation, existing job scripts, module setup, and
-  environment files before creating or changing them.
-* Reuse documented modules and environments.  Search with ``module spider``
-  before installing software; see :doc:`software modules
-  </triton/tut/modules>`.
-* Use the storage location intended by the project.  Keep computation data out
-  of ``$HOME`` and remember that ``$WRKDIR`` and scratch are not backed up; see
-  :doc:`Triton storage </triton/tut/storage>`.
-* Avoid producing large numbers of small files or unnecessarily frequent logs
-  and checkpoints; see :doc:`small-file guidance </triton/usage/smallfiles>`.
-* Make small, reviewable changes.  Test with a small input before scaling up,
-  preserve important outputs, and report commands, job IDs, and generated
-  files to the user.
+   * Never read, print, move, or commit credentials. 
+   * Do not run git commands.  Suggest the exact commands and let the
+     user run them in a separate terminal.  Do not use git credentials.
+   * Before installing a software, search with
+     module spider and reuse existing modules.  If something is
+     missing, ask the user for approval before the installation. 
+     https://scicomp.aalto.fi/triton/tut/modules/
+   * Before proposing a job, verify time, memory, CPUs, GPUs, and
+     partition against the Triton documentation:
+     https://scicomp.aalto.fi/triton/tut/slurm/
+     https://scicomp.aalto.fi/triton/tut/serial/
+     https://scicomp.aalto.fi/triton/tut/array/
+     https://scicomp.aalto.fi/triton/tut/parallel/
+     https://scicomp.aalto.fi/triton/tut/gpu/
+   * Ask before submitting or cancelling jobs, deleting files, or
+     changing permissions.
+   * Do not submit large numbers of small jobs individually.  Group
+     short tasks or use Slurm arrays (see the array tutorial above).
+   * Do not poll the queue aggressively.  Wait at least 15 seconds
+     between squeue/sacct calls, and stop watchers when they are no
+     longer needed:
+     https://scicomp.aalto.fi/triton/tut/monitoring/
+   * Keep computation data out of $HOME.  $WRKDIR and scratch are not
+     backed up:
+     https://scicomp.aalto.fi/triton/tut/storage/
+   * Avoid producing large numbers of small files or unnecessarily
+     frequent logs and checkpoints:
+     https://scicomp.aalto.fi/triton/usage/smallfiles/
+   * Make small, reviewable changes.  Test with a small input before
+     scaling up, preserve important outputs, and report commands, job
+     IDs, and generated files to the user.
+   * Save work frequently.  Do not rely on long unsupervised sessions
+     on the login node.
+   * When Triton documentation and project instructions disagree,
+     follow the project for how this repository runs, and Triton docs
+     for cluster limits.  Stop and ask if the requested action still
+     conflicts.
+
+Example project rules to copy into the repository (then replace the
+placeholders):
+
+.. code-block:: text
+
+   * Read this project's documentation, existing job scripts, module
+     setup, and environment files before creating or changing them.
+   * Software stack (do not invent a new one unless the user asks):
+     modules: <MODULE LIST>
+     container or environment: <PATH OR NAME>
+   * Data, job output, and temporary files go here (not $HOME):
+     <PROJECT DATA PATH, e.g. $WRKDIR/...>
+     <JOB OUTPUT PATH>
+   * Job-script conventions unless the user asks to change them:
+     partition: <PARTITION>
+     typical time / memory / CPUs or GPUs: <VALUES>
+     array layout: <HOW TASKS ARE GROUPED>
+     output paths: <SLURM -o/-e OR EQUIVALENT>
 
 Recommended skills for Triton projects
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Skills are reusable instruction bundles, and some can also include scripts or
-references.  Useful skills for Triton projects include:
+A *skill* is a reusable how-to bundle: instructions, and often scripts or
+reference files, that the agent loads when it needs them.  Unlike the rules above (which set
+constraints), a skill describes *how* to carry out a specific task: which
+page to fetch, which commands to run, what output to check.  Example skills
+for Triton projects:
 
-* **Triton documentation lookup:** Find the relevant Triton page, extract the
-  site-specific instructions, and cite them before proposing a command.
-* **Slurm job preparation:** Select time, memory, CPUs, GPUs, and temporary
-  storage; choose arrays or grouped jobs for many short tasks; validate an
-  existing job script; and request approval before submission.
-* **Job monitoring and diagnosis:** Check queue state without aggressive
-  polling, inspect logs, use ``seff`` or ``slurm history`` after completion,
-  and suggest resource adjustments based on evidence.
-* **Software environment setup:** Discover installed software with
-  ``module spider``, reproduce the project's module stack.
+* **Triton documentation lookup:** Fetch the relevant Triton page, extract
+  the site-specific limit or command, and cite it before proposing an action.
+* **Slurm job preparation:** Draft or validate ``#SBATCH`` lines against this
+  project's conventions and the Triton tutorials; group short tasks into
+  arrays; require user approval before running ``sbatch``.
+* **Job monitoring and diagnosis:** Observe the polling interval in the rules
+  above; inspect logs; after completion run ``seff`` or ``slurm history`` and
+  suggest resource adjustments based on the evidence.
+* **Software environment setup:** Use ``module spider`` to discover what is
+  already installed, then reproduce this project's documented module,
+  container, or environment stack.
 
-Treat every skill as executable third-party content: read all instructions and
-scripts before adding it.  Do not use a skill that asks for credentials,
-weakens confirmation settings, or sends project data elsewhere.
+.. warning::
 
-Example skills for Triton projects can be found in the `ASC LLM examples <https://github.com/AaltoSciComp/llm-examples>`__ repository.
-
+   Skills can be a prompt-injection vector; see the **Prompt injection** row
+   above.  Treat every skill as executable third-party content: read all of
+   its instructions and scripts before adding it, and reject any skill that
+   asks for credentials, weakens confirmation settings, or sends project
+   data elsewhere.  
