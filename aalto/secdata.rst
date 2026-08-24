@@ -35,6 +35,8 @@ with your goal and links to the software instructions you want to
 follow — we can build the container with you, or even build it for
 you.
 
+.. highlight:: console
+
 
 When to use SECDATA
 -------------------
@@ -157,7 +159,9 @@ Work on a normal Aalto Linux workstation or Triton, with
 **non-secret** test data.
 
 Create a Conda environment file ``environment.yml``.  List the
-packages you actually need; this is only a sketch::
+packages you actually need; this is only a sketch:
+
+.. code-block:: yaml
 
    name: myproject
    channels:
@@ -172,7 +176,9 @@ packages you actually need; this is only a sketch::
      - pip:
        - pydeface
 
-Create a Singularity definition file ``conda.def``::
+Create a Singularity definition file ``conda.def``:
+
+.. code-block:: singularity
 
    Bootstrap: docker
    From: continuumio/miniconda3:4.10.3-alpine
@@ -197,7 +203,7 @@ Create a Singularity definition file ``conda.def``::
 Build the image (root is often required; Apptainer can also build
 without root in some setups)::
 
-   sudo singularity build conda.sif conda.def
+   $ sudo singularity build conda.sif conda.def
 
 Test the image locally with dummy data until Jupyter and your scripts
 run.  Then put the image, code, and **only the files that must go in**
@@ -205,8 +211,8 @@ into one folder and upload them to the SECDATA incoming share (ITS
 will tell you the instance name, here ``INSTANCE``).  Connect and
 upload from the folder that contains your files::
 
-   cd FOLDER
-   smbclient -k //teamwork/secdata
+   $ cd FOLDER
+   $ smbclient -k //teamwork/secdata
    smb: \> cd INSTANCE
    smb: \> cd incoming
 
@@ -232,10 +238,10 @@ Connect with **VMware Horizon Client** to https://finvdi.aalto.fi
 Open a terminal and create a working project folder (adjust user and
 instance names)::
 
-   cd /nfs/home
-   mkdir project
-   chown YOURUSERNAME:INSTANCENAME project
-   chmod 770 project
+   $ cd /nfs/home
+   $ mkdir project
+   $ chown YOURUSERNAME:INSTANCENAME project
+   $ chmod 770 project
 
 C. Work with the data and the container
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -243,22 +249,22 @@ C. Work with the data and the container
 Copy incoming material into your project (source data stays read-only
 in ``/nfs/data``; this copy is what you write alongside)::
 
-   cd /nfs/home/project
-   mkdir code
-   cp -r /nfs/incoming/. code/
-   mkdir data
-   cp -r /nfs/data/. data/
+   $ cd /nfs/home/project
+   $ mkdir code
+   $ cp -r /nfs/incoming/. code/
+   $ mkdir data
+   $ cp -r /nfs/data/. data/
 
 If the data was zipped, tarred, or password-encrypted, extract it
 here.
 
 Start the container and JupyterLab::
 
-   cd /nfs/home/project/code
-   singularity shell -B /nfs --no-home ./conda.sif
-   conda env list
-   source activate myproject
-   jupyter-lab
+   $ cd /nfs/home/project/code
+   $ singularity shell -B /nfs --no-home ./conda.sif
+   $ conda env list
+   $ source activate myproject
+   $ jupyter-lab
 
 Jupyter prints a local URL, for example
 ``https://localhost:8888/lab?token=...``.  Open **Firefox inside the

@@ -196,6 +196,7 @@ html_css_files = [
 
 html_js_files = [
     "redirect-to-https.js",
+    "llm-gateway-models.js",
 ]
 
 html_theme = "sphinx_rtd_theme"

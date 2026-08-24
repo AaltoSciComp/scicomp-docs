@@ -29,8 +29,8 @@ If you encounter an error along the lines of
 cause is that you request a GPU partition but script is missing ``--gpus=n``.
 
 (*) These GPUs have a priority queue for the Ellis project, since they were
-procured for this project. Any job submitted to the short queue might be
-preempted if a job requiring the resources comes in from the Ellis queue.
+procured for this project. Any job submitted to the short queue will not launch
+if there is a job requiring the resources in the Ellis queue.
 
 (**) These GPUs are split from a single GPU with NVIDIA's
 `Multi-Instance GPU <https://docs.nvidia.com/datacenter/tesla/mig-user-guide/index.html>`__-feature.

@@ -11,16 +11,18 @@ There is a better way.  Scientific computing must be a team effort in
 the future (just like physical laboratories have their own
 specialists).
 
-`Three slide introduction <https://aaltofi.sharepoint.com/:p:/s/SciComp--ITSCloudTeam/EdbJv90A2QtCg182W20tzeUBb_mWX-7W1Uu8dh62mN34-w?e=uCg9sA>`__ (internal users only).
+`Three slide introduction
+<https://aaltofi.sharepoint.com/:p:/s/SciComp--ITSCloudTeam/EdbJv90A2QtCg182W20tzeUBb_mWX-7W1Uu8dh62mN34-w?e=uCg9sA>`__
+(link for internal users only).
 
 
 
 What are Research Software Engineers (RSE)?
 -------------------------------------------
 
-In Aalto RSE's vision, they are the co-researcher you need for your
-projects. **We are part of technical services, and we focus on all
-your computational challenges**, streamlining your research.
+We are the collaborator you need for your projects. **We are part of
+technical services, and we focus on all your computational
+challenges**, streamlining your research.
 
 * **Research:** with research background, supporting research (not IT
   specialists).
@@ -58,8 +60,8 @@ Real benefits
 
 During the work we have seen many real benefits.
 
-**Statistics show that when the RSE spends X time, the academic's
-time saved is 5X.**
+**Early statistics show that when the RSE spends X time, the
+academic's time saved is 5X.**
 
 * Solve daily computing/data problems
 * Take on long-term development out of scope for academic staff

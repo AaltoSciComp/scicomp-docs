@@ -5,8 +5,7 @@ Jupyter with GPUs
 
    Certain projects have funded hardware for Jupyter with GPUs.  The resources
    are available to all Triton users, with priority given to the project
-   members.  Others can attempt to use in a preemptible queue (the jobs are
-   killed with no warning if a higher-priority user comes).
+   members.
 
    We are still tuning the parameters (run time, resources available,
    etc.) to balance usefulness vs resource wastage.  There is no service
