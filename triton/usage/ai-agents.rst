@@ -16,7 +16,7 @@ and more broadly on any computer you use.
 How do I run a coding agent? Am I running an agent on Triton?
 --------------------------------------------------------------
 
-It depends on your workflow. Here some of the most common setups:
+It depends on your workflow. Here are some of the most common setups:
 
 #. **VS Code (or other editor) with coding agent running only on your computer:** You run
    VS Code on your computer with
@@ -36,7 +36,7 @@ It depends on your workflow. Here some of the most common setups:
    connect to ``triton.aalto.fi`` via remote SSH. In this case VS Code server runs on Triton's
    login node and any coding agent extension also runs there.
 
-#. **CLI agents over SSH on Triton:** You SSH into ``triton.aalto.fi`` and from the terminal
+#. **CLI agents over SSH on Triton:** You SSH into ``code.triton.aalto.fi`` and from the terminal
    start a command line agent such as Claude Code or OpenAI Codex. The agent runs on the
    login node and sends your code and other data it can access to the remote LLM provider.
 
@@ -44,7 +44,7 @@ It depends on your workflow. Here some of the most common setups:
 garage.*
 
 **NEW: If you are conneting to triton.aalto.fi with your coding tool (VScode, Claude code, 
-Codex, PyCharm, ...) please use the new login server** ``code.triton.aalto.fi``.
+Codex, PyCharm, ...) please use the new login server** ``code.triton.aalto.fi`` instead of ``triton.aalto.fi``.
 
 
 
@@ -191,8 +191,170 @@ GitHub Copilot allows some free credits for GitHub accounts that are
 teaching assistants or supervisors/mentors of other students or researchers). There are some
 ways to use open-source large language models and we will document them later.
 
+Practical guidance for configuring and using AI agents
+-------------------------------------------------------
 
-Recommendations for specific agents
--------------------------------------
 
+Large language model (LLM) agents are developing rapidly, so the practices in
+this section are not necessarily the best or final approaches.
 We will update our recommendations here based on users' feedback.
+These are techniques we have found useful and good starting points.  We welcome
+suggestions and reviews.  An agent's configuration does not make it safe by
+itself: remain present, review proposed actions, and follow the precautions
+above.
+
+Restricting file-system access
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Agents and their commands usually inherit your file permissions.  Selecting a
+project directory does not necessarily prevent access to your home directory,
+which may contain API keys, SSH configuration, and other secrets.
+
+Use the harness's sandbox settings to restrict access to the workspace, prefer
+read-only access where possible, and require approval for commands and file
+changes.  Avoid ``full access`` and test what is actually blocked.  For stronger
+isolation, use an operating-system sandbox, container, or virtual machine that
+exposes only the required project directories.
+
+The `vscode-apptainer <https://github.com/AaltoRSE/vscode-apptainer>`__
+repository provides scripts for running VS Code inside an Apptainer container
+with restricted access.  Isolation does not make sensitive data safe to send
+to a model provider, so the data-handling requirements above still apply.  Ask
+at the :ref:`daily garage help session <garage>` if you need help choosing an
+isolation method for Triton.
+
+
+Configuring AI agents to use a custom model API (often openAI-compatible API)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Some agent harnesses can use a custom or OpenAI-compatible API instead of the
+vendor's default service.  The exact setting names differ between agents, but
+the setup usually requires:
+
+* the API provider or protocol (often ``openai`` or ``openai-compatible``);
+* the API base URL;
+* a model or Azure deployment name; and
+* an API key or other authentication token.
+
+To configure one:
+
+#. Request access to the service and obtain its current base URL, available
+   model names, and authentication instructions.
+#. Follow your agent's documentation for a custom provider or base URL.
+   Azure OpenAI may additionally require a deployment name and API version.
+#. Put credentials in environment variables or the agent's secret store, not
+   in a repository, rule, skill, prompt, shell history, or command-line
+   argument.  Restrict permissions on any file containing a credential.
+#. Start with a small test.
+
+The `ASC LLM examples <https://github.com/AaltoSciComp/llm-examples>`__
+repository contains examples for connecting software to the `Aalto Azure
+OpenAI API <https://www.aalto.fi/en/services/aalto-ai-apis>`__ and the `Aalto
+LLM Gateway <https://github.com/AaltoSciComp/llm-gateway>`__.
+
+If you are uncertain which service fits your use case or have problems
+configuring the agent, contact the :ref:`daily garage help session <garage>`.
+
+Recommended global rules and project rules for Triton projects
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Agent harnesses use different names and locations for persistent instructions.
+Global rules should apply to every session on Triton, while project rules
+should describe the conventions and resources of one repository.  Keep both
+short enough that the agent can follow them reliably.
+
+Example global rules to copy into any coding agent that runs on Triton
+(for example ``CLAUDE.md``, ``AGENTS.md``, Cursor/Codex user rules, or
+the agent's equivalent).
+
+.. code-block:: text
+
+   You are working on the Triton HPC cluster at Aalto University.
+   Follow these rules and fetch the linked pages when you need
+   site-specific details.
+
+   * Never read, print, move, or commit credentials. 
+   * Do not run git commands.  Suggest the exact commands and let the
+     user run them in a separate terminal.  Do not use git credentials.
+   * Before installing a software, search with
+     module spider and reuse existing modules.  If something is
+     missing, ask the user for approval before the installation. 
+     https://scicomp.aalto.fi/triton/tut/modules/
+   * Before proposing a job, verify time, memory, CPUs, GPUs, and
+     partition against the Triton documentation:
+     https://scicomp.aalto.fi/triton/tut/slurm/
+     https://scicomp.aalto.fi/triton/tut/serial/
+     https://scicomp.aalto.fi/triton/tut/array/
+     https://scicomp.aalto.fi/triton/tut/parallel/
+     https://scicomp.aalto.fi/triton/tut/gpu/
+   * Ask before submitting or cancelling jobs, deleting files, or
+     changing permissions.
+   * Do not submit large numbers of small jobs individually.  Group
+     short tasks or use Slurm arrays (see the array tutorial above).
+   * Do not poll the queue aggressively.  Wait at least 15 seconds
+     between squeue/sacct calls, and stop watchers when they are no
+     longer needed:
+     https://scicomp.aalto.fi/triton/tut/monitoring/
+   * Keep computation data out of $HOME.  $WRKDIR and scratch are not
+     backed up:
+     https://scicomp.aalto.fi/triton/tut/storage/
+   * Avoid producing large numbers of small files or unnecessarily
+     frequent logs and checkpoints:
+     https://scicomp.aalto.fi/triton/usage/smallfiles/
+   * Make small, reviewable changes.  Test with a small input before
+     scaling up, preserve important outputs, and report commands, job
+     IDs, and generated files to the user.
+   * Save work frequently.  Do not rely on long unsupervised sessions
+     on the login node.
+   * When Triton documentation and project instructions disagree,
+     follow the project for how this repository runs, and Triton docs
+     for cluster limits.  Stop and ask if the requested action still
+     conflicts.
+
+Example project rules to copy into the repository (then replace the
+placeholders):
+
+.. code-block:: text
+
+   * Read this project's documentation, existing job scripts, module
+     setup, and environment files before creating or changing them.
+   * Software stack (do not invent a new one unless the user asks):
+     modules: <MODULE LIST>
+     container or environment: <PATH OR NAME>
+   * Data, job output, and temporary files go here (not $HOME):
+     <PROJECT DATA PATH, e.g. $WRKDIR/...>
+     <JOB OUTPUT PATH>
+   * Job-script conventions unless the user asks to change them:
+     partition: <PARTITION>
+     typical time / memory / CPUs or GPUs: <VALUES>
+     array layout: <HOW TASKS ARE GROUPED>
+     output paths: <SLURM -o/-e OR EQUIVALENT>
+
+Recommended skills for Triton projects
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A *skill* is a reusable how-to bundle: instructions, and often scripts or
+reference files, that the agent loads when it needs them.  Unlike the rules above (which set
+constraints), a skill describes *how* to carry out a specific task: which
+page to fetch, which commands to run, what output to check.  Example skills
+for Triton projects:
+
+* **Triton documentation lookup:** Fetch the relevant Triton page, extract
+  the site-specific limit or command, and cite it before proposing an action.
+* **Slurm job preparation:** Draft or validate ``#SBATCH`` lines against this
+  project's conventions and the Triton tutorials; group short tasks into
+  arrays; require user approval before running ``sbatch``.
+* **Job monitoring and diagnosis:** Observe the polling interval in the rules
+  above; inspect logs; after completion run ``seff`` or ``slurm history`` and
+  suggest resource adjustments based on the evidence.
+* **Software environment setup:** Use ``module spider`` to discover what is
+  already installed, then reproduce this project's documented module,
+  container, or environment stack.
+
+.. warning::
+
+   Skills can be a prompt-injection vector; see the **Prompt injection** row
+   above.  Treat every skill as executable third-party content: read all of
+   its instructions and scripts before adding it, and reject any skill that
+   asks for credentials, weakens confirmation settings, or sends project
+   data elsewhere.  
