@@ -111,6 +111,7 @@ Discussion starters
   * Management: collection, storage, transfer, archive, sharing.
   * What do you usually use?
   * Sensitive data: support and storage locations
+  * On-premise cold storage
 
 * Computing
 
