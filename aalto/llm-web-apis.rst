@@ -59,12 +59,7 @@ always-up-to-date list):
 All models support the OpenAI-compatible chat/completions API, so most
 existing OpenAI client libraries work without changes. If you want to request new models or discuss improvements, please use the `issue tracker <https://version.aalto.fi/gitlab/llmdeployment/gateway-issue-tracker>`__ or just email ``rse@aalto.fi``. Requested models must be available on HuggingFace and downloadable from within Europe. Please note that only models smaller than ~70GB can be used in the current hardware we have. Models of 40 GB or below are preferred as they fit on a single GPU; multi-GPU deployments are more fragile and may fail to start. Please note that the system does NOT provide ``responses`` background functionality (i.e. submit now, come back later). It does otherwise support ``responses``.
 
-Only two models:
-
-- ``Qwen/Qwen3-30B-A3B-Instruct-2507-FP8``
-- ``RedHatAI/gemma-4-31B-it-FP8-Dynamic``
-
-are permanently on, i.e. there is an instance of those running constantly. 
+Only a small number of models (listed as can be seen in the table) are permanently on, i.e. there is an instance of those running constantly. 
 
 The other models are on demand, i.e. they will be spun up once a request comes in
 (this can take up to several minutes depending on model size) and
