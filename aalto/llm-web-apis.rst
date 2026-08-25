@@ -49,11 +49,11 @@ always-up-to-date list):
 
 .. raw:: html
 
-   <div data-llm-model-table data-models-url="https://llm-gateway.k8s.aalto.fi/api/v1/models">
+   <div data-llm-model-table data-models-url="https://llm-gateway.k8s.aalto.fi/api/v1/modelinfos">
      <p>Loading current model list...</p>
    </div>
    <noscript>
-     <p>This table requires JavaScript. You can still inspect the available models via <a href="https://llm-gateway.k8s.aalto.fi/api/v1/models">the models endpoint</a>.</p>
+     <p>This table requires JavaScript. You can still inspect the available models via <a href="https://llm-gateway.k8s.aalto.fi/api/v1/modelinfos">the models endpoint</a>.</p>
    </noscript>
 
 All models support the OpenAI-compatible chat/completions API, so most

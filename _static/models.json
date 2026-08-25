@@ -1,101 +1,164 @@
 [
   {
-    "id": "openai/gpt-oss-120b",
-    "owned_by": "Admin",
-    "permissions": [],
-    "object": "model",
-    "type": [
-      "chat",
-      "responses",
-      "messages"
-    ]
+    "model": {
+      "id": "openai/gpt-oss-120b",
+      "owned_by": "Admin",
+      "permissions": [],
+      "object": "model",
+      "type": [
+        "chat",
+        "responses",
+        "messages"
+      ]
+    },
+    "name": "openai/gpt-oss-120b",
+    "description": "OpenAIs gpt-oss-120B model. Context length 131072 tokens (on demand)",
+    "prompt_cost": 1,
+    "completion_cost": 1,
+    "cached_token_cost": 0.5
   },
   {
-    "id": "google/codegemma-7b-it",
-    "owned_by": "Admin",
-    "permissions": [],
-    "object": "model",
-    "type": [
-      "chat",
-      "responses",
-      "messages"
-    ]
+    "model": {
+      "id": "google/codegemma-7b-it",
+      "owned_by": "Admin",
+      "permissions": [],
+      "object": "model",
+      "type": [
+        "chat",
+        "responses",
+        "messages"
+      ]
+    },
+    "name": "google/codegemma-7b-it",
+    "description": "Google codegemma 7B it model.  Context length 64000 tokens (on demand)",
+    "prompt_cost": 0.1,
+    "completion_cost": 0.1,
+    "cached_token_cost": 0.05
   },
   {
-    "id": "Qwen/Qwen3-VL-30B-A3B-Instruct-FP8",
-    "owned_by": "Admin",
-    "permissions": [],
-    "object": "model",
-    "type": [
-      "chat",
-      "responses",
-      "messages"
-    ]
+    "model": {
+      "id": "Qwen/Qwen3.8-27B-FP8",
+      "owned_by": "Admin",
+      "permissions": [],
+      "object": "model",
+      "type": [
+        "chat",
+        "responses",
+        "messages"
+      ]
+    },
+    "name": "Qwen/Qwen3.8-27B-FP8",
+    "description": "Qwen3.8 27B model with fp8 quantization. Context length 262144 tokens ( Always On )",
+    "prompt_cost": 0.1,
+    "completion_cost": 0.1,
+    "cached_token_cost": 0.05
   },
   {
-    "id": "RedHatAI/gemma-4-31B-it-FP8-Dynamic",
-    "owned_by": "Admin",
-    "permissions": [],
-    "object": "model",
-    "type": [
-      "chat",
-      "responses",
-      "messages"
-    ]
+    "model": {
+      "id": "google/gemma-4-E4B-it",
+      "owned_by": "Admin",
+      "permissions": [],
+      "object": "model",
+      "type": [
+        "chat",
+        "responses",
+        "messages"
+      ]
+    },
+    "name": "google/gemma-4-E4B-it",
+    "description": "Google Gemma 4 E4B IT model. Context length 128000 tokens (on demand)",
+    "prompt_cost": 0.1,
+    "completion_cost": 0.1,
+    "cached_token_cost": 0.05
   },
   {
-    "id": "Qwen/Qwen3-VL-30B-A3B-Thinking-FP8",
-    "owned_by": "Admin",
-    "permissions": [],
-    "object": "model",
-    "type": [
-      "chat",
-      "responses",
-      "messages"
-    ]
+    "model": {
+      "id": "Qwen/Qwen3-30B-A3B-Instruct-2507-FP8",
+      "owned_by": "Admin",
+      "permissions": [],
+      "object": "model",
+      "type": [
+        "chat",
+        "responses",
+        "messages"
+      ]
+    },
+    "name": "Qwen/Qwen3-30B-A3B-Instruct-2507-FP8",
+    "description": "Qwen3 30B instruct model with fp8 quantization. Context length 15664 tokens ( On demand )",
+    "prompt_cost": 0.1,
+    "completion_cost": 0.1,
+    "cached_token_cost": 0.05
   },
   {
-    "id": "Qwen/Qwen3-Coder-30B-A3B-Instruct-FP8",
-    "owned_by": "Admin",
-    "permissions": [],
-    "object": "model",
-    "type": [
-      "chat",
-      "responses",
-      "messages"
-    ]
+    "model": {
+      "id": "Qwen/Qwen3-VL-30B-A3B-Instruct-FP8",
+      "owned_by": "Admin",
+      "permissions": [],
+      "object": "model",
+      "type": [
+        "chat",
+        "responses",
+        "messages"
+      ]
+    },
+    "name": "Qwen/Qwen3-VL-30B-A3B-Instruct-FP8",
+    "description": "Qwen3 VL 30B instruct model with FP8 quantization. Context length 31228 tokens (on demand)",
+    "prompt_cost": 0.1,
+    "completion_cost": 0.1,
+    "cached_token_cost": 0.05
   },
   {
-    "id": "google/gemma-4-E4B-it",
-    "owned_by": "Admin",
-    "permissions": [],
-    "object": "model",
-    "type": [
-      "chat",
-      "responses",
-      "messages"
-    ]
+    "model": {
+      "id": "RedHatAI/gemma-4-31B-it-FP8-Dynamic",
+      "owned_by": "Admin",
+      "permissions": [],
+      "object": "model",
+      "type": [
+        "chat",
+        "responses",
+        "messages"
+      ]
+    },
+    "name": "RedHatAI/gemma-4-31B-it-FP8-Dynamic",
+    "description": "Google Gemma 4 31B IT model Q8 Quantized RedHatAI/gemma-4-31B-it-FP8-Dynamic. Context length 32768 tokens (Always On)",
+    "prompt_cost": 0.1,
+    "completion_cost": 0.1,
+    "cached_token_cost": 0.05
   },
   {
-    "id": "Qwen/Qwen3.8-27B-FP8",
-    "owned_by": "Admin",
-    "permissions": [],
-    "object": "model",
-    "type": [
-      "chat",
-      "responses",
-      "messages"
-    ]
+    "model": {
+      "id": "Qwen/Qwen3-Coder-30B-A3B-Instruct-FP8",
+      "owned_by": "Admin",
+      "permissions": [],
+      "object": "model",
+      "type": [
+        "chat",
+        "responses",
+        "messages"
+      ]
+    },
+    "name": "Qwen/Qwen3-Coder-30B-A3B-Instruct-FP8",
+    "description": "Qwen3 30B coder instruct model with fp8 quantization. Context length 32768 tokens (on demand)",
+    "prompt_cost": 0.1,
+    "completion_cost": 0.1,
+    "cached_token_cost": 0.05
   },
   {
-    "id": "Qwen/Qwen3-30B-A3B-Instruct-2507-FP8",
-    "owned_by": "Admin",
-    "permissions": [],
-    "object": "model",
-    "type": [
-      "chat",
-      "responses",
-      "messages"
-    ]
+    "model": {
+      "id": "Qwen/Qwen3-VL-30B-A3B-Thinking-FP8",
+      "owned_by": "Admin",
+      "permissions": [],
+      "object": "model",
+      "type": [
+        "chat",
+        "responses",
+        "messages"
+      ]
+    },
+    "name": "Qwen/Qwen3-VL-30B-A3B-Thinking-FP8",
+    "description": "Qwen3 VL 30B thinking model with FP8 quantization. Context length 31228 tokens (on demand)",
+    "prompt_cost": 0.1,
+    "completion_cost": 0.1,
+    "cached_token_cost": 0.05
   }
 ]

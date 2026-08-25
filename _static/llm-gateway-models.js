@@ -12,19 +12,23 @@
   }
 
   function tableHtml(models) {
+    console.log(models)
     var rows = models
       .slice()
       .sort(function (left, right) {
-        return left.id.localeCompare(right.id);
+        return left.model.id.localeCompare(right.model.id);
       })
       .map(function (model) {
-        var modelId = escapeHtml(model.id);
-        var modelUrl = "https://huggingface.co/" + encodeURI(model.id);
-
+        var modelId = escapeHtml(model.model.id);
+        var modelUrl = "https://huggingface.co/" + encodeURI(model.model.id);
+        var maxTokens = model.description.toLowerCase().match(/context length (\d+) tokens/) 
+        var alwaysOn = model.description.toLowerCase().includes("always on") ? "Yes" : "No";
         return [
           "<tr>",
           "<td><code>" + modelId + "</code></td>",
           '<td><a href="' + modelUrl + '">Model card</a></td>',
+          "<td>" + (maxTokens ? maxTokens[1] : "N/A") + "</td>",
+          "<td>" + alwaysOn + "</td>",
           "</tr>",
         ].join("");
       })
@@ -34,7 +38,7 @@
       '<div class="wy-table-responsive">',
       '<table class="docutils align-default">',
       "<thead>",
-      "<tr><th>Model</th><th>HuggingFace</th></tr>",
+      "<tr><th>Model</th><th>HuggingFace</th><th>Max tokens</th><th>Always on</th></tr>",
       "</thead>",
       "<tbody>",
       rows,
@@ -52,7 +56,7 @@
     container.innerHTML = [
       '<p class="llm-models-fallback-note">',
       "Showing a locally cached model list because the live gateway did not respond. ",
-      '<a href="https://llm-gateway.k8s.aalto.fi/docs">Check the API docs</a> for the current list.',
+      '<a href="https://llm-gateway.k8s.aalto.fi/api/v1/modelinfos">Check the API docs</a> for the current list.',
       "</p>",
       tableHtml(models),
     ].join("");
@@ -62,7 +66,7 @@
     container.innerHTML = [
       '<p class="llm-models-error">',
       'Unable to load the current model list from the gateway. ',
-      '<a href="https://llm-gateway.k8s.aalto.fi/docs">Check the API docs</a>.',
+      '<a href="https://llm-gateway.k8s.aalto.fi/api/v1/modelinfos">Check the API docs</a>.',
       "</p>",
     ].join("");
   }
@@ -99,28 +103,32 @@
         }
         renderFallbackTable(container, models);
       })
-      .catch(function () {
+      .catch(function (err) {
+        console.error(err)
         renderError(container);
       });
   }
 
   function loadModels() {
     var container = document.querySelector("[data-llm-model-table]");
+    console.log("Loading models into container:", container);
     if (!container) {
       return;
     }
-
+    console.log("Fetching models from URL:", container.getAttribute("data-models-url"));
     var modelsUrl = container.getAttribute("data-models-url");
     container.innerHTML = "<p>Loading current model list...</p>";
 
     fetchWithTimeout(modelsUrl, FETCH_TIMEOUT_MS)
       .then(function (response) {
-        if (!response.ok) {
+        console.log("Fetched models response:", response);
+        if (!response.ok) {          
           throw new Error("Unexpected status " + response.status);
         }
         return response.json();
       })
       .then(function (models) {
+        console.log("Fetched models:", models);
         if (!Array.isArray(models)) {
           throw new Error("Model response was not an array");
         }
