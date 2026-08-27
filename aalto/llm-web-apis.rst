@@ -183,3 +183,16 @@ Kubernetes is used to manage computing power, so in principle there is
 plenty of opportunity for increasing resources if there is high demand, but this is not turned on until a
 need is established.  CPU resources are significant, but there are
 limited GPU resources (but that can change, depending on demand).
+
+
+Logging
+-------
+
+The gateway records information needed for authentication, security,
+operation, troubleshooting, and resource accounting. This includes access
+events, such as when a request was made and the user or API key associated
+with it, as well as the numbers of input and output tokens used.
+
+The gateway does **not** log or retain the contents of prompts or model
+responses as part of its normal application logging.
+
