@@ -36,29 +36,30 @@ need:
    See :doc:`contact` for other ways to contact, including email.
 
 
-Brief intros
-------------
+.. _request-rse:
+
+Basics
+------
 
 .. toctree::
    :maxdepth: 1
 
    contact
-   for-researchers
-   for-group-leaders
-   for-grant-applicants
-   for-units
+   project-lifecycle
    portfolio
 
-.. _request-rse:
 
-Project procedures
-------------------
+Topical details
+---------------
 
 .. toctree::
    :maxdepth: 1
 
-   project-lifecycle
    project-setup
+   for-researchers
+   for-group-leaders
+   for-grant-applicants
+   for-units
    procedures/finance-practicalities
 
 Below this point is advanced material you only need to check if you
