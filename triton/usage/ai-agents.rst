@@ -189,7 +189,7 @@ GitHub Copilot allows some free credits for GitHub accounts that are
 `registered as a teacher <https://docs.github.com/en/education/about-github-education/github-education-for-teachers/apply-to-github-education-as-a-teacher>`__
 (in practice this is suitable for any Aalto researcher or academic staff, since they are all
 teaching assistants or supervisors/mentors of other students or researchers). There are some
-ways to use open-source large language models and we will document them later.
+ways to use open-source large language models. See the section below.
 
 Practical guidance for configuring and using AI agents
 -------------------------------------------------------
