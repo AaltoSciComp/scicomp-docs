@@ -5,10 +5,10 @@
 Research Software Engineers
 ===========================
 
-The Aalto Research Software Engineers (RSEs) provide
-specialist support regarding
-software, computing, and data. Research is becoming more digital and
-computer-dependent, and we exist to make sure all research can be successful.
+The Aalto Research Software Engineers (RSEs) provide specialist
+support regarding software, computing, and data. Research is becoming
+more digital and computer-dependent, and we exist to make sure all
+research can be successful.
 
 We support people, without limitation to software or infrastructures.
 For anything related to **computational research, research data,
@@ -18,11 +18,17 @@ research web services, collaborative work, reproducible research,
 optimization, and more**, we can be the internal collaborator you
 need:
 
+**Our main audience is researchers of all types** (including artists,
+research assistants, MSc thesis workers, and all PhD students), but we
+can also serve service staff and teachers.  We don't mainly serve
+student questions related to courses unless they come through our work
+for a course.
+
 * **For any quick questions or consultations,** drop by our :ref:`online
   "garage" office hour <scicomp-garage>`, for free (anyone at Aalto)
-* **Hire us for longer projects,** either collaborative or delegated to
+* **Plan a longer project with us,** either collaborative or delegated to
   us.  Different Aalto units have different free thresholds, but we
-  can always make an initial plan for free.
+  can always make an initial plan and/or proof of concept for free.
 
 .. admonition:: Contact
 
