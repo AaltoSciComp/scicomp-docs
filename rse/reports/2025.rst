@@ -33,6 +33,12 @@ Major partnerships include:
 * AI-DOC (AI doctoral pilot)
 
 
+.. figure:: 2025-science-it-venn-diagram.png
+   :alt: Euler diagram of Science-IT's organization
+
+   Euler diagram of the state of Science-IT and RSEs at the end
+   of 2025.
+
 
 Finance
 -------
