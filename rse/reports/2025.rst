@@ -9,30 +9,67 @@
   - What is the future?
 
 In 2025, Aalto RSE has grow compared to 2025, mainly with even more
-focus on AI with significant funding from several AI infrastructure
-projects.
+focus on AI with significant funding from several major AI projects.
 
-.. admonition:: Summary
 
-   TBA
 
 Current status of Aalto RSE
 ---------------------------
 
 We have continued as in past years, pretty successfully.  During 2025,
-we grew from 7 staff to 10 staff with a new Lumi AI Factory grant to
-a research group in the CS department.
+we grew from 7 staff to 10 staff with the new staff being hired as
+academic staff in the CS department.  This allows us to support a
+wider variety of career paths.  We continue to mainly serve
+computational research groups, we are increasing getting projects from
+outside the School of Science.
 
-For more information on the types of projects we do, see the previous
-year's report: :doc:`2024`.
+Major partnerships include:
 
+* The School of Science
+* CS, NBE, PHYS departments
+* Aalto Data Agents (Research Services, Open Science and ACRIS team)
+* LUMI AI Factory
+* IT Services (IT Services for Research, Cloud/AI team)
+* AI-DOC (AI doctoral pilot)
+
+
+
+Finance
+-------
+
+Goal: Basic funding from SCI and its departments remains under 2 FTE,
+even as the team grows.  This has been accomplished.
+
+The large amount of AI-related funding has, in some sense, inhibited
+the team from finding a more diverse funding base.  While the increase
+in computing brought about by AI is here to stay, there is at least
+some risk of these dedicated funding sources being reduced in the
+future, and it would be wise to find a broader funding base.
+
+One future challenge is to be able to receive funding from small
+projects (under one month) with less work.  Right now our current
+threshold is one month, but an stakeholder suggested that we should
+find a way to receive funding for smaller projects.
+
+.. figure:: 2025-funding.png
+
+   Main funding sources.  Orange is SCI (+ SCI department) basic
+   funding.  Blue is that from assorted 3-party sources.  Greens
+   represent major AI funding from the Department of Computer Science.
+   Red indicates absences, which are recorded separately in financial
+   systems and needs further consideration.
 
 
 Our KPIs
 --------
 
 As we have matured, our previous KPIs of "number of projects per year"
-isn't appropriate anymore - our projects are becoming larger, and small stuff is being handled in garage.
+isn't appropriate anymore - our projects are becoming larger, and
+small work is being handled without separate tracking.
+From 20265 we will focus on two types of KPIs:
+
+* Major projects, trackable separately.
+* Garage support, tracked only in aggregate and "best-effort".
 
 
 RSE project stats
@@ -70,7 +107,7 @@ assigned to some year.
    things we do.
 
 
-	     
+
 Garage support stats
 --------------------
 
@@ -104,5 +141,13 @@ miss people.
 
    Word cloud of descriptions from garage.
 
-Funding stats
--------------
+
+
+Future considerations
+---------------------
+
+* "AI" will increase computing demands by lowering the human effort
+  required for computing, which will expand our customer base and make
+  new challenges.
+* Extra funding will make a larger team and more diverse career paths,
+  which needs extra attention.

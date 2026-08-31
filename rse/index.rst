@@ -79,6 +79,7 @@ About the research software engineers
    reports/2022
    reports/2023
    reports/2024
+   reports/2025
 
 
 
