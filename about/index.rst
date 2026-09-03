@@ -174,11 +174,11 @@ certain person.  Always contact us by :doc:`our help channels
      * computational physics/chemistry, network science, complex systems
 
    * * Enrico Glerean
-     * Triton admin, **teaching coordination**, **Research Services
+     * **Teaching coordination**, Triton admin, **Research Services
        liaison** (Research Ethics Committee, legal/personal data),
        **NBE unit liaison**, statistics
-     * neuroimaging methods, statistics, signal processing,
-       responsible conduct of research
+     * Neuroimaging methods, statistics, signal processing,
+       responsible conduct of research, personal data
 
    * * Ivan Tervanto
      * Triton admin, **Triton hardware**, **data center**, Applied
@@ -210,7 +210,7 @@ certain person.  Always contact us by :doc:`our help channels
 
    * * Julia Sohkanen
      * RSE
-     * *to be added*
+     * Mathematical physics
 
    * * Marijn van Vliet
      * RSE (NBE)
