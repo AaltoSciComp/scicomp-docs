@@ -171,7 +171,7 @@ certain person.  Always contact us by :doc:`our help channels
    * * Richard Darst
      * **RSE lead** (manages the RSE team), Triton admin, instructor
        training, **documentation**
-     * computational physics/chemistry, network science, complex systems
+     * Computational physics/chemistry, network science, complex systems
 
    * * Enrico Glerean
      * **Teaching coordination**, Triton admin, **Research Services
@@ -205,7 +205,7 @@ certain person.  Always contact us by :doc:`our help channels
 
    * * Jarno Rantaharju
      * RSE
-     * computational physics (quantum mechanics), HPC development and
+     * Computational physics (quantum mechanics), HPC development and
        optimization
 
    * * Julia Sohkanen
@@ -219,7 +219,7 @@ certain person.  Always contact us by :doc:`our help channels
 
    * * Nguyen Luong
      * RSE (LUMI AI Factory)
-     * computational social science, statistical modeling, machine
+     * Computational social science, statistical modeling, machine
        learning, software engineering
 
    * * Patricia Hernández León
