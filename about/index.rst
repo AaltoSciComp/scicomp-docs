@@ -158,92 +158,109 @@ certain person.  Always contact us by :doc:`our help channels
 </help/index>` for new questions.
 
 .. list-table::
+   :header-rows: 1
 
-   * *
-     * Internal specialties
+   * * Name
+     * Role / specialties
      * Background skills
-
-   * * Richard Darst
-     * Triton admin, RSE, **RSE lead**, instructor training, **documentation**
-     * computational physics/chemistry, network science, complex systems
-
-   * * Enrico Glerean
-     * Triton admin, RSE, **research ethics**, **personal data**,
-       **teaching coordination**, statistics, NBE unit liaison
-     * neuroimaging methods, statistics, signal processing,
-       responsible conduct of research
-
-   * * Luca Ferranti
-     * RSE (LUMI AI Factory)
-     * applied mathematics, computational geometry, signal processing,
-       machine learning
-
-   * * Hossein Firooz
-     * RSE (FCAI), **GPU partition configuration**, FCAI/ELLIS unit liaison
-     * machine learning
 
    * * Mikko Hakala
      * Triton admin, **team lead**, **strategy and finance**
      * Computational physics, mathematics
 
-   * * Patricia Hernández León
-     * RSE (LUMI AI Factory)
-     * Computational physics (atomistic modelling), machine learning,
-       mathematics
+   * * Richard Darst
+     * **RSE lead** (manages the RSE team), Triton admin, instructor
+       training, **documentation**
+     * Computational physics/chemistry, network science, complex systems
 
-   * * Sami Laine
-     * Triton admin, **Software build system**
-     * JupyterHub, software deployment, security and cloud
-
-   * * Nguyen Luong
-     * RSE (LUMI AI Factory)
-     * computational social science, statistical modeling, machine
-       learning, software engineering
-
-   * * Susanne Merz
-     * RSE
-     * Neuroimaging, medical research
-
-   * * Thomas Pfau
-     * RSE (web, Aalto AI assistant, LLM deployment), ITS unit
-       liaison.
-     * Computational Biology, Metabolic modelling, Linear Programming
-
-   * * Jarno Rantaharju
-     * RSE
-     * computational physics (quantum mechanics), HPC development and
-       optimization.
-
-   * * Teemu Ruokolainen
-     * RSE (FCAI, CUDA)
-     * Natural language processing, digital humanities, social sciences
-
-   * * Mira Salmensaari
-     * Triton admin, software deployment, teaching
-     * Computational physics
+   * * Enrico Glerean
+     * **Teaching coordination**, Triton admin, **Research Services
+       liaison** (Research Ethics Committee, legal/personal data),
+       **NBE unit liaison**, statistics
+     * Neuroimaging methods, statistics, signal processing,
+       responsible conduct of research, personal data
 
    * * Ivan Tervanto
      * Triton admin, **Triton hardware**, **data center**, Applied
        Physics support, teaching
      * Computational physics, computer science
 
-   * * Yu Tian
-     * RSE (generative AI, FCAI)
-     * Machine learning, medical research
+   * * Sami Laine
+     * Triton admin, **Software build system**
+     * JupyterHub, software deployment, security and cloud
+
+   * * Simppa Äkäslompolo
+     * Triton admin, **data storage systems**, **Slurm**, hardware and
+       data center, COMSOL
+     * Monte Carlo computations, FEM
+
+   * * Anja Virkkunen
+     * RSE, **AI-DOC unit liaison**, **ELEC/DICE (Dept. of Information
+       and Communications Engineering) unit liaison**
+     * Machine learning, AI, software engineering, speech recognition
+
+   * * Hossein Firooz
+     * RSE, **GPU partition configuration**, **FCAI/ELLIS unit liaison**
+     * machine learning
+
+   * * Jarno Rantaharju
+     * RSE
+     * Computational physics (quantum mechanics), HPC development and
+       optimization
+
+   * * Julia Sohkanen
+     * RSE
+     * Mathematical physics
+
+   * * Marijn van Vliet
+     * RSE (NBE)
+     * MEG/EEG and other neuroimaging methods, computational
+       modelling, machine learning, Python software development
+
+   * * Nguyen Luong
+     * RSE (LUMI AI Factory)
+     * Computational social science, statistical modeling, machine
+       learning, software engineering
+
+   * * Patricia Hernández León
+     * RSE (LUMI AI Factory)
+     * Computational physics (atomistic modelling), machine learning,
+       mathematics
 
    * * Simo Tuomisto
      * RSE (HPC, ML&AI, low level libraries)
      * Computational physics, ML&AI, deep learning, software
        engineering
 
-   * * Anja Virkkunen
-     * RSE (AI-DOC unit liaiason)
-     * Machine learning, AI, software engineering, speech recognition
+   * * Susanne Merz
+     * RSE
+     * Neuroimaging, medical research
 
-   * * Simppa Äkäslompolo
-     * Triton admin, **data storage systems**, **Slurm**, hardware and
-       data center, COMSOL
-     * Monte Carlo computations, FEM
+   * * Teemu Ruokolainen
+     * RSE (FCAI, CUDA)
+     * Natural language processing, digital humanities, social sciences
+
+   * * Thomas Pfau
+     * RSE (web, Aalto AI assistant, LLM deployment), **ITS unit
+       liaison**
+     * Computational Biology, Metabolic modelling, Linear Programming
+
+   * * Yu Tian
+     * RSE (generative AI, FCAI)
+     * Machine learning, medical research
+
+
+Alumni
+~~~~~~
+
+Former members of the team, listed here with thanks for their
+contributions:
+
+* **Luca Ferranti** — formerly RSE (LUMI AI Factory); applied
+  mathematics, computational geometry, signal processing, machine
+  learning
+* **Mira Salmensaari** — formerly Triton admin, software deployment,
+  teaching; computational physics
 
 
 
