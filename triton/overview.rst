@@ -35,8 +35,8 @@ those islands are mainly used for Lustre communication.
 Running MPI jobs possible on the entire island or its segment, but not
 across the cluster.
 
-Storgage
---------
+Storage
+-------
 
 All compute nodes and front-end are connected to a `ClusterStor storage
 system <usage/lustre>`:
