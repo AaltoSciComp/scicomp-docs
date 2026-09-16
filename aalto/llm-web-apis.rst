@@ -69,7 +69,7 @@ On-demand models are labelled as such in the model overview on the gateway front
 Given the limited resources (at time of writing the whole supporting infrastructure has 8 L40s cards)
 not all models can run at the same time and it is entirely possible that a model
 will not spin up after a request because resources are in use.
-If you are unsure which one to pick as a start, pick "RedHatAI/gemma-4-31B-it-FP8-Dynamic".
+If you are unsure which one to pick as a start, pick "Qwen/Qwen3.8-27B-FP8".
 
 Python quickstart
 -----------------
@@ -98,7 +98,7 @@ Replace ``YOURKEYGOESHERE`` with the key you created above.
        base_url="https://llm-gateway.k8s.aalto.fi/api/v1"
    )
    completion = client.chat.completions.create(
-       model="RedHatAI/gemma-4-31B-it-FP8-Dynamic",
+       model="Qwen/Qwen3.8-27B-FP8",
        messages=[
            {"role": "system", "content": "Helpful assistant that writes python for research."},
            {"role": "user", "content": "I need a python script to load a csv."}
