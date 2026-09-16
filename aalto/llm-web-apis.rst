@@ -170,6 +170,10 @@ about whether the endpoint is the right tool for what you have in mind.
      - No
      - Deploying tools to end users (students, staff, public) makes you an AI system
        provider under the EU AI Act, which comes with obligations we can't support here. Just get in touch so we can chat about your idea.
+   * - Are there legal restrictions on the models that you provide?
+     - Each model comes with its own license. We try to host only models with permissive licenses (MIT, Apache 2.0) but sometimes licenses
+       change in time and restrictions that did not exist might suddenly appear. If you are unsure, let's have a chat during our daily zoom
+       and, depending on the case, we can then escalate to our legal experts.
 
 If you're not sure whether your use case fits, just ask: drop a message in the
 ``#llms`` stream on :ref:`chat` or email ``rse@aalto.fi`` and we'll help you figure it out. If you are making any type of production system that is not for research, it might have extra legal requirements. Using this platform does not give you any compliance towards these rules.
