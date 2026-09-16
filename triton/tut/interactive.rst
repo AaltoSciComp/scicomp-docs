@@ -181,7 +181,7 @@ then sshes to there and connects to the shell::
 Interactive shell with GPU nodes
 --------------------------------
 
-For interactive jobs with gpu resources, it is advised to use ``gpu-debug`` partition. ``gpu-debug`` has a higher priority and your job will be scheduled faster.
+For interactive jobs with GPU resources, it is advised to use ``gpu-debug`` partition. ``gpu-debug`` has a higher priority and your job will be scheduled faster.  Batch GPUs are designed mainly for efficient batch computation and jobs which appear to be interactive and have low GPU usage may be cancelled with or without notice.
 
 If you need a specific GPU type, you can submit your interactive job to other partitions too, but keep the time limit of the job to 4 hours. Also the number of GPUs requested in an interactive job should be kept to 1 GPUs. 
 
