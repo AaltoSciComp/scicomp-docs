@@ -216,8 +216,8 @@ changes.  Avoid ``full access`` and test what is actually blocked.  For stronger
 isolation, use an operating-system sandbox, container, or virtual machine that
 exposes only the required project directories.
 
-The `vscode-apptainer <https://github.com/AaltoRSE/vscode-apptainer>`__
-repository provides scripts for running VS Code inside an Apptainer container
+The `AI tools in a container <https://github.com/AaltoRSE/moat>`__
+repository provides a command line tool for running AI tools inside an Apptainer container
 with restricted access.  Isolation does not make sensitive data safe to send
 to a model provider, so the data-handling requirements above still apply.  Ask
 at the :ref:`daily garage help session <garage>` if you need help choosing an
