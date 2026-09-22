@@ -271,7 +271,8 @@ the agent's equivalent).
 
    You are working on the Triton HPC cluster at Aalto University.
    Follow these rules and fetch the linked pages when you need
-   site-specific details.
+   site-specific details.  If the search_scicomp_docs MCP tool is
+   available, use it before guessing Triton-specific commands or limits.
 
    * Never read, print, move, or commit credentials. 
    * Do not run git commands.  Suggest the exact commands and let the
@@ -339,8 +340,8 @@ constraints), a skill describes *how* to carry out a specific task: which
 page to fetch, which commands to run, what output to check.  Example skills
 for Triton projects:
 
-* **Triton documentation lookup:** Fetch the relevant Triton page, extract
-  the site-specific limit or command, and cite it before proposing an action.
+* **Triton documentation lookup:** Fetch the relevant Triton page, extract the
+  site-specific limit or command, and cite it before proposing an action.
 * **Slurm job preparation:** Draft or validate ``#SBATCH`` lines against this
   project's conventions and the Triton tutorials; group short tasks into
   arrays; require user approval before running ``sbatch``.
@@ -357,4 +358,50 @@ for Triton projects:
    above.  Treat every skill as executable third-party content: read all of
    its instructions and scripts before adding it, and reject any skill that
    asks for credentials, weakens confirmation settings, or sends project
-   data elsewhere.  
+   data elsewhere.
+
+
+SciComp docs MCP tool (``search_scicomp_docs``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Agents often invent plausible but wrong Slurm flags, partitions, or module
+names.  An MCP (`Model Context Protocol
+<https://modelcontextprotocol.io>`__) tool can give the agent a grounded
+search over the SciComp documentation instead of guessing from memory.
+
+On ``code.triton.aalto.fi`` (the login node for coding agents) you can connect
+directly to the hosted SciComp Docs MCP.  It exposes one tool,
+``search_scicomp_docs``, which ranks relevant pages and returns excerpts with
+published ``https://scicomp.aalto.fi/`` URLs. 
+
+Full client notes are in the `docs MCP guide
+<https://github.com/AaltoSciComp/llm-examples/blob/main/triton-mcp/docs-mcp.md>`__.
+
+**Connect (client config).**  Add this to your MCP client settings (Cursor
+example: MCP servers config):
+
+.. code-block:: json
+
+   {
+     "mcpServers": {
+       "scicomp-docs": {
+         "url": "https://docs.triton.aalto.fi/mcp/"
+       }
+     }
+   }
+
+Restart or reload MCP if your client requires it, then confirm
+``search_scicomp_docs`` appears in the tool list.  With Codex you can instead
+run:
+
+.. code-block:: bash
+
+   codex mcp add scicomp-docs --url https://docs.triton.aalto.fi/mcp/
+
+**When the tool is used.**  Pose a docs question in chat; the agent should
+call ``search_scicomp_docs`` and cite the returned ``https://scicomp.aalto.fi/``
+URLs.  For example: “How do I request a GPU on Triton?”, “Where is the Aalto
+storage quota documentation?”, or “What is the policy for AI agents on
+Triton?”.  In agent / auto mode, if the agent needs Triton or SciComp facts
+(partitions, modules, quotas, Slurm, policy, …), it may call the same tool
+without you mentioning docs.
