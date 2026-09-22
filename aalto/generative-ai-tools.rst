@@ -99,6 +99,8 @@ of text inputs.
   * This is a very cost-efficient method to use these models.
   * These models will eventually be available in the Aalto AI
     Assistant as options you can test.
+  * For a quick command-line chat with these models on Triton, see
+    :ref:`llm-cli-chat` below.
 
 * OpenAI, and many other providers, also provide general API access
   for a price.  Without an Aalto contract, data security can not be
@@ -110,8 +112,59 @@ of text inputs.
   can help you try it out on triton.
 
 
-Locally installed models
-------------------------
+.. _llm-cli-chat:
+
+Command-line chat with Aalto models on Triton
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Triton provides an ``llm`` module for quick interactive chat with the
+:doc:`Aalto-hosted open-source models <llm-web-apis>` from the command
+line.  It does not change your Python or Conda environment.
+
+**First-time setup**
+
+1. On Triton, load the module::
+
+      module load llm
+
+2. Run ``llm`` once and accept the Aalto configuration when prompted.
+   This sets the default model and disables local prompt/response
+   logging.
+
+3. Create an API key at
+   `https://llm-gateway.k8s.aalto.fi/ <https://llm-gateway.k8s.aalto.fi/>`__
+   (Aalto network or VPN required; see :doc:`llm-web-apis`).
+
+4. Store the key::
+
+      llm keys set aalto
+
+**Normal use**
+
+Ask a question::
+
+    llm "your question"
+
+Interactive chat::
+
+    llm chat
+
+Continue the previous conversation::
+
+    llm -c "Explain the previous answer more simply."
+
+Pipe content into a prompt::
+
+    cat script.py | llm "Review this Python code."
+
+Reasoning output (when the model produces it) is shown automatically.
+Hide it with::
+
+    llm -R "your question"
+
+
+Locally pre-downloaded models
+------------------------------
 
 Open-source models can be downloaded and run on your own computers,
 which can provide the ultimate performance for large analysis.  The
