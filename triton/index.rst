@@ -92,6 +92,14 @@ Running calculations
    tut/gpu.rst
    tut/dependency.rst
 
+AI agentic workflows
+--------------------
+
+.. toctree::
+   :maxdepth: 1
+
+   tut/ai-agentic-workflow.rst
+
 Supports by discipline 
 ======================
 
