@@ -232,3 +232,19 @@ Past events
 
 Scicomp Garage has existed since Spring 2017.  It has been online
 since March 2020, and daily since summer 2020.
+
+
+Funding acknowledgment
+----------------------
+
+A portion of Aalto RSE work is funded by the EU LUMI AI Factory
+Service Center grant from 2025-2028.  The following statement covers
+that portion.
+
+.. image:: https://github.com/AaltoSciComp/aaltoscicomp-graphics/blob/master/external/EU-co-funded.png?raw=true
+   :width: 25%
+
+.. image:: https://github.com/AaltoSciComp/aaltoscicomp-graphics/blob/master/external/EU-co-funded.png?raw=true
+   :width: 25%
+
+Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or EuroHPC Joint Undertaking. Neither the European Union nor the granting authority can be held responsible for them. The project is supported by the EuroHPC joint undertaking and its members including top-up funding by the Ministry of Education and Culture of Finland.
