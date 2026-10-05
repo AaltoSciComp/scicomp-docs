@@ -67,6 +67,7 @@ Topical details
    for-grant-applicants
    for-units
    procedures/finance-practicalities
+   acknowledging-rse
 
 Below this point is advanced material you only need to check if you
 have a special interest.
@@ -178,8 +179,8 @@ Other links
     by the Nordic e-Infrastructure Collaboration 2022 program committee.
 
 
-Funding acknowledgment
-----------------------
+Supported by
+------------
 
 A portion of Aalto RSE work is funded by the EU LUMI AI Factory
 Service Center grant from 2025-2028.  The following statement covers

@@ -63,3 +63,10 @@ details {
     margin-left: 10%;
     margin-right: 10%;
 }
+
+/* Left border bar for block quotes */
+.rst-content .document  blockquote {
+    border-left: 3px solid #ccc;
+    margin-left: .5em;
+    padding-left: .5em;
+}

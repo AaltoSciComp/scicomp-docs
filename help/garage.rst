@@ -237,8 +237,8 @@ Scicomp Garage has existed since Spring 2017.  It has been online
 since March 2020, and daily since summer 2020.
 
 
-Funding acknowledgment
-----------------------
+Supported by
+------------
 
 A portion of Aalto RSE work is funded by the EU LUMI AI Factory
 Service Center grant from 2025-2028.  The following statement covers
