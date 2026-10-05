@@ -19,6 +19,9 @@ SciComp garage
 .. admonition:: Planned disruptions
    :class: important
 
+   * 2026 October 7: No RSEs (internal development day)
+
+..
    * No planned disruptions.
 
 A "Garage" is a office hour to get practical advice and hands-on
