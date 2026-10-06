@@ -144,7 +144,7 @@ page for link.
 Special days
 ------------
 
-* **Wednedays** On 2026-09-16 and 2026-10-07 we will have a :ref:`COMSOL Multiphysics<comsol>` focus day: an expert from COMSOL (the company) plans to join.
+* **Wednedays** On 2026-10-07 and 2026-11-11 we will have a :ref:`COMSOL Multiphysics<comsol>` focus day: an expert from COMSOL (the company) plans to join.
 
 
 
