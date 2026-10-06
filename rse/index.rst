@@ -189,7 +189,7 @@ that portion.
 .. image:: https://github.com/AaltoSciComp/aaltoscicomp-graphics/blob/master/external/EU-co-funded.png?raw=true
    :width: 25%
 
-.. image:: https://github.com/AaltoSciComp/aaltoscicomp-graphics/blob/master/external/EU-co-funded.png?raw=true
+.. image:: https://github.com/AaltoSciComp/aaltoscicomp-graphics/blob/master/external/EuroHPC-horiz.png?raw=true
    :width: 25%
 
 Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or EuroHPC Joint Undertaking. Neither the European Union nor the granting authority can be held responsible for them. The project is supported by the EuroHPC joint undertaking and its members including top-up funding by the Ministry of Education and Culture of Finland.
