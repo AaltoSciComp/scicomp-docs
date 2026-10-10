@@ -12,7 +12,7 @@ Nov 24th - Nov 26th 2026 / Python for Scientific Computing
    * We are updating the content for this year's run. 
    * `Course material <https://aaltoscicomp.github.io/python-for-scicomp/>`__
    * Last year run on `YouTube
-     <https://www.youtube.com/playlist?list=PLZLVmS9rf3nMWEKWtagJ6h0q9BrFO49tn>`__
+     <https://www.youtube.com/watch?v=goFQSVQojMc&list=PLZLVmS9rf3nPYGcdalc8N2Qd7V3QY_MqS>`__
 
 
 This is a medium-advanced course in Python tools such as NumPy, SciPy,
