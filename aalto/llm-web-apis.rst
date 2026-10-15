@@ -23,6 +23,12 @@ Who can use the endpoint and with what data?
 
 To use the local endpoint you need to have an active Aalto account and be part of Aalto employees. Students can get access via their course organiser (the organiser creates an API key for the students to use); teachers are responsible for revoking student keys once the course work is complete. The advantage of a fully local solution is that the endpoint can be use with data classified as confidential. Secret data should not be processed with these tools.
 
+.. note::
+   
+   If you are a doctoral researcher without being emlpyed by Aalto, you can request an API key 
+   by registering to our course `SCI-L1010 <https://mycourses.aalto.fi/course/view.php?id=50445&loginredirect=0>`__ and complete module SCS7.
+
+ 
 
 Access and API keys
 -------------------
