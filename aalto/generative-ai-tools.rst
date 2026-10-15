@@ -53,7 +53,7 @@ Examples:
   purposes)
 * Many other services you can find online, many of which have
   questionable data security or ownership practices.
-* The Aalto service `speech2text <https://scicomp.aalto.fi/triton/apps/speech2text/>`__ uses the Whisper
+* The Aalto service `speech2text <https://speech2text.aalto.fi/>`__ uses the Whisper
   model.  It is a multitasking model that can perform multilingual
   speech recognition, speech translation, and language
   identification.  speech2text runs on the Triton computer and thus is
