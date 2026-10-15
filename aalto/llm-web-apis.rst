@@ -25,7 +25,7 @@ To use the local endpoint you need to have an active Aalto account and be part o
 
 .. note::
    
-   If you are a doctoral researcher without being emlpyed by Aalto, you can request an API key 
+   If you are a doctoral researcher without being employed by Aalto University, you can request an API key 
    by registering to our course `SCI-L1010 <https://mycourses.aalto.fi/course/view.php?id=50445&loginredirect=0>`__ and complete module SCS7.
 
  
