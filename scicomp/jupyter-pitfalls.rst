@@ -98,6 +98,10 @@ Solutions:
 
 - But just like with modularity above, a notebook designed to be
   easily testable isn't designed for interactive work.
+- However, if the notebooks are actually Python files like 
+  `Marimo notebooks <https://marimo.io/>`__, they can easily be tested 
+  `with Pytest <https://docs.marimo.io/guides/testing/pytest/>`__ just 
+  like regular Python. 
 - Transition to modules instead of testing in the notebook.
 
 
@@ -118,9 +122,10 @@ Solutions:
   merging, VCS integration
 - Jupyter `lab <https://github.com/jupyterlab/jupyterlab-git>`__ /
   notebook git integration work well.
-- Notebooks in other plain-text formats: Rmarkdown, `Jupytext
+- Notebooks in other formats: Rmarkdown, `Jupytext
   <https://jupytext.readthedocs.io/>`__ (pair notebooks with plain
-  text versions).
+  text versions), `Marimo <https://marimo.io/>`__ (notebooks are
+  regular Python files).
 - Remember, blobs in version control is still better than nothing.
 
 
@@ -146,6 +151,12 @@ Solutions:
   run all" defeats the purpose of that, so... balance it out.)
 - Design for modularity and clean interfaces, even within a notebook.
   Don't make a mess.
+- `IPyflow <https://github.com/ipyflow/ipyflow>`__ - reactive kernel for 
+  Jupyter notebooks that removes hidden state, introduces cell dependencies,
+  and enables computation propagation (cascading updates on cell update).
+- `Marimo <https://marimo.io/>`__ - alternative to Jupyter with cell graph, 
+  reactivity, custom web-based GUI like Jupyter Lab, and built-in package 
+  management. 
 
 
 
