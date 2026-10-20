@@ -189,7 +189,7 @@ with ``--constraint=ARCHITECTURE``. This tells Slurm to look for nodes that
 satisfy a specific feature. To list available features, one can use
 ``slurm features``.
 
-For example, one could limit the code to the Haswell-architecture with the
+For example, one could limit the code to the Skylake-architecture with the
 following script:
 
 .. code-block:: slurm
@@ -199,7 +199,7 @@ following script:
   #SBATCH --mem-per-cpu=200M   # 200MB per process
   #SBATCH --nodes=1            # 1 node
   #SBATCH --ntasks-per-node=24 # 24 processes as that is the number in the machine
-  #SBATCH --constraint=hsw     # set constraint for processor architecture
+  #SBATCH --constraint=skl     # set constraint for processor architecture
 
   module load triton/2024.1-gcc openmpi/4.1.6  # NOTE: should be the same as you used to compile the code
   srun ./pi-mpi 1000000
