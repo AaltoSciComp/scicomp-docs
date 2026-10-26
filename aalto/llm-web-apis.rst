@@ -177,12 +177,55 @@ about whether the endpoint is the right tool for what you have in mind.
      - Deploying tools to end users (students, staff, public) makes you an AI system
        provider under the EU AI Act, which comes with obligations we can't support here. Just get in touch so we can chat about your idea.
    * - Are there legal restrictions on the models that you provide?
+     - Depends
      - Each model comes with its own license. We try to host only models with permissive licenses (MIT, Apache 2.0) but sometimes licenses
        change in time and restrictions that did not exist might suddenly appear. If you are unsure, let's have a chat during our daily zoom
        and, depending on the case, we can then escalate to our legal experts.
 
 If you're not sure whether your use case fits, just ask: drop a message in the
 ``#llms`` stream on :ref:`chat` or email ``rse@aalto.fi`` and we'll help you figure it out. If you are making any type of production system that is not for research, it might have extra legal requirements. Using this platform does not give you any compliance towards these rules.
+
+
+.. admonition:: LLM Gateway vs. LLMs run on Triton
+   :class: tip
+
+   .. rubric:: What is the difference between the LLM Gateway and Triton LLMs?
+
+   - **LLM Gateway:** On-demand API access to selected models. Best for interactive use, coding assistants, and testing. No Slurm job needed.
+   - **Triton:** Pre-downloaded models for running your own inference jobs. Recommended for large datasets and batch processing.
+
+   Both allow processing within the Aalto network without using external LLM providers.
+
+   .. rubric:: Which models are available?
+
+   The LLM Gateway offers a limited selection of models, listed on this page. Triton provides a larger collection of hundreds of pre-downloaded models.
+
+   See :doc:`LLMs on Triton </triton/apps/llms>`.
+
+   .. rubric:: How much can I use the services? Are there quotas?
+
+   - **LLM Gateway:** Quotas are currently flexible and can be increased based on usage. Fixed limits may be introduced later.
+   - **Triton:** No token budget. Resources are allocated using fairshare scheduling: higher past usage temporarily reduces your job priority (two-week half-life).
+
+   .. rubric:: How should I process a large dataset?
+
+   Use **Triton batch jobs** rather than the LLM Gateway. This provides dedicated resources and more efficient processing.
+
+   Instructions: :ref:`Using Hugging Face models on Triton <triton-llms-huggingface>`.
+
+   .. rubric:: How fast are the models?
+
+   Performance depends on the model, GPUs, and workload.
+
+   For example, GLM 5.3 Flash on the Gateway currently runs on four H200 GPUs and achieves approximately **30–200 generated tokens/second**, depending on the workload.
+
+   On Triton, performance depends on the hardware allocated to your job.
+
+   .. rubric:: How long can I run an LLM job on Triton?
+
+   Maximum job runtime is generally **5 days**, or **2 days on common latest-generation GPU queues**.
+
+   Jobs start when resources become available, according to fairshare priority.
 
 
 Technical implementation

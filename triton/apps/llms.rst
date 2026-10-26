@@ -15,6 +15,8 @@ get familiar with the basics of using the cluster, including running jobs and us
     You can visit us at :ref:`the daily Zoom help session at 13.00-14.00 <garage>`.
 
 
+.. _triton-llms-huggingface:
+
 HuggingFace Models
 ~~~~~~~~~~~~~~~~~~~
 
