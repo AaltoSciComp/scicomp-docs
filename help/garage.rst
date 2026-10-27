@@ -19,7 +19,7 @@ SciComp garage
 .. admonition:: Planned disruptions
    :class: important
 
-   * 2026 October 7: No RSEs (internal development day)
+   * 2026 October 27: Most RSEs are in `AI agents unveiled seminar <https://www.aalto.fi/en/events/ai-agents-unveiled-how-ai-agents-work-behind-the-scenes-oct-27-2026>`__.
 
 ..
    * No planned disruptions.
