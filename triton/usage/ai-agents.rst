@@ -12,6 +12,13 @@ AI agents are powerful and can introduce security risks or disruptions for you a
 users of the cluster. We want to develop good practices for working with AI agents on Triton,
 and more broadly on any computer you use.
 
+.. warning::
+
+   30/10/2026: We are contacting users who are running agents on triton main login node. 
+   Please move your coding agents to ``code.triton.aalto.fi``. "YOLO" mode is not allowed.
+   We are working on step-by-step guidelines on how to run agents inside containers.
+   
+
 
 How do I run a coding agent? Am I running an agent on Triton?
 --------------------------------------------------------------
@@ -33,18 +40,23 @@ It depends on your workflow. Here are some of the most common setups:
    provider. Again, nothing runs on Triton.
 
 #. **VSCode with remote SSH to Triton:** You open VS Code on your computer, but this time you
-   connect to ``triton.aalto.fi`` via remote SSH. In this case VS Code server runs on Triton's
+   connect to ``code.triton.aalto.fi`` via remote SSH. In this case VS Code server runs on Triton's
    login node and any coding agent extension also runs there.
 
 #. **CLI agents over SSH on Triton:** You SSH into ``code.triton.aalto.fi`` and from the terminal
    start a command line agent such as Claude Code or OpenAI Codex. The agent runs on the
    login node and sends your code and other data it can access to the remote LLM provider.
 
-*If you are not sure about these workflows, just come and chat with us at the daily zoom
-garage.*
+#. **Coding agent on a dedicated node** You request resources via ``srun`` or ``sbatch`` and run the 
+   agent in the allocated node.  
 
-**NEW: If you are conneting to triton.aalto.fi with your coding tool (VScode, Claude code, 
-Codex, PyCharm, ...) please use the new login server** ``code.triton.aalto.fi`` instead of ``triton.aalto.fi``.
+
+*We are working on step-by-step instructions for the last two scenarios.*
+
+Please note that if you are conneting to ``triton.aalto.fi`` with your coding tool (VScode, Claude code, 
+Codex, PyCharm, ...) please use the dedicated login node ``code.triton.aalto.fi`` instead of ``triton.aalto.fi``. 
+From November 2026 we will contact users who are running coding agents on triton main login node and ask them to move
+to the dedicated node.
 
 
 
@@ -179,23 +191,22 @@ risks.
 Accounts to remote AI systems
 ------------------------------
 
-The coding agent itself is just a script that packages your code, questions, plans, and data
+The coding agent itself is just a process that packages your code, questions, plans, and data
 into a clever "prompt" that is sent to a remote AI system — very similar to chatting with
 ChatGPT or `duck.ai <http://duck.ai>`__, but this time you do not control what is sent to the
-remote large language model. While some chatbots are free and require no accounts (e.g.
-`duck.ai <http://duck.ai>`__), coding agents want you to register and in most cases you need
+remote large language model. The output from the LLM is then interpreted by the harness to run actual
+commands in your computer. Remote LLMs for coding agents often require a registration and in most cases you need
 to buy the service from the provider (e.g. OpenAI for Codex or Anthropic for Claude Code).
 GitHub Copilot allows some free credits for GitHub accounts that are
 `registered as a teacher <https://docs.github.com/en/education/about-github-education/github-education-for-teachers/apply-to-github-education-as-a-teacher>`__
 (in practice this is suitable for any Aalto researcher or academic staff, since they are all
-teaching assistants or supervisors/mentors of other students or researchers). There are some
-ways to use open-source large language models. See the section below.
+teaching assistants or supervisors/mentors of other students or researchers). There are however
+ways to use open-source large language models, especially those hosted locally. See the section below.
 
 Practical guidance for configuring and using AI agents
 -------------------------------------------------------
 
-
-Large language model (LLM) agents are developing rapidly, so the practices in
+AI agents are developing rapidly, so the practices in
 this section are not necessarily the best or final approaches.
 We will update our recommendations here based on users' feedback.
 These are techniques we have found useful and good starting points.  We welcome
@@ -203,25 +214,28 @@ suggestions and reviews.  An agent's configuration does not make it safe by
 itself: remain present, review proposed actions, and follow the precautions
 above.
 
-Restricting file-system access
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Restricting file-system access and review agent actions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Agents and their commands usually inherit your file permissions.  Selecting a
-project directory does not necessarily prevent access to your home directory,
-which may contain API keys, SSH configuration, and other secrets.
+project directory does not necessarily prevent the agent process to 
+access to your home directory, which may contain API keys, SSH configuration, and other secrets.
 
 Use the harness's sandbox settings to restrict access to the workspace, prefer
 read-only access where possible, and require approval for commands and file
-changes.  Avoid ``full access`` and test what is actually blocked.  For stronger
+changes.  Avoid ``full access``, avoid running agents that never ask for approval
+and test what is actually blocked.  For stronger
 isolation, use an operating-system sandbox, container, or virtual machine that
 exposes only the required project directories.
 
 The `AI tools in a container <https://github.com/AaltoRSE/moat>`__
 repository provides a command line tool for running AI tools inside an Apptainer container
-with restricted access.  Isolation does not make sensitive data safe to send
-to a model provider, so the data-handling requirements above still apply.  Ask
+with restricted access to the folders that you want to make visible to the agent.  
+Isolation does not make sensitive data safe to send to an external model provider, 
+so the data-handling requirements above still apply.  Ask
 at the :ref:`daily garage help session <garage>` if you need help choosing an
-isolation method for Triton.
+isolation method for Triton. We are working on detailed guidelines on how to run ``moat`` using
+our local LLM endpoint.
 
 
 Configuring AI agents to use a custom model API (often openAI-compatible API)
