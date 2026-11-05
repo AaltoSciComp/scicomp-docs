@@ -218,10 +218,11 @@ above.
 
 .. warning:: 
 
-   **Why is YOLO mode not allowed on Triton?**
+   **Why is full auto-approval mode (aka YOLO) not allowed on Triton?**
 
-   YOLO mode (automatic execution without *any* human approval) removes an
-   important safety checkpoint. On a shared HPC cluster, even an
+   "YOLO" mode (automatic execution without *any* human approval) removes an
+   important safety checkpoint: the human in the loop. This is sometimes run as
+   "dangerously-skip-permissions" option in coding agents. On a shared HPC cluster, even an
    unintended action can affect other users or the entire system.
 
    For example, an agent might access other users' accidentally
