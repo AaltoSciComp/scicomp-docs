@@ -214,6 +214,35 @@ suggestions and reviews.  An agent's configuration does not make it safe by
 itself: remain present, review proposed actions, and follow the precautions
 above.
 
+
+
+.. warning:: 
+
+   **Why is full auto-approval mode (aka YOLO) not allowed on Triton?**
+
+   "YOLO" mode (automatic execution without *any* human approval) removes an
+   important safety checkpoint: the human in the loop. This is sometimes run as
+   "dangerously-skip-permissions" option in coding agents. On a shared HPC cluster, even an
+   unintended action can affect other users or the entire system.
+
+   For example, an agent might access other users' accidentally
+   writable directories, overload the Slurm controller with frequent
+   queries, or submit thousands of jobs without supervision.
+
+   **Selecting a working directory or specifying some "skills" in the system prompt
+   is not necessarily a security boundary.** 
+   Agents generally inherit your filesystem permissions,
+   and instructions or skills alone cannot guarantee safe behaviour.
+
+   While sandboxing and containers can mitigate some risks, these
+   protections must be technically enforced and correctly configured by each user.
+   We cannot rely solely on individual users to configure and
+   continuously supervise unrestricted agents.
+
+   **For these reasons, YOLO mode is not permitted on Triton.**
+
+
+
 Restricting file-system access and review agent actions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
