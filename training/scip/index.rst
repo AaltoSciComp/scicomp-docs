@@ -97,3 +97,9 @@ deleted.  This series has existed since 2016.
 ----
 
 - :doc:`HPC Winter Kickstart (Jan 28, 2026) <winter-kickstart-2026>`
+- `CodeRefinery March 2026 <https://coderefinery.github.io/2026-03-17-workshop/>`__ (Mar 17–26, 2026)
+- :doc:`HPC Summer Kickstart 2026 <kickstart-2026>` (Jun 3–5, 2026)
+- `High Performance R (with CSC) <https://csc.fi/en/training-calendar/high-performance-r-3/>`__ (Sep 7–8, 2026)
+- `Roihu NVIDIA GH200 Training (with CSC) <https://csc.fi/en/training-calendar/roihu-nvidia-gh200-training/>`__ (Sep 14–15, 2026)
+- `CodeRefinery September 2026 <https://coderefinery.github.io/2026-09-22-workshop/>`__ (Sep 22–Oct 1, 2026)
+- `Data Analysis with R (with CSC) <https://csc.fi/en/training-calendar/data-analysis-with-r-7/>`__ (Sep 24–25, 2026)

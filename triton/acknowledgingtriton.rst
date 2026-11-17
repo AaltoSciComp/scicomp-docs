@@ -18,16 +18,20 @@ different departments - you can use Triton without logging into it.)
 
 An appropriate acknowledgement line might be one of:
 
-    We acknowledge the computational resources provided by the Aalto Science-IT project.
+    We acknowledge the computational resources provided by the Aalto
+    Science-IT project.
 
 or
 
-    The calculations presented above were performed using computer resources within the Aalto University School of Science "Science-IT" project.
+    The calculations presented above were performed using computer
+    resources within the Aalto University School of Science
+    "Science-IT" project.
 
 You can decide which one fits better to your text/slides. Rephrasing is
 also fine, the main issue is referencing to Science-IT and Aalto.  (Note
 that this does not exist in various funding databases, this is an Aalto
-internal project.)
+internal project.)  There is :doc:`more info for those using the
+Research Software Engineer service </rse/acknowledging-rse>`
 
 
 .. _acris-link:
@@ -41,6 +45,8 @@ Reporting
    * The Research Software Engineer service
    * SciComp garage support (if you think it's significant enough).
 
+You do this after the publication is out (as part of yearly
+reporting).
 
 We can't automatically track all publications, so we need all
 users to verify their publications are linked to Science-IT in ACRIS

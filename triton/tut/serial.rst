@@ -373,7 +373,7 @@ Part of a series: :doc:`pi </triton/tut/exercises-pi>`:
 
       Simply add ``#SBATCH --constraint=X`` to your sbatch script, or
       give ``--constraint=X`` to srun as additional argument. For example,
-      to run only on Haswell cpu's you can add ``--constraint=hsw``, or
+      to run only on Skylake cpu's you can add ``--constraint=skl``, or
       similarily for amd milan cpus ``--constraint=milan``. This also
       works identically for gpus.
 

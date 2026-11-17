@@ -67,6 +67,7 @@ Topical details
    for-grant-applicants
    for-units
    procedures/finance-practicalities
+   acknowledging-rse
 
 Below this point is advanced material you only need to check if you
 have a special interest.
@@ -176,3 +177,19 @@ Other links
   * Point three of `Vision for Nordic Open Science Data Collaboration
     <https://neic.no/news/2022/05/31/neic2022-conference-statement/>`__,
     by the Nordic e-Infrastructure Collaboration 2022 program committee.
+
+
+Supported by
+------------
+
+A portion of Aalto RSE work is funded by the EU LUMI AI Factory
+Service Center grant from 2025-2028.  The following statement covers
+that portion.
+
+.. image:: https://github.com/AaltoSciComp/aaltoscicomp-graphics/blob/master/external/EU-co-funded.png?raw=true
+   :width: 25%
+
+.. image:: https://github.com/AaltoSciComp/aaltoscicomp-graphics/blob/master/external/EuroHPC-horiz.png?raw=true
+   :width: 25%
+
+Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or EuroHPC Joint Undertaking. Neither the European Union nor the granting authority can be held responsible for them. The project is supported by the EuroHPC joint undertaking and its members including top-up funding by the Ministry of Education and Culture of Finland.

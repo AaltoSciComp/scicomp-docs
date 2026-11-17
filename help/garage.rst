@@ -19,6 +19,9 @@ SciComp garage
 .. admonition:: Planned disruptions
    :class: important
 
+   * 2026 October 27: Most RSEs are in `AI agents unveiled seminar <https://www.aalto.fi/en/events/ai-agents-unveiled-how-ai-agents-work-behind-the-scenes-oct-27-2026>`__.
+
+..
    * No planned disruptions.
 
 A "Garage" is a office hour to get practical advice and hands-on
@@ -141,7 +144,7 @@ page for link.
 Special days
 ------------
 
-* **Wednedays** On 2026-09-16 and 2026-10-07 we will have a :ref:`COMSOL Multiphysics<comsol>` focus day: an expert from COMSOL (the company) plans to join.
+* **Wednedays** On 2026-10-07 and 2026-11-11 we will have a :ref:`COMSOL Multiphysics<comsol>` focus day: an expert from COMSOL (the company) plans to join.
 
 
 
@@ -232,3 +235,19 @@ Past events
 
 Scicomp Garage has existed since Spring 2017.  It has been online
 since March 2020, and daily since summer 2020.
+
+
+Supported by
+------------
+
+A portion of Aalto RSE work is funded by the EU LUMI AI Factory
+Service Center grant from 2025-2028.  The following statement covers
+that portion.
+
+.. image:: https://github.com/AaltoSciComp/aaltoscicomp-graphics/blob/master/external/EU-co-funded.png?raw=true
+   :width: 25%
+
+.. image:: https://github.com/AaltoSciComp/aaltoscicomp-graphics/blob/master/external/EuroHPC-horiz.png?raw=true
+   :width: 25%
+
+Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or EuroHPC Joint Undertaking. Neither the European Union nor the granting authority can be held responsible for them. The project is supported by the EuroHPC joint undertaking and its members including top-up funding by the Ministry of Education and Culture of Finland.

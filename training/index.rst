@@ -22,16 +22,24 @@ and/or Python, Matlab and many others.
 If you are interested in a re-run of our past courses or if you want
 to suggest a new course, `please take this survey <https://link.webropol.com/s/scipod>`__.
 
-*Upcoming courses:* `High Performance R (Sep 7–8) <https://csc.fi/en/training-calendar/high-performance-r-3/>`__ (1 ECTS),
-`Roihu NVIDIA GH200 Training (Sep 14–15) <https://csc.fi/en/training-calendar/roihu-nvidia-gh200-training/>`__ (1 ECTS),
-`CodeRefinery workshop (Sep 22–Oct 1) <https://coderefinery.github.io/2026-09-22-workshop/>`__ (1 ECTS).
+*Upcoming at Aalto:* `AI in Research Work (Oct 22) <https://www.aalto.fi/en/events/ai-in-research-work-oct-22-2026>`__,
+`AI agents unveiled (Oct 27) <https://www.aalto.fi/en/events/ai-agents-unveiled-how-ai-agents-work-behind-the-scenes-oct-27-2026>`__,
+`Starting computational research projects at Aalto (Oct 29) <https://www.aalto.fi/en/events/starting-computational-research-projects-at-aalto-oct-29-2026>`__,
+`Open science and model cards in ML (Nov 3) <https://www.aalto.fi/en/events/open-science-and-model-cards-in-machine-learning-nov-3-2026>`__,
+`Doing qualitative research in conversation with AI (Nov 10) <https://www.aalto.fi/en/events/doing-qualitative-research-in-conversation-with-ai-nov-10-2026>`__,
+:doc:`Python for Scientific Computing (Nov 24–26) <scip/python-for-scicomp-2026>`.
+*Upcoming at CSC / LUMI AI Factory:* `Practical Deep Learning (Oct 21–22) <https://csc.fi/en/training-calendar/practical-deep-learning-8/>`__,
+`Agentic AI (Nov 3–5) <https://csc.fi/en/training-calendar/agentic-ai-beyond-coding-assistants-and-chatbots/>`__,
+`Containers in Supercomputing Environment (Nov 24–26) <https://csc.fi/en/training-calendar/containers-in-supercomputing-environment-2/>`__.
+Some of these workshops can give 1 ECTS: see `SCI-L1010 Scientific Computing Skills
+<https://mycourses.aalto.fi/course/view.php?id=50445>`__ for which events qualify and the requirements.
 More: `CSC training calendar <https://csc.fi/en/training/>`__ | `RSE Seminar Series <https://aaltoscicomp.github.io/rse-training/seminars/>`__.
 Our SCI-L1010 course is now part of the `doctoralcourses.fi <https://www.doctoralcourses.fi/>`__ network — doctoral students at partner Finnish universities can get credit for our courses (and CSC/LUMI training) more easily.
 
 .. toctree::
    :maxdepth: 1
 
-   scip/kickstart-2026
+   scip/python-for-scicomp-2026
    Take the survey! Request a re-run of past courses / new courses <https://link.webropol.com/s/scipod>
    scip/index
 
@@ -44,27 +52,56 @@ Our SCI-L1010 course is now part of the `doctoralcourses.fi <https://www.doctora
 
 
 
-**Upcoming courses**
+**Upcoming Aalto courses and workshops**
 
-*Sep 7–8, 2026* (upcoming) `High Performance R <https://csc.fi/en/training-calendar/high-performance-r-3/>`__ —
-efficient and parallel R programming, 1 ECTS available.
+*Oct 22, 2026, 9:30–15:30* `AI in Research Work
+<https://www.aalto.fi/en/events/ai-in-research-work-oct-22-2026>`__ —
+generative AI in research workflows, ethics, and research integrity.
+LUMI AI Factory AI Hub, TUAS 4th floor, Espoo (morning hybrid, afternoon workshops in person only).
 
-*Sep 11, 2026* (upcoming) `RSE Seminar Series <https://aaltoscicomp.github.io/rse-training/seminars/>`__ kicks off —
-a new quarterly seminar by LUMI AI Factory partners Aalto SciComp and CSC.
+*Oct 27, 2026, 13:00–14:30* `AI agents unveiled: how AI agents work behind the scenes
+<https://www.aalto.fi/en/events/ai-agents-unveiled-how-ai-agents-work-behind-the-scenes-oct-27-2026>`__ —
+how AI tools and agents work, good practices, and AI resources at Aalto.
+Hybrid: AI Hub TUAS + Zoom.
 
-*Sep 14–15, 2026* (upcoming) `Roihu NVIDIA GH200 Training
-<https://csc.fi/en/training-calendar/roihu-nvidia-gh200-training/>`__ —
-GPU programming on the Grace Hopper architecture, 1 ECTS available.
+*Oct 29, 2026, 13:00–14:30* `Starting computational research projects at Aalto
+<https://www.aalto.fi/en/events/starting-computational-research-projects-at-aalto-oct-29-2026>`__ —
+good practices for data storage, code management, collaboration, and Aalto services.
+Hybrid: Otakaari 1, U523 Top Lounge + Zoom.
 
-*Sep 22–Oct 1, 2026* (upcoming) `CodeRefinery workshop
-<https://coderefinery.github.io/2026-09-22-workshop/>`__ —
-version control, reproducibility, and software best practices, 1 ECTS available.
+*Nov 3, 2026, 13:00–14:30* `Open science and model cards in machine learning
+<https://www.aalto.fi/en/events/open-science-and-model-cards-in-machine-learning-nov-3-2026>`__ —
+reading and writing model cards for reproducible ML research.
+Hybrid: AI Hub TUAS + Zoom.
 
-*Sep 24–25, 2026* (upcoming) `Data Analysis with R
-<https://csc.fi/en/training-calendar/data-analysis-with-r-7/>`__ — 1 ECTS available.
+*Nov 10, 2026, 9:00–15:30* `Doing qualitative research in conversation with AI
+<https://www.aalto.fi/en/events/doing-qualitative-research-in-conversation-with-ai-nov-10-2026>`__ —
+generative AI in qualitative and interpretive research: ethics, responsible conduct, and data security.
+Hybrid: AI Hub TUAS + online.
 
-*Nov 24–26, 2026* (upcoming) `Containers in Supercomputing Environment
-<https://csc.fi/en/training-calendar/containers-in-supercomputing-environment-2/>`__ — 1 ECTS available.
+*Nov 24–26, 2026* :doc:`Python for Scientific Computing 2026 <scip/python-for-scicomp-2026>` —
+NumPy, Pandas, Matplotlib and other scientific Python tools.
+Online, streamed via Twitch with CodeRefinery.
+
+**Upcoming CSC / LUMI AI Factory courses**
+
+*Oct 21–22, 2026* `Practical Deep Learning
+<https://csc.fi/en/training-calendar/practical-deep-learning-8/>`__ —
+neural networks (CNNs, RNNs, transformers) with PyTorch on the Roihu supercomputer.
+Hybrid: CSC, Keilaranta 14, Espoo + Zoom.
+
+*Nov 3–5, 2026* `Agentic AI: Beyond Coding Assistants and Chatbots
+<https://csc.fi/en/training-calendar/agentic-ai-beyond-coding-assistants-and-chatbots/>`__ —
+building AI agents with Pydantic AI, from API calls to multi-agent systems.
+Online (setup session Nov 2).
+
+*Nov 24–26, 2026* `Containers in Supercomputing Environment
+<https://csc.fi/en/training-calendar/containers-in-supercomputing-environment-2/>`__ —
+building, running and deploying containers on supercomputers.
+Online, three half-day sessions.
+
+Some of these workshops can give 1 ECTS: see `SCI-L1010 Scientific Computing Skills
+<https://mycourses.aalto.fi/course/view.php?id=50445>`__ for which events qualify and the requirements.
 
 
 Anyone can sign up for announcements at the :doc:`SCIP announcement

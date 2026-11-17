@@ -263,8 +263,9 @@ and for this we need to define some "end point".
    :class: dropdown
 
    You can acknowledge us as "Aalto Research Software Engineering
-   service" or "Aalto RSE".  In papers/presentations, please acknowledge
-   us if we significantly contribute to your work.
+   service" or "Aalto RSE", see :doc:`acknowledging-rse` for some
+   boilerplate texts.  In papers/presentations, please acknowledge us
+   if we significantly contribute to your work.
 
    For research outputs which appear in ACRIS (paper, data), you can
    :ref:`tag them with the Science-IT infrastructure <acris-link>`.

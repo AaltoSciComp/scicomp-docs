@@ -19,6 +19,40 @@
   },
   {
     "model": {
+      "id": "RedHatAI/gemma-4-31B-it-FP8-Dynamic",
+      "owned_by": "Admin",
+      "permissions": [],
+      "object": "model",
+      "type": [
+        "chat",
+        "responses",
+        "messages"
+      ]
+    },
+    "name": "RedHatAI/gemma-4-31B-it-FP8-Dynamic",
+    "description": "Google Gemma 4 31B IT model Q8 Quantized RedHatAI/gemma-4-31B-it-FP8-Dynamic. Context length 27500 tokens (Always On)",
+    "prompt_cost": 0.01,
+    "completion_cost": 0.1,
+    "cached_token_cost": 0.05
+  },
+  {
+    "model": {
+      "id": "codefuse-ai/F2LLM-v2-1.7B",
+      "owned_by": "Admin",
+      "permissions": [],
+      "object": "model",
+      "type": [
+        "embedding"
+      ]
+    },
+    "name": "codefuse-ai/F2LLM-v2-1.7B",
+    "description": "F2LLM-v2 1.7B model for embedding, Context Length 40960 tokens (on demand)",
+    "prompt_cost": 0.01,
+    "completion_cost": 0.1,
+    "cached_token_cost": 0.05
+  },
+  {
+    "model": {
       "id": "Qwen/Qwen3.8-27B-FP8",
       "owned_by": "Admin",
       "permissions": [],
@@ -31,24 +65,6 @@
     },
     "name": "Qwen/Qwen3.8-27B-FP8",
     "description": "Qwen3.8 27B model with fp8 quantization. Context length 262144 tokens ( Always On )",
-    "prompt_cost": 0.01,
-    "completion_cost": 0.1,
-    "cached_token_cost": 0.05
-  },
-  {
-    "model": {
-      "id": "RedHatAI/gemma-4-31B-it-FP8-Dynamic",
-      "owned_by": "Admin",
-      "permissions": [],
-      "object": "model",
-      "type": [
-        "chat",
-        "responses",
-        "messages"
-      ]
-    },
-    "name": "RedHatAI/gemma-4-31B-it-FP8-Dynamic",
-    "description": "Google Gemma 4 31B IT model Q8 Quantized RedHatAI/gemma-4-31B-it-FP8-Dynamic. Context length 32768 tokens (Always On)",
     "prompt_cost": 0.01,
     "completion_cost": 0.1,
     "cached_token_cost": 0.05
