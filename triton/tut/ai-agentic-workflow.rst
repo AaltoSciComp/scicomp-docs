@@ -196,10 +196,6 @@ apply automatically::
            ln -sfn "$d" ~/.codex/skills/"$(basename "$d")"
          done
 
-With moat, symlink under the fake home (for example
-``~/moat-home/.codex/skills``) and mount
-``/scratch/shareddata/triton-skills`` read-only so the links resolve.
-
 Triton agent rules
 ~~~~~~~~~~~~~~~~~~
 
@@ -248,15 +244,22 @@ time / memory / CPU or GPU and array layout for this repository.
 Testing out your new workflow
 -----------------------------
 
-Put the pieces from the sections above together.  Do the shared steps once,
-then choose whether to run the agent **directly** or **inside moat**.
+Put the pieces from the sections above together and run the agent **inside
+moat**.
 
-The commands below use **Codex** as the worked example.  The same steps
-apply to other harnesses; swap config paths and MCP/skills install commands
-for your tool (see the relevant tabs above).
- 
-Shared setup
-~~~~~~~~~~~~
+On Triton, load the ``moat-agents`` module.  It provides `moat
+<https://github.com/AaltoRSE/moat>`__ (the container sandbox) and
+`moat-install <https://github.com/AaltoRSE/moat-install>`__ (one-shot
+configuration of the harnesses in moat's image: Codex, Claude Code,
+OpenCode, pi, and others).  One shared fake home holds every agent's
+config; the directory you start ``moat run`` from is mounted into the
+container.
+
+**Host vs container.**  ``module load moat-agents`` and ``moat-install``
+run on the **login node** (the host).  Only ``moat run`` starts the
+Apptainer container.  Endpoint checks, API-key prompts, and writing
+configs under the home base all happen on the host before any container
+starts.
 
 #. **Connect.**  SSH to the coding-agent login node::
 
@@ -264,125 +267,48 @@ Shared setup
 
    See :doc:`connecting` if you are new to Triton.
 
-#. **Configure the harness.**  Point your agent at the Aalto LLM Gateway (or
-   another endpoint from *Configuring harnesses to use LLM endpoints*
-   above).  Write the config under your real home first (for running without
-   moat)::
+#. **Load the module**::
 
-      mkdir -p ~/.codex
-      cat > ~/.codex/config.toml <<'EOF'
-      model = "zai-org/GLM-5.3-Flash"
-      model_provider = "aalto"
-      approval_policy = "on-request"
+      module load moat-agents
 
-      [model_providers.aalto]
-      name = "Aalto LLM Gateway"
-      base_url = "https://llm-gateway.k8s.aalto.fi/api/v1"
-      env_key = "AALTO_LLM_API_KEY"
-      wire_api = "responses"
-      EOF
+#. **First-time setup with** ``moat-install``::
 
-      export AALTO_LLM_API_KEY="paste-your-key-here"
+      moat-install --no-verify
 
-   Keep the key in the environment, not in the config file.
-   ``approval_policy = "on-request"`` asks before acting — a good default on
-   a shared cluster.  For moat, use a separate config under the fake home
-   (see below) — a plain copy of this file is not enough.
+   It reads API keys from the env vars named in the specification (or
+   prompts for them) and writes harness configs under the home base.
+   Re-runs with the same inputs are safe.  On Triton, include
+   ``--no-verify``: the optional Python reachability probe often fails
+   on SSL / CA trust even when ``curl`` to the gateway works.  That
+   probe runs on the host, not inside moat.
 
-#. **Teach.**  Add the always-on rule and symlink the skills as described
-   under `Triton skills`_ and `Triton agent rules`_ above.
-
-#. **Ground.**  Enable the SciComp docs MCP::
-
-      codex mcp add scicomp-docs --url https://docs.triton.aalto.fi/mcp/
-
-   Verify later with ``/mcp`` inside Codex.  Details are under
-   `MCP server`_ above.
+#. **Teach and ground in the fake home.**  Enable the SciComp docs MCP
+   under the home base, as
+   described under `MCP server`_ above.  Do this in the fake home, not
+   your real ``$HOME``. 
 
 #. **Pick a project directory**::
 
       mkdir -p ~/demo && cd ~/demo
       # … add or clone a small project …
 
-Then choose one of the paths below.
+#. **Quick test**::
 
-Without moat
-~~~~~~~~~~~~
+      moat run -n agents "codex --no-daemon"
 
-Run the agent directly on the login node.  Simpler, but the agent inherits
-your full file permissions::
+   Codex needs ``--no-daemon`` inside moat, because a background daemon
+   would be orphaned when the container exits.  Give a small concrete
+   task (finish a half-written script, run it, report what changed),
+   approve actions on request, and check ``/mcp`` inside the session.
+   Review every change before you rely on it. 
 
-   export AALTO_LLM_API_KEY="paste-your-key-here"
-   codex
+   Other harnesses use the same environment::
 
-Give a concrete task, approve actions on request, and review every change.
+      moat run -n agents opencode
+      moat run -n agents pi
 
-.. warning::
-
-   Without a sandbox the agent can read anything you can, including SSH keys
-   and credentials under ``$HOME``.  Prefer moat for anything beyond a quick
-   test.  See :doc:`/triton/usage/ai-agents`.
-
-With moat
-~~~~~~~~~
-
-Install moat, put the agent config into a fake home, create an env that mounts
-only the project (and skills), then run.  See *Using moat to secure your
-harnesses* above and the `moat README <https://github.com/AaltoRSE/moat>`__.
-
-#. **Install and init moat** (once)::
-
-      mkdir -p ~/tools/moat && cd ~/tools/moat
-      curl -sL https://github.com/AaltoRSE/moat/releases/download/v0.1.0/moat_Linux_x86_64.tar.gz | tar xz
-      export PATH="$HOME/tools/moat:$PATH"
-      moat init
-
-   On Triton, ``/tmp`` is small — point Apptainer's cache at scratch before
-   the first run, for example
-   ``export APPTAINER_CACHEDIR=$WRKDIR/moat-cache TMPDIR=$WRKDIR/moat-cache``.
-
-#. **Prepare the fake home.**  The agent inside moat uses ``~/moat-home`` as
-   ``$HOME``, not your real home.  Copy skills and MCP settings from your
-   real ``~/.codex``, then write a **moat-specific** ``config.toml``.  Codex
-   must not run its own nested sandbox inside moat — set
-   ``sandbox_mode = "danger-full-access"`` so isolation comes from moat
-   alone::
-
-      mkdir -p ~/moat-home/.codex
-      cp -a ~/.codex/. ~/moat-home/.codex/
-      cat > ~/moat-home/.codex/config.toml <<'EOF'
-      model = "zai-org/GLM-5.3-Flash"
-      model_provider = "aalto"
-      approval_policy = "on-request"
-      sandbox_mode = "danger-full-access"
-
-      [model_providers.aalto]
-      name = "Aalto LLM Gateway"
-      base_url = "https://llm-gateway.k8s.aalto.fi/api/v1"
-      env_key = "AALTO_LLM_API_KEY"
-      wire_api = "responses"
-      EOF
-
-   Skills under ``~/moat-home/.codex/skills`` must still resolve to
-   ``/scratch/shareddata/triton-skills``, so mount that tree read-only in the
-   next step.
-
-#. **Create the env and run.**  Mounts and the fake home are stored in the env
-   config and reused on every ``moat run`` — they do not follow a later
-   ``cd`` unless you set ``mountcwd``::
-
-      cd ~/demo
-      moat env create -n demo -H ~/moat-home -m ~/demo \
-          -r /scratch/shareddata/triton-skills -y
-      export AALTO_LLM_API_KEY="paste-your-key-here"
-      moat run -n demo codex
-
-   The API key still comes from the host shell (``passenv``).  Verify MCP with
-   ``/mcp`` and skills with ``/skills`` inside the Codex session.
-
-Either way, give a concrete task (finish a half-written script, run it, report
-what changed), approve actions on request, and review every change before you
-rely on it.
+   ``moat run -n agents`` without a command opens a ``bash`` shell in the
+   container.
 
 You are responsible for what the agent does.  Keep heavy compute off the
 login node, keep secrets out of agent-readable trees, and save work often.
@@ -398,4 +324,6 @@ See also
   <https://github.com/AaltoSciComp/llm-examples/blob/main/triton-mcp/docs-mcp.md>`__
 * `ASC LLM examples <https://github.com/AaltoSciComp/llm-examples>`__
 * `moat <https://github.com/AaltoRSE/moat>`__ — container sandbox for AI tools
+* `moat-install <https://github.com/AaltoRSE/moat-install>`__ — configure
+  harnesses under a moat home base from one provider specification
 * Triton skills on the cluster: ``/scratch/shareddata/triton-skills``
