@@ -294,10 +294,10 @@ starts.
 
 #. **Quick test**::
 
-      moat run -n agents "codex --no-daemon"
+      moat run -n agents "codex --no-daemon --sandbox danger-full-access"
 
    Codex needs ``--no-daemon`` inside moat, because a background daemon
-   would be orphaned when the container exits.  Give a small concrete
+   would be orphaned when the container exits. Give a small concrete
    task (finish a half-written script, run it, report what changed),
    approve actions on request, and check ``/mcp`` inside the session.
    Review every change before you rely on it. 
