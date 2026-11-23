@@ -142,40 +142,40 @@ Detailed instructions
    :glob:
 
    usage/*
-   
+
 
 See also
 ========
 
 * **Shortcuts**
 
-       * `Triton Issue tracker <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`_
-       * `Triton Cheatsheet <https://aaltoscicomp.github.io/cheatsheets/triton-cheatsheet.pdf>`_
-       * `Scicomp Garage </help/garage>`
+  * `Triton Issue tracker <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues>`_
+  * `Triton Cheatsheet <https://aaltoscicomp.github.io/cheatsheets/triton-cheatsheet.pdf>`_
+  * `Scicomp Garage </help/garage>`
 
 * **Scientific computing resources**
 
-       * :doc:`SCIP – Scientific Computing in Practice courses
-	 </training/scip/index>`: organized
-	 by SciComp. Including Triton kickstarts and many others
-       * `Parallel computing <https://wiki.aalto.fi/download/attachments/65022076/parallel_computing.2012-04-12.pdf?version=1&modificationDate=1334828664000&api=v2>`_
-       * `Aalto IT Services for Research <https://www.aalto.fi/en/services/it-services-for-research>`_
-       * `Hands-on Scientific Computing <hosc_>`__: map of important
-	 computing skills
-       * `Software Carpentry <https://software-carpentry.org/>`_
-	 (scientific computation basics) and
-	 `Code Refinery <https://coderefinery.org/>`_ (more focused on
-	 programming techniques)
+  * :doc:`SCIP – Scientific Computing in Practice courses
+    </training/scip/index>`: organized
+    by SciComp. Including Triton kickstarts and many others
+  * `Parallel computing <https://wiki.aalto.fi/download/attachments/65022076/parallel_computing.2012-04-12.pdf?version=1&modificationDate=1334828664000&api=v2>`_
+  * `Aalto IT Services for Research <https://www.aalto.fi/en/services/it-services-for-research>`_
+  * `Hands-on Scientific Computing <hosc_>`__: map of important
+    computing skills
+  * `Software Carpentry <https://software-carpentry.org/>`_
+    (scientific computation basics) and
+    `Code Refinery <https://coderefinery.org/>`_ (more focused on
+    programming techniques)
 
 * **General links**
 
-       * `CSC <https://www.csc.fi/>`_ - Finland's academic computing center.
-       * `FGCI user's guide
-	 <https://docs.csc.fi/cloud/fgci/fgci-user-guide-overview/>`_ at CSC: That is a
-	 general Guide to FGCI resources. Triton is one of them.
-       * `CSC HPC guides
-	 <https://research.csc.fi/guides>`_ at CSC: a
-	 Triton like cluster at CSC. Similar setup, thus examples and
-	 instructions can be useful.
-       * `Aalto research data management information <https://www.aalto.fi/en/services/research-data-management-rdm-and-open-science>`_
+  * `CSC <https://www.csc.fi/>`_ - Finland's academic computing center.
+  * `FGCI user's guide
+    <https://docs.csc.fi/cloud/fgci/fgci-user-guide-overview/>`_ at CSC: That is a
+    general Guide to FGCI resources. Triton is one of them.
+  * `CSC HPC guides
+    <https://research.csc.fi/guides>`_ at CSC: a
+    Triton like cluster at CSC. Similar setup, thus examples and
+    instructions can be useful.
+  * `Aalto research data management information <https://www.aalto.fi/en/services/research-data-management-rdm-and-open-science>`_
 
