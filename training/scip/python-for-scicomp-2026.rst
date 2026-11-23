@@ -72,36 +72,38 @@ if attending a single lesson.
   intro already starts then.
 - Tue 24.nov, 9:50-15:00
 
-  - 09:50 Icebreakers and warming up (Enrico)
-  - 10:00 :doc:`Intro <python-for-scicomp/intro>` (Enrico)
-  - 10:15  `Jupyter <https://aaltoscicomp.github.io/python-for-scicomp/jupyter/>`__ (Diana, Hemanadhan)
-  - 11:00  `NumPy <https://aaltoscicomp.github.io/python-for-scicomp/numpy/>`__ (Marijn, Susa)
+  - 09:50 Icebreakers and warming up (Richard, Enrico, other morning instructors)
+  - 10:00 :doc:`Intro <python-for-scicomp/intro>` (Richard)
+  - 10:15 `Jupyter <https://aaltoscicomp.github.io/python-for-scicomp/jupyter/>`__ (Diana, Hemanadhan)
+  - 10:50 *10 minutes break*
+  - 11:00 `NumPy <https://aaltoscicomp.github.io/python-for-scicomp/numpy/>`__ (Marijn, Susa)
   - 12:00 Lunch break
-  - 13:00 `Pandas <https://aaltoscicomp.github.io/python-for-scicomp/pandas/>`__ (Ashwin, Susa)
-  - 14:30 `Xarray <https://aaltoscicomp.github.io/python-for-scicomp/xarray/>`__ (Marijn, Thomas)
+  - 13:00 `NumPy continued <https://aaltoscicomp.github.io/python-for-scicomp/numpy/>`__ (Marijn, Susa)
+  - 13:15 Tabular data with `Pandas <https://aaltoscicomp.github.io/python-for-scicomp/pandas/>`__ (Marijn, Susa)
+  - 14:00 *10 minutes break*
+  - 14:10 Multi-dimensional data with `Xarray <https://aaltoscicomp.github.io/python-for-scicomp/xarray/>`__ (Marijn, Thomas)
   - 15:00 End of day 1
 
 - Wed 25.nov, 9:50-15:00
 
-  - 09:50  Icebreakers and warming up (Enrico)
-  - 10:00 `Plotting with Vega-Altair <https://aaltoscicomp.github.io/python-for-scicomp/plotting-vega-altair/>`__ (Simo, Thomas)
-  - 11:30 `Working with data <https://aaltoscicomp.github.io/python-for-scicomp/work-with-data/>`__ (Thomas, Simo)
+  - 09:50 Icebreakers and warming up (Enrico and morning instructors)
+  - 10:00 `Plotting with Vega-Altair <https://aaltoscicomp.github.io/python-for-scicomp/plotting-vega-altair/>`__ (Simo, Frankie)
+  - 11:30 `Working with data <https://aaltoscicomp.github.io/python-for-scicomp/work-with-data/>`__ (Thomas, Jarno)
   - 12:00 Lunch break
-  - 13:00 `Scripts <https://aaltoscicomp.github.io/python-for-scicomp/scripts/>`__ (Thomas, Luca)
-  - 14:10 `Profiling <https://aaltoscicomp.github.io/python-for-scicomp/profiling/>`__ (Simo, Susa)
-  - 14:30 `Library ecosystem <https://aaltoscicomp.github.io/python-for-scicomp/libraries/>`__ (Thomas, Luca)
+  - 13:00 `Scripts <https://aaltoscicomp.github.io/python-for-scicomp/scripts/>`__ (Thomas, Frankie)
+  - 14:10 `Profiling <https://aaltoscicomp.github.io/python-for-scicomp/profiling/>`__ (Jarno, Susa)
+  - 14:30 `Library ecosystem <https://aaltoscicomp.github.io/python-for-scicomp/libraries/>`__ (Thomas, Frankie)
   - 15:00 End of day 2
 
 - Thu 26.nov, 9:50-15:00
 
-
-  - 09:50  Icebreakers and warming up (Enrico)
-  - 10:00 `Parallel programming intro <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__ (Johan, Susa, Lauri)
-  - 11:30 `Cython <https://aaltoscicomp.github.io/python-for-scicomp/cython/>`__ (Lauri, Ashwin)
+  - 09:50 Icebreakers and warming up (Enrico and morning instructors)
+  - 10:00 `Parallel programming intro <https://aaltoscicomp.github.io/python-for-scicomp/parallel/>`__ (Jarno, Lauri)
+  - 11:30 `Cython <https://aaltoscicomp.github.io/python-for-scicomp/cython/>`__ (Ashwin, Lauri)
   - 12:00 Lunch break
-  - 13:00 `Packaging <https://aaltoscicomp.github.io/python-for-scicomp/packaging/>`__ (Ashwin, Simo)
-  - 14:00 `Dependency management <https://aaltoscicomp.github.io/python-for-scicomp/dependencies/>`__ (Simo, Sabry)
-  - 14:50 :doc:`Outro <python-for-scicomp/outro>`
+  - 13:00 `Packaging <https://aaltoscicomp.github.io/python-for-scicomp/packaging/>`__ (Jarno, Patricia)
+  - 14:00 `Dependency management <https://aaltoscicomp.github.io/python-for-scicomp/dependencies/>`__ (Jarno, Thomas)
+  - 14:50 :doc:`Outro <python-for-scicomp/outro>` (Enrico)
   - 15:00 End of day 3 + zoom discussion
 
 
@@ -240,23 +242,22 @@ own audience.
 * `University of Iceland <https://english.hi.is/>`__
   
 
-..
+**Instructors:**
 
-  * Richard Darst (ASC, Aalto University) (instructor, instructor coordinator, director)
-  * Enrico Glerean (ASC, Aalto University) (instructor, coordinator, communication, helper)
-  * Johan Hellsvik (PDC, NAISS, KTH) (instructor, helper)
-  * Diana Iusan (`UPPMAX <https://www.uppmax.uu.se/>`__, NAISS, Uppsala University) (instructor, helper)
-  * Ashwin Mohanan (ENCCS / RISE) (instructor, helper)
-  * Thomas Pfau (ASC, Aalto University) (instructor, helper)
-  * Sabry Razick (University of Oslo) (instructor, helper)
-  * Simo Tuomisto (ASC, Aalto University) (instructor, helper)
-  * Marijn Van Vliet (Aalto University) (instructor, helper)
-  * Susanne Merz (ASC, Aalto University)(instructor, helper)
-  * Hemanadhan Myneni (University of Iceland)(instructor, helper)
-  * Lauri Niemi (CSC - IT Center for Science)(instructor, helper)
-  * Luca Ferranti (ASC, Aalto University)(instructor, helper)
-  * ...
- 
+* Richard Darst (Aalto Scientific Computing, Aalto University)
+* Enrico Glerean (Aalto Scientific Computing, Aalto University)
+* Diana Iusan (`UPPMAX <https://www.uppmax.uu.se/>`__, Uppsala University)
+* Patricia Leon (Aalto Scientific Computing, Aalto University)
+* Susanne Merz (Aalto Scientific Computing, Aalto University)
+* Ashwin Mohanan (`RISE Research Institutes of Sweden <https://www.ri.se/en/person/ashwin-mohanan>`__)
+* Hemanadhan Myneni (`University of Iceland <https://english.hi.is/staff/myneni>`__)
+* Lauri Niemi (CSC - IT Center for Science)
+* Thomas Pfau (Aalto Scientific Computing, Aalto University)
+* Jarno Rantaharju (Aalto Scientific Computing, Aalto University)
+* Frankie Robertson (University of Helsinki)
+* Simo Tuomisto (Aalto Scientific Computing, Aalto University)
+* Marijn van Vliet (Aalto Scientific Computing, Aalto University)
+
 ...and many more `contributors to the learning materials on Github <https://github.com/AaltoSciComp/python-for-scicomp/graphs/contributors>`__.
 
 
