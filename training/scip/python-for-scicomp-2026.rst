@@ -146,7 +146,8 @@ a little extra work. The certificate is equivalent to 1 ECTS and your study
 supervisor will be able to register it as a credit in your university study
 credit system. Please make sure that your supervisor/study program accepts it.
 
-Learners with a valid Aalto student number will get the credit via the course [SCI-L1010 Scientific Computing Skills](https://mycourses.aalto.fi/course/section.php?id=275224).
+Learners with a valid Aalto student number will get the credit via the
+course `SCI-L1010 Scientific Computing Skills <https://mycourses.aalto.fi/course/section.php?id=275224>`__.
 
 To obtain a certificate/credit, we expect you to have registered to the course by 26/11/2026, 
 follow the 4 sessions and provide us with at least the following 5 documents via email

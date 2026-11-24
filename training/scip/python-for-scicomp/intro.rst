@@ -17,7 +17,7 @@ Who are we?
 
 * Instructors introduce themselves.
 * A collaboration of CodeRefinery partners and more, in particular in
-  Sweden and Norway: https://coderefinery.org
+  Iceland, Sweden, and Norway: https://coderefinery.org
 * Coordinated by Aalto Scientific Computing: https://scicomp.aalto.fi/
 * More than ten different instructors, about as many other helpers, too.
 
