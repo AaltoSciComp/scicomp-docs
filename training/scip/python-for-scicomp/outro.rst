@@ -29,9 +29,9 @@ About CodeRefinery and Aalto SciComp
 
 Future events
 -------------
-* Introduction to HPC (aka Kickstart) - Febryary 2026
-* `CodeRefinery <https://coderefinery.org>`__ - March 2026
-* We might do a re-run of past courses, you can see all of them on `Aalto Scientific Computing YouTube Channel <https://www.youtube.com/@aaltoscientificcomputing3454>`__
+* Introduction to HPC (aka Kickstart) - Febryary 2027
+* `CodeRefinery <https://coderefinery.org>`__ - March 2027 (we are opening the registrations soon)
+* We often do re-runs of past courses, you can see all of them on `Aalto Scientific Computing YouTube Channel <https://www.youtube.com/@aaltoscientificcomputing3454>`__
 * You can `request a new course or a re-run with this survey <https://link.webropol.com/s/scipod>`__
 
 Subscribe to the CodeRefinery newsletter for announcements about all
@@ -85,4 +85,4 @@ How can we work together
 Follow-up
 ---------
 
-* Afterparty in Zoom :)
+* Afterparty in Zoom? :)
