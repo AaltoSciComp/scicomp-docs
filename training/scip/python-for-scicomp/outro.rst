@@ -13,7 +13,7 @@ Python for Scientific Computing outro
 1 ECTS Credit
 -------------
 * :doc:`See the website <../python-for-scicomp-2026>`
-* Submission deadline is middle of December
+* Submission deadline is in December, check details in the course page
 * If you are at Aalto we will register the credit for you into our umbrella course Scientific Computing Skills. Get in touch to understand how it works.
 * Homework: You can pick your own adventure, make sure your submitted scripts run and produce some results.
 
