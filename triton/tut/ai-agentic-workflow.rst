@@ -76,6 +76,7 @@ directory and will only have access to the directories you give them access.
 You are responsible for what the agent does.  Keep heavy compute off the
 login node, keep secrets out of agent-readable trees, and save work often.
 Full policy: :doc:`/triton/usage/ai-agents`.
+
 .. tabs::
 
    .. tab:: Automatic configuration of Aalto's endpoints (recommended)
@@ -259,7 +260,7 @@ apply automatically::
 Triton agent rules
 ~~~~~~~~~~~~~~~~~~
 
-Agent harnesses store persistent rules under different names
+Agent harnesses store persistent rulhttps://github.com/AaltoSciComp/scicomp-docs/pull/840es under different names
 (``CLAUDE.md``, ``AGENTS.md``, Cursor/Codex user rules, and so on).  Use
 **global rules** for every session on Triton, and **project rules** for one
 repository's modules, data paths, and job conventions.  Keep both short
@@ -325,7 +326,7 @@ starts.
 
       ssh <username>@code.triton.aalto.fi
 
-   See :doc:`connecting` if you are new to Triton.
+   See :doc:`connecting` if you are newhttps://github.com/AaltoSciComp/scicomp-docs/pull/840 to Triton.
 
 #. **Load the module**::
 
