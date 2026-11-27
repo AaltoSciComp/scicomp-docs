@@ -27,6 +27,7 @@ providers, see
 for more information.
 
 Few providers you can currently use:
+
 - Aalto SciComp provides locally hosted open source models (GLM, Qwen) via
   `llm-gateway <https://llm-gateway.aalto.fi/>`__. Employees of Aalto University
   can create keys via the website. You need to have Aalto VPN enabled or you
