@@ -4,49 +4,109 @@ Getting started with AI assisted workflows
 
 .. admonition:: Abstract
 
-  Quick summary of this page
+  This page describes what users should know about agentic workflows
+  in Triton and how to get started with them.
 
 What are the key pieces in agentic workflows?
 ---------------------------------------------
 
+For a more thorough explanation on how AI agents work, see
+`AI agents unveiled <https://www.youtube.com/watch?v=8Ol1aTYCiUM>`__-talk
+given by Simo Tuomisto from Aalto SciComp.
+
 Large language models
 ~~~~~~~~~~~~~~~~~~~~~
 
-Harnesses
-~~~~~~~~~
+Large language models predict next tokens based on the previous ones they
+have been given. They are used by coding agents as the brain of their
+operation.
 
-Connecting to Triton while using agents
----------------------------------------
+These can be provided by multiple providers via LLM APIs. For approved
+providers, see
+`AI in Aalto <https://www.aalto.fi/en/services/ai-in-aalto>`__-page
+for more information.
 
-Configuring harnesses to use LLM endpoints
-------------------------------------------
+Few providers you can currently use:
+- Aalto SciComp provides locally hosted open source models (GLM, Qwen) via
+  `llm-gateway <https://llm-gateway.aalto.fi/>`__. Employees of Aalto University
+  can create keys via the website. You need to have Aalto VPN enabled or you
+  need to be in Aalto network to access this service.
+- Aalto ITS provides models by OpenAI (ChatGPT) and Google (gemma) via their
+  Azure APIs. See `this page <https://www.aalto.fi/en/services/aalto-ai-apis>`__
+  for more information on how to request a key.
 
-.. tabs::
+Agent
+~~~~~
 
-   .. tab:: Aalto ITS provided LLMs
+Agent is an AI persona that, based on user's request, uses LLMs to determine
+things that it should do and that uses tools provided by a harness to accomplish
+the user's request.
 
-   .. tab:: Aalto SciComp provided local LLMs
+Harness
+~~~~~~~
 
-.. tabs::
+Harness is a program that run agents. It starts gives agents a possibility of
+doing tool calls that can affect the real world.
 
-   .. tab:: Codex
+Typical tool calls include:
 
-      Instructions for Codex
+- Reading files
+- Editing files
+- Doing web searches
+- Running arbitrary command line commands
 
-   .. tab:: Claude
-
-      Instructions for Claude
-
-   .. tab:: OpenCode
-
-      Instructions for Opencode
-
-   .. tab:: Pi
-
-      Instructions for Pi
+Because harnesses run under your command line, they can do whatever you can do.
+This makes it imporant to limit the possibilities of what files the harnesses
+can access. Otherwise, if the agent so chooses, they can leak information to
+the LLM providers or run commands that could cause harm.
 
 Using moat to secure your harnesses
 -----------------------------------
+
+Configuring harnesses to use LLM endpoints
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In Triton we recommend that you use `moat <https://github.com/AaltoRSE/moat>`__
+to secure your harnesses.
+
+Moat help you control your agents by running the agents in containers. This
+means that the agent will get a different home directory than your normal home
+directory and will only have access to the directories you give them access.
+
+You are responsible for what the agent does.  Keep heavy compute off the
+login node, keep secrets out of agent-readable trees, and save work often.
+Full policy: :doc:`/triton/usage/ai-agents`.
+.. tabs::
+
+   .. tab:: Automatic configuration of Aalto's endpoints (recommended)
+
+      In Triton we have provided an installation tool that automatically
+      configures harnesses against Aalto provided LLM endpoints:
+
+      .. code-block:: shell
+
+         module load moat-agents
+
+         moat-install
+
+      When prompted, provide your LLM gateway key and/or Aalto Azure
+      API key to the installation tool.
+
+   .. tab:: Manual configuration of endpoints by editing configurations
+
+      You can manually configure the endpoints by starting a terminal and
+      configuring the harnesses manually. The following command starts
+      an interactive terminal in the container:
+
+      .. code-block:: shell
+
+         module load moat-agents
+
+         moat run -n agents bash
+
+      After that, you can configure the harnesses by editing its configuration
+      file or by using the harnesses own configuration tools.
+
 
 Triton-specific skills and agentic instructions
 -----------------------------------------------
@@ -294,11 +354,9 @@ starts.
 
 #. **Quick test**::
 
-      moat run -n agents "codex --no-daemon --sandbox danger-full-access"
+      moat run -n agents codex
 
-   Codex needs ``--no-daemon`` inside moat, because a background daemon
-   would be orphaned when the container exits. Give a small concrete
-   task (finish a half-written script, run it, report what changed),
+   Give a small concrete task (finish a half-written script, run it, report what changed),
    approve actions on request, and check ``/mcp`` inside the session.
    Review every change before you rely on it. 
 
@@ -310,9 +368,6 @@ starts.
    ``moat run -n agents`` without a command opens a ``bash`` shell in the
    container.
 
-You are responsible for what the agent does.  Keep heavy compute off the
-login node, keep secrets out of agent-readable trees, and save work often.
-Full policy: :doc:`/triton/usage/ai-agents`.
 
 
 See also
